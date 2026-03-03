@@ -268,7 +268,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <button class="search-btn" id="search-btn" onclick="openSearch()" title="Search words">🔍</button>
   <div class="app-header-center">
     <h1>Deutsch Lernen</h1>
-    <p id="header-sub">Vocabulary · Grammar · Cases · Verb Forms</p>
+    <p id="header-sub">Word Practice · Cases · Verb Forms</p>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="Settings">⚙️</button>
 </div>
@@ -285,15 +285,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <button class="opt-btn active" id="opt-en" onclick="setLang('en')">🇬🇧 English</button>
       <button class="opt-btn" id="opt-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
       <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
-    </div>
-  </div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-mode-label">Practice Mode</div>
-    <div class="option-row">
-      <button class="opt-btn active" id="opt-vocab" onclick="setMode('vocab')">📖 <span id="lbl-vocab">Vocabulary</span></button>
-      <button class="opt-btn" id="opt-grammar" onclick="setMode('grammar')">📐 <span id="lbl-grammar">Grammar</span></button>
-      <button class="opt-btn" id="opt-mix" onclick="setMode('mix')">🔀 Mix</button>
     </div>
   </div>
 
@@ -405,23 +396,21 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 // ══════════════════════════════════════════════════════════════════
 const UI = {
   en: {
-    headerSub: 'Vocabulary · Grammar · Cases · Verb Forms',
+    headerSub: 'Word Practice · Cases · Verb Forms',
     settingsTitle: 'Settings',
     langLabel: 'Language / Dil',
-    modeLabel: 'Practice Mode',
-    modeVocab: 'Vocabulary', modeGrammar: 'Grammar',
     closeDone: 'Done',
     rwBannerTitle: 'Random Word Explorer',
     rwBannerSub: 'See any word with all its forms, cases & examples',
     selectLevel: 'Select Level',
     levelNames: { A1:'Starter', 'A2.1':'Elementary I', 'A2.2':'Elementary II', 'B1.1':'Intermediate I', 'B1.2':'Intermediate II', B2:'Upper-Intermediate' },
-    cardCount: (n,m) => n + (m==='vocab'?' vocab cards':m==='grammar'?' grammar cards':' mixed cards'),
+    cardCount: (n) => n + ' word practice cards',
     back: '← Back',
     next: 'Next →',
     correct: '✓ Correct!',
     wrong: (a) => `✗ Wrong. Correct answer: <strong>${a}</strong>`,
     resultTitles: { great:'Excellent!', good:'Well done!', ok:'Good effort!', low:'Keep practicing!' },
-    resultSub: (lv,m,p) => `Level ${lv} · ${m} mode · ${p}% correct`,
+    resultSub: (lv,p) => `Level ${lv} · ${p}% correct`,
     scoreLbl: 'Score', correctLbl: 'Correct', wrongLbl: 'Wrong',
     playAgain: 'Play again', chooseLevel: 'Choose level',
     rwTitle: 'Word Explorer',
@@ -429,30 +418,28 @@ const UI = {
     presentTense: 'Präsens (Present)', pastSimple: 'Präteritum (Simple Past)', perfekt: 'Perfekt',
     comparatives: 'Komparativ & Superlativ', adjEndings: 'Adjective Endings (Nom.)', examples: 'Examples',
     source: 'Source: Goethe-Institut word list',
-    modeIcons: { vocab:'📖', grammar:'📐', mix:'🔀' },
-    vocabBadge: 'Vocab', grammarBadge: 'Grammar',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Word Practice',
     meaning: 'Meaning',
     tapPrompt: '👆 Tap any form above to see an example sentence.',
     noExample: 'No example available.',
   },
   tr: {
-    headerSub: 'Kelimeler · Dilbilgisi · Hâller · Fiil Çekimi',
+    headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
     settingsTitle: 'Ayarlar',
     langLabel: 'Dil / Language',
-    modeLabel: 'Çalışma Modu',
-    modeVocab: 'Kelimeler', modeGrammar: 'Dilbilgisi',
     closeDone: 'Tamam',
     rwBannerTitle: 'Rastgele Kelime Keşfi',
     rwBannerSub: 'Her kelimenin tüm hâllerini, çekimlerini ve örneklerini gör',
     selectLevel: 'Seviye Seç',
     levelNames: { A1:'Başlangıç', 'A2.1':'Temel I', 'A2.2':'Temel II', 'B1.1':'Orta I', 'B1.2':'Orta II', B2:'Üst-Orta' },
-    cardCount: (n,m) => n + (m==='vocab'?' kelime kartı':m==='grammar'?' dilbilgisi kartı':' karma kart'),
+    cardCount: (n) => n + ' kelime pratiği kartı',
     back: '← Geri',
     next: 'Sonraki →',
     correct: '✓ Doğru!',
     wrong: (a) => `✗ Yanlış. Doğru cevap: <strong>${a}</strong>`,
     resultTitles: { great:'Mükemmel!', good:'Çok iyi!', ok:'Güzel deneme!', low:'Pratik yapmaya devam!' },
-    resultSub: (lv,m,p) => `Seviye ${lv} · ${m} modu · %${p} doğru`,
+    resultSub: (lv,p) => `Seviye ${lv} · %${p} doğru`,
     scoreLbl: 'Puan', correctLbl: 'Doğru', wrongLbl: 'Yanlış',
     playAgain: 'Tekrar oyna', chooseLevel: 'Seviye seç',
     rwTitle: 'Kelime Keşfi',
@@ -460,30 +447,28 @@ const UI = {
     presentTense: 'Präsens (Şimdiki)', pastSimple: 'Präteritum (Geçmiş)', perfekt: 'Perfekt',
     comparatives: 'Karşılaştırma & Üstünlük', adjEndings: 'Sıfat Ekleri (Nom.)', examples: 'Örnekler',
     source: 'Kaynak: Goethe-Enstitüsü kelime listesi',
-    modeIcons: { vocab:'📖', grammar:'📐', mix:'🔀' },
-    vocabBadge: 'Kelime', grammarBadge: 'Dilbilgisi',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Kelime Pratiği',
     meaning: 'Anlam',
     tapPrompt: '👆 Örnek cümle görmek için yukarıdaki bir biçime dokun.',
     noExample: 'Örnek bulunamadı.',
   },
   fa: {
-    headerSub: 'واژگان · دستور زبان · حالت‌ها · صرف فعل',
+    headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
     settingsTitle: 'تنظیمات',
     langLabel: 'زبان / Language',
-    modeLabel: 'حالت تمرین',
-    modeVocab: 'واژگان', modeGrammar: 'دستور زبان',
     closeDone: 'تأیید',
     rwBannerTitle: 'کاوشگر واژه تصادفی',
     rwBannerSub: 'هر واژه را با تمام حالت‌ها، صرف‌ها و مثال‌هایش ببین',
     selectLevel: 'انتخاب سطح',
     levelNames: { A1:'مبتدی', 'A2.1':'پایه I', 'A2.2':'پایه II', 'B1.1':'متوسط I', 'B1.2':'متوسط II', B2:'بالاتر از متوسط' },
-    cardCount: (n,m) => n + (m==='vocab'?' کارت واژگان':m==='grammar'?' کارت دستور زبان':' کارت ترکیبی'),
+    cardCount: (n) => n + ' کارت تمرین واژگان',
     back: '← بازگشت',
     next: 'بعدی →',
     correct: '✓ درست!',
     wrong: (a) => `✗ اشتباه. جواب درست: <strong>${a}</strong>`,
     resultTitles: { great:'عالی!', good:'خیلی خوب!', ok:'تلاش خوبی بود!', low:'به تمرین ادامه بده!' },
-    resultSub: (lv,m,p) => `سطح ${lv} · حالت ${m} · ${p}٪ درست`,
+    resultSub: (lv,p) => `سطح ${lv} · ${p}٪ درست`,
     scoreLbl: 'امتیاز', correctLbl: 'درست', wrongLbl: 'اشتباه',
     playAgain: 'دوباره بازی کن', chooseLevel: 'انتخاب سطح',
     rwTitle: 'کاوشگر واژه',
@@ -491,8 +476,8 @@ const UI = {
     presentTense: 'Präsens (حال)', pastSimple: 'Präteritum (گذشته ساده)', perfekt: 'Perfekt',
     comparatives: 'تفضیلی و عالی', adjEndings: 'پسوندهای صفت (Nom.)', examples: 'مثال‌ها',
     source: 'منبع: فهرست واژگان مؤسسه گوته',
-    modeIcons: { vocab:'📖', grammar:'📐', mix:'🔀' },
-    vocabBadge: 'واژگان', grammarBadge: 'دستور زبان',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'تمرین واژگان',
     meaning: 'معنی',
     tapPrompt: '👆 برای مشاهده جمله نمونه روی یک شکل بالا ضربه بزنید.',
     noExample: 'نمونه‌ای موجود نیست.',
@@ -1965,166 +1950,10 @@ var SEARCH_EXTRA = [];
   }); });
 })();
 
-// Grammar cards — questions/subs translated, answers stay German-centric
-const GRAMMAR_CARDS = {
-A1:[
-  {badgeType:'grammar',badgeLabel:'Artikel',
-    question:{en:'Which article goes with "Mann"? (Nominativ)',tr:'"Mann" ile hangi artikel kullanılır? (Nominativ)'},
-    main:'___ Mann',sub:{en:'Choose the correct definite article',tr:'Doğru belirli artikeli seçin'},
-    answer:'der',choices:['der','die','das','den']},
-  {badgeType:'grammar',badgeLabel:'Artikel',
-    question:{en:'Which article goes with "Frau"? (Nominativ)',tr:'"Frau" ile hangi artikel kullanılır? (Nominativ)'},
-    main:'___ Frau',sub:{en:'Choose the correct definite article',tr:'Doğru belirli artikeli seçin'},
-    answer:'die',choices:['die','der','das','dem']},
-  {badgeType:'grammar',badgeLabel:'Artikel',
-    question:{en:'Which article goes with "Kind"? (Nominativ)',tr:'"Kind" ile hangi artikel kullanılır? (Nominativ)'},
-    main:'___ Kind',sub:{en:'Choose the correct definite article',tr:'Doğru belirli artikeli seçin'},
-    answer:'das',choices:['das','die','der','den']},
-  {badgeType:'grammar',badgeLabel:'Akkusativ',
-    question:{en:'Akkusativ — masculine: "Ich kaufe ___ Apfel."',tr:'Akkusativ — eril: "Ich kaufe ___ Apfel."'},
-    main:'der Apfel → Akkusativ',sub:{en:'masculine definite article changes!',tr:'eril belirli artikel değişir!'},
-    answer:'den Apfel',choices:['den Apfel','der Apfel','dem Apfel','des Apfels']},
-  {badgeType:'grammar',badgeLabel:'Akkusativ',
-    question:{en:'Akkusativ — neuter: "Ich lese ___ Buch."',tr:'Akkusativ — nötr: "Ich lese ___ Buch."'},
-    main:'das Buch → Akkusativ',sub:{en:'neuter: unchanged in Akkusativ',tr:'nötr isim: Akkusativ\'de değişmez'},
-    answer:'das Buch',choices:['das Buch','dem Buch','den Buch','des Buches']},
-  {badgeType:'grammar',badgeLabel:'Akkusativ',
-    question:{en:'Akkusativ — feminine: "Ich sehe ___ Frau."',tr:'Akkusativ — dişil: "Ich sehe ___ Frau."'},
-    main:'die Frau → Akkusativ',sub:{en:'feminine: unchanged in Akkusativ',tr:'dişil isim: Akkusativ\'de değişmez'},
-    answer:'die Frau',choices:['die Frau','der Frau','den Frau','dem Frau']},
-  {badgeType:'grammar',badgeLabel:'Wortstellung',
-    question:{en:'Correct word order?',tr:'Doğru sözcük sırası?'},
-    main:'"I learn German."',sub:{en:'Subject – Verb – Object',tr:'Özne – Fiil – Nesne'},
-    answer:'Ich lerne Deutsch.',choices:['Ich lerne Deutsch.','Lerne ich Deutsch.','Ich Deutsch lerne.','Deutsch lerne ich.']},
-  {badgeType:'grammar',badgeLabel:'Negation',
-    question:{en:'Negation: "I don\'t have a book."',tr:'Olumsuzluk: "Kitabım yok."'},
-    main:'nicht vs. kein',sub:{en:'"kein" negates nouns without definite article',tr:'"kein" belirli artikel olmayan isimleri olumsuzlaştırır'},
-    answer:'Ich habe kein Buch.',choices:['Ich habe kein Buch.','Ich habe nicht Buch.','Ich habe nicht ein Buch.','Ich habe kein ein Buch.']},
-  {badgeType:'grammar',badgeLabel:'Personalpron.',
-    question:{en:'Personal pronoun for "das Kind":',tr:'"das Kind" için kişi zamiri:'},
-    main:'das Kind → ?',sub:{en:'3rd person singular neuter',tr:'3. tekil şahıs nötr'},
-    answer:'es',choices:['es','er','sie','ihr']},
-  {badgeType:'grammar',badgeLabel:'Possessiv',
-    question:{en:'Possessive "my" with masculine Nominativ:',tr:'Eril Nominativ ile "benim" iyelik:'},
-    main:'"my brother" = ___',sub:{en:'mein/meine/mein',tr:'mein/meine/mein'},
-    answer:'mein Bruder',choices:['mein Bruder','meine Bruder','meinen Bruder','meinem Bruder']},
-],
-'A2.1':[
-  {badgeType:'grammar',badgeLabel:'Dativ',
-    question:{en:'Dativ — masculine: "Ich helfe ___ Mann."',tr:'Dativ — eril: "Ich helfe ___ Mann."'},
-    main:'der Mann → Dativ',sub:{en:'masculine/neuter: dem',tr:'eril/nötr: dem'},
-    answer:'dem Mann',choices:['dem Mann','den Mann','der Mann','des Mannes']},
-  {badgeType:'grammar',badgeLabel:'Dativ',
-    question:{en:'Dativ — feminine: "Ich danke ___ Frau."',tr:'Dativ — dişil: "Ich danke ___ Frau."'},
-    main:'die Frau → Dativ',sub:{en:'feminine: der in Dativ',tr:'dişil: Dativ\'de der'},
-    answer:'der Frau',choices:['der Frau','die Frau','den Frau','dem Frau']},
-  {badgeType:'grammar',badgeLabel:'Dativ Präp.',
-    question:{en:'"mit" takes which case?',tr:'"mit" hangi hâli alır?'},
-    main:'mit + ___',sub:{en:'prepositions always taking Dativ',tr:'her zaman Dativ alan edatlar'},
-    answer:'Dativ (mit dem Bus)',choices:['Dativ (mit dem Bus)','Akkusativ','Nominativ','Genitiv']},
-  {badgeType:'grammar',badgeLabel:'Modalverb',
-    question:{en:'Modal verb position:\n"Ich ___ Deutsch ___."',tr:'Modal fiil konumu:\n"Ich ___ Deutsch ___."'},
-    main:'können',sub:{en:'modal → pos.2, infinitive → end',tr:'modal → 2. konum, infinitif → sona'},
-    answer:'kann … sprechen',choices:['kann … sprechen','sprechen … kann','kann … gesprochen','gesprochen … kann']},
-  {badgeType:'grammar',badgeLabel:'Trennbar',
-    question:{en:'Separable verb in Präsens — where does the prefix go?',tr:'Präsens\'te ayrılabilen fiil — ön ek nereye gider?'},
-    main:'anrufen → ich',sub:{en:'"an-" splits off to end of sentence',tr:'"an-" cümlenin sonuna gider'},
-    answer:'Ich rufe … an.',choices:['Ich rufe … an.','Ich anrufe.','Ich rufe anrufe.','An ich rufe.']},
-  {badgeType:'grammar',badgeLabel:'Präposition',
-    question:{en:'Akkusativ prepositions — correct set:',tr:'Akkusativ edatları — doğru grup:'},
-    main:'durch · für · gegen · ohne · um',sub:{en:'These 5 always take Akkusativ',tr:'Bu 5 edat her zaman Akkusativ alır'},
-    answer:'durch, für, gegen, ohne, um',choices:['durch, für, gegen, ohne, um','mit, nach, seit, von','in, an, auf, über','wegen, trotz, während']},
-],
-'A2.2':[
-  {badgeType:'grammar',badgeLabel:'Wechselpräp.',
-    question:{en:'"Wo?" takes which case with "in"?',tr:'"Wo? / Nerede?" "in" ile hangi hâli alır?'},
-    main:'in + wo? = ___',sub:{en:'Location vs. Direction',tr:'Konum / Yön farkı'},
-    answer:'Dativ (im/in dem)',choices:['Dativ (im/in dem)','Akkusativ (ins/in das)','Nominativ','Genitiv']},
-  {badgeType:'grammar',badgeLabel:'Wechselpräp.',
-    question:{en:'"Wohin?" takes which case with "auf"?',tr:'"Wohin? / Nereye?" "auf" ile hangi hâli alır?'},
-    main:'auf + wohin? = ___',sub:{en:'Location vs. Direction',tr:'Konum / Yön farkı'},
-    answer:'Akkusativ (auf den/die/das)',choices:['Akkusativ (auf den/die/das)','Dativ (auf dem/der)','Nominativ','Genitiv']},
-  {badgeType:'grammar',badgeLabel:'Genitiv',
-    question:{en:'Genitiv — masculine: "Das Auto ___ Mannes"',tr:'Genitiv — eril: "Das Auto ___ Mannes"'},
-    main:'der Mann → Genitiv',sub:{en:'masculine/neuter: des + noun +(e)s',tr:'eril/nötr: des + isim + (e)s'},
-    answer:'des Mannes',choices:['des Mannes','der Mannes','dem Mann','den Mann']},
-  {badgeType:'grammar',badgeLabel:'Konjunktion',
-    question:{en:'Conjunction "dass" — verb position:',tr:'"dass" bağlacı — fiil konumu:'},
-    main:'"Ich weiß, dass er ___ kommt."',sub:{en:'Nebensatz: verb to END',tr:'Yan cümle: fiil en SONA'},
-    answer:'morgen → kommt.',choices:['morgen → kommt.','kommt morgen.','morgen kommt.','er kommt morgen.']},
-  {badgeType:'grammar',badgeLabel:'Perfekt',
-    question:{en:'Perfekt auxiliary — which verb uses "sein"?',tr:'Perfekt yardımcısı — hangi fiil "sein" alır?'},
-    main:'haben vs. sein in Perfekt',sub:{en:'movement/change of state → sein',tr:'hareket/durum değişimi → sein'},
-    answer:'gehen (bin gegangen)',choices:['gehen (bin gegangen)','essen (bin gegessen)','arbeiten (bin gearbeitet)','kaufen (bin gekauft)']},
-  {badgeType:'grammar',badgeLabel:'Adjektivend.',
-    question:{en:'Nominativ, feminine, definite article:',tr:'Nominativ, dişil, belirli artikel:'},
-    main:'"die ___ Frau" (alt)',sub:{en:'after definite article Nom. fem.: -e',tr:'belirli artikel sonrası Nom. dişil: -e'},
-    answer:'die alte Frau',choices:['die alte Frau','die alten Frau','die alter Frau','die altes Frau']},
-],
-'B1.1':[
-  {badgeType:'grammar',badgeLabel:'Relativsatz',
-    question:{en:'Relative pronoun Nominativ masc.:\n"Der Mann, ___ kommt, ..."',tr:'Bağıl zamir Nominativ eril:\n"Der Mann, ___ kommt, ..."'},
-    main:'Relativpronomen Nom. mask.',sub:{en:'same as definite article',tr:'belirli artikelle aynı'},
-    answer:'der',choices:['der','den','dem','dessen']},
-  {badgeType:'grammar',badgeLabel:'Relativsatz',
-    question:{en:'Relative pronoun Dativ plural:\n"Die Leute, ___ ich helfe, ..."',tr:'Bağıl zamir Dativ çoğul:\n"Die Leute, ___ ich helfe, ..."'},
-    main:'Relativpronomen Dat. pl.',sub:{en:'Plural Dativ relative pronoun',tr:'Çoğul Dativ bağıl zamiri'},
-    answer:'denen',choices:['denen','die','deren','dem']},
-  {badgeType:'grammar',badgeLabel:'Konjunktiv II',
-    question:{en:'Konjunktiv II — express a wish:\n"If I were rich, I would travel."',tr:'Konjunktiv II — dilek cümlesi:\n"Zengin olsaydım, seyahat ederdim."'},
-    main:'Wenn ich reich ___, ___ ich reisen.',sub:{en:'wäre + würde',tr:'wäre + würde'},
-    answer:'wäre … würde',choices:['wäre … würde','war … werde','sei … werde','wäre … werde']},
-  {badgeType:'grammar',badgeLabel:'Zweiteilig.',
-    question:{en:'Two-part conjunction "Either … or …" = ?',tr:'İkili bağlaç "Ya … ya da …" = ?'},
-    main:'entweder … oder …',sub:{en:'zweiteilige Konjunktionen',tr:'ikili bağlaçlar'},
-    answer:'entweder … oder',choices:['entweder … oder','sowohl … als auch','weder … noch','zwar … aber']},
-],
-'B1.2':[
-  {badgeType:'grammar',badgeLabel:'Passiv',
-    question:{en:'Passiv Präsens — correct form:',tr:'Passiv Präsens — doğru biçim:'},
-    main:'"Das Buch ___ gelesen."',sub:{en:'werden (Präsens) + Partizip II',tr:'werden (Präsens) + Partizip II'},
-    answer:'wird gelesen',choices:['wird gelesen','ist gelesen','hat gelesen','wurde gelesen']},
-  {badgeType:'grammar',badgeLabel:'Passiv',
-    question:{en:'Passiv Präteritum — correct form:',tr:'Passiv Präteritum — doğru biçim:'},
-    main:'"Das Haus ___ 1900 gebaut."',sub:{en:'wurde + Partizip II',tr:'wurde + Partizip II'},
-    answer:'wurde gebaut',choices:['wurde gebaut','wird gebaut','ist gebaut worden','war gebaut']},
-  {badgeType:'grammar',badgeLabel:'Infinitiv+zu',
-    question:{en:'"um … zu" vs "damit": same subject?',tr:'"um … zu" vs "damit": aynı özne mi?'},
-    main:'Ich lerne, ___ zu bestehen.',sub:{en:'"um zu" = same subject',tr:'"um zu" = aynı özne'},
-    answer:'um … zu (same subject)',choices:['um … zu (same subject)','damit (different subject)','weil','obwohl']},
-  {badgeType:'grammar',badgeLabel:'Wortstellung',
-    question:{en:'Adverb order: TEKAMOLO\nWhich is correct?',tr:'Zarf sırası: TEKAMOLO\nHangisi doğru?'},
-    main:'Temporal – Kausal – Modal – Lokal',sub:{en:'time → manner → place',tr:'zaman → biçim → yer'},
-    answer:'Ich fahre morgen mit dem Zug nach Berlin.',choices:['Ich fahre morgen mit dem Zug nach Berlin.','Ich fahre nach Berlin morgen mit dem Zug.','Ich fahre mit dem Zug morgen nach Berlin.','Ich fahre nach Berlin mit dem Zug morgen.']},
-],
-B2:[
-  {badgeType:'grammar',badgeLabel:'Konjunktiv I',
-    question:{en:'Konjunktiv I of "haben" (er):',tr:'"haben" fiilinin Konjunktiv I biçimi (er):'},
-    main:'haben → Konj.I (er)',sub:{en:'used in reported speech',tr:'aktarılan konuşmada kullanılır'},
-    answer:'habe',choices:['habe','hat','hätte','hatte']},
-  {badgeType:'grammar',badgeLabel:'Partizip I',
-    question:{en:'Partizip I of "laufen" as adjective (Nom.m.):',tr:'"laufen" fiilinin Partizip I sıfat biçimi (Nom.eril):'},
-    main:'der ___ Mann',sub:{en:'Partizip I: Infinitiv + d + ending',tr:'Partizip I: İnfinitif + d + ek'},
-    answer:'laufende Mann',choices:['laufende Mann','laufender Mann','gelaufene Mann','läufende Mann']},
-  {badgeType:'grammar',badgeLabel:'Wortbildung',
-    question:{en:'What does suffix "-heit/-keit" create?',tr:'"-heit/-keit" eki ne oluşturur?'},
-    main:'gesund → Gesundheit',sub:{en:'German word formation',tr:'Almanca sözcük yapımı'},
-    answer:{en:'Abstract nouns from adjectives',tr:'Sıfatlardan soyut isimler',fa:'اسم مجرد از صفت'},
-    choices_en:['Abstract nouns from adjectives','Verbs from nouns','Adjectives from verbs','Diminutives'],
-    choices_tr:['Sıfatlardan soyut isimler','İsimlerden fiiller','Fiillerden sıfatlar','Küçültme biçimleri'],
-    choices_fa:['اسم مجرد از صفت','فعل از اسم','صفت از فعل','کوچک‌سازی']},
-  {badgeType:'grammar',badgeLabel:'Erw.Attribut',
-    question:{en:'Extended attribute — which is correct?',tr:'Genişletilmiş sıfat tamlaması — hangisi doğru?'},
-    main:'"the book lying on the table"',sub:{en:'Partizip I as extended attribute',tr:'Partizip I genişletilmiş sıfat olarak'},
-    answer:'das auf dem Tisch liegende Buch',choices:['das auf dem Tisch liegende Buch','das liegende auf dem Tisch Buch','das Buch, das auf dem Tisch liegt','das auf dem Tisch liegend Buch']},
-]
-};
-
 // ══════════════════════════════════════════════════════════════════
 //  APP STATE
 // ══════════════════════════════════════════════════════════════════
 let LANG = 'en';
-let MODE = 'vocab';
 let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 
@@ -2158,28 +1987,12 @@ document.addEventListener('keydown', function(e){
   updateCounts();
 }
 
-// ── Set mode ──
-function setMode(m) {
-  MODE = m;
-  ['vocab','grammar','mix'].forEach(x => {
-    const btn = document.getElementById('opt-'+x);
-    btn.classList.toggle('active', x===m);
-    btn.classList.remove('blue','purple');
-  });
-  if (m==='grammar') document.getElementById('opt-grammar').classList.add('blue');
-  if (m==='mix') document.getElementById('opt-mix').classList.add('purple');
-  updateCounts();
-}
-
 // ── Apply all UI translations ──
 function applyTranslations() {
   const u = UI[LANG];
   document.getElementById('header-sub').textContent = u.headerSub;
   document.getElementById('st-title').textContent = u.settingsTitle;
   document.getElementById('st-lang-label').textContent = u.langLabel;
-  document.getElementById('st-mode-label').textContent = u.modeLabel;
-  document.getElementById('lbl-vocab').textContent = u.modeVocab;
-  document.getElementById('lbl-grammar').textContent = u.modeGrammar;
   document.getElementById('st-close-btn').textContent = u.closeDone;
   document.getElementById('rw-banner-title').textContent = u.rwBannerTitle;
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
@@ -2212,8 +2025,7 @@ function updateCounts() {
     const el = document.getElementById('cnt-'+lv);
     if (!el) return;
     const vc = (VOCAB_CARDS[lv]||[]).length;
-    const gc = (GRAMMAR_CARDS[lv]||[]).length;
-    el.textContent = t('cardCount')(MODE==='vocab'?vc:MODE==='grammar'?gc:vc+gc, MODE);
+    el.textContent = t('cardCount')(vc);
   });
 }
 
@@ -2240,17 +2052,7 @@ function resolveCard(card) {
 // ── Build quiz queue ──
 function buildQueue(level) {
   const vc = shuffle([...(VOCAB_CARDS[level]||[])]);
-  const gc = shuffle([...(GRAMMAR_CARDS[level]||[])]);
-  if (MODE==='vocab') return vc.slice(0,QUIZ_LEN);
-  if (MODE==='grammar') return gc.slice(0,QUIZ_LEN);
-  const mixed = [];
-  let vi=0,gi=0;
-  for(let i=0;i<QUIZ_LEN;i++){
-    if(i%2===0 && vi<vc.length) mixed.push({...vc[vi++],_isVocab:true});
-    else if(gi<gc.length) mixed.push({...gc[gi++],_isVocab:false});
-    else if(vi<vc.length) mixed.push({...vc[vi++],_isVocab:true});
-  }
-  return mixed;
+  return vc.slice(0,QUIZ_LEN);
 }
 
 function startLevel(lv) {
@@ -2279,13 +2081,8 @@ function renderCard() {
   document.getElementById('tlevel').textContent = 'Level '+currentLevel;
 
   const mb = document.getElementById('tmode-badge');
-  if(MODE==='mix'){
-    mb.textContent = card._isVocab ? t('vocabBadge') : t('grammarBadge');
-    mb.className = 'tmode-badge '+(card._isVocab?'vocab':'grammar');
-  } else {
-    mb.textContent = MODE==='vocab'?t('vocabBadge'):(MODE==='grammar'?t('grammarBadge'):'Mix');
-    mb.className = 'tmode-badge '+(MODE==='grammar'?'grammar':'vocab');
-  }
+  mb.textContent = t('vocabBadge');
+  mb.className = 'tmode-badge vocab';
 
   document.getElementById('cquestion').innerHTML = (question||'').replace(/\n/g,'<br>');
   document.getElementById('cmain').textContent = card.main;
@@ -2348,7 +2145,7 @@ function showResults(){
   document.getElementById('r-emoji').textContent=emoji;
   document.getElementById('r-title').textContent=title;
   document.getElementById('r-score').textContent=ok+'/'+total;
-  document.getElementById('r-sub').textContent=t('resultSub')(currentLevel,MODE,pct);
+  document.getElementById('r-sub').textContent=t('resultSub')(currentLevel,pct);
   document.getElementById('r-pct').textContent=pct+'%';
   document.getElementById('r-ok').textContent=ok;
   document.getElementById('r-no').textContent=no;
@@ -2644,7 +2441,6 @@ function show(id){
 }
 
 // ── Init ──
-setMode('vocab');
 applyTranslations();
 updateCounts();
 </script>
