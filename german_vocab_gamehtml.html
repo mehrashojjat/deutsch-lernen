@@ -115,7 +115,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
 
 /* ── LEVEL GRID ── */
-.level-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+.level-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .level-card{background:var(--surf);border:1px solid var(--border);border-radius:14px;
   padding:16px 10px 12px;cursor:pointer;transition:all .18s ease;position:relative;overflow:hidden;}
 .level-card::before{content:'';position:absolute;inset:0;
@@ -260,7 +260,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 :root[dir="rtl"] .rw-word {
 }
 </style>
-  <script src="word_data/game_data.js"></script>
 </head>
 <body>
 
@@ -310,25 +309,15 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="lv-name" id="ln-A1">Starter</div>
       <div class="lv-count" id="cnt-A1"></div>
     </div>
-    <div class="level-card" onclick="startLevel('A2.1')">
-      <span class="lv-badge">A2.1</span>
-      <div class="lv-name" id="ln-A21">Elementary I</div>
-      <div class="lv-count" id="cnt-A2.1"></div>
+    <div class="level-card" onclick="startLevel('A2')">
+      <span class="lv-badge">A2</span>
+      <div class="lv-name" id="ln-A2">Elementary</div>
+      <div class="lv-count" id="cnt-A2"></div>
     </div>
-    <div class="level-card" onclick="startLevel('A2.2')">
-      <span class="lv-badge">A2.2</span>
-      <div class="lv-name" id="ln-A22">Elementary II</div>
-      <div class="lv-count" id="cnt-A2.2"></div>
-    </div>
-    <div class="level-card" onclick="startLevel('B1.1')">
-      <span class="lv-badge">B1.1</span>
-      <div class="lv-name" id="ln-B11">Intermediate I</div>
-      <div class="lv-count" id="cnt-B1.1"></div>
-    </div>
-    <div class="level-card" onclick="startLevel('B1.2')">
-      <span class="lv-badge">B1.2</span>
-      <div class="lv-name" id="ln-B12">Intermediate II</div>
-      <div class="lv-count" id="cnt-B1.2"></div>
+    <div class="level-card" onclick="startLevel('B1')">
+      <span class="lv-badge">B1</span>
+      <div class="lv-name" id="ln-B1">Intermediate</div>
+      <div class="lv-count" id="cnt-B1"></div>
     </div>
     <div class="level-card" onclick="startLevel('B2')">
       <span class="lv-badge">B2</span>
@@ -391,6 +380,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <div id="rw-content"></div>
 </div>
 
+<!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
+<script src="word_data/game_data.js"></script>
+<script src="word_data/sources/goethe-institut/a1_words.js"></script>
+<script src="word_data/sources/goethe-institut/a2_words.js"></script>
+<script src="word_data/sources/goethe-institut/b1_words.js"></script>
+<script src="word_data/sources/goethe-institut/b2_words.js"></script>
+<script src="word_data/loader.js"></script>
+
 <script>
 // ══════════════════════════════════════════════════════════════════
 //  UI STRINGS  (EN + TR)
@@ -404,7 +401,7 @@ const UI = {
     rwBannerTitle: 'Random Word Explorer',
     rwBannerSub: 'See any word with all its forms, cases & examples',
     selectLevel: 'Select Level',
-    levelNames: { A1:'Starter', 'A2.1':'Elementary I', 'A2.2':'Elementary II', 'B1.1':'Intermediate I', 'B1.2':'Intermediate II', B2:'Upper-Intermediate' },
+    levelNames: { A1:'Starter', A2:'Elementary', B1:'Intermediate', B2:'Upper-Intermediate' },
     cardCount: (n) => n + ' word practice cards',
     back: '← Back',
     next: 'Next →',
@@ -433,7 +430,7 @@ const UI = {
     rwBannerTitle: 'Rastgele Kelime Keşfi',
     rwBannerSub: 'Her kelimenin tüm hâllerini, çekimlerini ve örneklerini gör',
     selectLevel: 'Seviye Seç',
-    levelNames: { A1:'Başlangıç', 'A2.1':'Temel I', 'A2.2':'Temel II', 'B1.1':'Orta I', 'B1.2':'Orta II', B2:'Üst-Orta' },
+    levelNames: { A1:'Başlangıç', A2:'Temel', B1:'Orta', B2:'Üst-Orta' },
     cardCount: (n) => n + ' kelime pratiği kartı',
     back: '← Geri',
     next: 'Sonraki →',
@@ -462,7 +459,7 @@ const UI = {
     rwBannerTitle: 'کاوشگر واژه تصادفی',
     rwBannerSub: 'هر واژه را با تمام حالت‌ها، صرف‌ها و مثال‌هایش ببین',
     selectLevel: 'انتخاب سطح',
-    levelNames: { A1:'مبتدی', 'A2.1':'پایه I', 'A2.2':'پایه II', 'B1.1':'متوسط I', 'B1.2':'متوسط II', B2:'بالاتر از متوسط' },
+    levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
     cardCount: (n) => n + ' کارت تمرین واژگان',
     back: '← بازگشت',
     next: 'بعدی →',
@@ -585,10 +582,8 @@ function applyTranslations() {
   // Level names
   const ln = u.levelNames;
   document.getElementById('ln-A1').textContent = ln.A1;
-  document.getElementById('ln-A21').textContent = ln['A2.1'];
-  document.getElementById('ln-A22').textContent = ln['A2.2'];
-  document.getElementById('ln-B11').textContent = ln['B1.1'];
-  document.getElementById('ln-B12').textContent = ln['B1.2'];
+  document.getElementById('ln-A2').textContent = ln.A2;
+  document.getElementById('ln-B1').textContent = ln.B1;
   document.getElementById('ln-B2').textContent = ln.B2;
   // Results page
   document.getElementById('r-lbl-score').textContent = u.scoreLbl;
@@ -606,7 +601,7 @@ function applyTranslations() {
 
 // ── Card counts ──
 function updateCounts() {
-  ['A1','A2.1','A2.2','B1.1','B1.2','B2'].forEach(lv => {
+  ['A1','A2','B1','B2'].forEach(lv => {
     const el = document.getElementById('cnt-'+lv);
     if (!el) return;
     const vc = (VOCAB_CARDS[lv]||[]).length;
@@ -629,7 +624,7 @@ function resolveCard(card) {
   } else {
     // structural/grammar card — choices stay as given (German forms)
     answer = typeof card.answer === 'object' ? card.answer[LANG] : card.answer;
-    choices = [...card.choices];
+    choices = card.choices ? [...card.choices] : [answer];
   }
   return { question, sub, answer, choices };
 }
@@ -1047,6 +1042,28 @@ function show(id){
 // ── Init ──
 applyTranslations();
 updateCounts();
+
+// ── Load dictionary in background (doesn't block UI) ──
+(function() {
+  var s = document.createElement('script');
+  s.src = 'word_data/sources/dictionary/dictionary.js';
+  s.async = true;
+  s.onload = function() {
+    // Re-run loader merge so dictionary words appear in search
+    if (window._GS && window._GS.length) {
+      var lastChunk = window._GS[window._GS.length - 1];
+      var seen = {};
+      WORD_BANK.forEach(function(w) {
+        seen[(w.word||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase()] = true;
+      });
+      (lastChunk.WORD_BANK || []).forEach(function(w) {
+        var key = (w.word||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
+        if (!seen[key]) { seen[key]=true; WORD_BANK.push(w); }
+      });
+    }
+  };
+  document.body.appendChild(s);
+})();
 </script>
 
 <!-- ══ SEARCH OVERLAY ══ -->
