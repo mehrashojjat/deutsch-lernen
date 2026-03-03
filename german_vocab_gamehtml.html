@@ -498,12 +498,12 @@ var FORM_INDEX = {};
   WORD_BANK.forEach(function(w){
     FORM_INDEX[w.word.toLowerCase()] = w.word;
     if(w.type==='Noun'){
-      Object.values(w.cases).forEach(function(v){ FORM_INDEX[v.toLowerCase()]=w.word; });
+      if(w.cases) Object.values(w.cases).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
       if(w.plural) FORM_INDEX[w.plural.toLowerCase()]=w.word;
     }
     if(w.type==='Verb'){
-      Object.values(w.conjugation).forEach(function(v){ FORM_INDEX[v.toLowerCase()]=w.word; });
-      if(w['präteritum']) Object.values(w['präteritum']).forEach(function(v){ FORM_INDEX[v.toLowerCase()]=w.word; });
+      if(w.conjugation) Object.values(w.conjugation).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
+      if(w['präteritum']) Object.values(w['präteritum']).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
       if(w.perfekt){ FORM_INDEX[w.perfekt.toLowerCase()]=w.word; w.perfekt.toLowerCase().split(' ').forEach(function(p){ if(!FORM_INDEX[p]) FORM_INDEX[p]=w.word; }); }
     }
     if(w.type==='Adjective'){
@@ -601,38 +601,53 @@ function applyTranslations() {
 
 // ── Card counts ──
 function updateCounts() {
-  ['A1','A2','B1','B2'].forEach(lv => {
-    const el = document.getElementById('cnt-'+lv);
+  ['A1','A2','B1','B2'].forEach(function(lv) {
+    var el = document.getElementById('cnt-'+lv);
     if (!el) return;
-    const vc = (VOCAB_CARDS[lv]||[]).length;
-    el.textContent = t('cardCount')(vc);
+    var count = WORD_BANK.filter(function(w) { return w.level === lv && w.meaning_en && w.meaning_en.trim(); }).length;
+    el.textContent = t('cardCount')(count);
   });
 }
 
-// ── Resolve card answer & choices for current language ──
-function resolveCard(card) {
-  // question and sub
-  const question = tv(card.question);
-  const sub = tv(card.sub);
-  // answer
-  let answer, choices;
-  if (card.choices_en && card.choices_tr) {
-    // meaning card — choices are localized
-    const choicesArr = LANG === 'fa' ? (card.choices_fa || card.choices_en) : (LANG === 'tr' ? card.choices_tr : card.choices_en);
-    answer = tv(card.answer);
-    choices = [...choicesArr];
-  } else {
-    // structural/grammar card — choices stay as given (German forms)
-    answer = typeof card.answer === 'object' ? card.answer[LANG] : card.answer;
-    choices = card.choices ? [...card.choices] : [answer];
-  }
-  return { question, sub, answer, choices };
+// ── Get meaning in active language ──
+function getLangMeaning(w) {
+  if (LANG === 'fa') return (w.meaning_fa && w.meaning_fa.trim()) || (w.meaning_en && w.meaning_en.trim()) || '';
+  if (LANG === 'tr') return (w.meaning_tr && w.meaning_tr.trim()) || (w.meaning_en && w.meaning_en.trim()) || '';
+  return (w.meaning_en && w.meaning_en.trim()) || '';
 }
 
-// ── Build quiz queue ──
+// ── Build quiz queue dynamically from WORD_BANK ──
 function buildQueue(level) {
-  const vc = shuffle([...(VOCAB_CARDS[level]||[])]);
-  return vc.slice(0,QUIZ_LEN);
+  // Pool: words at this level that have a usable meaning
+  var pool = WORD_BANK.filter(function(w) {
+    return w.level === level && w.meaning_en && w.meaning_en.trim();
+  });
+  if (pool.length === 0) return [];
+
+  var selected = shuffle(pool).slice(0, QUIZ_LEN);
+
+  return selected.map(function(w) {
+    // Pre-select distractor candidates (other words, distinct meaning)
+    var usedEn = {}; usedEn[w.meaning_en.trim()] = true;
+    var distractors = [];
+    // prefer same-level distractors
+    shuffle(pool).forEach(function(d) {
+      if (distractors.length >= 6) return;
+      if (d.word === w.word) return;
+      var m = d.meaning_en.trim();
+      if (m && !usedEn[m]) { usedEn[m] = true; distractors.push(d); }
+    });
+    // top up from full bank if needed
+    if (distractors.length < 3) {
+      shuffle(WORD_BANK).forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (d.word === w.word || !d.meaning_en) return;
+        var m = d.meaning_en.trim();
+        if (m && !usedEn[m]) { usedEn[m] = true; distractors.push(d); }
+      });
+    }
+    return { _word: w, _distractors: distractors };
+  });
 }
 
 function startLevel(lv) {
@@ -646,41 +661,56 @@ function startLevel(lv) {
 
 function renderCard() {
   answered = false;
-  const card = queue[idx];
-  const total = queue.length;
-  const {question,sub,answer,choices} = resolveCard(card);
+  var card = queue[idx];
+  var total = queue.length;
+  var w = card._word;
 
   document.getElementById('prog').style.width=(idx/total*100)+'%';
   document.getElementById('sc-ok').textContent=ok;
   document.getElementById('sc-no').textContent=no;
   document.getElementById('hud-pos').textContent=(idx+1)+'/'+total;
 
-  const badge = document.getElementById('tbadge');
-  badge.textContent = card.badgeLabel;
-  badge.className = 'tbadge '+card.badgeType;
+  var badge = document.getElementById('tbadge');
+  badge.textContent = w.type;
+  badge.className = 'tbadge '+(w.type==='Noun'?'noun':w.type==='Verb'?'verb':w.type==='Adjective'?'adj':'grammar');
   document.getElementById('tlevel').textContent = 'Level '+currentLevel;
 
-  const mb = document.getElementById('tmode-badge');
+  var mb = document.getElementById('tmode-badge');
   mb.textContent = t('vocabBadge');
   mb.className = 'tmode-badge vocab';
 
-  document.getElementById('cquestion').innerHTML = (question||'').replace(/\n/g,'<br>');
-  document.getElementById('cmain').textContent = card.main;
-  document.getElementById('csub').textContent = sub||'';
+  var qText = LANG==='fa' ? 'این کلمه چه معنایی دارد؟'
+            : LANG==='tr' ? 'Bu kelimenin anlamı nedir?'
+            : 'What does this word mean?';
+  document.getElementById('cquestion').textContent = qText;
+  document.getElementById('cmain').textContent = w.word;
+  document.getElementById('csub').textContent = '';
 
-  const opts = shuffle([...new Set(choices)]);
-  const choicesEl = document.getElementById('choices');
+  // Build choices in the active language
+  var correctMeaning = getLangMeaning(w);
+  var usedChoices = {}; usedChoices[correctMeaning] = true;
+  var distractorChoices = [];
+  card._distractors.forEach(function(d) {
+    if (distractorChoices.length >= 3) return;
+    var m = getLangMeaning(d);
+    if (m && !usedChoices[m]) { usedChoices[m]=true; distractorChoices.push(m); }
+  });
+
+  var choices = shuffle([correctMeaning].concat(distractorChoices));
+  var answer = correctMeaning;
+
+  var choicesEl = document.getElementById('choices');
   choicesEl.innerHTML='';
-  opts.forEach(opt => {
-    const btn = document.createElement('button');
+  choices.forEach(function(opt) {
+    var btn = document.createElement('button');
     btn.className='cbtn';
     btn.textContent=opt;
-    btn.onclick=()=>pick(btn,opt,answer);
+    btn.onclick=(function(b,o,a){return function(){pick(b,o,a);};})(btn,opt,answer);
     choicesEl.appendChild(btn);
   });
 
-  const fb = document.getElementById('feedback');
-  fb.className='feedback';fb.textContent='';
+  var fb = document.getElementById('feedback');
+  fb.className='feedback'; fb.textContent='';
   document.getElementById('next-btn').textContent = t('next');
   document.getElementById('next-btn').classList.remove('show');
 }
@@ -823,14 +853,16 @@ function renderRandomWord(){
     + '<div class="rw-meaning-single">' + meaning + '</div>'
     + '<div class="rw-divider"></div>';
 
-  if (w.type === 'Noun' && w.cases) {
+  var hasGrammar = false;
+  if (w.type === 'Noun' && w.cases && Object.keys(w.cases).length > 0) {
+    hasGrammar = true;
     html += '<div class="rw-section">'
       + '<div class="rw-section-title-row"><span>' + u.cases + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div>'
       + '<div class="rw-forms">';
     var cc = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
     Object.entries(w.cases).forEach(function(kv){
-      html += chip(kv[0], kv[1], cc[kv[0]]||'', kv[0]);
+      if (kv[1]) html += chip(kv[0], kv[1], cc[kv[0]]||'', kv[0]);
     });
     html += '</div></div>';
     if (w.plural) {
@@ -839,7 +871,8 @@ function renderRandomWord(){
     }
   }
 
-  if (w.type === 'Verb') {
+  if (w.type === 'Verb' && w.conjugation && Object.keys(w.conjugation).length > 0) {
+    hasGrammar = true;
     html += '<div class="rw-section">'
       + '<div class="rw-section-title-row"><span>' + u.presentTense + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div>'
@@ -851,12 +884,11 @@ function renderRandomWord(){
     html += '</div></div>';
 
     var pt = w['präteritum'];
-    if (pt) {
+    if (pt && Object.keys(pt).length > 0) {
       html += '<div class="rw-section">'
         + '<div class="rw-section-title-row"><span>' + u.pastSimple + '</span>'
         + '<span class="rw-click-hint">' + hint + '</span></div>'
         + '<div class="rw-forms">';
-      // Key = conjugated past form (war, hatte, ging…) — matches FORM_EX keys
       Object.entries(pt).forEach(function(kv){
         html += chip(kv[0], kv[1], '', kv[1]);
       });
@@ -869,7 +901,8 @@ function renderRandomWord(){
     }
   }
 
-  if (w.type === 'Adjective') {
+  if (w.type === 'Adjective' && w.comparative) {
+    hasGrammar = true;
     html += '<div class="rw-section">'
       + '<div class="rw-section-title-row"><span>' + u.comparatives + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div>'
@@ -883,10 +916,18 @@ function renderRandomWord(){
     }
   }
 
-  html += '<div class="rw-divider" style="margin-top:6px"></div>'
-    + '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-    + '<div class="rw-example-box" id="rw-ex-box">' + tapMsg + '</div></div>'
-    + '<div class="rw-source">' + u.source + ' · ' + w.level + '</div></div>';
+  html += '<div class="rw-divider" style="margin-top:6px"></div>';
+
+  // Show example directly for thin words (no grammar chips to tap)
+  if (!hasGrammar && w.example) {
+    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
+      + '<div class="rw-example-box lit">' + w.example + '</div></div>';
+  } else {
+    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
+      + '<div class="rw-example-box" id="rw-ex-box">' + (hasGrammar ? tapMsg : (w.example || (LANG==='tr'?'Örnek mevcut değil.':LANG==='fa'?'نمونه‌ای موجود نیست.':'No example available.'))) + '</div></div>';
+  }
+
+  html += '<div class="rw-source">' + (w.source ? w.source : u.source) + ' · ' + w.level + '</div></div>';
 
   document.getElementById('rw-content').innerHTML = html;
 
@@ -979,23 +1020,26 @@ function openWordCard(wordKey) {
     + '<div class="rw-meaning-single">' + meaning + '</div>'
     + '<div class="rw-divider"></div>';
 
-  if (w.type === 'Noun' && w.cases) {
+  var hasGrammarM = false;
+  if (w.type === 'Noun' && w.cases && Object.keys(w.cases).length > 0) {
+    hasGrammarM = true;
     html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.cases + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
     var cc = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
-    Object.entries(w.cases).forEach(function(kv){ html += chip(kv[0],kv[1],cc[kv[0]]||'',kv[0]); });
+    Object.entries(w.cases).forEach(function(kv){ if(kv[1]) html += chip(kv[0],kv[1],cc[kv[0]]||'',kv[0]); });
     html += '</div></div>';
     if (w.plural) html += '<div class="rw-section"><div class="rw-section-title">' + u.plural + '</div>'
       + '<div class="rw-forms">' + chip(u.plural,w.plural,'','Plural') + '</div></div>';
   }
-  if (w.type === 'Verb' && w.conjugation) {
+  if (w.type === 'Verb' && w.conjugation && Object.keys(w.conjugation).length > 0) {
+    hasGrammarM = true;
     html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.presentTense + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
     var pc = {ich:'gold',du:'blue','er/sie/es':'green'};
     Object.entries(w.conjugation).forEach(function(kv){ html += chip(kv[0],kv[1],pc[kv[0]]||'',kv[0]); });
     html += '</div></div>';
     var pt = w['präteritum'];
-    if (pt) {
+    if (pt && Object.keys(pt).length > 0) {
       html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.pastSimple + '</span>'
         + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
       Object.entries(pt).forEach(function(kv){ html += chip(kv[0],kv[1],'',kv[1]); });
@@ -1005,6 +1049,7 @@ function openWordCard(wordKey) {
       + '<div class="rw-forms">' + chip(u.perfekt,w.perfekt,'blue','perfekt') + '</div></div>';
   }
   if (w.type === 'Adjective' && w.comparative) {
+    hasGrammarM = true;
     html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.comparatives + '</span>'
       + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">'
       + chip('Komparativ',w.comparative,'gold','Komparativ')
@@ -1014,10 +1059,15 @@ function openWordCard(wordKey) {
       + '<div class="rw-example">' + w.endingNote + '</div></div>';
   }
 
-  html += '<div class="rw-divider" style="margin-top:6px"></div>'
-    + '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-    + '<div class="rw-example-box" id="wm-ex-box">' + tapMsg + '</div></div>'
-    + '<div class="rw-source">' + u.source + ' · ' + w.level + '</div></div>';
+  html += '<div class="rw-divider" style="margin-top:6px"></div>';
+  if (!hasGrammarM && w.example) {
+    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
+      + '<div class="rw-example-box lit">' + w.example + '</div></div>';
+  } else {
+    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
+      + '<div class="rw-example-box" id="wm-ex-box">' + (hasGrammarM ? tapMsg : (w.example || (LANG==='tr'?'Örnek mevcut değil.':LANG==='fa'?'نمونه‌ای موجود نیست.':'No example available.'))) + '</div></div>';
+  }
+  html += '<div class="rw-source">' + (w.source ? w.source : u.source) + ' · ' + w.level + '</div></div>';
 
   document.getElementById('word-modal-content').innerHTML = html;
   document.getElementById('word-modal-overlay').classList.add('open');
@@ -1058,7 +1108,19 @@ updateCounts();
       });
       (lastChunk.WORD_BANK || []).forEach(function(w) {
         var key = (w.word||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
-        if (!seen[key]) { seen[key]=true; WORD_BANK.push(w); }
+        if (!seen[key]) {
+          seen[key] = true;
+          WORD_BANK.push(w);
+          // Also index the new word for search
+          FORM_INDEX[w.word.toLowerCase()] = w.word;
+          if (w.type === 'Verb' && w.conjugation) {
+            Object.values(w.conjugation).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()] = w.word; });
+          }
+          if (w.type === 'Noun') {
+            if (w.cases) Object.values(w.cases).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()] = w.word; });
+            if (w.plural) FORM_INDEX[w.plural.toLowerCase()] = w.word;
+          }
+        }
       });
     }
   };
