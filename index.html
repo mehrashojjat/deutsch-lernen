@@ -989,7 +989,57 @@ async function _wiktFetch(lw) {
   if (!resp.ok) throw new Error('HTTP ' + resp.status);
   var json = await resp.json();
   if (json.error) throw new Error(json.error.info || 'API error');
-  return parseWiktPage(json.parse.text['*'], lw);
+  var data = parseWiktPage(json.parse.text['*'], lw);
+  // If the HTML parse found nothing, fall back to the REST definition API
+  if (!data.found) {
+    try {
+      var restData = await _wiktRestFetch(lw);
+      if (restData.found) return restData;
+    } catch(e) {}
+  }
+  return data;
+}
+
+// Wiktionary REST API fallback — returns structured definitions when the
+// parse API's HTML doesn't contain a recognisable German section.
+async function _wiktRestFetch(lw) {
+  var url = 'https://en.wiktionary.org/api/rest_v1/page/definition/'
+    + encodeURIComponent(lw) + '?redirect=true';
+  var resp = await fetch(url);
+  if (!resp.ok) return { found: false, word: lw, ipa: '', sections: [] };
+  var json = await resp.json();
+  var result = { found: false, word: lw, ipa: '', sections: [] };
+  // The response is keyed by language code; German is 'de'
+  var entries = json['de'] || [];
+  // Also scan all keys for entries explicitly labelled German
+  if (!entries.length) {
+    Object.values(json).forEach(function(arr) {
+      (arr || []).forEach(function(e) {
+        if ((e.language || '').toLowerCase() === 'german') entries.push(e);
+      });
+    });
+  }
+  entries.forEach(function(entry) {
+    var pos = (entry.partOfSpeech || 'word').toLowerCase();
+    var sec = { pos: pos, headLine: '', defs: [], table: null, tableType: '' };
+    (entry.definitions || []).slice(0, 6).forEach(function(def) {
+      // Strip HTML tags from definition text
+      var text = (def.definition || '').replace(/<[^>]*>/g, '').replace(/\s+/g,' ').trim();
+      if (!text) return;
+      var d = { text: text, examples: [] };
+      // parsedExamples or examples array
+      var exArr = def.parsedExamples || def.examples || [];
+      exArr.slice(0, 2).forEach(function(ex) {
+        var exTxt = typeof ex === 'string' ? ex : (ex.example || ex.text || '');
+        exTxt = exTxt.replace(/<[^>]*>/g, '').replace(/\s+/g,' ').trim();
+        if (exTxt) d.examples.push(exTxt);
+      });
+      sec.defs.push(d);
+    });
+    if (sec.defs.length) result.sections.push(sec);
+  });
+  result.found = result.sections.length > 0;
+  return result;
 }
 
 function parseWiktPage(htmlStr, word) {
@@ -999,6 +1049,21 @@ function parseWiktPage(htmlStr, word) {
 
   var pout = doc.querySelector('.mw-parser-output');
   if (!pout) return result;
+
+  // ── Normalize new Wiktionary heading format (changed ~2023) ──
+  // Wiktionary now wraps h2/h3/h4 in <div class="mw-heading mw-headingN">.
+  // Replace each such div with its bare heading element so the rest of the
+  // parser can treat them the same as the old flat format.
+  Array.from(pout.querySelectorAll('div.mw-heading')).forEach(function(div) {
+    var h = div.querySelector('h2,h3,h4,h5,h6');
+    if (h && div.parentNode) {
+      var newH = doc.createElement(h.tagName);
+      // Copy just the text, stripping any edit-section spans
+      newH.textContent = h.textContent.replace(/\[edit\]/gi,'').trim();
+      div.parentNode.insertBefore(newH, div);
+      div.parentNode.removeChild(div);
+    }
+  });
 
   var kids = Array.from(pout.children);
 
@@ -1068,11 +1133,11 @@ function parseWiktPage(htmlStr, word) {
           if (def.text) sec.defs.push(def);
         });
       }
-      // Inflection table (direct or inside NavFrame/div)
+      // Inflection table (direct or inside NavFrame/div/details)
       if (!sec.table) {
         var tbl = null;
-        if (tag === 'TABLE' && (el.classList.contains('wikitable') || el.classList.contains('inflection-table'))) tbl = el;
-        else if (tag === 'DIV') tbl = el.querySelector('table.wikitable, table.inflection-table, table[class*="inflection"]');
+        if (tag === 'TABLE') tbl = el;
+        else if (tag === 'DIV' || tag === 'DETAILS') tbl = el.querySelector('table');
         if (tbl) sec.table = extractWiktTable(tbl);
       }
     });
