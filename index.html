@@ -737,10 +737,11 @@ async function startLevel(lv) {
   idx=0;ok=0;no=0;
 
   if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru') {
-    // Collect words missing native-language translations that aren't cached yet
+    // Collect words missing native-language translations that aren't cached yet.
+    // Only the first 3 distractors per card are used in renderCard, so skip the rest.
     var toFetch = [];
     queue.forEach(function(card) {
-      [card._word].concat(card._distractors).forEach(function(w) {
+      [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
         var k = normKey(w.word);
         var isMissing = LANG === 'tr'
           ? (!(w.meaning_tr && w.meaning_tr.trim()) && _trMemCache[k] === undefined)
@@ -751,13 +752,12 @@ async function startLevel(lv) {
       });
     });
     if (toFetch.length) {
-      // Show a neutral loading overlay — user stays on levels screen while we fetch
       var _ov = document.getElementById('quiz-prep-overlay');
       _ov.classList.add('active');
-      for (var _fi = 0; _fi < toFetch.length; _fi++) {
-        await (LANG === 'tr' ? fetchTurkish(toFetch[_fi]) : LANG === 'fa' ? fetchPersian(toFetch[_fi]) : fetchRussian(toFetch[_fi]));
-        if (_fi > 0 && _fi % 5 === 0) await new Promise(function(r){ setTimeout(r, 150); });
-      }
+      var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : 'ru';
+      var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : _ruMemCache;
+      var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : _ruCacheSave;
+      await _batchFetchTranslations(toFetch, _lc, _c, _sf);
       _ov.classList.remove('active');
     }
   }
@@ -1409,6 +1409,60 @@ function _autoFetchRussian(word, container) {
       el.classList.remove('ru-meaning-pending');
     }
   });
+}
+
+// ── Batch translation fetch: sends multiple words in one request (newline-joined)
+// Falls back to parallel individual requests if the response doesn't align.
+async function _batchFetchTranslations(words, langCode, cache, saveFn) {
+  if (!words.length) return;
+  // Pack words into batches that each fit within the 500-char MyMemory limit
+  var batches = [], cur = [], curLen = 0;
+  words.forEach(function(w) {
+    var wl = w.length + 1; // word + \n separator
+    if (curLen + wl > 490 && cur.length) { batches.push(cur); cur = []; curLen = 0; }
+    cur.push(w); curLen += wl;
+  });
+  if (cur.length) batches.push(cur);
+
+  await Promise.all(batches.map(async function(batch) {
+    try {
+      var url = 'https://api.mymemory.translated.net/get?q='
+        + encodeURIComponent(batch.join('\n')) + '&langpair=de|' + langCode;
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('http');
+      var json = await resp.json();
+      if (json.responseStatus !== 200 || !json.responseData) throw new Error('api');
+      var parts = (json.responseData.translatedText || '').split('\n');
+      if (parts.length !== batch.length) throw new Error('mismatch');
+      batch.forEach(function(w, i) {
+        var key = normKey(w);
+        var t = (parts[i] || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          cache[key] = t;
+        } else if (cache[key] === undefined) {
+          cache[key] = '';
+        }
+      });
+      saveFn();
+    } catch(e) {
+      // Alignment mismatch or network error — fall back to individual parallel fetches
+      await Promise.all(batch.map(async function(w) {
+        var key = normKey(w);
+        if (cache[key] !== undefined) return;
+        try {
+          var r = await fetch('https://api.mymemory.translated.net/get?q='
+            + encodeURIComponent(w) + '&langpair=de|' + langCode);
+          if (!r.ok) return;
+          var j = await r.json();
+          if (j.responseStatus === 200 && j.responseData) {
+            var t = (j.responseData.translatedText || '').trim();
+            cache[key] = (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) ? t : '';
+          }
+        } catch(e2) {}
+      }));
+      saveFn();
+    }
+  }));
 }
 
 function parseWiktPage(htmlStr, word) {
