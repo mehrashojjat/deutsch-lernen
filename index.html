@@ -106,6 +106,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
   cursor:pointer;margin-top:14px;}
 .about-modal-close:hover{background:var(--surf2);}
+.home-footer{text-align:center;padding:20px 20px 36px;margin-top:6px;}
+.home-footer p{margin:0;line-height:1.6;}
+#footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
+#footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
 .opt-btn{flex:1;padding:11px 8px;border-radius:10px;border:1.5px solid var(--border);
   background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
   color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;}
@@ -346,7 +350,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     </div>
   </div>
 
-  <button class="about-btn" onclick="openAbout()">ℹ️ About</button>
+  <button class="about-btn" id="st-about-btn" onclick="openAbout()">ℹ️ About</button>
 
   <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Done</button>
 </div>
@@ -354,11 +358,11 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ ABOUT MODAL ══ -->
 <div class="about-modal-overlay" id="about-modal-overlay" onclick="closeAbout(event)">
   <div class="about-modal">
-    <h3>About</h3>
-    <p>I built this free mini-game for myself — a simple way to practice German vocabulary without any paywalls. I wanted it available as a free resource for anyone learning German.</p>
-    <p>Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
-    <p>Word lists are sourced from <strong>Goethe-Institut</strong> resources for each CEFR level. Translations use the free <strong>MyMemory API</strong>. The project is open-source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a>. Built with <strong>Claude AI</strong>.</p>
-    <button class="about-modal-close" onclick="closeAbout()">Close</button>
+    <h3 id="about-title">About</h3>
+    <p id="about-p1">I built this free mini-game for myself — a simple way to practice German without any paywalls. I wanted it available as a free resource for anyone learning German.</p>
+    <p id="about-p2">Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
+    <p id="about-p3">Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.</p>
+    <button class="about-modal-close" id="about-close-btn" onclick="closeAbout()">Close</button>
   </div>
 </div>
 
@@ -398,6 +402,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="lv-name" id="ln-B2">Upper-Intermediate</div>
       <div class="lv-count" id="cnt-B2"></div>
     </div>
+  </div>
+  <div class="home-footer">
+    <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
+    <p id="footer-copy">© 2026 Mehras Hojjat</p>
   </div>
 </div>
 
@@ -495,6 +503,20 @@ const UI = {
     meaning: 'Meaning',
     tapPrompt: '👆 Tap any form above to see an example sentence.',
     noExample: 'No example available.',
+    quizQuestion: 'What does this word mean?',
+    levelLabel: 'Level',
+    wiktSource: 'Source',
+    autoTranslated: 'Auto-translated',
+    offlineNote: 'ⓘ Offline data · Wiktionary unreachable',
+    aboutBtn: 'ℹ️ About',
+    aboutTitle: 'About',
+    aboutClose: 'Close',
+    aboutP1: 'I built this free mini-game for myself — a simple way to practice German without any paywalls. I wanted it available as a free resource for anyone learning German.',
+    aboutP2html: 'Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.',
+    aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
+    footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
   },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
@@ -524,6 +546,20 @@ const UI = {
     meaning: 'Anlam',
     tapPrompt: '👆 Örnek cümle görmek için yukarıdaki bir biçime dokun.',
     noExample: 'Örnek bulunamadı.',
+    quizQuestion: 'Bu kelimenin anlamı nedir?',
+    levelLabel: 'Seviye',
+    wiktSource: 'Kaynak',
+    autoTranslated: 'Otomatik çevrildi',
+    offlineNote: 'ⓘ Çevrimdışı veri · Wiktionary erişilemiyor',
+    aboutBtn: 'ℹ️ Hakkında',
+    aboutTitle: 'Hakkında',
+    aboutClose: 'Kapat',
+    aboutP1: 'Bu ücretsiz mini oyunu kendim için yaptım — Almanca kelime pratiği yapmanın basit bir yolu, ücret ödemeden. Almanca öğrenen herkes için ücretsiz bir kaynak olarak sunmak istedim.',
+    aboutP2html: 'Yapımcı: <strong>Mehras Hojjat</strong>. Özellik istekleri veya geri bildirim için <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> ya da <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>\'dan ulaşabilirsiniz.',
+    aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
+    footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -553,6 +589,20 @@ const UI = {
     meaning: 'معنی',
     tapPrompt: '👆 برای مشاهده جمله نمونه روی یک شکل بالا ضربه بزنید.',
     noExample: 'نمونه‌ای موجود نیست.',
+    quizQuestion: 'این کلمه چه معنایی دارد؟',
+    levelLabel: 'سطح',
+    wiktSource: 'منبع',
+    autoTranslated: 'ترجمه خودکار',
+    offlineNote: 'ⓘ داده آفلاین · Wiktionary در دسترس نیست',
+    aboutBtn: 'ℹ️ درباره',
+    aboutTitle: 'درباره',
+    aboutClose: 'بستن',
+    aboutP1: 'این بازی رایگان کوچک را برای خودم ساختم — روشی ساده برای تمرین واژگان آلمانی بدون هیچ هزینه‌ای. می‌خواستم برای هر کسی که آلمانی می‌آموزد در دسترس باشد.',
+    aboutP2html: 'ساخته <strong>Mehras Hojjat</strong>. برای درخواست ویژگی یا بازخورد از طریق <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> یا <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> در تماس باشید.',
+    aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
+    footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
+    footerCopy: '© ۲۰۲۶ Mehras Hojjat',
+    typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
   },
   ru: {
     headerSub: 'Практика слов · Падежи · Спряжение',
@@ -582,6 +632,20 @@ const UI = {
     meaning: 'Значение',
     tapPrompt: '👆 Нажмите на форму выше, чтобы увидеть пример предложения.',
     noExample: 'Пример отсутствует.',
+    quizQuestion: 'Что означает это слово?',
+    levelLabel: 'Уровень',
+    wiktSource: 'Источник',
+    autoTranslated: 'Авто-перевод',
+    offlineNote: 'ⓘ Офлайн данные · Wiktionary недоступен',
+    aboutBtn: 'ℹ️ О приложении',
+    aboutTitle: 'О приложении',
+    aboutClose: 'Закрыть',
+    aboutP1: 'Я создал эту бесплатную мини-игру для себя — простой способ практиковать немецкую лексику без платных подписок. Хотел сделать её доступной бесплатно для всех, кто учит немецкий.',
+    aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запросов функций или обратной связи пишите в <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> или <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
+    aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
+    footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
   },
   uk: {
     headerSub: 'Практика слів · Відмінки · Відмінювання',
@@ -611,6 +675,20 @@ const UI = {
     meaning: 'Значення',
     tapPrompt: '👆 Натисніть на форму вище, щоб побачити приклад речення.',
     noExample: 'Приклад відсутній.',
+    quizQuestion: 'Що означає це слово?',
+    levelLabel: 'Рівень',
+    wiktSource: 'Джерело',
+    autoTranslated: 'Авто-переклад',
+    offlineNote: 'ⓘ Офлайн дані · Wiktionary недоступний',
+    aboutBtn: 'ℹ️ Про додаток',
+    aboutTitle: 'Про додаток',
+    aboutClose: 'Закрити',
+    aboutP1: 'Я створив цю безкоштовну міні-гру для себе — простий спосіб практикувати німецьку лексику без будь-яких платежів. Хотів зробити її доступною безкоштовно для всіх, хто вивчає німецьку.',
+    aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запитів щодо функцій або відгуків пишіть у <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> або <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
+    aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
+    footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
   },
   ar: {
     headerSub: 'تدريب المفردات · الحالات · تصريف الأفعال',
@@ -640,6 +718,20 @@ const UI = {
     meaning: 'المعنى',
     tapPrompt: '👆 اضغط على أي شكل أعلاه لرؤية جملة مثال.',
     noExample: 'لا يوجد مثال.',
+    quizQuestion: 'ما معنى هذه الكلمة؟',
+    levelLabel: 'المستوى',
+    wiktSource: 'المصدر',
+    autoTranslated: 'ترجمة تلقائية',
+    offlineNote: 'ⓘ بيانات غير متصلة · Wiktionary غير متاح',
+    aboutBtn: 'ℹ️ حول التطبيق',
+    aboutTitle: 'حول التطبيق',
+    aboutClose: 'إغلاق',
+    aboutP1: 'صنعت هذه اللعبة المجانية الصغيرة لنفسي — طريقة بسيطة لتدريب المفردات الألمانية دون أي رسوم. أردت أن تكون متاحة كمورد مجاني لأي شخص يتعلم الألمانية.',
+    aboutP2html: 'صنعه <strong>Mehras Hojjat</strong>. للتواصل بشأن طلبات الميزات أو الملاحظات عبر <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> أو <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
+    aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
+    footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
   }
 };
 
@@ -761,6 +853,15 @@ function applyTranslations() {
   document.getElementById('quiz-back-btn').textContent = u.back;
   document.getElementById('rw-back-btn').textContent = u.back;
   document.getElementById('rw-screen-title').textContent = u.rwTitle;
+  // About & footer
+  document.getElementById('st-about-btn').textContent = u.aboutBtn;
+  document.getElementById('about-title').textContent = u.aboutTitle;
+  document.getElementById('about-p1').textContent = u.aboutP1;
+  document.getElementById('about-p2').innerHTML = u.aboutP2html;
+  document.getElementById('about-p3').innerHTML = u.aboutP3html;
+  document.getElementById('about-close-btn').textContent = u.aboutClose;
+  document.getElementById('footer-msg').textContent = u.footerMsg;
+  document.getElementById('footer-copy').textContent = u.footerCopy;
 }
 
 
@@ -885,19 +986,16 @@ function renderCard() {
   document.getElementById('hud-pos').textContent=(idx+1)+'/'+total;
 
   var badge = document.getElementById('tbadge');
-  badge.textContent = w.type;
+  var _tb = t('typeBadge');
+  badge.textContent = _tb[w.type] || w.type;
   badge.className = 'tbadge '+(w.type==='Noun'?'noun':w.type==='Verb'?'verb':w.type==='Adjective'?'adj':'grammar');
-  document.getElementById('tlevel').textContent = 'Level '+currentLevel;
+  document.getElementById('tlevel').textContent = t('levelLabel')+' '+currentLevel;
 
   var mb = document.getElementById('tmode-badge');
   mb.textContent = t('vocabBadge');
   mb.className = 'tmode-badge vocab';
 
-  var qText = LANG==='fa' ? 'این کلمه چه معنایی دارد؟'
-            : LANG==='tr' ? 'Bu kelimenin anlamı nedir?'
-            : LANG==='ru' ? 'Что означает это слово?'
-            : 'What does this word mean?';
-  document.getElementById('cquestion').textContent = qText;
+  document.getElementById('cquestion').textContent = t('quizQuestion');
   document.getElementById('cmain').textContent = w.word;
   document.getElementById('csub').textContent = '';
 
@@ -1978,7 +2076,7 @@ function renderWiktCard(data, meta, targetId) {
       var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
       html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
         + (meaningIsAuto
-          ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
+          ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ ' + escHtml(t('autoTranslated')) + '</span>'
           : '')
         + '</div>';
     }
@@ -1990,7 +2088,7 @@ function renderWiktCard(data, meta, targetId) {
     // Offline fallback
     if (wb) {
       html += renderOfflineWordBody(wb);
-      html += '<div class="wikt-offline-note">ⓘ Offline data · Wiktionary unreachable</div>';
+      html += '<div class="wikt-offline-note">' + escHtml(t('offlineNote')) + '</div>';
     } else if (!meaning) {
       // No word bank entry and no meaning — inject a pending placeholder so
       // async fetchers (_autoFetchTurkish / _autoFetchPersian) can fill it,
@@ -2103,7 +2201,7 @@ function renderWiktCard(data, meta, targetId) {
       + '<div class="rw-example-box lit">' + escHtml(_exTxt) + '</div></div>';
   }
 
-  html += '<div class="rw-source">Source: <a href="https://en.wiktionary.org/wiki/' + encodeURIComponent(wiktLookupWord(word,tc)) + '" target="_blank">Wiktionary</a></div>';
+  html += '<div class="rw-source">' + escHtml(t('wiktSource')) + ': <a href="https://en.wiktionary.org/wiki/' + encodeURIComponent(wiktLookupWord(word,tc)) + '" target="_blank">Wiktionary</a></div>';
   html += '</div>';
   return html;
 }
