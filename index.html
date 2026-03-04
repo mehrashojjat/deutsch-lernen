@@ -982,6 +982,46 @@ var STRONG_PAST = (function(){
     ['starb','sterben'],['starbst','sterben'],['starben','sterben'],
     ['roch','riechen'],['rochst','riechen'],['rochen','riechen'],
     ['log','lügen'],['logst','lügen'],['logen','lügen'],
+    // ── Present-tense stem-changing (e→i, a→ä, etc.) du / er forms ──
+    // These can't be detected by suffix rules because the stem vowel changes.
+    ['isst','essen'],['ißt','essen'],                         // essen
+    ['liest','lesen'],                                         // lesen
+    ['gibt','geben'],['gibst','geben'],                        // geben
+    ['nimmt','nehmen'],['nimmst','nehmen'],                    // nehmen
+    ['spricht','sprechen'],['sprichst','sprechen'],            // sprechen
+    ['trifft','treffen'],['triffst','treffen'],                // treffen
+    ['hilft','helfen'],['hilfst','helfen'],                   // helfen
+    ['wirft','werfen'],['wirfst','werfen'],                   // werfen
+    ['bricht','brechen'],['brichst','brechen'],               // brechen
+    ['sticht','stechen'],['stichst','stechen'],               // stechen
+    ['tritt','treten'],['trittst','treten'],                  // treten
+    ['vergisst','vergessen'],['vergisst','vergessen'],        // vergessen
+    ['empfiehlt','empfehlen'],['empfiehlst','empfehlen'],    // empfehlen
+    ['sieht','sehen'],['siehst','sehen'],                    // sehen (si- stem)
+    ['stirbt','sterben'],['stirbst','sterben'],              // sterben
+    // a → ä umlaut present
+    ['läuft','laufen'],['läufst','laufen'],                  // laufen
+    ['fährt','fahren'],['fährst','fahren'],                  // fahren
+    ['schläft','schlafen'],['schläfst','schlafen'],          // schlafen
+    ['hält','halten'],['hältst','halten'],                   // halten
+    ['fällt','fallen'],['fällst','fallen'],                  // fallen
+    ['trägt','tragen'],['trägst','tragen'],                  // tragen
+    ['wächst','wachsen'],['wächst','wachsen'],               // wachsen
+    ['schlägt','schlagen'],['schlägst','schlagen'],          // schlagen
+    ['lässt','lassen'],['lässt','lassen'],                   // lassen (present)
+    ['heißt','heißen'],                                       // heißen (present)
+    ['lädt','laden'],['lädst','laden'],                      // laden
+    // Irregular/modal present
+    ['ist','sein'],['bist','sein'],                          // sein
+    ['hat','haben'],['hast','haben'],                        // haben
+    ['wird','werden'],['wirst','werden'],                    // werden
+    ['kann','können'],['kannst','können'],                   // können
+    ['muss','müssen'],['musst','müssen'],                    // müssen
+    ['darf','dürfen'],['darfst','dürfen'],                   // dürfen
+    ['will','wollen'],['willst','wollen'],                   // wollen
+    ['soll','sollen'],['sollst','sollen'],                   // sollen
+    ['mag','mögen'],['magst','mögen'],                       // mögen
+    ['weiß','wissen'],['weißt','wissen'],                    // wissen
   ];
   pairs.forEach(function(p){ m[p[0]] = p[1]; });
   return m;
@@ -1260,15 +1300,14 @@ function renderWiktCard(data, meta, targetId) {
   // When data was fetched from the base lemma (inflected form lookup),
   // annotate the card title so the user understands the relationship.
   var baseLemma = data.fromLemma || null;
-  // Meaning: strict language respect — only show in the selected UI language.
-  // If unavailable in that language, try to pull the first English Wiktionary
-  // definition as a fallback (these are always in English).
-  var meaning = LANG==='fa' ? (meta.fa||'')
-              : LANG==='tr' ? (meta.tr||'')
-              : (meta.en||'');
-  // If no meaning found in the selected language, borrow the first Wiktionary
-  // definition as a last resort (it is always in English, acceptable for EN).
-  if (!meaning && LANG==='en' && data.found && data.sections.length) {
+  // Meaning: selected language first, then English as universal secondary
+  // (data is predominantly in English so EN fallback is safe for all languages).
+  // We never show Turkish to an English user or vice-versa without reason.
+  var meaning = LANG==='fa' ? (meta.fa || meta.en || '')
+              : LANG==='tr' ? (meta.tr || meta.en || '')
+              : (meta.en || '');
+  // Still no meaning? Pull the first Wiktionary definition (always English).
+  if (!meaning && data.found && data.sections.length) {
     for (var _si = 0; _si < data.sections.length; _si++) {
       if (data.sections[_si].defs && data.sections[_si].defs.length) {
         meaning = data.sections[_si].defs[0].text;
@@ -1341,20 +1380,203 @@ function renderWiktCard(data, meta, targetId) {
   return html;
 }
 
+// ── English → German grammatical term translator ─────────────────────────
+// Applied to every table cell so all grammatical labels appear in German.
+var _DE_FULL = {
+  'nominative':'Nominativ','accusative':'Akkusativ','dative':'Dativ','genitive':'Genitiv',
+  'singular':'Singular','plural':'Plural',
+  'masculine':'Mask.','feminine':'Fem.','neuter':'Neutr.','common':'Utrum',
+  'positive':'Positiv','comparative':'Komparativ','superlative':'Superlativ',
+  'present':'Präsens','preterite':'Präteritum','past':'Präteritum',
+  'perfect':'Perfekt','pluperfect':'Plusquamperfekt',
+  'future i':'Futur I','future ii':'Futur II','future':'Futur',
+  'indicative':'Indikativ','subjunctive':'Konjunktiv','imperative':'Imperativ',
+  'subjunctive i':'Konj. I','subjunctive ii':'Konj. II',
+  'active':'Aktiv','passive':'Passiv',
+  'strong':'Stark','weak':'Schwach','mixed':'Gemischt',
+  'definite':'bestimmt','indefinite':'unbestimmt',
+  'inflection':'Beugung','declension':'Deklination','conjugation':'Konjugation',
+  // Person labels → German pronouns (so chip detector can recognise them)
+  '1st person singular':'ich','2nd person singular':'du',
+  '3rd person singular':'er/sie/es','1st person plural':'wir',
+  '2nd person plural':'ihr','3rd person plural':'sie/Sie',
+  '1st pers. sg.':'ich','2nd pers. sg.':'du','3rd pers. sg.':'er/sie/es',
+  '1st pers. pl.':'wir','2nd pers. pl.':'ihr','3rd pers. pl.':'sie/Sie',
+};
+function translateCellDE(txt) {
+  if (!txt) return txt;
+  var lo = txt.trim().toLowerCase();
+  if (_DE_FULL[lo]) return _DE_FULL[lo];
+  return txt
+    .replace(/\bNominative\b/g,'Nominativ').replace(/\bAccusative\b/g,'Akkusativ')
+    .replace(/\bDative\b/g,'Dativ').replace(/\bGenitive\b/g,'Genitiv')
+    .replace(/\bMasculine\b/g,'Mask.').replace(/\bFeminine\b/g,'Fem.')
+    .replace(/\bNeuter\b/g,'Neutr.').replace(/\bSingular\b/g,'Singular')
+    .replace(/\bPlural\b/g,'Plural').replace(/\bPositive\b/g,'Positiv')
+    .replace(/\bComparative\b/g,'Komparativ').replace(/\bSuperlative\b/g,'Superlativ')
+    .replace(/\bIndicative\b/g,'Indikativ').replace(/\bSubjunctive I\b/g,'Konj. I')
+    .replace(/\bSubjunctive II\b/g,'Konj. II').replace(/\bSubjunctive\b/g,'Konjunktiv')
+    .replace(/\bImperative\b/g,'Imperativ').replace(/\bPresent\b/g,'Präsens')
+    .replace(/\bPreterite\b/g,'Präteritum').replace(/\bPerfect\b/g,'Perfekt')
+    .replace(/\bActive\b/g,'Aktiv').replace(/\bPassive\b/g,'Passiv')
+    .replace(/\bStrong\b/g,'Stark').replace(/\bWeak\b/g,'Schwach')
+    .replace(/\b1st person\b/g,'1. P.').replace(/\b2nd person\b/g,'2. P.')
+    .replace(/\b3rd person\b/g,'3. P.');
+}
+
+// ── Smart table renderer ────────────────────────────────────────────────────
+// 1. Translates all cell text to German.
+// 2. Tries to convert standard noun / verb / adjective tables into chips.
+// 3. Falls back to a compact scrollable table for anything else.
 function renderWiktTable(rows) {
   if (!rows || !rows.length) return '';
+
+  // Step 1: translate every cell
+  var trows = rows.map(function(row) {
+    return row.map(function(c) {
+      return { text: translateCellDE(c.text), isHeader: c.isHeader,
+               colspan: c.colspan, rowspan: c.rowspan };
+    });
+  });
+
+  // Step 2: try chip display
+  var chips = _tryChips(trows);
+  if (chips) return chips;
+
+  // Step 3: compact scrollable table fallback
   var h = '<div class="wikt-table-wrap"><table class="wikt-table">';
-  rows.forEach(function(row) {
+  trows.forEach(function(row) {
     h += '<tr>';
     row.forEach(function(cell) {
       var tag = cell.isHeader ? 'th' : 'td';
-      var attrs = (cell.colspan>1?' colspan="'+cell.colspan+'"':'') + (cell.rowspan>1?' rowspan="'+cell.rowspan+'"':'');
-      h += '<'+tag+attrs+'>' + escHtml(cell.text) + '</'+tag+'>';
+      var cs = (cell.colspan>1?' colspan="'+cell.colspan+'"':'');
+      var rs = (cell.rowspan>1?' rowspan="'+cell.rowspan+'"':'');
+      h += '<'+tag+cs+rs+'>' + escHtml(cell.text) + '</'+tag+'>';
     });
     h += '</tr>';
   });
   h += '</table></div>';
   return h;
+}
+
+// Attempt to render a translated table as chip groups.
+// Returns HTML string on success, null when the table is too irregular.
+function _tryChips(trows) {
+  // ── Noun declension: rows whose first-cell matches a German case name ──
+  var caseRx = /^(Nominativ|Akkusativ|Dativ|Genitiv)$/i;
+  var caseRows = trows.filter(function(r) {
+    return r.length >= 2 && caseRx.test(r[0].text);
+  });
+  if (caseRows.length >= 2) {
+    // Column headers: scan *backward* from the first case row to find the
+    // nearest all-header row that has more than one cell (skipping the
+    // single-cell title row that Wiktionary often puts at the very top).
+    var colHdrs = [];
+    var firstCaseIdx = trows.indexOf(caseRows[0]);
+    for (var _hi = firstCaseIdx - 1; _hi >= 0; _hi--) {
+      var _hr = trows[_hi];
+      if (_hr.every(function(c){ return c.isHeader; }) && _hr.length > 1) {
+        colHdrs = _hr.slice(1).map(function(c){ return c.text; });
+        break;
+      }
+    }
+    // Still empty? Infer from the data row width
+    if (!colHdrs.length) {
+      var _w = caseRows[0].length - 1;
+      colHdrs = _w >= 2 ? ['Singular','Plural'] : ['Form'];
+    }
+    var caseColor = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
+    var caseAbbr  = {Nominativ:'Nom.',Akkusativ:'Akk.',Dativ:'Dat.',Genitiv:'Gen.'};
+    var html = '';
+    var numCols = Math.max(colHdrs.length, 1);
+    for (var ci = 0; ci < numCols && ci < 3; ci++) {
+      var colName = colHdrs[ci] || '';
+      if (colName) html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(colName) + '</div>';
+      html += '<div class="rw-forms">';
+      caseRows.forEach(function(row) {
+        var cn = row[0].text;
+        var cell = row[ci + 1];
+        var val = cell ? cell.text : '';
+        if (!val || val === '—' || val === '-' || val === '–') return;
+        var cls = caseColor[cn] || '';
+        var abbr = caseAbbr[cn] || cn;
+        html += '<div class="rw-form">'
+          + '<span class="fl">' + escHtml(abbr) + '</span>'
+          + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(val) + '</span>'
+          + '</div>';
+      });
+      html += '</div>';
+      if (colName) html += '</div>';
+    }
+    return html || null;
+  }
+
+  // ── Verb conjugation: rows whose first-cell is a German pronoun ──
+  var pronounRx = /^(ich|du|er\/sie\/es|wir|ihr|sie\/Sie)$/i;
+  var pronounRows = trows.filter(function(r) {
+    return r.length >= 2 && pronounRx.test(r[0].text);
+  });
+  if (pronounRows.length >= 3) {
+    var colHdrs2 = [];
+    var firstPronounIdx = trows.indexOf(pronounRows[0]);
+    for (var _hi2 = firstPronounIdx - 1; _hi2 >= 0; _hi2--) {
+      var _hr2 = trows[_hi2];
+      if (_hr2.every(function(c){ return c.isHeader; }) && _hr2.length > 1) {
+        colHdrs2 = _hr2.slice(1).map(function(c){ return c.text; });
+        break;
+      }
+    }
+    if (!colHdrs2.length && pronounRows[0].length > 2) {
+      colHdrs2 = ['Präsens','Präteritum'].slice(0, pronounRows[0].length - 1);
+    }
+    var pColor = {ich:'gold',du:'blue','er/sie/es':'green'};
+    var html = '';
+    var numCols2 = Math.max(colHdrs2.length, 1);
+    for (var ci2 = 0; ci2 < numCols2 && ci2 < 3; ci2++) {
+      var colName2 = colHdrs2[ci2] || '';
+      if (colName2) html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(colName2) + '</div>';
+      html += '<div class="rw-forms">';
+      pronounRows.forEach(function(row) {
+        var pr = row[0].text;
+        var cell2 = row[ci2 + 1];
+        var val2 = cell2 ? cell2.text : '';
+        if (!val2) return;
+        var cls2 = pColor[pr.toLowerCase()] || '';
+        html += '<div class="rw-form">'
+          + '<span class="fl">' + escHtml(pr) + '</span>'
+          + '<span class="fv' + (cls2?' '+cls2:'') + '">' + escHtml(val2) + '</span>'
+          + '</div>';
+      });
+      html += '</div>';
+      if (colName2) html += '</div>';
+    }
+    return html || null;
+  }
+
+  // ── Adjective degree: row containing Positiv / Komparativ / Superlativ ──
+  var adjRx = /^(Positiv|Komparativ|Superlativ)$/i;
+  var adjRows = trows.filter(function(r) {
+    return r.some(function(c){ return adjRx.test(c.text); });
+  });
+  if (adjRows.length >= 1) {
+    var html = '<div class="rw-forms">';
+    var adjColor = {Positiv:'',Komparativ:'gold',Superlativ:'blue'};
+    adjRows.forEach(function(row) {
+      var hdr = row.find(function(c){ return c.isHeader && adjRx.test(c.text); });
+      var val = row.find(function(c){ return !c.isHeader; });
+      if (hdr && val) {
+        var cls = adjColor[hdr.text] || '';
+        html += '<div class="rw-form">'
+          + '<span class="fl">' + escHtml(hdr.text) + '</span>'
+          + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(val.text) + '</span>'
+          + '</div>';
+      }
+    });
+    html += '</div>';
+    return html;
+  }
+
+  return null; // give up — use the compact table fallback
 }
 
 // Offline card body (cases/conjugation chips) — fallback when Wiktionary fails
@@ -1525,11 +1747,36 @@ function onSearchInput(q) {
     });
   }
 
-  // Sort: exact word prefix > base prefix > rest
+  // ── Pass 4: FORM_INDEX — inflected form → base word ──────────────────────
+  // e.g. "isst" → "essen", "aß" → "essen", so typing any form finds its lemma.
+  // Also check STRONG_PAST for forms not in FORM_INDEX (irregular verbs).
+  var _baseFromForm = FORM_INDEX[ql] || (STRONG_PAST[ql] ? STRONG_PAST[ql] : null);
+  if (_baseFromForm) {
+    var _bk = normKey(_baseFromForm);
+    if (!seen[_bk]) {
+      // Try SI first, then WORD_BANK
+      var _bIdx = SI_READY && window.SI ? SI_KEY_MAP[_bk] : undefined;
+      if (_bIdx !== undefined) {
+        seen[_bk] = true; results.unshift(window.SI[_bIdx]);
+      } else {
+        var _bwb = WORD_BANK.find(function(w){ return normKey(w.word) === _bk; });
+        if (_bwb) { seen[_bk] = true; results.unshift([_bwb.word, typeChar(_bwb.type), _bwb.meaning_en||'', _bwb.meaning_tr||'']); }
+      }
+    }
+  }
+
+  // Sort: exact match (norm == query) → prefix → base-prefix → rest
+  // Within each tier, alphabetical by normalised key.
   results.sort(function(a, b) {
     var al = a[0].toLowerCase(), bl = b[0].toLowerCase();
-    var s = function(l){ return l.startsWith(ql)?0:normKey(l).startsWith(ql)?1:2; };
-    return s(al) - s(bl) || normKey(al).localeCompare(normKey(bl));
+    var nka = normKey(al), nkb = normKey(bl);
+    var score = function(l, nk) {
+      if (nk === ql || l === ql) return -1;          // exact → top
+      if (l.startsWith(ql))      return 0;            // prefix match
+      if (nk.startsWith(ql))     return 1;            // article-stripped prefix
+      return 2;                                        // substring / meaning
+    };
+    return score(al,nka) - score(bl,nkb) || nka.localeCompare(nkb);
   });
 
   _lastSR = results.slice(0, 60);
@@ -1541,9 +1788,9 @@ function onSearchInput(q) {
     return;
   }
   container.innerHTML = _lastSR.map(function(e, i) {
-    // Strict language respect: only show the meaning in the selected UI language.
-    // Do NOT fall back to another language — show nothing if unavailable.
-    var meaning = LANG==='tr' ? (e[3]||'') : LANG==='fa' ? (e[4]||'') : (e[2]||'');
+    // Show meaning in selected language; fall back to English (never to an
+    // unrelated language — e.g. never show Turkish to an English user).
+    var meaning = LANG==='tr' ? (e[3]||e[2]||'') : LANG==='fa' ? (e[4]||e[2]||'') : (e[2]||'');
     var label = tcNameDE(e[1]);
     return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
       + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
