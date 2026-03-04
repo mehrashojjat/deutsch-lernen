@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
 <meta name="theme-color" content="#0b0d13">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -319,7 +319,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   padding:11px 14px;font-size:.83rem;line-height:1.6;color:var(--muted);font-style:italic;
   transition:border-color .2s,color .2s;min-height:44px;}
 .rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
-.rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;opacity:.6;}
+.rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;}
+.rw-source a{color:var(--blue);opacity:.85;}
 
 /* ── WIKTIONARY CARD ── */
 .wikt-loading{display:flex;align-items:center;justify-content:center;gap:12px;
@@ -564,6 +565,7 @@ const UI = {
     quizQuestion: 'What does this word mean?',
     levelLabel: 'Level',
     wiktSource: 'Source',
+    meanings: 'Meanings',
     autoTranslated: 'Auto-translated',
     offlineNote: 'ⓘ Offline data · Wiktionary unreachable',
     aboutBtn: 'ℹ️ About',
@@ -607,6 +609,7 @@ const UI = {
     quizQuestion: 'Bu kelimenin anlamı nedir?',
     levelLabel: 'Seviye',
     wiktSource: 'Kaynak',
+    meanings: 'Anlamlar',
     autoTranslated: 'Otomatik çevrildi',
     offlineNote: 'ⓘ Çevrimdışı veri · Wiktionary erişilemiyor',
     aboutBtn: 'ℹ️ Hakkında',
@@ -650,6 +653,7 @@ const UI = {
     quizQuestion: 'این کلمه چه معنایی دارد؟',
     levelLabel: 'سطح',
     wiktSource: 'منبع',
+    meanings: 'معانی',
     autoTranslated: 'ترجمه خودکار',
     offlineNote: 'ⓘ داده آفلاین · Wiktionary در دسترس نیست',
     aboutBtn: 'ℹ️ درباره',
@@ -693,6 +697,7 @@ const UI = {
     quizQuestion: 'Что означает это слово?',
     levelLabel: 'Уровень',
     wiktSource: 'Источник',
+    meanings: 'Значения',
     autoTranslated: 'Авто-перевод',
     offlineNote: 'ⓘ Офлайн данные · Wiktionary недоступен',
     aboutBtn: 'ℹ️ О приложении',
@@ -736,6 +741,7 @@ const UI = {
     quizQuestion: 'Що означає це слово?',
     levelLabel: 'Рівень',
     wiktSource: 'Джерело',
+    meanings: 'Значення',
     autoTranslated: 'Авто-переклад',
     offlineNote: 'ⓘ Офлайн дані · Wiktionary недоступний',
     aboutBtn: 'ℹ️ Про додаток',
@@ -779,6 +785,7 @@ const UI = {
     quizQuestion: 'ما معنى هذه الكلمة؟',
     levelLabel: 'المستوى',
     wiktSource: 'المصدر',
+    meanings: 'المعاني',
     autoTranslated: 'ترجمة تلقائية',
     offlineNote: 'ⓘ بيانات غير متصلة · Wiktionary غير متاح',
     aboutBtn: 'ℹ️ حول التطبيق',
@@ -1494,7 +1501,20 @@ async function _wiktRestFetch(lw) {
 }
 
 // ── MyMemory machine-translation fallback (English only) ──
-var _myMemoryCache = {};
+var _myMemoryCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_en_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _myMemoryCacheSave() {
+  try {
+    var keys = Object.keys(_myMemoryCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _myMemoryCache[k]; });
+      _myMemoryCache = trim;
+    }
+    localStorage.setItem('dl_en_cache', JSON.stringify(_myMemoryCache));
+  } catch(e) {}
+}
 async function fetchMyMemoryTranslation(word) {
   var key = normKey(word);
   if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
@@ -1509,12 +1529,14 @@ async function fetchMyMemoryTranslation(word) {
         var t = (json.responseData.translatedText || '').trim();
         if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
           _myMemoryCache[key] = t;
+          _myMemoryCacheSave();
           return t;
         }
       }
     }
   } catch(e) {}
   _myMemoryCache[key] = null;
+  _myMemoryCacheSave();
   return null;
 }
 
@@ -1762,6 +1784,102 @@ function _autoFetchArabic(word, container) {
   });
 }
 
+// ── Definition translation caches (per language, localStorage-backed) ──────
+// Keyed by normalised definition text; separate from single-word caches.
+function normDefKey(text) { return (text || '').trim().toLowerCase().slice(0, 250); }
+var _defTrCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_tr') || '{}'); } catch(e) { return {}; } })();
+var _defFaCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_fa') || '{}'); } catch(e) { return {}; } })();
+var _defRuCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_ru') || '{}'); } catch(e) { return {}; } })();
+var _defUkCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_uk') || '{}'); } catch(e) { return {}; } })();
+var _defArCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_ar') || '{}'); } catch(e) { return {}; } })();
+function _defTrCacheSave(){try{var k=Object.keys(_defTrCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defTrCache[x];});_defTrCache=t;}localStorage.setItem('dl_def_tr',JSON.stringify(_defTrCache));}catch(e){}}
+function _defFaCacheSave(){try{var k=Object.keys(_defFaCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defFaCache[x];});_defFaCache=t;}localStorage.setItem('dl_def_fa',JSON.stringify(_defFaCache));}catch(e){}}
+function _defRuCacheSave(){try{var k=Object.keys(_defRuCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defRuCache[x];});_defRuCache=t;}localStorage.setItem('dl_def_ru',JSON.stringify(_defRuCache));}catch(e){}}
+function _defUkCacheSave(){try{var k=Object.keys(_defUkCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defUkCache[x];});_defUkCache=t;}localStorage.setItem('dl_def_uk',JSON.stringify(_defUkCache));}catch(e){}}
+function _defArCacheSave(){try{var k=Object.keys(_defArCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defArCache[x];});_defArCache=t;}localStorage.setItem('dl_def_ar',JSON.stringify(_defArCache));}catch(e){}}
+
+function _defCacheFor(lang) {
+  if (lang === 'tr') return { cache: _defTrCache, saveFn: _defTrCacheSave };
+  if (lang === 'fa') return { cache: _defFaCache, saveFn: _defFaCacheSave };
+  if (lang === 'ru') return { cache: _defRuCache, saveFn: _defRuCacheSave };
+  if (lang === 'uk') return { cache: _defUkCache, saveFn: _defUkCacheSave };
+  return { cache: _defArCache, saveFn: _defArCacheSave };
+}
+
+// Batch-fetches translations for items [{text, key, ...}] and stores results in cache.
+// onResult(item, translatedText) is called for each successful translation (may be null).
+async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult) {
+  var batches = [], cur = [], curLen = 0;
+  toFetch.forEach(function(item) {
+    var il = item.text.length + 1;
+    if (curLen + il > 490 && cur.length) { batches.push(cur); cur = []; curLen = 0; }
+    cur.push(item); curLen += il;
+  });
+  if (cur.length) batches.push(cur);
+  await Promise.all(batches.map(async function(batch) {
+    function applyResult(item, tr) {
+      cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
+      if (onResult && cache[item.key]) onResult(item, cache[item.key]);
+    }
+    try {
+      var url = 'https://api.mymemory.translated.net/get?q='
+        + encodeURIComponent(batch.map(function(d){ return d.text; }).join('\n'))
+        + '&langpair=de|' + langCode;
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('http');
+      var json = await resp.json();
+      if (json.responseStatus !== 200 || !json.responseData) throw new Error('api');
+      var parts = (json.responseData.translatedText || '').split('\n');
+      if (parts.length !== batch.length) throw new Error('mismatch');
+      batch.forEach(function(item, i) { applyResult(item, (parts[i] || '').trim()); });
+      saveFn();
+    } catch(e) {
+      await Promise.all(batch.map(async function(item) {
+        if (cache[item.key] !== undefined) return;
+        try {
+          var r = await fetch('https://api.mymemory.translated.net/get?q='
+            + encodeURIComponent(item.text) + '&langpair=de|' + langCode);
+          if (!r.ok) return;
+          var j = await r.json();
+          if (j.responseStatus === 200 && j.responseData)
+            applyResult(item, (j.responseData.translatedText || '').trim());
+        } catch(e2) { cache[item.key] = ''; }
+      }));
+      saveFn();
+    }
+  }));
+}
+
+// Translates ALL .def-translate-pending spans in a container in one batched request.
+// Fills cached entries immediately; sends only uncached texts to the API.
+async function _translateDefsInContainer(container) {
+  if (LANG === 'en') return;
+  var pending = Array.from(container.querySelectorAll('.def-translate-pending'));
+  if (!pending.length) return;
+  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
+  // Fill already-cached items immediately; collect the rest
+  var toFetch = [];
+  pending.forEach(function(el) {
+    var orig = el.getAttribute('data-def-orig');
+    if (!orig) return;
+    var dk = normDefKey(orig);
+    if (cache[dk]) {
+      el.textContent = cache[dk];
+      el.classList.remove('def-translate-pending');
+    } else if (cache[dk] === undefined) {
+      toFetch.push({ el: el, text: orig, key: dk });
+    }
+    // cache[dk] === '' means a prior fetch failed — keep English
+  });
+  if (!toFetch.length) return;
+  await _batchTranslateDefs(toFetch, LANG, cache, saveFn, function(item, tr) {
+    if (item.el.isConnected) {
+      item.el.textContent = tr;
+      item.el.classList.remove('def-translate-pending');
+    }
+  });
+}
+
 // ── Batch translation fetch: sends multiple words in one request (newline-joined)
 // Falls back to parallel individual requests if the response doesn't align.
 async function _batchFetchTranslations(words, langCode, cache, saveFn) {
@@ -2004,47 +2122,38 @@ function renderHeadLineChips(text) {
 
   // ── Pattern B: "Lemma gender (attrs…)" ───────────────────────────────
   // e.g. "Badeanzug m (strong, genitive Badeanzuges or Badeanzugs, plural Badeanzüge)"
+  // We only show case-form chips (Genitiv, Plural, etc.) — skip the word+gender chip
+  // and declension-type chips (stark/schwach/gemischt) which are noise for learners.
   var parenOpen = text.indexOf('(');
-  var beforeParen = (parenOpen >= 0 ? text.slice(0, parenOpen) : text).trim();
   var inParen = parenOpen >= 0 ? text.slice(parenOpen + 1).replace(/\)\s*$/, '').trim() : '';
 
-  // Lemma + gender chip (e.g. "Badeanzug m")
-  if (beforeParen) {
-    html += '<div class="rw-form" style="cursor:default;">'
-      + '<span class="fv">' + escHtml(beforeParen) + '</span></div>';
-  }
-
+  var chipHtml = '';
   if (inParen) {
-    // Split on commas, but keep "X or Y" together
     inParen.split(',').forEach(function(part) {
       part = part.trim();
       if (!part) return;
 
-      // Try "label form(s)" where label is a case/number keyword
+      // Case/number form chips — keep and make clickable
       var labelMatch = part.match(
         /^(genitive|dative|accusative|nominative|plural|singular)\s+(.+)$/i
       );
       if (labelMatch) {
         var lbl = translateCellDE(labelMatch[1].trim());
         var formsPart = labelMatch[2].trim();
-        // Multiple forms joined by "or"
         formsPart.split(/\s+or\s+/i).forEach(function(frm) {
           frm = frm.trim();
           if (!frm) return;
-          html += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
+          chipHtml += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
             + '<span class="fl">' + escHtml(lbl) + '</span>'
             + '<span class="fv blue">' + escHtml(frm) + '</span></div>';
         });
-      } else {
-        // Plain attribute chip (e.g. "strong", "weak", "mixed")
-        var translated2 = translateCellDE(part);
-        html += '<div class="rw-form" style="cursor:default;">'
-          + '<span class="fv" style="font-size:.78rem;">'
-          + escHtml(translated2) + '</span></div>';
       }
+      // Plain declension-type attributes (strong/weak/etc.) — silently skipped
     });
   }
 
+  if (!chipHtml) return ''; // nothing useful to show
+  html += chipHtml;
   html += '</div>';
   return html;
 }
@@ -2120,24 +2229,12 @@ function renderWiktCard(data, meta, targetId) {
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
     + '</div>';
   if (meaning) {
-    // If meaning still looks like a grammatical form description (e.g. "nominative
-    // plural of Badeanzug"), make the base word a clickable gold link so the user
-    // can navigate to its full card with one tap.
-    var _mOfRe = meaning.match(/^(.*?)\s+of\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)\s*$/i);
-    if (_mOfRe) {
-      var _mEnc = _mOfRe[2].replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      html += '<div class="rw-meaning-single">' + escHtml(_mOfRe[1]) + ' of '
-        + '<span onclick="openWordCard(\'' + _mEnc + '\',\'?\')" '
-        + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
-        + escHtml(_mOfRe[2]) + '</span></div>';
-    } else {
-      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
-      html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
-        + (meaningIsAuto
-          ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ ' + escHtml(t('autoTranslated')) + '</span>'
-          : '')
-        + '</div>';
-    }
+    var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
+    html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
+      + (meaningIsAuto
+        ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ ' + escHtml(t('autoTranslated')) + '</span>'
+        : '')
+      + '</div>';
   }
   if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
   html += '<div class="rw-divider"></div>';
@@ -2176,18 +2273,34 @@ function renderWiktCard(data, meta, targetId) {
     // POS badge is always in German — this is a German learning card
     html += '<span class="wikt-pos-badge">' + posLabelDE(sec.pos) + '</span>';
 
-    // For inflected-form sections (Wortform / noun form / verb form etc.), pull the
-    // base word out of the definition list and show a clickable "Grundform" chip.
-    // For full lemma sections (Substantiv/Verb/Adjektiv), show the headLine chips
-    // (e.g. gender, genitive, plural) as a compact summary above the declension table.
     var _isFormSec = /form|wortform|participle/i.test(sec.pos);
-    if (!_isFormSec && sec.headLine) {
-      // Show key forms from the headLine (e.g. "Badeanzug m (strong, genitive …, plural Badeanzüge)")
-      // so the plural and genitive are always visible regardless of the table state.
-      html += renderHeadLineChips(sec.headLine);
+
+    // ── 1. Meanings — always first, before anything else ──────────────
+    if (sec.defs.length) {
+      var _dfc = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:LANG==='ar'?_defArCache:null;
+      html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
+        + '<div class="wikt-def-list">';
+      sec.defs.slice(0,5).forEach(function(d, i) {
+        var _dk = normDefKey(d.text);
+        var _cached = (_dfc && LANG !== 'en') ? _dfc[_dk] : undefined;
+        var _isPending = (_dfc && LANG !== 'en' && _cached === undefined);
+        // Plain text only — no clickable "of WORD" links in definitions
+        var _dHtml = _cached ? escHtml(_cached) : escHtml(d.text);
+        html += '<div class="wikt-def-item">'
+          + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
+          + '<span class="wikt-def-text' + (_isPending ? ' def-translate-pending' : '') + '"'
+          + (_isPending ? ' data-def-orig="' + escHtml(d.text) + '"' : '')
+          + '>' + _dHtml + '</span></div>';
+        if (d.examples.length) {
+          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
+        }
+        html += '</div>';
+      });
+      html += '</div></div>';
     }
+
+    // ── 2. Grundform — clickable base-word chip for inflected forms ────
     if (_isFormSec && sec.defs.length) {
-      // Collect all "X of WORD" base-word references from defs
       var _bwSet = [], _bwSeen = {};
       sec.defs.forEach(function(d) {
         var _bwm = d.text.match(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/i);
@@ -2208,38 +2321,23 @@ function renderWiktCard(data, meta, targetId) {
         html += '</div></div>';
       }
     }
+
+    // ── 3. HeadLine chips — only when no table (table already covers the same info).
+    //    renderHeadLineChips skips the word+gender chip and type chips (stark/schwach),
+    //    keeping only useful case-form chips (Genitiv, Plural etc.).
+    if (!_isFormSec && sec.headLine && !(sec.table && sec.table.length)) {
+      html += renderHeadLineChips(sec.headLine);
+    }
+
+    // ── 4. Declension / conjugation table ─────────────────────────────
     if (sec.table && sec.table.length) {
-      // Table section title is always in German
       var tTitle = sec.tableType==='conj' ? 'Konjugation'
                  : sec.tableType==='decl' ? 'Deklination'
                  : 'Beugung';
       html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
         + renderWiktTable(sec.table) + '</div>';
     }
-    if (sec.defs.length) {
-      // Definitions heading: "Bedeutungen" in German; the definitions text itself
-      // is always in English (from English Wiktionary) — that IS the learning content
-      var defTitle = 'Bedeutungen';
-      html += '<div class="rw-section"><div class="rw-section-title">' + defTitle + '</div>'
-        + '<div class="wikt-def-list">';
-      sec.defs.slice(0,5).forEach(function(d, i) {
-        // Linkify any "of WORD" pattern so base words are tappable
-        var _dEsc = escHtml(d.text);
-        var _dHtml = _dEsc.replace(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/g, function(m, w) {
-          var _we = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-          return 'of <span onclick="openWordCard(\'' + _we + '\',\'?\')" '
-            + 'style="color:var(--gold);cursor:pointer;font-weight:600;">' + w + '</span>';
-        });
-        html += '<div class="wikt-def-item">'
-          + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
-          + '<span class="wikt-def-text">' + _dHtml + '</span></div>';
-        if (d.examples.length) {
-          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
-        }
-        html += '</div>';
-      });
-      html += '</div></div>';
-    }
+
     html += '<div class="rw-divider" style="margin:10px 0 8px"></div>';
   });
 
@@ -2553,13 +2651,8 @@ var _randUsed = new Set();
 function showRandomWord() { show('screen-random'); renderRandomWord(); }
 
 function renderRandomWord() {
-  // Pick pool: prefer SI (broad index) once loaded, fallback to WORD_BANK
-  var pool;
-  if (SI_READY && window.SI && window.SI.length > 500) {
-    pool = window.SI;
-  } else {
-    pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
-  }
+  // Pool: always use WORD_BANK (Goethe-Institut source, same as quizzes)
+  var pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
 
   var idx, attempts = 0;
   do {
@@ -2586,6 +2679,7 @@ function renderRandomWord() {
 
   fetchWiktionary(word, tc).then(async function(data) {
     await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
     // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
@@ -2595,6 +2689,7 @@ function renderRandomWord() {
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
@@ -2738,6 +2833,23 @@ async function _prefetchLangMeta(word, meta) {
   else if (LANG === 'ar' && !meta.ar) { var _t = await fetchArabic(word); if (_t) meta.ar = _t; }
 }
 
+// Pre-fetches all definition translations into cache before the card renders,
+// so the card shows translated definitions on first paint (no flicker/update).
+async function _prefetchDefTranslations(data) {
+  if (LANG === 'en' || !data || !data.sections || !data.sections.length) return;
+  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
+  // Collect unique uncached definition texts across all sections
+  var seen = {}, toFetch = [];
+  data.sections.forEach(function(sec) {
+    (sec.defs || []).slice(0, 5).forEach(function(d) {
+      var dk = normDefKey(d.text);
+      if (cache[dk] === undefined && !seen[dk]) { seen[dk] = true; toFetch.push({ text: d.text, key: dk }); }
+    });
+  });
+  if (!toFetch.length) return;
+  await _batchTranslateDefs(toFetch, LANG, cache, saveFn, null);
+}
+
 async function openWordCard(word, tc) {
   closeSearch();
   if (!word) return;
@@ -2749,6 +2861,7 @@ async function openWordCard(word, tc) {
   try {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
@@ -2756,6 +2869,7 @@ async function openWordCard(word, tc) {
     // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
