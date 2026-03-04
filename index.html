@@ -2116,47 +2116,41 @@ function renderHeadLineChips(text) {
 
   // ── Pattern B: "Lemma gender (attrs…)" ───────────────────────────────
   // e.g. "Badeanzug m (strong, genitive Badeanzuges or Badeanzugs, plural Badeanzüge)"
+  // We only show case-form chips (Genitiv, Plural, etc.) — skip the word+gender chip
+  // and declension-type chips (stark/schwach/gemischt) which are noise for learners.
   var parenOpen = text.indexOf('(');
-  var beforeParen = (parenOpen >= 0 ? text.slice(0, parenOpen) : text).trim();
   var inParen = parenOpen >= 0 ? text.slice(parenOpen + 1).replace(/\)\s*$/, '').trim() : '';
 
-  // Lemma + gender chip (e.g. "Badeanzug m")
-  if (beforeParen) {
-    html += '<div class="rw-form" style="cursor:default;">'
-      + '<span class="fv">' + escHtml(beforeParen) + '</span></div>';
-  }
+  // Declension-type words to ignore (not useful for language learners)
+  var _typeWords = /^(strong|weak|mixed|stark|schwach|gemischt|no\s+plural|indeclinable|invariable)$/i;
 
+  var chipHtml = '';
   if (inParen) {
-    // Split on commas, but keep "X or Y" together
     inParen.split(',').forEach(function(part) {
       part = part.trim();
       if (!part) return;
 
-      // Try "label form(s)" where label is a case/number keyword
+      // Case/number form chips — keep and make clickable
       var labelMatch = part.match(
         /^(genitive|dative|accusative|nominative|plural|singular)\s+(.+)$/i
       );
       if (labelMatch) {
         var lbl = translateCellDE(labelMatch[1].trim());
         var formsPart = labelMatch[2].trim();
-        // Multiple forms joined by "or"
         formsPart.split(/\s+or\s+/i).forEach(function(frm) {
           frm = frm.trim();
           if (!frm) return;
-          html += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
+          chipHtml += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
             + '<span class="fl">' + escHtml(lbl) + '</span>'
             + '<span class="fv blue">' + escHtml(frm) + '</span></div>';
         });
-      } else {
-        // Plain attribute chip (e.g. "strong", "weak", "mixed")
-        var translated2 = translateCellDE(part);
-        html += '<div class="rw-form" style="cursor:default;">'
-          + '<span class="fv" style="font-size:.78rem;">'
-          + escHtml(translated2) + '</span></div>';
       }
+      // Plain declension-type attributes (strong/weak/etc.) — silently skipped
     });
   }
 
+  if (!chipHtml) return ''; // nothing useful to show
+  html += chipHtml;
   html += '</div>';
   return html;
 }
@@ -2232,24 +2226,12 @@ function renderWiktCard(data, meta, targetId) {
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
     + '</div>';
   if (meaning) {
-    // If meaning still looks like a grammatical form description (e.g. "nominative
-    // plural of Badeanzug"), make the base word a clickable gold link so the user
-    // can navigate to its full card with one tap.
-    var _mOfRe = meaning.match(/^(.*?)\s+of\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)\s*$/i);
-    if (_mOfRe) {
-      var _mEnc = _mOfRe[2].replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      html += '<div class="rw-meaning-single">' + escHtml(_mOfRe[1]) + ' of '
-        + '<span onclick="openWordCard(\'' + _mEnc + '\',\'?\')" '
-        + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
-        + escHtml(_mOfRe[2]) + '</span></div>';
-    } else {
-      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
-      html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
-        + (meaningIsAuto
-          ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ ' + escHtml(t('autoTranslated')) + '</span>'
-          : '')
-        + '</div>';
-    }
+    var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
+    html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
+      + (meaningIsAuto
+        ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ ' + escHtml(t('autoTranslated')) + '</span>'
+        : '')
+      + '</div>';
   }
   if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
   html += '<div class="rw-divider"></div>';
@@ -2288,18 +2270,34 @@ function renderWiktCard(data, meta, targetId) {
     // POS badge is always in German — this is a German learning card
     html += '<span class="wikt-pos-badge">' + posLabelDE(sec.pos) + '</span>';
 
-    // For inflected-form sections (Wortform / noun form / verb form etc.), pull the
-    // base word out of the definition list and show a clickable "Grundform" chip.
-    // For full lemma sections (Substantiv/Verb/Adjektiv), show the headLine chips
-    // (e.g. gender, genitive, plural) as a compact summary above the declension table.
     var _isFormSec = /form|wortform|participle/i.test(sec.pos);
-    if (!_isFormSec && sec.headLine) {
-      // Show key forms from the headLine (e.g. "Badeanzug m (strong, genitive …, plural Badeanzüge)")
-      // so the plural and genitive are always visible regardless of the table state.
-      html += renderHeadLineChips(sec.headLine);
+
+    // ── 1. Meanings — always first, before anything else ──────────────
+    if (sec.defs.length) {
+      var _dfc = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:LANG==='ar'?_defArCache:null;
+      html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
+        + '<div class="wikt-def-list">';
+      sec.defs.slice(0,5).forEach(function(d, i) {
+        var _dk = normDefKey(d.text);
+        var _cached = (_dfc && LANG !== 'en') ? _dfc[_dk] : undefined;
+        var _isPending = (_dfc && LANG !== 'en' && _cached === undefined);
+        // Plain text only — no clickable "of WORD" links in definitions
+        var _dHtml = _cached ? escHtml(_cached) : escHtml(d.text);
+        html += '<div class="wikt-def-item">'
+          + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
+          + '<span class="wikt-def-text' + (_isPending ? ' def-translate-pending' : '') + '"'
+          + (_isPending ? ' data-def-orig="' + escHtml(d.text) + '"' : '')
+          + '>' + _dHtml + '</span></div>';
+        if (d.examples.length) {
+          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
+        }
+        html += '</div>';
+      });
+      html += '</div></div>';
     }
+
+    // ── 2. Grundform — clickable base-word chip for inflected forms ────
     if (_isFormSec && sec.defs.length) {
-      // Collect all "X of WORD" base-word references from defs
       var _bwSet = [], _bwSeen = {};
       sec.defs.forEach(function(d) {
         var _bwm = d.text.match(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/i);
@@ -2320,47 +2318,23 @@ function renderWiktCard(data, meta, targetId) {
         html += '</div></div>';
       }
     }
-    if (sec.defs.length) {
-      var _dfc = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:LANG==='ar'?_defArCache:null;
-      html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
-        + '<div class="wikt-def-list">';
-      sec.defs.slice(0,5).forEach(function(d, i) {
-        var _dk = normDefKey(d.text);
-        var _cached = (_dfc && LANG !== 'en') ? _dfc[_dk] : undefined;
-        // _cached undefined → needs fetch (pending); '' → fetch failed, keep English; string → use it
-        var _isPending = (_dfc && LANG !== 'en' && _cached === undefined);
-        var _dHtml;
-        if (_cached) {
-          _dHtml = escHtml(_cached); // translated, no need to linkify
-        } else {
-          // English (or failed translation fallback): linkify "of WORD" patterns
-          var _dEsc = escHtml(d.text);
-          _dHtml = _dEsc.replace(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/g, function(m, w) {
-            var _we = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-            return 'of <span onclick="openWordCard(\'' + _we + '\',\'?\')" '
-              + 'style="color:var(--gold);cursor:pointer;font-weight:600;">' + w + '</span>';
-          });
-        }
-        html += '<div class="wikt-def-item">'
-          + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
-          + '<span class="wikt-def-text' + (_isPending ? ' def-translate-pending' : '') + '"'
-          + (_isPending ? ' data-def-orig="' + escHtml(d.text) + '"' : '')
-          + '>' + _dHtml + '</span></div>';
-        if (d.examples.length) {
-          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
-        }
-        html += '</div>';
-      });
-      html += '</div></div>';
+
+    // ── 3. HeadLine chips — only when no table (table already covers the same info).
+    //    renderHeadLineChips skips the word+gender chip and type chips (stark/schwach),
+    //    keeping only useful case-form chips (Genitiv, Plural etc.).
+    if (!_isFormSec && sec.headLine && !(sec.table && sec.table.length)) {
+      html += renderHeadLineChips(sec.headLine);
     }
+
+    // ── 4. Declension / conjugation table ─────────────────────────────
     if (sec.table && sec.table.length) {
-      // Table section title is always in German
       var tTitle = sec.tableType==='conj' ? 'Konjugation'
                  : sec.tableType==='decl' ? 'Deklination'
                  : 'Beugung';
       html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
         + renderWiktTable(sec.table) + '</div>';
     }
+
     html += '<div class="rw-divider" style="margin:10px 0 8px"></div>';
   });
 
