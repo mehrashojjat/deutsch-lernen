@@ -1273,7 +1273,11 @@ function extractWiktTable(tableEl) {
   tableEl.querySelectorAll('tr').forEach(function(tr) {
     var row = [];
     tr.querySelectorAll('th,td').forEach(function(cell) {
-      var txt = cell.textContent.replace(/\[.*?\]/g,'').replace(/\n/g,' ').replace(/\s+/g,' ').trim();
+      // Clone the cell and strip superscript footnotes (e.g. <sup>1</sup>)
+      // before reading textContent — otherwise footnote numbers bleed into form values.
+      var cellCl = cell.cloneNode(true);
+      cellCl.querySelectorAll('sup').forEach(function(x){ x.remove(); });
+      var txt = cellCl.textContent.replace(/\[.*?\]/g,'').replace(/\n/g,' ').replace(/\s+/g,' ').trim();
       if (txt) row.push({
         text: txt,
         isHeader: cell.tagName === 'TH',
@@ -1480,10 +1484,14 @@ function renderWiktCard(data, meta, targetId) {
 
     // For inflected-form sections (Wortform / noun form / verb form etc.), pull the
     // base word out of the definition list and show a clickable "Grundform" chip.
-    // For full lemma sections (Substantiv/Verb/Adjektiv), suppress the headLine:
-    // "Badeanzug m (strong, ...)" is confusing to learners — the declension table
-    // already shows all the form data.
+    // For full lemma sections (Substantiv/Verb/Adjektiv), show the headLine chips
+    // (e.g. gender, genitive, plural) as a compact summary above the declension table.
     var _isFormSec = /form|wortform|participle/i.test(sec.pos);
+    if (!_isFormSec && sec.headLine) {
+      // Show key forms from the headLine (e.g. "Badeanzug m (strong, genitive …, plural Badeanzüge)")
+      // so the plural and genitive are always visible regardless of the table state.
+      html += renderHeadLineChips(sec.headLine);
+    }
     if (_isFormSec && sec.defs.length) {
       // Collect all "X of WORD" base-word references from defs
       var _bwSet = [], _bwSeen = {};
@@ -1656,22 +1664,40 @@ function _tryChips(trows) {
     return r.length >= 2 && caseRx.test(r[0].text);
   });
   if (caseRows.length >= 2) {
-    // Column headers: scan *backward* from the first case row to find the
-    // nearest all-header row that has more than one cell (skipping the
-    // single-cell title row that Wiktionary often puts at the very top).
+    // Column headers: scan *backward* from the first case row to find the best
+    // all-header row. Prefer rows that explicitly contain "Singular"/"Plural"
+    // (or other column-label keywords) over rows whose cells are German word
+    // forms (which Wiktionary sometimes uses as sub-headers).
     var colHdrs = [];
     var firstCaseIdx = trows.indexOf(caseRows[0]);
+    var _fallbackHdrs = null;
     for (var _hi = firstCaseIdx - 1; _hi >= 0; _hi--) {
       var _hr = trows[_hi];
       if (_hr.every(function(c){ return c.isHeader; }) && _hr.length > 1) {
-        colHdrs = _hr.slice(1).map(function(c){ return c.text; });
-        break;
+        var _cand = _hr.slice(1).map(function(c){ return c.text; });
+        // Prefer rows that contain recognised column-label words
+        if (_cand.some(function(t){ return /^(Singular|Plural|mask\.|Mask\.|fem\.|Fem\.|neutr\.|Neutr\.|utrum)/i.test(t); })) {
+          colHdrs = _cand;
+          break;
+        }
+        if (!_fallbackHdrs) _fallbackHdrs = _cand; // keep first fallback found
       }
     }
-    // Still empty? Infer from the data row width
     if (!colHdrs.length) {
-      var _w = caseRows[0].length - 1;
-      colHdrs = _w >= 2 ? ['Singular','Plural'] : ['Form'];
+      if (_fallbackHdrs) {
+        colHdrs = _fallbackHdrs;
+      } else {
+        // Infer from the data row width
+        var _w = caseRows[0].length - 1;
+        colHdrs = _w >= 2 ? ['Singular','Plural'] : ['Form'];
+      }
+    }
+    // ── Safety: pad colHdrs so every data column has a label ──────────────
+    // This ensures the Plural column always renders even when the backward
+    // scan only found a 1-entry header row (e.g. a word-form sub-header row).
+    var _dataW = Math.max.apply(null, caseRows.map(function(r){ return r.length - 1; }));
+    while (colHdrs.length < _dataW) {
+      colHdrs.push(colHdrs.length === 0 ? 'Singular' : colHdrs.length === 1 ? 'Plural' : '');
     }
     var caseColor = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
     var caseAbbr  = {Nominativ:'Nom.',Akkusativ:'Akk.',Dativ:'Dat.',Genitiv:'Gen.'};
@@ -1688,13 +1714,19 @@ function _tryChips(trows) {
         if (!val || val === '—' || val === '-' || val === '–') return;
         var cls = caseColor[cn] || '';
         var abbr = caseAbbr[cn] || cn;
-        // Strip leading article (der/die/das/dem/den/des) to get bare word for card lookup
-        var _bareForm = val.replace(/^(der|die|das|dem|den|des)\s+/i,'').trim();
-        var _fOnc = _bareForm ? ' onclick="openWordCard(\'' + _bareForm.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'?\')" style="cursor:pointer;"' : '';
-        html += '<div class="rw-form"' + _fOnc + '>'
-          + '<span class="fl">' + escHtml(abbr) + '</span>'
-          + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(val) + '</span>'
-          + '</div>';
+        // Split cells that contain multiple forms (e.g. "Badeanzug, Badeanzuge" or
+        // "des Badeanzuges / des Badeanzugs") into individual chips — one per form.
+        var formParts = val.split(/,\s+|\s+\/\s+/).map(function(f){ return f.trim(); }).filter(Boolean);
+        formParts.forEach(function(formVal) {
+          if (!formVal || formVal === '—' || formVal === '-' || formVal === '–') return;
+          // Strip leading article to get the bare word for card lookup
+          var _bareForm = formVal.replace(/^(der|die|das|dem|den|des)\s+/i,'').trim();
+          var _fOnc = _bareForm ? ' onclick="openWordCard(\'' + _bareForm.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'?\')" style="cursor:pointer;"' : '';
+          html += '<div class="rw-form"' + _fOnc + '>'
+            + '<span class="fl">' + escHtml(abbr) + '</span>'
+            + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(formVal) + '</span>'
+            + '</div>';
+        });
       });
       html += '</div>';
       if (colName) html += '</div>';
