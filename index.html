@@ -642,7 +642,10 @@ function updateCounts() {
 // ── Get meaning in active language ──
 function getLangMeaning(w) {
   if (LANG === 'fa') return (w.meaning_fa && w.meaning_fa.trim()) || (w.meaning_en && w.meaning_en.trim()) || '';
-  if (LANG === 'tr') return (w.meaning_tr && w.meaning_tr.trim()) || (w.meaning_en && w.meaning_en.trim()) || '';
+  if (LANG === 'tr') {
+    var tr = (w.meaning_tr && w.meaning_tr.trim()) || (_trMemCache && _trMemCache[normKey(w.word)]) || '';
+    return tr || (w.meaning_en && w.meaning_en.trim()) || '';
+  }
   return (w.meaning_en && w.meaning_en.trim()) || '';
 }
 
@@ -680,12 +683,32 @@ function buildQueue(level) {
   });
 }
 
-function startLevel(lv) {
+async function startLevel(lv) {
   currentLevel = lv;
   queue = buildQueue(lv);
   if(!queue.length){alert('No cards!');return;}
   idx=0;ok=0;no=0;
   show('screen-quiz');
+  if (LANG === 'tr') {
+    // Collect words missing Turkish translations that aren't cached yet
+    var toFetch = [];
+    queue.forEach(function(card) {
+      [card._word].concat(card._distractors).forEach(function(w) {
+        var k = normKey(w.word);
+        if (!(w.meaning_tr && w.meaning_tr.trim()) && _trMemCache[k] === undefined) {
+          if (toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
+        }
+      });
+    });
+    if (toFetch.length) {
+      document.getElementById('cquestion').textContent = 'Çeviriler hazırlanıyor…';
+      document.getElementById('choices').innerHTML = '';
+      for (var _fi = 0; _fi < toFetch.length; _fi++) {
+        await fetchTurkish(toFetch[_fi]);
+        if (_fi > 0 && _fi % 5 === 0) await new Promise(function(r){ setTimeout(r, 150); });
+      }
+    }
+  }
   renderCard();
 }
 
@@ -919,12 +942,12 @@ function metaFromWord(word) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
-      return { word: e[0], tc: e[1], en: e[2], tr: e[3], fa: '' };
+      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: '' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||'', fa: wb.meaning_fa||'' };
-  return { word: word, tc: '?', en: '', tr: '', fa: '' };
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||'' };
+  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: '' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
@@ -1152,7 +1175,7 @@ async function _wiktRestFetch(lw) {
   return result;
 }
 
-// ── MyMemory machine-translation fallback (English only; other languages TBD) ──
+// ── MyMemory machine-translation fallback (English only) ──
 var _myMemoryCache = {};
 async function fetchMyMemoryTranslation(word) {
   var key = normKey(word);
@@ -1175,6 +1198,58 @@ async function fetchMyMemoryTranslation(word) {
   } catch(e) {}
   _myMemoryCache[key] = null;
   return null;
+}
+
+// ── Turkish translation auto-fetch with localStorage persistence ──
+var _trMemCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_tr_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _trCacheSave() {
+  try {
+    var keys = Object.keys(_trMemCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _trMemCache[k]; });
+      _trMemCache = trim;
+    }
+    localStorage.setItem('dl_tr_cache', JSON.stringify(_trMemCache));
+  } catch(e) {}
+}
+async function fetchTurkish(word) {
+  var key = normKey(word);
+  if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
+  if (_trMemCache[key] !== undefined) return _trMemCache[key] || null;
+  try {
+    var url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(word) + '&langpair=de|tr';
+    var resp = await fetch(url);
+    if (resp.ok) {
+      var json = await resp.json();
+      if (json.responseStatus === 200 && json.responseData) {
+        var t = (json.responseData.translatedText || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          _trMemCache[key] = t;
+          _trCacheSave();
+          return t;
+        }
+      }
+    }
+  } catch(e) {}
+  _trMemCache[key] = '';
+  _trCacheSave();
+  return null;
+}
+// Helper: fetch Turkish for a displayed word card and update the DOM element
+function _autoFetchTurkish(word, container) {
+  if (LANG !== 'tr') return;
+  var el = container.querySelector('.tr-meaning-pending');
+  if (!el) return;
+  fetchTurkish(word).then(function(tr) {
+    if (tr && el.isConnected) {
+      el.textContent = tr;
+      el.classList.remove('tr-meaning-pending');
+    }
+  });
 }
 
 function parseWiktPage(htmlStr, word) {
@@ -1425,9 +1500,12 @@ function renderWiktCard(data, meta, targetId) {
   // Meaning: selected language first, then English as universal secondary
   // (data is predominantly in English so EN fallback is safe for all languages).
   // We never show Turkish to an English user or vice-versa without reason.
+  var _cachedTr = _trMemCache && _trMemCache[normKey(meta.word)] || '';
   var meaning = LANG==='fa' ? (meta.fa || meta.en || '')
-              : LANG==='tr' ? (meta.tr || meta.en || '')
+              : LANG==='tr' ? (meta.tr || _cachedTr || meta.en || '')
               : (meta.en || '');
+  // True when we're showing English as fallback for Turkish (no TR data yet)
+  var _trPending = LANG === 'tr' && !(meta.tr || _cachedTr);
   // Still no meaning? Pull the first Wiktionary definition (always English).
   if (!meaning && data.found && data.sections.length) {
     for (var _si = 0; _si < data.sections.length; _si++) {
@@ -1476,7 +1554,7 @@ function renderWiktCard(data, meta, targetId) {
         + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
         + escHtml(_mOfRe[2]) + '</span></div>';
     } else {
-      html += '<div class="rw-meaning-single">' + escHtml(meaning)
+      html += '<div class="rw-meaning-single' + (_trPending ? ' tr-meaning-pending' : '') + '">' + escHtml(meaning)
         + (meaningIsAuto
           ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
           : '')
@@ -1913,6 +1991,7 @@ function renderRandomWord() {
 
   fetchWiktionary(word, tc).then(function(data) {
     content.innerHTML = renderWiktCard(data, meta);
+    _autoFetchTurkish(word, content);
     // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
@@ -1921,6 +2000,7 @@ function renderRandomWord() {
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _autoFetchTurkish(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
@@ -2034,7 +2114,7 @@ function onSearchInput(q) {
   container.innerHTML = _lastSR.map(function(e, i) {
     // Show meaning in selected language; fall back to English (never to an
     // unrelated language — e.g. never show Turkish to an English user).
-    var meaning = LANG==='tr' ? (e[3]||e[2]||'') : LANG==='fa' ? (e[4]||e[2]||'') : (e[2]||'');
+    var meaning = LANG==='tr' ? (e[3]||(_trMemCache&&_trMemCache[normKey(e[0])])||e[2]||'') : LANG==='fa' ? (e[4]||e[2]||'') : (e[2]||'');
     var label = tcNameDE(e[1]);
     return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
       + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
@@ -2061,11 +2141,13 @@ async function openWordCard(word, tc) {
   try {
     var data = await fetchWiktionary(word, meta.tc);
     content.innerHTML = renderWiktCard(data, meta);
+    _autoFetchTurkish(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _autoFetchTurkish(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }
