@@ -886,10 +886,15 @@ function loadingHTML() {
 }
 function wiktLookupWord(word, tc) {
   var base = word.replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
-  // German nouns are capitalised; verbs/adjs lowercase
-  return (tc === 'N')
-    ? base.charAt(0).toUpperCase() + base.slice(1)
-    : base.charAt(0).toLowerCase() + base.slice(1);
+  // Verbs, adjectives, adverbs, prepositions and conjunctions are lowercase in
+  // Wiktionary German entries. Nouns, unknown words and everything else must be
+  // capitalised (German capitalisation rule applies to nouns; for unknown/? type
+  // words from frequency lists most are nouns, and Wiktionary redirects handle
+  // the rest).
+  var forceLower = (tc === 'V' || tc === 'A' || tc === 'D' || tc === 'R' || tc === 'C');
+  return forceLower
+    ? base.charAt(0).toLowerCase() + base.slice(1)
+    : base.charAt(0).toUpperCase() + base.slice(1);
 }
 function metaFromWord(word) {
   // Check SI first, then WORD_BANK
@@ -906,11 +911,77 @@ function metaFromWord(word) {
   return { word: word, tc: '?', en: '', tr: '', fa: '' };
 }
 
+// ── German verb lemmatizer ─────────────────────────────────────────
+// Given an inflected (conjugated/participle) form, return the likely
+// infinitive if it can be found in SI or WORD_BANK.
+// e.g. "verschwendet" → "verschwenden", "gespielt" → "spielen"
+function deduceLemma(word) {
+  var w = word.toLowerCase().replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
+  var candidates = [];
+  // ge- prefix past participle: gespielt → spielen, gearbeitet → arbeiten
+  if (w.startsWith('ge') && w.length > 5) {
+    var wGe = w.slice(2);
+    if (wGe.endsWith('et')) candidates.push(wGe.slice(0,-2) + 'en');
+    if (wGe.endsWith('t'))  candidates.push(wGe.slice(0,-1) + 'en');
+  }
+  // -et  → -en   verschwendet → verschwenden, arbeitet → arbeiten
+  if (w.endsWith('et'))   candidates.push(w.slice(0,-2) + 'en');
+  // -est → -en   arbeitest → arbeiten
+  if (w.endsWith('est'))  candidates.push(w.slice(0,-3) + 'en');
+  // -test→ -en   arbeitetest → arbeiten
+  if (w.endsWith('test')) candidates.push(w.slice(0,-4) + 'en');
+  // -ten → -en   arbeiteten → arbeiten
+  if (w.endsWith('ten'))  candidates.push(w.slice(0,-3) + 'en');
+  // -te  → -en   spielte → spielen
+  if (w.endsWith('te'))   candidates.push(w.slice(0,-2) + 'en');
+  // -st  → -en   spielst → spielen, kommst → kommen
+  if (w.endsWith('st'))   candidates.push(w.slice(0,-2) + 'en');
+  // -t   → -en   spielt → spielen (lower confidence; tried last)
+  if (w.endsWith('t') && !w.endsWith('et')) candidates.push(w.slice(0,-1) + 'en');
+  // -e   → -en   spiele → spielen
+  if (w.endsWith('e') && !w.endsWith('ie')) candidates.push(w + 'n');
+
+  for (var ci = 0; ci < candidates.length; ci++) {
+    var c = candidates[ci];
+    if (SI_READY && window.SI) {
+      var si = SI_KEY_MAP[c];
+      if (si !== undefined && window.SI[si][1] === 'V') return window.SI[si][0];
+    }
+    var wbm = WORD_BANK.find(function(x){ return x.word.toLowerCase() === c && x.type === 'Verb'; });
+    if (wbm) return wbm.word;
+  }
+  return null;
+}
+
 // ══════════════════════════════════════════════════════════════════
 //  WIKTIONARY FETCH + PARSE
 // ══════════════════════════════════════════════════════════════════
 async function fetchWiktionary(word, tc) {
   var lw = wiktLookupWord(word, tc);
+  var data = await _wiktFetch(lw);
+  // Retry with flipped first-letter case (handles ?-type words where we guessed
+  // capitalisation but the Wiktionary entry is lowercase or vice versa)
+  if (!data.found) {
+    var alt = lw.charAt(0) === lw.charAt(0).toUpperCase()
+      ? lw.charAt(0).toLowerCase() + lw.slice(1)
+      : lw.charAt(0).toUpperCase() + lw.slice(1);
+    if (alt !== lw) {
+      try { var alt_data = await _wiktFetch(alt); if (alt_data.found) return alt_data; } catch(e) {}
+    }
+  }
+  // Still not found? The word is likely an inflected / conjugated form.
+  // Try to deduce the base lemma (infinitive) and look that up instead.
+  if (!data.found) {
+    var lemma = deduceLemma(word);
+    if (lemma) {
+      var lemmaLw = wiktLookupWord(lemma, 'V');
+      try { var ld = await _wiktFetch(lemmaLw); if (ld.found) { ld.fromLemma = lemma; return ld; } } catch(e) {}
+    }
+  }
+  return data;
+}
+
+async function _wiktFetch(lw) {
   var url = 'https://en.wiktionary.org/w/api.php?action=parse&page='
     + encodeURIComponent(lw)
     + '&prop=text&format=json&origin=*&redirects=1&disablelimitreport=1&disableeditsection=1';
@@ -1039,15 +1110,24 @@ function extractWiktTable(tableEl) {
 function renderWiktCard(data, meta, targetId) {
   var word = meta.word || data.word;
   var tc   = meta.tc || '?';
-  var meaning = LANG==='fa' ? (meta.fa||meta.en)
+  // Use the properly-cased lookup word as the display title (e.g., "nachtisch"
+  // from the frequency-list index becomes "Nachtisch" for display)
+  var displayWord = wiktLookupWord(word, tc);
+  // When data was fetched from the base lemma (inflected form lookup),
+  // annotate the card title so the user understands the relationship.
+  var baseLemma = data.fromLemma || null;
+  // Meaning: prefer current-lang, fall back across all three
+  var meaning = LANG==='fa' ? (meta.fa||meta.en||meta.tr)
               : LANG==='tr' ? (meta.tr||meta.en)
-              : meta.en;
+              : (meta.en||meta.tr);          // EN falls back to TR for SI entries that only have TR
   var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
   var level = wb ? wb.level : '';
 
   var html = '<div class="rw-card">';
   html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcName(tc) + '</div>';
-  html += '<div class="rw-word">' + escHtml(word) + '</div>';
+  html += '<div class="rw-word">' + escHtml(displayWord)
+    + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
+    + '</div>';
   if (meaning) html += '<div class="rw-meaning-single">' + escHtml(meaning) + '</div>';
   if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
   html += '<div class="rw-divider"></div>';
@@ -1304,7 +1384,10 @@ function onSearchInput(q) {
     return;
   }
   container.innerHTML = _lastSR.map(function(e, i) {
-    var meaning = LANG==='tr' ? (e[3]||e[2]) : LANG==='fa' ? (e[3]||e[2]) : e[2];
+    // For all languages fall back across the available meanings so words that
+    // only have a Turkish translation (common in the frequency-list SI entries)
+    // still show something useful even when the UI language is English/Persian.
+    var meaning = LANG==='tr' ? (e[3]||e[2]) : LANG==='fa' ? (e[4]||e[2]||e[3]) : (e[2]||e[3]);
     var label = tcName(e[1]);
     return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
       + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
@@ -1325,6 +1408,16 @@ async function openWordCard(word, tc) {
   if (!word) return;
   var meta = metaFromWord(word);
   if (tc && meta.tc === '?') meta.tc = tc;
+  // If no meaning in meta (inflected form in SI with empty fields), inherit
+  // meaning from the base lemma so the card header shows something useful.
+  if (!meta.en && !meta.tr && !meta.fa) {
+    var lemma = deduceLemma(word);
+    if (lemma) {
+      var lm = metaFromWord(lemma);
+      meta.en = lm.en; meta.tr = lm.tr; meta.fa = lm.fa;
+      if (meta.tc === '?') meta.tc = lm.tc;
+    }
+  }
   var content = document.getElementById('word-modal-content');
   content.innerHTML = loadingHTML();
   document.getElementById('word-modal-overlay').classList.add('open');
