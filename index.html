@@ -318,6 +318,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <button class="opt-btn active" id="opt-en" onclick="setLang('en')">🇬🇧 English</button>
       <button class="opt-btn" id="opt-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
       <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
+      <button class="opt-btn" id="opt-ru" onclick="setLang('ru')">🇷🇺 Русский</button>
     </div>
   </div>
 
@@ -512,6 +513,35 @@ const UI = {
     meaning: 'معنی',
     tapPrompt: '👆 برای مشاهده جمله نمونه روی یک شکل بالا ضربه بزنید.',
     noExample: 'نمونه‌ای موجود نیست.',
+  },
+  ru: {
+    headerSub: 'Практика слов · Падежи · Спряжение',
+    settingsTitle: 'Настройки',
+    langLabel: 'Язык / Language',
+    closeDone: 'Готово',
+    rwBannerTitle: 'Исследователь случайных слов',
+    rwBannerSub: 'Смотри любое слово со всеми формами, падежами и примерами',
+    selectLevel: 'Выбрать уровень',
+    levelNames: { A1:'Начальный', A2:'Элементарный', B1:'Средний', B2:'Выше среднего' },
+    cardCount: (n) => n + ' карточек практики слов',
+    back: '← Назад',
+    next: 'Далее →',
+    correct: '✓ Правильно!',
+    wrong: (a) => `✗ Неверно. Правильный ответ: <strong>${a}</strong>`,
+    resultTitles: { great:'Отлично!', good:'Хорошо!', ok:'Неплохая попытка!', low:'Продолжай практиковаться!' },
+    resultSub: (lv,p) => `Уровень ${lv} · ${p}% правильно`,
+    scoreLbl: 'Счёт', correctLbl: 'Правильно', wrongLbl: 'Неверно',
+    playAgain: 'Играть снова', chooseLevel: 'Выбрать уровень',
+    rwTitle: 'Исследователь слов',
+    cases: 'Падежи (Kasus)', plural: 'Множественное число',
+    presentTense: 'Präsens (Настоящее)', pastSimple: 'Präteritum (Прошедшее)', perfekt: 'Perfekt',
+    comparatives: 'Сравнительная и превосходная степень', adjEndings: 'Окончания прилагательных (Nom.)', examples: 'Примеры',
+    source: 'Источник: список слов института Гёте',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Практика слов',
+    meaning: 'Значение',
+    tapPrompt: '👆 Нажмите на форму выше, чтобы увидеть пример предложения.',
+    noExample: 'Пример отсутствует.',
   }
 };
 
@@ -593,6 +623,7 @@ function setLang(lang) {
   document.getElementById('opt-en').classList.toggle('active', lang==='en');
   document.getElementById('opt-tr').classList.toggle('active', lang==='tr');
   document.getElementById('opt-fa').classList.toggle('active', lang==='fa');
+  document.getElementById('opt-ru').classList.toggle('active', lang==='ru');
   document.documentElement.style.setProperty('direction', lang==='fa'?'rtl':'ltr');
   document.body.classList.toggle('lang-fa', lang==='fa');
   applyTranslations();
@@ -641,13 +672,18 @@ function updateCounts() {
 
 // ── Get meaning in active language ──
 function getLangMeaning(w) {
+  var key = normKey(w.word);
   if (LANG === 'fa') {
-    var fa = (w.meaning_fa && w.meaning_fa.trim()) || (_faMemCache && _faMemCache[normKey(w.word)]) || '';
+    var fa = (w.meaning_fa && w.meaning_fa.trim()) || (_faMemCache && _faMemCache[key]) || '';
     return fa || (w.meaning_en && w.meaning_en.trim()) || '';
   }
   if (LANG === 'tr') {
-    var tr = (w.meaning_tr && w.meaning_tr.trim()) || (_trMemCache && _trMemCache[normKey(w.word)]) || '';
+    var tr = (w.meaning_tr && w.meaning_tr.trim()) || (_trMemCache && _trMemCache[key]) || '';
     return tr || (w.meaning_en && w.meaning_en.trim()) || '';
+  }
+  if (LANG === 'ru') {
+    var ru = (_ruMemCache && _ruMemCache[key]) || '';
+    return ru || (w.meaning_en && w.meaning_en.trim()) || '';
   }
   return (w.meaning_en && w.meaning_en.trim()) || '';
 }
@@ -692,7 +728,7 @@ async function startLevel(lv) {
   if(!queue.length){alert('No cards!');return;}
   idx=0;ok=0;no=0;
   show('screen-quiz');
-  if (LANG === 'tr' || LANG === 'fa') {
+  if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru') {
     // Collect words missing native-language translations that aren't cached yet
     var toFetch = [];
     queue.forEach(function(card) {
@@ -700,16 +736,20 @@ async function startLevel(lv) {
         var k = normKey(w.word);
         var isMissing = LANG === 'tr'
           ? (!(w.meaning_tr && w.meaning_tr.trim()) && _trMemCache[k] === undefined)
-          : (!(w.meaning_fa && w.meaning_fa.trim()) && _faMemCache[k] === undefined);
+          : LANG === 'fa'
+          ? (!(w.meaning_fa && w.meaning_fa.trim()) && _faMemCache[k] === undefined)
+          : (_ruMemCache[k] === undefined);
         if (isMissing && toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
       });
     });
     if (toFetch.length) {
       document.getElementById('cquestion').textContent =
-        LANG === 'tr' ? 'Çeviriler hazırlanıyor…' : 'در حال آماده‌سازی ترجمه‌ها…';
+        LANG === 'tr' ? 'Çeviriler hazırlanıyor…'
+        : LANG === 'fa' ? 'در حال آماده‌سازی ترجمه‌ها…'
+        : 'Переводы готовятся…';
       document.getElementById('choices').innerHTML = '';
       for (var _fi = 0; _fi < toFetch.length; _fi++) {
-        await (LANG === 'tr' ? fetchTurkish(toFetch[_fi]) : fetchPersian(toFetch[_fi]));
+        await (LANG === 'tr' ? fetchTurkish(toFetch[_fi]) : LANG === 'fa' ? fetchPersian(toFetch[_fi]) : fetchRussian(toFetch[_fi]));
         if (_fi > 0 && _fi % 5 === 0) await new Promise(function(r){ setTimeout(r, 150); });
       }
     }
@@ -739,6 +779,7 @@ function renderCard() {
 
   var qText = LANG==='fa' ? 'این کلمه چه معنایی دارد؟'
             : LANG==='tr' ? 'Bu kelimenin anlamı nedir?'
+            : LANG==='ru' ? 'Что означает это слово?'
             : 'What does this word mean?';
   document.getElementById('cquestion').textContent = qText;
   document.getElementById('cmain').textContent = w.word;
@@ -925,7 +966,7 @@ function normKey(w) {
   return (w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
 }
 function loadingHTML() {
-  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : 'Loading…';
+  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : LANG==='ru' ? 'Загрузка…' : 'Loading…';
   return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + msg + '</span></div>';
 }
 function wiktLookupWord(word, tc) {
@@ -947,12 +988,12 @@ function metaFromWord(word) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
-      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'' };
+      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||(_faMemCache&&_faMemCache[key])||'' };
-  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'' };
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||(_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
+  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
@@ -1309,6 +1350,58 @@ function _autoFetchPersian(word, container) {
   });
 }
 
+// ── Russian translation auto-fetch with localStorage persistence ──
+var _ruMemCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_ru_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _ruCacheSave() {
+  try {
+    var keys = Object.keys(_ruMemCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _ruMemCache[k]; });
+      _ruMemCache = trim;
+    }
+    localStorage.setItem('dl_ru_cache', JSON.stringify(_ruMemCache));
+  } catch(e) {}
+}
+async function fetchRussian(word) {
+  var key = normKey(word);
+  if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
+  if (_ruMemCache[key] !== undefined) return _ruMemCache[key] || null;
+  try {
+    var url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(word) + '&langpair=de|ru';
+    var resp = await fetch(url);
+    if (resp.ok) {
+      var json = await resp.json();
+      if (json.responseStatus === 200 && json.responseData) {
+        var t = (json.responseData.translatedText || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          _ruMemCache[key] = t;
+          _ruCacheSave();
+          return t;
+        }
+      }
+    }
+  } catch(e) {}
+  _ruMemCache[key] = '';
+  _ruCacheSave();
+  return null;
+}
+// Helper: fetch Russian for a displayed word card and update the DOM element
+function _autoFetchRussian(word, container) {
+  if (LANG !== 'ru') return;
+  var el = container.querySelector('.ru-meaning-pending');
+  if (!el) return;
+  fetchRussian(word).then(function(ru) {
+    if (ru && el.isConnected) {
+      el.textContent = ru;
+      el.classList.remove('ru-meaning-pending');
+    }
+  });
+}
+
 function parseWiktPage(htmlStr, word) {
   var dp = new DOMParser();
   var doc = dp.parseFromString(htmlStr, 'text/html');
@@ -1559,12 +1652,15 @@ function renderWiktCard(data, meta, targetId) {
   // We never show Turkish to an English user or vice-versa without reason.
   var _cachedTr = _trMemCache && _trMemCache[normKey(meta.word)] || '';
   var _cachedFa = _faMemCache && _faMemCache[normKey(meta.word)] || '';
+  var _cachedRu = _ruMemCache && _ruMemCache[normKey(meta.word)] || '';
   var meaning = LANG==='fa' ? (meta.fa || _cachedFa || meta.en || '')
               : LANG==='tr' ? (meta.tr || _cachedTr || meta.en || '')
+              : LANG==='ru' ? (meta.ru || _cachedRu || meta.en || '')
               : (meta.en || '');
   // True when we're showing English as fallback (no native translation yet)
   var _trPending = LANG === 'tr' && !(meta.tr || _cachedTr);
   var _faPending = LANG === 'fa' && !(meta.fa || _cachedFa);
+  var _ruPending = LANG === 'ru' && !(meta.ru || _cachedRu);
   // Still no meaning? Pull the first Wiktionary definition (always English).
   if (!meaning && data.found && data.sections.length) {
     for (var _si = 0; _si < data.sections.length; _si++) {
@@ -1613,7 +1709,7 @@ function renderWiktCard(data, meta, targetId) {
         + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
         + escHtml(_mOfRe[2]) + '</span></div>';
     } else {
-      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : '';
+      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : '';
       html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
         + (meaningIsAuto
           ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
@@ -1637,6 +1733,8 @@ function renderWiktCard(data, meta, targetId) {
         html += '<div class="rw-meaning-single tr-meaning-pending"></div>';
       } else if (LANG === 'fa') {
         html += '<div class="rw-meaning-single fa-meaning-pending"></div>';
+      } else if (LANG === 'ru') {
+        html += '<div class="rw-meaning-single ru-meaning-pending"></div>';
       } else {
         html += '<div class="wikt-error"><div class="wikt-error-word">' + escHtml(word) + '</div>'
           + '<span>No detailed information found.</span></div>';
@@ -2047,7 +2145,7 @@ function renderRandomWord() {
 
   var entry = pool[idx];
   var word = entry[0], tc = entry[1], en = entry[2], tr = entry[3];
-  var meta = { word: word, tc: tc, en: en, tr: tr, fa: '' };
+  var meta = { word: word, tc: tc, en: en, tr: tr, fa: (_faMemCache&&_faMemCache[normKey(word)])||'', ru: (_ruMemCache&&_ruMemCache[normKey(word)])||'' };
 
   // Animate refresh
   var rb = document.querySelector('.refresh-btn');
@@ -2060,18 +2158,18 @@ function renderRandomWord() {
   var content = document.getElementById('rw-content');
   content.innerHTML = loadingHTML();
 
-  fetchWiktionary(word, tc).then(function(data) {
+  fetchWiktionary(word, tc).then(async function(data) {
+    await _prefetchLangMeta(word, meta);
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content);
     // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }).catch(function() {
-    // Offline fallback
+    // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content);
+    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
@@ -2084,7 +2182,7 @@ function openSearch() {
   var overlay = document.getElementById('search-overlay');
   var box = document.getElementById('search-box');
   box.value = '';
-  box.placeholder = LANG==='tr' ? 'Kelime ara...' : LANG==='fa' ? 'جستجوی کلمه...' : 'Search a word...';
+  box.placeholder = LANG==='tr' ? 'Kelime ara...' : LANG==='fa' ? 'جستجوی کلمه...' : LANG==='ru' ? 'Поиск слова...' : 'Search a word...';
   document.getElementById('search-results').innerHTML = '';
   overlay.classList.add('open');
   requestAnimationFrame(function(){
@@ -2186,7 +2284,8 @@ function onSearchInput(q) {
     // Show meaning in selected language; fall back to English (never to an
     // unrelated language — e.g. never show Turkish to an English user).
     var meaning = LANG==='tr' ? (e[3]||(_trMemCache&&_trMemCache[normKey(e[0])])||e[2]||'')
-                : LANG==='fa' ? (e[4]||(_faMemCache&&_faMemCache[normKey(e[0])])||e[2]||'')
+                : LANG==='fa' ? ((_faMemCache&&_faMemCache[normKey(e[0])])||e[2]||'')
+                : LANG==='ru' ? ((_ruMemCache&&_ruMemCache[normKey(e[0])])||e[2]||'')
                 : (e[2]||'');
     var label = tcNameDE(e[1]);
     return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
@@ -2203,6 +2302,14 @@ function openSRItem(i) {
   openWordCard(e[0], e[1]);
 }
 
+// Pre-fetch the active language translation into meta before rendering
+// so the card always displays in the right language on first paint.
+async function _prefetchLangMeta(word, meta) {
+  if (LANG === 'tr' && !meta.tr) { var _t = await fetchTurkish(word); if (_t) meta.tr = _t; }
+  else if (LANG === 'fa' && !meta.fa) { var _t = await fetchPersian(word); if (_t) meta.fa = _t; }
+  else if (LANG === 'ru' && !meta.ru) { var _t = await fetchRussian(word); if (_t) meta.ru = _t; }
+}
+
 async function openWordCard(word, tc) {
   closeSearch();
   if (!word) return;
@@ -2213,14 +2320,15 @@ async function openWordCard(word, tc) {
   document.getElementById('word-modal-overlay').classList.add('open');
   try {
     var data = await fetchWiktionary(word, meta.tc);
+    await _prefetchLangMeta(word, meta);
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
+    // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content);
+    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }
