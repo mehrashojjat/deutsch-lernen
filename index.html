@@ -1289,6 +1289,103 @@ function extractWiktTable(tableEl) {
 }
 
 // ══════════════════════════════════════════════════════════════════
+//  HEAD-LINE CHIP RENDERER
+// Turns Wiktionary's headword summary line into styled, clickable chips.
+//
+// Two formats are handled:
+//   A) Inflected-form entry  — "nominative/accusative plural of Badeanzug"
+//      → form-description chips  + a gold clickable chip for the base word
+//   B) Full lemma entry      — "Badeanzug m (strong, genitive Badeanzuges or
+//                               Badeanzugs, plural Badeanzüge)"
+//      → lemma+gender chip  + individual chips for each bracketed attribute,
+//        with clickable chips for any word-form values
+// ══════════════════════════════════════════════════════════════════
+function renderHeadLineChips(text) {
+  if (!text) return '';
+
+  // Helper: safe onclick value for openWordCard calls inside HTML attributes
+  function cardLink(word) {
+    var s = word.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    return 'openWordCard(\'' + s + '\',\'?\')';
+  }
+
+  var html = '<div class="rw-forms" style="margin-bottom:12px;flex-wrap:wrap;">';
+
+  // ── Pattern A: "... of BaseWord" ──────────────────────────────────────
+  // e.g. "nominative/accusative/genitive plural of Badeanzug"
+  var ofMatch = text.match(/^(.+?)\s+of\s+([A-ZÄÖÜa-zäöüß][^\s,()]+)\s*$/);
+  if (ofMatch) {
+    var formDesc = ofMatch[1].trim();  // "nominative/accusative/genitive plural"
+    var baseWord = ofMatch[2].trim(); // "Badeanzug"
+
+    // One chip per slash-separated form descriptor
+    formDesc.split('/').forEach(function(part) {
+      part = part.trim();
+      if (!part) return;
+      var translated = translateCellDE(part);
+      html += '<div class="rw-form" style="cursor:default;">'
+        + '<span class="fv" style="color:var(--muted);font-size:.78rem;">'
+        + escHtml(translated) + '</span></div>';
+    });
+
+    // Clickable gold chip for the base word
+    html += '<div class="rw-form" onclick="' + cardLink(baseWord) + '" '
+      + 'style="cursor:pointer;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+      + '<span class="fl" style="font-size:.62rem;">→</span>'
+      + '<span class="fv gold">' + escHtml(baseWord) + '</span></div>';
+
+    html += '</div>';
+    return html;
+  }
+
+  // ── Pattern B: "Lemma gender (attrs…)" ───────────────────────────────
+  // e.g. "Badeanzug m (strong, genitive Badeanzuges or Badeanzugs, plural Badeanzüge)"
+  var parenOpen = text.indexOf('(');
+  var beforeParen = (parenOpen >= 0 ? text.slice(0, parenOpen) : text).trim();
+  var inParen = parenOpen >= 0 ? text.slice(parenOpen + 1).replace(/\)\s*$/, '').trim() : '';
+
+  // Lemma + gender chip (e.g. "Badeanzug m")
+  if (beforeParen) {
+    html += '<div class="rw-form" style="cursor:default;">'
+      + '<span class="fv">' + escHtml(beforeParen) + '</span></div>';
+  }
+
+  if (inParen) {
+    // Split on commas, but keep "X or Y" together
+    inParen.split(',').forEach(function(part) {
+      part = part.trim();
+      if (!part) return;
+
+      // Try "label form(s)" where label is a case/number keyword
+      var labelMatch = part.match(
+        /^(genitive|dative|accusative|nominative|plural|singular)\s+(.+)$/i
+      );
+      if (labelMatch) {
+        var lbl = translateCellDE(labelMatch[1].trim());
+        var formsPart = labelMatch[2].trim();
+        // Multiple forms joined by "or"
+        formsPart.split(/\s+or\s+/i).forEach(function(frm) {
+          frm = frm.trim();
+          if (!frm) return;
+          html += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
+            + '<span class="fl">' + escHtml(lbl) + '</span>'
+            + '<span class="fv blue">' + escHtml(frm) + '</span></div>';
+        });
+      } else {
+        // Plain attribute chip (e.g. "strong", "weak", "mixed")
+        var translated2 = translateCellDE(part);
+        html += '<div class="rw-form" style="cursor:default;">'
+          + '<span class="fv" style="font-size:.78rem;">'
+          + escHtml(translated2) + '</span></div>';
+      }
+    });
+  }
+
+  html += '</div>';
+  return html;
+}
+
+// ══════════════════════════════════════════════════════════════════
 //  WIKTIONARY CARD RENDERER
 // ══════════════════════════════════════════════════════════════════
 function renderWiktCard(data, meta, targetId) {
@@ -1315,6 +1412,29 @@ function renderWiktCard(data, meta, targetId) {
       }
     }
   }
+  // Still no meaning? The word may be an inflected form whose headLine says
+  // "… of BaseWord". Look up the base word meaning from our local data.
+  if (!meaning && data.found) {
+    for (var _si2 = 0; _si2 < data.sections.length && !meaning; _si2++) {
+      var _ofM = (data.sections[_si2].headLine || '').match(/\bof\s+([A-ZÄÖÜa-zäöüß][^\s,()]+)/);
+      if (_ofM) {
+        var _bm = metaFromWord(_ofM[1]);
+        meaning = LANG==='tr' ? (_bm.tr || _bm.en || '')
+                : LANG==='fa' ? (_bm.fa || _bm.en || '')
+                : (_bm.en || '');
+      }
+    }
+  }
+  // If meaning still looks like a grammatical form description (e.g. "plural of Badeanzug"),
+  // try to resolve the actual base-word meaning from our local index.
+  if (meaning) {
+    var _fofRe = meaning.match(/\b(?:plural|genitive|dative|accusative|nominative|form|participle)\s+of\s+([A-ZÄÖÜa-zäöüß]\S+)/i);
+    if (_fofRe) {
+      var _fofM = metaFromWord(_fofRe[1]);
+      var _fofMn = LANG==='fa' ? (_fofM.fa || _fofM.en) : LANG==='tr' ? (_fofM.tr || _fofM.en) : _fofM.en;
+      if (_fofMn) meaning = _fofMn;
+    }
+  }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
   var level = wb ? wb.level : '';
 
@@ -1323,7 +1443,21 @@ function renderWiktCard(data, meta, targetId) {
   html += '<div class="rw-word">' + escHtml(displayWord)
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
     + '</div>';
-  if (meaning) html += '<div class="rw-meaning-single">' + escHtml(meaning) + '</div>';
+  if (meaning) {
+    // If meaning still looks like a grammatical form description (e.g. "nominative
+    // plural of Badeanzug"), make the base word a clickable gold link so the user
+    // can navigate to its full card with one tap.
+    var _mOfRe = meaning.match(/^(.*?)\s+of\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)\s*$/i);
+    if (_mOfRe) {
+      var _mEnc = _mOfRe[2].replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      html += '<div class="rw-meaning-single">' + escHtml(_mOfRe[1]) + ' of '
+        + '<span onclick="openWordCard(\'' + _mEnc + '\',\'?\')" '
+        + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
+        + escHtml(_mOfRe[2]) + '</span></div>';
+    } else {
+      html += '<div class="rw-meaning-single">' + escHtml(meaning) + '</div>';
+    }
+  }
   if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
   html += '<div class="rw-divider"></div>';
 
@@ -1344,8 +1478,33 @@ function renderWiktCard(data, meta, targetId) {
     // POS badge is always in German — this is a German learning card
     html += '<span class="wikt-pos-badge">' + posLabelDE(sec.pos) + '</span>';
 
-    if (sec.headLine) {
-      html += '<div class="wikt-head-line">' + escHtml(sec.headLine) + '</div>';
+    // For inflected-form sections (Wortform / noun form / verb form etc.), pull the
+    // base word out of the definition list and show a clickable "Grundform" chip.
+    // For full lemma sections (Substantiv/Verb/Adjektiv), suppress the headLine:
+    // "Badeanzug m (strong, ...)" is confusing to learners — the declension table
+    // already shows all the form data.
+    var _isFormSec = /form|wortform|participle/i.test(sec.pos);
+    if (_isFormSec && sec.defs.length) {
+      // Collect all "X of WORD" base-word references from defs
+      var _bwSet = [], _bwSeen = {};
+      sec.defs.forEach(function(d) {
+        var _bwm = d.text.match(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/i);
+        if (_bwm && !_bwSeen[_bwm[1]]) { _bwSeen[_bwm[1]] = true; _bwSet.push(_bwm[1]); }
+      });
+      if (_bwSet.length) {
+        html += '<div class="rw-section" style="margin-bottom:10px;">'
+          + '<div class="rw-section-title">Grundform</div>'
+          + '<div class="rw-forms">';
+        _bwSet.forEach(function(_bwf) {
+          var _bwEnc = _bwf.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+          html += '<div class="rw-form" onclick="openWordCard(\'' + _bwEnc + '\',\'?\')" '
+            + 'style="cursor:pointer;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+            + '<span class="fl" style="font-size:.62rem;">→</span>'
+            + '<span class="fv gold">' + escHtml(_bwf) + '</span>'
+            + '</div>';
+        });
+        html += '</div></div>';
+      }
     }
     if (sec.table && sec.table.length) {
       // Table section title is always in German
@@ -1362,9 +1521,16 @@ function renderWiktCard(data, meta, targetId) {
       html += '<div class="rw-section"><div class="rw-section-title">' + defTitle + '</div>'
         + '<div class="wikt-def-list">';
       sec.defs.slice(0,5).forEach(function(d, i) {
+        // Linkify any "of WORD" pattern so base words are tappable
+        var _dEsc = escHtml(d.text);
+        var _dHtml = _dEsc.replace(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/g, function(m, w) {
+          var _we = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+          return 'of <span onclick="openWordCard(\'' + _we + '\',\'?\')" '
+            + 'style="color:var(--gold);cursor:pointer;font-weight:600;">' + w + '</span>';
+        });
         html += '<div class="wikt-def-item">'
           + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
-          + '<span class="wikt-def-text">' + escHtml(d.text) + '</span></div>';
+          + '<span class="wikt-def-text">' + _dHtml + '</span></div>';
         if (d.examples.length) {
           html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
         }
@@ -1374,6 +1540,22 @@ function renderWiktCard(data, meta, targetId) {
     }
     html += '<div class="rw-divider" style="margin:10px 0 8px"></div>';
   });
+
+  // ── Example sentence ─────────────────────────────────────────────────
+  var _exTxt = null;
+  // 1. Try Wiktionary definition examples first
+  data.sections.forEach(function(_esec) {
+    if (_exTxt) return;
+    (_esec.defs || []).forEach(function(_ed) {
+      if (!_exTxt && _ed.examples && _ed.examples.length) _exTxt = _ed.examples[0];
+    });
+  });
+  // 2. Fall back to WORD_BANK example
+  if (!_exTxt && wb && wb.example) _exTxt = wb.example;
+  if (_exTxt) {
+    html += '<div class="rw-section"><div class="rw-section-title">Beispiel</div>'
+      + '<div class="rw-example-box lit">' + escHtml(_exTxt) + '</div></div>';
+  }
 
   html += '<div class="rw-source">Source: <a href="https://en.wiktionary.org/wiki/' + encodeURIComponent(wiktLookupWord(word,tc)) + '" target="_blank">Wiktionary</a></div>';
   html += '</div>';
@@ -1407,6 +1589,12 @@ function translateCellDE(txt) {
   if (!txt) return txt;
   var lo = txt.trim().toLowerCase();
   if (_DE_FULL[lo]) return _DE_FULL[lo];
+  // Multi-word phrase: translate each word individually via _DE_FULL
+  if (lo.includes(' ')) {
+    return lo.split(/\s+/).map(function(p) {
+      return _DE_FULL[p] ? _DE_FULL[p] : (p.charAt(0).toUpperCase() + p.slice(1));
+    }).join(' ');
+  }
   return txt
     .replace(/\bNominative\b/g,'Nominativ').replace(/\bAccusative\b/g,'Akkusativ')
     .replace(/\bDative\b/g,'Dativ').replace(/\bGenitive\b/g,'Genitiv')
@@ -1500,7 +1688,10 @@ function _tryChips(trows) {
         if (!val || val === '—' || val === '-' || val === '–') return;
         var cls = caseColor[cn] || '';
         var abbr = caseAbbr[cn] || cn;
-        html += '<div class="rw-form">'
+        // Strip leading article (der/die/das/dem/den/des) to get bare word for card lookup
+        var _bareForm = val.replace(/^(der|die|das|dem|den|des)\s+/i,'').trim();
+        var _fOnc = _bareForm ? ' onclick="openWordCard(\'' + _bareForm.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'?\')" style="cursor:pointer;"' : '';
+        html += '<div class="rw-form"' + _fOnc + '>'
           + '<span class="fl">' + escHtml(abbr) + '</span>'
           + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(val) + '</span>'
           + '</div>';
@@ -1670,7 +1861,7 @@ function renderRandomWord() {
   fetchWiktionary(word, tc).then(function(data) {
     content.innerHTML = renderWiktCard(data, meta);
     // If offline chips exist, auto-click first
-    var chip = content.querySelector('.rw-form');
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }).catch(function() {
     // Offline fallback
@@ -1678,7 +1869,7 @@ function renderRandomWord() {
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
     if (wb) {
-      var chip = content.querySelector('.rw-form');
+      var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
     }
   });
@@ -1827,12 +2018,12 @@ async function openWordCard(word, tc) {
   try {
     var data = await fetchWiktionary(word, meta.tc);
     content.innerHTML = renderWiktCard(data, meta);
-    var chip = content.querySelector('.rw-form');
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
-    var chip = content.querySelector('.rw-form');
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }
 }
