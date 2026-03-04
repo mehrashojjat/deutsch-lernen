@@ -942,29 +942,24 @@ function updateCounts() {
 }
 
 // ── Get meaning in active language ──
+// All non-English languages follow the same priority:
+//   1. Live API cache (de→target, the German word translated directly)
+//   2. Pre-baked field from data files (TR/FA only, as secondary fallback)
+//   3. English meaning_en as absolute last resort
 function getLangMeaning(w) {
+  if (LANG === 'en') return (w.meaning_en && w.meaning_en.trim()) || '';
   var key = normKey(w.word);
-  if (LANG === 'fa') {
-    var fa = (w.meaning_fa && w.meaning_fa.trim()) || (_faMemCache && _faMemCache[key]) || '';
-    return fa || (w.meaning_en && w.meaning_en.trim()) || '';
-  }
-  if (LANG === 'tr') {
-    var tr = (w.meaning_tr && w.meaning_tr.trim()) || (_trMemCache && _trMemCache[key]) || '';
-    return tr || (w.meaning_en && w.meaning_en.trim()) || '';
-  }
-  if (LANG === 'ru') {
-    var ru = (_ruMemCache && _ruMemCache[key]) || '';
-    return ru || (w.meaning_en && w.meaning_en.trim()) || '';
-  }
-  if (LANG === 'uk') {
-    var uk = (_ukMemCache && _ukMemCache[key]) || '';
-    return uk || (w.meaning_en && w.meaning_en.trim()) || '';
-  }
-  if (LANG === 'ar') {
-    var ar = (_arMemCache && _arMemCache[key]) || '';
-    return ar || (w.meaning_en && w.meaning_en.trim()) || '';
-  }
-  return (w.meaning_en && w.meaning_en.trim()) || '';
+  var cache = LANG==='tr' ? _trMemCache
+            : LANG==='fa' ? _faMemCache
+            : LANG==='ru' ? _ruMemCache
+            : LANG==='uk' ? _ukMemCache
+            :                _arMemCache;
+  var api = (cache && cache[key] && cache[key].trim()) || '';
+  // Pre-baked overrides exist only for TR and FA; used as secondary fallback only
+  var baked = LANG==='tr' ? ((w.meaning_tr||'').trim())
+            : LANG==='fa' ? ((w.meaning_fa||'').trim())
+            : '';
+  return api || baked || (w.meaning_en && w.meaning_en.trim()) || '';
 }
 
 // ── Build quiz queue dynamically from WORD_BANK ──
@@ -1008,31 +1003,50 @@ async function startLevel(lv) {
   idx=0;ok=0;no=0;
 
   if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru' || LANG === 'uk' || LANG === 'ar') {
+    var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : LANG === 'ru' ? 'ru' : LANG === 'uk' ? 'uk' : 'ar';
+    var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : LANG === 'ru' ? _ruMemCache : LANG === 'uk' ? _ukMemCache : _arMemCache;
+    var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : LANG === 'ru' ? _ruCacheSave : LANG === 'uk' ? _ukCacheSave : _arCacheSave;
+
+    // Collect all words not yet cached at all (first pass: de→target)
     var toFetch = [];
     queue.forEach(function(card) {
       [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
         var k = normKey(w.word);
-        var isMissing = LANG === 'tr'
-          ? (!(w.meaning_tr && w.meaning_tr.trim()) && _trMemCache[k] === undefined)
-          : LANG === 'fa'
-          ? (!(w.meaning_fa && w.meaning_fa.trim()) && _faMemCache[k] === undefined)
-          : LANG === 'ru'
-          ? (_ruMemCache[k] === undefined)
-          : LANG === 'uk'
-          ? (_ukMemCache[k] === undefined)
-          : (_arMemCache[k] === undefined);
-        if (isMissing && toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
+        if (_c[k] === undefined && toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
       });
     });
+    var _ov = document.getElementById('quiz-prep-overlay');
     if (toFetch.length) {
-      var _ov = document.getElementById('quiz-prep-overlay');
       _ov.classList.add('active');
-      var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : LANG === 'ru' ? 'ru' : LANG === 'uk' ? 'uk' : 'ar';
-      var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : LANG === 'ru' ? _ruMemCache : LANG === 'uk' ? _ukMemCache : _arMemCache;
-      var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : LANG === 'ru' ? _ruCacheSave : LANG === 'uk' ? _ukCacheSave : _arCacheSave;
       await _batchFetchTranslations(toFetch, _lc, _c, _sf);
-      _ov.classList.remove('active');
     }
+
+    // Second pass: for words where de→target returned nothing, translate meaning_en (en→target)
+    var defFallback = [];
+    var defCs = _defCacheFor(_lc);
+    queue.forEach(function(card) {
+      [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
+        var k = normKey(w.word);
+        // Cache has this word but value is empty (API found nothing useful)
+        if (_c[k] === '' && w.meaning_en && w.meaning_en.trim()) {
+          var txt = w.meaning_en.trim();
+          var dk = normDefKey(txt);
+          if (!defFallback.some(function(x){ return x.wordKey === k; })) {
+            defFallback.push({ text: txt, key: dk, wordKey: k, wordObj: w });
+          }
+        }
+      });
+    });
+    if (defFallback.length) {
+      if (!_ov.classList.contains('active')) _ov.classList.add('active');
+      // Translate English definitions (en→target) and store results in the word translation cache
+      await _batchTranslateDefs(defFallback, _lc, defCs.cache, defCs.saveFn, function(item, tr) {
+        // Promote result into the word-level cache so getLangMeaning picks it up
+        _c[item.wordKey] = tr;
+        _sf();
+      }, 'en');
+    }
+    _ov.classList.remove('active');
   }
 
   show('screen-quiz');
@@ -1267,11 +1281,13 @@ function metaFromWord(word) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
-      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
+      // API cache (de→target) takes priority over pre-baked SI fields
+      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||(_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
+  // API cache (de→target) takes priority over any pre-baked TR/FA data
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
   return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
 }
 
@@ -1579,17 +1595,60 @@ async function fetchTurkish(word) {
   _trCacheSave();
   return null;
 }
-// Helper: fetch Turkish for a displayed word card and update the DOM element
-function _autoFetchTurkish(word, container) {
-  if (LANG !== 'tr') return;
-  var el = container.querySelector('.tr-meaning-pending');
+// Helper: auto-fetch the word-card main meaning (below the German word) for the active language.
+// Logic is identical for all non-English languages:
+//   Step 1 — translate the German word itself (de→target) via the language's fetch function.
+//   Step 2 — if Step 1 returns nothing, translate the English meaning_en text (en→target) as
+//             a fallback, and store the result in the word-level cache so it persists.
+// Only the pending element for the CURRENT language is updated; all other language pending
+// elements are silently ignored.
+async function _autoFetchLangMeaning(word, container) {
+  if (LANG === 'en') return;
+  var pendingClass = LANG + '-meaning-pending';
+  var el = container.querySelector('.' + pendingClass);
   if (!el) return;
-  fetchTurkish(word).then(function(tr) {
-    if (tr && el.isConnected) {
-      el.textContent = tr;
-      el.classList.remove('tr-meaning-pending');
+
+  var fetchFn = LANG==='tr' ? fetchTurkish
+              : LANG==='fa' ? fetchPersian
+              : LANG==='ru' ? fetchRussian
+              : LANG==='uk' ? fetchUkrainian
+              :                fetchArabic;
+  var wordCache = LANG==='tr' ? _trMemCache : LANG==='fa' ? _faMemCache
+               : LANG==='ru' ? _ruMemCache  : LANG==='uk' ? _ukMemCache : _arMemCache;
+  var cacheSave = LANG==='tr' ? _trCacheSave : LANG==='fa' ? _faCacheSave
+               : LANG==='ru' ? _ruCacheSave  : LANG==='uk' ? _ukCacheSave : _arCacheSave;
+
+  // Step 1: de→target (direct German word translation)
+  var result = await fetchFn(word);
+
+  if (!result) {
+    // Step 2: en→target (translate the English meaning as fallback)
+    var meta = metaFromWord(word);
+    var meaningEn = meta.en || '';
+    if (meaningEn) {
+      try {
+        var r = await fetch('https://api.mymemory.translated.net/get?q='
+          + encodeURIComponent(meaningEn) + '&langpair=en|' + LANG);
+        if (r.ok) {
+          var j = await r.json();
+          if (j.responseStatus === 200 && j.responseData) {
+            var t = (j.responseData.translatedText || '').trim();
+            if (t && !t.startsWith('PLEASE SELECT')) {
+              result = t;
+              // Store in word-level cache for future reuse
+              wordCache[normKey(word)] = result;
+              cacheSave();
+            }
+          }
+        }
+      } catch(e2) {}
     }
-  });
+  }
+
+  if (result && el.isConnected) {
+    el.textContent = result;
+    el.classList.remove(pendingClass);
+  }
 }
 
 // ── Persian (Farsi) translation auto-fetch with localStorage persistence ──
@@ -1632,18 +1691,6 @@ async function fetchPersian(word) {
   return null;
 }
 // Helper: fetch Persian for a displayed word card and update the DOM element
-function _autoFetchPersian(word, container) {
-  if (LANG !== 'fa') return;
-  var el = container.querySelector('.fa-meaning-pending');
-  if (!el) return;
-  fetchPersian(word).then(function(fa) {
-    if (fa && el.isConnected) {
-      el.textContent = fa;
-      el.classList.remove('fa-meaning-pending');
-    }
-  });
-}
-
 // ── Russian translation auto-fetch with localStorage persistence ──
 var _ruMemCache = (function() {
   try { return JSON.parse(localStorage.getItem('dl_ru_cache') || '{}'); } catch(e) { return {}; }
@@ -1683,18 +1730,6 @@ async function fetchRussian(word) {
   _ruCacheSave();
   return null;
 }
-// Helper: fetch Russian for a displayed word card and update the DOM element
-function _autoFetchRussian(word, container) {
-  if (LANG !== 'ru') return;
-  var el = container.querySelector('.ru-meaning-pending');
-  if (!el) return;
-  fetchRussian(word).then(function(ru) {
-    if (ru && el.isConnected) {
-      el.textContent = ru;
-      el.classList.remove('ru-meaning-pending');
-    }
-  });
-}
 
 // ── Ukrainian translation auto-fetch with localStorage persistence ──
 var _ukMemCache = (function() {
@@ -1731,14 +1766,7 @@ async function fetchUkrainian(word) {
   } catch(e) {}
   _ukMemCache[key] = ''; _ukCacheSave(); return null;
 }
-function _autoFetchUkrainian(word, container) {
-  if (LANG !== 'uk') return;
-  var el = container.querySelector('.uk-meaning-pending');
-  if (!el) return;
-  fetchUkrainian(word).then(function(uk) {
-    if (uk && el.isConnected) { el.textContent = uk; el.classList.remove('uk-meaning-pending'); }
-  });
-}
+
 
 // ── Arabic translation auto-fetch with localStorage persistence ──
 var _arMemCache = (function() {
@@ -1775,14 +1803,7 @@ async function fetchArabic(word) {
   } catch(e) {}
   _arMemCache[key] = ''; _arCacheSave(); return null;
 }
-function _autoFetchArabic(word, container) {
-  if (LANG !== 'ar') return;
-  var el = container.querySelector('.ar-meaning-pending');
-  if (!el) return;
-  fetchArabic(word).then(function(ar) {
-    if (ar && el.isConnected) { el.textContent = ar; el.classList.remove('ar-meaning-pending'); }
-  });
-}
+
 
 // ── Definition translation caches (per language, localStorage-backed) ──────
 // Keyed by normalised definition text; separate from single-word caches.
@@ -1797,6 +1818,17 @@ function _defFaCacheSave(){try{var k=Object.keys(_defFaCache);if(k.length>400){v
 function _defRuCacheSave(){try{var k=Object.keys(_defRuCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defRuCache[x];});_defRuCache=t;}localStorage.setItem('dl_def_ru',JSON.stringify(_defRuCache));}catch(e){}}
 function _defUkCacheSave(){try{var k=Object.keys(_defUkCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defUkCache[x];});_defUkCache=t;}localStorage.setItem('dl_def_uk',JSON.stringify(_defUkCache));}catch(e){}}
 function _defArCacheSave(){try{var k=Object.keys(_defArCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defArCache[x];});_defArCache=t;}localStorage.setItem('dl_def_ar',JSON.stringify(_defArCache));}catch(e){}}
+// ── Definition cache version invalidation ─────────────────────────────────
+// Version key: bump this string whenever the source language for definition
+// translations changes (e.g. de→target was wrong; now fixed to en→target).
+(function() {
+  var DEF_CACHE_VERSION = 'v2'; // was v1 (used de|target, now en|target)
+  if (localStorage.getItem('dl_def_cache_ver') !== DEF_CACHE_VERSION) {
+    ['dl_def_tr','dl_def_fa','dl_def_ru','dl_def_uk','dl_def_ar'].forEach(function(k){ localStorage.removeItem(k); });
+    _defTrCache = {}; _defFaCache = {}; _defRuCache = {}; _defUkCache = {}; _defArCache = {};
+    localStorage.setItem('dl_def_cache_ver', DEF_CACHE_VERSION);
+  }
+})();
 
 function _defCacheFor(lang) {
   if (lang === 'tr') return { cache: _defTrCache, saveFn: _defTrCacheSave };
@@ -1808,7 +1840,9 @@ function _defCacheFor(lang) {
 
 // Batch-fetches translations for items [{text, key, ...}] and stores results in cache.
 // onResult(item, translatedText) is called for each successful translation (may be null).
-async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult) {
+// sourceLang: the language of the input text — 'en' for Wiktionary definitions, 'de' for German words.
+async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult, sourceLang) {
+  var src = sourceLang || 'en'; // Wiktionary definitions are in English
   var batches = [], cur = [], curLen = 0;
   toFetch.forEach(function(item) {
     var il = item.text.length + 1;
@@ -1824,7 +1858,7 @@ async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult) {
     try {
       var url = 'https://api.mymemory.translated.net/get?q='
         + encodeURIComponent(batch.map(function(d){ return d.text; }).join('\n'))
-        + '&langpair=de|' + langCode;
+        + '&langpair=' + src + '|' + langCode;
       var resp = await fetch(url);
       if (!resp.ok) throw new Error('http');
       var json = await resp.json();
@@ -1838,7 +1872,7 @@ async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult) {
         if (cache[item.key] !== undefined) return;
         try {
           var r = await fetch('https://api.mymemory.translated.net/get?q='
-            + encodeURIComponent(item.text) + '&langpair=de|' + langCode);
+            + encodeURIComponent(item.text) + '&langpair=' + src + '|' + langCode);
           if (!r.ok) return;
           var j = await r.json();
           if (j.responseStatus === 200 && j.responseData)
@@ -2246,7 +2280,7 @@ function renderWiktCard(data, meta, targetId) {
       html += '<div class="wikt-offline-note">' + escHtml(t('offlineNote')) + '</div>';
     } else if (!meaning) {
       // No word bank entry and no meaning — inject a pending placeholder so
-      // async fetchers (_autoFetchTurkish / _autoFetchPersian) can fill it,
+      // async fetcher (_autoFetchLangMeaning) can fill it,
       // or show an error for English where the sync fetch already ran.
       if (LANG === 'tr') {
         html += '<div class="rw-meaning-single tr-meaning-pending"></div>';
@@ -2690,7 +2724,7 @@ function renderRandomWord() {
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
     _translateDefsInContainer(content);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
+    _autoFetchLangMeaning(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
@@ -2870,7 +2904,7 @@ async function openWordCard(word, tc) {
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
     _translateDefsInContainer(content);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
+    _autoFetchLangMeaning(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }
