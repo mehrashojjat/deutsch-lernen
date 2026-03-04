@@ -1798,15 +1798,65 @@ function _defRuCacheSave(){try{var k=Object.keys(_defRuCache);if(k.length>400){v
 function _defUkCacheSave(){try{var k=Object.keys(_defUkCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defUkCache[x];});_defUkCache=t;}localStorage.setItem('dl_def_uk',JSON.stringify(_defUkCache));}catch(e){}}
 function _defArCacheSave(){try{var k=Object.keys(_defArCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defArCache[x];});_defArCache=t;}localStorage.setItem('dl_def_ar',JSON.stringify(_defArCache));}catch(e){}}
 
+function _defCacheFor(lang) {
+  if (lang === 'tr') return { cache: _defTrCache, saveFn: _defTrCacheSave };
+  if (lang === 'fa') return { cache: _defFaCache, saveFn: _defFaCacheSave };
+  if (lang === 'ru') return { cache: _defRuCache, saveFn: _defRuCacheSave };
+  if (lang === 'uk') return { cache: _defUkCache, saveFn: _defUkCacheSave };
+  return { cache: _defArCache, saveFn: _defArCacheSave };
+}
+
+// Batch-fetches translations for items [{text, key, ...}] and stores results in cache.
+// onResult(item, translatedText) is called for each successful translation (may be null).
+async function _batchTranslateDefs(toFetch, langCode, cache, saveFn, onResult) {
+  var batches = [], cur = [], curLen = 0;
+  toFetch.forEach(function(item) {
+    var il = item.text.length + 1;
+    if (curLen + il > 490 && cur.length) { batches.push(cur); cur = []; curLen = 0; }
+    cur.push(item); curLen += il;
+  });
+  if (cur.length) batches.push(cur);
+  await Promise.all(batches.map(async function(batch) {
+    function applyResult(item, tr) {
+      cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
+      if (onResult && cache[item.key]) onResult(item, cache[item.key]);
+    }
+    try {
+      var url = 'https://api.mymemory.translated.net/get?q='
+        + encodeURIComponent(batch.map(function(d){ return d.text; }).join('\n'))
+        + '&langpair=de|' + langCode;
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('http');
+      var json = await resp.json();
+      if (json.responseStatus !== 200 || !json.responseData) throw new Error('api');
+      var parts = (json.responseData.translatedText || '').split('\n');
+      if (parts.length !== batch.length) throw new Error('mismatch');
+      batch.forEach(function(item, i) { applyResult(item, (parts[i] || '').trim()); });
+      saveFn();
+    } catch(e) {
+      await Promise.all(batch.map(async function(item) {
+        if (cache[item.key] !== undefined) return;
+        try {
+          var r = await fetch('https://api.mymemory.translated.net/get?q='
+            + encodeURIComponent(item.text) + '&langpair=de|' + langCode);
+          if (!r.ok) return;
+          var j = await r.json();
+          if (j.responseStatus === 200 && j.responseData)
+            applyResult(item, (j.responseData.translatedText || '').trim());
+        } catch(e2) { cache[item.key] = ''; }
+      }));
+      saveFn();
+    }
+  }));
+}
+
 // Translates ALL .def-translate-pending spans in a container in one batched request.
 // Fills cached entries immediately; sends only uncached texts to the API.
 async function _translateDefsInContainer(container) {
   if (LANG === 'en') return;
   var pending = Array.from(container.querySelectorAll('.def-translate-pending'));
   if (!pending.length) return;
-  var langCode = LANG;
-  var cache  = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:_defArCache;
-  var saveFn = LANG==='tr'?_defTrCacheSave:LANG==='fa'?_defFaCacheSave:LANG==='ru'?_defRuCacheSave:LANG==='uk'?_defUkCacheSave:_defArCacheSave;
+  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
   // Fill already-cached items immediately; collect the rest
   var toFetch = [];
   pending.forEach(function(el) {
@@ -1822,56 +1872,12 @@ async function _translateDefsInContainer(container) {
     // cache[dk] === '' means a prior fetch failed — keep English
   });
   if (!toFetch.length) return;
-  // Pack into batches respecting MyMemory's ~490-char limit
-  var batches = [], cur = [], curLen = 0;
-  toFetch.forEach(function(item) {
-    var il = item.text.length + 1;
-    if (curLen + il > 490 && cur.length) { batches.push(cur); cur = []; curLen = 0; }
-    cur.push(item); curLen += il;
-  });
-  if (cur.length) batches.push(cur);
-  await Promise.all(batches.map(async function(batch) {
-    try {
-      var url = 'https://api.mymemory.translated.net/get?q='
-        + encodeURIComponent(batch.map(function(d){ return d.text; }).join('\n'))
-        + '&langpair=de|' + langCode;
-      var resp = await fetch(url);
-      if (!resp.ok) throw new Error('http');
-      var json = await resp.json();
-      if (json.responseStatus !== 200 || !json.responseData) throw new Error('api');
-      var parts = (json.responseData.translatedText || '').split('\n');
-      if (parts.length !== batch.length) throw new Error('mismatch');
-      batch.forEach(function(item, i) {
-        var tr = (parts[i] || '').trim();
-        cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
-        if (cache[item.key] && item.el.isConnected) {
-          item.el.textContent = cache[item.key];
-          item.el.classList.remove('def-translate-pending');
-        }
-      });
-      saveFn();
-    } catch(e) {
-      // Fallback: individual parallel fetches per item
-      await Promise.all(batch.map(async function(item) {
-        if (cache[item.key] !== undefined) return;
-        try {
-          var r = await fetch('https://api.mymemory.translated.net/get?q='
-            + encodeURIComponent(item.text) + '&langpair=de|' + langCode);
-          if (!r.ok) return;
-          var j = await r.json();
-          if (j.responseStatus === 200 && j.responseData) {
-            var tr = (j.responseData.translatedText || '').trim();
-            cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
-            if (cache[item.key] && item.el.isConnected) {
-              item.el.textContent = cache[item.key];
-              item.el.classList.remove('def-translate-pending');
-            }
-          }
-        } catch(e2) { cache[item.key] = ''; }
-      }));
-      saveFn();
+  await _batchTranslateDefs(toFetch, LANG, cache, saveFn, function(item, tr) {
+    if (item.el.isConnected) {
+      item.el.textContent = tr;
+      item.el.classList.remove('def-translate-pending');
     }
-  }));
+  });
 }
 
 // ── Batch translation fetch: sends multiple words in one request (newline-joined)
@@ -2120,9 +2126,6 @@ function renderHeadLineChips(text) {
   // and declension-type chips (stark/schwach/gemischt) which are noise for learners.
   var parenOpen = text.indexOf('(');
   var inParen = parenOpen >= 0 ? text.slice(parenOpen + 1).replace(/\)\s*$/, '').trim() : '';
-
-  // Declension-type words to ignore (not useful for language learners)
-  var _typeWords = /^(strong|weak|mixed|stark|schwach|gemischt|no\s+plural|indeclinable|invariable)$/i;
 
   var chipHtml = '';
   if (inParen) {
@@ -2676,8 +2679,8 @@ function renderRandomWord() {
 
   fetchWiktionary(word, tc).then(async function(data) {
     await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
-    _translateDefsInContainer(content);
     // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
@@ -2830,6 +2833,23 @@ async function _prefetchLangMeta(word, meta) {
   else if (LANG === 'ar' && !meta.ar) { var _t = await fetchArabic(word); if (_t) meta.ar = _t; }
 }
 
+// Pre-fetches all definition translations into cache before the card renders,
+// so the card shows translated definitions on first paint (no flicker/update).
+async function _prefetchDefTranslations(data) {
+  if (LANG === 'en' || !data || !data.sections || !data.sections.length) return;
+  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
+  // Collect unique uncached definition texts across all sections
+  var seen = {}, toFetch = [];
+  data.sections.forEach(function(sec) {
+    (sec.defs || []).slice(0, 5).forEach(function(d) {
+      var dk = normDefKey(d.text);
+      if (cache[dk] === undefined && !seen[dk]) { seen[dk] = true; toFetch.push({ text: d.text, key: dk }); }
+    });
+  });
+  if (!toFetch.length) return;
+  await _batchTranslateDefs(toFetch, LANG, cache, saveFn, null);
+}
+
 async function openWordCard(word, tc) {
   closeSearch();
   if (!word) return;
@@ -2841,8 +2861,8 @@ async function openWordCard(word, tc) {
   try {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
-    _translateDefsInContainer(content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
