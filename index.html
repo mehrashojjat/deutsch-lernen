@@ -238,6 +238,39 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
 .rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;opacity:.6;}
 
+/* ── WIKTIONARY CARD ── */
+.wikt-loading{display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:48px 20px;color:var(--muted);font-size:.9rem;}
+.wikt-spinner{width:22px;height:22px;border:3px solid var(--surf3);border-top-color:var(--gold);
+  border-radius:50%;flex-shrink:0;animation:wSpin .75s linear infinite;}
+@keyframes wSpin{to{transform:rotate(360deg)}}
+.wikt-ipa{font-family:'Outfit',monospace;color:var(--blue);font-size:.83rem;margin:-4px 0 14px;opacity:.85;letter-spacing:.03em;}
+.wikt-head-line{font-size:.77rem;color:var(--muted);line-height:1.6;margin-bottom:14px;
+  border-left:2px solid var(--surf3);padding:6px 10px;background:var(--surf2);border-radius:0 8px 8px 0;}
+.wikt-pos-badge{display:inline-block;font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;
+  padding:3px 9px;border-radius:6px;font-weight:700;margin-bottom:10px;
+  background:rgba(232,201,122,.12);color:var(--gold);}
+.wikt-def-list{display:flex;flex-direction:column;gap:8px;}
+.wikt-def-item{font-size:.84rem;line-height:1.55;display:flex;flex-direction:column;gap:4px;}
+.wikt-def-row{display:flex;gap:8px;align-items:baseline;}
+.wikt-def-num{color:var(--gold);font-weight:700;font-size:.78rem;flex-shrink:0;}
+.wikt-def-text{color:var(--text);}
+.wikt-example{font-size:.77rem;color:var(--muted);font-style:italic;margin-top:3px;
+  padding:6px 10px;border-left:2px solid var(--border);border-radius:0 6px 6px 0;background:var(--surf2);}
+.wikt-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;margin-top:4px;}
+.wikt-table{border-collapse:collapse;font-size:.7rem;min-width:260px;width:100%;}
+.wikt-table th{background:var(--surf3);color:var(--muted);padding:5px 7px;text-align:center;
+  font-weight:600;border:1px solid var(--border);white-space:nowrap;font-size:.67rem;}
+.wikt-table td{background:var(--surf2);color:var(--text);padding:5px 7px;text-align:center;
+  border:1px solid var(--border);white-space:nowrap;}
+.wikt-table tr:hover td{background:rgba(232,201,122,.06);}
+.wikt-error{color:var(--muted);font-size:.85rem;text-align:center;padding:30px 16px;
+  font-style:italic;display:flex;flex-direction:column;gap:12px;align-items:center;}
+.wikt-error-word{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--text);
+  font-style:normal;}
+.wikt-offline-note{color:var(--muted);font-size:.7rem;text-align:right;margin-top:10px;opacity:.6;
+  font-style:italic;}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -563,9 +596,6 @@ function setLang(lang) {
   document.documentElement.style.setProperty('direction', lang==='fa'?'rtl':'ltr');
   document.body.classList.toggle('lang-fa', lang==='fa');
   applyTranslations();
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
-});
   updateCounts();
 }
 
@@ -814,128 +844,386 @@ function pickFormExample(el, key, modal) {
   }
 }
 
-function showRandomWord(){ show('screen-random'); renderRandomWord(); }
+// ══════════════════════════════════════════════════════════════════
+//  SEARCH INDEX (SI) STATE
+// ══════════════════════════════════════════════════════════════════
+var SI_READY = false;
+var SI_KEY_MAP = {}; // norm_key → SI array index
 
-function renderRandomWord(){
-  var ri;
-  do { ri = Math.floor(Math.random()*WORD_BANK.length); }
-  while (ri === lastRandIdx && WORD_BANK.length > 1);
-  lastRandIdx = ri;
-  var w = WORD_BANK[ri];
-  rwWordKey = w.word;
-  var u = UI[LANG];
-
-  var rb = document.querySelector('.refresh-btn');
-  rb.style.transform = 'rotate(360deg)';
-  rb.style.transition = 'transform .4s ease';
-  setTimeout(function(){ rb.style.transition='none'; rb.style.transform='rotate(0deg)'; }, 410);
-
-  var meaning = LANG==='fa' ? (w.meaning_fa||w.meaning_en) : LANG==='tr' ? w.meaning_tr : w.meaning_en;
-  var hint   = LANG==='tr' ? 'Örnek için bir biçime dokun'
-             : LANG==='fa' ? 'برای مثال روی یک شکل بزنید'
-             : 'Tap a form to see an example';
-  var tapMsg = LANG==='tr' ? 'Örnek görmek için bir biçime dokunun.'
-             : LANG==='fa' ? 'برای مشاهده مثال روی یک شکل بزنید.'
-             : 'Tap any form above to see an example sentence.';
-
-  function chip(label, value, cls, key) {
-    var enc = encodeURIComponent(key);
-    var onc = "pickFormExample(this,decodeURIComponent('" + enc + "'))";
-    return '<div class="rw-form" onclick="' + onc + '">'
-      + '<span class="fl">' + label + '</span>'
-      + '<span class="fv' + (cls ? ' '+cls : '') + '">' + value + '</span>'
-      + '</div>';
+function onSILoaded() {
+  SI_READY = true;
+  var arr = window.SI || [];
+  for (var i = 0; i < arr.length; i++) {
+    var k = arr[i][0].replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
+    if (!SI_KEY_MAP.hasOwnProperty(k)) SI_KEY_MAP[k] = i;
   }
+}
 
-  var html = '<div class="rw-card">'
-    + '<div class="rw-type">' + w.level + ' · ' + w.type + '</div>'
-    + '<div class="rw-word">' + w.word + '</div>'
-    + '<div class="rw-meaning-single">' + meaning + '</div>'
-    + '<div class="rw-divider"></div>';
-
-  var hasGrammar = false;
-  if (w.type === 'Noun' && w.cases && Object.keys(w.cases).length > 0) {
-    hasGrammar = true;
-    html += '<div class="rw-section">'
-      + '<div class="rw-section-title-row"><span>' + u.cases + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div>'
-      + '<div class="rw-forms">';
-    var cc = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
-    Object.entries(w.cases).forEach(function(kv){
-      if (kv[1]) html += chip(kv[0], kv[1], cc[kv[0]]||'', kv[0]);
-    });
-    html += '</div></div>';
-    if (w.plural) {
-      html += '<div class="rw-section"><div class="rw-section-title">' + u.plural + '</div>'
-        + '<div class="rw-forms">' + chip(u.plural, w.plural, '', 'Plural') + '</div></div>';
+// ══════════════════════════════════════════════════════════════════
+//  UTILITIES
+// ══════════════════════════════════════════════════════════════════
+function escHtml(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function typeChar(t) {
+  t = (t||'').toLowerCase();
+  if (t==='noun')      return 'N';
+  if (t==='verb')      return 'V';
+  if (t==='adjective') return 'A';
+  if (t==='phrase')    return 'P';
+  if (t==='adverb')    return 'D';
+  return 'O';
+}
+function tcName(tc) {
+  return {N:'Noun',V:'Verb',A:'Adjective',P:'Phrase',D:'Adverb',O:'Word','?':'Word'}[tc] || tc || 'Word';
+}
+function normKey(w) {
+  return (w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
+}
+function loadingHTML() {
+  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : 'Loading…';
+  return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + msg + '</span></div>';
+}
+function wiktLookupWord(word, tc) {
+  var base = word.replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
+  // German nouns are capitalised; verbs/adjs lowercase
+  return (tc === 'N')
+    ? base.charAt(0).toUpperCase() + base.slice(1)
+    : base.charAt(0).toLowerCase() + base.slice(1);
+}
+function metaFromWord(word) {
+  // Check SI first, then WORD_BANK
+  var key = normKey(word);
+  if (SI_READY && window.SI) {
+    var i = SI_KEY_MAP[key];
+    if (i !== undefined) {
+      var e = window.SI[i];
+      return { word: e[0], tc: e[1], en: e[2], tr: e[3], fa: '' };
     }
   }
+  var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||'', fa: wb.meaning_fa||'' };
+  return { word: word, tc: '?', en: '', tr: '', fa: '' };
+}
 
-  if (w.type === 'Verb' && w.conjugation && Object.keys(w.conjugation).length > 0) {
-    hasGrammar = true;
-    html += '<div class="rw-section">'
-      + '<div class="rw-section-title-row"><span>' + u.presentTense + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div>'
-      + '<div class="rw-forms">';
-    var pc = {ich:'gold',du:'blue','er/sie/es':'green'};
-    Object.entries(w.conjugation).forEach(function(kv){
-      html += chip(kv[0], kv[1], pc[kv[0]]||'', kv[0]);
+// ══════════════════════════════════════════════════════════════════
+//  WIKTIONARY FETCH + PARSE
+// ══════════════════════════════════════════════════════════════════
+async function fetchWiktionary(word, tc) {
+  var lw = wiktLookupWord(word, tc);
+  var url = 'https://en.wiktionary.org/w/api.php?action=parse&page='
+    + encodeURIComponent(lw)
+    + '&prop=text&format=json&origin=*&redirects=1&disablelimitreport=1&disableeditsection=1';
+  var resp = await fetch(url);
+  if (!resp.ok) throw new Error('HTTP ' + resp.status);
+  var json = await resp.json();
+  if (json.error) throw new Error(json.error.info || 'API error');
+  return parseWiktPage(json.parse.text['*'], lw);
+}
+
+function parseWiktPage(htmlStr, word) {
+  var dp = new DOMParser();
+  var doc = dp.parseFromString(htmlStr, 'text/html');
+  var result = { found: false, word: word, ipa: '', sections: [] };
+
+  var pout = doc.querySelector('.mw-parser-output');
+  if (!pout) return result;
+
+  var kids = Array.from(pout.children);
+
+  // Find German h2 section bounds
+  var gStart = -1, gEnd = kids.length;
+  for (var i = 0; i < kids.length; i++) {
+    if (kids[i].tagName === 'H2') {
+      var h2txt = kids[i].textContent.replace(/\[.*?\]/g,'').trim();
+      if (h2txt === 'German') { gStart = i; }
+      else if (gStart >= 0) { gEnd = i; break; }
+    }
+  }
+  if (gStart < 0) return result;
+
+  var gNodes = kids.slice(gStart + 1, gEnd);
+
+  // IPA
+  for (var i = 0; i < gNodes.length; i++) {
+    var ipaEl = gNodes[i].querySelector ? gNodes[i].querySelector('.IPA, .ipa') : null;
+    if (ipaEl) { result.ipa = ipaEl.textContent.trim(); break; }
+  }
+
+  // Group content by h3/h4 POS headings
+  var POS = ['noun','verb','adjective','adverb','article','conjunction','preposition',
+             'pronoun','numeral','particle','interjection','determiner'];
+  var posGroups = [], curPOS = null, curBatch = [];
+  function flushPOS() {
+    if (curPOS && curBatch.length) posGroups.push({ pos: curPOS, nodes: curBatch.slice() });
+    curPOS = null; curBatch = [];
+  }
+  gNodes.forEach(function(el) {
+    var tag = el.tagName;
+    if (tag === 'H3' || tag === 'H4') {
+      var txt = el.textContent.replace(/\[.*?\]/g,'').trim().toLowerCase();
+      if (POS.indexOf(txt) >= 0) { flushPOS(); curPOS = txt; }
+      else if (curPOS) curBatch.push(el);
+    } else if (curPOS) {
+      curBatch.push(el);
+    }
+  });
+  flushPOS();
+
+  posGroups.forEach(function(grp) {
+    var sec = { pos: grp.pos, headLine: '', defs: [], table: null, tableType: '' };
+    grp.nodes.forEach(function(el) {
+      var tag = el.tagName;
+      // Headword summary line (first <p> with <strong>)
+      if (tag === 'P' && !sec.headLine && el.querySelector('strong')) {
+        var clone = el.cloneNode(true);
+        clone.querySelectorAll('.mw-editsection').forEach(function(x){ x.remove(); });
+        var txt = clone.textContent.replace(/\s+/g,' ').trim();
+        if (txt.length > 1) sec.headLine = txt;
+      }
+      // Definitions
+      if (tag === 'OL') {
+        Array.from(el.querySelectorAll(':scope > li')).slice(0,6).forEach(function(li) {
+          var def = { text:'', examples:[] };
+          var cl = li.cloneNode(true);
+          cl.querySelectorAll('dl,ul,ol,.nyms,.mw-editsection').forEach(function(x){ x.remove(); });
+          def.text = cl.textContent.replace(/\s+/g,' ').trim();
+          li.querySelectorAll('dl > dd').forEach(function(dd) {
+            var ec = dd.cloneNode(true);
+            ec.querySelectorAll('.mw-editsection').forEach(function(x){ x.remove(); });
+            var ex = ec.textContent.replace(/\s+/g,' ').trim();
+            if (ex && ex.length < 400) def.examples.push(ex);
+          });
+          if (def.text) sec.defs.push(def);
+        });
+      }
+      // Inflection table (direct or inside NavFrame/div)
+      if (!sec.table) {
+        var tbl = null;
+        if (tag === 'TABLE' && (el.classList.contains('wikitable') || el.classList.contains('inflection-table'))) tbl = el;
+        else if (tag === 'DIV') tbl = el.querySelector('table.wikitable, table.inflection-table, table[class*="inflection"]');
+        if (tbl) sec.table = extractWiktTable(tbl);
+      }
     });
-    html += '</div></div>';
+    if (sec.table) sec.tableType = grp.pos==='noun'?'decl':grp.pos==='verb'?'conj':'inflex';
+    if (sec.headLine || sec.defs.length > 0 || sec.table) result.sections.push(sec);
+  });
 
-    var pt = w['präteritum'];
-    if (pt && Object.keys(pt).length > 0) {
-      html += '<div class="rw-section">'
-        + '<div class="rw-section-title-row"><span>' + u.pastSimple + '</span>'
-        + '<span class="rw-click-hint">' + hint + '</span></div>'
-        + '<div class="rw-forms">';
-      Object.entries(pt).forEach(function(kv){
-        html += chip(kv[0], kv[1], '', kv[1]);
+  result.found = result.sections.length > 0;
+  return result;
+}
+
+function extractWiktTable(tableEl) {
+  var rows = [];
+  tableEl.querySelectorAll('tr').forEach(function(tr) {
+    var row = [];
+    tr.querySelectorAll('th,td').forEach(function(cell) {
+      var txt = cell.textContent.replace(/\[.*?\]/g,'').replace(/\n/g,' ').replace(/\s+/g,' ').trim();
+      if (txt) row.push({
+        text: txt,
+        isHeader: cell.tagName === 'TH',
+        colspan: parseInt(cell.getAttribute('colspan')) || 1,
+        rowspan: parseInt(cell.getAttribute('rowspan')) || 1
+      });
+    });
+    if (row.length) rows.push(row);
+  });
+  // Trim empty/header-only rows from bottom
+  while (rows.length && rows[rows.length-1].every(function(c){ return c.isHeader; })) rows.pop();
+  return rows;
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  WIKTIONARY CARD RENDERER
+// ══════════════════════════════════════════════════════════════════
+function renderWiktCard(data, meta, targetId) {
+  var word = meta.word || data.word;
+  var tc   = meta.tc || '?';
+  var meaning = LANG==='fa' ? (meta.fa||meta.en)
+              : LANG==='tr' ? (meta.tr||meta.en)
+              : meta.en;
+  var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
+  var level = wb ? wb.level : '';
+
+  var html = '<div class="rw-card">';
+  html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcName(tc) + '</div>';
+  html += '<div class="rw-word">' + escHtml(word) + '</div>';
+  if (meaning) html += '<div class="rw-meaning-single">' + escHtml(meaning) + '</div>';
+  if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
+  html += '<div class="rw-divider"></div>';
+
+  if (!data.found || !data.sections.length) {
+    // Offline fallback
+    if (wb) {
+      html += renderOfflineWordBody(wb);
+      html += '<div class="wikt-offline-note">ⓘ Offline data · Wiktionary unreachable</div>';
+    } else {
+      html += '<div class="wikt-error"><div class="wikt-error-word">' + escHtml(word) + '</div>'
+        + '<span>' + (LANG==='fa'?'اطلاعاتی یافت نشد.':LANG==='tr'?'Bilgi bulunamadı.':'No detailed information found.') + '</span></div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  data.sections.forEach(function(sec) {
+    var posLabel = sec.pos.charAt(0).toUpperCase() + sec.pos.slice(1);
+    html += '<span class="wikt-pos-badge">' + posLabel + '</span>';
+
+    if (sec.headLine) {
+      html += '<div class="wikt-head-line">' + escHtml(sec.headLine) + '</div>';
+    }
+    if (sec.table && sec.table.length) {
+      var tTitle = sec.tableType==='conj'
+        ? (LANG==='tr'?'Çekim Tablosu':LANG==='fa'?'جدول صرف':'Conjugation')
+        : sec.tableType==='decl'
+        ? (LANG==='tr'?'Çekim (İsim)':LANG==='fa'?'تصریف اسم':'Declension')
+        : (LANG==='tr'?'Tablo':LANG==='fa'?'جدول':'Inflection');
+      html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
+        + renderWiktTable(sec.table) + '</div>';
+    }
+    if (sec.defs.length) {
+      var defTitle = LANG==='tr'?'Anlamlar':LANG==='fa'?'معانی':'Definitions';
+      html += '<div class="rw-section"><div class="rw-section-title">' + defTitle + '</div>'
+        + '<div class="wikt-def-list">';
+      sec.defs.slice(0,5).forEach(function(d, i) {
+        html += '<div class="wikt-def-item">'
+          + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
+          + '<span class="wikt-def-text">' + escHtml(d.text) + '</span></div>';
+        if (d.examples.length) {
+          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
+        }
+        html += '</div>';
       });
       html += '</div></div>';
     }
+    html += '<div class="rw-divider" style="margin:10px 0 8px"></div>';
+  });
 
-    if (w.perfekt) {
-      html += '<div class="rw-section"><div class="rw-section-title">' + u.perfekt + '</div>'
-        + '<div class="rw-forms">' + chip(u.perfekt, w.perfekt, 'blue', 'perfekt') + '</div></div>';
-    }
-  }
-
-  if (w.type === 'Adjective' && w.comparative) {
-    hasGrammar = true;
-    html += '<div class="rw-section">'
-      + '<div class="rw-section-title-row"><span>' + u.comparatives + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div>'
-      + '<div class="rw-forms">'
-      + chip('Komparativ', w.comparative, 'gold', 'Komparativ')
-      + chip('Superlativ', w.superlative, 'blue', 'Superlativ')
-      + '</div></div>';
-    if (w.endingNote) {
-      html += '<div class="rw-section"><div class="rw-section-title">' + u.adjEndings + '</div>'
-        + '<div class="rw-example">' + w.endingNote + '</div></div>';
-    }
-  }
-
-  html += '<div class="rw-divider" style="margin-top:6px"></div>';
-
-  // Show example directly for thin words (no grammar chips to tap)
-  if (!hasGrammar && w.example) {
-    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-      + '<div class="rw-example-box lit">' + w.example + '</div></div>';
-  } else {
-    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-      + '<div class="rw-example-box" id="rw-ex-box">' + (hasGrammar ? tapMsg : (w.example || (LANG==='tr'?'Örnek mevcut değil.':LANG==='fa'?'نمونه‌ای موجود نیست.':'No example available.'))) + '</div></div>';
-  }
-
-  html += '<div class="rw-source">' + (w.source ? w.source : u.source) + ' · ' + w.level + '</div></div>';
-
-  document.getElementById('rw-content').innerHTML = html;
-
-  // Auto-show the default form example on load
-  var firstChip = document.querySelector('#rw-content .rw-form');
-  if (firstChip) firstChip.click();
+  html += '<div class="rw-source">Source: <a href="https://en.wiktionary.org/wiki/' + encodeURIComponent(wiktLookupWord(word,tc)) + '" target="_blank">Wiktionary</a></div>';
+  html += '</div>';
+  return html;
 }
 
+function renderWiktTable(rows) {
+  if (!rows || !rows.length) return '';
+  var h = '<div class="wikt-table-wrap"><table class="wikt-table">';
+  rows.forEach(function(row) {
+    h += '<tr>';
+    row.forEach(function(cell) {
+      var tag = cell.isHeader ? 'th' : 'td';
+      var attrs = (cell.colspan>1?' colspan="'+cell.colspan+'"':'') + (cell.rowspan>1?' rowspan="'+cell.rowspan+'"':'');
+      h += '<'+tag+attrs+'>' + escHtml(cell.text) + '</'+tag+'>';
+    });
+    h += '</tr>';
+  });
+  h += '</table></div>';
+  return h;
+}
+
+// Offline card body (cases/conjugation chips) — fallback when Wiktionary fails
+function renderOfflineWordBody(w) {
+  var u = UI[LANG];
+  var html = '';
+  var hint = LANG==='tr'?'Örnek için bir biçime dokun':LANG==='fa'?'برای مثال روی یک شکل بزنید':'Tap a form to see an example';
+  function chip(label, value, cls, key) {
+    var enc = encodeURIComponent(key);
+    return '<div class="rw-form" onclick="pickFormExample(this,decodeURIComponent(\''+enc+'\'))">'+'<span class="fl">'+label+'</span><span class="fv'+(cls?' '+cls:'')+'">'+value+'</span></div>';
+  }
+  rwWordKey = w.word;
+  var hasGrammar = false;
+  if (w.type==='Noun' && w.cases && Object.keys(w.cases).length) {
+    hasGrammar = true;
+    html += '<div class="rw-section"><div class="rw-section-title-row"><span>'+u.cases+'</span><span class="rw-click-hint">'+hint+'</span></div><div class="rw-forms">';
+    var cc={Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
+    Object.entries(w.cases).forEach(function(kv){ if(kv[1]) html+=chip(kv[0],kv[1],cc[kv[0]]||'',kv[0]); });
+    html += '</div></div>';
+    if (w.plural) html += '<div class="rw-section"><div class="rw-section-title">'+u.plural+'</div><div class="rw-forms">'+chip(u.plural,w.plural,'','Plural')+'</div></div>';
+  }
+  if (w.type==='Verb' && w.conjugation && Object.keys(w.conjugation).length) {
+    hasGrammar = true;
+    html += '<div class="rw-section"><div class="rw-section-title-row"><span>'+u.presentTense+'</span><span class="rw-click-hint">'+hint+'</span></div><div class="rw-forms">';
+    var pc={ich:'gold',du:'blue','er/sie/es':'green'};
+    Object.entries(w.conjugation).forEach(function(kv){ html+=chip(kv[0],kv[1],pc[kv[0]]||'',kv[0]); });
+    html += '</div></div>';
+    var pt = w['präteritum'];
+    if (pt && Object.keys(pt).length) {
+      html += '<div class="rw-section"><div class="rw-section-title-row"><span>'+u.pastSimple+'</span><span class="rw-click-hint">'+hint+'</span></div><div class="rw-forms">';
+      Object.entries(pt).forEach(function(kv){ html+=chip(kv[0],kv[1],'',kv[1]); });
+      html += '</div></div>';
+    }
+    if (w.perfekt) html += '<div class="rw-section"><div class="rw-section-title">'+u.perfekt+'</div><div class="rw-forms">'+chip(u.perfekt,w.perfekt,'blue','perfekt')+'</div></div>';
+  }
+  if (w.type==='Adjective' && w.comparative) {
+    hasGrammar = true;
+    html += '<div class="rw-section"><div class="rw-section-title-row"><span>'+u.comparatives+'</span><span class="rw-click-hint">'+hint+'</span></div><div class="rw-forms">'+chip('Komparativ',w.comparative,'gold','Komparativ')+chip('Superlativ',w.superlative,'blue','Superlativ')+'</div></div>';
+    if (w.endingNote) html += '<div class="rw-section"><div class="rw-section-title">'+u.adjEndings+'</div><div class="rw-example">'+w.endingNote+'</div></div>';
+  }
+  var tapMsg = LANG==='tr'?'Örnek görmek için bir biçime dokunun.':LANG==='fa'?'برای مشاهده مثال روی یک شکل بزنید.':'Tap any form above to see an example sentence.';
+  html += '<div class="rw-divider" style="margin-top:6px"></div>';
+  if (!hasGrammar && w.example) {
+    html += '<div class="rw-section"><div class="rw-section-title">'+u.examples+'</div><div class="rw-example-box lit">'+w.example+'</div></div>';
+  } else {
+    html += '<div class="rw-section"><div class="rw-section-title">'+u.examples+'</div><div class="rw-example-box" id="rw-ex-box">'+(hasGrammar ? tapMsg : (w.example||'No example available.'))+'</div></div>';
+  }
+  html += '<div class="rw-source">'+(w.source?w.source:UI[LANG].source)+' · '+w.level+'</div>';
+  return html;
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  RANDOM WORD EXPLORER (API-powered)
+// ══════════════════════════════════════════════════════════════════
+var _randUsed = new Set();
+
+function showRandomWord() { show('screen-random'); renderRandomWord(); }
+
+function renderRandomWord() {
+  // Pick pool: prefer SI (broad index) once loaded, fallback to WORD_BANK
+  var pool;
+  if (SI_READY && window.SI && window.SI.length > 500) {
+    pool = window.SI;
+  } else {
+    pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
+  }
+
+  var idx, attempts = 0;
+  do {
+    idx = Math.floor(Math.random() * pool.length);
+    attempts++;
+  } while (_randUsed.has(idx) && attempts < 60);
+  if (_randUsed.size > 300) _randUsed.clear();
+  _randUsed.add(idx);
+
+  var entry = pool[idx];
+  var word = entry[0], tc = entry[1], en = entry[2], tr = entry[3];
+  var meta = { word: word, tc: tc, en: en, tr: tr, fa: '' };
+
+  // Animate refresh
+  var rb = document.querySelector('.refresh-btn');
+  if (rb) {
+    rb.style.transform = 'rotate(360deg)';
+    rb.style.transition = 'transform .4s ease';
+    setTimeout(function(){ rb.style.transition='none'; rb.style.transform='rotate(0deg)'; }, 410);
+  }
+
+  var content = document.getElementById('rw-content');
+  content.innerHTML = loadingHTML();
+
+  fetchWiktionary(word, tc).then(function(data) {
+    content.innerHTML = renderWiktCard(data, meta);
+    // If offline chips exist, auto-click first
+    var chip = content.querySelector('.rw-form');
+    if (chip) { rwWordKey = word; chip.click(); }
+  }).catch(function() {
+    // Offline fallback
+    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
+    var data = { found: false, word: word, ipa: '', sections: [] };
+    content.innerHTML = renderWiktCard(data, meta);
+    if (wb) {
+      var chip = content.querySelector('.rw-form');
+      if (chip) { rwWordKey = word; chip.click(); }
+    }
+  });
+}
 
 // ══ SEARCH ══
 function openSearch() {
@@ -956,125 +1244,101 @@ function closeSearch() {
   document.getElementById('search-overlay').classList.remove('open');
 }
 
+// Search result cache (indexed by position for clean onclick)
+var _lastSR = [];
+
 function onSearchInput(q) {
   var container = document.getElementById('search-results');
-  q = q.trim().toLowerCase();
-  if (!q) { container.innerHTML = ''; return; }
-  var formHits = {};
-  Object.keys(FORM_INDEX).forEach(function(form){ if(form.includes(q)) formHits[FORM_INDEX[form]]=form; });
-  var hitWords = {};
-  WORD_BANK.forEach(function(w){
-    if(formHits[w.word]||w.meaning_en.toLowerCase().includes(q)||w.meaning_tr.toLowerCase().includes(q)||(w.meaning_fa&&w.meaning_fa.includes(q))) hitWords[w.word]=true;
+  var ql = q.trim().toLowerCase();
+  if (!ql) { container.innerHTML = ''; _lastSR = []; return; }
+
+  var seen = {};
+  var results = []; // each: [word, tc, en, tr]
+
+  // ── Search window.SI (40 k entries) if ready ──
+  if (SI_READY && window.SI) {
+    var arr = window.SI;
+    // Pass 1: prefix match on bare word
+    for (var i = 0; i < arr.length && results.length < 80; i++) {
+      var e = arr[i], wl = e[0].toLowerCase(), base = normKey(e[0]);
+      if (wl.startsWith(ql) || base.startsWith(ql)) {
+        if (!seen[wl]) { seen[wl] = true; results.push(e); }
+      }
+    }
+    // Pass 2: meaning match
+    for (var i = 0; i < arr.length && results.length < 120; i++) {
+      var e = arr[i], wl = e[0].toLowerCase();
+      if (!seen[wl] && (e[2].toLowerCase().includes(ql) || e[3].toLowerCase().includes(ql))) {
+        seen[wl] = true; results.push(e);
+      }
+    }
+    // Pass 3: substring in word
+    for (var i = 0; i < arr.length && results.length < 150; i++) {
+      var e = arr[i], wl = e[0].toLowerCase();
+      if (!seen[wl] && wl.includes(ql)) { seen[wl] = true; results.push(e); }
+    }
+  } else {
+    // Fallback: WORD_BANK + SEARCH_EXTRA
+    WORD_BANK.concat(SEARCH_EXTRA).forEach(function(w) {
+      var wl = w.word.toLowerCase();
+      if (!seen[wl] && (wl.includes(ql)||(w.meaning_en||'').toLowerCase().includes(ql)||(w.meaning_tr||'').toLowerCase().includes(ql))) {
+        seen[wl] = true;
+        results.push([w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']);
+      }
+    });
+  }
+
+  // Sort: exact word prefix > base prefix > rest
+  results.sort(function(a, b) {
+    var al = a[0].toLowerCase(), bl = b[0].toLowerCase();
+    var s = function(l){ return l.startsWith(ql)?0:normKey(l).startsWith(ql)?1:2; };
+    return s(al) - s(bl) || normKey(al).localeCompare(normKey(bl));
   });
-  var matches = WORD_BANK.filter(function(w){ return hitWords[w.word]; });
-  var extra = SEARCH_EXTRA.filter(function(w){
-    return w.word.toLowerCase().includes(q)||(formHits[w.word])||w.meaning_en.toLowerCase().includes(q)||w.meaning_tr.toLowerCase().includes(q)||(w.meaning_fa&&w.meaning_fa.includes(q));
-  });
-  matches = matches.concat(extra);
-  matches.sort(function(a,b){ var as=a.word.toLowerCase().startsWith(q)?0:formHits[a.word]?1:2; var bs=b.word.toLowerCase().startsWith(q)?0:formHits[b.word]?1:2; return as-bs; });
-  if (!matches.length) {
+
+  _lastSR = results.slice(0, 60);
+
+  if (!_lastSR.length) {
     container.innerHTML = '<div class="search-empty">' +
-      (LANG==='tr' ? 'Sonuç bulunamadı.' : LANG==='fa' ? 'نتیجه‌ای یافت نشد.' : 'No results found.') +
+      (LANG==='tr'?'Sonuç bulunamadı.':LANG==='fa'?'نتیجه‌ای یافت نشد.':'No results found.') +
       '</div>';
     return;
   }
-  container.innerHTML = matches.map(function(w) {
-    var meaning = LANG==='fa' ? (w.meaning_fa||w.meaning_en) : LANG==='tr' ? w.meaning_tr : w.meaning_en;
-    var enc = encodeURIComponent(w.word);
-    var onclick = 'openWordCard(decodeURIComponent(\'' + enc + '\'))';
-    var mf = (!w.word.toLowerCase().includes(q)&&formHits[w.word]) ? formHits[w.word] : '';
-    return '<div class="search-result-item" onclick="' + onclick + '">'
-      + '<div><div class="sri-word">' + w.word + '</div>'
-      + '<div class="sri-meta">' + w.level + ' · ' + w.type + (mf?' · <em style="opacity:.7">'+mf+'</em>':'') + '</div></div>'
-      + '<div class="sri-meaning">' + meaning + '</div>'
+  container.innerHTML = _lastSR.map(function(e, i) {
+    var meaning = LANG==='tr' ? (e[3]||e[2]) : LANG==='fa' ? (e[3]||e[2]) : e[2];
+    var label = tcName(e[1]);
+    return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
+      + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
+      + '<div class="sri-meta">' + escHtml(label) + '</div></div>'
+      + '<div class="sri-meaning">' + escHtml(meaning) + '</div>'
       + '</div>';
   }).join('');
 }
 
-function openWordCard(wordKey) {
+function openSRItem(i) {
+  var e = _lastSR[i];
+  if (!e) return;
+  openWordCard(e[0], e[1]);
+}
+
+async function openWordCard(word, tc) {
   closeSearch();
-  var w = WORD_BANK.find(function(x){ return x.word === wordKey; }) || SEARCH_EXTRA.find(function(x){ return x.word === wordKey; });
-  if (!w) return;
-  rwWordKey = w.word;
-  var u = UI[LANG];
-  var meaning = LANG==='fa' ? (w.meaning_fa||w.meaning_en) : LANG==='tr' ? w.meaning_tr : w.meaning_en;
-  var hint = LANG==='tr' ? 'Örnek için bir biçime dokun'
-           : LANG==='fa' ? 'برای مثال روی یک شکل بزنید'
-           : 'Tap a form to see an example';
-  var tapMsg = LANG==='tr' ? 'Örnek görmek için bir biçime dokunun.'
-             : LANG==='fa' ? 'برای مشاهده مثال روی یک شکل بزنید.'
-             : 'Tap any form to see an example sentence.';
-
-  function chip(label, value, cls, key) {
-    var enc = encodeURIComponent(key);
-    var onc = "pickFormExample(this,decodeURIComponent('" + enc + "'),true)";
-    return '<div class="rw-form" onclick="' + onc + '">'
-      + '<span class="fl">' + label + '</span>'
-      + '<span class="fv' + (cls ? ' '+cls : '') + '">' + value + '</span>'
-      + '</div>';
-  }
-
-  var html = '<div class="rw-card">'
-    + '<div class="rw-type">' + w.level + ' · ' + w.type + '</div>'
-    + '<div class="rw-word">' + w.word + '</div>'
-    + '<div class="rw-meaning-single">' + meaning + '</div>'
-    + '<div class="rw-divider"></div>';
-
-  var hasGrammarM = false;
-  if (w.type === 'Noun' && w.cases && Object.keys(w.cases).length > 0) {
-    hasGrammarM = true;
-    html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.cases + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
-    var cc = {Nominativ:'gold',Akkusativ:'blue',Dativ:'green',Genitiv:''};
-    Object.entries(w.cases).forEach(function(kv){ if(kv[1]) html += chip(kv[0],kv[1],cc[kv[0]]||'',kv[0]); });
-    html += '</div></div>';
-    if (w.plural) html += '<div class="rw-section"><div class="rw-section-title">' + u.plural + '</div>'
-      + '<div class="rw-forms">' + chip(u.plural,w.plural,'','Plural') + '</div></div>';
-  }
-  if (w.type === 'Verb' && w.conjugation && Object.keys(w.conjugation).length > 0) {
-    hasGrammarM = true;
-    html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.presentTense + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
-    var pc = {ich:'gold',du:'blue','er/sie/es':'green'};
-    Object.entries(w.conjugation).forEach(function(kv){ html += chip(kv[0],kv[1],pc[kv[0]]||'',kv[0]); });
-    html += '</div></div>';
-    var pt = w['präteritum'];
-    if (pt && Object.keys(pt).length > 0) {
-      html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.pastSimple + '</span>'
-        + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">';
-      Object.entries(pt).forEach(function(kv){ html += chip(kv[0],kv[1],'',kv[1]); });
-      html += '</div></div>';
-    }
-    if (w.perfekt) html += '<div class="rw-section"><div class="rw-section-title">' + u.perfekt + '</div>'
-      + '<div class="rw-forms">' + chip(u.perfekt,w.perfekt,'blue','perfekt') + '</div></div>';
-  }
-  if (w.type === 'Adjective' && w.comparative) {
-    hasGrammarM = true;
-    html += '<div class="rw-section"><div class="rw-section-title-row"><span>' + u.comparatives + '</span>'
-      + '<span class="rw-click-hint">' + hint + '</span></div><div class="rw-forms">'
-      + chip('Komparativ',w.comparative,'gold','Komparativ')
-      + chip('Superlativ',w.superlative,'blue','Superlativ')
-      + '</div></div>';
-    if (w.endingNote) html += '<div class="rw-section"><div class="rw-section-title">' + u.adjEndings + '</div>'
-      + '<div class="rw-example">' + w.endingNote + '</div></div>';
-  }
-
-  html += '<div class="rw-divider" style="margin-top:6px"></div>';
-  if (!hasGrammarM && w.example) {
-    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-      + '<div class="rw-example-box lit">' + w.example + '</div></div>';
-  } else {
-    html += '<div class="rw-section"><div class="rw-section-title">' + u.examples + '</div>'
-      + '<div class="rw-example-box" id="wm-ex-box">' + (hasGrammarM ? tapMsg : (w.example || (LANG==='tr'?'Örnek mevcut değil.':LANG==='fa'?'نمونه‌ای موجود نیست.':'No example available.'))) + '</div></div>';
-  }
-  html += '<div class="rw-source">' + (w.source ? w.source : u.source) + ' · ' + w.level + '</div></div>';
-
-  document.getElementById('word-modal-content').innerHTML = html;
+  if (!word) return;
+  var meta = metaFromWord(word);
+  if (tc && meta.tc === '?') meta.tc = tc;
+  var content = document.getElementById('word-modal-content');
+  content.innerHTML = loadingHTML();
   document.getElementById('word-modal-overlay').classList.add('open');
-
-  // Auto-show first form example
-  var firstChip = document.querySelector('#word-modal-content .rw-form');
-  if (firstChip) firstChip.click();
+  try {
+    var data = await fetchWiktionary(word, meta.tc);
+    content.innerHTML = renderWiktCard(data, meta);
+    var chip = content.querySelector('.rw-form');
+    if (chip) { rwWordKey = word; chip.click(); }
+  } catch(e) {
+    var data = { found: false, word: word, ipa: '', sections: [] };
+    content.innerHTML = renderWiktCard(data, meta);
+    var chip = content.querySelector('.rw-form');
+    if (chip) { rwWordKey = word; chip.click(); }
+  }
 }
 
 function closeWordModal(e) {
@@ -1092,6 +1356,18 @@ function show(id){
 // ── Init ──
 applyTranslations();
 updateCounts();
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
+});
+
+// ── Load search index (40k words) in background ──
+(function() {
+  var s = document.createElement('script');
+  s.src = 'word_data/search_index.js';
+  s.async = true;
+  // onSILoaded() is called from inside the script when it finishes
+  document.body.appendChild(s);
+})();
 
 // ── Load dictionary in background (doesn't block UI) ──
 (function() {
