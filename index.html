@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
 <meta name="theme-color" content="#0b0d13">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -319,7 +319,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   padding:11px 14px;font-size:.83rem;line-height:1.6;color:var(--muted);font-style:italic;
   transition:border-color .2s,color .2s;min-height:44px;}
 .rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
-.rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;opacity:.6;}
+.rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;}
+.rw-source a{color:var(--blue);opacity:.85;}
 
 /* ── WIKTIONARY CARD ── */
 .wikt-loading{display:flex;align-items:center;justify-content:center;gap:12px;
@@ -564,6 +565,7 @@ const UI = {
     quizQuestion: 'What does this word mean?',
     levelLabel: 'Level',
     wiktSource: 'Source',
+    meanings: 'Meanings',
     autoTranslated: 'Auto-translated',
     offlineNote: 'ⓘ Offline data · Wiktionary unreachable',
     aboutBtn: 'ℹ️ About',
@@ -607,6 +609,7 @@ const UI = {
     quizQuestion: 'Bu kelimenin anlamı nedir?',
     levelLabel: 'Seviye',
     wiktSource: 'Kaynak',
+    meanings: 'Anlamlar',
     autoTranslated: 'Otomatik çevrildi',
     offlineNote: 'ⓘ Çevrimdışı veri · Wiktionary erişilemiyor',
     aboutBtn: 'ℹ️ Hakkında',
@@ -650,6 +653,7 @@ const UI = {
     quizQuestion: 'این کلمه چه معنایی دارد؟',
     levelLabel: 'سطح',
     wiktSource: 'منبع',
+    meanings: 'معانی',
     autoTranslated: 'ترجمه خودکار',
     offlineNote: 'ⓘ داده آفلاین · Wiktionary در دسترس نیست',
     aboutBtn: 'ℹ️ درباره',
@@ -693,6 +697,7 @@ const UI = {
     quizQuestion: 'Что означает это слово?',
     levelLabel: 'Уровень',
     wiktSource: 'Источник',
+    meanings: 'Значения',
     autoTranslated: 'Авто-перевод',
     offlineNote: 'ⓘ Офлайн данные · Wiktionary недоступен',
     aboutBtn: 'ℹ️ О приложении',
@@ -736,6 +741,7 @@ const UI = {
     quizQuestion: 'Що означає це слово?',
     levelLabel: 'Рівень',
     wiktSource: 'Джерело',
+    meanings: 'Значення',
     autoTranslated: 'Авто-переклад',
     offlineNote: 'ⓘ Офлайн дані · Wiktionary недоступний',
     aboutBtn: 'ℹ️ Про додаток',
@@ -779,6 +785,7 @@ const UI = {
     quizQuestion: 'ما معنى هذه الكلمة؟',
     levelLabel: 'المستوى',
     wiktSource: 'المصدر',
+    meanings: 'المعاني',
     autoTranslated: 'ترجمة تلقائية',
     offlineNote: 'ⓘ بيانات غير متصلة · Wiktionary غير متاح',
     aboutBtn: 'ℹ️ حول التطبيق',
@@ -2208,19 +2215,8 @@ function renderWiktCard(data, meta, targetId) {
         html += '</div></div>';
       }
     }
-    if (sec.table && sec.table.length) {
-      // Table section title is always in German
-      var tTitle = sec.tableType==='conj' ? 'Konjugation'
-                 : sec.tableType==='decl' ? 'Deklination'
-                 : 'Beugung';
-      html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
-        + renderWiktTable(sec.table) + '</div>';
-    }
     if (sec.defs.length) {
-      // Definitions heading: "Bedeutungen" in German; the definitions text itself
-      // is always in English (from English Wiktionary) — that IS the learning content
-      var defTitle = 'Bedeutungen';
-      html += '<div class="rw-section"><div class="rw-section-title">' + defTitle + '</div>'
+      html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
         + '<div class="wikt-def-list">';
       sec.defs.slice(0,5).forEach(function(d, i) {
         // Linkify any "of WORD" pattern so base words are tappable
@@ -2239,6 +2235,14 @@ function renderWiktCard(data, meta, targetId) {
         html += '</div>';
       });
       html += '</div></div>';
+    }
+    if (sec.table && sec.table.length) {
+      // Table section title is always in German
+      var tTitle = sec.tableType==='conj' ? 'Konjugation'
+                 : sec.tableType==='decl' ? 'Deklination'
+                 : 'Beugung';
+      html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
+        + renderWiktTable(sec.table) + '</div>';
     }
     html += '<div class="rw-divider" style="margin:10px 0 8px"></div>';
   });
