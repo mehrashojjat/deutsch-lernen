@@ -877,6 +877,22 @@ function typeChar(t) {
 function tcName(tc) {
   return {N:'Noun',V:'Verb',A:'Adjective',P:'Phrase',D:'Adverb',O:'Word','?':'Word'}[tc] || tc || 'Word';
 }
+// German grammatical term labels — used in the word card so the app stays
+// oriented toward German learning regardless of the UI display language.
+function tcNameDE(tc) {
+  return {N:'Substantiv',V:'Verb',A:'Adjektiv',P:'Phrase',D:'Adverb',O:'Wort','?':'Wort'}[tc] || tc || 'Wort';
+}
+// Convert English Wiktionary POS string → German label for the card badge
+function posLabelDE(pos) {
+  return {
+    'noun':'Substantiv','verb':'Verb','adjective':'Adjektiv','adverb':'Adverb',
+    'article':'Artikel','conjunction':'Konjunktion','preposition':'Präposition',
+    'pronoun':'Pronomen','numeral':'Numerale','particle':'Partikel',
+    'interjection':'Interjektion','determiner':'Determiner',
+    'wortform':'Wortform','verb form':'Verbform','noun form':'Nominalform',
+    'adjective form':'Adjektivform'
+  }[pos.toLowerCase()] || (pos.charAt(0).toUpperCase() + pos.slice(1));
+}
 function normKey(w) {
   return (w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
 }
@@ -915,8 +931,66 @@ function metaFromWord(word) {
 // Given an inflected (conjugated/participle) form, return the likely
 // infinitive if it can be found in SI or WORD_BANK.
 // e.g. "verschwendet" → "verschwenden", "gespielt" → "spielen"
+// Irregular (strong) verb Präteritum forms → infinitive.
+// Covers A1–B2 vocabulary plus the most common irregular verbs a learner meets.
+var STRONG_PAST = (function(){
+  var m = {};
+  var pairs = [
+    ['blieb','bleiben'],['bliebst','bleiben'],['blieben','bleiben'],['bliebt','bleiben'],
+    ['ging','gehen'],['gingst','gehen'],['gingen','gehen'],['gingt','gehen'],
+    ['kam','kommen'],['kamst','kommen'],['kamen','kommen'],['kamt','kommen'],
+    ['stand','stehen'],['standst','stehen'],['standen','stehen'],['standet','stehen'],
+    ['fuhr','fahren'],['fuhrst','fahren'],['fuhren','fahren'],['fuhrt','fahren'],
+    ['nahm','nehmen'],['nahmst','nehmen'],['nahmen','nehmen'],['nahmt','nehmen'],
+    ['sah','sehen'],['sahst','sehen'],['sahen','sehen'],['saht','sehen'],
+    ['gab','geben'],['gabst','geben'],['gaben','geben'],['gabt','geben'],
+    ['fand','finden'],['fandst','finden'],['fanden','finden'],['fandet','finden'],
+    ['rief','rufen'],['riefst','rufen'],['riefen','rufen'],['rieft','rufen'],
+    ['lief','laufen'],['liefst','laufen'],['liefen','laufen'],['lieft','laufen'],
+    ['hielt','halten'],['hieltest','halten'],['hielten','halten'],['hieltet','halten'],
+    ['ließ','lassen'],['ließest','lassen'],['ließen','lassen'],['ließt','lassen'],
+    ['hieß','heißen'],['hießest','heißen'],['hießen','heißen'],['hießt','heißen'],
+    ['schlief','schlafen'],['schliefst','schlafen'],['schliefen','schlafen'],['schlieft','schlafen'],
+    ['schrieb','schreiben'],['schriebst','schreiben'],['schrieben','schreiben'],['schriebt','schreiben'],
+    ['sprach','sprechen'],['sprachst','sprechen'],['sprachen','sprechen'],['spracht','sprechen'],
+    ['trug','tragen'],['trugst','tragen'],['trugen','tragen'],['trugt','tragen'],
+    ['zog','ziehen'],['zogst','ziehen'],['zogen','ziehen'],['zogt','ziehen'],
+    ['flog','fliegen'],['flogst','fliegen'],['flogen','fliegen'],['flogt','fliegen'],
+    ['saß','sitzen'],['saßest','sitzen'],['saßen','sitzen'],['saßt','sitzen'],
+    ['las','lesen'],['last','lesen'],['lasen','lesen'],
+    ['aß','essen'],['aßest','essen'],['aßen','essen'],['aßt','essen'],
+    ['trank','trinken'],['trankst','trinken'],['tranken','trinken'],['trankt','trinken'],
+    ['sang','singen'],['sangst','singen'],['sangen','singen'],['sangt','singen'],
+    ['bat','bitten'],['batst','bitten'],['baten','bitten'],['batet','bitten'],
+    ['bot','bieten'],['botst','bieten'],['boten','bieten'],['botet','bieten'],
+    ['bog','biegen'],['bogst','biegen'],['bogen','biegen'],['bogt','biegen'],
+    ['ritt','reiten'],['rittest','reiten'],['ritten','reiten'],['rittet','reiten'],
+    ['griff','greifen'],['griffst','greifen'],['griffen','greifen'],['grifft','greifen'],
+    ['schrieb','schreiben'],['schnitt','schneiden'],['schnittest','schneiden'],['schnitten','schneiden'],
+    ['stahl','stehlen'],['stahlst','stehlen'],['stahlen','stehlen'],
+    ['half','helfen'],['halfst','helfen'],['halfen','helfen'],
+    ['traf','treffen'],['trafst','treffen'],['trafen','treffen'],['traft','treffen'],
+    ['vergaß','vergessen'],['vergaßest','vergessen'],['vergaßen','vergessen'],
+    ['verlor','verlieren'],['verlorst','verlieren'],['verloren','verlieren'],
+    ['gewann','gewinnen'],['gewannst','gewinnen'],['gewannen','gewinnen'],
+    ['begann','beginnen'],['begannst','beginnen'],['begannen','beginnen'],
+    ['rief','rufen'],['fiel','fallen'],['fielst','fallen'],['fielen','fallen'],['fielt','fallen'],
+    ['wuchs','wachsen'],['wuchst','wachsen'],['wuchsen','wachsen'],
+    ['warf','werfen'],['warfst','werfen'],['warfen','werfen'],['warft','werfen'],
+    ['schlug','schlagen'],['schlugst','schlagen'],['schlugen','schlagen'],['schlugt','schlagen'],
+    ['zog','ziehen'],['brach','brechen'],['brachst','brechen'],['brachen','brechen'],
+    ['starb','sterben'],['starbst','sterben'],['starben','sterben'],
+    ['roch','riechen'],['rochst','riechen'],['rochen','riechen'],
+    ['log','lügen'],['logst','lügen'],['logen','lügen'],
+  ];
+  pairs.forEach(function(p){ m[p[0]] = p[1]; });
+  return m;
+})();
+
 function deduceLemma(word) {
   var w = word.toLowerCase().replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
+  // Check strong/irregular past tense table first
+  if (STRONG_PAST[w]) return STRONG_PAST[w];
   var candidates = [];
   // ge- prefix past participle: gespielt → spielen, gearbeitet → arbeiten
   if (w.startsWith('ge') && w.length > 5) {
@@ -1086,9 +1160,14 @@ function parseWiktPage(htmlStr, word) {
     if (ipaEl) { result.ipa = ipaEl.textContent.trim(); break; }
   }
 
-  // Group content by h3/h4 POS headings
+  // Group content by h3/h4 POS headings.
+  // Include inflected-form entries (Wortform, "verb form", etc.) so that
+  // past-tense forms like "blieb" that only have a brief Wiktionary entry
+  // still render their content rather than falling back to "not found".
   var POS = ['noun','verb','adjective','adverb','article','conjunction','preposition',
-             'pronoun','numeral','particle','interjection','determiner'];
+             'pronoun','numeral','particle','interjection','determiner',
+             'wortform','verb form','noun form','adjective form',
+             'participle','suffix','prefix','letter'];
   var posGroups = [], curPOS = null, curBatch = [];
   function flushPOS() {
     if (curPOS && curBatch.length) posGroups.push({ pos: curPOS, nodes: curBatch.slice() });
@@ -1181,15 +1260,27 @@ function renderWiktCard(data, meta, targetId) {
   // When data was fetched from the base lemma (inflected form lookup),
   // annotate the card title so the user understands the relationship.
   var baseLemma = data.fromLemma || null;
-  // Meaning: prefer current-lang, fall back across all three
-  var meaning = LANG==='fa' ? (meta.fa||meta.en||meta.tr)
-              : LANG==='tr' ? (meta.tr||meta.en)
-              : (meta.en||meta.tr);          // EN falls back to TR for SI entries that only have TR
+  // Meaning: strict language respect — only show in the selected UI language.
+  // If unavailable in that language, try to pull the first English Wiktionary
+  // definition as a fallback (these are always in English).
+  var meaning = LANG==='fa' ? (meta.fa||'')
+              : LANG==='tr' ? (meta.tr||'')
+              : (meta.en||'');
+  // If no meaning found in the selected language, borrow the first Wiktionary
+  // definition as a last resort (it is always in English, acceptable for EN).
+  if (!meaning && LANG==='en' && data.found && data.sections.length) {
+    for (var _si = 0; _si < data.sections.length; _si++) {
+      if (data.sections[_si].defs && data.sections[_si].defs.length) {
+        meaning = data.sections[_si].defs[0].text;
+        break;
+      }
+    }
+  }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
   var level = wb ? wb.level : '';
 
   var html = '<div class="rw-card">';
-  html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcName(tc) + '</div>';
+  html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcNameDE(tc) + '</div>';
   html += '<div class="rw-word">' + escHtml(displayWord)
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
     + '</div>';
@@ -1211,23 +1302,24 @@ function renderWiktCard(data, meta, targetId) {
   }
 
   data.sections.forEach(function(sec) {
-    var posLabel = sec.pos.charAt(0).toUpperCase() + sec.pos.slice(1);
-    html += '<span class="wikt-pos-badge">' + posLabel + '</span>';
+    // POS badge is always in German — this is a German learning card
+    html += '<span class="wikt-pos-badge">' + posLabelDE(sec.pos) + '</span>';
 
     if (sec.headLine) {
       html += '<div class="wikt-head-line">' + escHtml(sec.headLine) + '</div>';
     }
     if (sec.table && sec.table.length) {
-      var tTitle = sec.tableType==='conj'
-        ? (LANG==='tr'?'Çekim Tablosu':LANG==='fa'?'جدول صرف':'Conjugation')
-        : sec.tableType==='decl'
-        ? (LANG==='tr'?'Çekim (İsim)':LANG==='fa'?'تصریف اسم':'Declension')
-        : (LANG==='tr'?'Tablo':LANG==='fa'?'جدول':'Inflection');
+      // Table section title is always in German
+      var tTitle = sec.tableType==='conj' ? 'Konjugation'
+                 : sec.tableType==='decl' ? 'Deklination'
+                 : 'Beugung';
       html += '<div class="rw-section"><div class="rw-section-title">' + tTitle + '</div>'
         + renderWiktTable(sec.table) + '</div>';
     }
     if (sec.defs.length) {
-      var defTitle = LANG==='tr'?'Anlamlar':LANG==='fa'?'معانی':'Definitions';
+      // Definitions heading: "Bedeutungen" in German; the definitions text itself
+      // is always in English (from English Wiktionary) — that IS the learning content
+      var defTitle = 'Bedeutungen';
       html += '<div class="rw-section"><div class="rw-section-title">' + defTitle + '</div>'
         + '<div class="wikt-def-list">';
       sec.defs.slice(0,5).forEach(function(d, i) {
@@ -1449,11 +1541,10 @@ function onSearchInput(q) {
     return;
   }
   container.innerHTML = _lastSR.map(function(e, i) {
-    // For all languages fall back across the available meanings so words that
-    // only have a Turkish translation (common in the frequency-list SI entries)
-    // still show something useful even when the UI language is English/Persian.
-    var meaning = LANG==='tr' ? (e[3]||e[2]) : LANG==='fa' ? (e[4]||e[2]||e[3]) : (e[2]||e[3]);
-    var label = tcName(e[1]);
+    // Strict language respect: only show the meaning in the selected UI language.
+    // Do NOT fall back to another language — show nothing if unavailable.
+    var meaning = LANG==='tr' ? (e[3]||'') : LANG==='fa' ? (e[4]||'') : (e[2]||'');
+    var label = tcNameDE(e[1]);
     return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
       + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
       + '<div class="sri-meta">' + escHtml(label) + '</div></div>'
