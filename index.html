@@ -88,7 +88,24 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .drawer-section{margin-bottom:22px;}
 .drawer-section-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;
   color:var(--muted);margin-bottom:10px;font-weight:600;}
-.option-row{display:flex;gap:8px;}
+.option-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.about-btn{width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--border);
+  background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
+  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:4px;}
+.about-btn:hover{border-color:rgba(232,201,122,.3);color:var(--text);}
+.about-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;
+  align-items:flex-end;justify-content:center;}
+.about-modal-overlay.open{display:flex;}
+.about-modal{background:var(--surf);border-radius:18px 18px 0 0;width:100%;max-width:480px;
+  padding:24px 22px 32px;max-height:80vh;overflow-y:auto;}
+.about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.1rem;margin:0 0 14px;}
+.about-modal p{font-size:.85rem;line-height:1.65;color:var(--text);margin:0 0 10px;}
+.about-modal a{color:var(--gold);text-decoration:none;font-weight:600;}
+.about-modal a:hover{text-decoration:underline;}
+.about-modal-close{width:100%;padding:11px;background:var(--surf3);border:none;border-radius:10px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
+  cursor:pointer;margin-top:14px;}
+.about-modal-close:hover{background:var(--surf2);}
 .opt-btn{flex:1;padding:11px 8px;border-radius:10px;border:1.5px solid var(--border);
   background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
   color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;}
@@ -322,12 +339,27 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <div class="option-row">
       <button class="opt-btn active" id="opt-en" onclick="setLang('en')">🇬🇧 English</button>
       <button class="opt-btn" id="opt-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
-      <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
       <button class="opt-btn" id="opt-ru" onclick="setLang('ru')">🇷🇺 Русский</button>
+      <button class="opt-btn" id="opt-uk" onclick="setLang('uk')">🇺🇦 Українська</button>
+      <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
+      <button class="opt-btn" id="opt-ar" onclick="setLang('ar')">🇸🇦 العربية</button>
     </div>
   </div>
 
+  <button class="about-btn" onclick="openAbout()">ℹ️ About</button>
+
   <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Done</button>
+</div>
+
+<!-- ══ ABOUT MODAL ══ -->
+<div class="about-modal-overlay" id="about-modal-overlay" onclick="closeAbout(event)">
+  <div class="about-modal">
+    <h3>About</h3>
+    <p>I built this free mini-game for myself — a simple way to practice German vocabulary without any paywalls. I wanted it available as a free resource for anyone learning German.</p>
+    <p>Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
+    <p>Word lists are sourced from <strong>Goethe-Institut</strong> resources for each CEFR level. Translations use the free <strong>MyMemory API</strong>. The project is open-source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a>. Built with <strong>Claude AI</strong>.</p>
+    <button class="about-modal-close" onclick="closeAbout()">Close</button>
+  </div>
 </div>
 
 <!-- ══ HOME ══ -->
@@ -550,6 +582,64 @@ const UI = {
     meaning: 'Значение',
     tapPrompt: '👆 Нажмите на форму выше, чтобы увидеть пример предложения.',
     noExample: 'Пример отсутствует.',
+  },
+  uk: {
+    headerSub: 'Практика слів · Відмінки · Відмінювання',
+    settingsTitle: 'Налаштування',
+    langLabel: 'Мова / Language',
+    closeDone: 'Готово',
+    rwBannerTitle: 'Дослідник випадкових слів',
+    rwBannerSub: 'Переглядай будь-яке слово з усіма формами, відмінками та прикладами',
+    selectLevel: 'Обрати рівень',
+    levelNames: { A1:'Початківець', A2:'Елементарний', B1:'Середній', B2:'Вище середнього' },
+    cardCount: (n) => n + ' карток практики слів',
+    back: '← Назад',
+    next: 'Далі →',
+    correct: '✓ Правильно!',
+    wrong: (a) => `✗ Неправильно. Правильна відповідь: <strong>${a}</strong>`,
+    resultTitles: { great:'Відмінно!', good:'Молодець!', ok:'Непогана спроба!', low:'Продовжуй практикуватись!' },
+    resultSub: (lv,p) => `Рівень ${lv} · ${p}% правильно`,
+    scoreLbl: 'Рахунок', correctLbl: 'Правильно', wrongLbl: 'Неправильно',
+    playAgain: 'Грати знову', chooseLevel: 'Обрати рівень',
+    rwTitle: 'Дослідник слів',
+    cases: 'Відмінки (Kasus)', plural: 'Множина',
+    presentTense: 'Präsens (Теперішній)', pastSimple: 'Präteritum (Минулий)', perfekt: 'Perfekt',
+    comparatives: 'Вищий і найвищий ступінь', adjEndings: 'Закінчення прикметників (Nom.)', examples: 'Приклади',
+    source: 'Джерело: список слів інституту Гете',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Практика слів',
+    meaning: 'Значення',
+    tapPrompt: '👆 Натисніть на форму вище, щоб побачити приклад речення.',
+    noExample: 'Приклад відсутній.',
+  },
+  ar: {
+    headerSub: 'تدريب المفردات · الحالات · تصريف الأفعال',
+    settingsTitle: 'الإعدادات',
+    langLabel: 'اللغة / Language',
+    closeDone: 'تم',
+    rwBannerTitle: 'مستكشف الكلمات العشوائي',
+    rwBannerSub: 'اعرض أي كلمة بجميع أشكالها وحالاتها وأمثلتها',
+    selectLevel: 'اختر المستوى',
+    levelNames: { A1:'مبتدئ', A2:'أساسي', B1:'متوسط', B2:'فوق المتوسط' },
+    cardCount: (n) => n + ' بطاقة تدريب مفردات',
+    back: '→ رجوع',
+    next: '← التالي',
+    correct: '✓ صحيح!',
+    wrong: (a) => `✗ خطأ. الإجابة الصحيحة: <strong>${a}</strong>`,
+    resultTitles: { great:'ممتاز!', good:'أحسنت!', ok:'محاولة جيدة!', low:'واصل التدريب!' },
+    resultSub: (lv,p) => `المستوى ${lv} · ${p}% صحيح`,
+    scoreLbl: 'النقاط', correctLbl: 'صحيح', wrongLbl: 'خطأ',
+    playAgain: 'العب مرة أخرى', chooseLevel: 'اختر المستوى',
+    rwTitle: 'مستكشف الكلمات',
+    cases: 'الحالات (Kasus)', plural: 'الجمع',
+    presentTense: 'Präsens (المضارع)', pastSimple: 'Präteritum (الماضي البسيط)', perfekt: 'Perfekt',
+    comparatives: 'المقارنة والتفضيل', adjEndings: 'لواحق الصفات (Nom.)', examples: 'أمثلة',
+    source: 'المصدر: قائمة مفردات معهد غوته',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'تدريب المفردات',
+    meaning: 'المعنى',
+    tapPrompt: '👆 اضغط على أي شكل أعلاه لرؤية جملة مثال.',
+    noExample: 'لا يوجد مثال.',
   }
 };
 
@@ -624,15 +714,22 @@ function closeSettings() {
   document.getElementById('drawer-overlay').classList.remove('open');
   document.getElementById('settings-drawer').classList.remove('open');
 }
+function openAbout() {
+  document.getElementById('about-modal-overlay').classList.add('open');
+}
+function closeAbout(e) {
+  if (e && e.target !== document.getElementById('about-modal-overlay')) return;
+  document.getElementById('about-modal-overlay').classList.remove('open');
+}
 
 // ── Set language ──
 function setLang(lang) {
   LANG = lang;
-  document.getElementById('opt-en').classList.toggle('active', lang==='en');
-  document.getElementById('opt-tr').classList.toggle('active', lang==='tr');
-  document.getElementById('opt-fa').classList.toggle('active', lang==='fa');
-  document.getElementById('opt-ru').classList.toggle('active', lang==='ru');
-  document.documentElement.style.setProperty('direction', lang==='fa'?'rtl':'ltr');
+  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+    document.getElementById('opt-'+l).classList.toggle('active', lang===l);
+  });
+  var isRtl = lang==='fa' || lang==='ar';
+  document.documentElement.style.setProperty('direction', isRtl?'rtl':'ltr');
   document.body.classList.toggle('lang-fa', lang==='fa');
   applyTranslations();
   updateCounts();
@@ -693,6 +790,14 @@ function getLangMeaning(w) {
     var ru = (_ruMemCache && _ruMemCache[key]) || '';
     return ru || (w.meaning_en && w.meaning_en.trim()) || '';
   }
+  if (LANG === 'uk') {
+    var uk = (_ukMemCache && _ukMemCache[key]) || '';
+    return uk || (w.meaning_en && w.meaning_en.trim()) || '';
+  }
+  if (LANG === 'ar') {
+    var ar = (_arMemCache && _arMemCache[key]) || '';
+    return ar || (w.meaning_en && w.meaning_en.trim()) || '';
+  }
   return (w.meaning_en && w.meaning_en.trim()) || '';
 }
 
@@ -736,9 +841,7 @@ async function startLevel(lv) {
   if(!queue.length){alert('No cards!');return;}
   idx=0;ok=0;no=0;
 
-  if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru') {
-    // Collect words missing native-language translations that aren't cached yet.
-    // Only the first 3 distractors per card are used in renderCard, so skip the rest.
+  if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru' || LANG === 'uk' || LANG === 'ar') {
     var toFetch = [];
     queue.forEach(function(card) {
       [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
@@ -747,16 +850,20 @@ async function startLevel(lv) {
           ? (!(w.meaning_tr && w.meaning_tr.trim()) && _trMemCache[k] === undefined)
           : LANG === 'fa'
           ? (!(w.meaning_fa && w.meaning_fa.trim()) && _faMemCache[k] === undefined)
-          : (_ruMemCache[k] === undefined);
+          : LANG === 'ru'
+          ? (_ruMemCache[k] === undefined)
+          : LANG === 'uk'
+          ? (_ukMemCache[k] === undefined)
+          : (_arMemCache[k] === undefined);
         if (isMissing && toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
       });
     });
     if (toFetch.length) {
       var _ov = document.getElementById('quiz-prep-overlay');
       _ov.classList.add('active');
-      var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : 'ru';
-      var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : _ruMemCache;
-      var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : _ruCacheSave;
+      var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : LANG === 'ru' ? 'ru' : LANG === 'uk' ? 'uk' : 'ar';
+      var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : LANG === 'ru' ? _ruMemCache : LANG === 'uk' ? _ukMemCache : _arMemCache;
+      var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : LANG === 'ru' ? _ruCacheSave : LANG === 'uk' ? _ukCacheSave : _arCacheSave;
       await _batchFetchTranslations(toFetch, _lc, _c, _sf);
       _ov.classList.remove('active');
     }
@@ -975,7 +1082,7 @@ function normKey(w) {
   return (w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
 }
 function loadingHTML() {
-  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : LANG==='ru' ? 'Загрузка…' : 'Loading…';
+  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : LANG==='ru' ? 'Загрузка…' : LANG==='uk' ? 'Завантаження…' : LANG==='ar' ? 'جارٍ التحميل…' : 'Loading…';
   return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + msg + '</span></div>';
 }
 function wiktLookupWord(word, tc) {
@@ -997,12 +1104,12 @@ function metaFromWord(word) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
-      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
+      return { word: e[0], tc: e[1], en: e[2], tr: e[3]||(_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||(_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
-  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'' };
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: wb.meaning_tr||(_trMemCache&&_trMemCache[key])||'', fa: wb.meaning_fa||(_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
+  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
@@ -1411,6 +1518,94 @@ function _autoFetchRussian(word, container) {
   });
 }
 
+// ── Ukrainian translation auto-fetch with localStorage persistence ──
+var _ukMemCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_uk_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _ukCacheSave() {
+  try {
+    var keys = Object.keys(_ukMemCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _ukMemCache[k]; });
+      _ukMemCache = trim;
+    }
+    localStorage.setItem('dl_uk_cache', JSON.stringify(_ukMemCache));
+  } catch(e) {}
+}
+async function fetchUkrainian(word) {
+  var key = normKey(word);
+  if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
+  if (_ukMemCache[key] !== undefined) return _ukMemCache[key] || null;
+  try {
+    var url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(word) + '&langpair=de|uk';
+    var resp = await fetch(url);
+    if (resp.ok) {
+      var json = await resp.json();
+      if (json.responseStatus === 200 && json.responseData) {
+        var t = (json.responseData.translatedText || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          _ukMemCache[key] = t; _ukCacheSave(); return t;
+        }
+      }
+    }
+  } catch(e) {}
+  _ukMemCache[key] = ''; _ukCacheSave(); return null;
+}
+function _autoFetchUkrainian(word, container) {
+  if (LANG !== 'uk') return;
+  var el = container.querySelector('.uk-meaning-pending');
+  if (!el) return;
+  fetchUkrainian(word).then(function(uk) {
+    if (uk && el.isConnected) { el.textContent = uk; el.classList.remove('uk-meaning-pending'); }
+  });
+}
+
+// ── Arabic translation auto-fetch with localStorage persistence ──
+var _arMemCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_ar_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _arCacheSave() {
+  try {
+    var keys = Object.keys(_arMemCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _arMemCache[k]; });
+      _arMemCache = trim;
+    }
+    localStorage.setItem('dl_ar_cache', JSON.stringify(_arMemCache));
+  } catch(e) {}
+}
+async function fetchArabic(word) {
+  var key = normKey(word);
+  if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
+  if (_arMemCache[key] !== undefined) return _arMemCache[key] || null;
+  try {
+    var url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(word) + '&langpair=de|ar';
+    var resp = await fetch(url);
+    if (resp.ok) {
+      var json = await resp.json();
+      if (json.responseStatus === 200 && json.responseData) {
+        var t = (json.responseData.translatedText || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          _arMemCache[key] = t; _arCacheSave(); return t;
+        }
+      }
+    }
+  } catch(e) {}
+  _arMemCache[key] = ''; _arCacheSave(); return null;
+}
+function _autoFetchArabic(word, container) {
+  if (LANG !== 'ar') return;
+  var el = container.querySelector('.ar-meaning-pending');
+  if (!el) return;
+  fetchArabic(word).then(function(ar) {
+    if (ar && el.isConnected) { el.textContent = ar; el.classList.remove('ar-meaning-pending'); }
+  });
+}
+
 // ── Batch translation fetch: sends multiple words in one request (newline-joined)
 // Falls back to parallel individual requests if the response doesn't align.
 async function _batchFetchTranslations(words, langCode, cache, saveFn) {
@@ -1716,14 +1911,19 @@ function renderWiktCard(data, meta, targetId) {
   var _cachedTr = _trMemCache && _trMemCache[normKey(meta.word)] || '';
   var _cachedFa = _faMemCache && _faMemCache[normKey(meta.word)] || '';
   var _cachedRu = _ruMemCache && _ruMemCache[normKey(meta.word)] || '';
+  var _cachedUk = _ukMemCache && _ukMemCache[normKey(meta.word)] || '';
+  var _cachedAr = _arMemCache && _arMemCache[normKey(meta.word)] || '';
   var meaning = LANG==='fa' ? (meta.fa || _cachedFa || meta.en || '')
               : LANG==='tr' ? (meta.tr || _cachedTr || meta.en || '')
               : LANG==='ru' ? (meta.ru || _cachedRu || meta.en || '')
+              : LANG==='uk' ? (meta.uk || _cachedUk || meta.en || '')
+              : LANG==='ar' ? (meta.ar || _cachedAr || meta.en || '')
               : (meta.en || '');
-  // True when we're showing English as fallback (no native translation yet)
   var _trPending = LANG === 'tr' && !(meta.tr || _cachedTr);
   var _faPending = LANG === 'fa' && !(meta.fa || _cachedFa);
   var _ruPending = LANG === 'ru' && !(meta.ru || _cachedRu);
+  var _ukPending = LANG === 'uk' && !(meta.uk || _cachedUk);
+  var _arPending = LANG === 'ar' && !(meta.ar || _cachedAr);
   // Still no meaning? Pull the first Wiktionary definition (always English).
   if (!meaning && data.found && data.sections.length) {
     for (var _si = 0; _si < data.sections.length; _si++) {
@@ -1742,6 +1942,9 @@ function renderWiktCard(data, meta, targetId) {
         var _bm = metaFromWord(_ofM[1]);
         meaning = LANG==='tr' ? (_bm.tr || _bm.en || '')
                 : LANG==='fa' ? (_bm.fa || _bm.en || '')
+                : LANG==='ru' ? (_bm.ru || _bm.en || '')
+                : LANG==='uk' ? (_bm.uk || _bm.en || '')
+                : LANG==='ar' ? (_bm.ar || _bm.en || '')
                 : (_bm.en || '');
       }
     }
@@ -1772,7 +1975,7 @@ function renderWiktCard(data, meta, targetId) {
         + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
         + escHtml(_mOfRe[2]) + '</span></div>';
     } else {
-      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : '';
+      var _pendCls = _trPending ? ' tr-meaning-pending' : _faPending ? ' fa-meaning-pending' : _ruPending ? ' ru-meaning-pending' : _ukPending ? ' uk-meaning-pending' : _arPending ? ' ar-meaning-pending' : '';
       html += '<div class="rw-meaning-single' + _pendCls + '">' + escHtml(meaning)
         + (meaningIsAuto
           ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
@@ -1798,6 +2001,10 @@ function renderWiktCard(data, meta, targetId) {
         html += '<div class="rw-meaning-single fa-meaning-pending"></div>';
       } else if (LANG === 'ru') {
         html += '<div class="rw-meaning-single ru-meaning-pending"></div>';
+      } else if (LANG === 'uk') {
+        html += '<div class="rw-meaning-single uk-meaning-pending"></div>';
+      } else if (LANG === 'ar') {
+        html += '<div class="rw-meaning-single ar-meaning-pending"></div>';
       } else {
         html += '<div class="wikt-error"><div class="wikt-error-word">' + escHtml(word) + '</div>'
           + '<span>No detailed information found.</span></div>';
@@ -2232,7 +2439,7 @@ function renderRandomWord() {
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content);
+    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
@@ -2371,6 +2578,8 @@ async function _prefetchLangMeta(word, meta) {
   if (LANG === 'tr' && !meta.tr) { var _t = await fetchTurkish(word); if (_t) meta.tr = _t; }
   else if (LANG === 'fa' && !meta.fa) { var _t = await fetchPersian(word); if (_t) meta.fa = _t; }
   else if (LANG === 'ru' && !meta.ru) { var _t = await fetchRussian(word); if (_t) meta.ru = _t; }
+  else if (LANG === 'uk' && !meta.uk) { var _t = await fetchUkrainian(word); if (_t) meta.uk = _t; }
+  else if (LANG === 'ar' && !meta.ar) { var _t = await fetchArabic(word); if (_t) meta.ar = _t; }
 }
 
 async function openWordCard(word, tc) {
@@ -2391,7 +2600,7 @@ async function openWordCard(word, tc) {
     // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
-    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content);
+    _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }
