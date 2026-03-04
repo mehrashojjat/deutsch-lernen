@@ -1085,10 +1085,8 @@ async function fetchWiktionary(word, tc) {
   }
   // Last resort: direct machine translation for the exact word
   if (!data.found) {
-    try {
-      var mmTrans = await fetchMyMemoryTranslation(word);
-      if (mmTrans) data.autoTranslation = mmTrans;
-    } catch(e) {}
+    var mmTrans = await fetchMyMemoryTranslation(word);
+    if (mmTrans) data.autoTranslation = mmTrans;
   }
   return data;
 }
@@ -1157,11 +1155,12 @@ async function _wiktRestFetch(lw) {
 // ── MyMemory machine-translation fallback (English only; other languages TBD) ──
 var _myMemoryCache = {};
 async function fetchMyMemoryTranslation(word) {
-  var key = word.toLowerCase().trim();
+  var key = normKey(word);
+  if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
   if (_myMemoryCache[key] !== undefined) return _myMemoryCache[key];
   try {
     var url = 'https://api.mymemory.translated.net/get?q='
-      + encodeURIComponent(word) + '&langpair=de|en';
+      + encodeURIComponent(key) + '&langpair=de|en';
     var resp = await fetch(url);
     if (resp.ok) {
       var json = await resp.json();
@@ -1452,9 +1451,10 @@ function renderWiktCard(data, meta, targetId) {
     }
   }
   // Last resort: machine translation attached by fetchWiktionary
+  var meaningIsAuto = false;
   if (!meaning && data.autoTranslation) {
     meaning = data.autoTranslation;
-    data._meaningIsAuto = true;
+    meaningIsAuto = true;
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
   var level = wb ? wb.level : '';
@@ -1477,7 +1477,7 @@ function renderWiktCard(data, meta, targetId) {
         + escHtml(_mOfRe[2]) + '</span></div>';
     } else {
       html += '<div class="rw-meaning-single">' + escHtml(meaning)
-        + (data._meaningIsAuto
+        + (meaningIsAuto
           ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
           : '')
         + '</div>';
