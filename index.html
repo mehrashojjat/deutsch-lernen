@@ -1501,7 +1501,20 @@ async function _wiktRestFetch(lw) {
 }
 
 // ── MyMemory machine-translation fallback (English only) ──
-var _myMemoryCache = {};
+var _myMemoryCache = (function() {
+  try { return JSON.parse(localStorage.getItem('dl_en_cache') || '{}'); } catch(e) { return {}; }
+})();
+function _myMemoryCacheSave() {
+  try {
+    var keys = Object.keys(_myMemoryCache);
+    if (keys.length > 2000) {
+      var trim = {};
+      keys.slice(-1500).forEach(function(k){ trim[k] = _myMemoryCache[k]; });
+      _myMemoryCache = trim;
+    }
+    localStorage.setItem('dl_en_cache', JSON.stringify(_myMemoryCache));
+  } catch(e) {}
+}
 async function fetchMyMemoryTranslation(word) {
   var key = normKey(word);
   if (key.length < 2 || !/[a-zA-ZäöüÄÖÜß]/.test(key)) return null;
@@ -1516,12 +1529,14 @@ async function fetchMyMemoryTranslation(word) {
         var t = (json.responseData.translatedText || '').trim();
         if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
           _myMemoryCache[key] = t;
+          _myMemoryCacheSave();
           return t;
         }
       }
     }
   } catch(e) {}
   _myMemoryCache[key] = null;
+  _myMemoryCacheSave();
   return null;
 }
 
@@ -1767,6 +1782,96 @@ function _autoFetchArabic(word, container) {
   fetchArabic(word).then(function(ar) {
     if (ar && el.isConnected) { el.textContent = ar; el.classList.remove('ar-meaning-pending'); }
   });
+}
+
+// ── Definition translation caches (per language, localStorage-backed) ──────
+// Keyed by normalised definition text; separate from single-word caches.
+function normDefKey(text) { return (text || '').trim().toLowerCase().slice(0, 250); }
+var _defTrCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_tr') || '{}'); } catch(e) { return {}; } })();
+var _defFaCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_fa') || '{}'); } catch(e) { return {}; } })();
+var _defRuCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_ru') || '{}'); } catch(e) { return {}; } })();
+var _defUkCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_uk') || '{}'); } catch(e) { return {}; } })();
+var _defArCache = (function(){ try { return JSON.parse(localStorage.getItem('dl_def_ar') || '{}'); } catch(e) { return {}; } })();
+function _defTrCacheSave(){try{var k=Object.keys(_defTrCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defTrCache[x];});_defTrCache=t;}localStorage.setItem('dl_def_tr',JSON.stringify(_defTrCache));}catch(e){}}
+function _defFaCacheSave(){try{var k=Object.keys(_defFaCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defFaCache[x];});_defFaCache=t;}localStorage.setItem('dl_def_fa',JSON.stringify(_defFaCache));}catch(e){}}
+function _defRuCacheSave(){try{var k=Object.keys(_defRuCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defRuCache[x];});_defRuCache=t;}localStorage.setItem('dl_def_ru',JSON.stringify(_defRuCache));}catch(e){}}
+function _defUkCacheSave(){try{var k=Object.keys(_defUkCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defUkCache[x];});_defUkCache=t;}localStorage.setItem('dl_def_uk',JSON.stringify(_defUkCache));}catch(e){}}
+function _defArCacheSave(){try{var k=Object.keys(_defArCache);if(k.length>400){var t={};k.slice(-300).forEach(function(x){t[x]=_defArCache[x];});_defArCache=t;}localStorage.setItem('dl_def_ar',JSON.stringify(_defArCache));}catch(e){}}
+
+// Translates ALL .def-translate-pending spans in a container in one batched request.
+// Fills cached entries immediately; sends only uncached texts to the API.
+async function _translateDefsInContainer(container) {
+  if (LANG === 'en') return;
+  var pending = Array.from(container.querySelectorAll('.def-translate-pending'));
+  if (!pending.length) return;
+  var langCode = LANG;
+  var cache  = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:_defArCache;
+  var saveFn = LANG==='tr'?_defTrCacheSave:LANG==='fa'?_defFaCacheSave:LANG==='ru'?_defRuCacheSave:LANG==='uk'?_defUkCacheSave:_defArCacheSave;
+  // Fill already-cached items immediately; collect the rest
+  var toFetch = [];
+  pending.forEach(function(el) {
+    var orig = el.getAttribute('data-def-orig');
+    if (!orig) return;
+    var dk = normDefKey(orig);
+    if (cache[dk]) {
+      el.textContent = cache[dk];
+      el.classList.remove('def-translate-pending');
+    } else if (cache[dk] === undefined) {
+      toFetch.push({ el: el, text: orig, key: dk });
+    }
+    // cache[dk] === '' means a prior fetch failed — keep English
+  });
+  if (!toFetch.length) return;
+  // Pack into batches respecting MyMemory's ~490-char limit
+  var batches = [], cur = [], curLen = 0;
+  toFetch.forEach(function(item) {
+    var il = item.text.length + 1;
+    if (curLen + il > 490 && cur.length) { batches.push(cur); cur = []; curLen = 0; }
+    cur.push(item); curLen += il;
+  });
+  if (cur.length) batches.push(cur);
+  await Promise.all(batches.map(async function(batch) {
+    try {
+      var url = 'https://api.mymemory.translated.net/get?q='
+        + encodeURIComponent(batch.map(function(d){ return d.text; }).join('\n'))
+        + '&langpair=de|' + langCode;
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('http');
+      var json = await resp.json();
+      if (json.responseStatus !== 200 || !json.responseData) throw new Error('api');
+      var parts = (json.responseData.translatedText || '').split('\n');
+      if (parts.length !== batch.length) throw new Error('mismatch');
+      batch.forEach(function(item, i) {
+        var tr = (parts[i] || '').trim();
+        cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
+        if (cache[item.key] && item.el.isConnected) {
+          item.el.textContent = cache[item.key];
+          item.el.classList.remove('def-translate-pending');
+        }
+      });
+      saveFn();
+    } catch(e) {
+      // Fallback: individual parallel fetches per item
+      await Promise.all(batch.map(async function(item) {
+        if (cache[item.key] !== undefined) return;
+        try {
+          var r = await fetch('https://api.mymemory.translated.net/get?q='
+            + encodeURIComponent(item.text) + '&langpair=de|' + langCode);
+          if (!r.ok) return;
+          var j = await r.json();
+          if (j.responseStatus === 200 && j.responseData) {
+            var tr = (j.responseData.translatedText || '').trim();
+            cache[item.key] = (tr && !tr.startsWith('PLEASE SELECT')) ? tr : '';
+            if (cache[item.key] && item.el.isConnected) {
+              item.el.textContent = cache[item.key];
+              item.el.classList.remove('def-translate-pending');
+            }
+          }
+        } catch(e2) { cache[item.key] = ''; }
+      }));
+      saveFn();
+    }
+  }));
 }
 
 // ── Batch translation fetch: sends multiple words in one request (newline-joined)
@@ -2216,19 +2321,31 @@ function renderWiktCard(data, meta, targetId) {
       }
     }
     if (sec.defs.length) {
+      var _dfc = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:LANG==='ar'?_defArCache:null;
       html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
         + '<div class="wikt-def-list">';
       sec.defs.slice(0,5).forEach(function(d, i) {
-        // Linkify any "of WORD" pattern so base words are tappable
-        var _dEsc = escHtml(d.text);
-        var _dHtml = _dEsc.replace(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/g, function(m, w) {
-          var _we = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-          return 'of <span onclick="openWordCard(\'' + _we + '\',\'?\')" '
-            + 'style="color:var(--gold);cursor:pointer;font-weight:600;">' + w + '</span>';
-        });
+        var _dk = normDefKey(d.text);
+        var _cached = (_dfc && LANG !== 'en') ? _dfc[_dk] : undefined;
+        // _cached undefined → needs fetch (pending); '' → fetch failed, keep English; string → use it
+        var _isPending = (_dfc && LANG !== 'en' && _cached === undefined);
+        var _dHtml;
+        if (_cached) {
+          _dHtml = escHtml(_cached); // translated, no need to linkify
+        } else {
+          // English (or failed translation fallback): linkify "of WORD" patterns
+          var _dEsc = escHtml(d.text);
+          _dHtml = _dEsc.replace(/\bof\s+([A-ZÄÖÜa-zäöüß][A-ZÄÖÜa-zäöüßa-z]+)/g, function(m, w) {
+            var _we = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+            return 'of <span onclick="openWordCard(\'' + _we + '\',\'?\')" '
+              + 'style="color:var(--gold);cursor:pointer;font-weight:600;">' + w + '</span>';
+          });
+        }
         html += '<div class="wikt-def-item">'
           + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
-          + '<span class="wikt-def-text">' + _dHtml + '</span></div>';
+          + '<span class="wikt-def-text' + (_isPending ? ' def-translate-pending' : '') + '"'
+          + (_isPending ? ' data-def-orig="' + escHtml(d.text) + '"' : '')
+          + '>' + _dHtml + '</span></div>';
         if (d.examples.length) {
           html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
         }
@@ -2591,6 +2708,7 @@ function renderRandomWord() {
   fetchWiktionary(word, tc).then(async function(data) {
     await _prefetchLangMeta(word, meta);
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
@@ -2599,6 +2717,7 @@ function renderRandomWord() {
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
@@ -2754,12 +2873,14 @@ async function openWordCard(word, tc) {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
     // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
+    _translateDefsInContainer(content);
     _autoFetchTurkish(word, content); _autoFetchPersian(word, content); _autoFetchRussian(word, content); _autoFetchUkrainian(word, content); _autoFetchArabic(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
