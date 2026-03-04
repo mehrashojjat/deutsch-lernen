@@ -2674,13 +2674,8 @@ var _randUsed = new Set();
 function showRandomWord() { show('screen-random'); renderRandomWord(); }
 
 function renderRandomWord() {
-  // Pick pool: prefer SI (broad index) once loaded, fallback to WORD_BANK
-  var pool;
-  if (SI_READY && window.SI && window.SI.length > 500) {
-    pool = window.SI;
-  } else {
-    pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
-  }
+  // Pool: always use WORD_BANK (Goethe-Institut source, same as quizzes)
+  var pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
 
   var idx, attempts = 0;
   do {
