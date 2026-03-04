@@ -303,7 +303,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 @keyframes cardIn{from{opacity:0;transform:scale(.97) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.05)}100%{transform:scale(1)}}
 .pop{animation:pop .22s ease;}
-#screen-levels{animation:fadeUp .4s ease both;}
+#screen-levels{animation:fadeUp .4s ease both;display:flex;flex-direction:column;min-height:100dvh;}
+#screen-levels .home-footer{margin-top:auto;}
 
 /* ── Persian / Vazirmatn font ── */
 :root[dir="rtl"], :root[dir="rtl"] * {
