@@ -1083,14 +1083,12 @@ async function fetchWiktionary(word, tc) {
       try { var alt_data = await _wiktFetch(alt); if (alt_data.found) return alt_data; } catch(e) {}
     }
   }
-  // Still not found? The word is likely an inflected / conjugated form.
-  // Try to deduce the base lemma (infinitive) and look that up instead.
+  // Last resort: direct machine translation for the exact word
   if (!data.found) {
-    var lemma = deduceLemma(word);
-    if (lemma) {
-      var lemmaLw = wiktLookupWord(lemma, 'V');
-      try { var ld = await _wiktFetch(lemmaLw); if (ld.found) { ld.fromLemma = lemma; return ld; } } catch(e) {}
-    }
+    try {
+      var mmTrans = await fetchMyMemoryTranslation(word);
+      if (mmTrans) data.autoTranslation = mmTrans;
+    } catch(e) {}
   }
   return data;
 }
@@ -1154,6 +1152,30 @@ async function _wiktRestFetch(lw) {
   });
   result.found = result.sections.length > 0;
   return result;
+}
+
+// ── MyMemory machine-translation fallback (English only; other languages TBD) ──
+var _myMemoryCache = {};
+async function fetchMyMemoryTranslation(word) {
+  var key = word.toLowerCase().trim();
+  if (_myMemoryCache[key] !== undefined) return _myMemoryCache[key];
+  try {
+    var url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(word) + '&langpair=de|en';
+    var resp = await fetch(url);
+    if (resp.ok) {
+      var json = await resp.json();
+      if (json.responseStatus === 200 && json.responseData) {
+        var t = (json.responseData.translatedText || '').trim();
+        if (t && t.toLowerCase() !== key && !t.startsWith('PLEASE SELECT')) {
+          _myMemoryCache[key] = t;
+          return t;
+        }
+      }
+    }
+  } catch(e) {}
+  _myMemoryCache[key] = null;
+  return null;
 }
 
 function parseWiktPage(htmlStr, word) {
@@ -1429,15 +1451,10 @@ function renderWiktCard(data, meta, targetId) {
       }
     }
   }
-  // If meaning still looks like a grammatical form description (e.g. "plural of Badeanzug"),
-  // try to resolve the actual base-word meaning from our local index.
-  if (meaning) {
-    var _fofRe = meaning.match(/\b(?:plural|genitive|dative|accusative|nominative|form|participle)\s+of\s+([A-ZÄÖÜa-zäöüß]\S+)/i);
-    if (_fofRe) {
-      var _fofM = metaFromWord(_fofRe[1]);
-      var _fofMn = LANG==='fa' ? (_fofM.fa || _fofM.en) : LANG==='tr' ? (_fofM.tr || _fofM.en) : _fofM.en;
-      if (_fofMn) meaning = _fofMn;
-    }
+  // Last resort: machine translation attached by fetchWiktionary
+  if (!meaning && data.autoTranslation) {
+    meaning = data.autoTranslation;
+    data._meaningIsAuto = true;
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
   var level = wb ? wb.level : '';
@@ -1459,7 +1476,11 @@ function renderWiktCard(data, meta, targetId) {
         + 'style="color:var(--gold);cursor:pointer;font-style:normal;font-weight:600;">'
         + escHtml(_mOfRe[2]) + '</span></div>';
     } else {
-      html += '<div class="rw-meaning-single">' + escHtml(meaning) + '</div>';
+      html += '<div class="rw-meaning-single">' + escHtml(meaning)
+        + (data._meaningIsAuto
+          ? ' <span style="color:var(--muted);font-size:.75em;font-weight:400">· ⓘ Auto-translated</span>'
+          : '')
+        + '</div>';
     }
   }
   if (data.ipa) html += '<div class="wikt-ipa">🔊 ' + escHtml(data.ipa) + '</div>';
@@ -2034,16 +2055,6 @@ async function openWordCard(word, tc) {
   if (!word) return;
   var meta = metaFromWord(word);
   if (tc && meta.tc === '?') meta.tc = tc;
-  // If no meaning in meta (inflected form in SI with empty fields), inherit
-  // meaning from the base lemma so the card header shows something useful.
-  if (!meta.en && !meta.tr && !meta.fa) {
-    var lemma = deduceLemma(word);
-    if (lemma) {
-      var lm = metaFromWord(lemma);
-      meta.en = lm.en; meta.tr = lm.tr; meta.fa = lm.fa;
-      if (meta.tc === '?') meta.tc = lm.tc;
-    }
-  }
   var content = document.getElementById('word-modal-content');
   content.innerHTML = loadingHTML();
   document.getElementById('word-modal-overlay').classList.add('open');
