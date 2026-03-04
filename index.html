@@ -53,6 +53,11 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .search-close{position:absolute;top:16px;right:16px;background:none;border:none;
   color:var(--muted);font-size:1.4rem;cursor:pointer;padding:8px;}
 
+/* ── Quiz prep loading overlay ── */
+#quiz-prep-overlay{display:none;position:fixed;inset:0;background:var(--bg);z-index:400;
+  align-items:center;justify-content:center;}
+#quiz-prep-overlay.active{display:flex;}
+
 /* Word card modal */
 .word-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;
   display:flex;align-items:flex-end;justify-content:center;
@@ -326,6 +331,9 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 </div>
 
 <!-- ══ HOME ══ -->
+<div id="quiz-prep-overlay" aria-live="polite">
+  <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
+</div>
 <div class="screen" id="screen-levels">
   <div class="random-banner" onclick="showRandomWord()">
     <div class="rb-icon">🎲</div>
@@ -727,7 +735,7 @@ async function startLevel(lv) {
   queue = buildQueue(lv);
   if(!queue.length){alert('No cards!');return;}
   idx=0;ok=0;no=0;
-  show('screen-quiz');
+
   if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru') {
     // Collect words missing native-language translations that aren't cached yet
     var toFetch = [];
@@ -743,17 +751,18 @@ async function startLevel(lv) {
       });
     });
     if (toFetch.length) {
-      document.getElementById('cquestion').textContent =
-        LANG === 'tr' ? 'Çeviriler hazırlanıyor…'
-        : LANG === 'fa' ? 'در حال آماده‌سازی ترجمه‌ها…'
-        : 'Переводы готовятся…';
-      document.getElementById('choices').innerHTML = '';
+      // Show a neutral loading overlay — user stays on levels screen while we fetch
+      var _ov = document.getElementById('quiz-prep-overlay');
+      _ov.classList.add('active');
       for (var _fi = 0; _fi < toFetch.length; _fi++) {
         await (LANG === 'tr' ? fetchTurkish(toFetch[_fi]) : LANG === 'fa' ? fetchPersian(toFetch[_fi]) : fetchRussian(toFetch[_fi]));
         if (_fi > 0 && _fi % 5 === 0) await new Promise(function(r){ setTimeout(r, 150); });
       }
+      _ov.classList.remove('active');
     }
   }
+
+  show('screen-quiz');
   renderCard();
 }
 
