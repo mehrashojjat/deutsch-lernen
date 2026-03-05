@@ -444,22 +444,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <div class="level-card" onclick="startLevel('A1')">
       <span class="lv-badge">A1</span>
       <div class="lv-name" id="ln-A1">Starter</div>
-      <div class="lv-count" id="cnt-A1"></div>
     </div>
     <div class="level-card" onclick="startLevel('A2')">
       <span class="lv-badge">A2</span>
       <div class="lv-name" id="ln-A2">Elementary</div>
-      <div class="lv-count" id="cnt-A2"></div>
     </div>
     <div class="level-card" onclick="startLevel('B1')">
       <span class="lv-badge">B1</span>
       <div class="lv-name" id="ln-B1">Intermediate</div>
-      <div class="lv-count" id="cnt-B1"></div>
-    </div>
-    <div class="level-card" onclick="startLevel('B2')">
-      <span class="lv-badge">B2</span>
-      <div class="lv-name" id="ln-B2">Upper-Intermediate</div>
-      <div class="lv-count" id="cnt-B2"></div>
     </div>
   </div>
   <div class="home-footer">
@@ -907,7 +899,6 @@ function applyTranslations() {
   document.getElementById('ln-A1').textContent = ln.A1;
   document.getElementById('ln-A2').textContent = ln.A2;
   document.getElementById('ln-B1').textContent = ln.B1;
-  document.getElementById('ln-B2').textContent = ln.B2;
   // Results page
   document.getElementById('r-lbl-score').textContent = u.scoreLbl;
   document.getElementById('r-lbl-correct').textContent = u.correctLbl;
@@ -931,119 +922,142 @@ function applyTranslations() {
 
 
 
-// ── Card counts ──
-function updateCounts() {
-  ['A1','A2','B1','B2'].forEach(function(lv) {
-    var el = document.getElementById('cnt-'+lv);
-    if (!el) return;
-    var count = WORD_BANK.filter(function(w) { return w.level === lv && w.meaning_en && w.meaning_en.trim(); }).length;
-    el.textContent = t('cardCount')(count);
-  });
+// ── Card counts — no longer shown on level cards ──
+function updateCounts() { /* word counts removed from UI */ }
+
+// ── CSV-based quiz data ──
+// CSVs are loaded once from word_data/quiz_csv/ at first quiz start.
+// Each row is kept as a plain object keyed by the CSV header names.
+var CSV_QUIZ_DATA = { A1: null, A2: null, B1: null };
+var _csvLoadPromise = null;
+
+function _parseCSVText(text) {
+  var lines = text.split('\n');
+  if (!lines.length) return [];
+  var headers = lines[0].split(',').map(function(h){ return h.trim(); });
+  var rows = [];
+  for (var i = 1; i < lines.length; i++) {
+    var line = lines[i].trim();
+    if (!line) continue;
+    var vals = line.split(',');
+    var obj = {};
+    headers.forEach(function(h, idx){ obj[h] = (vals[idx] || '').trim(); });
+    rows.push(obj);
+  }
+  return rows;
 }
 
-// ── Get meaning in active language ──
-// All non-English languages follow the same priority:
-//   1. Live API cache (de→target, the German word translated directly)
-//   2. Pre-baked field from data files (TR/FA only, as secondary fallback)
-//   3. English meaning_en as absolute last resort
-function getLangMeaning(w) {
-  if (LANG === 'en') return (w.meaning_en && w.meaning_en.trim()) || '';
-  var key = normKey(w.word);
+function _loadAllCSV() {
+  if (_csvLoadPromise) return _csvLoadPromise;
+  _csvLoadPromise = Promise.all(['A1','A2','B1'].map(function(lv) {
+    return fetch('word_data/quiz_csv/' + lv.toLowerCase() + '.csv')
+      .then(function(r){ return r.text(); })
+      .then(function(txt){
+        CSV_QUIZ_DATA[lv] = _parseCSVText(txt).filter(function(r){
+          return r.entry_type === 'main'
+              && r.word && r.word.trim()
+              && r.translation_en && r.translation_en.trim();
+        });
+      })
+      .catch(function(){ CSV_QUIZ_DATA[lv] = []; });
+  }));
+  return _csvLoadPromise;
+}
+
+// ── Get display label for a CSV row in the active language ──
+// Correctness is NEVER determined by comparing this text.
+// The row's unique `id` field is used for correct-answer checking instead,
+// so translations in any language can never accidentally swap answers.
+function _csvRowDisplay(row) {
+  if (LANG === 'en') return row.translation_en;
+  var key = normKey(row.word);
   var cache = LANG==='tr' ? _trMemCache
             : LANG==='fa' ? _faMemCache
             : LANG==='ru' ? _ruMemCache
             : LANG==='uk' ? _ukMemCache
             :                _arMemCache;
-  var api = (cache && cache[key] && cache[key].trim()) || '';
-  // Pre-baked overrides exist only for TR and FA; used as secondary fallback only
-  var baked = LANG==='tr' ? ((w.meaning_tr||'').trim())
-            : LANG==='fa' ? ((w.meaning_fa||'').trim())
-            : '';
-  return api || baked || (w.meaning_en && w.meaning_en.trim()) || '';
+  var cached = cache && cache[key] && cache[key].trim();
+  return cached || row.translation_en;
 }
 
-// ── Build quiz queue dynamically from WORD_BANK ──
+// ── Build quiz queue from CSV rows ──
 function buildQueue(level) {
-  // Pool: words at this level that have a usable meaning
-  var pool = WORD_BANK.filter(function(w) {
-    return w.level === level && w.meaning_en && w.meaning_en.trim();
-  });
-  if (pool.length === 0) return [];
+  var pool = CSV_QUIZ_DATA[level] || [];
+  if (!pool.length) return [];
 
-  var selected = shuffle(pool).slice(0, QUIZ_LEN);
+  var selected = shuffle(pool.slice()).slice(0, QUIZ_LEN);
 
-  return selected.map(function(w) {
-    // Pre-select distractor candidates (other words, distinct meaning)
-    var usedEn = {}; usedEn[w.meaning_en.trim()] = true;
+  return selected.map(function(row) {
+    var usedIds = {}; usedIds[row.id] = true;
+    var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
     var distractors = [];
-    // prefer same-level distractors
-    shuffle(pool).forEach(function(d) {
+
+    shuffle(pool.slice()).forEach(function(d) {
       if (distractors.length >= 6) return;
-      if (d.word === w.word) return;
-      var m = d.meaning_en.trim();
-      if (m && !usedEn[m]) { usedEn[m] = true; distractors.push(d); }
+      if (usedIds[d.id]) return;
+      var en = d.translation_en.trim();
+      if (en && !usedEn[en]) {
+        usedEn[en] = true; usedIds[d.id] = true;
+        distractors.push(d);
+      }
     });
-    // top up from full bank if needed
-    if (distractors.length < 3) {
-      shuffle(WORD_BANK).forEach(function(d) {
-        if (distractors.length >= 6) return;
-        if (d.word === w.word || !d.meaning_en) return;
-        var m = d.meaning_en.trim();
-        if (m && !usedEn[m]) { usedEn[m] = true; distractors.push(d); }
-      });
-    }
-    return { _word: w, _distractors: distractors };
+    return { _row: row, _distractors: distractors };
   });
 }
 
 async function startLevel(lv) {
   currentLevel = lv;
+  var _ov = document.getElementById('quiz-prep-overlay');
+
+  // Ensure CSV data is loaded
+  if (!CSV_QUIZ_DATA[lv]) {
+    _ov.classList.add('active');
+    await _loadAllCSV();
+    _ov.classList.remove('active');
+  }
+
   queue = buildQueue(lv);
-  if(!queue.length){alert('No cards!');return;}
-  idx=0;ok=0;no=0;
+  if (!queue.length) { alert('No cards!'); return; }
+  idx = 0; ok = 0; no = 0;
 
+  // Pre-fetch translations so choices display in the user's language
   if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru' || LANG === 'uk' || LANG === 'ar') {
-    var _lc = LANG === 'tr' ? 'tr' : LANG === 'fa' ? 'fa' : LANG === 'ru' ? 'ru' : LANG === 'uk' ? 'uk' : 'ar';
-    var _c  = LANG === 'tr' ? _trMemCache : LANG === 'fa' ? _faMemCache : LANG === 'ru' ? _ruMemCache : LANG === 'uk' ? _ukMemCache : _arMemCache;
-    var _sf = LANG === 'tr' ? _trCacheSave : LANG === 'fa' ? _faCacheSave : LANG === 'ru' ? _ruCacheSave : LANG === 'uk' ? _ukCacheSave : _arCacheSave;
+    var _lc = LANG==='tr'?'tr':LANG==='fa'?'fa':LANG==='ru'?'ru':LANG==='uk'?'uk':'ar';
+    var _c  = LANG==='tr'?_trMemCache:LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
+    var _sf = LANG==='tr'?_trCacheSave:LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
 
-    // Collect all words not yet cached at all (first pass: de→target)
+    // First pass: translate German words (de→target)
     var toFetch = [];
     queue.forEach(function(card) {
-      [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
-        var k = normKey(w.word);
-        if (_c[k] === undefined && toFetch.indexOf(w.word) === -1) toFetch.push(w.word);
+      [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
+        var k = normKey(r.word);
+        if (_c[k] === undefined && toFetch.indexOf(r.word) === -1) toFetch.push(r.word);
       });
     });
-    var _ov = document.getElementById('quiz-prep-overlay');
     if (toFetch.length) {
       _ov.classList.add('active');
       await _batchFetchTranslations(toFetch, _lc, _c, _sf);
     }
 
-    // Second pass: for words where de→target returned nothing, translate meaning_en (en→target)
+    // Second pass: for words where de→target returned nothing, translate English (en→target)
     var defFallback = [];
     var defCs = _defCacheFor(_lc);
     queue.forEach(function(card) {
-      [card._word].concat(card._distractors.slice(0, 3)).forEach(function(w) {
-        var k = normKey(w.word);
-        // Cache has this word but value is empty (API found nothing useful)
-        if (_c[k] === '' && w.meaning_en && w.meaning_en.trim()) {
-          var txt = w.meaning_en.trim();
-          var dk = normDefKey(txt);
+      [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
+        var k = normKey(r.word);
+        if (_c[k] === '' && r.translation_en && r.translation_en.trim()) {
+          var txt = r.translation_en.trim();
+          var dk  = normDefKey(txt);
           if (!defFallback.some(function(x){ return x.wordKey === k; })) {
-            defFallback.push({ text: txt, key: dk, wordKey: k, wordObj: w });
+            defFallback.push({ text: txt, key: dk, wordKey: k });
           }
         }
       });
     });
     if (defFallback.length) {
       if (!_ov.classList.contains('active')) _ov.classList.add('active');
-      // Translate English definitions (en→target) and store results in the word translation cache
       await _batchTranslateDefs(defFallback, _lc, defCs.cache, defCs.saveFn, function(item, tr) {
-        // Promote result into the word-level cache so getLangMeaning picks it up
-        _c[item.wordKey] = tr;
-        _sf();
+        _c[item.wordKey] = tr; _sf();
       }, 'en');
     }
     _ov.classList.remove('active');
@@ -1055,79 +1069,97 @@ async function startLevel(lv) {
 
 function renderCard() {
   answered = false;
-  var card = queue[idx];
+  var card  = queue[idx];
   var total = queue.length;
-  var w = card._word;
+  var row   = card._row;
 
-  document.getElementById('prog').style.width=(idx/total*100)+'%';
-  document.getElementById('sc-ok').textContent=ok;
-  document.getElementById('sc-no').textContent=no;
-  document.getElementById('hud-pos').textContent=(idx+1)+'/'+total;
+  document.getElementById('prog').style.width = (idx / total * 100) + '%';
+  document.getElementById('sc-ok').textContent  = ok;
+  document.getElementById('sc-no').textContent  = no;
+  document.getElementById('hud-pos').textContent = (idx + 1) + '/' + total;
 
+  // Word-type badge — from CSV word_type column (Noun, Verb, Adjective, etc.)
   var badge = document.getElementById('tbadge');
-  var _tb = t('typeBadge');
-  badge.textContent = _tb[w.type] || w.type;
-  badge.className = 'tbadge '+(w.type==='Noun'?'noun':w.type==='Verb'?'verb':w.type==='Adjective'?'adj':'grammar');
-  document.getElementById('tlevel').textContent = t('levelLabel')+' '+currentLevel;
+  var wt = row.word_type || 'Word';
+  badge.textContent = wt;
+  badge.className = 'tbadge '
+    + (wt === 'Noun'       ? 'noun'
+     : wt === 'Verb'       ? 'verb'
+     : (wt === 'Adjective' || wt === 'Adj') ? 'adj'
+     : 'grammar');
 
+  document.getElementById('tlevel').textContent = t('levelLabel') + ' ' + currentLevel;
   var mb = document.getElementById('tmode-badge');
   mb.textContent = t('vocabBadge');
   mb.className = 'tmode-badge vocab';
 
   document.getElementById('cquestion').textContent = t('quizQuestion');
-  document.getElementById('cmain').textContent = w.word;
-  document.getElementById('csub').textContent = '';
 
-  // Build choices in the active language
-  var correctMeaning = getLangMeaning(w);
-  var usedChoices = {}; usedChoices[correctMeaning] = true;
-  var distractorChoices = [];
-  card._distractors.forEach(function(d) {
-    if (distractorChoices.length >= 3) return;
-    var m = getLangMeaning(d);
-    if (m && !usedChoices[m]) { usedChoices[m]=true; distractorChoices.push(m); }
-  });
+  // Show article + word for nouns (e.g. "der Hund"); plain word for verbs/others
+  document.getElementById('cmain').textContent = (row.article ? row.article + ' ' : '') + row.word;
 
-  var choices = shuffle([correctMeaning].concat(distractorChoices));
-  var answer = correctMeaning;
+  // Sub-line: plural hint for nouns, present-tense hint for verbs
+  var sub = '';
+  if (row.plural && row.plural.trim()) {
+    sub = 'Pl.: ' + row.plural;
+  } else if (row.verb_present && row.verb_present.trim()) {
+    sub = row.verb_present;
+  }
+  document.getElementById('csub').textContent = sub;
+
+  // Each choice button carries the CSV row id as its identity.
+  // Correctness is checked by comparing ids — NEVER by comparing displayed strings.
+  // This makes the quiz translation-safe: even if labels differ between languages,
+  // the right answer is always the button whose id matches the question row's id.
+  var correctId     = row.id;
+  var allChoiceRows = shuffle([row].concat(card._distractors.slice(0, 3)));
 
   var choicesEl = document.getElementById('choices');
-  choicesEl.innerHTML='';
-  choices.forEach(function(opt) {
+  choicesEl.innerHTML = '';
+  allChoiceRows.forEach(function(choiceRow) {
     var btn = document.createElement('button');
-    btn.className='cbtn';
-    btn.textContent=opt;
-    btn.onclick=(function(b,o,a){return function(){pick(b,o,a);};})(btn,opt,answer);
+    btn.className = 'cbtn';
+    btn.dataset.csvId = choiceRow.id;
+    btn.textContent   = _csvRowDisplay(choiceRow);
+    btn.onclick = (function(b, cId, corrId) {
+      return function() { pick(b, cId, corrId); };
+    })(btn, choiceRow.id, correctId);
     choicesEl.appendChild(btn);
   });
 
   var fb = document.getElementById('feedback');
-  fb.className='feedback'; fb.textContent='';
+  fb.className = 'feedback'; fb.textContent = '';
   document.getElementById('next-btn').textContent = t('next');
   document.getElementById('next-btn').classList.remove('show');
 }
 
-function pick(btn,selected,correct) {
-  if(answered)return;
-  answered=true;
-  document.querySelectorAll('.cbtn').forEach(b=>b.classList.add('disabled'));
-  const fb=document.getElementById('feedback');
-  if(selected===correct){
-    btn.classList.add('correct');btn.classList.remove('disabled');
-    ok++;btn.classList.add('pop');
-    fb.textContent=t('correct');
-    fb.className='feedback c show';
+function pick(btn, selectedId, correctId) {
+  if (answered) return;
+  answered = true;
+  document.querySelectorAll('.cbtn').forEach(function(b){ b.classList.add('disabled'); });
+  var fb = document.getElementById('feedback');
+
+  // Row-id comparison — correct in every language, no string-matching needed
+  if (selectedId === correctId) {
+    btn.classList.add('correct'); btn.classList.remove('disabled');
+    ok++; btn.classList.add('pop');
+    fb.textContent = t('correct');
+    fb.className = 'feedback c show';
   } else {
-    btn.classList.add('wrong');btn.classList.remove('disabled');
+    btn.classList.add('wrong'); btn.classList.remove('disabled');
     no++;
-    fb.innerHTML=t('wrong')(correct);
-    fb.className='feedback w show';
-    document.querySelectorAll('.cbtn').forEach(b=>{
-      if(b.textContent===correct){b.classList.add('correct');b.classList.remove('disabled');}
+    var correctText = '';
+    document.querySelectorAll('.cbtn').forEach(function(b) {
+      if (b.dataset.csvId === correctId) {
+        b.classList.add('correct'); b.classList.remove('disabled');
+        correctText = b.textContent;
+      }
     });
+    fb.innerHTML = t('wrong')(correctText);
+    fb.className = 'feedback w show';
   }
-  document.getElementById('sc-ok').textContent=ok;
-  document.getElementById('sc-no').textContent=no;
+  document.getElementById('sc-ok').textContent = ok;
+  document.getElementById('sc-no').textContent = no;
   document.getElementById('next-btn').classList.add('show');
 }
 
