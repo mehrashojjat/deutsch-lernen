@@ -911,7 +911,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 910,A2,27,T,main,trainieren,,,Verb,trainiert,hat trainiert,to train,antrenman yapmak
 911,A2,27,T,main,Training,das,-s,Noun,,,training,antrenman
 912,A2,27,T,main,Traum,der,¨-e,Noun,,,dream,rüya
-913,A2,27,S,main,Student,der,"-en,",Noun,,,student (university, male),öğrenci (üniversite, erkek)
+913,A2,27,S,main,Student,der,"-en,",Noun,,,"student (university, male)","öğrenci (üniversite, erkek)"
 914,A2,27,S,main,studieren,,,Verb,studiert,hat studiert,to study (university),okumak (üniversitede)
 915,A2,27,S,main,Studium,das,,Noun,,,studies / degree,öğrenim / bölüm
 916,A2,27,S,main,super,,,Other,,,great / super,harika
