@@ -987,9 +987,9 @@ function _loadAllCSV() {
 // so translations in any language can never accidentally swap answers.
 function _csvRowDisplay(row) {
   if (LANG === 'en') return row.translation_en;
+  if (LANG === 'tr') return row.translation_tr || row.translation_en;
   var key = normKey(row.word);
-  var cache = LANG==='tr' ? _trMemCache
-            : LANG==='fa' ? _faMemCache
+  var cache = LANG==='fa' ? _faMemCache
             : LANG==='ru' ? _ruMemCache
             : LANG==='uk' ? _ukMemCache
             :                _arMemCache;
@@ -1039,10 +1039,11 @@ async function startLevel(lv) {
   idx = 0; ok = 0; no = 0;
 
   // Pre-fetch translations so choices display in the user's language
-  if (LANG === 'tr' || LANG === 'fa' || LANG === 'ru' || LANG === 'uk' || LANG === 'ar') {
-    var _lc = LANG==='tr'?'tr':LANG==='fa'?'fa':LANG==='ru'?'ru':LANG==='uk'?'uk':'ar';
-    var _c  = LANG==='tr'?_trMemCache:LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
-    var _sf = LANG==='tr'?_trCacheSave:LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+  // Turkish is excluded here because it uses pre-baked translation_tr columns directly.
+  if (LANG === 'fa' || LANG === 'ru' || LANG === 'uk' || LANG === 'ar') {
+    var _lc = LANG==='fa'?'fa':LANG==='ru'?'ru':LANG==='uk'?'uk':'ar';
+    var _c  = LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
+    var _sf = LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
 
     // First pass: translate German words (de→target)
     var toFetch = [];
@@ -1146,13 +1147,11 @@ function renderCard() {
   });
 
   // For any choice that couldn't be translated yet (shows '···'), kick off a
-  // background per-word retry. This covers cases where the batch fetch failed or
-  // the API returned empty for a word. The button text updates live before the
-  // user clicks, and the correct-answer check still uses the CSV row id — not text.
-  if (LANG !== 'en') {
-    var _rf = LANG==='tr'?fetchTurkish:LANG==='fa'?fetchPersian:LANG==='ru'?fetchRussian:LANG==='uk'?fetchUkrainian:fetchArabic;
-    var _rc = LANG==='tr'?_trMemCache:LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
-    var _rs = LANG==='tr'?_trCacheSave:LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+  // background per-word retry. Turkish is excluded as it uses pre-baked translation_tr.
+  if (LANG !== 'en' && LANG !== 'tr') {
+    var _rf = LANG==='fa'?fetchPersian:LANG==='ru'?fetchRussian:LANG==='uk'?fetchUkrainian:fetchArabic;
+    var _rc = LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
+    var _rs = LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
     document.querySelectorAll('.cbtn').forEach(function(btn) {
       if (btn.textContent !== '···') return;
       var cRow = allChoiceRows.find(function(r){ return r.id === btn.dataset.csvId; });
