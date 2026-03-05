@@ -1800,87 +1800,87 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1800,B1,51,H,main,Hügel,der,-,Noun,,,,hill,tepe
 1801,B1,51,H,main,Humor,der,,Noun,,,,humor / sense of humor,mizah / espri
 1802,B1,51,H,main,Hunger,der,,Noun,,,,hunger,açlık
-1803,B1,51,H,main,hungrig,,,Other,,,,hungry,aç / aç olmak
-1804,B1,51,H,main,hupen,,,Verb,hupt,hupte,hat gehupt,to honk / to beep,kornaya basmak
+1803,B1,51,H,main,hungrig,,,Other,,,,hungry,aç
+1804,B1,51,H,main,hupen,,,Verb,hupt,hupte,hat gehupt,to honk / to beep,korna çalmak
 1805,B1,51,H,main,husten,,,Verb,hustet,hustete,hat gehustet,to cough,öksürmek
 1806,B1,51,H,main,Husten,der,,Noun,,,,cough,öksürük
 1807,B1,51,H,main,Hut,der,¨-e,Noun,,,,hat,şapka
-1808,B1,51,H,main,Hütte,die,-n,Noun,,,,hut / cabin / mountain refuge,kulübe / dağ evi / sığınak
-1809,B1,51,I,main,Imbiss,der,-e,Noun,,,,snack bar / fast food stand,büfe / fast food standı
+1808,B1,51,H,main,Hütte,die,-n,Noun,,,,hut / cabin / mountain refuge,kulübe / dağ evi
+1809,B1,51,I,main,Imbiss,der,-e,Noun,,,,snack bar / fast food stand,büfe / atıştırmalık
 1810,B1,51,S,main,schlimmer,,,Other,,,,worse (artifact),daha kötü (hatalı)
-1811,B1,51,Z,main,zu,,,Other,,,,to / too (artifact),-e / de (hatalı)
+1811,B1,51,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
 1812,B1,51,G,main,gehen,,,Verb,,,,to go (artifact),gitmek (hatalı)
-1813,B1,51,E,main,einmal,,,Other,,,,once / sometime (artifact),bir kez / bir ara (hatalı)
+1813,B1,51,E,main,einmal,,,Other,,,,once / sometime (artifact),bir kez (hatalı)
 1814,B1,51,I,main,ins,,,Other,,,,into the (artifact),içine (hatalı)
 1815,B1,51,H,main,hier,,,Other,,,,here (artifact),burada (hatalı)
 1816,B1,51,I,main,individuell,,,Other,,,,individual,bireysel
 1817,B1,51,N,main,neuen,die,,Noun,,,,the new (artifact),yeni (hatalı)
-1818,B1,51,Ü,main,über,,,Other,,,,about / over (artifact),hakkında / üzerinde (hatalı)
-1819,B1,51,G,main,genau,,,Other,,,,exactly (artifact),tam olarak (hatalı)
+1818,B1,51,Ü,main,über,,,Other,,,,about / over (artifact),hakkında (hatalı)
+1819,B1,51,G,main,genau,,,Other,,,,exactly (artifact),tam (hatalı)
 1820,B1,51,E,main,einen,,,Verb,,,,a / one (artifact),bir (hatalı)
 1821,B1,51,S,main,sein,,,Verb,dass,,,to be (artifact),olmak (hatalı)
 1822,B1,51,I,main,innerhalb,,,Other,,,,within,içinde / dahilinde
 1823,B1,51,M,main,machen,,,Verb,,,,to make / to do (artifact),yapmak (hatalı)
 1824,B1,51,G,main,gefunden,,,Verb,,,,found (artifact),bulundu (hatalı)
 1825,B1,51,S,main,sch,,,Other,,,,sch (artifact),(hatalı)
-1826,B1,51,H,main,hat,,,Other,,,,has (artifact),-dı / -di (hatalı)
+1826,B1,51,H,main,hat,,,Other,,,,has (artifact),var (hatalı)
 1827,B1,51,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
 1828,B1,51,H,main,habe,,,Other,,,,have (artifact),sahibim (hatalı)
 1829,B1,51,D,main,du,,,Other,,,,you (artifact),sen (hatalı)
-1830,B1,51,G,main,gehustet,,,Other,,,,coughed (artifact),öksürdü (hatalı)
-1831,B1,51,I,main,in,,,Other,,,,in (artifact),-de / -da (hatalı)
+1830,B1,51,G,main,gehustet,,,Other,,,,coughed (artifact),öksürmüş (hatalı)
+1831,B1,51,I,main,in,,,Other,,,,in (artifact),içinde (hatalı)
 1832,B1,51,I,main,ideal,,,Other,,,,ideal,ideal
-1833,B1,51,F,main,finde,,,Other,,,,find (artifact),bul (hatalı)
-1834,B1,52,I,main,inzwischenirgend,,,Other,,,,meanwhile-any (artifact),bu arada (hatalı)
+1833,B1,51,F,main,finde,,,Other,,,,find (artifact),bulmak (hatalı)
+1834,B1,52,I,main,inzwischenirgend,,,Other,,,,meanwhile-any (artifact),bu arada / herhangi (hatalı)
 1835,B1,52,I,main,irgendein,,,Other,,,,any / some,herhangi bir
-1836,B1,52,I,main,irgendwann,,,Other,,,,sometime / at some point,bir ara / zamanla
+1836,B1,52,I,main,irgendwann,,,Other,,,,sometime / at some point,bir zaman / bir gün
 1837,B1,52,J,main,ja,,,Other,,,,yes (artifact),evet (hatalı)
 1838,B1,52,J,main,Jacke,die,-n,Noun,,,,jacket,ceket
 1839,B1,52,J,main,Jause,die,-n,Noun,,,,snack (Austrian),atıştırmalık (Avusturya)
-1840,B1,52,B,main,biss,,,Other,,,,bit / a little (artifact),az / biraz (hatalı)
+1840,B1,52,B,main,biss,,,Other,,,,bit / a little (artifact),biraz (hatalı)
 1841,B1,52,J,main,je,,,Other,,,,each / ever,her / hiç
-1842,B1,52,J,main,Jeans,die,,Noun,,,,jeans,kot / jean
-1843,B1,52,I,main,Inserat,das,-e,Noun,,,,advertisement / classified ad,ilan / gazete ilanı
-1844,B1,52,I,main,insgesamt,,,Other,,,,altogether / in total,toplam / toplamda
-1845,B1,52,I,main,installieren,,,Verb,installiert,installierte,hat installiert,to install,kurmak / yüklemek
+1842,B1,52,J,main,Jeans,die,,Noun,,,,jeans,kot pantolon / jeans
+1843,B1,52,I,main,Inserat,das,-e,Noun,,,,advertisement / classified ad,ilan / reklam
+1844,B1,52,I,main,insgesamt,,,Other,,,,altogether / in total,toplam / hepsi birlikte
+1845,B1,52,I,main,installieren,,,Verb,installiert,installierte,hat installiert,to install,yüklemek / kurmak
 1846,B1,52,I,main,Institut,das,-e,Noun,,,,institute,enstitü
 1847,B1,52,I,main,Instrument,das,"-eintegrieren, integriert, in-",Noun,,,,instrument,enstrüman / alet
-1848,B1,52,I,main,Integration,die,-en,Noun,,,,integration,entegrasyon
+1848,B1,52,I,main,Integration,die,-en,Noun,,,,integration,entegrasyon / bütünleşme
 1849,B1,52,I,main,intelligent,,,Other,,,,intelligent,zeki / akıllı
-1850,B1,52,I,main,Intelligenz,die,,Noun,,,,intelligence,zeka / akıl
+1850,B1,52,I,main,Intelligenz,die,,Noun,,,,intelligence,zeka
 1851,B1,52,I,main,intensiv,,,Other,,,,intensive,yoğun
 1852,B1,52,I,main,Intensivkurs,der,-e,Noun,,,,intensive course,yoğun kurs
-1853,B1,52,I,main,interessieren,,,Verb,interessiert,interessierte,hat interessiert,to interest / to be interested in,ilgilenmek / ilgi duymak
-1854,B1,52,I,main,interessant,,,Other,,,,interesting,ilginç
+1853,B1,52,I,main,interessieren,,,Verb,interessiert,interessierte,hat interessiert,to interest / to be interested in,ilgilendirmek / ilgilenmek
+1854,B1,52,I,main,interessant,,,Other,,,,interesting,ilginç / ilgi çekici
 1855,B1,52,I,main,Interesse,das,-n,Noun,,,,interest,ilgi / çıkar
-1856,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili / ilgi duyan
+1856,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili / meraklı
 1857,B1,52,I,main,interkulturell,,,Other,,,,intercultural,kültürlerarası
 1858,B1,52,I,main,international,,,Other,,,,international,uluslararası
 1859,B1,52,S,main,santes,,,Other,,,,santes (artifact),(hatalı)
-1860,B1,52,K,main,können,,,Verb,,,,to be able to / can (artifact),yapabilmek / -ebilmek (hatalı)
-1861,B1,52,G,main,gesehen,,,Verb,,,,seen (artifact),görüldü (hatalı)
+1860,B1,52,K,main,können,,,Verb,,,,to be able to / can (artifact),-ebilmek (hatalı)
+1861,B1,52,G,main,gesehen,,,Verb,,,,seen (artifact),görmüş (hatalı)
 1862,B1,52,S,main,sondern,,,Verb,,,,but rather (artifact),aksine (hatalı)
-1863,B1,52,G,main,geirrt,,,Other,,,,mistaken (artifact),yanılmak (hatalı)
-1864,B1,52,D,main,da,,,Other,,,,there / since (artifact),orada / -diğinden (hatalı)
+1863,B1,52,G,main,geirrt,,,Other,,,,mistaken (artifact),yanılmış (hatalı)
+1864,B1,52,D,main,da,,,Other,,,,there / since (artifact),orada / çünkü (hatalı)
 1865,B1,52,G,main,geht,,,Other,,,,goes (artifact),gidiyor (hatalı)
 1866,B1,52,Z,main,zwischen,,,Verb,,,,between (artifact),arasında (hatalı)
 1867,B1,52,B,main,bekommt,,,Other,,,,receives (artifact),alıyor (hatalı)
 1868,B1,52,B,main,besser,,,Other,,,,better (artifact),daha iyi (hatalı)
 1869,B1,52,F,main,für,,,Other,,,,for (artifact),için (hatalı)
 1870,B1,52,K,main,kleinen,,,Verb,,,,small (artifact),küçük (hatalı)
-1871,B1,52,I,main,integriert,,,Other,,,,integrated (artifact),entegre (hatalı)
+1871,B1,52,I,main,integriert,,,Other,,,,integrated (artifact),entegre edilmiş (hatalı)
 1872,B1,52,B,main,besser,,,Other,,,,better (artifact),daha iyi (hatalı)
 1873,B1,52,G,main,gut,,,Other,,,,good (artifact),iyi (hatalı)
 1874,B1,52,E,main,einen,,,Verb,,,,a / one (artifact),bir (hatalı)
 1875,B1,52,I,main,interessiert,,,Other,,,,interested (artifact),ilgili (hatalı)
 1876,B1,52,G,main,gelesen,,,Verb,,,,read (artifact),okundu (hatalı)
-1877,B1,52,A,main,aus,,,Other,,,,from / out of (artifact),-den / dışarıdan (hatalı)
+1877,B1,52,A,main,aus,,,Other,,,,from / out of (artifact),-den (hatalı)
 1878,B1,52,I,main,int,,,Other,,,,int (artifact),(hatalı)
 1879,B1,52,E,main,erkulturelles,,,Other,,,,ercultural (artifact),(hatalı)
-1880,B1,52,S,main,sind,,,Other,,,,are (artifact),-dir / -dır (hatalı)
-1881,B1,52,B,main,bekannt,,,Other,,,,known (artifact),bilinen (hatalı)
+1880,B1,52,S,main,sind,,,Other,,,,are (artifact),(hatalı)
+1881,B1,52,B,main,bekannt,,,Other,,,,known (artifact),tanınan (hatalı)
 1882,B1,53,K,main,Kabel,das,-,Noun,,,,cable,kablo
-1883,B1,53,K,main,Kabine,die,-n,Noun,,,,cabin / cubicle,kabin / soyunma odası
+1883,B1,53,K,main,Kabine,die,-n,Noun,,,,cabin / cubicle,kabin / soyunma kabini
 1884,B1,53,K,main,Kaffee,der,,Noun,,,,coffee,kahve
 1885,B1,53,K,main,Kaffeehaus,das,¨-er,Noun,,,,coffee house / café,kahvehane / kafe
 1886,B1,53,K,main,Kakao,der,-sder,Noun,,,,cocoa / hot chocolate,kakao / sıcak çikolata
@@ -1888,62 +1888,62 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1888,B1,53,K,main,Kälte,die,,Noun,,,,cold / coldness,soğuk / soğukluk
 1889,B1,53,K,main,Kamera,die,-s,Noun,,,,camera,kamera / fotoğraf makinesi
 1890,B1,53,K,main,kämpfen,,,Verb,kämpft,kämpfte,hat gekämpft,to fight / to struggle,savaşmak / mücadele etmek
-1891,B1,53,K,main,Kampf,der,¨-e,Noun,,,,fight / struggle / battle,savaş / mücadele / kavga
+1891,B1,53,K,main,Kampf,der,¨-e,Noun,,,,fight / struggle / battle,savaş / mücadele
 1892,B1,53,K,main,Kanal,der,¨-e,Noun,,,,canal / channel,kanal
 1893,B1,53,K,main,Kandidat,der,-endie,Noun,,,,candidate,aday
 1894,B1,53,K,main,Kantine,die,-n,Noun,,,,canteen / cafeteria,kantin / yemekhane
 1895,B1,53,K,main,Kapitel,das,-jederzeit,Noun,,,,chapter,bölüm / fasıl
-1896,B1,53,J,main,jedes,,,Other,,,,every / each (artifact),her / her biri (hatalı)
+1896,B1,53,J,main,jedes,,,Other,,,,every / each (artifact),her (hatalı)
 1897,B1,53,J,main,jedochjemalsjemand,,,Other,,,,however-ever-someone (artifact),ancak / hiç / biri (hatalı)
 1898,B1,53,J,main,jetzt,,,Other,,,,now (artifact),şimdi (hatalı)
 1899,B1,53,J,main,jeweils,,,Other,,,,each / respectively,her biri / sırasıyla
 1900,B1,53,J,main,Journalist,der,-en,Noun,,,,journalist (male),gazeteci (erkek)
 1901,B1,53,J,main,Journalistin,die,-nen,Noun,,,,journalist (female),gazeteci (kadın)
 1902,B1,53,J,main,Jugend,die,,Noun,,,,youth,gençlik
-1903,B1,53,J,main,Jugendliche,der,-n,Noun,,,,young person / teenager (male),genç / ergen (erkek)
-1904,B1,53,J,main,Jugendliche,die,-nen,Noun,,,,young person / teenager (female),genç / ergen (kadın)
-1905,B1,53,J,main,Jugendherberge,die,-n,Noun,,,,youth hostel,gençlik yurdu
+1903,B1,53,J,main,Jugendliche,der,-n,Noun,,,,young person / teenager (male),genç (erkek)
+1904,B1,53,J,main,Jugendliche,die,-nen,Noun,,,,young person / teenager (female),genç (kadın)
+1905,B1,53,J,main,Jugendherberge,die,-n,Noun,,,,youth hostel,gençlik yurdu / hostel
 1906,B1,53,J,main,jung,,,Other,,,,young,genç
-1907,B1,53,J,main,Junge,der,-n,Noun,,,,boy,oğlan / erkek çocuk
-1908,B1,53,G,main,gerät,,,Other,,,,device / gets (artifact),cihaz / gidiyor (hatalı)
+1907,B1,53,J,main,Junge,der,-n,Noun,,,,boy,erkek çocuk / oğlan
+1908,B1,53,G,main,gerät,,,Other,,,,device / gets (artifact),cihaz / düşüyor (hatalı)
 1909,B1,53,M,main,mit,,,Other,,,,with (artifact),ile (hatalı)
 1910,B1,53,L,main,laden,,,Verb,,,,to load / to charge,yüklemek / şarj etmek
 1911,B1,53,E,main,ein,,,Other,,,,a / one (artifact),bir (hatalı)
-1912,B1,53,E,main,essen,,,Verb,,,,to eat (artifact),yemek (hatalı)
+1912,B1,53,E,main,essen,,,Verb,,,,to eat (artifact),yemek yemek (hatalı)
 1913,B1,53,Z,main,zwei,,,Other,,,,two (artifact),iki (hatalı)
-1914,B1,53,A,main,anders,,,Other,,,,different / otherwise (artifact),farklı / yoksa (hatalı)
+1914,B1,53,A,main,anders,,,Other,,,,different / otherwise (artifact),farklı (hatalı)
 1915,B1,53,L,main,leihen,,,Verb,,,,to lend / to borrow,ödünç vermek / ödünç almak
 1916,B1,53,N,main,ness-Studio,,,Other,,,,ness studio (artifact),(hatalı)
 1917,B1,53,M,main,meinem,,,Other,,,,my (dative artifact),benim (hatalı)
 1918,B1,53,A,main,anders,,,Other,,,,different (artifact),farklı (hatalı)
-1919,B1,53,D,main,donnerstags,,,Other,,,,on Thursdays (artifact),Perşembeleri (hatalı)
+1919,B1,53,D,main,donnerstags,,,Other,,,,on Thursdays (artifact),perşembeleri (hatalı)
 1920,B1,53,W,main,werden,,,Verb,,,,to become (artifact),olmak (hatalı)
 1921,B1,53,F,main,für,,,Other,,,,for (artifact),için (hatalı)
 1922,B1,53,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
 1923,B1,53,T,main,te,,,Other,,,,te (artifact),(hatalı)
-1924,B1,54,K,main,Käuferin,die,-nen,Noun,,,,female buyer / female customer,alıcı (kadın) / müşteri (kadın)
-1925,B1,54,K,main,kaum,,,Other,,,,barely / hardly,neredeyse hiç / güçlükle
+1924,B1,54,K,main,Käuferin,die,-nen,Noun,,,,female buyer / female customer,kadın alıcı / kadın müşteri
+1925,B1,54,K,main,kaum,,,Other,,,,barely / hardly,neredeyse yok / güçlükle
 1926,B1,54,K,main,kein,,,Other,,,,no / not a,hiç / hiçbir
-1927,B1,54,K,main,Keller,der,-,Noun,,,,cellar / basement,bodrum / kiler
+1927,B1,54,K,main,Keller,der,-,Noun,,,,cellar / basement,bodrum / mahzen
 1928,B1,54,K,main,Kellner,der,-,Noun,,,,waiter / server (male),garson (erkek)
 1929,B1,54,K,main,Kellnerin,die,-nen,Noun,,,,waitress / server (female),garson (kadın)
 1930,B1,54,K,main,kennen,,,Verb,kennt,kannte,hat gekannt,to know / to be familiar with,tanımak / bilmek
-1931,B1,54,K,main,kennenlernen,,,Verb,lernt,,,to get to know / to meet,tanışmak / tanımaya başlamak
+1931,B1,54,K,main,kennenlernen,,,Verb,lernt,,,to get to know / to meet,tanışmak
 1932,B1,54,K,main,kennen,,,Verb,lernte kennen,,hat kennengelernt,to know (artifact),tanımak (hatalı)
-1933,B1,54,K,main,Kenntnisse,die,,Noun,,,,knowledge / skills,bilgi / beceri
-1934,B1,54,K,main,Kennzeichen,das,-,Noun,,,,license plate / identifier,plaka / tanımlayıcı
+1933,B1,54,K,main,Kenntnisse,die,,Noun,,,,knowledge / skills,bilgi / beceriler
+1934,B1,54,K,main,Kennzeichen,das,-,Noun,,,,license plate / identifier,plaka / işaret
 1935,B1,54,K,main,Kerze,die,-ndie,Noun,,,,candle,mum
 1936,B1,54,K,main,Kindergarten,der,¨-,Noun,,,,kindergarten / preschool,anaokulu
 1937,B1,54,K,main,Kindheit,die,,Noun,,,,childhood,çocukluk
 1938,B1,54,K,main,Kino,das,-s,Noun,,,,cinema / movie theater,sinema
-1939,B1,54,K,main,Kiosk,der,-edie,Noun,,,,kiosk / newsstand,kiosk / gazete bayii
-1940,B1,54,K,main,kaputtgehen,,,Verb,,,,to break down / to stop working,bozulmak / çalışmaz hale gelmek
-1941,B1,54,K,main,kaputtmachen,,,Verb,,,,to break / to damage,kırmak / bozmak / zarar vermek
+1939,B1,54,K,main,Kiosk,der,-edie,Noun,,,,kiosk / newsstand,büfe / kiosk
+1940,B1,54,K,main,kaputtgehen,,,Verb,,,,to break down / to stop working,bozulmak / çökmek
+1941,B1,54,K,main,kaputtmachen,,,Verb,,,,to break / to damage,bozmak / kırmak
 1942,B1,54,K,main,Karneval,der,-s/-e,Noun,,,,carnival,karnaval
 1943,B1,54,N,main,nacht,,,Other,,,,night (artifact),gece (hatalı)
 1944,B1,54,K,main,Karotte,die,-n,Noun,,,,carrot,havuç
 1945,B1,54,K,main,Karte,die,-n,Noun,,,,card / map / menu,kart / harita / menü
-1946,B1,54,C,main,Chipkarte,die,-n,Noun,,,,chip card / smart card,chip kart / akıllı kart
+1946,B1,54,C,main,Chipkarte,die,-n,Noun,,,,chip card / smart card,çipli kart / akıllı kart
 1947,B1,54,F,main,Fahrkarte,die,-n,Noun,,,,ticket,bilet
 1948,B1,54,K,main,Kartoffel,die,-n,Noun,,,,potato,patates
 1949,B1,54,D,main,dapfel,,,Other,,,,apple (artifact),elma (hatalı)
@@ -1951,42 +1951,42 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1951,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate,kutu / kasa
 1952,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate (duplicate),kutu / kasa
 1953,B1,54,K,main,Katalog,der,-e,Noun,,,,catalog,katalog
-1954,B1,54,K,main,Katastrophe,die,"-n(sich etwas) kaufen, kauft,",Noun,,,,catastrophe / disaster,felaket / afet
+1954,B1,54,K,main,Katastrophe,die,"-n(sich etwas) kaufen, kauft,",Noun,,,,catastrophe / disaster,felaket / yıkım
 1955,B1,54,K,main,KaufIch,der,,Noun,,,,purchase-I (artifact),satın alma (hatalı)
 1956,B1,54,S,main,sprechen,,,Verb,,,,to speak (artifact),konuşmak (hatalı)
 1957,B1,54,K,main,keins,,,Other,,,,none / no one (artifact),hiçbiri (hatalı)
-1958,B1,54,G,main,gemütliches,,,Other,,,,cozy (artifact),rahat / huzurlu (hatalı)
+1958,B1,54,G,main,gemütliches,,,Other,,,,cozy (artifact),rahat (hatalı)
 1959,B1,54,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
 1960,B1,54,V,main,verbessern,,,Verb,,,,to improve,geliştirmek / iyileştirmek
-1961,B1,54,V,main,viele,,,Other,,,,many (artifact),çok / birçok (hatalı)
+1961,B1,54,V,main,viele,,,Other,,,,many (artifact),çok (hatalı)
 1962,B1,54,D,main,dert.1,,,Other,,,,dert (artifact),(hatalı)
 1963,B1,54,L,main,leicht,,,Other,,,,easy / light (artifact),kolay / hafif (hatalı)
-1964,B1,54,G,main,gegangen,,,Verb,,,,gone (artifact),gitti (hatalı)
+1964,B1,54,G,main,gegangen,,,Verb,,,,gone (artifact),gidilmiş (hatalı)
 1965,B1,54,D,main,deutschland,,,Other,,,,Germany (artifact),Almanya (hatalı)
 1966,B1,54,K,main,kaufen,,,Verb,,,,to buy (artifact),satın almak (hatalı)
-1967,B1,54,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak / elde etmek (hatalı)
-1968,B1,54,B,main,bestellt,,,Other,,,,ordered (artifact),sipariş verildi (hatalı)
+1967,B1,54,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak (hatalı)
+1968,B1,54,B,main,bestellt,,,Other,,,,ordered (artifact),sipariş verilmiş (hatalı)
 1969,B1,54,E,main,ein,,,Other,,,,a / one (artifact),bir (hatalı)
 1970,B1,55,K,main,Klingel,die,-n,Noun,,,,doorbell / bell,zil / kapı zili
-1971,B1,55,K,main,klingen,,,Verb,klingt,klang,hat geklungen,to ring / to sound,çalmak / kulağa gelmek
+1971,B1,55,K,main,klingen,,,Verb,klingt,klang,hat geklungen,to ring / to sound,çalmak / ses çıkarmak
 1972,B1,55,K,main,Klinik,die,"-enklopfen, klopft, klopfte,",Noun,,,,clinic / hospital,klinik / hastane
-1973,B1,55,K,main,Kloß,der,¨-e,Noun,,,,dumpling,köfte / hamur topu
-1974,B1,55,K,main,klug,,,Other,,,,clever / smart,akıllı / zeki
-1975,B1,55,K,main,knapp,,,Other,,,,barely / tight / scarce,neredeyse / kıt / dar
-1976,B1,55,K,main,Kneipe,die,-n,Noun,,,,pub / bar,meyhane / bar
+1973,B1,55,K,main,Kloß,der,¨-e,Noun,,,,dumpling,hamur topu / köfte
+1974,B1,55,K,main,klug,,,Other,,,,clever / smart,zeki / akıllı
+1975,B1,55,K,main,knapp,,,Other,,,,barely / tight / scarce,kıl payı / kıt / dar
+1976,B1,55,K,main,Kneipe,die,-n,Noun,,,,pub / bar,bar / meyhane
 1977,B1,55,K,main,Knie,das,-der,Noun,,,,knee,diz
-1978,B1,55,K,main,Knopf,der,¨-e,Noun,,,,button / knob,düğme
+1978,B1,55,K,main,Knopf,der,¨-e,Noun,,,,button / knob,düğme / topuz
 1979,B1,55,K,main,kochen,,,Verb,kocht,kochte,hat gekocht,to cook,pişirmek / yemek yapmak
 1980,B1,55,K,main,Koch,der,¨-e,Noun,,,,cook / chef (male),aşçı (erkek)
 1981,B1,55,K,main,Köchin,die,-nen,Noun,,,,cook / chef (female),aşçı (kadın)
-1982,B1,55,K,main,Koffer,der,-,Noun,,,,suitcase,bavul / valiz
-1983,B1,55,K,main,Kollege,der,-n,Noun,,,,colleague (male),meslektaş (erkek)
-1984,B1,55,K,main,Kollegin,die,-nendie,Noun,,,,colleague (female),meslektaş (kadın)
-1985,B1,55,K,main,Kissen,das,-,Noun,,,,pillow / cushion,yastık
+1982,B1,55,K,main,Koffer,der,-,Noun,,,,suitcase,valiz / bavul
+1983,B1,55,K,main,Kollege,der,-n,Noun,,,,colleague (male),iş arkadaşı (erkek)
+1984,B1,55,K,main,Kollegin,die,-nendie,Noun,,,,colleague (female),iş arkadaşı (kadın)
+1985,B1,55,K,main,Kissen,das,-,Noun,,,,pillow / cushion,yastık / minder
 1986,B1,55,K,main,klagen,,,Verb,klagt,klagte,hat geklagt,to complain / to lament,şikâyet etmek / yakınmak
-1987,B1,55,K,main,klappen,,,Verb,klappt,klappte,hat geklappt,to work out / to go well,yolunda gitmek / başarılı olmak
+1987,B1,55,K,main,klappen,,,Verb,klappt,klappte,hat geklappt,to work out / to go well,yolunda gitmek / işe yaramak
 1988,B1,55,K,main,klar,,,Other,,,,clear,açık / net
-1989,B1,55,K,main,klären,,,Verb,klärt,klärte,hat geklärt,to clarify / to clear up,açıklamak / aydınlatmak
+1989,B1,55,K,main,klären,,,Verb,klärt,klärte,hat geklärt,to clarify / to clear up,açıklamak / çözmek
 1990,B1,55,K,main,Klassenarbeit,die,-en,Noun,,,,class test / exam,sınıf sınavı
 1991,B1,55,K,main,Klavier,das,-e,Noun,,,,piano,piyano
 1992,B1,55,K,main,kleben,,,Verb,klebt,klebte,hat geklebt,to stick / to glue,yapıştırmak
@@ -1994,10 +1994,10 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1994,B1,55,K,main,klein,,,Other,,,,small / little,küçük
 1995,B1,55,K,main,klettern,,,Verb,klettert,kletterte,ist geklettert,to climb,tırmanmak
 1996,B1,55,K,main,klicken,,,Verb,klickt,klickte,hat geklickt,to click,tıklamak
-1997,B1,55,K,main,Klick,der,- s,Noun,,,,click,tık / tıklama
+1997,B1,55,K,main,Klick,der,- s,Noun,,,,click,tıklama
 1998,B1,55,K,main,Klima,das,,Noun,,,,climate,iklim
-1999,B1,55,K,main,Klimaanlage,die,-n1.,Noun,,,,air conditioning,klima / hava kondisyoneri
-2000,B1,55,K,main,kranken,,,Verb,,,,sick / ill (artifact),hasta olmak (hatalı)
+1999,B1,55,K,main,Klimaanlage,die,-n1.,Noun,,,,air conditioning,klima
+2000,B1,55,K,main,kranken,,,Verb,,,,sick / ill (artifact),hasta (hatalı)
 2001,B1,55,B,main,besonders,,,Other,,,,especially (artifact),özellikle (hatalı)
 2002,B1,55,S,main,sparen,,,Verb,,,,to save (artifact),
 2003,B1,55,G,main,gekostet,,,Other,,,,cost (past artifact),
