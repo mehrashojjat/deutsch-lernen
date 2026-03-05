@@ -3599,406 +3599,406 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3598,B1,88,O,main,oben,,,Verb,,,,above (artifact)
 3599,B1,88,G,main,getan,,,Other,,,,done (artifact)
 3600,B1,88,S,main,sieht,,,Other,,,,looks (artifact)
-3601,B1,89,Ü,main,überzeugen,,,Verb,überzeugt,überzeugte,hat überzeugt,
-3602,B1,89,Ü,main,Überzeugung,die,-en,Noun,,,,
-3603,B1,89,Ü,main,üblich,,,Other,,,,
-3604,B1,89,Ü,main,übrig,,,Other,,,,
-3605,B1,89,Ü,main,übrigens,,,Other,,,,
-3606,B1,89,U,main,Ufer,das,-,Noun,,,,
-3607,B1,89,U,main,Uhr,die,-en,Noun,,,,
-3608,B1,89,U,main,um,,,Other,,,,
-3609,B1,89,U,main,umarmen,,,Verb,umarmt,umarmte,hat umarmt,
-3610,B1,89,U,main,um,,,Other,,,,
-3611,B1,89,U,main,umdrehen,,,Verb,dreht,um,hat umgedreht,
-3612,B1,89,U,main,Umfrage,die,-ndie,Noun,,,,
-3613,B1,89,U,main,umgekehrt,,,Other,,,,
-3614,B1,89,U,main,Umleitung,die,-enumso,Noun,,,,
-3615,B1,89,U,main,umsonstübermorgen,,,Verb,,,,
-3616,B1,89,Ü,main,übernachten,,,Verb,übernachtet,übernachtete,hat übernachtet,
-3617,B1,89,Ü,main,Übernachtung,die,-en,Noun,,,,
-3618,B1,89,Ü,main,übernehmen,,,Verb,übernimmt,übernahm,hat übernommen,
-3619,B1,89,Ü,main,überprüfen,,,Verb,überprüft,überprüfte,hat überprüft,
-3620,B1,89,Ü,main,überqueren,,,Verb,überquert,überquerte,hat überquert,
-3621,B1,89,Ü,main,überraschen,,,Verb,überrascht,überraschte,hat überrascht,
-3622,B1,89,Ü,main,Überraschung,die,-en,Noun,,,,
-3623,B1,89,Ü,main,überreden,,,Verb,überredet,überredete,hat überredet,
-3624,B1,89,Ü,main,Überschrift,die,-en,Noun,,,,
-3625,B1,89,Ü,main,übersetzen,,,Verb,übersetzt,übersetzte,hat übersetzt,
-3626,B1,89,Ü,main,Übersetzer,der,-,Noun,,,,
-3627,B1,89,Ü,main,Übersetzerin,die,-nen,Noun,,,,
-3628,B1,89,Ü,main,Übersetzung,die,-en,Noun,,,,
-3629,B1,89,Ü,main,Überstunde,die,-n,Noun,,,,
-3630,B1,89,Ü,main,über,,,Other,,,,
-3631,B1,89,Ü,main,übertreiben,,,Verb,übertreibt,übertrieb,hat übertrieben,
-3632,B1,89,Ü,main,überweisen,,,Verb,überweist,überwies,hat überwiesen,
-3633,B1,89,Ü,main,Überweisung,die,- en1.,Noun,,,,
-3634,B1,89,M,main,meine,,,Other,,,,
-3635,B1,89,G,main,gehen,,,Verb,,,,
-3636,B1,89,U,main,um,,,Other,,,,
-3637,B1,89,M,main,machen,,,Verb,,,,
-3638,B1,89,A,main,auf,,,Other,,,,
-3639,B1,89,S,main,schöne,,,Other,,,,
-3640,B1,89,D,main,dann,,,Other,,,,
-3641,B1,89,S,main,sind,,,Other,,,,
-3642,B1,89,A,main,auch,,,Other,,,,
-3643,B1,89,Ü,main,übernachtet,,,Other,,,,
-3644,B1,89,T,main,tung,,,Other,,,,
-3645,B1,89,R,main,richtig,,,Other,,,,
-3646,B1,89,Ü,main,überqueren,,,Verb,,,,
-3647,B1,89,D,main,den,,,Verb,,,,
-3648,B1,89,Z,main,zum,,,Other,,,,
-3649,B1,89,Ü,main,übersetzen?Meine,,,Other,,,,
-3650,B1,89,A,main,arbeiten,,,Verb,,,,
-3651,B1,89,G,main,gut,,,Other,,,,
-3652,B1,89,M,main,man,,,Other,,,,
-3653,B1,89,Ü,main,überwiesen,,,Verb,,,,
-3654,B1,89,B,main,bezahlen,,,Verb,,,,
-3655,B1,89,W,main,weisung,,,Other,,,,
-3656,B1,90,U,main,Universität,die,-en,Noun,,,,
-3657,B1,90,U,main,unten,,,Verb,,,,
-3658,B1,90,U,main,unter,,,Other,,,,
-3659,B1,90,U,main,unter,,,Other,,,,
-3660,B1,90,U,main,unterbrechen,,,Verb,unterbricht,unterbrach,hat unterbrochen,
-3661,B1,90,U,main,unterhalten,,,Verb,unter-,hält,hat unterhalten,
-3662,B1,90,U,main,Unterhaltung,die,-en,Noun,,,,
-3663,B1,90,U,main,Unterkunft,die,¨-e,Noun,,,,
-3664,B1,90,U,main,Unterlagen,die,,Noun,,,,
-3665,B1,90,U,main,unterlassen,,,Verb,unterlässt,unterließ,hat unterlassen,
-3666,B1,90,U,main,unternehmen,,,Verb,immt,unternahm,hat unternommen,
-3667,B1,90,U,main,Unternehmer,der,-,Noun,,,,
-3668,B1,90,U,main,Unternehmerin,die,-nen,Noun,,,,
-3669,B1,90,U,main,unterrichten,,,Verb,unterrichtet,unterrichtete,hat unterrichtet,
-3670,B1,90,U,main,Unterricht,der,,Noun,,,,
-3671,B1,90,U,main,untersagt,,,Other,,,,
-3672,B1,90,U,main,unterscheiden,,,Verb,unter-,scheidet,hat unterschie,
-3673,B1,90,U,main,Unterschied,der,"-eumsteigen, steigt um,stieg um, ist umgestiegen",Noun,,,,
-3674,B1,90,U,main,umtauschen,,,Verb,tauscht um,tauschte um,hat umgetauscht,
-3675,B1,90,U,main,Umtausch,der,¨-e,Noun,,,,
-3676,B1,90,U,main,Umwelt,die,,Noun,,,,
-3677,B1,90,U,main,Umweltschutz,der,,Noun,,,,
-3678,B1,90,U,main,Umweltver-,die,,Noun,,,,
-3679,B1,90,U,main,umziehen,,,Verb,zieht um,zogum,ist umgezogen,
-3680,B1,90,U,main,Umzug,der,¨-e,Noun,,,,
-3681,B1,90,U,main,un,,,Other,,,,
-3682,B1,90,U,main,unbedingt,,,Other,,,,
-3683,B1,90,U,main,und,,,Other,,,,
-3684,B1,90,U,main,Unfall,der,¨-e,Noun,,,,
-3685,B1,90,U,main,ungefähr,,,Other,,,,
-3686,B1,90,U,main,ungewöhnlich,,,Other,,,,
-3687,B1,90,M,main,man,,,Other,,,,
-3688,B1,90,U,main,unten,,,Verb,,,,
-3689,B1,90,W,main,wichtige,,,Other,,,,
-3690,B1,90,S,main,spreche,,,Other,,,,
-3691,B1,90,U,main,unterhalten,,,Verb,,,,
-3692,B1,90,U,main,unterhalten.Wir,,,Other,,,,
-3693,B1,90,U,main,und,,,Other,,,,
-3694,B1,90,U,main,und,,,Other,,,,
-3695,B1,90,P,main,Post,der,,Noun,,,,
-3696,B1,90,T,main,terlassen,,,Verb,,,,
-3697,B1,90,U,main,unternehmen,,,Verb,,,,
-3698,B1,90,B,main,bis,,,Other,,,,
-3699,B1,90,U,main,umsonst,,,Other,,,,
-3700,B1,90,W,main,weiter,,,Other,,,,
-3701,B1,90,U,main,umgezogen,,,Verb,,,,
-3702,B1,90,M,main,mich,,,Other,,,,
-3703,B1,90,E,main,echen,,,Verb,,,,
-3704,B1,90,A,main,aber,,,Other,,,,
-3705,B1,90,U,main,unheimlich,,,Other,,,,
-3706,B1,91,V,main,Vase,die,-n,Noun,,,,
-3707,B1,91,V,main,Vater,der,¨-,Noun,,,,
-3708,B1,91,V,main,verabreden,,,Verb,verabredet,verabredete,hat verabredet,
-3709,B1,91,V,main,verabredet,,,Other,,,,
-3710,B1,91,V,main,Verabredung,die,-en,Noun,,,,
-3711,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,
-3712,B1,91,A,main,Abschied,der,-e,Noun,,,,
-3713,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,
-3714,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,
-3715,B1,91,V,main,Verantwortung,die,,Noun,,,,
-3716,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,
-3717,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,
-3718,B1,91,V,main,Verbot,das,-e,Noun,,,,
-3719,B1,91,V,main,verboten,,,Verb,,,,
-3720,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,
-3721,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,
-3722,B1,91,U,main,Unterschrift,die,-en,Noun,,,,
-3723,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,
-3724,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,
-3725,B1,91,U,main,Unterstützung,die,-en,Noun,,,,
-3726,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,
-3727,B1,91,U,main,Untersuchung,die,-en,Noun,,,,
-3728,B1,91,U,main,unterwegs,,,Other,,,,
-3729,B1,91,U,main,Urkunde,die,-n,Noun,,,,
-3730,B1,91,U,main,Urlaub,der,-e,Noun,,,,
-3731,B1,91,U,main,Ursache,die,-n,Noun,,,,
-3732,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,
-3733,B1,91,U,main,ursprünglich,,,Other,,,,
-3734,B1,91,U,main,Urteil,das,,Noun,,,,
-3735,B1,91,L,main,liebsten,,,Verb,,,,
-3736,B1,91,Z,main,zur,,,Other,,,,
-3737,B1,91,V,main,verabredet,,,Other,,,,
-3738,B1,91,B,main,bin,,,Other,,,,
-3739,B1,91,M,main,mit,,,Other,,,,
-3740,B1,91,N,main,nett,,,Other,,,,
-3741,B1,91,V,main,verabschieden,,,Verb,,,,
-3742,B1,91,F,main,fiel,,,Other,,,,
-3743,B1,91,S,main,sen,,,Verb,,,,
-3744,B1,91,V,main,verbessert,,,Other,,,,
-3745,B1,91,V,main,verboten,,,Verb,,,,
-3746,B1,91,R,main,rechts,,,Other,,,,
-3747,B1,91,U,main,unterstreichen,,,Verb,,,,
-3748,B1,91,K,main,können,,,Verb,,,,
-3749,B1,91,L,main,lassen,,,Verb,,,,
-3750,B1,91,A,main,arte,,,Other,,,,
-3751,B1,91,K,main,komme,,,Other,,,,
-3752,B1,91,E,main,essen,,,Verb,,,,
-3753,B1,91,B,main,bekommen,,,Verb,,,,
-3754,B1,91,H,main,hart,,,Other,,,,
-3755,B1,92,V,main,vergnügt,,,Other,,,,
-3756,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,
-3757,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,
-3758,B1,92,V,main,Verhalten,das,,Noun,,,,
-3759,B1,92,V,main,Verhältnis,das,-se,Noun,,,,
-3760,B1,92,V,main,verheiratet,,,Other,,,,
-3761,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,
-3762,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,
-3763,B1,92,V,main,Verkäufer,der,-die,Noun,,,,
-3764,B1,92,V,main,Verkehr,der,,Noun,,,,
-3765,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,
-3766,B1,92,V,main,Verlag,der,,Noun,,,,
-3767,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,
-3768,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,
-3769,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,
-3770,B1,92,V,main,Verbrecher,der,-,Noun,,,,
-3771,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,
-3772,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,
-3773,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,
-3774,B1,92,V,main,Verdacht,der,,Noun,,,,
-3775,B1,92,V,main,verdächtig,,,Other,,,,
-3776,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,
-3777,B1,92,V,main,Verein,der,-e,Noun,,,,
-3778,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,
-3779,B1,92,V,main,Vergangenheitvergeblich,die,,Noun,,,,
-3780,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,
-3781,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,
-3782,B1,92,V,main,Vergleich,der,-e,Noun,,,,
-3783,B1,92,B,main,beim,,,Other,,,,
-3784,B1,92,H,main,herein,,,Other,,,,
-3785,B1,92,M,main,merkwürdig,,,Other,,,,
-3786,B1,92,S,main,schwierigen,,,Verb,,,,
-3787,B1,92,M,main,meinen,,,Verb,,,,
-3788,B1,92,V,main,verheiratet,,,Other,,,,
-3789,B1,92,V,main,verhindern,,,Verb,,,,
-3790,B1,92,H,main,helfen,,,Verb,,,,
-3791,B1,92,M,main,mit,,,Other,,,,
-3792,B1,92,V,main,verlangt,,,Other,,,,
-3793,B1,92,L,main,lassen,,,Verb,,,,
-3794,B1,92,H,main,helfe,,,Other,,,,
-3795,B1,92,D,main,direkt,,,Other,,,,
-3796,B1,92,V,main,verhaftet,,,Other,,,,
-3797,B1,92,V,main,verbrannt,,,Other,,,,
-3798,B1,92,I,main,ich,,,Other,,,,
-3799,B1,92,G,main,gesehen,,,Verb,,,,
-3800,B1,92,D,main,dient,,,Other,,,,
-3801,B1,92,D,main,diesem,,,Other,,,,
-3802,B1,92,A,main,anzurufen,,,Verb,,,,
-3803,B1,92,V,main,vergnügt,,,Other,,,,
-3804,B1,93,V,main,verpflichtet,,,Other,,,,
-3805,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,
-3806,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,
-3807,B1,93,V,main,verrückt,,,Other,,,,
-3808,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,
-3809,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,
-3810,B1,93,V,main,verschieden,,,Verb,,,,
-3811,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,
-3812,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,
-3813,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,
-3814,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,
-3815,B1,93,V,main,Versicherung,die,-en,Noun,,,,
-3816,B1,93,V,main,Verspätung,die,-en,Noun,,,,
-3817,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,
-3818,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,
-3819,B1,93,V,main,Verletzung,die,-en,Noun,,,,
-3820,B1,93,V,main,verliebt,,,Other,,,,
-3821,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,
-3822,B1,93,V,main,Verlierer,der,-,Noun,,,,
-3823,B1,93,V,main,Verliererin,die,-nen,Noun,,,,
-3824,B1,93,V,main,Verlust,der,-e,Noun,,,,
-3825,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,
-3826,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,
-3827,B1,93,V,main,Vermieter,der,-,Noun,,,,
-3828,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,
-3829,B1,93,V,main,Vermietung,die,-en,Noun,,,,
-3830,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,
-3831,B1,93,V,main,Vermittlung,die,-en,Noun,,,,
-3832,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,
-3833,B1,93,V,main,vermutlich,,,Other,,,,
-3834,B1,93,V,main,vernünftig,,,Other,,,,
-3835,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,
-3836,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,
-3837,B1,93,M,main,melden,,,Verb,,,,
-3838,B1,93,I,main,ist,,,Other,,,,
-3839,B1,93,V,main,versäumt,,,Other,,,,
-3840,B1,93,V,main,verschieben,,,Verb,,,,
-3841,B1,93,V,main,verschieden,,,Verb,,,,
-3842,B1,93,N,main,nen,,,Verb,,,,
-3843,B1,93,V,main,verschrieben,,,Verb,,,,
-3844,B1,93,D,main,du,,,Other,,,,
-3845,B1,93,S,main,sicherung,,,Other,,,,
-3846,B1,93,T,main,tung,,,Other,,,,
-3847,B1,93,M,main,mich,,,Other,,,,
-3848,B1,93,A,main,asche,,,Other,,,,
-3849,B1,93,S,main,sehr,,,Other,,,,
-3850,B1,93,V,main,vermeiden,,,Verb,,,,
-3851,B1,93,V,main,vermieten,,,Verb,,,,
-3852,B1,93,K,main,kann,,,Other,,,,
-3853,B1,93,V,main,Vermittlung,der,,Noun,,,,
-3854,B1,93,F,main,fragen,,,Verb,,,,
-3855,B1,93,V,main,von,,,Other,,,,
-3856,B1,93,K,main,kommen,,,Verb,,,,
-3857,B1,93,V,main,verpasst,,,Other,,,,
-3858,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,
-3859,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,
-3860,B1,94,V,main,Video,das,-s,Noun,,,,
-3861,B1,94,V,main,viel/viele,,,Other,,,,
-3862,B1,94,V,main,vielleicht,,,Other,,,,
-3863,B1,94,V,main,Viertel,das,-,Noun,,,,
-3864,B1,94,V,main,virtuell,,,Other,,,,
-3865,B1,94,V,main,Virus,der,,Noun,,,,
-3866,B1,94,V,main,Vitamin,das,-e,Noun,,,,
-3867,B1,94,V,main,voll,,,Other,,,,
-3868,B1,94,V,main,Vollzeit,die,,Noun,,,,
-3869,B1,94,V,main,völligvondas,,,Other,,,,
-3870,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,
-3871,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,
-3872,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,
-3873,B1,94,V,main,Versuch,der,-e,Noun,,,,
-3874,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,
-3875,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,
-3876,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,
-3877,B1,94,V,main,Vertrauen,das,,Noun,,,,
-3878,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,
-3879,B1,94,V,main,Vertreter,der,-,Noun,,,,
-3880,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,
-3881,B1,94,V,main,Vertretung,die,-en,Noun,,,,
-3882,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,
-3883,B1,94,V,main,Verwaltung,die,-en,Noun,,,,
-3884,B1,94,V,main,verwandt,,,Other,,,,
-3885,B1,94,V,main,Verwandte,der,-n,Noun,,,,
-3886,B1,94,V,main,Verwandte,die,-n,Noun,,,,
-3887,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,
-3888,B1,94,K,main,können,,,Verb,,,,
-3889,B1,94,A,main,aufgenommen,,,Verb,,,,
-3890,B1,94,N,main,noch,,,Other,,,,
-3891,B1,94,V,main,virtuellen,,,Verb,,,,
-3892,B1,94,M,main,meinem,,,Other,,,,
-3893,B1,94,G,main,geben,,,Verb,,,,
-3894,B1,94,E,main,essen,,,Verb,,,,
-3895,B1,94,I,main,immer,,,Other,,,,
-3896,B1,94,V,main,vollen,,,Verb,,,,
-3897,B1,94,H,main,heute?Wir,,,Other,,,,
-3898,B1,94,V,main,versteckt,,,Other,,,,
-3899,B1,94,S,main,sehr,,,Other,,,,
-3900,B1,94,Z,main,zu,,,Other,,,,
-3901,B1,94,S,main,suche,,,Other,,,,
-3902,B1,94,O,main,ohne,,,Other,,,,
-3903,B1,94,V,main,verteilen,,,Verb,,,,
-3904,B1,94,S,main,schreiben,,,Verb,,,,
-3905,B1,94,M,main,machen,,,Verb,,,,
-3906,B1,94,I,main,ich,,,Other,,,,
-3907,B1,94,E,main,eterin,,,Other,,,,
-3908,B1,94,J,main,jemandem,,,Other,,,,
-3909,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,
-3910,B1,95,V,main,Vorort,der,-e,Noun,,,,
-3911,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,
-3912,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,
-3913,B1,95,V,main,Vorschrift,die,-en,Noun,,,,
-3914,B1,95,V,main,Vorsicht,die,,Noun,,,,
-3915,B1,95,V,main,vorsichtig,,,Other,,,,
-3916,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,
-3917,B1,95,V,main,Vorstellung,die,-en,Noun,,,,
-3918,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,
-3919,B1,95,V,main,Vorteil,der,-e,Noun,,,,
-3920,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,
-3921,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,
-3922,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,
-3923,B1,95,V,main,vor,,,Other,,,,
-3924,B1,95,V,main,voraus,,,Other,,,,
-3925,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,
-3926,B1,95,V,main,voraussichtlich,,,Other,,,,
-3927,B1,95,V,main,vorbei/vorbei,,,Other,,,,
-3928,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,
-3929,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,
-3930,B1,95,V,main,vorder,,,Other,,,,
-3931,B1,95,V,main,Vorfahrt,die,,Noun,,,,
-3932,B1,95,V,main,vorgesternvorhaben,,,Verb,,,hat vor,
-3933,B1,95,V,main,vorher,,,Other,,,,
-3934,B1,95,V,main,vorhinvorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,
-3935,B1,95,W,main,wohne,,,Other,,,,
-3936,B1,95,N,main,noch,,,Other,,,,
-3937,B1,95,M,main,machen,,,Verb,,,,
-3938,B1,95,B,main,Benutzen,das,,Noun,,,,
-3939,B1,95,G,main,glatt,,,Other,,,,
-3940,B1,95,N,main,nicht,,,Other,,,,
-3941,B1,95,G,main,gespräch,,,Other,,,,
-3942,B1,95,D,main,dass,,,Other,,,,
-3943,B1,95,E,main,ein,,,Other,,,,
-3944,B1,95,G,main,geschlossen,,,Verb,,,,
-3945,B1,95,G,main,gehört,,,Other,,,,
-3946,B1,95,G,main,gekommen,,,Verb,,,,
-3947,B1,95,S,main,schlafen,,,Verb,,,,
-3948,B1,95,Z,main,zung,,,Other,,,,
-3949,B1,95,V,main,vorbei,,,Other,,,,
-3950,B1,95,P,main,paar,,,Other,,,,
-3951,B1,95,B,main,bereiten,,,Verb,,,,
-3952,B1,95,B,main,bereiten,,,Verb,,,,
-3953,B1,95,V,main,vor?Ich,,,Other,,,,
-3954,B1,95,I,main,ich,,,Other,,,,
-3955,B1,95,S,main,solls,,,Other,,,,
-3956,B1,96,W,main,Ware,die,-n,Noun,,,,
-3957,B1,96,W,main,warm,,,Other,,,,
-3958,B1,96,W,main,Wärme,die,,Noun,,,,
-3959,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,
-3960,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,
-3961,B1,96,W,main,warum,,,Other,,,,
-3962,B1,96,W,main,was,,,Other,,,,
-3963,B1,96,W,main,was,,,Other,,,,
-3964,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,
-3965,B1,96,W,main,Wäsche,die,,Noun,,,,
-3966,B1,96,W,main,Waschmittel,das,-,Noun,,,,
-3967,B1,96,W,main,Wasser,das,,Noun,,,,
-3968,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,
-3969,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,
-3970,B1,96,W,main,Wecker,der,,Noun,,,,
-3971,B1,96,W,main,waagerecht,,,Other,,,,
-3972,B1,96,W,main,wachwachsen,,,Verb,wächst,wuchs,ist gewachsen,
-3973,B1,96,W,main,Wagen,der,-,Noun,,,,
-3974,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,
-3975,B1,96,W,main,Wahl,die,-en,Noun,,,,
-3976,B1,96,W,main,wahnsinnig,,,Other,,,,
-3977,B1,96,W,main,wahr,,,Other,,,,
-3978,B1,96,W,main,Wahrheit,die,-en,Noun,,,,
-3979,B1,96,W,main,während,,,Other,,,,
-3980,B1,96,W,main,wahrscheinlich,,,Other,,,,
-3981,B1,96,W,main,Wald,der,¨-er,Noun,,,,
-3982,B1,96,W,main,Wand,die,¨-e,Noun,,,,
-3983,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,
-3984,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,
-3985,B1,96,W,main,warmen,,,Verb,,,,
-3986,B1,96,I,main,ist,,,Other,,,,
-3987,B1,96,G,main,gewaschen,,,Verb,,,,
-3988,B1,96,A,main,aufhängen,,,Verb,,,,
-3989,B1,96,H,main,hier,,,Other,,,,
-3990,B1,96,S,main,sechs,,,Other,,,,
-3991,B1,96,J,main,jetzt,,,Other,,,,
-3992,B1,96,U,main,und,,,Other,,,,
-3993,B1,96,S,main,statt,,,Other,,,,
-3994,B1,96,E,main,es,,,Other,,,,
-3995,B1,96,O,main,oder,,,Other,,,,
-3996,B1,96,W,main,wahnsinnig,,,Other,,,,
-3997,B1,96,U,main,unsere,,,Other,,,,
-3998,B1,96,N,main,noch,,,Other,,,,
-3999,B1,96,A,main,an,,,Other,,,,
-4000,B1,96,H,main,hört,,,Other,,,,
+3601,B1,89,Ü,main,überzeugen,,,Verb,überzeugt,überzeugte,hat überzeugt,to convince / to persuade
+3602,B1,89,Ü,main,Überzeugung,die,-en,Noun,,,,conviction / belief
+3603,B1,89,Ü,main,üblich,,,Other,,,,usual / common
+3604,B1,89,Ü,main,übrig,,,Other,,,,remaining / left over
+3605,B1,89,Ü,main,übrigens,,,Other,,,,by the way / incidentally
+3606,B1,89,U,main,Ufer,das,-,Noun,,,,shore / bank (river/lake)
+3607,B1,89,U,main,Uhr,die,-en,Noun,,,,clock / watch
+3608,B1,89,U,main,um,,,Other,,,,around / at (time) / in order to
+3609,B1,89,U,main,umarmen,,,Verb,umarmt,umarmte,hat umarmt,to hug / to embrace
+3610,B1,89,U,main,um,,,Other,,,,around / at (artifact)
+3611,B1,89,U,main,umdrehen,,,Verb,dreht,um,hat umgedreht,to turn around
+3612,B1,89,U,main,Umfrage,die,-ndie,Noun,,,,survey / poll
+3613,B1,89,U,main,umgekehrt,,,Other,,,,reversed / the other way around
+3614,B1,89,U,main,Umleitung,die,-enumso,Noun,,,,detour / diversion
+3615,B1,89,U,main,umsonstübermorgen,,,Verb,,,,for free / the day after tomorrow (artifact)
+3616,B1,89,Ü,main,übernachten,,,Verb,übernachtet,übernachtete,hat übernachtet,to stay overnight
+3617,B1,89,Ü,main,Übernachtung,die,-en,Noun,,,,overnight stay
+3618,B1,89,Ü,main,übernehmen,,,Verb,übernimmt,übernahm,hat übernommen,to take over / to take on
+3619,B1,89,Ü,main,überprüfen,,,Verb,überprüft,überprüfte,hat überprüft,to check / to verify
+3620,B1,89,Ü,main,überqueren,,,Verb,überquert,überquerte,hat überquert,to cross (a road)
+3621,B1,89,Ü,main,überraschen,,,Verb,überrascht,überraschte,hat überrascht,to surprise
+3622,B1,89,Ü,main,Überraschung,die,-en,Noun,,,,surprise
+3623,B1,89,Ü,main,überreden,,,Verb,überredet,überredete,hat überredet,to persuade / to talk into
+3624,B1,89,Ü,main,Überschrift,die,-en,Noun,,,,headline / heading
+3625,B1,89,Ü,main,übersetzen,,,Verb,übersetzt,übersetzte,hat übersetzt,to translate
+3626,B1,89,Ü,main,Übersetzer,der,-,Noun,,,,translator (male)
+3627,B1,89,Ü,main,Übersetzerin,die,-nen,Noun,,,,translator (female)
+3628,B1,89,Ü,main,Übersetzung,die,-en,Noun,,,,translation
+3629,B1,89,Ü,main,Überstunde,die,-n,Noun,,,,overtime
+3630,B1,89,Ü,main,über,,,Other,,,,about / over (artifact)
+3631,B1,89,Ü,main,übertreiben,,,Verb,übertreibt,übertrieb,hat übertrieben,to exaggerate
+3632,B1,89,Ü,main,überweisen,,,Verb,überweist,überwies,hat überwiesen,to transfer (money)
+3633,B1,89,Ü,main,Überweisung,die,- en1.,Noun,,,,bank transfer
+3634,B1,89,M,main,meine,,,Other,,,,my (artifact)
+3635,B1,89,G,main,gehen,,,Verb,,,,to go (artifact)
+3636,B1,89,U,main,um,,,Other,,,,around / at (artifact)
+3637,B1,89,M,main,machen,,,Verb,,,,to make (artifact)
+3638,B1,89,A,main,auf,,,Other,,,,on / at (artifact)
+3639,B1,89,S,main,schöne,,,Other,,,,beautiful (artifact)
+3640,B1,89,D,main,dann,,,Other,,,,then (artifact)
+3641,B1,89,S,main,sind,,,Other,,,,are (artifact)
+3642,B1,89,A,main,auch,,,Other,,,,also (artifact)
+3643,B1,89,Ü,main,übernachtet,,,Other,,,,stayed overnight (artifact)
+3644,B1,89,T,main,tung,,,Other,,,,tung (artifact)
+3645,B1,89,R,main,richtig,,,Other,,,,right / correct (artifact)
+3646,B1,89,Ü,main,überqueren,,,Verb,,,,"to cross (a road, artifact)"
+3647,B1,89,D,main,den,,,Verb,,,,the (artifact)
+3648,B1,89,Z,main,zum,,,Other,,,,to the (artifact)
+3649,B1,89,Ü,main,übersetzen?Meine,,,Other,,,,to translate (artifact)
+3650,B1,89,A,main,arbeiten,,,Verb,,,,to work (artifact)
+3651,B1,89,G,main,gut,,,Other,,,,good (artifact)
+3652,B1,89,M,main,man,,,Other,,,,"one / you (impersonal, artifact)"
+3653,B1,89,Ü,main,überwiesen,,,Verb,,,,transferred (artifact)
+3654,B1,89,B,main,bezahlen,,,Verb,,,,to pay (artifact)
+3655,B1,89,W,main,weisung,,,Other,,,,transfer (artifact)
+3656,B1,90,U,main,Universität,die,-en,Noun,,,,university
+3657,B1,90,U,main,unten,,,Verb,,,,below / downstairs
+3658,B1,90,U,main,unter,,,Other,,,,under / below / among
+3659,B1,90,U,main,unter,,,Other,,,,under / below (artifact)
+3660,B1,90,U,main,unterbrechen,,,Verb,unterbricht,unterbrach,hat unterbrochen,to interrupt
+3661,B1,90,U,main,unterhalten,,,Verb,unter-,hält,hat unterhalten,to entertain / to converse
+3662,B1,90,U,main,Unterhaltung,die,-en,Noun,,,,entertainment / conversation
+3663,B1,90,U,main,Unterkunft,die,¨-e,Noun,,,,accommodation
+3664,B1,90,U,main,Unterlagen,die,,Noun,,,,documents / files
+3665,B1,90,U,main,unterlassen,,,Verb,unterlässt,unterließ,hat unterlassen,to refrain from / to omit
+3666,B1,90,U,main,unternehmen,,,Verb,immt,unternahm,hat unternommen,to undertake / to do
+3667,B1,90,U,main,Unternehmer,der,-,Noun,,,,entrepreneur (male)
+3668,B1,90,U,main,Unternehmerin,die,-nen,Noun,,,,entrepreneur (female)
+3669,B1,90,U,main,unterrichten,,,Verb,unterrichtet,unterrichtete,hat unterrichtet,to teach
+3670,B1,90,U,main,Unterricht,der,,Noun,,,,lesson / class
+3671,B1,90,U,main,untersagt,,,Other,,,,prohibited / forbidden
+3672,B1,90,U,main,unterscheiden,,,Verb,unter-,scheidet,hat unterschie,to differentiate / to distinguish
+3673,B1,90,U,main,Unterschied,der,"-eumsteigen, steigt um,stieg um, ist umgestiegen",Noun,,,,difference
+3674,B1,90,U,main,umtauschen,,,Verb,tauscht um,tauschte um,hat umgetauscht,to exchange / to swap
+3675,B1,90,U,main,Umtausch,der,¨-e,Noun,,,,exchange
+3676,B1,90,U,main,Umwelt,die,,Noun,,,,environment
+3677,B1,90,U,main,Umweltschutz,der,,Noun,,,,environmental protection
+3678,B1,90,U,main,Umweltver-,die,,Noun,,,,environmental pollution
+3679,B1,90,U,main,umziehen,,,Verb,zieht um,zogum,ist umgezogen,to move (residence)
+3680,B1,90,U,main,Umzug,der,¨-e,Noun,,,,move / relocation
+3681,B1,90,U,main,un,,,Other,,,,un (artifact)
+3682,B1,90,U,main,unbedingt,,,Other,,,,absolutely / definitely
+3683,B1,90,U,main,und,,,Other,,,,and (artifact)
+3684,B1,90,U,main,Unfall,der,¨-e,Noun,,,,accident
+3685,B1,90,U,main,ungefähr,,,Other,,,,approximately / about
+3686,B1,90,U,main,ungewöhnlich,,,Other,,,,unusual
+3687,B1,90,M,main,man,,,Other,,,,"one / you (impersonal, artifact)"
+3688,B1,90,U,main,unten,,,Verb,,,,below / downstairs (artifact)
+3689,B1,90,W,main,wichtige,,,Other,,,,important (artifact)
+3690,B1,90,S,main,spreche,,,Other,,,,speak (artifact)
+3691,B1,90,U,main,unterhalten,,,Verb,,,,to entertain / converse (artifact)
+3692,B1,90,U,main,unterhalten.Wir,,,Other,,,,entertain / we (artifact)
+3693,B1,90,U,main,und,,,Other,,,,and (artifact)
+3694,B1,90,U,main,und,,,Other,,,,and (artifact)
+3695,B1,90,P,main,Post,der,,Noun,,,,post (artifact)
+3696,B1,90,T,main,terlassen,,,Verb,,,,left / omitted (artifact)
+3697,B1,90,U,main,unternehmen,,,Verb,,,,to undertake (artifact)
+3698,B1,90,B,main,bis,,,Other,,,,until (artifact)
+3699,B1,90,U,main,umsonst,,,Other,,,,for free / gratis
+3700,B1,90,W,main,weiter,,,Other,,,,further / forward (artifact)
+3701,B1,90,U,main,umgezogen,,,Verb,,,,moved (artifact)
+3702,B1,90,M,main,mich,,,Other,,,,me (artifact)
+3703,B1,90,E,main,echen,,,Verb,,,,speak (artifact)
+3704,B1,90,A,main,aber,,,Other,,,,but (artifact)
+3705,B1,90,U,main,unheimlich,,,Other,,,,eerie / uncanny
+3706,B1,91,V,main,Vase,die,-n,Noun,,,,vase
+3707,B1,91,V,main,Vater,der,¨-,Noun,,,,father
+3708,B1,91,V,main,verabreden,,,Verb,verabredet,verabredete,hat verabredet,to arrange to meet
+3709,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact)
+3710,B1,91,V,main,Verabredung,die,-en,Noun,,,,appointment / date
+3711,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,to say goodbye
+3712,B1,91,A,main,Abschied,der,-e,Noun,,,,farewell / goodbye
+3713,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,to change
+3714,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,event
+3715,B1,91,V,main,Verantwortung,die,,Noun,,,,responsibility
+3716,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,to improve
+3717,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,to forbid / to prohibit
+3718,B1,91,V,main,Verbot,das,-e,Noun,,,,ban / prohibition
+3719,B1,91,V,main,verboten,,,Verb,,,,forbidden / prohibited
+3720,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,to connect / to link
+3721,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,to sign (artifact)
+3722,B1,91,U,main,Unterschrift,die,-en,Noun,,,,signature
+3723,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,to underline
+3724,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,to support
+3725,B1,91,U,main,Unterstützung,die,-en,Noun,,,,support
+3726,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,to examine / to investigate
+3727,B1,91,U,main,Untersuchung,die,-en,Noun,,,,examination / investigation
+3728,B1,91,U,main,unterwegs,,,Other,,,,on the way / traveling
+3729,B1,91,U,main,Urkunde,die,-n,Noun,,,,document / certificate
+3730,B1,91,U,main,Urlaub,der,-e,Noun,,,,vacation / holiday
+3731,B1,91,U,main,Ursache,die,-n,Noun,,,,cause / reason
+3732,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,to cause
+3733,B1,91,U,main,ursprünglich,,,Other,,,,originally
+3734,B1,91,U,main,Urteil,das,,Noun,,,,verdict / judgment
+3735,B1,91,L,main,liebsten,,,Verb,,,,best (artifact)
+3736,B1,91,Z,main,zur,,,Other,,,,to the (artifact)
+3737,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact)
+3738,B1,91,B,main,bin,,,Other,,,,am (artifact)
+3739,B1,91,M,main,mit,,,Other,,,,with (artifact)
+3740,B1,91,N,main,nett,,,Other,,,,nice (artifact)
+3741,B1,91,V,main,verabschieden,,,Verb,,,,to say goodbye (artifact)
+3742,B1,91,F,main,fiel,,,Other,,,,fell (artifact)
+3743,B1,91,S,main,sen,,,Verb,,,,sen (artifact)
+3744,B1,91,V,main,verbessert,,,Other,,,,improved (artifact)
+3745,B1,91,V,main,verboten,,,Verb,,,,forbidden (artifact)
+3746,B1,91,R,main,rechts,,,Other,,,,"right (direction, artifact)"
+3747,B1,91,U,main,unterstreichen,,,Verb,,,,to underline (artifact)
+3748,B1,91,K,main,können,,,Verb,,,,to be able to (artifact)
+3749,B1,91,L,main,lassen,,,Verb,,,,to let / to leave (artifact)
+3750,B1,91,A,main,arte,,,Other,,,,arte (artifact)
+3751,B1,91,K,main,komme,,,Other,,,,come (artifact)
+3752,B1,91,E,main,essen,,,Verb,,,,to eat (artifact)
+3753,B1,91,B,main,bekommen,,,Verb,,,,to get / to receive (artifact)
+3754,B1,91,H,main,hart,,,Other,,,,hard / tough (artifact)
+3755,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased
+3756,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,to enlarge / to expand
+3757,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,to arrest
+3758,B1,92,V,main,Verhalten,das,,Noun,,,,behavior / conduct
+3759,B1,92,V,main,Verhältnis,das,-se,Noun,,,,relationship / ratio
+3760,B1,92,V,main,verheiratet,,,Other,,,,married
+3761,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,to prevent
+3762,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,to sell
+3763,B1,92,V,main,Verkäufer,der,-die,Noun,,,,salesperson (male)
+3764,B1,92,V,main,Verkehr,der,,Noun,,,,traffic
+3765,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,means of transportation
+3766,B1,92,V,main,Verlag,der,,Noun,,,,publisher / publishing house
+3767,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,to extend / to lengthen
+3768,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,to leave / to abandon
+3769,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,to use up / to consume
+3770,B1,92,V,main,Verbrecher,der,-,Noun,,,,criminal / offender (male)
+3771,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,criminal / offender (female)
+3772,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,to burn
+3773,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,to spend (time)
+3774,B1,92,V,main,Verdacht,der,,Noun,,,,suspicion
+3775,B1,92,V,main,verdächtig,,,Other,,,,suspicious
+3776,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,to earn
+3777,B1,92,V,main,Verein,der,-e,Noun,,,,club / association
+3778,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,to arrange / to agree on
+3779,B1,92,V,main,Vergangenheitvergeblich,die,,Noun,,,,past / in vain (artifact)
+3780,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,to forget
+3781,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,to compare
+3782,B1,92,V,main,Vergleich,der,-e,Noun,,,,comparison
+3783,B1,92,B,main,beim,,,Other,,,,at the (artifact)
+3784,B1,92,H,main,herein,,,Other,,,,in / inside (artifact)
+3785,B1,92,M,main,merkwürdig,,,Other,,,,strange / odd
+3786,B1,92,S,main,schwierigen,,,Verb,,,,difficult (artifact)
+3787,B1,92,M,main,meinen,,,Verb,,,,to mean / to think (artifact)
+3788,B1,92,V,main,verheiratet,,,Other,,,,married (artifact)
+3789,B1,92,V,main,verhindern,,,Verb,,,,to prevent (artifact)
+3790,B1,92,H,main,helfen,,,Verb,,,,to help (artifact)
+3791,B1,92,M,main,mit,,,Other,,,,with (artifact)
+3792,B1,92,V,main,verlangt,,,Other,,,,demanded (artifact)
+3793,B1,92,L,main,lassen,,,Verb,,,,to let / to leave (artifact)
+3794,B1,92,H,main,helfe,,,Other,,,,help (artifact)
+3795,B1,92,D,main,direkt,,,Other,,,,direct (artifact)
+3796,B1,92,V,main,verhaftet,,,Other,,,,arrested (artifact)
+3797,B1,92,V,main,verbrannt,,,Other,,,,burned (artifact)
+3798,B1,92,I,main,ich,,,Other,,,,I (artifact)
+3799,B1,92,G,main,gesehen,,,Verb,,,,seen (artifact)
+3800,B1,92,D,main,dient,,,Other,,,,serves (artifact)
+3801,B1,92,D,main,diesem,,,Other,,,,"this (dative, artifact)"
+3802,B1,92,A,main,anzurufen,,,Verb,,,,to call (artifact)
+3803,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased (artifact)
+3804,B1,93,V,main,verpflichtet,,,Other,,,,obligated / required
+3805,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,to betray / to reveal
+3806,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,to travel / to go on a trip
+3807,B1,93,V,main,verrückt,,,Other,,,,crazy / mad
+3808,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,meeting / assembly
+3809,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,to postpone / to shift
+3810,B1,93,V,main,verschieden,,,Verb,,,,different / various
+3811,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,to prescribe (artifact)
+3812,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,to disappear
+3813,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,to insure / to assure
+3814,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,health insurance card
+3815,B1,93,V,main,Versicherung,die,-en,Noun,,,,insurance
+3816,B1,93,V,main,Verspätung,die,-en,Noun,,,,delay
+3817,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,to promise
+3818,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,to injure / to hurt
+3819,B1,93,V,main,Verletzung,die,-en,Noun,,,,injury
+3820,B1,93,V,main,verliebt,,,Other,,,,in love
+3821,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,to lose
+3822,B1,93,V,main,Verlierer,der,-,Noun,,,,loser (male)
+3823,B1,93,V,main,Verliererin,die,-nen,Noun,,,,loser (female)
+3824,B1,93,V,main,Verlust,der,-e,Noun,,,,loss
+3825,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,to avoid
+3826,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,to rent out
+3827,B1,93,V,main,Vermieter,der,-,Noun,,,,landlord
+3828,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,landlady
+3829,B1,93,V,main,Vermietung,die,-en,Noun,,,,rental
+3830,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,to miss
+3831,B1,93,V,main,Vermittlung,die,-en,Noun,,,,placement / mediation
+3832,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,to suspect / to assume
+3833,B1,93,V,main,vermutlich,,,Other,,,,presumably / probably
+3834,B1,93,V,main,vernünftig,,,Other,,,,reasonable / sensible
+3835,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,to pack / to wrap
+3836,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,to miss / to fail to catch
+3837,B1,93,M,main,melden,,,Verb,,,,to report / to register
+3838,B1,93,I,main,ist,,,Other,,,,is (artifact)
+3839,B1,93,V,main,versäumt,,,Other,,,,missed (artifact)
+3840,B1,93,V,main,verschieben,,,Verb,,,,to postpone (artifact)
+3841,B1,93,V,main,verschieden,,,Verb,,,,different / various (artifact)
+3842,B1,93,N,main,nen,,,Verb,,,,nen (artifact)
+3843,B1,93,V,main,verschrieben,,,Verb,,,,prescribed (artifact)
+3844,B1,93,D,main,du,,,Other,,,,you (artifact)
+3845,B1,93,S,main,sicherung,,,Other,,,,insurance (artifact)
+3846,B1,93,T,main,tung,,,Other,,,,tung (artifact)
+3847,B1,93,M,main,mich,,,Other,,,,me (artifact)
+3848,B1,93,A,main,asche,,,Other,,,,asche (artifact)
+3849,B1,93,S,main,sehr,,,Other,,,,very (artifact)
+3850,B1,93,V,main,vermeiden,,,Verb,,,,to avoid (artifact)
+3851,B1,93,V,main,vermieten,,,Verb,,,,to rent out (artifact)
+3852,B1,93,K,main,kann,,,Other,,,,can (artifact)
+3853,B1,93,V,main,Vermittlung,der,,Noun,,,,placement / mediation
+3854,B1,93,F,main,fragen,,,Verb,,,,to ask (artifact)
+3855,B1,93,V,main,von,,,Other,,,,from / of (artifact)
+3856,B1,93,K,main,kommen,,,Verb,,,,to come (artifact)
+3857,B1,93,V,main,verpasst,,,Other,,,,missed (artifact)
+3858,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,to forgive / to pardon
+3859,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,to give up / to do without
+3860,B1,94,V,main,Video,das,-s,Noun,,,,video
+3861,B1,94,V,main,viel/viele,,,Other,,,,much / many
+3862,B1,94,V,main,vielleicht,,,Other,,,,maybe / perhaps
+3863,B1,94,V,main,Viertel,das,-,Noun,,,,quarter
+3864,B1,94,V,main,virtuell,,,Other,,,,virtual
+3865,B1,94,V,main,Virus,der,,Noun,,,,virus
+3866,B1,94,V,main,Vitamin,das,-e,Noun,,,,vitamin
+3867,B1,94,V,main,voll,,,Other,,,,full / complete
+3868,B1,94,V,main,Vollzeit,die,,Noun,,,,full-time
+3869,B1,94,V,main,völligvondas,,,Other,,,,completely / from the (artifact)
+3870,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,to hide
+3871,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,to understand
+3872,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,to try / to attempt
+3873,B1,94,V,main,Versuch,der,-e,Noun,,,,attempt / try
+3874,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,to distribute
+3875,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,contract
+3876,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,to trust
+3877,B1,94,V,main,Vertrauen,das,,Noun,,,,trust / confidence
+3878,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,to represent
+3879,B1,94,V,main,Vertreter,der,-,Noun,,,,representative (male)
+3880,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,representative (female)
+3881,B1,94,V,main,Vertretung,die,-en,Noun,,,,representation / deputy
+3882,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,to convict / to sentence
+3883,B1,94,V,main,Verwaltung,die,-en,Noun,,,,administration
+3884,B1,94,V,main,verwandt,,,Other,,,,related
+3885,B1,94,V,main,Verwandte,der,-n,Noun,,,,relative (male)
+3886,B1,94,V,main,Verwandte,die,-n,Noun,,,,relative (female)
+3887,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,to mix up / to confuse
+3888,B1,94,K,main,können,,,Verb,,,,to be able to (artifact)
+3889,B1,94,A,main,aufgenommen,,,Verb,,,,recorded (artifact)
+3890,B1,94,N,main,noch,,,Other,,,,still / yet (artifact)
+3891,B1,94,V,main,virtuellen,,,Verb,,,,virtual (artifact)
+3892,B1,94,M,main,meinem,,,Other,,,,my (artifact)
+3893,B1,94,G,main,geben,,,Verb,,,,to give (artifact)
+3894,B1,94,E,main,essen,,,Verb,,,,to eat (artifact)
+3895,B1,94,I,main,immer,,,Other,,,,always (artifact)
+3896,B1,94,V,main,vollen,,,Verb,,,,full (artifact)
+3897,B1,94,H,main,heute?Wir,,,Other,,,,today (artifact)
+3898,B1,94,V,main,versteckt,,,Other,,,,hidden (artifact)
+3899,B1,94,S,main,sehr,,,Other,,,,very (artifact)
+3900,B1,94,Z,main,zu,,,Other,,,,to / too (artifact)
+3901,B1,94,S,main,suche,,,Other,,,,search (artifact)
+3902,B1,94,O,main,ohne,,,Other,,,,without (artifact)
+3903,B1,94,V,main,verteilen,,,Verb,,,,to distribute (artifact)
+3904,B1,94,S,main,schreiben,,,Verb,,,,to write (artifact)
+3905,B1,94,M,main,machen,,,Verb,,,,to make (artifact)
+3906,B1,94,I,main,ich,,,Other,,,,I (artifact)
+3907,B1,94,E,main,eterin,,,Other,,,,eterin (artifact)
+3908,B1,94,J,main,jemandem,,,Other,,,,someone (artifact)
+3909,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,to read aloud
+3910,B1,95,V,main,Vorort,der,-e,Noun,,,,suburb / outskirts
+3911,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,to suggest / to propose
+3912,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,suggestion / proposal
+3913,B1,95,V,main,Vorschrift,die,-en,Noun,,,,regulation / rule
+3914,B1,95,V,main,Vorsicht,die,,Noun,,,,caution / care
+3915,B1,95,V,main,vorsichtig,,,Other,,,,careful / cautious
+3916,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,to introduce / to imagine
+3917,B1,95,V,main,Vorstellung,die,-en,Noun,,,,presentation / performance / idea
+3918,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,job interview
+3919,B1,95,V,main,Vorteil,der,-e,Noun,,,,advantage
+3920,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,lecture / talk
+3921,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,area code / dialing code
+3922,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,accusation / reproach
+3923,B1,95,V,main,vor,,,Other,,,,before / in front of / ago
+3924,B1,95,V,main,voraus,,,Other,,,,ahead / in advance
+3925,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,prerequisite / requirement
+3926,B1,95,V,main,voraussichtlich,,,Other,,,,probably / expected
+3927,B1,95,V,main,vorbei/vorbei,,,Other,,,,past / over
+3928,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,to prepare
+3929,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,preparation
+3930,B1,95,V,main,vorder,,,Other,,,,front (artifact)
+3931,B1,95,V,main,Vorfahrt,die,,Noun,,,,right of way
+3932,B1,95,V,main,vorgesternvorhaben,,,Verb,,,hat vor,the day before yesterday / to plan
+3933,B1,95,V,main,vorher,,,Other,,,,before / previously
+3934,B1,95,V,main,vorhinvorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,a moment ago / to occur
+3935,B1,95,W,main,wohne,,,Other,,,,live (artifact)
+3936,B1,95,N,main,noch,,,Other,,,,still / yet (artifact)
+3937,B1,95,M,main,machen,,,Verb,,,,to make (artifact)
+3938,B1,95,B,main,Benutzen,das,,Noun,,,,use / usage
+3939,B1,95,G,main,glatt,,,Other,,,,smooth / slippery (artifact)
+3940,B1,95,N,main,nicht,,,Other,,,,not (artifact)
+3941,B1,95,G,main,gespräch,,,Other,,,,conversation (artifact)
+3942,B1,95,D,main,dass,,,Other,,,,that (artifact)
+3943,B1,95,E,main,ein,,,Other,,,,a / one (artifact)
+3944,B1,95,G,main,geschlossen,,,Verb,,,,closed (artifact)
+3945,B1,95,G,main,gehört,,,Other,,,,heard (artifact)
+3946,B1,95,G,main,gekommen,,,Verb,,,,come (artifact)
+3947,B1,95,S,main,schlafen,,,Verb,,,,to sleep (artifact)
+3948,B1,95,Z,main,zung,,,Other,,,,zung (artifact)
+3949,B1,95,V,main,vorbei,,,Other,,,,past / over (artifact)
+3950,B1,95,P,main,paar,,,Other,,,,a few (artifact)
+3951,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact)
+3952,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact)
+3953,B1,95,V,main,vor?Ich,,,Other,,,,before (artifact)
+3954,B1,95,I,main,ich,,,Other,,,,I (artifact)
+3955,B1,95,S,main,solls,,,Other,,,,should (artifact)
+3956,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise
+3957,B1,96,W,main,warm,,,Other,,,,warm
+3958,B1,96,W,main,Wärme,die,,Noun,,,,warmth / heat
+3959,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,to warn
+3960,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,to wait
+3961,B1,96,W,main,warum,,,Other,,,,why
+3962,B1,96,W,main,was,,,Other,,,,what
+3963,B1,96,W,main,was,,,Other,,,,what (artifact)
+3964,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,to wash
+3965,B1,96,W,main,Wäsche,die,,Noun,,,,laundry / washing
+3966,B1,96,W,main,Waschmittel,das,-,Noun,,,,laundry detergent
+3967,B1,96,W,main,Wasser,das,,Noun,,,,water
+3968,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,to change / to exchange
+3969,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,to wake up
+3970,B1,96,W,main,Wecker,der,,Noun,,,,alarm clock
+3971,B1,96,W,main,waagerecht,,,Other,,,,horizontal
+3972,B1,96,W,main,wachwachsen,,,Verb,wächst,wuchs,ist gewachsen,awake / to grow
+3973,B1,96,W,main,Wagen,der,-,Noun,,,,car / vehicle / cart
+3974,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,to choose / to dial
+3975,B1,96,W,main,Wahl,die,-en,Noun,,,,choice / election
+3976,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / mad / incredibly
+3977,B1,96,W,main,wahr,,,Other,,,,true
+3978,B1,96,W,main,Wahrheit,die,-en,Noun,,,,truth
+3979,B1,96,W,main,während,,,Other,,,,during / while
+3980,B1,96,W,main,wahrscheinlich,,,Other,,,,probably / likely
+3981,B1,96,W,main,Wald,der,¨-er,Noun,,,,forest / woods
+3982,B1,96,W,main,Wand,die,¨-e,Noun,,,,wall
+3983,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,to hike / to wander
+3984,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,hike
+3985,B1,96,W,main,warmen,,,Verb,,,,warm (artifact)
+3986,B1,96,I,main,ist,,,Other,,,,is (artifact)
+3987,B1,96,G,main,gewaschen,,,Verb,,,,washed (artifact)
+3988,B1,96,A,main,aufhängen,,,Verb,,,,to hang up
+3989,B1,96,H,main,hier,,,Other,,,,here (artifact)
+3990,B1,96,S,main,sechs,,,Other,,,,six (artifact)
+3991,B1,96,J,main,jetzt,,,Other,,,,now (artifact)
+3992,B1,96,U,main,und,,,Other,,,,and (artifact)
+3993,B1,96,S,main,statt,,,Other,,,,instead of (artifact)
+3994,B1,96,E,main,es,,,Other,,,,it (artifact)
+3995,B1,96,O,main,oder,,,Other,,,,or (artifact)
+3996,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / incredibly (artifact)
+3997,B1,96,U,main,unsere,,,Other,,,,our (artifact)
+3998,B1,96,N,main,noch,,,Other,,,,still / yet (artifact)
+3999,B1,96,A,main,an,,,Other,,,,on / at (artifact)
+4000,B1,96,H,main,hört,,,Other,,,,hears / listens (artifact)
 4001,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,
 4002,B1,97,W,main,wenig/wenige,,,Other,,,,
 4003,B1,97,W,main,wenigstens,,,Other,,,,
