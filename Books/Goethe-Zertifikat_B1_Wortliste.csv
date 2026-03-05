@@ -3999,252 +3999,252 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3998,B1,96,N,main,noch,,,Other,,,,still / yet (artifact)
 3999,B1,96,A,main,an,,,Other,,,,on / at (artifact)
 4000,B1,96,H,main,hört,,,Other,,,,hears / listens (artifact)
-4001,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,
-4002,B1,97,W,main,wenig/wenige,,,Other,,,,
-4003,B1,97,W,main,wenigstens,,,Other,,,,
-4004,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,
-4005,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,
-4006,B1,97,W,main,Werk,das,-e,Noun,,,,
-4007,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,
-4008,B1,97,W,main,Werkzeug,das,-e,Noun,,,,
-4009,B1,97,W,main,wert,,,Other,,,,
-4010,B1,97,W,main,Wert,der,-e,Noun,,,,
-4011,B1,97,W,main,wertlos,,,Other,,,,
-4012,B1,97,W,main,wertvoll,,,Other,,,,
-4013,B1,97,W,main,weg/weg,,,Other,,,,
-4014,B1,97,W,main,wegen,,,Verb,,,,
-4015,B1,97,W,main,weiblichweich,,,Other,,,,
-4016,B1,97,W,main,weil,,,Other,,,,
-4017,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,
-4018,B1,97,W,main,weitweiter/weiter,,,Other,,,,
-4019,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,
-4020,B1,97,W,main,Welt1.,die,,Noun,,,,
-4021,B1,97,W,main,weltweiten,,,Verb,,,,
-4022,B1,97,A,main,angeboten,,,Verb,,,,
-4023,B1,97,D,main,dürfen,,,Verb,,,,
-4024,B1,97,W,main,wenn,,,Other,,,,
-4025,B1,97,W,main,wirst,,,Other,,,,
-4026,B1,97,V,main,verrückt,,,Other,,,,
-4027,B1,97,G,main,geworfen,,,Verb,,,,
-4028,B1,97,S,main,statt,,,Other,,,,
-4029,B1,97,W,main,wert,,,Other,,,,
-4030,B1,97,V,main,von,,,Other,,,,
-4031,B1,97,L,main,leider,,,Other,,,,
-4032,B1,97,A,main,angenehm,,,Other,,,,
-4033,B1,97,E,main,erklären,,,Verb,,,,
-4034,B1,97,N,main,nicht,,,Other,,,,
-4035,B1,97,B,main,bin,,,Other,,,,
-4036,B1,97,G,main,guten,,,Verb,,,,
-4037,B1,97,N,main,neue,,,Other,,,,
-4038,B1,97,E,main,einfach,,,Other,,,,
-4039,B1,97,R,main,ruhig,,,Other,,,,
-4040,B1,98,W,main,willkommen,,,Verb,,,,
-4041,B1,98,W,main,Wind,der,-e,Noun,,,,
-4042,B1,98,W,main,windig,,,Other,,,,
-4043,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,
-4044,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,
-4045,B1,98,W,main,Wirkung,die,-en,Noun,,,,
-4046,B1,98,W,main,wirklich,,,Other,,,,
-4047,B1,98,W,main,Wirklichkeit,die,,Noun,,,,
-4048,B1,98,W,main,Wirt,der,-edie,Noun,,,,
-4049,B1,98,W,main,Wirtschaft,die,,Noun,,,,
-4050,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,
-4051,B1,98,W,main,Wissen,das,,Noun,,,,
-4052,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,
-4053,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,
-4054,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,
-4055,B1,98,W,main,Witz,der,-e,Noun,,,,
-4056,B1,98,W,main,wo,,,Other,,,,
-4057,B1,98,W,main,Wetter,das,,Noun,,,,
-4058,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,
-4059,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,
-4060,B1,98,W,main,wichtig,,,Other,,,,
-4061,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,
-4062,B1,98,W,main,wie,,,Other,,,,
-4063,B1,98,W,main,wieder/wieder,,,Other,,,,
-4064,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,
-4065,B1,98,W,main,Wiederholung,die,-en,Noun,,,,
-4066,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,
-4067,B1,98,W,main,wild,,,Other,,,,
-4068,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,
-4069,B1,98,W,main,winkten,,,Verb,,,,
-4070,B1,98,M,main,ment,,,Other,,,,
-4071,B1,98,W,main,wirklich,,,Other,,,,
-4072,B1,98,W,main,wirklich,,,Other,,,,
-4073,B1,98,U,main,um,,,Other,,,,
-4074,B1,98,Ü,main,über,,,Other,,,,
-4075,B1,98,V,main,verheiratet,,,Other,,,,
-4076,B1,98,T,main,treffen,,,Verb,,,,
-4077,B1,98,G,main,gelacht,,,Other,,,,
-4078,B1,98,S,main,spät,,,Other,,,,
-4079,B1,98,S,main,schön,,,Other,,,,
-4080,B1,98,G,main,gehört,,,Other,,,,
-4081,B1,98,T,main,trocken,,,Verb,,,,
-4082,B1,98,A,main,aber,,,Other,,,,
-4083,B1,98,S,main,spät,,,Other,,,,
-4084,B1,98,M,main,men,,,Verb,,,,
-4085,B1,98,M,main,möglich,,,Other,,,,
-4086,B1,98,F,main,fragen,,,Verb,,,,
-4087,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,
-4088,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,
-4089,B1,99,W,main,Wurst,die,¨-e,Noun,,,,
-4090,B1,99,W,main,wütend,,,Other,,,,
-4091,B1,99,Z,main,Zahl,die,-en,Noun,,,,
-4092,B1,99,A,main,Anzahl,die,-en,Noun,,,,
-4093,B1,99,Z,main,zahlreich,,,Other,,,,
-4094,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,
-4095,B1,99,Z,main,Zahlung,die,-en,Noun,,,,
-4096,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,
-4097,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,
-4098,B1,99,Z,main,Zahncreme/-pasta,die,,Noun,,,,
-4099,B1,99,Z,main,Zange,die,-n,Noun,,,,
-4100,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,
-4101,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,
-4102,B1,99,W,main,Wohnort,der,-e,Noun,,,,
-4103,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,
-4104,B1,99,W,main,Wohnung,die,-en,Noun,,,,
-4105,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,
-4106,B1,99,W,main,Wolke,die,-n,Noun,,,,
-4107,B1,99,B,main,bewölkt,,,Other,,,,
-4108,B1,99,W,main,Wolle,die,,Noun,,,,
-4109,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,
-4110,B1,99,W,main,worüber,,,Other,,,,
-4111,B1,99,W,main,worum,,,Other,,,,
-4112,B1,99,W,main,Wort,das,¨-er,Noun,,,,
-4113,B1,99,W,main,Wort,das,-e,Noun,,,,
-4114,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,
-4115,B1,99,W,main,Wunde,die,-n,Noun,,,,
-4116,B1,99,W,main,Wunder,das,-,Noun,,,,
-4117,B1,99,W,main,wunderbar1,,,Other,,,,
-4118,B1,99,W,main,war,,,Other,,,,
-4119,B1,99,G,main,gekauft,,,Other,,,,
-4120,B1,99,H,main,hier,,,Other,,,,
-4121,B1,99,F,main,früh,,,Other,,,,
-4122,B1,99,L,main,los,,,Other,,,,
-4123,B1,99,I,main,immer,,,Other,,,,
-4124,B1,99,M,main,musste,,,Other,,,,
-4125,B1,99,S,main,sofort,,,Other,,,,
-4126,B1,99,B,main,brauchst,,,Other,,,,
-4127,B1,99,M,main,mich,,,Other,,,,
-4128,B1,99,G,main,geplant,,,Other,,,,
-4129,B1,99,M,main,möglichst,,,Other,,,,
-4130,B1,99,F,main,fern,,,Verb,,,,
-4131,B1,99,G,main,gesagt,,,Other,,,,
-4132,B1,99,N,main,nachschlagen,,,Verb,,,,
-4133,B1,99,V,main,verbinden,,,Verb,,,,
-4134,B1,99,B,main,bares,,,Other,,,,
-4135,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,
-4136,B1,100,Z,main,Ziel,das,-e,Noun,,,,
-4137,B1,100,Z,main,ziemlich,,,Other,,,,
-4138,B1,100,Z,main,Zigarette,die,-n,Noun,,,,
-4139,B1,100,Z,main,Zimmer,das,-,Noun,,,,
-4140,B1,100,Z,main,Zinsen,die,,Noun,,,,
-4141,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,
-4142,B1,100,Z,main,Zivilstand,der,,Noun,,,,
-4143,B1,100,L,main,lienstand,,,Other,,,,
-4144,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,
-4145,B1,100,Z,main,Zone,die,-nder,Noun,,,,
-4146,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,
-4147,B1,100,Z,main,Zuckerdas,der,,Noun,,,,
-4148,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,
-4149,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,
-4150,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,
-4151,B1,100,Z,main,Zeile,die,-n,Noun,,,,
-4152,B1,100,Z,main,Zeit,die,,Noun,,,,
-4153,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,
-4154,B1,100,Z,main,zurzeit,,,Other,,,,
-4155,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,
-4156,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,
-4157,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,
-4158,B1,100,Z,main,zentral,,,Other,,,,
-4159,B1,100,Z,main,Zentrum,das,,Noun,,,,
-4160,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,
-4161,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,
-4162,B1,100,Z,main,Zettel,der,-das,Noun,,,,
-4163,B1,100,Z,main,Zeuge,der,-n,Noun,,,,
-4164,B1,100,Z,main,Zeugin,die,,Noun,,,,
-4165,B1,100,I,main,ins,,,Other,,,,
-4166,B1,100,W,main,warten,,,Verb,,,,
-4167,B1,100,S,main,serviert,,,Other,,,,
-4168,B1,100,M,main,mein,,,Other,,,,
-4169,B1,100,D,main,den,,,Verb,,,,
-4170,B1,100,A,main,ankreuzen,,,Verb,,,,
-4171,B1,100,J,main,jetzt,,,Other,,,,
-4172,B1,100,E,main,eine,,,Other,,,,
-4173,B1,100,N,main,nen,,,Verb,,,,
-4174,B1,100,K,main,kaufen,,,Verb,,,,
-4175,B1,100,G,main,gerade,,,Other,,,,
-4176,B1,100,Z,main,zeige,,,Other,,,,
-4177,B1,100,W,main,weise,,,Other,,,,
-4178,B1,100,N,main,nehmen,,,Verb,,,,
-4179,B1,100,I,main,in,,,Other,,,,
-4180,B1,100,P,main,plätze,,,Other,,,,
-4181,B1,100,B,main,bekomme,,,Other,,,,
-4182,B1,100,M,main,muss,,,Other,,,,
-4183,B1,100,G,main,gemacht,,,Other,,,,
-4184,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,
-4185,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,
-4186,B1,101,Z,main,zurück/zurück,,,Other,,,,
-4187,B1,101,Z,main,zurzeit,,,Other,,,,
-4188,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,
-4189,B1,101,Z,main,zusammen/zusammen,,,Other,,,,
-4190,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,
-4191,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,
-4192,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,
-4193,B1,101,Z,main,zusätzlich,,,Other,,,,
-4194,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,
-4195,B1,101,Z,main,Zuschauer,der,-,Noun,,,,
-4196,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,
-4197,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,
-4198,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,
-4199,B1,101,Z,main,zufällig,,,Other,,,,
-4200,B1,101,Z,main,zufrieden,,,Verb,,,,
-4201,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,
-4202,B1,101,Z,main,zugänglich,,,Other,,,,
-4203,B1,101,Z,main,Zug,der,¨-e,Noun,,,,
-4204,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,
-4205,B1,101,Z,main,Zuhause,das,,Noun,,,,
-4206,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,
-4207,B1,101,Z,main,Zuhörer,der,-,Noun,,,,
-4208,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,
-4209,B1,101,Z,main,Zukunft,die,,Noun,,,,
-4210,B1,101,Z,main,zukünftig,,,Other,,,,
-4211,B1,101,Z,main,zuletzt,,,Other,,,,
-4212,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,
-4213,B1,101,Z,main,zumindest,,,Other,,,,
-4214,B1,101,Z,main,zunächstIch,,,Other,,,,
-4215,B1,101,M,main,men,,,Verb,,,,
-4216,B1,101,K,main,komme,,,Other,,,,
-4217,B1,101,U,main,und,,,Other,,,,
-4218,B1,101,E,main,eingeladen,,,Verb,,,,
-4219,B1,101,G,main,gespielt,,,Other,,,,
-4220,B1,101,G,main,getrennt,,,Other,,,,
-4221,B1,101,S,main,schreiben,,,Verb,,,,
-4222,B1,101,Z,main,zusammenfassen,,,Verb,,,,
-4223,B1,101,D,main,diesen,,,Verb,,,,
-4224,B1,101,Z,main,zusätzlich,,,Other,,,,
-4225,B1,101,S,main,schaue,,,Other,,,,
-4226,B1,101,G,main,gute,,,Other,,,,
-4227,B1,101,I,main,ihr,,,Other,,,,
-4228,B1,101,G,main,gefallen,,,Verb,,,,
-4229,B1,101,G,main,getroffen,,,Verb,,,,
-4230,B1,101,B,main,bekommen,,,Verb,,,,
-4231,B1,101,S,main,schwierig,,,Other,,,,
-4232,B1,101,E,main,en,,,Other,,,,
-4233,B1,101,G,main,gesehen,,,Verb,,,,
-4234,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,
-4235,B1,102,Z,main,Zweifel,der,-,Noun,,,,
-4236,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,
-4237,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,
-4238,B1,102,Z,main,zu,,,Other,,,,
-4239,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,
-4240,B1,102,Z,main,zuständig,,,Other,,,,
-4241,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,
-4242,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,
-4243,B1,102,Z,main,Zutaten,die,,Noun,,,,
-4244,B1,102,H,main,haben,,,Verb,,,,
-4245,B1,102,U,main,umzukehren,,,Verb,,,,
-4246,B1,102,B,main,beiden,,,Verb,,,,
-4247,B1,102,U,main,und,,,Other,,,,
-4248,B1,102,Z,main,zu,,,Other,,,,
-4249,B1,102,D,main,diesen,,,Verb,,,,
+4001,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,to turn / to refer
+4002,B1,97,W,main,wenig/wenige,,,Other,,,,little / few
+4003,B1,97,W,main,wenigstens,,,Other,,,,at least
+4004,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,to become
+4005,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,to throw
+4006,B1,97,W,main,Werk,das,-e,Noun,,,,work / opus
+4007,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,workshop / garage
+4008,B1,97,W,main,Werkzeug,das,-e,Noun,,,,tool
+4009,B1,97,W,main,wert,,,Other,,,,worth / valued
+4010,B1,97,W,main,Wert,der,-e,Noun,,,,value / worth
+4011,B1,97,W,main,wertlos,,,Other,,,,worthless
+4012,B1,97,W,main,wertvoll,,,Other,,,,valuable
+4013,B1,97,W,main,weg/weg,,,Other,,,,away / gone
+4014,B1,97,W,main,wegen,,,Verb,,,,because of / due to
+4015,B1,97,W,main,weiblichweich,,,Other,,,,female / soft (artifact)
+4016,B1,97,W,main,weil,,,Other,,,,because
+4017,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,wine
+4018,B1,97,W,main,weitweiter/weiter,,,Other,,,,far / further / farther
+4019,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,further education / continuing education
+4020,B1,97,W,main,Welt1.,die,,Noun,,,,world
+4021,B1,97,W,main,weltweiten,,,Verb,,,,worldwide (artifact)
+4022,B1,97,A,main,angeboten,,,Verb,,,,offered (artifact)
+4023,B1,97,D,main,dürfen,,,Verb,,,,may / to be allowed to (artifact)
+4024,B1,97,W,main,wenn,,,Other,,,,when / if (artifact)
+4025,B1,97,W,main,wirst,,,Other,,,,will become (artifact)
+4026,B1,97,V,main,verrückt,,,Other,,,,crazy / mad (artifact)
+4027,B1,97,G,main,geworfen,,,Verb,,,,thrown (artifact)
+4028,B1,97,S,main,statt,,,Other,,,,instead of (artifact)
+4029,B1,97,W,main,wert,,,Other,,,,worth (artifact)
+4030,B1,97,V,main,von,,,Other,,,,from / of (artifact)
+4031,B1,97,L,main,leider,,,Other,,,,unfortunately (artifact)
+4032,B1,97,A,main,angenehm,,,Other,,,,pleasant / comfortable (artifact)
+4033,B1,97,E,main,erklären,,,Verb,,,,to explain (artifact)
+4034,B1,97,N,main,nicht,,,Other,,,,not (artifact)
+4035,B1,97,B,main,bin,,,Other,,,,am (artifact)
+4036,B1,97,G,main,guten,,,Verb,,,,good (artifact)
+4037,B1,97,N,main,neue,,,Other,,,,new (artifact)
+4038,B1,97,E,main,einfach,,,Other,,,,simple / just (artifact)
+4039,B1,97,R,main,ruhig,,,Other,,,,quiet / calm (artifact)
+4040,B1,98,W,main,willkommen,,,Verb,,,,welcome
+4041,B1,98,W,main,Wind,der,-e,Noun,,,,wind
+4042,B1,98,W,main,windig,,,Other,,,,windy
+4043,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,to wave
+4044,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,to work / to have an effect
+4045,B1,98,W,main,Wirkung,die,-en,Noun,,,,effect / impact
+4046,B1,98,W,main,wirklich,,,Other,,,,really / truly
+4047,B1,98,W,main,Wirklichkeit,die,,Noun,,,,reality
+4048,B1,98,W,main,Wirt,der,-edie,Noun,,,,innkeeper / host
+4049,B1,98,W,main,Wirtschaft,die,,Noun,,,,economy / business
+4050,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,to know
+4051,B1,98,W,main,Wissen,das,,Noun,,,,knowledge
+4052,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,science
+4053,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,scientist (male)
+4054,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,scientist (female)
+4055,B1,98,W,main,Witz,der,-e,Noun,,,,joke
+4056,B1,98,W,main,wo,,,Other,,,,where
+4057,B1,98,W,main,Wetter,das,,Noun,,,,weather
+4058,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,weather report
+4059,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,weather forecast
+4060,B1,98,W,main,wichtig,,,Other,,,,important
+4061,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,to contradict / to object
+4062,B1,98,W,main,wie,,,Other,,,,how / as
+4063,B1,98,W,main,wieder/wieder,,,Other,,,,again
+4064,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,to repeat
+4065,B1,98,W,main,Wiederholung,die,-en,Noun,,,,repetition
+4066,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,to weigh
+4067,B1,98,W,main,wild,,,Other,,,,wild
+4068,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,meadow
+4069,B1,98,W,main,winkten,,,Verb,,,,waved (artifact)
+4070,B1,98,M,main,ment,,,Other,,,,ment (artifact)
+4071,B1,98,W,main,wirklich,,,Other,,,,really (artifact)
+4072,B1,98,W,main,wirklich,,,Other,,,,really (artifact)
+4073,B1,98,U,main,um,,,Other,,,,around / at (artifact)
+4074,B1,98,Ü,main,über,,,Other,,,,about / over (artifact)
+4075,B1,98,V,main,verheiratet,,,Other,,,,married (artifact)
+4076,B1,98,T,main,treffen,,,Verb,,,,to meet (artifact)
+4077,B1,98,G,main,gelacht,,,Other,,,,laughed (artifact)
+4078,B1,98,S,main,spät,,,Other,,,,late (artifact)
+4079,B1,98,S,main,schön,,,Other,,,,beautiful (artifact)
+4080,B1,98,G,main,gehört,,,Other,,,,heard (artifact)
+4081,B1,98,T,main,trocken,,,Verb,,,,dry (artifact)
+4082,B1,98,A,main,aber,,,Other,,,,but (artifact)
+4083,B1,98,S,main,spät,,,Other,,,,late (artifact)
+4084,B1,98,M,main,men,,,Verb,,,,men (artifact)
+4085,B1,98,M,main,möglich,,,Other,,,,possible (artifact)
+4086,B1,98,F,main,fragen,,,Verb,,,,to ask (artifact)
+4087,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,to wish
+4088,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,wish / desire
+4089,B1,99,W,main,Wurst,die,¨-e,Noun,,,,sausage
+4090,B1,99,W,main,wütend,,,Other,,,,angry / furious
+4091,B1,99,Z,main,Zahl,die,-en,Noun,,,,number / figure
+4092,B1,99,A,main,Anzahl,die,-en,Noun,,,,number / quantity
+4093,B1,99,Z,main,zahlreich,,,Other,,,,numerous
+4094,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,to pay
+4095,B1,99,Z,main,Zahlung,die,-en,Noun,,,,payment
+4096,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,to count
+4097,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,tooth
+4098,B1,99,Z,main,Zahncreme/-pasta,die,,Noun,,,,toothpaste
+4099,B1,99,Z,main,Zange,die,-n,Noun,,,,pliers / tongs
+4100,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,sign / symbol
+4101,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,to live / to reside
+4102,B1,99,W,main,Wohnort,der,-e,Noun,,,,place of residence
+4103,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,place of residence / domicile
+4104,B1,99,W,main,Wohnung,die,-en,Noun,,,,apartment / flat
+4105,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,living room
+4106,B1,99,W,main,Wolke,die,-n,Noun,,,,cloud
+4107,B1,99,B,main,bewölkt,,,Other,,,,cloudy / overcast
+4108,B1,99,W,main,Wolle,die,,Noun,,,,wool
+4109,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,to want
+4110,B1,99,W,main,worüber,,,Other,,,,about what
+4111,B1,99,W,main,worum,,,Other,,,,about what / for what
+4112,B1,99,W,main,Wort,das,¨-er,Noun,,,,word
+4113,B1,99,W,main,Wort,das,-e,Noun,,,,word
+4114,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,dictionary
+4115,B1,99,W,main,Wunde,die,-n,Noun,,,,wound
+4116,B1,99,W,main,Wunder,das,-,Noun,,,,miracle / wonder
+4117,B1,99,W,main,wunderbar1,,,Other,,,,wonderful / great
+4118,B1,99,W,main,war,,,Other,,,,was (artifact)
+4119,B1,99,G,main,gekauft,,,Other,,,,bought (artifact)
+4120,B1,99,H,main,hier,,,Other,,,,here (artifact)
+4121,B1,99,F,main,früh,,,Other,,,,early (artifact)
+4122,B1,99,L,main,los,,,Other,,,,off / away (artifact)
+4123,B1,99,I,main,immer,,,Other,,,,always (artifact)
+4124,B1,99,M,main,musste,,,Other,,,,had to (artifact)
+4125,B1,99,S,main,sofort,,,Other,,,,immediately (artifact)
+4126,B1,99,B,main,brauchst,,,Other,,,,need (artifact)
+4127,B1,99,M,main,mich,,,Other,,,,me (artifact)
+4128,B1,99,G,main,geplant,,,Other,,,,planned (artifact)
+4129,B1,99,M,main,möglichst,,,Other,,,,as ... as possible (artifact)
+4130,B1,99,F,main,fern,,,Verb,,,,television (artifact)
+4131,B1,99,G,main,gesagt,,,Other,,,,said (artifact)
+4132,B1,99,N,main,nachschlagen,,,Verb,,,,to look up (artifact)
+4133,B1,99,V,main,verbinden,,,Verb,,,,to connect (artifact)
+4134,B1,99,B,main,bares,,,Other,,,,cash (artifact)
+4135,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,to pull / to move
+4136,B1,100,Z,main,Ziel,das,-e,Noun,,,,goal / destination / aim
+4137,B1,100,Z,main,ziemlich,,,Other,,,,quite / fairly / rather
+4138,B1,100,Z,main,Zigarette,die,-n,Noun,,,,cigarette
+4139,B1,100,Z,main,Zimmer,das,-,Noun,,,,room
+4140,B1,100,Z,main,Zinsen,die,,Noun,,,,interest (financial)
+4141,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,circus
+4142,B1,100,Z,main,Zivilstand,der,,Noun,,,,marital status (Swiss)
+4143,B1,100,L,main,lienstand,,,Other,,,,marital status (artifact)
+4144,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,customs / duty / inch
+4145,B1,100,Z,main,Zone,die,-nder,Noun,,,,zone
+4146,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,to prepare (food)
+4147,B1,100,Z,main,Zuckerdas,der,,Noun,,,,sugar (artifact)
+4148,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,to draw
+4149,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,drawing
+4150,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,to show / to point
+4151,B1,100,Z,main,Zeile,die,-n,Noun,,,,line / row
+4152,B1,100,Z,main,Zeit,die,,Noun,,,,time
+4153,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,point in time / moment
+4154,B1,100,Z,main,zurzeit,,,Other,,,,at the moment / currently
+4155,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,magazine / journal
+4156,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,newspaper
+4157,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,to camp / to go camping
+4158,B1,100,Z,main,zentral,,,Other,,,,central
+4159,B1,100,Z,main,Zentrum,das,,Noun,,,,center / centre
+4160,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,to destroy
+4161,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,certificate
+4162,B1,100,Z,main,Zettel,der,-das,Noun,,,,slip of paper / note
+4163,B1,100,Z,main,Zeuge,der,-n,Noun,,,,witness (male)
+4164,B1,100,Z,main,Zeugin,die,,Noun,,,,witness (female)
+4165,B1,100,I,main,ins,,,Other,,,,into the (artifact)
+4166,B1,100,W,main,warten,,,Verb,,,,to wait (artifact)
+4167,B1,100,S,main,serviert,,,Other,,,,served (artifact)
+4168,B1,100,M,main,mein,,,Other,,,,my (artifact)
+4169,B1,100,D,main,den,,,Verb,,,,the (artifact)
+4170,B1,100,A,main,ankreuzen,,,Verb,,,,to mark / check (artifact)
+4171,B1,100,J,main,jetzt,,,Other,,,,now (artifact)
+4172,B1,100,E,main,eine,,,Other,,,,a / one (artifact)
+4173,B1,100,N,main,nen,,,Verb,,,,nen (artifact)
+4174,B1,100,K,main,kaufen,,,Verb,,,,to buy (artifact)
+4175,B1,100,G,main,gerade,,,Other,,,,straight / just / currently (artifact)
+4176,B1,100,Z,main,zeige,,,Other,,,,show (artifact)
+4177,B1,100,W,main,weise,,,Other,,,,weise (artifact)
+4178,B1,100,N,main,nehmen,,,Verb,,,,to take (artifact)
+4179,B1,100,I,main,in,,,Other,,,,in (artifact)
+4180,B1,100,P,main,plätze,,,Other,,,,places (artifact)
+4181,B1,100,B,main,bekomme,,,Other,,,,receive (artifact)
+4182,B1,100,M,main,muss,,,Other,,,,must (artifact)
+4183,B1,100,G,main,gemacht,,,Other,,,,made (artifact)
+4184,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,match / matchstick
+4185,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,to manage / to cope
+4186,B1,101,Z,main,zurück/zurück,,,Other,,,,back / return
+4187,B1,101,Z,main,zurzeit,,,Other,,,,at the moment / currently
+4188,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,to agree / to accept
+4189,B1,101,Z,main,zusammen/zusammen,,,Other,,,,together
+4190,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,cooperation / teamwork
+4191,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,to summarize
+4192,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,context / connection
+4193,B1,101,Z,main,zusätzlich,,,Other,,,,additional / extra
+4194,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,to watch / to look on
+4195,B1,101,Z,main,Zuschauer,der,-,Noun,,,,spectator (male)
+4196,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,spectator (female)
+4197,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,surcharge / supplement
+4198,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,coincidence / chance
+4199,B1,101,Z,main,zufällig,,,Other,,,,coincidentally / by chance
+4200,B1,101,Z,main,zufrieden,,,Verb,,,,satisfied / content
+4201,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,access / entry
+4202,B1,101,Z,main,zugänglich,,,Other,,,,accessible
+4203,B1,101,Z,main,Zug,der,¨-e,Noun,,,,train
+4204,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,to approach / to proceed
+4205,B1,101,Z,main,Zuhause,das,,Noun,,,,home
+4206,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,to listen
+4207,B1,101,Z,main,Zuhörer,der,-,Noun,,,,listener (male)
+4208,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,listener (female)
+4209,B1,101,Z,main,Zukunft,die,,Noun,,,,future
+4210,B1,101,Z,main,zukünftig,,,Other,,,,future / upcoming
+4211,B1,101,Z,main,zuletzt,,,Other,,,,at last / in the end
+4212,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,to close / to shut
+4213,B1,101,Z,main,zumindest,,,Other,,,,at least
+4214,B1,101,Z,main,zunächstIch,,,Other,,,,first of all / at first
+4215,B1,101,M,main,men,,,Verb,,,,men (artifact)
+4216,B1,101,K,main,komme,,,Other,,,,come (artifact)
+4217,B1,101,U,main,und,,,Other,,,,and (artifact)
+4218,B1,101,E,main,eingeladen,,,Verb,,,,invited (artifact)
+4219,B1,101,G,main,gespielt,,,Other,,,,played (artifact)
+4220,B1,101,G,main,getrennt,,,Other,,,,separated (artifact)
+4221,B1,101,S,main,schreiben,,,Verb,,,,to write (artifact)
+4222,B1,101,Z,main,zusammenfassen,,,Verb,,,,to summarize (artifact)
+4223,B1,101,D,main,diesen,,,Verb,,,,this (artifact)
+4224,B1,101,Z,main,zusätzlich,,,Other,,,,additional (artifact)
+4225,B1,101,S,main,schaue,,,Other,,,,watch (artifact)
+4226,B1,101,G,main,gute,,,Other,,,,good (artifact)
+4227,B1,101,I,main,ihr,,,Other,,,,you (artifact)
+4228,B1,101,G,main,gefallen,,,Verb,,,,liked / fallen (artifact)
+4229,B1,101,G,main,getroffen,,,Verb,,,,met (artifact)
+4230,B1,101,B,main,bekommen,,,Verb,,,,to get / to receive (artifact)
+4231,B1,101,S,main,schwierig,,,Other,,,,difficult (artifact)
+4232,B1,101,E,main,en,,,Other,,,,en (artifact)
+4233,B1,101,G,main,gesehen,,,Verb,,,,seen (artifact)
+4234,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,to doubt
+4235,B1,102,Z,main,Zweifel,der,-,Noun,,,,doubt
+4236,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,onion
+4237,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,to force / to compel
+4238,B1,102,Z,main,zu,,,Other,,,,to / too (artifact)
+4239,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,condition / state
+4240,B1,102,Z,main,zuständig,,,Other,,,,responsible / in charge
+4241,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,to agree / to approve
+4242,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,agreement / approval / consent
+4243,B1,102,Z,main,Zutaten,die,,Noun,,,,ingredients
+4244,B1,102,H,main,haben,,,Verb,,,,to have (artifact)
+4245,B1,102,U,main,umzukehren,,,Verb,,,,to turn around / to reverse
+4246,B1,102,B,main,beiden,,,Verb,,,,both (artifact)
+4247,B1,102,U,main,und,,,Other,,,,and (artifact)
+4248,B1,102,Z,main,zu,,,Other,,,,to / too (artifact)
+4249,B1,102,D,main,diesen,,,Verb,,,,this (artifact)
