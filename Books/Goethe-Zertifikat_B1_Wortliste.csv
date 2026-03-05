@@ -2999,606 +2999,606 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 2998,B1,76,Z,main,zuschauen,,,Verb,,,,to watch / to observe (artifact)
 2999,B1,76,W,main,waren,,,Verb,,,,were (artifact)
 3000,B1,76,M,main,muss,,,Other,,,,must (artifact)
-3001,B1,76,L,main,lassen,,,Verb,,,,
-3002,B1,76,W,main,wechseln,,,Verb,,,,
-3003,B1,76,W,main,wieder,,,Other,,,,
-3004,B1,76,W,main,war,,,Other,,,,
-3005,B1,76,S,main,schenken,,,Verb,,,,
-3006,B1,76,L,main,ladung,,,Other,,,,
-3007,B1,76,G,main,geschickt,,,Other,,,,
-3008,B1,76,G,main,gegangen,,,Verb,,,,
-3009,B1,76,G,main,geschossen,,,Verb,,,,
-3010,B1,76,W,main,wirklich,,,Other,,,,
-3011,B1,76,K,main,kannst,,,Other,,,,
-3012,B1,76,S,main,schaden,,,Verb,,,,
-3013,B1,76,T,main,to,,,Other,,,,
-3014,B1,76,B,main,bereiten,,,Verb,,,,
-3015,B1,76,S,main,schalten,,,Verb,,,,
-3016,B1,76,S,main,schalten,,,Verb,,,,
-3017,B1,76,S,main,scharf,,,Other,,,,
-3018,B1,77,S,main,schlimm,,,Other,,,,
-3019,B1,77,S,main,Schloss,das,¨-er,Noun,,,,
-3020,B1,77,S,main,Schluss,der,,Noun,,,,
-3021,B1,77,S,main,Schlüssel,der,-,Noun,,,,
-3022,B1,77,S,main,schmal,,,Other,,,,
-3023,B1,77,S,main,schmecken,,,Verb,schmeckt,schmeckte,hat geschmeckt,
-3024,B1,77,S,main,Schmerz,der,-en,Noun,,,,
-3025,B1,77,S,main,Schmerzmittel,das,-,Noun,,,,
-3026,B1,77,S,main,schminken,,,Verb,schminkt,schminkte,hat geschminkt,
-3027,B1,77,S,main,Schmuck,der,,Noun,,,,
-3028,B1,77,S,main,Schmutz,der,,Noun,,,,
-3029,B1,77,S,main,schmutzig,,,Other,,,,
-3030,B1,77,V,main,verschmutzen,,,Verb,verschmutzt,verschmutzte,hat verschmutzt,
-3031,B1,77,S,main,Schnee,der,,Noun,,,,
-3032,B1,77,S,main,schneien,,,Verb,es schneit,es,,
-3033,B1,77,S,main,schneiden,,,Verb,schneidet,schnitt,hat geschnitten,
-3034,B1,77,S,main,schimpfen,,,Verb,schimpft,schimpfte,hat geschimpft,
-3035,B1,77,S,main,Schinken,der,-,Noun,,,,
-3036,B1,77,S,main,Schirm,der,-e,Noun,,,,
-3037,B1,77,S,main,schlafen,,,Verb,schläft,schlief,hat geschlafen,
-3038,B1,77,S,main,Schlaf,der,,Noun,,,,
-3039,B1,77,S,main,schlagen,,,Verb,schlägt,schlug,hat geschlagen,
-3040,B1,77,D,main,der/das,,,Other,,,,
-3041,B1,77,S,main,Schlange,die,-n,Noun,,,,
-3042,B1,77,S,main,schlankschlecht,,,Other,,,,
-3043,B1,77,S,main,schließen,,,Verb,schließt,schloss,hat geschlossen7.,
-3044,B1,77,F,main,fertig,,,Other,,,,
-3045,B1,77,S,main,schließlich,,,Other,,,,
-3046,B1,77,B,main,bekommen,,,Verb,,,,
-3047,B1,77,S,main,schließlich,,,Other,,,,
-3048,B1,77,B,main,besichtigt,,,Other,,,,
-3049,B1,77,K,main,klingelt,,,Other,,,,
-3050,B1,77,I,main,ich,,,Other,,,,
-3051,B1,77,K,main,können,,,Verb,,,,
-3052,B1,77,S,main,schlagen,,,Verb,,,,
-3053,B1,77,A,main,aus,,,Other,,,,
-3054,B1,77,K,main,kr,,,Other,,,,
-3055,B1,77,A,main,ank,,,Other,,,,
-3056,B1,77,S,main,schlecht,,,Other,,,,
-3057,B1,77,S,main,schlecht,,,Other,,,,
-3058,B1,77,D,main,dich,,,Other,,,,
-3059,B1,77,G,main,ganz,,,Other,,,,
-3060,B1,77,G,main,geschlossen,,,Verb,,,,
-3061,B1,77,A,main,abschließen,,,Verb,,,,
-3062,B1,78,S,main,schreien,,,Verb,schreit,schrie,hat geschrien,
-3063,B1,78,S,main,Schrift,die,-en,Noun,,,,
-3064,B1,78,S,main,schriftlich,,,Other,,,,
-3065,B1,78,S,main,Schriftsteller,der,-,Noun,,,,
-3066,B1,78,S,main,Schriftstellerin,die,-nen,Noun,,,,
-3067,B1,78,S,main,Schritt,der,-e,Noun,,,,
-3068,B1,78,S,main,Schuh,der,-e,Noun,,,,
-3069,B1,78,S,main,Schuld,die,,Noun,,,,
-3070,B1,78,S,main,schuld,,,Other,,,,
-3071,B1,78,S,main,Schulden,die,,Noun,,,,
-3072,B1,78,S,main,schuldig,,,Other,,,,
-3073,B1,78,S,main,Schule,die,-n,Noun,,,,
-3074,B1,78,S,main,Schularbeit,die,-en,Noun,,,,
-3075,B1,78,S,main,Schüler,der,-,Noun,,,,
-3076,B1,78,S,main,Schülerin,die,-nen,Noun,,,,
-3077,B1,78,S,main,Schulter,die,-n,Noun,,,,
-3078,B1,78,S,main,Schüssel,die,"-nschütteln, schüttelt,",Noun,,,,
-3079,B1,78,S,main,schützen,,,Verb,schützt,schützte,hat geschütztschnell,
-3080,B1,78,S,main,Schnitzel,das,-,Noun,,,,
-3081,B1,78,S,main,Schnupfendie,der,,Noun,,,,
-3082,B1,78,S,main,schon,,,Other,,,,
-3083,B1,78,S,main,schön,,,Other,,,,
-3084,B1,78,S,main,Schrank,der,¨-e,Noun,,,,
-3085,B1,78,S,main,Schreck(en),der,,Noun,,,,
-3086,B1,78,S,main,schrecklich,,,Other,,,,
-3087,B1,78,S,main,schreiben,,,Verb,schreibt,schrieb,hat geschrieben,
-3088,B1,78,A,main,aufschreibenHaben,,,Verb,,,,
-3089,B1,78,S,main,schreien,,,Verb,,,,
-3090,B1,78,G,main,geschrien,,,Verb,,,,
-3091,B1,78,L,main,lesen,,,Verb,,,,
-3092,B1,78,H,main,halben,,,Verb,,,,
-3093,B1,78,S,main,schriftliche,,,Other,,,,
-3094,B1,78,N,main,nicht,,,Other,,,,
-3095,B1,78,N,main,nicht,,,Other,,,,
-3096,B1,78,B,main,bezahlt,,,Other,,,,
-3097,B1,78,B,main,bitte,,,Other,,,,
-3098,B1,78,W,main,wieder,,,Other,,,,
-3099,B1,78,D,main,den,,,Verb,,,,
-3100,B1,78,S,main,schütteln,,,Verb,,,,
-3101,B1,78,M,main,möglich,,,Other,,,,
-3102,B1,78,S,main,schnell,,,Other,,,,
-3103,B1,78,G,main,gegessen,,,Verb,,,,
-3104,B1,78,L,main,lesen,,,Verb,,,,
-3105,B1,78,S,main,sehr,,,Other,,,,
-3106,B1,78,W,main,warten,,,Verb,,,,
-3107,B1,78,S,main,schon,,,Other,,,,
-3108,B1,78,B,main,bleiben,,,Verb,,,,
-3109,B1,78,B,main,bekommen,,,Verb,,,,
-3110,B1,78,M,main,mehr,,,Other,,,,
-3111,B1,78,A,main,aufgeschrieben,,,Verb,,,,
-3112,B1,79,S,main,sehr,,,Other,,,,
-3113,B1,79,S,main,Seife,die,-n,Noun,,,,
-3114,B1,79,S,main,sein,,,Verb,,,ist gewesen,
-3115,B1,79,S,main,seit,,,Other,,,,
-3116,B1,79,S,main,seitdem,,,Other,,,,
-3117,B1,79,S,main,Seite,die,-n,Noun,,,,
-3118,B1,79,S,main,Sekretär,der,-e,Noun,,,,
-3119,B1,79,S,main,Sekretärin,die,-nen,Noun,,,,
-3120,B1,79,S,main,selb,,,Other,,,,
-3121,B1,79,S,main,selbst,,,Other,,,,
-3122,B1,79,S,main,selber,,,Other,,,,
-3123,B1,79,S,main,selbstständig,,,Other,,,,
-3124,B1,79,S,main,selbstverständlichder,,,Other,,,,
-3125,B1,79,S,main,schwach,,,Other,,,,
-3126,B1,79,S,main,Schwammerl,das,-n,Noun,,,,
-3127,B1,79,S,main,schwanger,,,Other,,,,
-3128,B1,79,S,main,Schwangerschaft,die,-en,Noun,,,,
-3129,B1,79,S,main,schweigen,,,Verb,schweigt,schwieg,hat geschwiegen,
-3130,B1,79,S,main,schwer,,,Other,,,,
-3131,B1,79,S,main,Schwester,die,-n,Noun,,,,
-3132,B1,79,S,main,schwierig,,,Other,,,,
-3133,B1,79,S,main,Schwierigkeit,die,-en,Noun,,,,
-3134,B1,79,S,main,schwimmen,,,Verb,schwimmt,schwamm,ist geschwommen,
-3135,B1,79,S,main,Schwimmbad,das,¨-er,Noun,,,,
-3136,B1,79,S,main,schwitzen,,,Verb,schwitzt,schwitzte,hat geschwitzt,
-3137,B1,79,S,main,See,der,-n,Noun,,,,
-3138,B1,79,S,main,See,die,,Noun,,,,
-3139,B1,79,N,main,Nord-/Ostsee,die,,Noun,,,,
-3140,B1,79,S,main,sehen,,,Verb,sieht,sah,hat gesehen5.,
-3141,B1,79,S,main,schnell,,,Other,,,,
-3142,B1,79,N,main,noch,,,Other,,,,
-3143,B1,79,G,main,gefreut,,,Other,,,,
-3144,B1,79,Ü,main,übermorgen,,,Verb,,,,
-3145,B1,79,A,main,an/aus,,,Other,,,,
-3146,B1,79,I,main,ich,,,Other,,,,
-3147,B1,79,L,main,land,,,Other,,,,
-3148,B1,79,W,main,wohne,,,Other,,,,
-3149,B1,79,D,main,du,,,Other,,,,
-3150,B1,79,S,main,selbstständig,,,Other,,,,
-3151,B1,79,S,main,selbstständig,,,Other,,,,
-3152,B1,79,F,main,fort,,,Other,,,,
-3153,B1,79,M,main,mich,,,Other,,,,
-3154,B1,79,H,main,helfen,,,Verb,,,,
-3155,B1,79,S,main,schwanger,,,Other,,,,
-3156,B1,79,S,main,schaft,,,Other,,,,
-3157,B1,79,D,main,den,,,Verb,,,,
-3158,B1,79,E,main,einen,,,Verb,,,,
-3159,B1,79,G,main,geschwitzt,,,Other,,,,
-3160,B1,79,A,main,ahren,,,Verb,,,,
-3161,B1,80,S,main,siegen,,,Verb,siegt,siegte,hat gesiegt,
-3162,B1,80,S,main,Sieg,der,-e,Noun,,,,
-3163,B1,80,S,main,Sieger,der,-,Noun,,,,
-3164,B1,80,S,main,Siegerin,die,-nen,Noun,,,,
-3165,B1,80,S,main,siezen,,,Verb,siezt,siezte,hat gesiezt,
-3166,B1,80,S,main,singen,,,Verb,singt,sang,,
-3167,B1,80,G,main,gesungen,,,Verb,,,,
-3168,B1,80,S,main,sinken,,,Verb,sinkt,sank,ist gesunken,
-3169,B1,80,S,main,Sinn,der,,Noun,,,,
-3170,B1,80,S,main,sinnlos,,,Other,,,,
-3171,B1,80,S,main,sinnvoll,,,Other,,,,
-3172,B1,80,S,main,Situation,die,"-ensitzen, sitzt, saß, hat/ist",Noun,,,,
-3173,B1,80,G,main,gesessen,,,Verb,,,,
-3174,B1,80,S,main,Sitz,der,-e,Noun,,,,
-3175,B1,80,S,main,Ski/Schi,der,-er/-,Noun,,,,
-3176,B1,80,S,main,so,,,Other,,,,
-3177,B1,80,S,main,sobaldselten,,,Verb,,,,
-3178,B1,80,S,main,seltsam,,,Other,,,,
-3179,B1,80,S,main,Semester,das,-,Noun,,,,
-3180,B1,80,S,main,Seminar,das,-e,Noun,,,,
-3181,B1,80,S,main,Semmel,die,-n,Noun,,,,
-3182,B1,80,S,main,Sender,der,-,Noun,,,,
-3183,B1,80,S,main,Sendung,die,-en,Noun,,,,
-3184,B1,80,S,main,Senioren,die,,Noun,,,,
-3185,B1,80,S,main,Service,der,,Noun,,,,
-3186,B1,80,S,main,Serviceangestellte,der,-n,Noun,,,,
-3187,B1,80,S,main,Sessel,der,-,Noun,,,,
-3188,B1,80,S,main,sicher,,,Other,,,,
-3189,B1,80,S,main,Sicherheit,die,-en,Noun,,,,
-3190,B1,80,S,main,sichern,,,Verb,sichert,sicherte,hat gesichert,
-3191,B1,80,B,main,Bein,das,,Noun,,,,
-3192,B1,80,F,main,freuen,,,Verb,,,,
-3193,B1,80,S,main,siezen,,,Verb,,,,
-3194,B1,80,E,main,erkältet,,,Other,,,,
-3195,B1,80,L,main,lange,,,Other,,,,
-3196,B1,80,H,main,hinten,,,Verb,,,,
-3197,B1,80,F,main,fürs,,,Other,,,,
-3198,B1,80,K,main,kann,,,Other,,,,
-3199,B1,80,M,main,mich,,,Other,,,,
-3200,B1,80,J,main,jetzt,,,Other,,,,
-3201,B1,80,N,main,nicht,,,Other,,,,
-3202,B1,80,B,main,besuchen.Ich,,,Other,,,,
-3203,B1,80,P,main,per,,,Other,,,,
-3204,B1,80,N,main,nachsenden,,,Verb,,,,
-3205,B1,80,M,main,mit,,,Other,,,,
-3206,B1,80,S,main,statt,,,Other,,,,
-3207,B1,80,G,main,geöffnet,,,Other,,,,
-3208,B1,81,S,main,sovielso,,,Other,,,,
-3209,B1,81,S,main,sowieso,,,Other,,,,
-3210,B1,81,S,main,sowohl,,,Other,,,,
-3211,B1,81,S,main,Sozialarbeiter,der,-,Noun,,,,
-3212,B1,81,S,main,Sozialarbeiterin,die,-nen,Noun,,,,
-3213,B1,81,S,main,spannendsparen,,,Verb,spart,sparte,,
-3214,B1,81,G,main,gespart,,,Other,,,,
-3215,B1,81,S,main,sparsam,,,Other,,,,
-3216,B1,81,S,main,Spaß,der,,Noun,,,,
-3217,B1,81,S,main,spät,,,Other,,,,
-3218,B1,81,S,main,spätestens,,,Other,,,,
-3219,B1,81,S,main,spazieren,,,Verb,geht,,,
-3220,B1,81,S,main,spazieren,,,Verb,ging spazieren,,ist spazieren,
-3221,B1,81,S,main,Spaziergang,der,¨-e,Noun,,,,
-3222,B1,81,S,main,speichern,,,Verb,speichert,speicherte,hat gespeichert,
-3223,B1,81,S,main,sodass,,,Other,,,,
-3224,B1,81,S,main,Sofa,das,-s,Noun,,,,
-3225,B1,81,S,main,sofort,,,Other,,,,
-3226,B1,81,S,main,sogenannt,,,Other,,,,
-3227,B1,81,S,main,sogar,,,Other,,,,
-3228,B1,81,S,main,Sohn,der,¨-e,Noun,,,,
-3229,B1,81,S,main,solange,,,Other,,,,
-3230,B1,81,S,main,solch,,,Other,,,,
-3231,B1,81,S,main,sollen,,,Verb,soll,sollte,,
-3232,B1,81,G,main,gesollt,,,Other,,,,
-3233,B1,81,S,main,Sonderangebot,das,-e,Noun,,,,
-3234,B1,81,S,main,sondern,,,Verb,,,,
-3235,B1,81,S,main,Sonne,die,,Noun,,,,
-3236,B1,81,S,main,sonnig,,,Other,,,,
-3237,B1,81,S,main,sonst,,,Other,,,,
-3238,B1,81,S,main,sorgen,,,Verb,sorgt,sorgte,hat gesorgt,
-3239,B1,81,S,main,Sorge,die,-n,Noun,,,,
-3240,B1,81,S,main,Soße/Sauce,die,,Noun,,,,
-3241,B1,81,H,main,heute,,,Other,,,,
-3242,B1,81,S,main,schlecht,,,Other,,,,
-3243,B1,81,U,main,unterschreiben,,,Verb,,,,
-3244,B1,81,S,main,sparen,,,Verb,,,,
-3245,B1,81,S,main,sehr,,,Other,,,,
-3246,B1,81,V,main,verbraucht,,,Other,,,,
-3247,B1,81,I,main,ich,,,Other,,,,
-3248,B1,81,B,main,besonders,,,Other,,,,
-3249,B1,81,W,main,werden,,,Verb,,,,
-3250,B1,81,G,main,gegangen,,,Verb,,,,
-3251,B1,81,A,main,ab,,,Other,,,,
-3252,B1,81,G,main,genannte,,,Other,,,,
-3253,B1,81,S,main,sogar,,,Other,,,,
-3254,B1,81,A,main,auf,,,Other,,,,
-3255,B1,81,M,main,morgen,,,Verb,,,,
-3256,B1,81,E,main,einverstanden,,,Verb,,,,
-3257,B1,81,D,main,duziert,,,Other,,,,
-3258,B1,81,S,main,sondern,,,Verb,,,,
-3259,B1,81,S,main,scheint,,,Other,,,,
-3260,B1,81,G,main,gelegen,,,Verb,,,,
-3261,B1,81,E,main,er,,,Other,,,,
-3262,B1,81,Z,main,zu,,,Other,,,,
-3263,B1,81,K,main,keine,,,Other,,,,
-3264,B1,82,S,main,springen,,,Verb,springt,sprang,ist gesprungen,
-3265,B1,82,S,main,Spritze,die,-n,Noun,,,,
-3266,B1,82,S,main,spülen,,,Verb,spült,spülte,hat gespült,
-3267,B1,82,S,main,Spur,die,-en,Noun,,,,
-3268,B1,82,S,main,spüren,,,Verb,spürt,spürte,hat gespürt,
-3269,B1,82,S,main,Stadion,das,,Noun,,,,
-3270,B1,82,S,main,Stadt,die,¨-e,Noun,,,,
-3271,B1,82,S,main,städtisch,,,Other,,,,
-3272,B1,82,S,main,Stadtplan,der,¨-e,Noun,,,,
-3273,B1,82,S,main,stammen,,,Verb,stammt,stammte,hat gestammt,
-3274,B1,82,S,main,ständig,,,Other,,,,
-3275,B1,82,S,main,Standpunkt,der,-e,Noun,,,,
-3276,B1,82,S,main,Star,der,-sstark,Noun,,,,
-3277,B1,82,S,main,starten,,,Verb,startet,startete,ist gestartet,
-3278,B1,82,S,main,Speisekarte,die,-n,Noun,,,,
-3279,B1,82,S,main,Speisewagen,der,-,Noun,,,,
-3280,B1,82,S,main,Spezialist,der,-en,Noun,,,,
-3281,B1,82,S,main,Spezialistin,die,-nen,Noun,,,,
-3282,B1,82,S,main,speziell,,,Other,,,,
-3283,B1,82,S,main,Spiegel,der,"-spielen, spielt, spielte,",Noun,,,,
-3284,B1,82,S,main,Spiel,das,-e,Noun,,,,
-3285,B1,82,S,main,Spieler,der,-,Noun,,,,
-3286,B1,82,S,main,Spielerin,die,-nen,Noun,,,,
-3287,B1,82,S,main,Spielplatz,der,¨-e,Noun,,,,
-3288,B1,82,S,main,Spielzeug,das,-e,Noun,,,,
-3289,B1,82,S,main,spitz,,,Other,,,,
-3290,B1,82,S,main,Sport,der,,Noun,,,,
-3291,B1,82,S,main,Sportart,die,-en,Noun,,,,
-3292,B1,82,S,main,Sportler,der,-,Noun,,,,
-3293,B1,82,S,main,Sportlerin,die,-nen,Noun,,,,
-3294,B1,82,S,main,sportlich,,,Other,,,,
-3295,B1,82,S,main,Sprache,die,-n,Noun,,,,
-3296,B1,82,F,main,Fremdsprache,die,-n,Noun,,,,
-3297,B1,82,M,main,Muttersprache,die,-n,Noun,,,,
-3298,B1,82,Z,main,Zweitsprache,die,-n,Noun,,,,
-3299,B1,82,S,main,sprechen,,,Verb,spricht,sprach,hat gesprochen3.,
-3300,B1,82,G,main,gegen,,,Verb,,,,
-3301,B1,82,G,main,gehen,,,Verb,,,,
-3302,B1,82,S,main,Stadt.,der,,Noun,,,,
-3303,B1,82,D,main,Donau.,der,,Noun,,,,
-3304,B1,82,M,main,meiner,,,Other,,,,
-3305,B1,82,R,main,recht,,,Other,,,,
-3306,B1,82,B,main,besonders,,,Other,,,,
-3307,B1,82,V,main,verschreiben,,,Verb,,,,
-3308,B1,82,G,main,geschickt,,,Other,,,,
-3309,B1,82,F,main,für,,,Other,,,,
-3310,B1,82,K,main,können,,,Verb,,,,
-3311,B1,82,V,main,vier,,,Other,,,,
-3312,B1,82,D,main,dung,,,Other,,,,
-3313,B1,82,S,main,sprechen,,,Verb,,,,
-3314,B1,83,S,main,Stein,der,-e,Noun,,,,
-3315,B1,83,S,main,Stelle,die,-n,Noun,,,,
-3316,B1,83,S,main,stellen,,,Verb,stellt,stellte,hat gestellt,
-3317,B1,83,S,main,Stempel,der,-,Noun,,,,
-3318,B1,83,S,main,sterben,,,Verb,stirbt,starb,,
-3319,B1,83,G,main,gestorben,,,Verb,,,,
-3320,B1,83,S,main,Stern,der,-e,Noun,,,,
-3321,B1,83,S,main,Steuer,die,-nder,Noun,,,,
-3322,B1,83,S,main,Stewardess,die,-en,Noun,,,,
-3323,B1,83,S,main,Stift,der,-eder,Noun,,,,
-3324,B1,83,S,main,stilistisch,,,Other,,,,
-3325,B1,83,S,main,still,,,Other,,,,
-3326,B1,83,S,main,Stiefel,der,-die,Noun,,,,
-3327,B1,83,S,main,Stiegenhaus,das,¨-er,Noun,,,,
-3328,B1,83,S,main,Station,die,-en,Noun,,,,
-3329,B1,83,S,main,Statistik,die,-en,Noun,,,,
-3330,B1,83,S,main,statistisch,,,Other,,,,
-3331,B1,83,S,main,statt,,,Other,,,,
-3332,B1,83,S,main,stattfinden,,,Verb,findet statt,fand statt,hat stattgefun,
-3333,B1,83,S,main,Stau,der,-s,Noun,,,,
-3334,B1,83,S,main,Staub,der,,Noun,,,,
-3335,B1,83,S,main,staubsaugen,,,Verb,staubsaugt,staubsaugte,hat gestaubsaugt,
-3336,B1,83,S,main,stechen,,,Verb,sticht,stach,hat gestochen,
-3337,B1,83,S,main,stecken,,,Verb,steckt,steckte,hat gesteckt,
-3338,B1,83,S,main,Steckdose,die,-n,Noun,,,,
-3339,B1,83,S,main,Stecker,der,"-stehen, steht, stand,",Noun,,,,
-3340,B1,83,S,main,stehen,,,Verb,,,,
-3341,B1,83,S,main,stehlen,,,Verb,stiehlt,stahl,hat gestohlen,
-3342,B1,83,S,main,steigen,,,Verb,steigt,stieg,ist gestiegen,
-3343,B1,83,N,main,nicht,,,Other,,,,
-3344,B1,83,N,main,nicht,,,Other,,,,
-3345,B1,83,S,main,schon,,,Other,,,,
-3346,B1,83,L,main,leiser,,,Other,,,,
-3347,B1,83,M,main,möchten,,,Verb,,,,
-3348,B1,83,G,main,gestellt,,,Other,,,,
-3349,B1,83,L,main,letzter,,,Other,,,,
-3350,B1,83,Z,main,zahlen,,,Verb,,,,
-3351,B1,83,U,main,und,,,Other,,,,
-3352,B1,83,S,main,steigen,,,Verb,,,,
-3353,B1,83,S,main,sitzen,,,Verb,,,,
-3354,B1,83,A,main,aussteigen,,,Verb,,,,
-3355,B1,83,E,main,eine,,,Other,,,,
-3356,B1,83,A,main,am,,,Other,,,,
-3357,B1,83,N,main,noch,,,Other,,,,
-3358,B1,83,D,main,den,,,Verb,,,,
-3359,B1,83,A,main,ass,,,Other,,,,
-3360,B1,83,D,main,doch,,,Other,,,,
-3361,B1,83,S,main,steckt,,,Other,,,,
-3362,B1,83,A,main,auf,,,Other,,,,
-3363,B1,83,S,main,schon,,,Other,,,,
-3364,B1,83,G,main,gestiegen,,,Verb,,,,
-3365,B1,84,S,main,streiken,,,Verb,streikt,streikte,hat gestreikt,
-3366,B1,84,S,main,Streik,der,-s,Noun,,,,
-3367,B1,84,S,main,streiten,,,Verb,streitet,stritt,hat gestritten,
-3368,B1,84,S,main,Streit,der,,Noun,,,,
-3369,B1,84,S,main,streng,,,Other,,,,
-3370,B1,84,S,main,Stress,der,,Noun,,,,
-3371,B1,84,S,main,Strom,der,,Noun,,,,
-3372,B1,84,S,main,Strumpf,der,¨-e,Noun,,,,
-3373,B1,84,S,main,Stück/-stück,das,-e,Noun,,,,
-3374,B1,84,S,main,Studie,die,-n,Noun,,,,
-3375,B1,84,S,main,studieren,,,Verb,studiert,studierte,hat studiert,
-3376,B1,84,S,main,Student,der,-en,Noun,,,,
-3377,B1,84,S,main,Studentin,die,-nen,Noun,,,,
-3378,B1,84,S,main,Studierende,der,-n,Noun,,,,
-3379,B1,84,S,main,Studierende,die,-n,Noun,,,,
-3380,B1,84,S,main,Studium,das,,Noun,,,,
-3381,B1,84,S,main,Studio,das,-s,Noun,,,,
-3382,B1,84,S,main,Stufe,die,-n,Noun,,,,
-3383,B1,84,S,main,Stuhl,der,¨-e,Noun,,,,
-3384,B1,84,S,main,stimmen,,,Verb,stimmt,stimmte,hat gestimmt,
-3385,B1,84,S,main,Stimmung,die,"-enstinken, stinkt, stank,",Noun,,,,
-3386,B1,84,S,main,Stock,der,,Noun,,,,
-3387,B1,84,S,main,Stockwerk,das,-e,Noun,,,,
-3388,B1,84,S,main,Stoff,der,-e,Noun,,,,
-3389,B1,84,S,main,stolzstoppen,,,Verb,stoppt,stoppte,hat gestoppt,
-3390,B1,84,S,main,stören,,,Verb,stört,störte,hat gestört,
-3391,B1,84,S,main,Störung,die,-en,Noun,,,,
-3392,B1,84,S,main,stoßen,,,Verb,stößt,stieß,hat gestoßen,
-3393,B1,84,S,main,Strafe,die,-n,Noun,,,,
-3394,B1,84,S,main,strafbar,,,Other,,,,
-3395,B1,84,S,main,Strafzettel,der,-,Noun,,,,
-3396,B1,84,S,main,Strand,der,¨-e,Noun,,,,
-3397,B1,84,S,main,Straße,die,-n,Noun,,,,
-3398,B1,84,S,main,Straßenbahn,die,,Noun,,,,
-3399,B1,84,S,main,Strecke,die,,Noun,,,,
-3400,B1,84,S,main,strengen,,,Verb,,,,
-3401,B1,84,S,main,sparen,,,Verb,,,,
-3402,B1,84,L,main,losigkeit,,,Other,,,,
-3403,B1,84,A,main,abgeschlossenes,,,Other,,,,
-3404,B1,84,K,main,kurse,,,Other,,,,
-3405,B1,84,S,main,stumm.Ich,,,Other,,,,
-3406,B1,84,B,main,besser,,,Other,,,,
-3407,B1,84,W,main,war,,,Other,,,,
-3408,B1,84,B,main,bei,,,Other,,,,
-3409,B1,84,S,main,stört,,,Other,,,,
-3410,B1,84,H,main,habe,,,Other,,,,
-3411,B1,84,G,main,geparkt,,,Other,,,,
-3412,B1,84,G,main,gegangen,,,Verb,,,,
-3413,B1,85,T,main,Tabelle,die,-n,Noun,,,,
-3414,B1,85,T,main,Tablette,die,-ndie,Noun,,,,
-3415,B1,85,T,main,Tagesablauf,der,¨-e,Noun,,,,
-3416,B1,85,T,main,Tal,das,¨-erdas,Noun,,,,
-3417,B1,85,T,main,Tankstelle,die,-n,Noun,,,,
-3418,B1,85,T,main,Tante,die,-n,Noun,,,,
-3419,B1,85,T,main,tanzen,,,Verb,tanzt,tanzte,hat getanzt,
-3420,B1,85,T,main,Tanz,der,¨-e,Noun,,,,
-3421,B1,85,T,main,Tasche,die,-n,Noun,,,,
-3422,B1,85,T,main,Taschengeld,das,-er,Noun,,,,
-3423,B1,85,T,main,Taschentuch,das,¨-er,Noun,,,,
-3424,B1,85,T,main,Tasse,die,-n,Noun,,,,
-3425,B1,85,T,main,Tastatur,die,-en,Noun,,,,
-3426,B1,85,T,main,Taste,die,-n,Noun,,,,
-3427,B1,85,T,main,Tat,die,-en,Noun,,,,
-3428,B1,85,T,main,Täter,der,-,Noun,,,,
-3429,B1,85,T,main,Täterin,die,-nen,Noun,,,,
-3430,B1,85,T,main,Tätigkeit,die,-endie,Noun,,,,
-3431,B1,85,S,main,Sturm,der,¨-e,Noun,,,,
-3432,B1,85,S,main,stürzen,,,Verb,stürzt,stürzte,ist gestürzt,
-3433,B1,85,S,main,suchen,,,Verb,sucht,suchte,hat gesucht,
-3434,B1,85,S,main,Sucht,die,¨-e,Noun,,,,
-3435,B1,85,S,main,süchtig,,,Other,,,,
-3436,B1,85,S,main,Suchtmittel,das,-,Noun,,,,
-3437,B1,85,S,main,Summe,die,-n,Noun,,,,
-3438,B1,85,S,main,super,,,Other,,,,
-3439,B1,85,S,main,Supermarkt,der,¨-e,Noun,,,,
-3440,B1,85,S,main,Suppe,die,-n,Noun,,,,
-3441,B1,85,S,main,süß,,,Other,,,,
-3442,B1,85,S,main,Symbol,das,-e,Noun,,,,
-3443,B1,85,S,main,sympathisch,,,Other,,,,
-3444,B1,85,S,main,System,das,-e,Noun,,,,
-3445,B1,85,S,main,Szene,die,,Noun,,,,
-3446,B1,85,T,main,Tabelle,die,,Noun,,,,
-3447,B1,85,T,main,Tafel.,die,,Noun,,,,
-3448,B1,85,H,main,haben,,,Verb,,,,
-3449,B1,85,G,main,getanzt,,,Other,,,,
-3450,B1,85,G,main,ganz,,,Other,,,,
-3451,B1,85,K,main,kaputt,,,Other,,,,
-3452,B1,85,D,main,drücken,,,Verb,,,,
-3453,B1,85,G,main,gefasst,,,Other,,,,
-3454,B1,85,M,main,machen?1,,,Other,,,,
-3455,B1,85,H,main,habe,,,Other,,,,
-3456,B1,85,N,main,nicht,,,Other,,,,
-3457,B1,85,Z,main,zu,,,Other,,,,
-3458,B1,85,P,main,permarkt,,,Other,,,,
-3459,B1,85,S,main,sympathisch,,,Other,,,,
-3460,B1,85,E,main,es,,,Other,,,,
-3461,B1,86,T,main,Teller,der,-,Noun,,,,
-3462,B1,86,T,main,Temperatur,die,-en,Noun,,,,
-3463,B1,86,T,main,Tempo,das,,Noun,,,,
-3464,B1,86,T,main,Teppich,der,-e,Noun,,,,
-3465,B1,86,T,main,Termin,der,-e,Noun,,,,
-3466,B1,86,T,main,Terminkalender,der,-,Noun,,,,
-3467,B1,86,T,main,Terrasse,die,-n,Noun,,,,
-3468,B1,86,T,main,testen,,,Verb,testet,testete,hat getestet,
-3469,B1,86,T,main,Test,der,-s,Noun,,,,
-3470,B1,86,T,main,teuer,,,Other,,,,
-3471,B1,86,T,main,Text,der,-edas,Noun,,,,
-3472,B1,86,T,main,theoretisch,,,Other,,,,
-3473,B1,86,T,main,Theorie,die,-n,Noun,,,,
-3474,B1,86,T,main,Therapie,die,-ndas,Noun,,,,
-3475,B1,86,T,main,tief,,,Other,,,,
-3476,B1,86,T,main,Tier,das,-edie,Noun,,,,
-3477,B1,86,T,main,tatsächlich,,,Other,,,,
-3478,B1,86,T,main,taub,,,Other,,,,
-3479,B1,86,T,main,tauchen,,,Verb,taucht,tauchte,,
-3480,B1,86,T,main,tauschen,,,Verb,tauscht,tauschte,hat getauscht,
-3481,B1,86,T,main,Technik,die,-en,Noun,,,,
-3482,B1,86,T,main,technisch,,,Other,,,,
-3483,B1,86,T,main,Technologie,die,-n,Noun,,,,
-3484,B1,86,T,main,Tee,der,,Noun,,,,
-3485,B1,86,T,main,teilen,,,Verb,teilt,teilte,hat geteilt,
-3486,B1,86,T,main,Teil,das,-e,Noun,,,,
-3487,B1,86,T,main,Teil,der,-e,Noun,,,,
-3488,B1,86,T,main,Teilzeit,die,,Noun,,,,
-3489,B1,86,T,main,teilnehmen,,,Verb,nimmt teil,nahm teil,hat teilgenommen,
-3490,B1,86,T,main,Teilnahme,die,-n,Noun,,,,
-3491,B1,86,T,main,Teilnehmer,der,-,Noun,,,,
-3492,B1,86,T,main,Teilnehmerin,die,-nen,Noun,,,,
-3493,B1,86,T,main,telefonieren,,,Verb,telefoniert,telefonierte,hat telefoniert1,
-3494,B1,86,G,main,gekauft,,,Other,,,,
-3495,B1,86,S,main,schaffen,,,Verb,,,,
-3496,B1,86,S,main,standen,,,Verb,,,,
-3497,B1,86,V,main,vieles,,,Other,,,,
-3498,B1,86,S,main,schon,,,Other,,,,
-3499,B1,86,S,main,sehr,,,Other,,,,
-3500,B1,86,O,main,obwohl,,,Other,,,,
-3501,B1,86,T,main,taub,,,Other,,,,
-3502,B1,86,E,main,eine,,,Other,,,,
-3503,B1,86,E,main,ersten,,,Verb,,,,
-3504,B1,86,R,main,regelmäßig,,,Other,,,,
-3505,B1,86,K,main,kostenlos,,,Other,,,,
-3506,B1,86,K,main,kommen,,,Verb,,,,
-3507,B1,87,T,main,traditionell,,,Other,,,,
-3508,B1,87,T,main,tragen,,,Verb,trägt,trug,hat getragen,
-3509,B1,87,T,main,trainieren,,,Verb,trainiert,trainierte,hat trainiert,
-3510,B1,87,T,main,Trainer,der,-,Noun,,,,
-3511,B1,87,T,main,Trainerin,die,-nen,Noun,,,,
-3512,B1,87,T,main,Training,das,-s,Noun,,,,
-3513,B1,87,T,main,Tram,das,-s,Noun,,,,
-3514,B1,87,T,main,Träne,die,"-ntransportieren, trans-portiert, transportierte, hat transportiert",Noun,,,,
-3515,B1,87,T,main,Transport,der,-e,Noun,,,,
-3516,B1,87,T,main,träumen,,,Verb,träumt,träumte,hat geträumt,
-3517,B1,87,T,main,Traum,der,¨-e,Noun,,,,
-3518,B1,87,T,main,traurig,,,Other,,,,
-3519,B1,87,T,main,treffen,,,Verb,trifft,traf,hat getroffen,
-3520,B1,87,T,main,Treffpunkt,der,-e,Noun,,,,
-3521,B1,87,T,main,treiben,,,Verb,treibt,trieb,,
-3522,B1,87,T,main,trennen,,,Verb,trennt,trennte,hat getrennt,
-3523,B1,87,T,main,Trennung,die,-en,Noun,,,,
-3524,B1,87,T,main,Tierpark,der,-s,Noun,,,,
-3525,B1,87,T,main,Tipp,der,-s,Noun,,,,
-3526,B1,87,T,main,tippen,,,Verb,tippt,tippte,,
-3527,B1,87,G,main,getippt,,,Other,,,,
-3528,B1,87,T,main,Tisch,der,-eder,Noun,,,,
-3529,B1,87,T,main,Tochter,die,¨-,Noun,,,,
-3530,B1,87,T,main,Tod,der,,Noun,,,,
-3531,B1,87,T,main,tödlich,,,Other,,,,
-3532,B1,87,T,main,Toilette,die,-n tolerant,Noun,,,,
-3533,B1,87,R,main,radeiser,,,Other,,,,
-3534,B1,87,T,main,Topf,der,¨-e,Noun,,,,
-3535,B1,87,T,main,Tor,das,-e,Noun,,,,
-3536,B1,87,T,main,Torte,die,-n,Noun,,,,
-3537,B1,87,T,main,tot,,,Other,,,,
-3538,B1,87,T,main,Tote,der,-n,Noun,,,,
-3539,B1,87,T,main,Tote,die,-n,Noun,,,,
-3540,B1,87,T,main,total,,,Other,,,,
-3541,B1,87,T,main,Tourismus,der,,Noun,,,,
-3542,B1,87,T,main,Tourist,der,-en,Noun,,,,
-3543,B1,87,T,main,Touristin,die,,Noun,,,,
-3544,B1,87,S,main,schwer,,,Other,,,,
-3545,B1,87,M,main,mitfahren,,,Verb,,,,
-3546,B1,87,G,main,getroffen,,,Verb,,,,
-3547,B1,87,S,main,sich,,,Other,,,,
-3548,B1,87,K,main,kommt,,,Other,,,,
-3549,B1,87,S,main,schwierig,,,Other,,,,
-3550,B1,87,G,main,geschieden,,,Verb,aber sie lebt,,,
-3551,B1,87,W,main,wir,,,Other,,,,
-3552,B1,87,F,main,finde,,,Other,,,,
-3553,B1,87,E,main,einmal,,,Other,,,,
-3554,B1,87,T,main,tödlich,,,Other,,,,
-3555,B1,87,M,main,müssen,,,Verb,,,,
-3556,B1,87,M,main,möchte,,,Other,,,,
-3557,B1,87,S,main,schießen,,,Verb,,,,
-3558,B1,87,U,main,unsere,,,Other,,,,
-3559,B1,88,T,main,Typ,der,-en,Noun,,,,
-3560,B1,88,T,main,typisch,,,Other,,,,
-3561,B1,88,U,main,U-Bahn,die,-enüben,Noun,,,,
-3562,B1,88,Ü,main,Übung,die,-en,Noun,,,,
-3563,B1,88,Ü,main,über,,,Other,,,,
-3564,B1,88,Ü,main,überall,,,Other,,,,
-3565,B1,88,Ü,main,überfahren,,,Verb,überfährt,überfuhr,hat überfahren,
-3566,B1,88,Ü,main,überhaupt,,,Other,,,,
-3567,B1,88,Ü,main,überholen,,,Verb,überholt,überholte,hat überholt,
-3568,B1,88,Ü,main,überlegen,,,Verb,überlegt,überlegte,hat überlegt,
-3569,B1,88,T,main,Treppenhaus,das,,Noun,,,,
-3570,B1,88,T,main,treten,,,Verb,tritt,trat,ist getreten,
-3571,B1,88,T,main,treu,,,Other,,,,
-3572,B1,88,T,main,trinken,,,Verb,trinkt,trank,hat getrunken,
-3573,B1,88,T,main,Trinkgeld,das,-er,Noun,,,,
-3574,B1,88,T,main,trocken,,,Verb,,,,
-3575,B1,88,T,main,trocknen,,,Verb,trocknet,trocknete,,
-3576,B1,88,T,main,Tropfen,die,,Noun,,,,
-3577,B1,88,T,main,Trottoir,das,-s,Noun,,,,
-3578,B1,88,T,main,trotz,,,Other,,,,
-3579,B1,88,T,main,tun,,,Verb,tut,tat,hat getan,
-3580,B1,88,T,main,Tür,die,-en,Noun,,,,
-3581,B1,88,T,main,Turm,der,,Noun,,,,
-3582,B1,88,D,main,du,,,Other,,,,
-3583,B1,88,T,main,typisch,,,Other,,,,
-3584,B1,88,Ü,main,übe,,,Other,,,,
-3585,B1,88,B,main,bezahlen,,,Verb,,,,
-3586,B1,88,Ü,main,überfahren,,,Verb,,,,
-3587,B1,88,N,main,nicht,,,Other,,,,
-3588,B1,88,M,main,muss,,,Other,,,,
-3589,B1,88,K,main,kaufen,,,Verb,,,,
-3590,B1,88,U,main,und,,,Other,,,,
-3591,B1,88,S,main,steigen.Im,,,Other,,,,
-3592,B1,88,G,main,ganz,,,Other,,,,
-3593,B1,88,D,main,du,,,Other,,,,
-3594,B1,88,N,main,nicht,,,Other,,,,
-3595,B1,88,G,main,gegangen,,,Verb,,,,
-3596,B1,88,S,main,schwimmen,,,Verb,,,,
-3597,B1,88,G,main,gekauft,,,Other,,,,
-3598,B1,88,O,main,oben,,,Verb,,,,
-3599,B1,88,G,main,getan,,,Other,,,,
-3600,B1,88,S,main,sieht,,,Other,,,,
+3001,B1,76,L,main,lassen,,,Verb,,,,to let / to leave (artifact)
+3002,B1,76,W,main,wechseln,,,Verb,,,,to change / to switch
+3003,B1,76,W,main,wieder,,,Other,,,,again (artifact)
+3004,B1,76,W,main,war,,,Other,,,,was (artifact)
+3005,B1,76,S,main,schenken,,,Verb,,,,to give as a gift (artifact)
+3006,B1,76,L,main,ladung,,,Other,,,,loading / charge (artifact)
+3007,B1,76,G,main,geschickt,,,Other,,,,sent / clever (artifact)
+3008,B1,76,G,main,gegangen,,,Verb,,,,gone (artifact)
+3009,B1,76,G,main,geschossen,,,Verb,,,,shot (artifact)
+3010,B1,76,W,main,wirklich,,,Other,,,,really (artifact)
+3011,B1,76,K,main,kannst,,,Other,,,,can (artifact)
+3012,B1,76,S,main,schaden,,,Verb,,,,to harm (artifact)
+3013,B1,76,T,main,to,,,Other,,,,to (artifact)
+3014,B1,76,B,main,bereiten,,,Verb,,,,to prepare (artifact)
+3015,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact)
+3016,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact)
+3017,B1,76,S,main,scharf,,,Other,,,,sharp / spicy (artifact)
+3018,B1,77,S,main,schlimm,,,Other,,,,bad / severe / terrible
+3019,B1,77,S,main,Schloss,das,¨-er,Noun,,,,castle / lock
+3020,B1,77,S,main,Schluss,der,,Noun,,,,end / conclusion
+3021,B1,77,S,main,Schlüssel,der,-,Noun,,,,key
+3022,B1,77,S,main,schmal,,,Other,,,,narrow / slim
+3023,B1,77,S,main,schmecken,,,Verb,schmeckt,schmeckte,hat geschmeckt,to taste
+3024,B1,77,S,main,Schmerz,der,-en,Noun,,,,pain
+3025,B1,77,S,main,Schmerzmittel,das,-,Noun,,,,painkiller
+3026,B1,77,S,main,schminken,,,Verb,schminkt,schminkte,hat geschminkt,to put on makeup
+3027,B1,77,S,main,Schmuck,der,,Noun,,,,jewelry
+3028,B1,77,S,main,Schmutz,der,,Noun,,,,dirt / filth
+3029,B1,77,S,main,schmutzig,,,Other,,,,dirty
+3030,B1,77,V,main,verschmutzen,,,Verb,verschmutzt,verschmutzte,hat verschmutzt,to pollute
+3031,B1,77,S,main,Schnee,der,,Noun,,,,snow
+3032,B1,77,S,main,schneien,,,Verb,es schneit,es,,to snow
+3033,B1,77,S,main,schneiden,,,Verb,schneidet,schnitt,hat geschnitten,to cut (artifact)
+3034,B1,77,S,main,schimpfen,,,Verb,schimpft,schimpfte,hat geschimpft,to scold / to complain
+3035,B1,77,S,main,Schinken,der,-,Noun,,,,ham
+3036,B1,77,S,main,Schirm,der,-e,Noun,,,,umbrella / screen
+3037,B1,77,S,main,schlafen,,,Verb,schläft,schlief,hat geschlafen,to sleep
+3038,B1,77,S,main,Schlaf,der,,Noun,,,,sleep
+3039,B1,77,S,main,schlagen,,,Verb,schlägt,schlug,hat geschlagen,to hit / to beat
+3040,B1,77,D,main,der/das,,,Other,,,,the (artifact)
+3041,B1,77,S,main,Schlange,die,-n,Noun,,,,snake / queue / line
+3042,B1,77,S,main,schlankschlecht,,,Other,,,,slim / bad (artifact)
+3043,B1,77,S,main,schließen,,,Verb,schließt,schloss,hat geschlossen7.,to close / to shut
+3044,B1,77,F,main,fertig,,,Other,,,,ready / finished (artifact)
+3045,B1,77,S,main,schließlich,,,Other,,,,finally / after all
+3046,B1,77,B,main,bekommen,,,Verb,,,,to get / to receive (artifact)
+3047,B1,77,S,main,schließlich,,,Other,,,,finally / after all (artifact)
+3048,B1,77,B,main,besichtigt,,,Other,,,,visited / toured (artifact)
+3049,B1,77,K,main,klingelt,,,Other,,,,rings (artifact)
+3050,B1,77,I,main,ich,,,Other,,,,I (artifact)
+3051,B1,77,K,main,können,,,Verb,,,,to be able to / can (artifact)
+3052,B1,77,S,main,schlagen,,,Verb,,,,to hit / to beat (artifact)
+3053,B1,77,A,main,aus,,,Other,,,,from / out of (artifact)
+3054,B1,77,K,main,kr,,,Other,,,,kr (artifact)
+3055,B1,77,A,main,ank,,,Other,,,,ank (artifact)
+3056,B1,77,S,main,schlecht,,,Other,,,,bad (artifact)
+3057,B1,77,S,main,schlecht,,,Other,,,,bad (artifact)
+3058,B1,77,D,main,dich,,,Other,,,,"you (accusative, artifact)"
+3059,B1,77,G,main,ganz,,,Other,,,,whole / quite (artifact)
+3060,B1,77,G,main,geschlossen,,,Verb,,,,closed (artifact)
+3061,B1,77,A,main,abschließen,,,Verb,,,,to lock / to conclude
+3062,B1,78,S,main,schreien,,,Verb,schreit,schrie,hat geschrien,to scream / to shout
+3063,B1,78,S,main,Schrift,die,-en,Noun,,,,writing / font / script
+3064,B1,78,S,main,schriftlich,,,Other,,,,written
+3065,B1,78,S,main,Schriftsteller,der,-,Noun,,,,writer / author (male)
+3066,B1,78,S,main,Schriftstellerin,die,-nen,Noun,,,,writer / author (female)
+3067,B1,78,S,main,Schritt,der,-e,Noun,,,,step
+3068,B1,78,S,main,Schuh,der,-e,Noun,,,,shoe
+3069,B1,78,S,main,Schuld,die,,Noun,,,,guilt / debt
+3070,B1,78,S,main,schuld,,,Other,,,,guilty
+3071,B1,78,S,main,Schulden,die,,Noun,,,,debts
+3072,B1,78,S,main,schuldig,,,Other,,,,guilty
+3073,B1,78,S,main,Schule,die,-n,Noun,,,,school
+3074,B1,78,S,main,Schularbeit,die,-en,Noun,,,,homework / school assignment (Austrian)
+3075,B1,78,S,main,Schüler,der,-,Noun,,,,student / pupil (male)
+3076,B1,78,S,main,Schülerin,die,-nen,Noun,,,,student / pupil (female)
+3077,B1,78,S,main,Schulter,die,-n,Noun,,,,shoulder
+3078,B1,78,S,main,Schüssel,die,"-nschütteln, schüttelt,",Noun,,,,bowl / dish
+3079,B1,78,S,main,schützen,,,Verb,schützt,schützte,hat geschütztschnell,to protect
+3080,B1,78,S,main,Schnitzel,das,-,Noun,,,,schnitzel / breaded cutlet
+3081,B1,78,S,main,Schnupfendie,der,,Noun,,,,cold / runny nose
+3082,B1,78,S,main,schon,,,Other,,,,already
+3083,B1,78,S,main,schön,,,Other,,,,beautiful / nice
+3084,B1,78,S,main,Schrank,der,¨-e,Noun,,,,wardrobe / cabinet
+3085,B1,78,S,main,Schreck(en),der,,Noun,,,,fright / horror
+3086,B1,78,S,main,schrecklich,,,Other,,,,terrible / horrible
+3087,B1,78,S,main,schreiben,,,Verb,schreibt,schrieb,hat geschrieben,to write
+3088,B1,78,A,main,aufschreibenHaben,,,Verb,,,,to write down (artifact)
+3089,B1,78,S,main,schreien,,,Verb,,,,to scream / to shout
+3090,B1,78,G,main,geschrien,,,Verb,,,,screamed / shouted (artifact)
+3091,B1,78,L,main,lesen,,,Verb,,,,to read (artifact)
+3092,B1,78,H,main,halben,,,Verb,,,,half (artifact)
+3093,B1,78,S,main,schriftliche,,,Other,,,,written (artifact)
+3094,B1,78,N,main,nicht,,,Other,,,,not (artifact)
+3095,B1,78,N,main,nicht,,,Other,,,,not (artifact)
+3096,B1,78,B,main,bezahlt,,,Other,,,,paid (artifact)
+3097,B1,78,B,main,bitte,,,Other,,,,please (artifact)
+3098,B1,78,W,main,wieder,,,Other,,,,again (artifact)
+3099,B1,78,D,main,den,,,Verb,,,,the (artifact)
+3100,B1,78,S,main,schütteln,,,Verb,,,,to shake
+3101,B1,78,M,main,möglich,,,Other,,,,possible (artifact)
+3102,B1,78,S,main,schnell,,,Other,,,,fast / quick (artifact)
+3103,B1,78,G,main,gegessen,,,Verb,,,,eaten (artifact)
+3104,B1,78,L,main,lesen,,,Verb,,,,to read (artifact)
+3105,B1,78,S,main,sehr,,,Other,,,,very (artifact)
+3106,B1,78,W,main,warten,,,Verb,,,,to wait (artifact)
+3107,B1,78,S,main,schon,,,Other,,,,already (artifact)
+3108,B1,78,B,main,bleiben,,,Verb,,,,to stay / to remain (artifact)
+3109,B1,78,B,main,bekommen,,,Verb,,,,to get / to receive (artifact)
+3110,B1,78,M,main,mehr,,,Other,,,,more (artifact)
+3111,B1,78,A,main,aufgeschrieben,,,Verb,,,,written down (artifact)
+3112,B1,79,S,main,sehr,,,Other,,,,very (artifact)
+3113,B1,79,S,main,Seife,die,-n,Noun,,,,soap
+3114,B1,79,S,main,sein,,,Verb,,,ist gewesen,to be
+3115,B1,79,S,main,seit,,,Other,,,,since / for (time)
+3116,B1,79,S,main,seitdem,,,Other,,,,since then
+3117,B1,79,S,main,Seite,die,-n,Noun,,,,page / side
+3118,B1,79,S,main,Sekretär,der,-e,Noun,,,,secretary (male)
+3119,B1,79,S,main,Sekretärin,die,-nen,Noun,,,,secretary (female)
+3120,B1,79,S,main,selb,,,Other,,,,self (artifact)
+3121,B1,79,S,main,selbst,,,Other,,,,oneself / self
+3122,B1,79,S,main,selber,,,Other,,,,oneself / self
+3123,B1,79,S,main,selbstständig,,,Other,,,,self-employed / independent
+3124,B1,79,S,main,selbstverständlichder,,,Other,,,,of course / naturally (artifact)
+3125,B1,79,S,main,schwach,,,Other,,,,weak
+3126,B1,79,S,main,Schwammerl,das,-n,Noun,,,,mushroom (Austrian)
+3127,B1,79,S,main,schwanger,,,Other,,,,pregnant
+3128,B1,79,S,main,Schwangerschaft,die,-en,Noun,,,,pregnancy
+3129,B1,79,S,main,schweigen,,,Verb,schweigt,schwieg,hat geschwiegen,to be silent / to keep quiet
+3130,B1,79,S,main,schwer,,,Other,,,,heavy / difficult
+3131,B1,79,S,main,Schwester,die,-n,Noun,,,,sister
+3132,B1,79,S,main,schwierig,,,Other,,,,difficult
+3133,B1,79,S,main,Schwierigkeit,die,-en,Noun,,,,difficulty
+3134,B1,79,S,main,schwimmen,,,Verb,schwimmt,schwamm,ist geschwommen,to swim
+3135,B1,79,S,main,Schwimmbad,das,¨-er,Noun,,,,swimming pool
+3136,B1,79,S,main,schwitzen,,,Verb,schwitzt,schwitzte,hat geschwitzt,to sweat
+3137,B1,79,S,main,See,der,-n,Noun,,,,lake (der - freshwater)
+3138,B1,79,S,main,See,die,,Noun,,,,sea (die - saltwater)
+3139,B1,79,N,main,Nord-/Ostsee,die,,Noun,,,,North/Baltic Sea
+3140,B1,79,S,main,sehen,,,Verb,sieht,sah,hat gesehen5.,to see
+3141,B1,79,S,main,schnell,,,Other,,,,fast / quick (artifact)
+3142,B1,79,N,main,noch,,,Other,,,,still / yet (artifact)
+3143,B1,79,G,main,gefreut,,,Other,,,,glad / pleased (artifact)
+3144,B1,79,Ü,main,übermorgen,,,Verb,,,,the day after tomorrow
+3145,B1,79,A,main,an/aus,,,Other,,,,on / off (artifact)
+3146,B1,79,I,main,ich,,,Other,,,,I (artifact)
+3147,B1,79,L,main,land,,,Other,,,,land / country (artifact)
+3148,B1,79,W,main,wohne,,,Other,,,,live (artifact)
+3149,B1,79,D,main,du,,,Other,,,,you (artifact)
+3150,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact)
+3151,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact)
+3152,B1,79,F,main,fort,,,Other,,,,away / forth (artifact)
+3153,B1,79,M,main,mich,,,Other,,,,me (artifact)
+3154,B1,79,H,main,helfen,,,Verb,,,,to help (artifact)
+3155,B1,79,S,main,schwanger,,,Other,,,,pregnant (artifact)
+3156,B1,79,S,main,schaft,,,Other,,,,schaft (artifact)
+3157,B1,79,D,main,den,,,Verb,,,,the (artifact)
+3158,B1,79,E,main,einen,,,Verb,,,,a / one (artifact)
+3159,B1,79,G,main,geschwitzt,,,Other,,,,sweated (artifact)
+3160,B1,79,A,main,ahren,,,Verb,,,,years (artifact)
+3161,B1,80,S,main,siegen,,,Verb,siegt,siegte,hat gesiegt,to win / to be victorious
+3162,B1,80,S,main,Sieg,der,-e,Noun,,,,victory
+3163,B1,80,S,main,Sieger,der,-,Noun,,,,winner (male)
+3164,B1,80,S,main,Siegerin,die,-nen,Noun,,,,winner (female)
+3165,B1,80,S,main,siezen,,,Verb,siezt,siezte,hat gesiezt,to address formally (Sie)
+3166,B1,80,S,main,singen,,,Verb,singt,sang,,to sing
+3167,B1,80,G,main,gesungen,,,Verb,,,,sung (artifact)
+3168,B1,80,S,main,sinken,,,Verb,sinkt,sank,ist gesunken,to sink / to fall
+3169,B1,80,S,main,Sinn,der,,Noun,,,,meaning / sense
+3170,B1,80,S,main,sinnlos,,,Other,,,,pointless / senseless
+3171,B1,80,S,main,sinnvoll,,,Other,,,,meaningful / sensible
+3172,B1,80,S,main,Situation,die,"-ensitzen, sitzt, saß, hat/ist",Noun,,,,situation
+3173,B1,80,G,main,gesessen,,,Verb,,,,sat (artifact)
+3174,B1,80,S,main,Sitz,der,-e,Noun,,,,seat / headquarters
+3175,B1,80,S,main,Ski/Schi,der,-er/-,Noun,,,,ski
+3176,B1,80,S,main,so,,,Other,,,,so / like that
+3177,B1,80,S,main,sobaldselten,,,Verb,,,,as soon as / rarely
+3178,B1,80,S,main,seltsam,,,Other,,,,strange / odd
+3179,B1,80,S,main,Semester,das,-,Noun,,,,semester
+3180,B1,80,S,main,Seminar,das,-e,Noun,,,,seminar
+3181,B1,80,S,main,Semmel,die,-n,Noun,,,,bread roll (Austrian)
+3182,B1,80,S,main,Sender,der,-,Noun,,,,sender / broadcaster
+3183,B1,80,S,main,Sendung,die,-en,Noun,,,,broadcast / program / shipment
+3184,B1,80,S,main,Senioren,die,,Noun,,,,seniors / elderly people
+3185,B1,80,S,main,Service,der,,Noun,,,,service
+3186,B1,80,S,main,Serviceangestellte,der,-n,Noun,,,,service employee
+3187,B1,80,S,main,Sessel,der,-,Noun,,,,armchair
+3188,B1,80,S,main,sicher,,,Other,,,,safe / certain / sure
+3189,B1,80,S,main,Sicherheit,die,-en,Noun,,,,safety / security
+3190,B1,80,S,main,sichern,,,Verb,sichert,sicherte,hat gesichert,to secure / to back up
+3191,B1,80,B,main,Bein,das,,Noun,,,,leg
+3192,B1,80,F,main,freuen,,,Verb,,,,to be glad / to look forward to
+3193,B1,80,S,main,siezen,,,Verb,,,,to address formally (artifact)
+3194,B1,80,E,main,erkältet,,,Other,,,,having a cold (artifact)
+3195,B1,80,L,main,lange,,,Other,,,,long (artifact)
+3196,B1,80,H,main,hinten,,,Verb,,,,behind / at the back (artifact)
+3197,B1,80,F,main,fürs,,,Other,,,,for the (artifact)
+3198,B1,80,K,main,kann,,,Other,,,,can (artifact)
+3199,B1,80,M,main,mich,,,Other,,,,me (artifact)
+3200,B1,80,J,main,jetzt,,,Other,,,,now (artifact)
+3201,B1,80,N,main,nicht,,,Other,,,,not (artifact)
+3202,B1,80,B,main,besuchen.Ich,,,Other,,,,to visit (artifact)
+3203,B1,80,P,main,per,,,Other,,,,by / per (artifact)
+3204,B1,80,N,main,nachsenden,,,Verb,,,,to forward / to redirect mail
+3205,B1,80,M,main,mit,,,Other,,,,with (artifact)
+3206,B1,80,S,main,statt,,,Other,,,,instead of (artifact)
+3207,B1,80,G,main,geöffnet,,,Other,,,,opened (artifact)
+3208,B1,81,S,main,sovielso,,,Other,,,,so much / anyway (artifact)
+3209,B1,81,S,main,sowieso,,,Other,,,,anyway / in any case
+3210,B1,81,S,main,sowohl,,,Other,,,,both / as well as
+3211,B1,81,S,main,Sozialarbeiter,der,-,Noun,,,,social worker (male)
+3212,B1,81,S,main,Sozialarbeiterin,die,-nen,Noun,,,,social worker (female)
+3213,B1,81,S,main,spannendsparen,,,Verb,spart,sparte,,exciting / to save (artifact)
+3214,B1,81,G,main,gespart,,,Other,,,,saved (artifact)
+3215,B1,81,S,main,sparsam,,,Other,,,,economical / thrifty
+3216,B1,81,S,main,Spaß,der,,Noun,,,,fun
+3217,B1,81,S,main,spät,,,Other,,,,late
+3218,B1,81,S,main,spätestens,,,Other,,,,at the latest
+3219,B1,81,S,main,spazieren,,,Verb,geht,,,to walk / to stroll
+3220,B1,81,S,main,spazieren,,,Verb,ging spazieren,,ist spazieren,to walk / to stroll
+3221,B1,81,S,main,Spaziergang,der,¨-e,Noun,,,,walk / stroll
+3222,B1,81,S,main,speichern,,,Verb,speichert,speicherte,hat gespeichert,to save / to store
+3223,B1,81,S,main,sodass,,,Other,,,,so that
+3224,B1,81,S,main,Sofa,das,-s,Noun,,,,sofa / couch
+3225,B1,81,S,main,sofort,,,Other,,,,immediately / right away
+3226,B1,81,S,main,sogenannt,,,Other,,,,so-called
+3227,B1,81,S,main,sogar,,,Other,,,,even / in fact
+3228,B1,81,S,main,Sohn,der,¨-e,Noun,,,,son
+3229,B1,81,S,main,solange,,,Other,,,,as long as
+3230,B1,81,S,main,solch,,,Other,,,,such
+3231,B1,81,S,main,sollen,,,Verb,soll,sollte,,should / to be supposed to
+3232,B1,81,G,main,gesollt,,,Other,,,,should / supposed to (artifact)
+3233,B1,81,S,main,Sonderangebot,das,-e,Noun,,,,special offer
+3234,B1,81,S,main,sondern,,,Verb,,,,but rather
+3235,B1,81,S,main,Sonne,die,,Noun,,,,sun
+3236,B1,81,S,main,sonnig,,,Other,,,,sunny
+3237,B1,81,S,main,sonst,,,Other,,,,otherwise / else
+3238,B1,81,S,main,sorgen,,,Verb,sorgt,sorgte,hat gesorgt,to care / to worry
+3239,B1,81,S,main,Sorge,die,-n,Noun,,,,worry / concern
+3240,B1,81,S,main,Soße/Sauce,die,,Noun,,,,sauce / gravy
+3241,B1,81,H,main,heute,,,Other,,,,today (artifact)
+3242,B1,81,S,main,schlecht,,,Other,,,,bad (artifact)
+3243,B1,81,U,main,unterschreiben,,,Verb,,,,to sign
+3244,B1,81,S,main,sparen,,,Verb,,,,to save (money)
+3245,B1,81,S,main,sehr,,,Other,,,,very (artifact)
+3246,B1,81,V,main,verbraucht,,,Other,,,,used up / consumed (artifact)
+3247,B1,81,I,main,ich,,,Other,,,,I (artifact)
+3248,B1,81,B,main,besonders,,,Other,,,,especially (artifact)
+3249,B1,81,W,main,werden,,,Verb,,,,to become (artifact)
+3250,B1,81,G,main,gegangen,,,Verb,,,,gone (artifact)
+3251,B1,81,A,main,ab,,,Other,,,,from / off (artifact)
+3252,B1,81,G,main,genannte,,,Other,,,,named / called (artifact)
+3253,B1,81,S,main,sogar,,,Other,,,,even / in fact (artifact)
+3254,B1,81,A,main,auf,,,Other,,,,on / at (artifact)
+3255,B1,81,M,main,morgen,,,Verb,,,,tomorrow (artifact)
+3256,B1,81,E,main,einverstanden,,,Verb,,,,agreed (artifact)
+3257,B1,81,D,main,duziert,,,Other,,,,duced (artifact)
+3258,B1,81,S,main,sondern,,,Verb,,,,but rather (artifact)
+3259,B1,81,S,main,scheint,,,Other,,,,seems (artifact)
+3260,B1,81,G,main,gelegen,,,Verb,,,,lay / was located (artifact)
+3261,B1,81,E,main,er,,,Other,,,,he (artifact)
+3262,B1,81,Z,main,zu,,,Other,,,,to / too (artifact)
+3263,B1,81,K,main,keine,,,Other,,,,no / not any (artifact)
+3264,B1,82,S,main,springen,,,Verb,springt,sprang,ist gesprungen,to jump
+3265,B1,82,S,main,Spritze,die,-n,Noun,,,,injection / syringe
+3266,B1,82,S,main,spülen,,,Verb,spült,spülte,hat gespült,to rinse / to wash up
+3267,B1,82,S,main,Spur,die,-en,Noun,,,,track / trail / trace
+3268,B1,82,S,main,spüren,,,Verb,spürt,spürte,hat gespürt,to feel / to sense
+3269,B1,82,S,main,Stadion,das,,Noun,,,,stadium
+3270,B1,82,S,main,Stadt,die,¨-e,Noun,,,,city / town
+3271,B1,82,S,main,städtisch,,,Other,,,,urban / municipal
+3272,B1,82,S,main,Stadtplan,der,¨-e,Noun,,,,city map
+3273,B1,82,S,main,stammen,,,Verb,stammt,stammte,hat gestammt,to come from / to originate
+3274,B1,82,S,main,ständig,,,Other,,,,constantly / permanently
+3275,B1,82,S,main,Standpunkt,der,-e,Noun,,,,viewpoint / standpoint
+3276,B1,82,S,main,Star,der,-sstark,Noun,,,,star / celebrity
+3277,B1,82,S,main,starten,,,Verb,startet,startete,ist gestartet,to start
+3278,B1,82,S,main,Speisekarte,die,-n,Noun,,,,menu
+3279,B1,82,S,main,Speisewagen,der,-,Noun,,,,dining car
+3280,B1,82,S,main,Spezialist,der,-en,Noun,,,,specialist (male)
+3281,B1,82,S,main,Spezialistin,die,-nen,Noun,,,,specialist (female)
+3282,B1,82,S,main,speziell,,,Other,,,,special
+3283,B1,82,S,main,Spiegel,der,"-spielen, spielt, spielte,",Noun,,,,mirror
+3284,B1,82,S,main,Spiel,das,-e,Noun,,,,game / play
+3285,B1,82,S,main,Spieler,der,-,Noun,,,,player (male)
+3286,B1,82,S,main,Spielerin,die,-nen,Noun,,,,player (female)
+3287,B1,82,S,main,Spielplatz,der,¨-e,Noun,,,,playground
+3288,B1,82,S,main,Spielzeug,das,-e,Noun,,,,toy
+3289,B1,82,S,main,spitz,,,Other,,,,pointed / sharp
+3290,B1,82,S,main,Sport,der,,Noun,,,,sport / sports
+3291,B1,82,S,main,Sportart,die,-en,Noun,,,,type of sport
+3292,B1,82,S,main,Sportler,der,-,Noun,,,,athlete (male)
+3293,B1,82,S,main,Sportlerin,die,-nen,Noun,,,,athlete (female)
+3294,B1,82,S,main,sportlich,,,Other,,,,sporty / athletic
+3295,B1,82,S,main,Sprache,die,-n,Noun,,,,language
+3296,B1,82,F,main,Fremdsprache,die,-n,Noun,,,,foreign language
+3297,B1,82,M,main,Muttersprache,die,-n,Noun,,,,mother tongue / native language
+3298,B1,82,Z,main,Zweitsprache,die,-n,Noun,,,,second language
+3299,B1,82,S,main,sprechen,,,Verb,spricht,sprach,hat gesprochen3.,to speak (artifact)
+3300,B1,82,G,main,gegen,,,Verb,,,,against (artifact)
+3301,B1,82,G,main,gehen,,,Verb,,,,to go (artifact)
+3302,B1,82,S,main,Stadt.,der,,Noun,,,,city (artifact)
+3303,B1,82,D,main,Donau.,der,,Noun,,,,Danube (artifact)
+3304,B1,82,M,main,meiner,,,Other,,,,my (artifact)
+3305,B1,82,R,main,recht,,,Other,,,,right / correct (artifact)
+3306,B1,82,B,main,besonders,,,Other,,,,especially (artifact)
+3307,B1,82,V,main,verschreiben,,,Verb,,,,to prescribe
+3308,B1,82,G,main,geschickt,,,Other,,,,sent / clever (artifact)
+3309,B1,82,F,main,für,,,Other,,,,for (artifact)
+3310,B1,82,K,main,können,,,Verb,,,,to be able to (artifact)
+3311,B1,82,V,main,vier,,,Other,,,,four (artifact)
+3312,B1,82,D,main,dung,,,Other,,,,dung (artifact)
+3313,B1,82,S,main,sprechen,,,Verb,,,,to speak (artifact)
+3314,B1,83,S,main,Stein,der,-e,Noun,,,,stone / rock
+3315,B1,83,S,main,Stelle,die,-n,Noun,,,,position / place / job
+3316,B1,83,S,main,stellen,,,Verb,stellt,stellte,hat gestellt,to place / to put
+3317,B1,83,S,main,Stempel,der,-,Noun,,,,stamp
+3318,B1,83,S,main,sterben,,,Verb,stirbt,starb,,to die
+3319,B1,83,G,main,gestorben,,,Verb,,,,died (artifact)
+3320,B1,83,S,main,Stern,der,-e,Noun,,,,star
+3321,B1,83,S,main,Steuer,die,-nder,Noun,,,,tax / steering
+3322,B1,83,S,main,Stewardess,die,-en,Noun,,,,flight attendant (female)
+3323,B1,83,S,main,Stift,der,-eder,Noun,,,,pen / pencil / marker
+3324,B1,83,S,main,stilistisch,,,Other,,,,stylistic
+3325,B1,83,S,main,still,,,Other,,,,quiet / still
+3326,B1,83,S,main,Stiefel,der,-die,Noun,,,,boot
+3327,B1,83,S,main,Stiegenhaus,das,¨-er,Noun,,,,staircase (Austrian)
+3328,B1,83,S,main,Station,die,-en,Noun,,,,station / stop
+3329,B1,83,S,main,Statistik,die,-en,Noun,,,,statistics
+3330,B1,83,S,main,statistisch,,,Other,,,,statistical
+3331,B1,83,S,main,statt,,,Other,,,,instead of
+3332,B1,83,S,main,stattfinden,,,Verb,findet statt,fand statt,hat stattgefun,to take place
+3333,B1,83,S,main,Stau,der,-s,Noun,,,,traffic jam
+3334,B1,83,S,main,Staub,der,,Noun,,,,dust
+3335,B1,83,S,main,staubsaugen,,,Verb,staubsaugt,staubsaugte,hat gestaubsaugt,to vacuum
+3336,B1,83,S,main,stechen,,,Verb,sticht,stach,hat gestochen,to sting / to prick
+3337,B1,83,S,main,stecken,,,Verb,steckt,steckte,hat gesteckt,to stick / to put
+3338,B1,83,S,main,Steckdose,die,-n,Noun,,,,power outlet / socket
+3339,B1,83,S,main,Stecker,der,"-stehen, steht, stand,",Noun,,,,plug
+3340,B1,83,S,main,stehen,,,Verb,,,,to stand
+3341,B1,83,S,main,stehlen,,,Verb,stiehlt,stahl,hat gestohlen,to steal
+3342,B1,83,S,main,steigen,,,Verb,steigt,stieg,ist gestiegen,to climb / to rise
+3343,B1,83,N,main,nicht,,,Other,,,,not (artifact)
+3344,B1,83,N,main,nicht,,,Other,,,,not (artifact)
+3345,B1,83,S,main,schon,,,Other,,,,already (artifact)
+3346,B1,83,L,main,leiser,,,Other,,,,quieter (artifact)
+3347,B1,83,M,main,möchten,,,Verb,,,,would like (artifact)
+3348,B1,83,G,main,gestellt,,,Other,,,,placed / set (artifact)
+3349,B1,83,L,main,letzter,,,Other,,,,last (artifact)
+3350,B1,83,Z,main,zahlen,,,Verb,,,,to pay (artifact)
+3351,B1,83,U,main,und,,,Other,,,,and (artifact)
+3352,B1,83,S,main,steigen,,,Verb,,,,to climb / to rise (artifact)
+3353,B1,83,S,main,sitzen,,,Verb,,,,to sit (artifact)
+3354,B1,83,A,main,aussteigen,,,Verb,,,,to get off / to exit
+3355,B1,83,E,main,eine,,,Other,,,,a / one (artifact)
+3356,B1,83,A,main,am,,,Other,,,,at the (artifact)
+3357,B1,83,N,main,noch,,,Other,,,,still / yet (artifact)
+3358,B1,83,D,main,den,,,Verb,,,,the (artifact)
+3359,B1,83,A,main,ass,,,Other,,,,ate (artifact)
+3360,B1,83,D,main,doch,,,Other,,,,yet / still / come on (artifact)
+3361,B1,83,S,main,steckt,,,Other,,,,sticks / is stuck (artifact)
+3362,B1,83,A,main,auf,,,Other,,,,on / at (artifact)
+3363,B1,83,S,main,schon,,,Other,,,,already (artifact)
+3364,B1,83,G,main,gestiegen,,,Verb,,,,climbed / risen (artifact)
+3365,B1,84,S,main,streiken,,,Verb,streikt,streikte,hat gestreikt,to strike / to go on strike
+3366,B1,84,S,main,Streik,der,-s,Noun,,,,strike
+3367,B1,84,S,main,streiten,,,Verb,streitet,stritt,hat gestritten,to argue / to fight
+3368,B1,84,S,main,Streit,der,,Noun,,,,argument / quarrel
+3369,B1,84,S,main,streng,,,Other,,,,strict
+3370,B1,84,S,main,Stress,der,,Noun,,,,stress
+3371,B1,84,S,main,Strom,der,,Noun,,,,electricity / current / river
+3372,B1,84,S,main,Strumpf,der,¨-e,Noun,,,,stocking / sock
+3373,B1,84,S,main,Stück/-stück,das,-e,Noun,,,,piece
+3374,B1,84,S,main,Studie,die,-n,Noun,,,,study
+3375,B1,84,S,main,studieren,,,Verb,studiert,studierte,hat studiert,to study
+3376,B1,84,S,main,Student,der,-en,Noun,,,,student (male)
+3377,B1,84,S,main,Studentin,die,-nen,Noun,,,,student (female)
+3378,B1,84,S,main,Studierende,der,-n,Noun,,,,"student (male, formal)"
+3379,B1,84,S,main,Studierende,die,-n,Noun,,,,"student (female, formal)"
+3380,B1,84,S,main,Studium,das,,Noun,,,,studies / degree program
+3381,B1,84,S,main,Studio,das,-s,Noun,,,,studio
+3382,B1,84,S,main,Stufe,die,-n,Noun,,,,step / level / stage
+3383,B1,84,S,main,Stuhl,der,¨-e,Noun,,,,chair
+3384,B1,84,S,main,stimmen,,,Verb,stimmt,stimmte,hat gestimmt,to be correct / to tune
+3385,B1,84,S,main,Stimmung,die,"-enstinken, stinkt, stank,",Noun,,,,mood / atmosphere
+3386,B1,84,S,main,Stock,der,,Noun,,,,floor / stick / walking stick
+3387,B1,84,S,main,Stockwerk,das,-e,Noun,,,,floor / story (of a building)
+3388,B1,84,S,main,Stoff,der,-e,Noun,,,,fabric / material
+3389,B1,84,S,main,stolzstoppen,,,Verb,stoppt,stoppte,hat gestoppt,proud / to stop (artifact)
+3390,B1,84,S,main,stören,,,Verb,stört,störte,hat gestört,to disturb / to bother
+3391,B1,84,S,main,Störung,die,-en,Noun,,,,disturbance / fault
+3392,B1,84,S,main,stoßen,,,Verb,stößt,stieß,hat gestoßen,to push / to bump
+3393,B1,84,S,main,Strafe,die,-n,Noun,,,,punishment / penalty
+3394,B1,84,S,main,strafbar,,,Other,,,,punishable / criminal
+3395,B1,84,S,main,Strafzettel,der,-,Noun,,,,parking ticket / fine
+3396,B1,84,S,main,Strand,der,¨-e,Noun,,,,beach
+3397,B1,84,S,main,Straße,die,-n,Noun,,,,street / road
+3398,B1,84,S,main,Straßenbahn,die,,Noun,,,,tram / streetcar
+3399,B1,84,S,main,Strecke,die,,Noun,,,,route / stretch
+3400,B1,84,S,main,strengen,,,Verb,,,,to strain / to make an effort (artifact)
+3401,B1,84,S,main,sparen,,,Verb,,,,to save (money)
+3402,B1,84,L,main,losigkeit,,,Other,,,,lessness / lack (artifact)
+3403,B1,84,A,main,abgeschlossenes,,,Other,,,,completed (artifact)
+3404,B1,84,K,main,kurse,,,Other,,,,courses (artifact)
+3405,B1,84,S,main,stumm.Ich,,,Other,,,,mute (artifact)
+3406,B1,84,B,main,besser,,,Other,,,,better (artifact)
+3407,B1,84,W,main,war,,,Other,,,,was (artifact)
+3408,B1,84,B,main,bei,,,Other,,,,at / near (artifact)
+3409,B1,84,S,main,stört,,,Other,,,,disturbs (artifact)
+3410,B1,84,H,main,habe,,,Other,,,,have (artifact)
+3411,B1,84,G,main,geparkt,,,Other,,,,parked (artifact)
+3412,B1,84,G,main,gegangen,,,Verb,,,,gone (artifact)
+3413,B1,85,T,main,Tabelle,die,-n,Noun,,,,table / chart
+3414,B1,85,T,main,Tablette,die,-ndie,Noun,,,,tablet / pill
+3415,B1,85,T,main,Tagesablauf,der,¨-e,Noun,,,,daily routine
+3416,B1,85,T,main,Tal,das,¨-erdas,Noun,,,,valley
+3417,B1,85,T,main,Tankstelle,die,-n,Noun,,,,gas station
+3418,B1,85,T,main,Tante,die,-n,Noun,,,,aunt
+3419,B1,85,T,main,tanzen,,,Verb,tanzt,tanzte,hat getanzt,to dance
+3420,B1,85,T,main,Tanz,der,¨-e,Noun,,,,dance
+3421,B1,85,T,main,Tasche,die,-n,Noun,,,,bag / pocket
+3422,B1,85,T,main,Taschengeld,das,-er,Noun,,,,pocket money
+3423,B1,85,T,main,Taschentuch,das,¨-er,Noun,,,,handkerchief / tissue
+3424,B1,85,T,main,Tasse,die,-n,Noun,,,,cup
+3425,B1,85,T,main,Tastatur,die,-en,Noun,,,,keyboard
+3426,B1,85,T,main,Taste,die,-n,Noun,,,,key / button
+3427,B1,85,T,main,Tat,die,-en,Noun,,,,act / deed
+3428,B1,85,T,main,Täter,der,-,Noun,,,,perpetrator (male)
+3429,B1,85,T,main,Täterin,die,-nen,Noun,,,,perpetrator (female)
+3430,B1,85,T,main,Tätigkeit,die,-endie,Noun,,,,activity / occupation
+3431,B1,85,S,main,Sturm,der,¨-e,Noun,,,,storm
+3432,B1,85,S,main,stürzen,,,Verb,stürzt,stürzte,ist gestürzt,to fall / to crash
+3433,B1,85,S,main,suchen,,,Verb,sucht,suchte,hat gesucht,to search / to look for
+3434,B1,85,S,main,Sucht,die,¨-e,Noun,,,,addiction
+3435,B1,85,S,main,süchtig,,,Other,,,,addicted
+3436,B1,85,S,main,Suchtmittel,das,-,Noun,,,,addictive substance
+3437,B1,85,S,main,Summe,die,-n,Noun,,,,sum / total
+3438,B1,85,S,main,super,,,Other,,,,super / great
+3439,B1,85,S,main,Supermarkt,der,¨-e,Noun,,,,supermarket
+3440,B1,85,S,main,Suppe,die,-n,Noun,,,,soup
+3441,B1,85,S,main,süß,,,Other,,,,sweet
+3442,B1,85,S,main,Symbol,das,-e,Noun,,,,symbol
+3443,B1,85,S,main,sympathisch,,,Other,,,,nice / likeable
+3444,B1,85,S,main,System,das,-e,Noun,,,,system
+3445,B1,85,S,main,Szene,die,,Noun,,,,scene
+3446,B1,85,T,main,Tabelle,die,,Noun,,,,table / chart
+3447,B1,85,T,main,Tafel.,die,,Noun,,,,blackboard / board
+3448,B1,85,H,main,haben,,,Verb,,,,to have (artifact)
+3449,B1,85,G,main,getanzt,,,Other,,,,danced (artifact)
+3450,B1,85,G,main,ganz,,,Other,,,,whole / quite (artifact)
+3451,B1,85,K,main,kaputt,,,Other,,,,broken (artifact)
+3452,B1,85,D,main,drücken,,,Verb,,,,to press / to push
+3453,B1,85,G,main,gefasst,,,Other,,,,composed / ready (artifact)
+3454,B1,85,M,main,machen?1,,,Other,,,,do (artifact)
+3455,B1,85,H,main,habe,,,Other,,,,have (artifact)
+3456,B1,85,N,main,nicht,,,Other,,,,not (artifact)
+3457,B1,85,Z,main,zu,,,Other,,,,to / too (artifact)
+3458,B1,85,P,main,permarkt,,,Other,,,,supermarket (artifact)
+3459,B1,85,S,main,sympathisch,,,Other,,,,likeable (artifact)
+3460,B1,85,E,main,es,,,Other,,,,it (artifact)
+3461,B1,86,T,main,Teller,der,-,Noun,,,,plate
+3462,B1,86,T,main,Temperatur,die,-en,Noun,,,,temperature
+3463,B1,86,T,main,Tempo,das,,Noun,,,,speed / tempo
+3464,B1,86,T,main,Teppich,der,-e,Noun,,,,carpet / rug
+3465,B1,86,T,main,Termin,der,-e,Noun,,,,appointment
+3466,B1,86,T,main,Terminkalender,der,-,Noun,,,,calendar / planner
+3467,B1,86,T,main,Terrasse,die,-n,Noun,,,,terrace / patio
+3468,B1,86,T,main,testen,,,Verb,testet,testete,hat getestet,to test
+3469,B1,86,T,main,Test,der,-s,Noun,,,,test
+3470,B1,86,T,main,teuer,,,Other,,,,expensive
+3471,B1,86,T,main,Text,der,-edas,Noun,,,,text
+3472,B1,86,T,main,theoretisch,,,Other,,,,theoretical
+3473,B1,86,T,main,Theorie,die,-n,Noun,,,,theory
+3474,B1,86,T,main,Therapie,die,-ndas,Noun,,,,therapy
+3475,B1,86,T,main,tief,,,Other,,,,deep / low
+3476,B1,86,T,main,Tier,das,-edie,Noun,,,,animal
+3477,B1,86,T,main,tatsächlich,,,Other,,,,actually / really
+3478,B1,86,T,main,taub,,,Other,,,,deaf
+3479,B1,86,T,main,tauchen,,,Verb,taucht,tauchte,,to dive
+3480,B1,86,T,main,tauschen,,,Verb,tauscht,tauschte,hat getauscht,to swap / to exchange
+3481,B1,86,T,main,Technik,die,-en,Noun,,,,technology / technique
+3482,B1,86,T,main,technisch,,,Other,,,,technical
+3483,B1,86,T,main,Technologie,die,-n,Noun,,,,technology
+3484,B1,86,T,main,Tee,der,,Noun,,,,tea
+3485,B1,86,T,main,teilen,,,Verb,teilt,teilte,hat geteilt,to share / to divide
+3486,B1,86,T,main,Teil,das,-e,Noun,,,,part / section
+3487,B1,86,T,main,Teil,der,-e,Noun,,,,part / section
+3488,B1,86,T,main,Teilzeit,die,,Noun,,,,part-time
+3489,B1,86,T,main,teilnehmen,,,Verb,nimmt teil,nahm teil,hat teilgenommen,to participate / to take part
+3490,B1,86,T,main,Teilnahme,die,-n,Noun,,,,participation
+3491,B1,86,T,main,Teilnehmer,der,-,Noun,,,,participant (male)
+3492,B1,86,T,main,Teilnehmerin,die,-nen,Noun,,,,participant (female)
+3493,B1,86,T,main,telefonieren,,,Verb,telefoniert,telefonierte,hat telefoniert1,to telephone / to call
+3494,B1,86,G,main,gekauft,,,Other,,,,bought (artifact)
+3495,B1,86,S,main,schaffen,,,Verb,,,,to manage / to accomplish (artifact)
+3496,B1,86,S,main,standen,,,Verb,,,,stood (artifact)
+3497,B1,86,V,main,vieles,,,Other,,,,many things (artifact)
+3498,B1,86,S,main,schon,,,Other,,,,already (artifact)
+3499,B1,86,S,main,sehr,,,Other,,,,very (artifact)
+3500,B1,86,O,main,obwohl,,,Other,,,,although (artifact)
+3501,B1,86,T,main,taub,,,Other,,,,deaf (artifact)
+3502,B1,86,E,main,eine,,,Other,,,,a / one (artifact)
+3503,B1,86,E,main,ersten,,,Verb,,,,first (artifact)
+3504,B1,86,R,main,regelmäßig,,,Other,,,,regularly (artifact)
+3505,B1,86,K,main,kostenlos,,,Other,,,,free of charge (artifact)
+3506,B1,86,K,main,kommen,,,Verb,,,,to come (artifact)
+3507,B1,87,T,main,traditionell,,,Other,,,,traditional
+3508,B1,87,T,main,tragen,,,Verb,trägt,trug,hat getragen,to carry / to wear
+3509,B1,87,T,main,trainieren,,,Verb,trainiert,trainierte,hat trainiert,to train
+3510,B1,87,T,main,Trainer,der,-,Noun,,,,trainer / coach (male)
+3511,B1,87,T,main,Trainerin,die,-nen,Noun,,,,trainer / coach (female)
+3512,B1,87,T,main,Training,das,-s,Noun,,,,training
+3513,B1,87,T,main,Tram,das,-s,Noun,,,,tram / streetcar
+3514,B1,87,T,main,Träne,die,"-ntransportieren, trans-portiert, transportierte, hat transportiert",Noun,,,,tear (drop)
+3515,B1,87,T,main,Transport,der,-e,Noun,,,,transport
+3516,B1,87,T,main,träumen,,,Verb,träumt,träumte,hat geträumt,to dream
+3517,B1,87,T,main,Traum,der,¨-e,Noun,,,,dream
+3518,B1,87,T,main,traurig,,,Other,,,,sad
+3519,B1,87,T,main,treffen,,,Verb,trifft,traf,hat getroffen,to meet
+3520,B1,87,T,main,Treffpunkt,der,-e,Noun,,,,meeting point
+3521,B1,87,T,main,treiben,,,Verb,treibt,trieb,,to drive / to do (sports)
+3522,B1,87,T,main,trennen,,,Verb,trennt,trennte,hat getrennt,to separate / to divide
+3523,B1,87,T,main,Trennung,die,-en,Noun,,,,separation
+3524,B1,87,T,main,Tierpark,der,-s,Noun,,,,animal park / zoo
+3525,B1,87,T,main,Tipp,der,-s,Noun,,,,tip / hint
+3526,B1,87,T,main,tippen,,,Verb,tippt,tippte,,to type / to guess
+3527,B1,87,G,main,getippt,,,Other,,,,typed / guessed (artifact)
+3528,B1,87,T,main,Tisch,der,-eder,Noun,,,,table / desk
+3529,B1,87,T,main,Tochter,die,¨-,Noun,,,,daughter
+3530,B1,87,T,main,Tod,der,,Noun,,,,death
+3531,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal
+3532,B1,87,T,main,Toilette,die,-n tolerant,Noun,,,,toilet / restroom
+3533,B1,87,R,main,radeiser,,,Other,,,,tomato (artifact)
+3534,B1,87,T,main,Topf,der,¨-e,Noun,,,,pot
+3535,B1,87,T,main,Tor,das,-e,Noun,,,,gate / goal
+3536,B1,87,T,main,Torte,die,-n,Noun,,,,cake / tart
+3537,B1,87,T,main,tot,,,Other,,,,dead
+3538,B1,87,T,main,Tote,der,-n,Noun,,,,dead person (male)
+3539,B1,87,T,main,Tote,die,-n,Noun,,,,dead person (female)
+3540,B1,87,T,main,total,,,Other,,,,total / completely
+3541,B1,87,T,main,Tourismus,der,,Noun,,,,tourism
+3542,B1,87,T,main,Tourist,der,-en,Noun,,,,tourist (male)
+3543,B1,87,T,main,Touristin,die,,Noun,,,,tourist (female)
+3544,B1,87,S,main,schwer,,,Other,,,,heavy / difficult (artifact)
+3545,B1,87,M,main,mitfahren,,,Verb,,,,to ride along / to travel with
+3546,B1,87,G,main,getroffen,,,Verb,,,,met (artifact)
+3547,B1,87,S,main,sich,,,Other,,,,oneself (artifact)
+3548,B1,87,K,main,kommt,,,Other,,,,comes (artifact)
+3549,B1,87,S,main,schwierig,,,Other,,,,difficult (artifact)
+3550,B1,87,G,main,geschieden,,,Verb,aber sie lebt,,,divorced (artifact)
+3551,B1,87,W,main,wir,,,Other,,,,we (artifact)
+3552,B1,87,F,main,finde,,,Other,,,,find (artifact)
+3553,B1,87,E,main,einmal,,,Other,,,,once (artifact)
+3554,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal (artifact)
+3555,B1,87,M,main,müssen,,,Verb,,,,must (artifact)
+3556,B1,87,M,main,möchte,,,Other,,,,would like (artifact)
+3557,B1,87,S,main,schießen,,,Verb,,,,to shoot (artifact)
+3558,B1,87,U,main,unsere,,,Other,,,,our (artifact)
+3559,B1,88,T,main,Typ,der,-en,Noun,,,,type / guy
+3560,B1,88,T,main,typisch,,,Other,,,,typical
+3561,B1,88,U,main,U-Bahn,die,-enüben,Noun,,,,subway / underground
+3562,B1,88,Ü,main,Übung,die,-en,Noun,,,,exercise / practice
+3563,B1,88,Ü,main,über,,,Other,,,,about / over / via
+3564,B1,88,Ü,main,überall,,,Other,,,,everywhere
+3565,B1,88,Ü,main,überfahren,,,Verb,überfährt,überfuhr,hat überfahren,to run over / to cross
+3566,B1,88,Ü,main,überhaupt,,,Other,,,,at all / anyway
+3567,B1,88,Ü,main,überholen,,,Verb,überholt,überholte,hat überholt,to overtake / to pass
+3568,B1,88,Ü,main,überlegen,,,Verb,überlegt,überlegte,hat überlegt,to think about / to consider
+3569,B1,88,T,main,Treppenhaus,das,,Noun,,,,stairwell
+3570,B1,88,T,main,treten,,,Verb,tritt,trat,ist getreten,to step / to kick
+3571,B1,88,T,main,treu,,,Other,,,,faithful / loyal
+3572,B1,88,T,main,trinken,,,Verb,trinkt,trank,hat getrunken,to drink
+3573,B1,88,T,main,Trinkgeld,das,-er,Noun,,,,tip (gratuity)
+3574,B1,88,T,main,trocken,,,Verb,,,,dry
+3575,B1,88,T,main,trocknen,,,Verb,trocknet,trocknete,,to dry
+3576,B1,88,T,main,Tropfen,die,,Noun,,,,drops
+3577,B1,88,T,main,Trottoir,das,-s,Noun,,,,sidewalk / pavement (Swiss)
+3578,B1,88,T,main,trotz,,,Other,,,,despite / in spite of
+3579,B1,88,T,main,tun,,,Verb,tut,tat,hat getan,to do
+3580,B1,88,T,main,Tür,die,-en,Noun,,,,door
+3581,B1,88,T,main,Turm,der,,Noun,,,,tower
+3582,B1,88,D,main,du,,,Other,,,,you (artifact)
+3583,B1,88,T,main,typisch,,,Other,,,,typical (artifact)
+3584,B1,88,Ü,main,übe,,,Other,,,,practice (artifact)
+3585,B1,88,B,main,bezahlen,,,Verb,,,,to pay (artifact)
+3586,B1,88,Ü,main,überfahren,,,Verb,,,,to run over (artifact)
+3587,B1,88,N,main,nicht,,,Other,,,,not (artifact)
+3588,B1,88,M,main,muss,,,Other,,,,must (artifact)
+3589,B1,88,K,main,kaufen,,,Verb,,,,to buy (artifact)
+3590,B1,88,U,main,und,,,Other,,,,and (artifact)
+3591,B1,88,S,main,steigen.Im,,,Other,,,,climb / in (artifact)
+3592,B1,88,G,main,ganz,,,Other,,,,whole / quite (artifact)
+3593,B1,88,D,main,du,,,Other,,,,you (artifact)
+3594,B1,88,N,main,nicht,,,Other,,,,not (artifact)
+3595,B1,88,G,main,gegangen,,,Verb,,,,gone (artifact)
+3596,B1,88,S,main,schwimmen,,,Verb,,,,to swim (artifact)
+3597,B1,88,G,main,gekauft,,,Other,,,,bought (artifact)
+3598,B1,88,O,main,oben,,,Verb,,,,above (artifact)
+3599,B1,88,G,main,getan,,,Other,,,,done (artifact)
+3600,B1,88,S,main,sieht,,,Other,,,,looks (artifact)
 3601,B1,89,Ü,main,überzeugen,,,Verb,überzeugt,überzeugte,hat überzeugt,
 3602,B1,89,Ü,main,Überzeugung,die,-en,Noun,,,,
 3603,B1,89,Ü,main,üblich,,,Other,,,,
