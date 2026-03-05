@@ -2999,1251 +2999,1251 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 2999,B1,76,W,main,waren,,,Verb,,,,were (artifact),oradaydı (hatalı)
 3000,B1,76,M,main,muss,,,Other,,,,must (artifact),zorunda (hatalı)
 3001,B1,76,L,main,lassen,,,Verb,,,,to let / to leave (artifact),bırakmak (hatalı)
-3002,B1,76,W,main,wechseln,,,Verb,,,,to change / to switch,
-3003,B1,76,W,main,wieder,,,Other,,,,again (artifact),
-3004,B1,76,W,main,war,,,Other,,,,was (artifact),
-3005,B1,76,S,main,schenken,,,Verb,,,,to give as a gift (artifact),
-3006,B1,76,L,main,ladung,,,Other,,,,loading / charge (artifact),
-3007,B1,76,G,main,geschickt,,,Other,,,,sent / clever (artifact),
-3008,B1,76,G,main,gegangen,,,Verb,,,,gone (artifact),
-3009,B1,76,G,main,geschossen,,,Verb,,,,shot (artifact),
-3010,B1,76,W,main,wirklich,,,Other,,,,really (artifact),
-3011,B1,76,K,main,kannst,,,Other,,,,can (artifact),
-3012,B1,76,S,main,schaden,,,Verb,,,,to harm (artifact),
-3013,B1,76,T,main,to,,,Other,,,,to (artifact),
-3014,B1,76,B,main,bereiten,,,Verb,,,,to prepare (artifact),
-3015,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact),
-3016,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact),
-3017,B1,76,S,main,scharf,,,Other,,,,sharp / spicy (artifact),
-3018,B1,77,S,main,schlimm,,,Other,,,,bad / severe / terrible,
-3019,B1,77,S,main,Schloss,das,¨-er,Noun,,,,castle / lock,
-3020,B1,77,S,main,Schluss,der,,Noun,,,,end / conclusion,
-3021,B1,77,S,main,Schlüssel,der,-,Noun,,,,key,
-3022,B1,77,S,main,schmal,,,Other,,,,narrow / slim,
-3023,B1,77,S,main,schmecken,,,Verb,schmeckt,schmeckte,hat geschmeckt,to taste,
-3024,B1,77,S,main,Schmerz,der,-en,Noun,,,,pain,
-3025,B1,77,S,main,Schmerzmittel,das,-,Noun,,,,painkiller,
-3026,B1,77,S,main,schminken,,,Verb,schminkt,schminkte,hat geschminkt,to put on makeup,
-3027,B1,77,S,main,Schmuck,der,,Noun,,,,jewelry,
-3028,B1,77,S,main,Schmutz,der,,Noun,,,,dirt / filth,
-3029,B1,77,S,main,schmutzig,,,Other,,,,dirty,
-3030,B1,77,V,main,verschmutzen,,,Verb,verschmutzt,verschmutzte,hat verschmutzt,to pollute,
-3031,B1,77,S,main,Schnee,der,,Noun,,,,snow,
-3032,B1,77,S,main,schneien,,,Verb,es schneit,es,,to snow,
-3033,B1,77,S,main,schneiden,,,Verb,schneidet,schnitt,hat geschnitten,to cut (artifact),
-3034,B1,77,S,main,schimpfen,,,Verb,schimpft,schimpfte,hat geschimpft,to scold / to complain,
-3035,B1,77,S,main,Schinken,der,-,Noun,,,,ham,
-3036,B1,77,S,main,Schirm,der,-e,Noun,,,,umbrella / screen,
-3037,B1,77,S,main,schlafen,,,Verb,schläft,schlief,hat geschlafen,to sleep,
-3038,B1,77,S,main,Schlaf,der,,Noun,,,,sleep,
-3039,B1,77,S,main,schlagen,,,Verb,schlägt,schlug,hat geschlagen,to hit / to beat,
-3040,B1,77,D,main,der/das,,,Other,,,,the (artifact),
-3041,B1,77,S,main,Schlange,die,-n,Noun,,,,snake / queue / line,
-3042,B1,77,S,main,schlankschlecht,,,Other,,,,slim / bad (artifact),
-3043,B1,77,S,main,schließen,,,Verb,schließt,schloss,hat geschlossen7.,to close / to shut,
-3044,B1,77,F,main,fertig,,,Other,,,,ready / finished (artifact),
-3045,B1,77,S,main,schließlich,,,Other,,,,finally / after all,
-3046,B1,77,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),
-3047,B1,77,S,main,schließlich,,,Other,,,,finally / after all (artifact),
-3048,B1,77,B,main,besichtigt,,,Other,,,,visited / toured (artifact),
-3049,B1,77,K,main,klingelt,,,Other,,,,rings (artifact),
-3050,B1,77,I,main,ich,,,Other,,,,I (artifact),
-3051,B1,77,K,main,können,,,Verb,,,,to be able to / can (artifact),
-3052,B1,77,S,main,schlagen,,,Verb,,,,to hit / to beat (artifact),
-3053,B1,77,A,main,aus,,,Other,,,,from / out of (artifact),
-3054,B1,77,K,main,kr,,,Other,,,,kr (artifact),
-3055,B1,77,A,main,ank,,,Other,,,,ank (artifact),
-3056,B1,77,S,main,schlecht,,,Other,,,,bad (artifact),
-3057,B1,77,S,main,schlecht,,,Other,,,,bad (artifact),
-3058,B1,77,D,main,dich,,,Other,,,,"you (accusative, artifact)",
-3059,B1,77,G,main,ganz,,,Other,,,,whole / quite (artifact),
-3060,B1,77,G,main,geschlossen,,,Verb,,,,closed (artifact),
-3061,B1,77,A,main,abschließen,,,Verb,,,,to lock / to conclude,
-3062,B1,78,S,main,schreien,,,Verb,schreit,schrie,hat geschrien,to scream / to shout,
-3063,B1,78,S,main,Schrift,die,-en,Noun,,,,writing / font / script,
-3064,B1,78,S,main,schriftlich,,,Other,,,,written,
-3065,B1,78,S,main,Schriftsteller,der,-,Noun,,,,writer / author (male),
-3066,B1,78,S,main,Schriftstellerin,die,-nen,Noun,,,,writer / author (female),
-3067,B1,78,S,main,Schritt,der,-e,Noun,,,,step,
-3068,B1,78,S,main,Schuh,der,-e,Noun,,,,shoe,
-3069,B1,78,S,main,Schuld,die,,Noun,,,,guilt / debt,
-3070,B1,78,S,main,schuld,,,Other,,,,guilty,
-3071,B1,78,S,main,Schulden,die,,Noun,,,,debts,
-3072,B1,78,S,main,schuldig,,,Other,,,,guilty,
-3073,B1,78,S,main,Schule,die,-n,Noun,,,,school,
-3074,B1,78,S,main,Schularbeit,die,-en,Noun,,,,homework / school assignment (Austrian),
-3075,B1,78,S,main,Schüler,der,-,Noun,,,,student / pupil (male),
-3076,B1,78,S,main,Schülerin,die,-nen,Noun,,,,student / pupil (female),
-3077,B1,78,S,main,Schulter,die,-n,Noun,,,,shoulder,
-3078,B1,78,S,main,Schüssel,die,"-nschütteln, schüttelt,",Noun,,,,bowl / dish,
-3079,B1,78,S,main,schützen,,,Verb,schützt,schützte,hat geschütztschnell,to protect,
-3080,B1,78,S,main,Schnitzel,das,-,Noun,,,,schnitzel / breaded cutlet,
-3081,B1,78,S,main,Schnupfendie,der,,Noun,,,,cold / runny nose,
-3082,B1,78,S,main,schon,,,Other,,,,already,
-3083,B1,78,S,main,schön,,,Other,,,,beautiful / nice,
-3084,B1,78,S,main,Schrank,der,¨-e,Noun,,,,wardrobe / cabinet,
-3085,B1,78,S,main,Schreck(en),der,,Noun,,,,fright / horror,
-3086,B1,78,S,main,schrecklich,,,Other,,,,terrible / horrible,
-3087,B1,78,S,main,schreiben,,,Verb,schreibt,schrieb,hat geschrieben,to write,
-3088,B1,78,A,main,aufschreibenHaben,,,Verb,,,,to write down (artifact),
-3089,B1,78,S,main,schreien,,,Verb,,,,to scream / to shout,
-3090,B1,78,G,main,geschrien,,,Verb,,,,screamed / shouted (artifact),
-3091,B1,78,L,main,lesen,,,Verb,,,,to read (artifact),
-3092,B1,78,H,main,halben,,,Verb,,,,half (artifact),
-3093,B1,78,S,main,schriftliche,,,Other,,,,written (artifact),
-3094,B1,78,N,main,nicht,,,Other,,,,not (artifact),
-3095,B1,78,N,main,nicht,,,Other,,,,not (artifact),
-3096,B1,78,B,main,bezahlt,,,Other,,,,paid (artifact),
-3097,B1,78,B,main,bitte,,,Other,,,,please (artifact),
-3098,B1,78,W,main,wieder,,,Other,,,,again (artifact),
-3099,B1,78,D,main,den,,,Verb,,,,the (artifact),
-3100,B1,78,S,main,schütteln,,,Verb,,,,to shake,
-3101,B1,78,M,main,möglich,,,Other,,,,possible (artifact),
-3102,B1,78,S,main,schnell,,,Other,,,,fast / quick (artifact),
-3103,B1,78,G,main,gegessen,,,Verb,,,,eaten (artifact),
-3104,B1,78,L,main,lesen,,,Verb,,,,to read (artifact),
-3105,B1,78,S,main,sehr,,,Other,,,,very (artifact),
-3106,B1,78,W,main,warten,,,Verb,,,,to wait (artifact),
-3107,B1,78,S,main,schon,,,Other,,,,already (artifact),
-3108,B1,78,B,main,bleiben,,,Verb,,,,to stay / to remain (artifact),
-3109,B1,78,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),
-3110,B1,78,M,main,mehr,,,Other,,,,more (artifact),
-3111,B1,78,A,main,aufgeschrieben,,,Verb,,,,written down (artifact),
-3112,B1,79,S,main,sehr,,,Other,,,,very (artifact),
-3113,B1,79,S,main,Seife,die,-n,Noun,,,,soap,
-3114,B1,79,S,main,sein,,,Verb,,,ist gewesen,to be,
-3115,B1,79,S,main,seit,,,Other,,,,since / for (time),
-3116,B1,79,S,main,seitdem,,,Other,,,,since then,
-3117,B1,79,S,main,Seite,die,-n,Noun,,,,page / side,
-3118,B1,79,S,main,Sekretär,der,-e,Noun,,,,secretary (male),
-3119,B1,79,S,main,Sekretärin,die,-nen,Noun,,,,secretary (female),
-3120,B1,79,S,main,selb,,,Other,,,,self (artifact),
-3121,B1,79,S,main,selbst,,,Other,,,,oneself / self,
-3122,B1,79,S,main,selber,,,Other,,,,oneself / self,
-3123,B1,79,S,main,selbstständig,,,Other,,,,self-employed / independent,
-3124,B1,79,S,main,selbstverständlichder,,,Other,,,,of course / naturally (artifact),
-3125,B1,79,S,main,schwach,,,Other,,,,weak,
-3126,B1,79,S,main,Schwammerl,das,-n,Noun,,,,mushroom (Austrian),
-3127,B1,79,S,main,schwanger,,,Other,,,,pregnant,
-3128,B1,79,S,main,Schwangerschaft,die,-en,Noun,,,,pregnancy,
-3129,B1,79,S,main,schweigen,,,Verb,schweigt,schwieg,hat geschwiegen,to be silent / to keep quiet,
-3130,B1,79,S,main,schwer,,,Other,,,,heavy / difficult,
-3131,B1,79,S,main,Schwester,die,-n,Noun,,,,sister,
-3132,B1,79,S,main,schwierig,,,Other,,,,difficult,
-3133,B1,79,S,main,Schwierigkeit,die,-en,Noun,,,,difficulty,
-3134,B1,79,S,main,schwimmen,,,Verb,schwimmt,schwamm,ist geschwommen,to swim,
-3135,B1,79,S,main,Schwimmbad,das,¨-er,Noun,,,,swimming pool,
-3136,B1,79,S,main,schwitzen,,,Verb,schwitzt,schwitzte,hat geschwitzt,to sweat,
-3137,B1,79,S,main,See,der,-n,Noun,,,,lake (der - freshwater),
-3138,B1,79,S,main,See,die,,Noun,,,,sea (die - saltwater),
-3139,B1,79,N,main,Nord-/Ostsee,die,,Noun,,,,North/Baltic Sea,
-3140,B1,79,S,main,sehen,,,Verb,sieht,sah,hat gesehen5.,to see,
-3141,B1,79,S,main,schnell,,,Other,,,,fast / quick (artifact),
-3142,B1,79,N,main,noch,,,Other,,,,still / yet (artifact),
-3143,B1,79,G,main,gefreut,,,Other,,,,glad / pleased (artifact),
-3144,B1,79,Ü,main,übermorgen,,,Verb,,,,the day after tomorrow,
-3145,B1,79,A,main,an/aus,,,Other,,,,on / off (artifact),
-3146,B1,79,I,main,ich,,,Other,,,,I (artifact),
-3147,B1,79,L,main,land,,,Other,,,,land / country (artifact),
-3148,B1,79,W,main,wohne,,,Other,,,,live (artifact),
-3149,B1,79,D,main,du,,,Other,,,,you (artifact),
-3150,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact),
-3151,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact),
-3152,B1,79,F,main,fort,,,Other,,,,away / forth (artifact),
-3153,B1,79,M,main,mich,,,Other,,,,me (artifact),
-3154,B1,79,H,main,helfen,,,Verb,,,,to help (artifact),
-3155,B1,79,S,main,schwanger,,,Other,,,,pregnant (artifact),
-3156,B1,79,S,main,schaft,,,Other,,,,schaft (artifact),
-3157,B1,79,D,main,den,,,Verb,,,,the (artifact),
-3158,B1,79,E,main,einen,,,Verb,,,,a / one (artifact),
-3159,B1,79,G,main,geschwitzt,,,Other,,,,sweated (artifact),
-3160,B1,79,A,main,ahren,,,Verb,,,,years (artifact),
-3161,B1,80,S,main,siegen,,,Verb,siegt,siegte,hat gesiegt,to win / to be victorious,
-3162,B1,80,S,main,Sieg,der,-e,Noun,,,,victory,
-3163,B1,80,S,main,Sieger,der,-,Noun,,,,winner (male),
-3164,B1,80,S,main,Siegerin,die,-nen,Noun,,,,winner (female),
-3165,B1,80,S,main,siezen,,,Verb,siezt,siezte,hat gesiezt,to address formally (Sie),
-3166,B1,80,S,main,singen,,,Verb,singt,sang,,to sing,
-3167,B1,80,G,main,gesungen,,,Verb,,,,sung (artifact),
-3168,B1,80,S,main,sinken,,,Verb,sinkt,sank,ist gesunken,to sink / to fall,
-3169,B1,80,S,main,Sinn,der,,Noun,,,,meaning / sense,
-3170,B1,80,S,main,sinnlos,,,Other,,,,pointless / senseless,
-3171,B1,80,S,main,sinnvoll,,,Other,,,,meaningful / sensible,
-3172,B1,80,S,main,Situation,die,"-ensitzen, sitzt, saß, hat/ist",Noun,,,,situation,
-3173,B1,80,G,main,gesessen,,,Verb,,,,sat (artifact),
-3174,B1,80,S,main,Sitz,der,-e,Noun,,,,seat / headquarters,
-3175,B1,80,S,main,Ski/Schi,der,-er/-,Noun,,,,ski,
-3176,B1,80,S,main,so,,,Other,,,,so / like that,
-3177,B1,80,S,main,sobaldselten,,,Verb,,,,as soon as / rarely,
-3178,B1,80,S,main,seltsam,,,Other,,,,strange / odd,
-3179,B1,80,S,main,Semester,das,-,Noun,,,,semester,
-3180,B1,80,S,main,Seminar,das,-e,Noun,,,,seminar,
-3181,B1,80,S,main,Semmel,die,-n,Noun,,,,bread roll (Austrian),
-3182,B1,80,S,main,Sender,der,-,Noun,,,,sender / broadcaster,
-3183,B1,80,S,main,Sendung,die,-en,Noun,,,,broadcast / program / shipment,
-3184,B1,80,S,main,Senioren,die,,Noun,,,,seniors / elderly people,
-3185,B1,80,S,main,Service,der,,Noun,,,,service,
-3186,B1,80,S,main,Serviceangestellte,der,-n,Noun,,,,service employee,
-3187,B1,80,S,main,Sessel,der,-,Noun,,,,armchair,
-3188,B1,80,S,main,sicher,,,Other,,,,safe / certain / sure,
-3189,B1,80,S,main,Sicherheit,die,-en,Noun,,,,safety / security,
-3190,B1,80,S,main,sichern,,,Verb,sichert,sicherte,hat gesichert,to secure / to back up,
-3191,B1,80,B,main,Bein,das,,Noun,,,,leg,
-3192,B1,80,F,main,freuen,,,Verb,,,,to be glad / to look forward to,
-3193,B1,80,S,main,siezen,,,Verb,,,,to address formally (artifact),
-3194,B1,80,E,main,erkältet,,,Other,,,,having a cold (artifact),
-3195,B1,80,L,main,lange,,,Other,,,,long (artifact),
-3196,B1,80,H,main,hinten,,,Verb,,,,behind / at the back (artifact),
-3197,B1,80,F,main,fürs,,,Other,,,,for the (artifact),
-3198,B1,80,K,main,kann,,,Other,,,,can (artifact),
-3199,B1,80,M,main,mich,,,Other,,,,me (artifact),
-3200,B1,80,J,main,jetzt,,,Other,,,,now (artifact),
-3201,B1,80,N,main,nicht,,,Other,,,,not (artifact),
-3202,B1,80,B,main,besuchen.Ich,,,Other,,,,to visit (artifact),
-3203,B1,80,P,main,per,,,Other,,,,by / per (artifact),
-3204,B1,80,N,main,nachsenden,,,Verb,,,,to forward / to redirect mail,
-3205,B1,80,M,main,mit,,,Other,,,,with (artifact),
-3206,B1,80,S,main,statt,,,Other,,,,instead of (artifact),
-3207,B1,80,G,main,geöffnet,,,Other,,,,opened (artifact),
-3208,B1,81,S,main,sovielso,,,Other,,,,so much / anyway (artifact),
-3209,B1,81,S,main,sowieso,,,Other,,,,anyway / in any case,
-3210,B1,81,S,main,sowohl,,,Other,,,,both / as well as,
-3211,B1,81,S,main,Sozialarbeiter,der,-,Noun,,,,social worker (male),
-3212,B1,81,S,main,Sozialarbeiterin,die,-nen,Noun,,,,social worker (female),
-3213,B1,81,S,main,spannendsparen,,,Verb,spart,sparte,,exciting / to save (artifact),
-3214,B1,81,G,main,gespart,,,Other,,,,saved (artifact),
-3215,B1,81,S,main,sparsam,,,Other,,,,economical / thrifty,
-3216,B1,81,S,main,Spaß,der,,Noun,,,,fun,
-3217,B1,81,S,main,spät,,,Other,,,,late,
-3218,B1,81,S,main,spätestens,,,Other,,,,at the latest,
-3219,B1,81,S,main,spazieren,,,Verb,geht,,,to walk / to stroll,
-3220,B1,81,S,main,spazieren,,,Verb,ging spazieren,,ist spazieren,to walk / to stroll,
-3221,B1,81,S,main,Spaziergang,der,¨-e,Noun,,,,walk / stroll,
-3222,B1,81,S,main,speichern,,,Verb,speichert,speicherte,hat gespeichert,to save / to store,
-3223,B1,81,S,main,sodass,,,Other,,,,so that,
-3224,B1,81,S,main,Sofa,das,-s,Noun,,,,sofa / couch,
-3225,B1,81,S,main,sofort,,,Other,,,,immediately / right away,
-3226,B1,81,S,main,sogenannt,,,Other,,,,so-called,
-3227,B1,81,S,main,sogar,,,Other,,,,even / in fact,
-3228,B1,81,S,main,Sohn,der,¨-e,Noun,,,,son,
-3229,B1,81,S,main,solange,,,Other,,,,as long as,
-3230,B1,81,S,main,solch,,,Other,,,,such,
-3231,B1,81,S,main,sollen,,,Verb,soll,sollte,,should / to be supposed to,
-3232,B1,81,G,main,gesollt,,,Other,,,,should / supposed to (artifact),
-3233,B1,81,S,main,Sonderangebot,das,-e,Noun,,,,special offer,
-3234,B1,81,S,main,sondern,,,Verb,,,,but rather,
-3235,B1,81,S,main,Sonne,die,,Noun,,,,sun,
-3236,B1,81,S,main,sonnig,,,Other,,,,sunny,
-3237,B1,81,S,main,sonst,,,Other,,,,otherwise / else,
-3238,B1,81,S,main,sorgen,,,Verb,sorgt,sorgte,hat gesorgt,to care / to worry,
-3239,B1,81,S,main,Sorge,die,-n,Noun,,,,worry / concern,
-3240,B1,81,S,main,Soße/Sauce,die,,Noun,,,,sauce / gravy,
-3241,B1,81,H,main,heute,,,Other,,,,today (artifact),
-3242,B1,81,S,main,schlecht,,,Other,,,,bad (artifact),
-3243,B1,81,U,main,unterschreiben,,,Verb,,,,to sign,
-3244,B1,81,S,main,sparen,,,Verb,,,,to save (money),
-3245,B1,81,S,main,sehr,,,Other,,,,very (artifact),
-3246,B1,81,V,main,verbraucht,,,Other,,,,used up / consumed (artifact),
-3247,B1,81,I,main,ich,,,Other,,,,I (artifact),
-3248,B1,81,B,main,besonders,,,Other,,,,especially (artifact),
-3249,B1,81,W,main,werden,,,Verb,,,,to become (artifact),
-3250,B1,81,G,main,gegangen,,,Verb,,,,gone (artifact),
-3251,B1,81,A,main,ab,,,Other,,,,from / off (artifact),
-3252,B1,81,G,main,genannte,,,Other,,,,named / called (artifact),
-3253,B1,81,S,main,sogar,,,Other,,,,even / in fact (artifact),
-3254,B1,81,A,main,auf,,,Other,,,,on / at (artifact),
-3255,B1,81,M,main,morgen,,,Verb,,,,tomorrow (artifact),
-3256,B1,81,E,main,einverstanden,,,Verb,,,,agreed (artifact),
-3257,B1,81,D,main,duziert,,,Other,,,,duced (artifact),
-3258,B1,81,S,main,sondern,,,Verb,,,,but rather (artifact),
-3259,B1,81,S,main,scheint,,,Other,,,,seems (artifact),
-3260,B1,81,G,main,gelegen,,,Verb,,,,lay / was located (artifact),
-3261,B1,81,E,main,er,,,Other,,,,he (artifact),
-3262,B1,81,Z,main,zu,,,Other,,,,to / too (artifact),
-3263,B1,81,K,main,keine,,,Other,,,,no / not any (artifact),
-3264,B1,82,S,main,springen,,,Verb,springt,sprang,ist gesprungen,to jump,
-3265,B1,82,S,main,Spritze,die,-n,Noun,,,,injection / syringe,
-3266,B1,82,S,main,spülen,,,Verb,spült,spülte,hat gespült,to rinse / to wash up,
-3267,B1,82,S,main,Spur,die,-en,Noun,,,,track / trail / trace,
-3268,B1,82,S,main,spüren,,,Verb,spürt,spürte,hat gespürt,to feel / to sense,
-3269,B1,82,S,main,Stadion,das,,Noun,,,,stadium,
-3270,B1,82,S,main,Stadt,die,¨-e,Noun,,,,city / town,
-3271,B1,82,S,main,städtisch,,,Other,,,,urban / municipal,
-3272,B1,82,S,main,Stadtplan,der,¨-e,Noun,,,,city map,
-3273,B1,82,S,main,stammen,,,Verb,stammt,stammte,hat gestammt,to come from / to originate,
-3274,B1,82,S,main,ständig,,,Other,,,,constantly / permanently,
-3275,B1,82,S,main,Standpunkt,der,-e,Noun,,,,viewpoint / standpoint,
-3276,B1,82,S,main,Star,der,-sstark,Noun,,,,star / celebrity,
-3277,B1,82,S,main,starten,,,Verb,startet,startete,ist gestartet,to start,
-3278,B1,82,S,main,Speisekarte,die,-n,Noun,,,,menu,
-3279,B1,82,S,main,Speisewagen,der,-,Noun,,,,dining car,
-3280,B1,82,S,main,Spezialist,der,-en,Noun,,,,specialist (male),
-3281,B1,82,S,main,Spezialistin,die,-nen,Noun,,,,specialist (female),
-3282,B1,82,S,main,speziell,,,Other,,,,special,
-3283,B1,82,S,main,Spiegel,der,"-spielen, spielt, spielte,",Noun,,,,mirror,
-3284,B1,82,S,main,Spiel,das,-e,Noun,,,,game / play,
-3285,B1,82,S,main,Spieler,der,-,Noun,,,,player (male),
-3286,B1,82,S,main,Spielerin,die,-nen,Noun,,,,player (female),
-3287,B1,82,S,main,Spielplatz,der,¨-e,Noun,,,,playground,
-3288,B1,82,S,main,Spielzeug,das,-e,Noun,,,,toy,
-3289,B1,82,S,main,spitz,,,Other,,,,pointed / sharp,
-3290,B1,82,S,main,Sport,der,,Noun,,,,sport / sports,
-3291,B1,82,S,main,Sportart,die,-en,Noun,,,,type of sport,
-3292,B1,82,S,main,Sportler,der,-,Noun,,,,athlete (male),
-3293,B1,82,S,main,Sportlerin,die,-nen,Noun,,,,athlete (female),
-3294,B1,82,S,main,sportlich,,,Other,,,,sporty / athletic,
-3295,B1,82,S,main,Sprache,die,-n,Noun,,,,language,
-3296,B1,82,F,main,Fremdsprache,die,-n,Noun,,,,foreign language,
-3297,B1,82,M,main,Muttersprache,die,-n,Noun,,,,mother tongue / native language,
-3298,B1,82,Z,main,Zweitsprache,die,-n,Noun,,,,second language,
-3299,B1,82,S,main,sprechen,,,Verb,spricht,sprach,hat gesprochen3.,to speak (artifact),
-3300,B1,82,G,main,gegen,,,Verb,,,,against (artifact),
-3301,B1,82,G,main,gehen,,,Verb,,,,to go (artifact),
-3302,B1,82,S,main,Stadt.,der,,Noun,,,,city (artifact),
-3303,B1,82,D,main,Donau.,der,,Noun,,,,Danube (artifact),
-3304,B1,82,M,main,meiner,,,Other,,,,my (artifact),
-3305,B1,82,R,main,recht,,,Other,,,,right / correct (artifact),
-3306,B1,82,B,main,besonders,,,Other,,,,especially (artifact),
-3307,B1,82,V,main,verschreiben,,,Verb,,,,to prescribe,
-3308,B1,82,G,main,geschickt,,,Other,,,,sent / clever (artifact),
-3309,B1,82,F,main,für,,,Other,,,,for (artifact),
-3310,B1,82,K,main,können,,,Verb,,,,to be able to (artifact),
-3311,B1,82,V,main,vier,,,Other,,,,four (artifact),
-3312,B1,82,D,main,dung,,,Other,,,,dung (artifact),
-3313,B1,82,S,main,sprechen,,,Verb,,,,to speak (artifact),
-3314,B1,83,S,main,Stein,der,-e,Noun,,,,stone / rock,
-3315,B1,83,S,main,Stelle,die,-n,Noun,,,,position / place / job,
-3316,B1,83,S,main,stellen,,,Verb,stellt,stellte,hat gestellt,to place / to put,
-3317,B1,83,S,main,Stempel,der,-,Noun,,,,stamp,
-3318,B1,83,S,main,sterben,,,Verb,stirbt,starb,,to die,
-3319,B1,83,G,main,gestorben,,,Verb,,,,died (artifact),
-3320,B1,83,S,main,Stern,der,-e,Noun,,,,star,
-3321,B1,83,S,main,Steuer,die,-nder,Noun,,,,tax / steering,
-3322,B1,83,S,main,Stewardess,die,-en,Noun,,,,flight attendant (female),
-3323,B1,83,S,main,Stift,der,-eder,Noun,,,,pen / pencil / marker,
-3324,B1,83,S,main,stilistisch,,,Other,,,,stylistic,
-3325,B1,83,S,main,still,,,Other,,,,quiet / still,
-3326,B1,83,S,main,Stiefel,der,-die,Noun,,,,boot,
-3327,B1,83,S,main,Stiegenhaus,das,¨-er,Noun,,,,staircase (Austrian),
-3328,B1,83,S,main,Station,die,-en,Noun,,,,station / stop,
-3329,B1,83,S,main,Statistik,die,-en,Noun,,,,statistics,
-3330,B1,83,S,main,statistisch,,,Other,,,,statistical,
-3331,B1,83,S,main,statt,,,Other,,,,instead of,
-3332,B1,83,S,main,stattfinden,,,Verb,findet statt,fand statt,hat stattgefun,to take place,
-3333,B1,83,S,main,Stau,der,-s,Noun,,,,traffic jam,
-3334,B1,83,S,main,Staub,der,,Noun,,,,dust,
-3335,B1,83,S,main,staubsaugen,,,Verb,staubsaugt,staubsaugte,hat gestaubsaugt,to vacuum,
-3336,B1,83,S,main,stechen,,,Verb,sticht,stach,hat gestochen,to sting / to prick,
-3337,B1,83,S,main,stecken,,,Verb,steckt,steckte,hat gesteckt,to stick / to put,
-3338,B1,83,S,main,Steckdose,die,-n,Noun,,,,power outlet / socket,
-3339,B1,83,S,main,Stecker,der,"-stehen, steht, stand,",Noun,,,,plug,
-3340,B1,83,S,main,stehen,,,Verb,,,,to stand,
-3341,B1,83,S,main,stehlen,,,Verb,stiehlt,stahl,hat gestohlen,to steal,
-3342,B1,83,S,main,steigen,,,Verb,steigt,stieg,ist gestiegen,to climb / to rise,
-3343,B1,83,N,main,nicht,,,Other,,,,not (artifact),
-3344,B1,83,N,main,nicht,,,Other,,,,not (artifact),
-3345,B1,83,S,main,schon,,,Other,,,,already (artifact),
-3346,B1,83,L,main,leiser,,,Other,,,,quieter (artifact),
-3347,B1,83,M,main,möchten,,,Verb,,,,would like (artifact),
-3348,B1,83,G,main,gestellt,,,Other,,,,placed / set (artifact),
-3349,B1,83,L,main,letzter,,,Other,,,,last (artifact),
-3350,B1,83,Z,main,zahlen,,,Verb,,,,to pay (artifact),
-3351,B1,83,U,main,und,,,Other,,,,and (artifact),
-3352,B1,83,S,main,steigen,,,Verb,,,,to climb / to rise (artifact),
-3353,B1,83,S,main,sitzen,,,Verb,,,,to sit (artifact),
-3354,B1,83,A,main,aussteigen,,,Verb,,,,to get off / to exit,
-3355,B1,83,E,main,eine,,,Other,,,,a / one (artifact),
-3356,B1,83,A,main,am,,,Other,,,,at the (artifact),
-3357,B1,83,N,main,noch,,,Other,,,,still / yet (artifact),
-3358,B1,83,D,main,den,,,Verb,,,,the (artifact),
-3359,B1,83,A,main,ass,,,Other,,,,ate (artifact),
-3360,B1,83,D,main,doch,,,Other,,,,yet / still / come on (artifact),
-3361,B1,83,S,main,steckt,,,Other,,,,sticks / is stuck (artifact),
-3362,B1,83,A,main,auf,,,Other,,,,on / at (artifact),
-3363,B1,83,S,main,schon,,,Other,,,,already (artifact),
-3364,B1,83,G,main,gestiegen,,,Verb,,,,climbed / risen (artifact),
-3365,B1,84,S,main,streiken,,,Verb,streikt,streikte,hat gestreikt,to strike / to go on strike,
-3366,B1,84,S,main,Streik,der,-s,Noun,,,,strike,
-3367,B1,84,S,main,streiten,,,Verb,streitet,stritt,hat gestritten,to argue / to fight,
-3368,B1,84,S,main,Streit,der,,Noun,,,,argument / quarrel,
-3369,B1,84,S,main,streng,,,Other,,,,strict,
-3370,B1,84,S,main,Stress,der,,Noun,,,,stress,
-3371,B1,84,S,main,Strom,der,,Noun,,,,electricity / current / river,
-3372,B1,84,S,main,Strumpf,der,¨-e,Noun,,,,stocking / sock,
-3373,B1,84,S,main,Stück/-stück,das,-e,Noun,,,,piece,
-3374,B1,84,S,main,Studie,die,-n,Noun,,,,study,
-3375,B1,84,S,main,studieren,,,Verb,studiert,studierte,hat studiert,to study,
-3376,B1,84,S,main,Student,der,-en,Noun,,,,student (male),
-3377,B1,84,S,main,Studentin,die,-nen,Noun,,,,student (female),
-3378,B1,84,S,main,Studierende,der,-n,Noun,,,,"student (male, formal)",
-3379,B1,84,S,main,Studierende,die,-n,Noun,,,,"student (female, formal)",
-3380,B1,84,S,main,Studium,das,,Noun,,,,studies / degree program,
-3381,B1,84,S,main,Studio,das,-s,Noun,,,,studio,
-3382,B1,84,S,main,Stufe,die,-n,Noun,,,,step / level / stage,
-3383,B1,84,S,main,Stuhl,der,¨-e,Noun,,,,chair,
-3384,B1,84,S,main,stimmen,,,Verb,stimmt,stimmte,hat gestimmt,to be correct / to tune,
-3385,B1,84,S,main,Stimmung,die,"-enstinken, stinkt, stank,",Noun,,,,mood / atmosphere,
-3386,B1,84,S,main,Stock,der,,Noun,,,,floor / stick / walking stick,
-3387,B1,84,S,main,Stockwerk,das,-e,Noun,,,,floor / story (of a building),
-3388,B1,84,S,main,Stoff,der,-e,Noun,,,,fabric / material,
-3389,B1,84,S,main,stolzstoppen,,,Verb,stoppt,stoppte,hat gestoppt,proud / to stop (artifact),
-3390,B1,84,S,main,stören,,,Verb,stört,störte,hat gestört,to disturb / to bother,
-3391,B1,84,S,main,Störung,die,-en,Noun,,,,disturbance / fault,
-3392,B1,84,S,main,stoßen,,,Verb,stößt,stieß,hat gestoßen,to push / to bump,
-3393,B1,84,S,main,Strafe,die,-n,Noun,,,,punishment / penalty,
-3394,B1,84,S,main,strafbar,,,Other,,,,punishable / criminal,
-3395,B1,84,S,main,Strafzettel,der,-,Noun,,,,parking ticket / fine,
-3396,B1,84,S,main,Strand,der,¨-e,Noun,,,,beach,
-3397,B1,84,S,main,Straße,die,-n,Noun,,,,street / road,
-3398,B1,84,S,main,Straßenbahn,die,,Noun,,,,tram / streetcar,
-3399,B1,84,S,main,Strecke,die,,Noun,,,,route / stretch,
-3400,B1,84,S,main,strengen,,,Verb,,,,to strain / to make an effort (artifact),
-3401,B1,84,S,main,sparen,,,Verb,,,,to save (money),
-3402,B1,84,L,main,losigkeit,,,Other,,,,lessness / lack (artifact),
-3403,B1,84,A,main,abgeschlossenes,,,Other,,,,completed (artifact),
-3404,B1,84,K,main,kurse,,,Other,,,,courses (artifact),
-3405,B1,84,S,main,stumm.Ich,,,Other,,,,mute (artifact),
-3406,B1,84,B,main,besser,,,Other,,,,better (artifact),
-3407,B1,84,W,main,war,,,Other,,,,was (artifact),
-3408,B1,84,B,main,bei,,,Other,,,,at / near (artifact),
-3409,B1,84,S,main,stört,,,Other,,,,disturbs (artifact),
-3410,B1,84,H,main,habe,,,Other,,,,have (artifact),
-3411,B1,84,G,main,geparkt,,,Other,,,,parked (artifact),
-3412,B1,84,G,main,gegangen,,,Verb,,,,gone (artifact),
-3413,B1,85,T,main,Tabelle,die,-n,Noun,,,,table / chart,
-3414,B1,85,T,main,Tablette,die,-ndie,Noun,,,,tablet / pill,
-3415,B1,85,T,main,Tagesablauf,der,¨-e,Noun,,,,daily routine,
-3416,B1,85,T,main,Tal,das,¨-erdas,Noun,,,,valley,
-3417,B1,85,T,main,Tankstelle,die,-n,Noun,,,,gas station,
-3418,B1,85,T,main,Tante,die,-n,Noun,,,,aunt,
-3419,B1,85,T,main,tanzen,,,Verb,tanzt,tanzte,hat getanzt,to dance,
-3420,B1,85,T,main,Tanz,der,¨-e,Noun,,,,dance,
-3421,B1,85,T,main,Tasche,die,-n,Noun,,,,bag / pocket,
-3422,B1,85,T,main,Taschengeld,das,-er,Noun,,,,pocket money,
-3423,B1,85,T,main,Taschentuch,das,¨-er,Noun,,,,handkerchief / tissue,
-3424,B1,85,T,main,Tasse,die,-n,Noun,,,,cup,
-3425,B1,85,T,main,Tastatur,die,-en,Noun,,,,keyboard,
-3426,B1,85,T,main,Taste,die,-n,Noun,,,,key / button,
-3427,B1,85,T,main,Tat,die,-en,Noun,,,,act / deed,
-3428,B1,85,T,main,Täter,der,-,Noun,,,,perpetrator (male),
-3429,B1,85,T,main,Täterin,die,-nen,Noun,,,,perpetrator (female),
-3430,B1,85,T,main,Tätigkeit,die,-endie,Noun,,,,activity / occupation,
-3431,B1,85,S,main,Sturm,der,¨-e,Noun,,,,storm,
-3432,B1,85,S,main,stürzen,,,Verb,stürzt,stürzte,ist gestürzt,to fall / to crash,
-3433,B1,85,S,main,suchen,,,Verb,sucht,suchte,hat gesucht,to search / to look for,
-3434,B1,85,S,main,Sucht,die,¨-e,Noun,,,,addiction,
-3435,B1,85,S,main,süchtig,,,Other,,,,addicted,
-3436,B1,85,S,main,Suchtmittel,das,-,Noun,,,,addictive substance,
-3437,B1,85,S,main,Summe,die,-n,Noun,,,,sum / total,
-3438,B1,85,S,main,super,,,Other,,,,super / great,
-3439,B1,85,S,main,Supermarkt,der,¨-e,Noun,,,,supermarket,
-3440,B1,85,S,main,Suppe,die,-n,Noun,,,,soup,
-3441,B1,85,S,main,süß,,,Other,,,,sweet,
-3442,B1,85,S,main,Symbol,das,-e,Noun,,,,symbol,
-3443,B1,85,S,main,sympathisch,,,Other,,,,nice / likeable,
-3444,B1,85,S,main,System,das,-e,Noun,,,,system,
-3445,B1,85,S,main,Szene,die,,Noun,,,,scene,
-3446,B1,85,T,main,Tabelle,die,,Noun,,,,table / chart,
-3447,B1,85,T,main,Tafel.,die,,Noun,,,,blackboard / board,
-3448,B1,85,H,main,haben,,,Verb,,,,to have (artifact),
-3449,B1,85,G,main,getanzt,,,Other,,,,danced (artifact),
-3450,B1,85,G,main,ganz,,,Other,,,,whole / quite (artifact),
-3451,B1,85,K,main,kaputt,,,Other,,,,broken (artifact),
-3452,B1,85,D,main,drücken,,,Verb,,,,to press / to push,
-3453,B1,85,G,main,gefasst,,,Other,,,,composed / ready (artifact),
-3454,B1,85,M,main,machen,,,Other,,,,do (artifact),
-3455,B1,85,H,main,habe,,,Other,,,,have (artifact),
-3456,B1,85,N,main,nicht,,,Other,,,,not (artifact),
-3457,B1,85,Z,main,zu,,,Other,,,,to / too (artifact),
-3458,B1,85,P,main,permarkt,,,Other,,,,supermarket (artifact),
-3459,B1,85,S,main,sympathisch,,,Other,,,,likeable (artifact),
-3460,B1,85,E,main,es,,,Other,,,,it (artifact),
-3461,B1,86,T,main,Teller,der,-,Noun,,,,plate,
-3462,B1,86,T,main,Temperatur,die,-en,Noun,,,,temperature,
-3463,B1,86,T,main,Tempo,das,,Noun,,,,speed / tempo,
-3464,B1,86,T,main,Teppich,der,-e,Noun,,,,carpet / rug,
-3465,B1,86,T,main,Termin,der,-e,Noun,,,,appointment,
-3466,B1,86,T,main,Terminkalender,der,-,Noun,,,,calendar / planner,
-3467,B1,86,T,main,Terrasse,die,-n,Noun,,,,terrace / patio,
-3468,B1,86,T,main,testen,,,Verb,testet,testete,hat getestet,to test,
-3469,B1,86,T,main,Test,der,-s,Noun,,,,test,
-3470,B1,86,T,main,teuer,,,Other,,,,expensive,
-3471,B1,86,T,main,Text,der,-edas,Noun,,,,text,
-3472,B1,86,T,main,theoretisch,,,Other,,,,theoretical,
-3473,B1,86,T,main,Theorie,die,-n,Noun,,,,theory,
-3474,B1,86,T,main,Therapie,die,-ndas,Noun,,,,therapy,
-3475,B1,86,T,main,tief,,,Other,,,,deep / low,
-3476,B1,86,T,main,Tier,das,-edie,Noun,,,,animal,
-3477,B1,86,T,main,tatsächlich,,,Other,,,,actually / really,
-3478,B1,86,T,main,taub,,,Other,,,,deaf,
-3479,B1,86,T,main,tauchen,,,Verb,taucht,tauchte,,to dive,
-3480,B1,86,T,main,tauschen,,,Verb,tauscht,tauschte,hat getauscht,to swap / to exchange,
-3481,B1,86,T,main,Technik,die,-en,Noun,,,,technology / technique,
-3482,B1,86,T,main,technisch,,,Other,,,,technical,
-3483,B1,86,T,main,Technologie,die,-n,Noun,,,,technology,
-3484,B1,86,T,main,Tee,der,,Noun,,,,tea,
-3485,B1,86,T,main,teilen,,,Verb,teilt,teilte,hat geteilt,to share / to divide,
-3486,B1,86,T,main,Teil,das,-e,Noun,,,,part / section,
-3487,B1,86,T,main,Teil,der,-e,Noun,,,,part / section,
-3488,B1,86,T,main,Teilzeit,die,,Noun,,,,part-time,
-3489,B1,86,T,main,teilnehmen,,,Verb,nimmt teil,nahm teil,hat teilgenommen,to participate / to take part,
-3490,B1,86,T,main,Teilnahme,die,-n,Noun,,,,participation,
-3491,B1,86,T,main,Teilnehmer,der,-,Noun,,,,participant (male),
-3492,B1,86,T,main,Teilnehmerin,die,-nen,Noun,,,,participant (female),
-3493,B1,86,T,main,telefonieren,,,Verb,telefoniert,telefonierte,hat telefoniert1,to telephone / to call,
-3494,B1,86,G,main,gekauft,,,Other,,,,bought (artifact),
-3495,B1,86,S,main,schaffen,,,Verb,,,,to manage / to accomplish (artifact),
-3496,B1,86,S,main,standen,,,Verb,,,,stood (artifact),
-3497,B1,86,V,main,vieles,,,Other,,,,many things (artifact),
-3498,B1,86,S,main,schon,,,Other,,,,already (artifact),
-3499,B1,86,S,main,sehr,,,Other,,,,very (artifact),
-3500,B1,86,O,main,obwohl,,,Other,,,,although (artifact),
-3501,B1,86,T,main,taub,,,Other,,,,deaf (artifact),
-3502,B1,86,E,main,eine,,,Other,,,,a / one (artifact),
-3503,B1,86,E,main,ersten,,,Verb,,,,first (artifact),
-3504,B1,86,R,main,regelmäßig,,,Other,,,,regularly (artifact),
-3505,B1,86,K,main,kostenlos,,,Other,,,,free of charge (artifact),
-3506,B1,86,K,main,kommen,,,Verb,,,,to come (artifact),
-3507,B1,87,T,main,traditionell,,,Other,,,,traditional,
-3508,B1,87,T,main,tragen,,,Verb,trägt,trug,hat getragen,to carry / to wear,
-3509,B1,87,T,main,trainieren,,,Verb,trainiert,trainierte,hat trainiert,to train,
-3510,B1,87,T,main,Trainer,der,-,Noun,,,,trainer / coach (male),
-3511,B1,87,T,main,Trainerin,die,-nen,Noun,,,,trainer / coach (female),
-3512,B1,87,T,main,Training,das,-s,Noun,,,,training,
-3513,B1,87,T,main,Tram,das,-s,Noun,,,,tram / streetcar,
-3514,B1,87,T,main,Träne,die,"-ntransportieren, trans-portiert, transportierte, hat transportiert",Noun,,,,tear (drop),
-3515,B1,87,T,main,Transport,der,-e,Noun,,,,transport,
-3516,B1,87,T,main,träumen,,,Verb,träumt,träumte,hat geträumt,to dream,
-3517,B1,87,T,main,Traum,der,¨-e,Noun,,,,dream,
-3518,B1,87,T,main,traurig,,,Other,,,,sad,
-3519,B1,87,T,main,treffen,,,Verb,trifft,traf,hat getroffen,to meet,
-3520,B1,87,T,main,Treffpunkt,der,-e,Noun,,,,meeting point,
-3521,B1,87,T,main,treiben,,,Verb,treibt,trieb,,to drive / to do (sports),
-3522,B1,87,T,main,trennen,,,Verb,trennt,trennte,hat getrennt,to separate / to divide,
-3523,B1,87,T,main,Trennung,die,-en,Noun,,,,separation,
-3524,B1,87,T,main,Tierpark,der,-s,Noun,,,,animal park / zoo,
-3525,B1,87,T,main,Tipp,der,-s,Noun,,,,tip / hint,
-3526,B1,87,T,main,tippen,,,Verb,tippt,tippte,,to type / to guess,
-3527,B1,87,G,main,getippt,,,Other,,,,typed / guessed (artifact),
-3528,B1,87,T,main,Tisch,der,-eder,Noun,,,,table / desk,
-3529,B1,87,T,main,Tochter,die,¨-,Noun,,,,daughter,
-3530,B1,87,T,main,Tod,der,,Noun,,,,death,
-3531,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal,
-3532,B1,87,T,main,Toilette,die,-n tolerant,Noun,,,,toilet / restroom,
-3533,B1,87,R,main,radeiser,,,Other,,,,tomato (artifact),
-3534,B1,87,T,main,Topf,der,¨-e,Noun,,,,pot,
-3535,B1,87,T,main,Tor,das,-e,Noun,,,,gate / goal,
-3536,B1,87,T,main,Torte,die,-n,Noun,,,,cake / tart,
-3537,B1,87,T,main,tot,,,Other,,,,dead,
-3538,B1,87,T,main,Tote,der,-n,Noun,,,,dead person (male),
-3539,B1,87,T,main,Tote,die,-n,Noun,,,,dead person (female),
-3540,B1,87,T,main,total,,,Other,,,,total / completely,
-3541,B1,87,T,main,Tourismus,der,,Noun,,,,tourism,
-3542,B1,87,T,main,Tourist,der,-en,Noun,,,,tourist (male),
-3543,B1,87,T,main,Touristin,die,,Noun,,,,tourist (female),
-3544,B1,87,S,main,schwer,,,Other,,,,heavy / difficult (artifact),
-3545,B1,87,M,main,mitfahren,,,Verb,,,,to ride along / to travel with,
-3546,B1,87,G,main,getroffen,,,Verb,,,,met (artifact),
-3547,B1,87,S,main,sich,,,Other,,,,oneself (artifact),
-3548,B1,87,K,main,kommt,,,Other,,,,comes (artifact),
-3549,B1,87,S,main,schwierig,,,Other,,,,difficult (artifact),
-3550,B1,87,G,main,geschieden,,,Verb,aber sie lebt,,,divorced (artifact),
-3551,B1,87,W,main,wir,,,Other,,,,we (artifact),
-3552,B1,87,F,main,finde,,,Other,,,,find (artifact),
-3553,B1,87,E,main,einmal,,,Other,,,,once (artifact),
-3554,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal (artifact),
-3555,B1,87,M,main,müssen,,,Verb,,,,must (artifact),
-3556,B1,87,M,main,möchte,,,Other,,,,would like (artifact),
-3557,B1,87,S,main,schießen,,,Verb,,,,to shoot (artifact),
-3558,B1,87,U,main,unsere,,,Other,,,,our (artifact),
-3559,B1,88,T,main,Typ,der,-en,Noun,,,,type / guy,
-3560,B1,88,T,main,typisch,,,Other,,,,typical,
-3561,B1,88,U,main,U-Bahn,die,-enüben,Noun,,,,subway / underground,
-3562,B1,88,Ü,main,Übung,die,-en,Noun,,,,exercise / practice,
-3563,B1,88,Ü,main,über,,,Other,,,,about / over / via,
-3564,B1,88,Ü,main,überall,,,Other,,,,everywhere,
-3565,B1,88,Ü,main,überfahren,,,Verb,überfährt,überfuhr,hat überfahren,to run over / to cross,
-3566,B1,88,Ü,main,überhaupt,,,Other,,,,at all / anyway,
-3567,B1,88,Ü,main,überholen,,,Verb,überholt,überholte,hat überholt,to overtake / to pass,
-3568,B1,88,Ü,main,überlegen,,,Verb,überlegt,überlegte,hat überlegt,to think about / to consider,
-3569,B1,88,T,main,Treppenhaus,das,,Noun,,,,stairwell,
-3570,B1,88,T,main,treten,,,Verb,tritt,trat,ist getreten,to step / to kick,
-3571,B1,88,T,main,treu,,,Other,,,,faithful / loyal,
-3572,B1,88,T,main,trinken,,,Verb,trinkt,trank,hat getrunken,to drink,
-3573,B1,88,T,main,Trinkgeld,das,-er,Noun,,,,tip (gratuity),
-3574,B1,88,T,main,trocken,,,Verb,,,,dry,
-3575,B1,88,T,main,trocknen,,,Verb,trocknet,trocknete,,to dry,
-3576,B1,88,T,main,Tropfen,die,,Noun,,,,drops,
-3577,B1,88,T,main,Trottoir,das,-s,Noun,,,,sidewalk / pavement (Swiss),
-3578,B1,88,T,main,trotz,,,Other,,,,despite / in spite of,
-3579,B1,88,T,main,tun,,,Verb,tut,tat,hat getan,to do,
-3580,B1,88,T,main,Tür,die,-en,Noun,,,,door,
-3581,B1,88,T,main,Turm,der,,Noun,,,,tower,
-3582,B1,88,D,main,du,,,Other,,,,you (artifact),
-3583,B1,88,T,main,typisch,,,Other,,,,typical (artifact),
-3584,B1,88,Ü,main,übe,,,Other,,,,practice (artifact),
-3585,B1,88,B,main,bezahlen,,,Verb,,,,to pay (artifact),
-3586,B1,88,Ü,main,überfahren,,,Verb,,,,to run over (artifact),
-3587,B1,88,N,main,nicht,,,Other,,,,not (artifact),
-3588,B1,88,M,main,muss,,,Other,,,,must (artifact),
-3589,B1,88,K,main,kaufen,,,Verb,,,,to buy (artifact),
-3590,B1,88,U,main,und,,,Other,,,,and (artifact),
-3591,B1,88,S,main,steigen.Im,,,Other,,,,climb / in (artifact),
-3592,B1,88,G,main,ganz,,,Other,,,,whole / quite (artifact),
-3593,B1,88,D,main,du,,,Other,,,,you (artifact),
-3594,B1,88,N,main,nicht,,,Other,,,,not (artifact),
-3595,B1,88,G,main,gegangen,,,Verb,,,,gone (artifact),
-3596,B1,88,S,main,schwimmen,,,Verb,,,,to swim (artifact),
-3597,B1,88,G,main,gekauft,,,Other,,,,bought (artifact),
-3598,B1,88,O,main,oben,,,Verb,,,,above (artifact),
-3599,B1,88,G,main,getan,,,Other,,,,done (artifact),
-3600,B1,88,S,main,sieht,,,Other,,,,looks (artifact),
-3601,B1,89,Ü,main,überzeugen,,,Verb,überzeugt,überzeugte,hat überzeugt,to convince / to persuade,
-3602,B1,89,Ü,main,Überzeugung,die,-en,Noun,,,,conviction / belief,
-3603,B1,89,Ü,main,üblich,,,Other,,,,usual / common,
-3604,B1,89,Ü,main,übrig,,,Other,,,,remaining / left over,
-3605,B1,89,Ü,main,übrigens,,,Other,,,,by the way / incidentally,
-3606,B1,89,U,main,Ufer,das,-,Noun,,,,shore / bank (river/lake),
-3607,B1,89,U,main,Uhr,die,-en,Noun,,,,clock / watch,
-3608,B1,89,U,main,um,,,Other,,,,around / at (time) / in order to,
-3609,B1,89,U,main,umarmen,,,Verb,umarmt,umarmte,hat umarmt,to hug / to embrace,
-3610,B1,89,U,main,um,,,Other,,,,around / at (artifact),
-3611,B1,89,U,main,umdrehen,,,Verb,dreht,um,hat umgedreht,to turn around,
-3612,B1,89,U,main,Umfrage,die,-ndie,Noun,,,,survey / poll,
-3613,B1,89,U,main,umgekehrt,,,Other,,,,reversed / the other way around,
-3614,B1,89,U,main,Umleitung,die,-enumso,Noun,,,,detour / diversion,
-3615,B1,89,U,main,umsonstübermorgen,,,Verb,,,,for free / the day after tomorrow (artifact),
-3616,B1,89,Ü,main,übernachten,,,Verb,übernachtet,übernachtete,hat übernachtet,to stay overnight,
-3617,B1,89,Ü,main,Übernachtung,die,-en,Noun,,,,overnight stay,
-3618,B1,89,Ü,main,übernehmen,,,Verb,übernimmt,übernahm,hat übernommen,to take over / to take on,
-3619,B1,89,Ü,main,überprüfen,,,Verb,überprüft,überprüfte,hat überprüft,to check / to verify,
-3620,B1,89,Ü,main,überqueren,,,Verb,überquert,überquerte,hat überquert,to cross (a road),
-3621,B1,89,Ü,main,überraschen,,,Verb,überrascht,überraschte,hat überrascht,to surprise,
-3622,B1,89,Ü,main,Überraschung,die,-en,Noun,,,,surprise,
-3623,B1,89,Ü,main,überreden,,,Verb,überredet,überredete,hat überredet,to persuade / to talk into,
-3624,B1,89,Ü,main,Überschrift,die,-en,Noun,,,,headline / heading,
-3625,B1,89,Ü,main,übersetzen,,,Verb,übersetzt,übersetzte,hat übersetzt,to translate,
-3626,B1,89,Ü,main,Übersetzer,der,-,Noun,,,,translator (male),
-3627,B1,89,Ü,main,Übersetzerin,die,-nen,Noun,,,,translator (female),
-3628,B1,89,Ü,main,Übersetzung,die,-en,Noun,,,,translation,
-3629,B1,89,Ü,main,Überstunde,die,-n,Noun,,,,overtime,
-3630,B1,89,Ü,main,über,,,Other,,,,about / over (artifact),
-3631,B1,89,Ü,main,übertreiben,,,Verb,übertreibt,übertrieb,hat übertrieben,to exaggerate,
-3632,B1,89,Ü,main,überweisen,,,Verb,überweist,überwies,hat überwiesen,to transfer (money),
-3633,B1,89,Ü,main,Überweisung,die,- en1.,Noun,,,,bank transfer,
-3634,B1,89,M,main,meine,,,Other,,,,my (artifact),
-3635,B1,89,G,main,gehen,,,Verb,,,,to go (artifact),
-3636,B1,89,U,main,um,,,Other,,,,around / at (artifact),
-3637,B1,89,M,main,machen,,,Verb,,,,to make (artifact),
-3638,B1,89,A,main,auf,,,Other,,,,on / at (artifact),
-3639,B1,89,S,main,schöne,,,Other,,,,beautiful (artifact),
-3640,B1,89,D,main,dann,,,Other,,,,then (artifact),
-3641,B1,89,S,main,sind,,,Other,,,,are (artifact),
-3642,B1,89,A,main,auch,,,Other,,,,also (artifact),
-3643,B1,89,Ü,main,übernachtet,,,Other,,,,stayed overnight (artifact),
-3644,B1,89,T,main,tung,,,Other,,,,tung (artifact),
-3645,B1,89,R,main,richtig,,,Other,,,,right / correct (artifact),
-3646,B1,89,Ü,main,überqueren,,,Verb,,,,"to cross (a road, artifact)",
-3647,B1,89,D,main,den,,,Verb,,,,the (artifact),
-3648,B1,89,Z,main,zum,,,Other,,,,to the (artifact),
-3649,B1,89,Ü,main,übersetzen,,,Other,,,,to translate (artifact),
-3650,B1,89,A,main,arbeiten,,,Verb,,,,to work (artifact),
-3651,B1,89,G,main,gut,,,Other,,,,good (artifact),
-3652,B1,89,M,main,man,,,Other,,,,"one / you (impersonal, artifact)",
-3653,B1,89,Ü,main,überwiesen,,,Verb,,,,transferred (artifact),
-3654,B1,89,B,main,bezahlen,,,Verb,,,,to pay (artifact),
-3655,B1,89,W,main,weisung,,,Other,,,,transfer (artifact),
-3656,B1,90,U,main,Universität,die,-en,Noun,,,,university,
-3657,B1,90,U,main,unten,,,Verb,,,,below / downstairs,
-3658,B1,90,U,main,unter,,,Other,,,,under / below / among,
-3659,B1,90,U,main,unter,,,Other,,,,under / below (artifact),
-3660,B1,90,U,main,unterbrechen,,,Verb,unterbricht,unterbrach,hat unterbrochen,to interrupt,
-3661,B1,90,U,main,unterhalten,,,Verb,unter-,hält,hat unterhalten,to entertain / to converse,
-3662,B1,90,U,main,Unterhaltung,die,-en,Noun,,,,entertainment / conversation,
-3663,B1,90,U,main,Unterkunft,die,¨-e,Noun,,,,accommodation,
-3664,B1,90,U,main,Unterlagen,die,,Noun,,,,documents / files,
-3665,B1,90,U,main,unterlassen,,,Verb,unterlässt,unterließ,hat unterlassen,to refrain from / to omit,
-3666,B1,90,U,main,unternehmen,,,Verb,immt,unternahm,hat unternommen,to undertake / to do,
-3667,B1,90,U,main,Unternehmer,der,-,Noun,,,,entrepreneur (male),
-3668,B1,90,U,main,Unternehmerin,die,-nen,Noun,,,,entrepreneur (female),
-3669,B1,90,U,main,unterrichten,,,Verb,unterrichtet,unterrichtete,hat unterrichtet,to teach,
-3670,B1,90,U,main,Unterricht,der,,Noun,,,,lesson / class,
-3671,B1,90,U,main,untersagt,,,Other,,,,prohibited / forbidden,
-3672,B1,90,U,main,unterscheiden,,,Verb,unter-,scheidet,hat unterschie,to differentiate / to distinguish,
-3673,B1,90,U,main,Unterschied,der,"-eumsteigen, steigt um,stieg um, ist umgestiegen",Noun,,,,difference,
-3674,B1,90,U,main,umtauschen,,,Verb,tauscht um,tauschte um,hat umgetauscht,to exchange / to swap,
-3675,B1,90,U,main,Umtausch,der,¨-e,Noun,,,,exchange,
-3676,B1,90,U,main,Umwelt,die,,Noun,,,,environment,
-3677,B1,90,U,main,Umweltschutz,der,,Noun,,,,environmental protection,
-3678,B1,90,U,main,Umweltver-,die,,Noun,,,,environmental pollution,
-3679,B1,90,U,main,umziehen,,,Verb,zieht um,zogum,ist umgezogen,to move (residence),
-3680,B1,90,U,main,Umzug,der,¨-e,Noun,,,,move / relocation,
-3681,B1,90,U,main,un,,,Other,,,,un (artifact),
-3682,B1,90,U,main,unbedingt,,,Other,,,,absolutely / definitely,
-3683,B1,90,U,main,und,,,Other,,,,and (artifact),
-3684,B1,90,U,main,Unfall,der,¨-e,Noun,,,,accident,
-3685,B1,90,U,main,ungefähr,,,Other,,,,approximately / about,
-3686,B1,90,U,main,ungewöhnlich,,,Other,,,,unusual,
-3687,B1,90,M,main,man,,,Other,,,,"one / you (impersonal, artifact)",
-3688,B1,90,U,main,unten,,,Verb,,,,below / downstairs (artifact),
-3689,B1,90,W,main,wichtige,,,Other,,,,important (artifact),
-3690,B1,90,S,main,spreche,,,Other,,,,speak (artifact),
-3691,B1,90,U,main,unterhalten,,,Verb,,,,to entertain / converse (artifact),
-3692,B1,90,U,main,unterhalten.Wir,,,Other,,,,entertain / we (artifact),
-3693,B1,90,U,main,und,,,Other,,,,and (artifact),
-3694,B1,90,U,main,und,,,Other,,,,and (artifact),
-3695,B1,90,P,main,Post,der,,Noun,,,,post (artifact),
-3696,B1,90,T,main,terlassen,,,Verb,,,,left / omitted (artifact),
-3697,B1,90,U,main,unternehmen,,,Verb,,,,to undertake (artifact),
-3698,B1,90,B,main,bis,,,Other,,,,until (artifact),
-3699,B1,90,U,main,umsonst,,,Other,,,,for free / gratis,
-3700,B1,90,W,main,weiter,,,Other,,,,further / forward (artifact),
-3701,B1,90,U,main,umgezogen,,,Verb,,,,moved (artifact),
-3702,B1,90,M,main,mich,,,Other,,,,me (artifact),
-3703,B1,90,E,main,echen,,,Verb,,,,speak (artifact),
-3704,B1,90,A,main,aber,,,Other,,,,but (artifact),
-3705,B1,90,U,main,unheimlich,,,Other,,,,eerie / uncanny,
-3706,B1,91,V,main,Vase,die,-n,Noun,,,,vase,
-3707,B1,91,V,main,Vater,der,¨-,Noun,,,,father,
-3708,B1,91,V,main,verabreden,,,Verb,verabredet,verabredete,hat verabredet,to arrange to meet,
-3709,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact),
-3710,B1,91,V,main,Verabredung,die,-en,Noun,,,,appointment / date,
-3711,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,to say goodbye,
-3712,B1,91,A,main,Abschied,der,-e,Noun,,,,farewell / goodbye,
-3713,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,to change,
-3714,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,event,
-3715,B1,91,V,main,Verantwortung,die,,Noun,,,,responsibility,
-3716,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,to improve,
-3717,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,to forbid / to prohibit,
-3718,B1,91,V,main,Verbot,das,-e,Noun,,,,ban / prohibition,
-3719,B1,91,V,main,verboten,,,Verb,,,,forbidden / prohibited,
-3720,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,to connect / to link,
-3721,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,to sign (artifact),
-3722,B1,91,U,main,Unterschrift,die,-en,Noun,,,,signature,
-3723,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,to underline,
-3724,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,to support,
-3725,B1,91,U,main,Unterstützung,die,-en,Noun,,,,support,
-3726,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,to examine / to investigate,
-3727,B1,91,U,main,Untersuchung,die,-en,Noun,,,,examination / investigation,
-3728,B1,91,U,main,unterwegs,,,Other,,,,on the way / traveling,
-3729,B1,91,U,main,Urkunde,die,-n,Noun,,,,document / certificate,
-3730,B1,91,U,main,Urlaub,der,-e,Noun,,,,vacation / holiday,
-3731,B1,91,U,main,Ursache,die,-n,Noun,,,,cause / reason,
-3732,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,to cause,
-3733,B1,91,U,main,ursprünglich,,,Other,,,,originally,
-3734,B1,91,U,main,Urteil,das,,Noun,,,,verdict / judgment,
-3735,B1,91,L,main,liebsten,,,Verb,,,,best (artifact),
-3736,B1,91,Z,main,zur,,,Other,,,,to the (artifact),
-3737,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact),
-3738,B1,91,B,main,bin,,,Other,,,,am (artifact),
-3739,B1,91,M,main,mit,,,Other,,,,with (artifact),
-3740,B1,91,N,main,nett,,,Other,,,,nice (artifact),
-3741,B1,91,V,main,verabschieden,,,Verb,,,,to say goodbye (artifact),
-3742,B1,91,F,main,fiel,,,Other,,,,fell (artifact),
-3743,B1,91,S,main,sen,,,Verb,,,,sen (artifact),
-3744,B1,91,V,main,verbessert,,,Other,,,,improved (artifact),
-3745,B1,91,V,main,verboten,,,Verb,,,,forbidden (artifact),
-3746,B1,91,R,main,rechts,,,Other,,,,"right (direction, artifact)",
-3747,B1,91,U,main,unterstreichen,,,Verb,,,,to underline (artifact),
-3748,B1,91,K,main,können,,,Verb,,,,to be able to (artifact),
-3749,B1,91,L,main,lassen,,,Verb,,,,to let / to leave (artifact),
-3750,B1,91,A,main,arte,,,Other,,,,arte (artifact),
-3751,B1,91,K,main,komme,,,Other,,,,come (artifact),
-3752,B1,91,E,main,essen,,,Verb,,,,to eat (artifact),
-3753,B1,91,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),
-3754,B1,91,H,main,hart,,,Other,,,,hard / tough (artifact),
-3755,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,
-3756,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,to enlarge / to expand,
-3757,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,to arrest,
-3758,B1,92,V,main,Verhalten,das,,Noun,,,,behavior / conduct,
-3759,B1,92,V,main,Verhältnis,das,-se,Noun,,,,relationship / ratio,
-3760,B1,92,V,main,verheiratet,,,Other,,,,married,
-3761,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,to prevent,
-3762,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,to sell,
-3763,B1,92,V,main,Verkäufer,der,-die,Noun,,,,salesperson (male),
-3764,B1,92,V,main,Verkehr,der,,Noun,,,,traffic,
-3765,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,means of transportation,
-3766,B1,92,V,main,Verlag,der,,Noun,,,,publisher / publishing house,
-3767,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,to extend / to lengthen,
-3768,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,to leave / to abandon,
-3769,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,to use up / to consume,
-3770,B1,92,V,main,Verbrecher,der,-,Noun,,,,criminal / offender (male),
-3771,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,criminal / offender (female),
-3772,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,to burn,
-3773,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,to spend (time),
-3774,B1,92,V,main,Verdacht,der,,Noun,,,,suspicion,
-3775,B1,92,V,main,verdächtig,,,Other,,,,suspicious,
-3776,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,to earn,
-3777,B1,92,V,main,Verein,der,-e,Noun,,,,club / association,
-3778,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,to arrange / to agree on,
-3779,B1,92,V,main,Vergangenheitvergeblich,die,,Noun,,,,past / in vain (artifact),
-3780,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,to forget,
-3781,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,to compare,
-3782,B1,92,V,main,Vergleich,der,-e,Noun,,,,comparison,
-3783,B1,92,B,main,beim,,,Other,,,,at the (artifact),
-3784,B1,92,H,main,herein,,,Other,,,,in / inside (artifact),
-3785,B1,92,M,main,merkwürdig,,,Other,,,,strange / odd,
-3786,B1,92,S,main,schwierigen,,,Verb,,,,difficult (artifact),
-3787,B1,92,M,main,meinen,,,Verb,,,,to mean / to think (artifact),
-3788,B1,92,V,main,verheiratet,,,Other,,,,married (artifact),
-3789,B1,92,V,main,verhindern,,,Verb,,,,to prevent (artifact),
-3790,B1,92,H,main,helfen,,,Verb,,,,to help (artifact),
-3791,B1,92,M,main,mit,,,Other,,,,with (artifact),
-3792,B1,92,V,main,verlangt,,,Other,,,,demanded (artifact),
-3793,B1,92,L,main,lassen,,,Verb,,,,to let / to leave (artifact),
-3794,B1,92,H,main,helfe,,,Other,,,,help (artifact),
-3795,B1,92,D,main,direkt,,,Other,,,,direct (artifact),
-3796,B1,92,V,main,verhaftet,,,Other,,,,arrested (artifact),
-3797,B1,92,V,main,verbrannt,,,Other,,,,burned (artifact),
-3798,B1,92,I,main,ich,,,Other,,,,I (artifact),
-3799,B1,92,G,main,gesehen,,,Verb,,,,seen (artifact),
-3800,B1,92,D,main,dient,,,Other,,,,serves (artifact),
-3801,B1,92,D,main,diesem,,,Other,,,,"this (dative, artifact)",
-3802,B1,92,A,main,anzurufen,,,Verb,,,,to call (artifact),
-3803,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased (artifact),
-3804,B1,93,V,main,verpflichtet,,,Other,,,,obligated / required,
-3805,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,to betray / to reveal,
-3806,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,to travel / to go on a trip,
-3807,B1,93,V,main,verrückt,,,Other,,,,crazy / mad,
-3808,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,meeting / assembly,
-3809,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,to postpone / to shift,
-3810,B1,93,V,main,verschieden,,,Verb,,,,different / various,
-3811,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,to prescribe (artifact),
-3812,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,to disappear,
-3813,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,to insure / to assure,
-3814,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,health insurance card,
-3815,B1,93,V,main,Versicherung,die,-en,Noun,,,,insurance,
-3816,B1,93,V,main,Verspätung,die,-en,Noun,,,,delay,
-3817,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,to promise,
-3818,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,to injure / to hurt,
-3819,B1,93,V,main,Verletzung,die,-en,Noun,,,,injury,
-3820,B1,93,V,main,verliebt,,,Other,,,,in love,
-3821,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,to lose,
-3822,B1,93,V,main,Verlierer,der,-,Noun,,,,loser (male),
-3823,B1,93,V,main,Verliererin,die,-nen,Noun,,,,loser (female),
-3824,B1,93,V,main,Verlust,der,-e,Noun,,,,loss,
-3825,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,to avoid,
-3826,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,to rent out,
-3827,B1,93,V,main,Vermieter,der,-,Noun,,,,landlord,
-3828,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,landlady,
-3829,B1,93,V,main,Vermietung,die,-en,Noun,,,,rental,
-3830,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,to miss,
-3831,B1,93,V,main,Vermittlung,die,-en,Noun,,,,placement / mediation,
-3832,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,to suspect / to assume,
-3833,B1,93,V,main,vermutlich,,,Other,,,,presumably / probably,
-3834,B1,93,V,main,vernünftig,,,Other,,,,reasonable / sensible,
-3835,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,to pack / to wrap,
-3836,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,to miss / to fail to catch,
-3837,B1,93,M,main,melden,,,Verb,,,,to report / to register,
-3838,B1,93,I,main,ist,,,Other,,,,is (artifact),
-3839,B1,93,V,main,versäumt,,,Other,,,,missed (artifact),
-3840,B1,93,V,main,verschieben,,,Verb,,,,to postpone (artifact),
-3841,B1,93,V,main,verschieden,,,Verb,,,,different / various (artifact),
-3842,B1,93,N,main,nen,,,Verb,,,,nen (artifact),
-3843,B1,93,V,main,verschrieben,,,Verb,,,,prescribed (artifact),
-3844,B1,93,D,main,du,,,Other,,,,you (artifact),
-3845,B1,93,S,main,sicherung,,,Other,,,,insurance (artifact),
-3846,B1,93,T,main,tung,,,Other,,,,tung (artifact),
-3847,B1,93,M,main,mich,,,Other,,,,me (artifact),
-3848,B1,93,A,main,asche,,,Other,,,,asche (artifact),
-3849,B1,93,S,main,sehr,,,Other,,,,very (artifact),
-3850,B1,93,V,main,vermeiden,,,Verb,,,,to avoid (artifact),
-3851,B1,93,V,main,vermieten,,,Verb,,,,to rent out (artifact),
-3852,B1,93,K,main,kann,,,Other,,,,can (artifact),
-3853,B1,93,V,main,Vermittlung,der,,Noun,,,,placement / mediation,
-3854,B1,93,F,main,fragen,,,Verb,,,,to ask (artifact),
-3855,B1,93,V,main,von,,,Other,,,,from / of (artifact),
-3856,B1,93,K,main,kommen,,,Verb,,,,to come (artifact),
-3857,B1,93,V,main,verpasst,,,Other,,,,missed (artifact),
-3858,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,to forgive / to pardon,
-3859,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,to give up / to do without,
-3860,B1,94,V,main,Video,das,-s,Noun,,,,video,
-3861,B1,94,V,main,viel/viele,,,Other,,,,much / many,
-3862,B1,94,V,main,vielleicht,,,Other,,,,maybe / perhaps,
-3863,B1,94,V,main,Viertel,das,-,Noun,,,,quarter,
-3864,B1,94,V,main,virtuell,,,Other,,,,virtual,
-3865,B1,94,V,main,Virus,der,,Noun,,,,virus,
-3866,B1,94,V,main,Vitamin,das,-e,Noun,,,,vitamin,
-3867,B1,94,V,main,voll,,,Other,,,,full / complete,
-3868,B1,94,V,main,Vollzeit,die,,Noun,,,,full-time,
-3869,B1,94,V,main,völligvondas,,,Other,,,,completely / from the (artifact),
-3870,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,to hide,
-3871,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,to understand,
-3872,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,to try / to attempt,
-3873,B1,94,V,main,Versuch,der,-e,Noun,,,,attempt / try,
-3874,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,to distribute,
-3875,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,contract,
-3876,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,to trust,
-3877,B1,94,V,main,Vertrauen,das,,Noun,,,,trust / confidence,
-3878,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,to represent,
-3879,B1,94,V,main,Vertreter,der,-,Noun,,,,representative (male),
-3880,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,representative (female),
-3881,B1,94,V,main,Vertretung,die,-en,Noun,,,,representation / deputy,
-3882,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,to convict / to sentence,
-3883,B1,94,V,main,Verwaltung,die,-en,Noun,,,,administration,
-3884,B1,94,V,main,verwandt,,,Other,,,,related,
-3885,B1,94,V,main,Verwandte,der,-n,Noun,,,,relative (male),
-3886,B1,94,V,main,Verwandte,die,-n,Noun,,,,relative (female),
-3887,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,to mix up / to confuse,
-3888,B1,94,K,main,können,,,Verb,,,,to be able to (artifact),
-3889,B1,94,A,main,aufgenommen,,,Verb,,,,recorded (artifact),
-3890,B1,94,N,main,noch,,,Other,,,,still / yet (artifact),
-3891,B1,94,V,main,virtuellen,,,Verb,,,,virtual (artifact),
-3892,B1,94,M,main,meinem,,,Other,,,,my (artifact),
-3893,B1,94,G,main,geben,,,Verb,,,,to give (artifact),
-3894,B1,94,E,main,essen,,,Verb,,,,to eat (artifact),
-3895,B1,94,I,main,immer,,,Other,,,,always (artifact),
-3896,B1,94,V,main,vollen,,,Verb,,,,full (artifact),
-3897,B1,94,H,main,heute,,,Other,,,,today (artifact),
-3898,B1,94,V,main,versteckt,,,Other,,,,hidden (artifact),
-3899,B1,94,S,main,sehr,,,Other,,,,very (artifact),
-3900,B1,94,Z,main,zu,,,Other,,,,to / too (artifact),
-3901,B1,94,S,main,suche,,,Other,,,,search (artifact),
-3902,B1,94,O,main,ohne,,,Other,,,,without (artifact),
-3903,B1,94,V,main,verteilen,,,Verb,,,,to distribute (artifact),
-3904,B1,94,S,main,schreiben,,,Verb,,,,to write (artifact),
-3905,B1,94,M,main,machen,,,Verb,,,,to make (artifact),
-3906,B1,94,I,main,ich,,,Other,,,,I (artifact),
-3907,B1,94,E,main,eterin,,,Other,,,,eterin (artifact),
-3908,B1,94,J,main,jemandem,,,Other,,,,someone (artifact),
-3909,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,to read aloud,
-3910,B1,95,V,main,Vorort,der,-e,Noun,,,,suburb / outskirts,
-3911,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,to suggest / to propose,
-3912,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,suggestion / proposal,
-3913,B1,95,V,main,Vorschrift,die,-en,Noun,,,,regulation / rule,
-3914,B1,95,V,main,Vorsicht,die,,Noun,,,,caution / care,
-3915,B1,95,V,main,vorsichtig,,,Other,,,,careful / cautious,
-3916,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,to introduce / to imagine,
-3917,B1,95,V,main,Vorstellung,die,-en,Noun,,,,presentation / performance / idea,
-3918,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,job interview,
-3919,B1,95,V,main,Vorteil,der,-e,Noun,,,,advantage,
-3920,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,lecture / talk,
-3921,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,area code / dialing code,
-3922,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,accusation / reproach,
-3923,B1,95,V,main,vor,,,Other,,,,before / in front of / ago,
-3924,B1,95,V,main,voraus,,,Other,,,,ahead / in advance,
-3925,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,prerequisite / requirement,
-3926,B1,95,V,main,voraussichtlich,,,Other,,,,probably / expected,
-3927,B1,95,V,main,vorbei/vorbei,,,Other,,,,past / over,
-3928,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,to prepare,
-3929,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,preparation,
-3930,B1,95,V,main,vorder,,,Other,,,,front (artifact),
-3931,B1,95,V,main,Vorfahrt,die,,Noun,,,,right of way,
-3932,B1,95,V,main,vorgesternvorhaben,,,Verb,,,hat vor,the day before yesterday / to plan,
-3933,B1,95,V,main,vorher,,,Other,,,,before / previously,
-3934,B1,95,V,main,vorhinvorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,a moment ago / to occur,
-3935,B1,95,W,main,wohne,,,Other,,,,live (artifact),
-3936,B1,95,N,main,noch,,,Other,,,,still / yet (artifact),
-3937,B1,95,M,main,machen,,,Verb,,,,to make (artifact),
-3938,B1,95,B,main,Benutzen,das,,Noun,,,,use / usage,
-3939,B1,95,G,main,glatt,,,Other,,,,smooth / slippery (artifact),
-3940,B1,95,N,main,nicht,,,Other,,,,not (artifact),
-3941,B1,95,G,main,gespräch,,,Other,,,,conversation (artifact),
-3942,B1,95,D,main,dass,,,Other,,,,that (artifact),
-3943,B1,95,E,main,ein,,,Other,,,,a / one (artifact),
-3944,B1,95,G,main,geschlossen,,,Verb,,,,closed (artifact),
-3945,B1,95,G,main,gehört,,,Other,,,,heard (artifact),
-3946,B1,95,G,main,gekommen,,,Verb,,,,come (artifact),
-3947,B1,95,S,main,schlafen,,,Verb,,,,to sleep (artifact),
-3948,B1,95,Z,main,zung,,,Other,,,,zung (artifact),
-3949,B1,95,V,main,vorbei,,,Other,,,,past / over (artifact),
-3950,B1,95,P,main,paar,,,Other,,,,a few (artifact),
-3951,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact),
-3952,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact),
-3953,B1,95,V,main,vor,,,Other,,,,before (artifact),
-3954,B1,95,I,main,ich,,,Other,,,,I (artifact),
-3955,B1,95,S,main,solls,,,Other,,,,should (artifact),
-3956,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise,
-3957,B1,96,W,main,warm,,,Other,,,,warm,
-3958,B1,96,W,main,Wärme,die,,Noun,,,,warmth / heat,
-3959,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,to warn,
-3960,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,to wait,
-3961,B1,96,W,main,warum,,,Other,,,,why,
-3962,B1,96,W,main,was,,,Other,,,,what,
-3963,B1,96,W,main,was,,,Other,,,,what (artifact),
-3964,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,to wash,
-3965,B1,96,W,main,Wäsche,die,,Noun,,,,laundry / washing,
-3966,B1,96,W,main,Waschmittel,das,-,Noun,,,,laundry detergent,
-3967,B1,96,W,main,Wasser,das,,Noun,,,,water,
-3968,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,to change / to exchange,
-3969,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,to wake up,
-3970,B1,96,W,main,Wecker,der,,Noun,,,,alarm clock,
-3971,B1,96,W,main,waagerecht,,,Other,,,,horizontal,
-3972,B1,96,W,main,wachwachsen,,,Verb,wächst,wuchs,ist gewachsen,awake / to grow,
-3973,B1,96,W,main,Wagen,der,-,Noun,,,,car / vehicle / cart,
-3974,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,to choose / to dial,
-3975,B1,96,W,main,Wahl,die,-en,Noun,,,,choice / election,
-3976,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / mad / incredibly,
-3977,B1,96,W,main,wahr,,,Other,,,,true,
-3978,B1,96,W,main,Wahrheit,die,-en,Noun,,,,truth,
-3979,B1,96,W,main,während,,,Other,,,,during / while,
-3980,B1,96,W,main,wahrscheinlich,,,Other,,,,probably / likely,
-3981,B1,96,W,main,Wald,der,¨-er,Noun,,,,forest / woods,
-3982,B1,96,W,main,Wand,die,¨-e,Noun,,,,wall,
-3983,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,to hike / to wander,
-3984,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,hike,
-3985,B1,96,W,main,warmen,,,Verb,,,,warm (artifact),
-3986,B1,96,I,main,ist,,,Other,,,,is (artifact),
-3987,B1,96,G,main,gewaschen,,,Verb,,,,washed (artifact),
-3988,B1,96,A,main,aufhängen,,,Verb,,,,to hang up,
-3989,B1,96,H,main,hier,,,Other,,,,here (artifact),
-3990,B1,96,S,main,sechs,,,Other,,,,six (artifact),
-3991,B1,96,J,main,jetzt,,,Other,,,,now (artifact),
-3992,B1,96,U,main,und,,,Other,,,,and (artifact),
-3993,B1,96,S,main,statt,,,Other,,,,instead of (artifact),
-3994,B1,96,E,main,es,,,Other,,,,it (artifact),
-3995,B1,96,O,main,oder,,,Other,,,,or (artifact),
-3996,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / incredibly (artifact),
-3997,B1,96,U,main,unsere,,,Other,,,,our (artifact),
-3998,B1,96,N,main,noch,,,Other,,,,still / yet (artifact),
-3999,B1,96,A,main,an,,,Other,,,,on / at (artifact),
-4000,B1,96,H,main,hört,,,Other,,,,hears / listens (artifact),
-4001,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,to turn / to refer,
-4002,B1,97,W,main,wenig/wenige,,,Other,,,,little / few,
-4003,B1,97,W,main,wenigstens,,,Other,,,,at least,
-4004,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,to become,
-4005,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,to throw,
-4006,B1,97,W,main,Werk,das,-e,Noun,,,,work / opus,
-4007,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,workshop / garage,
-4008,B1,97,W,main,Werkzeug,das,-e,Noun,,,,tool,
-4009,B1,97,W,main,wert,,,Other,,,,worth / valued,
-4010,B1,97,W,main,Wert,der,-e,Noun,,,,value / worth,
-4011,B1,97,W,main,wertlos,,,Other,,,,worthless,
-4012,B1,97,W,main,wertvoll,,,Other,,,,valuable,
-4013,B1,97,W,main,weg/weg,,,Other,,,,away / gone,
-4014,B1,97,W,main,wegen,,,Verb,,,,because of / due to,
-4015,B1,97,W,main,weiblichweich,,,Other,,,,female / soft (artifact),
-4016,B1,97,W,main,weil,,,Other,,,,because,
-4017,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,wine,
-4018,B1,97,W,main,weitweiter/weiter,,,Other,,,,far / further / farther,
-4019,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,further education / continuing education,
-4020,B1,97,W,main,Welt1.,die,,Noun,,,,world,
-4021,B1,97,W,main,weltweiten,,,Verb,,,,worldwide (artifact),
-4022,B1,97,A,main,angeboten,,,Verb,,,,offered (artifact),
-4023,B1,97,D,main,dürfen,,,Verb,,,,may / to be allowed to (artifact),
-4024,B1,97,W,main,wenn,,,Other,,,,when / if (artifact),
-4025,B1,97,W,main,wirst,,,Other,,,,will become (artifact),
-4026,B1,97,V,main,verrückt,,,Other,,,,crazy / mad (artifact),
-4027,B1,97,G,main,geworfen,,,Verb,,,,thrown (artifact),
-4028,B1,97,S,main,statt,,,Other,,,,instead of (artifact),
-4029,B1,97,W,main,wert,,,Other,,,,worth (artifact),
-4030,B1,97,V,main,von,,,Other,,,,from / of (artifact),
-4031,B1,97,L,main,leider,,,Other,,,,unfortunately (artifact),
-4032,B1,97,A,main,angenehm,,,Other,,,,pleasant / comfortable (artifact),
-4033,B1,97,E,main,erklären,,,Verb,,,,to explain (artifact),
-4034,B1,97,N,main,nicht,,,Other,,,,not (artifact),
-4035,B1,97,B,main,bin,,,Other,,,,am (artifact),
-4036,B1,97,G,main,guten,,,Verb,,,,good (artifact),
-4037,B1,97,N,main,neue,,,Other,,,,new (artifact),
-4038,B1,97,E,main,einfach,,,Other,,,,simple / just (artifact),
-4039,B1,97,R,main,ruhig,,,Other,,,,quiet / calm (artifact),
-4040,B1,98,W,main,willkommen,,,Verb,,,,welcome,
-4041,B1,98,W,main,Wind,der,-e,Noun,,,,wind,
-4042,B1,98,W,main,windig,,,Other,,,,windy,
-4043,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,to wave,
-4044,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,to work / to have an effect,
-4045,B1,98,W,main,Wirkung,die,-en,Noun,,,,effect / impact,
-4046,B1,98,W,main,wirklich,,,Other,,,,really / truly,
-4047,B1,98,W,main,Wirklichkeit,die,,Noun,,,,reality,
-4048,B1,98,W,main,Wirt,der,-edie,Noun,,,,innkeeper / host,
-4049,B1,98,W,main,Wirtschaft,die,,Noun,,,,economy / business,
-4050,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,to know,
-4051,B1,98,W,main,Wissen,das,,Noun,,,,knowledge,
-4052,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,science,
-4053,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,scientist (male),
-4054,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,scientist (female),
-4055,B1,98,W,main,Witz,der,-e,Noun,,,,joke,
-4056,B1,98,W,main,wo,,,Other,,,,where,
-4057,B1,98,W,main,Wetter,das,,Noun,,,,weather,
-4058,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,weather report,
-4059,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,weather forecast,
-4060,B1,98,W,main,wichtig,,,Other,,,,important,
-4061,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,to contradict / to object,
-4062,B1,98,W,main,wie,,,Other,,,,how / as,
-4063,B1,98,W,main,wieder/wieder,,,Other,,,,again,
-4064,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,to repeat,
-4065,B1,98,W,main,Wiederholung,die,-en,Noun,,,,repetition,
-4066,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,to weigh,
-4067,B1,98,W,main,wild,,,Other,,,,wild,
-4068,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,meadow,
-4069,B1,98,W,main,winkten,,,Verb,,,,waved (artifact),
-4070,B1,98,M,main,ment,,,Other,,,,ment (artifact),
-4071,B1,98,W,main,wirklich,,,Other,,,,really (artifact),
-4072,B1,98,W,main,wirklich,,,Other,,,,really (artifact),
-4073,B1,98,U,main,um,,,Other,,,,around / at (artifact),
-4074,B1,98,Ü,main,über,,,Other,,,,about / over (artifact),
-4075,B1,98,V,main,verheiratet,,,Other,,,,married (artifact),
-4076,B1,98,T,main,treffen,,,Verb,,,,to meet (artifact),
-4077,B1,98,G,main,gelacht,,,Other,,,,laughed (artifact),
-4078,B1,98,S,main,spät,,,Other,,,,late (artifact),
-4079,B1,98,S,main,schön,,,Other,,,,beautiful (artifact),
-4080,B1,98,G,main,gehört,,,Other,,,,heard (artifact),
-4081,B1,98,T,main,trocken,,,Verb,,,,dry (artifact),
-4082,B1,98,A,main,aber,,,Other,,,,but (artifact),
-4083,B1,98,S,main,spät,,,Other,,,,late (artifact),
-4084,B1,98,M,main,men,,,Verb,,,,men (artifact),
-4085,B1,98,M,main,möglich,,,Other,,,,possible (artifact),
-4086,B1,98,F,main,fragen,,,Verb,,,,to ask (artifact),
-4087,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,to wish,
-4088,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,wish / desire,
-4089,B1,99,W,main,Wurst,die,¨-e,Noun,,,,sausage,
-4090,B1,99,W,main,wütend,,,Other,,,,angry / furious,
-4091,B1,99,Z,main,Zahl,die,-en,Noun,,,,number / figure,
-4092,B1,99,A,main,Anzahl,die,-en,Noun,,,,number / quantity,
-4093,B1,99,Z,main,zahlreich,,,Other,,,,numerous,
-4094,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,to pay,
-4095,B1,99,Z,main,Zahlung,die,-en,Noun,,,,payment,
-4096,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,to count,
-4097,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,tooth,
-4098,B1,99,Z,main,Zahncreme/-pasta,die,,Noun,,,,toothpaste,
-4099,B1,99,Z,main,Zange,die,-n,Noun,,,,pliers / tongs,
-4100,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,sign / symbol,
-4101,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,to live / to reside,
-4102,B1,99,W,main,Wohnort,der,-e,Noun,,,,place of residence,
-4103,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,place of residence / domicile,
-4104,B1,99,W,main,Wohnung,die,-en,Noun,,,,apartment / flat,
-4105,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,living room,
-4106,B1,99,W,main,Wolke,die,-n,Noun,,,,cloud,
-4107,B1,99,B,main,bewölkt,,,Other,,,,cloudy / overcast,
-4108,B1,99,W,main,Wolle,die,,Noun,,,,wool,
-4109,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,to want,
-4110,B1,99,W,main,worüber,,,Other,,,,about what,
-4111,B1,99,W,main,worum,,,Other,,,,about what / for what,
-4112,B1,99,W,main,Wort,das,¨-er,Noun,,,,word,
-4113,B1,99,W,main,Wort,das,-e,Noun,,,,word,
-4114,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,dictionary,
-4115,B1,99,W,main,Wunde,die,-n,Noun,,,,wound,
-4116,B1,99,W,main,Wunder,das,-,Noun,,,,miracle / wonder,
-4117,B1,99,W,main,wunderbar1,,,Other,,,,wonderful / great,
-4118,B1,99,W,main,war,,,Other,,,,was (artifact),
-4119,B1,99,G,main,gekauft,,,Other,,,,bought (artifact),
-4120,B1,99,H,main,hier,,,Other,,,,here (artifact),
-4121,B1,99,F,main,früh,,,Other,,,,early (artifact),
-4122,B1,99,L,main,los,,,Other,,,,off / away (artifact),
-4123,B1,99,I,main,immer,,,Other,,,,always (artifact),
-4124,B1,99,M,main,musste,,,Other,,,,had to (artifact),
-4125,B1,99,S,main,sofort,,,Other,,,,immediately (artifact),
-4126,B1,99,B,main,brauchst,,,Other,,,,need (artifact),
-4127,B1,99,M,main,mich,,,Other,,,,me (artifact),
-4128,B1,99,G,main,geplant,,,Other,,,,planned (artifact),
-4129,B1,99,M,main,möglichst,,,Other,,,,as ... as possible (artifact),
-4130,B1,99,F,main,fern,,,Verb,,,,television (artifact),
-4131,B1,99,G,main,gesagt,,,Other,,,,said (artifact),
-4132,B1,99,N,main,nachschlagen,,,Verb,,,,to look up (artifact),
-4133,B1,99,V,main,verbinden,,,Verb,,,,to connect (artifact),
-4134,B1,99,B,main,bares,,,Other,,,,cash (artifact),
-4135,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,to pull / to move,
-4136,B1,100,Z,main,Ziel,das,-e,Noun,,,,goal / destination / aim,
-4137,B1,100,Z,main,ziemlich,,,Other,,,,quite / fairly / rather,
-4138,B1,100,Z,main,Zigarette,die,-n,Noun,,,,cigarette,
-4139,B1,100,Z,main,Zimmer,das,-,Noun,,,,room,
-4140,B1,100,Z,main,Zinsen,die,,Noun,,,,interest (financial),
-4141,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,circus,
-4142,B1,100,Z,main,Zivilstand,der,,Noun,,,,marital status (Swiss),
-4143,B1,100,L,main,lienstand,,,Other,,,,marital status (artifact),
-4144,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,customs / duty / inch,
-4145,B1,100,Z,main,Zone,die,-nder,Noun,,,,zone,
-4146,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,to prepare (food),
-4147,B1,100,Z,main,Zuckerdas,der,,Noun,,,,sugar (artifact),
-4148,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,to draw,
-4149,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,drawing,
-4150,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,to show / to point,
-4151,B1,100,Z,main,Zeile,die,-n,Noun,,,,line / row,
-4152,B1,100,Z,main,Zeit,die,,Noun,,,,time,
-4153,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,point in time / moment,
-4154,B1,100,Z,main,zurzeit,,,Other,,,,at the moment / currently,
-4155,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,magazine / journal,
-4156,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,newspaper,
-4157,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,to camp / to go camping,
-4158,B1,100,Z,main,zentral,,,Other,,,,central,
-4159,B1,100,Z,main,Zentrum,das,,Noun,,,,center / centre,
-4160,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,to destroy,
-4161,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,certificate,
-4162,B1,100,Z,main,Zettel,der,-das,Noun,,,,slip of paper / note,
-4163,B1,100,Z,main,Zeuge,der,-n,Noun,,,,witness (male),
-4164,B1,100,Z,main,Zeugin,die,,Noun,,,,witness (female),
-4165,B1,100,I,main,ins,,,Other,,,,into the (artifact),
-4166,B1,100,W,main,warten,,,Verb,,,,to wait (artifact),
-4167,B1,100,S,main,serviert,,,Other,,,,served (artifact),
-4168,B1,100,M,main,mein,,,Other,,,,my (artifact),
-4169,B1,100,D,main,den,,,Verb,,,,the (artifact),
-4170,B1,100,A,main,ankreuzen,,,Verb,,,,to mark / check (artifact),
-4171,B1,100,J,main,jetzt,,,Other,,,,now (artifact),
-4172,B1,100,E,main,eine,,,Other,,,,a / one (artifact),
-4173,B1,100,N,main,nen,,,Verb,,,,nen (artifact),
-4174,B1,100,K,main,kaufen,,,Verb,,,,to buy (artifact),
-4175,B1,100,G,main,gerade,,,Other,,,,straight / just / currently (artifact),
-4176,B1,100,Z,main,zeige,,,Other,,,,show (artifact),
-4177,B1,100,W,main,weise,,,Other,,,,weise (artifact),
-4178,B1,100,N,main,nehmen,,,Verb,,,,to take (artifact),
-4179,B1,100,I,main,in,,,Other,,,,in (artifact),
-4180,B1,100,P,main,plätze,,,Other,,,,places (artifact),
-4181,B1,100,B,main,bekomme,,,Other,,,,receive (artifact),
-4182,B1,100,M,main,muss,,,Other,,,,must (artifact),
-4183,B1,100,G,main,gemacht,,,Other,,,,made (artifact),
-4184,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,match / matchstick,
-4185,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,to manage / to cope,
-4186,B1,101,Z,main,zurück/zurück,,,Other,,,,back / return,
-4187,B1,101,Z,main,zurzeit,,,Other,,,,at the moment / currently,
-4188,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,to agree / to accept,
-4189,B1,101,Z,main,zusammen/zusammen,,,Other,,,,together,
-4190,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,cooperation / teamwork,
-4191,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,to summarize,
-4192,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,context / connection,
-4193,B1,101,Z,main,zusätzlich,,,Other,,,,additional / extra,
-4194,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,to watch / to look on,
-4195,B1,101,Z,main,Zuschauer,der,-,Noun,,,,spectator (male),
-4196,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,spectator (female),
-4197,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,surcharge / supplement,
-4198,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,coincidence / chance,
-4199,B1,101,Z,main,zufällig,,,Other,,,,coincidentally / by chance,
-4200,B1,101,Z,main,zufrieden,,,Verb,,,,satisfied / content,
-4201,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,access / entry,
-4202,B1,101,Z,main,zugänglich,,,Other,,,,accessible,
-4203,B1,101,Z,main,Zug,der,¨-e,Noun,,,,train,
-4204,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,to approach / to proceed,
-4205,B1,101,Z,main,Zuhause,das,,Noun,,,,home,
-4206,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,to listen,
-4207,B1,101,Z,main,Zuhörer,der,-,Noun,,,,listener (male),
-4208,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,listener (female),
-4209,B1,101,Z,main,Zukunft,die,,Noun,,,,future,
-4210,B1,101,Z,main,zukünftig,,,Other,,,,future / upcoming,
-4211,B1,101,Z,main,zuletzt,,,Other,,,,at last / in the end,
-4212,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,to close / to shut,
-4213,B1,101,Z,main,zumindest,,,Other,,,,at least,
-4214,B1,101,Z,main,zunächstIch,,,Other,,,,first of all / at first,
-4215,B1,101,M,main,men,,,Verb,,,,men (artifact),
-4216,B1,101,K,main,komme,,,Other,,,,come (artifact),
-4217,B1,101,U,main,und,,,Other,,,,and (artifact),
-4218,B1,101,E,main,eingeladen,,,Verb,,,,invited (artifact),
-4219,B1,101,G,main,gespielt,,,Other,,,,played (artifact),
-4220,B1,101,G,main,getrennt,,,Other,,,,separated (artifact),
-4221,B1,101,S,main,schreiben,,,Verb,,,,to write (artifact),
-4222,B1,101,Z,main,zusammenfassen,,,Verb,,,,to summarize (artifact),
-4223,B1,101,D,main,diesen,,,Verb,,,,this (artifact),
-4224,B1,101,Z,main,zusätzlich,,,Other,,,,additional (artifact),
-4225,B1,101,S,main,schaue,,,Other,,,,watch (artifact),
-4226,B1,101,G,main,gute,,,Other,,,,good (artifact),
-4227,B1,101,I,main,ihr,,,Other,,,,you (artifact),
-4228,B1,101,G,main,gefallen,,,Verb,,,,liked / fallen (artifact),
-4229,B1,101,G,main,getroffen,,,Verb,,,,met (artifact),
-4230,B1,101,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),
-4231,B1,101,S,main,schwierig,,,Other,,,,difficult (artifact),
-4232,B1,101,E,main,en,,,Other,,,,en (artifact),
-4233,B1,101,G,main,gesehen,,,Verb,,,,seen (artifact),
-4234,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,to doubt,
-4235,B1,102,Z,main,Zweifel,der,-,Noun,,,,doubt,
-4236,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,onion,
-4237,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,to force / to compel,
-4238,B1,102,Z,main,zu,,,Other,,,,to / too (artifact),
-4239,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,condition / state,
-4240,B1,102,Z,main,zuständig,,,Other,,,,responsible / in charge,
-4241,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,to agree / to approve,
-4242,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,agreement / approval / consent,
-4243,B1,102,Z,main,Zutaten,die,,Noun,,,,ingredients,
-4244,B1,102,H,main,haben,,,Verb,,,,to have (artifact),
-4245,B1,102,U,main,umzukehren,,,Verb,,,,to turn around / to reverse,
-4246,B1,102,B,main,beiden,,,Verb,,,,both (artifact),
-4247,B1,102,U,main,und,,,Other,,,,and (artifact),
-4248,B1,102,Z,main,zu,,,Other,,,,to / too (artifact),
-4249,B1,102,D,main,diesen,,,Verb,,,,this (artifact),
+3002,B1,76,W,main,wechseln,,,Verb,,,,to change / to switch,değiştirmek / geçiş yapmak
+3003,B1,76,W,main,wieder,,,Other,,,,again (artifact),yeniden (hatalı)
+3004,B1,76,W,main,war,,,Other,,,,was (artifact),"-dı/-di (geçmiş zaman, hatalı)"
+3005,B1,76,S,main,schenken,,,Verb,,,,to give as a gift (artifact),hediye etmek (hatalı)
+3006,B1,76,L,main,ladung,,,Other,,,,loading / charge (artifact),yükleme / şarj (hatalı)
+3007,B1,76,G,main,geschickt,,,Other,,,,sent / clever (artifact),gönderilmiş / becerikli (hatalı)
+3008,B1,76,G,main,gegangen,,,Verb,,,,gone (artifact),gitmiş (hatalı)
+3009,B1,76,G,main,geschossen,,,Verb,,,,shot (artifact),ateş edilmiş (hatalı)
+3010,B1,76,W,main,wirklich,,,Other,,,,really (artifact),gerçekten (hatalı)
+3011,B1,76,K,main,kannst,,,Other,,,,can (artifact),yapabilirsin (hatalı)
+3012,B1,76,S,main,schaden,,,Verb,,,,to harm (artifact),zarar vermek (hatalı)
+3013,B1,76,T,main,to,,,Other,,,,to (artifact),-e/-a (hatalı)
+3014,B1,76,B,main,bereiten,,,Verb,,,,to prepare (artifact),hazırlamak (hatalı)
+3015,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact),açıp kapamak / geçiş yapmak (hatalı)
+3016,B1,76,S,main,schalten,,,Verb,,,,to switch (artifact),açıp kapamak / geçiş yapmak (hatalı)
+3017,B1,76,S,main,scharf,,,Other,,,,sharp / spicy (artifact),keskin / acı (hatalı)
+3018,B1,77,S,main,schlimm,,,Other,,,,bad / severe / terrible,kötü / ağır / korkunç
+3019,B1,77,S,main,Schloss,das,¨-er,Noun,,,,castle / lock,şato / kilit
+3020,B1,77,S,main,Schluss,der,,Noun,,,,end / conclusion,son / sonuç
+3021,B1,77,S,main,Schlüssel,der,-,Noun,,,,key,anahtar
+3022,B1,77,S,main,schmal,,,Other,,,,narrow / slim,dar / ince
+3023,B1,77,S,main,schmecken,,,Verb,schmeckt,schmeckte,hat geschmeckt,to taste,tatmak / tadına bakmak
+3024,B1,77,S,main,Schmerz,der,-en,Noun,,,,pain,ağrı / acı
+3025,B1,77,S,main,Schmerzmittel,das,-,Noun,,,,painkiller,ağrı kesici
+3026,B1,77,S,main,schminken,,,Verb,schminkt,schminkte,hat geschminkt,to put on makeup,makyaj yapmak
+3027,B1,77,S,main,Schmuck,der,,Noun,,,,jewelry,mücevher / takı
+3028,B1,77,S,main,Schmutz,der,,Noun,,,,dirt / filth,kir / pislik
+3029,B1,77,S,main,schmutzig,,,Other,,,,dirty,kirli
+3030,B1,77,V,main,verschmutzen,,,Verb,verschmutzt,verschmutzte,hat verschmutzt,to pollute,kirletmek
+3031,B1,77,S,main,Schnee,der,,Noun,,,,snow,kar
+3032,B1,77,S,main,schneien,,,Verb,es schneit,es,,to snow,kar yağmak
+3033,B1,77,S,main,schneiden,,,Verb,schneidet,schnitt,hat geschnitten,to cut (artifact),kesmek (hatalı)
+3034,B1,77,S,main,schimpfen,,,Verb,schimpft,schimpfte,hat geschimpft,to scold / to complain,azarlamak / şikayet etmek
+3035,B1,77,S,main,Schinken,der,-,Noun,,,,ham,jambon
+3036,B1,77,S,main,Schirm,der,-e,Noun,,,,umbrella / screen,şemsiye / ekran
+3037,B1,77,S,main,schlafen,,,Verb,schläft,schlief,hat geschlafen,to sleep,uyumak
+3038,B1,77,S,main,Schlaf,der,,Noun,,,,sleep,uyku
+3039,B1,77,S,main,schlagen,,,Verb,schlägt,schlug,hat geschlagen,to hit / to beat,vurmak / dövmek
+3040,B1,77,D,main,der/das,,,Other,,,,the (artifact),"-ı/-i (belirli artikel, hatalı)"
+3041,B1,77,S,main,Schlange,die,-n,Noun,,,,snake / queue / line,yılan / kuyruk / sıra
+3042,B1,77,S,main,schlankschlecht,,,Other,,,,slim / bad (artifact),ince / kötü (hatalı)
+3043,B1,77,S,main,schließen,,,Verb,schließt,schloss,hat geschlossen7.,to close / to shut,kapamak / kapatmak
+3044,B1,77,F,main,fertig,,,Other,,,,ready / finished (artifact),hazır / bitmiş (hatalı)
+3045,B1,77,S,main,schließlich,,,Other,,,,finally / after all,sonunda / neticede
+3046,B1,77,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak / edinmek (hatalı)
+3047,B1,77,S,main,schließlich,,,Other,,,,finally / after all (artifact),sonunda / neticede (hatalı)
+3048,B1,77,B,main,besichtigt,,,Other,,,,visited / toured (artifact),ziyaret edilmiş / gezilmiş (hatalı)
+3049,B1,77,K,main,klingelt,,,Other,,,,rings (artifact),çalıyor (hatalı)
+3050,B1,77,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3051,B1,77,K,main,können,,,Verb,,,,to be able to / can (artifact),yapabilmek / -ebilmek (hatalı)
+3052,B1,77,S,main,schlagen,,,Verb,,,,to hit / to beat (artifact),vurmak / dövmek (hatalı)
+3053,B1,77,A,main,aus,,,Other,,,,from / out of (artifact),-den/-dan / dışarı (hatalı)
+3054,B1,77,K,main,kr,,,Other,,,,kr (artifact),kr (hatalı)
+3055,B1,77,A,main,ank,,,Other,,,,ank (artifact),ank (hatalı)
+3056,B1,77,S,main,schlecht,,,Other,,,,bad (artifact),kötü (hatalı)
+3057,B1,77,S,main,schlecht,,,Other,,,,bad (artifact),kötü (hatalı)
+3058,B1,77,D,main,dich,,,Other,,,,"you (accusative, artifact)",seni (hatalı)
+3059,B1,77,G,main,ganz,,,Other,,,,whole / quite (artifact),bütün / oldukça (hatalı)
+3060,B1,77,G,main,geschlossen,,,Verb,,,,closed (artifact),kapalı (hatalı)
+3061,B1,77,A,main,abschließen,,,Verb,,,,to lock / to conclude,kilitlemek / sonuçlandırmak
+3062,B1,78,S,main,schreien,,,Verb,schreit,schrie,hat geschrien,to scream / to shout,bağırmak / çığlık atmak
+3063,B1,78,S,main,Schrift,die,-en,Noun,,,,writing / font / script,yazı / font / el yazısı
+3064,B1,78,S,main,schriftlich,,,Other,,,,written,yazılı
+3065,B1,78,S,main,Schriftsteller,der,-,Noun,,,,writer / author (male),yazar (erkek)
+3066,B1,78,S,main,Schriftstellerin,die,-nen,Noun,,,,writer / author (female),yazar (kadın)
+3067,B1,78,S,main,Schritt,der,-e,Noun,,,,step,adım
+3068,B1,78,S,main,Schuh,der,-e,Noun,,,,shoe,ayakkabı
+3069,B1,78,S,main,Schuld,die,,Noun,,,,guilt / debt,suçluluk / borç
+3070,B1,78,S,main,schuld,,,Other,,,,guilty,suçlu
+3071,B1,78,S,main,Schulden,die,,Noun,,,,debts,borçlar
+3072,B1,78,S,main,schuldig,,,Other,,,,guilty,suçlu
+3073,B1,78,S,main,Schule,die,-n,Noun,,,,school,okul
+3074,B1,78,S,main,Schularbeit,die,-en,Noun,,,,homework / school assignment (Austrian),ev ödevi / okul ödevi (Avusturya)
+3075,B1,78,S,main,Schüler,der,-,Noun,,,,student / pupil (male),öğrenci (erkek)
+3076,B1,78,S,main,Schülerin,die,-nen,Noun,,,,student / pupil (female),öğrenci (kadın)
+3077,B1,78,S,main,Schulter,die,-n,Noun,,,,shoulder,omuz
+3078,B1,78,S,main,Schüssel,die,"-nschütteln, schüttelt,",Noun,,,,bowl / dish,kase / tabak
+3079,B1,78,S,main,schützen,,,Verb,schützt,schützte,hat geschütztschnell,to protect,korumak
+3080,B1,78,S,main,Schnitzel,das,-,Noun,,,,schnitzel / breaded cutlet,şnitzel / ekmek kızartmalı pirzola
+3081,B1,78,S,main,Schnupfendie,der,,Noun,,,,cold / runny nose,nezle / burun akıntısı
+3082,B1,78,S,main,schon,,,Other,,,,already,zaten / artık
+3083,B1,78,S,main,schön,,,Other,,,,beautiful / nice,güzel
+3084,B1,78,S,main,Schrank,der,¨-e,Noun,,,,wardrobe / cabinet,dolap
+3085,B1,78,S,main,Schreck(en),der,,Noun,,,,fright / horror,korku / dehşet
+3086,B1,78,S,main,schrecklich,,,Other,,,,terrible / horrible,korkunç / berbat
+3087,B1,78,S,main,schreiben,,,Verb,schreibt,schrieb,hat geschrieben,to write,yazmak
+3088,B1,78,A,main,aufschreibenHaben,,,Verb,,,,to write down (artifact),not almak / yazmak (hatalı)
+3089,B1,78,S,main,schreien,,,Verb,,,,to scream / to shout,bağırmak / çığlık atmak
+3090,B1,78,G,main,geschrien,,,Verb,,,,screamed / shouted (artifact),bağırmış / çığlık atmış (hatalı)
+3091,B1,78,L,main,lesen,,,Verb,,,,to read (artifact),okumak (hatalı)
+3092,B1,78,H,main,halben,,,Verb,,,,half (artifact),yarım (hatalı)
+3093,B1,78,S,main,schriftliche,,,Other,,,,written (artifact),yazılı (hatalı)
+3094,B1,78,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3095,B1,78,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3096,B1,78,B,main,bezahlt,,,Other,,,,paid (artifact),ödenmiş (hatalı)
+3097,B1,78,B,main,bitte,,,Other,,,,please (artifact),lütfen (hatalı)
+3098,B1,78,W,main,wieder,,,Other,,,,again (artifact),yeniden (hatalı)
+3099,B1,78,D,main,den,,,Verb,,,,the (artifact),-ı (hatalı)
+3100,B1,78,S,main,schütteln,,,Verb,,,,to shake,sallamak
+3101,B1,78,M,main,möglich,,,Other,,,,possible (artifact),mümkün (hatalı)
+3102,B1,78,S,main,schnell,,,Other,,,,fast / quick (artifact),hızlı (hatalı)
+3103,B1,78,G,main,gegessen,,,Verb,,,,eaten (artifact),yenilmiş (hatalı)
+3104,B1,78,L,main,lesen,,,Verb,,,,to read (artifact),okumak (hatalı)
+3105,B1,78,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3106,B1,78,W,main,warten,,,Verb,,,,to wait (artifact),beklemek (hatalı)
+3107,B1,78,S,main,schon,,,Other,,,,already (artifact),zaten (hatalı)
+3108,B1,78,B,main,bleiben,,,Verb,,,,to stay / to remain (artifact),kalmak (hatalı)
+3109,B1,78,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak / edinmek (hatalı)
+3110,B1,78,M,main,mehr,,,Other,,,,more (artifact),daha fazla (hatalı)
+3111,B1,78,A,main,aufgeschrieben,,,Verb,,,,written down (artifact),not alınmış (hatalı)
+3112,B1,79,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3113,B1,79,S,main,Seife,die,-n,Noun,,,,soap,sabun
+3114,B1,79,S,main,sein,,,Verb,,,ist gewesen,to be,olmak
+3115,B1,79,S,main,seit,,,Other,,,,since / for (time),-den beri / -dır
+3116,B1,79,S,main,seitdem,,,Other,,,,since then,o zamandan beri
+3117,B1,79,S,main,Seite,die,-n,Noun,,,,page / side,sayfa / taraf
+3118,B1,79,S,main,Sekretär,der,-e,Noun,,,,secretary (male),sekreter (erkek)
+3119,B1,79,S,main,Sekretärin,die,-nen,Noun,,,,secretary (female),sekreter (kadın)
+3120,B1,79,S,main,selb,,,Other,,,,self (artifact),kendisi (hatalı)
+3121,B1,79,S,main,selbst,,,Other,,,,oneself / self,kendisi / bizzat
+3122,B1,79,S,main,selber,,,Other,,,,oneself / self,kendisi / bizzat
+3123,B1,79,S,main,selbstständig,,,Other,,,,self-employed / independent,serbest çalışan / bağımsız
+3124,B1,79,S,main,selbstverständlichder,,,Other,,,,of course / naturally (artifact),tabii ki / doğal olarak (hatalı)
+3125,B1,79,S,main,schwach,,,Other,,,,weak,zayıf
+3126,B1,79,S,main,Schwammerl,das,-n,Noun,,,,mushroom (Austrian),mantar (Avusturya)
+3127,B1,79,S,main,schwanger,,,Other,,,,pregnant,hamile
+3128,B1,79,S,main,Schwangerschaft,die,-en,Noun,,,,pregnancy,hamilelik
+3129,B1,79,S,main,schweigen,,,Verb,schweigt,schwieg,hat geschwiegen,to be silent / to keep quiet,susmak / sessiz kalmak
+3130,B1,79,S,main,schwer,,,Other,,,,heavy / difficult,ağır / zor
+3131,B1,79,S,main,Schwester,die,-n,Noun,,,,sister,kız kardeş
+3132,B1,79,S,main,schwierig,,,Other,,,,difficult,zor
+3133,B1,79,S,main,Schwierigkeit,die,-en,Noun,,,,difficulty,zorluk / güçlük
+3134,B1,79,S,main,schwimmen,,,Verb,schwimmt,schwamm,ist geschwommen,to swim,yüzmek
+3135,B1,79,S,main,Schwimmbad,das,¨-er,Noun,,,,swimming pool,yüzme havuzu
+3136,B1,79,S,main,schwitzen,,,Verb,schwitzt,schwitzte,hat geschwitzt,to sweat,terlemek
+3137,B1,79,S,main,See,der,-n,Noun,,,,lake (der - freshwater),göl
+3138,B1,79,S,main,See,die,,Noun,,,,sea (die - saltwater),deniz
+3139,B1,79,N,main,Nord-/Ostsee,die,,Noun,,,,North/Baltic Sea,Kuzey/Baltık Denizi
+3140,B1,79,S,main,sehen,,,Verb,sieht,sah,hat gesehen5.,to see,görmek
+3141,B1,79,S,main,schnell,,,Other,,,,fast / quick (artifact),hızlı (hatalı)
+3142,B1,79,N,main,noch,,,Other,,,,still / yet (artifact),hâlâ / henüz (hatalı)
+3143,B1,79,G,main,gefreut,,,Other,,,,glad / pleased (artifact),memnun olmuş (hatalı)
+3144,B1,79,Ü,main,übermorgen,,,Verb,,,,the day after tomorrow,öbür gün
+3145,B1,79,A,main,an/aus,,,Other,,,,on / off (artifact),açık / kapalı (hatalı)
+3146,B1,79,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3147,B1,79,L,main,land,,,Other,,,,land / country (artifact),arazi / ülke (hatalı)
+3148,B1,79,W,main,wohne,,,Other,,,,live (artifact),yaşıyorum (hatalı)
+3149,B1,79,D,main,du,,,Other,,,,you (artifact),sen (hatalı)
+3150,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact),serbest çalışan (hatalı)
+3151,B1,79,S,main,selbstständig,,,Other,,,,self-employed (artifact),serbest çalışan (hatalı)
+3152,B1,79,F,main,fort,,,Other,,,,away / forth (artifact),ileri / uzağa (hatalı)
+3153,B1,79,M,main,mich,,,Other,,,,me (artifact),beni (hatalı)
+3154,B1,79,H,main,helfen,,,Verb,,,,to help (artifact),yardım etmek (hatalı)
+3155,B1,79,S,main,schwanger,,,Other,,,,pregnant (artifact),hamile (hatalı)
+3156,B1,79,S,main,schaft,,,Other,,,,schaft (artifact),schaft (hatalı)
+3157,B1,79,D,main,den,,,Verb,,,,the (artifact),-ı (hatalı)
+3158,B1,79,E,main,einen,,,Verb,,,,a / one (artifact),bir (hatalı)
+3159,B1,79,G,main,geschwitzt,,,Other,,,,sweated (artifact),terlenmiş (hatalı)
+3160,B1,79,A,main,ahren,,,Verb,,,,years (artifact),yıllar (hatalı)
+3161,B1,80,S,main,siegen,,,Verb,siegt,siegte,hat gesiegt,to win / to be victorious,kazanmak / zafer kazanmak
+3162,B1,80,S,main,Sieg,der,-e,Noun,,,,victory,zafer / galibiyet
+3163,B1,80,S,main,Sieger,der,-,Noun,,,,winner (male),kazanan (erkek)
+3164,B1,80,S,main,Siegerin,die,-nen,Noun,,,,winner (female),kazanan (kadın)
+3165,B1,80,S,main,siezen,,,Verb,siezt,siezte,hat gesiezt,to address formally (Sie),saygı hitabıyla hitap etmek (Sie)
+3166,B1,80,S,main,singen,,,Verb,singt,sang,,to sing,şarkı söylemek
+3167,B1,80,G,main,gesungen,,,Verb,,,,sung (artifact),şarkı söylenmiş (hatalı)
+3168,B1,80,S,main,sinken,,,Verb,sinkt,sank,ist gesunken,to sink / to fall,batmak / düşmek
+3169,B1,80,S,main,Sinn,der,,Noun,,,,meaning / sense,anlam / his
+3170,B1,80,S,main,sinnlos,,,Other,,,,pointless / senseless,anlamsız / saçma
+3171,B1,80,S,main,sinnvoll,,,Other,,,,meaningful / sensible,anlamlı / mantıklı
+3172,B1,80,S,main,Situation,die,"-ensitzen, sitzt, saß, hat/ist",Noun,,,,situation,durum / koşul
+3173,B1,80,G,main,gesessen,,,Verb,,,,sat (artifact),oturmuş (hatalı)
+3174,B1,80,S,main,Sitz,der,-e,Noun,,,,seat / headquarters,koltuk / merkez
+3175,B1,80,S,main,Ski/Schi,der,-er/-,Noun,,,,ski,kayak
+3176,B1,80,S,main,so,,,Other,,,,so / like that,böyle / öyle
+3177,B1,80,S,main,sobaldselten,,,Verb,,,,as soon as / rarely,hemen / nadiren (hatalı)
+3178,B1,80,S,main,seltsam,,,Other,,,,strange / odd,tuhaf / garip
+3179,B1,80,S,main,Semester,das,-,Noun,,,,semester,sömestr / dönem
+3180,B1,80,S,main,Seminar,das,-e,Noun,,,,seminar,seminer
+3181,B1,80,S,main,Semmel,die,-n,Noun,,,,bread roll (Austrian),ekmek rulosu (Avusturya)
+3182,B1,80,S,main,Sender,der,-,Noun,,,,sender / broadcaster,gönderici / yayıncı
+3183,B1,80,S,main,Sendung,die,-en,Noun,,,,broadcast / program / shipment,yayın / program / sevkiyat
+3184,B1,80,S,main,Senioren,die,,Noun,,,,seniors / elderly people,yaşlılar / kıdemli kişiler
+3185,B1,80,S,main,Service,der,,Noun,,,,service,hizmet / servis
+3186,B1,80,S,main,Serviceangestellte,der,-n,Noun,,,,service employee,hizmet çalışanı
+3187,B1,80,S,main,Sessel,der,-,Noun,,,,armchair,koltuk
+3188,B1,80,S,main,sicher,,,Other,,,,safe / certain / sure,güvenli / kesin / emin
+3189,B1,80,S,main,Sicherheit,die,-en,Noun,,,,safety / security,güvenlik
+3190,B1,80,S,main,sichern,,,Verb,sichert,sicherte,hat gesichert,to secure / to back up,güvence altına almak / yedeklemek
+3191,B1,80,B,main,Bein,das,,Noun,,,,leg,bacak
+3192,B1,80,F,main,freuen,,,Verb,,,,to be glad / to look forward to,sevinmek / iple çekmek
+3193,B1,80,S,main,siezen,,,Verb,,,,to address formally (artifact),saygı hitabıyla hitap etmek (hatalı)
+3194,B1,80,E,main,erkältet,,,Other,,,,having a cold (artifact),soğuk algınlığı olan (hatalı)
+3195,B1,80,L,main,lange,,,Other,,,,long (artifact),uzun (hatalı)
+3196,B1,80,H,main,hinten,,,Verb,,,,behind / at the back (artifact),arkada (hatalı)
+3197,B1,80,F,main,fürs,,,Other,,,,for the (artifact),-için (hatalı)
+3198,B1,80,K,main,kann,,,Other,,,,can (artifact),yapabilir (hatalı)
+3199,B1,80,M,main,mich,,,Other,,,,me (artifact),beni (hatalı)
+3200,B1,80,J,main,jetzt,,,Other,,,,now (artifact),şimdi (hatalı)
+3201,B1,80,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3202,B1,80,B,main,besuchen.Ich,,,Other,,,,to visit (artifact),ziyaret etmek (hatalı)
+3203,B1,80,P,main,per,,,Other,,,,by / per (artifact),ile / her (hatalı)
+3204,B1,80,N,main,nachsenden,,,Verb,,,,to forward / to redirect mail,posta yönlendirmek / iletmek
+3205,B1,80,M,main,mit,,,Other,,,,with (artifact),ile (hatalı)
+3206,B1,80,S,main,statt,,,Other,,,,instead of (artifact),yerine (hatalı)
+3207,B1,80,G,main,geöffnet,,,Other,,,,opened (artifact),açılmış (hatalı)
+3208,B1,81,S,main,sovielso,,,Other,,,,so much / anyway (artifact),bu kadar / zaten (hatalı)
+3209,B1,81,S,main,sowieso,,,Other,,,,anyway / in any case,zaten / her halükarda
+3210,B1,81,S,main,sowohl,,,Other,,,,both / as well as,hem ... hem de
+3211,B1,81,S,main,Sozialarbeiter,der,-,Noun,,,,social worker (male),sosyal hizmet uzmanı (erkek)
+3212,B1,81,S,main,Sozialarbeiterin,die,-nen,Noun,,,,social worker (female),sosyal hizmet uzmanı (kadın)
+3213,B1,81,S,main,spannendsparen,,,Verb,spart,sparte,,exciting / to save (artifact),heyecanlı / tasarruf etmek (hatalı)
+3214,B1,81,G,main,gespart,,,Other,,,,saved (artifact),tasarruf edilmiş (hatalı)
+3215,B1,81,S,main,sparsam,,,Other,,,,economical / thrifty,tutumlu / idareli
+3216,B1,81,S,main,Spaß,der,,Noun,,,,fun,eğlence / keyif
+3217,B1,81,S,main,spät,,,Other,,,,late,geç
+3218,B1,81,S,main,spätestens,,,Other,,,,at the latest,en geç
+3219,B1,81,S,main,spazieren,,,Verb,geht,,,to walk / to stroll,yürümek / dolaşmak
+3220,B1,81,S,main,spazieren,,,Verb,ging spazieren,,ist spazieren,to walk / to stroll,yürümek / dolaşmak
+3221,B1,81,S,main,Spaziergang,der,¨-e,Noun,,,,walk / stroll,yürüyüş
+3222,B1,81,S,main,speichern,,,Verb,speichert,speicherte,hat gespeichert,to save / to store,kaydetmek / depolamak
+3223,B1,81,S,main,sodass,,,Other,,,,so that,öyle ki / böylece
+3224,B1,81,S,main,Sofa,das,-s,Noun,,,,sofa / couch,kanepe / sedir
+3225,B1,81,S,main,sofort,,,Other,,,,immediately / right away,hemen / derhal
+3226,B1,81,S,main,sogenannt,,,Other,,,,so-called,sözde / söz konusu
+3227,B1,81,S,main,sogar,,,Other,,,,even / in fact,hatta / bile
+3228,B1,81,S,main,Sohn,der,¨-e,Noun,,,,son,oğul / oğlan
+3229,B1,81,S,main,solange,,,Other,,,,as long as,olduğu sürece
+3230,B1,81,S,main,solch,,,Other,,,,such,böyle / bu tür
+3231,B1,81,S,main,sollen,,,Verb,soll,sollte,,should / to be supposed to,-malı / -meli / gerekiyor
+3232,B1,81,G,main,gesollt,,,Other,,,,should / supposed to (artifact),gerekmişti (hatalı)
+3233,B1,81,S,main,Sonderangebot,das,-e,Noun,,,,special offer,özel teklif / indirimli teklif
+3234,B1,81,S,main,sondern,,,Verb,,,,but rather,aksine / bilakis
+3235,B1,81,S,main,Sonne,die,,Noun,,,,sun,güneş
+3236,B1,81,S,main,sonnig,,,Other,,,,sunny,güneşli
+3237,B1,81,S,main,sonst,,,Other,,,,otherwise / else,yoksa / aksi halde
+3238,B1,81,S,main,sorgen,,,Verb,sorgt,sorgte,hat gesorgt,to care / to worry,ilgilenmek / endişelenmek
+3239,B1,81,S,main,Sorge,die,-n,Noun,,,,worry / concern,endişe / kaygı
+3240,B1,81,S,main,Soße/Sauce,die,,Noun,,,,sauce / gravy,sos / et suyu
+3241,B1,81,H,main,heute,,,Other,,,,today (artifact),bugün (hatalı)
+3242,B1,81,S,main,schlecht,,,Other,,,,bad (artifact),kötü (hatalı)
+3243,B1,81,U,main,unterschreiben,,,Verb,,,,to sign,imzalamak
+3244,B1,81,S,main,sparen,,,Verb,,,,to save (money),tasarruf etmek / biriktirmek
+3245,B1,81,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3246,B1,81,V,main,verbraucht,,,Other,,,,used up / consumed (artifact),tüketilmiş (hatalı)
+3247,B1,81,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3248,B1,81,B,main,besonders,,,Other,,,,especially (artifact),özellikle (hatalı)
+3249,B1,81,W,main,werden,,,Verb,,,,to become (artifact),olmak (hatalı)
+3250,B1,81,G,main,gegangen,,,Verb,,,,gone (artifact),gitmiş (hatalı)
+3251,B1,81,A,main,ab,,,Other,,,,from / off (artifact),-den / kapalı (hatalı)
+3252,B1,81,G,main,genannte,,,Other,,,,named / called (artifact),adlandırılmış (hatalı)
+3253,B1,81,S,main,sogar,,,Other,,,,even / in fact (artifact),hatta / bile (hatalı)
+3254,B1,81,A,main,auf,,,Other,,,,on / at (artifact),üzerinde / -e (hatalı)
+3255,B1,81,M,main,morgen,,,Verb,,,,tomorrow (artifact),yarın (hatalı)
+3256,B1,81,E,main,einverstanden,,,Verb,,,,agreed (artifact),kabul edilmiş (hatalı)
+3257,B1,81,D,main,duziert,,,Other,,,,duced (artifact),duziert (hatalı)
+3258,B1,81,S,main,sondern,,,Verb,,,,but rather (artifact),aksine (hatalı)
+3259,B1,81,S,main,scheint,,,Other,,,,seems (artifact),görünüyor (hatalı)
+3260,B1,81,G,main,gelegen,,,Verb,,,,lay / was located (artifact),yer almış (hatalı)
+3261,B1,81,E,main,er,,,Other,,,,he (artifact),"o (erkek, hatalı)"
+3262,B1,81,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
+3263,B1,81,K,main,keine,,,Other,,,,no / not any (artifact),hiç / yok (hatalı)
+3264,B1,82,S,main,springen,,,Verb,springt,sprang,ist gesprungen,to jump,zıplamak / atlamak
+3265,B1,82,S,main,Spritze,die,-n,Noun,,,,injection / syringe,iğne / şırınga
+3266,B1,82,S,main,spülen,,,Verb,spült,spülte,hat gespült,to rinse / to wash up,durulamak / yıkamak
+3267,B1,82,S,main,Spur,die,-en,Noun,,,,track / trail / trace,iz / yol / ipucu
+3268,B1,82,S,main,spüren,,,Verb,spürt,spürte,hat gespürt,to feel / to sense,hissetmek / sezinlemek
+3269,B1,82,S,main,Stadion,das,,Noun,,,,stadium,stadyum
+3270,B1,82,S,main,Stadt,die,¨-e,Noun,,,,city / town,şehir / kent
+3271,B1,82,S,main,städtisch,,,Other,,,,urban / municipal,kentsel / belediyeye ait
+3272,B1,82,S,main,Stadtplan,der,¨-e,Noun,,,,city map,şehir haritası
+3273,B1,82,S,main,stammen,,,Verb,stammt,stammte,hat gestammt,to come from / to originate,köken almak / gelmek
+3274,B1,82,S,main,ständig,,,Other,,,,constantly / permanently,sürekli / devamlı
+3275,B1,82,S,main,Standpunkt,der,-e,Noun,,,,viewpoint / standpoint,bakış açısı / tutum
+3276,B1,82,S,main,Star,der,-sstark,Noun,,,,star / celebrity,yıldız / ünlü
+3277,B1,82,S,main,starten,,,Verb,startet,startete,ist gestartet,to start,başlamak / harekete geçmek
+3278,B1,82,S,main,Speisekarte,die,-n,Noun,,,,menu,yemek listesi / menü
+3279,B1,82,S,main,Speisewagen,der,-,Noun,,,,dining car,yemekli vagon
+3280,B1,82,S,main,Spezialist,der,-en,Noun,,,,specialist (male),uzman (erkek)
+3281,B1,82,S,main,Spezialistin,die,-nen,Noun,,,,specialist (female),uzman (kadın)
+3282,B1,82,S,main,speziell,,,Other,,,,special,özel
+3283,B1,82,S,main,Spiegel,der,"-spielen, spielt, spielte,",Noun,,,,mirror,ayna
+3284,B1,82,S,main,Spiel,das,-e,Noun,,,,game / play,oyun
+3285,B1,82,S,main,Spieler,der,-,Noun,,,,player (male),oyuncu (erkek)
+3286,B1,82,S,main,Spielerin,die,-nen,Noun,,,,player (female),oyuncu (kadın)
+3287,B1,82,S,main,Spielplatz,der,¨-e,Noun,,,,playground,oyun alanı
+3288,B1,82,S,main,Spielzeug,das,-e,Noun,,,,toy,oyuncak
+3289,B1,82,S,main,spitz,,,Other,,,,pointed / sharp,sivri / keskin
+3290,B1,82,S,main,Sport,der,,Noun,,,,sport / sports,spor
+3291,B1,82,S,main,Sportart,die,-en,Noun,,,,type of sport,spor türü
+3292,B1,82,S,main,Sportler,der,-,Noun,,,,athlete (male),sporcu (erkek)
+3293,B1,82,S,main,Sportlerin,die,-nen,Noun,,,,athlete (female),sporcu (kadın)
+3294,B1,82,S,main,sportlich,,,Other,,,,sporty / athletic,sportif / atletik
+3295,B1,82,S,main,Sprache,die,-n,Noun,,,,language,dil
+3296,B1,82,F,main,Fremdsprache,die,-n,Noun,,,,foreign language,yabancı dil
+3297,B1,82,M,main,Muttersprache,die,-n,Noun,,,,mother tongue / native language,ana dil
+3298,B1,82,Z,main,Zweitsprache,die,-n,Noun,,,,second language,ikinci dil
+3299,B1,82,S,main,sprechen,,,Verb,spricht,sprach,hat gesprochen3.,to speak (artifact),konuşmak (hatalı)
+3300,B1,82,G,main,gegen,,,Verb,,,,against (artifact),karşı (hatalı)
+3301,B1,82,G,main,gehen,,,Verb,,,,to go (artifact),gitmek (hatalı)
+3302,B1,82,S,main,Stadt.,der,,Noun,,,,city (artifact),şehir (hatalı)
+3303,B1,82,D,main,Donau.,der,,Noun,,,,Danube (artifact),Tuna (hatalı)
+3304,B1,82,M,main,meiner,,,Other,,,,my (artifact),benim (hatalı)
+3305,B1,82,R,main,recht,,,Other,,,,right / correct (artifact),doğru / haklı (hatalı)
+3306,B1,82,B,main,besonders,,,Other,,,,especially (artifact),özellikle (hatalı)
+3307,B1,82,V,main,verschreiben,,,Verb,,,,to prescribe,reçete yazmak
+3308,B1,82,G,main,geschickt,,,Other,,,,sent / clever (artifact),gönderilmiş / becerikli (hatalı)
+3309,B1,82,F,main,für,,,Other,,,,for (artifact),için (hatalı)
+3310,B1,82,K,main,können,,,Verb,,,,to be able to (artifact),yapabilmek (hatalı)
+3311,B1,82,V,main,vier,,,Other,,,,four (artifact),dört (hatalı)
+3312,B1,82,D,main,dung,,,Other,,,,dung (artifact),dung (hatalı)
+3313,B1,82,S,main,sprechen,,,Verb,,,,to speak (artifact),konuşmak (hatalı)
+3314,B1,83,S,main,Stein,der,-e,Noun,,,,stone / rock,taş / kaya
+3315,B1,83,S,main,Stelle,die,-n,Noun,,,,position / place / job,yer / pozisyon / iş
+3316,B1,83,S,main,stellen,,,Verb,stellt,stellte,hat gestellt,to place / to put,koymak / yerleştirmek
+3317,B1,83,S,main,Stempel,der,-,Noun,,,,stamp,damga / pul
+3318,B1,83,S,main,sterben,,,Verb,stirbt,starb,,to die,ölmek
+3319,B1,83,G,main,gestorben,,,Verb,,,,died (artifact),ölmüş (hatalı)
+3320,B1,83,S,main,Stern,der,-e,Noun,,,,star,yıldız
+3321,B1,83,S,main,Steuer,die,-nder,Noun,,,,tax / steering,vergi / direksiyon
+3322,B1,83,S,main,Stewardess,die,-en,Noun,,,,flight attendant (female),hostes (kadın)
+3323,B1,83,S,main,Stift,der,-eder,Noun,,,,pen / pencil / marker,kalem / marker
+3324,B1,83,S,main,stilistisch,,,Other,,,,stylistic,stilistik / üslupsal
+3325,B1,83,S,main,still,,,Other,,,,quiet / still,sessiz / sakin
+3326,B1,83,S,main,Stiefel,der,-die,Noun,,,,boot,çizme
+3327,B1,83,S,main,Stiegenhaus,das,¨-er,Noun,,,,staircase (Austrian),merdiven evi (Avusturya)
+3328,B1,83,S,main,Station,die,-en,Noun,,,,station / stop,istasyon / durak
+3329,B1,83,S,main,Statistik,die,-en,Noun,,,,statistics,istatistik
+3330,B1,83,S,main,statistisch,,,Other,,,,statistical,istatistiksel
+3331,B1,83,S,main,statt,,,Other,,,,instead of,yerine / -in yerine
+3332,B1,83,S,main,stattfinden,,,Verb,findet statt,fand statt,hat stattgefun,to take place,gerçekleşmek / düzenlenmek
+3333,B1,83,S,main,Stau,der,-s,Noun,,,,traffic jam,trafik sıkışıklığı
+3334,B1,83,S,main,Staub,der,,Noun,,,,dust,toz
+3335,B1,83,S,main,staubsaugen,,,Verb,staubsaugt,staubsaugte,hat gestaubsaugt,to vacuum,elektrik süpürgesi çekmek
+3336,B1,83,S,main,stechen,,,Verb,sticht,stach,hat gestochen,to sting / to prick,sokmak / iğnelemek
+3337,B1,83,S,main,stecken,,,Verb,steckt,steckte,hat gesteckt,to stick / to put,sokmak / yerleştirmek
+3338,B1,83,S,main,Steckdose,die,-n,Noun,,,,power outlet / socket,priz / soket
+3339,B1,83,S,main,Stecker,der,"-stehen, steht, stand,",Noun,,,,plug,fiş
+3340,B1,83,S,main,stehen,,,Verb,,,,to stand,durmak / ayakta durmak
+3341,B1,83,S,main,stehlen,,,Verb,stiehlt,stahl,hat gestohlen,to steal,çalmak
+3342,B1,83,S,main,steigen,,,Verb,steigt,stieg,ist gestiegen,to climb / to rise,çıkmak / yükselmek
+3343,B1,83,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3344,B1,83,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3345,B1,83,S,main,schon,,,Other,,,,already (artifact),zaten (hatalı)
+3346,B1,83,L,main,leiser,,,Other,,,,quieter (artifact),daha sessiz (hatalı)
+3347,B1,83,M,main,möchten,,,Verb,,,,would like (artifact),istemek (hatalı)
+3348,B1,83,G,main,gestellt,,,Other,,,,placed / set (artifact),konulmuş (hatalı)
+3349,B1,83,L,main,letzter,,,Other,,,,last (artifact),son (hatalı)
+3350,B1,83,Z,main,zahlen,,,Verb,,,,to pay (artifact),ödemek (hatalı)
+3351,B1,83,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3352,B1,83,S,main,steigen,,,Verb,,,,to climb / to rise (artifact),çıkmak / yükselmek (hatalı)
+3353,B1,83,S,main,sitzen,,,Verb,,,,to sit (artifact),oturmak (hatalı)
+3354,B1,83,A,main,aussteigen,,,Verb,,,,to get off / to exit,inmek / çıkmak
+3355,B1,83,E,main,eine,,,Other,,,,a / one (artifact),bir (hatalı)
+3356,B1,83,A,main,am,,,Other,,,,at the (artifact),-de/-da (hatalı)
+3357,B1,83,N,main,noch,,,Other,,,,still / yet (artifact),hâlâ / henüz (hatalı)
+3358,B1,83,D,main,den,,,Verb,,,,the (artifact),-ı (hatalı)
+3359,B1,83,A,main,ass,,,Other,,,,ate (artifact),yedi (hatalı)
+3360,B1,83,D,main,doch,,,Other,,,,yet / still / come on (artifact),ama / gel (hatalı)
+3361,B1,83,S,main,steckt,,,Other,,,,sticks / is stuck (artifact),takılmış / yerleştirilmiş (hatalı)
+3362,B1,83,A,main,auf,,,Other,,,,on / at (artifact),üzerinde / -e (hatalı)
+3363,B1,83,S,main,schon,,,Other,,,,already (artifact),zaten (hatalı)
+3364,B1,83,G,main,gestiegen,,,Verb,,,,climbed / risen (artifact),çıkmış / yükselmiş (hatalı)
+3365,B1,84,S,main,streiken,,,Verb,streikt,streikte,hat gestreikt,to strike / to go on strike,grev yapmak
+3366,B1,84,S,main,Streik,der,-s,Noun,,,,strike,grev
+3367,B1,84,S,main,streiten,,,Verb,streitet,stritt,hat gestritten,to argue / to fight,tartışmak / kavga etmek
+3368,B1,84,S,main,Streit,der,,Noun,,,,argument / quarrel,tartışma / kavga
+3369,B1,84,S,main,streng,,,Other,,,,strict,sert / katı
+3370,B1,84,S,main,Stress,der,,Noun,,,,stress,stres
+3371,B1,84,S,main,Strom,der,,Noun,,,,electricity / current / river,elektrik / akım / nehir
+3372,B1,84,S,main,Strumpf,der,¨-e,Noun,,,,stocking / sock,çorap
+3373,B1,84,S,main,Stück/-stück,das,-e,Noun,,,,piece,parça
+3374,B1,84,S,main,Studie,die,-n,Noun,,,,study,çalışma / araştırma
+3375,B1,84,S,main,studieren,,,Verb,studiert,studierte,hat studiert,to study,üniversitede okumak
+3376,B1,84,S,main,Student,der,-en,Noun,,,,student (male),üniversite öğrencisi (erkek)
+3377,B1,84,S,main,Studentin,die,-nen,Noun,,,,student (female),üniversite öğrencisi (kadın)
+3378,B1,84,S,main,Studierende,der,-n,Noun,,,,"student (male, formal)","öğrenci (erkek, resmi)"
+3379,B1,84,S,main,Studierende,die,-n,Noun,,,,"student (female, formal)","öğrenci (kadın, resmi)"
+3380,B1,84,S,main,Studium,das,,Noun,,,,studies / degree program,üniversite eğitimi / lisans programı
+3381,B1,84,S,main,Studio,das,-s,Noun,,,,studio,stüdyo
+3382,B1,84,S,main,Stufe,die,-n,Noun,,,,step / level / stage,adım / seviye / aşama
+3383,B1,84,S,main,Stuhl,der,¨-e,Noun,,,,chair,sandalye
+3384,B1,84,S,main,stimmen,,,Verb,stimmt,stimmte,hat gestimmt,to be correct / to tune,doğru olmak / akort etmek
+3385,B1,84,S,main,Stimmung,die,"-enstinken, stinkt, stank,",Noun,,,,mood / atmosphere,ruh hali / atmosfer
+3386,B1,84,S,main,Stock,der,,Noun,,,,floor / stick / walking stick,kat / değnek / baston
+3387,B1,84,S,main,Stockwerk,das,-e,Noun,,,,floor / story (of a building),kat (bina)
+3388,B1,84,S,main,Stoff,der,-e,Noun,,,,fabric / material,kumaş / malzeme
+3389,B1,84,S,main,stolzstoppen,,,Verb,stoppt,stoppte,hat gestoppt,proud / to stop (artifact),gururlu / durdurmak (hatalı)
+3390,B1,84,S,main,stören,,,Verb,stört,störte,hat gestört,to disturb / to bother,rahatsız etmek / tedirgin etmek
+3391,B1,84,S,main,Störung,die,-en,Noun,,,,disturbance / fault,rahatsızlık / arıza
+3392,B1,84,S,main,stoßen,,,Verb,stößt,stieß,hat gestoßen,to push / to bump,itmek / çarpmak
+3393,B1,84,S,main,Strafe,die,-n,Noun,,,,punishment / penalty,ceza
+3394,B1,84,S,main,strafbar,,,Other,,,,punishable / criminal,cezalandırılabilir / suç teşkil eden
+3395,B1,84,S,main,Strafzettel,der,-,Noun,,,,parking ticket / fine,park cezası / para cezası
+3396,B1,84,S,main,Strand,der,¨-e,Noun,,,,beach,plaj / sahil
+3397,B1,84,S,main,Straße,die,-n,Noun,,,,street / road,sokak / cadde
+3398,B1,84,S,main,Straßenbahn,die,,Noun,,,,tram / streetcar,tramvay
+3399,B1,84,S,main,Strecke,die,,Noun,,,,route / stretch,güzergah / mesafe
+3400,B1,84,S,main,strengen,,,Verb,,,,to strain / to make an effort (artifact),zorlamak / çaba sarf etmek (hatalı)
+3401,B1,84,S,main,sparen,,,Verb,,,,to save (money),tasarruf etmek / biriktirmek
+3402,B1,84,L,main,losigkeit,,,Other,,,,lessness / lack (artifact),eksiklik / yokluk (hatalı)
+3403,B1,84,A,main,abgeschlossenes,,,Other,,,,completed (artifact),tamamlanmış (hatalı)
+3404,B1,84,K,main,kurse,,,Other,,,,courses (artifact),kurslar (hatalı)
+3405,B1,84,S,main,stumm.Ich,,,Other,,,,mute (artifact),dilsiz (hatalı)
+3406,B1,84,B,main,besser,,,Other,,,,better (artifact),daha iyi (hatalı)
+3407,B1,84,W,main,war,,,Other,,,,was (artifact),"-dı/-di (geçmiş zaman, hatalı)"
+3408,B1,84,B,main,bei,,,Other,,,,at / near (artifact),-de/-da / yanında (hatalı)
+3409,B1,84,S,main,stört,,,Other,,,,disturbs (artifact),rahatsız ediyor (hatalı)
+3410,B1,84,H,main,habe,,,Other,,,,have (artifact),sahibim (hatalı)
+3411,B1,84,G,main,geparkt,,,Other,,,,parked (artifact),park edilmiş (hatalı)
+3412,B1,84,G,main,gegangen,,,Verb,,,,gone (artifact),gitmiş (hatalı)
+3413,B1,85,T,main,Tabelle,die,-n,Noun,,,,table / chart,tablo / grafik
+3414,B1,85,T,main,Tablette,die,-ndie,Noun,,,,tablet / pill,tablet / hap
+3415,B1,85,T,main,Tagesablauf,der,¨-e,Noun,,,,daily routine,günlük rutin / günlük program
+3416,B1,85,T,main,Tal,das,¨-erdas,Noun,,,,valley,vadi
+3417,B1,85,T,main,Tankstelle,die,-n,Noun,,,,gas station,benzin istasyonu
+3418,B1,85,T,main,Tante,die,-n,Noun,,,,aunt,teyze / hala
+3419,B1,85,T,main,tanzen,,,Verb,tanzt,tanzte,hat getanzt,to dance,dans etmek
+3420,B1,85,T,main,Tanz,der,¨-e,Noun,,,,dance,dans
+3421,B1,85,T,main,Tasche,die,-n,Noun,,,,bag / pocket,çanta / cep
+3422,B1,85,T,main,Taschengeld,das,-er,Noun,,,,pocket money,harçlık
+3423,B1,85,T,main,Taschentuch,das,¨-er,Noun,,,,handkerchief / tissue,mendil / kağıt mendil
+3424,B1,85,T,main,Tasse,die,-n,Noun,,,,cup,fincan / bardak
+3425,B1,85,T,main,Tastatur,die,-en,Noun,,,,keyboard,klavye
+3426,B1,85,T,main,Taste,die,-n,Noun,,,,key / button,tuş / düğme
+3427,B1,85,T,main,Tat,die,-en,Noun,,,,act / deed,eylem / hareket
+3428,B1,85,T,main,Täter,der,-,Noun,,,,perpetrator (male),fail (erkek)
+3429,B1,85,T,main,Täterin,die,-nen,Noun,,,,perpetrator (female),fail (kadın)
+3430,B1,85,T,main,Tätigkeit,die,-endie,Noun,,,,activity / occupation,faaliyet / iş
+3431,B1,85,S,main,Sturm,der,¨-e,Noun,,,,storm,fırtına
+3432,B1,85,S,main,stürzen,,,Verb,stürzt,stürzte,ist gestürzt,to fall / to crash,düşmek / çökmek
+3433,B1,85,S,main,suchen,,,Verb,sucht,suchte,hat gesucht,to search / to look for,aramak
+3434,B1,85,S,main,Sucht,die,¨-e,Noun,,,,addiction,bağımlılık
+3435,B1,85,S,main,süchtig,,,Other,,,,addicted,bağımlı
+3436,B1,85,S,main,Suchtmittel,das,-,Noun,,,,addictive substance,bağımlılık yapan madde
+3437,B1,85,S,main,Summe,die,-n,Noun,,,,sum / total,toplam / miktar
+3438,B1,85,S,main,super,,,Other,,,,super / great,harika / süper
+3439,B1,85,S,main,Supermarkt,der,¨-e,Noun,,,,supermarket,süpermarket
+3440,B1,85,S,main,Suppe,die,-n,Noun,,,,soup,çorba
+3441,B1,85,S,main,süß,,,Other,,,,sweet,tatlı
+3442,B1,85,S,main,Symbol,das,-e,Noun,,,,symbol,sembol
+3443,B1,85,S,main,sympathisch,,,Other,,,,nice / likeable,sempatik / sevimli
+3444,B1,85,S,main,System,das,-e,Noun,,,,system,sistem
+3445,B1,85,S,main,Szene,die,,Noun,,,,scene,sahne
+3446,B1,85,T,main,Tabelle,die,,Noun,,,,table / chart,tablo / grafik
+3447,B1,85,T,main,Tafel.,die,,Noun,,,,blackboard / board,tahta / yazı tahtası
+3448,B1,85,H,main,haben,,,Verb,,,,to have (artifact),sahip olmak (hatalı)
+3449,B1,85,G,main,getanzt,,,Other,,,,danced (artifact),dans edilmiş (hatalı)
+3450,B1,85,G,main,ganz,,,Other,,,,whole / quite (artifact),bütün / oldukça (hatalı)
+3451,B1,85,K,main,kaputt,,,Other,,,,broken (artifact),bozuk / kırık (hatalı)
+3452,B1,85,D,main,drücken,,,Verb,,,,to press / to push,basmak / itmek
+3453,B1,85,G,main,gefasst,,,Other,,,,composed / ready (artifact),kendini toplamış (hatalı)
+3454,B1,85,M,main,machen,,,Other,,,,do (artifact),yapmak (hatalı)
+3455,B1,85,H,main,habe,,,Other,,,,have (artifact),sahibim (hatalı)
+3456,B1,85,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3457,B1,85,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
+3458,B1,85,P,main,permarkt,,,Other,,,,supermarket (artifact),süpermarket (hatalı)
+3459,B1,85,S,main,sympathisch,,,Other,,,,likeable (artifact),sempatik (hatalı)
+3460,B1,85,E,main,es,,,Other,,,,it (artifact),o (hatalı)
+3461,B1,86,T,main,Teller,der,-,Noun,,,,plate,tabak
+3462,B1,86,T,main,Temperatur,die,-en,Noun,,,,temperature,sıcaklık / ısı
+3463,B1,86,T,main,Tempo,das,,Noun,,,,speed / tempo,hız / tempo
+3464,B1,86,T,main,Teppich,der,-e,Noun,,,,carpet / rug,halı / kilim
+3465,B1,86,T,main,Termin,der,-e,Noun,,,,appointment,randevu
+3466,B1,86,T,main,Terminkalender,der,-,Noun,,,,calendar / planner,ajanda / takvim
+3467,B1,86,T,main,Terrasse,die,-n,Noun,,,,terrace / patio,teras / veranda
+3468,B1,86,T,main,testen,,,Verb,testet,testete,hat getestet,to test,sınamak / test etmek
+3469,B1,86,T,main,Test,der,-s,Noun,,,,test,test / sınav
+3470,B1,86,T,main,teuer,,,Other,,,,expensive,pahalı
+3471,B1,86,T,main,Text,der,-edas,Noun,,,,text,metin
+3472,B1,86,T,main,theoretisch,,,Other,,,,theoretical,teorik / kuramsal
+3473,B1,86,T,main,Theorie,die,-n,Noun,,,,theory,teori / kuram
+3474,B1,86,T,main,Therapie,die,-ndas,Noun,,,,therapy,terapi
+3475,B1,86,T,main,tief,,,Other,,,,deep / low,derin / alçak
+3476,B1,86,T,main,Tier,das,-edie,Noun,,,,animal,hayvan
+3477,B1,86,T,main,tatsächlich,,,Other,,,,actually / really,aslında / gerçekten
+3478,B1,86,T,main,taub,,,Other,,,,deaf,sağır
+3479,B1,86,T,main,tauchen,,,Verb,taucht,tauchte,,to dive,dalmak
+3480,B1,86,T,main,tauschen,,,Verb,tauscht,tauschte,hat getauscht,to swap / to exchange,değiş tokuş etmek / takas yapmak
+3481,B1,86,T,main,Technik,die,-en,Noun,,,,technology / technique,teknoloji / teknik
+3482,B1,86,T,main,technisch,,,Other,,,,technical,teknik
+3483,B1,86,T,main,Technologie,die,-n,Noun,,,,technology,teknoloji
+3484,B1,86,T,main,Tee,der,,Noun,,,,tea,çay
+3485,B1,86,T,main,teilen,,,Verb,teilt,teilte,hat geteilt,to share / to divide,paylaşmak / bölmek
+3486,B1,86,T,main,Teil,das,-e,Noun,,,,part / section,bölüm / parça
+3487,B1,86,T,main,Teil,der,-e,Noun,,,,part / section,bölüm / parça
+3488,B1,86,T,main,Teilzeit,die,,Noun,,,,part-time,yarı zamanlı
+3489,B1,86,T,main,teilnehmen,,,Verb,nimmt teil,nahm teil,hat teilgenommen,to participate / to take part,katılmak
+3490,B1,86,T,main,Teilnahme,die,-n,Noun,,,,participation,katılım
+3491,B1,86,T,main,Teilnehmer,der,-,Noun,,,,participant (male),katılımcı (erkek)
+3492,B1,86,T,main,Teilnehmerin,die,-nen,Noun,,,,participant (female),katılımcı (kadın)
+3493,B1,86,T,main,telefonieren,,,Verb,telefoniert,telefonierte,hat telefoniert1,to telephone / to call,telefon etmek / aramak
+3494,B1,86,G,main,gekauft,,,Other,,,,bought (artifact),satın alınmış (hatalı)
+3495,B1,86,S,main,schaffen,,,Verb,,,,to manage / to accomplish (artifact),başarmak / yönetmek (hatalı)
+3496,B1,86,S,main,standen,,,Verb,,,,stood (artifact),duruyordu (hatalı)
+3497,B1,86,V,main,vieles,,,Other,,,,many things (artifact),bir çok şey (hatalı)
+3498,B1,86,S,main,schon,,,Other,,,,already (artifact),zaten (hatalı)
+3499,B1,86,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3500,B1,86,O,main,obwohl,,,Other,,,,although (artifact),-e rağmen (hatalı)
+3501,B1,86,T,main,taub,,,Other,,,,deaf (artifact),sağır (hatalı)
+3502,B1,86,E,main,eine,,,Other,,,,a / one (artifact),bir (hatalı)
+3503,B1,86,E,main,ersten,,,Verb,,,,first (artifact),ilk (hatalı)
+3504,B1,86,R,main,regelmäßig,,,Other,,,,regularly (artifact),düzenli olarak (hatalı)
+3505,B1,86,K,main,kostenlos,,,Other,,,,free of charge (artifact),ücretsiz (hatalı)
+3506,B1,86,K,main,kommen,,,Verb,,,,to come (artifact),gelmek (hatalı)
+3507,B1,87,T,main,traditionell,,,Other,,,,traditional,geleneksel
+3508,B1,87,T,main,tragen,,,Verb,trägt,trug,hat getragen,to carry / to wear,taşımak / giymek
+3509,B1,87,T,main,trainieren,,,Verb,trainiert,trainierte,hat trainiert,to train,antrenman yapmak / idman yapmak
+3510,B1,87,T,main,Trainer,der,-,Noun,,,,trainer / coach (male),antrenör (erkek)
+3511,B1,87,T,main,Trainerin,die,-nen,Noun,,,,trainer / coach (female),antrenör (kadın)
+3512,B1,87,T,main,Training,das,-s,Noun,,,,training,antrenman / idman
+3513,B1,87,T,main,Tram,das,-s,Noun,,,,tram / streetcar,tramvay
+3514,B1,87,T,main,Träne,die,"-ntransportieren, trans-portiert, transportierte, hat transportiert",Noun,,,,tear (drop),gözyaşı
+3515,B1,87,T,main,Transport,der,-e,Noun,,,,transport,taşıma / nakliye
+3516,B1,87,T,main,träumen,,,Verb,träumt,träumte,hat geträumt,to dream,rüya görmek / hayal etmek
+3517,B1,87,T,main,Traum,der,¨-e,Noun,,,,dream,rüya / hayal
+3518,B1,87,T,main,traurig,,,Other,,,,sad,üzgün
+3519,B1,87,T,main,treffen,,,Verb,trifft,traf,hat getroffen,to meet,buluşmak / tanışmak
+3520,B1,87,T,main,Treffpunkt,der,-e,Noun,,,,meeting point,buluşma noktası
+3521,B1,87,T,main,treiben,,,Verb,treibt,trieb,,to drive / to do (sports),sürmek / spor yapmak
+3522,B1,87,T,main,trennen,,,Verb,trennt,trennte,hat getrennt,to separate / to divide,ayırmak / bölmek
+3523,B1,87,T,main,Trennung,die,-en,Noun,,,,separation,ayrılık / ayrışma
+3524,B1,87,T,main,Tierpark,der,-s,Noun,,,,animal park / zoo,hayvanat bahçesi / doğa parkı
+3525,B1,87,T,main,Tipp,der,-s,Noun,,,,tip / hint,ipucu / tavsiye
+3526,B1,87,T,main,tippen,,,Verb,tippt,tippte,,to type / to guess,yazmak (klavyeyle) / tahmin etmek
+3527,B1,87,G,main,getippt,,,Other,,,,typed / guessed (artifact),yazılmış / tahmin edilmiş (hatalı)
+3528,B1,87,T,main,Tisch,der,-eder,Noun,,,,table / desk,masa
+3529,B1,87,T,main,Tochter,die,¨-,Noun,,,,daughter,kız
+3530,B1,87,T,main,Tod,der,,Noun,,,,death,ölüm
+3531,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal,ölümcül / öldürücü
+3532,B1,87,T,main,Toilette,die,-n tolerant,Noun,,,,toilet / restroom,tuvalet
+3533,B1,87,R,main,radeiser,,,Other,,,,tomato (artifact),domates (hatalı)
+3534,B1,87,T,main,Topf,der,¨-e,Noun,,,,pot,tencere
+3535,B1,87,T,main,Tor,das,-e,Noun,,,,gate / goal,kapı / gol
+3536,B1,87,T,main,Torte,die,-n,Noun,,,,cake / tart,pasta / turta
+3537,B1,87,T,main,tot,,,Other,,,,dead,ölü
+3538,B1,87,T,main,Tote,der,-n,Noun,,,,dead person (male),ölü (erkek)
+3539,B1,87,T,main,Tote,die,-n,Noun,,,,dead person (female),ölü (kadın)
+3540,B1,87,T,main,total,,,Other,,,,total / completely,tamamen / toplam
+3541,B1,87,T,main,Tourismus,der,,Noun,,,,tourism,turizm
+3542,B1,87,T,main,Tourist,der,-en,Noun,,,,tourist (male),turist (erkek)
+3543,B1,87,T,main,Touristin,die,,Noun,,,,tourist (female),turist (kadın)
+3544,B1,87,S,main,schwer,,,Other,,,,heavy / difficult (artifact),ağır / zor (hatalı)
+3545,B1,87,M,main,mitfahren,,,Verb,,,,to ride along / to travel with,birlikte gitmek / araçla yolculuk etmek
+3546,B1,87,G,main,getroffen,,,Verb,,,,met (artifact),buluşulmuş (hatalı)
+3547,B1,87,S,main,sich,,,Other,,,,oneself (artifact),kendini (hatalı)
+3548,B1,87,K,main,kommt,,,Other,,,,comes (artifact),geliyor (hatalı)
+3549,B1,87,S,main,schwierig,,,Other,,,,difficult (artifact),zor (hatalı)
+3550,B1,87,G,main,geschieden,,,Verb,aber sie lebt,,,divorced (artifact),boşanmış (hatalı)
+3551,B1,87,W,main,wir,,,Other,,,,we (artifact),biz (hatalı)
+3552,B1,87,F,main,finde,,,Other,,,,find (artifact),buluyorum (hatalı)
+3553,B1,87,E,main,einmal,,,Other,,,,once (artifact),bir kez (hatalı)
+3554,B1,87,T,main,tödlich,,,Other,,,,deadly / fatal (artifact),ölümcül (hatalı)
+3555,B1,87,M,main,müssen,,,Verb,,,,must (artifact),-malı / -meli (hatalı)
+3556,B1,87,M,main,möchte,,,Other,,,,would like (artifact),istiyorum (hatalı)
+3557,B1,87,S,main,schießen,,,Verb,,,,to shoot (artifact),ateş etmek (hatalı)
+3558,B1,87,U,main,unsere,,,Other,,,,our (artifact),bizim (hatalı)
+3559,B1,88,T,main,Typ,der,-en,Noun,,,,type / guy,tür / adam
+3560,B1,88,T,main,typisch,,,Other,,,,typical,tipik / karakteristik
+3561,B1,88,U,main,U-Bahn,die,-enüben,Noun,,,,subway / underground,metro
+3562,B1,88,Ü,main,Übung,die,-en,Noun,,,,exercise / practice,egzersiz / alıştırma
+3563,B1,88,Ü,main,über,,,Other,,,,about / over / via,hakkında / üzerinde / aracılığıyla
+3564,B1,88,Ü,main,überall,,,Other,,,,everywhere,her yerde
+3565,B1,88,Ü,main,überfahren,,,Verb,überfährt,überfuhr,hat überfahren,to run over / to cross,ezmek / geçmek
+3566,B1,88,Ü,main,überhaupt,,,Other,,,,at all / anyway,hiç / zaten
+3567,B1,88,Ü,main,überholen,,,Verb,überholt,überholte,hat überholt,to overtake / to pass,geçmek / sollamamak
+3568,B1,88,Ü,main,überlegen,,,Verb,überlegt,überlegte,hat überlegt,to think about / to consider,düşünmek / göz önüne almak
+3569,B1,88,T,main,Treppenhaus,das,,Noun,,,,stairwell,merdiven evi
+3570,B1,88,T,main,treten,,,Verb,tritt,trat,ist getreten,to step / to kick,adım atmak / tekmelemek
+3571,B1,88,T,main,treu,,,Other,,,,faithful / loyal,sadık / vefalı
+3572,B1,88,T,main,trinken,,,Verb,trinkt,trank,hat getrunken,to drink,içmek
+3573,B1,88,T,main,Trinkgeld,das,-er,Noun,,,,tip (gratuity),bahşiş
+3574,B1,88,T,main,trocken,,,Verb,,,,dry,kuru
+3575,B1,88,T,main,trocknen,,,Verb,trocknet,trocknete,,to dry,kurutmak
+3576,B1,88,T,main,Tropfen,die,,Noun,,,,drops,damlalar
+3577,B1,88,T,main,Trottoir,das,-s,Noun,,,,sidewalk / pavement (Swiss),kaldırım (İsviçre)
+3578,B1,88,T,main,trotz,,,Other,,,,despite / in spite of,-e rağmen
+3579,B1,88,T,main,tun,,,Verb,tut,tat,hat getan,to do,yapmak
+3580,B1,88,T,main,Tür,die,-en,Noun,,,,door,kapı
+3581,B1,88,T,main,Turm,der,,Noun,,,,tower,kule
+3582,B1,88,D,main,du,,,Other,,,,you (artifact),sen (hatalı)
+3583,B1,88,T,main,typisch,,,Other,,,,typical (artifact),tipik (hatalı)
+3584,B1,88,Ü,main,übe,,,Other,,,,practice (artifact),pratik yap (hatalı)
+3585,B1,88,B,main,bezahlen,,,Verb,,,,to pay (artifact),ödemek (hatalı)
+3586,B1,88,Ü,main,überfahren,,,Verb,,,,to run over (artifact),ezmek (hatalı)
+3587,B1,88,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3588,B1,88,M,main,muss,,,Other,,,,must (artifact),-malı (hatalı)
+3589,B1,88,K,main,kaufen,,,Verb,,,,to buy (artifact),satın almak (hatalı)
+3590,B1,88,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3591,B1,88,S,main,steigen.Im,,,Other,,,,climb / in (artifact),çıkmak / üzere (hatalı)
+3592,B1,88,G,main,ganz,,,Other,,,,whole / quite (artifact),bütün / oldukça (hatalı)
+3593,B1,88,D,main,du,,,Other,,,,you (artifact),sen (hatalı)
+3594,B1,88,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3595,B1,88,G,main,gegangen,,,Verb,,,,gone (artifact),gitmiş (hatalı)
+3596,B1,88,S,main,schwimmen,,,Verb,,,,to swim (artifact),yüzmek (hatalı)
+3597,B1,88,G,main,gekauft,,,Other,,,,bought (artifact),satın alınmış (hatalı)
+3598,B1,88,O,main,oben,,,Verb,,,,above (artifact),yukarıda (hatalı)
+3599,B1,88,G,main,getan,,,Other,,,,done (artifact),yapılmış (hatalı)
+3600,B1,88,S,main,sieht,,,Other,,,,looks (artifact),görünüyor (hatalı)
+3601,B1,89,Ü,main,überzeugen,,,Verb,überzeugt,überzeugte,hat überzeugt,to convince / to persuade,ikna etmek / kandırmak
+3602,B1,89,Ü,main,Überzeugung,die,-en,Noun,,,,conviction / belief,inanç / kanı
+3603,B1,89,Ü,main,üblich,,,Other,,,,usual / common,alışılmış / yaygın
+3604,B1,89,Ü,main,übrig,,,Other,,,,remaining / left over,kalan / artık
+3605,B1,89,Ü,main,übrigens,,,Other,,,,by the way / incidentally,bu arada / ayrıca
+3606,B1,89,U,main,Ufer,das,-,Noun,,,,shore / bank (river/lake),kıyı / sahil
+3607,B1,89,U,main,Uhr,die,-en,Noun,,,,clock / watch,saat
+3608,B1,89,U,main,um,,,Other,,,,around / at (time) / in order to,etrafında / saat ...-de / için
+3609,B1,89,U,main,umarmen,,,Verb,umarmt,umarmte,hat umarmt,to hug / to embrace,kucaklamak / sarılmak
+3610,B1,89,U,main,um,,,Other,,,,around / at (artifact),etrafında (hatalı)
+3611,B1,89,U,main,umdrehen,,,Verb,dreht,um,hat umgedreht,to turn around,döndürmek / geri çevirmek
+3612,B1,89,U,main,Umfrage,die,-ndie,Noun,,,,survey / poll,anket / araştırma
+3613,B1,89,U,main,umgekehrt,,,Other,,,,reversed / the other way around,tersine / tam tersi
+3614,B1,89,U,main,Umleitung,die,-enumso,Noun,,,,detour / diversion,güzergah değişikliği / yol sapması
+3615,B1,89,U,main,umsonstübermorgen,,,Verb,,,,for free / the day after tomorrow (artifact),bedavaya / öbür gün (hatalı)
+3616,B1,89,Ü,main,übernachten,,,Verb,übernachtet,übernachtete,hat übernachtet,to stay overnight,gecelemek
+3617,B1,89,Ü,main,Übernachtung,die,-en,Noun,,,,overnight stay,geceleme / konaklama
+3618,B1,89,Ü,main,übernehmen,,,Verb,übernimmt,übernahm,hat übernommen,to take over / to take on,devralmak / üstlenmek
+3619,B1,89,Ü,main,überprüfen,,,Verb,überprüft,überprüfte,hat überprüft,to check / to verify,kontrol etmek / doğrulamak
+3620,B1,89,Ü,main,überqueren,,,Verb,überquert,überquerte,hat überquert,to cross (a road),geçmek / karşıya geçmek
+3621,B1,89,Ü,main,überraschen,,,Verb,überrascht,überraschte,hat überrascht,to surprise,şaşırtmak / sürpriz yapmak
+3622,B1,89,Ü,main,Überraschung,die,-en,Noun,,,,surprise,sürpriz
+3623,B1,89,Ü,main,überreden,,,Verb,überredet,überredete,hat überredet,to persuade / to talk into,ikna etmek / razı etmek
+3624,B1,89,Ü,main,Überschrift,die,-en,Noun,,,,headline / heading,başlık
+3625,B1,89,Ü,main,übersetzen,,,Verb,übersetzt,übersetzte,hat übersetzt,to translate,tercüme etmek / çevirmek
+3626,B1,89,Ü,main,Übersetzer,der,-,Noun,,,,translator (male),çevirmen (erkek)
+3627,B1,89,Ü,main,Übersetzerin,die,-nen,Noun,,,,translator (female),çevirmen (kadın)
+3628,B1,89,Ü,main,Übersetzung,die,-en,Noun,,,,translation,çeviri / tercüme
+3629,B1,89,Ü,main,Überstunde,die,-n,Noun,,,,overtime,fazla mesai
+3630,B1,89,Ü,main,über,,,Other,,,,about / over (artifact),hakkında / üzerinde (hatalı)
+3631,B1,89,Ü,main,übertreiben,,,Verb,übertreibt,übertrieb,hat übertrieben,to exaggerate,abartmak
+3632,B1,89,Ü,main,überweisen,,,Verb,überweist,überwies,hat überwiesen,to transfer (money),havale etmek / para göndermek
+3633,B1,89,Ü,main,Überweisung,die,- en1.,Noun,,,,bank transfer,banka havalesi
+3634,B1,89,M,main,meine,,,Other,,,,my (artifact),benim (hatalı)
+3635,B1,89,G,main,gehen,,,Verb,,,,to go (artifact),gitmek (hatalı)
+3636,B1,89,U,main,um,,,Other,,,,around / at (artifact),etrafında (hatalı)
+3637,B1,89,M,main,machen,,,Verb,,,,to make (artifact),yapmak (hatalı)
+3638,B1,89,A,main,auf,,,Other,,,,on / at (artifact),üzerinde (hatalı)
+3639,B1,89,S,main,schöne,,,Other,,,,beautiful (artifact),güzel (hatalı)
+3640,B1,89,D,main,dann,,,Other,,,,then (artifact),sonra (hatalı)
+3641,B1,89,S,main,sind,,,Other,,,,are (artifact),-dırlar (hatalı)
+3642,B1,89,A,main,auch,,,Other,,,,also (artifact),da / de (hatalı)
+3643,B1,89,Ü,main,übernachtet,,,Other,,,,stayed overnight (artifact),gecelenmiş (hatalı)
+3644,B1,89,T,main,tung,,,Other,,,,tung (artifact),tung (hatalı)
+3645,B1,89,R,main,richtig,,,Other,,,,right / correct (artifact),doğru (hatalı)
+3646,B1,89,Ü,main,überqueren,,,Verb,,,,"to cross (a road, artifact)",karşıya geçmek (hatalı)
+3647,B1,89,D,main,den,,,Verb,,,,the (artifact),-ı (hatalı)
+3648,B1,89,Z,main,zum,,,Other,,,,to the (artifact),-e/-a (hatalı)
+3649,B1,89,Ü,main,übersetzen,,,Other,,,,to translate (artifact),tercüme etmek (hatalı)
+3650,B1,89,A,main,arbeiten,,,Verb,,,,to work (artifact),çalışmak (hatalı)
+3651,B1,89,G,main,gut,,,Other,,,,good (artifact),iyi (hatalı)
+3652,B1,89,M,main,man,,,Other,,,,"one / you (impersonal, artifact)",insan / kişi (hatalı)
+3653,B1,89,Ü,main,überwiesen,,,Verb,,,,transferred (artifact),havale edilmiş (hatalı)
+3654,B1,89,B,main,bezahlen,,,Verb,,,,to pay (artifact),ödemek (hatalı)
+3655,B1,89,W,main,weisung,,,Other,,,,transfer (artifact),talimat / havale (hatalı)
+3656,B1,90,U,main,Universität,die,-en,Noun,,,,university,üniversite
+3657,B1,90,U,main,unten,,,Verb,,,,below / downstairs,aşağıda
+3658,B1,90,U,main,unter,,,Other,,,,under / below / among,altında / arasında
+3659,B1,90,U,main,unter,,,Other,,,,under / below (artifact),altında (hatalı)
+3660,B1,90,U,main,unterbrechen,,,Verb,unterbricht,unterbrach,hat unterbrochen,to interrupt,kesmek / sözünü kesmek
+3661,B1,90,U,main,unterhalten,,,Verb,unter-,hält,hat unterhalten,to entertain / to converse,eğlendirmek / sohbet etmek
+3662,B1,90,U,main,Unterhaltung,die,-en,Noun,,,,entertainment / conversation,eğlence / sohbet
+3663,B1,90,U,main,Unterkunft,die,¨-e,Noun,,,,accommodation,konaklama / barınak
+3664,B1,90,U,main,Unterlagen,die,,Noun,,,,documents / files,belgeler / dosyalar
+3665,B1,90,U,main,unterlassen,,,Verb,unterlässt,unterließ,hat unterlassen,to refrain from / to omit,kaçınmak / yapmamak
+3666,B1,90,U,main,unternehmen,,,Verb,immt,unternahm,hat unternommen,to undertake / to do,girişimde bulunmak / yapmak
+3667,B1,90,U,main,Unternehmer,der,-,Noun,,,,entrepreneur (male),girişimci (erkek)
+3668,B1,90,U,main,Unternehmerin,die,-nen,Noun,,,,entrepreneur (female),girişimci (kadın)
+3669,B1,90,U,main,unterrichten,,,Verb,unterrichtet,unterrichtete,hat unterrichtet,to teach,ders vermek / öğretmek
+3670,B1,90,U,main,Unterricht,der,,Noun,,,,lesson / class,ders
+3671,B1,90,U,main,untersagt,,,Other,,,,prohibited / forbidden,yasak / yasaklı
+3672,B1,90,U,main,unterscheiden,,,Verb,unter-,scheidet,hat unterschie,to differentiate / to distinguish,ayırt etmek / fark etmek
+3673,B1,90,U,main,Unterschied,der,"-eumsteigen, steigt um,stieg um, ist umgestiegen",Noun,,,,difference,fark
+3674,B1,90,U,main,umtauschen,,,Verb,tauscht um,tauschte um,hat umgetauscht,to exchange / to swap,değiştirmek / takas yapmak
+3675,B1,90,U,main,Umtausch,der,¨-e,Noun,,,,exchange,değişim / takas
+3676,B1,90,U,main,Umwelt,die,,Noun,,,,environment,çevre
+3677,B1,90,U,main,Umweltschutz,der,,Noun,,,,environmental protection,çevre koruma
+3678,B1,90,U,main,Umweltver-,die,,Noun,,,,environmental pollution,çevre kirliliği
+3679,B1,90,U,main,umziehen,,,Verb,zieht um,zogum,ist umgezogen,to move (residence),taşınmak
+3680,B1,90,U,main,Umzug,der,¨-e,Noun,,,,move / relocation,taşınma / taşıma
+3681,B1,90,U,main,un,,,Other,,,,un (artifact),un (hatalı)
+3682,B1,90,U,main,unbedingt,,,Other,,,,absolutely / definitely,kesinlikle / mutlaka
+3683,B1,90,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3684,B1,90,U,main,Unfall,der,¨-e,Noun,,,,accident,kaza
+3685,B1,90,U,main,ungefähr,,,Other,,,,approximately / about,yaklaşık / aşağı yukarı
+3686,B1,90,U,main,ungewöhnlich,,,Other,,,,unusual,alışılmadık / sıra dışı
+3687,B1,90,M,main,man,,,Other,,,,"one / you (impersonal, artifact)",insan / kişi (hatalı)
+3688,B1,90,U,main,unten,,,Verb,,,,below / downstairs (artifact),aşağıda (hatalı)
+3689,B1,90,W,main,wichtige,,,Other,,,,important (artifact),önemli (hatalı)
+3690,B1,90,S,main,spreche,,,Other,,,,speak (artifact),konuşuyorum (hatalı)
+3691,B1,90,U,main,unterhalten,,,Verb,,,,to entertain / converse (artifact),eğlendirmek / sohbet etmek (hatalı)
+3692,B1,90,U,main,unterhalten.Wir,,,Other,,,,entertain / we (artifact),eğlendirmek / biz (hatalı)
+3693,B1,90,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3694,B1,90,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3695,B1,90,P,main,Post,der,,Noun,,,,post (artifact),posta (hatalı)
+3696,B1,90,T,main,terlassen,,,Verb,,,,left / omitted (artifact),kalmış / ihmal edilmiş (hatalı)
+3697,B1,90,U,main,unternehmen,,,Verb,,,,to undertake (artifact),girişimde bulunmak (hatalı)
+3698,B1,90,B,main,bis,,,Other,,,,until (artifact),-e kadar (hatalı)
+3699,B1,90,U,main,umsonst,,,Other,,,,for free / gratis,bedava / boşuna
+3700,B1,90,W,main,weiter,,,Other,,,,further / forward (artifact),ileri / daha fazla (hatalı)
+3701,B1,90,U,main,umgezogen,,,Verb,,,,moved (artifact),taşınmış (hatalı)
+3702,B1,90,M,main,mich,,,Other,,,,me (artifact),beni (hatalı)
+3703,B1,90,E,main,echen,,,Verb,,,,speak (artifact),konuşmak (hatalı)
+3704,B1,90,A,main,aber,,,Other,,,,but (artifact),ama (hatalı)
+3705,B1,90,U,main,unheimlich,,,Other,,,,eerie / uncanny,ürkütücü / tuhaf
+3706,B1,91,V,main,Vase,die,-n,Noun,,,,vase,vazo
+3707,B1,91,V,main,Vater,der,¨-,Noun,,,,father,baba
+3708,B1,91,V,main,verabreden,,,Verb,verabredet,verabredete,hat verabredet,to arrange to meet,buluşmayı planlamak / randevulaşmak
+3709,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact),randevulaşılmış (hatalı)
+3710,B1,91,V,main,Verabredung,die,-en,Noun,,,,appointment / date,buluşma / randevu
+3711,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,to say goodbye,veda etmek / uğurlamak
+3712,B1,91,A,main,Abschied,der,-e,Noun,,,,farewell / goodbye,veda
+3713,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,to change,değiştirmek / değişmek
+3714,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,event,etkinlik / organizasyon
+3715,B1,91,V,main,Verantwortung,die,,Noun,,,,responsibility,sorumluluk
+3716,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,to improve,geliştirmek / iyileştirmek
+3717,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,to forbid / to prohibit,yasaklamak
+3718,B1,91,V,main,Verbot,das,-e,Noun,,,,ban / prohibition,yasak
+3719,B1,91,V,main,verboten,,,Verb,,,,forbidden / prohibited,yasak / yasaklı
+3720,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,to connect / to link,bağlamak / birleştirmek
+3721,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,to sign (artifact),imzalamak (hatalı)
+3722,B1,91,U,main,Unterschrift,die,-en,Noun,,,,signature,imza
+3723,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,to underline,altını çizmek
+3724,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,to support,desteklemek
+3725,B1,91,U,main,Unterstützung,die,-en,Noun,,,,support,destek
+3726,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,to examine / to investigate,incelemek / araştırmak
+3727,B1,91,U,main,Untersuchung,die,-en,Noun,,,,examination / investigation,inceleme / araştırma
+3728,B1,91,U,main,unterwegs,,,Other,,,,on the way / traveling,yolda / seyahatte
+3729,B1,91,U,main,Urkunde,die,-n,Noun,,,,document / certificate,belge / sertifika
+3730,B1,91,U,main,Urlaub,der,-e,Noun,,,,vacation / holiday,tatil
+3731,B1,91,U,main,Ursache,die,-n,Noun,,,,cause / reason,neden / sebep
+3732,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,to cause,neden olmak / yol açmak
+3733,B1,91,U,main,ursprünglich,,,Other,,,,originally,başlangıçta / aslen
+3734,B1,91,U,main,Urteil,das,,Noun,,,,verdict / judgment,karar / hüküm
+3735,B1,91,L,main,liebsten,,,Verb,,,,best (artifact),en sevilen (hatalı)
+3736,B1,91,Z,main,zur,,,Other,,,,to the (artifact),-e/-a (hatalı)
+3737,B1,91,V,main,verabredet,,,Other,,,,arranged to meet (artifact),randevulaşılmış (hatalı)
+3738,B1,91,B,main,bin,,,Other,,,,am (artifact),-im (hatalı)
+3739,B1,91,M,main,mit,,,Other,,,,with (artifact),ile (hatalı)
+3740,B1,91,N,main,nett,,,Other,,,,nice (artifact),nazik / hoş (hatalı)
+3741,B1,91,V,main,verabschieden,,,Verb,,,,to say goodbye (artifact),veda etmek (hatalı)
+3742,B1,91,F,main,fiel,,,Other,,,,fell (artifact),düştü (hatalı)
+3743,B1,91,S,main,sen,,,Verb,,,,sen (artifact),sen (hatalı)
+3744,B1,91,V,main,verbessert,,,Other,,,,improved (artifact),geliştirilmiş (hatalı)
+3745,B1,91,V,main,verboten,,,Verb,,,,forbidden (artifact),yasak (hatalı)
+3746,B1,91,R,main,rechts,,,Other,,,,"right (direction, artifact)",sağa (hatalı)
+3747,B1,91,U,main,unterstreichen,,,Verb,,,,to underline (artifact),altını çizmek (hatalı)
+3748,B1,91,K,main,können,,,Verb,,,,to be able to (artifact),yapabilmek (hatalı)
+3749,B1,91,L,main,lassen,,,Verb,,,,to let / to leave (artifact),bırakmak (hatalı)
+3750,B1,91,A,main,arte,,,Other,,,,arte (artifact),arte (hatalı)
+3751,B1,91,K,main,komme,,,Other,,,,come (artifact),geliyorum (hatalı)
+3752,B1,91,E,main,essen,,,Verb,,,,to eat (artifact),yemek (hatalı)
+3753,B1,91,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak (hatalı)
+3754,B1,91,H,main,hart,,,Other,,,,hard / tough (artifact),sert / zor (hatalı)
+3755,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,neşeli / memnun
+3756,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,to enlarge / to expand,büyütmek / genişletmek
+3757,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,to arrest,tutuklamak
+3758,B1,92,V,main,Verhalten,das,,Noun,,,,behavior / conduct,davranış / tutum
+3759,B1,92,V,main,Verhältnis,das,-se,Noun,,,,relationship / ratio,ilişki / oran
+3760,B1,92,V,main,verheiratet,,,Other,,,,married,evli
+3761,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,to prevent,engellemek / önlemek
+3762,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,to sell,satmak
+3763,B1,92,V,main,Verkäufer,der,-die,Noun,,,,salesperson (male),satıcı (erkek)
+3764,B1,92,V,main,Verkehr,der,,Noun,,,,traffic,trafik
+3765,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,means of transportation,ulaşım aracı
+3766,B1,92,V,main,Verlag,der,,Noun,,,,publisher / publishing house,yayınevi
+3767,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,to extend / to lengthen,uzatmak / uzatmak
+3768,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,to leave / to abandon,terk etmek / bırakmak
+3769,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,to use up / to consume,tüketmek / harcamak
+3770,B1,92,V,main,Verbrecher,der,-,Noun,,,,criminal / offender (male),suçlu (erkek)
+3771,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,criminal / offender (female),suçlu (kadın)
+3772,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,to burn,yakmak / yanmak
+3773,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,to spend (time),geçirmek (zaman)
+3774,B1,92,V,main,Verdacht,der,,Noun,,,,suspicion,şüphe / kuşku
+3775,B1,92,V,main,verdächtig,,,Other,,,,suspicious,şüpheli / kuşkulu
+3776,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,to earn,kazanmak
+3777,B1,92,V,main,Verein,der,-e,Noun,,,,club / association,kulüp / dernek
+3778,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,to arrange / to agree on,anlaşmak / kararlaştırmak
+3779,B1,92,V,main,Vergangenheitvergeblich,die,,Noun,,,,past / in vain (artifact),geçmiş / boşuna (hatalı)
+3780,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,to forget,unutmak
+3781,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,to compare,karşılaştırmak
+3782,B1,92,V,main,Vergleich,der,-e,Noun,,,,comparison,karşılaştırma
+3783,B1,92,B,main,beim,,,Other,,,,at the (artifact),-de/-da (hatalı)
+3784,B1,92,H,main,herein,,,Other,,,,in / inside (artifact),içeri (hatalı)
+3785,B1,92,M,main,merkwürdig,,,Other,,,,strange / odd,tuhaf / garip
+3786,B1,92,S,main,schwierigen,,,Verb,,,,difficult (artifact),zor (hatalı)
+3787,B1,92,M,main,meinen,,,Verb,,,,to mean / to think (artifact),anlamak / düşünmek (hatalı)
+3788,B1,92,V,main,verheiratet,,,Other,,,,married (artifact),evli (hatalı)
+3789,B1,92,V,main,verhindern,,,Verb,,,,to prevent (artifact),engellemek (hatalı)
+3790,B1,92,H,main,helfen,,,Verb,,,,to help (artifact),yardım etmek (hatalı)
+3791,B1,92,M,main,mit,,,Other,,,,with (artifact),ile (hatalı)
+3792,B1,92,V,main,verlangt,,,Other,,,,demanded (artifact),talep edilmiş (hatalı)
+3793,B1,92,L,main,lassen,,,Verb,,,,to let / to leave (artifact),bırakmak (hatalı)
+3794,B1,92,H,main,helfe,,,Other,,,,help (artifact),yardım ediyorum (hatalı)
+3795,B1,92,D,main,direkt,,,Other,,,,direct (artifact),direkt (hatalı)
+3796,B1,92,V,main,verhaftet,,,Other,,,,arrested (artifact),tutuklanmış (hatalı)
+3797,B1,92,V,main,verbrannt,,,Other,,,,burned (artifact),yanmış (hatalı)
+3798,B1,92,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3799,B1,92,G,main,gesehen,,,Verb,,,,seen (artifact),görülmüş (hatalı)
+3800,B1,92,D,main,dient,,,Other,,,,serves (artifact),hizmet ediyor (hatalı)
+3801,B1,92,D,main,diesem,,,Other,,,,"this (dative, artifact)",bu (hatalı)
+3802,B1,92,A,main,anzurufen,,,Verb,,,,to call (artifact),aramak (hatalı)
+3803,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased (artifact),neşeli / memnun (hatalı)
+3804,B1,93,V,main,verpflichtet,,,Other,,,,obligated / required,yükümlü / zorunlu
+3805,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,to betray / to reveal,ihanet etmek / açığa çıkarmak
+3806,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,to travel / to go on a trip,seyahate çıkmak
+3807,B1,93,V,main,verrückt,,,Other,,,,crazy / mad,deli / çılgın
+3808,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,meeting / assembly,toplantı / meclis
+3809,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,to postpone / to shift,ertelemek / kaydırmak
+3810,B1,93,V,main,verschieden,,,Verb,,,,different / various,farklı / çeşitli
+3811,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,to prescribe (artifact),reçete yazmak (hatalı)
+3812,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,to disappear,kaybolmak
+3813,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,to insure / to assure,sigortalamak / güvence vermek
+3814,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,health insurance card,sağlık sigortası kartı
+3815,B1,93,V,main,Versicherung,die,-en,Noun,,,,insurance,sigorta
+3816,B1,93,V,main,Verspätung,die,-en,Noun,,,,delay,gecikme
+3817,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,to promise,söz vermek
+3818,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,to injure / to hurt,yaralamak / incitmek
+3819,B1,93,V,main,Verletzung,die,-en,Noun,,,,injury,yaralanma
+3820,B1,93,V,main,verliebt,,,Other,,,,in love,aşık
+3821,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,to lose,kaybetmek
+3822,B1,93,V,main,Verlierer,der,-,Noun,,,,loser (male),kaybeden (erkek)
+3823,B1,93,V,main,Verliererin,die,-nen,Noun,,,,loser (female),kaybeden (kadın)
+3824,B1,93,V,main,Verlust,der,-e,Noun,,,,loss,kayıp
+3825,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,to avoid,kaçınmak
+3826,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,to rent out,kiralamak (ev sahibi olarak)
+3827,B1,93,V,main,Vermieter,der,-,Noun,,,,landlord,ev sahibi (erkek)
+3828,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,landlady,ev sahibi (kadın)
+3829,B1,93,V,main,Vermietung,die,-en,Noun,,,,rental,kiralama
+3830,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,to miss,özlemek
+3831,B1,93,V,main,Vermittlung,die,-en,Noun,,,,placement / mediation,aracılık / yerleştirme
+3832,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,to suspect / to assume,sanmak / tahmin etmek
+3833,B1,93,V,main,vermutlich,,,Other,,,,presumably / probably,muhtemelen / büyük ihtimalle
+3834,B1,93,V,main,vernünftig,,,Other,,,,reasonable / sensible,makul / mantıklı
+3835,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,to pack / to wrap,paketlemek / sarmak
+3836,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,to miss / to fail to catch,kaçırmak
+3837,B1,93,M,main,melden,,,Verb,,,,to report / to register,bildirmek / kayıt olmak
+3838,B1,93,I,main,ist,,,Other,,,,is (artifact),-dır/-dir (hatalı)
+3839,B1,93,V,main,versäumt,,,Other,,,,missed (artifact),kaçırılmış (hatalı)
+3840,B1,93,V,main,verschieben,,,Verb,,,,to postpone (artifact),ertelemek (hatalı)
+3841,B1,93,V,main,verschieden,,,Verb,,,,different / various (artifact),farklı / çeşitli (hatalı)
+3842,B1,93,N,main,nen,,,Verb,,,,nen (artifact),nen (hatalı)
+3843,B1,93,V,main,verschrieben,,,Verb,,,,prescribed (artifact),reçete yazılmış (hatalı)
+3844,B1,93,D,main,du,,,Other,,,,you (artifact),sen (hatalı)
+3845,B1,93,S,main,sicherung,,,Other,,,,insurance (artifact),sigorta (hatalı)
+3846,B1,93,T,main,tung,,,Other,,,,tung (artifact),tung (hatalı)
+3847,B1,93,M,main,mich,,,Other,,,,me (artifact),beni (hatalı)
+3848,B1,93,A,main,asche,,,Other,,,,asche (artifact),asche (hatalı)
+3849,B1,93,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3850,B1,93,V,main,vermeiden,,,Verb,,,,to avoid (artifact),kaçınmak (hatalı)
+3851,B1,93,V,main,vermieten,,,Verb,,,,to rent out (artifact),kiralamak (hatalı)
+3852,B1,93,K,main,kann,,,Other,,,,can (artifact),yapabilir (hatalı)
+3853,B1,93,V,main,Vermittlung,der,,Noun,,,,placement / mediation,aracılık / yerleştirme
+3854,B1,93,F,main,fragen,,,Verb,,,,to ask (artifact),sormak (hatalı)
+3855,B1,93,V,main,von,,,Other,,,,from / of (artifact),-den / -in (hatalı)
+3856,B1,93,K,main,kommen,,,Verb,,,,to come (artifact),gelmek (hatalı)
+3857,B1,93,V,main,verpasst,,,Other,,,,missed (artifact),kaçırılmış (hatalı)
+3858,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,to forgive / to pardon,affetmek / bağışlamak
+3859,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,to give up / to do without,vazgeçmek / feragat etmek
+3860,B1,94,V,main,Video,das,-s,Noun,,,,video,video
+3861,B1,94,V,main,viel/viele,,,Other,,,,much / many,çok / birçok
+3862,B1,94,V,main,vielleicht,,,Other,,,,maybe / perhaps,belki / şüphesiz
+3863,B1,94,V,main,Viertel,das,-,Noun,,,,quarter,çeyrek
+3864,B1,94,V,main,virtuell,,,Other,,,,virtual,sanal
+3865,B1,94,V,main,Virus,der,,Noun,,,,virus,virüs
+3866,B1,94,V,main,Vitamin,das,-e,Noun,,,,vitamin,vitamin
+3867,B1,94,V,main,voll,,,Other,,,,full / complete,dolu / tam
+3868,B1,94,V,main,Vollzeit,die,,Noun,,,,full-time,tam zamanlı
+3869,B1,94,V,main,völligvondas,,,Other,,,,completely / from the (artifact),tamamen / -den (hatalı)
+3870,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,to hide,saklamak / gizlemek
+3871,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,to understand,anlamak
+3872,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,to try / to attempt,denemek / girişmek
+3873,B1,94,V,main,Versuch,der,-e,Noun,,,,attempt / try,deneme / girişim
+3874,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,to distribute,dağıtmak
+3875,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,contract,sözleşme / anlaşma
+3876,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,to trust,güvenmek
+3877,B1,94,V,main,Vertrauen,das,,Noun,,,,trust / confidence,güven
+3878,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,to represent,temsil etmek
+3879,B1,94,V,main,Vertreter,der,-,Noun,,,,representative (male),temsilci (erkek)
+3880,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,representative (female),temsilci (kadın)
+3881,B1,94,V,main,Vertretung,die,-en,Noun,,,,representation / deputy,temsil / vekillik
+3882,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,to convict / to sentence,mahkum etmek / suçlamak
+3883,B1,94,V,main,Verwaltung,die,-en,Noun,,,,administration,yönetim / idare
+3884,B1,94,V,main,verwandt,,,Other,,,,related,akraba / ilgili
+3885,B1,94,V,main,Verwandte,der,-n,Noun,,,,relative (male),akraba (erkek)
+3886,B1,94,V,main,Verwandte,die,-n,Noun,,,,relative (female),akraba (kadın)
+3887,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,to mix up / to confuse,karıştırmak
+3888,B1,94,K,main,können,,,Verb,,,,to be able to (artifact),yapabilmek (hatalı)
+3889,B1,94,A,main,aufgenommen,,,Verb,,,,recorded (artifact),kaydedilmiş (hatalı)
+3890,B1,94,N,main,noch,,,Other,,,,still / yet (artifact),hâlâ (hatalı)
+3891,B1,94,V,main,virtuellen,,,Verb,,,,virtual (artifact),sanal (hatalı)
+3892,B1,94,M,main,meinem,,,Other,,,,my (artifact),benim (hatalı)
+3893,B1,94,G,main,geben,,,Verb,,,,to give (artifact),vermek (hatalı)
+3894,B1,94,E,main,essen,,,Verb,,,,to eat (artifact),yemek (hatalı)
+3895,B1,94,I,main,immer,,,Other,,,,always (artifact),her zaman (hatalı)
+3896,B1,94,V,main,vollen,,,Verb,,,,full (artifact),dolu (hatalı)
+3897,B1,94,H,main,heute,,,Other,,,,today (artifact),bugün (hatalı)
+3898,B1,94,V,main,versteckt,,,Other,,,,hidden (artifact),gizlenmiş (hatalı)
+3899,B1,94,S,main,sehr,,,Other,,,,very (artifact),çok (hatalı)
+3900,B1,94,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
+3901,B1,94,S,main,suche,,,Other,,,,search (artifact),arama (hatalı)
+3902,B1,94,O,main,ohne,,,Other,,,,without (artifact),olmadan (hatalı)
+3903,B1,94,V,main,verteilen,,,Verb,,,,to distribute (artifact),dağıtmak (hatalı)
+3904,B1,94,S,main,schreiben,,,Verb,,,,to write (artifact),yazmak (hatalı)
+3905,B1,94,M,main,machen,,,Verb,,,,to make (artifact),yapmak (hatalı)
+3906,B1,94,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3907,B1,94,E,main,eterin,,,Other,,,,eterin (artifact),eterin (hatalı)
+3908,B1,94,J,main,jemandem,,,Other,,,,someone (artifact),birine (hatalı)
+3909,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,to read aloud,sesli okumak
+3910,B1,95,V,main,Vorort,der,-e,Noun,,,,suburb / outskirts,banliyö / yakın çevre
+3911,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,to suggest / to propose,önermek / teklif etmek
+3912,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,suggestion / proposal,öneri / teklif
+3913,B1,95,V,main,Vorschrift,die,-en,Noun,,,,regulation / rule,yönetmelik / kural
+3914,B1,95,V,main,Vorsicht,die,,Noun,,,,caution / care,dikkat / ihtiyat
+3915,B1,95,V,main,vorsichtig,,,Other,,,,careful / cautious,dikkatli / ihtiyatlı
+3916,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,to introduce / to imagine,tanıtmak / hayal etmek
+3917,B1,95,V,main,Vorstellung,die,-en,Noun,,,,presentation / performance / idea,sunum / gösteri / fikir
+3918,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,job interview,iş görüşmesi
+3919,B1,95,V,main,Vorteil,der,-e,Noun,,,,advantage,avantaj / üstünlük
+3920,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,lecture / talk,konuşma / sunum
+3921,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,area code / dialing code,alan kodu
+3922,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,accusation / reproach,suçlama / kınama
+3923,B1,95,V,main,vor,,,Other,,,,before / in front of / ago,önce / önünde / -nce
+3924,B1,95,V,main,voraus,,,Other,,,,ahead / in advance,ileride / önceden
+3925,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,prerequisite / requirement,ön koşul / gereksinim
+3926,B1,95,V,main,voraussichtlich,,,Other,,,,probably / expected,muhtemelen / beklenen
+3927,B1,95,V,main,vorbei/vorbei,,,Other,,,,past / over,geçmiş / bitti
+3928,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,to prepare,hazırlamak
+3929,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,preparation,hazırlık
+3930,B1,95,V,main,vorder,,,Other,,,,front (artifact),ön (hatalı)
+3931,B1,95,V,main,Vorfahrt,die,,Noun,,,,right of way,geçiş hakkı
+3932,B1,95,V,main,vorgesternvorhaben,,,Verb,,,hat vor,the day before yesterday / to plan,evvelsi gün / planlamak (hatalı)
+3933,B1,95,V,main,vorher,,,Other,,,,before / previously,daha önce / evvelce
+3934,B1,95,V,main,vorhinvorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,a moment ago / to occur,az önce / olmak (hatalı)
+3935,B1,95,W,main,wohne,,,Other,,,,live (artifact),yaşıyorum (hatalı)
+3936,B1,95,N,main,noch,,,Other,,,,still / yet (artifact),hâlâ (hatalı)
+3937,B1,95,M,main,machen,,,Verb,,,,to make (artifact),yapmak (hatalı)
+3938,B1,95,B,main,Benutzen,das,,Noun,,,,use / usage,kullanmak / kullanım
+3939,B1,95,G,main,glatt,,,Other,,,,smooth / slippery (artifact),düz / kaygan (hatalı)
+3940,B1,95,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+3941,B1,95,G,main,gespräch,,,Other,,,,conversation (artifact),konuşma (hatalı)
+3942,B1,95,D,main,dass,,,Other,,,,that (artifact),-dığını (hatalı)
+3943,B1,95,E,main,ein,,,Other,,,,a / one (artifact),bir (hatalı)
+3944,B1,95,G,main,geschlossen,,,Verb,,,,closed (artifact),kapalı (hatalı)
+3945,B1,95,G,main,gehört,,,Other,,,,heard (artifact),duyulmuş (hatalı)
+3946,B1,95,G,main,gekommen,,,Verb,,,,come (artifact),gelmiş (hatalı)
+3947,B1,95,S,main,schlafen,,,Verb,,,,to sleep (artifact),uyumak (hatalı)
+3948,B1,95,Z,main,zung,,,Other,,,,zung (artifact),zung (hatalı)
+3949,B1,95,V,main,vorbei,,,Other,,,,past / over (artifact),geçmiş (hatalı)
+3950,B1,95,P,main,paar,,,Other,,,,a few (artifact),birkaç (hatalı)
+3951,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact),hazırlamak (hatalı)
+3952,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact),hazırlamak (hatalı)
+3953,B1,95,V,main,vor,,,Other,,,,before (artifact),önce (hatalı)
+3954,B1,95,I,main,ich,,,Other,,,,I (artifact),ben (hatalı)
+3955,B1,95,S,main,solls,,,Other,,,,should (artifact),olmalı (hatalı)
+3956,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise,mal / emtia
+3957,B1,96,W,main,warm,,,Other,,,,warm,sıcak
+3958,B1,96,W,main,Wärme,die,,Noun,,,,warmth / heat,sıcaklık / ısı
+3959,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,to warn,uyarmak
+3960,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,to wait,beklemek
+3961,B1,96,W,main,warum,,,Other,,,,why,neden / niçin
+3962,B1,96,W,main,was,,,Other,,,,what,ne
+3963,B1,96,W,main,was,,,Other,,,,what (artifact),ne (hatalı)
+3964,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,to wash,yıkamak
+3965,B1,96,W,main,Wäsche,die,,Noun,,,,laundry / washing,çamaşır
+3966,B1,96,W,main,Waschmittel,das,-,Noun,,,,laundry detergent,çamaşır deterjanı
+3967,B1,96,W,main,Wasser,das,,Noun,,,,water,su
+3968,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,to change / to exchange,değiştirmek / bozmak
+3969,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,to wake up,uyandırmak
+3970,B1,96,W,main,Wecker,der,,Noun,,,,alarm clock,çalar saat
+3971,B1,96,W,main,waagerecht,,,Other,,,,horizontal,yatay
+3972,B1,96,W,main,wachwachsen,,,Verb,wächst,wuchs,ist gewachsen,awake / to grow,uyanık / büyümek (hatalı)
+3973,B1,96,W,main,Wagen,der,-,Noun,,,,car / vehicle / cart,araba / araç / el arabası
+3974,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,to choose / to dial,seçmek / aramak
+3975,B1,96,W,main,Wahl,die,-en,Noun,,,,choice / election,seçim
+3976,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / mad / incredibly,deli / çılgın / inanılmaz derecede
+3977,B1,96,W,main,wahr,,,Other,,,,true,doğru / gerçek
+3978,B1,96,W,main,Wahrheit,die,-en,Noun,,,,truth,gerçek / doğru
+3979,B1,96,W,main,während,,,Other,,,,during / while,-sırasında / -iken
+3980,B1,96,W,main,wahrscheinlich,,,Other,,,,probably / likely,muhtemelen / büyük ihtimalle
+3981,B1,96,W,main,Wald,der,¨-er,Noun,,,,forest / woods,orman
+3982,B1,96,W,main,Wand,die,¨-e,Noun,,,,wall,duvar
+3983,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,to hike / to wander,yürüyüşe çıkmak / dolaşmak
+3984,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,hike,doğa yürüyüşü
+3985,B1,96,W,main,warmen,,,Verb,,,,warm (artifact),sıcak (hatalı)
+3986,B1,96,I,main,ist,,,Other,,,,is (artifact),-dır (hatalı)
+3987,B1,96,G,main,gewaschen,,,Verb,,,,washed (artifact),yıkanmış (hatalı)
+3988,B1,96,A,main,aufhängen,,,Verb,,,,to hang up,asmak / telefonu kapatmak
+3989,B1,96,H,main,hier,,,Other,,,,here (artifact),burada (hatalı)
+3990,B1,96,S,main,sechs,,,Other,,,,six (artifact),altı (hatalı)
+3991,B1,96,J,main,jetzt,,,Other,,,,now (artifact),şimdi (hatalı)
+3992,B1,96,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+3993,B1,96,S,main,statt,,,Other,,,,instead of (artifact),yerine (hatalı)
+3994,B1,96,E,main,es,,,Other,,,,it (artifact),o (hatalı)
+3995,B1,96,O,main,oder,,,Other,,,,or (artifact),ya da / veya (hatalı)
+3996,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / incredibly (artifact),deli / inanılmaz (hatalı)
+3997,B1,96,U,main,unsere,,,Other,,,,our (artifact),bizim (hatalı)
+3998,B1,96,N,main,noch,,,Other,,,,still / yet (artifact),hâlâ (hatalı)
+3999,B1,96,A,main,an,,,Other,,,,on / at (artifact),-de/-da (hatalı)
+4000,B1,96,H,main,hört,,,Other,,,,hears / listens (artifact),duyuyor / dinliyor (hatalı)
+4001,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,to turn / to refer,dönmek / başvurmak
+4002,B1,97,W,main,wenig/wenige,,,Other,,,,little / few,az / birkaç
+4003,B1,97,W,main,wenigstens,,,Other,,,,at least,en azından
+4004,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,to become,olmak
+4005,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,to throw,atmak / fırlatmak
+4006,B1,97,W,main,Werk,das,-e,Noun,,,,work / opus,eser / yapıt
+4007,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,workshop / garage,atölye / servis
+4008,B1,97,W,main,Werkzeug,das,-e,Noun,,,,tool,araç gereç / alet
+4009,B1,97,W,main,wert,,,Other,,,,worth / valued,değerli / değer
+4010,B1,97,W,main,Wert,der,-e,Noun,,,,value / worth,değer
+4011,B1,97,W,main,wertlos,,,Other,,,,worthless,değersiz
+4012,B1,97,W,main,wertvoll,,,Other,,,,valuable,değerli
+4013,B1,97,W,main,weg/weg,,,Other,,,,away / gone,uzakta / gitmiş
+4014,B1,97,W,main,wegen,,,Verb,,,,because of / due to,nedeniyle / yüzünden
+4015,B1,97,W,main,weiblichweich,,,Other,,,,female / soft (artifact),kadın / yumuşak (hatalı)
+4016,B1,97,W,main,weil,,,Other,,,,because,çünkü
+4017,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,wine,şarap
+4018,B1,97,W,main,weitweiter/weiter,,,Other,,,,far / further / farther,uzak / daha ileri / daha uzak
+4019,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,further education / continuing education,devam eğitimi / mesleki gelişim
+4020,B1,97,W,main,Welt1.,die,,Noun,,,,world,dünya
+4021,B1,97,W,main,weltweiten,,,Verb,,,,worldwide (artifact),dünya genelinde (hatalı)
+4022,B1,97,A,main,angeboten,,,Verb,,,,offered (artifact),sunulmuş (hatalı)
+4023,B1,97,D,main,dürfen,,,Verb,,,,may / to be allowed to (artifact),-ebilmek / izin (hatalı)
+4024,B1,97,W,main,wenn,,,Other,,,,when / if (artifact),-diğinde / eğer (hatalı)
+4025,B1,97,W,main,wirst,,,Other,,,,will become (artifact),olacaksın (hatalı)
+4026,B1,97,V,main,verrückt,,,Other,,,,crazy / mad (artifact),deli / çılgın (hatalı)
+4027,B1,97,G,main,geworfen,,,Verb,,,,thrown (artifact),atılmış (hatalı)
+4028,B1,97,S,main,statt,,,Other,,,,instead of (artifact),yerine (hatalı)
+4029,B1,97,W,main,wert,,,Other,,,,worth (artifact),değerli (hatalı)
+4030,B1,97,V,main,von,,,Other,,,,from / of (artifact),-den / -in (hatalı)
+4031,B1,97,L,main,leider,,,Other,,,,unfortunately (artifact),ne yazık ki (hatalı)
+4032,B1,97,A,main,angenehm,,,Other,,,,pleasant / comfortable (artifact),hoş / konforlu (hatalı)
+4033,B1,97,E,main,erklären,,,Verb,,,,to explain (artifact),açıklamak (hatalı)
+4034,B1,97,N,main,nicht,,,Other,,,,not (artifact),değil (hatalı)
+4035,B1,97,B,main,bin,,,Other,,,,am (artifact),-im (hatalı)
+4036,B1,97,G,main,guten,,,Verb,,,,good (artifact),iyi (hatalı)
+4037,B1,97,N,main,neue,,,Other,,,,new (artifact),yeni (hatalı)
+4038,B1,97,E,main,einfach,,,Other,,,,simple / just (artifact),basit / sadece (hatalı)
+4039,B1,97,R,main,ruhig,,,Other,,,,quiet / calm (artifact),sakin (hatalı)
+4040,B1,98,W,main,willkommen,,,Verb,,,,welcome,hoş geldiniz
+4041,B1,98,W,main,Wind,der,-e,Noun,,,,wind,rüzgar
+4042,B1,98,W,main,windig,,,Other,,,,windy,rüzgarlı
+4043,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,to wave,el sallayarak selamlamak
+4044,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,to work / to have an effect,çalışmak / etki etmek
+4045,B1,98,W,main,Wirkung,die,-en,Noun,,,,effect / impact,etki
+4046,B1,98,W,main,wirklich,,,Other,,,,really / truly,gerçekten
+4047,B1,98,W,main,Wirklichkeit,die,,Noun,,,,reality,gerçeklik
+4048,B1,98,W,main,Wirt,der,-edie,Noun,,,,innkeeper / host,hancı / ev sahibi
+4049,B1,98,W,main,Wirtschaft,die,,Noun,,,,economy / business,ekonomi / ticaret
+4050,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,to know,bilmek
+4051,B1,98,W,main,Wissen,das,,Noun,,,,knowledge,bilgi
+4052,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,science,bilim
+4053,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,scientist (male),bilim insanı (erkek)
+4054,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,scientist (female),bilim insanı (kadın)
+4055,B1,98,W,main,Witz,der,-e,Noun,,,,joke,şaka / fıkra
+4056,B1,98,W,main,wo,,,Other,,,,where,nerede
+4057,B1,98,W,main,Wetter,das,,Noun,,,,weather,hava / hava durumu
+4058,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,weather report,hava raporu
+4059,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,weather forecast,hava tahmini
+4060,B1,98,W,main,wichtig,,,Other,,,,important,önemli
+4061,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,to contradict / to object,itiraz etmek / çelişmek
+4062,B1,98,W,main,wie,,,Other,,,,how / as,nasıl / gibi
+4063,B1,98,W,main,wieder/wieder,,,Other,,,,again,yeniden / tekrar
+4064,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,to repeat,tekrarlamak
+4065,B1,98,W,main,Wiederholung,die,-en,Noun,,,,repetition,tekrar
+4066,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,to weigh,tartmak
+4067,B1,98,W,main,wild,,,Other,,,,wild,vahşi / yabani
+4068,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,meadow,çayır / mera
+4069,B1,98,W,main,winkten,,,Verb,,,,waved (artifact),el sallamış (hatalı)
+4070,B1,98,M,main,ment,,,Other,,,,ment (artifact),ment (hatalı)
+4071,B1,98,W,main,wirklich,,,Other,,,,really (artifact),gerçekten (hatalı)
+4072,B1,98,W,main,wirklich,,,Other,,,,really (artifact),gerçekten (hatalı)
+4073,B1,98,U,main,um,,,Other,,,,around / at (artifact),etrafında (hatalı)
+4074,B1,98,Ü,main,über,,,Other,,,,about / over (artifact),hakkında (hatalı)
+4075,B1,98,V,main,verheiratet,,,Other,,,,married (artifact),evli (hatalı)
+4076,B1,98,T,main,treffen,,,Verb,,,,to meet (artifact),buluşmak (hatalı)
+4077,B1,98,G,main,gelacht,,,Other,,,,laughed (artifact),gülünmüş (hatalı)
+4078,B1,98,S,main,spät,,,Other,,,,late (artifact),geç (hatalı)
+4079,B1,98,S,main,schön,,,Other,,,,beautiful (artifact),güzel (hatalı)
+4080,B1,98,G,main,gehört,,,Other,,,,heard (artifact),duyulmuş (hatalı)
+4081,B1,98,T,main,trocken,,,Verb,,,,dry (artifact),kuru (hatalı)
+4082,B1,98,A,main,aber,,,Other,,,,but (artifact),ama (hatalı)
+4083,B1,98,S,main,spät,,,Other,,,,late (artifact),geç (hatalı)
+4084,B1,98,M,main,men,,,Verb,,,,men (artifact),men (hatalı)
+4085,B1,98,M,main,möglich,,,Other,,,,possible (artifact),mümkün (hatalı)
+4086,B1,98,F,main,fragen,,,Verb,,,,to ask (artifact),sormak (hatalı)
+4087,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,to wish,dilemek / istemek
+4088,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,wish / desire,dilek / istek
+4089,B1,99,W,main,Wurst,die,¨-e,Noun,,,,sausage,sosis / salam
+4090,B1,99,W,main,wütend,,,Other,,,,angry / furious,öfkeli / kızgın
+4091,B1,99,Z,main,Zahl,die,-en,Noun,,,,number / figure,sayı / rakam
+4092,B1,99,A,main,Anzahl,die,-en,Noun,,,,number / quantity,sayı / adet
+4093,B1,99,Z,main,zahlreich,,,Other,,,,numerous,çok sayıda / kalabalık
+4094,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,to pay,ödemek
+4095,B1,99,Z,main,Zahlung,die,-en,Noun,,,,payment,ödeme
+4096,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,to count,saymak
+4097,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,tooth,diş
+4098,B1,99,Z,main,Zahncreme/-pasta,die,,Noun,,,,toothpaste,diş macunu
+4099,B1,99,Z,main,Zange,die,-n,Noun,,,,pliers / tongs,pense / maşa
+4100,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,sign / symbol,işaret / sembol
+4101,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,to live / to reside,yaşamak / oturmak
+4102,B1,99,W,main,Wohnort,der,-e,Noun,,,,place of residence,ikamet yeri
+4103,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,place of residence / domicile,ikamet / yerleşim yeri
+4104,B1,99,W,main,Wohnung,die,-en,Noun,,,,apartment / flat,daire / apartman
+4105,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,living room,oturma odası / salon
+4106,B1,99,W,main,Wolke,die,-n,Noun,,,,cloud,bulut
+4107,B1,99,B,main,bewölkt,,,Other,,,,cloudy / overcast,bulutlu / kapalı
+4108,B1,99,W,main,Wolle,die,,Noun,,,,wool,yün
+4109,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,to want,istemek
+4110,B1,99,W,main,worüber,,,Other,,,,about what,ne hakkında
+4111,B1,99,W,main,worum,,,Other,,,,about what / for what,ne hakkında / ne için
+4112,B1,99,W,main,Wort,das,¨-er,Noun,,,,word,kelime / sözcük
+4113,B1,99,W,main,Wort,das,-e,Noun,,,,word,kelime / sözcük
+4114,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,dictionary,sözlük
+4115,B1,99,W,main,Wunde,die,-n,Noun,,,,wound,yara
+4116,B1,99,W,main,Wunder,das,-,Noun,,,,miracle / wonder,mucize / harika
+4117,B1,99,W,main,wunderbar1,,,Other,,,,wonderful / great,harika / muhteşem
+4118,B1,99,W,main,war,,,Other,,,,was (artifact),-dı/-di (hatalı)
+4119,B1,99,G,main,gekauft,,,Other,,,,bought (artifact),satın alınmış (hatalı)
+4120,B1,99,H,main,hier,,,Other,,,,here (artifact),burada (hatalı)
+4121,B1,99,F,main,früh,,,Other,,,,early (artifact),erken (hatalı)
+4122,B1,99,L,main,los,,,Other,,,,off / away (artifact),başla / uzağa (hatalı)
+4123,B1,99,I,main,immer,,,Other,,,,always (artifact),her zaman (hatalı)
+4124,B1,99,M,main,musste,,,Other,,,,had to (artifact),zorunda kalmış (hatalı)
+4125,B1,99,S,main,sofort,,,Other,,,,immediately (artifact),hemen (hatalı)
+4126,B1,99,B,main,brauchst,,,Other,,,,need (artifact),ihtiyacın var (hatalı)
+4127,B1,99,M,main,mich,,,Other,,,,me (artifact),beni (hatalı)
+4128,B1,99,G,main,geplant,,,Other,,,,planned (artifact),planlanmış (hatalı)
+4129,B1,99,M,main,möglichst,,,Other,,,,as ... as possible (artifact),mümkün olduğunca (hatalı)
+4130,B1,99,F,main,fern,,,Verb,,,,television (artifact),televizyon (hatalı)
+4131,B1,99,G,main,gesagt,,,Other,,,,said (artifact),söylenmiş (hatalı)
+4132,B1,99,N,main,nachschlagen,,,Verb,,,,to look up (artifact),araştırmak (hatalı)
+4133,B1,99,V,main,verbinden,,,Verb,,,,to connect (artifact),bağlamak (hatalı)
+4134,B1,99,B,main,bares,,,Other,,,,cash (artifact),nakit (hatalı)
+4135,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,to pull / to move,çekmek / taşınmak
+4136,B1,100,Z,main,Ziel,das,-e,Noun,,,,goal / destination / aim,hedef / varış noktası / amaç
+4137,B1,100,Z,main,ziemlich,,,Other,,,,quite / fairly / rather,oldukça / epeyce
+4138,B1,100,Z,main,Zigarette,die,-n,Noun,,,,cigarette,sigara
+4139,B1,100,Z,main,Zimmer,das,-,Noun,,,,room,oda
+4140,B1,100,Z,main,Zinsen,die,,Noun,,,,interest (financial),faiz
+4141,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,circus,sirk
+4142,B1,100,Z,main,Zivilstand,der,,Noun,,,,marital status (Swiss),medeni durum (İsviçre)
+4143,B1,100,L,main,lienstand,,,Other,,,,marital status (artifact),medeni durum (hatalı)
+4144,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,customs / duty / inch,gümrük / vergi / inç
+4145,B1,100,Z,main,Zone,die,-nder,Noun,,,,zone,bölge / alan
+4146,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,to prepare (food),pişirmek / hazırlamak (yemek)
+4147,B1,100,Z,main,Zuckerdas,der,,Noun,,,,sugar (artifact),şeker (hatalı)
+4148,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,to draw,çizmek / resim yapmak
+4149,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,drawing,çizim / resim
+4150,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,to show / to point,göstermek / işaret etmek
+4151,B1,100,Z,main,Zeile,die,-n,Noun,,,,line / row,satır / sıra
+4152,B1,100,Z,main,Zeit,die,,Noun,,,,time,zaman
+4153,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,point in time / moment,an / zaman noktası
+4154,B1,100,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar
+4155,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,magazine / journal,dergi / yayın
+4156,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,newspaper,gazete
+4157,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,to camp / to go camping,kamp yapmak
+4158,B1,100,Z,main,zentral,,,Other,,,,central,merkezi
+4159,B1,100,Z,main,Zentrum,das,,Noun,,,,center / centre,merkez
+4160,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,to destroy,yıkmak / tahrip etmek
+4161,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,certificate,sertifika
+4162,B1,100,Z,main,Zettel,der,-das,Noun,,,,slip of paper / note,not kağıdı / fiş
+4163,B1,100,Z,main,Zeuge,der,-n,Noun,,,,witness (male),tanık (erkek)
+4164,B1,100,Z,main,Zeugin,die,,Noun,,,,witness (female),tanık (kadın)
+4165,B1,100,I,main,ins,,,Other,,,,into the (artifact),-e/-a (hatalı)
+4166,B1,100,W,main,warten,,,Verb,,,,to wait (artifact),beklemek (hatalı)
+4167,B1,100,S,main,serviert,,,Other,,,,served (artifact),servis edilmiş (hatalı)
+4168,B1,100,M,main,mein,,,Other,,,,my (artifact),benim (hatalı)
+4169,B1,100,D,main,den,,,Verb,,,,the (artifact),-ı (hatalı)
+4170,B1,100,A,main,ankreuzen,,,Verb,,,,to mark / check (artifact),işaretlemek (hatalı)
+4171,B1,100,J,main,jetzt,,,Other,,,,now (artifact),şimdi (hatalı)
+4172,B1,100,E,main,eine,,,Other,,,,a / one (artifact),bir (hatalı)
+4173,B1,100,N,main,nen,,,Verb,,,,nen (artifact),nen (hatalı)
+4174,B1,100,K,main,kaufen,,,Verb,,,,to buy (artifact),satın almak (hatalı)
+4175,B1,100,G,main,gerade,,,Other,,,,straight / just / currently (artifact),düz / tam şu anda (hatalı)
+4176,B1,100,Z,main,zeige,,,Other,,,,show (artifact),göster (hatalı)
+4177,B1,100,W,main,weise,,,Other,,,,weise (artifact),weise (hatalı)
+4178,B1,100,N,main,nehmen,,,Verb,,,,to take (artifact),almak (hatalı)
+4179,B1,100,I,main,in,,,Other,,,,in (artifact),-de/-da (hatalı)
+4180,B1,100,P,main,plätze,,,Other,,,,places (artifact),yerler (hatalı)
+4181,B1,100,B,main,bekomme,,,Other,,,,receive (artifact),alıyorum (hatalı)
+4182,B1,100,M,main,muss,,,Other,,,,must (artifact),-malı (hatalı)
+4183,B1,100,G,main,gemacht,,,Other,,,,made (artifact),yapılmış (hatalı)
+4184,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,match / matchstick,kibrit
+4185,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,to manage / to cope,başa çıkmak / idare etmek
+4186,B1,101,Z,main,zurück/zurück,,,Other,,,,back / return,geri / geri dönüş
+4187,B1,101,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar
+4188,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,to agree / to accept,kabul etmek / razı olmak
+4189,B1,101,Z,main,zusammen/zusammen,,,Other,,,,together,birlikte
+4190,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,cooperation / teamwork,işbirliği / takım çalışması
+4191,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,to summarize,özetlemek
+4192,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,context / connection,bağlam / bağlantı
+4193,B1,101,Z,main,zusätzlich,,,Other,,,,additional / extra,ek / ilave
+4194,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,to watch / to look on,izlemek / seyretmek
+4195,B1,101,Z,main,Zuschauer,der,-,Noun,,,,spectator (male),seyirci (erkek)
+4196,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,spectator (female),seyirci (kadın)
+4197,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,surcharge / supplement,ek ücret / vergi
+4198,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,coincidence / chance,tesadüf / şans
+4199,B1,101,Z,main,zufällig,,,Other,,,,coincidentally / by chance,tesadüfen / şans eseri
+4200,B1,101,Z,main,zufrieden,,,Verb,,,,satisfied / content,memnun / tatmin olmuş
+4201,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,access / entry,erişim / giriş
+4202,B1,101,Z,main,zugänglich,,,Other,,,,accessible,erişilebilir
+4203,B1,101,Z,main,Zug,der,¨-e,Noun,,,,train,tren
+4204,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,to approach / to proceed,yaklaşmak / ilerlemek
+4205,B1,101,Z,main,Zuhause,das,,Noun,,,,home,ev / evde
+4206,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,to listen,dinlemek
+4207,B1,101,Z,main,Zuhörer,der,-,Noun,,,,listener (male),dinleyici (erkek)
+4208,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,listener (female),dinleyici (kadın)
+4209,B1,101,Z,main,Zukunft,die,,Noun,,,,future,gelecek
+4210,B1,101,Z,main,zukünftig,,,Other,,,,future / upcoming,gelecekteki / yaklaşan
+4211,B1,101,Z,main,zuletzt,,,Other,,,,at last / in the end,sonunda / son olarak
+4212,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,to close / to shut,kapatmak
+4213,B1,101,Z,main,zumindest,,,Other,,,,at least,en azından
+4214,B1,101,Z,main,zunächstIch,,,Other,,,,first of all / at first,her şeyden önce / ilk başta (hatalı)
+4215,B1,101,M,main,men,,,Verb,,,,men (artifact),men (hatalı)
+4216,B1,101,K,main,komme,,,Other,,,,come (artifact),geliyorum (hatalı)
+4217,B1,101,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+4218,B1,101,E,main,eingeladen,,,Verb,,,,invited (artifact),davet edilmiş (hatalı)
+4219,B1,101,G,main,gespielt,,,Other,,,,played (artifact),oynamış (hatalı)
+4220,B1,101,G,main,getrennt,,,Other,,,,separated (artifact),ayrılmış (hatalı)
+4221,B1,101,S,main,schreiben,,,Verb,,,,to write (artifact),yazmak (hatalı)
+4222,B1,101,Z,main,zusammenfassen,,,Verb,,,,to summarize (artifact),özetlemek (hatalı)
+4223,B1,101,D,main,diesen,,,Verb,,,,this (artifact),bu (hatalı)
+4224,B1,101,Z,main,zusätzlich,,,Other,,,,additional (artifact),ek / ilave (hatalı)
+4225,B1,101,S,main,schaue,,,Other,,,,watch (artifact),bakıyorum (hatalı)
+4226,B1,101,G,main,gute,,,Other,,,,good (artifact),iyi (hatalı)
+4227,B1,101,I,main,ihr,,,Other,,,,you (artifact),siz (hatalı)
+4228,B1,101,G,main,gefallen,,,Verb,,,,liked / fallen (artifact),beğenilmiş / düşmüş (hatalı)
+4229,B1,101,G,main,getroffen,,,Verb,,,,met (artifact),buluşulmuş (hatalı)
+4230,B1,101,B,main,bekommen,,,Verb,,,,to get / to receive (artifact),almak (hatalı)
+4231,B1,101,S,main,schwierig,,,Other,,,,difficult (artifact),zor (hatalı)
+4232,B1,101,E,main,en,,,Other,,,,en (artifact),en (hatalı)
+4233,B1,101,G,main,gesehen,,,Verb,,,,seen (artifact),görülmüş (hatalı)
+4234,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,to doubt,şüphe etmek / kuşku duymak
+4235,B1,102,Z,main,Zweifel,der,-,Noun,,,,doubt,şüphe / kuşku
+4236,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,onion,soğan
+4237,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,to force / to compel,zorlamak / mecbur etmek
+4238,B1,102,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
+4239,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,condition / state,durum / hal
+4240,B1,102,Z,main,zuständig,,,Other,,,,responsible / in charge,yetkili / sorumlu
+4241,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,to agree / to approve,onaylamak / kabul etmek
+4242,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,agreement / approval / consent,onay / rıza / kabul
+4243,B1,102,Z,main,Zutaten,die,,Noun,,,,ingredients,malzemeler / içerikler
+4244,B1,102,H,main,haben,,,Verb,,,,to have (artifact),sahip olmak (hatalı)
+4245,B1,102,U,main,umzukehren,,,Verb,,,,to turn around / to reverse,geri dönmek / tersine çevirmek
+4246,B1,102,B,main,beiden,,,Verb,,,,both (artifact),her iki (hatalı)
+4247,B1,102,U,main,und,,,Other,,,,and (artifact),ve (hatalı)
+4248,B1,102,Z,main,zu,,,Other,,,,to / too (artifact),-e / çok (hatalı)
+4249,B1,102,D,main,diesen,,,Verb,,,,this (artifact),bu (hatalı)
