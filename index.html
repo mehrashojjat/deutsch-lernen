@@ -886,6 +886,12 @@ function setLang(lang) {
   document.body.classList.toggle('lang-fa', lang==='fa');
   applyTranslations();
   updateCounts();
+  // Immediately update the active screen so the user sees the new language at once
+  if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
+    _quizRefreshLang();
+  } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
+    _explorerRefreshLang();
+  }
 }
 
 // ── Apply all UI translations ──
@@ -2771,6 +2777,9 @@ function renderOfflineWordBody(w) {
 //  RANDOM WORD EXPLORER (API-powered)
 // ══════════════════════════════════════════════════════════════════
 var _randUsed = new Set();
+// State for the currently displayed explorer card (used by _explorerRefreshLang)
+var _currentRandRow  = null;  // CSV row object
+var _currentWiktData = null;  // Wiktionary data object (null when offline/failed)
 
 function showRandomWord() { show('screen-random'); renderRandomWord(); }
 
@@ -2830,12 +2839,16 @@ async function renderRandomWord() {
   content.innerHTML = loadingHTML();
 
   fetchWiktionary(word, tc).then(async function(data) {
+    _currentRandRow  = row;
+    _currentWiktData = data;
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }).catch(function() {
+    _currentRandRow  = row;
+    _currentWiktData = null;
     // Offline fallback: render with whatever is cached; pass CSV meta.en so
     // _autoFetchLangMeaning can translate via en→target even without WORD_BANK
     var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
@@ -2848,6 +2861,103 @@ async function renderRandomWord() {
       if (chip) { rwWordKey = word; chip.click(); }
     }
   });
+}
+
+// Re-renders the currently visible explorer card in the newly selected language.
+// Called by setLang() when screen-random is active.
+async function _explorerRefreshLang() {
+  if (!_currentRandRow) return;
+  var row  = _currentRandRow;
+  var data = _currentWiktData;
+  var word = row.word;
+  var tc   = typeChar(row.word_type);
+  var key  = normKey(word);
+  var meta = {
+    word: word, tc: tc,
+    en: row.translation_en || '',
+    tr: row.translation_tr || '',
+    fa: (_faMemCache && _faMemCache[key]) || '',
+    ru: (_ruMemCache && _ruMemCache[key]) || '',
+    uk: (_ukMemCache && _ukMemCache[key]) || '',
+    ar: (_arMemCache && _arMemCache[key]) || ''
+  };
+  var content = document.getElementById('rw-content');
+  content.innerHTML = loadingHTML();
+  if (data) {
+    await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
+    content.innerHTML = renderWiktCard(data, meta);
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
+    if (chip) { rwWordKey = word; chip.click(); }
+  } else {
+    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
+    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
+    _translateDefsInContainer(content);
+    _autoFetchLangMeaning(word, content, meta.en);
+    if (wb) {
+      var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
+      if (chip) { rwWordKey = word; chip.click(); }
+    }
+  }
+}
+
+// Prefetches translations for all remaining quiz cards in the new language,
+// then re-renders the current card. Called by setLang() when screen-quiz is active.
+async function _quizRefreshLang() {
+  if (!queue.length) return;
+  var targetLang = LANG;
+
+  if (LANG === 'en' || LANG === 'tr') {
+    // CSV columns are ready immediately — just re-render
+    renderCard();
+    return;
+  }
+
+  // FA/RU/UK/AR: need to batch-fetch translations for all remaining cards
+  var _ov = document.getElementById('quiz-prep-overlay');
+  var _lc = LANG==='fa'?'fa':LANG==='ru'?'ru':LANG==='uk'?'uk':'ar';
+  var _c  = LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
+  var _sf = LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+
+  // Collect all words for remaining cards (current + future) that are not yet cached
+  var remaining = queue.slice(idx);
+  var toFetch = [];
+  remaining.forEach(function(card) {
+    [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
+      var k = normKey(r.word);
+      if (_c[k] === undefined && toFetch.indexOf(r.word) === -1) toFetch.push(r.word);
+    });
+  });
+  if (toFetch.length) {
+    _ov.classList.add('active');
+    await _batchFetchTranslations(toFetch, _lc, _c, _sf);
+  }
+
+  // Second pass: en→target fallback for words with empty de→target results
+  var defFallback = [];
+  var defCs = _defCacheFor(_lc);
+  remaining.forEach(function(card) {
+    [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
+      var k = normKey(r.word);
+      if (_c[k] === '' && r.translation_en && r.translation_en.trim()) {
+        var txt = r.translation_en.trim();
+        var dk  = normDefKey(txt);
+        if (!defFallback.some(function(x){ return x.wordKey === k; })) {
+          defFallback.push({ text: txt, key: dk, wordKey: k });
+        }
+      }
+    });
+  });
+  if (defFallback.length) {
+    if (!_ov.classList.contains('active')) _ov.classList.add('active');
+    await _batchTranslateDefs(defFallback, _lc, defCs.cache, defCs.saveFn, function(item, tr) {
+      _c[item.wordKey] = tr; _sf();
+    }, 'en');
+  }
+  _ov.classList.remove('active');
+
+  // Only re-render if the language hasn't changed again while we were fetching
+  if (LANG === targetLang) renderCard();
 }
 
 // ══ SEARCH ══
