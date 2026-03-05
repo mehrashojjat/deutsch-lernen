@@ -1692,7 +1692,7 @@ async function fetchTurkish(word) {
 //             a fallback, and store the result in the word-level cache so it persists.
 // Only the pending element for the CURRENT language is updated; all other language pending
 // elements are silently ignored.
-async function _autoFetchLangMeaning(word, container) {
+async function _autoFetchLangMeaning(word, container, enFallback) {
   if (LANG === 'en') return;
   var pendingClass = LANG + '-meaning-pending';
   var el = container.querySelector('.' + pendingClass);
@@ -1714,7 +1714,7 @@ async function _autoFetchLangMeaning(word, container) {
   if (!result) {
     // Step 2: en→target (translate the English meaning as fallback)
     var meta = metaFromWord(word);
-    var meaningEn = meta.en || '';
+    var meaningEn = enFallback || meta.en || '';
     if (meaningEn) {
       try {
         var r = await fetch('https://api.mymemory.translated.net/get?q='
@@ -2774,9 +2774,27 @@ var _randUsed = new Set();
 
 function showRandomWord() { show('screen-random'); renderRandomWord(); }
 
-function renderRandomWord() {
-  // Pool: always use WORD_BANK (Goethe-Institut source, same as quizzes)
-  var pool = WORD_BANK.map(function(w){ return [w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']; });
+// Build a flat pool of all CSV rows across A1/A2/B1 (cached after first build)
+var _csvRandPool = null;
+function _getCsvRandPool() {
+  if (_csvRandPool) return _csvRandPool;
+  var pool = [];
+  ['A1','A2','B1'].forEach(function(lv) {
+    var rows = CSV_QUIZ_DATA[lv] || [];
+    rows.forEach(function(r) {
+      if (r.word && r.word.trim() && r.translation_en && r.translation_en.trim()) pool.push(r);
+    });
+  });
+  _csvRandPool = pool;
+  return pool;
+}
+
+async function renderRandomWord() {
+  // Ensure CSV data is loaded (fast no-op if already done)
+  await _loadAllCSV();
+
+  var pool = _getCsvRandPool();
+  if (!pool.length) return;
 
   var idx, attempts = 0;
   do {
@@ -2786,9 +2804,19 @@ function renderRandomWord() {
   if (_randUsed.size > 300) _randUsed.clear();
   _randUsed.add(idx);
 
-  var entry = pool[idx];
-  var word = entry[0], tc = entry[1], en = entry[2], tr = entry[3];
-  var meta = { word: word, tc: tc, en: en, tr: tr, fa: (_faMemCache&&_faMemCache[normKey(word)])||'', ru: (_ruMemCache&&_ruMemCache[normKey(word)])||'' };
+  var row  = pool[idx];
+  var word = row.word;
+  var tc   = typeChar(row.word_type);
+  var key  = normKey(word);
+  var meta = {
+    word: word, tc: tc,
+    en: row.translation_en || '',
+    tr: row.translation_tr || '',
+    fa: (_faMemCache && _faMemCache[key]) || '',
+    ru: (_ruMemCache && _ruMemCache[key]) || '',
+    uk: (_ukMemCache && _ukMemCache[key]) || '',
+    ar: (_arMemCache && _arMemCache[key]) || ''
+  };
 
   // Animate refresh
   var rb = document.querySelector('.refresh-btn');
@@ -2805,16 +2833,16 @@ function renderRandomWord() {
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
     content.innerHTML = renderWiktCard(data, meta);
-    // If offline chips exist, auto-click first
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }).catch(function() {
-    // Offline: render immediately with whatever is cached, auto-fetchers update if online
-    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === normKey(word); });
+    // Offline fallback: render with whatever is cached; pass CSV meta.en so
+    // _autoFetchLangMeaning can translate via en→target even without WORD_BANK
+    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
     _translateDefsInContainer(content);
-    _autoFetchLangMeaning(word, content);
+    _autoFetchLangMeaning(word, content, meta.en);
     if (wb) {
       var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
       if (chip) { rwWordKey = word; chip.click(); }
