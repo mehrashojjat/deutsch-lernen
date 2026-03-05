@@ -520,6 +520,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <script src="word_data/sources/goethe-institut/b1_words.js"></script>
 <script src="word_data/sources/goethe-institut/b2_words.js"></script>
 <script src="word_data/loader.js"></script>
+<!-- ══ QUIZ CSV DATA — pre-baked JS so no fetch() is needed ══ -->
+<script src="word_data/quiz_csv/a1_data.js"></script>
+<script src="word_data/quiz_csv/a2_data.js"></script>
+<script src="word_data/quiz_csv/b1_data.js"></script>
 
 <script>
 // ══════════════════════════════════════════════════════════════════
@@ -624,8 +628,8 @@ const UI = {
     selectLevel: 'انتخاب سطح',
     levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
     cardCount: (n) => n + ' کارت تمرین واژگان',
-    back: 'بازگشت →',
-    next: '← بعدی',
+    back: '→ بازگشت',
+    next: 'بعدی ←',
     correct: '✓ درست!',
     wrong: (a) => `✗ اشتباه. جواب درست: <strong>${a}</strong>`,
     resultTitles: { great:'عالی!', good:'خیلی خوب!', ok:'تلاش خوبی بود!', low:'به تمرین ادامه بده!' },
@@ -952,7 +956,17 @@ function _parseCSVText(text) {
 
 function _loadAllCSV() {
   if (_csvLoadPromise) return _csvLoadPromise;
+  // Primary path: use pre-baked JS globals (window._QUIZ_CSV_A1 etc.) loaded via <script>.
+  // This is synchronous and works in every browser regardless of fetch/CORS/CSP restrictions.
+  // The fetch path is kept as a best-effort fallback only, for environments where the JS
+  // globals haven't loaded (e.g. custom build pipeline stripping them).
   _csvLoadPromise = Promise.all(['A1','A2','B1'].map(function(lv) {
+    var global = window['_QUIZ_CSV_' + lv];
+    if (global && global.length) {
+      CSV_QUIZ_DATA[lv] = global;
+      return Promise.resolve();
+    }
+    // Fallback: fetch and parse the raw CSV (won't work in all environments)
     return fetch('word_data/quiz_csv/' + lv.toLowerCase() + '.csv')
       .then(function(r){ return r.text(); })
       .then(function(txt){
