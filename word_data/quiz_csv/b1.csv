@@ -1287,7 +1287,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1286,B1,39,G,main,gemacht,,,Other,,,,done (artifact)
 1287,B1,39,F,main,funden,,,Verb,,,,found (artifact)
 1288,B1,39,G,main,gefeiert,,,Other,,,,celebrated (artifact)
-1289,B1,39,A,main,aufmachen?Fahren,,,Verb,,,,to open / to drive (artifact)
+1289,B1,39,A,main,aufmachen,,,Verb,,,,to open / to drive (artifact)
 1290,B1,39,V,main,verletzt,,,Other,,,,injured (artifact)
 1291,B1,39,F,main,fair,,,Other,,,,fair (artifact)
 1292,B1,39,S,main,schutzfaktor,,,Other,,,,protection factor (artifact)
@@ -1341,7 +1341,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1340,B1,40,N,main,neue,die,,Noun,,,,new (artifact)
 1341,B1,40,N,main,noch,,,Other,,,,still (artifact)
 1342,B1,40,G,main,großes,,,Other,,,,big (artifact)
-1343,B1,40,F,main,festgelegt?Die,,,Other,,,,set (artifact)
+1343,B1,40,F,main,festgelegt,,,Other,,,,set (artifact)
 1344,B1,40,F,main,festgenommen,,,Verb,,,,arrested (artifact)
 1345,B1,40,D,main,des,,,Other,,,,of the (artifact)
 1346,B1,40,A,main,aber,,,Other,,,,but (artifact)
@@ -3452,7 +3452,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3451,B1,85,K,main,kaputt,,,Other,,,,broken (artifact)
 3452,B1,85,D,main,drücken,,,Verb,,,,to press / to push
 3453,B1,85,G,main,gefasst,,,Other,,,,composed / ready (artifact)
-3454,B1,85,M,main,machen?1,,,Other,,,,do (artifact)
+3454,B1,85,M,main,machen,,,Other,,,,do (artifact)
 3455,B1,85,H,main,habe,,,Other,,,,have (artifact)
 3456,B1,85,N,main,nicht,,,Other,,,,not (artifact)
 3457,B1,85,Z,main,zu,,,Other,,,,to / too (artifact)
@@ -3647,7 +3647,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3646,B1,89,Ü,main,überqueren,,,Verb,,,,"to cross (a road, artifact)"
 3647,B1,89,D,main,den,,,Verb,,,,the (artifact)
 3648,B1,89,Z,main,zum,,,Other,,,,to the (artifact)
-3649,B1,89,Ü,main,übersetzen?Meine,,,Other,,,,to translate (artifact)
+3649,B1,89,Ü,main,übersetzen,,,Other,,,,to translate (artifact)
 3650,B1,89,A,main,arbeiten,,,Verb,,,,to work (artifact)
 3651,B1,89,G,main,gut,,,Other,,,,good (artifact)
 3652,B1,89,M,main,man,,,Other,,,,"one / you (impersonal, artifact)"
@@ -3895,7 +3895,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3894,B1,94,E,main,essen,,,Verb,,,,to eat (artifact)
 3895,B1,94,I,main,immer,,,Other,,,,always (artifact)
 3896,B1,94,V,main,vollen,,,Verb,,,,full (artifact)
-3897,B1,94,H,main,heute?Wir,,,Other,,,,today (artifact)
+3897,B1,94,H,main,heute,,,Other,,,,today (artifact)
 3898,B1,94,V,main,versteckt,,,Other,,,,hidden (artifact)
 3899,B1,94,S,main,sehr,,,Other,,,,very (artifact)
 3900,B1,94,Z,main,zu,,,Other,,,,to / too (artifact)
@@ -3951,7 +3951,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3950,B1,95,P,main,paar,,,Other,,,,a few (artifact)
 3951,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact)
 3952,B1,95,B,main,bereiten,,,Verb,,,,to prepare (artifact)
-3953,B1,95,V,main,vor?Ich,,,Other,,,,before (artifact)
+3953,B1,95,V,main,vor,,,Other,,,,before (artifact)
 3954,B1,95,I,main,ich,,,Other,,,,I (artifact)
 3955,B1,95,S,main,solls,,,Other,,,,should (artifact)
 3956,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise

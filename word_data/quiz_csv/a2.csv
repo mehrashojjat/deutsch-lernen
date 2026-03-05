@@ -1,1057 +1,1057 @@
-id,level,source_page,section,entry_type,word,article,plural,word_type,verb_present,verb_perfect,translation_en
-1,A2,5,abkuerzungen,section_title,Abkürzung,die,-en,Noun,,,abbreviation
-2,A2,5,abkuerzungen,main,ca.,,,Other,,,approximately / ca.
-3,A2,5,abkuerzungen,main,d.h.,,,Other,,,i.e. / that is
-4,A2,5,abkuerzungen,main,ICE,,,Other,,,ICE (high-speed train)
-5,A2,5,abkuerzungen,main,Lkw,der,-s,Noun,,,truck / lorry
-6,A2,5,abkuerzungen,main,PC,der,-s,Noun,,,PC / personal computer
-7,A2,5,abkuerzungen,main,SMS,die,,Noun,,,text message / SMS
-8,A2,5,abkuerzungen,main,usw.,,,Other,,,etc. / and so on
-9,A2,5,abkuerzungen,main,WC,das,-s,Noun,,,toilet / WC
-10,A2,5,abkuerzungen,main,z.B.,,,Other,,,e.g. / for example
-11,A2,5,anweisungssprache,section_title,Anweisungssprache,die,,Noun,,,language of instructions
-12,A2,5,anweisungssprache,main,Antwortbogen,der,-,Noun,,,answer sheet
-13,A2,5,anweisungssprache,main,Aufgabe,die,-n,Noun,,,task / exercise
-14,A2,5,anweisungssprache,main,Beispiel,das,-e,Noun,,,example
-15,A2,5,anweisungssprache,main,Durchsage,die,-n,Noun,,,announcement
-16,A2,5,anweisungssprache,main,Lösung,die,-en,Noun,,,solution / answer
-17,A2,5,anweisungssprache,main,markieren,,,Verb,,,to mark
-18,A2,5,anweisungssprache,main,Prüfer,der,-,Noun,,,examiner
-19,A2,5,anweisungssprache,sub,Prüferin,die,-nen,Noun,,,examiner (female)
-20,A2,5,anweisungssprache,main,Prüfung,die,-en,Noun,,,exam / test
-21,A2,5,anweisungssprache,main,Punkt,der,-e,Noun,,,point
-22,A2,5,anweisungssprache,main,Teil,der,-e,Noun,,,part
-23,A2,5,anweisungssprache,main,Test,der,-s,Noun,,,test
-24,A2,5,anweisungssprache,main,Text,der,-e,Noun,,,text
-25,A2,5,anweisungssprache,main,Wörterbuch,das,¨-er,Noun,,,dictionary
-26,A2,5,berufe,section_title,Beruf,der,-e,Noun,,,profession / job
-27,A2,5,berufe,main,Angestellte,der/die,-n,Noun,,,employee / salaried worker
-28,A2,5,berufe,main,Arzt,der,¨-e,Noun,,,doctor
-29,A2,5,berufe,sub,Ärztin,die,-nen,Noun,,,doctor (female)
-30,A2,5,berufe,main,Auszubildende,der/die,-n,Noun,,,trainee / apprentice
-31,A2,5,berufe,main,Autor,der,-en,Noun,,,author
-32,A2,5,berufe,sub,Autorin,die,-nen,Noun,,,author (female)
-33,A2,5,berufe,main,Babysitter,der,-,Noun,,,babysitter
-34,A2,5,berufe,main,Bäcker,der,-,Noun,,,baker
-35,A2,5,berufe,sub,Bäckerin,die,-nen,Noun,,,baker (female)
-36,A2,5,berufe,main,Doktor,der,-en,Noun,,,doctor / PhD
-37,A2,5,berufe,sub,Doktorin,die,-nen,Noun,,,doctor / PhD (female)
-38,A2,5,berufe,main,Fahrer,der,-,Noun,,,driver
-39,A2,5,berufe,sub,Fahrerin,die,-nen,Noun,,,driver (female)
-40,A2,5,berufe,main,Friseur,der,-e,Noun,,,hairdresser
-41,A2,5,berufe,sub,Friseurin,die,-nen,Noun,,,hairdresser (female)
-42,A2,5,berufe,main,Handwerker,der,-,Noun,,,craftsman / tradesperson
-43,A2,5,berufe,sub,Handwerkerin,die,-nen,Noun,,,craftswoman / tradesperson (female)
-44,A2,5,berufe,main,Hausmann,der,¨-er,Noun,,,househusband
-45,A2,5,berufe,sub,Hausfrau,die,-en,Noun,,,housewife
-46,A2,5,berufe,main,Journalist,der,-en,Noun,,,journalist
-47,A2,5,berufe,sub,Journalistin,die,-nen,Noun,,,journalist (female)
-48,A2,5,berufe,main,Kaufmann,der,Kaufleute,Noun,,,businessman / merchant
-49,A2,5,berufe,sub,Kauffrau,die,-en,Noun,,,businesswoman / merchant (female)
-50,A2,5,berufe,main,Kellner,der,-,Noun,,,waiter
-51,A2,5,berufe,sub,Kellnerin,die,-nen,Noun,,,waitress
-52,A2,5,berufe,main,Koch,der,¨-e,Noun,,,cook / chef
-53,A2,5,berufe,sub,Köchin,die,-nen,Noun,,,cook / chef (female)
-54,A2,5,berufe,main,Krankenpfleger,der,-,Noun,,,male nurse
-55,A2,5,berufe,sub,Krankenschwester,die,-n,Noun,,,nurse
-56,A2,5,berufe,main,Künstler,der,-,Noun,,,artist
-57,A2,5,berufe,sub,Künstlerin,die,-nen,Noun,,,artist (female)
-58,A2,5,berufe,main,Lehrer,der,-,Noun,,,teacher
-59,A2,5,berufe,sub,Lehrerin,die,-nen,Noun,,,teacher (female)
-60,A2,5,berufe,main,Mechaniker,der,-,Noun,,,mechanic
-61,A2,5,berufe,sub,Mechanikerin,die,-nen,Noun,,,mechanic (female)
-62,A2,5,berufe,main,Model,das,-s,Noun,,,model
-63,A2,5,berufe,main,Musiker,der,-,Noun,,,musician
-64,A2,5,berufe,sub,Musikerin,die,-nen,Noun,,,musician (female)
-65,A2,5,berufe,main,Polizist,der,-en,Noun,,,police officer
-66,A2,5,berufe,sub,Polizistin,die,-nen,Noun,,,police officer (female)
-67,A2,5,berufe,main,Rentner,der,-,Noun,,,retiree / pensioner
-68,A2,5,berufe,sub,Rentnerin,die,-nen,Noun,,,retiree / pensioner (female)
-69,A2,5,berufe,main,Sänger,der,-,Noun,,,singer
-70,A2,5,berufe,sub,Sängerin,die,-nen,Noun,,,singer (female)
-71,A2,5,berufe,main,Schauspieler,der,-,Noun,,,actor
-72,A2,5,berufe,sub,Schauspielerin,die,-nen,Noun,,,actress
-73,A2,5,berufe,main,Techniker,der,-,Noun,,,technician
-74,A2,5,berufe,sub,Technikerin,die,-nen,Noun,,,technician (female)
-75,A2,5,berufe,main,Verkäufer,der,-,Noun,,,salesperson
-76,A2,5,berufe,sub,Verkäuferin,die,-nen,Noun,,,salesperson (female)
-77,A2,5,familienmitglieder,section_title,Familienmitglied,das,-er,Noun,,,family member
-78,A2,5,familienmitglieder,main,Bruder,der,¨-,Noun,,,brother
-79,A2,5,familienmitglieder,main,Cousin,der,-s,Noun,,,cousin (male)
-80,A2,5,familienmitglieder,main,Cousine,die,-n,Noun,,,cousin (female)
-81,A2,5,familienmitglieder,main,Eltern,die,,Noun,,,parents
-82,A2,5,familienmitglieder,main,Enkel,der,-,Noun,,,grandson
-83,A2,5,familienmitglieder,sub,Enkelin,die,-nen,Noun,,,granddaughter
-84,A2,5,familienmitglieder,main,Geschwister,die,,Noun,,,siblings
-85,A2,5,familienmitglieder,main,Großeltern,die,,Noun,,,grandparents
-86,A2,5,familienmitglieder,main,Großmutter,die,¨-,Noun,,,grandmother
-87,A2,5,familienmitglieder,sub,Oma,die,-s,Noun,,,grandma
-88,A2,5,familienmitglieder,main,Großvater,der,¨-,Noun,,,grandfather
-89,A2,5,familienmitglieder,sub,Opa,der,-s,Noun,,,grandpa
-90,A2,5,familienmitglieder,main,Kind,das,-er,Noun,,,child
-91,A2,5,familienmitglieder,main,Mutter,die,¨-,Noun,,,mother
-92,A2,5,familienmitglieder,sub,Mama,die,-s,Noun,,,mom / mum
-93,A2,5,familienmitglieder,main,Onkel,der,-,Noun,,,uncle
-94,A2,5,familienmitglieder,main,Schwester,die,-n,Noun,,,sister
-95,A2,5,familienmitglieder,main,Sohn,der,¨-e,Noun,,,son
-96,A2,5,familienmitglieder,main,Tante,die,-n,Noun,,,aunt
-97,A2,5,familienmitglieder,main,Tochter,die,¨-,Noun,,,daughter
-98,A2,5,familienmitglieder,main,Vater,der,¨-,Noun,,,father
-99,A2,5,familienmitglieder,sub,Papa,der,-s,Noun,,,dad
-100,A2,5,familienmitglieder,main,Verwandte,der/die,-n,Noun,,,relative
-101,A2,5,familienstand,section_title,Familienstand,der,,Noun,,,marital status
-102,A2,5,familienstand,main,ledig,,,Adjective,,,single / unmarried
-103,A2,5,familienstand,main,verheiratet,,,Adjective,,,married
-104,A2,5,familienstand,main,getrennt,,,Adjective,,,separated
-105,A2,5,familienstand,main,geschieden,,,Adjective,,,divorced
-106,A2,5,farben,section_title,Farbe,die,-n,Noun,,,color
-107,A2,5,farben,main,blau,,,Adjective,,,blue
-108,A2,5,farben,main,braun,,,Adjective,,,brown
-109,A2,5,farben,main,gelb,,,Adjective,,,yellow
-110,A2,5,farben,main,grau,,,Adjective,,,gray
-111,A2,5,farben,main,grün,,,Adjective,,,green
-112,A2,5,farben,main,lila,,,Adjective,,,purple / lilac
-113,A2,5,farben,main,orange,,,Adjective,,,orange
-114,A2,5,farben,main,rosa,,,Adjective,,,pink
-115,A2,5,farben,main,rot,,,Adjective,,,red
-116,A2,5,farben,main,schwarz,,,Adjective,,,black
-117,A2,5,farben,main,weiß,,,Adjective,,,white
-118,A2,5,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,,,compass direction
-119,A2,5,himmelsrichtungen,main,Norden,der,,Noun,,,north
-120,A2,5,himmelsrichtungen,main,Süden,der,,Noun,,,south
-121,A2,5,himmelsrichtungen,main,Osten,der,,Noun,,,east
-122,A2,5,himmelsrichtungen,main,Westen,der,,Noun,,,west
-123,A2,6,laender,section_title,Land,das,¨-er,Noun,,,country
-124,A2,6,laender,section_title,Nationalität,die,-en,Noun,,,nationality
-125,A2,6,laender,main,Deutschland,,,Noun,,,Germany
-126,A2,6,laender,sub,Deutsche,der/die,-n,Noun,,,German (person)
-127,A2,6,laender,sub,deutsch,,,Adjective,,,German
-128,A2,6,laender,main,Österreich,,,Noun,,,Austria
-129,A2,6,laender,sub,Österreicher,der,-,Noun,,,Austrian (male)
-130,A2,6,laender,sub,Österreicherin,die,-nen,Noun,,,Austrian (female)
-131,A2,6,laender,sub,österreichisch,,,Adjective,,,Austrian
-132,A2,6,laender,main,Schweiz,die,,Noun,,,Switzerland
-133,A2,6,laender,sub,Schweizer,der,-,Noun,,,Swiss (male)
-134,A2,6,laender,sub,Schweizerin,die,-nen,Noun,,,Swiss (female)
-135,A2,6,laender,sub,schweizerisch,,,Adjective,,,Swiss
-136,A2,6,laender,main,Luxemburg,,,Noun,,,Luxembourg
-137,A2,6,laender,sub,Luxemburger,der,-,Noun,,,Luxembourger (male)
-138,A2,6,laender,sub,Luxemburgerin,die,-nen,Noun,,,Luxembourger (female)
-139,A2,6,laender,sub,luxemburgisch,,,Adjective,,,Luxembourgish
-140,A2,6,laender,main,Europa,,,Noun,,,Europe
-141,A2,6,laender,sub,Europäer,der,-,Noun,,,European (male)
-142,A2,6,laender,sub,Europäerin,die,-nen,Noun,,,European (female)
-143,A2,6,laender,sub,europäisch,,,Adjective,,,European
-144,A2,6,waehrungen,section_title,Währung,die,-en,Noun,,,currency
-145,A2,6,masse,section_title,Maß,das,-e,Noun,,,unit of measurement
-146,A2,6,waehrungen,main,Euro,der,,Noun,,,euro
-147,A2,6,waehrungen,sub,Cent,der,,Noun,,,cent
-148,A2,6,waehrungen,main,Franken,der,-,Noun,,,franc (Swiss)
-149,A2,6,waehrungen,sub,Rappen,der,-,Noun,,,rappen (Swiss cent)
-150,A2,6,masse,main,Meter,der,,Noun,,,meter
-151,A2,6,masse,sub,Zentimeter,der,,Noun,,,centimeter
-152,A2,6,masse,main,Kilometer,der,,Noun,,,kilometer
-153,A2,6,masse,main,Prozent,das,,Noun,,,percent
-154,A2,6,masse,main,Liter,der,,Noun,,,liter
-155,A2,6,masse,main,Gramm,das,,Noun,,,gram
-156,A2,6,masse,sub,Kilogramm,das,,Noun,,,kilogram
-157,A2,6,masse,main,Grad,der,,Noun,,,degree
-158,A2,6,schule,section_title,Schule,die,-n,Noun,,,school
-159,A2,6,schule,section_title,Schulfach,das,¨-er,Noun,,,school subject
-160,A2,6,schule,main,Abitur,das,,Noun,,,Abitur (university entrance exam)
-161,A2,6,schule,main,Direktor,der,-en,Noun,,,headmaster / principal
-162,A2,6,schule,main,Hausaufgabe,die,-n,Noun,,,homework
-163,A2,6,schule,main,Klasse,die,-n,Noun,,,class / grade
-164,A2,6,schule,main,Klassenfahrt,die,-en,Noun,,,school trip
-165,A2,6,schule,main,Sekretariat,das,-e,Noun,,,secretary's office
-166,A2,6,schule,main,Stundenplan,der,¨-e,Noun,,,timetable / schedule
-167,A2,6,schule,main,Biologie,,,Noun,,,biology
-168,A2,6,schule,main,Chemie,,,Noun,,,chemistry
-169,A2,6,schule,main,Deutsch,,,Noun,,,German (language)
-170,A2,6,schule,main,Englisch,,,Noun,,,English (language)
-171,A2,6,schule,main,Französisch,,,Noun,,,French (language)
-172,A2,6,schule,main,Geografie,,,Noun,,,geography
-173,A2,6,schule,main,Geschichte,,,Noun,,,history
-174,A2,6,schule,main,Kunst,die,,Noun,,,art
-175,A2,6,schule,main,Latein,,,Noun,,,Latin
-176,A2,6,schule,main,Mathematik,,,Noun,,,mathematics
-177,A2,6,schule,main,Musik,die,,Noun,,,music
-178,A2,6,schule,main,Physik,,,Noun,,,physics
-179,A2,6,schule,main,Religion,die,-en,Noun,,,religion
-180,A2,6,schule,main,Sozialkunde,,,Noun,,,social studies / civics
-181,A2,6,schule,main,Sport,der,,Noun,,,PE / sports
-182,A2,6,feiertage,section_title,Feiertag,der,-e,Noun,,,public holiday
-183,A2,6,feiertage,main,Karneval,der,,Noun,,,carnival
-184,A2,6,feiertage,main,Ostern,,,Noun,,,Easter
-185,A2,6,feiertage,main,Weihnachten,,,Noun,,,Christmas
-186,A2,6,feiertage,main,Neujahr,das,,Noun,,,New Year
-187,A2,6,feiertage,main,Silvester,,,Noun,,,New Year's Eve
-188,A2,6,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,,,season
-189,A2,6,jahreszeiten,main,Frühling,der,,Noun,,,spring
-190,A2,6,jahreszeiten,sub,Frühjahr,das,,Noun,,,spring (early)
-191,A2,6,jahreszeiten,main,Sommer,der,,Noun,,,summer
-192,A2,6,jahreszeiten,main,Herbst,der,,Noun,,,autumn / fall
-193,A2,6,jahreszeiten,main,Winter,der,,Noun,,,winter
-194,A2,6,monat,section_title,Monat,der,-e,Noun,,,month
-195,A2,6,monat,main,Januar,der,,Noun,,,January
-196,A2,6,monat,main,Februar,der,,Noun,,,February
-197,A2,6,monat,main,März,der,,Noun,,,March
-198,A2,6,monat,main,April,der,,Noun,,,April
-199,A2,6,monat,main,Mai,der,,Noun,,,May
-200,A2,6,monat,main,Juni,der,,Noun,,,June
-201,A2,6,monat,main,Juli,der,,Noun,,,July
-202,A2,6,monat,main,August,der,,Noun,,,August
-203,A2,6,monat,main,September,der,,Noun,,,September
-204,A2,6,monat,main,Oktober,der,,Noun,,,October
-205,A2,6,monat,main,November,der,,Noun,,,November
-206,A2,6,monat,main,Dezember,der,,Noun,,,December
-207,A2,6,tageszeiten,section_title,Tageszeit,die,-en,Noun,,,time of day
-208,A2,6,tageszeiten,main,Tag,der,-e,Noun,,,day
-209,A2,6,tageszeiten,main,Morgen,der,-,Noun,,,morning
-210,A2,6,tageszeiten,main,Vormittag,der,-e,Noun,,,late morning
-211,A2,6,tageszeiten,main,Mittag,der,-e,Noun,,,noon / midday
-212,A2,6,tageszeiten,main,Nachmittag,der,-e,Noun,,,afternoon
-213,A2,6,tageszeiten,main,Abend,der,-e,Noun,,,evening
-214,A2,6,tageszeiten,main,Nacht,die,¨-e,Noun,,,night
-215,A2,6,tageszeiten,main,Mitternacht,die,,Noun,,,midnight
-216,A2,6,tageszeiten,main,täglich,,,Adverb,,,daily
-217,A2,6,tageszeiten,main,tagsüber,,,Adverb,,,during the day
-218,A2,6,tageszeiten,main,morgens,,,Adverb,,,in the morning
-219,A2,6,tageszeiten,main,vormittags,,,Adverb,,,in the late morning
-220,A2,6,tageszeiten,main,mittags,,,Adverb,,,at noon
-221,A2,6,tageszeiten,main,nachmittags,,,Adverb,,,in the afternoon
-222,A2,6,tageszeiten,main,abends,,,Adverb,,,in the evening
-223,A2,6,tageszeiten,main,nachts,,,Adverb,,,at night
-224,A2,7,zahlen,section_title,Zahlen,,,Noun,,,numbers
-225,A2,7,zahlen,main,eins,,,Number,,,one
-226,A2,7,zahlen,main,zwei,,,Number,,,two
-227,A2,7,zahlen,main,drei,,,Number,,,three
-228,A2,7,zahlen,main,vier,,,Number,,,four
-229,A2,7,zahlen,main,fünf,,,Number,,,five
-230,A2,7,zahlen,main,sechs,,,Number,,,six
-231,A2,7,zahlen,main,sieben,,,Number,,,seven
-232,A2,7,zahlen,main,acht,,,Number,,,eight
-233,A2,7,zahlen,main,neun,,,Number,,,nine
-234,A2,7,zahlen,main,zehn,,,Number,,,ten
-235,A2,7,zahlen,main,elf,,,Number,,,eleven
-236,A2,7,zahlen,main,zwölf,,,Number,,,twelve
-237,A2,7,zahlen,main,dreizehn,,,Number,,,thirteen
-238,A2,7,zahlen,main,vierzehn,,,Number,,,fourteen
-239,A2,7,zahlen,main,fünfzehn,,,Number,,,fifteen
-240,A2,7,zahlen,main,sechzehn,,,Number,,,sixteen
-241,A2,7,zahlen,main,siebzehn,,,Number,,,seventeen
-242,A2,7,zahlen,main,achtzehn,,,Number,,,eighteen
-243,A2,7,zahlen,main,neunzehn,,,Number,,,nineteen
-244,A2,7,zahlen,main,zwanzig,,,Number,,,twenty
-245,A2,7,zahlen,main,einundzwanzig,,,Number,,,twenty-one
-246,A2,7,zahlen,main,dreißig,,,Number,,,thirty
-247,A2,7,zahlen,main,vierzig,,,Number,,,forty
-248,A2,7,zahlen,main,fünfzig,,,Number,,,fifty
-249,A2,7,zahlen,main,sechzig,,,Number,,,sixty
-250,A2,7,zahlen,main,siebzig,,,Number,,,seventy
-251,A2,7,zahlen,main,achtzig,,,Number,,,eighty
-252,A2,7,zahlen,main,neunzig,,,Number,,,ninety
-253,A2,7,zahlen,main,hundert,,,Number,,,hundred
-254,A2,7,zahlen,main,hunderteins,,,Number,,,one hundred and one
-255,A2,7,zahlen,main,zweihundert,,,Number,,,two hundred
-256,A2,7,zahlen,main,tausend,,,Number,,,thousand
-257,A2,7,zahlen,main,zweitausendeins,,,Number,,,two thousand and one
-258,A2,7,zahlen,main,Million,die,-en,Noun,,,million
-259,A2,7,zahlen,main,erste,,,Number,,,first
-260,A2,7,zahlen,main,zweite,,,Number,,,second
-261,A2,7,zahlen,main,dritte,,,Number,,,third
-262,A2,7,zahlen,main,vierte,,,Number,,,fourth
-263,A2,7,zahlen,main,erstens,,,Adverb,,,firstly
-264,A2,7,zahlen,main,zweitens,,,Adverb,,,secondly
-265,A2,7,zahlen,main,drittens,,,Adverb,,,thirdly
-266,A2,7,zahlen,main,viertens,,,Adverb,,,fourthly
-267,A2,7,zahlen,main,einmal,,,Adverb,,,once
-268,A2,7,zahlen,main,zweimal,,,Adverb,,,twice
-269,A2,7,zahlen,main,dreimal,,,Adverb,,,three times
-270,A2,7,zahlen,main,viermal,,,Adverb,,,four times
-271,A2,7,uhrzeit,section_title,Uhrzeit,die,,Noun,,,time of day
-272,A2,7,uhrzeit,main,Sekunde,die,-n,Noun,,,second
-273,A2,7,uhrzeit,main,Minute,die,-n,Noun,,,minute
-274,A2,7,uhrzeit,main,Stunde,die,-n,Noun,,,hour
-275,A2,7,woche,section_title,Wochentag,der,-e,Noun,,,weekday
-276,A2,7,woche,main,Wochenende,das,-n,Noun,,,weekend
-277,A2,7,woche,main,Montag,der,,Noun,,,Monday
-278,A2,7,woche,main,Dienstag,der,,Noun,,,Tuesday
-279,A2,7,woche,main,Mittwoch,der,,Noun,,,Wednesday
-280,A2,7,woche,main,Donnerstag,der,,Noun,,,Thursday
-281,A2,7,woche,main,Freitag,der,,Noun,,,Friday
-282,A2,7,woche,main,Samstag,der,,Noun,,,Saturday
-283,A2,7,woche,main,Sonntag,der,,Noun,,,Sunday
-284,A2,7,woche,sub,montags,,,Adverb,,,on Mondays
-285,A2,7,woche,sub,dienstags,,,Adverb,,,on Tuesdays
-286,A2,7,woche,sub,mittwochs,,,Adverb,,,on Wednesdays
-287,A2,7,woche,sub,donnerstags,,,Adverb,,,on Thursdays
-288,A2,7,woche,sub,freitags,,,Adverb,,,on Fridays
-289,A2,7,woche,sub,samstags,,,Adverb,,,on Saturdays
-290,A2,7,woche,sub,sonntags,,,Adverb,,,on Sundays
-291,A2,7,woche,main,Arbeitstag,der,-e,Noun,,,working day
-292,A2,7,woche,sub,Werktag,der,-e,Noun,,,weekday / working day
-293,A2,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,,,unit of time
-294,A2,7,zeitmaße,main,Woche,die,-n,Noun,,,week
-295,A2,7,zeitmaße,main,Jahr,das,-e,Noun,,,year
-296,A2,8,A,main,Angebot,das,-e,Noun,,,offer / deal
-297,A2,8,Ä,main,ändern,,,Verb,ändert,hat geändert,to change / alter
-298,A2,8,A,main,anders,,,Other,,,differently / otherwise
-299,A2,8,A,main,anfangen,,,Verb,fängt an,hat angefangen,to begin / start
-300,A2,8,A,main,Anfang,der,¨-e,Noun,,,beginning
-301,A2,8,A,main,Angst,die,¨-e,Noun,,,fear / anxiety
-302,A2,8,A,main,ankommen,,,Verb,kommt an,,to arrive
-303,A2,8,A,main,anmachen,,,Verb,macht an,hat angemacht,to turn on / switch on
-304,A2,8,A,main,anmelden,,,Verb,,hat angemeldet,to register / log in
-305,A2,8,A,main,Anmeldung,die,-en,Noun,,,registration
-306,A2,8,A,main,anrufen,,,Verb,ruft an,hat angerufen,to call / phone
-307,A2,8,A,main,Anruf,der,-e,Noun,,,phone call
-308,A2,8,A,main,ansehen,,,Verb,sieht an,hat angesehen,to look at / watch
-309,A2,8,A,main,antworten,,,Verb,antwortet,hat geantwortet,to answer
-310,A2,8,A,main,Anzeige,die,-n,Noun,,,advertisement / notice
-311,A2,8,A,main,abgeben,,,Verb,gibt ab,,to hand in / submit
-312,A2,8,A,main,abholen,,,Verb,holt ab,hat abgeholt,to pick up / collect
-313,A2,8,A,main,abschließen,,,Verb,,hat abgeschlossen,to lock / conclude
-314,A2,8,A,main,Adresse,die,-n,Noun,,,address
-315,A2,8,A,main,aktiv,,,Other,,,active
-316,A2,8,A,main,als,,,Other,,,as / when / than
-317,A2,8,A,main,alt,,,Other,,,old
-318,A2,8,A,main,Alter,das,,Noun,,,age
-319,A2,8,A,main,an,,,Other,,,at / on / to
-320,A2,8,A,main,anbieten,,,Verb,bietet an,,to offer
-321,A2,9,A,main,aus,,,Other,,,from / out of
-322,A2,9,A,main,Ausbildung,die,-en,Noun,,,training / apprenticeship
-323,A2,9,A,main,Ausflug,der,¨-e,Noun,,,excursion / day trip
-324,A2,9,A,main,ausfüllen,,,Verb,,,to fill in
-325,A2,9,A,main,Ausgang,der,¨-e,Noun,,,exit
-326,A2,9,A,main,ausgehen,,,Verb,geht aus,,to go out
-327,A2,9,A,main,Auskunft,die,¨-e,Noun,,,information
-328,A2,9,A,main,Ausland,das,,Noun,,,abroad
-329,A2,9,A,main,auspacken,,,Verb,packt aus,hat ausgepackt,to unpack
-330,A2,9,A,main,ausruhen,,,Verb,ruht aus,,to rest / relax
-331,A2,9,A,main,aussehen,,,Verb,sieht aus,,to look / appear
-332,A2,9,A,main,außer,,,Other,,,except / besides
-333,A2,9,A,main,aussprechen,,,Verb,spricht aus,hat ausgesprochen,to pronounce
-334,A2,9,A,main,aussteigen,,,Verb,steigt aus,,to get off (vehicle)
-335,A2,9,A,main,Ausstellung,die,-en,Noun,,,exhibition
-336,A2,9,A,main,Ausweis,der,-e,Noun,,,ID card
-337,A2,9,A,main,Auto,das,-s,Noun,,,car
-338,A2,9,A,main,arbeiten,,,Verb,arbeitet,hat gearbeitet,to work
-339,A2,9,A,main,Arbeit,die,-en,Noun,,,work / job
-340,A2,9,Ä,main,ärgern,,,Verb,arm,,to annoy / get angry
-341,A2,9,A,main,auch,,,Other,,,also / too
-342,A2,9,A,main,auf,,,Other,,,on / onto / open
-343,A2,9,A,main,auf,,,Other,,,on / up (prefix)
-344,A2,9,A,main,aufhören,,,Verb,,,to stop / quit
-345,A2,9,A,main,aufmachen,,,Verb,macht auf,hat aufgemacht,to open
-346,A2,9,A,main,aufpassen,,,Verb,passt auf,hat aufgepasst,to pay attention / watch out
-347,A2,9,A,main,aufräumen,,,Verb,räumt auf,hat aufgeräumt,to tidy up
-348,A2,9,A,main,aufregend,,,Other,,,exciting
-349,A2,9,A,main,aufstehen,,,Verb,steht auf,ist aufgestan,to get up
-350,A2,9,A,main,Aufzug,der,¨-e,Noun,,,elevator / lift
-351,A2,9,A,main,Auge,das,-n,Noun,,,eye
-352,A2,10,B,main,beenden,,,Verb,beendet,hat beendet,to end / finish
-353,A2,10,B,main,beginnen,,,Verb,beginnt,hat begonnen,to begin
-354,A2,10,B,main,begründen,,,Verb,begründet,hat begründet,to give reasons / justify
-355,A2,10,B,main,bei,,,Other,,,at / near / with
-356,A2,10,B,main,beide,,,Other,,,both
-357,A2,10,B,main,Bein,das,-e,Noun,,,leg
-358,A2,10,B,main,bekannt,,,Other,,,known / familiar
-359,A2,10,B,main,bekommen,,,Verb,bekommt,hat benutzt,to get / receive
-360,A2,10,B,main,bequem,,,Other,,,comfortable
-361,A2,10,B,main,beraten,,,Verb,berät,,to advise
-362,A2,10,B,main,Berg,der,-e,Noun,,,mountain
-363,A2,10,B,main,berichten,,,Verb,berichtet,hat berichtet,to report
-364,A2,10,B,main,Beruf,der,-e,Noun,,,profession / job
-365,A2,10,B,main,beschreiben,,,Verb,,,to describe
-366,A2,10,B,main,beschweren,,,Verb,beschwert,,to complain
-367,A2,10,B,main,Baby,das,-s,Noun,,,baby
-368,A2,10,B,main,backen,,,Verb,,hat gebacken,to bake
-369,A2,10,B,main,Bäckerei,die,-en,Noun,,,bakery
-370,A2,10,B,main,baden,,,Verb,badet,hat gebadet,to bathe
-371,A2,10,B,main,Bahn,die,-en,Noun,,,train / railway
-372,A2,10,B,main,Bahnhof,der,¨-e,Noun,,,train station
-373,A2,10,B,main,Balkon,der,-e,Noun,,,balcony
-374,A2,10,B,main,Bank,die,-en,Noun,,,bank (financial)
-375,A2,10,B,main,Bank,die,¨-e,Noun,,,bench
-376,A2,10,B,main,Bauch,der,¨-e,Noun,,,stomach / belly
-377,A2,10,B,main,Baum,der,¨-e,Noun,,,tree
-378,A2,10,B,main,Baustelle,die,-n,Noun,,,construction site
-379,A2,10,B,main,bedanken,,,Verb,bedankt,,to thank / express gratitude
-380,A2,10,B,main,bedeuten,,,Verb,bedeutet,hat bedeutet,to mean
-381,A2,10,B,main,beeilen,,,Verb,beeilt,,to hurry
-382,A2,11,B,main,bleiben,,,Verb,bleibt,,to stay / remain
-383,A2,11,B,main,Bleistift,der,-e,Noun,,,pencil
-384,A2,11,B,main,braten,,,Verb,brät,,to fry / roast
-385,A2,11,B,main,brauchen,,,Verb,braucht,,to need
-386,A2,11,B,main,Brief,der,-e,Noun,,,letter
-387,A2,11,B,main,bringen,,,Verb,bringt,,to bring
-388,A2,11,B,main,Brot,das,-e,Noun,,,bread
-389,A2,11,B,main,Brötchen,das,-,Noun,,,bread roll
-390,A2,11,B,main,Buch,das,¨-er,Noun,,,book
-391,A2,11,B,main,buchen,,,Verb,bucht,hat gebucht,to book / reserve
-392,A2,11,B,main,Buchstabe,der,-n,Noun,,,letter (of the alphabet)
-393,A2,11,B,main,bunt,,,Other,,,colorful
-394,A2,11,B,main,Büro,das,-s,Noun,,,office
-395,A2,11,B,main,Bus,der,-se,Noun,,,bus
-396,A2,11,B,main,besonders,,,Other,,,especially / particularly
-397,A2,11,B,main,bestätigen,,,Verb,bestätigt,hat bestätigt,to confirm
-398,A2,11,B,main,bestehen,,,Verb,besteht,hat bestan,to pass (exam) / consist of
-399,A2,11,B,main,bestellen,,,Verb,bestellt,,to order
-400,A2,11,B,main,Besuch,der,-e,Noun,,,visit
-401,A2,11,B,main,besuchen,,,Verb,besucht,,to visit
-402,A2,11,B,main,Bett,das,-en,Noun,,,bed
-403,A2,11,B,main,bewölkt,,,Other,,,cloudy / overcast
-404,A2,11,W,main,Wolke,die,-n,Noun,,,cloud
-405,A2,11,B,main,bezahlen,,,Verb,bezahlt,hat bezahlt,to pay
-406,A2,11,B,main,Bibliothek,die,-en,Noun,,,library
-407,A2,11,B,main,Birne,die,-n,Noun,,,pear
-408,A2,11,B,main,bisschen,,,Verb,,,a little / a bit
-409,A2,11,B,main,bitte,,,Other,,,please / you're welcome
-410,A2,11,B,main,Bitte,die,-n,Noun,,,request
-411,A2,12,D,main,Datum,das,-en,Noun,,,date
-412,A2,12,D,main,dauern,,,Verb,dauert,,to last / take (time)
-413,A2,12,D,main,denken,,,Verb,denkt,hat gedacht,to think
-414,A2,12,D,main,deshalb,,,Other,,,therefore / that's why
-415,A2,12,D,main,deutlich,,,Other,,,clear / distinct
-416,A2,12,D,main,dick,,,Other,,,fat / thick
-417,A2,12,D,main,Ding,das,-e,Noun,,,thing
-418,A2,12,D,main,direkt,,,Other,,,direct / directly
-419,A2,12,D,main,Disco,die,-s /,Noun,,,disco / club
-420,A2,12,D,main,diskutieren,,,Verb,diskutiert,hat diskutiert,to discuss
-421,A2,12,D,main,Doppelzimmer,das,-,Noun,,,double room
-422,A2,12,D,main,Dorf,das,¨-er,Noun,,,village
-423,A2,12,D,main,draußen,,,Verb,,,outside
-424,A2,12,D,main,dringend,,,Other,,,urgent
-425,A2,12,D,main,drinnen,,,Verb,,,inside
-426,A2,12,D,main,drüben,,,Verb,drückt,hat gedrückt,over there / across
-427,A2,12,C,main,Café,das,-s,Noun,,,café
-428,A2,12,C,main,Cafeteria,die,-s,Noun,,,cafeteria
-429,A2,12,C,main,chatten,,,Verb,chattet,hat gechattet,to chat (online)
-430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager
-431,A2,12,C,main,Chefin,die,-nen,Noun,,,boss / manager (female)
-432,A2,12,C,main,Club,der,-s /,Noun,,,club
-433,A2,12,C,main,Computer,der,-,Noun,,,computer
-434,A2,12,D,main,da,,,Other,,,there / then
-435,A2,12,D,main,dafür/dagegen,,,Verb,,,for it / against it
-436,A2,12,D,main,damals,,,Other,,,back then / at that time
-437,A2,12,D,main,Dame,die,-n,Noun,,,lady
-438,A2,12,D,main,daneben,,,Verb,wo die,,next to it / beside it
-439,A2,12,D,main,Dank,der,,Noun,,,thanks / gratitude
-440,A2,12,D,main,danken,,,Verb,dankt,hat gedankt,to thank
-441,A2,12,D,main,Datei,die,-en,Noun,,,file (computer)
-442,A2,13,E,main,Einkaufs-,das,,Noun,,,shopping (compound prefix)
-443,A2,13,E,main,einladen,,,Verb,lädt ein,hat eingela,to invite
-444,A2,13,E,main,Einladung,die,-en,Noun,,,invitation
-445,A2,13,E,main,einpacken,,,Verb,packt ein,,to pack
-446,A2,13,E,main,einsteigen,,,Verb,steigt ein,,to board / get in (vehicle)
-447,A2,13,E,main,eintragen,,,Verb,trägt ein,,to enter / register (in a form)
-448,A2,13,E,main,Eintritt,der,-e,Noun,,,admission / entry
-449,A2,13,E,main,einverstanden,,,Verb,,,agreed / in agreement
-450,A2,13,S,main,sein,,,Verb,bin) einverstanden. ist,,to be
-451,A2,13,E,main,einzel-,,,Other,,,single- (prefix)
-452,A2,13,E,main,einziehen,,,Verb,zieht ein,,to move in
-453,A2,13,E,main,Eis,das,,Noun,,,ice cream / ice
-454,A2,13,E,main,empfehlen,,,Verb,empfiehlt,hat empfohlen,to recommend
-455,A2,13,E,main,Ende,das,-n,Noun,,,end
-456,A2,13,E,main,enden,,,Verb,endet,hat geendet,to end
-457,A2,13,E,main,endlich,,,Other,,,finally / at last
-458,A2,13,E,main,eng,,,Other,,,narrow / tight
-459,A2,13,E,main,entschuldigen,,,Verb,,,to excuse / apologize
-460,A2,13,I,main,Ich,,,Verb,hat entschuldigt,,I (pronoun)
-461,A2,13,E,main,Entschuldi-,die,,Noun,,,excuse me / apology
-462,A2,13,D,main,Drucker,der,-,Noun,,,printer
-463,A2,13,D,main,dunkel,,,Other,,,dark
-464,A2,13,D,main,dünn,,,Other,,,thin
-465,A2,13,D,main,durch,,,Other,,,through / by
-466,A2,13,D,main,dürfen,,,Verb,darf,,may / to be allowed to
-467,A2,13,D,main,Durst,der,,Noun,,,thirst
-468,A2,13,E,main,E-Book,das,-s,Noun,,,e-book
-469,A2,13,E,main,echt,,,Other,,,real / genuine / really
-470,A2,13,E,main,Ecke,die,-n,Noun,,,corner
-471,A2,13,E,main,egal,,,Other,,,it doesn't matter / all the same
-472,A2,13,E,main,Ehefrau,die,-en /,Noun,,,wife
-473,A2,13,E,main,Ehemann,der,¨-er/,Noun,,,husband
-474,A2,13,E,main,Ei,das,-er,Noun,,,egg
-475,A2,13,E,main,eilig,,,Other,,,urgent / in a hurry
-476,A2,13,E,main,Eingang,der,¨-e,Noun,,,entrance
-477,A2,13,E,main,einkaufen,,,Verb,kauft ein,hat eingekauft,to go shopping
-478,A2,14,F,main,falsch,,,Other,,,wrong / false
-479,A2,14,F,main,Familie,die,-n,Noun,,,family
-480,A2,14,F,main,Familien-,der,,Noun,,,family (compound prefix)
-481,A2,14,F,main,Fan,der,-s,Noun,,,fan
-482,A2,14,F,main,fantastisch,,,Other,,,fantastic
-483,A2,14,F,main,Farbe,die,-n,Noun,,,color
-484,A2,14,F,main,fast,,,Other,,,almost / nearly
-485,A2,14,F,main,faul,,,Other,,,lazy
-486,A2,14,F,main,fehlen,,,Verb,fehlt,hat gefehlt,to be missing / lack
-487,A2,14,F,main,Fehler,der,-,Noun,,,mistake / error
-488,A2,14,F,main,feiern,,,Verb,feiert,hat gefeiert,to celebrate
-489,A2,14,F,main,Fenster,das,-,Noun,,,window
-490,A2,14,F,main,fernsehen,,,Verb,sieht fern,hat ferngesehen,to watch TV
-491,A2,14,F,main,Fernseher,der,-,Noun,,,television set / TV
-492,A2,14,F,main,Fest,das,-e,Noun,,,festival / celebration
-493,A2,14,F,main,Festival,das,-s,Noun,,,festival
-494,A2,14,F,main,Firma,die,-en,Noun,,,company / firm
-495,A2,14,E,main,Erfahrung,die,-en,Noun,,,experience
-496,A2,14,E,main,erklären,,,Verb,erklärt,hat erklärt,to explain
-497,A2,14,E,main,erlauben,,,Verb,erlaubt,hat erlaubt,to allow / permit
-498,A2,14,E,main,Erlaubnis,die,,Noun,,,permission
-499,A2,14,E,main,erreichen,,,Verb,erreicht,,to reach / achieve
-500,A2,14,E,main,erst,,,Other,,,first / only / not until
-501,A2,14,E,main,Erwachsene,der,-n,Noun,,,adult
-502,A2,14,E,main,erzählen,,,Verb,erzählt,hat erzählt,to tell / narrate
-503,A2,14,E,main,essen,,,Verb,isst,hat gegessen,to eat
-504,A2,14,E,main,Essen,das,-,Noun,,,food / meal
-505,A2,14,E,main,etwas,,,Other,,,something / a little
-506,A2,14,F,main,Fach,das,¨-er,Noun,,,subject / compartment
-507,A2,14,A,main,Abfahrt,die,-en,Noun,,,departure
-508,A2,14,F,main,Fahrplan,der,¨-e,Noun,,,timetable / schedule
-509,A2,15,F,main,früher,,,Other,,,earlier / formerly
-510,A2,15,F,main,Frühstück,das,,Noun,,,breakfast
-511,A2,15,F,main,fühlen,,,Verb,fühlt,hat gefühlt,to feel
-512,A2,15,F,main,Führer-,der,,Noun,,,driving license (compound)
-513,A2,15,F,main,Führung,die,-en,Noun,,,guided tour / leadership
-514,A2,15,F,main,für,,,Other,,,for
-515,A2,15,F,main,furchtbar,,,Other,,,terrible / awful
-516,A2,15,F,main,Fuß,der,¨-e,Noun,,,foot
-517,A2,15,F,main,Fußball,der,¨-e,Noun,,,football / soccer
-518,A2,15,G,main,Gabel,die,-n,Noun,,,fork
-519,A2,15,G,main,Garage,die,-n,Noun,,,garage
-520,A2,15,G,main,geboren,,,Verb,,,born
-521,A2,15,G,main,gefallen,,,Verb,gefällt,hat gefallen,to like / please
-522,A2,15,G,main,gegen,,,Verb,,,against / around (time)
-523,A2,15,F,main,Fleisch,das,,Noun,,,meat
-524,A2,15,F,main,Flohmarkt,der,¨-e,Noun,,,flea market
-525,A2,15,F,main,Flug,der,¨-e,Noun,,,flight
-526,A2,15,F,main,Flughafen,der,¨,Noun,,,airport
-527,A2,15,F,main,Fluss,der,¨-e,Noun,,,river
-528,A2,15,F,main,Foto,das,-s,Noun,,,photo
-529,A2,15,F,main,Frau,die,-en,Noun,,,woman / wife / Mrs.
-530,A2,15,F,main,freiwillig,,,Other,,,voluntary
-531,A2,15,F,main,freuen,,,Verb,freut,hat gefreut,to be happy / look forward to
-532,A2,15,F,main,Freund,der,"-e,",Noun,,,friend / boyfriend
-533,A2,15,F,main,Freundin,die,-nen,Noun,,,friend / girlfriend
-534,A2,15,F,main,freundlich,,,Other,,,friendly / kind
-535,A2,15,F,main,frisch,,,Other,,,fresh
-536,A2,15,F,main,früh,,,Other,,,early
-537,A2,16,G,main,gewinnen,,,Verb,gewinnt,,to win
-538,A2,16,G,main,Gewitter,das,-,Noun,,,thunderstorm
-539,A2,16,G,main,glauben,,,Verb,glaubt,hat geglaubt,to believe
-540,A2,16,G,main,gleich,,,Other,,,same / immediately
-541,A2,16,G,main,Gleis,das,-e,Noun,,,track / platform (rail)
-542,A2,16,G,main,glücklich,,,Other,,,happy / lucky
-543,A2,16,G,main,Glück-,der,,Noun,,,congratulations (compound)
-544,A2,16,G,main,gratulieren,,,Verb,gratuliert,hat gratuliert,to congratulate
-545,A2,16,G,main,grillen,,,Verb,grillt,hat gegrillt,to grill / barbecue
-546,A2,16,G,main,Grippe,die,,Noun,,,flu / influenza
-547,A2,16,G,main,groß,,,Other,,,big / tall
-548,A2,16,G,main,Größe,die,-n,Noun,,,size / height
-549,A2,16,G,main,Gruß,der,¨-e,Noun,,,greeting
-550,A2,16,G,main,günstig,,,Other,,,cheap / favorable
-551,A2,16,A,main,am,,,Other,,,at the / on the
-552,A2,16,H,main,Haar,das,-e,Noun,,,hair
-553,A2,16,H,main,Hähnchen,das,-,Noun,,,chicken
-554,A2,16,G,main,Gehalt,das,¨-er,Noun,,,salary / wage
-555,A2,16,G,main,gehören,,,Verb,gehört,hat gehört,to belong to
-556,A2,16,G,main,Geld,das,,Noun,,,money
-557,A2,16,G,main,Geldbörse,die,-n,Noun,,,purse / wallet
-558,A2,16,G,main,genug,,,Other,,,enough
-559,A2,16,G,main,Gepäck,das,,Noun,,,luggage
-560,A2,16,G,main,gerade,,,Other,,,just / straight / at the moment
-561,A2,16,A,main,am,,,Other,,,at the / on the
-562,A2,16,G,main,Geschäft,das,-e,Noun,,,shop / store / business
-563,A2,16,G,main,Geschirr,das,,Noun,,,dishes / crockery
-564,A2,16,G,main,Gespräch,das,-e,Noun,,,conversation / talk
-565,A2,16,G,main,gestern,,,Verb,,,yesterday
-566,A2,16,G,main,Getränk,das,-e,Noun,,,drink / beverage
-567,A2,17,H,main,herein/rein,,,Other,,,come in / inside
-568,A2,17,H,main,Herd,der,-e,Noun,,,stove / cooker
-569,A2,17,H,main,Herr,der,-en,Noun,,,Mr. / gentleman
-570,A2,17,H,main,herunterladen,,,Verb,lädt herunter,hat heruntergela,to download
-571,A2,17,H,main,herzlich,,,Other,,,heartfelt / warm / cordial
-572,A2,17,H,main,Hilfe,die,,Noun,,,help / assistance
-573,A2,17,H,main,Himmel,der,,Noun,,,sky / heaven
-574,A2,17,H,main,hin/hin-/-hin,,,Other,,,there / towards (directional prefix)
-575,A2,17,H,main,hinten,,,Verb,,,at the back / behind
-576,A2,17,H,main,hinter,,,Other,,,behind
-577,A2,17,H,main,Hobby,das,-s,Noun,,,hobby
-578,A2,17,H,main,Hochzeit,die,-en,Noun,,,wedding
-579,A2,17,H,main,hoffen,,,Verb,hofft,hat gehofft,to hope
-580,A2,17,H,main,Homepage,die,-s,Noun,,,homepage / website
-581,A2,17,H,main,hören,,,Verb,hört,,to hear / listen
-582,A2,17,H,main,Hose,die,-n,Noun,,,trousers / pants
-583,A2,17,H,main,Hunger,der,,Noun,,,hunger
-584,A2,17,H,main,hallo,,,Other,,,hello
-585,A2,17,H,main,Hals,der,¨-e,Noun,,,throat / neck
-586,A2,17,H,main,halten,,,Verb,hält,hat gehalten,to hold / stop
-587,A2,17,H,main,Haltestelle,die,-n,Noun,,,bus stop / tram stop
-588,A2,17,H,main,hängen,,,Verb,hängt,,to hang
-589,A2,17,B,main,Bild,das,,Noun,,,picture / image
-590,A2,17,H,main,hart,,,Other,,,hard
-591,A2,17,H,main,hässlich,,,Other,,,ugly
-592,A2,17,H,main,Hauptstadt,die,¨-e,Noun,,,capital city
-593,A2,17,H,main,Haushalt,der,-e,Noun,,,household
-594,A2,17,H,main,Heft,das,-e,Noun,,,notebook / exercise book
-595,A2,17,H,main,Heimat,die,,Noun,,,home / homeland
-596,A2,17,H,main,heiraten,,,Verb,heiratet,,to marry
-597,A2,17,H,main,heißen,,,Verb,heißt,hat geheißen,to be called / named
-598,A2,17,H,main,Heizung,die,-en,Noun,,,heating
-599,A2,17,H,main,hell,,,Other,,,bright / light
-600,A2,17,H,main,Hemd,das,-en,Noun,,,shirt
-601,A2,17,H,main,her/her-/-her,,,Other,,,here / from there (directional prefix)
-602,A2,17,H,main,heraus/raus,,,Other,,,out / outside
-603,A2,18,J,main,jung,,,Other,,,young
-604,A2,18,J,main,Junge,der,-n,Noun,,,boy
-605,A2,18,K,main,Kaffee,der,-s,Noun,,,coffee
-606,A2,18,K,main,Kalender,der,-,Noun,,,calendar
-607,A2,18,K,main,kalt,,,Other,,,cold
-608,A2,18,K,main,Kamera,die,-s,Noun,,,camera
-609,A2,18,K,main,Kartoffel,die,-n,Noun,,,potato
-610,A2,18,K,main,Kaufhaus,das,-¨er,Noun,,,department store
-611,A2,18,K,main,Keller,der,-,Noun,,,cellar / basement
-612,A2,18,K,main,kennen,,,Verb,kennt,hat gekannt,to know (a person or place)
-613,A2,18,K,main,kennenlernen,,,Verb,lernt kennen,,to get to know / meet
-614,A2,18,K,main,Kenntnisse,die,,Noun,,,knowledge / skills
-615,A2,18,K,main,Kette,die,-n,Noun,,,chain / necklace
-616,A2,18,K,main,Kind,das,-er,Noun,,,child
-617,A2,18,I,main,immer,,,Other,,,always
-618,A2,18,I,main,Information,die,-en,Noun,,,information
-619,A2,18,I,main,informieren,,,Verb,,,to inform
-620,A2,18,I,main,Insel,die,-n,Noun,,,island
-621,A2,18,I,main,Instrument,das,-e,Noun,,,instrument
-622,A2,18,I,main,interessieren,,,Verb,interessiert,,to interest
-623,A2,18,I,main,international,,,Other,,,international
-624,A2,18,I,main,Internet,das,,Noun,,,internet
-625,A2,18,I,main,Interview,das,-s,Noun,,,interview
-626,A2,18,J,main,ja,,,Other,,,yes
-627,A2,18,J,main,Jacke,die,-n,Noun,,,jacket
-628,A2,18,J,main,jemand,,,Other,,,someone / somebody
-629,A2,18,J,main,joggen,,,Verb,joggt,,to jog / go jogging
-630,A2,18,J,main,Jugend-,die,,Noun,,,youth hostel (compound)
-631,A2,19,K,main,kostenlos,,,Other,,,free of charge
-632,A2,19,K,main,krank,,,Other,,,sick / ill
-633,A2,19,K,main,Kranken-,das,,Noun,,,hospital (compound)
-634,A2,19,K,main,Kranken-,die,,Noun,,,health insurance / nurse (compound)
-635,A2,19,K,main,Krankheit,die,-en,Noun,,,illness / disease
-636,A2,19,K,main,Kreuzung,die,-en,Noun,,,crossroads / intersection
-637,A2,19,K,main,Krimi,der,-s,Noun,,,crime novel / thriller
-638,A2,19,K,main,Küche,die,-n,Noun,,,kitchen
-639,A2,19,K,main,Kuchen,der,- kühl,Noun,,,cake
-640,A2,19,K,main,Kühl-,der,,Noun,,,refrigerator (compound)
-641,A2,19,K,main,Kultur,die,-en,Noun,,,culture
-642,A2,19,K,main,kümmern,,,Verb,kümmert,hat gekümmert,to take care of / look after
-643,A2,19,K,main,Kunde,der,-n /,Noun,,,customer (male)
-644,A2,19,K,main,Kundin,die,-nen,Noun,,,customer (female)
-645,A2,19,K,main,kündigen,,,Verb,kündigt,hat gekündigt,to quit / give notice
-646,A2,19,K,main,Kunst,die,¨-e,Noun,,,art
-647,A2,19,K,main,Kurs,der,-e,Noun,,,course / class
-648,A2,19,L,main,lachen,,,Verb,lacht,hat gelacht,to laugh
-649,A2,19,L,main,Laden,der,¨-,Noun,,,shop / store
-650,A2,19,L,main,Lampe,die,-n,Noun,,,lamp / light
-651,A2,19,W,main,wohnen?,,,Other,,,to live / reside
-652,A2,19,L,main,Landschaft,die,-en,Noun,,,landscape / scenery
-653,A2,19,K,main,Kirche,die,-n,Noun,,,church
-654,A2,19,K,main,Klavier,das,-e,Noun,,,piano
-655,A2,19,K,main,Kleid,das,-er,Noun,,,dress
-656,A2,19,U,main,und,,,Other,,,and
-657,A2,19,K,main,klein,,,Other,,,small / little
-658,A2,19,K,main,klug,,,Other,,,clever / smart
-659,A2,19,K,main,kochen,,,Verb,kocht,,to cook
-660,A2,19,K,main,Koffer,der,-,Noun,,,suitcase
-661,A2,19,K,main,Kollegin,die,-nen,Noun,,,colleague (female)
-662,A2,19,K,main,komisch,,,Other,,,strange / funny / odd
-663,A2,19,K,main,komisch,,,Other,,,strange / funny / odd
-664,A2,19,K,main,kommen,,,Verb,kommt,,to come
-665,A2,19,K,main,können,,,Verb,kann,hat gekonnt,can / to be able to
-666,A2,19,K,main,Kontakt,der,-e,Noun,,,contact
-667,A2,19,K,main,Konto,das,-en,Noun,,,bank account
-668,A2,19,K,main,kontrollieren,,,Verb,,,to check / control
-669,A2,19,K,main,Konzert,das,-e,Noun,,,concert
-670,A2,19,K,main,Kopf,der,¨-e,Noun,,,head
-671,A2,19,T,main,tun,,,Verb,z.,,to do
-672,A2,19,K,main,Kosmetik,die,,Noun,,,cosmetics / beauty products
-673,A2,19,I,main,interessant.,,,Other,,,interesting
-674,A2,20,L,main,Link,der,-s,Noun,,,link (web)
-675,A2,20,L,main,Lust,die,,Noun,,,desire / mood / inclination
-676,A2,20,L,main,lustig,,,Other,,,funny / amusing
-677,A2,20,M,main,machen,,,Verb,macht,hat gemacht,to make / do
-678,A2,20,E,main,Essen,das,,Noun,,,food / meal
-679,A2,20,M,main,Mädchen,das,-,Noun,,,girl
-680,A2,20,M,main,Magen,der,¨-,Noun,,,stomach
-681,A2,20,M,main,malen,,,Verb,malt,hat gemalt,to paint
-682,A2,20,M,main,man,,,Other,,,one / you (impersonal)
-683,A2,20,M,main,manch-,,,Other,,,some- (prefix)
-684,A2,20,M,main,Mann,der,¨-er,Noun,,,man / husband
-685,A2,20,M,main,Maschine,die,-n,Noun,,,machine
-686,A2,20,M,main,meinen,,,Verb,meint,hat gemeint,to think / mean / believe
-687,A2,20,M,main,Meinung,die,-en,Noun,,,opinion
-688,A2,20,M,main,meist-,,,Other,,,most- (prefix)
-689,A2,20,L,main,lange,,,Other,,,for a long time / long
-690,A2,20,L,main,laufen,,,Verb,läuft,ist gelaufen,to run / walk
-691,A2,20,L,main,Leben,das,-,Noun,,,life
-692,A2,20,M,main,mittel,,,Other,,,medium / average
-693,A2,20,L,main,leihen,,,Verb,leiht,hat geliehen,to borrow / lend
-694,A2,20,L,main,lesen,,,Verb,liest,hat gelesen,to read
-695,A2,20,L,main,letzt-,,,Other,,,last- (prefix)
-696,A2,20,L,main,Leute,die,,Noun,,,people
-697,A2,20,L,main,lieben,,,Verb,liebt,hat geliebt,to love
-698,A2,20,L,main,liegen,,,Verb,liegt,,to lie / be located
-699,A2,21,M,main,Moment,der,-e,Noun,,,moment
-700,A2,21,M,main,morgen,,,Verb,,,tomorrow
-701,A2,21,M,main,Motor,der,-en,Noun,,,engine / motor
-702,A2,21,M,main,Mund,der,¨-er,Noun,,,mouth
-703,A2,21,M,main,Museum,das,-een,Noun,,,museum
-704,A2,21,M,main,Musik,die,,Noun,,,music
-705,A2,21,M,main,müssen,,,Verb,muss,,must / to have to
-706,A2,21,M,main,musste,,,Other,,,had to (past)
-707,A2,21,M,main,Mütze,die,-n,Noun,,,hat / cap
-708,A2,21,N,main,nach,,,Other,,,to / after / according to
-709,A2,21,N,main,Nachbar,der,"-n,",Noun,,,neighbor
-710,A2,21,N,main,Nachricht,die,-en,Noun,,,message / news
-711,A2,21,N,main,Nähe,die,,Noun,,,vicinity / nearness
-712,A2,21,N,main,Name,der,-n,Noun,,,name
-713,A2,21,N,main,nass,,,Other,,,wet
-714,A2,21,N,main,Natur,die,,Noun,,,nature
-715,A2,21,N,main,natürlich,,,Other,,,of course / naturally
-716,A2,21,N,main,neben,,,Verb,,,next to / beside
-717,A2,21,M,main,Mensch,der,-en,Noun,,,person / human being
-718,A2,21,M,main,merken,,,Verb,merkt,hat gemerkt,to notice / realize
-719,A2,21,M,main,Messe,die,-n,Noun,,,trade fair / mass (church)
-720,A2,21,M,main,Messer,das,-,Noun,,,knife
-721,A2,21,M,main,Miete,die,-n,Noun,,,rent
-722,A2,21,M,main,mieten,,,Verb,mietet,hat gemietet,to rent
-723,A2,21,M,main,Milch,die,,Noun,,,milk
-724,A2,21,M,main,Mineral-,das,,Noun,,,mineral water (compound)
-725,A2,21,M,main,mit,,,Other,,,with / by
-726,A2,21,M,main,Mitarbeiter,der,-,Noun,,,employee / staff member
-727,A2,21,M,main,Mittagessen,das,-,Noun,,,lunch
-728,A2,21,M,main,Mittel,das,-,Noun,,,means / remedy
-729,A2,21,M,main,Möbel,die,,Noun,,,furniture
-730,A2,21,M,main,Mobil-,das,,Noun,,,mobile phone (compound)
-731,A2,21,M,main,möchten,,,Verb,möchte,hat gemocht,would like to
-732,A2,21,M,main,Mode,die,-n,Noun,,,fashion
-733,A2,21,M,main,möglich,,,Other,,,possible
-734,A2,22,O,main,offen,,,Verb,,,open
-735,A2,22,Ö,main,öffnen,,,Verb,öffnet,hat geöffnet,to open
-736,A2,22,O,main,oft,,,Other,,,often
-737,A2,22,O,main,Ohr,das,-en,Noun,,,ear
-738,A2,22,Ö,main,Öl,das,-e,Noun,,,oil
-739,A2,22,O,main,online,,,Other,,,online
-740,A2,22,O,main,Orange,die,-n,Noun,,,orange (fruit)
-741,A2,22,O,main,Ordnung,die,-en,Noun,,,order / tidiness
-742,A2,22,O,main,organisieren,,,Verb,,,to organize
-743,A2,22,O,main,Ort,der,-e,Noun,,,place / location
-744,A2,22,P,main,Paar,das,-e,Noun,,,pair / couple
-745,A2,22,E,main,ein,,,Other,,,a / one
-746,A2,22,P,main,packen,,,Verb,packt,hat gepackt,to pack
-747,A2,22,P,main,Paket,das,-e,Noun,,,package / parcel
-748,A2,22,P,main,Partner,der,-,Noun,,,partner (male)
-749,A2,22,P,main,Partnerin,die,-nen,Noun,,,partner (female)
-750,A2,22,P,main,Party,die,-s,Noun,,,party
-751,A2,22,P,main,passieren,,,Verb,passiert,,to happen / occur
-752,A2,22,N,main,nennen,,,Verb,nennt,,to name / call
-753,A2,22,N,main,nervös,,,Other,,,nervous
-754,A2,22,N,main,neu,,,Other,,,new
-755,A2,22,N,main,nicht,,,Other,,,not
-756,A2,22,N,main,nichts,,,Other,,,nothing
-757,A2,22,N,main,nie,,,Other,,,never
-758,A2,22,N,main,niemand,,,Other,,,nobody / no one
-759,A2,22,N,main,nirgends,,,Other,,,nowhere
-760,A2,22,N,main,noch,,,Other,,,still / yet
-761,A2,22,N,main,normal,,,Other,,,normal
-762,A2,22,N,main,Note,die,-n,Noun,,,grade / mark
-763,A2,22,N,main,Notiz,die,-en,Noun,,,note / memo
-764,A2,22,N,main,Nudel,die,-n,Noun,,,noodle / pasta
-765,A2,22,N,main,Nummer,die,-n,Noun,,,number
-766,A2,22,N,main,nur,,,Other,,,only / just
-767,A2,22,N,main,nützlich,,,Other,,,useful
-768,A2,22,O,main,oben,,,Verb,,,above / upstairs
-769,A2,22,O,main,oder,,,Other,,,or
-770,A2,23,P,main,Projekt,das,-e,Noun,,,project
-771,A2,23,P,main,Prospekt,der,-e,Noun,,,brochure / leaflet
-772,A2,23,P,main,prüfen,,,Verb,prüft,hat geprüft,to check / test
-773,A2,23,P,main,Prüfung,die,-en,Noun,,,exam / test
-774,A2,23,P,main,putzen,,,Verb,putzt,hat geputzt,to clean
-775,A2,23,Q,main,Qualität,die,-en,Noun,,,quality
-776,A2,23,Q,main,Quiz,das,,Noun,,,quiz
-777,A2,23,R,main,Radio,das,-s,Noun,,,radio
-778,A2,23,R,main,Rathaus,das,¨-er,Noun,,,town hall / city hall
-779,A2,23,R,main,Rätsel,das,-,Noun,,,puzzle / riddle
-780,A2,23,R,main,rauchen,,,Verb,raucht,hat geraucht,to smoke
-781,A2,23,R,main,Raum,der,¨-e,Noun,,,room / space
-782,A2,23,R,main,Rechnung,die,-en,Noun,,,bill / invoice
-783,A2,23,R,main,Regen,der,,Noun,,,rain
-784,A2,23,R,main,Reinigung,die,-en,Noun,,,cleaning / dry cleaner's
-785,A2,23,P,main,Pause,die,-n,Noun,,,break / pause
-786,A2,23,P,main,Person,die,-en,Noun,,,person
-787,A2,23,P,main,Pizza,die,-s/-en,Noun,,,pizza
-788,A2,23,P,main,Plakat,das,-e,Noun,,,poster
-789,A2,23,P,main,Plan,der,¨-e,Noun,,,plan
-790,A2,23,P,main,Platz,der,¨-e,Noun,,,place / seat / square
-791,A2,23,P,main,plötzlich,,,Other,,,suddenly
-792,A2,23,P,main,Polizei,die,,Noun,,,police
-793,A2,23,P,main,Portion,die,-en,Noun,,,portion / serving
-794,A2,23,P,main,Poster,das,-,Noun,,,poster
-795,A2,23,P,main,Praktikum,das,-a,Noun,,,internship
-796,A2,23,P,main,Praxis,die,-en,Noun,,,practice / doctor's office
-797,A2,23,P,main,Preis,der,-e,Noun,,,price
-798,A2,23,P,main,preiswert,,,Other,,,good value / affordable
-799,A2,23,P,main,pro,,,Other,,,per
-800,A2,23,P,main,probieren,,,Verb,probiert,,to try / taste
-801,A2,23,P,main,Problem,das,-e,Noun,,,problem
-802,A2,24,R,main,rund,,,Other,,,round / about
-803,A2,24,R,main,Rundgang,der,¨-e,Noun,,,tour / round trip
-804,A2,24,S,main,Sache,die,-n,Noun,,,thing / matter
-805,A2,24,S,main,Saft,der,¨-e,Noun,,,juice
-806,A2,24,S,main,sagen,,,Verb,sagt,hat gesagt,to say / tell
-807,A2,24,S,main,Salat,der,-e,Noun,,,salad
-808,A2,24,S,main,Salz,das,-e,Noun,,,salt
-809,A2,24,S,main,sammeln,,,Verb,sammelt,,to collect
-810,A2,24,S,main,Satz,der,¨-e,Noun,,,sentence / set
-811,A2,24,S,main,Schalter,der,-,Noun,,,counter / switch / ticket window
-812,A2,24,S,main,scharf,,,Other,,,sharp / spicy
-813,A2,24,S,main,scheinen,,,Verb,scheint,,to shine / seem
-814,A2,24,S,main,schenken,,,Verb,schenkt,hat geschenkt,to give (as a gift)
-815,A2,24,S,main,Schere,die,-n,Noun,,,scissors
-816,A2,24,S,main,schicken,,,Verb,schickt,hat geschickt,to send
-817,A2,24,S,main,Schiff,das,-e,Noun,,,ship
-818,A2,24,S,main,Schirm,der,,Noun,,,umbrella / screen
-819,A2,24,R,main,Reise,die,-n,Noun,,,journey / trip
-820,A2,24,R,main,Reisebüro,das,-s,Noun,,,travel agency
-821,A2,24,R,main,Reiseführer,der,-,Noun,,,travel guide
-822,A2,24,R,main,reisen,,,Verb,reist,,to travel
-823,A2,24,R,main,reiten,,,Verb,reitet,ist geritten,to ride (horse)
-824,A2,24,R,main,renovieren,,,Verb,renoviert,hat renoviert,to renovate
-825,A2,24,R,main,Rentnerin,die,-nen,Noun,,,pensioner (female)
-826,A2,24,R,main,Reparatur,die,-en,Noun,,,repair
-827,A2,24,R,main,reservieren,,,Verb,reserviert,,to reserve
-828,A2,24,R,main,Rest,der,-e,Noun,,,rest / remainder
-829,A2,24,R,main,Restaurant,das,-s,Noun,,,restaurant
-830,A2,24,R,main,Rezeption,die,en,Noun,,,reception (desk)
-831,A2,24,R,main,richtig,,,Other,,,correct / right
-832,A2,24,R,main,riechen,,,Verb,riecht,hat gerochen,to smell
-833,A2,24,R,main,Rind,das,,Noun,,,beef / cattle
-834,A2,24,R,main,Rose,die,-n,Noun,,,rose
-835,A2,24,R,main,Rücken,der,-,Noun,,,back (body)
-836,A2,24,R,main,rufen,,,Verb,ruft,hat gerufen,to call / shout
-837,A2,24,R,main,Ruhe,die,,Noun,,,quiet / peace / rest
-838,A2,24,R,main,ruhig,,,Other,,,quiet / calm
-839,A2,25,S,main,Schüler,der,- /,Noun,,,pupil / school student (male)
-840,A2,25,S,main,Schülerin,die,-nen,Noun,,,pupil / school student (female)
-841,A2,25,S,main,schwach,,,Other,,,weak
-842,A2,25,S,main,schwierig,,,Other,,,difficult
-843,A2,25,S,main,schwimmen,,,Verb,schwimmt,ist geschwommen,to swim
-844,A2,25,S,main,See,der,-n,Noun,,,lake
-845,A2,25,S,main,See,die,,Noun,,,sea
-846,A2,25,S,main,sehen,,,Verb,sieht,hat gesehen,to see
-847,A2,25,S,main,Sehens-,die,,Noun,,,tourist attraction (compound)
-848,A2,25,S,main,sehr,,,Other,,,very
-849,A2,25,S,main,Seife,die,-n,Noun,,,soap
-850,A2,25,S,main,Service,der,,Noun,,,service
-851,A2,25,S,main,setzen,,,Verb,setzt,hat gesetzt,to sit down / place
-852,A2,25,S,main,schlecht,,,Other,,,bad / poor
-853,A2,25,S,main,schließen,,,Verb,schließt,,to close / shut
-854,A2,25,S,main,Schluss,der,¨-e,Noun,,,end / conclusion
-855,A2,25,S,main,Schlüssel,der,-,Noun,,,key
-856,A2,25,S,main,schmecken,,,Verb,schmeckt,,to taste
-857,A2,25,S,main,Schmerz,der,-en,Noun,,,pain / ache
-858,A2,25,S,main,schneien,,,Verb,schneit,hat geschneit,to snow
-859,A2,25,S,main,schnell,,,Other,,,fast / quick
-860,A2,25,S,main,schon,,,Other,,,already
-861,A2,25,S,main,schön,,,Other,,,beautiful / nice
-862,A2,25,S,main,Schrank,der,¨-e,Noun,,,cupboard / wardrobe
-863,A2,25,S,main,schrecklich,,,Other,,,terrible / awful
-864,A2,25,S,main,schreiben,,,Verb,schreibt,hat geschrieben,to write
-865,A2,25,S,main,schriftlich,,,Other,,,in writing / written
-866,A2,25,S,main,Schuh,der,-e,Noun,,,shoe
-867,A2,25,S,main,Schule,die,-n,Noun,,,school
-868,A2,26,S,main,spielen,,,Verb,spielt,,to play
-869,A2,26,S,main,Sport,der,,Noun,,,sport / sports
-870,A2,26,S,main,Sprache,die,-n,Noun,,,language
-871,A2,26,S,main,sprechen,,,Verb,spricht,hat gesprochen,to speak / talk
-872,A2,26,S,main,Sprech-,die,,Noun,,,office hours (compound)
-873,A2,26,S,main,Stadt,die,¨-e,Noun,,,city / town
-874,A2,26,S,main,stattfinden,,,Verb,,,to take place / occur
-875,A2,26,S,main,stehen,,,Verb,steht,,to stand
-876,A2,26,S,main,Stelle,die,-n,Noun,,,position / job / place
-877,A2,26,S,main,stellen,,,Verb,stellt,,to place / put
-878,A2,26,S,main,sterben,,,Verb,stirbt,ist gestorben,to die
-879,A2,26,S,main,Stiefel,der,-,Noun,,,boot
-880,A2,26,S,main,Stipen-,das,,Noun,,,scholarship (compound)
-881,A2,26,S,main,Stock,der,¨-e;,Noun,,,floor / storey
-882,A2,26,S,main,Strand,der,¨-e,Noun,,,beach
-883,A2,26,S,main,Straße,die,-n,Noun,,,street / road
-884,A2,26,S,main,streiten,,,Verb,streitet,hat gestritten,to argue / fight
-885,A2,26,S,main,singen,,,Verb,singt,,to sing
-886,A2,26,S,main,Situation,die,-en,Noun,,,situation
-887,A2,26,S,main,sitzen,,,Verb,sitzt,,to sit
-888,A2,26,S,main,Ski,der,"-, -er",Noun,,,ski
-889,A2,26,S,main,so,,,Other,,,so / like that
-890,A2,26,S,main,Sofa,das,-s,Noun,,,sofa / couch
-891,A2,26,S,main,sofort,,,Other,,,immediately
-892,A2,26,S,main,sogar,,,Other,,,even / in fact
-893,A2,26,S,main,sollen,,,Verb,soll,,should / to be supposed to
-894,A2,26,S,main,Sonne,die,-n,Noun,,,sun
-895,A2,26,S,main,spannend,,,Other,,,exciting / thrilling
-896,A2,26,S,main,sparen,,,Verb,spart,hat gespart,to save (money)
-897,A2,26,S,main,Spaß,der,,Noun,,,fun / joke
-898,A2,26,S,main,Spazier-,der,,Noun,,,walk (compound)
-899,A2,26,S,main,speichern,,,Verb,speichert,hat gespeichert,to save (digital)
-900,A2,26,S,main,Speisekarte,die,-n,Noun,,,menu
-901,A2,26,S,main,Spiel,das,-e,Noun,,,game / play
-902,A2,27,T,main,teilnehmen,,,Verb,nimmt teil,hat teilgenommen,to participate / take part
-903,A2,27,T,main,Telefon,das,-e,Noun,,,telephone / phone
-904,A2,27,T,main,Teller,der,-,Noun,,,plate
-905,A2,27,T,main,Tennis,das,,Noun,,,tennis
-906,A2,27,T,main,Tipp,der,-s,Noun,,,tip / hint
-907,A2,27,T,main,Torte,die,-n,Noun,,,layer cake / gateau
-908,A2,27,T,main,Tourist,der,"-en,",Noun,,,tourist
-909,A2,27,T,main,tragen,,,Verb,trägt,hat getragen,to carry / wear
-910,A2,27,T,main,trainieren,,,Verb,trainiert,hat trainiert,to train
-911,A2,27,T,main,Training,das,-s,Noun,,,training
-912,A2,27,T,main,Traum,der,¨-e,Noun,,,dream
-913,A2,27,S,main,Student,der,"-en,",Noun,,,"student (university, male)"
-914,A2,27,S,main,studieren,,,Verb,studiert,hat studiert,to study (university)
-915,A2,27,S,main,Studium,das,,Noun,,,studies / degree
-916,A2,27,S,main,super,,,Other,,,great / super
-917,A2,27,S,main,Supermarkt,der,¨-e,Noun,,,supermarket
-918,A2,27,S,main,Suppe,die,-n,Noun,,,soup
-919,A2,27,S,main,süß,,,Other,,,sweet
-920,A2,27,S,main,Süßigkeiten,die,,Noun,,,sweets / candy
-921,A2,27,S,main,sympathisch,,,Other,,,likeable / nice
-922,A2,27,T,main,Tablet,das,-s,Noun,,,tablet (device)
-923,A2,27,T,main,Tablette,die,-n,Noun,,,tablet / pill
-924,A2,27,T,main,tanzen,,,Verb,tanzt,,to dance
-925,A2,27,T,main,Tasche,die,-n,Noun,,,bag / pocket
-926,A2,27,T,main,Taschengeld,das,,Noun,,,pocket money / allowance
-927,A2,27,T,main,Tasse,die,-n,Noun,,,cup
-928,A2,27,T,main,Taxi,das,-s,Noun,,,taxi
-929,A2,27,T,main,Tee,der,-s,Noun,,,tea
-930,A2,28,U,main,unbedingt,,,Other,,,absolutely / by all means
-931,A2,28,U,main,und,,,Other,,,and
-932,A2,28,U,main,Unfall,der,¨-e,Noun,,,accident
-933,A2,28,U,main,Universität,die,-en,Noun,,,university
-934,A2,28,U,main,Unterkunft,die,¨-e,Noun,,,accommodation
-935,A2,28,U,main,unternehmen,,,Verb,unternimmt,hat unternommen,to do / undertake
-936,A2,28,U,main,Unterricht,der,,Noun,,,lesson / class
-937,A2,28,U,main,unterschreiben,,,Verb,unterschreibt,hat unterschrieben,to sign
-938,A2,28,U,main,Unterschrift,die,-en,Noun,,,signature
-939,A2,28,U,main,Urlaub,der,-e,Noun,,,holiday / vacation
-940,A2,28,V,main,Veranstal-,die,,Noun,,,event (compound)
-941,A2,28,V,main,verbieten,,,Verb,,,to forbid / prohibit
-942,A2,28,V,main,verboten,,,Verb,,,forbidden / prohibited
-943,A2,28,V,main,verdienen,,,Verb,verdient,hat verdient,to earn
-944,A2,28,V,main,Verein,der,-e,Noun,,,club / association
-945,A2,28,V,main,vereinbaren,,,Verb,vereinbart,hat vereinbart,to agree on / arrange
-946,A2,28,V,main,vergessen,,,Verb,vergisst,,to forget
-947,A2,28,T,main,Treppe,die,-n,Noun,,,stairs / staircase
-948,A2,28,T,main,trinken,,,Verb,trinkt,hat getrunken,to drink
-949,A2,28,T,main,trocken,,,Verb,bis morgen!das,hat getan,dry
-950,A2,28,T,main,Tür,die,-en,Noun,,,door
-951,A2,28,Ü,main,üben,,,Verb,übt,hat geübt,to practice
-952,A2,28,Ü,main,über,,,Other,,,over / about / via
-953,A2,28,Ü,main,übermorgen,,,Verb,,,the day after tomorrow
-954,A2,28,Ü,main,übernachten,,,Verb,übernachtet,hat übernachtet,to stay overnight
-955,A2,28,Ü,main,übersetzen,,,Verb,übersetzt,hat übersetzt,to translate
-956,A2,28,Ü,main,Über-,die,,Noun,,,translation (compound)
-957,A2,28,Ü,main,überweisen,,,Verb,überweist,,to transfer (money)
-958,A2,28,U,main,Uhr,die,-en,Noun,,,clock / watch
-959,A2,28,U,main,um,,,Other,,,around / at (time)
-960,A2,28,U,main,umsteigen,,,Verb,steigt um,ist umgestiegen,to change (trains/buses)
-961,A2,28,U,main,umziehen,,,Verb,zieht um,ist umgezogen,to move house / change clothes
-962,A2,28,U,main,Umzug,der,¨-e,Noun,,,move / parade
-963,A2,29,V,main,Volleyball,der,¨-e,Noun,,,volleyball
-964,A2,29,V,main,von,,,Other,,,from / of / by
-965,A2,29,V,main,vor,,,Other,,,before / in front of
-966,A2,29,V,main,vorbei,,,Other,,,past / over
-967,A2,29,V,main,vorbereiten,,,Verb,bereitet vor,,to prepare
-968,A2,29,V,main,vorgestern,,,Verb,,,the day before yesterday
-969,A2,29,V,main,vorsichtig,,,Other,,,careful / cautious
-970,A2,29,V,main,vorstellen,,,Verb,stellt vor,,to introduce / imagine
-971,A2,29,V,main,vorwärts,,,Other,,,forward(s)
-972,A2,29,W,main,wach,,,Other,,,awake
-973,A2,29,W,main,Wagen,der,–,Noun,,,car / carriage
-974,A2,29,W,main,wählen,,,Verb,wählt,hat gewählt,to choose / vote
-975,A2,29,W,main,wahr,,,Other,,,true
-976,A2,29,W,main,Wald,der,¨-er,Noun,,,forest / woods
-977,A2,29,W,main,wandern,,,Verb,wandert,ist gewandert,to hike
-978,A2,29,W,main,wann,,,Other,,,when
-979,A2,29,W,main,warm,,,Other,,,warm
-980,A2,29,W,main,warten,,,Verb,wartet,,to wait
-981,A2,29,V,main,verkaufen,,,Verb,verkauft,hat verkauft,to sell
-982,A2,29,V,main,Verkehr,der,,Noun,,,traffic
-983,A2,29,V,main,verletzen,,,Verb,verletzt,,to hurt / injure
-984,A2,29,V,main,verlieben,,,Verb,verliebt,hat verliebt,to fall in love
-985,A2,29,V,main,verlieren,,,Verb,verliert,,to lose
-986,A2,29,V,main,vermieten,,,Verb,vermietet,hat vermietet,to rent out
-987,A2,29,V,main,Vermieter,der,- /,Noun,,,landlord (male)
-988,A2,29,V,main,Vermieterin,die,-nen,Noun,,,landlord (female)
-989,A2,29,V,main,verpassen,,,Verb,verpasst,hat verpasst,to miss
-990,A2,29,V,main,verreisen,,,Verb,verreist,,to go on a trip
-991,A2,29,V,main,verschieben,,,Verb,verschiebt,hat verschoben,to postpone / move
-992,A2,29,V,main,verschieden,,,Verb,,,different / various
-993,A2,29,V,main,Verspätung,die,-en,Noun,,,delay
-994,A2,29,V,main,versuchen,,,Verb,versucht,,to try
-995,A2,29,V,main,Vertrag,der,¨-e,Noun,,,contract
-996,A2,29,V,main,vielleicht,,,Other,,,maybe / perhaps
-997,A2,29,V,main,Vogel,der,¨-,Noun,,,bird
-998,A2,29,V,main,voll,,,Other,,,full
-999,A2,30,W,main,werden,,,Verb,wird,ist gewor,to become
-1000,A2,30,S,main,sie,,,Other,,,she / they
-1001,A2,30,W,main,Werkstatt,die,¨-en,Noun,,,workshop / garage (car)
-1002,A2,30,W,main,Wettbewerb,der,-e,Noun,,,competition
-1003,A2,30,W,main,wie,,,Other,,,how / as / like
-1004,A2,30,W,main,wieder,,,Other,,,again
-1005,A2,30,W,main,wiederholen,,,Verb,,,to repeat
-1006,A2,30,W,main,Wiederhören,das,-,Noun,,,goodbye (on phone)
-1007,A2,30,W,main,Wiedersehen,das,-,Noun,,,goodbye
-1008,A2,30,W,main,wirklich,,,Other,,,really / truly
-1009,A2,30,W,main,wissen,,,Verb,weiß,hat gewusst,to know (a fact)
-1010,A2,30,W,main,Witz,der,-e,Noun,,,joke
-1011,A2,30,W,main,wo,,,Other,,,where
-1012,A2,30,W,main,woher,,,Other,,,where from
-1013,A2,30,W,main,wohin,,,Other,,,where to
-1014,A2,30,W,main,wohnen,,,Verb,wohnt,,to live / reside
-1015,A2,30,W,main,Wohnung,die,-en,Noun,,,apartment / flat
-1016,A2,30,W,main,Wohnzimmer,das,-,Noun,,,living room
-1017,A2,30,W,main,Wäsche,die,-n,Noun,,,laundry / washing
-1018,A2,30,W,main,waschen,,,Verb,wäscht,hat gewaschen,to wash
-1019,A2,30,W,main,Wasser,das,,Noun,,,water
-1020,A2,30,W,main,Webseite,die,-n,Noun,,,website
-1021,A2,30,W,main,wecken,,,Verb,weckt,hat geweckt,to wake (someone)
-1022,A2,30,W,main,weg/weg-,,,Other,,,away / off (prefix)
-1023,A2,30,W,main,Weg,der,-e,Noun,,,way / path / route
-1024,A2,30,W,main,wegen,,,Verb,,,because of / due to
-1025,A2,30,W,main,weiblich,,,Other,,,female / feminine
-1026,A2,30,W,main,weich,,,Other,,,soft
-1027,A2,30,W,main,Wein,der,-e,Noun,,,wine
-1028,A2,30,W,main,weinen,,,Verb,weint,hat geweint,to cry
-1029,A2,30,W,main,weit,,,Other,,,far / wide
-1030,A2,30,W,main,weiter,,,Other,,,further / continue
-1031,A2,30,W,main,Welt,die,-en,Noun,,,world
-1032,A2,30,W,main,wenigstens,,,Other,,,at least
-1033,A2,31,Z,main,Zimmer,das,-,Noun,,,room
-1034,A2,31,Z,main,Zirkus,der,-se,Noun,,,circus
-1035,A2,31,Z,main,Zoo,der,-s,Noun,,,zoo
-1036,A2,31,Z,main,Zucker,der,,Noun,,,sugar
-1037,A2,31,Z,main,zufrieden,,,Verb,,,satisfied / content
-1038,A2,31,Z,main,Zug,der,¨-e,Noun,,,train
-1039,A2,31,Z,main,zuletzt,,,Other,,,lastly / last time
-1040,A2,31,Z,main,zumachen,,,Verb,macht zu,hat zugemacht,to close / shut
-1041,A2,31,Z,main,zusammen,,,Verb,,,together
-1042,A2,31,Z,main,zwischen,,,Verb,,,between
-1043,A2,31,W,main,wollen,,,Verb,will,hat gewollt,to want
-1044,A2,31,W,main,Workshop,der,-s,Noun,,,workshop
-1045,A2,31,W,main,Wort,das,¨-er,Noun,,,word
-1046,A2,31,W,main,wunderbar,,,Other,,,wonderful / marvelous
-1047,A2,31,W,main,Wunsch,der,¨-e,Noun,,,wish
-1048,A2,31,W,main,wünschen,,,Verb,,,to wish
-1049,A2,31,Z,main,Zahl,die,-en,Noun,,,number / figure
-1050,A2,31,Z,main,Zahn,der,¨-e,Noun,,,tooth
-1051,A2,31,Z,main,zeigen,,,Verb,zeigt,hat gezeigt,to show
-1052,A2,31,Z,main,Zeit,die,-en,Noun,,,time
-1053,A2,31,Z,main,Zelt,das,-e,Noun,,,tent
-1054,A2,31,Z,main,Zettel,der,-,Noun,,,note / slip of paper
-1055,A2,31,Z,main,Zeugnis,das,-se,Noun,,,report card / certificate
-1056,A2,31,Z,main,Ziel,das,-e,Noun,,,goal / destination / target
+id,level,source_page,section,entry_type,word,article,plural,word_type,verb_present,verb_perfect,translation_en,translation_tr
+1,A2,5,abkuerzungen,section_title,Abkürzung,die,-en,Noun,,,abbreviation,kısaltma
+2,A2,5,abkuerzungen,main,ca.,,,Other,,,approximately / ca.,yaklaşık
+3,A2,5,abkuerzungen,main,d.h.,,,Other,,,i.e. / that is,yani
+4,A2,5,abkuerzungen,main,ICE,,,Other,,,ICE (high-speed train),ICE (hızlı tren)
+5,A2,5,abkuerzungen,main,Lkw,der,-s,Noun,,,truck / lorry,kamyon
+6,A2,5,abkuerzungen,main,PC,der,-s,Noun,,,PC / personal computer,PC / kişisel bilgisayar
+7,A2,5,abkuerzungen,main,SMS,die,,Noun,,,text message / SMS,SMS / kısa mesaj
+8,A2,5,abkuerzungen,main,usw.,,,Other,,,etc. / and so on,vb. / ve benzeri
+9,A2,5,abkuerzungen,main,WC,das,-s,Noun,,,toilet / WC,tuvalet / WC
+10,A2,5,abkuerzungen,main,z.B.,,,Other,,,e.g. / for example,örn. / örneğin
+11,A2,5,anweisungssprache,section_title,Anweisungssprache,die,,Noun,,,language of instructions,talimat dili
+12,A2,5,anweisungssprache,main,Antwortbogen,der,-,Noun,,,answer sheet,cevap kağıdı
+13,A2,5,anweisungssprache,main,Aufgabe,die,-n,Noun,,,task / exercise,görev / alıştırma
+14,A2,5,anweisungssprache,main,Beispiel,das,-e,Noun,,,example,örnek
+15,A2,5,anweisungssprache,main,Durchsage,die,-n,Noun,,,announcement,duyuru
+16,A2,5,anweisungssprache,main,Lösung,die,-en,Noun,,,solution / answer,çözüm / cevap
+17,A2,5,anweisungssprache,main,markieren,,,Verb,,,to mark,işaretlemek
+18,A2,5,anweisungssprache,main,Prüfer,der,-,Noun,,,examiner,sınav görevlisi
+19,A2,5,anweisungssprache,sub,Prüferin,die,-nen,Noun,,,examiner (female),sınav görevlisi (kadın)
+20,A2,5,anweisungssprache,main,Prüfung,die,-en,Noun,,,exam / test,sınav / test
+21,A2,5,anweisungssprache,main,Punkt,der,-e,Noun,,,point,puan
+22,A2,5,anweisungssprache,main,Teil,der,-e,Noun,,,part,bölüm / kısım
+23,A2,5,anweisungssprache,main,Test,der,-s,Noun,,,test,test
+24,A2,5,anweisungssprache,main,Text,der,-e,Noun,,,text,metin
+25,A2,5,anweisungssprache,main,Wörterbuch,das,¨-er,Noun,,,dictionary,sözlük
+26,A2,5,berufe,section_title,Beruf,der,-e,Noun,,,profession / job,meslek / iş
+27,A2,5,berufe,main,Angestellte,der/die,-n,Noun,,,employee / salaried worker,çalışan / memur
+28,A2,5,berufe,main,Arzt,der,¨-e,Noun,,,doctor,doktor
+29,A2,5,berufe,sub,Ärztin,die,-nen,Noun,,,doctor (female),doktor (kadın)
+30,A2,5,berufe,main,Auszubildende,der/die,-n,Noun,,,trainee / apprentice,çırak / stajyer
+31,A2,5,berufe,main,Autor,der,-en,Noun,,,author,yazar
+32,A2,5,berufe,sub,Autorin,die,-nen,Noun,,,author (female),yazar (kadın)
+33,A2,5,berufe,main,Babysitter,der,-,Noun,,,babysitter,bebek bakıcısı
+34,A2,5,berufe,main,Bäcker,der,-,Noun,,,baker,fırıncı
+35,A2,5,berufe,sub,Bäckerin,die,-nen,Noun,,,baker (female),fırıncı (kadın)
+36,A2,5,berufe,main,Doktor,der,-en,Noun,,,doctor / PhD,doktor
+37,A2,5,berufe,sub,Doktorin,die,-nen,Noun,,,doctor / PhD (female),doktor (kadın)
+38,A2,5,berufe,main,Fahrer,der,-,Noun,,,driver,şoför
+39,A2,5,berufe,sub,Fahrerin,die,-nen,Noun,,,driver (female),şoför (kadın)
+40,A2,5,berufe,main,Friseur,der,-e,Noun,,,hairdresser,kuaför
+41,A2,5,berufe,sub,Friseurin,die,-nen,Noun,,,hairdresser (female),kuaför (kadın)
+42,A2,5,berufe,main,Handwerker,der,-,Noun,,,craftsman / tradesperson,zanaatkar
+43,A2,5,berufe,sub,Handwerkerin,die,-nen,Noun,,,craftswoman / tradesperson (female),zanaatkar (kadın)
+44,A2,5,berufe,main,Hausmann,der,¨-er,Noun,,,househusband,ev erkeği
+45,A2,5,berufe,sub,Hausfrau,die,-en,Noun,,,housewife,ev kadını
+46,A2,5,berufe,main,Journalist,der,-en,Noun,,,journalist,gazeteci
+47,A2,5,berufe,sub,Journalistin,die,-nen,Noun,,,journalist (female),gazeteci (kadın)
+48,A2,5,berufe,main,Kaufmann,der,Kaufleute,Noun,,,businessman / merchant,tüccar / işadamı
+49,A2,5,berufe,sub,Kauffrau,die,-en,Noun,,,businesswoman / merchant (female),iş kadını
+50,A2,5,berufe,main,Kellner,der,-,Noun,,,waiter,garson
+51,A2,5,berufe,sub,Kellnerin,die,-nen,Noun,,,waitress,garson (kadın)
+52,A2,5,berufe,main,Koch,der,¨-e,Noun,,,cook / chef,aşçı / şef
+53,A2,5,berufe,sub,Köchin,die,-nen,Noun,,,cook / chef (female),aşçı (kadın)
+54,A2,5,berufe,main,Krankenpfleger,der,-,Noun,,,male nurse,erkek hemşire
+55,A2,5,berufe,sub,Krankenschwester,die,-n,Noun,,,nurse,hemşire
+56,A2,5,berufe,main,Künstler,der,-,Noun,,,artist,sanatçı
+57,A2,5,berufe,sub,Künstlerin,die,-nen,Noun,,,artist (female),sanatçı (kadın)
+58,A2,5,berufe,main,Lehrer,der,-,Noun,,,teacher,öğretmen
+59,A2,5,berufe,sub,Lehrerin,die,-nen,Noun,,,teacher (female),öğretmen (kadın)
+60,A2,5,berufe,main,Mechaniker,der,-,Noun,,,mechanic,tamirci
+61,A2,5,berufe,sub,Mechanikerin,die,-nen,Noun,,,mechanic (female),tamirci (kadın)
+62,A2,5,berufe,main,Model,das,-s,Noun,,,model,model
+63,A2,5,berufe,main,Musiker,der,-,Noun,,,musician,müzisyen
+64,A2,5,berufe,sub,Musikerin,die,-nen,Noun,,,musician (female),müzisyen (kadın)
+65,A2,5,berufe,main,Polizist,der,-en,Noun,,,police officer,polis memuru
+66,A2,5,berufe,sub,Polizistin,die,-nen,Noun,,,police officer (female),polis memuru (kadın)
+67,A2,5,berufe,main,Rentner,der,-,Noun,,,retiree / pensioner,emekli
+68,A2,5,berufe,sub,Rentnerin,die,-nen,Noun,,,retiree / pensioner (female),emekli (kadın)
+69,A2,5,berufe,main,Sänger,der,-,Noun,,,singer,şarkıcı
+70,A2,5,berufe,sub,Sängerin,die,-nen,Noun,,,singer (female),şarkıcı (kadın)
+71,A2,5,berufe,main,Schauspieler,der,-,Noun,,,actor,aktör
+72,A2,5,berufe,sub,Schauspielerin,die,-nen,Noun,,,actress,aktris
+73,A2,5,berufe,main,Techniker,der,-,Noun,,,technician,teknisyen
+74,A2,5,berufe,sub,Technikerin,die,-nen,Noun,,,technician (female),teknisyen (kadın)
+75,A2,5,berufe,main,Verkäufer,der,-,Noun,,,salesperson,satış elemanı
+76,A2,5,berufe,sub,Verkäuferin,die,-nen,Noun,,,salesperson (female),satış elemanı (kadın)
+77,A2,5,familienmitglieder,section_title,Familienmitglied,das,-er,Noun,,,family member,aile üyesi
+78,A2,5,familienmitglieder,main,Bruder,der,¨-,Noun,,,brother,kardeş (erkek)
+79,A2,5,familienmitglieder,main,Cousin,der,-s,Noun,,,cousin (male),kuzen (erkek)
+80,A2,5,familienmitglieder,main,Cousine,die,-n,Noun,,,cousin (female),kuzen (kız)
+81,A2,5,familienmitglieder,main,Eltern,die,,Noun,,,parents,ebeveynler
+82,A2,5,familienmitglieder,main,Enkel,der,-,Noun,,,grandson,torun (erkek)
+83,A2,5,familienmitglieder,sub,Enkelin,die,-nen,Noun,,,granddaughter,torun (kız)
+84,A2,5,familienmitglieder,main,Geschwister,die,,Noun,,,siblings,kardeşler
+85,A2,5,familienmitglieder,main,Großeltern,die,,Noun,,,grandparents,büyük ebeveynler
+86,A2,5,familienmitglieder,main,Großmutter,die,¨-,Noun,,,grandmother,büyükanne
+87,A2,5,familienmitglieder,sub,Oma,die,-s,Noun,,,grandma,anna / anneanne (kontext)
+88,A2,5,familienmitglieder,main,Großvater,der,¨-,Noun,,,grandfather,dede / büyükbaba (kontext)
+89,A2,5,familienmitglieder,sub,Opa,der,-s,Noun,,,grandpa,dede
+90,A2,5,familienmitglieder,main,Kind,das,-er,Noun,,,child,çocuk
+91,A2,5,familienmitglieder,main,Mutter,die,¨-,Noun,,,mother,anne
+92,A2,5,familienmitglieder,sub,Mama,die,-s,Noun,,,mom / mum,anne / mama
+93,A2,5,familienmitglieder,main,Onkel,der,-,Noun,,,uncle,amca / dayı
+94,A2,5,familienmitglieder,main,Schwester,die,-n,Noun,,,sister,kız kardeş
+95,A2,5,familienmitglieder,main,Sohn,der,¨-e,Noun,,,son,oğul
+96,A2,5,familienmitglieder,main,Tante,die,-n,Noun,,,aunt,tante / teyze
+97,A2,5,familienmitglieder,main,Tochter,die,¨-,Noun,,,daughter,kız
+98,A2,5,familienmitglieder,main,Vater,der,¨-,Noun,,,father,baba
+99,A2,5,familienmitglieder,sub,Papa,der,-s,Noun,,,dad,baba
+100,A2,5,familienmitglieder,main,Verwandte,der/die,-n,Noun,,,relative,yakın / akraba
+101,A2,5,familienstand,section_title,Familienstand,der,,Noun,,,marital status,medeni durum
+102,A2,5,familienstand,main,ledig,,,Adjective,,,single / unmarried,bekar
+103,A2,5,familienstand,main,verheiratet,,,Adjective,,,married,evli
+104,A2,5,familienstand,main,getrennt,,,Adjective,,,separated,ayrılmış
+105,A2,5,familienstand,main,geschieden,,,Adjective,,,divorced,boşanmış
+106,A2,5,farben,section_title,Farbe,die,-n,Noun,,,color,renk
+107,A2,5,farben,main,blau,,,Adjective,,,blue,mavi
+108,A2,5,farben,main,braun,,,Adjective,,,brown,kahverengi
+109,A2,5,farben,main,gelb,,,Adjective,,,yellow,sarı
+110,A2,5,farben,main,grau,,,Adjective,,,gray,gri
+111,A2,5,farben,main,grün,,,Adjective,,,green,yeşil
+112,A2,5,farben,main,lila,,,Adjective,,,purple / lilac,mor
+113,A2,5,farben,main,orange,,,Adjective,,,orange,turuncu
+114,A2,5,farben,main,rosa,,,Adjective,,,pink,pembe
+115,A2,5,farben,main,rot,,,Adjective,,,red,kırmızı
+116,A2,5,farben,main,schwarz,,,Adjective,,,black,siyah
+117,A2,5,farben,main,weiß,,,Adjective,,,white,beyaz
+118,A2,5,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,,,compass direction,yön
+119,A2,5,himmelsrichtungen,main,Norden,der,,Noun,,,north,kuzey
+120,A2,5,himmelsrichtungen,main,Süden,der,,Noun,,,south,güney
+121,A2,5,himmelsrichtungen,main,Osten,der,,Noun,,,east,doğu
+122,A2,5,himmelsrichtungen,main,Westen,der,,Noun,,,west,batı
+123,A2,6,laender,section_title,Land,das,¨-er,Noun,,,country,ülke
+124,A2,6,laender,section_title,Nationalität,die,-en,Noun,,,nationality,milliyet
+125,A2,6,laender,main,Deutschland,,,Noun,,,Germany,Almanya
+126,A2,6,laender,sub,Deutsche,der/die,-n,Noun,,,German (person),Alman (kişi)
+127,A2,6,laender,sub,deutsch,,,Adjective,,,German,Alman
+128,A2,6,laender,main,Österreich,,,Noun,,,Austria,Avusturya
+129,A2,6,laender,sub,Österreicher,der,-,Noun,,,Austrian (male),Avusturyalı (erkek)
+130,A2,6,laender,sub,Österreicherin,die,-nen,Noun,,,Austrian (female),Avusturyalı (kadın)
+131,A2,6,laender,sub,österreichisch,,,Adjective,,,Austrian,Avusturyalı
+132,A2,6,laender,main,Schweiz,die,,Noun,,,Switzerland,İsviçre
+133,A2,6,laender,sub,Schweizer,der,-,Noun,,,Swiss (male),İsviçreli (erkek)
+134,A2,6,laender,sub,Schweizerin,die,-nen,Noun,,,Swiss (female),İsviçreli (kadın)
+135,A2,6,laender,sub,schweizerisch,,,Adjective,,,Swiss,İsviçre'ye ait
+136,A2,6,laender,main,Luxemburg,,,Noun,,,Luxembourg,Lüksemburg
+137,A2,6,laender,sub,Luxemburger,der,-,Noun,,,Luxembourger (male),Lüksemburglu (erkek)
+138,A2,6,laender,sub,Luxemburgerin,die,-nen,Noun,,,Luxembourger (female),Lüksemburglu (kadın)
+139,A2,6,laender,sub,luxemburgisch,,,Adjective,,,Luxembourgish,Lüksemburg (sıfat)
+140,A2,6,laender,main,Europa,,,Noun,,,Europe,Avrupa
+141,A2,6,laender,sub,Europäer,der,-,Noun,,,European (male),Avrupalı (erkek)
+142,A2,6,laender,sub,Europäerin,die,-nen,Noun,,,European (female),Avrupalı (kadın)
+143,A2,6,laender,sub,europäisch,,,Adjective,,,European,Avrupa'ya ait
+144,A2,6,waehrungen,section_title,Währung,die,-en,Noun,,,currency,para birimi
+145,A2,6,masse,section_title,Maß,das,-e,Noun,,,unit of measurement,ölçü birimi
+146,A2,6,waehrungen,main,Euro,der,,Noun,,,euro,euro
+147,A2,6,waehrungen,sub,Cent,der,,Noun,,,cent,cent
+148,A2,6,waehrungen,main,Franken,der,-,Noun,,,franc (Swiss),Frank
+149,A2,6,waehrungen,sub,Rappen,der,-,Noun,,,rappen (Swiss cent),rappen
+150,A2,6,masse,main,Meter,der,,Noun,,,meter,metre
+151,A2,6,masse,sub,Zentimeter,der,,Noun,,,centimeter,santimetre
+152,A2,6,masse,main,Kilometer,der,,Noun,,,kilometer,kilometre
+153,A2,6,masse,main,Prozent,das,,Noun,,,percent,yüzde
+154,A2,6,masse,main,Liter,der,,Noun,,,liter,litre
+155,A2,6,masse,main,Gramm,das,,Noun,,,gram,gram
+156,A2,6,masse,sub,Kilogramm,das,,Noun,,,kilogram,kilogram
+157,A2,6,masse,main,Grad,der,,Noun,,,degree,derece
+158,A2,6,schule,section_title,Schule,die,-n,Noun,,,school,okul
+159,A2,6,schule,section_title,Schulfach,das,¨-er,Noun,,,school subject,ders
+160,A2,6,schule,main,Abitur,das,,Noun,,,Abitur (university entrance exam),lise bitirme sınavı
+161,A2,6,schule,main,Direktor,der,-en,Noun,,,headmaster / principal,müdür
+162,A2,6,schule,main,Hausaufgabe,die,-n,Noun,,,homework,ödev
+163,A2,6,schule,main,Klasse,die,-n,Noun,,,class / grade,sınıf
+164,A2,6,schule,main,Klassenfahrt,die,-en,Noun,,,school trip,okul gezisi
+165,A2,6,schule,main,Sekretariat,das,-e,Noun,,,secretary's office,sekreterlik
+166,A2,6,schule,main,Stundenplan,der,¨-e,Noun,,,timetable / schedule,ders programı
+167,A2,6,schule,main,Biologie,,,Noun,,,biology,biyoloji
+168,A2,6,schule,main,Chemie,,,Noun,,,chemistry,kimya
+169,A2,6,schule,main,Deutsch,,,Noun,,,German (language,Almanca
+170,A2,6,schule,main,Englisch,,,Noun,,,English (language),İngilizce
+171,A2,6,schule,main,Französisch,,,Noun,,,French (language),Fransızca
+172,A2,6,schule,main,Geografie,,,Noun,,,geography,coğrafya
+173,A2,6,schule,main,Geschichte,,,Noun,,,history,tarih
+174,A2,6,schule,main,Kunst,die,,Noun,,,art,resim / sanat
+175,A2,6,schule,main,Latein,,,Noun,,,Latin,Latince
+176,A2,6,schule,main,Mathematik,,,Noun,,,mathematics,matematik
+177,A2,6,schule,main,Musik,die,,Noun,,,music,müzik
+178,A2,6,schule,main,Physik,,,Noun,,,physics,fizik
+179,A2,6,schule,main,Religion,die,-en,Noun,,,religion,din
+180,A2,6,schule,main,Sozialkunde,,,Noun,,,social studies / civics,sosyal bilgiler
+181,A2,6,schule,main,Sport,der,,Noun,,,PE / sports,beden eğitimi / spor
+182,A2,6,feiertage,section_title,Feiertag,der,-e,Noun,,,public holiday,resmi tatil
+183,A2,6,feiertage,main,Karneval,der,,Noun,,,carnival,karnaval
+184,A2,6,feiertage,main,Ostern,,,Noun,,,Easter,Paskalya
+185,A2,6,feiertage,main,Weihnachten,,,Noun,,,Christmas,Noel
+186,A2,6,feiertage,main,Neujahr,das,,Noun,,,New Year,Yeni Yıl
+187,A2,6,feiertage,main,Silvester,,,Noun,,,New Year's Eve,Yılbaşı gecesi
+188,A2,6,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,,,season,mevsim
+189,A2,6,jahreszeiten,main,Frühling,der,,Noun,,,spring,ilkbahar
+190,A2,6,jahreszeiten,sub,Frühjahr,das,,Noun,,,spring (early),ilkbahar (erken)
+191,A2,6,jahreszeiten,main,Sommer,der,,Noun,,,summer,yaz
+192,A2,6,jahreszeiten,main,Herbst,der,,Noun,,,autumn / fall,sonbahar
+193,A2,6,jahreszeiten,main,Winter,der,,Noun,,,winter,kış
+194,A2,6,monat,section_title,Monat,der,-e,Noun,,,month,ay
+195,A2,6,monat,main,Januar,der,,Noun,,,January,Ocak
+196,A2,6,monat,main,Februar,der,,Noun,,,February,Şubat
+197,A2,6,monat,main,März,der,,Noun,,,March,Mart
+198,A2,6,monat,main,April,der,,Noun,,,April,Nisan
+199,A2,6,monat,main,Mai,der,,Noun,,,May,Mayıs
+200,A2,6,monat,main,Juni,der,,Noun,,,June,Haziran
+201,A2,6,monat,main,Juli,der,,Noun,,,July,Temmuz
+202,A2,6,monat,main,August,der,,Noun,,,August,Ağustos
+203,A2,6,monat,main,September,der,,Noun,,,September,Eylül
+204,A2,6,monat,main,Oktober,der,,Noun,,,October,Ekim
+205,A2,6,monat,main,November,der,,Noun,,,November,Kasım
+206,A2,6,monat,main,Dezember,der,,Noun,,,December,Aralık
+207,A2,6,tageszeiten,section_title,Tageszeit,die,-en,Noun,,,time of day,günün zamanı
+208,A2,6,tageszeiten,main,Tag,der,-e,Noun,,,day,gün
+209,A2,6,tageszeiten,main,Morgen,der,-,Noun,,,morning,sabah
+210,A2,6,tageszeiten,main,Vormittag,der,-e,Noun,,,late morning,öğleden önce
+211,A2,6,tageszeiten,main,Mittag,der,-e,Noun,,,noon / midday,öğle
+212,A2,6,tageszeiten,main,Nachmittag,der,-e,Noun,,,afternoon,öğleden sonra
+213,A2,6,tageszeiten,main,Abend,der,-e,Noun,,,evening,akşam
+214,A2,6,tageszeiten,main,Nacht,die,¨-e,Noun,,,night,gece
+215,A2,6,tageszeiten,main,Mitternacht,die,,Noun,,,midnight,gece yarısı
+216,A2,6,tageszeiten,main,täglich,,,Adverb,,,daily,günlük
+217,A2,6,tageszeiten,main,tagsüber,,,Adverb,,,during the day,gün boyunca
+218,A2,6,tageszeiten,main,morgens,,,Adverb,,,in the morning,sabahları
+219,A2,6,tageszeiten,main,vormittags,,,Adverb,,,in the late morning,öğleden önce
+220,A2,6,tageszeiten,main,mittags,,,Adverb,,,at noon,öğle vakti
+221,A2,6,tageszeiten,main,nachmittags,,,Adverb,,,in the afternoon,öğleden sonraları
+222,A2,6,tageszeiten,main,abends,,,Adverb,,,in the evening,akşamları
+223,A2,6,tageszeiten,main,nachts,,,Adverb,,,at night,geceleri
+224,A2,7,zahlen,section_title,Zahlen,,,Noun,,,numbers,sayılar
+225,A2,7,zahlen,main,eins,,,Number,,,one,bir
+226,A2,7,zahlen,main,zwei,,,Number,,,two,iki
+227,A2,7,zahlen,main,drei,,,Number,,,three,üç
+228,A2,7,zahlen,main,vier,,,Number,,,four,dört
+229,A2,7,zahlen,main,fünf,,,Number,,,five,beş
+230,A2,7,zahlen,main,sechs,,,Number,,,six,altı
+231,A2,7,zahlen,main,sieben,,,Number,,,seven,yedi
+232,A2,7,zahlen,main,acht,,,Number,,,eight,sekiz
+233,A2,7,zahlen,main,neun,,,Number,,,nine,dokuz
+234,A2,7,zahlen,main,zehn,,,Number,,,ten,on
+235,A2,7,zahlen,main,elf,,,Number,,,eleven,on bir
+236,A2,7,zahlen,main,zwölf,,,Number,,,twelve,on iki
+237,A2,7,zahlen,main,dreizehn,,,Number,,,thirteen,on üç
+238,A2,7,zahlen,main,vierzehn,,,Number,,,fourteen,on dört
+239,A2,7,zahlen,main,fünfzehn,,,Number,,,fifteen,on beş
+240,A2,7,zahlen,main,sechzehn,,,Number,,,sixteen,on altı
+241,A2,7,zahlen,main,siebzehn,,,Number,,,seventeen,on yedi
+242,A2,7,zahlen,main,achtzehn,,,Number,,,eighteen,on sekiz
+243,A2,7,zahlen,main,neunzehn,,,Number,,,nineteen,on dokuz
+244,A2,7,zahlen,main,zwanzig,,,Number,,,twenty,yirmi
+245,A2,7,zahlen,main,einundzwanzig,,,Number,,,twenty-one,yirmi bir
+246,A2,7,zahlen,main,dreißig,,,Number,,,thirty,otuz
+247,A2,7,zahlen,main,vierzig,,,Number,,,forty,kırk
+248,A2,7,zahlen,main,fünfzig,,,Number,,,fifty,elli
+249,A2,7,zahlen,main,sechzig,,,Number,,,sixty,altmış
+250,A2,7,zahlen,main,siebzig,,,Number,,,seventy,yetmiş
+251,A2,7,zahlen,main,achtzig,,,Number,,,eighty,seksen
+252,A2,7,zahlen,main,neunzig,,,Number,,,ninety,doksan
+253,A2,7,zahlen,main,hundert,,,Number,,,hundred,yüz
+254,A2,7,zahlen,main,hunderteins,,,Number,,,one hundred and one,yüz bir
+255,A2,7,zahlen,main,zweihundert,,,Number,,,two hundred,iki yüz
+256,A2,7,zahlen,main,tausend,,,Number,,,thousand,bin
+257,A2,7,zahlen,main,zweitausendeins,,,Number,,,two thousand and one,iki bin bir
+258,A2,7,zahlen,main,Million,die,-en,Noun,,,million,milyon
+259,A2,7,zahlen,main,erste,,,Number,,,first,birinci
+260,A2,7,zahlen,main,zweite,,,Number,,,second,ikinci
+261,A2,7,zahlen,main,dritte,,,Number,,,third,üçüncü
+262,A2,7,zahlen,main,vierte,,,Number,,,fourth,dördüncü
+263,A2,7,zahlen,main,erstens,,,Adverb,,,firstly,birincisi
+264,A2,7,zahlen,main,zweitens,,,Adverb,,,secondly,ikincisi
+265,A2,7,zahlen,main,drittens,,,Adverb,,,thirdly,üçüncüsü
+266,A2,7,zahlen,main,viertens,,,Adverb,,,fourthly,dördüncüsü
+267,A2,7,zahlen,main,einmal,,,Adverb,,,once,bir kere
+268,A2,7,zahlen,main,zweimal,,,Adverb,,,twice,iki kere
+269,A2,7,zahlen,main,dreimal,,,Adverb,,,three times,üç kez
+270,A2,7,zahlen,main,viermal,,,Adverb,,,four times,dört kere
+271,A2,7,uhrzeit,section_title,Uhrzeit,die,,Noun,,,time of day,günün zamanı
+272,A2,7,uhrzeit,main,Sekunde,die,-n,Noun,,,second,saniye
+273,A2,7,uhrzeit,main,Minute,die,-n,Noun,,,minute,dakika
+274,A2,7,uhrzeit,main,Stunde,die,-n,Noun,,,hour,saat
+275,A2,7,woche,section_title,Wochentag,der,-e,Noun,,,weekday,hafta günü
+276,A2,7,woche,main,Wochenende,das,-n,Noun,,,weekend,hafta sonu
+277,A2,7,woche,main,Montag,der,,Noun,,,Monday,Pazartesi
+278,A2,7,woche,main,Dienstag,der,,Noun,,,Tuesday,Salı
+279,A2,7,woche,main,Mittwoch,der,,Noun,,,Wednesday,Çarşamba
+280,A2,7,woche,main,Donnerstag,der,,Noun,,,Thursday,Perşembe
+281,A2,7,woche,main,Freitag,der,,Noun,,,Friday,Cuma
+282,A2,7,woche,main,Samstag,der,,Noun,,,Saturday,Cumartesi
+283,A2,7,woche,main,Sonntag,der,,Noun,,,Sunday,Pazar
+284,A2,7,woche,sub,montags,,,Adverb,,,on Mondays,Pazartesileri
+285,A2,7,woche,sub,dienstags,,,Adverb,,,on Tuesdays,Salı günleri
+286,A2,7,woche,sub,mittwochs,,,Adverb,,,on Wednesdays,Çarşamba günleri
+287,A2,7,woche,sub,donnerstags,,,Adverb,,,on Thursdays,Perşembe günleri
+288,A2,7,woche,sub,freitags,,,Adverb,,,on Fridays,Cuma günleri
+289,A2,7,woche,sub,samstags,,,Adverb,,,on Saturdays,Cumartesi günleri
+290,A2,7,woche,sub,sonntags,,,Adverb,,,on Sundays,Pazar günleri
+291,A2,7,woche,main,Arbeitstag,der,-e,Noun,,,working day,çalışma günü
+292,A2,7,woche,sub,Werktag,der,-e,Noun,,,weekday / working day,hafta içi günü
+293,A2,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,,,unit of time,zaman ölçüsü
+294,A2,7,zeitmaße,main,Woche,die,-n,Noun,,,week,hafta
+295,A2,7,zeitmaße,main,Jahr,das,-e,Noun,,,year,yıl
+296,A2,8,A,main,Angebot,das,-e,Noun,,,offer / deal,teklif
+297,A2,8,Ä,main,ändern,,,Verb,ändert,hat geändert,to change / alter,değiştirmek
+298,A2,8,A,main,anders,,,Other,,,differently / otherwise,farklı
+299,A2,8,A,main,anfangen,,,Verb,fängt an,hat angefangen,to begin / start,başlamak
+300,A2,8,A,main,Anfang,der,¨-e,Noun,,,beginning,başlangıç
+301,A2,8,A,main,Angst,die,¨-e,Noun,,,fear / anxiety,korku
+302,A2,8,A,main,ankommen,,,Verb,kommt an,,to arrive,varmak
+303,A2,8,A,main,anmachen,,,Verb,macht an,hat angemacht,to turn on / switch on,açmak
+304,A2,8,A,main,anmelden,,,Verb,,hat angemeldet,to register / log in,kaydolmak / giriş yapmak
+305,A2,8,A,main,Anmeldung,die,-en,Noun,,,registration,kayıt
+306,A2,8,A,main,anrufen,,,Verb,ruft an,hat angerufen,to call / phone,telefonla aramak
+307,A2,8,A,main,Anruf,der,-e,Noun,,,phone call,telefon araması
+308,A2,8,A,main,ansehen,,,Verb,sieht an,hat angesehen,to look at / watch,bakmak / izlemek
+309,A2,8,A,main,antworten,,,Verb,antwortet,hat geantwortet,to answer,cevap vermek
+310,A2,8,A,main,Anzeige,die,-n,Noun,,,advertisement / notice,ilan / duyuru
+311,A2,8,A,main,abgeben,,,Verb,gibt ab,,to hand in / submit,teslim etmek
+312,A2,8,A,main,abholen,,,Verb,holt ab,hat abgeholt,to pick up / collect,almak
+313,A2,8,A,main,abschließen,,,Verb,,hat abgeschlossen,to lock / conclude,kilitlemek / sonuçlandırmak
+314,A2,8,A,main,Adresse,die,-n,Noun,,,address,adres
+315,A2,8,A,main,aktiv,,,Other,,,active,aktif
+316,A2,8,A,main,als,,,Other,,,as / when / than,olarak
+317,A2,8,A,main,alt,,,Other,,,old,eski
+318,A2,8,A,main,Alter,das,,Noun,,,age,yaş
+319,A2,8,A,main,an,,,Other,,,at / on / to,-de / -e
+320,A2,8,A,main,anbieten,,,Verb,bietet an,,to offer,teklif etmek
+321,A2,9,A,main,aus,,,Other,,,from / out of,den / dışarı
+322,A2,9,A,main,Ausbildung,die,-en,Noun,,,training / apprenticeship,eğitim / çıraklık
+323,A2,9,A,main,Ausflug,der,¨-e,Noun,,,excursion / day trip,gezi / piknik
+324,A2,9,A,main,ausfüllen,,,Verb,,,to fill in,doldurmak
+325,A2,9,A,main,Ausgang,der,¨-e,Noun,,,exit,çıkış
+326,A2,9,A,main,ausgehen,,,Verb,geht aus,,to go out,dışarı çıkmak
+327,A2,9,A,main,Auskunft,die,¨-e,Noun,,,information,bilgi
+328,A2,9,A,main,Ausland,das,,Noun,,,abroad,yurt dışı
+329,A2,9,A,main,auspacken,,,Verb,packt aus,hat ausgepackt,to unpack,açmak (paketi)
+330,A2,9,A,main,ausruhen,,,Verb,ruht aus,,to rest / relax,dinlenmek
+331,A2,9,A,main,aussehen,,,Verb,sieht aus,,to look / appear,görünmek
+332,A2,9,A,main,außer,,,Other,,,except / besides,dışında / hariç
+333,A2,9,A,main,aussprechen,,,Verb,spricht aus,hat ausgesprochen,to pronounce,telaffuz etmek
+334,A2,9,A,main,aussteigen,,,Verb,steigt aus,,to get off (vehicle),inmek (taşıttan)
+335,A2,9,A,main,Ausstellung,die,-en,Noun,,,exhibition,sergi
+336,A2,9,A,main,Ausweis,der,-e,Noun,,,ID card,kimlik
+337,A2,9,A,main,Auto,das,-s,Noun,,,car,araba
+338,A2,9,A,main,arbeiten,,,Verb,arbeitet,hat gearbeitet,to work,çalışmak
+339,A2,9,A,main,Arbeit,die,-en,Noun,,,work / job,iş / meslek
+340,A2,9,Ä,main,ärgern,,,Verb,arm,,to annoy / get angry,kızdırmak / sinirlendirmek
+341,A2,9,A,main,auch,,,Other,,,also / too,de / ayrıca
+342,A2,9,A,main,auf,,,Other,,,on / onto / open,üzerinde / üzerine / açık
+343,A2,9,A,main,auf,,,Other,,,on / up (prefix),üstünde / -e (önek)
+344,A2,9,A,main,aufhören,,,Verb,,,to stop / quit,bırakmak / durmak
+345,A2,9,A,main,aufmachen,,,Verb,macht auf,hat aufgemacht,to open,açmak
+346,A2,9,A,main,aufpassen,,,Verb,passt auf,hat aufgepasst,to pay attention / watch out,dikkat etmek
+347,A2,9,A,main,aufräumen,,,Verb,räumt auf,hat aufgeräumt,to tidy up,toparlamak / temizlemek
+348,A2,9,A,main,aufregend,,,Other,,,exciting,heyecan verici
+349,A2,9,A,main,aufstehen,,,Verb,steht auf,ist aufgestan,to get up,kalkmak
+350,A2,9,A,main,Aufzug,der,¨-e,Noun,,,elevator / lift,asansör
+351,A2,9,A,main,Auge,das,-n,Noun,,,eye,göz
+352,A2,10,B,main,beenden,,,Verb,beendet,hat beendet,to end / finish,bitirmek
+353,A2,10,B,main,beginnen,,,Verb,beginnt,hat begonnen,to begin,başlamak
+354,A2,10,B,main,begründen,,,Verb,begründet,hat begründet,to give reasons / justify,gerekçelendirmek
+355,A2,10,B,main,bei,,,Other,,,at / near / with,yanında / ile
+356,A2,10,B,main,beide,,,Other,,,both,her ikisi
+357,A2,10,B,main,Bein,das,-e,Noun,,,leg,bacak
+358,A2,10,B,main,bekannt,,,Other,,,known / familiar,tanınmış / bilinen
+359,A2,10,B,main,bekommen,,,Verb,bekommt,hat benutzt,to get / receive,almak / elde etmek
+360,A2,10,B,main,bequem,,,Other,,,comfortable,rahat
+361,A2,10,B,main,beraten,,,Verb,berät,,to advise,tavsiye etmek
+362,A2,10,B,main,Berg,der,-e,Noun,,,mountain,dağ
+363,A2,10,B,main,berichten,,,Verb,berichtet,hat berichtet,to report,rapor etmek / bildirmek
+364,A2,10,B,main,Beruf,der,-e,Noun,,,profession / job,meslek / iş
+365,A2,10,B,main,beschreiben,,,Verb,,,to describe,tanımlamak
+366,A2,10,B,main,beschweren,,,Verb,beschwert,,to complain,şikayet etmek
+367,A2,10,B,main,Baby,das,-s,Noun,,,baby,bebek
+368,A2,10,B,main,backen,,,Verb,,hat gebacken,to bake,fırınlamak / pişirmek
+369,A2,10,B,main,Bäckerei,die,-en,Noun,,,bakery,fırın (ekmekçi)
+370,A2,10,B,main,baden,,,Verb,badet,hat gebadet,to bathe,yıkanmak
+371,A2,10,B,main,Bahn,die,-en,Noun,,,train / railway,tren / demiryolu
+372,A2,10,B,main,Bahnhof,der,¨-e,Noun,,,train station,tren garı
+373,A2,10,B,main,Balkon,der,-e,Noun,,,balcony,balkon
+374,A2,10,B,main,Bank,die,-en,Noun,,,bank (financial),banka
+375,A2,10,B,main,Bank,die,¨-e,Noun,,,bench,oturak / bank
+376,A2,10,B,main,Bauch,der,¨-e,Noun,,,stomach / belly,göbek / karın
+377,A2,10,B,main,Baum,der,¨-e,Noun,,,tree,ağaç
+378,A2,10,B,main,Baustelle,die,-n,Noun,,,construction site,inşaat alanı
+379,A2,10,B,main,bedanken,,,Verb,bedankt,,to thank / express gratitude,teşekkür etmek
+380,A2,10,B,main,bedeuten,,,Verb,bedeutet,hat bedeutet,to mean,anlamına gelmek
+381,A2,10,B,main,beeilen,,,Verb,beeilt,,to hurry,acele etmek
+382,A2,11,B,main,bleiben,,,Verb,bleibt,,to stay / remain,kalmk / kalmak
+383,A2,11,B,main,Bleistift,der,-e,Noun,,,pencil,kurşun kalem
+384,A2,11,B,main,braten,,,Verb,brät,,to fry / roast,kızartmak / kavurmak
+385,A2,11,B,main,brauchen,,,Verb,braucht,,to need,ihtiyaç duymak
+386,A2,11,B,main,Brief,der,-e,Noun,,,letter,mektup
+387,A2,11,B,main,bringen,,,Verb,bringt,,to bring,getirmek
+388,A2,11,B,main,Brot,das,-e,Noun,,,bread,ekmek
+389,A2,11,B,main,Brötchen,das,-,Noun,,,bread roll,poğaça / küçük ekmek
+390,A2,11,B,main,Buch,das,¨-er,Noun,,,book,kitap
+391,A2,11,B,main,buchen,,,Verb,bucht,hat gebucht,to book / reserve,rezerve etmek
+392,A2,11,B,main,Buchstabe,der,-n,Noun,,,letter (of the alphabet),harf
+393,A2,11,B,main,bunt,,,Other,,,colorful,renkli
+394,A2,11,B,main,Büro,das,-s,Noun,,,office,ofis
+395,A2,11,B,main,Bus,der,-se,Noun,,,bus,otobüs
+396,A2,11,B,main,besonders,,,Other,,,especially / particularly,özellikle
+397,A2,11,B,main,bestätigen,,,Verb,bestätigt,hat bestätigt,to confirm,onaylamak
+398,A2,11,B,main,bestehen,,,Verb,besteht,hat bestan,to pass (exam) / consist of,başarmak / oluşmak
+399,A2,11,B,main,bestellen,,,Verb,bestellt,,to order,sipariş etmek
+400,A2,11,B,main,Besuch,der,-e,Noun,,,visit,ziyaret
+401,A2,11,B,main,besuchen,,,Verb,besucht,,to visit,ziyaret etmek
+402,A2,11,B,main,Bett,das,-en,Noun,,,bed,yatak
+403,A2,11,B,main,bewölkt,,,Other,,,cloudy / overcast,bulutlu
+404,A2,11,W,main,Wolke,die,-n,Noun,,,cloud,bulut
+405,A2,11,B,main,bezahlen,,,Verb,bezahlt,hat bezahlt,to pay,ödemek
+406,A2,11,B,main,Bibliothek,die,-en,Noun,,,library,kütüphane
+407,A2,11,B,main,Birne,die,-n,Noun,,,pear,armut
+408,A2,11,B,main,bisschen,,,Verb,,,a little / a bit,biraz
+409,A2,11,B,main,bitte,,,Other,,,please / you're welcome,lütfen / rica ederim
+410,A2,11,B,main,Bitte,die,-n,Noun,,,request,rica
+411,A2,12,D,main,Datum,das,-en,Noun,,,date,tarih
+412,A2,12,D,main,dauern,,,Verb,dauert,,to last / take (time),sürmek
+413,A2,12,D,main,denken,,,Verb,denkt,hat gedacht,to think,düşünmek
+414,A2,12,D,main,deshalb,,,Other,,,therefore / that's why,bu yüzden
+415,A2,12,D,main,deutlich,,,Other,,,clear / distinct,açık / net
+416,A2,12,D,main,dick,,,Other,,,fat / thick,şişman / kalın
+417,A2,12,D,main,Ding,das,-e,Noun,,,thing,şey
+418,A2,12,D,main,direkt,,,Other,,,direct / directly,direkt / doğrudan
+419,A2,12,D,main,Disco,die,-s /,Noun,,,disco / club,disko / kulüp
+420,A2,12,D,main,diskutieren,,,Verb,diskutiert,hat diskutiert,to discuss,tartışmak / görüşmek
+421,A2,12,D,main,Doppelzimmer,das,-,Noun,,,double room,çift kişilik oda
+422,A2,12,D,main,Dorf,das,¨-er,Noun,,,village,köy
+423,A2,12,D,main,draußen,,,Verb,,,outside,dışarıda
+424,A2,12,D,main,dringend,,,Other,,,urgent,acil
+425,A2,12,D,main,drinnen,,,Verb,,,inside,içeride
+426,A2,12,D,main,drüben,,,Verb,drückt,hat gedrückt,over there / across,orada / karşı tarafta
+427,A2,12,C,main,Café,das,-s,Noun,,,café,kafe
+428,A2,12,C,main,Cafeteria,die,-s,Noun,,,cafeteria,kantin
+429,A2,12,C,main,chatten,,,Verb,chattet,hat gechattet,to chat (online),sohbet etmek (çevrimiçi)
+430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager,patron / yönetici
+431,A2,12,C,main,Chefin,die,-nen,Noun,,,boss / manager (female),patron (kadın) / yönetici (kadın)
+432,A2,12,C,main,Club,der,-s /,Noun,,,club,kulüp
+433,A2,12,C,main,Computer,der,-,Noun,,,computer,bilgisayar
+434,A2,12,D,main,da,,,Other,,,there / then,orada / sonra
+435,A2,12,D,main,dafür/dagegen,,,Verb,,,for it / against it,lehinde / aleyhinde
+436,A2,12,D,main,damals,,,Other,,,back then / at that time,o zamanlar
+437,A2,12,D,main,Dame,die,-n,Noun,,,lady,hanımefendi
+438,A2,12,D,main,daneben,,,Verb,wo die,,next to it / beside it,yanıbaşında / yanında
+439,A2,12,D,main,Dank,der,,Noun,,,thanks / gratitude,teşekkür / minnettarlık
+440,A2,12,D,main,danken,,,Verb,dankt,hat gedankt,to thank,teşekkür etmek
+441,A2,12,D,main,Datei,die,-en,Noun,,,file (computer),dosya
+442,A2,13,E,main,Einkaufs-,das,,Noun,,,shopping (compound prefix),alışveriş- (önek)
+443,A2,13,E,main,einladen,,,Verb,lädt ein,hat eingela,to invite,davet etmek
+444,A2,13,E,main,Einladung,die,-en,Noun,,,invitation,davet
+445,A2,13,E,main,einpacken,,,Verb,packt ein,,to pack, paketlemek
+446,A2,13,E,main,einsteigen,,,Verb,steigt ein,,to board / get in (vehicle),binek / binmek (taşıta)
+447,A2,13,E,main,eintragen,,,Verb,trägt ein,,to enter / register (in a form),form doldurmak / kaydetmek
+448,A2,13,E,main,Eintritt,der,-e,Noun,,,admission / entry,giriş
+449,A2,13,E,main,einverstanden,,,Verb,,,agreed / in agreement,kabul / hemfikir
+450,A2,13,S,main,sein,,,Verb,bin) einverstanden. ist,,to be,olmak
+451,A2,13,E,main,einzel-,,,Other,,,single- (prefix),tek- (önek)
+452,A2,13,E,main,einziehen,,,Verb,zieht ein,,to move in,taşınmak
+453,A2,13,E,main,Eis,das,,Noun,,,ice cream / ice,dondurma / buz
+454,A2,13,E,main,empfehlen,,,Verb,empfiehlt,hat empfohlen,to recommend,tavsiye etmek
+455,A2,13,E,main,Ende,das,-n,Noun,,,end,son
+456,A2,13,E,main,enden,,,Verb,endet,hat geendet,to end,sona ermek
+457,A2,13,E,main,endlich,,,Other,,,finally / at last,nihayet / sonunda
+458,A2,13,E,main,eng,,,Other,,,narrow / tight,dar
+459,A2,13,E,main,entschuldigen,,,Verb,,,to excuse / apologize,özür dilemek
+460,A2,13,I,main,Ich,,,Verb,hat entschuldigt,,I (pronoun),ben
+461,A2,13,E,main,Entschuldi-,die,,Noun,,,excuse me / apology,afedersiniz / özür
+462,A2,13,D,main,Drucker,der,-,Noun,,,printer,yazıcı
+463,A2,13,D,main,dunkel,,,Other,,,dark,karanlık
+464,A2,13,D,main,dünn,,,Other,,,thin,inç / ince
+465,A2,13,D,main,durch,,,Other,,,through / by,vasıtasıyla / aracılığıyla
+466,A2,13,D,main,dürfen,,,Verb,darf,,may / to be allowed to,izinli olmak / -ebilir
+467,A2,13,D,main,Durst,der,,Noun,,,thirst,susuzluk
+468,A2,13,E,main,E-Book,das,-s,Noun,,,e-book,e-kitap
+469,A2,13,E,main,echt,,,Other,,,real / genuine / really,gerçek
+470,A2,13,E,main,Ecke,die,-n,Noun,,,corner,köşe
+471,A2,13,E,main,egal,,,Other,,,it doesn't matter / all the same,farketmez
+472,A2,13,E,main,Ehefrau,die,-en /,Noun,,,wife,eş (kadın) / karı
+473,A2,13,E,main,Ehemann,der,¨-er/,Noun,,,husband,eş (erkek) / koca
+474,A2,13,E,main,Ei,das,-er,Noun,,,egg,yumurta
+475,A2,13,E,main,eilig,,,Other,,,urgent / in a hurry,acele / acil
+476,A2,13,E,main,Eingang,der,¨-e,Noun,,,entrance,giriş
+477,A2,13,E,main,einkaufen,,,Verb,kauft ein,hat eingekauft,to go shopping,alışveriş yapmak
+478,A2,14,F,main,falsch,,,Other,,,wrong / false,yanlış
+479,A2,14,F,main,Familie,die,-n,Noun,,,family,aile
+480,A2,14,F,main,Familien-,der,,Noun,,,family (compound prefix),aile- (önek)
+481,A2,14,F,main,Fan,der,-s,Noun,,,fan,taraftar
+482,A2,14,F,main,fantastisch,,,Other,,,fantastic,harika
+483,A2,14,F,main,Farbe,die,-n,Noun,,,color,renk
+484,A2,14,F,main,fast,,,Other,,,almost / nearly,neredeyse
+485,A2,14,F,main,faul,,,Other,,,lazy,tembel
+486,A2,14,F,main,fehlen,,,Verb,fehlt,hat gefehlt,to be missing / lack,eksik olmak
+487,A2,14,F,main,Fehler,der,-,Noun,,,mistake / error,hata
+488,A2,14,F,main,feiern,,,Verb,feiert,hat gefeiert,to celebrate,kutlamak
+489,A2,14,F,main,Fenster,das,-,Noun,,,window,pencere
+490,A2,14,F,main,fernsehen,,,Verb,sieht fern,hat ferngesehen,to watch TV,televizyon izlemek
+491,A2,14,F,main,Fernseher,der,-,Noun,,,television set / TV,televizyon
+492,A2,14,F,main,Fest,das,-e,Noun,,,festival / celebration,festival / kutlama
+493,A2,14,F,main,Festival,das,-s,Noun,,,festival,festival
+494,A2,14,F,main,Firma,die,-en,Noun,,,company / firm,firma / şirket
+495,A2,14,E,main,Erfahrung,die,-en,Noun,,,experience,deneyim
+496,A2,14,E,main,erklären,,,Verb,erklärt,hat erklärt,to explain,açıklamak
+497,A2,14,E,main,erlauben,,,Verb,erlaubt,hat erlaubt,to allow / permit,izin vermek
+498,A2,14,E,main,Erlaubnis,die,,Noun,,,permission,izin
+499,A2,14,E,main,erreichen,,,Verb,erreicht,,to reach / achieve,ulaşmak
+500,A2,14,E,main,erst,,,Other,,,first / only / not until,ilk / ancak
+501,A2,14,E,main,Erwachsene,der,-n,Noun,,,adult,yetişkin
+502,A2,14,E,main,erzählen,,,Verb,erzählt,hat erzählt,to tell / narrate,anlatmak
+503,A2,14,E,main,essen,,,Verb,isst,hat gegessen,to eat,yemek yemek
+504,A2,14,E,main,Essen,das,-,Noun,,,food / meal,yemek / yiyecek
+505,A2,14,E,main,etwas,,,Other,,,something / a little,biraz / biraz şey
+506,A2,14,F,main,Fach,das,¨-er,Noun,,,subject / compartment,alan / ders
+507,A2,14,A,main,Abfahrt,die,-en,Noun,,,departure,kalkış
+508,A2,14,F,main,Fahrplan,der,¨-e,Noun,,,timetable / schedule,sefer tarifesi
+509,A2,15,F,main,früher,,,Other,,,earlier / formerly,eskiden
+510,A2,15,F,main,Frühstück,das,,Noun,,,breakfast,kahvaltı
+511,A2,15,F,main,fühlen,,,Verb,fühlt,hat gefühlt,to feel,hissetmek
+512,A2,15,F,main,Führer-,der,,Noun,,,driving license (compound),ehliyet- (önek)
+513,A2,15,F,main,Führung,die,-en,Noun,,,guided tour / leadership,rehberlik / tur
+514,A2,15,F,main,für,,,Other,,,for,için
+515,A2,15,F,main,furchtbar,,,Other,,,terrible / awful,korkunç
+516,A2,15,F,main,Fuß,der,¨-e,Noun,,,foot,ayak
+517,A2,15,F,main,Fußball,der,¨-e,Noun,,,football / soccer,futbol
+518,A2,15,G,main,Gabel,die,-n,Noun,,,fork,çatal
+519,A2,15,G,main,Garage,die,-n,Noun,,,garage,garaj
+520,A2,15,G,main,geboren,,,Verb,,,born,doğmak
+521,A2,15,G,main,gefallen,,,Verb,gefällt,hat gefallen,to like / please,hoşlanmak
+522,A2,15,G,main,gegen,,,Verb,,,against / around (time),karşı / civarında
+523,A2,15,F,main,Fleisch,das,,Noun,,,meat,et
+524,A2,15,F,main,Flohmarkt,der,¨-e,Noun,,,flea market,bit pazarı
+525,A2,15,F,main,Flug,der,¨-e,Noun,,,flight,uçuş
+526,A2,15,F,main,Flughafen,der,¨,Noun,,,airport,havaalanı
+527,A2,15,F,main,Fluss,der,¨-e,Noun,,,river,nehir
+528,A2,15,F,main,Foto,das,-s,Noun,,,photo,fotoğraf
+529,A2,15,F,main,Frau,die,-en,Noun,,,woman / wife / Mrs.,kadın / eş / bayan
+530,A2,15,F,main,freiwillig,,,Other,,,voluntary,gönüllü
+531,A2,15,F,main,freuen,,,Verb,freut,hat gefreut,to be happy / look forward to,sevinmek
+532,A2,15,F,main,Freund,der,"-e,",Noun,,,friend / boyfriend,arkadaş / erkek arkadaş
+533,A2,15,F,main,Freundin,die,-nen,Noun,,,friend / girlfriend,arkadaş (kız) / kız arkadaş
+534,A2,15,F,main,freundlich,,,Other,,,friendly / kind,dostça / nazik
+535,A2,15,F,main,frisch,,,Other,,,fresh,taze
+536,A2,15,F,main,früh,,,Other,,,early,erken
+537,A2,16,G,main,gewinnen,,,Verb,gewinnt,,to win,kazanmak
+538,A2,16,G,main,Gewitter,das,-,Noun,,,thunderstorm,gök gürültülü fırtına
+539,A2,16,G,main,glauben,,,Verb,glaubt,hat geglaubt,to believe,inanmak
+540,A2,16,G,main,gleich,,,Other,,,same / immediately,aynı / hemen
+541,A2,16,G,main,Gleis,das,-e,Noun,,,track / platform (rail),peron
+542,A2,16,G,main,glücklich,,,Other,,,happy / lucky,mutlu
+543,A2,16,G,main,Glück-,der,,Noun,,,congratulations (compound),tebrik- (önek)
+544,A2,16,G,main,gratulieren,,,Verb,gratuliert,hat gratuliert,to congratulate,tebrik etmek
+545,A2,16,G,main,grillen,,,Verb,grillt,hat gegrillt,to grill / barbecue,mangal yapmak
+546,A2,16,G,main,Grippe,die,,Noun,,,flu / influenza,grip
+547,A2,16,G,main,groß,,,Other,,,big / tall,büyük
+548,A2,16,G,main,Größe,die,-n,Noun,,,size / height,büyüklük
+549,A2,16,G,main,Gruß,der,¨-e,Noun,,,greeting,selam
+550,A2,16,G,main,günstig,,,Other,,,cheap / favorable,uygun fiyatlı
+551,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da
+552,A2,16,H,main,Haar,das,-e,Noun,,,hair,saç
+553,A2,16,H,main,Hähnchen,das,-,Noun,,,chicken,tavuk
+554,A2,16,G,main,Gehalt,das,¨-er,Noun,,,salary / wage,maaş
+555,A2,16,G,main,gehören,,,Verb,gehört,hat gehört,to belong to,ait olmak
+556,A2,16,G,main,Geld,das,,Noun,,,money,para
+557,A2,16,G,main,Geldbörse,die,-n,Noun,,,purse / wallet,cüzdan
+558,A2,16,G,main,genug,,,Other,,,enough,yeterli
+559,A2,16,G,main,Gepäck,das,,Noun,,,luggage,eşya / bavul
+560,A2,16,G,main,gerade,,,Other,,,just / straight / at the moment,şu anda / tam
+561,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da
+562,A2,16,G,main,Geschäft,das,-e,Noun,,,shop / store / business,mağaza / işyeri
+563,A2,16,G,main,Geschirr,das,,Noun,,,dishes / crockery,çanak çömlek
+564,A2,16,G,main,Gespräch,das,-e,Noun,,,conversation / talk,sohbet / konuşma
+565,A2,16,G,main,gestern,,,Verb,,,yesterday,dün
+566,A2,16,G,main,Getränk,das,-e,Noun,,,drink / beverage,içecek
+567,A2,17,H,main,herein/rein,,,Other,,,come in / inside,içeri gir / içeri
+568,A2,17,H,main,Herd,der,-e,Noun,,,stove / cooker,ocak
+569,A2,17,H,main,Herr,der,-en,Noun,,,Mr. / gentleman,Bey / efendi
+570,A2,17,H,main,herunterladen,,,Verb,lädt herunter,hat heruntergela,to download,indirmek
+571,A2,17,H,main,herzlich,,,Other,,,heartfelt / warm / cordial,samimi / içten
+572,A2,17,H,main,Hilfe,die,,Noun,,,help / assistance,yardım
+573,A2,17,H,main,Himmel,der,,Noun,,,sky / heaven,gökyüzü / cennet
+574,A2,17,H,main,hin/hin-/-hin,,,Other,,,there / towards (directional prefix),orada / -e (yönelme eki)
+575,A2,17,H,main,hinten,,,Verb,,,at the back / behind,arkada
+576,A2,17,H,main,hinter,,,Other,,,behind,arkasında
+577,A2,17,H,main,Hobby,das,-s,Noun,,,hobby,hobi
+578,A2,17,H,main,Hochzeit,die,-en,Noun,,,wedding,düğün
+579,A2,17,H,main,hoffen,,,Verb,hofft,hat gehofft,to hope,ummak / ümit etmek
+580,A2,17,H,main,Homepage,die,-s,Noun,,,homepage / website,ana sayfa / web sitesi
+581,A2,17,H,main,hören,,,Verb,hört,,to hear / listen,duymak / dinlemek
+582,A2,17,H,main,Hose,die,-n,Noun,,,trousers / pants,pantolon
+583,A2,17,H,main,Hunger,der,,Noun,,,hunger,açlık
+584,A2,17,H,main,hallo,,,Other,,,hello,merhaba
+585,A2,17,H,main,Hals,der,¨-e,Noun,,,throat / neck,boğaz / boyun
+586,A2,17,H,main,halten,,,Verb,hält,hat gehalten,to hold / stop,tutmak / durdurmak
+587,A2,17,H,main,Haltestelle,die,-n,Noun,,,bus stop / tram stop,durak
+588,A2,17,H,main,hängen,,,Verb,hängt,,to hang,asılı durmak / asmak
+589,A2,17,B,main,Bild,das,,Noun,,,picture / image,resim
+590,A2,17,H,main,hart,,,Other,,,hard,sert
+591,A2,17,H,main,hässlich,,,Other,,,ugly,çirkin
+592,A2,17,H,main,Hauptstadt,die,¨-e,Noun,,,capital city,başkent
+593,A2,17,H,main,Haushalt,der,-e,Noun,,,household,hane / ev işi
+594,A2,17,H,main,Heft,das,-e,Noun,,,notebook / exercise book,defter
+595,A2,17,H,main,Heimat,die,,Noun,,,home / homeland,yurt / vatan
+596,A2,17,H,main,heiraten,,,Verb,heiratet,,to marry,evlenmek
+597,A2,17,H,main,heißen,,,Verb,heißt,hat geheißen,to be called / named,adlandırılmak / isim olmak
+598,A2,17,H,main,Heizung,die,-en,Noun,,,heating,kalorifer / ısınma
+599,A2,17,H,main,hell,,,Other,,,bright / light,parlak
+600,A2,17,H,main,Hemd,das,-en,Noun,,,shirt,gömlek
+601,A2,17,H,main,her/her-/-her,,,Other,,,here / from there (directional prefix),burada / oradan (önek)
+602,A2,17,H,main,heraus/raus,,,Other,,,out / outside,dışarı / dışarıya
+603,A2,18,J,main,jung,,,Other,,,young,genç
+604,A2,18,J,main,Junge,der,-n,Noun,,,boy,erkek çocuk
+605,A2,18,K,main,Kaffee,der,-s,Noun,,,coffee,kahve
+606,A2,18,K,main,Kalender,der,-,Noun,,,calendar,takvim
+607,A2,18,K,main,kalt,,,Other,,,cold,soğuk
+608,A2,18,K,main,Kamera,die,-s,Noun,,,camera,kamera
+609,A2,18,K,main,Kartoffel,die,-n,Noun,,,potato,patates
+610,A2,18,K,main,Kaufhaus,das,-¨er,Noun,,,department store,alışveriş merkezi / büyük mağaza
+611,A2,18,K,main,Keller,der,-,Noun,,,cellar / basement,kiler / bodrum
+612,A2,18,K,main,kennen,,,Verb,kennt,hat gekannt,to know (a person or place),tanımak
+613,A2,18,K,main,kennenlernen,,,Verb,lernt kennen,,to get to know / meet,tanışmak
+614,A2,18,K,main,Kenntnisse,die,,Noun,,,knowledge / skills,bilgiler / yetkinlikler
+615,A2,18,K,main,Kette,die,-n,Noun,,,chain / necklace,zincir / kolye
+616,A2,18,K,main,Kind,das,-er,Noun,,,child,çocuk
+617,A2,18,I,main,immer,,,Other,,,always,her zaman
+618,A2,18,I,main,Information,die,-en,Noun,,,information,bilgi
+619,A2,18,I,main,informieren,,,Verb,,,to inform,bilgilendirmek
+620,A2,18,I,main,Insel,die,-n,Noun,,,island,ada
+621,A2,18,I,main,Instrument,das,-e,Noun,,,instrument,enstrüman
+622,A2,18,I,main,interessieren,,,Verb,interessiert,,to interest,ilgilendirmek
+623,A2,18,I,main,international,,,Other,,,international,uluslararası
+624,A2,18,I,main,Internet,das,,Noun,,,internet,internet
+625,A2,18,I,main,Interview,das,-s,Noun,,,interview,röportaj / mülakat
+626,A2,18,J,main,ja,,,Other,,,yes,evet
+627,A2,18,J,main,Jacke,die,-n,Noun,,,jacket,ceket
+628,A2,18,J,main,jemand,,,Other,,,someone / somebody,biri
+629,A2,18,J,main,joggen,,,Verb,joggt,,to jog / go jogging,jog yapmak / koşmak
+630,A2,18,J,main,Jugend-,die,,Noun,,,youth hostel (compound),gençlik- (önek)
+631,A2,19,K,main,kostenlos,,,Other,,,free of charge,ücretsiz
+632,A2,19,K,main,krank,,,Other,,,sick / ill,hasta
+633,A2,19,K,main,Kranken-,das,,Noun,,,hospital (compound),hastane- (önek)
+634,A2,19,K,main,Kranken-,die,,Noun,,,health insurance / nurse (compound),sağlık- (önek)
+635,A2,19,K,main,Krankheit,die,-en,Noun,,,illness / disease,hastalık
+636,A2,19,K,main,Kreuzung,die,-en,Noun,,,crossroads / intersection,kavşak
+637,A2,19,K,main,Krimi,der,-s,Noun,,,crime novel / thriller,polisiye roman
+638,A2,19,K,main,Küche,die,-n,Noun,,,kitchen,mutfak
+639,A2,19,K,main,Kuchen,der,- kühl,Noun,,,cake,pasta / kek
+640,A2,19,K,main,Kühl-,der,,Noun,,,refrigerator (compound),soğutma- (önek)
+641,A2,19,K,main,Kultur,die,-en,Noun,,,culture,kültür
+642,A2,19,K,main,kümmern,,,Verb,kümmert,hat gekümmert,to take care of / look after,ilgilenmek / bakmak
+643,A2,19,K,main,Kunde,der,-n /,Noun,,,customer (male),müşteri (erkek)
+644,A2,19,K,main,Kundin,die,-nen,Noun,,,customer (female),müşteri (kadın)
+645,A2,19,K,main,kündigen,,,Verb,kündigt,hat gekündigt,to quit / give notice,işten ayrılmak / feshetmek
+646,A2,19,K,main,Kunst,die,¨-e,Noun,,,art,sanat
+647,A2,19,K,main,Kurs,der,-e,Noun,,,course / class,kurs
+648,A2,19,L,main,lachen,,,Verb,lacht,hat gelacht,to laugh,gülmek
+649,A2,19,L,main,Laden,der,¨-,Noun,,,shop / store,mağaza
+650,A2,19,L,main,Lampe,die,-n,Noun,,,lamp / light,lamba
+651,A2,19,W,main,wohnen,,,Other,,,to live / reside,ikamet etmek / yaşamak
+652,A2,19,L,main,Landschaft,die,-en,Noun,,,landscape / scenery,manzara
+653,A2,19,K,main,Kirche,die,-n,Noun,,,church,kilise
+654,A2,19,K,main,Klavier,das,-e,Noun,,,piano,piyano
+655,A2,19,K,main,Kleid,das,-er,Noun,,,dress,elbise
+656,A2,19,U,main,und,,,Other,,,and,ve
+657,A2,19,K,main,klein,,,Other,,,small / little,küçük
+658,A2,19,K,main,klug,,,Other,,,clever / smart,zeki
+659,A2,19,K,main,kochen,,,Verb,kocht,,to cook,yemek pişirmek
+660,A2,19,K,main,Koffer,der,-,Noun,,,suitcase,valiz
+661,A2,19,K,main,Kollegin,die,-nen,Noun,,,colleague (female),iş arkadaşı (kadın)
+662,A2,19,K,main,komisch,,,Other,,,strange / funny / odd,garip / tuhaf
+663,A2,19,K,main,komisch,,,Other,,,strange / funny / odd,garip / tuhaf
+664,A2,19,K,main,kommen,,,Verb,kommt,,to come,gelmek
+665,A2,19,K,main,können,,,Verb,kann,hat gekonnt,can / to be able to,yapabilmek
+666,A2,19,K,main,Kontakt,der,-e,Noun,,,contact,iletişim / temas
+667,A2,19,K,main,Konto,das,-en,Noun,,,bank account,hesap
+668,A2,19,K,main,kontrollieren,,,Verb,,,to check / control,denetlemek / kontrol etmek
+669,A2,19,K,main,Konzert,das,-e,Noun,,,concert,konser
+670,A2,19,K,main,Kopf,der,¨-e,Noun,,,head,baş
+671,A2,19,T,main,tun,,,Verb,z.,,to do,yapmak
+672,A2,19,K,main,Kosmetik,die,,Noun,,,cosmetics / beauty products,kozmetik
+673,A2,19,I,main,interessant.,,,Other,,,interesting,ilginç
+674,A2,20,L,main,Link,der,-s,Noun,,,link (web),bağlantı (web)
+675,A2,20,L,main,Lust,die,,Noun,,,desire / mood / inclination,istek / canı çekme
+676,A2,20,L,main,lustig,,,Other,,,funny / amusing,komik
+677,A2,20,M,main,machen,,,Verb,macht,hat gemacht,to make / do,yapmak
+678,A2,20,E,main,Essen,das,,Noun,,,food / meal,yemek
+679,A2,20,M,main,Mädchen,das,-,Noun,,,girl,kız
+680,A2,20,M,main,Magen,der,¨-,Noun,,,stomach,mide
+681,A2,20,M,main,malen,,,Verb,malt,hat gemalt,to paint,resim yapmak
+682,A2,20,M,main,man,,,Other,,,one / you (impersonal),insan / biri
+683,A2,20,M,main,manch-,,,Other,,,some- (prefix),bazı- (önek)
+684,A2,20,M,main,Mann,der,¨-er,Noun,,,man / husband,adam / koca
+685,A2,20,M,main,Maschine,die,-n,Noun,,,machine,makine
+686,A2,20,M,main,meinen,,,Verb,meint,hat gemeint,to think / mean / believe,düşünmek / demek istemek
+687,A2,20,M,main,Meinung,die,-en,Noun,,,opinion,görüş
+688,A2,20,M,main,meist-,,,Other,,,most- (prefix),çoğunlukla- (önek)
+689,A2,20,L,main,lange,,,Other,,,for a long time / long,uzun süre / uzun
+690,A2,20,L,main,laufen,,,Verb,läuft,ist gelaufen,to run / walk,yürümek / koşmak
+691,A2,20,L,main,Leben,das,-,Noun,,,life,hayat
+692,A2,20,M,main,mittel,,,Other,,,medium / average,orta
+693,A2,20,L,main,leihen,,,Verb,leiht,hat geliehen,to borrow / lend,ödünç vermek / almak
+694,A2,20,L,main,lesen,,,Verb,liest,hat gelesen,to read,okumak
+695,A2,20,L,main,letzt-,,,Other,,,last- (prefix),son- (önek)
+696,A2,20,L,main,Leute,die,,Noun,,,people,insanlar
+697,A2,20,L,main,lieben,,,Verb,liebt,hat geliebt,to love,sevmek
+698,A2,20,L,main,liegen,,,Verb,liegt,,to lie / be located,uzanmak / bulunmak
+699,A2,21,M,main,Moment,der,-e,Noun,,,moment,an
+700,A2,21,M,main,morgen,,,Verb,,,tomorrow,yarın
+701,A2,21,M,main,Motor,der,-en,Noun,,,engine / motor,motor
+702,A2,21,M,main,Mund,der,¨-er,Noun,,,mouth,ağız
+703,A2,21,M,main,Museum,das,-een,Noun,,,museum,müze
+704,A2,21,M,main,Musik,die,,Noun,,,music,müzik
+705,A2,21,M,main,müssen,,,Verb,muss,,must / to have to,meli / malı (zorunluluk)
+706,A2,21,M,main,musste,,,Other,,,had to (past),zorunda kaldı
+707,A2,21,M,main,Mütze,die,-n,Noun,,,hat / cap,kasket / bere
+708,A2,21,N,main,nach,,,Other,,,to / after / according to,-e / sonra / göre
+709,A2,21,N,main,Nachbar,der,"-n,",Noun,,,neighbor,komşu
+710,A2,21,N,main,Nachricht,die,-en,Noun,,,message / news,haber / mesaj
+711,A2,21,N,main,Nähe,die,,Noun,,,vicinity / nearness,yakınlık
+712,A2,21,N,main,Name,der,-n,Noun,,,name,isim
+713,A2,21,N,main,nass,,,Other,,,wet,ıslak
+714,A2,21,N,main,Natur,die,,Noun,,,nature,doğa
+715,A2,21,N,main,natürlich,,,Other,,,of course / naturally,tabii ki / doğal olarak
+716,A2,21,N,main,neben,,,Verb,,,next to / beside,yanında
+717,A2,21,M,main,Mensch,der,-en,Noun,,,person / human being,insan
+718,A2,21,M,main,merken,,,Verb,merkt,hat gemerkt,to notice / realize,fark etmek
+719,A2,21,M,main,Messe,die,-n,Noun,,,trade fair / mass (church),fuar / ayin
+720,A2,21,M,main,Messer,das,-,Noun,,,knife,bıçak
+721,A2,21,M,main,Miete,die,-n,Noun,,,rent,kira
+722,A2,21,M,main,mieten,,,Verb,mietet,hat gemietet,to rent,kiralamak
+723,A2,21,M,main,Milch,die,,Noun,,,milk,süt
+724,A2,21,M,main,Mineral-,das,,Noun,,,mineral water (compound),maden suyu- (önek)
+725,A2,21,M,main,mit,,,Other,,,with / by,ile
+726,A2,21,M,main,Mitarbeiter,der,-,Noun,,,employee / staff member,çalışan
+727,A2,21,M,main,Mittagessen,das,-,Noun,,,lunch,öğle yemeği
+728,A2,21,M,main,Mittel,das,-,Noun,,,means / remedy,araç / çare
+729,A2,21,M,main,Möbel,die,,Noun,,,furniture,mobilya
+730,A2,21,M,main,Mobil-,das,,Noun,,,mobile phone (compound),cep telefonu- (önek)
+731,A2,21,M,main,möchten,,,Verb,möchte,hat gemocht,would like to,istemek
+732,A2,21,M,main,Mode,die,-n,Noun,,,fashion,moda
+733,A2,21,M,main,möglich,,,Other,,,possible,mümkün
+734,A2,22,O,main,offen,,,Verb,,,open,açık
+735,A2,22,Ö,main,öffnen,,,Verb,öffnet,hat geöffnet,to open,açmak
+736,A2,22,O,main,oft,,,Other,,,often,sık sık
+737,A2,22,O,main,Ohr,das,-en,Noun,,,ear,kulak
+738,A2,22,Ö,main,Öl,das,-e,Noun,,,oil,yakıt / yağ
+739,A2,22,O,main,online,,,Other,,,online,çevrimiçi
+740,A2,22,O,main,Orange,die,-n,Noun,,,orange (fruit),portakal
+741,A2,22,O,main,Ordnung,die,-en,Noun,,,order / tidiness,düzen
+742,A2,22,O,main,organisieren,,,Verb,,,to organize,organize etmek / düzenlemek
+743,A2,22,O,main,Ort,der,-e,Noun,,,place / location,yer
+744,A2,22,P,main,Paar,das,-e,Noun,,,pair / couple,çift
+745,A2,22,E,main,ein,,,Other,,,a / one,bir
+746,A2,22,P,main,packen,,,Verb,packt,hat gepackt,to pack,paketlemek
+747,A2,22,P,main,Paket,das,-e,Noun,,,package / parcel,parça / paket
+748,A2,22,P,main,Partner,der,-,Noun,,,partner (male),ortak / partner (erkek)
+749,A2,22,P,main,Partnerin,die,-nen,Noun,,,partner (female),ortak / partner (kadın)
+750,A2,22,P,main,Party,die,-s,Noun,,,party,parti / eğlence
+751,A2,22,P,main,passieren,,,Verb,passiert,,to happen / occur,olmak
+752,A2,22,N,main,nennen,,,Verb,nennt,,to name / call,adlandırmak / çağırmak
+753,A2,22,N,main,nervös,,,Other,,,nervous,gergin
+754,A2,22,N,main,neu,,,Other,,,new,yeni
+755,A2,22,N,main,nicht,,,Other,,,not,değil
+756,A2,22,N,main,nichts,,,Other,,,nothing,hiçbir şey
+757,A2,22,N,main,nie,,,Other,,,never,asla
+758,A2,22,N,main,niemand,,,Other,,,nobody / no one,hiç kimse
+759,A2,22,N,main,nirgends,,,Other,,,nowhere,hiçbir yerde
+760,A2,22,N,main,noch,,,Other,,,still / yet,hala / henüz
+761,A2,22,N,main,normal,,,Other,,,normal,normal
+762,A2,22,N,main,Note,die,-n,Noun,,,grade / mark,not
+763,A2,22,N,main,Notiz,die,-en,Noun,,,note / memo,not / not kağıdı
+764,A2,22,N,main,Nudel,die,-n,Noun,,,noodle / pasta,makarna
+765,A2,22,N,main,Nummer,die,-n,Noun,,,number,numara
+766,A2,22,N,main,nur,,,Other,,,only / just,sadece
+767,A2,22,N,main,nützlich,,,Other,,,useful,faydalı
+768,A2,22,O,main,oben,,,Verb,,,above / upstairs,yukarıda
+769,A2,22,O,main,oder,,,Other,,,or,veya
+770,A2,23,P,main,Projekt,das,-e,Noun,,,project,proje
+771,A2,23,P,main,Prospekt,der,-e,Noun,,,brochure / leaflet,broşür
+772,A2,23,P,main,prüfen,,,Verb,prüft,hat geprüft,to check / test,denetlemek / kontrol etmek
+773,A2,23,P,main,Prüfung,die,-en,Noun,,,exam / test,sınav
+774,A2,23,P,main,putzen,,,Verb,putzt,hat geputzt,to clean,temizlemek
+775,A2,23,Q,main,Qualität,die,-en,Noun,,,quality,kalite
+776,A2,23,Q,main,Quiz,das,,Noun,,,quiz,quiz
+777,A2,23,R,main,Radio,das,-s,Noun,,,radio,radyo
+778,A2,23,R,main,Rathaus,das,¨-er,Noun,,,town hall / city hall,belediye binası
+779,A2,23,R,main,Rätsel,das,-,Noun,,,puzzle / riddle,bilmece
+780,A2,23,R,main,rauchen,,,Verb,raucht,hat geraucht,to smoke,sigara içmek
+781,A2,23,R,main,Raum,der,¨-e,Noun,,,room / space,oda
+782,A2,23,R,main,Rechnung,die,-en,Noun,,,bill / invoice,fatura
+783,A2,23,R,main,Regen,der,,Noun,,,rain,yagmur
+784,A2,23,R,main,Reinigung,die,-en,Noun,,,cleaning / dry cleaner's,temizlik / kuru temizleme
+785,A2,23,P,main,Pause,die,-n,Noun,,,break / pause,mola
+786,A2,23,P,main,Person,die,-en,Noun,,,person,kişi
+787,A2,23,P,main,Pizza,die,-s/-en,Noun,,,pizza,pizza
+788,A2,23,P,main,Plakat,das,-e,Noun,,,poster,afiş
+789,A2,23,P,main,Plan,der,¨-e,Noun,,,plan,plan
+790,A2,23,P,main,Platz,der,¨-e,Noun,,,place / seat / square,yer / meydan
+791,A2,23,P,main,plötzlich,,,Other,,,suddenly,aniden
+792,A2,23,P,main,Polizei,die,,Noun,,,police,polis
+793,A2,23,P,main,Portion,die,-en,Noun,,,portion / serving,porsiyon
+794,A2,23,P,main,Poster,das,-,Noun,,,poster,poster
+795,A2,23,P,main,Praktikum,das,-a,Noun,,,internship,staj
+796,A2,23,P,main,Praxis,die,-en,Noun,,,practice / doctor's office,muayenehane / uygulama
+797,A2,23,P,main,Preis,der,-e,Noun,,,price,fiyat
+798,A2,23,P,main,preiswert,,,Other,,,good value / affordable,uygun fiyatlı
+799,A2,23,P,main,pro,,,Other,,,per,her / başına
+800,A2,23,P,main,probieren,,,Verb,probiert,,to try / taste,tatmak / denemek
+801,A2,23,P,main,Problem,das,-e,Noun,,,problem,sorun
+802,A2,24,R,main,rund,,,Other,,,round / about,etrafında / yaklaşık
+803,A2,24,R,main,Rundgang,der,¨-e,Noun,,,tour / round trip,tur
+804,A2,24,S,main,Sache,die,-n,Noun,,,thing / matter,şey
+805,A2,24,S,main,Saft,der,¨-e,Noun,,,juice,meşrubat / meyve suyu
+806,A2,24,S,main,sagen,,,Verb,sagt,hat gesagt,to say / tell,söylemek
+807,A2,24,S,main,Salat,der,-e,Noun,,,salad,salata
+808,A2,24,S,main,Salz,das,-e,Noun,,,salt,tuz
+809,A2,24,S,main,sammeln,,,Verb,sammelt,,to collect,toplamak
+810,A2,24,S,main,Satz,der,¨-e,Noun,,,sentence / set,cümle
+811,A2,24,S,main,Schalter,der,-,Noun,,,counter / switch / ticket window,gişe / anahtar
+812,A2,24,S,main,scharf,,,Other,,,sharp / spicy,acı / keskin
+813,A2,24,S,main,scheinen,,,Verb,scheint,,to shine / seem,görünmek / parlamak
+814,A2,24,S,main,schenken,,,Verb,schenkt,hat geschenkt,to give (as a gift),hediye etmek
+815,A2,24,S,main,Schere,die,-n,Noun,,,scissors,makas
+816,A2,24,S,main,schicken,,,Verb,schickt,hat geschickt,to send,göndermek
+817,A2,24,S,main,Schiff,das,-e,Noun,,,ship,gemi
+818,A2,24,S,main,Schirm,der,,Noun,,,umbrella / screen,şemsiye
+819,A2,24,R,main,Reise,die,-n,Noun,,,journey / trip,yolculuk
+820,A2,24,R,main,Reisebüro,das,-s,Noun,,,travel agency,seyahat acentesi
+821,A2,24,R,main,Reiseführer,der,-,Noun,,,travel guide,gezi rehberi
+822,A2,24,R,main,reisen,,,Verb,reist,,to travel,seyehat etmek
+823,A2,24,R,main,reiten,,,Verb,reitet,ist geritten,to ride (horse),at binmek
+824,A2,24,R,main,renovieren,,,Verb,renoviert,hat renoviert,to renovate,renove etmek
+825,A2,24,R,main,Rentnerin,die,-nen,Noun,,,pensioner (female),emekli (kadın)
+826,A2,24,R,main,Reparatur,die,-en,Noun,,,repair,tamir
+827,A2,24,R,main,reservieren,,,Verb,reserviert,,to reserve,rezerve etmek
+828,A2,24,R,main,Rest,der,-e,Noun,,,rest / remainder,kalan
+829,A2,24,R,main,Restaurant,das,-s,Noun,,,restaurant,restoran
+830,A2,24,R,main,Rezeption,die,en,Noun,,,reception (desk),resepsiyon
+831,A2,24,R,main,richtig,,,Other,,,correct / right,doğru
+832,A2,24,R,main,riechen,,,Verb,riecht,hat gerochen,to smell,kokmak
+833,A2,24,R,main,Rind,das,,Noun,,,beef / cattle,sığır eti
+834,A2,24,R,main,Rose,die,-n,Noun,,,rose,gül
+835,A2,24,R,main,Rücken,der,-,Noun,,,back (body),sırt
+836,A2,24,R,main,rufen,,,Verb,ruft,hat gerufen,to call / shout,bağırmak / çağırmak
+837,A2,24,R,main,Ruhe,die,,Noun,,,quiet / peace / rest,huzur
+838,A2,24,R,main,ruhig,,,Other,,,quiet / calm,sakin
+839,A2,25,S,main,Schüler,der,- /,Noun,,,pupil / school student (male),öğrenci (erkek)
+840,A2,25,S,main,Schülerin,die,-nen,Noun,,,pupil / school student (female),öğrenci (kız)
+841,A2,25,S,main,schwach,,,Other,,,weak,zayıf
+842,A2,25,S,main,schwierig,,,Other,,,difficult,zor
+843,A2,25,S,main,schwimmen,,,Verb,schwimmt,ist geschwommen,to swim,yüzmek
+844,A2,25,S,main,See,der,-n,Noun,,,lake,göl
+845,A2,25,S,main,See,die,,Noun,,,sea,deniz
+846,A2,25,S,main,sehen,,,Verb,sieht,hat gesehen,to see,görmek
+847,A2,25,S,main,Sehens-,die,,Noun,,,tourist attraction (compound),gezilecek yer- (önek)
+848,A2,25,S,main,sehr,,,Other,,,very,çok
+849,A2,25,S,main,Seife,die,-n,Noun,,,soap,sebep? (typo) Seife -> sabun
+850,A2,25,S,main,Service,der,,Noun,,,service,hizmet
+851,A2,25,S,main,setzen,,,Verb,setzt,hat gesetzt,to sit down / place,oturmak / koymak
+852,A2,25,S,main,schlecht,,,Other,,,bad / poor,kötü
+853,A2,25,S,main,schließen,,,Verb,schließt,,to close / shut,kapatmak
+854,A2,25,S,main,Schluss,der,¨-e,Noun,,,end / conclusion,son / sonuç
+855,A2,25,S,main,Schlüssel,der,-,Noun,,,key,anahtar
+856,A2,25,S,main,schmecken,,,Verb,schmeckt,,to taste,tatmak
+857,A2,25,S,main,Schmerz,der,-en,Noun,,,pain / ache,ağrı
+858,A2,25,S,main,schneien,,,Verb,schneit,hat geschneit,to snow,kar yağmak
+859,A2,25,S,main,schnell,,,Other,,,fast / quick,çabuk
+860,A2,25,S,main,schon,,,Other,,,already,zaten
+861,A2,25,S,main,schön,,,Other,,,beautiful / nice,güzel
+862,A2,25,S,main,Schrank,der,¨-e,Noun,,,cupboard / wardrobe,elbise dolabı
+863,A2,25,S,main,schrecklich,,,Other,,,terrible / awful,feci
+864,A2,25,S,main,schreiben,,,Verb,schreibt,hat geschrieben,to write,yazmak
+865,A2,25,S,main,schriftlich,,,Other,,,in writing / written,yazılı
+866,A2,25,S,main,Schuh,der,-e,Noun,,,shoe,ayakkabı
+867,A2,25,S,main,Schule,die,-n,Noun,,,school,okul
+868,A2,26,S,main,spielen,,,Verb,spielt,,to play,oynamak
+869,A2,26,S,main,Sport,der,,Noun,,,sport / sports,spor
+870,A2,26,S,main,Sprache,die,-n,Noun,,,language,dil
+871,A2,26,S,main,sprechen,,,Verb,spricht,hat gesprochen,to speak / talk,konuşmak
+872,A2,26,S,main,Sprech-,die,,Noun,,,office hours (compound),danışma- (önek)
+873,A2,26,S,main,Stadt,die,¨-e,Noun,,,city / town,şehir
+874,A2,26,S,main,stattfinden,,,Verb,,,to take place / occur,gerçekleşmek
+875,A2,26,S,main,stehen,,,Verb,steht,,to stand,ayakta durmak
+876,A2,26,S,main,Stelle,die,-n,Noun,,,position / job / place,görev / yer
+877,A2,26,S,main,stellen,,,Verb,stellt,,to place / put,koymak
+878,A2,26,S,main,sterben,,,Verb,stirbt,ist gestorben,to die,ölmek
+879,A2,26,S,main,Stiefel,der,-,Noun,,,boot,çizme
+880,A2,26,S,main,Stipen-,das,,Noun,,,scholarship (compound),burs- (önek)
+881,A2,26,S,main,Stock,der,¨-e;,Noun,,,floor / storey,kat
+882,A2,26,S,main,Strand,der,¨-e,Noun,,,beach,plaj
+883,A2,26,S,main,Straße,die,-n,Noun,,,street / road,sokak
+884,A2,26,S,main,streiten,,,Verb,streitet,hat gestritten,to argue / fight,kavga etmek / tartışmak
+885,A2,26,S,main,singen,,,Verb,singt,,to sing,şarkı söylemek
+886,A2,26,S,main,Situation,die,-en,Noun,,,situation,durum
+887,A2,26,S,main,sitzen,,,Verb,sitzt,,to sit,oturmak
+888,A2,26,S,main,Ski,der,"-, -er",Noun,,,ski,kayak
+889,A2,26,S,main,so,,,Other,,,so / like that,böyle
+890,A2,26,S,main,Sofa,das,-s,Noun,,,sofa / couch,divan
+891,A2,26,S,main,sofort,,,Other,,,immediately,hemen
+892,A2,26,S,main,sogar,,,Other,,,even / in fact,hatta
+893,A2,26,S,main,sollen,,,Verb,soll,,should / to be supposed to,gerekmek
+894,A2,26,S,main,Sonne,die,-n,Noun,,,sun,güneş
+895,A2,26,S,main,spannend,,,Other,,,exciting / thrilling,heyecan verici
+896,A2,26,S,main,sparen,,,Verb,spart,hat gespart,to save (money),para biriktirmek
+897,A2,26,S,main,Spaß,der,,Noun,,,fun / joke,eğlence
+898,A2,26,S,main,Spazier-,der,,Noun,,,walk (compound),gezinti- (önek)
+899,A2,26,S,main,speichern,,,Verb,speichert,hat gespeichert,to save (digital),kaydetmek
+900,A2,26,S,main,Speisekarte,die,-n,Noun,,,menu,menü
+901,A2,26,S,main,Spiel,das,-e,Noun,,,game / play,oyun
+902,A2,27,T,main,teilnehmen,,,Verb,nimmt teil,hat teilgenommen,to participate / take part,katılmak
+903,A2,27,T,main,Telefon,das,-e,Noun,,,telephone / phone,telefon
+904,A2,27,T,main,Teller,der,-,Noun,,,plate,tabağ
+905,A2,27,T,main,Tennis,das,,Noun,,,tennis,tenis
+906,A2,27,T,main,Tipp,der,-s,Noun,,,tip / hint,ipuçu
+907,A2,27,T,main,Torte,die,-n,Noun,,,layer cake / gateau,pasta
+908,A2,27,T,main,Tourist,der,"-en,",Noun,,,tourist,turist
+909,A2,27,T,main,tragen,,,Verb,trägt,hat getragen,to carry / wear,taşımak / giymek
+910,A2,27,T,main,trainieren,,,Verb,trainiert,hat trainiert,to train,antrenman yapmak
+911,A2,27,T,main,Training,das,-s,Noun,,,training,antrenman
+912,A2,27,T,main,Traum,der,¨-e,Noun,,,dream,rüya
+913,A2,27,S,main,Student,der,"-en,",Noun,,,student (university, male),öğrenci (üniversite, erkek)
+914,A2,27,S,main,studieren,,,Verb,studiert,hat studiert,to study (university),okumak (üniversitede)
+915,A2,27,S,main,Studium,das,,Noun,,,studies / degree,öğrenim / bölüm
+916,A2,27,S,main,super,,,Other,,,great / super,harika
+917,A2,27,S,main,Supermarkt,der,¨-e,Noun,,,supermarket,süpermarket
+918,A2,27,S,main,Suppe,die,-n,Noun,,,soup,çorba
+919,A2,27,S,main,süß,,,Other,,,sweet,tatlı
+920,A2,27,S,main,Süßigkeiten,die,,Noun,,,sweets / candy,şekerlemeler
+921,A2,27,S,main,sympathisch,,,Other,,,likeable / nice,sempatik
+922,A2,27,T,main,Tablet,das,-s,Noun,,,tablet (device),tablet
+923,A2,27,T,main,Tablette,die,-n,Noun,,,tablet / pill,tablet / hap
+924,A2,27,T,main,tanzen,,,Verb,tanzt,,to dance,Dans etmek
+925,A2,27,T,main,Tasche,die,-n,Noun,,,bag / pocket,çanta
+926,A2,27,T,main,Taschengeld,das,,Noun,,,pocket money / allowance,harçlık
+927,A2,27,T,main,Tasse,die,-n,Noun,,,cup,fincan
+928,A2,27,T,main,Taxi,das,-s,Noun,,,taxi,taksi
+929,A2,27,T,main,Tee,der,-s,Noun,,,tea,çay
+930,A2,28,U,main,unbedingt,,,Other,,,absolutely / by all means,kesinlikle
+931,A2,28,U,main,und,,,Other,,,and,ve
+932,A2,28,U,main,Unfall,der,¨-e,Noun,,,accident,kaza
+933,A2,28,U,main,Universität,die,-en,Noun,,,university,üniversite
+934,A2,28,U,main,Unterkunft,die,¨-e,Noun,,,accommodation,konaklama
+935,A2,28,U,main,unternehmen,,,Verb,unternimmt,hat unternommen,to do / undertake,üstlenmek / yapmak
+936,A2,28,U,main,Unterricht,der,,Noun,,,lesson / class,ders
+937,A2,28,U,main,unterschreiben,,,Verb,unterschreibt,hat unterschrieben,to sign,imzalamak
+938,A2,28,U,main,Unterschrift,die,-en,Noun,,,signature,imza
+939,A2,28,U,main,Urlaub,der,-e,Noun,,,holiday / vacation,tatil
+940,A2,28,V,main,Veranstal-,die,,Noun,,,event (compound),etkinlik- (önek)
+941,A2,28,V,main,verbieten,,,Verb,,,to forbid / prohibit,yasaklamak
+942,A2,28,V,main,verboten,,,Verb,,,forbidden / prohibited,yasak
+943,A2,28,V,main,verdienen,,,Verb,verdient,hat verdient,to earn,kazanç sağlamak / kazanmak
+944,A2,28,V,main,Verein,der,-e,Noun,,,club / association,dernek / kulüp
+945,A2,28,V,main,vereinbaren,,,Verb,vereinbart,hat vereinbart,to agree on / arrange,kararlaştırmak / ayarlamak
+946,A2,28,V,main,vergessen,,,Verb,vergisst,,to forget,unutmak
+947,A2,28,T,main,Treppe,die,-n,Noun,,,stairs / staircase,merdiven
+948,A2,28,T,main,trinken,,,Verb,trinkt,hat getrunken,to drink,içmek
+949,A2,28,T,main,trocken,,,Verb,bis morgen!das,hat getan,dry,kuru
+950,A2,28,T,main,Tür,die,-en,Noun,,,door,kapı
+951,A2,28,Ü,main,üben,,,Verb,übt,hat geübt,to practice,alıştırma yapmak / pratik yapmak
+952,A2,28,Ü,main,über,,,Other,,,over / about / via,hakkında / üzerinden
+953,A2,28,Ü,main,übermorgen,,,Verb,,,the day after tomorrow,öbür gün / yarından sonraki gün
+954,A2,28,Ü,main,übernachten,,,Verb,übernachtet,hat übernachtet,to stay overnight,gecelemek
+955,A2,28,Ü,main,übersetzen,,,Verb,übersetzt,hat übersetzt,to translate,çevirmek
+956,A2,28,Ü,main,Über-,die,,Noun,,,translation (compound),çeviri- (önek)
+957,A2,28,Ü,main,überweisen,,,Verb,überweist,,to transfer (money),para transfer etmek
+958,A2,28,U,main,Uhr,die,-en,Noun,,,clock / watch,saat
+959,A2,28,U,main,um,,,Other,,,around / at (time),saat civarında / -de
+960,A2,28,U,main,umsteigen,,,Verb,steigt um,ist umgestiegen,to change (trains/buses),aktarma yapmak
+961,A2,28,U,main,umziehen,,,Verb,zieht um,ist umgezogen,to move house / change clothes,taşınmak / kıyafet değiştirmek
+962,A2,28,U,main,Umzug,der,¨-e,Noun,,,move / parade,taşınma / geçit töreni
+963,A2,29,V,main,Volleyball,der,¨-e,Noun,,,volleyball,voleybol
+964,A2,29,V,main,von,,,Other,,,from / of / by,-den / -dan / tarafından
+965,A2,29,V,main,vor,,,Other,,,before / in front of,önünde / önce
+966,A2,29,V,main,vorbei,,,Other,,,past / over,geçmiş / bitmiş
+967,A2,29,V,main,vorbereiten,,,Verb,bereitet vor,,to prepare,hazırlamak
+968,A2,29,V,main,vorgestern,,,Verb,,,the day before yesterday,evvelsi gün
+969,A2,29,V,main,vorsichtig,,,Other,,,careful / cautious,dikkatli
+970,A2,29,V,main,vorstellen,,,Verb,stellt vor,,to introduce / imagine,tanıtmak / hayal etmek
+971,A2,29,V,main,vorwärts,,,Other,,,forward(s),ileri
+972,A2,29,W,main,wach,,,Other,,,awake,uyanık
+973,A2,29,W,main,Wagen,der,–,Noun,,,car / carriage,araba / vagon
+974,A2,29,W,main,wählen,,,Verb,wählt,hat gewählt,to choose / vote,seçmek / oy vermek
+975,A2,29,W,main,wahr,,,Other,,,true,gerçek
+976,A2,29,W,main,Wald,der,¨-er,Noun,,,forest / woods,orman
+977,A2,29,W,main,wandern,,,Verb,wandert,ist gewandert,to hike,yürüyüş yapmak
+978,A2,29,W,main,wann,,,Other,,,when,ne zaman
+979,A2,29,W,main,warm,,,Other,,,warm,sıcak
+980,A2,29,W,main,warten,,,Verb,wartet,,to wait,beklemek
+981,A2,29,V,main,verkaufen,,,Verb,verkauft,hat verkauft,to sell,satmak
+982,A2,29,V,main,Verkehr,der,,Noun,,,traffic,trafiк
+983,A2,29,V,main,verletzen,,,Verb,verletzt,,to hurt / injure,yaralamak
+984,A2,29,V,main,verlieben,,,Verb,verliebt,hat verliebt,to fall in love,aşık olmak
+985,A2,29,V,main,verlieren,,,Verb,verliert,,to lose,kaybetmek
+986,A2,29,V,main,vermieten,,,Verb,vermietet,hat vermietet,to rent out,kiralamak (vermek)
+987,A2,29,V,main,Vermieter,der,- /,Noun,,,landlord (male),ev sahibi (erkek)
+988,A2,29,V,main,Vermieterin,die,-nen,Noun,,,landlord (female),ev sahibi (kadın)
+989,A2,29,V,main,verpassen,,,Verb,verpasst,hat verpasst,to miss,kaçırmak
+990,A2,29,V,main,verreisen,,,Verb,verreist,,to go on a trip,tatile çıkmak
+991,A2,29,V,main,verschieben,,,Verb,verschiebt,hat verschoben,to postpone / move,ertelemek
+992,A2,29,V,main,verschieden,,,Verb,,,different / various,çeşitli
+993,A2,29,V,main,Verspätung,die,-en,Noun,,,delay,gecikme
+994,A2,29,V,main,versuchen,,,Verb,versucht,,to try,denemek
+995,A2,29,V,main,Vertrag,der,¨-e,Noun,,,contract,sözleşme
+996,A2,29,V,main,vielleicht,,,Other,,,maybe / perhaps,belki
+997,A2,29,V,main,Vogel,der,¨-,Noun,,,bird,kuş
+998,A2,29,V,main,voll,,,Other,,,full,dolu
+999,A2,30,W,main,werden,,,Verb,wird,ist gewor,to become,olmak / -e gelmek
+1000,A2,30,S,main,sie,,,Other,,,she / they,o / onlar
+1001,A2,30,W,main,Werkstatt,die,¨-en,Noun,,,workshop / garage (car),atölye / garaj
+1002,A2,30,W,main,Wettbewerb,der,-e,Noun,,,competition,yarışma
+1003,A2,30,W,main,wie,,,Other,,,how / as / like,nasıl / gibi
+1004,A2,30,W,main,wieder,,,Other,,,again,tekrar
+1005,A2,30,W,main,wiederholen,,,Verb,,,to repeat,tekrar etmek
+1006,A2,30,W,main,Wiederhören,das,-,Noun,,,goodbye (on phone),görüşürüz (telefonda)
+1007,A2,30,W,main,Wiedersehen,das,-,Noun,,,goodbye,hoşça kal
+1008,A2,30,W,main,wirklich,,,Other,,,really / truly,gerçekten
+1009,A2,30,W,main,wissen,,,Verb,weiß,hat gewusst,to know (a fact),bilmek
+1010,A2,30,W,main,Witz,der,-e,Noun,,,joke,şaka
+1011,A2,30,W,main,wo,,,Other,,,where,nerede
+1012,A2,30,W,main,woher,,,Other,,,where from,nereden
+1013,A2,30,W,main,wohin,,,Other,,,where to,nereye
+1014,A2,30,W,main,wohnen,,,Verb,wohnt,,to live / reside,ikamet etmek
+1015,A2,30,W,main,Wohnung,die,-en,Noun,,,apartment / flat,daire
+1016,A2,30,W,main,Wohnzimmer,das,-,Noun,,,living room,oturma odası
+1017,A2,30,W,main,Wäsche,die,-n,Noun,,,laundry / washing,çamaşır
+1018,A2,30,W,main,waschen,,,Verb,wäscht,hat gewaschen,to wash,yıkamak
+1019,A2,30,W,main,Wasser,das,,Noun,,,water,su
+1020,A2,30,W,main,Webseite,die,-n,Noun,,,website,web sitesi
+1021,A2,30,W,main,wecken,,,Verb,weckt,hat geweckt,to wake (someone),uyandırmak
+1022,A2,30,W,main,weg/weg-,,,Other,,,away / off (prefix),uzakta / -den (önek)
+1023,A2,30,W,main,Weg,der,-e,Noun,,,way / path / route,yol
+1024,A2,30,W,main,wegen,,,Verb,,,because of / due to,nedeniyle
+1025,A2,30,W,main,weiblich,,,Other,,,female / feminine,dişi
+1026,A2,30,W,main,weich,,,Other,,,soft,yumuşak
+1027,A2,30,W,main,Wein,der,-e,Noun,,,wine,şarap
+1028,A2,30,W,main,weinen,,,Verb,weint,hat geweint,to cry,ağlamak
+1029,A2,30,W,main,weit,,,Other,,,far / wide,uzak
+1030,A2,30,W,main,weiter,,,Other,,,further / continue,ileriye / devam
+1031,A2,30,W,main,Welt,die,-en,Noun,,,world,dünya
+1032,A2,30,W,main,wenigstens,,,Other,,,at least,en azından
+1033,A2,31,Z,main,Zimmer,das,-,Noun,,,room,oda
+1034,A2,31,Z,main,Zirkus,der,-se,Noun,,,circus,sirk
+1035,A2,31,Z,main,Zoo,der,-s,Noun,,,zoo,hayvanat bahçesi
+1036,A2,31,Z,main,Zucker,der,,Noun,,,sugar,şeker
+1037,A2,31,Z,main,zufrieden,,,Verb,,,satisfied / content,memnun
+1038,A2,31,Z,main,Zug,der,¨-e,Noun,,,train,tren
+1039,A2,31,Z,main,zuletzt,,,Other,,,lastly / last time,en son
+1040,A2,31,Z,main,zumachen,,,Verb,macht zu,hat zugemacht,to close / shut,kapatmak
+1041,A2,31,Z,main,zusammen,,,Verb,,,together,birlikte
+1042,A2,31,Z,main,zwischen,,,Verb,,,between,arasında
+1043,A2,31,W,main,wollen,,,Verb,will,hat gewollt,to want,istemek
+1044,A2,31,W,main,Workshop,der,-s,Noun,,,workshop,atölye
+1045,A2,31,W,main,Wort,das,¨-er,Noun,,,word,kelime
+1046,A2,31,W,main,wunderbar,,,Other,,,wonderful / marvelous,muhteşem
+1047,A2,31,W,main,Wunsch,der,¨-e,Noun,,,wish,dilek
+1048,A2,31,W,main,wünschen,,,Verb,,,to wish,dilemek
+1049,A2,31,Z,main,Zahl,die,-en,Noun,,,number / figure,sayı
+1050,A2,31,Z,main,Zahn,der,¨-e,Noun,,,tooth,diş
+1051,A2,31,Z,main,zeigen,,,Verb,zeigt,hat gezeigt,to show,göstermek
+1052,A2,31,Z,main,Zeit,die,-en,Noun,,,time,zaman
+1053,A2,31,Z,main,Zelt,das,-e,Noun,,,tent,çadır
+1054,A2,31,Z,main,Zettel,der,-,Noun,,,note / slip of paper,not / makbuz
+1055,A2,31,Z,main,Zeugnis,das,-se,Noun,,,report card / certificate,karne / sertifika
+1056,A2,31,Z,main,Ziel,das,-e,Noun,,,goal / destination / target,hedef / varış noktası

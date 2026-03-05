@@ -1,0 +1,121 @@
+id,level,source_page,section,entry_type,word,article,plural,word_type,translation_en
+1,A1,6,zahlen,section_title,Zahlen,,,Noun,numbers
+2,A1,6,zahlen,main,eins,,,Number,one
+3,A1,6,zahlen,main,zwei,,,Number,two
+4,A1,6,zahlen,main,drei,,,Number,three
+5,A1,6,zahlen,main,vier,,,Number,four
+6,A1,6,zahlen,main,fünf,,,Number,five
+7,A1,6,zahlen,main,sechs,,,Number,six
+8,A1,6,zahlen,main,sieben,,,Number,seven
+9,A1,6,zahlen,main,acht,,,Number,eight
+10,A1,6,zahlen,main,neun,,,Number,nine
+11,A1,6,zahlen,main,zehn,,,Number,ten
+12,A1,6,zahlen,main,elf,,,Number,eleven
+13,A1,6,zahlen,main,zwölf,,,Number,twelve
+14,A1,6,zahlen,main,dreizehn,,,Number,thirteen
+15,A1,6,zahlen,main,vierzehn,,,Number,fourteen
+16,A1,6,zahlen,main,fünfzehn,,,Number,fifteen
+17,A1,6,zahlen,main,sechzehn,,,Number,sixteen
+18,A1,6,zahlen,main,siebzehn,,,Number,seventeen
+19,A1,6,zahlen,main,achtzehn,,,Number,eighteen
+20,A1,6,zahlen,main,neunzehn,,,Number,nineteen
+21,A1,6,zahlen,main,zwanzig,,,Number,twenty
+22,A1,6,zahlen,main,einundzwanzig,,,Number,twenty-one
+23,A1,6,zahlen,main,dreißig,,,Number,thirty
+24,A1,6,zahlen,main,vierzig,,,Number,forty
+25,A1,6,zahlen,main,fünfzig,,,Number,fifty
+26,A1,6,zahlen,main,sechzig,,,Number,sixty
+27,A1,6,zahlen,main,siebzig,,,Number,seventy
+28,A1,6,zahlen,main,achtzig,,,Number,eighty
+29,A1,6,zahlen,main,neunzig,,,Number,ninety
+30,A1,6,zahlen,main,hundert,,,Number,hundred
+31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one
+32,A1,6,zahlen,main,zweihundert,,,Number,two hundred
+33,A1,6,zahlen,main,tausend,,,Number,thousand
+34,A1,6,zahlen,main,Million,die,-en,Noun,million
+35,A1,6,zahlen,main,Milliarde,die,-en,Noun,billion
+36,A1,6,zahlen,main,erste,,,Number,first
+37,A1,6,zahlen,main,zweite,,,Number,second
+38,A1,6,zahlen,main,dritte,,,Number,third
+39,A1,6,zahlen,main,vierte,,,Number,fourth
+40,A1,6,zahlen,main,Datum,das,,Noun,date
+41,A1,6,zahlen,main,halb,,,Other,half
+42,A1,6,zahlen,main,Viertel,das,,Noun,quarter
+43,A1,7,uhrzeit,section_title,Uhrzeit,die,,Noun,time of day
+44,A1,7,uhrzeit,main,Sekunde,die,-n,Noun,second
+45,A1,7,uhrzeit,main,Minute,die,-n,Noun,minute
+46,A1,7,uhrzeit,main,Stunde,die,-n,Noun,hour
+47,A1,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,unit of time
+48,A1,7,zeitmaße,section_title,Zeitangabe,die,-n,Noun,time expression
+49,A1,7,zeitmaße,main,Tag,der,-e,Noun,day
+50,A1,7,zeitmaße,main,Woche,die,-n,Noun,week
+51,A1,7,zeitmaße,main,Jahr,das,-e,Noun,year
+52,A1,7,woche,section_title,Wochentag,der,-e,Noun,weekday
+53,A1,7,woche,main,Wochenende,das,,Noun,weekend
+54,A1,7,woche,main,Sonntag,der,,Noun,Sunday
+55,A1,7,woche,main,Montag,der,,Noun,Monday
+56,A1,7,woche,main,Dienstag,der,,Noun,Tuesday
+57,A1,7,woche,main,Mittwoch,der,,Noun,Wednesday
+58,A1,7,woche,main,Donnerstag,der,,Noun,Thursday
+59,A1,7,woche,main,Freitag,der,,Noun,Friday
+60,A1,7,woche,main,Samstag,der,,Noun,Saturday
+61,A1,7,woche,sub,Sonnabend,der,,Noun,Saturday (northern German)
+62,A1,7,tageszeiten,section_title,Tageszeit,die,-en,Noun,time of day
+63,A1,7,tageszeiten,main,Morgen,der,,Noun,morning
+64,A1,7,tageszeiten,main,Vormittag,der,-e,Noun,late morning
+65,A1,7,tageszeiten,main,Mittag,der,,Noun,noon
+66,A1,7,tageszeiten,main,Nachmittag,der,-e,Noun,afternoon
+67,A1,7,tageszeiten,main,Abend,der,-e,Noun,evening
+68,A1,7,tageszeiten,main,Nacht,die,¨-e,Noun,night
+69,A1,7,monat,section_title,Monat,der,-e,Noun,month
+70,A1,7,monat,section_title,Monatsname,der,-n,Noun,name of the month
+71,A1,7,monat,main,Januar,der,,Noun,January
+72,A1,7,monat,main,Februar,der,,Noun,February
+73,A1,7,monat,main,März,der,,Noun,March
+74,A1,7,monat,main,April,der,,Noun,April
+75,A1,7,monat,main,Mai,der,,Noun,May
+76,A1,7,monat,main,Juni,der,,Noun,June
+77,A1,7,monat,main,Juli,der,,Noun,July
+78,A1,7,monat,main,August,der,,Noun,August
+79,A1,7,monat,main,September,der,,Noun,September
+80,A1,7,monat,main,Oktober,der,,Noun,October
+81,A1,7,monat,main,November,der,,Noun,November
+82,A1,7,monat,main,Dezember,der,,Noun,December
+83,A1,8,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,season
+84,A1,8,jahreszeiten,main,Frühling,der,,Noun,spring
+85,A1,8,jahreszeiten,sub,Frühjahr,das,,Noun,spring
+86,A1,8,jahreszeiten,main,Sommer,der,,Noun,summer
+87,A1,8,jahreszeiten,main,Herbst,der,,Noun,autumn
+88,A1,8,jahreszeiten,main,Winter,der,,Noun,winter
+89,A1,8,waehrungen,section_title,Währung,die,-en,Noun,currency
+90,A1,8,waehrungen,main,Euro,der,,Noun,euro
+91,A1,8,waehrungen,sub,Cent,der,,Noun,cent
+92,A1,8,masse,section_title,Maß,das,-e,Noun,measure / unit
+93,A1,8,masse,section_title,Gewicht,das,-e,Noun,weight
+94,A1,8,masse,main,Meter,der,,Noun,meter
+95,A1,8,masse,sub,Zentimeter,der,,Noun,centimeter
+96,A1,8,masse,main,Kilometer,der,,Noun,kilometer
+97,A1,8,masse,main,Quadratmeter,der,,Noun,square meter
+98,A1,8,masse,main,Grad,der,,Noun,degree
+99,A1,8,masse,main,Prozent,das,,Noun,percent
+100,A1,8,masse,main,Liter,der,,Noun,liter
+101,A1,8,masse,main,Gramm,das,,Noun,gram
+102,A1,8,masse,sub,Pfund,das,,Noun,pound
+103,A1,8,masse,main,Kilogramm,das,,Noun,kilogram
+104,A1,8,laender,section_title,Land,das,¨-er,Noun,country
+105,A1,8,laender,section_title,Ländername,der,-n,Noun,country name
+106,A1,8,laender,section_title,Nationalität,die,-en,Noun,nationality
+107,A1,8,laender,main,Deutschland,,,Noun,Germany
+108,A1,8,laender,sub,Deutschen,der/die,-n,Noun,Germans
+109,A1,8,laender,main,Europa,,,Noun,Europe
+110,A1,8,laender,sub,Europäer,der,,Noun,European
+111,A1,8,laender,sub,europäisch,,,Adjective,European
+112,A1,8,farben,section_title,Farbe,die,-n,Noun,color
+113,A1,8,farben,main,schwarz,,,Adjective,black
+114,A1,8,farben,main,grau,,,Adjective,gray
+115,A1,8,farben,main,blau,,,Adjective,blue
+116,A1,8,farben,main,grün,,,Adjective,green
+117,A1,8,farben,main,weiß,,,Adjective,white
+118,A1,8,farben,main,rot,,,Adjective,red
+119,A1,8,farben,main,gelb,,,Adjective,yellow
+120,A1,8,farben,main,braun,,,Adjective,brown
