@@ -520,6 +520,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <script src="word_data/sources/goethe-institut/b1_words.js"></script>
 <script src="word_data/sources/goethe-institut/b2_words.js"></script>
 <script src="word_data/loader.js"></script>
+<!-- ══ QUIZ CSV DATA — pre-baked JS so no fetch() is needed ══ -->
+<script src="word_data/quiz_csv/a1_data.js"></script>
+<script src="word_data/quiz_csv/a2_data.js"></script>
+<script src="word_data/quiz_csv/b1_data.js"></script>
 
 <script>
 // ══════════════════════════════════════════════════════════════════
@@ -624,8 +628,8 @@ const UI = {
     selectLevel: 'انتخاب سطح',
     levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
     cardCount: (n) => n + ' کارت تمرین واژگان',
-    back: '← بازگشت',
-    next: 'بعدی →',
+    back: '→ بازگشت',
+    next: 'بعدی ←',
     correct: '✓ درست!',
     wrong: (a) => `✗ اشتباه. جواب درست: <strong>${a}</strong>`,
     resultTitles: { great:'عالی!', good:'خیلی خوب!', ok:'تلاش خوبی بود!', low:'به تمرین ادامه بده!' },
@@ -908,6 +912,9 @@ function applyTranslations() {
   // Quiz buttons
   document.getElementById('quiz-back-btn').textContent = u.back;
   document.getElementById('rw-back-btn').textContent = u.back;
+  // Random-word banner arrow: flip direction for RTL languages (Persian & Arabic)
+  var rbArrow = document.querySelector('.rb-arrow');
+  if (rbArrow) rbArrow.textContent = (LANG === 'fa' || LANG === 'ar') ? '←' : '→';
   document.getElementById('rw-screen-title').textContent = u.rwTitle;
   // About & footer
   document.getElementById('st-about-btn').textContent = u.aboutBtn;
@@ -949,7 +956,17 @@ function _parseCSVText(text) {
 
 function _loadAllCSV() {
   if (_csvLoadPromise) return _csvLoadPromise;
+  // Primary path: use pre-baked JS globals (window._QUIZ_CSV_A1 etc.) loaded via <script>.
+  // This is synchronous and works in every browser regardless of fetch/CORS/CSP restrictions.
+  // The fetch path is kept as a best-effort fallback only, for environments where the JS
+  // globals haven't loaded (e.g. custom build pipeline stripping them).
   _csvLoadPromise = Promise.all(['A1','A2','B1'].map(function(lv) {
+    var global = window['_QUIZ_CSV_' + lv];
+    if (global && global.length) {
+      CSV_QUIZ_DATA[lv] = global;
+      return Promise.resolve();
+    }
+    // Fallback: fetch and parse the raw CSV (won't work in all environments)
     return fetch('word_data/quiz_csv/' + lv.toLowerCase() + '.csv')
       .then(function(r){ return r.text(); })
       .then(function(txt){
@@ -977,7 +994,8 @@ function _csvRowDisplay(row) {
             : LANG==='uk' ? _ukMemCache
             :                _arMemCache;
   var cached = cache && cache[key] && cache[key].trim();
-  return cached || row.translation_en;
+  // Never fall back to English — '···' placeholder lets renderCard trigger a retry
+  return cached || '···';
 }
 
 // ── Build quiz queue from CSV rows ──
@@ -1126,6 +1144,47 @@ function renderCard() {
     })(btn, choiceRow.id, correctId);
     choicesEl.appendChild(btn);
   });
+
+  // For any choice that couldn't be translated yet (shows '···'), kick off a
+  // background per-word retry. This covers cases where the batch fetch failed or
+  // the API returned empty for a word. The button text updates live before the
+  // user clicks, and the correct-answer check still uses the CSV row id — not text.
+  if (LANG !== 'en') {
+    var _rf = LANG==='tr'?fetchTurkish:LANG==='fa'?fetchPersian:LANG==='ru'?fetchRussian:LANG==='uk'?fetchUkrainian:fetchArabic;
+    var _rc = LANG==='tr'?_trMemCache:LANG==='fa'?_faMemCache:LANG==='ru'?_ruMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
+    var _rs = LANG==='tr'?_trCacheSave:LANG==='fa'?_faCacheSave:LANG==='ru'?_ruCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+    document.querySelectorAll('.cbtn').forEach(function(btn) {
+      if (btn.textContent !== '···') return;
+      var cRow = allChoiceRows.find(function(r){ return r.id === btn.dataset.csvId; });
+      if (!cRow) return;
+      (async function(b, row) {
+        var k = normKey(row.word);
+        // Clear a stale empty entry so the fetch function doesn't skip it
+        if (_rc[k] === '') delete _rc[k];
+        // Attempt 1: translate German word directly (de→target)
+        var tr = await _rf(row.word);
+        // Attempt 2: if de→target still fails, translate the English definition (en→target)
+        if (!tr && row.translation_en && row.translation_en.trim()) {
+          try {
+            var r2 = await fetch('https://api.mymemory.translated.net/get?q='
+              + encodeURIComponent(row.translation_en.trim()) + '&langpair=en|' + LANG);
+            if (r2.ok) {
+              var j2 = await r2.json();
+              if (j2.responseStatus === 200 && j2.responseData) {
+                var t2 = (j2.responseData.translatedText || '').trim();
+                if (t2 && !t2.startsWith('PLEASE SELECT')) {
+                  tr = t2;
+                  _rc[k] = t2; _rs();
+                }
+              }
+            }
+          } catch(e) {}
+        }
+        // Update the button if it's still showing '···' and is still in the DOM
+        if (tr && b.isConnected && b.textContent === '···') b.textContent = tr;
+      })(btn, cRow);
+    });
+  }
 
   var fb = document.getElementById('feedback');
   fb.className = 'feedback'; fb.textContent = '';
