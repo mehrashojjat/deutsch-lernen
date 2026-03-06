@@ -1,6 +1,6 @@
 {
-  "name": "rovi Deutsch Lernen",
-  "short_name": "rovi DL",
+  "name": "DeutschLernen",
+  "short_name": "DeutschLernen",
   "description": "A free mini-game to practice and memorize German vocabulary — built on Goethe-Institut word lists.",
   "start_url": "/",
   "display": "standalone",
