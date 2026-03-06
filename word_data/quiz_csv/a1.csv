@@ -1,236 +1,236 @@
-id,level,source_page,section,entry_type,word,article,plural,word_type,translation_en,translation_tr
-1,A1,6,zahlen,section_title,Zahlen,,,Noun,numbers,sayılar
-2,A1,6,zahlen,main,eins,,,Number,one,bir
-3,A1,6,zahlen,main,zwei,,,Number,two,iki
-4,A1,6,zahlen,main,drei,,,Number,three,üç
-5,A1,6,zahlen,main,vier,,,Number,four,dört
-6,A1,6,zahlen,main,fünf,,,Number,five,beş
-7,A1,6,zahlen,main,sechs,,,Number,six,altı
-8,A1,6,zahlen,main,sieben,,,Number,seven,yedi
-9,A1,6,zahlen,main,acht,,,Number,eight,sekiz
-10,A1,6,zahlen,main,neun,,,Number,nine,dokuz
-11,A1,6,zahlen,main,zehn,,,Number,ten,on
-12,A1,6,zahlen,main,elf,,,Number,eleven,on bir
-13,A1,6,zahlen,main,zwölf,,,Number,twelve,on iki
-14,A1,6,zahlen,main,dreizehn,,,Number,thirteen,on üç
-15,A1,6,zahlen,main,vierzehn,,,Number,fourteen,on dört
-16,A1,6,zahlen,main,fünfzehn,,,Number,fifteen,on beş
-17,A1,6,zahlen,main,sechzehn,,,Number,sixteen,on altı
-18,A1,6,zahlen,main,siebzehn,,,Number,seventeen,on yedi
-19,A1,6,zahlen,main,achtzehn,,,Number,eighteen,on sekiz
-20,A1,6,zahlen,main,neunzehn,,,Number,nineteen,on dokuz
-21,A1,6,zahlen,main,zwanzig,,,Number,twenty,yirmi
-22,A1,6,zahlen,main,einundzwanzig,,,Number,twenty-one,yirmi bir
-23,A1,6,zahlen,main,dreißig,,,Number,thirty,otuz
-24,A1,6,zahlen,main,vierzig,,,Number,forty,kırk
-25,A1,6,zahlen,main,fünfzig,,,Number,fifty,elli
-26,A1,6,zahlen,main,sechzig,,,Number,sixty,altmış
-27,A1,6,zahlen,main,siebzig,,,Number,seventy,yetmiş
-28,A1,6,zahlen,main,achtzig,,,Number,eighty,seksen
-29,A1,6,zahlen,main,neunzig,,,Number,ninety,doksan
-30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz
-31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one,yüz bir
-32,A1,6,zahlen,main,zweihundert,,,Number,two hundred,iki yüz
-33,A1,6,zahlen,main,tausend,,,Number,thousand,bin
-34,A1,6,zahlen,main,Million,die,-en,Noun,million,milyon
-35,A1,6,zahlen,main,Milliarde,die,-en,Noun,billion,milyar
-36,A1,6,zahlen,main,erste,,,Number,first,birinci
-37,A1,6,zahlen,main,zweite,,,Number,second,ikinci
-38,A1,6,zahlen,main,dritte,,,Number,third,üçüncü
-39,A1,6,zahlen,main,vierte,,,Number,fourth,dördüncü
-40,A1,6,zahlen,main,Datum,das,,Noun,date,tarih
-41,A1,6,zahlen,main,halb,,,Other,half,yarım
-42,A1,6,zahlen,main,Viertel,das,,Noun,quarter,çeyrek
-43,A1,7,uhrzeit,section_title,Uhrzeit,die,,Noun,time of day,saat / günün zamanı
-44,A1,7,uhrzeit,main,Sekunde,die,-n,Noun,second,saniye
-45,A1,7,uhrzeit,main,Minute,die,-n,Noun,minute,dakika
-46,A1,7,uhrzeit,main,Stunde,die,-n,Noun,hour,saat
-47,A1,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,unit of time,zaman birimi
-48,A1,7,zeitmaße,section_title,Zeitangabe,die,-n,Noun,time expression,zaman ifadesi
-49,A1,7,zeitmaße,main,Tag,der,-e,Noun,day,gün
-50,A1,7,zeitmaße,main,Woche,die,-n,Noun,week,hafta
-51,A1,7,zeitmaße,main,Jahr,das,-e,Noun,year,yıl
-52,A1,7,woche,section_title,Wochentag,der,-e,Noun,weekday,hafta günü
-53,A1,7,woche,main,Wochenende,das,,Noun,weekend,hafta sonu
-54,A1,7,woche,main,Sonntag,der,,Noun,Sunday,Pazar
-55,A1,7,woche,main,Montag,der,,Noun,Monday,Pazartesi
-56,A1,7,woche,main,Dienstag,der,,Noun,Tuesday,Sali
-57,A1,7,woche,main,Mittwoch,der,,Noun,Wednesday,Çarşamba
-58,A1,7,woche,main,Donnerstag,der,,Noun,Thursday,Perşembe
-59,A1,7,woche,main,Freitag,der,,Noun,Friday,Cuma
-60,A1,7,woche,main,Samstag,der,,Noun,Saturday,Cumartesi
-61,A1,7,woche,sub,Sonnabend,der,,Noun,Saturday (northern German),Cumartesi (Kuzey Almanya)
-62,A1,7,tageszeiten,section_title,Tageszeit,die,-en,Noun,time of day,günün saati
-63,A1,7,tageszeiten,main,Morgen,der,,Noun,morning,sabah
-64,A1,7,tageszeiten,main,Vormittag,der,-e,Noun,late morning,öğleden önce
-65,A1,7,tageszeiten,main,Mittag,der,,Noun,noon,öğle
-66,A1,7,tageszeiten,main,Nachmittag,der,-e,Noun,afternoon,öğleden sonra
-67,A1,7,tageszeiten,main,Abend,der,-e,Noun,evening,akşam
-68,A1,7,tageszeiten,main,Nacht,die,¨-e,Noun,night,gece
-69,A1,7,monat,section_title,Monat,der,-e,Noun,month,ay
-70,A1,7,monat,section_title,Monatsname,der,-n,Noun,name of the month,ay adı
-71,A1,7,monat,main,Januar,der,,Noun,January,Ocak
-72,A1,7,monat,main,Februar,der,,Noun,February,Şubat
-73,A1,7,monat,main,März,der,,Noun,March,Mart
-74,A1,7,monat,main,April,der,,Noun,April,Nisan
-75,A1,7,monat,main,Mai,der,,Noun,May,Mayıs
-76,A1,7,monat,main,Juni,der,,Noun,June,Haziran
-77,A1,7,monat,main,Juli,der,,Noun,July,Temmuz
-78,A1,7,monat,main,August,der,,Noun,August,Ağustos
-79,A1,7,monat,main,September,der,,Noun,September,Eylül
-80,A1,7,monat,main,Oktober,der,,Noun,October,Ekim
-81,A1,7,monat,main,November,der,,Noun,November,Kasım
-82,A1,7,monat,main,Dezember,der,,Noun,December,Aralık
-83,A1,8,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,season,mevsim
-84,A1,8,jahreszeiten,main,Frühling,der,,Noun,spring,ilkbahar
-85,A1,8,jahreszeiten,sub,Frühjahr,das,,Noun,spring,ilkbahar
-86,A1,8,jahreszeiten,main,Sommer,der,,Noun,summer,yaz
-87,A1,8,jahreszeiten,main,Herbst,der,,Noun,autumn,sonbahar
-88,A1,8,jahreszeiten,main,Winter,der,,Noun,winter,kış
-89,A1,8,waehrungen,section_title,Währung,die,-en,Noun,currency,para birimi
-90,A1,8,waehrungen,main,Euro,der,,Noun,euro,euro
-91,A1,8,waehrungen,sub,Cent,der,,Noun,cent,cent
-92,A1,8,masse,section_title,Maß,das,-e,Noun,measure / unit,ölçü / birim
-93,A1,8,masse,section_title,Gewicht,das,-e,Noun,weight,ağırlık
-94,A1,8,masse,main,Meter,der,,Noun,meter,metre
-95,A1,8,masse,sub,Zentimeter,der,,Noun,centimeter,santimetre
-96,A1,8,masse,main,Kilometer,der,,Noun,kilometer,kilometre
-97,A1,8,masse,main,Quadratmeter,der,,Noun,square meter,metrekare
-98,A1,8,masse,main,Grad,der,,Noun,degree,derece
-99,A1,8,masse,main,Prozent,das,,Noun,percent,yüzde
-100,A1,8,masse,main,Liter,der,,Noun,liter,litre
-101,A1,8,masse,main,Gramm,das,,Noun,gram,gram
-102,A1,8,masse,sub,Pfund,das,,Noun,pound,pound (yabancı)
-103,A1,8,masse,main,Kilogramm,das,,Noun,kilogram,kilogram
-104,A1,8,laender,section_title,Land,das,¨-er,Noun,country,ülke
-105,A1,8,laender,section_title,Ländername,der,-n,Noun,country name,ülke adı
-106,A1,8,laender,section_title,Nationalität,die,-en,Noun,nationality,uyruk
-107,A1,8,laender,main,Deutschland,,,Noun,Germany,Almanya
-108,A1,8,laender,sub,Deutschen,der/die,-n,Noun,Germans,Almanlar
-109,A1,8,laender,main,Europa,,,Noun,Europe,Avrupa
-110,A1,8,laender,sub,Europäer,der,,Noun,European,Avrupalı
-111,A1,8,laender,sub,europäisch,,,Adjective,European,Avrupaya ait / Avrupalı
-112,A1,8,farben,section_title,Farbe,die,-n,Noun,color,renk
-113,A1,8,farben,main,schwarz,,,Adjective,black,siyah
-114,A1,8,farben,main,grau,,,Adjective,gray,gri
-115,A1,8,farben,main,blau,,,Adjective,blue,mavi
-116,A1,8,farben,main,grün,,,Adjective,green,yeşil
-117,A1,8,farben,main,weiß,,,Adjective,white,beyaz
-118,A1,8,farben,main,rot,,,Adjective,red,kırmızı
-119,A1,8,farben,main,gelb,,,Adjective,yellow,sarı
-120,A1,8,farben,main,braun,,,Adjective,brown,kahverengi
-121,A1,8,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,compass direction,yön
-122,A1,8,himmelsrichtungen,main,Norden,der,,Noun,north,kuzey
-123,A1,8,himmelsrichtungen,main,Süden,der,,Noun,south,güney
-124,A1,8,himmelsrichtungen,main,Westen,der,,Noun,west,batı
-125,A1,8,himmelsrichtungen,main,Osten,der,,Noun,east,doğu
-126,A1,9,A,main,ab,,,Other,from / off,- / -den / -den
-127,A1,9,A,main,aber,,,Other,but,ama
-128,A1,9,A,main,abfahren,,,Verb,to depart,ayrılmak / hareket etmek
-129,A1,9,A,sub,Abfahrt,die,,Noun,departure,kalkış / ayrılış
-130,A1,9,A,main,abgeben,,,Verb,to hand in,teslim etmek
-131,A1,9,A,main,abholen,,,Verb,to pick up,almak
-132,A1,9,A,main,Absender,der,,Noun,sender,gönderen
-133,A1,9,A,main,Achtung,,,Other,attention / caution,uyarı / dikkat
-134,A1,9,A,main,Adresse,die,-en,Noun,address,adres
-135,A1,9,A,main,all-,,,Other,all- (prefix),tüm- (önek)
-136,A1,9,A,main,allein,,,Other,alone,yalnız
-137,A1,9,A,main,also,,,Other,so / therefore,yani / bu yüzden
-138,A1,9,A,main,alt,,,Other,old,yaşlı / eski
-139,A1,9,A,main,Alter,das,,Noun,age,yaş
-140,A1,9,A,main,an,,,Other,at / on / to, -de / -da / -e (bağlamına göre)
-141,A1,9,A,main,anbieten,,,Verb,to offer,sunmak
-142,A1,9,A,sub,Angebot,das,-e,Noun,offer,teklif
-143,A1,9,A,main,ander-,,,Other,other- (prefix),başka- (önek)
-144,A1,9,A,main,anfangen,,,Verb,to begin,başlamak
-145,A1,9,A,sub,Anfang,der,,Noun,beginning,başlangıç
-146,A1,9,A,main,anklicken,,,Verb,to click on,tıklamak
-147,A1,9,A,main,ankommen,,,Verb,to arrive,varmak
-148,A1,9,A,main,Ankunft,die,,Noun,arrival,varış
-149,A1,9,A,main,ankreuzen,,,Verb,to check / tick,işaretlemek / tik atmak
-150,A1,9,A,main,anmachen,,,Verb,to switch on,açmak (elektrikli cihaz)
-151,A1,9,A,main,anmelden,,,Verb,to register / log in,kayıt olmak / giriş yapmak
-152,A1,9,A,main,Anrede,die,,Noun,salutation / form of address,hitap / selamlama
-153,A1,9,A,main,anrufen,,,Verb,to call / phone,aramak
-154,A1,9,A,main,Anruf,der,-e,Noun,phone call,telefon araması
-155,A1,9,A,sub,Anruf-,der,,Noun,phone call (compound prefix),arama- (önek)
-156,A1,10,A,main,Ansage,die,-n,Noun,announcement,anons / duyuru
-157,A1,10,A,main,Anschluss,der,,Noun,connection,bağlantı
-158,A1,10,A,main,an sein,,,Other,to be on,açık olmak / çalışıyor olmak
-159,A1,10,A,main,antworten,,,Verb,to answer,cevaplamak
-160,A1,10,A,sub,Antwort,die,-en,Noun,answer,cevap
-161,A1,10,A,main,Anzeige,die,-n,Noun,advertisement / notice,ilan / duyuru
-162,A1,10,A,main,anziehen,,,Verb,to put on (clothes),giymek
-163,A1,10,A,main,Apartment,das,-s,Noun,apartment,daire
-164,A1,10,A,main,Apfel,der,,Noun,apple,elma
-165,A1,10,A,main,Appetit,der,,Noun,appetite,iştah
-166,A1,10,A,main,arbeiten,,,Verb,to work,çalışmak
-167,A1,10,A,sub,Arbeit,die,-en,Noun,work / job,iş / çalışma
-168,A1,10,A,main,arbeitslos,,,Other,unemployed,işsiz
-169,A1,10,A,main,Arbeitsplatz,der,"-ä, e",Noun,workplace,iş yeri
-170,A1,10,A,main,Arm,der,-e,Noun,arm,kol
-171,A1,10,A,main,Arzt,der,,Noun,doctor,doktor
-172,A1,10,A,main,auch,,,Other,also / too,de ayrıca
-173,A1,10,A,main,auf,,,Other,on / onto,üzerinde / -e doğru
-174,A1,10,A,main,Aufgabe,die,-n,Noun,task / exercise,görev / alıştırma
-175,A1,10,A,main,aufhören,,,Verb,to stop / quit,durmak / bırakmak
-176,A1,10,A,main,auf sein,,,Other,to be open / awake,açık / uyanık olmak
-177,A1,10,A,main,aufstehen,,,Verb,to get up,ayağa kalkmak
-178,A1,10,A,main,Aufzug,der,"-ü, e",Noun,elevator / lift,asansör
-179,A1,10,A,main,Auge,das,-n,Noun,eye,göz
-180,A1,10,A,main,aus,,,Other,from / out of,-den / -dan
-181,A1,10,A,main,Ausflug,der,,Noun,excursion / day trip,gezinti / günlük gezi
-182,A1,10,A,main,ausfüllen,,,Verb,to fill in,doldurmak
-183,A1,10,A,main,Ausgang,der,,Noun,exit,çıkış
-184,A1,10,A,main,Auskunft,die,"-ü, e",Noun,information,bilgi
-185,A1,10,A,main,Ausland,das,,Noun,abroad,yurtdışı
-186,A1,10,A,sub,Ausländer,der,-,Noun,foreigner,yabancı
-187,A1,10,A,sub,ausländisch,,,Other,foreign,yabancı
-188,A1,10,A,main,ausmachen,,,Verb,to switch off,kapatmak
-189,A1,10,A,main,Aussage,die,-n,Noun,statement,ifade / açıklama
-190,A1,10,A,main,aussehen,,,Verb,to look / appear,görünmek
-191,A1,10,A,main,aus sein,,,Other,to be off / finished,kapalı olmak / bitmiş olmak
-192,A1,10,A,main,aussteigen,,,Verb,to get off (vehicle),inmek (taşıttan)
-193,A1,10,A,main,Ausweis,der,,Noun,ID card,kimlik kartı
-194,A1,10,A,main,ausziehen,,,Verb,to move out / take off (clothes),taşınmak / (elbise) çıkarmak
-195,A1,10,A,main,Autobahn,die,-en,Noun,highway / motorway,otoyol
-196,A1,10,A,main,Automat,der,,Noun,vending machine,otomat
-197,A1,10,A,main,automatisch,,,Other,automatic,otomatik
-198,A1,11,B,main,Baby,das,-s,Noun,baby,bebek
-199,A1,11,B,main,Bäckerei,die,,Noun,bakery,fırın / pastane
-200,A1,11,B,main,Bad,das,,Noun,bathroom,banyo
-201,A1,11,B,main,baden,,,Verb,to bathe,yıkanmak
-202,A1,11,B,main,Bahn,die,,Noun,train / railway,treni / demiryolu
-203,A1,11,B,main,Bahnhof,der,,Noun,train station,tren istasyonu
-204,A1,11,B,main,Bahnsteig,der,,Noun,platform,peron
-205,A1,11,B,main,bald,,,Other,soon,yakında
-206,A1,11,B,main,Balkon,der,,Noun,balcony,balkon
-207,A1,11,B,main,Banane,die,-n,Noun,banana,muz
-208,A1,11,B,main,Bank,die,,Noun,bank,banka
-209,A1,11,B,main,bar,,,Other,cash,peşin / nakit
-210,A1,11,B,main,Bauch,der,,Noun,stomach / belly,karın
-211,A1,11,B,main,Baum,der,"-ä, e",Noun,tree,ağaç
-212,A1,11,B,main,Beamte,der,-n,Noun,civil servant,memur
-213,A1,11,B,main,bedeuten,,,Verb,to mean,anlamına gelmek
-214,A1,11,B,main,beginnen,,,Verb,to begin,başlamak
-215,A1,11,B,main,bei,,,Other,at / near / with,yanında / ile
-216,A1,11,B,main,beide,,,Other,both,her ikisi
-217,A1,11,B,main,Bein,das,-e,Noun,leg,bacak
-218,A1,11,B,main,Beispiel,das,-e,Noun,example,örnek
-219,A1,11,B,main,bekannt,,,Other,known / familiar,tanınmış / bilinen
-220,A1,11,D,main,der/die,,,Other,the (m/f),o / o (cinsiyete göre)
-221,A1,11,B,main,bekommen,,,Verb,to get / receive,almak / teslim almak
-222,A1,11,B,main,benutzen,,,Verb,to use,kullanmak
-223,A1,11,B,main,Beruf,der,-e,Noun,profession / occupation,meslek
-224,A1,11,B,main,besetzt,,,Other,occupied / busy,meşgul / dolu
-225,A1,11,B,main,besichtigen,,,Verb,to visit (a sight),gezilecek yerleri gezmek
-226,A1,11,B,main,besser,,,Other,better,daha iyi
-227,A1,11,B,main,best-,,,Other,best- (prefix),en iyi- (önek)
-228,A1,11,B,main,bestellen,,,Verb,to order,sipariş vermek
-229,A1,11,B,main,besuchen,,,Verb,to visit,ziyaret etmek
-230,A1,11,B,main,Bett,das,-en,Noun,bed,yatak
-231,A1,11,B,main,bezahlen,,,Verb,to pay,ödemek
-232,A1,11,B,main,Bier,das,,Noun,beer,bira
-233,A1,11,B,main,Bild,das,-er,Noun,picture / image,resim / görüntü
-234,A1,11,B,main,billig,,,Other,cheap,ucuz
-235,A1,12,B,main,Birne,die,-n,Noun,pear,armut
+id,level,source_page,section,entry_type,word,article,plural,word_type,translation_en,translation_tr,translation_ru
+1,A1,6,zahlen,section_title,Zahlen,,,Noun,numbers,sayılar,числа
+2,A1,6,zahlen,main,eins,,,Number,one,bir,один
+3,A1,6,zahlen,main,zwei,,,Number,two,iki,два
+4,A1,6,zahlen,main,drei,,,Number,three,üç,три
+5,A1,6,zahlen,main,vier,,,Number,four,dört,четыре
+6,A1,6,zahlen,main,fünf,,,Number,five,beş,пять
+7,A1,6,zahlen,main,sechs,,,Number,six,altı,шесть
+8,A1,6,zahlen,main,sieben,,,Number,seven,yedi,семь
+9,A1,6,zahlen,main,acht,,,Number,eight,sekiz,восемь
+10,A1,6,zahlen,main,neun,,,Number,nine,dokuz,девять
+11,A1,6,zahlen,main,zehn,,,Number,ten,on,десять
+12,A1,6,zahlen,main,elf,,,Number,eleven,on bir,одиннадцать
+13,A1,6,zahlen,main,zwölf,,,Number,twelve,on iki,двенадцать
+14,A1,6,zahlen,main,dreizehn,,,Number,thirteen,on üç,тринадцать
+15,A1,6,zahlen,main,vierzehn,,,Number,fourteen,on dört,четырнадцать
+16,A1,6,zahlen,main,fünfzehn,,,Number,fifteen,on beş,пятнадцать
+17,A1,6,zahlen,main,sechzehn,,,Number,sixteen,on altı,шестнадцать
+18,A1,6,zahlen,main,siebzehn,,,Number,seventeen,on yedi,семнадцать
+19,A1,6,zahlen,main,achtzehn,,,Number,eighteen,on sekiz,восемнадцать
+20,A1,6,zahlen,main,neunzehn,,,Number,nineteen,on dokuz,девятнадцать
+21,A1,6,zahlen,main,zwanzig,,,Number,twenty,yirmi,двадцать
+22,A1,6,zahlen,main,einundzwanzig,,,Number,twenty-one,yirmi bir,двадцать один
+23,A1,6,zahlen,main,dreißig,,,Number,thirty,otuz,тридцать
+24,A1,6,zahlen,main,vierzig,,,Number,forty,kırk,сорок
+25,A1,6,zahlen,main,fünfzig,,,Number,fifty,elli,пятьдесят
+26,A1,6,zahlen,main,sechzig,,,Number,sixty,altmış,шестьдесят
+27,A1,6,zahlen,main,siebzig,,,Number,seventy,yetmiş,семьдесят
+28,A1,6,zahlen,main,achtzig,,,Number,eighty,seksen,восемьдесят
+29,A1,6,zahlen,main,neunzig,,,Number,ninety,doksan,девяносто
+30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz,сто
+31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one,yüz bir,сто один
+32,A1,6,zahlen,main,zweihundert,,,Number,two hundred,iki yüz,двести
+33,A1,6,zahlen,main,tausend,,,Number,thousand,bin,тысяча
+34,A1,6,zahlen,main,Million,die,-en,Noun,million,milyon,миллион
+35,A1,6,zahlen,main,Milliarde,die,-en,Noun,billion,milyar,миллиард
+36,A1,6,zahlen,main,erste,,,Number,first,birinci,первый
+37,A1,6,zahlen,main,zweite,,,Number,second,ikinci,второй
+38,A1,6,zahlen,main,dritte,,,Number,third,üçüncü,третий
+39,A1,6,zahlen,main,vierte,,,Number,fourth,dördüncü,четвёртый
+40,A1,6,zahlen,main,Datum,das,,Noun,date,tarih,дата
+41,A1,6,zahlen,main,halb,,,Other,half,yarım,половина
+42,A1,6,zahlen,main,Viertel,das,,Noun,quarter,çeyrek,четверть
+43,A1,7,uhrzeit,section_title,Uhrzeit,die,,Noun,time of day,saat / günün zamanı,время суток
+44,A1,7,uhrzeit,main,Sekunde,die,-n,Noun,second,saniye,секунда
+45,A1,7,uhrzeit,main,Minute,die,-n,Noun,minute,dakika,минута
+46,A1,7,uhrzeit,main,Stunde,die,-n,Noun,hour,saat,час
+47,A1,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,unit of time,zaman birimi,единица времени
+48,A1,7,zeitmaße,section_title,Zeitangabe,die,-n,Noun,time expression,zaman ifadesi,указание времени
+49,A1,7,zeitmaße,main,Tag,der,-e,Noun,day,gün,день
+50,A1,7,zeitmaße,main,Woche,die,-n,Noun,week,hafta,неделя
+51,A1,7,zeitmaße,main,Jahr,das,-e,Noun,year,yıl,год
+52,A1,7,woche,section_title,Wochentag,der,-e,Noun,weekday,hafta günü,день недели
+53,A1,7,woche,main,Wochenende,das,,Noun,weekend,hafta sonu,выходные
+54,A1,7,woche,main,Sonntag,der,,Noun,Sunday,Pazar,воскресенье
+55,A1,7,woche,main,Montag,der,,Noun,Monday,Pazartesi,понедельник
+56,A1,7,woche,main,Dienstag,der,,Noun,Tuesday,Sali,вторник
+57,A1,7,woche,main,Mittwoch,der,,Noun,Wednesday,Çarşamba,среда
+58,A1,7,woche,main,Donnerstag,der,,Noun,Thursday,Perşembe,четверг
+59,A1,7,woche,main,Freitag,der,,Noun,Friday,Cuma,пятница
+60,A1,7,woche,main,Samstag,der,,Noun,Saturday,Cumartesi,суббота
+61,A1,7,woche,sub,Sonnabend,der,,Noun,Saturday (northern German),Cumartesi (Kuzey Almanya),суббота (северная Германия)
+62,A1,7,tageszeiten,section_title,Tageszeit,die,-en,Noun,time of day,günün saati,время суток
+63,A1,7,tageszeiten,main,Morgen,der,,Noun,morning,sabah,утро
+64,A1,7,tageszeiten,main,Vormittag,der,-e,Noun,late morning,öğleden önce,позднее утро
+65,A1,7,tageszeiten,main,Mittag,der,,Noun,noon,öğle,полдень
+66,A1,7,tageszeiten,main,Nachmittag,der,-e,Noun,afternoon,öğleden sonra,после полудня
+67,A1,7,tageszeiten,main,Abend,der,-e,Noun,evening,akşam,вечер
+68,A1,7,tageszeiten,main,Nacht,die,¨-e,Noun,night,gece,ночь
+69,A1,7,monat,section_title,Monat,der,-e,Noun,month,ay,месяц
+70,A1,7,monat,section_title,Monatsname,der,-n,Noun,name of the month,ay adı,название месяца
+71,A1,7,monat,main,Januar,der,,Noun,January,Ocak,январь
+72,A1,7,monat,main,Februar,der,,Noun,February,Şubat,февраль
+73,A1,7,monat,main,März,der,,Noun,March,Mart,март
+74,A1,7,monat,main,April,der,,Noun,April,Nisan,апрель
+75,A1,7,monat,main,Mai,der,,Noun,May,Mayıs,май
+76,A1,7,monat,main,Juni,der,,Noun,June,Haziran,июнь
+77,A1,7,monat,main,Juli,der,,Noun,July,Temmuz,июль
+78,A1,7,monat,main,August,der,,Noun,August,Ağustos,август
+79,A1,7,monat,main,September,der,,Noun,September,Eylül,сентябрь
+80,A1,7,monat,main,Oktober,der,,Noun,October,Ekim,октябрь
+81,A1,7,monat,main,November,der,,Noun,November,Kasım,ноябрь
+82,A1,7,monat,main,Dezember,der,,Noun,December,Aralık,декабрь
+83,A1,8,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,season,mevsim,время года
+84,A1,8,jahreszeiten,main,Frühling,der,,Noun,spring,ilkbahar,весна
+85,A1,8,jahreszeiten,sub,Frühjahr,das,,Noun,spring,ilkbahar,весна
+86,A1,8,jahreszeiten,main,Sommer,der,,Noun,summer,yaz,лето
+87,A1,8,jahreszeiten,main,Herbst,der,,Noun,autumn,sonbahar,осень
+88,A1,8,jahreszeiten,main,Winter,der,,Noun,winter,kış,зима
+89,A1,8,waehrungen,section_title,Währung,die,-en,Noun,currency,para birimi,валюта
+90,A1,8,waehrungen,main,Euro,der,,Noun,euro,euro,евро
+91,A1,8,waehrungen,sub,Cent,der,,Noun,cent,cent,цент
+92,A1,8,masse,section_title,Maß,das,-e,Noun,measure / unit,ölçü / birim,мера / единица
+93,A1,8,masse,section_title,Gewicht,das,-e,Noun,weight,ağırlık,вес
+94,A1,8,masse,main,Meter,der,,Noun,meter,metre,метр
+95,A1,8,masse,sub,Zentimeter,der,,Noun,centimeter,santimetre,сантиметр
+96,A1,8,masse,main,Kilometer,der,,Noun,kilometer,kilometre,километр
+97,A1,8,masse,main,Quadratmeter,der,,Noun,square meter,metrekare,квадратный метр
+98,A1,8,masse,main,Grad,der,,Noun,degree,derece,градус
+99,A1,8,masse,main,Prozent,das,,Noun,percent,yüzde,процент
+100,A1,8,masse,main,Liter,der,,Noun,liter,litre,литр
+101,A1,8,masse,main,Gramm,das,,Noun,gram,gram,грамм
+102,A1,8,masse,sub,Pfund,das,,Noun,pound,pound (yabancı),фунт
+103,A1,8,masse,main,Kilogramm,das,,Noun,kilogram,kilogram,килограмм
+104,A1,8,laender,section_title,Land,das,¨-er,Noun,country,ülke,страна
+105,A1,8,laender,section_title,Ländername,der,-n,Noun,country name,ülke adı,название страны
+106,A1,8,laender,section_title,Nationalität,die,-en,Noun,nationality,uyruk,национальность
+107,A1,8,laender,main,Deutschland,,,Noun,Germany,Almanya,Германия
+108,A1,8,laender,sub,Deutschen,der/die,-n,Noun,Germans,Almanlar,немцы
+109,A1,8,laender,main,Europa,,,Noun,Europe,Avrupa,Европа
+110,A1,8,laender,sub,Europäer,der,,Noun,European,Avrupalı,европеец
+111,A1,8,laender,sub,europäisch,,,Adjective,European,Avrupaya ait / Avrupalı,европейский
+112,A1,8,farben,section_title,Farbe,die,-n,Noun,color,renk,цвет
+113,A1,8,farben,main,schwarz,,,Adjective,black,siyah,чёрный
+114,A1,8,farben,main,grau,,,Adjective,gray,gri,серый
+115,A1,8,farben,main,blau,,,Adjective,blue,mavi,синий
+116,A1,8,farben,main,grün,,,Adjective,green,yeşil,зелёный
+117,A1,8,farben,main,weiß,,,Adjective,white,beyaz,белый
+118,A1,8,farben,main,rot,,,Adjective,red,kırmızı,красный
+119,A1,8,farben,main,gelb,,,Adjective,yellow,sarı,жёлтый
+120,A1,8,farben,main,braun,,,Adjective,brown,kahverengi,коричневый
+121,A1,8,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,compass direction,yön,сторона света
+122,A1,8,himmelsrichtungen,main,Norden,der,,Noun,north,kuzey,север
+123,A1,8,himmelsrichtungen,main,Süden,der,,Noun,south,güney,юг
+124,A1,8,himmelsrichtungen,main,Westen,der,,Noun,west,batı,запад
+125,A1,8,himmelsrichtungen,main,Osten,der,,Noun,east,doğu,восток
+126,A1,9,A,main,ab,,,Other,from / off,- / -den / -den,от
+127,A1,9,A,main,aber,,,Other,but,ama,но
+128,A1,9,A,main,abfahren,,,Verb,to depart,ayrılmak / hareket etmek,отправляться
+129,A1,9,A,sub,Abfahrt,die,,Noun,departure,kalkış / ayrılış,отправление
+130,A1,9,A,main,abgeben,,,Verb,to hand in,teslim etmek,сдать
+131,A1,9,A,main,abholen,,,Verb,to pick up,almak,забрать
+132,A1,9,A,main,Absender,der,,Noun,sender,gönderen,отправитель
+133,A1,9,A,main,Achtung,,,Other,attention / caution,uyarı / dikkat,внимание / осторожность
+134,A1,9,A,main,Adresse,die,-en,Noun,address,adres,адрес
+135,A1,9,A,main,all-,,,Other,all- (prefix),tüm- (önek),весь- (приставка)
+136,A1,9,A,main,allein,,,Other,alone,yalnız,одинокий
+137,A1,9,A,main,also,,,Other,so / therefore,yani / bu yüzden,так / поэтому
+138,A1,9,A,main,alt,,,Other,old,yaşlı / eski,старый
+139,A1,9,A,main,Alter,das,,Noun,age,yaş,возраст
+140,A1,9,A,main,an,,,Other,at / on / to, -de / -da / -e (bağlamına göre),в / на / к (в зависимости от контекста)
+141,A1,9,A,main,anbieten,,,Verb,to offer,sunmak,предлагать
+142,A1,9,A,sub,Angebot,das,-e,Noun,offer,teklif,предложение
+143,A1,9,A,main,ander-,,,Other,other- (prefix),başka- (önek),другой- (приставка)
+144,A1,9,A,main,anfangen,,,Verb,to begin,başlamak,начинать
+145,A1,9,A,sub,Anfang,der,,Noun,beginning,başlangıç,начало
+146,A1,9,A,main,anklicken,,,Verb,to click on,tıklamak,нажать (кликнуть)
+147,A1,9,A,main,ankommen,,,Verb,to arrive,varmak,прибывать
+148,A1,9,A,main,Ankunft,die,,Noun,arrival,varış,прибытие
+149,A1,9,A,main,ankreuzen,,,Verb,to check / tick,işaretlemek / tik atmak,отметить (крестиком)
+150,A1,9,A,main,anmachen,,,Verb,to switch on,açmak (elektrikli cihaz),включать
+151,A1,9,A,main,anmelden,,,Verb,to register / log in,kayıt olmak / giriş yapmak,зарегистрироваться / войти
+152,A1,9,A,main,Anrede,die,,Noun,salutation / form of address,hitap / selamlama,обращение / форма обращения
+153,A1,9,A,main,anrufen,,,Verb,to call / phone,aramak,позвонить
+154,A1,9,A,main,Anruf,der,-e,Noun,phone call,telefon araması,телефонный звонок
+155,A1,9,A,sub,Anruf-,der,,Noun,phone call (compound prefix),arama- (önek),звонок- (приставка)
+156,A1,10,A,main,Ansage,die,-n,Noun,announcement,anons / duyuru,объявление
+157,A1,10,A,main,Anschluss,der,,Noun,connection,bağlantı,пересадка / соединение
+158,A1,10,A,main,an sein,,,Other,to be on,açık olmak / çalışıyor olmak,быть включённым
+159,A1,10,A,main,antworten,,,Verb,to answer,cevaplamak,отвечать
+160,A1,10,A,sub,Antwort,die,-en,Noun,answer,cevap,ответ
+161,A1,10,A,main,Anzeige,die,-n,Noun,advertisement / notice,ilan / duyuru,объявление / уведомление
+162,A1,10,A,main,anziehen,,,Verb,to put on (clothes),giymek,надевать
+163,A1,10,A,main,Apartment,das,-s,Noun,apartment,daire,квартира
+164,A1,10,A,main,Apfel,der,,Noun,apple,elma,яблоко
+165,A1,10,A,main,Appetit,der,,Noun,appetite,iştah,аппетит
+166,A1,10,A,main,arbeiten,,,Verb,to work,çalışmak,работать
+167,A1,10,A,sub,Arbeit,die,-en,Noun,work / job,iş / çalışma,работа / труд
+168,A1,10,A,main,arbeitslos,,,Other,unemployed,işsiz,безработный
+169,A1,10,A,main,Arbeitsplatz,der,"-ä, e",Noun,workplace,iş yeri,рабочее место
+170,A1,10,A,main,Arm,der,-e,Noun,arm,kol,рука
+171,A1,10,A,main,Arzt,der,,Noun,doctor,doktor,врач
+172,A1,10,A,main,auch,,,Other,also / too,de ayrıca,тоже
+173,A1,10,A,main,auf,,,Other,on / onto,üzerinde / -e doğru,на / к
+174,A1,10,A,main,Aufgabe,die,-n,Noun,task / exercise,görev / alıştırma,задание / упражнение
+175,A1,10,A,main,aufhören,,,Verb,to stop / quit,durmak / bırakmak,переставать / прекращать
+176,A1,10,A,main,auf sein,,,Other,to be open / awake,açık / uyanık olmak,быть открытым / бодрствующим
+177,A1,10,A,main,aufstehen,,,Verb,to get up,ayağa kalkmak,вставать
+178,A1,10,A,main,Aufzug,der,"-ü, e",Noun,elevator / lift,asansör,лифт
+179,A1,10,A,main,Auge,das,-n,Noun,eye,göz,глаз
+180,A1,10,A,main,aus,,,Other,from / out of,-den / -dan,из
+181,A1,10,A,main,Ausflug,der,,Noun,excursion / day trip,gezinti / günlük gezi,экскурсия / прогулка
+182,A1,10,A,main,ausfüllen,,,Verb,to fill in,doldurmak,заполнить
+183,A1,10,A,main,Ausgang,der,,Noun,exit,çıkış,выход
+184,A1,10,A,main,Auskunft,die,"-ü, e",Noun,information,bilgi,информация
+185,A1,10,A,main,Ausland,das,,Noun,abroad,yurtdışı,зарубежье
+186,A1,10,A,sub,Ausländer,der,-,Noun,foreigner,yabancı,иностранец
+187,A1,10,A,sub,ausländisch,,,Other,foreign,yabancı,иностранный
+188,A1,10,A,main,ausmachen,,,Verb,to switch off,kapatmak,выключать
+189,A1,10,A,main,Aussage,die,-n,Noun,statement,ifade / açıklama,утверждение / высказывание
+190,A1,10,A,main,aussehen,,,Verb,to look / appear,görünmek,выглядеть
+191,A1,10,A,main,aus sein,,,Other,to be off / finished,kapalı olmak / bitmiş olmak,быть выключенным / закончиться
+192,A1,10,A,main,aussteigen,,,Verb,to get off (vehicle),inmek (taşıttan),выходить (из транспорта)
+193,A1,10,A,main,Ausweis,der,,Noun,ID card,kimlik kartı,удостоверение личности
+194,A1,10,A,main,ausziehen,,,Verb,to move out / take off (clothes),taşınmak / (elbise) çıkarmak,съезжать / снимать (одежду)
+195,A1,10,A,main,Autobahn,die,-en,Noun,highway / motorway,otoyol,автомагистраль
+196,A1,10,A,main,Automat,der,,Noun,vending machine,otomat,торговый автомат
+197,A1,10,A,main,automatisch,,,Other,automatic,otomatik,автоматический
+198,A1,11,B,main,Baby,das,-s,Noun,baby,bebek,младенец
+199,A1,11,B,main,Bäckerei,die,,Noun,bakery,fırın / pastane,пекарня
+200,A1,11,B,main,Bad,das,,Noun,bathroom,banyo,ванная
+201,A1,11,B,main,baden,,,Verb,to bathe,yıkanmak,купаться
+202,A1,11,B,main,Bahn,die,,Noun,train / railway,treni / demiryolu,поезд / железная дорога
+203,A1,11,B,main,Bahnhof,der,,Noun,train station,tren istasyonu,вокзал
+204,A1,11,B,main,Bahnsteig,der,,Noun,platform,peron,платформа
+205,A1,11,B,main,bald,,,Other,soon,yakında,скоро
+206,A1,11,B,main,Balkon,der,,Noun,balcony,balkon,балкон
+207,A1,11,B,main,Banane,die,-n,Noun,banana,muz,банан
+208,A1,11,B,main,Bank,die,,Noun,bank,banka,банк
+209,A1,11,B,main,bar,,,Other,cash,peşin / nakit,наличными
+210,A1,11,B,main,Bauch,der,,Noun,stomach / belly,karın,живот
+211,A1,11,B,main,Baum,der,"-ä, e",Noun,tree,ağaç,дерево
+212,A1,11,B,main,Beamte,der,-n,Noun,civil servant,memur,чиновник
+213,A1,11,B,main,bedeuten,,,Verb,to mean,anlamına gelmek,значить / означать
+214,A1,11,B,main,beginnen,,,Verb,to begin,başlamak,начинать
+215,A1,11,B,main,bei,,,Other,at / near / with,yanında / ile,у / при / возле
+216,A1,11,B,main,beide,,,Other,both,her ikisi,оба
+217,A1,11,B,main,Bein,das,-e,Noun,leg,bacak,нога
+218,A1,11,B,main,Beispiel,das,-e,Noun,example,örnek,пример
+219,A1,11,B,main,bekannt,,,Other,known / familiar,tanınmış / bilinen,известный
+220,A1,11,D,main,der/die,,,Other,the (m/f),o / o (cinsiyete göre),определённый артикль (м/ж)
+221,A1,11,B,main,bekommen,,,Verb,to get / receive,almak / teslim almak,получать
+222,A1,11,B,main,benutzen,,,Verb,to use,kullanmak,использовать
+223,A1,11,B,main,Beruf,der,-e,Noun,profession / occupation,meslek,профессия
+224,A1,11,B,main,besetzt,,,Other,occupied / busy,meşgul / dolu,занято / занятый
+225,A1,11,B,main,besichtigen,,,Verb,to visit (a sight),gezilecek yerleri gezmek,осматривать (достопримечательности)
+226,A1,11,B,main,besser,,,Other,better,daha iyi,лучше
+227,A1,11,B,main,best-,,,Other,best- (prefix),en iyi- (önek),лучший- (приставка)
+228,A1,11,B,main,bestellen,,,Verb,to order,sipariş vermek,заказывать
+229,A1,11,B,main,besuchen,,,Verb,to visit,ziyaret etmek,посещать
+230,A1,11,B,main,Bett,das,-en,Noun,bed,yatak,кровать
+231,A1,11,B,main,bezahlen,,,Verb,to pay,ödemek,платить
+232,A1,11,B,main,Bier,das,,Noun,beer,bira,пиво
+233,A1,11,B,main,Bild,das,-er,Noun,picture / image,resim / görüntü,изображение / картина
+234,A1,11,B,main,billig,,,Other,cheap,ucuz,дешёвый
+235,A1,12,B,main,Birne,die,-n,Noun,pear,armut,груша
