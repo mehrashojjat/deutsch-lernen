@@ -180,12 +180,17 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   cursor:pointer;transition:all .15s;margin-top:4px;}
 .drawer-close:hover{background:var(--surf2);}
 
+/* ── HOME ACTIONS ── */
+.home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+
 /* ── RANDOM BANNER ── */
 .random-banner{background:linear-gradient(135deg,rgba(232,201,122,.1),rgba(126,184,247,.08));
   border:1px solid rgba(232,201,122,.2);border-radius:14px;
   padding:14px 18px;display:flex;align-items:center;gap:12px;
-  cursor:pointer;transition:all .18s ease;margin-bottom:20px;}
+  cursor:pointer;transition:all .18s ease;min-height:100px;}
 .random-banner:hover{border-color:rgba(232,201,122,.4);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
+.random-banner.swipe-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(107,232,160,.08));border-color:rgba(126,184,247,.24);}
+.random-banner.swipe-banner .rb-text strong{color:var(--blue);}
 .rb-icon{font-size:1.5rem;}
 .rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
 .rb-text span{font-size:.74rem;color:var(--muted);}
@@ -261,6 +266,49 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   color:#0b0d13;cursor:pointer;transition:all .15s;display:none;}
 .next-btn.show{display:block;}
 .next-btn:hover{opacity:.88;transform:translateY(-1px);}
+
+/* ── SWIPE MODE ── */
+#screen-swipe{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
+.swipe-setup{background:var(--surf);border:1px solid var(--border);border-radius:20px;padding:22px 18px;}
+.swipe-setup-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.5rem;color:var(--blue);margin-bottom:8px;}
+.swipe-setup-sub{display:none;}
+.swipe-level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.swipe-level-btn{background:var(--surf2);border:1px solid var(--border);border-radius:12px;padding:14px 8px;cursor:pointer;transition:all .18s ease;text-align:center;}
+.swipe-level-btn.active{border-color:var(--blue);background:rgba(126,184,247,.12);}
+.swipe-level-btn strong{display:block;font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.3rem;}
+.swipe-level-btn span{display:block;color:var(--muted);font-size:.7rem;margin-top:4px;}
+.swipe-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px;}
+.swipe-title-wrap{display:flex;flex-direction:column;gap:3px;align-items:center;flex:1;}
+.swipe-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;color:var(--blue);}
+.swipe-subtitle{font-size:.74rem;color:var(--muted);}
+.swipe-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:290px;margin:0 0 14px;z-index:1;}
+.swipe-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;}
+.swipe-card{position:absolute;inset:0;background:#0d1220;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:16px 16px 14px;box-shadow:0 16px 34px rgba(0,0,0,.28);display:flex;flex-direction:column;justify-content:space-between;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;overflow:hidden;}
+.swipe-card.under-1{transform:translateY(8px) scale(.98);opacity:1;filter:brightness(.92);}
+.swipe-card.under-2{transform:translateY(14px) scale(.96);opacity:1;filter:brightness(.84);}
+.swipe-card.dragging{transition:none;}
+.swipe-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
+.swipe-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
+.swipe-word-block{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:154px;}
+.swipe-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,7vw,2.65rem);line-height:1.02;color:var(--text);text-align:center;margin:0;}
+.swipe-helper{font-size:.76rem;color:var(--muted);text-align:center;min-height:18px;}
+.swipe-meaning-box{background:#161d31;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:12px 12px;text-align:center;}
+.swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.swipe-meaning{font-size:.98rem;line-height:1.45;color:var(--text);}
+.swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;margin-top:auto;padding-top:8px;}
+.swipe-btn{width:58px;height:58px;border-radius:50%;border:1px solid var(--border);background:var(--surf);cursor:pointer;font-size:1.35rem;transition:transform .15s ease,border-color .15s ease,background .15s ease;}
+.swipe-btn:hover{transform:translateY(-2px);}
+.swipe-btn.left:hover{border-color:rgba(240,112,112,.5);background:rgba(240,112,112,.08);}
+.swipe-btn.right:hover{border-color:rgba(107,232,160,.45);background:rgba(107,232,160,.08);}
+.swipe-flash{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;pointer-events:none;opacity:0;transform:scale(.96);transition:opacity .2s ease,transform .2s ease;z-index:8;text-align:center;direction:ltr;}
+.swipe-flash.show{opacity:1;transform:scale(1);}
+.swipe-flash-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:min(100%,320px);margin:0 auto;}
+.swipe-flash-mark{padding:10px 16px;border-radius:999px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(11,13,19,.88);backdrop-filter:blur(8px);box-shadow:0 12px 30px rgba(0,0,0,.28);}
+.swipe-flash.good .swipe-flash-mark{border:1px solid rgba(107,232,160,.45);color:var(--green);}
+.swipe-flash.bad .swipe-flash-mark{border:1px solid rgba(240,112,112,.45);color:var(--red);}
+.swipe-flash-note{max-width:300px;background:rgba(17,24,39,.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;text-align:center;font-size:.8rem;line-height:1.4;color:var(--text);}
+.swipe-empty{background:var(--surf);border:1px dashed var(--border);border-radius:20px;padding:40px 18px;text-align:center;color:var(--muted);}
+.swipe-empty strong{display:block;color:var(--text);font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;margin-bottom:8px;}
 
 /* ── RESULTS ── */
 .res-card{background:var(--surf);border:1px solid var(--border);border-radius:20px;padding:36px 24px;text-align:center;}
@@ -430,13 +478,21 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
 </div>
 <div class="screen" id="screen-levels">
-  <div class="random-banner" onclick="showRandomWord()">
-    <div class="rb-icon">🎲</div>
-    <div class="rb-text">
-      <strong id="rw-banner-title">Random Word Explorer</strong>
-      <span id="rw-banner-sub">See any word with all its forms, cases & examples</span>
+  <div class="home-actions">
+    <div class="random-banner" onclick="showRandomWord()">
+      <div class="rb-icon">🎲</div>
+      <div class="rb-text">
+        <strong id="rw-banner-title">Word Explorer</strong>
+        <span id="rw-banner-sub">Open one word card instantly</span>
+      </div>
     </div>
-    <div class="rb-arrow">→</div>
+    <div class="random-banner swipe-banner" onclick="openSwipeSetup()">
+      <div class="rb-icon">🃏</div>
+      <div class="rb-text">
+        <strong id="swipe-banner-title">Swipe Check</strong>
+        <span id="swipe-banner-sub">Swipe if the meaning matches</span>
+      </div>
+    </div>
   </div>
 
   <div class="section-label" id="lbl-select-level">Select Level</div>
@@ -500,6 +556,50 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     </div>
     <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
     <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Choose level</button>
+  </div>
+</div>
+
+<!-- ══ SWIPE SETUP ══ -->
+<div class="screen hidden" id="screen-swipe-setup">
+  <div class="rw-header">
+    <button class="back-btn" id="swipe-setup-back-btn" onclick="goHome()">← Back</button>
+    <div class="rw-title" id="swipe-setup-screen-title">Swipe Check</div>
+    <div style="width:42px;"></div>
+  </div>
+  <div class="swipe-setup">
+    <div class="swipe-setup-title" id="swipe-setup-title">Swipe Check</div>
+    <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
+    <div class="swipe-level-grid">
+      <button class="swipe-level-btn active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
+    </div>
+    <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
+  </div>
+</div>
+
+<!-- ══ SWIPE GAME ══ -->
+<div class="screen hidden" id="screen-swipe">
+  <div class="swipe-header">
+    <button class="back-btn" id="swipe-back-btn" onclick="openSwipeSetup()">← Back</button>
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="swipe-title">Swipe Check</div>
+      <div class="swipe-subtitle" id="swipe-subtitle">Swipe if the meaning matches</div>
+    </div>
+    <div style="width:58px;"></div>
+  </div>
+  <div class="swipe-stage">
+    <div class="swipe-flash" id="swipe-flash">
+      <div class="swipe-flash-inner">
+        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
+        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
+      </div>
+    </div>
+    <div class="swipe-card-stack" id="swipe-card-stack"></div>
+  </div>
+  <div class="swipe-actions">
+    <button class="swipe-btn left" onclick="swipeAction('left')" title="Wrong">✖</button>
+    <button class="swipe-btn right" onclick="swipeAction('right')" title="Correct">✔</button>
   </div>
 </div>
 

@@ -7,8 +7,10 @@ const UI = {
     settingsTitle: 'Settings',
     langLabel: 'Language / Dil',
     closeDone: 'Done',
-    rwBannerTitle: 'Random Word Explorer',
-    rwBannerSub: 'See any word with all its forms, cases & examples',
+    rwBannerTitle: 'Word Explorer',
+    rwBannerSub: 'Open one word card instantly',
+    swipeBannerTitle: 'Quick Match',
+    swipeBannerSub: 'Swipe if the meaning matches',
     selectLevel: 'Select Level',
     levelNames: { A1:'Starter', A2:'Elementary', B1:'Intermediate', B2:'Upper-Intermediate' },
     cardCount: (n) => n + ' word practice cards',
@@ -31,6 +33,17 @@ const UI = {
     tapPrompt: '👆 Tap any form above to see an example sentence.',
     noExample: 'No example available.',
     quizQuestion: 'What does this word mean?',
+    swipeSetupTitle: 'Quick Match',
+    swipeSetupSub: '',
+    prepareTen: 'Start',
+    swipeSubtitle: 'Swipe if the meaning matches',
+    swipeMeaningLabel: 'Meaning',
+    swipeEmptyTitle: 'Deck finished',
+    swipeEmptySub: 'Prepare another batch to continue swiping.',
+    swipeToastGoodMatch: 'Correct',
+    swipeToastGoodMiss: 'Correct',
+    swipeToastBadMatch: 'Wrong',
+    swipeToastBadMiss: 'Wrong',
     levelLabel: 'Level',
     wiktSource: 'Source',
     meanings: 'Meanings',
@@ -53,6 +66,8 @@ const UI = {
     closeDone: 'Tamam',
     rwBannerTitle: 'Rastgele Kelime Keşfi',
     rwBannerSub: 'Her kelimenin tüm hâllerini, çekimlerini ve örneklerini gör',
+    swipeBannerTitle: 'Hızlı Eşleştirme',
+    swipeBannerSub: 'Anlam eşleşiyorsa kaydır',
     selectLevel: 'Seviye Seç',
     levelNames: { A1:'Başlangıç', A2:'Temel', B1:'Orta', B2:'Üst-Orta' },
     cardCount: (n) => n + ' kelime pratiği kartı',
@@ -75,6 +90,17 @@ const UI = {
     tapPrompt: '👆 Örnek cümle görmek için yukarıdaki bir biçime dokun.',
     noExample: 'Örnek bulunamadı.',
     quizQuestion: 'Bu kelimenin anlamı nedir?',
+    swipeSetupTitle: 'Hızlı Eşleştirme',
+    swipeSetupSub: '',
+    prepareTen: 'Başlat',
+    swipeSubtitle: 'Anlam eşleşiyorsa kaydır',
+    swipeMeaningLabel: 'Anlam',
+    swipeEmptyTitle: 'Kartlar bitti',
+    swipeEmptySub: 'Devam etmek için yeni bir seri başlat.',
+    swipeToastGoodMatch: 'Doğru',
+    swipeToastGoodMiss: 'Doğru',
+    swipeToastBadMatch: 'Yanlış',
+    swipeToastBadMiss: 'Yanlış',
     levelLabel: 'Seviye',
     wiktSource: 'Kaynak',
     meanings: 'Anlamlar',
@@ -97,6 +123,8 @@ const UI = {
     closeDone: 'تأیید',
     rwBannerTitle: 'کاوشگر واژه تصادفی',
     rwBannerSub: 'هر واژه را با تمام حالت‌ها، صرف‌ها و مثال‌هایش ببین',
+    swipeBannerTitle: 'تطبیق سریع',
+    swipeBannerSub: 'اگر معنی درست است، بکش',
     selectLevel: 'انتخاب سطح',
     levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
     cardCount: (n) => n + ' کارت تمرین واژگان',
@@ -119,6 +147,17 @@ const UI = {
     tapPrompt: '👆 برای مشاهده جمله نمونه روی یک شکل بالا ضربه بزنید.',
     noExample: 'نمونه‌ای موجود نیست.',
     quizQuestion: 'این کلمه چه معنایی دارد؟',
+    swipeSetupTitle: 'تطبیق سریع',
+    swipeSetupSub: '',
+    prepareTen: 'شروع',
+    swipeSubtitle: 'اگر معنی درست است، بکش',
+    swipeMeaningLabel: 'معنی',
+    swipeEmptyTitle: 'کارت‌ها تمام شد',
+    swipeEmptySub: 'برای ادامه یک دسته جدید شروع کنید.',
+    swipeToastGoodMatch: 'درست',
+    swipeToastGoodMiss: 'درست',
+    swipeToastBadMatch: 'اشتباه',
+    swipeToastBadMiss: 'اشتباه',
     levelLabel: 'سطح',
     wiktSource: 'منبع',
     meanings: 'معانی',
@@ -141,6 +180,8 @@ const UI = {
     closeDone: 'Готово',
     rwBannerTitle: 'Исследователь случайных слов',
     rwBannerSub: 'Смотри любое слово со всеми формами, падежами и примерами',
+    swipeBannerTitle: 'Быстрое совпадение',
+    swipeBannerSub: 'Смахни, если значение подходит',
     selectLevel: 'Выбрать уровень',
     levelNames: { A1:'Начальный', A2:'Элементарный', B1:'Средний', B2:'Выше среднего' },
     cardCount: (n) => n + ' карточек практики слов',
@@ -163,6 +204,17 @@ const UI = {
     tapPrompt: '👆 Нажмите на форму выше, чтобы увидеть пример предложения.',
     noExample: 'Пример отсутствует.',
     quizQuestion: 'Что означает это слово?',
+    swipeSetupTitle: 'Быстрое совпадение',
+    swipeSetupSub: '',
+    prepareTen: 'Старт',
+    swipeSubtitle: 'Смахни, если значение подходит',
+    swipeMeaningLabel: 'Значение',
+    swipeEmptyTitle: 'Колода закончилась',
+    swipeEmptySub: 'Запусти новую серию, чтобы продолжить.',
+    swipeToastGoodMatch: 'Верно',
+    swipeToastGoodMiss: 'Верно',
+    swipeToastBadMatch: 'Неверно',
+    swipeToastBadMiss: 'Неверно',
     levelLabel: 'Уровень',
     wiktSource: 'Источник',
     meanings: 'Значения',
@@ -185,6 +237,8 @@ const UI = {
     closeDone: 'Готово',
     rwBannerTitle: 'Дослідник випадкових слів',
     rwBannerSub: 'Переглядай будь-яке слово з усіма формами, відмінками та прикладами',
+    swipeBannerTitle: 'Швидке зіставлення',
+    swipeBannerSub: 'Свайпни, якщо значення підходить',
     selectLevel: 'Обрати рівень',
     levelNames: { A1:'Початківець', A2:'Елементарний', B1:'Середній', B2:'Вище середнього' },
     cardCount: (n) => n + ' карток практики слів',
@@ -207,6 +261,17 @@ const UI = {
     tapPrompt: '👆 Натисніть на форму вище, щоб побачити приклад речення.',
     noExample: 'Приклад відсутній.',
     quizQuestion: 'Що означає це слово?',
+    swipeSetupTitle: 'Швидке зіставлення',
+    swipeSetupSub: '',
+    prepareTen: 'Старт',
+    swipeSubtitle: 'Свайпни, якщо значення підходить',
+    swipeMeaningLabel: 'Значення',
+    swipeEmptyTitle: 'Колода закінчилась',
+    swipeEmptySub: 'Запусти нову серію, щоб продовжити.',
+    swipeToastGoodMatch: 'Правильно',
+    swipeToastGoodMiss: 'Правильно',
+    swipeToastBadMatch: 'Неправильно',
+    swipeToastBadMiss: 'Неправильно',
     levelLabel: 'Рівень',
     wiktSource: 'Джерело',
     meanings: 'Значення',
@@ -229,6 +294,8 @@ const UI = {
     closeDone: 'تم',
     rwBannerTitle: 'مستكشف الكلمات العشوائي',
     rwBannerSub: 'اعرض أي كلمة بجميع أشكالها وحالاتها وأمثلتها',
+    swipeBannerTitle: 'مطابقة سريعة',
+    swipeBannerSub: 'اسحب إذا كان المعنى صحيحاً',
     selectLevel: 'اختر المستوى',
     levelNames: { A1:'مبتدئ', A2:'أساسي', B1:'متوسط', B2:'فوق المتوسط' },
     cardCount: (n) => n + ' بطاقة تدريب مفردات',
@@ -251,6 +318,17 @@ const UI = {
     tapPrompt: '👆 اضغط على أي شكل أعلاه لرؤية جملة مثال.',
     noExample: 'لا يوجد مثال.',
     quizQuestion: 'ما معنى هذه الكلمة؟',
+    swipeSetupTitle: 'مطابقة سريعة',
+    swipeSetupSub: '',
+    prepareTen: 'ابدأ',
+    swipeSubtitle: 'اسحب إذا كان المعنى صحيحاً',
+    swipeMeaningLabel: 'المعنى',
+    swipeEmptyTitle: 'انتهت البطاقات',
+    swipeEmptySub: 'ابدأ مجموعة جديدة للمتابعة.',
+    swipeToastGoodMatch: 'صحيح',
+    swipeToastGoodMiss: 'صحيح',
+    swipeToastBadMatch: 'خطأ',
+    swipeToastBadMiss: 'خطأ',
     levelLabel: 'المستوى',
     wiktSource: 'المصدر',
     meanings: 'المعاني',
@@ -324,11 +402,17 @@ var SEARCH_EXTRA = [];
 let LANG = 'en';
 let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
+let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
+let swipePreloadPromise = null, swipeAnimating = false;
 
 // ── Helpers ──
-function t(key) { return UI[LANG][key]; }
+function t(key) { return UI[LANG][key] !== undefined ? UI[LANG][key] : UI.en[key]; }
 function tv(obj) { return typeof obj === 'object' && obj !== null && (obj.en || obj.tr) ? obj[LANG] : obj; }
 function shuffle(a) { return [...a].sort(() => Math.random() - 0.5); }
+function rowTypeLabel(type) {
+  var labels = t('typeBadge') || {};
+  return labels[type] || type || (labels.Word || 'Word');
+}
 
 // ── Settings drawer ──
 function openSettings() {
@@ -361,6 +445,8 @@ function setLang(lang) {
   // Immediately update the active screen so the user sees the new language at once
   if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
     _quizRefreshLang();
+  } else if (!document.getElementById('screen-swipe').classList.contains('hidden')) {
+    _swipeRefreshLang();
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
   }
@@ -368,19 +454,24 @@ function setLang(lang) {
 
 // ── Apply all UI translations ──
 function applyTranslations() {
-  const u = UI[LANG];
+  const u = new Proxy(UI[LANG], { get: function(obj, prop) { return obj[prop] !== undefined ? obj[prop] : UI.en[prop]; } });
   document.getElementById('header-sub').textContent = u.headerSub;
   document.getElementById('st-title').textContent = u.settingsTitle;
   document.getElementById('st-lang-label').textContent = u.langLabel;
   document.getElementById('st-close-btn').textContent = u.closeDone;
   document.getElementById('rw-banner-title').textContent = u.rwBannerTitle;
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
+  document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
+  document.getElementById('swipe-banner-sub').textContent = u.swipeBannerSub;
   document.getElementById('lbl-select-level').textContent = u.selectLevel;
   // Level names
   const ln = u.levelNames;
   document.getElementById('ln-A1').textContent = ln.A1;
   document.getElementById('ln-A2').textContent = ln.A2;
   document.getElementById('ln-B1').textContent = ln.B1;
+  document.getElementById('swipe-ln-A1').textContent = ln.A1;
+  document.getElementById('swipe-ln-A2').textContent = ln.A2;
+  document.getElementById('swipe-ln-B1').textContent = ln.B1;
   // Results page
   document.getElementById('r-lbl-score').textContent = u.scoreLbl;
   document.getElementById('r-lbl-correct').textContent = u.correctLbl;
@@ -390,10 +481,15 @@ function applyTranslations() {
   // Quiz buttons
   document.getElementById('quiz-back-btn').textContent = u.back;
   document.getElementById('rw-back-btn').textContent = u.back;
-  // Random-word banner arrow: flip direction for RTL languages (Persian & Arabic)
-  var rbArrow = document.querySelector('.rb-arrow');
-  if (rbArrow) rbArrow.textContent = (LANG === 'fa' || LANG === 'ar') ? '←' : '→';
+  document.getElementById('swipe-setup-back-btn').textContent = u.back;
+  document.getElementById('swipe-back-btn').textContent = u.back;
   document.getElementById('rw-screen-title').textContent = u.rwTitle;
+  document.getElementById('swipe-setup-screen-title').textContent = u.swipeSetupTitle;
+  document.getElementById('swipe-setup-title').textContent = u.swipeSetupTitle;
+  document.getElementById('swipe-setup-sub').textContent = u.swipeSetupSub;
+  document.getElementById('swipe-prepare-btn').textContent = u.prepareTen;
+  document.getElementById('swipe-title').textContent = u.swipeSetupTitle;
+  document.getElementById('swipe-subtitle').textContent = u.swipeSubtitle;
   // About & footer
   document.getElementById('st-about-btn').textContent = u.aboutBtn;
   document.getElementById('about-title').textContent = u.aboutTitle;
@@ -801,6 +897,264 @@ function showResults(){
 
 function restartLevel(){startLevel(currentLevel);}
 function goHome(){show('screen-levels');}
+function openSwipeSetup(){ show('screen-swipe-setup'); }
+function setSwipeLevel(lv){
+  swipeSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k){
+    document.getElementById('swipe-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  SWIPE CHECK
+// ══════════════════════════════════════════════════════════════════
+function _rowMeaningForLang(row) {
+  if (LANG === 'en') return row.translation_en || '';
+  if (LANG === 'tr') return row.translation_tr || row.translation_en || '';
+  if (LANG === 'ru') return row.translation_ru || row.translation_en || '';
+  return '';
+}
+
+async function _resolveMeaningRows(rows) {
+  var map = {};
+  var uniq = [];
+  var seen = {};
+  rows.forEach(function(r) {
+    if (!r || !r.id || seen[r.id]) return;
+    seen[r.id] = true;
+    uniq.push(r);
+  });
+  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru') {
+    uniq.forEach(function(r){ map[r.id] = _rowMeaningForLang(r); });
+    return map;
+  }
+  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
+  var toFetch = [];
+  var queued = {};
+  uniq.forEach(function(r) {
+    var txt = (r.translation_en || '').trim();
+    if (!txt) return;
+    var key = normDefKey(txt);
+    if (cache[key] === undefined && !queued[key]) {
+      queued[key] = true;
+      toFetch.push({ text: txt, key: key });
+    }
+  });
+  if (toFetch.length) {
+    await _batchTranslateDefs(toFetch, LANG, cache, saveFn, null, 'en');
+  }
+  uniq.forEach(function(r) {
+    var txt = (r.translation_en || '').trim();
+    map[r.id] = cache[normDefKey(txt)] || txt;
+  });
+  return map;
+}
+
+async function _buildSwipeBatch(level, count) {
+  var pool = CSV_QUIZ_DATA[level] || [];
+  if (!pool.length) return [];
+  var selected = shuffle(pool.slice()).slice(0, Math.min(count, pool.length));
+  var cards = selected.map(function(row) {
+    var isMatch = Math.random() < 0.5;
+    var meaningRow = row;
+    if (!isMatch) {
+      var alt = shuffle(pool.slice()).find(function(d) {
+        return d.id !== row.id && (d.translation_en || '').trim() !== (row.translation_en || '').trim();
+      });
+      if (alt) meaningRow = alt;
+      else isMatch = true;
+    }
+    return { row: row, meaningRow: meaningRow, isMatch: isMatch, meaningText: '', correctMeaningText: '' };
+  });
+  var meaningMap = await _resolveMeaningRows(cards.reduce(function(acc, card) {
+    acc.push(card.row, card.meaningRow);
+    return acc;
+  }, []));
+  cards.forEach(function(card) {
+    card.meaningText = meaningMap[card.meaningRow.id] || card.meaningRow.translation_en || '';
+    card.correctMeaningText = meaningMap[card.row.id] || card.row.translation_en || '';
+  });
+  return cards;
+}
+
+async function prepareSwipeGame() {
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    await _loadCSVLevel(swipeSelectedLevel);
+    swipeDeck = await _buildSwipeBatch(swipeSelectedLevel, QUIZ_LEN);
+    swipeIdx = 0;
+    swipeGood = 0;
+    swipeBad = 0;
+    swipePreloadPromise = null;
+    swipeAnimating = false;
+    show('screen-swipe');
+    renderSwipeCards();
+  } catch (err) {
+    var msg = 'Could not prepare swipe cards from CSV.';
+    if (err && err.message) msg += '\n\nDetails: ' + err.message;
+    alert(msg);
+  } finally {
+    _ov.classList.remove('active');
+  }
+}
+
+function _swipeWordLabel(row) {
+  return (row.article ? row.article + ' ' : '') + expandOptional(row.word);
+}
+
+function _swipeWordSub(row) {
+  if (row.plural && row.plural.trim()) return 'Pl.: ' + row.plural;
+  if (row.verb_present && row.verb_present.trim()) return row.verb_present;
+  return '';
+}
+
+function _renderSwipeCardHtml(card, posClass) {
+  return '<div class="swipe-card ' + posClass + '" data-swipe-pos="' + posClass + '">'
+    + '<div class="swipe-word-block">'
+    + '<div class="swipe-word">' + escHtml(_swipeWordLabel(card.row)) + '</div>'
+    + '<div class="swipe-helper">' + escHtml(_swipeWordSub(card.row)) + '</div>'
+    + '</div>'
+    + '<div class="swipe-meaning-box"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
+    + '</div>';
+}
+
+function renderSwipeCards() {
+  var stack = document.getElementById('swipe-card-stack');
+  var current = swipeDeck[swipeIdx];
+  if (!current) {
+    stack.innerHTML = '<div class="swipe-empty"><strong>' + escHtml(t('swipeEmptyTitle')) + '</strong><span>' + escHtml(t('swipeEmptySub')) + '</span></div>';
+    return;
+  }
+  var next1 = swipeDeck[swipeIdx + 1];
+  var next2 = swipeDeck[swipeIdx + 2];
+  stack.innerHTML =
+    (next2 ? _renderSwipeCardHtml(next2, 'under-2') : '') +
+    (next1 ? _renderSwipeCardHtml(next1, 'under-1') : '') +
+    _renderSwipeCardHtml(current, 'top');
+  _attachSwipeGesture(stack.querySelector('.swipe-card.top'));
+  _ensureSwipePrefetch();
+}
+
+function _attachSwipeGesture(cardEl) {
+  if (!cardEl) return;
+  var startX = 0, currentX = 0, dragging = false;
+  cardEl.onpointerdown = function(e) {
+    if (swipeAnimating) return;
+    dragging = true;
+    startX = e.clientX;
+    currentX = 0;
+    cardEl.classList.add('dragging');
+    cardEl.setPointerCapture(e.pointerId);
+  };
+  cardEl.onpointermove = function(e) {
+    if (!dragging) return;
+    currentX = e.clientX - startX;
+    var rot = currentX * 0.05;
+    cardEl.style.transform = 'translateX(' + currentX + 'px) rotate(' + rot + 'deg)';
+  };
+  cardEl.onpointerup = function(e) {
+    if (!dragging) return;
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.releasePointerCapture(e.pointerId);
+    if (Math.abs(currentX) > 90) {
+      _animateSwipe(currentX > 0 ? 'right' : 'left', cardEl);
+    } else {
+      cardEl.style.transform = '';
+    }
+  };
+  cardEl.onpointercancel = function() {
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+  };
+}
+
+function swipeAction(dir) {
+  var top = document.querySelector('#swipe-card-stack .swipe-card.top');
+  if (top) _animateSwipe(dir, top);
+}
+
+function _animateSwipe(dir, cardEl) {
+  if (swipeAnimating) return;
+  swipeAnimating = true;
+  if (cardEl) {
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+    cardEl.classList.add(dir === 'right' ? 'swipe-right' : 'swipe-left');
+  }
+  setTimeout(function() {
+    _finalizeSwipe(dir);
+    swipeAnimating = false;
+  }, 190);
+}
+
+function _showSwipeToast(success, card) {
+  var flash = document.getElementById('swipe-flash');
+  var mark = document.getElementById('swipe-flash-mark');
+  var note = document.getElementById('swipe-flash-note');
+  flash.className = 'swipe-flash ' + (success ? 'good' : 'bad');
+  mark.textContent = success
+    ? (card.isMatch ? t('swipeToastGoodMatch') : t('swipeToastGoodMiss'))
+    : (card.isMatch ? t('swipeToastBadMatch') : t('swipeToastBadMiss'));
+  if (success) {
+    note.hidden = true;
+    note.textContent = '';
+  } else {
+    note.hidden = false;
+    note.textContent = t('swipeMeaningLabel') + ': ' + card.correctMeaningText;
+  }
+  flash.classList.add('show');
+  clearTimeout(_showSwipeToast._timer);
+  _showSwipeToast._timer = setTimeout(function() {
+    flash.classList.remove('show');
+  }, 2400);
+}
+
+function _finalizeSwipe(dir) {
+  var card = swipeDeck[swipeIdx];
+  if (!card) return;
+  var guessedMatch = dir === 'right';
+  var success = guessedMatch === card.isMatch;
+  if (success) swipeGood++;
+  else swipeBad++;
+  _showSwipeToast(success, card);
+  swipeIdx++;
+  renderSwipeCards();
+}
+
+function _ensureSwipePrefetch() {
+  if (swipePreloadPromise) return;
+  if (swipeDeck.length - swipeIdx > 3) return;
+  swipePreloadPromise = _buildSwipeBatch(swipeSelectedLevel, QUIZ_LEN)
+    .then(function(batch) {
+      swipeDeck = swipeDeck.concat(batch);
+    })
+    .catch(function(){})
+    .finally(function() {
+      swipePreloadPromise = null;
+    });
+}
+
+async function _swipeRefreshLang() {
+  if (!swipeDeck.length) return;
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    var meanings = await _resolveMeaningRows(swipeDeck.slice(swipeIdx).reduce(function(acc, card) {
+      acc.push(card.row, card.meaningRow);
+      return acc;
+    }, []));
+    swipeDeck.forEach(function(card) {
+      card.meaningText = meanings[card.meaningRow.id] || card.meaningRow.translation_en || '';
+      card.correctMeaningText = meanings[card.row.id] || card.row.translation_en || '';
+    });
+    renderSwipeCards();
+  } finally {
+    _ov.classList.remove('active');
+  }
+}
 
 // ══════════════════════════════════════════════════════════════════
 //  RANDOM WORD EXPLORER
@@ -2696,7 +3050,7 @@ function closeWordModal(e) {
 
 // ── Screen switcher ──
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
 }
