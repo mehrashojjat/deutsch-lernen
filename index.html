@@ -70,7 +70,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
-  display:flex;flex-direction:column;align-items:center;padding:18px 14px 60px;
+  display:flex;flex-direction:column;align-items:center;padding:18px 14px 18px;
   overflow-x:hidden;background-image:radial-gradient(ellipse at 10% 0%,rgba(232,201,122,.07) 0%,transparent 50%),
     radial-gradient(ellipse at 90% 95%,rgba(126,184,247,.06) 0%,transparent 50%);}
 
@@ -163,7 +163,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
   cursor:pointer;margin-top:14px;}
 .about-modal-close:hover{background:var(--surf2);}
-.home-footer{text-align:center;padding:12px 20px 28px;}
+.home-footer{text-align:center;padding:12px 20px 12px;}
 .home-footer p{margin:0;line-height:1.6;}
 #footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
 #footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
@@ -270,7 +270,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 /* ── SWIPE MODE ── */
 #screen-swipe{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
 .swipe-setup{background:var(--surf);border:1px solid var(--border);border-radius:20px;padding:22px 18px;}
-.swipe-setup-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.5rem;color:var(--blue);margin-bottom:8px;}
+.swipe-setup-title{display:none;}
 .swipe-setup-sub{display:none;}
 .swipe-level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
 .swipe-level-btn{background:var(--surf2);border:1px solid var(--border);border-radius:12px;padding:14px 8px;cursor:pointer;transition:all .18s ease;text-align:center;}
@@ -567,7 +567,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <div style="width:42px;"></div>
   </div>
   <div class="swipe-setup">
-    <div class="swipe-setup-title" id="swipe-setup-title">Swipe Check</div>
+    <div class="swipe-setup-title" id="swipe-setup-title"></div>
     <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
     <div class="swipe-level-grid">
       <button class="swipe-level-btn active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
