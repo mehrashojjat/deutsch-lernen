@@ -1121,7 +1121,7 @@ function renderCard() {
   document.getElementById('cquestion').textContent = t('quizQuestion');
 
   // Show article + word for nouns (e.g. "der Hund"); plain word for verbs/others
-  document.getElementById('cmain').textContent = (row.article ? row.article + ' ' : '') + row.word;
+  document.getElementById('cmain').textContent = (row.article ? row.article + ' ' : '') + expandOptional(row.word);
 
   // Sub-line: plural hint for nouns, present-tense hint for verbs
   var sub = '';
@@ -1351,15 +1351,19 @@ function posLabelDE(pos) {
     'adjective form':'Adjektivform'
   }[pos.toLowerCase()] || (pos.charAt(0).toUpperCase() + pos.slice(1));
 }
+// Expand optional-letter notation used in some word lists: "nah(e)" → "nahe", "Hend(e)l" → "Hendel"
+function expandOptional(w) {
+  return (w||'').replace(/\(([a-zA-Z\u00C0-\u024F]+)\)/g, '$1');
+}
 function normKey(w) {
-  return (w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
+  return expandOptional(w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
 }
 function loadingHTML() {
   var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : LANG==='ru' ? 'Загрузка…' : LANG==='uk' ? 'Завантаження…' : LANG==='ar' ? 'جارٍ التحميل…' : 'Loading…';
   return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + msg + '</span></div>';
 }
 function wiktLookupWord(word, tc) {
-  var base = word.replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
+  var base = expandOptional(word).replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
   // Verbs, adjectives, adverbs, prepositions and conjunctions are lowercase in
   // Wiktionary German entries. Nouns, unknown words and everything else must be
   // capitalised (German capitalisation rule applies to nouns; for unknown/? type
