@@ -1041,6 +1041,7 @@ function _attachSwipeGesture(cardEl) {
   var startX = 0, currentX = 0, dragging = false;
   cardEl.onpointerdown = function(e) {
     if (swipeAnimating) return;
+    if (e.cancelable) e.preventDefault();
     dragging = true;
     startX = e.clientX;
     currentX = 0;
@@ -1049,12 +1050,14 @@ function _attachSwipeGesture(cardEl) {
   };
   cardEl.onpointermove = function(e) {
     if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
     currentX = e.clientX - startX;
     var rot = currentX * 0.05;
     cardEl.style.transform = 'translateX(' + currentX + 'px) rotate(' + rot + 'deg)';
   };
   cardEl.onpointerup = function(e) {
     if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
     dragging = false;
     cardEl.classList.remove('dragging');
     cardEl.releasePointerCapture(e.pointerId);
@@ -1064,7 +1067,8 @@ function _attachSwipeGesture(cardEl) {
       cardEl.style.transform = '';
     }
   };
-  cardEl.onpointercancel = function() {
+  cardEl.onpointercancel = function(e) {
+    if (e && e.cancelable) e.preventDefault();
     dragging = false;
     cardEl.classList.remove('dragging');
     cardEl.style.transform = '';
