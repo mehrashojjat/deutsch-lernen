@@ -84,7 +84,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .settings-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
   width:40px;height:40px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;}
-.settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);transform:rotate(20deg);}
+.settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
 .search-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
   width:40px;height:40px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;}
@@ -383,9 +383,9 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
 <!-- ══ PERSISTENT HEADER ══ -->
 <div class="app-header" id="app-header">
-  <button class="search-btn" id="search-btn" onclick="openSearch()" title="Search words">🔍</button>
+  <button class="search-btn" id="search-btn" style="visibility:hidden;pointer-events:none;" title="Search words">🔍</button>
   <div class="app-header-center">
-    <h1>Deutsch Lernen</h1>
+    <h1>DeutschLernen</h1>
     <p id="header-sub">Word Practice · Cases · Verb Forms</p>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="Settings">⚙️</button>
@@ -2240,9 +2240,8 @@ function renderHeadLineChips(text) {
         + escHtml(translated) + '</span></div>';
     });
 
-    // Clickable gold chip for the base word
-    html += '<div class="rw-form" onclick="' + cardLink(baseWord) + '" '
-      + 'style="cursor:pointer;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+    // Non-clickable gold chip for the base word
+    html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
       + '<span class="fl" style="font-size:.62rem;">→</span>'
       + '<span class="fv gold">' + escHtml(baseWord) + '</span></div>';
 
@@ -2273,7 +2272,7 @@ function renderHeadLineChips(text) {
         formsPart.split(/\s+or\s+/i).forEach(function(frm) {
           frm = frm.trim();
           if (!frm) return;
-          chipHtml += '<div class="rw-form" onclick="' + cardLink(frm) + '" style="cursor:pointer;">'
+          chipHtml += '<div class="rw-form" style="cursor:default;">'
             + '<span class="fl">' + escHtml(lbl) + '</span>'
             + '<span class="fv blue">' + escHtml(frm) + '</span></div>';
         });
@@ -2399,16 +2398,19 @@ function renderWiktCard(data, meta, targetId) {
     return html;
   }
 
+  // Meanings are collected separately so they can be appended after Beispiel
+  var _meaningsHtml = '';
+
   data.sections.forEach(function(sec) {
     // POS badge is always in German — this is a German learning card
     html += '<span class="wikt-pos-badge">' + posLabelDE(sec.pos) + '</span>';
 
     var _isFormSec = /form|wortform|participle/i.test(sec.pos);
 
-    // ── 1. Meanings — always first, before anything else ──────────────
+    // ── 1. Meanings — collected into _meaningsHtml, rendered at the very bottom ──
     if (sec.defs.length) {
       var _dfc = LANG==='tr'?_defTrCache:LANG==='fa'?_defFaCache:LANG==='ru'?_defRuCache:LANG==='uk'?_defUkCache:LANG==='ar'?_defArCache:null;
-      html += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
+      _meaningsHtml += '<div class="rw-section"><div class="rw-section-title">' + escHtml(t('meanings')) + '</div>'
         + '<div class="wikt-def-list">';
       sec.defs.slice(0,5).forEach(function(d, i) {
         var _dk = normDefKey(d.text);
@@ -2416,17 +2418,17 @@ function renderWiktCard(data, meta, targetId) {
         var _isPending = (_dfc && LANG !== 'en' && _cached === undefined);
         // Plain text only — no clickable "of WORD" links in definitions
         var _dHtml = _cached ? escHtml(_cached) : escHtml(d.text);
-        html += '<div class="wikt-def-item">'
+        _meaningsHtml += '<div class="wikt-def-item">'
           + '<div class="wikt-def-row"><span class="wikt-def-num">' + (i+1) + '.</span>'
           + '<span class="wikt-def-text' + (_isPending ? ' def-translate-pending' : '') + '"'
           + (_isPending ? ' data-def-orig="' + escHtml(d.text) + '"' : '')
           + '>' + _dHtml + '</span></div>';
         if (d.examples.length) {
-          html += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
+          _meaningsHtml += '<div class="wikt-example">' + escHtml(d.examples[0]) + '</div>';
         }
-        html += '</div>';
+        _meaningsHtml += '</div>';
       });
-      html += '</div></div>';
+      _meaningsHtml += '</div></div>';
     }
 
     // ── 2. Grundform — clickable base-word chip for inflected forms ────
@@ -2441,9 +2443,7 @@ function renderWiktCard(data, meta, targetId) {
           + '<div class="rw-section-title">Grundform</div>'
           + '<div class="rw-forms">';
         _bwSet.forEach(function(_bwf) {
-          var _bwEnc = _bwf.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-          html += '<div class="rw-form" onclick="openWordCard(\'' + _bwEnc + '\',\'?\')" '
-            + 'style="cursor:pointer;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+          html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
             + '<span class="fl" style="font-size:.62rem;">→</span>'
             + '<span class="fv gold">' + escHtml(_bwf) + '</span>'
             + '</div>';
@@ -2486,6 +2486,9 @@ function renderWiktCard(data, meta, targetId) {
     html += '<div class="rw-section"><div class="rw-section-title">Beispiel</div>'
       + '<div class="rw-example-box lit">' + escHtml(_exTxt) + '</div></div>';
   }
+
+  // ── Meanings — rendered last so Beispiel and forms appear above ──────
+  html += _meaningsHtml;
 
   html += '<div class="rw-source">' + escHtml(t('wiktSource')) + ': <a href="https://en.wiktionary.org/wiki/' + encodeURIComponent(wiktLookupWord(word,tc)) + '" target="_blank">Wiktionary</a></div>';
   html += '</div>';
@@ -2641,10 +2644,7 @@ function _tryChips(trows) {
         var formParts = val.split(/,\s+|\s+\/\s+/).map(function(f){ return f.trim(); }).filter(Boolean);
         formParts.forEach(function(formVal) {
           if (!formVal || formVal === '—' || formVal === '-' || formVal === '–') return;
-          // Strip leading article to get the bare word for card lookup
-          var _bareForm = formVal.replace(/^(der|die|das|dem|den|des)\s+/i,'').trim();
-          var _fOnc = _bareForm ? ' onclick="openWordCard(\'' + _bareForm.replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\',\'?\')" style="cursor:pointer;"' : '';
-          html += '<div class="rw-form"' + _fOnc + '>'
+          html += '<div class="rw-form">'
             + '<span class="fl">' + escHtml(abbr) + '</span>'
             + '<span class="fv' + (cls?' '+cls:'') + '">' + escHtml(formVal) + '</span>'
             + '</div>';
