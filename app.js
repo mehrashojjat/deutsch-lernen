@@ -5,7 +5,7 @@ const UI = {
   en: {
     headerSub: 'Word Practice · Cases · Verb Forms',
     settingsTitle: 'Settings',
-    langLabel: 'Language / Dil',
+    langLabel: 'Language',
     closeDone: 'Done',
     rwBannerTitle: 'Word Explorer',
     rwBannerSub: 'Open one word card instantly',
@@ -62,7 +62,7 @@ const UI = {
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
     settingsTitle: 'Ayarlar',
-    langLabel: 'Dil / Language',
+    langLabel: 'Dil',
     closeDone: 'Tamam',
     rwBannerTitle: 'Rastgele Kelime Keşfi',
     rwBannerSub: 'Her kelimenin tüm hâllerini, çekimlerini ve örneklerini gör',
@@ -119,7 +119,7 @@ const UI = {
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
     settingsTitle: 'تنظیمات',
-    langLabel: 'زبان / Language',
+    langLabel: 'زبان',
     closeDone: 'تأیید',
     rwBannerTitle: 'کاوشگر واژه تصادفی',
     rwBannerSub: 'هر واژه را با تمام حالت‌ها، صرف‌ها و مثال‌هایش ببین',
@@ -176,7 +176,7 @@ const UI = {
   ru: {
     headerSub: 'Практика слов · Падежи · Спряжение',
     settingsTitle: 'Настройки',
-    langLabel: 'Язык / Language',
+    langLabel: 'Язык',
     closeDone: 'Готово',
     rwBannerTitle: 'Исследователь случайных слов',
     rwBannerSub: 'Смотри любое слово со всеми формами, падежами и примерами',
@@ -233,7 +233,7 @@ const UI = {
   uk: {
     headerSub: 'Практика слів · Відмінки · Відмінювання',
     settingsTitle: 'Налаштування',
-    langLabel: 'Мова / Language',
+    langLabel: 'Мова',
     closeDone: 'Готово',
     rwBannerTitle: 'Дослідник випадкових слів',
     rwBannerSub: 'Переглядай будь-яке слово з усіма формами, відмінками та прикладами',
@@ -290,7 +290,7 @@ const UI = {
   ar: {
     headerSub: 'تدريب المفردات · الحالات · تصريف الأفعال',
     settingsTitle: 'الإعدادات',
-    langLabel: 'اللغة / Language',
+    langLabel: 'اللغة',
     closeDone: 'تم',
     rwBannerTitle: 'مستكشف الكلمات العشوائي',
     rwBannerSub: 'اعرض أي كلمة بجميع أشكالها وحالاتها وأمثلتها',
@@ -485,6 +485,7 @@ function applyTranslations() {
   document.getElementById('swipe-back-btn').textContent = u.back;
   document.getElementById('rw-screen-title').textContent = u.rwTitle;
   document.getElementById('swipe-setup-screen-title').textContent = u.swipeSetupTitle;
+  document.getElementById('swipe-setup-screen-subtitle').textContent = u.swipeSubtitle;
   document.getElementById('swipe-setup-title').textContent = u.swipeSetupTitle;
   document.getElementById('swipe-setup-sub').textContent = u.swipeSetupSub;
   document.getElementById('swipe-prepare-btn').textContent = u.prepareTen;
