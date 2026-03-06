@@ -218,19 +218,21 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 217,A1,11,B,main,Bein,das,-e,Noun,leg,bacak,нога
 218,A1,11,B,main,Beispiel,das,-e,Noun,example,örnek,пример
 219,A1,11,B,main,bekannt,,,Other,known / familiar,tanınmış / bilinen,известный
-220,A1,11,D,main,der/die,,,Other,the (m/f),o / o (cinsiyete göre),определённый артикль (м/ж)
-221,A1,11,B,main,bekommen,,,Verb,to get / receive,almak / teslim almak,получать
-222,A1,11,B,main,benutzen,,,Verb,to use,kullanmak,использовать
-223,A1,11,B,main,Beruf,der,-e,Noun,profession / occupation,meslek,профессия
-224,A1,11,B,main,besetzt,,,Other,occupied / busy,meşgul / dolu,занято / занятый
-225,A1,11,B,main,besichtigen,,,Verb,to visit (a sight),gezilecek yerleri gezmek,осматривать (достопримечательности)
-226,A1,11,B,main,besser,,,Other,better,daha iyi,лучше
-227,A1,11,B,main,best-,,,Other,best- (prefix),en iyi- (önek),лучший- (приставка)
-228,A1,11,B,main,bestellen,,,Verb,to order,sipariş vermek,заказывать
-229,A1,11,B,main,besuchen,,,Verb,to visit,ziyaret etmek,посещать
-230,A1,11,B,main,Bett,das,-en,Noun,bed,yatak,кровать
-231,A1,11,B,main,bezahlen,,,Verb,to pay,ödemek,платить
-232,A1,11,B,main,Bier,das,,Noun,beer,bira,пиво
-233,A1,11,B,main,Bild,das,-er,Noun,picture / image,resim / görüntü,изображение / картина
-234,A1,11,B,main,billig,,,Other,cheap,ucuz,дешёвый
-235,A1,12,B,main,Birne,die,-n,Noun,pear,armut,груша
+220,A1,11,D,main,der,,,Other,the (masculine article),belirli artikel (eril),определённый артикль der
+221,A1,11,D,main,die,,,Other,the (feminine article),belirli artikel (dişil),определённый артикль die
+222,A1,11,D,main,das,,,Other,the (neuter article) / that,"belirli artikel (nötr) / şu, o",определённый артикль das / то
+223,A1,11,B,main,bekommen,,,Verb,to get / receive,almak / teslim almak,получать
+224,A1,11,B,main,benutzen,,,Verb,to use,kullanmak,использовать
+225,A1,11,B,main,Beruf,der,-e,Noun,profession / occupation,meslek,профессия
+226,A1,11,B,main,besetzt,,,Other,occupied / busy,meşgul / dolu,занято / занятый
+227,A1,11,B,main,besichtigen,,,Verb,to visit (a sight),gezilecek yerleri gezmek,осматривать (достопримечательности)
+228,A1,11,B,main,besser,,,Other,better,daha iyi,лучше
+229,A1,11,B,main,best-,,,Other,best- (prefix),en iyi- (önek),лучший- (приставка)
+230,A1,11,B,main,bestellen,,,Verb,to order,sipariş vermek,заказывать
+231,A1,11,B,main,besuchen,,,Verb,to visit,ziyaret etmek,посещать
+232,A1,11,B,main,Bett,das,-en,Noun,bed,yatak,кровать
+233,A1,11,B,main,bezahlen,,,Verb,to pay,ödemek,платить
+234,A1,11,B,main,Bier,das,,Noun,beer,bira,пиво
+235,A1,11,B,main,Bild,das,-er,Noun,picture / image,resim / görüntü,изображение / картина
+236,A1,11,B,main,billig,,,Other,cheap,ucuz,дешёвый
+237,A1,12,B,main,Birne,die,-n,Noun,pear,armut,груша
