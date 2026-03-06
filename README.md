@@ -1,4 +1,4 @@
-# rovi Deutsch Lernen
+# DeutschLernen
 
 A simple, browser-based flashcard game for learning German vocabulary — no installation, no login, just open and play.
 
@@ -17,12 +17,11 @@ It runs entirely in the browser as a static HTML/JS app — no server or build s
 ### Goethe-Institut Official Wortlisten *(primary)*
 The core vocabulary comes from the official word lists published by the [Goethe-Institut](https://www.goethe.de) — Germany's internationally recognised language and cultural institute. These lists are the canonical CEFR-aligned references used in all Goethe-Zertifikat examinations.
 
-| Level | Approx. words | Description |
-|-------|--------------|-------------|
-| A1 | ~600 | Starter – survival communication |
-| A2 | ~700 | Elementary – everyday topics |
-| B1 | ~900 | Intermediate – independent use |
-| B2 | ~800 | Upper-intermediate – complex topics |
+| Level | Words used (CSV rows) | Description |
+|-------|---------------------:|-------------|
+| A1 | 235 | Starter – survival communication |
+| A2 | 1056 | Elementary – everyday topics |
+| B1 | 4248 | Intermediate – independent use |
 
 ### Additional Sources
 - **DWDS** – *Digitales Wörterbuch der deutschen Sprache* ([dwds.de](https://www.dwds.de)) — comprehensive dictionary entries with meanings, grammar, and example sentences, maintained by the Berlin-Brandenburg Academy of Sciences and Humanities.
