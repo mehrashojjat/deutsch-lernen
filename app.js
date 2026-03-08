@@ -629,9 +629,9 @@ function _csvRowDisplay(row) {
   if (LANG === 'en') return row.translation_en;
   if (LANG === 'tr') return row.translation_tr || row.translation_en;
   if (LANG === 'ru') return row.translation_ru || row.translation_en;
+  if (LANG === 'uk') return row.translation_uk || row.translation_en;
   var key = normKey(row.word);
   var cache = LANG==='fa' ? _faMemCache
-            : LANG==='uk' ? _ukMemCache
             :                _arMemCache;
   var cached = cache && cache[key] && cache[key].trim();
   // Never fall back to English — '···' placeholder lets renderCard trigger a retry
@@ -690,11 +690,11 @@ async function startLevel(lv) {
   idx = 0; ok = 0; no = 0;
 
   // Pre-fetch translations so choices display in the user's language.
-  // English, Turkish, and Russian use CSV columns directly.
-  if (LANG === 'fa' || LANG === 'uk' || LANG === 'ar') {
-    var _lc = LANG==='fa'?'fa':LANG==='uk'?'uk':'ar';
-    var _c  = LANG==='fa'?_faMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
-    var _sf = LANG==='fa'?_faCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+  // English, Turkish, Russian, and Ukrainian use CSV columns directly.
+  if (LANG === 'fa' || LANG === 'ar') {
+    var _lc = LANG==='fa'?'fa':'ar';
+    var _c  = LANG==='fa'?_faMemCache:_arMemCache;
+    var _sf = LANG==='fa'?_faCacheSave:_arCacheSave;
 
     // First pass: translate German words (de→target)
     var toFetch = [];
@@ -798,11 +798,11 @@ function renderCard() {
   });
 
   // For any choice that couldn't be translated yet (shows '···'), kick off a
-  // background per-word retry. English, Turkish, and Russian use CSV columns directly.
-  if (LANG !== 'en' && LANG !== 'tr' && LANG !== 'ru') {
-    var _rf = LANG==='fa'?fetchPersian:LANG==='uk'?fetchUkrainian:fetchArabic;
-    var _rc = LANG==='fa'?_faMemCache:LANG==='uk'?_ukMemCache:_arMemCache;
-    var _rs = LANG==='fa'?_faCacheSave:LANG==='uk'?_ukCacheSave:_arCacheSave;
+  // background per-word retry. English, Turkish, Russian, and Ukrainian use CSV columns directly.
+  if (LANG !== 'en' && LANG !== 'tr' && LANG !== 'ru' && LANG !== 'uk') {
+    var _rf = LANG==='fa'?fetchPersian:fetchArabic;
+    var _rc = LANG==='fa'?_faMemCache:_arMemCache;
+    var _rs = LANG==='fa'?_faCacheSave:_arCacheSave;
     document.querySelectorAll('.cbtn').forEach(function(btn) {
       if (btn.textContent !== '···') return;
       var cRow = allChoiceRows.find(function(r){ return r.id === btn.dataset.csvId; });
@@ -913,6 +913,7 @@ function _rowMeaningForLang(row) {
   if (LANG === 'en') return row.translation_en || '';
   if (LANG === 'tr') return row.translation_tr || row.translation_en || '';
   if (LANG === 'ru') return row.translation_ru || row.translation_en || '';
+  if (LANG === 'uk') return row.translation_uk || row.translation_en || '';
   return '';
 }
 
@@ -925,7 +926,7 @@ async function _resolveMeaningRows(rows) {
     seen[r.id] = true;
     uniq.push(r);
   });
-  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru') {
+  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk') {
     uniq.forEach(function(r){ map[r.id] = _rowMeaningForLang(r); });
     return map;
   }
@@ -1284,18 +1285,25 @@ function wiktLookupWord(word, tc) {
 function metaFromWord(word) {
   // Check SI first, then WORD_BANK
   var key = normKey(word);
+  // Look up Ukrainian translation from CSV data (translation_uk column)
+  var _ukFromCsv = '';
+  ['A1','A2','B1'].forEach(function(lv) {
+    if (_ukFromCsv) return;
+    var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return normKey(x.word) === key; });
+    if (r && r.translation_uk && r.translation_uk.trim()) _ukFromCsv = r.translation_uk.trim();
+  });
   if (SI_READY && window.SI) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
-      // API cache (de→target) takes priority over cached search-index fields
-      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
+      // CSV (de→target) takes priority for uk; API cache for others
+      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  // API cache (de→target) takes priority over cached local translations
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
-  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: (_ukMemCache&&_ukMemCache[key])||'', ar: (_arMemCache&&_arMemCache[key])||'' };
+  // CSV (de→target) takes priority for uk; API cache for others
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
+  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
@@ -1610,7 +1618,7 @@ async function fetchTurkish(word) {
 // Only the pending element for the CURRENT language is updated; all other language pending
 // elements are silently ignored.
 async function _autoFetchLangMeaning(word, container, enFallback) {
-  if (LANG === 'en' || LANG === 'ru') return;
+  if (LANG === 'en' || LANG === 'ru' || LANG === 'uk') return;
   var pendingClass = LANG + '-meaning-pending';
   var el = container.querySelector('.' + pendingClass);
   if (!el) return;
@@ -2227,7 +2235,7 @@ function renderWiktCard(data, meta, targetId) {
   var _trPending = LANG === 'tr' && !(meta.tr || _cachedTr);
   var _faPending = LANG === 'fa' && !(meta.fa || _cachedFa);
   var _ruPending = LANG === 'ru' && !meta.ru;
-  var _ukPending = LANG === 'uk' && !(meta.uk || _cachedUk);
+  var _ukPending = false; // uk translations now from CSV, no async fetch needed
   var _arPending = LANG === 'ar' && !(meta.ar || _cachedAr);
   // Still no meaning? Pull the first Wiktionary definition (always English).
   if (!meaning && data.found && data.sections.length) {
@@ -2733,8 +2741,8 @@ async function renderRandomWord() {
     en: row.translation_en || '',
     tr: row.translation_tr || '',
     ru: row.translation_ru || '',
+    uk: row.translation_uk || '',
     fa: (_faMemCache && _faMemCache[key]) || '',
-    uk: (_ukMemCache && _ukMemCache[key]) || '',
     ar: (_arMemCache && _arMemCache[key]) || ''
   };
 
@@ -2788,8 +2796,8 @@ async function _explorerRefreshLang() {
     en: row.translation_en || '',
     tr: row.translation_tr || '',
     ru: row.translation_ru || '',
+    uk: row.translation_uk || '',
     fa: (_faMemCache && _faMemCache[key]) || '',
-    uk: (_ukMemCache && _ukMemCache[key]) || '',
     ar: (_arMemCache && _arMemCache[key]) || ''
   };
   var content = document.getElementById('rw-content');
@@ -3001,8 +3009,8 @@ function openSRItem(i) {
 async function _prefetchLangMeta(word, meta) {
   if (LANG === 'tr' && !meta.tr) { var _t = await fetchTurkish(word); if (_t) meta.tr = _t; }
   else if (LANG === 'fa' && !meta.fa) { var _t = await fetchPersian(word); if (_t) meta.fa = _t; }
-  else if (LANG === 'uk' && !meta.uk) { var _t = await fetchUkrainian(word); if (_t) meta.uk = _t; }
   else if (LANG === 'ar' && !meta.ar) { var _t = await fetchArabic(word); if (_t) meta.ar = _t; }
+  // uk: read from CSV (translation_uk) via metaFromWord — no API fetch needed
 }
 
 // Pre-fetches all definition translations into cache before the card renders,
