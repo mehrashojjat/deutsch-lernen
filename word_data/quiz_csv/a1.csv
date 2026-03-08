@@ -236,106 +236,106 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 235,A1,11,B,main,Bild,das,-er,Noun,picture / image,resim / görüntü,изображение / картина,зображення,تصویر
 236,A1,11,B,main,billig,,,Other,cheap,ucuz,дешёвый,дешевий,ارزان
 237,A1,12,B,main,Birne,die,-n,Noun,pear,armut,груша,груша,گلابی
-238,A1,12,B,main,bis,,,Other,,,,,
-239,A1,12,B,main,bisschen,,,Other,,,,,
-240,A1,12,B,main,bitte,,,Other,,,,,
-241,A1,12,B,sub,Bitte,die,-n,Noun,,,,,
-242,A1,12,B,sub,bitten,,,Verb,,,,,
-243,A1,12,B,main,bitter,,,Other,,,,,
-244,A1,12,B,main,bleiben,,,Verb,,,,,
-245,A1,12,B,main,Bleistift,der,-e,Noun,,,,,
-246,A1,12,B,main,Blick,der,,Noun,,,,,
-247,A1,12,B,main,Blume,die,-n,Noun,,,,,
-248,A1,12,B,main,Bogen,der,,Noun,,,,,
-249,A1,12,B,main,böse,,,Other,,,,,
-250,A1,12,B,main,brauchen,,,Verb,,,,,
-251,A1,12,B,main,breit,,,Other,,,,,
-252,A1,12,B,main,Brief,der,-e,Noun,,,,,
-253,A1,12,B,main,Briefmarke,die,-n,Noun,,,,,
-254,A1,12,B,main,bringen,,,Verb,,,,,
-255,A1,12,B,main,Brot,das,-e,Noun,,,,,
-256,A1,12,B,main,Brötchen,das,-,Noun,,,,,
-257,A1,12,B,main,Bruder,der,¨-er,Noun,,,,,
-258,A1,12,B,main,Buch,das,"-ü, er",Noun,,,,,
-259,A1,12,B,main,Buchstabe,der,-n,Noun,,,,,
-260,A1,12,B,main,buchstabieren,,,Verb,,,,,
-261,A1,12,B,main,Bus,der,-se,Noun,,,,,
-262,A1,12,B,main,Butter,die,,Noun,,,,,
-263,A1,12,C,main,Café,das,-s,Noun,,,,,
-264,A1,12,C,main,CD,die,-s,Noun,,,,,
-265,A1,12,C,main,Chef,der,,Noun,,,,,
-266,A1,12,C,main,circa,,,Other,,,,,
-267,A1,12,C,main,ca.,,,Other,,,,,
-268,A1,12,C,main,Computer,der,-,Noun,,,,,
-269,A1,12,D,main,da,,,Other,,,,,
-270,A1,12,D,main,Dame,die,-n,Noun,,,,,
-271,A1,13,D,main,daneben,,,Other,,,,,
-272,A1,13,D,main,danken,,,Verb,,,,,
-273,A1,13,D,sub,Dank,der,,Noun,,,,,
-274,A1,13,D,sub,danke,,,Other,,,,,
-275,A1,13,D,main,dann,,,Other,,,,,
-276,A1,13,D,main,Datum,das,,Noun,,,,,
-277,A1,13,D,main,dauern,,,Verb,,,,,
-278,A1,13,D,main,dein-,,,Other,,,,,
-279,A1,13,D,main,denn,,,Other,,,,,
-280,A1,13,D,main,der,,,Other,,,,,
-281,A1,13,D,main,die,,,Other,,,,,
-282,A1,13,D,main,das,,,Other,,,,,
-283,A1,13,D,main,dich,,,Other,,,,,
-284,A1,13,D,main,dies-,,,Other,,,,,
-285,A1,13,D,main,dir,,,Other,,,,,
-286,A1,13,D,main,Disco,die,,Noun,,,,,
-287,A1,13,D,main,Doktor,der,,Noun,,,,,
-288,A1,13,D,main,Doppelzimmer,das,,Noun,,,,,
-289,A1,13,D,main,Dorf,das,"-ö, er",Noun,,,,,
-290,A1,13,D,main,dort,,,Other,,,,,
-291,A1,13,D,main,draußen,,,Other,,,,,
-292,A1,13,D,main,drucken,,,Verb,,,,,
-293,A1,13,D,sub,Drucker,der,-,Noun,,,,,
-294,A1,13,D,main,drücken,,,Verb,,,,,
-295,A1,13,D,main,durch,,,Other,,,,,
-296,A1,13,D,main,Durchsage,die,-n,Noun,,,,,
-297,A1,13,D,main,dürfen,,,Verb,,,,,
-298,A1,13,D,main,Durst,der,,Noun,,,,,
-299,A1,13,D,main,duschen,,,Verb,,,,,
-300,A1,13,D,sub,Dusche,die,,Noun,,,,,
-301,A1,13,E,main,Ecke,die,-n,Noun,,,,,
-302,A1,13,E,main,Ehefrau,die,-en/,Noun,,,,,
-303,A1,13,E,main,Ehemann,der,¨-er/,Noun,,,,,
-304,A1,13,E,main,Ei,das,-er,Noun,,,,,
-305,A1,13,E,main,eilig,,,Other,,,,,
-306,A1,13,E,main,ein-,,,Other,,,,,
-307,A1,13,E,main,einfach,,,Other,,,,,
-308,A1,13,E,main,Eingang,der,,Noun,,,,,
-309,A1,13,E,main,einkaufen,,,Verb,,,,,
-310,A1,13,E,main,einladen,,,Verb,,,,,
-311,A1,13,E,sub,Einladung,die,,Noun,,,,,
-312,A1,14,E,main,einmal,,,Other,,,,,
-313,A1,14,E,main,einsteigen,,,Verb,,,,,
-314,A1,14,E,main,Eintritt,der,-e,Noun,,,,,
-315,A1,14,E,main,Einzelzimmer,das,,Noun,,,,,
-316,A1,14,E,main,Eltern,die,,Noun,,,,,
-317,A1,14,E,main,E-Mail,die,-s,Noun,,,,,
-318,A1,14,E,main,Empfänger,der,-,Noun,,,,,
-319,A1,14,E,main,empfehlen,,,Verb,,,,,
-320,A1,14,E,main,enden,,,Verb,,,,,
-321,A1,14,E,sub,Ende,das,,Noun,,,,,
-322,A1,14,E,main,entschuldigen,,,Verb,,,,,
-323,A1,14,E,sub,Entschuldigung,die,,Noun,,,,,
-324,A1,14,E,main,er,,,Other,,,,,
-325,A1,14,E,main,Ergebnis,das,-se,Noun,,,,,
-326,A1,14,E,main,erklären,,,Verb,,,,,
-327,A1,14,E,main,erlauben,,,Verb,,,,,
-328,A1,14,E,main,Erwachsene,der,-n,Noun,,,,,
-329,A1,14,E,main,erzählen,,,Verb,,,,,
-330,A1,14,E,main,es,,,Other,,,,,
-331,A1,14,E,main,essen,,,Verb,,,,,
-332,A1,14,E,sub,Essen,das,,Noun,,,,,
-333,A1,14,E,main,euer,,,Other,,,,,
-334,A1,14,F,main,fahren,,,Verb,,,,,
-335,A1,14,F,sub,Fahrer,der,,Noun,,,,,
-336,A1,14,F,main,Fahrkarte,die,-n,Noun,,,,,
-337,A1,14,F,main,Fahrrad,das,"-ä, er",Noun,,,,,
+238,A1,12,B,main,bis,,,Other,until / up to,kadar,до,до,تا
+239,A1,12,B,main,bisschen,,,Other,a little / a bit,biraz,немного,трохи,کمی
+240,A1,12,B,main,bitte,,,Other,please / you're welcome,lütfen / rica ederim,пожалуйста / не за что,будь ласка / нема за що,لطفاً / خواهش می‌کنم
+241,A1,12,B,sub,Bitte,die,-n,Noun,request,rica / talep,просьба,прохання,درخواست
+242,A1,12,B,sub,bitten,,,Verb,to ask / request,rica etmek / istemek,просить,просити,درخواست کردن
+243,A1,12,B,main,bitter,,,Other,bitter,acı,горький,гіркий,تلخ
+244,A1,12,B,main,bleiben,,,Verb,to stay / remain,kalmak,оставаться,залишатися,ماندن
+245,A1,12,B,main,Bleistift,der,-e,Noun,pencil,kurşun kalem,карандаш,олівець,مداد
+246,A1,12,B,main,Blick,der,,Noun,look / glance,bakış,взгляд,погляд,نگاه
+247,A1,12,B,main,Blume,die,-n,Noun,flower,çiçek,цветок,квітка,گل
+248,A1,12,B,main,Bogen,der,,Noun,sheet,kağıt yaprağı,лист,аркуш,برگه
+249,A1,12,B,main,böse,,,Other,angry / mean,kızgın / kötü,злой / сердитый,злий / сердитий,عصبانی / بدجنس
+250,A1,12,B,main,brauchen,,,Verb,to need,ihtiyacı olmak / gerek duymak,нуждаться,потребувати,نیاز داشتن
+251,A1,12,B,main,breit,,,Other,wide / broad,geniş,широкий,широкий,پهن / عریض
+252,A1,12,B,main,Brief,der,-e,Noun,letter,mektup,письмо,лист,نامه
+253,A1,12,B,main,Briefmarke,die,-n,Noun,stamp,posta pulu,почтовая марка,поштова марка,تمبر
+254,A1,12,B,main,bringen,,,Verb,to bring,getirmek,приносить,приносити,آوردن
+255,A1,12,B,main,Brot,das,-e,Noun,bread,ekmek,хлеб,хліб,نان
+256,A1,12,B,main,Brötchen,das,-,Noun,bread roll,küçük ekmek / sandviç ekmeği,булочка,булочка,نان کوچک
+257,A1,12,B,main,Bruder,der,¨-er,Noun,brother,erkek kardeş,брат,брат,برادر
+258,A1,12,B,main,Buch,das,"-ü, er",Noun,book,kitap,книга,книга,کتاب
+259,A1,12,B,main,Buchstabe,der,-n,Noun,letter (alphabet),harf,буква,літера,حرف
+260,A1,12,B,main,buchstabieren,,,Verb,to spell,harf harf söylemek,произносить по буквам,вимовляти по літерах,هجی کردن
+261,A1,12,B,main,Bus,der,-se,Noun,bus,otobüs,автобус,автобус,اتوبوس
+262,A1,12,B,main,Butter,die,,Noun,butter,tereyağı,масло,масло,کره
+263,A1,12,C,main,Café,das,-s,Noun,cafe,kafe,кафе,кафе,کافه
+264,A1,12,C,main,CD,die,-s,Noun,CD,CD,компакт-диск,компакт-диск,سی‌دی
+265,A1,12,C,main,Chef,der,,Noun,boss / manager,patron / yönetici,начальник / шеф,начальник / шеф,رئیس
+266,A1,12,C,main,circa,,,Other,approximately,yaklaşık olarak,приблизительно,приблизно,تقریباً
+267,A1,12,C,main,ca.,,,Other,approx.,yaklaşık,прибл.,прибл.,حدوداً
+268,A1,12,C,main,Computer,der,-,Noun,computer,bilgisayar,компьютер,комп'ютер,رایانه
+269,A1,12,D,main,da,,,Other,there,orada,там,там,آنجا
+270,A1,12,D,main,Dame,die,-n,Noun,lady,hanım,дама,пані,بانو
+271,A1,13,D,main,daneben,,,Other,next to it / beside,yanında,рядом / рядом с этим,поруч / біля цього,کنار آن
+272,A1,13,D,main,danken,,,Verb,to thank,teşekkür etmek,благодарить,дякувати,تشکر کردن
+273,A1,13,D,sub,Dank,der,,Noun,thanks,teşekkür,благодарность,подяка,تشکر
+274,A1,13,D,sub,danke,,,Other,thanks,teşekkürler,спасибо,дякую,ممنون
+275,A1,13,D,main,dann,,,Other,then,sonra / o zaman,тогда,тоді,سپس
+276,A1,13,D,main,Datum,das,,Noun,date,tarih,дата,дата,تاریخ
+277,A1,13,D,main,dauern,,,Verb,to last / take time,sürmek,длиться,тривати,طول کشیدن
+278,A1,13,D,main,dein-,,,Other,your,senin / senin-,твой,твій,مال تو / تو-
+279,A1,13,D,main,denn,,,Other,because / then,çünkü / öyleyse,потому что / же,тому що / ж,زیرا / پس
+280,A1,13,D,main,der,,,Other,the (masculine article),belirli artikel (eril),определённый артикль der,означений артикль (чоловічий),آرتیکل معین (مذکر) 'der'
+281,A1,13,D,main,die,,,Other,the (feminine article),belirli artikel (dişil),определённый артикль die,означений артикль (жіночий),آرتیکل معین (مؤنث) 'die'
+282,A1,13,D,main,das,,,Other,the (neuter article) / that,"belirli artikel (nötr) / şu, o",определённый артикль das / то,означений артикль (середній) / той,آرتیکل معین (نُتر) 'das'
+283,A1,13,D,main,dich,,,Other,you (accusative),seni,тебя,тебе,تو را
+284,A1,13,D,main,dies-,,,Other,this-,bu-,этот-,цей-,این-
+285,A1,13,D,main,dir,,,Other,to you,sana,тебе,тобі,به تو
+286,A1,13,D,main,Disco,die,,Noun,disco / club,disko,дискотека,дискотека,دیسکو
+287,A1,13,D,main,Doktor,der,,Noun,doctor,doktor,доктор,лікар / доктор,دکتر
+288,A1,13,D,main,Doppelzimmer,das,,Noun,double room,çift kişilik oda,двухместный номер,двомісний номер,اتاق دونفره
+289,A1,13,D,main,Dorf,das,"-ö, er",Noun,village,köy,деревня,село,روستا
+290,A1,13,D,main,dort,,,Other,there,orada,там,там,آنجا
+291,A1,13,D,main,draußen,,,Other,outside,dışarıda,снаружи / на улице,надворі / зовні,بیرون
+292,A1,13,D,main,drucken,,,Verb,to print,yazdırmak,печатать,друкувати,چاپ کردن
+293,A1,13,D,sub,Drucker,der,-,Noun,printer,yazıcı,принтер,принтер,چاپگر
+294,A1,13,D,main,drücken,,,Verb,to press,basmak,нажимать,натискати,فشار دادن
+295,A1,13,D,main,durch,,,Other,through,içinden / boyunca,через,через,از میان / از طریق
+296,A1,13,D,main,Durchsage,die,-n,Noun,announcement,anons,объявление,оголошення,اعلام
+297,A1,13,D,main,dürfen,,,Verb,to be allowed to / may,izinli olmak / -ebilmek,мочь / иметь право,мати дозвіл / могти,اجازه داشتن
+298,A1,13,D,main,Durst,der,,Noun,thirst,susuzluk,жажда,спрага,تشنگی
+299,A1,13,D,main,duschen,,,Verb,to shower,duş almak,принимать душ,приймати душ,دوش گرفتن
+300,A1,13,D,sub,Dusche,die,,Noun,shower,duş,душ,душ,دوش
+301,A1,13,E,main,Ecke,die,-n,Noun,corner,köşe,угол,кут,گوشه
+302,A1,13,E,main,Ehefrau,die,-en/,Noun,wife,eş,жена,дружина,همسر
+303,A1,13,E,main,Ehemann,der,¨-er/,Noun,husband,koca / eş,муж,чоловік,شوهر
+304,A1,13,E,main,Ei,das,-er,Noun,egg,yumurta,яйцо,яйце,تخم‌مرغ
+305,A1,13,E,main,eilig,,,Other,hurried / urgent,acelesi olan / acil,спешный / срочный,терміновий / поспішний,عجول / فوری
+306,A1,13,E,main,ein-,,,Other,a / an,bir,неопределённый артикль ein,неозначений артикль ein,یک / آرتیکل نامعین ein
+307,A1,13,E,main,einfach,,,Other,simple / easy,basit / kolay,простой / лёгкий,простий / легкий,ساده / آسان
+308,A1,13,E,main,Eingang,der,,Noun,entrance,giriş,вход,вхід,ورودی
+309,A1,13,E,main,einkaufen,,,Verb,to shop,alışveriş yapmak,делать покупки,робити покупки,خرید کردن
+310,A1,13,E,main,einladen,,,Verb,to invite,davet etmek,приглашать,запрошувати,دعوت کردن
+311,A1,13,E,sub,Einladung,die,,Noun,invitation,davetiye / davet,приглашение,запрошення,دعوت
+312,A1,14,E,main,einmal,,,Other,once / one time,bir kez,один раз,один раз,یک بار
+313,A1,14,E,main,einsteigen,,,Verb,to get on / board,binmek,садиться (в транспорт),сідати (в транспорт),سوار شدن
+314,A1,14,E,main,Eintritt,der,-e,Noun,entry / admission,giriş,вход,вхід,ورود
+315,A1,14,E,main,Einzelzimmer,das,,Noun,single room,tek kişilik oda,одноместный номер,одномісний номер,اتاق یک‌نفره
+316,A1,14,E,main,Eltern,die,,Noun,parents,ebeveynler / anne baba,родители,батьки,والدین
+317,A1,14,E,main,E-Mail,die,-s,Noun,e-mail,e-posta,электронная почта,електронна пошта,ایمیل
+318,A1,14,E,main,Empfänger,der,-,Noun,recipient,alıcı,получатель,одержувач,گیرنده
+319,A1,14,E,main,empfehlen,,,Verb,to recommend,tavsiye etmek,рекомендовать,рекомендувати,توصیه کردن
+320,A1,14,E,main,enden,,,Verb,to end,bitmek,заканчиваться,закінчуватися,تمام شدن
+321,A1,14,E,sub,Ende,das,,Noun,end,son,конец,кінець,پایان
+322,A1,14,E,main,entschuldigen,,,Verb,to excuse / apologize,affetmek / özür dilemek,извинять / извиняться,вибачати / вибачатися,معذرت خواستن / بخشیدن
+323,A1,14,E,sub,Entschuldigung,die,,Noun,apology / excuse me,özür / afedersiniz,извинение / извините,вибачення / вибачте,عذرخواهی / ببخشید
+324,A1,14,E,main,er,,,Other,he,o,он,він,او
+325,A1,14,E,main,Ergebnis,das,-se,Noun,result,sonuç,результат,результат,نتیجه
+326,A1,14,E,main,erklären,,,Verb,to explain,açıklamak,объяснять,пояснювати,توضیح دادن
+327,A1,14,E,main,erlauben,,,Verb,to allow,izin vermek,разрешать,дозволяти,اجازه دادن
+328,A1,14,E,main,Erwachsene,der,-n,Noun,adult,yetişkin,взрослый,дорослий,بزرگسال
+329,A1,14,E,main,erzählen,,,Verb,to tell / narrate,anlatmak,рассказывать,розповідати,تعریف کردن
+330,A1,14,E,main,es,,,Other,it,o,оно,воно,آن
+331,A1,14,E,main,essen,,,Verb,to eat,yemek yemek,есть,їсти,غذا خوردن
+332,A1,14,E,sub,Essen,das,,Noun,food / meal,yemek,еда,їжа,غذا
+333,A1,14,E,main,euer,,,Other,your (plural),sizin,ваш,ваш,مال شما / شما
+334,A1,14,F,main,fahren,,,Verb,to drive / go,gitmek / sürmek,ехать / водить,їхати / керувати,رفتن / راندن
+335,A1,14,F,sub,Fahrer,der,,Noun,driver,sürücü,водитель,водій,راننده
+336,A1,14,F,main,Fahrkarte,die,-n,Noun,ticket,bilet,билет,квиток,بلیت
+337,A1,14,F,main,Fahrrad,das,"-ä, er",Noun,bicycle,bisiklet,велосипед,велосипед,دوچرخه
 338,A1,14,F,main,falsch,,,Other,,,,,
 339,A1,14,F,main,Familie,die,-n,Noun,,,,,
 340,A1,14,F,sub,Familienname,der,,Noun,,,,,
