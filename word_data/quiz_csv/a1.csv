@@ -736,78 +736,78 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 735,A1,24,U,main,umziehen,,,Verb,to move / get changed,taşınmak / üstünü değiştirmek,переезжать / переодеваться,переїжджати / переодягатися,اسباب‌کشی کردن / لباس عوض کردن
 736,A1,24,U,main,und,,,Other,and,ve,и,і,و
 737,A1,25,U,main,unser,,,Other,our,bizim,наш,наш,مال ما / ما
-738,A1,25,U,main,unten,,,Other,,,,,
-739,A1,25,U,main,unter,,,Other,,,,,
-740,A1,25,U,main,Unterricht,der,,Noun,,,,,
-741,A1,25,U,main,unterschreiben,,,Verb,,,,,
-742,A1,25,U,sub,Unterschrift,die,,Noun,,,,,
-743,A1,25,U,main,Urlaub,der,,Noun,,,,,
-744,A1,25,V,main,Vater,der,-ä,Noun,,,,,
-745,A1,25,V,main,verboten,,,Other,,,,,
-746,A1,25,V,main,verdienen,,,Verb,,,,,
-747,A1,25,V,main,Verein,der,,Noun,,,,,
-748,A1,25,V,main,verheiratet,,,Other,,,,,
-749,A1,25,V,main,verkaufen,,,Verb,,,,,
-750,A1,25,V,sub,Verkäufer,der,-,Noun,,,,,
-751,A1,25,V,main,vermieten,,,Verb,,,,,
-752,A1,25,V,sub,Vermieter,der,,Noun,,,,,
-753,A1,25,V,main,verstehen,,,Verb,,,,,
-754,A1,25,V,main,Verwandte,der,-n,Noun,,,,,
-755,A1,25,V,main,viel,,,Other,,,,,
-756,A1,25,V,main,vielleicht,,,Other,,,,,
-757,A1,25,V,main,von,,,Other,,,,,
-758,A1,25,V,main,vor,,,Other,,,,,
-759,A1,25,V,main,Vorname,der,-n,Noun,,,,,
-760,A1,25,V,main,Vorsicht,die,,Noun,,,,,
-761,A1,25,V,main,vorstellen,,,Verb,,,,,
-762,A1,25,V,main,Vorwahl,die,,Noun,,,,,
-763,A1,25,W,main,wandern,,,Verb,,,,,
-764,A1,25,W,main,wann,,,Other,,,,,
-765,A1,25,W,main,warten,,,Verb,,,,,
-766,A1,25,W,main,warum,,,Other,,,,,
-767,A1,25,W,main,was,,,Other,,,,,
-768,A1,25,W,main,was für ein,,,Other,,,,,
-769,A1,25,W,main,waschen,,,Verb,,,,,
-770,A1,25,W,main,Wasser,das,,Noun,,,,,
-771,A1,25,W,main,weh tun,,,Other,,,,,
-772,A1,25,W,main,weiblich,,,Other,,,,,
-773,A1,25,W,main,Wein,der,,Noun,,,,,
-774,A1,25,W,main,weit,,,Other,,,,,
-775,A1,26,W,main,weiter,,,Other,,,,,
-776,A1,26,W,main,welch,,,Other,,,,,
-777,A1,26,W,main,Welt,die,,Noun,,,,,
-778,A1,26,W,main,wenig,,,Other,,,,,
-779,A1,26,W,main,wer,,,Other,,,,,
-780,A1,26,W,main,werden,,,Verb,,,,,
-781,A1,26,W,main,Wetter,das,,Noun,,,,,
-782,A1,26,W,main,wichtig,,,Other,,,,,
-783,A1,26,W,main,wie,,,Other,,,,,
-784,A1,26,W,main,wiederholen,,,Verb,,,,,
-785,A1,26,W,main,Wiederhören,das,,Noun,,,,,
-786,A1,26,W,main,Wiedersehen,das,,Noun,,,,,
-787,A1,26,W,main,wie viel,,,Other,,,,,
-788,A1,26,W,main,willkommen,,,Other,,,,,
-789,A1,26,W,main,Wind,der,,Noun,,,,,
-790,A1,26,W,main,wir,,,Other,,,,,
-791,A1,26,W,main,wissen,,,Verb,,,,,
-792,A1,26,W,main,wo,,,Other,,,,,
-793,A1,26,W,main,woher,,,Other,,,,,
-794,A1,26,W,main,wohin,,,Other,,,,,
-795,A1,26,W,main,wohnen,,,Verb,,,,,
-796,A1,26,W,sub,Wohnung,die,-en,Noun,,,,,
-797,A1,26,W,main,wollen,,,Verb,,,,,
-798,A1,26,W,main,Wort,das,"-ö, er/-e",Noun,,,,,
-799,A1,26,W,main,wunderbar,,,Other,,,,,
-800,A1,26,Z,main,zahlen,,,Verb,,,,,
-801,A1,26,Z,main,Zeit,die,,Noun,,,,,
-802,A1,26,Z,sub,zurzeit,,,Other,,,,,
-803,A1,26,Z,main,Zeitung,die,-en,Noun,,,,,
-804,A1,26,Z,main,Zigarette,die,-n,Noun,,,,,
-805,A1,26,Z,main,Zimmer,das,-,Noun,,,,,
-806,A1,26,Z,main,Zoll,der,,Noun,,,,,
-807,A1,26,Z,main,zu,,,Other,,,,,
-808,A1,27,Z,main,zufrieden,,,Other,,,,,
-809,A1,27,Z,main,Zug,der,"-ü, e",Noun,,,,,
-810,A1,27,Z,main,zurück,,,Other,,,,,
-811,A1,27,Z,main,zusammen,,,Other,,,,,
-812,A1,27,Z,main,zwischen,,,Other,,,,,
+738,A1,25,U,main,unten,,,Other,downstairs / below,aşağıda,внизу,внизу,پایین
+739,A1,25,U,main,unter,,,Other,under / below,altında,под / ниже,під / нижче,زیر
+740,A1,25,U,main,Unterricht,der,,Noun,lesson / class,ders,урок / занятие,урок / заняття,درس / کلاس
+741,A1,25,U,main,unterschreiben,,,Verb,to sign,imzalamak,подписывать,підписувати,امضا کردن
+742,A1,25,U,sub,Unterschrift,die,,Noun,signature,imza,подпись,підпис,امضا
+743,A1,25,U,main,Urlaub,der,,Noun,vacation / holiday,tatil,отпуск / каникулы,відпустка / канікули,تعطیلات
+744,A1,25,V,main,Vater,der,-ä,Noun,father,baba,отец,батько,پدر
+745,A1,25,V,main,verboten,,,Other,forbidden,yasak,запрещено,заборонено,ممنوع
+746,A1,25,V,main,verdienen,,,Verb,to earn,kazanmak,зарабатывать,заробляти,درآوردن / کسب کردن
+747,A1,25,V,main,Verein,der,,Noun,club / association,dernek / kulüp,союз / клуб,спілка / клуб,انجمن / باشگاه
+748,A1,25,V,main,verheiratet,,,Other,married,evli,женат / замужем,одружений / заміжня,متأهل
+749,A1,25,V,main,verkaufen,,,Verb,to sell,satmak,продавать,продавати,فروختن
+750,A1,25,V,sub,Verkäufer,der,-,Noun,salesman / seller,satıcı,продавец,продавець,فروشنده
+751,A1,25,V,main,vermieten,,,Verb,to rent out,kiraya vermek,сдавать в аренду,здавати в оренду,اجاره دادن
+752,A1,25,V,sub,Vermieter,der,,Noun,landlord / lessor,ev sahibi / kiraya veren,арендодатель,орендодавець,موجر / صاحبخانه
+753,A1,25,V,main,verstehen,,,Verb,to understand,anlamak,понимать,розуміти,فهمیدن
+754,A1,25,V,main,Verwandte,der,-n,Noun,relative,akraba,родственник,родич,فامیل / خویشاوند
+755,A1,25,V,main,viel,,,Other,much / many,çok,много,багато,زیاد
+756,A1,25,V,main,vielleicht,,,Other,maybe / perhaps,belki,может быть,можливо,شاید
+757,A1,25,V,main,von,,,Other,from / of,-den / hakkında,от / о,від / про,از / درباره
+758,A1,25,V,main,vor,,,Other,in front of / before,önünde / önce,перед / до,перед / до,جلوی / قبل از
+759,A1,25,V,main,Vorname,der,-n,Noun,first name,ad,имя,ім'я,نام کوچک
+760,A1,25,V,main,Vorsicht,die,,Noun,caution,dikkat,осторожность,обережність,احتیاط
+761,A1,25,V,main,vorstellen,,,Verb,to introduce / imagine,tanıtmak / hayal etmek,представлять / знакомить,представляти / знайомити,معرفی کردن / تصور کردن
+762,A1,25,V,main,Vorwahl,die,,Noun,area code,alan kodu,код города,код міста,پیش‌شماره
+763,A1,25,W,main,wandern,,,Verb,to hike,yürüyüş yapmak,ходить в поход,ходити в похід,پیاده‌روی طولانی / کوهپیمایی کردن
+764,A1,25,W,main,wann,,,Other,when,ne zaman,когда,коли,کی
+765,A1,25,W,main,warten,,,Verb,to wait,beklemek,ждать,чекати,منتظر ماندن
+766,A1,25,W,main,warum,,,Other,why,neden,почему,чому,چرا
+767,A1,25,W,main,was,,,Other,what,ne,что,що,چه
+768,A1,25,W,main,was für ein,,,Other,what kind of,nasıl bir,что за / какой,що за / який,چه نوع
+769,A1,25,W,main,waschen,,,Verb,to wash,yıkamak,мыть,мити,شستن
+770,A1,25,W,main,Wasser,das,,Noun,water,su,вода,вода,آب
+771,A1,25,W,main,weh tun,,,Other,to hurt,ağrımak / acımak,болеть,боліти,درد کردن
+772,A1,25,W,main,weiblich,,,Other,female,kadın / dişi,женский,жіночий,مونث / زن
+773,A1,25,W,main,Wein,der,,Noun,wine,şarap,вино,вино,شراب
+774,A1,25,W,main,weit,,,Other,far,uzak,далеко / далёкий,далеко / далекий,دور
+775,A1,26,W,main,weiter,,,Other,further / continue,daha ileri / devam,дальше / далее,далі / далі,بیشتر / ادامه
+776,A1,26,W,main,welch,,,Other,which / what kind of,hangi,какой,який,کدام / چه
+777,A1,26,W,main,Welt,die,,Noun,world,dünya,мир,світ,دنیا
+778,A1,26,W,main,wenig,,,Other,little / few,az,мало / немного,мало / трохи,کم
+779,A1,26,W,main,wer,,,Other,who,kim,кто,хто,چه کسی
+780,A1,26,W,main,werden,,,Verb,to become / will,olmak / olacak,становиться / будет,ставати / буде,شدن
+781,A1,26,W,main,Wetter,das,,Noun,weather,hava,погода,погода,هوا
+782,A1,26,W,main,wichtig,,,Other,important,önemli,важный,важливий,مهم
+783,A1,26,W,main,wie,,,Other,how,nasıl,как,як,چطور
+784,A1,26,W,main,wiederholen,,,Verb,to repeat,tekrarlamak,повторять,повторювати,تکرار کردن
+785,A1,26,W,main,Wiederhören,das,,Noun,goodbye (on phone),telefonda hoşça kal,до свидания (по телефону),до побачення (по телефону),خداحافظ (تلفنی)
+786,A1,26,W,main,Wiedersehen,das,,Noun,goodbye / seeing again,görüşmek üzere,до свидания,до побачення,به امید دیدار
+787,A1,26,W,main,wie viel,,,Other,how much / how many,ne kadar / kaç,сколько,скільки,چقدر / چند
+788,A1,26,W,main,willkommen,,,Other,welcome,hoş geldiniz,добро пожаловать,ласкаво просимо,خوش آمدید
+789,A1,26,W,main,Wind,der,,Noun,wind,rüzgar,ветер,вітер,باد
+790,A1,26,W,main,wir,,,Other,we,biz,мы,ми,ما
+791,A1,26,W,main,wissen,,,Verb,to know,bilmek,знать,знати,دانستن
+792,A1,26,W,main,wo,,,Other,where,nerede,где,де,کجا
+793,A1,26,W,main,woher,,,Other,from where,nereden,откуда,звідки,از کجا
+794,A1,26,W,main,wohin,,,Other,to where,nereye,куда,куди,به کجا
+795,A1,26,W,main,wohnen,,,Verb,to live / reside,oturmak / yaşamak,жить / проживать,жити / мешкати,زندگی کردن / ساکن بودن
+796,A1,26,W,sub,Wohnung,die,-en,Noun,apartment / flat,daire,квартира,квартира,آپارتمان
+797,A1,26,W,main,wollen,,,Verb,to want,istemek,хотеть,хотіти,خواستن
+798,A1,26,W,main,Wort,das,"-ö, er/-e",Noun,word,kelime / söz,слово,слово,کلمه
+799,A1,26,W,main,wunderbar,,,Other,wonderful,harika,замечательный,чудовий,عالی / فوق‌العاده
+800,A1,26,Z,main,zahlen,,,Verb,to pay / count,ödemek / saymak,платить / считать,платити / рахувати,پرداخت کردن / شمردن
+801,A1,26,Z,main,Zeit,die,,Noun,time / time period,zaman,время,час,زمان
+802,A1,26,Z,sub,zurzeit,,,Other,currently / at the moment,şu anda,в настоящее время,зараз,در حال حاضر
+803,A1,26,Z,main,Zeitung,die,-en,Noun,newspaper,gazete,газета,газета,روزنامه
+804,A1,26,Z,main,Zigarette,die,-n,Noun,cigarette,sigara,сигарета,сигарета,سیگار
+805,A1,26,Z,main,Zimmer,das,-,Noun,room,oda,комната,кімната,اتاق
+806,A1,26,Z,main,Zoll,der,,Noun,customs,gümrük,таможня,митниця,گمرک
+807,A1,26,Z,main,zu,,,Other,too / to / closed,çok / -e / kapalı,слишком / к / закрыто,занадто / до / зачинено,بیش از حد / به / بسته
+808,A1,27,Z,main,zufrieden,,,Other,satisfied,memnun,довольный,задоволений,راضی
+809,A1,27,Z,main,Zug,der,"-ü, e",Noun,train,tren,поезд,поїзд,قطار
+810,A1,27,Z,main,zurück,,,Other,back / back again,geri,назад / обратно,назад / назад,عقب / بازگشت
+811,A1,27,Z,main,zusammen,,,Other,together,birlikte,вместе,разом,با هم
+812,A1,27,Z,main,zwischen,,,Other,between,arasında,между,між,بین
