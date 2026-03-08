@@ -16,7 +16,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 15,A2,5,anweisungssprache,main,Durchsage,die,-n,Noun,,,announcement,duyuru,объявление,оголошення,اطلاعیه
 16,A2,5,anweisungssprache,main,Lösung,die,-en,Noun,,,solution / answer,çözüm / cevap,решение / ответ,розв'язок / відповідь,پاسخ
 17,A2,5,anweisungssprache,main,markieren,,,Verb,,,to mark,işaretlemek,отмечать,позначати,علامت‌زدن
-18,A2,5,anweisungssprache,main,Prüfer,der,-,Noun,,,examiner,sınav görevlisi,экзаменатор,екзаменатор,ممتحن
+18,A2,5,anweisungssprache,main,Prüfer,der,-,Noun,,,examiner (male),sınav görevlisi (erkek),экзаменатор (муж.),екзаменатор (чол.),ممتحن (مرد)
 19,A2,5,anweisungssprache,sub,Prüferin,die,-nen,Noun,,,examiner (female),sınav görevlisi (kadın),экзаменатор (жен.),екзаменаторка,ممتحن (زن)
 20,A2,5,anweisungssprache,main,Prüfung,die,-en,Noun,,,exam / test,sınav / test,экзамен / тест,іспит / тест,آزمون / امتحان
 21,A2,5,anweisungssprache,main,Punkt,der,-e,Noun,,,point,puan,пункт,пункт,نقطه
@@ -255,7 +255,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 427,A2,12,C,main,Café,das,-s,Noun,,,café,kafe,кафе,кафе,کافه
 428,A2,12,C,main,Cafeteria,die,-s,Noun,,,cafeteria,kantin,кафетерий,кафетерій,کافه‌تریا
 429,A2,12,C,main,chatten,,,Verb,chattet,hat gechattet,to chat (online),sohbet etmek (çevrimiçi),чатиться / общаться онлайн,спілкуватися онлайн / чатитися,چت کردن
-430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager,patron / yönetici,шеф / начальник,шеф / начальник,رئیس / مدیر
+430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager (male),patron (erkek) / yönetici (erkek),шеф / начальник (муж.),шеф / начальник (чол.),رئیس / مدیر مرد
 431,A2,12,C,main,Chefin,die,-nen,Noun,,,boss / manager (female),patron (kadın) / yönetici (kadın),шеф / начальница (жен.),шефиня / начальниця,رئیس / مدیر زن
 432,A2,12,C,main,Club,der,-s /,Noun,,,club,kulüp,клуб,клуб,باشگاه / کلوب
 433,A2,12,C,main,Computer,der,-,Noun,,,computer,bilgisayar,компьютер,комп'ютер,رایانه
@@ -471,7 +471,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 643,A2,19,K,main,Kühl-,der,,Noun,,,refrigerator (compound),soğutma- (önek),холодильник- (часть сложного слова),холодильник (частина складного слова),یخچال-
 644,A2,19,K,main,Kultur,die,-en,Noun,,,culture,kültür,культура,культура,فرهنگ
 645,A2,19,K,main,kümmern,,,Verb,kümmert,hat gekümmert,to take care of / look after,ilgilenmek / bakmak,заботиться / присматривать,турбуватися / доглядати,رسیدگی کردن / مراقبت کردن
-646,A2,19,K,main,Kunde,der,-n /,Noun,,,customer (male),müşteri (erkek),клиент (муж.),клієнт,مشتری
+646,A2,19,K,main,Kunde,der,-n /,Noun,,,customer (male),müşteri (erkek),клиент (муж.),клієнт (чол.),مشتری مرد
 647,A2,19,K,main,Kundin,die,-nen,Noun,,,customer (female),müşteri (kadın),клиентка (жен.),клієнтка,مشتری زن
 648,A2,19,K,main,kündigen,,,Verb,kündigt,hat gekündigt,to quit / give notice,işten ayrılmak / feshetmek,увольняться / уведомлять об увольнении,звільнятися / розривати контракт,استعفا دادن / فسخ کردن
 649,A2,19,K,main,Kunst,die,¨-e,Noun,,,art,sanat,искусство,мистецтво,هنر
@@ -576,7 +576,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 748,A2,22,E,main,ein,,,Other,,,a / one,bir,один / какой-то,один,یک
 749,A2,22,P,main,packen,,,Verb,packt,hat gepackt,to pack,paketlemek,паковать,пакувати,بسته‌بندی کردن
 750,A2,22,P,main,Paket,das,-e,Noun,,,package / parcel,parça / paket,посылка / пакет,пакет / посилка,بسته / مرسوله
-751,A2,22,P,main,Partner,der,-,Noun,,,partner (male),ortak / partner (erkek),партнёр (муж.),партнер,شریک / همسر
+751,A2,22,P,main,Partner,der,-,Noun,,,partner (male),ortak / partner (erkek),партнёр (муж.),партнер (чол.),شریک مرد / همسر مرد
 752,A2,22,P,main,Partnerin,die,-nen,Noun,,,partner (female),ortak / partner (kadın),партнёрша (жен.),партнерка,شریک زن / همسر زن
 753,A2,22,P,main,Party,die,-s,Noun,,,party,parti / eğlence,вечеринка,вечірка,مهمانی
 754,A2,22,P,main,passieren,,,Verb,passiert,,to happen / occur,olmak,случаться / происходить,траплятися / відбуватися,اتفاق افتادن
@@ -667,7 +667,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 839,A2,24,R,main,rufen,,,Verb,ruft,hat gerufen,to call / shout,bağırmak / çağırmak,звать / кричать,кликати / кричати,صدا زدن / فریاد زدن
 840,A2,24,R,main,Ruhe,die,,Noun,,,quiet / peace / rest,huzur,покой / тишина / отдых,спокій / тиша,آرامش / سکوت
 841,A2,24,R,main,ruhig,,,Other,,,quiet / calm,sakin,тихий / спокойный,тихий / спокійний,آرام / ساکت
-842,A2,25,S,main,Schüler,der,- /,Noun,,,pupil / school student (male),öğrenci (erkek),ученик / школьник (муж.),учень,دانش‌آموز
+842,A2,25,S,main,Schüler,der,- /,Noun,,,pupil / school student (male),öğrenci (erkek),ученик / школьник (муж.),учень (чол.),دانش‌آموز پسر
 843,A2,25,S,main,Schülerin,die,-nen,Noun,,,pupil / school student (female),öğrenci (kız),ученица / школьница (жен.),учениця,دانش‌آموز دختر
 844,A2,25,S,main,schwach,,,Other,,,weak,zayıf,слабый,слабкий,ضعیف
 845,A2,25,S,main,schwierig,,,Other,,,difficult,zor,трудный,складний / важкий,دشوار
@@ -815,7 +815,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 987,A2,29,V,main,verlieben,,,Verb,verliebt,hat verliebt,to fall in love,aşık olmak,влюбляться,закохуватися,عاشق شدن
 988,A2,29,V,main,verlieren,,,Verb,verliert,,to lose,kaybetmek,терять,втрачати / програвати,گم کردن / از دست دادن
 989,A2,29,V,main,vermieten,,,Verb,vermietet,hat vermietet,to rent out,kiralamak (vermek),сдавать в аренду,здавати в оренду,اجاره دادن
-990,A2,29,V,main,Vermieter,der,- /,Noun,,,landlord (male),ev sahibi (erkek),арендодатель / хозяин квартиры (муж.),домовласник / орендодавець,صاحبخانه
+990,A2,29,V,main,Vermieter,der,- /,Noun,,,landlord (male),ev sahibi (erkek),арендодатель / хозяин квартиры (муж.),домовласник / орендодавець (чол.),صاحبخانه مرد
 991,A2,29,V,main,Vermieterin,die,-nen,Noun,,,landlord (female),ev sahibi (kadın),арендодательница / хозяйка квартиры (жен.),домовласниця / орендодавиця,صاحبخانه زن
 992,A2,29,V,main,verpassen,,,Verb,verpasst,hat verpasst,to miss,kaçırmak,пропускать / упускать,пропускати / запізнюватися,از دست دادن / جا ماندن از
 993,A2,29,V,main,verreisen,,,Verb,verreist,,to go on a trip,tatile çıkmak,уезжать в поездку,їхати у подорож,به سفر رفتن
