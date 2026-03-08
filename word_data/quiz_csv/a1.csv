@@ -336,106 +336,106 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 335,A1,14,F,sub,Fahrer,der,,Noun,driver,sürücü,водитель,водій,راننده
 336,A1,14,F,main,Fahrkarte,die,-n,Noun,ticket,bilet,билет,квиток,بلیت
 337,A1,14,F,main,Fahrrad,das,"-ä, er",Noun,bicycle,bisiklet,велосипед,велосипед,دوچرخه
-338,A1,14,F,main,falsch,,,Other,,,,,
-339,A1,14,F,main,Familie,die,-n,Noun,,,,,
-340,A1,14,F,sub,Familienname,der,,Noun,,,,,
-341,A1,14,F,sub,Familienstand,der,,Noun,,,,,
-342,A1,14,F,main,Farbe,die,-n,Noun,,,,,
-343,A1,14,F,main,Fax,das,-e,Noun,,,,,
-344,A1,14,F,main,Feierabend,,,Noun,,,,,
-345,A1,14,F,main,Feiertag,,,Noun,,,,,
-346,A1,14,F,main,feiern,,,Verb,,,,,
-347,A1,14,F,main,fehlen,,,Verb,,,,,
-348,A1,14,F,main,Fehler,der,-,Noun,,,,,
-349,A1,14,F,main,fernsehen,,,Verb,,,,,
-350,A1,14,F,main,fertig,,,Other,,,,,
-351,A1,14,F,main,Feuer,das,,Noun,,,,,
-352,A1,14,F,main,Fieber,das,,Noun,,,,,
-353,A1,14,F,main,Film,der,-e,Noun,,,,,
-354,A1,14,F,main,finden,,,Verb,,,,,
-355,A1,14,F,main,Firma,die,,Noun,,,,,
-356,A1,14,F,main,Fisch,der,-e,Noun,,,,,
-357,A1,15,F,main,Flasche,die,-n,Noun,,,,,
-358,A1,15,F,main,Fleisch,das,,Noun,,,,,
-359,A1,15,F,main,fliegen,,,Verb,,,,,
-360,A1,15,F,sub,abfliegen,,,Verb,,,,,
-361,A1,15,F,sub,Abflug,der,,Noun,,,,,
-362,A1,15,F,main,Flughafen,der,,Noun,,,,,
-363,A1,15,F,main,Flugzeug,das,,Noun,,,,,
-364,A1,15,F,main,Formular,das,-e,Noun,,,,,
-365,A1,15,F,main,Foto,das,-s,Noun,,,,,
-366,A1,15,F,main,fragen,,,Verb,,,,,
-367,A1,15,F,sub,Frage,die,-n,Noun,,,,,
-368,A1,15,F,main,Frau,die,-en,Noun,,,,,
-369,A1,15,F,main,frei,,,Other,,,,,
-370,A1,15,F,main,Freizeit,die,,Noun,,,,,
-371,A1,15,F,main,fremd,,,Other,,,,,
-372,A1,15,F,main,freuen,,,Verb,,,,,
-373,A1,15,F,main,Freund,der,-e,Noun,,,,,
-374,A1,15,F,main,früher,,,Other,,,,,
-375,A1,15,F,main,frühstücken,,,Verb,,,,,
-376,A1,15,F,sub,Frühstück,das,,Noun,,,,,
-377,A1,15,F,main,Führung,die,,Noun,,,,,
-378,A1,15,F,main,für,,,Other,,,,,
-379,A1,15,F,main,Fuß,der,"-ü, e",Noun,,,,,
-380,A1,15,F,main,Fußball,der,,Noun,,,,,
-381,A1,15,G,main,Garten,der,,Noun,,,,,
-382,A1,15,G,main,Gast,der,"-ä, e",Noun,,,,,
-383,A1,15,G,main,geben,,,Verb,,,,,
-384,A1,15,G,main,geboren,,,Other,,,,,
-385,A1,15,G,main,Geburtsjahr,das,,Noun,,,,,
-386,A1,15,G,main,Geburtsort,der,,Noun,,,,,
-387,A1,15,G,main,Geburtstag,der,,Noun,,,,,
-388,A1,15,G,main,gefallen,,,Verb,,,,,
-389,A1,15,G,main,gegen,,,Other,,,,,
-390,A1,15,G,main,gehen,,,Verb,,,,,
-391,A1,15,G,main,gehören,,,Verb,,,,,
-392,A1,15,G,main,Geld,das,,Noun,,,,,
-393,A1,15,G,main,Gemüse,das,,Noun,,,,,
-394,A1,16,G,main,Gepäck,das,,Noun,,,,,
-395,A1,16,G,main,gerade,,,Other,,,,,
-396,A1,16,G,main,geradeaus,,,Other,,,,,
-397,A1,16,G,main,gern,,,Other,,,,,
-398,A1,16,G,main,Geschäft,das,-e,Noun,,,,,
-399,A1,16,G,main,Geschenk,das,-e,Noun,,,,,
-400,A1,16,G,main,Geschwister,die,,Noun,,,,,
-401,A1,16,G,main,Gespräch,das,-e,Noun,,,,,
-402,A1,16,G,main,gestern,,,Other,,,,,
-403,A1,16,G,main,gestorben,,,Other,,,,,
-404,A1,16,G,main,Getränk,das,-e,Noun,,,,,
-405,A1,16,G,main,Gewicht,das,,Noun,,,,,
-406,A1,16,G,main,gewinnen,,,Verb,,,,,
-407,A1,16,G,main,Glas,das,"-ä, er",Noun,,,,,
-408,A1,16,G,main,glauben,,,Verb,,,,,
-409,A1,16,G,main,gleich,,,Other,,,,,
-410,A1,16,G,main,Gleis,das,-e,Noun,,,,,
-411,A1,16,G,main,Glück,das,,Noun,,,,,
-412,A1,16,G,main,glücklich,,,Other,,,,,
-413,A1,16,G,main,Glückwunsch,der,,Noun,,,,,
-414,A1,16,G,main,Grad,,,Noun,,,,,
-415,A1,16,G,main,gratulieren,,,Verb,,,,,
-416,A1,16,G,main,grillen,,,Verb,,,,,
-417,A1,16,G,main,groß,,,Other,,,,,
-418,A1,16,G,sub,Größe,die,,Noun,,,,,
-419,A1,16,G,main,Großeltern,die,,Noun,,,,,
-420,A1,16,G,sub,Großmutter,die,,Noun,,,,,
-421,A1,16,G,sub,Großvater,der,,Noun,,,,,
-422,A1,16,G,main,Gruppe,die,-n,Noun,,,,,
-423,A1,16,G,main,Gruß,der,"-ü, e",Noun,,,,,
-424,A1,16,G,main,gültig,,,Other,,,,,
-425,A1,16,G,main,günstig,,,Other,,,,,
-426,A1,16,G,main,gut,,,Other,,,,,
-427,A1,16,H,main,Haar,das,-e,Noun,,,,,
-428,A1,16,H,main,haben,,,Verb,,,,,
-429,A1,16,H,main,Hähnchen,das,-,Noun,,,,,
-430,A1,16,H,main,Halbpension,die,,Noun,,,,,
-431,A1,16,H,main,Halle,die,,Noun,,,,,
-432,A1,16,H,main,hallo,,,Other,,,,,
-433,A1,17,H,main,halten,,,Verb,,,,,
-434,A1,17,H,main,Haltestelle,die,,Noun,,,,,
-435,A1,17,H,main,Hand,die,"-ä, e",Noun,,,,,
-436,A1,17,H,main,Handy,das,-s,Noun,,,,,
-437,A1,17,H,main,Haus,das,"-ä, er",Noun,,,,,
+338,A1,14,F,main,falsch,,,Other,wrong / incorrect,yanlış,неправильный,неправильний,غلط / نادرست
+339,A1,14,F,main,Familie,die,-n,Noun,family,aile,семья,сім'я,خانواده
+340,A1,14,F,sub,Familienname,der,,Noun,last name / family name,soyadı,фамилия,прізвище,نام خانوادگی
+341,A1,14,F,sub,Familienstand,der,,Noun,marital status,medeni durum,семейное положение,сімейний стан,وضعیت تأهل
+342,A1,14,F,main,Farbe,die,-n,Noun,color,renk,цвет,колір,رنگ
+343,A1,14,F,main,Fax,das,-e,Noun,fax,faks,факс,факс,فکس
+344,A1,14,F,main,Feierabend,,,Noun,end of workday,mesai bitimi,конец рабочего дня,кінець робочого дня,پایان روز کاری
+345,A1,14,F,main,Feiertag,,,Noun,public holiday,resmî tatil,праздничный день,святковий день,روز تعطیل
+346,A1,14,F,main,feiern,,,Verb,to celebrate,kutlamak,праздновать,святкувати,جشن گرفتن
+347,A1,14,F,main,fehlen,,,Verb,to be missing / lack,eksik olmak,отсутствовать / не хватать,бракувати / бути відсутнім,کم بودن / کمبود داشتن
+348,A1,14,F,main,Fehler,der,-,Noun,mistake / error,hata,ошибка,помилка,اشتباه / خطا
+349,A1,14,F,main,fernsehen,,,Verb,to watch TV,televizyon izlemek,смотреть телевизор,дивитися телевізор,تلویزیون تماشا کردن
+350,A1,14,F,main,fertig,,,Other,ready / finished,hazır / bitmiş,готовый / законченный,готовий / завершений,آماده / تمام شده
+351,A1,14,F,main,Feuer,das,,Noun,fire,ateş,огонь,вогонь,آتش
+352,A1,14,F,main,Fieber,das,,Noun,fever,ateş / humma,жар / температура,гарячка / температура,تب
+353,A1,14,F,main,Film,der,-e,Noun,film / movie,film,фильм,фільм,فیلم
+354,A1,14,F,main,finden,,,Verb,to find,bulmak,находить,знаходити,پیدا کردن
+355,A1,14,F,main,Firma,die,,Noun,company / firm,şirket,фирма / компания,фірма / компанія,شرکت
+356,A1,14,F,main,Fisch,der,-e,Noun,fish,balık,рыба,риба,ماهی
+357,A1,15,F,main,Flasche,die,-n,Noun,bottle,şişe,бутылка,пляшка,بطری
+358,A1,15,F,main,Fleisch,das,,Noun,meat,et,мясо,м'ясо,گوشت
+359,A1,15,F,main,fliegen,,,Verb,to fly,uçmak,летать,літати,پرواز کردن
+360,A1,15,F,sub,abfliegen,,,Verb,to depart (by plane),uçakla kalkmak,вылетать,відлітати,پرواز کردن / از زمین برخاستن
+361,A1,15,F,sub,Abflug,der,,Noun,departure (flight),kalkış,вылет,виліт,پرواز خروج
+362,A1,15,F,main,Flughafen,der,,Noun,airport,havaalanı,аэропорт,аеропорт,فرودگاه
+363,A1,15,F,main,Flugzeug,das,,Noun,airplane,uçak,самолёт,літак,هواپیما
+364,A1,15,F,main,Formular,das,-e,Noun,form,form,бланк / формуляр,формуляр / бланк,فرم
+365,A1,15,F,main,Foto,das,-s,Noun,photo,fotoğraf,фотография,фото,عکس
+366,A1,15,F,main,fragen,,,Verb,to ask,sormak,спрашивать,питати,پرسیدن
+367,A1,15,F,sub,Frage,die,-n,Noun,question,soru,вопрос,питання,سؤال
+368,A1,15,F,main,Frau,die,-en,Noun,woman / Mrs.,kadın / bayan,женщина / госпожа,жінка / пані,زن / خانم
+369,A1,15,F,main,frei,,,Other,free / available,boş / serbest,свободный,вільний,آزاد / خالی
+370,A1,15,F,main,Freizeit,die,,Noun,free time,boş zaman,свободное время,вільний час,اوقات فراغت
+371,A1,15,F,main,fremd,,,Other,foreign / strange,yabancı / garip,чужой / иностранный,чужий / іноземний,بیگانه / خارجی
+372,A1,15,F,main,freuen,,,Verb,to be glad / look forward,sevinmek / dört gözle beklemek,радоваться / ждать с нетерпением,радіти / чекати з нетерпінням,خوشحال شدن / مشتاق بودن
+373,A1,15,F,main,Freund,der,-e,Noun,friend,boy friend / arkadaş,друг,друг,دوست
+374,A1,15,F,main,früher,,,Other,earlier / in the past,daha önce / eskiden,раньше,раніше,قبلاً / در گذشته
+375,A1,15,F,main,frühstücken,,,Verb,to have breakfast,kahvaltı yapmak,завтракать,снідати,صبحانه خوردن
+376,A1,15,F,sub,Frühstück,das,,Noun,breakfast,kahvaltı,завтрак,сніданок,صبحانه
+377,A1,15,F,main,Führung,die,,Noun,guided tour / leadership,rehberli tur / yönetim,экскурсия / руководство,екскурсія / керівництво,تور راهنما / مدیریت
+378,A1,15,F,main,für,,,Other,for,için,для,для,برای
+379,A1,15,F,main,Fuß,der,"-ü, e",Noun,foot / leg,ayak,нога / ступня,нога / ступня,پا
+380,A1,15,F,main,Fußball,der,,Noun,football / soccer,futbol,футбол,футбол,فوتبال
+381,A1,15,G,main,Garten,der,,Noun,garden,bahçe,сад,сад,باغ
+382,A1,15,G,main,Gast,der,"-ä, e",Noun,guest,misafir,гость,гість,مهمان
+383,A1,15,G,main,geben,,,Verb,to give,vermek,давать,давати,دادن
+384,A1,15,G,main,geboren,,,Other,born,doğmuş,родившийся,народжений,متولد
+385,A1,15,G,main,Geburtsjahr,das,,Noun,year of birth,doğum yılı,год рождения,рік народження,سال تولد
+386,A1,15,G,main,Geburtsort,der,,Noun,place of birth,doğum yeri,место рождения,місце народження,محل تولد
+387,A1,15,G,main,Geburtstag,der,,Noun,birthday,doğum günü,день рождения,день народження,تولد / روز تولد
+388,A1,15,G,main,gefallen,,,Verb,to please / like,hoşuna gitmek,нравиться,подобатися,خوش آمدن
+389,A1,15,G,main,gegen,,,Other,against / toward,karşı,против / около,проти / близько,علیه / به سمت
+390,A1,15,G,main,gehen,,,Verb,to go,gitmek,идти,йти,رفتن
+391,A1,15,G,main,gehören,,,Verb,to belong (to),ait olmak,принадлежать,належати,متعلق بودن
+392,A1,15,G,main,Geld,das,,Noun,money,para,деньги,гроші,پول
+393,A1,15,G,main,Gemüse,das,,Noun,vegetables,sebze,овощи,овочі,سبزیجات
+394,A1,16,G,main,Gepäck,das,,Noun,luggage,bagaj,багаж,багаж,چمدان / بار
+395,A1,16,G,main,gerade,,,Other,just / straight,tam şimdi / düz,только что / прямо,щойно / прямо,همین حالا / مستقیم
+396,A1,16,G,main,geradeaus,,,Other,straight ahead,dümdüz / düz ileri,прямо,прямо,مستقیم
+397,A1,16,G,main,gern,,,Other,gladly,seve seve / memnuniyetle,охотно,охоче,با میل / با خوشحالی
+398,A1,16,G,main,Geschäft,das,-e,Noun,shop / business,mağaza / iş,магазин / дело,магазин / справа,مغازه / کسب‌وکار
+399,A1,16,G,main,Geschenk,das,-e,Noun,gift / present,hediye,подарок,подарунок,هدیه
+400,A1,16,G,main,Geschwister,die,,Noun,siblings,kardeşler,братья и сёстры,брати і сестри,خواهر و برادر
+401,A1,16,G,main,Gespräch,das,-e,Noun,conversation / talk,konuşma / görüşme,разговор / беседа,розмова / бесіда,گفتگو
+402,A1,16,G,main,gestern,,,Other,yesterday,dün,вчера,вчора,دیروز
+403,A1,16,G,main,gestorben,,,Other,deceased / died,ölmüş / vefat etmiş,умерший / умер,померлий / помер,فوت شده / مرده
+404,A1,16,G,main,Getränk,das,-e,Noun,drink,içecek,напиток,напій,نوشیدنی
+405,A1,16,G,main,Gewicht,das,,Noun,weight,ağırlık,вес,вага,وزن
+406,A1,16,G,main,gewinnen,,,Verb,to win,kazanmak,выигрывать,вигравати,بردن / برنده شدن
+407,A1,16,G,main,Glas,das,"-ä, er",Noun,glass / cup,bardak,стакан / стекло,склянка / скло,لیوان / شیشه
+408,A1,16,G,main,glauben,,,Verb,to believe,inanmak,верить,вірити,باور داشتن
+409,A1,16,G,main,gleich,,,Other,soon / same,az sonra / aynı,скоро / одинаковый,скоро / однаковий,به زودی / یکسان
+410,A1,16,G,main,Gleis,das,-e,Noun,track / platform,ray / peron yolu,путь / платформа,колія / платформа,خط ریل / سکو
+411,A1,16,G,main,Glück,das,,Noun,luck / happiness,şans / mutluluk,счастье / удача,щастя / удача,خوش‌شانسی / خوشبختی
+412,A1,16,G,main,glücklich,,,Other,happy / lucky,mutlu / şanslı,счастливый / удачливый,щасливий / вдалий,خوشحال / خوش‌شانس
+413,A1,16,G,main,Glückwunsch,der,,Noun,congratulation,tebrik,поздравление,привітання,تبریک
+414,A1,16,G,main,Grad,,,Noun,degree,derece,градус / степень,градус / ступінь,درجه
+415,A1,16,G,main,gratulieren,,,Verb,to congratulate,tebrik etmek,поздравлять,вітати,تبریک گفتن
+416,A1,16,G,main,grillen,,,Verb,to grill,ızgara yapmak,жарить на гриле,смажити на грилі,کباب کردن
+417,A1,16,G,main,groß,,,Other,big / tall,büyük / uzun,большой / высокий,великий / високий,بزرگ / بلند
+418,A1,16,G,sub,Größe,die,,Noun,size / height,beden / boy,размер / рост,розмір / зріст,اندازه / قد
+419,A1,16,G,main,Großeltern,die,,Noun,grandparents,büyükanne ve büyükbaba,бабушка и дедушка,дідусь і бабуся,پدربزرگ و مادربزرگ
+420,A1,16,G,sub,Großmutter,die,,Noun,grandmother,büyükanne,бабушка,бабуся,مادربزرگ
+421,A1,16,G,sub,Großvater,der,,Noun,grandfather,büyükbaba,дедушка,дідусь,پدربزرگ
+422,A1,16,G,main,Gruppe,die,-n,Noun,group,grup,группа,група,گروه
+423,A1,16,G,main,Gruß,der,"-ü, e",Noun,greeting,selam,приветствие,привітання,سلام
+424,A1,16,G,main,gültig,,,Other,valid / valid for use,geçerli,действительный,дійсний,معتبر
+425,A1,16,G,main,günstig,,,Other,inexpensive / favorable,uygun fiyatlı / elverişli,выгодный / недорогой,вигідний / недорогий,ارزان / مناسب
+426,A1,16,G,main,gut,,,Other,good,iyi,хороший,добрий,خوب
+427,A1,16,H,main,Haar,das,-e,Noun,hair / hair strand,saç,волос / волосы,волосся,مو
+428,A1,16,H,main,haben,,,Verb,to have,sahip olmak / olmak,иметь,мати,داشتن
+429,A1,16,H,main,Hähnchen,das,-,Noun,chicken,tavuk,курица,курка,مرغ
+430,A1,16,H,main,Halbpension,die,,Noun,half board,yarım pansiyon,полупансион,напівпансіон,نیم‌پانسیون
+431,A1,16,H,main,Halle,die,,Noun,hall,salon / hol,зал / холл,зал / хол,سالن
+432,A1,16,H,main,hallo,,,Other,hello,merhaba,привет / алло,привіт / алло,سلام
+433,A1,17,H,main,halten,,,Verb,to stop / hold,durmak / tutmak,останавливать / держать,зупиняти / тримати,نگه داشتن / متوقف شدن
+434,A1,17,H,main,Haltestelle,die,,Noun,stop / station,durak,остановка,зупинка,ایستگاه
+435,A1,17,H,main,Hand,die,"-ä, e",Noun,hand,el,рука,рука,دست
+436,A1,17,H,main,Handy,das,-s,Noun,mobile phone,cep telefonu,мобильный телефон,мобільний телефон,تلفن همراه
+437,A1,17,H,main,Haus,das,"-ä, er",Noun,house,ev,дом,будинок,خانه
 438,A1,17,H,main,Hausaufgabe,die,-n,Noun,,,,,
 439,A1,17,H,main,Hausfrau,die,-en/,Noun,,,,,
 440,A1,17,H,sub,Hausmann,der,,Noun,,,,,
