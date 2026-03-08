@@ -26,6 +26,179 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 25,A2,5,anweisungssprache,main,Wörterbuch,das,¨-er,Noun,,,dictionary,sözlük,словарь,словник,فرهنگ لغت
 26,A2,5,berufe,section_title,Beruf,der,-e,Noun,,,profession / job,meslek / iş,профессия / работа,професія / робота,حرفه / شغل
 27,A2,5,berufe,main,Angestellte,der/die,-n,Noun,,,employee / salaried worker,çalışan / memur,сотрудник / служащий,співробітник,کارمند
+28,A2,5,berufe,main,Arzt,der,¨-e,Noun,,,doctor,doktor,врач,лікар,پزشک
+29,A2,5,berufe,sub,Ärztin,die,-nen,Noun,,,doctor (female),doktor (kadın),врач (жен.),лікарка,پزشک (زن)
+30,A2,5,berufe,main,Auszubildende,der/die,-n,Noun,,,trainee / apprentice,çırak / stajyer,стажёр / ученик,стажер,کارآموز
+31,A2,5,berufe,main,Autor,der,-en,Noun,,,author,yazar,автор,автор,نویسنده
+32,A2,5,berufe,sub,Autorin,die,-nen,Noun,,,author (female),yazar (kadın),автор (жен.),авторка,نویسنده (زن)
+33,A2,5,berufe,main,Babysitter,der,-,Noun,,,babysitter,bebek bakıcısı,няня,няня,پرستار بچه
+34,A2,5,berufe,main,Bäcker,der,-,Noun,,,baker,fırıncı,пекарь,пекар,نانوا
+35,A2,5,berufe,sub,Bäckerin,die,-nen,Noun,,,baker (female),fırıncı (kadın),пекарь (жен.),пекарка,نانوا (زن)
+36,A2,5,berufe,main,Doktor,der,-en,Noun,,,doctor / PhD,doktor,доктор / кандидат наук,доктор,دکتر
+37,A2,5,berufe,sub,Doktorin,die,-nen,Noun,,,doctor / PhD (female),doktor (kadın),доктор / кандидат наук (жен.),докторка,دکتر (زن)
+38,A2,5,berufe,main,Fahrer,der,-,Noun,,,driver,şoför,водитель,водій,راننده
+39,A2,5,berufe,sub,Fahrerin,die,-nen,Noun,,,driver (female),şoför (kadın),водитель (жен.),водійка,راننده (زن)
+40,A2,5,berufe,main,Friseur,der,-e,Noun,,,hairdresser,kuaför,парикмахер,перукар,آرایشگر
+41,A2,5,berufe,sub,Friseurin,die,-nen,Noun,,,hairdresser (female),kuaför (kadın),парикмахер (жен.),перукарка,آرایشگر (زن)
+42,A2,5,berufe,main,Handwerker,der,-,Noun,,,craftsman / tradesperson,zanaatkar,ремесленник / мастер,ремісник,صنعتگر / استاد کار
+43,A2,5,berufe,sub,Handwerkerin,die,-nen,Noun,,,craftswoman / tradesperson (female),zanaatkar (kadın),ремесленница / мастер (жен.),ремісниця,صنعتگر (زن)
+44,A2,5,berufe,main,Hausmann,der,¨-er,Noun,,,househusband,ev erkeği,домохозяин,домогосподар,مرد خانه‌دار
+45,A2,5,berufe,sub,Hausfrau,die,-en,Noun,,,housewife,ev kadını,домохозяйка,домогосподарка,خانه‌دار
+46,A2,5,berufe,main,Journalist,der,-en,Noun,,,journalist,gazeteci,журналист,журналіст,روزنامه‌نگار
+47,A2,5,berufe,sub,Journalistin,die,-nen,Noun,,,journalist (female),gazeteci (kadın),журналист (жен.),журналістка,روزنامه‌نگار (زن)
+48,A2,5,berufe,main,Kaufmann,der,Kaufleute,Noun,,,businessman / merchant,tüccar / işadamı,бизнесмен / торговец,підприємець,تاجر / بازرگان
+49,A2,5,berufe,sub,Kauffrau,die,-en,Noun,,,businesswoman / merchant (female),iş kadını,бизнесвумен / торговец (жен.),підприємиця,تاجر (زن)
+50,A2,5,berufe,main,Kellner,der,-,Noun,,,waiter,garson,официант,офіціант,گارسون / پیشخدمت
+51,A2,5,berufe,sub,Kellnerin,die,-nen,Noun,,,waitress,garson (kadın),официантка,офіціантка,گارسون (زن)
+52,A2,5,berufe,main,Koch,der,¨-e,Noun,,,cook / chef,aşçı / şef,повар / шеф-повар,кухар,آشپز
+53,A2,5,berufe,sub,Köchin,die,-nen,Noun,,,cook / chef (female),aşçı (kadın),повар / шеф-повар (жен.),кухарка,آشپز (زن)
+54,A2,5,berufe,main,Krankenpfleger,der,-,Noun,,,male nurse,erkek hemşire,медбрат (муж.),медбрат,پرستار (مرد)
+55,A2,5,berufe,sub,Krankenschwester,die,-n,Noun,,,nurse,hemşire,медсестра,медсестра,پرستار
+56,A2,5,berufe,main,Künstler,der,-,Noun,,,artist,sanatçı,художник,художник,هنرمند
+57,A2,5,berufe,sub,Künstlerin,die,-nen,Noun,,,artist (female),sanatçı (kadın),художница (жен.),художниця,هنرمند (زن)
+58,A2,5,berufe,main,Lehrer,der,-,Noun,,,teacher,öğretmen,учитель,вчитель,معلم
+59,A2,5,berufe,sub,Lehrerin,die,-nen,Noun,,,teacher (female),öğretmen (kadın),учительница (жен.),вчителька,معلم (زن)
+60,A2,5,berufe,main,Mechaniker,der,-,Noun,,,mechanic,tamirci,механик,механік,مکانیک
+61,A2,5,berufe,sub,Mechanikerin,die,-nen,Noun,,,mechanic (female),tamirci (kadın),механик (жен.),механік (ж.),مکانیک (زن)
+62,A2,5,berufe,main,Model,das,-s,Noun,,,model,model,модель,модель,مدل
+63,A2,5,berufe,main,Musiker,der,-,Noun,,,musician,müzisyen,музыкант,музикант,موزیسین / نوازنده
+64,A2,5,berufe,sub,Musikerin,die,-nen,Noun,,,musician (female),müzisyen (kadın),музыкант (жен.),музикантка,موزیسین (زن)
+65,A2,5,berufe,main,Polizist,der,-en,Noun,,,police officer,polis memuru,полицейский,поліцейський,افسر پلیس
+66,A2,5,berufe,sub,Polizistin,die,-nen,Noun,,,police officer (female),polis memuru (kadın),полицейский (жен.),поліцейська,افسر پلیس (زن)
+67,A2,5,berufe,main,Rentner,der,-,Noun,,,retiree / pensioner,emekli,пенсионер,пенсіонер,بازنشسته
+68,A2,5,berufe,sub,Rentnerin,die,-nen,Noun,,,retiree / pensioner (female),emekli (kadın),пенсионерка,пенсіонерка,بازنشسته (زن)
+69,A2,5,berufe,main,Sänger,der,-,Noun,,,singer,şarkıcı,певец,співак,خواننده
+70,A2,5,berufe,sub,Sängerin,die,-nen,Noun,,,singer (female),şarkıcı (kadın),певица,співачка,خواننده (زن)
+71,A2,5,berufe,main,Schauspieler,der,-,Noun,,,actor,aktör,актёр,актор,بازیگر
+72,A2,5,berufe,sub,Schauspielerin,die,-nen,Noun,,,actress,aktris,актриса,акторка,بازیگر (زن)
+73,A2,5,berufe,main,Techniker,der,-,Noun,,,technician,teknisyen,техник,технік,تکنسین
+74,A2,5,berufe,sub,Technikerin,die,-nen,Noun,,,technician (female),teknisyen (kadın),техник (жен.),технік (ж.),تکنسین (زن)
+75,A2,5,berufe,main,Verkäufer,der,-,Noun,,,salesperson,satış elemanı,продавец,продавець,فروشنده
+76,A2,5,berufe,sub,Verkäuferin,die,-nen,Noun,,,salesperson (female),satış elemanı (kadın),продавец (жен.),продавчиня,فروشنده (زن)
+77,A2,5,familienmitglieder,section_title,Familienmitglied,das,-er,Noun,,,family member,aile üyesi,член семьи,член родини,عضو خانواده
+78,A2,5,familienmitglieder,main,Bruder,der,¨-,Noun,,,brother,kardeş (erkek),брат,брат,برادر
+79,A2,5,familienmitglieder,main,Cousin,der,-s,Noun,,,cousin (male),kuzen (erkek),двоюrodний брат (муж.),двоюрідний брат,پسرعمو / پسردایی
+80,A2,5,familienmitglieder,main,Cousine,die,-n,Noun,,,cousin (female),kuzen (kız),двоюродная сестра (жен.),двоюрідна сестра,دخترعمو / دختردایی
+81,A2,5,familienmitglieder,main,Eltern,die,,Noun,,,parents,ebeveynler,родители,батьки,والدین
+82,A2,5,familienmitglieder,main,Enkel,der,-,Noun,,,grandson,torun (erkek),внук,онук,نوه (پسر)
+83,A2,5,familienmitglieder,sub,Enkelin,die,-nen,Noun,,,granddaughter,torun (kız),внучка,онучка,نوه (دختر)
+84,A2,5,familienmitglieder,main,Geschwister,die,,Noun,,,siblings,kardeşler,братья и сёстры,брати і сестри,خواهر و برادر
+85,A2,5,familienmitglieder,main,Großeltern,die,,Noun,,,grandparents,büyük ebeveynler,бабушка и дедушка,бабуся і дідусь,پدربزرگ و مادربزرگ
+86,A2,5,familienmitglieder,main,Großmutter,die,¨-,Noun,,,grandmother,büyükanne,бабушка,бабуся,مادربزرگ
+87,A2,5,familienmitglieder,sub,Oma,die,-s,Noun,,,grandma,anna / anneanne (kontext),бабуля,бабуня,مامان‌بزرگ
+88,A2,5,familienmitglieder,main,Großvater,der,¨-,Noun,,,grandfather,dede / büyükbaba (kontext),дедушка,дідусь,پدربزرگ
+89,A2,5,familienmitglieder,sub,Opa,der,-s,Noun,,,grandpa,dede,дедуля,дідусь,بابابزرگ
+90,A2,5,familienmitglieder,main,Kind,das,-er,Noun,,,child,çocuk,ребёнок,дитина,کودک / بچه
+91,A2,5,familienmitglieder,main,Mutter,die,¨-,Noun,,,mother,anne,мать,мати,مادر
+92,A2,5,familienmitglieder,sub,Mama,die,-s,Noun,,,mom / mum,anne / mama,мама,мама,مامان
+93,A2,5,familienmitglieder,main,Onkel,der,-,Noun,,,uncle,amca / dayı,дядя,дядько,عمو / دایی
+94,A2,5,familienmitglieder,main,Schwester,die,-n,Noun,,,sister,kız kardeş,сестра,сестра,خواهر
+95,A2,5,familienmitglieder,main,Sohn,der,¨-e,Noun,,,son,oğul,сын,син,پسر
+96,A2,5,familienmitglieder,main,Tante,die,-n,Noun,,,aunt,tante / teyze,тётя,тітка,عمه / خاله
+97,A2,5,familienmitglieder,main,Tochter,die,¨-,Noun,,,daughter,kız,дочь,донька,دختر
+98,A2,5,familienmitglieder,main,Vater,der,¨-,Noun,,,father,baba,отец,батько,پدر
+99,A2,5,familienmitglieder,sub,Papa,der,-s,Noun,,,dad,baba,папа,тато,بابا
+100,A2,5,familienmitglieder,main,Verwandte,der/die,-n,Noun,,,relative,yakın / akraba,родственник,родич,خویشاوند / فامیل
+101,A2,5,familienstand,section_title,Familienstand,der,,Noun,,,marital status,medeni durum,семейное положение,сімейний стан,وضعیت تأهل
+102,A2,5,familienstand,main,ledig,,,Adjective,,,single / unmarried,bekar,холостой / незамужняя,неодружений / незаміжня,مجرد
+103,A2,5,familienstand,main,verheiratet,,,Adjective,,,married,evli,женат / замужем,одружений / заміжня,متأهل
+104,A2,5,familienstand,main,getrennt,,,Adjective,,,separated,ayrılmış,в разлуке / раздельно,у розлуці,جدا / در حال جدایی
+105,A2,5,familienstand,main,geschieden,,,Adjective,,,divorced,boşanmış,разведённый,розлучений,مطلقه / طلاق گرفته
+106,A2,5,farben,section_title,Farbe,die,-n,Noun,,,color,renk,цвет,колір,رنگ
+107,A2,5,farben,main,blau,,,Adjective,,,blue,mavi,синий,синій,آبی
+108,A2,5,farben,main,braun,,,Adjective,,,brown,kahverengi,коричневый,коричневий,قهوه‌ای
+109,A2,5,farben,main,gelb,,,Adjective,,,yellow,sarı,жёлтый,жовтий,زرد
+110,A2,5,farben,main,grau,,,Adjective,,,gray,gri,серый,сірий,خاکستری
+111,A2,5,farben,main,grün,,,Adjective,,,green,yeşil,зелёный,зелений,سبز
+112,A2,5,farben,main,lila,,,Adjective,,,purple / lilac,mor,фиолетовый / сиреневый,фіолетовий / бузковий,بنفش / یاسی
+113,A2,5,farben,main,orange,,,Adjective,,,orange,turuncu,оранжевый,помаранчевий,نارنجی
+114,A2,5,farben,main,rosa,,,Adjective,,,pink,pembe,розовый,рожевий,صورتی
+115,A2,5,farben,main,rot,,,Adjective,,,red,kırmızı,красный,червоний,قرمز
+116,A2,5,farben,main,schwarz,,,Adjective,,,black,siyah,чёрный,чорний,مشکی / سیاه
+117,A2,5,farben,main,weiß,,,Adjective,,,white,beyaz,белый,білий,سفید
+118,A2,5,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,,,compass direction,yön,сторона света,сторона світу,جهت جغرافیایی
+119,A2,5,himmelsrichtungen,main,Norden,der,,Noun,,,north,kuzey,север,північ,شمال
+120,A2,5,himmelsrichtungen,main,Süden,der,,Noun,,,south,güney,юг,південь,جنوب
+121,A2,5,himmelsrichtungen,main,Osten,der,,Noun,,,east,doğu,восток,схід,شرق
+122,A2,5,himmelsrichtungen,main,Westen,der,,Noun,,,west,batı,запад,захід,غرب
+123,A2,6,laender,section_title,Land,das,¨-er,Noun,,,country,ülke,страна,країна,کشور
+124,A2,6,laender,section_title,Nationalität,die,-en,Noun,,,nationality,milliyet,национальность,національність,ملیت
+125,A2,6,laender,main,Deutschland,,,Noun,,,Germany,Almanya,Германия,Німеччина,آلمان
+126,A2,6,laender,sub,Deutsche,der/die,-n,Noun,,,German (person),Alman (kişi),немец,німець,آلمانی (شخص)
+127,A2,6,laender,sub,deutsch,,,Adjective,,,German,Alman,немецкий,німецький,آلمانی
+128,A2,6,laender,main,Österreich,,,Noun,,,Austria,Avusturya,Австрия,Австрія,اتریش
+129,A2,6,laender,sub,Österreicher,der,-,Noun,,,Austrian (male),Avusturyalı (erkek),австриец (муж.),австрієць,اتریشی (مرد)
+130,A2,6,laender,sub,Österreicherin,die,-nen,Noun,,,Austrian (female),Avusturyalı (kadın),австрийка (жен.),австрійка,اتریشی (زن)
+131,A2,6,laender,sub,österreichisch,,,Adjective,,,Austrian,Avusturyalı,австрийский,австрійський,اتریشی
+132,A2,6,laender,main,Schweiz,die,,Noun,,,Switzerland,İsviçre,Швейцария,Швейцарія,سوئیس
+133,A2,6,laender,sub,Schweizer,der,-,Noun,,,Swiss (male),İsviçreli (erkek),швейцарец (муж.),швейцарець,سوئیسی (مرد)
+134,A2,6,laender,sub,Schweizerin,die,-nen,Noun,,,Swiss (female),İsviçreli (kadın),швейцарка (жен.),швейцарка,سوئیسی (زن)
+135,A2,6,laender,sub,schweizerisch,,,Adjective,,,Swiss,İsviçre'ye ait,швейцарский,швейцарський,سوئیسی
+136,A2,6,laender,main,Luxemburg,,,Noun,,,Luxembourg,Lüksemburg,Люксембург,Люксембург,لوکزامبورگ
+137,A2,6,laender,sub,Luxemburger,der,-,Noun,,,Luxembourger (male),Lüksemburglu (erkek),люксембуржец (муж.),люксембуржець,لوکزامبورگی (مرد)
+138,A2,6,laender,sub,Luxemburgerin,die,-nen,Noun,,,Luxembourger (female),Lüksemburglu (kadın),люксембурженка,люксембурженка,لوکزامبورگی (زن)
+139,A2,6,laender,sub,luxemburgisch,,,Adjective,,,Luxembourgish,Lüksemburg (sıfat),люксембургский,люксембурзький,لوکزامبورگی
+140,A2,6,laender,main,Europa,,,Noun,,,Europe,Avrupa,Европа,Європа,اروپا
+141,A2,6,laender,sub,Europäer,der,-,Noun,,,European (male),Avrupalı (erkek),европеец (муж.),європеєць,اروپایی (مرد)
+142,A2,6,laender,sub,Europäerin,die,-nen,Noun,,,European (female),Avrupalı (kadın),европейка (жен.),європейка,اروپایی (زن)
+143,A2,6,laender,sub,europäisch,,,Adjective,,,European,Avrupa'ya ait,европейский,європейський,اروپایی
+144,A2,6,waehrungen,section_title,Währung,die,-en,Noun,,,currency,para birimi,валюта,валюта,واحد پول / ارز
+145,A2,6,masse,section_title,Maß,das,-e,Noun,,,unit of measurement,ölçü birimi,единица измерения,одиниця виміру,واحد اندازه‌گیری
+146,A2,6,waehrungen,main,Euro,der,,Noun,,,euro,euro,евро,євро,یورو
+147,A2,6,waehrungen,sub,Cent,der,,Noun,,,cent,cent,цент,цент,سنت
+148,A2,6,waehrungen,main,Franken,der,-,Noun,,,franc (Swiss),Frank,франк (швейцарский),франк (швейцарський),فرانک (سوئیس)
+149,A2,6,waehrungen,sub,Rappen,der,-,Noun,,,rappen (Swiss cent),rappen,раппен (швейцарский цент),раппен,راپن (سنت سوئیس)
+150,A2,6,masse,main,Meter,der,,Noun,,,meter,metre,метр,метр,متر
+151,A2,6,masse,sub,Zentimeter,der,,Noun,,,centimeter,santimetre,сантиметр,сантиметр,سانتی‌متر
+152,A2,6,masse,main,Kilometer,der,,Noun,,,kilometer,kilometre,километр,кілометр,کیلومتر
+153,A2,6,masse,main,Prozent,das,,Noun,,,percent,yüzde,процент,відсоток,درصد
+154,A2,6,masse,main,Liter,der,,Noun,,,liter,litre,литр,літр,لیتر
+155,A2,6,masse,main,Gramm,das,,Noun,,,gram,gram,грамм,грам,گرم
+156,A2,6,masse,sub,Kilogramm,das,,Noun,,,kilogram,kilogram,килограмм,кілограм,کیلوگرم
+157,A2,6,masse,main,Grad,der,,Noun,,,degree,derece,градус,градус,درجه
+158,A2,6,schule,section_title,Schule,die,-n,Noun,,,school,okul,школа,школа,مدرسه
+159,A2,6,schule,section_title,Schulfach,das,¨-er,Noun,,,school subject,ders,школьный предмет,шкільний предмет,درس / موضوع درسی
+160,A2,6,schule,main,Abitur,das,,Noun,,,Abitur (university entrance exam),lise bitirme sınavı,абитур (экзамен для поступления в вуз),Abitur (іспит для вступу до університету),آبیتور (امتحان ورود به دانشگاه)
+161,A2,6,schule,main,Direktor,der,-en,Noun,,,headmaster / principal,müdür,директор школы / директор,директор школи,مدیر (مدرسه)
+162,A2,6,schule,main,Hausaufgabe,die,-n,Noun,,,homework,ödev,домашнее задание,домашнє завдання,تکلیف خانه
+163,A2,6,schule,main,Klasse,die,-n,Noun,,,class / grade,sınıf,класс,клас,کلاس / پایه
+164,A2,6,schule,main,Klassenfahrt,die,-en,Noun,,,school trip,okul gezisi,школьная поездка,шкільна поїздка,گردش مدرسه
+165,A2,6,schule,main,Sekretariat,das,-e,Noun,,,secretary's office,sekreterlik,секретариат,секретаріат,دفتر منشی
+166,A2,6,schule,main,Stundenplan,der,¨-e,Noun,,,timetable / schedule,ders programı,расписание / график,розклад,برنامه درسی
+167,A2,6,schule,main,Biologie,,,Noun,,,biology,biyoloji,биология,біологія,زیست‌شناسی
+168,A2,6,schule,main,Chemie,,,Noun,,,chemistry,kimya,химия,хімія,شیمی
+169,A2,6,schule,main,Deutsch,,,Noun,,,German (language,Almanca,немецкий язык,німецька мова,زبان آلمانی
+170,A2,6,schule,main,Englisch,,,Noun,,,English (language),İngilizce,английский язык,англійська мова,زبان انگلیسی
+171,A2,6,schule,main,Französisch,,,Noun,,,French (language),Fransızca,французский язык,французька мова,زبان فرانسوی
+172,A2,6,schule,main,Geografie,,,Noun,,,geography,coğrafya,география,географія,جغرافیا
+173,A2,6,schule,main,Geschichte,,,Noun,,,history,tarih,история,історія,تاریخ
+174,A2,6,schule,main,Kunst,die,,Noun,,,art,resim / sanat,искусство,мистецтво,هنر
+175,A2,6,schule,main,Latein,,,Noun,,,Latin,Latince,латынь,латина,لاتین
+176,A2,6,schule,main,Mathematik,,,Noun,,,mathematics,matematik,математика,математика,ریاضیات
+177,A2,6,schule,main,Musik,die,,Noun,,,music,müzik,музыка,музика,موسیقی
+178,A2,6,schule,main,Physik,,,Noun,,,physics,fizik,физика,фізика,فیزیک
+179,A2,6,schule,main,Religion,die,-en,Noun,,,religion,din,религия,релігія,دین / مذهب
+180,A2,6,schule,main,Sozialkunde,,,Noun,,,social studies / civics,sosyal bilgiler,обществознание / граждановедение,суспільствознавство,علوم اجتماعی
+181,A2,6,schule,main,Sport,der,,Noun,,,PE / sports,beden eğitimi / spor,физкультура / спорт,фізкультура / спорт,ورزش / تربیت بدنی
+182,A2,6,feiertage,section_title,Feiertag,der,-e,Noun,,,public holiday,resmi tatil,государственный праздник,державне свято,تعطیل رسمی
+183,A2,6,feiertage,main,Karneval,der,,Noun,,,carnival,karnaval,карнавал,карнавал,کارناوال
+184,A2,6,feiertage,main,Ostern,,,Noun,,,Easter,Paskalya,Пасха,Великдень,عید پاک
+185,A2,6,feiertage,main,Weihnachten,,,Noun,,,Christmas,Noel,Рождество,Різдво,کریسمس
+186,A2,6,feiertage,main,Neujahr,das,,Noun,,,New Year,Yeni Yıl,Новый год,Новий рік,سال نو
+187,A2,6,feiertage,main,Silvester,,,Noun,,,New Year's Eve,Yılbaşı gecesi,канун Нового года,канун Нового року,شب سال نو
+188,A2,6,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,,,season,mevsim,время года,пора року,فصل
+189,A2,6,jahreszeiten,main,Frühling,der,,Noun,,,spring,ilkbahar,весна,весна,بهار
+190,A2,6,jahreszeiten,sub,Frühjahr,das,,Noun,,,spring (early),ilkbahar (erken),ранняя весна,рання весна,اوایل بهار
+191,A2,6,jahreszeiten,main,Sommer,der,,Noun,,,summer,yaz,лето,літо,تابستان
+192,A2,6,jahreszeiten,main,Herbst,der,,Noun,,,autumn / fall,sonbahar,осень,осінь,پاییز
+193,A2,6,jahreszeiten,main,Winter,der,,Noun,,,winter,kış,зима,зима,زمستان
+194,A2,6,monat,section_title,Monat,der,-e,Noun,,,month,ay,месяц,місяць,ماه
+195,A2,6,monat,main,Januar,der,,Noun,,,January,Ocak,январь,січень,ژانویه
+196,A2,6,monat,main,Februar,der,,Noun,,,February,Şubat,февраль,лютий,فوریه
+197,A2,6,monat,main,März,der,,Noun,,,March,Mart,март,березень,مارس
+198,A2,6,monat,main,April,der,,Noun,,,April,Nisan,апрель,квітень,آوریل
+199,A2,6,monat,main,Mai,der,,Noun,,,May,Mayıs,май,травень,مه
+200,A2,6,monat,main,Juni,der,,Noun,,,June,Haziran,июнь,червень,ژوئن
 201,A2,6,monat,main,Juli,der,,Noun,,,July,Temmuz,июль,липень,ژوئیه
 202,A2,6,monat,main,August,der,,Noun,,,August,Ağustos,август,серпень,اوت
 203,A2,6,monat,main,September,der,,Noun,,,September,Eylül,сентябрь,вересень,سپتامبر
