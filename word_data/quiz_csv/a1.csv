@@ -636,106 +636,106 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 635,A1,22,R,sub,Reparatur,die,,Noun,repair,tamir,ремонт,ремонт,تعمیر
 636,A1,22,R,main,Restaurant,das,-s,Noun,restaurant,restoran,ресторан,ресторан,رستوران
 637,A1,22,R,main,Rezeption,die,,Noun,reception / front desk,resepsiyon,ресепшен / стойка регистрации,рецепція / стійка реєстрації,پذیرش
-638,A1,22,R,main,richtig,,,Other,,,,,
-639,A1,22,R,main,riechen,,,Verb,,,,,
-640,A1,22,R,main,ruhig,,,Other,,,,,
-641,A1,22,S,main,Saft,der,,Noun,,,,,
-642,A1,22,S,main,sagen,,,Verb,,,,,
-643,A1,22,S,main,Salat,der,,Noun,,,,,
-644,A1,22,S,main,Salz,das,,Noun,,,,,
-645,A1,22,S,main,Satz,der,"-ä, e",Noun,,,,,
-646,A1,22,S,main,S-Bahn,die,,Noun,,,,,
-647,A1,22,S,main,Schalter,der,,Noun,,,,,
-648,A1,22,S,main,scheinen,,,Verb,,,,,
-649,A1,22,S,main,schicken,,,Verb,,,,,
-650,A1,22,S,main,Schild,das,-er,Noun,,,,,
-651,A1,22,S,main,Schinken,der,-,Noun,,,,,
-652,A1,22,S,main,schlafen,,,Verb,,,,,
-653,A1,22,S,main,schlecht,,,Other,,,,,
-654,A1,22,S,main,schließen,,,Verb,,,,,
-655,A1,22,S,sub,geschlossen,,,Other,,,,,
-656,A1,22,S,main,Schluss,der,,Noun,,,,,
-657,A1,22,S,main,Schlüssel,der,-,Noun,,,,,
-658,A1,22,S,main,schmecken,,,Verb,,,,,
-659,A1,22,S,main,schnell,,,Other,,,,,
-660,A1,22,S,main,schon,,,Other,,,,,
-661,A1,22,S,main,schön,,,Other,,,,,
-662,A1,22,S,main,Schrank,der,"-ä, e",Noun,,,,,
-663,A1,22,S,main,schreiben,,,Verb,,,,,
-664,A1,23,S,main,Schuh,der,-e,Noun,,,,,
-665,A1,23,S,main,Schule,die,,Noun,,,,,
-666,A1,23,S,sub,Schüler,der,-,Noun,,,,,
-667,A1,23,S,main,schwer,,,Other,,,,,
-668,A1,23,S,main,Schwester,die,-n,Noun,,,,,
-669,A1,23,S,main,schwimmen,,,Verb,,,,,
-670,A1,23,S,sub,Schwimmbad,das,,Noun,,,,,
-671,A1,23,S,main,See,der,,Noun,,,,,
-672,A1,23,S,main,sehen,,,Verb,,,,,
-673,A1,23,S,main,Sehenswürdigkeit,die,-en,Noun,,,,,
-674,A1,23,S,main,sehr,,,Other,,,,,
-675,A1,23,S,main,sein,,,Verb,,,,,
-676,A1,23,S,main,seit,,,Other,,,,,
-677,A1,23,S,main,selbstständig,,,Other,,,,,
-678,A1,23,S,main,sich,,,Other,,,,,
-679,A1,23,S,main,sie,,,Other,,,,,
-680,A1,23,S,main,Sie,,,Other,,,,,
-681,A1,23,S,main,sitzen,,,Verb,,,,,
-682,A1,23,S,main,so,,,Other,,,,,
-683,A1,23,S,main,Sofa,das,,Noun,,,,,
-684,A1,23,S,main,sofort,,,Other,,,,,
-685,A1,23,S,main,Sohn,der,"-ö, e",Noun,,,,,
-686,A1,23,S,main,sollen,,,Verb,,,,,
-687,A1,23,S,main,Sonne,die,,Noun,,,,,
-688,A1,23,S,main,spät,,,Other,,,,,
-689,A1,23,S,main,später,,,Other,,,,,
-690,A1,23,S,main,Speisekarte,die,,Noun,,,,,
-691,A1,23,S,main,spielen,,,Verb,,,,,
-692,A1,23,S,main,Sport,der,,Noun,,,,,
-693,A1,23,S,main,Sprache,die,-n,Noun,,,,,
-694,A1,23,S,main,sprechen,,,Verb,,,,,
-695,A1,23,S,main,Stadt,die,"-ä, e",Noun,,,,,
-696,A1,23,S,main,stehen,,,Verb,,,,,
-697,A1,23,S,main,Stelle,die,-n,Noun,,,,,
-698,A1,24,S,main,stellen,,,Verb,,,,,
-699,A1,24,S,main,Stock,der,,Noun,,,,,
-700,A1,24,S,main,Straße,die,-n,Noun,,,,,
-701,A1,24,S,main,Straßenbahn,die,,Noun,,,,,
-702,A1,24,S,main,studieren,,,Verb,,,,,
-703,A1,24,S,main,Studium,das,,Noun,,,,,
-704,A1,24,S,sub,Student,der,-en,Noun,,,,,
-705,A1,24,S,main,Stunde,die,-n,Noun,,,,,
-706,A1,24,S,main,suchen,,,Verb,,,,,
-707,A1,24,T,main,tanzen,,,Verb,,,,,
-708,A1,24,T,main,Tasche,die,-n,Noun,,,,,
-709,A1,24,T,main,Taxi,das,-s,Noun,,,,,
-710,A1,24,T,main,Tee,der,,Noun,,,,,
-711,A1,24,T,main,Teil,der,-e,Noun,,,,,
-712,A1,24,T,main,telefonieren,,,Verb,,,,,
-713,A1,24,T,sub,Telefon,das,,Noun,,,,,
-714,A1,24,T,main,Termin,der,-e,Noun,,,,,
-715,A1,24,T,main,Test,der,,Noun,,,,,
-716,A1,24,T,main,teuer,,,Other,,,,,
-717,A1,24,T,main,Text,der,-e,Noun,,,,,
-718,A1,24,T,main,Thema,das,,Noun,,,,,
-719,A1,24,T,main,Ticket,das,-s,Noun,,,,,
-720,A1,24,T,main,Tisch,der,-e,Noun,,,,,
-721,A1,24,T,main,Tochter,die,-ö,Noun,,,,,
-722,A1,24,T,main,Toilette,die,-en,Noun,,,,,
-723,A1,24,T,main,Tomate,die,-n,Noun,,,,,
-724,A1,24,T,main,tot,,,Other,,,,,
-725,A1,24,T,main,treffen,,,Verb,,,,,
-726,A1,24,T,main,Treppe,die,-n,Noun,,,,,
-727,A1,24,T,main,trinken,,,Verb,,,,,
-728,A1,24,T,main,tschüss,,,Other,,,,,
-729,A1,24,T,main,tun,,,Verb,,,,,
-730,A1,24,U,main,über,,,Other,,,,,
-731,A1,24,U,main,übernachten,,,Verb,,,,,
-732,A1,24,U,main,überweisen,,,Verb,,,,,
-733,A1,24,U,main,Uhr,die,,Noun,,,,,
-734,A1,24,U,main,um,,,Other,,,,,
-735,A1,24,U,main,umziehen,,,Verb,,,,,
-736,A1,24,U,main,und,,,Other,,,,,
-737,A1,25,U,main,unser,,,Other,,,,,
+638,A1,22,R,main,richtig,,,Other,correct / right,doğru,правильный / верный,правильний / вірний,درست / صحیح
+639,A1,22,R,main,riechen,,,Verb,to smell,kokmak / kokusunu almak,пахнуть / нюхать,пахнути / нюхати,بو دادن / بو کشیدن
+640,A1,22,R,main,ruhig,,,Other,quiet / calm,sakin / sessiz,спокойный / тихий,спокійний / тихий,آرام / ساکت
+641,A1,22,S,main,Saft,der,,Noun,juice,meyve suyu,сок,сік,آبمیوه
+642,A1,22,S,main,sagen,,,Verb,to say,söylemek,сказать / говорить,казати / говорити,گفتن
+643,A1,22,S,main,Salat,der,,Noun,salad,salata,салат,салат,سالاد
+644,A1,22,S,main,Salz,das,,Noun,salt,tuz,соль,сіль,نمک
+645,A1,22,S,main,Satz,der,"-ä, e",Noun,sentence,cümle,предложение,речення,جمله
+646,A1,22,S,main,S-Bahn,die,,Noun,suburban train,S-Bahn / banliyö treni,городская электричка,S-Bahn / міська електричка,قطار شهری
+647,A1,22,S,main,Schalter,der,,Noun,counter / switch,gişe / düğme,стойка / выключатель,стійка / вимикач,باجه / کلید
+648,A1,22,S,main,scheinen,,,Verb,to shine / seem,parlamak / görünmek,светить / казаться,світити / здаватися,درخشیدن / به نظر رسیدن
+649,A1,22,S,main,schicken,,,Verb,to send,göndermek,отправлять,надсилати,فرستادن
+650,A1,22,S,main,Schild,das,-er,Noun,sign / notice,levha / tabela,табличка / знак,табличка / знак,تابلو / علامت
+651,A1,22,S,main,Schinken,der,-,Noun,ham,jambon,ветчина,шинка,ژامبون
+652,A1,22,S,main,schlafen,,,Verb,to sleep,uyumak,спать,спати,خوابیدن
+653,A1,22,S,main,schlecht,,,Other,bad,kötü,плохой,поганий,بد
+654,A1,22,S,main,schließen,,,Verb,to close / lock,kapatmak / kilitlemek,закрывать / запирать,закривати / замикати,بستن / قفل کردن
+655,A1,22,S,sub,geschlossen,,,Other,closed,kapalı,закрыто,зачинено,بسته
+656,A1,22,S,main,Schluss,der,,Noun,end / finish,son,конец,кінець,پایان
+657,A1,22,S,main,Schlüssel,der,-,Noun,key,anahtar,ключ,ключ,کلید
+658,A1,22,S,main,schmecken,,,Verb,to taste / to be tasty,tadı olmak / lezzetli gelmek,быть на вкус / нравиться на вкус,смакувати / бути на смак,مزه دادن / خوش‌طعم بودن
+659,A1,22,S,main,schnell,,,Other,fast / quick,hızlı,быстрый,швидкий,سریع
+660,A1,22,S,main,schon,,,Other,already / indeed,zaten / bile,уже / ведь,вже / таки,قبلاً / همین حالا
+661,A1,22,S,main,schön,,,Other,beautiful / nice,güzel / hoş,красивый / приятный,гарний / приємний,زیبا / خوب
+662,A1,22,S,main,Schrank,der,"-ä, e",Noun,cupboard / wardrobe,dolap,шкаф,шафа,کمد
+663,A1,22,S,main,schreiben,,,Verb,to write,yazmak,писать,писати,نوشتن
+664,A1,23,S,main,Schuh,der,-e,Noun,shoe,ayakkabı,туфля / ботинок,черевик / туфля,کفش
+665,A1,23,S,main,Schule,die,,Noun,school,okul,школа,школа,مدرسه
+666,A1,23,S,sub,Schüler,der,-,Noun,student / pupil,öğrenci,ученик,учень,دانش‌آموز
+667,A1,23,S,main,schwer,,,Other,difficult / heavy,zor / ağır,трудный / тяжёлый,важкий / складний,سخت / سنگین
+668,A1,23,S,main,Schwester,die,-n,Noun,sister,kız kardeş,сестра,сестра,خواهر
+669,A1,23,S,main,schwimmen,,,Verb,to swim,yüzmek,плавать,плавати,شنا کردن
+670,A1,23,S,sub,Schwimmbad,das,,Noun,swimming pool,yüzme havuzu,бассейн,басейн,استخر
+671,A1,23,S,main,See,der,,Noun,lake,göl,озеро,озеро,دریاچه
+672,A1,23,S,main,sehen,,,Verb,to see,görmek,видеть,бачити,دیدن
+673,A1,23,S,main,Sehenswürdigkeit,die,-en,Noun,sight / tourist attraction,gezilecek yer,достопримечательность,визначна пам'ятка,جاذبه دیدنی
+674,A1,23,S,main,sehr,,,Other,very,çok,очень,дуже,خیلی
+675,A1,23,S,main,sein,,,Verb,to be,olmak,быть,бути,بودن
+676,A1,23,S,main,seit,,,Other,since / for,den beri,с / уже,від / уже,از / برای
+677,A1,23,S,main,selbstständig,,,Other,self-employed / independent,serbest meslek sahibi / bağımsız,самостоятельный / самозанятый,самостійний / самозайнятий,مستقل / خوداشتغال
+678,A1,23,S,main,sich,,,Other,oneself,kendisi,себя,себе / себе,خود
+679,A1,23,S,main,sie,,,Other,she / they,o / onlar,она / они,вона / вони,او / آنها
+680,A1,23,S,main,Sie,,,Other,you (formal),siz,Вы,Ви,شما
+681,A1,23,S,main,sitzen,,,Verb,to sit,oturmak,сидеть,сидіти,نشستن
+682,A1,23,S,main,so,,,Other,so / like this,böyle / o kadar,так / таким образом,так / таким чином,این‌طور / چنین
+683,A1,23,S,main,Sofa,das,,Noun,sofa,kanepe,диван,диван,مبل
+684,A1,23,S,main,sofort,,,Other,immediately,hemen,сразу,одразу,فوراً
+685,A1,23,S,main,Sohn,der,"-ö, e",Noun,son,oğul,сын,син,پسر
+686,A1,23,S,main,sollen,,,Verb,should / be supposed to,gerekmek / -meli,должен / следует,слід / повинен,باید / قرار بودن
+687,A1,23,S,main,Sonne,die,,Noun,sun,güneş,солнце,сонце,خورشید
+688,A1,23,S,main,spät,,,Other,late,geç,поздний / поздно,пізній / пізно,دیر
+689,A1,23,S,main,später,,,Other,later,daha sonra,позже,пізніше,بعداً
+690,A1,23,S,main,Speisekarte,die,,Noun,menu,menü,меню,меню,منو
+691,A1,23,S,main,spielen,,,Verb,to play,oynamak,играть,грати,بازی کردن
+692,A1,23,S,main,Sport,der,,Noun,sport,spor,спорт,спорт,ورزش
+693,A1,23,S,main,Sprache,die,-n,Noun,language,dil,язык,мова,زبان
+694,A1,23,S,main,sprechen,,,Verb,to speak,konuşmak,говорить,говорити,صحبت کردن
+695,A1,23,S,main,Stadt,die,"-ä, e",Noun,city / town,şehir,город,місто,شهر
+696,A1,23,S,main,stehen,,,Verb,to stand,durmak / ayakta olmak,стоять,стояти,ایستادن
+697,A1,23,S,main,Stelle,die,-n,Noun,place / position,yer / pozisyon,место / должность,місце / посада,جایگاه / محل
+698,A1,24,S,main,stellen,,,Verb,to put / place,koymak / yerleştirmek,ставить / помещать,ставити / розміщувати,گذاشتن / قرار دادن
+699,A1,24,S,main,Stock,der,,Noun,floor / story,kat,этаж,поверх,طبقه
+700,A1,24,S,main,Straße,die,-n,Noun,street,sokak / cadde,улица,вулиця,خیابان
+701,A1,24,S,main,Straßenbahn,die,,Noun,tram,tramvay,трамвай,трамвай,تراموا
+702,A1,24,S,main,studieren,,,Verb,to study (at university),üniversitede okumak,учиться / изучать,навчатися,دانشجو بودن / تحصیل کردن
+703,A1,24,S,main,Studium,das,,Noun,studies / degree,öğrenim / üniversite eğitimi,учёба / обучение,навчання / студії,تحصیل / دوره دانشگاهی
+704,A1,24,S,sub,Student,der,-en,Noun,student,öğrenci / üniversite öğrencisi,студент,студент,دانشجو
+705,A1,24,S,main,Stunde,die,-n,Noun,hour / lesson,saat / ders,час / урок,година / урок,ساعت / درس
+706,A1,24,S,main,suchen,,,Verb,to search / look for,aramak,искать,шукати,جستجو کردن / دنبال گشتن
+707,A1,24,T,main,tanzen,,,Verb,to dance,dans etmek,танцевать,танцювати,رقصیدن
+708,A1,24,T,main,Tasche,die,-n,Noun,bag,çanta,сумка,сумка,کیف
+709,A1,24,T,main,Taxi,das,-s,Noun,taxi,taksi,такси,таксі,تاکسی
+710,A1,24,T,main,Tee,der,,Noun,tea,çay,чай,чай,چای
+711,A1,24,T,main,Teil,der,-e,Noun,part,bölüm / parça,часть,частина,بخش / قسمت
+712,A1,24,T,main,telefonieren,,,Verb,to make a phone call,telefon etmek,звонить,телефонувати,تلفن کردن
+713,A1,24,T,sub,Telefon,das,,Noun,telephone / phone,telefon,телефон,телефон,تلفن
+714,A1,24,T,main,Termin,der,-e,Noun,appointment,randevu,встреча / назначение,зустріч / запис,قرار ملاقات
+715,A1,24,T,main,Test,der,,Noun,test / quiz,test / sınav,тест,тест,آزمون / تست
+716,A1,24,T,main,teuer,,,Other,expensive,pahalı,дорогой,дорогий,گران
+717,A1,24,T,main,Text,der,-e,Noun,text,metin,текст,текст,متن
+718,A1,24,T,main,Thema,das,,Noun,topic / theme,konu / tema,тема,тема,موضوع
+719,A1,24,T,main,Ticket,das,-s,Noun,ticket,bilet,билет,квиток,بلیت
+720,A1,24,T,main,Tisch,der,-e,Noun,table,masa,стол,стіл,میز
+721,A1,24,T,main,Tochter,die,-ö,Noun,daughter,kız evlat,дочь,дочка,دختر
+722,A1,24,T,main,Toilette,die,-en,Noun,toilet,tuvalet,туалет,туалет,توالت
+723,A1,24,T,main,Tomate,die,-n,Noun,tomato,domates,помидор,помідор,گوجه‌فرنگی
+724,A1,24,T,main,tot,,,Other,dead,ölü,мёртвый,мертвий,مرده
+725,A1,24,T,main,treffen,,,Verb,to meet,buluşmak / karşılaşmak,встречать / встречаться,зустрічати / зустрічатися,ملاقات کردن
+726,A1,24,T,main,Treppe,die,-n,Noun,stairs / staircase,merdiven,лестница,сходи,پله
+727,A1,24,T,main,trinken,,,Verb,to drink,içmek,пить,пити,نوشیدن
+728,A1,24,T,main,tschüss,,,Other,bye,hoşça kal / bay bay,пока,па-па / бувай,خداحافظ
+729,A1,24,T,main,tun,,,Verb,to do,yapmak,делать,робити,انجام دادن
+730,A1,24,U,main,über,,,Other,over / about,üzerinde / hakkında,над / о,над / про,روی / درباره
+731,A1,24,U,main,übernachten,,,Verb,to stay overnight,gecelemek,ночевать,ночувати,شب ماندن
+732,A1,24,U,main,überweisen,,,Verb,to transfer (money),havale etmek / para göndermek,переводить деньги,переказувати гроші,پول انتقال دادن
+733,A1,24,U,main,Uhr,die,,Noun,clock / o'clock,saat,часы / час,годинник / година,ساعت
+734,A1,24,U,main,um,,,Other,at / around,saat / etrafında,в / вокруг,о / навколо,در / حدود
+735,A1,24,U,main,umziehen,,,Verb,to move / get changed,taşınmak / üstünü değiştirmek,переезжать / переодеваться,переїжджати / переодягатися,اسباب‌کشی کردن / لباس عوض کردن
+736,A1,24,U,main,und,,,Other,and,ve,и,і,و
+737,A1,25,U,main,unser,,,Other,our,bizim,наш,наш,مال ما / ما
 738,A1,25,U,main,unten,,,Other,,,,,
 739,A1,25,U,main,unter,,,Other,,,,,
 740,A1,25,U,main,Unterricht,der,,Noun,,,,,
