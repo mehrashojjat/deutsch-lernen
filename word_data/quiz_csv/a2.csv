@@ -26,54 +26,54 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 25,A2,5,anweisungssprache,main,Wörterbuch,das,¨-er,Noun,,,dictionary,sözlük,словарь,словник,فرهنگ لغت
 26,A2,5,berufe,section_title,Beruf,der,-e,Noun,,,profession / job,meslek / iş,профессия / работа,професія / робота,حرفه / شغل
 27,A2,5,berufe,main,Angestellte,der/die,-n,Noun,,,employee / salaried worker,çalışan / memur,сотрудник / служащий,співробітник,کارمند
-28,A2,5,berufe,main,Arzt,der,¨-e,Noun,,,doctor,doktor,врач,лікар,پزشک
+28,A2,5,berufe,main,Arzt,der,¨-e,Noun,,,doctor (male),doktor (erkek),врач (муж.),лікар,پزشک (مرد)
 29,A2,5,berufe,sub,Ärztin,die,-nen,Noun,,,doctor (female),doktor (kadın),врач (жен.),лікарка,پزشک (زن)
 30,A2,5,berufe,main,Auszubildende,der/die,-n,Noun,,,trainee / apprentice,çırak / stajyer,стажёр / ученик,стажер,کارآموز
-31,A2,5,berufe,main,Autor,der,-en,Noun,,,author,yazar,автор,автор,نویسنده
+31,A2,5,berufe,main,Autor,der,-en,Noun,,,author (male),yazar (erkek),автор (муж.),автор,نویسنده (مرد)
 32,A2,5,berufe,sub,Autorin,die,-nen,Noun,,,author (female),yazar (kadın),автор (жен.),авторка,نویسنده (زن)
 33,A2,5,berufe,main,Babysitter,der,-,Noun,,,babysitter,bebek bakıcısı,няня,няня,پرستار بچه
-34,A2,5,berufe,main,Bäcker,der,-,Noun,,,baker,fırıncı,пекарь,пекар,نانوا
+34,A2,5,berufe,main,Bäcker,der,-,Noun,,,baker (male),fırıncı (erkek),пекарь (муж.),пекар,نانوا (مرد)
 35,A2,5,berufe,sub,Bäckerin,die,-nen,Noun,,,baker (female),fırıncı (kadın),пекарь (жен.),пекарка,نانوا (زن)
-36,A2,5,berufe,main,Doktor,der,-en,Noun,,,doctor / PhD,doktor,доктор / кандидат наук,доктор,دکتر
+36,A2,5,berufe,main,Doktor,der,-en,Noun,,,doctor / PhD (male),doktor (erkek),доктор / кандидат наук (муж.),доктор,دکتر (مرد)
 37,A2,5,berufe,sub,Doktorin,die,-nen,Noun,,,doctor / PhD (female),doktor (kadın),доктор / кандидат наук (жен.),докторка,دکتر (زن)
-38,A2,5,berufe,main,Fahrer,der,-,Noun,,,driver,şoför,водитель,водій,راننده
+38,A2,5,berufe,main,Fahrer,der,-,Noun,,,driver (male),şoför (erkek),водитель (муж.),водій,راننده (مرد)
 39,A2,5,berufe,sub,Fahrerin,die,-nen,Noun,,,driver (female),şoför (kadın),водитель (жен.),водійка,راننده (زن)
-40,A2,5,berufe,main,Friseur,der,-e,Noun,,,hairdresser,kuaför,парикмахер,перукар,آرایشگر
+40,A2,5,berufe,main,Friseur,der,-e,Noun,,,hairdresser (male),kuaför (erkek),парикмахер (муж.),перукар,آرایشگر (مرد)
 41,A2,5,berufe,sub,Friseurin,die,-nen,Noun,,,hairdresser (female),kuaför (kadın),парикмахер (жен.),перукарка,آرایشگر (زن)
-42,A2,5,berufe,main,Handwerker,der,-,Noun,,,craftsman / tradesperson,zanaatkar,ремесленник / мастер,ремісник,صنعتگر / استاد کار
+42,A2,5,berufe,main,Handwerker,der,-,Noun,,,craftsman / tradesperson (male),zanaatkar (erkek),ремесленник / мастер (муж.),ремісник,صنعتگر / استاد کار (مرد)
 43,A2,5,berufe,sub,Handwerkerin,die,-nen,Noun,,,craftswoman / tradesperson (female),zanaatkar (kadın),ремесленница / мастер (жен.),ремісниця,صنعتگر (زن)
 44,A2,5,berufe,main,Hausmann,der,¨-er,Noun,,,househusband,ev erkeği,домохозяин,домогосподар,مرد خانه‌دار
 45,A2,5,berufe,sub,Hausfrau,die,-en,Noun,,,housewife,ev kadını,домохозяйка,домогосподарка,خانه‌دار
-46,A2,5,berufe,main,Journalist,der,-en,Noun,,,journalist,gazeteci,журналист,журналіст,روزنامه‌نگار
+46,A2,5,berufe,main,Journalist,der,-en,Noun,,,journalist (male),gazeteci (erkek),журналист (муж.),журналіст,روزنامه‌نگار (مرد)
 47,A2,5,berufe,sub,Journalistin,die,-nen,Noun,,,journalist (female),gazeteci (kadın),журналист (жен.),журналістка,روزنامه‌نگار (زن)
-48,A2,5,berufe,main,Kaufmann,der,Kaufleute,Noun,,,businessman / merchant,tüccar / işadamı,бизнесмен / торговец,підприємець,تاجر / بازرگان
+48,A2,5,berufe,main,Kaufmann,der,Kaufleute,Noun,,,businessman / merchant (male),tüccar / işadamı,бизнесмен / торговец (муж.),підприємець,تاجر / بازرگان (مرد)
 49,A2,5,berufe,sub,Kauffrau,die,-en,Noun,,,businesswoman / merchant (female),iş kadını,бизнесвумен / торговец (жен.),підприємиця,تاجر (زن)
 50,A2,5,berufe,main,Kellner,der,-,Noun,,,waiter,garson,официант,офіціант,گارسون / پیشخدمت
 51,A2,5,berufe,sub,Kellnerin,die,-nen,Noun,,,waitress,garson (kadın),официантка,офіціантка,گارسون (زن)
-52,A2,5,berufe,main,Koch,der,¨-e,Noun,,,cook / chef,aşçı / şef,повар / шеф-повар,кухар,آشپز
+52,A2,5,berufe,main,Koch,der,¨-e,Noun,,,cook / chef (male),aşçı / şef (erkek),повар / шеф-повар (муж.),кухар,آشپز (مرد)
 53,A2,5,berufe,sub,Köchin,die,-nen,Noun,,,cook / chef (female),aşçı (kadın),повар / шеф-повар (жен.),кухарка,آشپز (زن)
 54,A2,5,berufe,main,Krankenpfleger,der,-,Noun,,,male nurse,erkek hemşire,медбрат (муж.),медбрат,پرستار (مرد)
 55,A2,5,berufe,sub,Krankenschwester,die,-n,Noun,,,nurse,hemşire,медсестра,медсестра,پرستار
-56,A2,5,berufe,main,Künstler,der,-,Noun,,,artist,sanatçı,художник,художник,هنرمند
+56,A2,5,berufe,main,Künstler,der,-,Noun,,,artist (male),sanatçı (erkek),художник (муж.),художник,هنرمند (مرد)
 57,A2,5,berufe,sub,Künstlerin,die,-nen,Noun,,,artist (female),sanatçı (kadın),художница (жен.),художниця,هنرمند (زن)
-58,A2,5,berufe,main,Lehrer,der,-,Noun,,,teacher,öğretmen,учитель,вчитель,معلم
+58,A2,5,berufe,main,Lehrer,der,-,Noun,,,teacher (male),öğretmen (erkek),учитель (муж.),вчитель,معلم (مرد)
 59,A2,5,berufe,sub,Lehrerin,die,-nen,Noun,,,teacher (female),öğretmen (kadın),учительница (жен.),вчителька,معلم (زن)
-60,A2,5,berufe,main,Mechaniker,der,-,Noun,,,mechanic,tamirci,механик,механік,مکانیک
+60,A2,5,berufe,main,Mechaniker,der,-,Noun,,,mechanic (male),tamirci (erkek),механик (муж.),механік (чол.),مکانیک (مرد)
 61,A2,5,berufe,sub,Mechanikerin,die,-nen,Noun,,,mechanic (female),tamirci (kadın),механик (жен.),механік (ж.),مکانیک (زن)
 62,A2,5,berufe,main,Model,das,-s,Noun,,,model,model,модель,модель,مدل
-63,A2,5,berufe,main,Musiker,der,-,Noun,,,musician,müzisyen,музыкант,музикант,موزیسین / نوازنده
+63,A2,5,berufe,main,Musiker,der,-,Noun,,,musician (male),müzisyen (erkek),музыкант (муж.),музикант,موزیسین / نوازنده (مرد)
 64,A2,5,berufe,sub,Musikerin,die,-nen,Noun,,,musician (female),müzisyen (kadın),музыкант (жен.),музикантка,موزیسین (زن)
-65,A2,5,berufe,main,Polizist,der,-en,Noun,,,police officer,polis memuru,полицейский,поліцейський,افسر پلیس
+65,A2,5,berufe,main,Polizist,der,-en,Noun,,,police officer (male),polis memuru (erkek),полицейский (муж.),поліцейський,افسر پلیس (مرد)
 66,A2,5,berufe,sub,Polizistin,die,-nen,Noun,,,police officer (female),polis memuru (kadın),полицейский (жен.),поліцейська,افسر پلیس (زن)
-67,A2,5,berufe,main,Rentner,der,-,Noun,,,retiree / pensioner,emekli,пенсионер,пенсіонер,بازنشسته
+67,A2,5,berufe,main,Rentner,der,-,Noun,,,retiree / pensioner (male),emekli (erkek),пенсионер,пенсіонер,بازنشسته (مرد)
 68,A2,5,berufe,sub,Rentnerin,die,-nen,Noun,,,retiree / pensioner (female),emekli (kadın),пенсионерка,пенсіонерка,بازنشسته (زن)
-69,A2,5,berufe,main,Sänger,der,-,Noun,,,singer,şarkıcı,певец,співак,خواننده
+69,A2,5,berufe,main,Sänger,der,-,Noun,,,singer (male),şarkıcı (erkek),певец,співак,خواننده (مرد)
 70,A2,5,berufe,sub,Sängerin,die,-nen,Noun,,,singer (female),şarkıcı (kadın),певица,співачка,خواننده (زن)
 71,A2,5,berufe,main,Schauspieler,der,-,Noun,,,actor,aktör,актёр,актор,بازیگر
 72,A2,5,berufe,sub,Schauspielerin,die,-nen,Noun,,,actress,aktris,актриса,акторка,بازیگر (زن)
-73,A2,5,berufe,main,Techniker,der,-,Noun,,,technician,teknisyen,техник,технік,تکنسین
+73,A2,5,berufe,main,Techniker,der,-,Noun,,,technician (male),teknisyen (erkek),техник (муж.),технік (чол.),تکنسین (مرد)
 74,A2,5,berufe,sub,Technikerin,die,-nen,Noun,,,technician (female),teknisyen (kadın),техник (жен.),технік (ж.),تکنسین (زن)
-75,A2,5,berufe,main,Verkäufer,der,-,Noun,,,salesperson,satış elemanı,продавец,продавець,فروشنده
+75,A2,5,berufe,main,Verkäufer,der,-,Noun,,,salesperson (male),satış elemanı (erkek),продавец (муж.),продавець,فروشنده (مرد)
 76,A2,5,berufe,sub,Verkäuferin,die,-nen,Noun,,,salesperson (female),satış elemanı (kadın),продавец (жен.),продавчиня,فروشنده (زن)
 77,A2,5,familienmitglieder,section_title,Familienmitglied,das,-er,Noun,,,family member,aile üyesi,член семьи,член родини,عضو خانواده
 78,A2,5,familienmitglieder,main,Bruder,der,¨-,Noun,,,brother,kardeş (erkek),брат,брат,برادر
