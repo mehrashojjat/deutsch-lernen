@@ -2741,8 +2741,8 @@ async function renderRandomWord() {
     en: row.translation_en || '',
     tr: row.translation_tr || '',
     ru: row.translation_ru || '',
+    uk: row.translation_uk || '',
     fa: (_faMemCache && _faMemCache[key]) || '',
-    uk: (_ukMemCache && _ukMemCache[key]) || '',
     ar: (_arMemCache && _arMemCache[key]) || ''
   };
 
@@ -2796,8 +2796,8 @@ async function _explorerRefreshLang() {
     en: row.translation_en || '',
     tr: row.translation_tr || '',
     ru: row.translation_ru || '',
+    uk: row.translation_uk || '',
     fa: (_faMemCache && _faMemCache[key]) || '',
-    uk: (_ukMemCache && _ukMemCache[key]) || '',
     ar: (_arMemCache && _arMemCache[key]) || ''
   };
   var content = document.getElementById('rw-content');
