@@ -226,206 +226,206 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 398,A2,11,B,main,bestehen,,,Verb,besteht,hat bestan,to pass (exam) / consist of,başarmak / oluşmak,сдавать (экзамен) / состоять из,скласти (іспит) / складатися з,قبول شدن / تشکیل شدن از
 399,A2,11,B,main,bestellen,,,Verb,bestellt,,to order,sipariş etmek,заказывать,замовляти,سفارش دادن
 400,A2,11,B,main,Besuch,der,-e,Noun,,,visit,ziyaret,визит / посещение,візит / відвідування,دیدار / ملاقات
-401,A2,11,B,main,besuchen,,,Verb,besucht,,to visit,ziyaret etmek,посещать,відвідувати
-402,A2,11,B,main,Bett,das,-en,Noun,,,bed,yatak,кровать,ліжко
-403,A2,11,B,main,bewölkt,,,Other,,,cloudy / overcast,bulutlu,облачно / пасмурно,хмарно / похмуро
-404,A2,11,W,main,Wolke,die,-n,Noun,,,cloud,bulut,облако,хмара
-405,A2,11,B,main,bezahlen,,,Verb,bezahlt,hat bezahlt,to pay,ödemek,платить,платити
-406,A2,11,B,main,Bibliothek,die,-en,Noun,,,library,kütüphane,библиотека,бібліотека
-407,A2,11,B,main,Birne,die,-n,Noun,,,pear,armut,груша,груша
-408,A2,11,B,main,bisschen,,,Verb,,,a little / a bit,biraz,немного / чуть-чуть,трохи / трішки
-409,A2,11,B,main,bitte,,,Other,,,please / you're welcome,lütfen / rica ederim,пожалуйста / не за что,будь ласка / прошу
-410,A2,11,B,main,Bitte,die,-n,Noun,,,request,rica,просьба,прохання
-411,A2,12,D,main,Datum,das,-en,Noun,,,date,tarih,дата,дата
-412,A2,12,D,main,dauern,,,Verb,dauert,,to last / take (time),sürmek,длиться / занимать (время),тривати / займати (час)
-413,A2,12,D,main,denken,,,Verb,denkt,hat gedacht,to think,düşünmek,думать,думати
-414,A2,12,D,main,deshalb,,,Other,,,therefore / that's why,bu yüzden,поэтому / вот почему,тому / тому що
-415,A2,12,D,main,deutlich,,,Other,,,clear / distinct,açık / net,ясный / отчётливый,виразний / чіткий
-416,A2,12,D,main,dick,,,Other,,,fat / thick,şişman / kalın,толстый / плотный,товстий / щільний
-417,A2,12,D,main,Ding,das,-e,Noun,,,thing,şey,вещь,річ
-418,A2,12,D,main,direkt,,,Other,,,direct / directly,direkt / doğrudan,прямой / напрямую,прямий / безпосередньо
-419,A2,12,D,main,Disco,die,-s /,Noun,,,disco / club,disko / kulüp,дискотека / клуб,дискотека / клуб
-420,A2,12,D,main,diskutieren,,,Verb,diskutiert,hat diskutiert,to discuss,tartışmak / görüşmek,обсуждать,обговорювати
-421,A2,12,D,main,Doppelzimmer,das,-,Noun,,,double room,çift kişilik oda,двухместный номер,двомісний номер
-422,A2,12,D,main,Dorf,das,¨-er,Noun,,,village,köy,деревня,село
-423,A2,12,D,main,draußen,,,Verb,,,outside,dışarıda,снаружи,надворі / зовні
-424,A2,12,D,main,dringend,,,Other,,,urgent,acil,срочный,терміново / невідкладно
-425,A2,12,D,main,drinnen,,,Verb,,,inside,içeride,внутри,всередині
-426,A2,12,D,main,drüben,,,Verb,drückt,hat gedrückt,over there / across,orada / karşı tarafta,вон там / напротив,он там / навпроти
-427,A2,12,C,main,Café,das,-s,Noun,,,café,kafe,кафе,кафе
-428,A2,12,C,main,Cafeteria,die,-s,Noun,,,cafeteria,kantin,кафетерий,кафетерій
-429,A2,12,C,main,chatten,,,Verb,chattet,hat gechattet,to chat (online),sohbet etmek (çevrimiçi),чатиться / общаться онлайн,спілкуватися онлайн / чатитися
-430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager,patron / yönetici,шеф / начальник,шеф / начальник
-431,A2,12,C,main,Chefin,die,-nen,Noun,,,boss / manager (female),patron (kadın) / yönetici (kadın),шеф / начальница (жен.),шефиня / начальниця
-432,A2,12,C,main,Club,der,-s /,Noun,,,club,kulüp,клуб,клуб
-433,A2,12,C,main,Computer,der,-,Noun,,,computer,bilgisayar,компьютер,комп'ютер
-434,A2,12,D,main,da,,,Other,,,there / then,orada / sonra,там / тогда,там / тоді
-435,A2,12,D,main,dafür,,,Verb,,,for it / for that / in favor,bunun için / lehinde,за это / для этого / в пользу,для цього / за це / на користь
-436,A2,12,D,main,dagegen,,,Verb,,,against it / against that / on the other hand,buna karşı / aleyhinde / öte yandan,против этого / против того / с другой стороны,проти цього / проти того / натомість
-437,A2,12,D,main,damals,,,Other,,,back then / at that time,o zamanlar,тогда / в то время,тоді / у той час
-438,A2,12,D,main,Dame,die,-n,Noun,,,lady,hanımefendi,дама,дама / пані
-439,A2,12,D,main,daneben,,,Verb,wo die,,next to it / beside it,yanıbaşında / yanında,рядом с этим / возле этого,поруч / поряд з цим
-440,A2,12,D,main,Dank,der,,Noun,,,thanks / gratitude,teşekkür / minnettarlık,благодарность / спасибо,подяка
-441,A2,12,D,main,danken,,,Verb,dankt,hat gedankt,to thank,teşekkür etmek,благодарить,дякувати
-442,A2,12,D,main,Datei,die,-en,Noun,,,file (computer),dosya,файл,файл
-443,A2,13,E,main,Einkaufs-,das,,Noun,,,shopping (compound prefix),alışveriş- (önek),покупки- (часть сложного слова),покупки- (частина складного слова)
-444,A2,13,E,main,einladen,,,Verb,lädt ein,hat eingela,to invite,davet etmek,приглашать,запрошувати
-445,A2,13,E,main,Einladung,die,-en,Noun,,,invitation,davet,приглашение,запрошення
-446,A2,13,E,main,einpacken,,,Verb,packt ein,,to pack, paketlemek,упаковывать,пакувати / упаковувати
-447,A2,13,E,main,einsteigen,,,Verb,steigt ein,,to board / get in (vehicle),binek / binmek (taşıta),садиться / входить (в транспорт),сідати (у транспорт) / заходити
-448,A2,13,E,main,eintragen,,,Verb,trägt ein,,to enter / register (in a form),form doldurmak / kaydetmek,вносить / записывать (в форму),вносити / записувати (у форму)
-449,A2,13,E,main,Eintritt,der,-e,Noun,,,admission / entry,giriş,вход / допуск,вхід / вступ
-450,A2,13,E,main,einverstanden,,,Verb,,,agreed / in agreement,kabul / hemfikir,согласен / согласна,згоден / згодна
-451,A2,13,S,main,sein,,,Verb,bin) einverstanden. ist,,to be,olmak,быть,бути
-452,A2,13,E,main,einzel-,,,Other,,,single- (prefix),tek- (önek),одиночный- (приставка),одинарний- (префікс)
-453,A2,13,E,main,einziehen,,,Verb,zieht ein,,to move in,taşınmak,въезжать / заселяться,в'їжджати / заселятися
-454,A2,13,E,main,Eis,das,,Noun,,,ice cream / ice,dondurma / buz,мороженое / лёд,морозиво / лід
-455,A2,13,E,main,empfehlen,,,Verb,empfiehlt,hat empfohlen,to recommend,tavsiye etmek,рекомендовать,рекомендувати
-456,A2,13,E,main,Ende,das,-n,Noun,,,end,son,конец,кінець
-457,A2,13,E,main,enden,,,Verb,endet,hat geendet,to end,sona ermek,заканчиваться,закінчуватися
-458,A2,13,E,main,endlich,,,Other,,,finally / at last,nihayet / sonunda,наконец / в конце концов,нарешті / врешті-решт
-459,A2,13,E,main,eng,,,Other,,,narrow / tight,dar,узкий / тесный,вузький / тісний
-460,A2,13,E,main,entschuldigen,,,Verb,,,to excuse / apologize,özür dilemek,извинять / извиняться,вибачати / вибачатися
-461,A2,13,I,main,Ich,,,Verb,hat entschuldigt,,I (pronoun),ben,я,я
-462,A2,13,E,main,Entschuldi-,die,,Noun,,,excuse me / apology,afedersiniz / özür,извинение / простите,вибачення / вибачте
-463,A2,13,D,main,Drucker,der,-,Noun,,,printer,yazıcı,принтер,принтер
-464,A2,13,D,main,dunkel,,,Other,,,dark,karanlık,тёмный,темний
-465,A2,13,D,main,dünn,,,Other,,,thin,inç / ince,тонкий,тонкий
-466,A2,13,D,main,durch,,,Other,,,through / by,vasıtasıyla / aracılığıyla,через / посредством,через / за допомогою
-467,A2,13,D,main,dürfen,,,Verb,darf,,may / to be allowed to,izinli olmak / -ebilir,мочь / иметь право,мати право / дозволено
-468,A2,13,D,main,Durst,der,,Noun,,,thirst,susuzluk,жажда,спрага
-469,A2,13,E,main,E-Book,das,-s,Noun,,,e-book,e-kitap,электронная книга,електронна книга
-470,A2,13,E,main,echt,,,Other,,,real / genuine / really,gerçek,настоящий / подлинный / правда,справжній / підлинний / справді
-471,A2,13,E,main,Ecke,die,-n,Noun,,,corner,köşe,угол,куток / ріг
-472,A2,13,E,main,egal,,,Other,,,it doesn't matter / all the same,farketmez,неважно / всё равно,байдуже / все одно
-473,A2,13,E,main,Ehefrau,die,-en /,Noun,,,wife,eş (kadın) / karı,жена,дружина
-474,A2,13,E,main,Ehemann,der,¨-er/,Noun,,,husband,eş (erkek) / koca,муж,чоловік
-475,A2,13,E,main,Ei,das,-er,Noun,,,egg,yumurta,яйцо,яйце
-476,A2,13,E,main,eilig,,,Other,,,urgent / in a hurry,acele / acil,срочный / спешащий,терміновий / поспішний
-477,A2,13,E,main,Eingang,der,¨-e,Noun,,,entrance,giriş,вход,вхід
-478,A2,13,E,main,einkaufen,,,Verb,kauft ein,hat eingekauft,to go shopping,alışveriş yapmak,ходить по магазинам,ходити по магазинах / робити покупки
-479,A2,14,F,main,falsch,,,Other,,,wrong / false,yanlış,неправильный / ложный,неправильний / хибний
-480,A2,14,F,main,Familie,die,-n,Noun,,,family,aile,семья,сім'я
-481,A2,14,F,main,Familien-,der,,Noun,,,family (compound prefix),aile- (önek),семейный- (часть сложного слова),сімейний- (частина складного слова)
-482,A2,14,F,main,Fan,der,-s,Noun,,,fan,taraftar,фанат,фанат
-483,A2,14,F,main,fantastisch,,,Other,,,fantastic,harika,фантастический,фантастичний
-484,A2,14,F,main,Farbe,die,-n,Noun,,,color,renk,цвет,колір
-485,A2,14,F,main,fast,,,Other,,,almost / nearly,neredeyse,почти,майже
-486,A2,14,F,main,faul,,,Other,,,lazy,tembel,ленивый,лінивий
-487,A2,14,F,main,fehlen,,,Verb,fehlt,hat gefehlt,to be missing / lack,eksik olmak,отсутствовать / не хватать,бракувати / не вистачати
-488,A2,14,F,main,Fehler,der,-,Noun,,,mistake / error,hata,ошибка,помилка
-489,A2,14,F,main,feiern,,,Verb,feiert,hat gefeiert,to celebrate,kutlamak,праздновать,святкувати
-490,A2,14,F,main,Fenster,das,-,Noun,,,window,pencere,окно,вікно
-491,A2,14,F,main,fernsehen,,,Verb,sieht fern,hat ferngesehen,to watch TV,televizyon izlemek,смотреть телевизор,дивитися телевізор
-492,A2,14,F,main,Fernseher,der,-,Noun,,,television set / TV,televizyon,телевизор,телевізор
-493,A2,14,F,main,Fest,das,-e,Noun,,,festival / celebration,festival / kutlama,праздник / торжество,свято / урочистість
-494,A2,14,F,main,Festival,das,-s,Noun,,,festival,festival,фестиваль,фестиваль
-495,A2,14,F,main,Firma,die,-en,Noun,,,company / firm,firma / şirket,фирма / компания,фірма / компанія
-496,A2,14,E,main,Erfahrung,die,-en,Noun,,,experience,deneyim,опыт,досвід
-497,A2,14,E,main,erklären,,,Verb,erklärt,hat erklärt,to explain,açıklamak,объяснять,пояснювати
-498,A2,14,E,main,erlauben,,,Verb,erlaubt,hat erlaubt,to allow / permit,izin vermek,разрешать,дозволяти
-499,A2,14,E,main,Erlaubnis,die,,Noun,,,permission,izin,разрешение,дозвіл
-500,A2,14,E,main,erreichen,,,Verb,erreicht,,to reach / achieve,ulaşmak,достигать,досягати
-501,A2,14,E,main,erst,,,Other,,,first / only / not until,ilk / ancak,сначала / только / лишь тогда,спочатку / тільки / лише тоді
-502,A2,14,E,main,Erwachsene,der,-n,Noun,,,adult,yetişkin,взрослый,дорослий
-503,A2,14,E,main,erzählen,,,Verb,erzählt,hat erzählt,to tell / narrate,anlatmak,рассказывать,розповідати
-504,A2,14,E,main,essen,,,Verb,isst,hat gegessen,to eat,yemek yemek,есть,їсти
-505,A2,14,E,main,Essen,das,-,Noun,,,food / meal,yemek / yiyecek,еда / приём пищи,їжа / прийом їжі
-506,A2,14,E,main,etwas,,,Other,,,something / a little,biraz / biraz şey,что-то / немного,щось / трохи
-507,A2,14,F,main,Fach,das,¨-er,Noun,,,subject / compartment,alan / ders,предмет / отделение,предмет / відділення
-508,A2,14,A,main,Abfahrt,die,-en,Noun,,,departure,kalkış,отправление,відправлення / від'їзд
-509,A2,14,F,main,Fahrplan,der,¨-e,Noun,,,timetable / schedule,sefer tarifesi,расписание / график,розклад / графік
-510,A2,15,F,main,früher,,,Other,,,earlier / formerly,eskiden,раньше / прежде,раніше / колись
-511,A2,15,F,main,Frühstück,das,,Noun,,,breakfast,kahvaltı,завтрак,сніданок
-512,A2,15,F,main,fühlen,,,Verb,fühlt,hat gefühlt,to feel,hissetmek,чувствовать,відчувати / почувати
-513,A2,15,F,main,Führerschein,der,-e,Noun,,,driving license,ehliyet,водительские права,водійське посвідчення
-514,A2,15,F,main,Führung,die,-en,Noun,,,guided tour / leadership,rehberlik / tur,экскурсия с гидом / руководство,екскурсія з гідом / керівництво
-515,A2,15,F,main,für,,,Other,,,for,için,для,для
-516,A2,15,F,main,furchtbar,,,Other,,,terrible / awful,korkunç,ужасный / кошмарный,жахливий / страшний
-517,A2,15,F,main,Fuß,der,¨-e,Noun,,,foot,ayak,ступня,ступня / нога
-518,A2,15,F,main,Fußball,der,¨-e,Noun,,,football / soccer,futbol,футбол,футбол
-519,A2,15,G,main,Gabel,die,-n,Noun,,,fork,çatal,вилка,виделка
-520,A2,15,G,main,Garage,die,-n,Noun,,,garage,garaj,гараж,гараж
-521,A2,15,G,main,geboren,,,Verb,,,born,doğmak,рождённый,народжений
-522,A2,15,G,main,gefallen,,,Verb,gefällt,hat gefallen,to like / please,hoşlanmak,нравиться / доставлять удовольствие,подобатися
-523,A2,15,G,main,gegen,,,Verb,,,against / around (time),karşı / civarında,против / около (о времени),проти / близько (про час)
-524,A2,15,F,main,Fleisch,das,,Noun,,,meat,et,мясо,м'ясо
-525,A2,15,F,main,Flohmarkt,der,¨-e,Noun,,,flea market,bit pazarı,блошиный рынок,блошиний ринок
-526,A2,15,F,main,Flug,der,¨-e,Noun,,,flight,uçuş,рейс,рейс / політ
-527,A2,15,F,main,Flughafen,der,¨,Noun,,,airport,havaalanı,аэропорт,аеропорт
-528,A2,15,F,main,Fluss,der,¨-e,Noun,,,river,nehir,река,річка
-529,A2,15,F,main,Foto,das,-s,Noun,,,photo,fotoğraf,фото,фото
-530,A2,15,F,main,Frau,die,-en,Noun,,,woman / wife / Mrs.,kadın / eş / bayan,женщина / жена / госпожа,жінка / дружина / пані
-531,A2,15,F,main,freiwillig,,,Other,,,voluntary,gönüllü,добровольный,добровільний
-532,A2,15,F,main,freuen,,,Verb,freut,hat gefreut,to be happy / look forward to,sevinmek,радоваться / ждать с нетерпением,радіти / чекати з нетерпінням
-533,A2,15,F,main,Freund,der,"-e,",Noun,,,friend / boyfriend,arkadaş / erkek arkadaş,друг / парень,друг / хлопець
-534,A2,15,F,main,Freundin,die,-nen,Noun,,,friend / girlfriend,arkadaş (kız) / kız arkadaş,подруга / девушка,подруга / дівчина
-535,A2,15,F,main,freundlich,,,Other,,,friendly / kind,dostça / nazik,дружелюбный / добрый,дружній / добрий
-536,A2,15,F,main,frisch,,,Other,,,fresh,taze,свежий,свіжий
-537,A2,15,F,main,früh,,,Other,,,early,erken,ранний,ранній / рано
-538,A2,16,G,main,gewinnen,,,Verb,gewinnt,,to win,kazanmak,выигрывать,вигравати / перемагати
-539,A2,16,G,main,Gewitter,das,-,Noun,,,thunderstorm,gök gürültülü fırtına,гроза,гроза
-540,A2,16,G,main,glauben,,,Verb,glaubt,hat geglaubt,to believe,inanmak,верить,вірити
-541,A2,16,G,main,gleich,,,Other,,,same / immediately,aynı / hemen,одинаковый / сразу,однаковий / відразу
-542,A2,16,G,main,Gleis,das,-e,Noun,,,track / platform (rail),peron,путь / платформа,колія / перон
-543,A2,16,G,main,glücklich,,,Other,,,happy / lucky,mutlu,счастливый / удачливый,щасливий
-544,A2,16,G,main,Glück-,der,,Noun,,,congratulations (compound),tebrik- (önek),поздравления- (часть сложного слова),вітання- (частина складного слова)
-545,A2,16,G,main,gratulieren,,,Verb,gratuliert,hat gratuliert,to congratulate,tebrik etmek,поздравлять,вітати / поздоровляти
-546,A2,16,G,main,grillen,,,Verb,grillt,hat gegrillt,to grill / barbecue,mangal yapmak,жарить на гриле / барбекю,смажити на грилі / барбекювати
-547,A2,16,G,main,Grippe,die,,Noun,,,flu / influenza,grip,грипп,грип
-548,A2,16,G,main,groß,,,Other,,,big / tall,büyük,большой / высокий,великий / високий
-549,A2,16,G,main,Größe,die,-n,Noun,,,size / height,büyüklük,размер / рост,розмір / зріст
-550,A2,16,G,main,Gruß,der,¨-e,Noun,,,greeting,selam,приветствие,привітання
-551,A2,16,G,main,günstig,,,Other,,,cheap / favorable,uygun fiyatlı,дешёвый / выгодный,дешевий / вигідний
-552,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da,у / на,у / на
-553,A2,16,H,main,Haar,das,-e,Noun,,,hair,saç,волосы,волосся
-554,A2,16,H,main,Hähnchen,das,-,Noun,,,chicken,tavuk,цыплёнок,курча / курятина
-555,A2,16,G,main,Gehalt,das,¨-er,Noun,,,salary / wage,maaş,зарплата / оклад,зарплата / оклад
-556,A2,16,G,main,gehören,,,Verb,gehört,hat gehört,to belong to,ait olmak,принадлежать,належати
-557,A2,16,G,main,Geld,das,,Noun,,,money,para,деньги,гроші
-558,A2,16,G,main,Geldbörse,die,-n,Noun,,,purse / wallet,cüzdan,кошелёк,гаманець
-559,A2,16,G,main,genug,,,Other,,,enough,yeterli,достаточно,достатньо
-560,A2,16,G,main,Gepäck,das,,Noun,,,luggage,eşya / bavul,багаж,багаж
-561,A2,16,G,main,gerade,,,Other,,,just / straight / at the moment,şu anda / tam,как раз / прямо / в данный момент,якраз / прямо / зараз
-562,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da,у / на,у / на
-563,A2,16,G,main,Geschäft,das,-e,Noun,,,shop / store / business,mağaza / işyeri,магазин / дело / бизнес,магазин / справа / бізнес
-564,A2,16,G,main,Geschirr,das,,Noun,,,dishes / crockery,çanak çömlek,посуда,посуд
-565,A2,16,G,main,Gespräch,das,-e,Noun,,,conversation / talk,sohbet / konuşma,разговор / беседа,розмова / бесіда
-566,A2,16,G,main,gestern,,,Verb,,,yesterday,dün,вчера,вчора
-567,A2,16,G,main,Getränk,das,-e,Noun,,,drink / beverage,içecek,напиток,напій
-568,A2,17,H,main,herein,,,Other,,,in here / come in,içeri / içeri gir,сюда / входите,сюди / заходьте
-569,A2,17,H,main,rein,,,Other,,,in / inside / into,içine / içeri / içine doğru,"внутрь / внутрь чего-то / внутрь, вовнутрь",всередину / всередину чогось
-570,A2,17,H,main,Herd,der,-e,Noun,,,stove / cooker,ocak,плита,плита
-571,A2,17,H,main,Herr,der,-en,Noun,,,Mr. / gentleman,Bey / efendi,господин / мужчина,пан
-572,A2,17,H,main,herunterladen,,,Verb,lädt herunter,hat heruntergela,to download,indirmek,скачивать,завантажувати
-573,A2,17,H,main,herzlich,,,Other,,,heartfelt / warm / cordial,samimi / içten,сердечный / тёплый / радушный,щирий / сердечний / теплий
-574,A2,17,H,main,Hilfe,die,,Noun,,,help / assistance,yardım,помощь,допомога
-575,A2,17,H,main,Himmel,der,,Noun,,,sky / heaven,gökyüzü / cennet,небо / небеса,небо / рай
-576,A2,17,H,main,hin / hin- / -hin,,,Other,,,there / towards (directional prefix),orada / -e (yönelme eki),туда / по направлению (приставка),туди / у напрямку (префікс)
-577,A2,17,H,main,hinten,,,Verb,,,at the back / behind,arkada,сзади / позади,позаду
-578,A2,17,H,main,hinter,,,Other,,,behind,arkasında,за,за / позаду
-579,A2,17,H,main,Hobby,das,-s,Noun,,,hobby,hobi,хобби,хобі
-580,A2,17,H,main,Hochzeit,die,-en,Noun,,,wedding,düğün,свадьба,весілля
-581,A2,17,H,main,hoffen,,,Verb,hofft,hat gehofft,to hope,ummak / ümit etmek,надеяться,сподіватися
-582,A2,17,H,main,Homepage,die,-s,Noun,,,homepage / website,ana sayfa / web sitesi,домашняя страница / сайт,домашня сторінка / вебсайт
-583,A2,17,H,main,hören,,,Verb,hört,,to hear / listen,duymak / dinlemek,слышать / слушать,чути / слухати
-584,A2,17,H,main,Hose,die,-n,Noun,,,trousers / pants,pantolon,брюки,штани
-585,A2,17,H,main,Hunger,der,,Noun,,,hunger,açlık,голод,голод
-586,A2,17,H,main,hallo,,,Other,,,hello,merhaba,привет,привіт
-587,A2,17,H,main,Hals,der,¨-e,Noun,,,throat / neck,boğaz / boyun,горло / шея,горло / шия
-588,A2,17,H,main,halten,,,Verb,hält,hat gehalten,to hold / stop,tutmak / durdurmak,держать / останавливаться,тримати / зупинятися
-589,A2,17,H,main,Haltestelle,die,-n,Noun,,,bus stop / tram stop,durak,остановка,зупинка
-590,A2,17,H,main,hängen,,,Verb,hängt,,to hang,asılı durmak / asmak,висеть,висіти
-591,A2,17,B,main,Bild,das,,Noun,,,picture / image,resim,картинка / изображение,картина / зображення
-592,A2,17,H,main,hart,,,Other,,,hard,sert,твёрдый,твердий / жорсткий
-593,A2,17,H,main,hässlich,,,Other,,,ugly,çirkin,уродливый,негарний / бридкий
-594,A2,17,H,main,Hauptstadt,die,¨-e,Noun,,,capital city,başkent,столица,столиця
-595,A2,17,H,main,Haushalt,der,-e,Noun,,,household,hane / ev işi,домашнее хозяйство,домашнє господарство
-596,A2,17,H,main,Heft,das,-e,Noun,,,notebook / exercise book,defter,тетрадь,зошит
-597,A2,17,H,main,Heimat,die,,Noun,,,home / homeland,yurt / vatan,родина / дом,батьківщина / рідний край
-598,A2,17,H,main,heiraten,,,Verb,heiratet,,to marry,evlenmek,жениться / выходить замуж,одружуватися / виходити заміж
-599,A2,17,H,main,heißen,,,Verb,heißt,hat geheißen,to be called / named,adlandırılmak / isim olmak,называться,називатися
-600,A2,17,H,main,Heizung,die,-en,Noun,,,heating,kalorifer / ısınma,отопление,опалення
+401,A2,11,B,main,besuchen,,,Verb,besucht,,to visit,ziyaret etmek,посещать,відвідувати,دیدن / ملاقات کردن
+402,A2,11,B,main,Bett,das,-en,Noun,,,bed,yatak,кровать,ліжко,تخت
+403,A2,11,B,main,bewölkt,,,Other,,,cloudy / overcast,bulutlu,облачно / пасмурно,хмарно / похмуро,ابری
+404,A2,11,W,main,Wolke,die,-n,Noun,,,cloud,bulut,облако,хмара,ابر
+405,A2,11,B,main,bezahlen,,,Verb,bezahlt,hat bezahlt,to pay,ödemek,платить,платити,پرداخت کردن
+406,A2,11,B,main,Bibliothek,die,-en,Noun,,,library,kütüphane,библиотека,бібліотека,کتابخانه
+407,A2,11,B,main,Birne,die,-n,Noun,,,pear,armut,груша,груша,گلابی
+408,A2,11,B,main,bisschen,,,Verb,,,a little / a bit,biraz,немного / чуть-чуть,трохи / трішки,کمی / یک‌کم
+409,A2,11,B,main,bitte,,,Other,,,please / you're welcome,lütfen / rica ederim,пожалуйста / не за что,будь ласка / прошу,لطفاً / خواهش می‌کنم
+410,A2,11,B,main,Bitte,die,-n,Noun,,,request,rica,просьба,прохання,درخواست
+411,A2,12,D,main,Datum,das,-en,Noun,,,date,tarih,дата,дата,تاریخ
+412,A2,12,D,main,dauern,,,Verb,dauert,,to last / take (time),sürmek,длиться / занимать (время),тривати / займати (час),طول کشیدن
+413,A2,12,D,main,denken,,,Verb,denkt,hat gedacht,to think,düşünmek,думать,думати,فکر کردن
+414,A2,12,D,main,deshalb,,,Other,,,therefore / that's why,bu yüzden,поэтому / вот почему,тому / тому що,به همین دلیل
+415,A2,12,D,main,deutlich,,,Other,,,clear / distinct,açık / net,ясный / отчётливый,виразний / чіткий,واضح / مشخص
+416,A2,12,D,main,dick,,,Other,,,fat / thick,şişman / kalın,толстый / плотный,товстий / щільний,چاق / ضخیم
+417,A2,12,D,main,Ding,das,-e,Noun,,,thing,şey,вещь,річ,چیز
+418,A2,12,D,main,direkt,,,Other,,,direct / directly,direkt / doğrudan,прямой / напрямую,прямий / безпосередньо,مستقیم / مستقیمًا
+419,A2,12,D,main,Disco,die,-s /,Noun,,,disco / club,disko / kulüp,дискотека / клуб,дискотека / клуб,دیسکو / کلوب
+420,A2,12,D,main,diskutieren,,,Verb,diskutiert,hat diskutiert,to discuss,tartışmak / görüşmek,обсуждать,обговорювати,بحث کردن
+421,A2,12,D,main,Doppelzimmer,das,-,Noun,,,double room,çift kişilik oda,двухместный номер,двомісний номер,اتاق دونفره
+422,A2,12,D,main,Dorf,das,¨-er,Noun,,,village,köy,деревня,село,روستا
+423,A2,12,D,main,draußen,,,Verb,,,outside,dışarıda,снаружи,надворі / зовні,بیرون
+424,A2,12,D,main,dringend,,,Other,,,urgent,acil,срочный,терміново / невідкладно,فوری
+425,A2,12,D,main,drinnen,,,Verb,,,inside,içeride,внутри,всередині,داخل
+426,A2,12,D,main,drüben,,,Verb,drückt,hat gedrückt,over there / across,orada / karşı tarafta,вон там / напротив,он там / навпроти,آنجا / آن طرف
+427,A2,12,C,main,Café,das,-s,Noun,,,café,kafe,кафе,кафе,کافه
+428,A2,12,C,main,Cafeteria,die,-s,Noun,,,cafeteria,kantin,кафетерий,кафетерій,کافه‌تریا
+429,A2,12,C,main,chatten,,,Verb,chattet,hat gechattet,to chat (online),sohbet etmek (çevrimiçi),чатиться / общаться онлайн,спілкуватися онлайн / чатитися,چت کردن
+430,A2,12,C,main,Chef,der,-s /,Noun,,,boss / manager,patron / yönetici,шеф / начальник,шеф / начальник,رئیس / مدیر
+431,A2,12,C,main,Chefin,die,-nen,Noun,,,boss / manager (female),patron (kadın) / yönetici (kadın),шеф / начальница (жен.),шефиня / начальниця,رئیس / مدیر زن
+432,A2,12,C,main,Club,der,-s /,Noun,,,club,kulüp,клуб,клуб,باشگاه / کلوب
+433,A2,12,C,main,Computer,der,-,Noun,,,computer,bilgisayar,компьютер,комп'ютер,رایانه
+434,A2,12,D,main,da,,,Other,,,there / then,orada / sonra,там / тогда,там / тоді,آنجا / آن وقت
+435,A2,12,D,main,dafür,,,Verb,,,for it / for that / in favor,bunun için / lehinde,за это / для этого / в пользу,для цього / за це / на користь,برای آن / موافق آن
+436,A2,12,D,main,dagegen,,,Verb,,,against it / against that / on the other hand,buna karşı / aleyhinde / öte yandan,против этого / против того / с другой стороны,проти цього / проти того / натомість,برخلاف آن / در مقابل آن
+437,A2,12,D,main,damals,,,Other,,,back then / at that time,o zamanlar,тогда / в то время,тоді / у той час,آن زمان
+438,A2,12,D,main,Dame,die,-n,Noun,,,lady,hanımefendi,дама,дама / пані,بانو
+439,A2,12,D,main,daneben,,,Verb,wo die,,next to it / beside it,yanıbaşında / yanında,рядом с этим / возле этого,поруч / поряд з цим,کنار آن
+440,A2,12,D,main,Dank,der,,Noun,,,thanks / gratitude,teşekkür / minnettarlık,благодарность / спасибо,подяка,تشکر / قدردانی
+441,A2,12,D,main,danken,,,Verb,dankt,hat gedankt,to thank,teşekkür etmek,благодарить,дякувати,تشکر کردن
+442,A2,12,D,main,Datei,die,-en,Noun,,,file (computer),dosya,файл,файл,فایل
+443,A2,13,E,main,Einkaufs-,das,,Noun,,,shopping (compound prefix),alışveriş- (önek),покупки- (часть сложного слова),покупки- (частина складного слова),خرید-
+444,A2,13,E,main,einladen,,,Verb,lädt ein,hat eingela,to invite,davet etmek,приглашать,запрошувати,دعوت کردن
+445,A2,13,E,main,Einladung,die,-en,Noun,,,invitation,davet,приглашение,запрошення,دعوت‌نامه
+446,A2,13,E,main,einpacken,,,Verb,packt ein,,to pack, paketlemek,упаковывать,пакувати / упаковувати,بسته‌بندی کردن
+447,A2,13,E,main,einsteigen,,,Verb,steigt ein,,to board / get in (vehicle),binek / binmek (taşıta),садиться / входить (в транспорт),сідати (у транспорт) / заходити,سوار شدن
+448,A2,13,E,main,eintragen,,,Verb,trägt ein,,to enter / register (in a form),form doldurmak / kaydetmek,вносить / записывать (в форму),вносити / записувати (у форму),ثبت کردن / وارد کردن
+449,A2,13,E,main,Eintritt,der,-e,Noun,,,admission / entry,giriş,вход / допуск,вхід / вступ,ورود / بلیت ورود
+450,A2,13,E,main,einverstanden,,,Verb,,,agreed / in agreement,kabul / hemfikir,согласен / согласна,згоден / згодна,موافق
+451,A2,13,S,main,sein,,,Verb,bin) einverstanden. ist,,to be,olmak,быть,бути,بودن
+452,A2,13,E,main,einzel-,,,Other,,,single- (prefix),tek- (önek),одиночный- (приставка),одинарний- (префікс),تک-
+453,A2,13,E,main,einziehen,,,Verb,zieht ein,,to move in,taşınmak,въезжать / заселяться,в'їжджати / заселятися,اسباب‌کشی کردن / ساکن شدن
+454,A2,13,E,main,Eis,das,,Noun,,,ice cream / ice,dondurma / buz,мороженое / лёд,морозиво / лід,بستنی / یخ
+455,A2,13,E,main,empfehlen,,,Verb,empfiehlt,hat empfohlen,to recommend,tavsiye etmek,рекомендовать,рекомендувати,توصیه کردن
+456,A2,13,E,main,Ende,das,-n,Noun,,,end,son,конец,кінець,پایان
+457,A2,13,E,main,enden,,,Verb,endet,hat geendet,to end,sona ermek,заканчиваться,закінчуватися,تمام شدن
+458,A2,13,E,main,endlich,,,Other,,,finally / at last,nihayet / sonunda,наконец / в конце концов,нарешті / врешті-решт,سرانجام / بالاخره
+459,A2,13,E,main,eng,,,Other,,,narrow / tight,dar,узкий / тесный,вузький / тісний,تنگ
+460,A2,13,E,main,entschuldigen,,,Verb,,,to excuse / apologize,özür dilemek,извинять / извиняться,вибачати / вибачатися,عذرخواهی کردن / بخشیدن
+461,A2,13,I,main,Ich,,,Verb,hat entschuldigt,,I (pronoun),ben,я,я,من
+462,A2,13,E,main,Entschuldi-,die,,Noun,,,excuse me / apology,afedersiniz / özür,извинение / простите,вибачення / вибачте,ببخشید / عذرخواهی
+463,A2,13,D,main,Drucker,der,-,Noun,,,printer,yazıcı,принтер,принтер,چاپگر
+464,A2,13,D,main,dunkel,,,Other,,,dark,karanlık,тёмный,темний,تاریک
+465,A2,13,D,main,dünn,,,Other,,,thin,inç / ince,тонкий,тонкий,نازک
+466,A2,13,D,main,durch,,,Other,,,through / by,vasıtasıyla / aracılığıyla,через / посредством,через / за допомогою,از طریق / از میان
+467,A2,13,D,main,dürfen,,,Verb,darf,,may / to be allowed to,izinli olmak / -ebilir,мочь / иметь право,мати право / дозволено,اجازه داشتن / مجاز بودن
+468,A2,13,D,main,Durst,der,,Noun,,,thirst,susuzluk,жажда,спрага,تشنگی
+469,A2,13,E,main,E-Book,das,-s,Noun,,,e-book,e-kitap,электронная книга,електронна книга,کتاب الکترونیکی
+470,A2,13,E,main,echt,,,Other,,,real / genuine / really,gerçek,настоящий / подлинный / правда,справжній / підлинний / справді,واقعی / واقعاً
+471,A2,13,E,main,Ecke,die,-n,Noun,,,corner,köşe,угол,куток / ріг,گوشه
+472,A2,13,E,main,egal,,,Other,,,it doesn't matter / all the same,farketmez,неважно / всё равно,байдуже / все одно,فرقی نمی‌کند
+473,A2,13,E,main,Ehefrau,die,-en /,Noun,,,wife,eş (kadın) / karı,жена,дружина,همسر / زن
+474,A2,13,E,main,Ehemann,der,¨-er/,Noun,,,husband,eş (erkek) / koca,муж,чоловік,شوهر / همسر
+475,A2,13,E,main,Ei,das,-er,Noun,,,egg,yumurta,яйцо,яйце,تخم‌مرغ
+476,A2,13,E,main,eilig,,,Other,,,urgent / in a hurry,acele / acil,срочный / спешащий,терміновий / поспішний,عجول / فوری
+477,A2,13,E,main,Eingang,der,¨-e,Noun,,,entrance,giriş,вход,вхід,ورودی
+478,A2,13,E,main,einkaufen,,,Verb,kauft ein,hat eingekauft,to go shopping,alışveriş yapmak,ходить по магазинам,ходити по магазинах / робити покупки,خرید کردن
+479,A2,14,F,main,falsch,,,Other,,,wrong / false,yanlış,неправильный / ложный,неправильний / хибний,غلط / نادرست
+480,A2,14,F,main,Familie,die,-n,Noun,,,family,aile,семья,сім'я,خانواده
+481,A2,14,F,main,Familien-,der,,Noun,,,family (compound prefix),aile- (önek),семейный- (часть сложного слова),сімейний- (частина складного слова),خانوادگی-
+482,A2,14,F,main,Fan,der,-s,Noun,,,fan,taraftar,фанат,фанат,هوادار
+483,A2,14,F,main,fantastisch,,,Other,,,fantastic,harika,фантастический,фантастичний,فوق‌العاده
+484,A2,14,F,main,Farbe,die,-n,Noun,,,color,renk,цвет,колір,رنگ
+485,A2,14,F,main,fast,,,Other,,,almost / nearly,neredeyse,почти,майже,تقریباً
+486,A2,14,F,main,faul,,,Other,,,lazy,tembel,ленивый,лінивий,تنبل
+487,A2,14,F,main,fehlen,,,Verb,fehlt,hat gefehlt,to be missing / lack,eksik olmak,отсутствовать / не хватать,бракувати / не вистачати,کم بودن / کم آمدن
+488,A2,14,F,main,Fehler,der,-,Noun,,,mistake / error,hata,ошибка,помилка,اشتباه
+489,A2,14,F,main,feiern,,,Verb,feiert,hat gefeiert,to celebrate,kutlamak,праздновать,святкувати,جشن گرفتن
+490,A2,14,F,main,Fenster,das,-,Noun,,,window,pencere,окно,вікно,پنجره
+491,A2,14,F,main,fernsehen,,,Verb,sieht fern,hat ferngesehen,to watch TV,televizyon izlemek,смотреть телевизор,дивитися телевізор,تلویزیون تماشا کردن
+492,A2,14,F,main,Fernseher,der,-,Noun,,,television set / TV,televizyon,телевизор,телевізор,تلویزیون
+493,A2,14,F,main,Fest,das,-e,Noun,,,festival / celebration,festival / kutlama,праздник / торжество,свято / урочистість,جشن / مراسم
+494,A2,14,F,main,Festival,das,-s,Noun,,,festival,festival,фестиваль,фестиваль,فستیوال
+495,A2,14,F,main,Firma,die,-en,Noun,,,company / firm,firma / şirket,фирма / компания,фірма / компанія,شرکت
+496,A2,14,E,main,Erfahrung,die,-en,Noun,,,experience,deneyim,опыт,досвід,تجربه
+497,A2,14,E,main,erklären,,,Verb,erklärt,hat erklärt,to explain,açıklamak,объяснять,пояснювати,توضیح دادن
+498,A2,14,E,main,erlauben,,,Verb,erlaubt,hat erlaubt,to allow / permit,izin vermek,разрешать,дозволяти,اجازه دادن
+499,A2,14,E,main,Erlaubnis,die,,Noun,,,permission,izin,разрешение,дозвіл,اجازه
+500,A2,14,E,main,erreichen,,,Verb,erreicht,,to reach / achieve,ulaşmak,достигать,досягати,رسیدن / به دست آوردن
+501,A2,14,E,main,erst,,,Other,,,first / only / not until,ilk / ancak,сначала / только / лишь тогда,спочатку / тільки / лише тоді,فقط / تازه / نخست
+502,A2,14,E,main,Erwachsene,der,-n,Noun,,,adult,yetişkin,взрослый,дорослий,بزرگسال
+503,A2,14,E,main,erzählen,,,Verb,erzählt,hat erzählt,to tell / narrate,anlatmak,рассказывать,розповідати,تعریف کردن
+504,A2,14,E,main,essen,,,Verb,isst,hat gegessen,to eat,yemek yemek,есть,їсти,خوردن
+505,A2,14,E,main,Essen,das,-,Noun,,,food / meal,yemek / yiyecek,еда / приём пищи,їжа / прийом їжі,غذا
+506,A2,14,E,main,etwas,,,Other,,,something / a little,biraz / biraz şey,что-то / немного,щось / трохи,چیزی / کمی
+507,A2,14,F,main,Fach,das,¨-er,Noun,,,subject / compartment,alan / ders,предмет / отделение,предмет / відділення,درس / بخش
+508,A2,14,A,main,Abfahrt,die,-en,Noun,,,departure,kalkış,отправление,відправлення / від'їзд,حرکت / عزیمت
+509,A2,14,F,main,Fahrplan,der,¨-e,Noun,,,timetable / schedule,sefer tarifesi,расписание / график,розклад / графік,برنامه زمانی / جدول حرکت
+510,A2,15,F,main,früher,,,Other,,,earlier / formerly,eskiden,раньше / прежде,раніше / колись,قبلاً / زودتر
+511,A2,15,F,main,Frühstück,das,,Noun,,,breakfast,kahvaltı,завтрак,сніданок,صبحانه
+512,A2,15,F,main,fühlen,,,Verb,fühlt,hat gefühlt,to feel,hissetmek,чувствовать,відчувати / почувати,احساس کردن
+513,A2,15,F,main,Führerschein,der,-e,Noun,,,driving license,ehliyet,водительские права,водійське посвідчення,گواهینامه رانندگی
+514,A2,15,F,main,Führung,die,-en,Noun,,,guided tour / leadership,rehberlik / tur,экскурсия с гидом / руководство,екскурсія з гідом / керівництво,تور همراه با راهنما / مدیریت
+515,A2,15,F,main,für,,,Other,,,for,için,для,для,برای
+516,A2,15,F,main,furchtbar,,,Other,,,terrible / awful,korkunç,ужасный / кошмарный,жахливий / страшний,وحشتناک
+517,A2,15,F,main,Fuß,der,¨-e,Noun,,,foot,ayak,ступня,ступня / нога,پا
+518,A2,15,F,main,Fußball,der,¨-e,Noun,,,football / soccer,futbol,футбол,футбол,فوتبال
+519,A2,15,G,main,Gabel,die,-n,Noun,,,fork,çatal,вилка,виделка,چنگال
+520,A2,15,G,main,Garage,die,-n,Noun,,,garage,garaj,гараж,гараж,گاراژ
+521,A2,15,G,main,geboren,,,Verb,,,born,doğmak,рождённый,народжений,متولد
+522,A2,15,G,main,gefallen,,,Verb,gefällt,hat gefallen,to like / please,hoşlanmak,нравиться / доставлять удовольствие,подобатися,خوش آمدن / مورد پسند بودن
+523,A2,15,G,main,gegen,,,Verb,,,against / around (time),karşı / civarında,против / около (о времени),проти / близько (про час),بر ضد / حدود
+524,A2,15,F,main,Fleisch,das,,Noun,,,meat,et,мясо,м'ясо,گوشت
+525,A2,15,F,main,Flohmarkt,der,¨-e,Noun,,,flea market,bit pazarı,блошиный рынок,блошиний ринок,بازار دست‌دوم
+526,A2,15,F,main,Flug,der,¨-e,Noun,,,flight,uçuş,рейс,рейс / політ,پرواز
+527,A2,15,F,main,Flughafen,der,¨,Noun,,,airport,havaalanı,аэропорт,аеропорт,فرودگاه
+528,A2,15,F,main,Fluss,der,¨-e,Noun,,,river,nehir,река,річка,رودخانه
+529,A2,15,F,main,Foto,das,-s,Noun,,,photo,fotoğraf,фото,фото,عکس
+530,A2,15,F,main,Frau,die,-en,Noun,,,woman / wife / Mrs.,kadın / eş / bayan,женщина / жена / госпожа,жінка / дружина / пані,زن / همسر / خانم
+531,A2,15,F,main,freiwillig,,,Other,,,voluntary,gönüllü,добровольный,добровільний,داوطلبانه
+532,A2,15,F,main,freuen,,,Verb,freut,hat gefreut,to be happy / look forward to,sevinmek,радоваться / ждать с нетерпением,радіти / чекати з нетерпінням,خوشحال شدن / مشتاق بودن
+533,A2,15,F,main,Freund,der,"-e,",Noun,,,friend / boyfriend,arkadaş / erkek arkadaş,друг / парень,друг / хлопець,دوست / دوست‌پسر
+534,A2,15,F,main,Freundin,die,-nen,Noun,,,friend / girlfriend,arkadaş (kız) / kız arkadaş,подруга / девушка,подруга / дівчина,دوست / دوست‌دختر
+535,A2,15,F,main,freundlich,,,Other,,,friendly / kind,dostça / nazik,дружелюбный / добрый,дружній / добрий,دوستانه / مهربان
+536,A2,15,F,main,frisch,,,Other,,,fresh,taze,свежий,свіжий,تازه
+537,A2,15,F,main,früh,,,Other,,,early,erken,ранний,ранній / рано,زود / زودهنگام
+538,A2,16,G,main,gewinnen,,,Verb,gewinnt,,to win,kazanmak,выигрывать,вигравати / перемагати,بردن / برنده شدن
+539,A2,16,G,main,Gewitter,das,-,Noun,,,thunderstorm,gök gürültülü fırtına,гроза,гроза,رعدوبرق / طوفان تندری
+540,A2,16,G,main,glauben,,,Verb,glaubt,hat geglaubt,to believe,inanmak,верить,вірити,باور کردن
+541,A2,16,G,main,gleich,,,Other,,,same / immediately,aynı / hemen,одинаковый / сразу,однаковий / відразу,یکسان / بلافاصله
+542,A2,16,G,main,Gleis,das,-e,Noun,,,track / platform (rail),peron,путь / платформа,колія / перон,سکو / خط آهن
+543,A2,16,G,main,glücklich,,,Other,,,happy / lucky,mutlu,счастливый / удачливый,щасливий,خوشحال / خوش‌شانس
+544,A2,16,G,main,Glück-,der,,Noun,,,congratulations (compound),tebrik- (önek),поздравления- (часть сложного слова),вітання- (частина складного слова),تبریک-
+545,A2,16,G,main,gratulieren,,,Verb,gratuliert,hat gratuliert,to congratulate,tebrik etmek,поздравлять,вітати / поздоровляти,تبریک گفتن
+546,A2,16,G,main,grillen,,,Verb,grillt,hat gegrillt,to grill / barbecue,mangal yapmak,жарить на гриле / барбекю,смажити на грилі / барбекювати,کباب کردن
+547,A2,16,G,main,Grippe,die,,Noun,,,flu / influenza,grip,грипп,грип,آنفلوانزا
+548,A2,16,G,main,groß,,,Other,,,big / tall,büyük,большой / высокий,великий / високий,بزرگ / بلندقد
+549,A2,16,G,main,Größe,die,-n,Noun,,,size / height,büyüklük,размер / рост,розмір / зріст,اندازه / قد
+550,A2,16,G,main,Gruß,der,¨-e,Noun,,,greeting,selam,приветствие,привітання,سلام / درود
+551,A2,16,G,main,günstig,,,Other,,,cheap / favorable,uygun fiyatlı,дешёвый / выгодный,дешевий / вигідний,ارزان / مناسب
+552,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da,у / на,у / на,در / روی
+553,A2,16,H,main,Haar,das,-e,Noun,,,hair,saç,волосы,волосся,مو
+554,A2,16,H,main,Hähnchen,das,-,Noun,,,chicken,tavuk,цыплёнок,курча / курятина,مرغ / جوجه
+555,A2,16,G,main,Gehalt,das,¨-er,Noun,,,salary / wage,maaş,зарплата / оклад,зарплата / оклад,حقوق
+556,A2,16,G,main,gehören,,,Verb,gehört,hat gehört,to belong to,ait olmak,принадлежать,належати,متعلق بودن
+557,A2,16,G,main,Geld,das,,Noun,,,money,para,деньги,гроші,پول
+558,A2,16,G,main,Geldbörse,die,-n,Noun,,,purse / wallet,cüzdan,кошелёк,гаманець,کیف پول
+559,A2,16,G,main,genug,,,Other,,,enough,yeterli,достаточно,достатньо,کافی
+560,A2,16,G,main,Gepäck,das,,Noun,,,luggage,eşya / bavul,багаж,багаж,چمدان / بار
+561,A2,16,G,main,gerade,,,Other,,,just / straight / at the moment,şu anda / tam,как раз / прямо / в данный момент,якраз / прямо / зараз,همین الآن / درست / مستقیم
+562,A2,16,A,main,am,,,Other,,,at the / on the,-de / -da,у / на,у / на,در / روی
+563,A2,16,G,main,Geschäft,das,-e,Noun,,,shop / store / business,mağaza / işyeri,магазин / дело / бизнес,магазин / справа / бізнес,مغازه / کسب‌وکار
+564,A2,16,G,main,Geschirr,das,,Noun,,,dishes / crockery,çanak çömlek,посуда,посуд,ظرف‌ها
+565,A2,16,G,main,Gespräch,das,-e,Noun,,,conversation / talk,sohbet / konuşma,разговор / беседа,розмова / бесіда,گفت‌وگو
+566,A2,16,G,main,gestern,,,Verb,,,yesterday,dün,вчера,вчора,دیروز
+567,A2,16,G,main,Getränk,das,-e,Noun,,,drink / beverage,içecek,напиток,напій,نوشیدنی
+568,A2,17,H,main,herein,,,Other,,,in here / come in,içeri / içeri gir,сюда / входите,сюди / заходьте,بیا تو / داخل
+569,A2,17,H,main,rein,,,Other,,,in / inside / into,içine / içeri / içine doğru,"внутрь / внутрь чего-то / внутрь, вовнутрь",всередину / всередину чогось,داخل / به داخل
+570,A2,17,H,main,Herd,der,-e,Noun,,,stove / cooker,ocak,плита,плита,اجاق گاز
+571,A2,17,H,main,Herr,der,-en,Noun,,,Mr. / gentleman,Bey / efendi,господин / мужчина,пан,آقا
+572,A2,17,H,main,herunterladen,,,Verb,lädt herunter,hat heruntergela,to download,indirmek,скачивать,завантажувати,دانلود کردن
+573,A2,17,H,main,herzlich,,,Other,,,heartfelt / warm / cordial,samimi / içten,сердечный / тёплый / радушный,щирий / сердечний / теплий,صمیمانه / گرم
+574,A2,17,H,main,Hilfe,die,,Noun,,,help / assistance,yardım,помощь,допомога,کمک
+575,A2,17,H,main,Himmel,der,,Noun,,,sky / heaven,gökyüzü / cennet,небо / небеса,небо / рай,آسمان / بهشت
+576,A2,17,H,main,hin / hin- / -hin,,,Other,,,there / towards (directional prefix),orada / -e (yönelme eki),туда / по направлению (приставка),туди / у напрямку (префікс),به آن‌سو / به سمت
+577,A2,17,H,main,hinten,,,Verb,,,at the back / behind,arkada,сзади / позади,позаду,پشت / عقب
+578,A2,17,H,main,hinter,,,Other,,,behind,arkasında,за,за / позаду,پشت
+579,A2,17,H,main,Hobby,das,-s,Noun,,,hobby,hobi,хобби,хобі,سرگرمی
+580,A2,17,H,main,Hochzeit,die,-en,Noun,,,wedding,düğün,свадьба,весілля,عروسی
+581,A2,17,H,main,hoffen,,,Verb,hofft,hat gehofft,to hope,ummak / ümit etmek,надеяться,сподіватися,امیدوار بودن
+582,A2,17,H,main,Homepage,die,-s,Noun,,,homepage / website,ana sayfa / web sitesi,домашняя страница / сайт,домашня сторінка / вебсайт,صفحه اصلی / وب‌سایت
+583,A2,17,H,main,hören,,,Verb,hört,,to hear / listen,duymak / dinlemek,слышать / слушать,чути / слухати,شنیدن / گوش دادن
+584,A2,17,H,main,Hose,die,-n,Noun,,,trousers / pants,pantolon,брюки,штани,شلوار
+585,A2,17,H,main,Hunger,der,,Noun,,,hunger,açlık,голод,голод,گرسنگی
+586,A2,17,H,main,hallo,,,Other,,,hello,merhaba,привет,привіт,سلام
+587,A2,17,H,main,Hals,der,¨-e,Noun,,,throat / neck,boğaz / boyun,горло / шея,горло / шия,گلو / گردن
+588,A2,17,H,main,halten,,,Verb,hält,hat gehalten,to hold / stop,tutmak / durdurmak,держать / останавливаться,тримати / зупинятися,نگه داشتن / توقف کردن
+589,A2,17,H,main,Haltestelle,die,-n,Noun,,,bus stop / tram stop,durak,остановка,зупинка,ایستگاه
+590,A2,17,H,main,hängen,,,Verb,hängt,,to hang,asılı durmak / asmak,висеть,висіти,آویزان بودن / آویزان کردن
+591,A2,17,B,main,Bild,das,,Noun,,,picture / image,resim,картинка / изображение,картина / зображення,تصویر / عکس
+592,A2,17,H,main,hart,,,Other,,,hard,sert,твёрдый,твердий / жорсткий,سخت
+593,A2,17,H,main,hässlich,,,Other,,,ugly,çirkin,уродливый,негарний / бридкий,زشت
+594,A2,17,H,main,Hauptstadt,die,¨-e,Noun,,,capital city,başkent,столица,столиця,پایتخت
+595,A2,17,H,main,Haushalt,der,-e,Noun,,,household,hane / ev işi,домашнее хозяйство,домашнє господарство,خانه‌داری / خانوار
+596,A2,17,H,main,Heft,das,-e,Noun,,,notebook / exercise book,defter,тетрадь,зошит,دفتر
+597,A2,17,H,main,Heimat,die,,Noun,,,home / homeland,yurt / vatan,родина / дом,батьківщина / рідний край,میهن / زادگاه
+598,A2,17,H,main,heiraten,,,Verb,heiratet,,to marry,evlenmek,жениться / выходить замуж,одружуватися / виходити заміж,ازدواج کردن
+599,A2,17,H,main,heißen,,,Verb,heißt,hat geheißen,to be called / named,adlandırılmak / isim olmak,называться,називатися,نام داشتن / نامیده شدن
+600,A2,17,H,main,Heizung,die,-en,Noun,,,heating,kalorifer / ısınma,отопление,опалення,گرمایش / بخاری
 601,A2,17,H,main,hell,,,Other,,,bright / light,parlak,светлый / яркий,світлий / яскравий
 602,A2,17,H,main,Hemd,das,-en,Noun,,,shirt,gömlek,рубашка,сорочка
 603,A2,17,H,main,her / her- / -her,,,Other,,,here / from there (directional prefix),burada / oradan (önek),сюда / оттуда (приставка),сюди / звідти (префікс)
