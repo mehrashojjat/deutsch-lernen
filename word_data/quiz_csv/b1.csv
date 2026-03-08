@@ -3749,550 +3749,550 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 3748,B1,91,V,main,verabreden,,,Verb,verabredet,verabredete,hat verabredet,to arrange to meet,buluşmayı planlamak / randevulaşmak,договариваться о встрече,домовлятися про зустріч
 3749,B1,91,V,main,verabredet,,,Other,,,,arranged to meet,randevulaşılmış,договорившийся о встрече,домовлений / призначений
 3750,B1,91,V,main,Verabredung,die,-en,Noun,,,,appointment / date,buluşma / randevu,встреча / свидание / договорённость,зустріч / побачення
-3751,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,to say goodbye,veda etmek / uğurlamak,прощаться / провожать,
-3752,B1,91,A,main,Abschied,der,-e,Noun,,,,farewell / goodbye,veda,прощание,
-3753,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,to change,değiştirmek / değişmek,изменять,
-3754,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,event,etkinlik / organizasyon,мероприятие / событие,
-3755,B1,91,V,main,Verantwortung,die,,Noun,,,,responsibility,sorumluluk,ответственность,
-3756,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,to improve,geliştirmek / iyileştirmek,улучшать,
-3757,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,to forbid / to prohibit,yasaklamak,запрещать,
-3758,B1,91,V,main,Verbot,das,-e,Noun,,,,ban / prohibition,yasak,запрет,
-3759,B1,91,V,main,verboten,,,Verb,,,,forbidden / prohibited,yasak / yasaklı,запрещённый,
-3760,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,to connect / to link,bağlamak / birleştirmek,соединять / связывать,
-3761,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,to sign,imzalamak,подписывать,
-3762,B1,91,U,main,Unterschrift,die,-en,Noun,,,,signature,imza,подпись,
-3763,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,to underline,altını çizmek,подчёркивать,
-3764,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,to support,desteklemek,поддерживать,
-3765,B1,91,U,main,Unterstützung,die,-en,Noun,,,,support,destek,поддержка,
-3766,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,to examine / to investigate,incelemek / araştırmak,исследовать / обследовать,
-3767,B1,91,U,main,Untersuchung,die,-en,Noun,,,,examination / investigation,inceleme / araştırma,исследование / обследование,
-3768,B1,91,U,main,unterwegs,,,Other,,,,on the way / traveling,yolda / seyahatte,в пути / в дороге,
-3769,B1,91,U,main,Urkunde,die,-n,Noun,,,,document / certificate,belge / sertifika,документ / грамота / сертификат,
-3770,B1,91,U,main,Urlaub,der,-e,Noun,,,,vacation / holiday,tatil,отпуск / каникулы,
-3771,B1,91,U,main,Ursache,die,-n,Noun,,,,cause / reason,neden / sebep,причина,
-3772,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,to cause,neden olmak / yol açmak,вызывать / причинять,
-3773,B1,91,U,main,ursprünglich,,,Other,,,,originally,başlangıçta / aslen,первоначально / изначально,
-3774,B1,91,U,main,Urteil,das,,Noun,,,,verdict / judgment,karar / hüküm,приговор / суждение,
-3775,B1,91,L,main,liebsten,,,Verb,,,,best,en sevilen,больше всего / любимее всего,
-3776,B1,91,Z,main,zur,,,Other,,,,to the,-e/-a,к / к тому,
-3777,B1,91,V,main,verabredet,,,Other,,,,arranged to meet,randevulaşılmış,договорившийся о встрече,
-3778,B1,91,B,main,bin,,,Other,,,,am,-im,есть / являюсь,
-3779,B1,91,M,main,mit,,,Other,,,,with,ile,с,
-3780,B1,91,N,main,nett,,,Other,,,,nice,nazik / hoş,милый / приятный,
-3781,B1,91,V,main,verabschieden,,,Verb,,,,to say goodbye,veda etmek,прощаться,
-3782,B1,91,F,main,fiel,,,Other,,,,fell,düştü,упал,
-3783,B1,91,S,main,sen,,,Verb,,,,sen,sen,тебе,
-3784,B1,91,V,main,verbessert,,,Other,,,,improved,geliştirilmiş,улучшенный,
-3785,B1,91,V,main,verboten,,,Verb,,,,forbidden,yasak,запрещено,
-3786,B1,91,R,main,rechts,,,Other,,,,right (direction),sağa,направо,
-3787,B1,91,U,main,unterstreichen,,,Verb,,,,to underline,altını çizmek,подчёркивать,
-3788,B1,91,K,main,können,,,Verb,,,,to be able to,yapabilmek,мочь,
-3789,B1,91,L,main,lassen,,,Verb,,,,to let / to leave,bırakmak,позволять / оставлять,
-3790,B1,91,A,main,Art,,,Other,,,,kind / type,tür / çeşit,вид / тип,
-3791,B1,91,K,main,komme,,,Other,,,,come,geliyorum,прихожу,
-3792,B1,91,E,main,essen,,,Verb,,,,to eat,yemek,есть / кушать,
-3793,B1,91,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,
-3794,B1,91,H,main,hart,,,Other,,,,hard / tough,sert / zor,твёрдый / тяжёлый,
-3795,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,neşeli / memnun,весёлый / довольный,
-3796,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,to enlarge / to expand,büyütmek / genişletmek,увеличивать,
-3797,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,to arrest,tutuklamak,арестовывать,
-3798,B1,92,V,main,Verhalten,das,,Noun,,,,behavior / conduct,davranış / tutum,поведение,
-3799,B1,92,V,main,Verhältnis,das,-se,Noun,,,,relationship / ratio,ilişki / oran,отношение / соотношение,
-3800,B1,92,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,
-3801,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,to prevent,engellemek / önlemek,предотвращать,
-3802,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,to sell,satmak,продавать,
-3803,B1,92,V,main,Verkäufer,der,-die,Noun,,,,salesperson (male),satıcı (erkek),продавец (муж.),
-3804,B1,92,V,main,Verkehr,der,,Noun,,,,traffic,trafik,движение / транспорт / дорожное движение,
-3805,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,means of transportation,ulaşım aracı,транспортное средство,
-3806,B1,92,V,main,Verlag,der,,Noun,,,,publisher / publishing house,yayınevi,издательство,
-3807,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,to extend / to lengthen,uzatmak / uzatmak,продлевать / удлинять,
-3808,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,to leave / to abandon,terk etmek / bırakmak,покидать / оставлять,
-3809,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,to use up / to consume,tüketmek / harcamak,расходовать / потреблять,
-3810,B1,92,V,main,Verbrecher,der,-,Noun,,,,criminal / offender (male),suçlu (erkek),преступник (муж.),
-3811,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,criminal / offender (female),suçlu (kadın),преступница (жен.),
-3812,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,to burn,yakmak / yanmak,сжигать / обжигаться,
-3813,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,to spend (time),geçirmek (zaman),проводить (время),
-3814,B1,92,V,main,Verdacht,der,,Noun,,,,suspicion,şüphe / kuşku,подозрение,
-3815,B1,92,V,main,verdächtig,,,Other,,,,suspicious,şüpheli / kuşkulu,подозрительный,
-3816,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,to earn,kazanmak,зарабатывать,
-3817,B1,92,V,main,Verein,der,-e,Noun,,,,club / association,kulüp / dernek,клуб / объединение,
-3818,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,to arrange / to agree on,anlaşmak / kararlaştırmak,договариваться / согласовывать,
-3819,B1,92,V,main,Vergangenheit,die,,Noun,,,,past,geçmiş,прошлое,
-3820,B1,92,V,main,vergeblich,,,Other,,,,in vain,boşuna,напрасно,
-3821,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,to forget,unutmak,забывать,
-3822,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,to compare,karşılaştırmak,сравнивать,
-3823,B1,92,V,main,Vergleich,der,-e,Noun,,,,comparison,karşılaştırma,сравнение,
-3824,B1,92,B,main,beim,,,Other,,,,at the,-de/-da,у / при,
-3825,B1,92,H,main,herein,,,Other,,,,in / inside,içeri,внутрь / сюда,
-3826,B1,92,M,main,merkwürdig,,,Other,,,,strange / odd,tuhaf / garip,странный,
-3827,B1,92,S,main,schwierigen,,,Verb,,,,difficult,zor,трудный / сложный,
-3828,B1,92,M,main,meinen,,,Verb,,,,to mean / to think,anlamak / düşünmek,иметь в виду / считать,
-3829,B1,92,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,
-3830,B1,92,V,main,verhindern,,,Verb,,,,to prevent,engellemek,предотвращать,
-3831,B1,92,H,main,helfen,,,Verb,,,,to help,yardım etmek,помогать,
-3832,B1,92,M,main,mit,,,Other,,,,with,ile,с,
-3833,B1,92,V,main,verlangt,,,Other,,,,demanded,talep edilmiş,потребованный / потребовал,
-3834,B1,92,L,main,lassen,,,Verb,,,,to let / to leave,bırakmak,позволять / оставлять,
-3835,B1,92,H,main,helfe,,,Other,,,,help,yardım ediyorum,помогаю,
-3836,B1,92,D,main,direkt,,,Other,,,,direct,direkt,прямой / прямо,
-3837,B1,92,V,main,verhaftet,,,Other,,,,arrested,tutuklanmış,арестованный,
-3838,B1,92,V,main,verbrannt,,,Other,,,,burned,yanmış,сгоревший / обожжённый,
-3839,B1,92,I,main,ich,,,Other,,,,I,ben,я,
-3840,B1,92,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,
-3841,B1,92,D,main,dient,,,Other,,,,serves,hizmet ediyor,служит,
-3842,B1,92,D,main,diesem,,,Other,,,,this (dative),bu,этому / этой / этому (дат.),
-3843,B1,92,A,main,anzurufen,,,Verb,,,,to call,aramak,позвонить,
-3844,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,neşeli / memnun,весёлый / довольный,
-3845,B1,93,V,main,verpflichtet,,,Other,,,,obligated / required,yükümlü / zorunlu,обязанный / обязателен,
-3846,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,to betray / to reveal,ihanet etmek / açığa çıkarmak,предавать / выдавать / раскрывать,
-3847,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,to travel / to go on a trip,seyahate çıkmak,уезжать / отправляться в поездку,
-3848,B1,93,V,main,verrückt,,,Other,,,,crazy / mad,deli / çılgın,сумасшедший / безумный,
-3849,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,meeting / assembly,toplantı / meclis,собрание,
-3850,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,to postpone / to shift,ertelemek / kaydırmak,переносить / сдвигать,
-3851,B1,93,V,main,verschieden,,,Verb,,,,different / various,farklı / çeşitli,различный / разный,
-3852,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,to prescribe,reçete yazmak,выписывать рецепт / ошибиться в написании,
-3853,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,to disappear,kaybolmak,исчезать,
-3854,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,to insure / to assure,sigortalamak / güvence vermek,страховать / уверять,
-3855,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,health insurance card,sağlık sigortası kartı,страховая карта / карточка застрахованного,
-3856,B1,93,V,main,Versicherung,die,-en,Noun,,,,insurance,sigorta,страховка / страхование,
-3857,B1,93,V,main,Verspätung,die,-en,Noun,,,,delay,gecikme,опоздание / задержка,
-3858,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,to promise,söz vermek,обещать,
-3859,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,to injure / to hurt,yaralamak / incitmek,ранить / причинять боль,
-3860,B1,93,V,main,Verletzung,die,-en,Noun,,,,injury,yaralanma,травма / ранение,
-3861,B1,93,V,main,verliebt,,,Other,,,,in love,aşık,влюблённый,
-3862,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,to lose,kaybetmek,терять,
-3863,B1,93,V,main,Verlierer,der,-,Noun,,,,loser (male),kaybeden (erkek),проигравший (муж.),
-3864,B1,93,V,main,Verliererin,die,-nen,Noun,,,,loser (female),kaybeden (kadın),проигравшая (жен.),
-3865,B1,93,V,main,Verlust,der,-e,Noun,,,,loss,kayıp,потеря / убыток,
-3866,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,to avoid,kaçınmak,избегать,
-3867,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,to rent out,kiralamak (ev sahibi olarak),сдавать в аренду,
-3868,B1,93,V,main,Vermieter,der,-,Noun,,,,landlord,ev sahibi (erkek),арендодатель / хозяин квартиры (муж.),
-3869,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,landlady,ev sahibi (kadın),арендодательница / хозяйка квартиры (жен.),
-3870,B1,93,V,main,Vermietung,die,-en,Noun,,,,rental,kiralama,сдача в аренду / аренда,
-3871,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,to miss,özlemek,скучать / тосковать,
-3872,B1,93,V,main,Vermittlung,die,-en,Noun,,,,placement / mediation,aracılık / yerleştirme,посредничество / размещение,
-3873,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,to suspect / to assume,sanmak / tahmin etmek,предполагать / подозревать,
-3874,B1,93,V,main,vermutlich,,,Other,,,,presumably / probably,muhtemelen / büyük ihtimalle,предположительно / вероятно,
-3875,B1,93,V,main,vernünftig,,,Other,,,,reasonable / sensible,makul / mantıklı,разумный / благоразумный,
-3876,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,to pack / to wrap,paketlemek / sarmak,упаковывать,
-3877,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,to miss / to fail to catch,kaçırmak,пропускать / упускать,
-3878,B1,93,M,main,melden,,,Verb,,,,to report / to register,bildirmek / kayıt olmak,сообщать / регистрировать,
-3879,B1,93,I,main,ist,,,Other,,,,is,-dır/-dir,есть / является,
-3880,B1,93,V,main,versäumt,,,Other,,,,missed,kaçırılmış,пропущенный / упущенный,
-3881,B1,93,V,main,verschieben,,,Verb,,,,to postpone,ertelemek,переносить / откладывать,
-3882,B1,93,V,main,verschieden,,,Verb,,,,different / various,farklı / çeşitli,различный / разный,
-3883,B1,93,N,main,-nen,,,Verb,,,,(verb ending -nen),-nen fiil eki,глагольное окончание -nen,
-3884,B1,93,V,main,verschrieben,,,Verb,,,,prescribed,reçete yazılmış,выписанный по рецепту,
-3885,B1,93,D,main,du,,,Other,,,,you,sen,ты,
-3886,B1,93,S,main,Versicherung,,,Other,,,,insurance,sigorta / sigortacılık,страховка / страхование,
-3887,B1,93,T,main,-ung,,,Other,,,,(suffix -ung),-ung soneki,суффикс -ung,
-3888,B1,93,M,main,mich,,,Other,,,,me,beni,меня / мне,
-3889,B1,93,A,main,asche,,,Other,,,,(word fragment),(kelime parçası),(фрагмент слова),
-3890,B1,93,S,main,sehr,,,Other,,,,very,çok,очень,
-3891,B1,93,V,main,vermeiden,,,Verb,,,,to avoid,kaçınmak,избегать,
-3892,B1,93,V,main,vermieten,,,Verb,,,,to rent out,kiralamak,сдавать в аренду,
-3893,B1,93,K,main,kann,,,Other,,,,can,yapabilir,может / могу,
-3894,B1,93,V,main,Vermittlung,der,,Noun,,,,placement / mediation,aracılık / yerleştirme,посредничество / размещение,
-3895,B1,93,F,main,fragen,,,Verb,,,,to ask,sormak,спрашивать,
-3896,B1,93,V,main,von,,,Other,,,,from / of,-den / -in,от / из,
-3897,B1,93,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,
-3898,B1,93,V,main,verpasst,,,Other,,,,missed,kaçırılmış,пропущенный / опоздавший,
-3899,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,to forgive / to pardon,affetmek / bağışlamak,прощать,
-3900,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,to give up / to do without,vazgeçmek / feragat etmek,отказываться / обходиться без,
-3901,B1,94,V,main,Video,das,-s,Noun,,,,video,video,видео,
-3902,B1,94,V,main,viel / viele,,,Other,,,,much / many,çok / birçok,много / многие,
-3903,B1,94,V,main,vielleicht,,,Other,,,,maybe / perhaps,belki / şüphesiz,может быть,
-3904,B1,94,V,main,Viertel,das,-,Noun,,,,quarter,çeyrek,четверть,
-3905,B1,94,V,main,virtuell,,,Other,,,,virtual,sanal,виртуальный,
-3906,B1,94,V,main,Virus,der,,Noun,,,,virus,virüs,вирус,
-3907,B1,94,V,main,Vitamin,das,-e,Noun,,,,vitamin,vitamin,витамин,
-3908,B1,94,V,main,voll,,,Other,,,,full / complete,dolu / tam,полный,
-3909,B1,94,V,main,Vollzeit,die,,Noun,,,,full-time,tam zamanlı,полная занятость,
-3910,B1,94,V,main,völlig,,,Other,,,,completely,tamamen,полностью,
-3911,B1,94,V,main,von,,,Other,,,,from / of,-den / -ın,от / из,
-3912,B1,94,V,main,das,,,Other,,,,the (neuter article) / that,belirli artikel (nötr) / şu,определённый артикль das / то,
-3913,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,to hide,saklamak / gizlemek,прятать / скрывать,
-3914,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,to understand,anlamak,понимать,
-3915,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,to try / to attempt,denemek / girişmek,пытаться,
-3916,B1,94,V,main,Versuch,der,-e,Noun,,,,attempt / try,deneme / girişim,попытка,
-3917,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,to distribute,dağıtmak,распределять / раздавать,
-3918,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,contract,sözleşme / anlaşma,договор / контракт,
-3919,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,to trust,güvenmek,доверять,
-3920,B1,94,V,main,Vertrauen,das,,Noun,,,,trust / confidence,güven,доверие,
-3921,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,to represent,temsil etmek,представлять / замещать,
-3922,B1,94,V,main,Vertreter,der,-,Noun,,,,representative (male),temsilci (erkek),представитель (муж.),
-3923,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,representative (female),temsilci (kadın),представительница (жен.),
-3924,B1,94,V,main,Vertretung,die,-en,Noun,,,,representation / deputy,temsil / vekillik,представительство / замещение,
-3925,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,to convict / to sentence,mahkum etmek / suçlamak,осуждать / приговаривать,
-3926,B1,94,V,main,Verwaltung,die,-en,Noun,,,,administration,yönetim / idare,администрация / управление,
-3927,B1,94,V,main,verwandt,,,Other,,,,related,akraba / ilgili,родственный / родня,
-3928,B1,94,V,main,Verwandte,der,-n,Noun,,,,relative (male),akraba (erkek),родственник (муж.),
-3929,B1,94,V,main,Verwandte,die,-n,Noun,,,,relative (female),akraba (kadın),родственница (жен.),
-3930,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,to mix up / to confuse,karıştırmak,путать,
-3931,B1,94,K,main,können,,,Verb,,,,to be able to,yapabilmek,мочь,
-3932,B1,94,A,main,aufgenommen,,,Verb,,,,recorded,kaydedilmiş,записанный / принятый,
-3933,B1,94,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,
-3934,B1,94,V,main,virtuellen,,,Verb,,,,virtual,sanal,виртуальный,
-3935,B1,94,M,main,meinem,,,Other,,,,my,benim,моему / моей,
-3936,B1,94,G,main,geben,,,Verb,,,,to give,vermek,давать,
-3937,B1,94,E,main,essen,,,Verb,,,,to eat,yemek,есть / кушать,
-3938,B1,94,I,main,immer,,,Other,,,,always,her zaman,всегда,
-3939,B1,94,V,main,vollen,,,Verb,,,,full,dolu,полный,
-3940,B1,94,H,main,heute,,,Other,,,,today,bugün,сегодня,
-3941,B1,94,V,main,versteckt,,,Other,,,,hidden,gizlenmiş,спрятанный,
-3942,B1,94,S,main,sehr,,,Other,,,,very,çok,очень,
-3943,B1,94,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,
-3944,B1,94,S,main,suche,,,Other,,,,search,arama,поиск / ищу,
-3945,B1,94,O,main,ohne,,,Other,,,,without,olmadan,без,
-3946,B1,94,V,main,verteilen,,,Verb,,,,to distribute,dağıtmak,распределять / раздавать,
-3947,B1,94,S,main,schreiben,,,Verb,,,,to write,yazmak,писать,
-3948,B1,94,M,main,machen,,,Verb,,,,to make,yapmak,делать,
-3949,B1,94,I,main,ich,,,Other,,,,I,ben,я,
-3950,B1,94,E,main,-eterin,,,Other,,,,(female suffix fragment),kadınlık eki parçası -eterin,женский суффикс / фрагмент -eterin,
-3951,B1,94,J,main,jemandem,,,Other,,,,someone,birine,кому-то,
-3952,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,to read aloud,sesli okumak,читать вслух,
-3953,B1,95,V,main,Vorort,der,-e,Noun,,,,suburb / outskirts,banliyö / yakın çevre,пригород,
-3954,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,to suggest / to propose,önermek / teklif etmek,предлагать,
-3955,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,suggestion / proposal,öneri / teklif,предложение,
-3956,B1,95,V,main,Vorschrift,die,-en,Noun,,,,regulation / rule,yönetmelik / kural,предписание / правило,
-3957,B1,95,V,main,Vorsicht,die,,Noun,,,,caution / care,dikkat / ihtiyat,осторожность / внимание,
-3958,B1,95,V,main,vorsichtig,,,Other,,,,careful / cautious,dikkatli / ihtiyatlı,осторожный,
-3959,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,to introduce / to imagine,tanıtmak / hayal etmek,представлять / знакомить / воображать,
-3960,B1,95,V,main,Vorstellung,die,-en,Noun,,,,presentation / performance / idea,sunum / gösteri / fikir,представление / спектакль / идея,
-3961,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,job interview,iş görüşmesi,собеседование,
-3962,B1,95,V,main,Vorteil,der,-e,Noun,,,,advantage,avantaj / üstünlük,преимущество,
-3963,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,lecture / talk,konuşma / sunum,доклад / лекция,
-3964,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,area code / dialing code,alan kodu,телефонный код,
-3965,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,accusation / reproach,suçlama / kınama,упрёк / обвинение,
-3966,B1,95,V,main,vor,,,Other,,,,before / in front of / ago,önce / önünde / -nce,перед / до / назад,
-3967,B1,95,V,main,voraus,,,Other,,,,ahead / in advance,ileride / önceden,вперёд / заранее,
-3968,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,prerequisite / requirement,ön koşul / gereksinim,предпосылка / условие,
-3969,B1,95,V,main,voraussichtlich,,,Other,,,,probably / expected,muhtemelen / beklenen,предположительно / вероятно,
-3970,B1,95,V,main,vorbei,,,Other,,,,past / over,geçmiş / bitmiş,мимо / закончился,
-3971,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,to prepare,hazırlamak,готовить / подготавливать,
-3972,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,preparation,hazırlık,подготовка,
-3973,B1,95,V,main,vorder,,,Other,,,,front,ön,передний,
-3974,B1,95,V,main,Vorfahrt,die,,Noun,,,,right of way,geçiş hakkı,преимущественное право проезда,
-3975,B1,95,V,main,vorgestern,,,Other,,,,the day before yesterday,evvelsi gün,позавчера,
-3976,B1,95,V,main,vorhaben,,,Verb,,,hat vor,to plan / to intend,planlamak / niyet etmek,планировать / намереваться,
-3977,B1,95,V,main,vorher,,,Other,,,,before / previously,daha önce / evvelce,раньше / прежде,
-3978,B1,95,V,main,vorhin,,,Other,,,,a moment ago,az önce / demin,только что,
-3979,B1,95,V,main,vorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,to occur / to appear,olmak / meydana gelmek / görünmek,случаться / встречаться,
-3980,B1,95,W,main,wohne,,,Other,,,,live,yaşıyorum,живу,
-3981,B1,95,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,
-3982,B1,95,M,main,machen,,,Verb,,,,to make,yapmak,делать,
-3983,B1,95,B,main,Benutzung,das,,Noun,,,,use / usage,kullanmak / kullanım,использование / пользование,
-3984,B1,95,G,main,glatt,,,Other,,,,smooth / slippery,düz / kaygan,гладкий / скользкий,
-3985,B1,95,N,main,nicht,,,Other,,,,not,değil,не,
-3986,B1,95,G,main,gespräch,,,Other,,,,conversation,konuşma,разговор / беседа,
-3987,B1,95,D,main,dass,,,Other,,,,that,-dığını,что,
-3988,B1,95,E,main,ein,,,Other,,,,a / one,bir,один / одна; неопределённый артикль,
-3989,B1,95,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,
-3990,B1,95,G,main,gehört,,,Other,,,,heard,duyulmuş,услышанный / слышал,
-3991,B1,95,G,main,gekommen,,,Verb,,,,come,gelmiş,пришедший / приехавший,
-3992,B1,95,S,main,schlafen,,,Verb,,,,to sleep,uyumak,спать,
-3993,B1,95,Z,main,-ung,,,Other,,,,(suffix -ung),-ung soneki,суффикс -ung,
-3994,B1,95,V,main,vorbei,,,Other,,,,past / over,geçmiş,мимо / закончился,
-3995,B1,95,P,main,paar,,,Other,,,,a few,birkaç,пара / несколько,
-3996,B1,95,B,main,bereiten,,,Verb,,,,to prepare,hazırlamak,готовить,
-3997,B1,95,B,main,bereiten,,,Verb,,,,to prepare,hazırlamak,готовить,
-3998,B1,95,V,main,vor,,,Other,,,,before,önce,перед / до,
-3999,B1,95,I,main,ich,,,Other,,,,I,ben,я,
-4000,B1,95,S,main,solls,,,Other,,,,should,olmalı,должно / должен,
-4001,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise,mal / emtia,товар,
-4002,B1,96,W,main,warm,,,Other,,,,warm,sıcak,тёплый,
-4003,B1,96,W,main,Wärme,die,,Noun,,,,warmth / heat,sıcaklık / ısı,тепло / теплота,
-4004,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,to warn,uyarmak,предупреждать,
-4005,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,to wait,beklemek,ждать,
-4006,B1,96,W,main,warum,,,Other,,,,why,neden / niçin,почему,
-4007,B1,96,W,main,was,,,Other,,,,what,ne,что,
-4008,B1,96,W,main,was,,,Other,,,,what,ne,что,
-4009,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,to wash,yıkamak,мыть,
-4010,B1,96,W,main,Wäsche,die,,Noun,,,,laundry / washing,çamaşır,бельё / стирка,
-4011,B1,96,W,main,Waschmittel,das,-,Noun,,,,laundry detergent,çamaşır deterjanı,стиральный порошок / средство для стирки,
-4012,B1,96,W,main,Wasser,das,,Noun,,,,water,su,вода,
-4013,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,to change / to exchange,değiştirmek / bozmak,менять / обменивать,
-4014,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,to wake up,uyandırmak,будить,
-4015,B1,96,W,main,Wecker,der,,Noun,,,,alarm clock,çalar saat,будильник,
-4016,B1,96,W,main,waagerecht,,,Other,,,,horizontal,yatay,горизонтальный,
-4017,B1,96,W,main,wach,,,Other,,,,awake,uyanık,бодрствующий / не спящий,
-4018,B1,96,W,main,wachsen,,,Verb,wächst,wuchs,ist gewachsen,to grow,büyümek,расти,
-4019,B1,96,W,main,Wagen,der,-,Noun,,,,car / vehicle / cart,araba / araç / el arabası,автомобиль / тележка,
-4020,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,to choose / to dial,seçmek / aramak,выбирать / набирать номер,
-4021,B1,96,W,main,Wahl,die,-en,Noun,,,,choice / election,seçim,выбор / выборы,
-4022,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / mad / incredibly,deli / çılgın / inanılmaz derecede,сумасшедший / невероятно,
-4023,B1,96,W,main,wahr,,,Other,,,,true,doğru / gerçek,правда / истинный,
-4024,B1,96,W,main,Wahrheit,die,-en,Noun,,,,truth,gerçek / doğru,правда / истина,
-4025,B1,96,W,main,während,,,Other,,,,during / while,-sırasında / -iken,во время / пока,
-4026,B1,96,W,main,wahrscheinlich,,,Other,,,,probably / likely,muhtemelen / büyük ihtimalle,вероятно,
-4027,B1,96,W,main,Wald,der,¨-er,Noun,,,,forest / woods,orman,лес,
-4028,B1,96,W,main,Wand,die,¨-e,Noun,,,,wall,duvar,стена,
-4029,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,to hike / to wander,yürüyüşe çıkmak / dolaşmak,ходить в поход / бродить,
-4030,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,hike,doğa yürüyüşü,поход / прогулка,
-4031,B1,96,W,main,warmen,,,Verb,,,,warm,sıcak,тёплый,
-4032,B1,96,I,main,ist,,,Other,,,,is,-dır,есть / является,
-4033,B1,96,G,main,gewaschen,,,Verb,,,,washed,yıkanmış,вымытый,
-4034,B1,96,A,main,aufhängen,,,Verb,,,,to hang up,asmak / telefonu kapatmak,вешать / класть трубку,
-4035,B1,96,H,main,hier,,,Other,,,,here,burada,здесь,
-4036,B1,96,S,main,sechs,,,Other,,,,six,altı,шесть,
-4037,B1,96,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,
-4038,B1,96,U,main,und,,,Other,,,,and,ve,и,
-4039,B1,96,S,main,statt,,,Other,,,,instead of,yerine,вместо,
-4040,B1,96,E,main,es,,,Other,,,,it,o,это / оно,
-4041,B1,96,O,main,oder,,,Other,,,,or,ya da / veya,или,
-4042,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / incredibly,deli / inanılmaz,сумасшедший / невероятно,
-4043,B1,96,U,main,unsere,,,Other,,,,our,bizim,наш / наша / наши,
-4044,B1,96,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,
-4045,B1,96,A,main,an,,,Other,,,,on / at,-de/-da,на / у / при,
-4046,B1,96,H,main,hört,,,Other,,,,hears / listens,duyuyor / dinliyor,слышит / слушает,
-4047,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,to turn / to refer,dönmek / başvurmak,поворачивать / обращаться,
-4048,B1,97,W,main,wenig / wenige,,,Other,,,,little / few,az / birkaç,мало / немногие,
-4049,B1,97,W,main,wenigstens,,,Other,,,,at least,en azından,по крайней мере,
-4050,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,to become,olmak,становиться,
-4051,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,to throw,atmak / fırlatmak,бросать,
-4052,B1,97,W,main,Werk,das,-e,Noun,,,,work / opus,eser / yapıt,произведение / работа,
-4053,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,workshop / garage,atölye / servis,мастерская / автосервис,
-4054,B1,97,W,main,Werkzeug,das,-e,Noun,,,,tool,araç gereç / alet,инструмент,
-4055,B1,97,W,main,wert,,,Other,,,,worth / valued,değerli / değer,ценный / стоящий,
-4056,B1,97,W,main,Wert,der,-e,Noun,,,,value / worth,değer,ценность / стоимость,
-4057,B1,97,W,main,wertlos,,,Other,,,,worthless,değersiz,бесполезный / ничего не стоящий,
-4058,B1,97,W,main,wertvoll,,,Other,,,,valuable,değerli,ценный,
-4059,B1,97,W,main,weg,,,Other,,,,away / gone,uzakta / gitmiş,прочь / ушёл,
-4060,B1,97,W,main,wegen,,,Verb,,,,because of / due to,nedeniyle / yüzünden,из-за,
-4061,B1,97,W,main,weiblich,,,Other,,,,female,kadın / dişi,женский,
-4062,B1,97,W,main,weich,,,Other,,,,soft,yumuşak,мягкий,
-4063,B1,97,W,main,weil,,,Other,,,,because,çünkü,потому что,
-4064,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,wine,şarap,вино,
-4065,B1,97,W,main,weit / weiter,,,Other,,,,far / further / farther,uzak / daha ileri / daha uzak,далеко / дальше,
-4066,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,further education / continuing education,devam eğitimi / mesleki gelişim,повышение квалификации / дополнительное обучение,
-4067,B1,97,W,main,Welt,die,,Noun,,,,world,dünya,мир,
-4068,B1,97,W,main,weltweit,,,Verb,,,,worldwide,dünya genelinde,по всему миру / всемирный,
-4069,B1,97,A,main,angeboten,,,Verb,,,,offered,sunulmuş,предложенный / предложили,
-4070,B1,97,D,main,dürfen,,,Verb,,,,may / to be allowed to,-ebilmek / izin,мочь / иметь разрешение,
-4071,B1,97,W,main,wenn,,,Other,,,,when / if,-diğinde / eğer,когда / если,
-4072,B1,97,W,main,wirst,,,Other,,,,will become,olacaksın,станешь / будешь,
-4073,B1,97,V,main,verrückt,,,Other,,,,crazy / mad,deli / çılgın,сумасшедший / безумный,
-4074,B1,97,G,main,geworfen,,,Verb,,,,thrown,atılmış,брошенный,
-4075,B1,97,S,main,statt,,,Other,,,,instead of,yerine,вместо,
-4076,B1,97,W,main,wert,,,Other,,,,worth,değerli,стоящий / ценный,
-4077,B1,97,V,main,von,,,Other,,,,from / of,-den / -in,от / из,
-4078,B1,97,L,main,leider,,,Other,,,,unfortunately,ne yazık ki,к сожалению,
-4079,B1,97,A,main,angenehm,,,Other,,,,pleasant / comfortable,hoş / konforlu,приятный / комфортный,
-4080,B1,97,E,main,erklären,,,Verb,,,,to explain,açıklamak,объяснять,
-4081,B1,97,N,main,nicht,,,Other,,,,not,değil,не,
-4082,B1,97,B,main,bin,,,Other,,,,am,-im,есть / являюсь,
-4083,B1,97,G,main,guten,,,Verb,,,,good,iyi,хороший / добрый,
-4084,B1,97,N,main,neue,,,Other,,,,new,yeni,новый / новые,
-4085,B1,97,E,main,einfach,,,Other,,,,simple / just,basit / sadece,простой / просто,
-4086,B1,97,R,main,ruhig,,,Other,,,,quiet / calm,sakin,спокойный / тихий,
-4087,B1,98,W,main,willkommen,,,Verb,,,,welcome,hoş geldiniz,добро пожаловать,
-4088,B1,98,W,main,Wind,der,-e,Noun,,,,wind,rüzgar,ветер,
-4089,B1,98,W,main,windig,,,Other,,,,windy,rüzgarlı,ветреный,
-4090,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,to wave,el sallayarak selamlamak,махать,
-4091,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,to work / to have an effect,çalışmak / etki etmek,действовать / производить впечатление,
-4092,B1,98,W,main,Wirkung,die,-en,Noun,,,,effect / impact,etki,действие / эффект,
-4093,B1,98,W,main,wirklich,,,Other,,,,really / truly,gerçekten,действительно,
-4094,B1,98,W,main,Wirklichkeit,die,,Noun,,,,reality,gerçeklik,реальность,
-4095,B1,98,W,main,Wirt,der,-edie,Noun,,,,innkeeper / host,hancı / ev sahibi,хозяин гостиницы / трактирщик,
-4096,B1,98,W,main,Wirtschaft,die,,Noun,,,,economy / business,ekonomi / ticaret,экономика / хозяйство,
-4097,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,to know,bilmek,знать,
-4098,B1,98,W,main,Wissen,das,,Noun,,,,knowledge,bilgi,знание,
-4099,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,science,bilim,наука,
-4100,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,scientist (male),bilim insanı (erkek),учёный (муж.),
-4101,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,scientist (female),bilim insanı (kadın),учёная (жен.),
-4102,B1,98,W,main,Witz,der,-e,Noun,,,,joke,şaka / fıkra,шутка,
-4103,B1,98,W,main,wo,,,Other,,,,where,nerede,где,
-4104,B1,98,W,main,Wetter,das,,Noun,,,,weather,hava / hava durumu,погода,
-4105,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,weather report,hava raporu,прогноз погоды / сводка погоды,
-4106,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,weather forecast,hava tahmini,прогноз погоды,
-4107,B1,98,W,main,wichtig,,,Other,,,,important,önemli,важный,
-4108,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,to contradict / to object,itiraz etmek / çelişmek,возражать / противоречить,
-4109,B1,98,W,main,wie,,,Other,,,,how / as,nasıl / gibi,как / словно,
-4110,B1,98,W,main,wieder,,,Other,,,,again,yeniden / tekrar,снова / опять,
-4111,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,to repeat,tekrarlamak,повторять,
-4112,B1,98,W,main,Wiederholung,die,-en,Noun,,,,repetition,tekrar,повторение,
-4113,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,to weigh,tartmak,весить / взвешивать,
-4114,B1,98,W,main,wild,,,Other,,,,wild,vahşi / yabani,дикий,
-4115,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,meadow,çayır / mera,луг,
-4116,B1,98,W,main,winkten,,,Verb,,,,waved,el sallamış,махали,
-4117,B1,98,M,main,-ment,,,Other,,,,(suffix -ment),-ment soneki,суффикс -ment,
-4118,B1,98,W,main,wirklich,,,Other,,,,really,gerçekten,действительно,
-4119,B1,98,W,main,wirklich,,,Other,,,,really,gerçekten,действительно,
-4120,B1,98,U,main,um,,,Other,,,,around / at,etrafında,вокруг / примерно в,
-4121,B1,98,Ü,main,über,,,Other,,,,about / over,hakkında,о / над,
-4122,B1,98,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,
-4123,B1,98,T,main,treffen,,,Verb,,,,to meet,buluşmak,встречаться,
-4124,B1,98,G,main,gelacht,,,Other,,,,laughed,gülünmüş,смеявшийся / смеялись,
-4125,B1,98,S,main,spät,,,Other,,,,late,geç,поздно / поздний,
-4126,B1,98,S,main,schön,,,Other,,,,beautiful,güzel,красивый,
-4127,B1,98,G,main,gehört,,,Other,,,,heard,duyulmuş,услышанный / слышал,
-4128,B1,98,T,main,trocken,,,Verb,,,,dry,kuru,сухой,
-4129,B1,98,A,main,aber,,,Other,,,,but,ama,но,
-4130,B1,98,S,main,spät,,,Other,,,,late,geç,поздно / поздний,
-4131,B1,98,M,main,wen,,,Verb,,,,whom,men,кого,
-4132,B1,98,M,main,möglich,,,Other,,,,possible,mümkün,возможный,
-4133,B1,98,F,main,fragen,,,Verb,,,,to ask,sormak,спрашивать,
-4134,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,to wish,dilemek / istemek,желать,
-4135,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,wish / desire,dilek / istek,желание,
-4136,B1,99,W,main,Wurst,die,¨-e,Noun,,,,sausage,sosis / salam,колбаса,
-4137,B1,99,W,main,wütend,,,Other,,,,angry / furious,öfkeli / kızgın,сердитый / яростный,
-4138,B1,99,Z,main,Zahl,die,-en,Noun,,,,number / figure,sayı / rakam,число / цифра,
-4139,B1,99,A,main,Anzahl,die,-en,Noun,,,,number / quantity,sayı / adet,количество / число,
-4140,B1,99,Z,main,zahlreich,,,Other,,,,numerous,çok sayıda / kalabalık,многочисленный,
-4141,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,to pay,ödemek,платить,
-4142,B1,99,Z,main,Zahlung,die,-en,Noun,,,,payment,ödeme,платёж / оплата,
-4143,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,to count,saymak,считать,
-4144,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,tooth,diş,зуб,
-4145,B1,99,Z,main,Zahncreme / -pasta,die,,Noun,,,,toothpaste,diş macunu,зубная паста,
-4146,B1,99,Z,main,Zange,die,-n,Noun,,,,pliers / tongs,pense / maşa,клещи / щипцы,
-4147,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,sign / symbol,işaret / sembol,знак / символ,
-4148,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,to live / to reside,yaşamak / oturmak,жить / проживать,
-4149,B1,99,W,main,Wohnort,der,-e,Noun,,,,place of residence,ikamet yeri,место жительства,
-4150,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,place of residence / domicile,ikamet / yerleşim yeri,место проживания / домициль,
-4151,B1,99,W,main,Wohnung,die,-en,Noun,,,,apartment / flat,daire / apartman,квартира,
-4152,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,living room,oturma odası / salon,гостиная,
-4153,B1,99,W,main,Wolke,die,-n,Noun,,,,cloud,bulut,облако,
-4154,B1,99,B,main,bewölkt,,,Other,,,,cloudy / overcast,bulutlu / kapalı,облачный / пасмурный,
-4155,B1,99,W,main,Wolle,die,,Noun,,,,wool,yün,шерсть / шерстяная пряжа,
-4156,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,to want,istemek,хотеть,
-4157,B1,99,W,main,worüber,,,Other,,,,about what,ne hakkında,о чём,
-4158,B1,99,W,main,worum,,,Other,,,,about what / for what,ne hakkında / ne için,о чём / за что,
-4159,B1,99,W,main,Wort,das,¨-er,Noun,,,,word,kelime / sözcük,слово,
-4160,B1,99,W,main,Wort,das,-e,Noun,,,,word,kelime / sözcük,слово,
-4161,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,dictionary,sözlük,словарь,
-4162,B1,99,W,main,Wunde,die,-n,Noun,,,,wound,yara,рана,
-4163,B1,99,W,main,Wunder,das,-,Noun,,,,miracle / wonder,mucize / harika,чудо,
-4164,B1,99,W,main,wunderbar,,,Other,,,,wonderful / great,harika / muhteşem,замечательный / чудесный,
-4165,B1,99,W,main,war,,,Other,,,,was,-dı/-di,был / была,
-4166,B1,99,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,
-4167,B1,99,H,main,hier,,,Other,,,,here,burada,здесь,
-4168,B1,99,F,main,früh,,,Other,,,,early,erken,рано / ранний,
-4169,B1,99,L,main,los,,,Other,,,,off / away,başla / uzağa,прочь / давай / начало,
-4170,B1,99,I,main,immer,,,Other,,,,always,her zaman,всегда,
-4171,B1,99,M,main,musste,,,Other,,,,had to,zorunda kalmış,должен был / пришлось,
-4172,B1,99,S,main,sofort,,,Other,,,,immediately,hemen,сразу / немедленно,
-4173,B1,99,B,main,brauchst,,,Other,,,,need,ihtiyacın var,нуждаешься,
-4174,B1,99,M,main,mich,,,Other,,,,me,beni,меня / мне,
-4175,B1,99,G,main,geplant,,,Other,,,,planned,planlanmış,запланированный,
-4176,B1,99,M,main,möglichst,,,Other,,,,as ... as possible,mümkün olduğunca,по возможности,
-4177,B1,99,F,main,fern,,,Verb,,,,television,televizyon,телевидение,
-4178,B1,99,G,main,gesagt,,,Other,,,,said,söylenmiş,сказанный / сказал,
-4179,B1,99,N,main,nachschlagen,,,Verb,,,,to look up,araştırmak,посмотреть в справочнике / найти,
-4180,B1,99,V,main,verbinden,,,Verb,,,,to connect,bağlamak,соединять,
-4181,B1,99,B,main,bares,,,Other,,,,cash,nakit,наличные,
-4182,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,to pull / to move,çekmek / taşınmak,тянуть / переезжать,
-4183,B1,100,Z,main,Ziel,das,-e,Noun,,,,goal / destination / aim,hedef / varış noktası / amaç,цель / пункт назначения / задача,
-4184,B1,100,Z,main,ziemlich,,,Other,,,,quite / fairly / rather,oldukça / epeyce,довольно / достаточно,
-4185,B1,100,Z,main,Zigarette,die,-n,Noun,,,,cigarette,sigara,сигарета,
-4186,B1,100,Z,main,Zimmer,das,-,Noun,,,,room,oda,комната,
-4187,B1,100,Z,main,Zinsen,die,,Noun,,,,interest (financial),faiz,проценты,
-4188,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,circus,sirk,цирк,
-4189,B1,100,Z,main,Zivilstand,der,,Noun,,,,marital status (Swiss),medeni durum (İsviçre),семейное положение,
-4190,B1,100,L,main,Familienstand,,,Other,,,,marital status,medeni durum,семейное положение,
-4191,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,customs / duty / inch,gümrük / vergi / inç,таможня / пошлина / дюйм,
-4192,B1,100,Z,main,Zone,die,-nder,Noun,,,,zone,bölge / alan,зона,
-4193,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,to prepare (food),pişirmek / hazırlamak (yemek),готовить (еду),
-4194,B1,100,Z,main,Zucker,der,,Noun,,,,sugar,şeker,сахар,
-4195,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,to draw,çizmek / resim yapmak,рисовать,
-4196,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,drawing,çizim / resim,рисунок,
-4197,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,to show / to point,göstermek / işaret etmek,показывать / указывать,
-4198,B1,100,Z,main,Zeile,die,-n,Noun,,,,line / row,satır / sıra,строка / ряд,
-4199,B1,100,Z,main,Zeit,die,,Noun,,,,time,zaman,время,
-4200,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,point in time / moment,an / zaman noktası,момент / точка во времени,
-4201,B1,100,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar,в настоящее время,
-4202,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,magazine / journal,dergi / yayın,журнал / журнал-издание,
-4203,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,newspaper,gazete,газета,
-4204,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,to camp / to go camping,kamp yapmak,разбивать лагерь / ходить в поход с палаткой,
-4205,B1,100,Z,main,zentral,,,Other,,,,central,merkezi,центральный,
-4206,B1,100,Z,main,Zentrum,das,,Noun,,,,center / centre,merkez,центр,
-4207,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,to destroy,yıkmak / tahrip etmek,разрушать,
-4208,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,certificate,sertifika,сертификат,
-4209,B1,100,Z,main,Zettel,der,-das,Noun,,,,slip of paper / note,not kağıdı / fiş,листок / записка,
-4210,B1,100,Z,main,Zeuge,der,-n,Noun,,,,witness (male),tanık (erkek),свидетель (муж.),
-4211,B1,100,Z,main,Zeugin,die,,Noun,,,,witness (female),tanık (kadın),свидетельница (жен.),
-4212,B1,100,I,main,ins,,,Other,,,,into the,-e/-a,в / внутрь,
-4213,B1,100,W,main,warten,,,Verb,,,,to wait,beklemek,ждать,
-4214,B1,100,S,main,serviert,,,Other,,,,served,servis edilmiş,поданный / обслуженный,
-4215,B1,100,M,main,mein,,,Other,,,,my,benim,мой / моя / мои,
-4216,B1,100,D,main,den,,,Verb,,,,the,-ı,определённый артикль,
-4217,B1,100,A,main,ankreuzen,,,Verb,,,,to mark / check,işaretlemek,отмечать / ставить крестик,
-4218,B1,100,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,
-4219,B1,100,E,main,eine,,,Other,,,,a / one,bir,один / одна; неопределённый артикль,
-4220,B1,100,N,main,-nen,,,Verb,,,,(verb ending -nen),-nen fiil eki,глагольное окончание -nen,
-4221,B1,100,K,main,kaufen,,,Verb,,,,to buy,satın almak,покупать,
-4222,B1,100,G,main,gerade,,,Other,,,,straight / just / currently,düz / tam şu anda,прямо / как раз / сейчас,
-4223,B1,100,Z,main,zeige,,,Other,,,,show,göster,покажи,
-4224,B1,100,W,main,Weise,,,Other,,,,way / manner,weise,образ / способ,
-4225,B1,100,N,main,nehmen,,,Verb,,,,to take,almak,брать,
-4226,B1,100,I,main,in,,,Other,,,,in,-de/-da,в,
-4227,B1,100,P,main,plätze,,,Other,,,,places,yerler,места,
-4228,B1,100,B,main,bekomme,,,Other,,,,receive,alıyorum,получаю,
-4229,B1,100,M,main,muss,,,Other,,,,must,-malı,должен / должно,
-4230,B1,100,G,main,gemacht,,,Other,,,,made,yapılmış,сделанный,
-4231,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,match / matchstick,kibrit,спичка,
-4232,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,to manage / to cope,başa çıkmak / idare etmek,справляться / управляться,
-4233,B1,101,Z,main,zurück,,,Other,,,,back / return,geri / geri dönüş,назад / обратно,
-4234,B1,101,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar,в настоящее время,
-4235,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,to agree / to accept,kabul etmek / razı olmak,соглашаться / принимать предложение,
-4236,B1,101,Z,main,zusammen,,,Other,,,,together,birlikte,вместе,
-4237,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,cooperation / teamwork,işbirliği / takım çalışması,сотрудничество,
-4238,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,to summarize,özetlemek,резюмировать / подытоживать,
-4239,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,context / connection,bağlam / bağlantı,связь / контекст,
-4240,B1,101,Z,main,zusätzlich,,,Other,,,,additional / extra,ek / ilave,дополнительный,
-4241,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,to watch / to look on,izlemek / seyretmek,наблюдать / смотреть,
-4242,B1,101,Z,main,Zuschauer,der,-,Noun,,,,spectator (male),seyirci (erkek),зритель (муж.),
-4243,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,spectator (female),seyirci (kadın),зрительница (жен.),
-4244,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,surcharge / supplement,ek ücret / vergi,доплата / надбавка,
-4245,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,coincidence / chance,tesadüf / şans,случайность / совпадение,
-4246,B1,101,Z,main,zufällig,,,Other,,,,coincidentally / by chance,tesadüfen / şans eseri,случайно,
-4247,B1,101,Z,main,zufrieden,,,Verb,,,,satisfied / content,memnun / tatmin olmuş,довольный / удовлетворённый,
-4248,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,access / entry,erişim / giriş,доступ / вход,
-4249,B1,101,Z,main,zugänglich,,,Other,,,,accessible,erişilebilir,доступный,
-4250,B1,101,Z,main,Zug,der,¨-e,Noun,,,,train,tren,поезд,
-4251,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,to approach / to proceed,yaklaşmak / ilerlemek,подходить / продвигаться,
-4252,B1,101,Z,main,Zuhause,das,,Noun,,,,home,ev / evde,дом / дома,
-4253,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,to listen,dinlemek,слушать,
-4254,B1,101,Z,main,Zuhörer,der,-,Noun,,,,listener (male),dinleyici (erkek),слушатель (муж.),
-4255,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,listener (female),dinleyici (kadın),слушательница (жен.),
-4256,B1,101,Z,main,Zukunft,die,,Noun,,,,future,gelecek,будущее,
-4257,B1,101,Z,main,zukünftig,,,Other,,,,future / upcoming,gelecekteki / yaklaşan,будущий / предстоящий,
-4258,B1,101,Z,main,zuletzt,,,Other,,,,at last / in the end,sonunda / son olarak,в конце концов / в последний раз,
-4259,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,to close / to shut,kapatmak,закрывать,
-4260,B1,101,Z,main,zumindest,,,Other,,,,at least,en azından,по крайней мере,
-4261,B1,101,Z,main,zunächst,,,Other,,,,first of all / at first,her şeyden önce / ilk başta,прежде всего / сначала,
-4262,B1,101,Z,main,ich,,,Other,,,,I,ben,я,
-4263,B1,101,M,main,Männer,,,Noun,,,,men,erkekler,мужчины,
-4264,B1,101,K,main,komme,,,Other,,,,come,geliyorum,прихожу,
-4265,B1,101,U,main,und,,,Other,,,,and,ve,и,
-4266,B1,101,E,main,eingeladen,,,Verb,,,,invited,davet edilmiş,приглашённый,
-4267,B1,101,G,main,gespielt,,,Other,,,,played,oynamış,игранный / играл,
-4268,B1,101,G,main,getrennt,,,Other,,,,separated,ayrılmış,разделённый / отдельно,
-4269,B1,101,S,main,schreiben,,,Verb,,,,to write,yazmak,писать,
-4270,B1,101,Z,main,zusammenfassen,,,Verb,,,,to summarize,özetlemek,резюмировать / подытоживать,
-4271,B1,101,D,main,diesen,,,Verb,,,,this,bu,этот / эту / это,
-4272,B1,101,Z,main,zusätzlich,,,Other,,,,additional,ek / ilave,дополнительно,
-4273,B1,101,S,main,schaue,,,Other,,,,watch,bakıyorum,смотрю,
-4274,B1,101,G,main,gute,,,Other,,,,good,iyi,хороший / хорошие,
-4275,B1,101,I,main,ihr,,,Other,,,,you,siz,вы / ей / её,
-4276,B1,101,G,main,gefallen,,,Verb,,,,liked / fallen,beğenilmiş / düşmüş,понравившийся / понравился,
-4277,B1,101,G,main,getroffen,,,Verb,,,,met,buluşulmuş,встреченный / встретились,
-4278,B1,101,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,
-4279,B1,101,S,main,schwierig,,,Other,,,,difficult,zor,трудный / сложный,
-4280,B1,101,E,main,en-,,,Other,,,,(prefix / fragment en-),en- öneki / parçası,приставка / фрагмент en-,
-4281,B1,101,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,
-4282,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,to doubt,şüphe etmek / kuşku duymak,сомневаться,
-4283,B1,102,Z,main,Zweifel,der,-,Noun,,,,doubt,şüphe / kuşku,сомнение,
-4284,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,onion,soğan,лук,
-4285,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,to force / to compel,zorlamak / mecbur etmek,заставлять / принуждать,
-4286,B1,102,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,
-4287,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,condition / state,durum / hal,состояние / положение,
-4288,B1,102,Z,main,zuständig,,,Other,,,,responsible / in charge,yetkili / sorumlu,ответственный / компетентный,
-4289,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,to agree / to approve,onaylamak / kabul etmek,соглашаться / одобрять,
-4290,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,agreement / approval / consent,onay / rıza / kabul,согласие / одобрение,
-4291,B1,102,Z,main,Zutaten,die,,Noun,,,,ingredients,malzemeler / içerikler,ингредиенты,
-4292,B1,102,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,
-4293,B1,102,U,main,umzukehren,,,Verb,,,,to turn around / to reverse,geri dönmek / tersine çevirmek,повернуть назад / развернуться,
-4294,B1,102,B,main,beiden,,,Verb,,,,both,her iki,оба / обеих,
-4295,B1,102,U,main,und,,,Other,,,,and,ve,и,
-4296,B1,102,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,
-4297,B1,102,D,main,diesen,,,Verb,,,,this,bu,этот / эту / это,
+3751,B1,91,V,main,verabschieden,,,Verb,verabschiedet,verabschiedete,hat verabschiedet,to say goodbye,veda etmek / uğurlamak,прощаться / провожать,прощатися
+3752,B1,91,A,main,Abschied,der,-e,Noun,,,,farewell / goodbye,veda,прощание,прощання
+3753,B1,91,V,main,verändern,,,Verb,verändert,veränderte,hat verändert,to change,değiştirmek / değişmek,изменять,змінювати
+3754,B1,91,V,main,Veranstaltung,die,-enverantwortlich,Noun,,,,event,etkinlik / organizasyon,мероприятие / событие,захід / подія
+3755,B1,91,V,main,Verantwortung,die,,Noun,,,,responsibility,sorumluluk,ответственность,відповідальність
+3756,B1,91,V,main,verbessern,,,Verb,verbessert,verbesserte,hat verbessert,to improve,geliştirmek / iyileştirmek,улучшать,покращувати
+3757,B1,91,V,main,verbieten,,,Verb,verbietet,verbot,hat verboten,to forbid / to prohibit,yasaklamak,запрещать,забороняти
+3758,B1,91,V,main,Verbot,das,-e,Noun,,,,ban / prohibition,yasak,запрет,заборона
+3759,B1,91,V,main,verboten,,,Verb,,,,forbidden / prohibited,yasak / yasaklı,запрещённый,заборонений
+3760,B1,91,V,main,verbinden,,,Verb,verbindet,verband,hat verbundenunterschiedlich,to connect / to link,bağlamak / birleştirmek,соединять / связывать,з'єднувати / пов'язувати
+3761,B1,91,U,main,unterschreiben,,,Verb,unter-schreibt,unterschrieb,hat unterschrieben,to sign,imzalamak,подписывать,підписувати
+3762,B1,91,U,main,Unterschrift,die,-en,Noun,,,,signature,imza,подпись,підпис
+3763,B1,91,U,main,unterstreichen,,,Verb,unterstre-,icht,hat unterstrichen,to underline,altını çizmek,подчёркивать,підкреслювати
+3764,B1,91,U,main,unterstützen,,,Verb,unterstützt,unterstützte,hat unterstützt,to support,desteklemek,поддерживать,підтримувати
+3765,B1,91,U,main,Unterstützung,die,-en,Noun,,,,support,destek,поддержка,підтримка
+3766,B1,91,U,main,untersuchen,,,Verb,untersucht,untersuchte,hat untersucht,to examine / to investigate,incelemek / araştırmak,исследовать / обследовать,досліджувати / перевіряти
+3767,B1,91,U,main,Untersuchung,die,-en,Noun,,,,examination / investigation,inceleme / araştırma,исследование / обследование,дослідження / перевірка
+3768,B1,91,U,main,unterwegs,,,Other,,,,on the way / traveling,yolda / seyahatte,в пути / в дороге,в дорозі / подорожуючи
+3769,B1,91,U,main,Urkunde,die,-n,Noun,,,,document / certificate,belge / sertifika,документ / грамота / сертификат,документ / сертифікат
+3770,B1,91,U,main,Urlaub,der,-e,Noun,,,,vacation / holiday,tatil,отпуск / каникулы,відпустка / відпочинок
+3771,B1,91,U,main,Ursache,die,-n,Noun,,,,cause / reason,neden / sebep,причина,причина
+3772,B1,91,V,main,verursachen,,,Verb,verursacht,verursachte,hat verursacht,to cause,neden olmak / yol açmak,вызывать / причинять,спричиняти
+3773,B1,91,U,main,ursprünglich,,,Other,,,,originally,başlangıçta / aslen,первоначально / изначально,спочатку / первісно
+3774,B1,91,U,main,Urteil,das,,Noun,,,,verdict / judgment,karar / hüküm,приговор / суждение,вирок / рішення
+3775,B1,91,L,main,liebsten,,,Verb,,,,best,en sevilen,больше всего / любимее всего,найулюбленіший
+3776,B1,91,Z,main,zur,,,Other,,,,to the,-e/-a,к / к тому,до
+3777,B1,91,V,main,verabredet,,,Other,,,,arranged to meet,randevulaşılmış,договорившийся о встрече,домовлений про зустріч
+3778,B1,91,B,main,bin,,,Other,,,,am,-im,есть / являюсь,є (я є)
+3779,B1,91,M,main,mit,,,Other,,,,with,ile,с,з
+3780,B1,91,N,main,nett,,,Other,,,,nice,nazik / hoş,милый / приятный,милий / приємний
+3781,B1,91,V,main,verabschieden,,,Verb,,,,to say goodbye,veda etmek,прощаться,прощатися
+3782,B1,91,F,main,fiel,,,Other,,,,fell,düştü,упал,впав
+3783,B1,91,S,main,sen,,,Verb,,,,sen,sen,тебе,сен (частка)
+3784,B1,91,V,main,verbessert,,,Other,,,,improved,geliştirilmiş,улучшенный,покращений
+3785,B1,91,V,main,verboten,,,Verb,,,,forbidden,yasak,запрещено,заборонений
+3786,B1,91,R,main,rechts,,,Other,,,,right (direction),sağa,направо,праворуч
+3787,B1,91,U,main,unterstreichen,,,Verb,,,,to underline,altını çizmek,подчёркивать,підкреслювати
+3788,B1,91,K,main,können,,,Verb,,,,to be able to,yapabilmek,мочь,могти
+3789,B1,91,L,main,lassen,,,Verb,,,,to let / to leave,bırakmak,позволять / оставлять,дозволяти / залишати
+3790,B1,91,A,main,Art,,,Other,,,,kind / type,tür / çeşit,вид / тип,вид / тип
+3791,B1,91,K,main,komme,,,Other,,,,come,geliyorum,прихожу,приходжу
+3792,B1,91,E,main,essen,,,Verb,,,,to eat,yemek,есть / кушать,їсти
+3793,B1,91,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,отримувати
+3794,B1,91,H,main,hart,,,Other,,,,hard / tough,sert / zor,твёрдый / тяжёлый,твердий / важкий
+3795,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,neşeli / memnun,весёлый / довольный,задоволений / радісний
+3796,B1,92,V,main,vergrößern,,,Verb,vergrößert,vergrößerte,hat vergrößert,to enlarge / to expand,büyütmek / genişletmek,увеличивать,збільшувати / розширювати
+3797,B1,92,V,main,verhaften,,,Verb,verhaftet,verhaftete,hat verhaftet,to arrest,tutuklamak,арестовывать,заарештовувати
+3798,B1,92,V,main,Verhalten,das,,Noun,,,,behavior / conduct,davranış / tutum,поведение,поведінка
+3799,B1,92,V,main,Verhältnis,das,-se,Noun,,,,relationship / ratio,ilişki / oran,отношение / соотношение,стосунки / відношення
+3800,B1,92,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,одружений / заміжня
+3801,B1,92,V,main,verhindern,,,Verb,verhindert,verhinderte,hat verhindert,to prevent,engellemek / önlemek,предотвращать,запобігати / перешкоджати
+3802,B1,92,V,main,verkaufen,,,Verb,verkauft,verkaufte,hat verkauft,to sell,satmak,продавать,продавати
+3803,B1,92,V,main,Verkäufer,der,-die,Noun,,,,salesperson (male),satıcı (erkek),продавец (муж.),продавець (чол.)
+3804,B1,92,V,main,Verkehr,der,,Noun,,,,traffic,trafik,движение / транспорт / дорожное движение,рух / транспорт
+3805,B1,92,V,main,Verkehrsmittel,das,-,Noun,,,,means of transportation,ulaşım aracı,транспортное средство,засіб пересування
+3806,B1,92,V,main,Verlag,der,,Noun,,,,publisher / publishing house,yayınevi,издательство,видавництво
+3807,B1,92,V,main,verlängern,,,Verb,verlängert,verlängerte,hat verlängert,to extend / to lengthen,uzatmak / uzatmak,продлевать / удлинять,продовжувати / подовжувати
+3808,B1,92,V,main,verlassen,,,Verb,verlässt,verließ,hat verlassen,to leave / to abandon,terk etmek / bırakmak,покидать / оставлять,покидати / залишати
+3809,B1,92,V,main,verbrauchen,,,Verb,verbraucht,verbrauchte,hat verbraucht,to use up / to consume,tüketmek / harcamak,расходовать / потреблять,витрачати / споживати
+3810,B1,92,V,main,Verbrecher,der,-,Noun,,,,criminal / offender (male),suçlu (erkek),преступник (муж.),злочинець (чол.)
+3811,B1,92,V,main,Verbrecherin,die,-nen,Noun,,,,criminal / offender (female),suçlu (kadın),преступница (жен.),злочинниця (жін.)
+3812,B1,92,V,main,verbrennen,,,Verb,verbrennt,verbrannte,hat verbrannt,to burn,yakmak / yanmak,сжигать / обжигаться,спалювати / горіти
+3813,B1,92,V,main,verbringen,,,Verb,verbringt,verbrachte,hat verbracht,to spend (time),geçirmek (zaman),проводить (время),проводити (час)
+3814,B1,92,V,main,Verdacht,der,,Noun,,,,suspicion,şüphe / kuşku,подозрение,підозра
+3815,B1,92,V,main,verdächtig,,,Other,,,,suspicious,şüpheli / kuşkulu,подозрительный,підозрілий
+3816,B1,92,V,main,verdienen,,,Verb,verdient,verdiente,hat verdient,to earn,kazanmak,зарабатывать,заробляти
+3817,B1,92,V,main,Verein,der,-e,Noun,,,,club / association,kulüp / dernek,клуб / объединение,клуб / асоціація
+3818,B1,92,V,main,vereinbaren,,,Verb,vereinbart,vereinbarte,hat vereinbart,to arrange / to agree on,anlaşmak / kararlaştırmak,договариваться / согласовывать,домовлятися / погоджувати
+3819,B1,92,V,main,Vergangenheit,die,,Noun,,,,past,geçmiş,прошлое,минуле
+3820,B1,92,V,main,vergeblich,,,Other,,,,in vain,boşuna,напрасно,марно / даремно
+3821,B1,92,V,main,vergessen,,,Verb,vergisst,vergaß,hat vergessen,to forget,unutmak,забывать,забувати
+3822,B1,92,V,main,vergleichen,,,Verb,vergleicht,verglich,hat verglichen,to compare,karşılaştırmak,сравнивать,порівнювати
+3823,B1,92,V,main,Vergleich,der,-e,Noun,,,,comparison,karşılaştırma,сравнение,порівняння
+3824,B1,92,B,main,beim,,,Other,,,,at the,-de/-da,у / при,при / на
+3825,B1,92,H,main,herein,,,Other,,,,in / inside,içeri,внутрь / сюда,всередину / заходьте
+3826,B1,92,M,main,merkwürdig,,,Other,,,,strange / odd,tuhaf / garip,странный,дивний / незвичайний
+3827,B1,92,S,main,schwierigen,,,Verb,,,,difficult,zor,трудный / сложный,важкий / складний
+3828,B1,92,M,main,meinen,,,Verb,,,,to mean / to think,anlamak / düşünmek,иметь в виду / считать,мати на увазі / думати
+3829,B1,92,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,одружений / заміжня
+3830,B1,92,V,main,verhindern,,,Verb,,,,to prevent,engellemek,предотвращать,запобігати
+3831,B1,92,H,main,helfen,,,Verb,,,,to help,yardım etmek,помогать,допомагати
+3832,B1,92,M,main,mit,,,Other,,,,with,ile,с,з
+3833,B1,92,V,main,verlangt,,,Other,,,,demanded,talep edilmiş,потребованный / потребовал,вимагав / потребував
+3834,B1,92,L,main,lassen,,,Verb,,,,to let / to leave,bırakmak,позволять / оставлять,дозволяти / залишати
+3835,B1,92,H,main,helfe,,,Other,,,,help,yardım ediyorum,помогаю,допомагаю
+3836,B1,92,D,main,direkt,,,Other,,,,direct,direkt,прямой / прямо,прямий / безпосередній
+3837,B1,92,V,main,verhaftet,,,Other,,,,arrested,tutuklanmış,арестованный,заарештований
+3838,B1,92,V,main,verbrannt,,,Other,,,,burned,yanmış,сгоревший / обожжённый,спалений / обгорілий
+3839,B1,92,I,main,ich,,,Other,,,,I,ben,я,я
+3840,B1,92,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,бачений / побачений
+3841,B1,92,D,main,dient,,,Other,,,,serves,hizmet ediyor,служит,служить
+3842,B1,92,D,main,diesem,,,Other,,,,this (dative),bu,этому / этой / этому (дат.),цьому
+3843,B1,92,A,main,anzurufen,,,Verb,,,,to call,aramak,позвонить,зателефонувати
+3844,B1,92,V,main,vergnügt,,,Other,,,,delighted / pleased,neşeli / memnun,весёлый / довольный,задоволений / радісний
+3845,B1,93,V,main,verpflichtet,,,Other,,,,obligated / required,yükümlü / zorunlu,обязанный / обязателен,зобов'язаний
+3846,B1,93,V,main,verraten,,,Verb,verrät,verriet,hat verraten,to betray / to reveal,ihanet etmek / açığa çıkarmak,предавать / выдавать / раскрывать,зраджувати / розкривати
+3847,B1,93,V,main,verreisen,,,Verb,verreist,verreiste,ist verreist,to travel / to go on a trip,seyahate çıkmak,уезжать / отправляться в поездку,вирушати в подорож
+3848,B1,93,V,main,verrückt,,,Other,,,,crazy / mad,deli / çılgın,сумасшедший / безумный,божевільний / шалений
+3849,B1,93,V,main,Versammlung,die,"-enversäumen, versäumt,",Noun,,,,meeting / assembly,toplantı / meclis,собрание,збори / зібрання
+3850,B1,93,V,main,verschieben,,,Verb,verschiebt,verschob,hat verschoben,to postpone / to shift,ertelemek / kaydırmak,переносить / сдвигать,відкладати / переміщувати
+3851,B1,93,V,main,verschieden,,,Verb,,,,different / various,farklı / çeşitli,различный / разный,різний / різноманітний
+3852,B1,93,V,main,verschreiben,,,Verb,verschreibt,verschrieb,hat verschrieben,to prescribe,reçete yazmak,выписывать рецепт / ошибиться в написании,прописувати (ліки)
+3853,B1,93,V,main,verschwinden,,,Verb,verschwindet,verschwand,ist verschwun,to disappear,kaybolmak,исчезать,зникати
+3854,B1,93,V,main,versichern,,,Verb,versichert,versicherte,hat versichert,to insure / to assure,sigortalamak / güvence vermek,страховать / уверять,страхувати / запевняти
+3855,B1,93,V,main,Versichertenkarte,die,-n,Noun,,,,health insurance card,sağlık sigortası kartı,страховая карта / карточка застрахованного,картка медичного страхування
+3856,B1,93,V,main,Versicherung,die,-en,Noun,,,,insurance,sigorta,страховка / страхование,страхування / страховка
+3857,B1,93,V,main,Verspätung,die,-en,Noun,,,,delay,gecikme,опоздание / задержка,запізнення
+3858,B1,93,V,main,versprechen,,,Verb,verspricht,versprach,hat versprochen,to promise,söz vermek,обещать,обіцяти
+3859,B1,93,V,main,verletzen,,,Verb,verletzt,verletzte,hat verletzt,to injure / to hurt,yaralamak / incitmek,ранить / причинять боль,травмувати / ображати
+3860,B1,93,V,main,Verletzung,die,-en,Noun,,,,injury,yaralanma,травма / ранение,травма / поранення
+3861,B1,93,V,main,verliebt,,,Other,,,,in love,aşık,влюблённый,закоханий
+3862,B1,93,V,main,verlieren,,,Verb,verliert,verlor,hat verloren,to lose,kaybetmek,терять,втрачати / програвати
+3863,B1,93,V,main,Verlierer,der,-,Noun,,,,loser (male),kaybeden (erkek),проигравший (муж.),"невдаха (чол.) / той, хто програє"
+3864,B1,93,V,main,Verliererin,die,-nen,Noun,,,,loser (female),kaybeden (kadın),проигравшая (жен.),"невдаха (жін.) / та, хто програє"
+3865,B1,93,V,main,Verlust,der,-e,Noun,,,,loss,kayıp,потеря / убыток,втрата / збиток
+3866,B1,93,V,main,vermeiden,,,Verb,vermeidet,vermied,hat vermie,to avoid,kaçınmak,избегать,уникати
+3867,B1,93,V,main,vermieten,,,Verb,vermietet,ver-,hat vermietet,to rent out,kiralamak (ev sahibi olarak),сдавать в аренду,здавати в оренду
+3868,B1,93,V,main,Vermieter,der,-,Noun,,,,landlord,ev sahibi (erkek),арендодатель / хозяин квартиры (муж.),орендодавець (чол.)
+3869,B1,93,V,main,Vermieterin,die,-nen,Noun,,,,landlady,ev sahibi (kadın),арендодательница / хозяйка квартиры (жен.),орендодавиця (жін.)
+3870,B1,93,V,main,Vermietung,die,-en,Noun,,,,rental,kiralama,сдача в аренду / аренда,оренда
+3871,B1,93,V,main,vermissen,,,Verb,vermisst,vermisste,hat vermisst,to miss,özlemek,скучать / тосковать,скучати / сумувати за
+3872,B1,93,V,main,Vermittlung,die,-en,Noun,,,,placement / mediation,aracılık / yerleştirme,посредничество / размещение,посередництво / влаштування
+3873,B1,93,V,main,vermuten,,,Verb,vermutet,vermutete,hat vermutet,to suspect / to assume,sanmak / tahmin etmek,предполагать / подозревать,підозрювати / припускати
+3874,B1,93,V,main,vermutlich,,,Other,,,,presumably / probably,muhtemelen / büyük ihtimalle,предположительно / вероятно,мабуть / імовірно
+3875,B1,93,V,main,vernünftig,,,Other,,,,reasonable / sensible,makul / mantıklı,разумный / благоразумный,розумний / розсудливий
+3876,B1,93,V,main,verpacken,,,Verb,verpackt,verpackte,hat verpackt,to pack / to wrap,paketlemek / sarmak,упаковывать,пакувати / загортати
+3877,B1,93,V,main,verpassen,,,Verb,verpasst,verpasste,hat verpasst,to miss / to fail to catch,kaçırmak,пропускать / упускать,пропускати / не встигати
+3878,B1,93,M,main,melden,,,Verb,,,,to report / to register,bildirmek / kayıt olmak,сообщать / регистрировать,повідомляти / реєструватися
+3879,B1,93,I,main,ist,,,Other,,,,is,-dır/-dir,есть / является,є
+3880,B1,93,V,main,versäumt,,,Other,,,,missed,kaçırılmış,пропущенный / упущенный,пропущений / запізнілий
+3881,B1,93,V,main,verschieben,,,Verb,,,,to postpone,ertelemek,переносить / откладывать,відкладати
+3882,B1,93,V,main,verschieden,,,Verb,,,,different / various,farklı / çeşitli,различный / разный,різний / різноманітний
+3883,B1,93,N,main,-nen,,,Verb,,,,(verb ending -nen),-nen fiil eki,глагольное окончание -nen,(закінчення дієслова -nen)
+3884,B1,93,V,main,verschrieben,,,Verb,,,,prescribed,reçete yazılmış,выписанный по рецепту,прописаний
+3885,B1,93,D,main,du,,,Other,,,,you,sen,ты,ти
+3886,B1,93,S,main,Versicherung,,,Other,,,,insurance,sigorta / sigortacılık,страховка / страхование,страхування
+3887,B1,93,T,main,-ung,,,Other,,,,(suffix -ung),-ung soneki,суффикс -ung,(суфікс -ung)
+3888,B1,93,M,main,mich,,,Other,,,,me,beni,меня / мне,мене
+3889,B1,93,A,main,asche,,,Other,,,,(word fragment),(kelime parçası),(фрагмент слова),(фрагмент слова)
+3890,B1,93,S,main,sehr,,,Other,,,,very,çok,очень,дуже
+3891,B1,93,V,main,vermeiden,,,Verb,,,,to avoid,kaçınmak,избегать,уникати
+3892,B1,93,V,main,vermieten,,,Verb,,,,to rent out,kiralamak,сдавать в аренду,здавати в оренду
+3893,B1,93,K,main,kann,,,Other,,,,can,yapabilir,может / могу,може / може бути
+3894,B1,93,V,main,Vermittlung,der,,Noun,,,,placement / mediation,aracılık / yerleştirme,посредничество / размещение,посередництво
+3895,B1,93,F,main,fragen,,,Verb,,,,to ask,sormak,спрашивать,запитувати
+3896,B1,93,V,main,von,,,Other,,,,from / of,-den / -in,от / из,від / з
+3897,B1,93,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,приходити / приїжджати
+3898,B1,93,V,main,verpasst,,,Other,,,,missed,kaçırılmış,пропущенный / опоздавший,пропущений
+3899,B1,94,V,main,verzeihen,,,Verb,verzeiht,verzieh,hat verziehen,to forgive / to pardon,affetmek / bağışlamak,прощать,прощати / вибачати
+3900,B1,94,V,main,verzichten,,,Verb,verzichtet,verzichtete,hat verzichtet,to give up / to do without,vazgeçmek / feragat etmek,отказываться / обходиться без,відмовлятися / обходитися без
+3901,B1,94,V,main,Video,das,-s,Noun,,,,video,video,видео,відео
+3902,B1,94,V,main,viel / viele,,,Other,,,,much / many,çok / birçok,много / многие,багато
+3903,B1,94,V,main,vielleicht,,,Other,,,,maybe / perhaps,belki / şüphesiz,может быть,може / можливо
+3904,B1,94,V,main,Viertel,das,-,Noun,,,,quarter,çeyrek,четверть,чверть / квартал
+3905,B1,94,V,main,virtuell,,,Other,,,,virtual,sanal,виртуальный,віртуальний
+3906,B1,94,V,main,Virus,der,,Noun,,,,virus,virüs,вирус,вірус
+3907,B1,94,V,main,Vitamin,das,-e,Noun,,,,vitamin,vitamin,витамин,вітамін
+3908,B1,94,V,main,voll,,,Other,,,,full / complete,dolu / tam,полный,повний
+3909,B1,94,V,main,Vollzeit,die,,Noun,,,,full-time,tam zamanlı,полная занятость,повна зайнятість / повний робочий день
+3910,B1,94,V,main,völlig,,,Other,,,,completely,tamamen,полностью,повністю / цілком
+3911,B1,94,V,main,von,,,Other,,,,from / of,-den / -ın,от / из,від / з
+3912,B1,94,V,main,das,,,Other,,,,the (neuter article) / that,belirli artikel (nötr) / şu,определённый артикль das / то,(артикль) / те / це
+3913,B1,94,V,main,verstecken,,,Verb,versteckt,versteckte,hat versteckt,to hide,saklamak / gizlemek,прятать / скрывать,ховати / ховатися
+3914,B1,94,V,main,verstehen,,,Verb,versteht,verstand,hat verstan,to understand,anlamak,понимать,розуміти
+3915,B1,94,V,main,versuchen,,,Verb,versucht,versuchte,hat versucht,to try / to attempt,denemek / girişmek,пытаться,намагатися / пробувати
+3916,B1,94,V,main,Versuch,der,-e,Noun,,,,attempt / try,deneme / girişim,попытка,спроба
+3917,B1,94,V,main,verteilen,,,Verb,verteilt,verteilte,hat verteilt,to distribute,dağıtmak,распределять / раздавать,розподіляти
+3918,B1,94,V,main,Vertrag,der,¨-e,Noun,,,,contract,sözleşme / anlaşma,договор / контракт,договір / контракт
+3919,B1,94,V,main,vertrauen,,,Verb,vertraut,vertraute,hat vertraut,to trust,güvenmek,доверять,довіряти
+3920,B1,94,V,main,Vertrauen,das,,Noun,,,,trust / confidence,güven,доверие,довіра
+3921,B1,94,V,main,vertreten,,,Verb,vertritt,vertrat,hat vertreten,to represent,temsil etmek,представлять / замещать,представляти
+3922,B1,94,V,main,Vertreter,der,-,Noun,,,,representative (male),temsilci (erkek),представитель (муж.),представник (чол.)
+3923,B1,94,V,main,Vertreterin,die,-nen,Noun,,,,representative (female),temsilci (kadın),представительница (жен.),представниця (жін.)
+3924,B1,94,V,main,Vertretung,die,-en,Noun,,,,representation / deputy,temsil / vekillik,представительство / замещение,представництво / заступник
+3925,B1,94,V,main,verurteilen,,,Verb,verurteilt,verurteilte,hat verurteilt,to convict / to sentence,mahkum etmek / suçlamak,осуждать / приговаривать,засуджувати
+3926,B1,94,V,main,Verwaltung,die,-en,Noun,,,,administration,yönetim / idare,администрация / управление,управління / адміністрація
+3927,B1,94,V,main,verwandt,,,Other,,,,related,akraba / ilgili,родственный / родня,споріднений
+3928,B1,94,V,main,Verwandte,der,-n,Noun,,,,relative (male),akraba (erkek),родственник (муж.),родич (чол.)
+3929,B1,94,V,main,Verwandte,die,-n,Noun,,,,relative (female),akraba (kadın),родственница (жен.),родичка (жін.)
+3930,B1,94,V,main,verwechseln,,,Verb,verwechselt,verwechselte,hat verwechselt,to mix up / to confuse,karıştırmak,путать,плутати
+3931,B1,94,K,main,können,,,Verb,,,,to be able to,yapabilmek,мочь,могти
+3932,B1,94,A,main,aufgenommen,,,Verb,,,,recorded,kaydedilmiş,записанный / принятый,записаний / прийнятий
+3933,B1,94,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,ще / все ще
+3934,B1,94,V,main,virtuellen,,,Verb,,,,virtual,sanal,виртуальный,віртуальний
+3935,B1,94,M,main,meinem,,,Other,,,,my,benim,моему / моей,моєму
+3936,B1,94,G,main,geben,,,Verb,,,,to give,vermek,давать,давати
+3937,B1,94,E,main,essen,,,Verb,,,,to eat,yemek,есть / кушать,їсти
+3938,B1,94,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди
+3939,B1,94,V,main,vollen,,,Verb,,,,full,dolu,полный,повний
+3940,B1,94,H,main,heute,,,Other,,,,today,bugün,сегодня,сьогодні
+3941,B1,94,V,main,versteckt,,,Other,,,,hidden,gizlenmiş,спрятанный,захований / прихований
+3942,B1,94,S,main,sehr,,,Other,,,,very,çok,очень,дуже
+3943,B1,94,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,до / занадто
+3944,B1,94,S,main,suche,,,Other,,,,search,arama,поиск / ищу,шукаю / пошук
+3945,B1,94,O,main,ohne,,,Other,,,,without,olmadan,без,без
+3946,B1,94,V,main,verteilen,,,Verb,,,,to distribute,dağıtmak,распределять / раздавать,розподіляти
+3947,B1,94,S,main,schreiben,,,Verb,,,,to write,yazmak,писать,писати
+3948,B1,94,M,main,machen,,,Verb,,,,to make,yapmak,делать,робити
+3949,B1,94,I,main,ich,,,Other,,,,I,ben,я,я
+3950,B1,94,E,main,-eterin,,,Other,,,,(female suffix fragment),kadınlık eki parçası -eterin,женский суффикс / фрагмент -eterin,(жіночий суфікс)
+3951,B1,94,J,main,jemandem,,,Other,,,,someone,birine,кому-то,комусь
+3952,B1,95,V,main,vorlesen,,,Verb,liest vor,las vor,hat vorgelesen,to read aloud,sesli okumak,читать вслух,читати вголос
+3953,B1,95,V,main,Vorort,der,-e,Noun,,,,suburb / outskirts,banliyö / yakın çevre,пригород,передмістя
+3954,B1,95,V,main,vorschlagen,,,Verb,schlägt vor,schlug vor,hat vorgeschlagen,to suggest / to propose,önermek / teklif etmek,предлагать,пропонувати
+3955,B1,95,V,main,Vorschlag,der,¨-e,Noun,,,,suggestion / proposal,öneri / teklif,предложение,пропозиція
+3956,B1,95,V,main,Vorschrift,die,-en,Noun,,,,regulation / rule,yönetmelik / kural,предписание / правило,розпорядження / правило
+3957,B1,95,V,main,Vorsicht,die,,Noun,,,,caution / care,dikkat / ihtiyat,осторожность / внимание,обережність
+3958,B1,95,V,main,vorsichtig,,,Other,,,,careful / cautious,dikkatli / ihtiyatlı,осторожный,обережний
+3959,B1,95,V,main,vorstellen,,,Verb,stellt vor,stellte vor,hat vorgestellt,to introduce / to imagine,tanıtmak / hayal etmek,представлять / знакомить / воображать,представляти / уявляти
+3960,B1,95,V,main,Vorstellung,die,-en,Noun,,,,presentation / performance / idea,sunum / gösteri / fikir,представление / спектакль / идея,уявлення / вистава / ідея
+3961,B1,95,V,main,Vorstellungsgespräch,das,,Noun,,,,job interview,iş görüşmesi,собеседование,співбесіда при прийомі на роботу
+3962,B1,95,V,main,Vorteil,der,-e,Noun,,,,advantage,avantaj / üstünlük,преимущество,перевага
+3963,B1,95,V,main,Vortrag,der,¨-e,Noun,,,,lecture / talk,konuşma / sunum,доклад / лекция,доповідь / лекція
+3964,B1,95,V,main,Vorwahl,die,-envorwärts,Noun,,,,area code / dialing code,alan kodu,телефонный код,код набору / код міста
+3965,B1,95,V,main,Vorwurf,der,¨-evoneinandervor,Noun,,,,accusation / reproach,suçlama / kınama,упрёк / обвинение,звинувачення / докір
+3966,B1,95,V,main,vor,,,Other,,,,before / in front of / ago,önce / önünde / -nce,перед / до / назад,перед / до / тому
+3967,B1,95,V,main,voraus,,,Other,,,,ahead / in advance,ileride / önceden,вперёд / заранее,вперед / наперед
+3968,B1,95,V,main,Voraussetzung,die,-en,Noun,,,,prerequisite / requirement,ön koşul / gereksinim,предпосылка / условие,передумова / вимога
+3969,B1,95,V,main,voraussichtlich,,,Other,,,,probably / expected,muhtemelen / beklenen,предположительно / вероятно,очікувано / за прогнозами
+3970,B1,95,V,main,vorbei,,,Other,,,,past / over,geçmiş / bitmiş,мимо / закончился,повз / минуло
+3971,B1,95,V,main,vorbereiten,,,Verb,bereitet vor,bereitete vor,hat vorbereitet,to prepare,hazırlamak,готовить / подготавливать,готуватися / готувати
+3972,B1,95,V,main,Vorbereitung,die,-en,Noun,,,,preparation,hazırlık,подготовка,підготовка
+3973,B1,95,V,main,vorder,,,Other,,,,front,ön,передний,передній
+3974,B1,95,V,main,Vorfahrt,die,,Noun,,,,right of way,geçiş hakkı,преимущественное право проезда,право першочергового проїзду
+3975,B1,95,V,main,vorgestern,,,Other,,,,the day before yesterday,evvelsi gün,позавчера,позавчора
+3976,B1,95,V,main,vorhaben,,,Verb,,,hat vor,to plan / to intend,planlamak / niyet etmek,планировать / намереваться,планувати / мати намір
+3977,B1,95,V,main,vorher,,,Other,,,,before / previously,daha önce / evvelce,раньше / прежде,раніше / до того
+3978,B1,95,V,main,vorhin,,,Other,,,,a moment ago,az önce / demin,только что,щойно / хвилину тому
+3979,B1,95,V,main,vorkommen,,,Verb,kommt vor,kam vor,ist vorgekommen1.,to occur / to appear,olmak / meydana gelmek / görünmek,случаться / встречаться,траплятися / здаватися
+3980,B1,95,W,main,wohne,,,Other,,,,live,yaşıyorum,живу,живу
+3981,B1,95,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,ще
+3982,B1,95,M,main,machen,,,Verb,,,,to make,yapmak,делать,робити
+3983,B1,95,B,main,Benutzung,das,,Noun,,,,use / usage,kullanmak / kullanım,использование / пользование,використання
+3984,B1,95,G,main,glatt,,,Other,,,,smooth / slippery,düz / kaygan,гладкий / скользкий,гладкий / слизький
+3985,B1,95,N,main,nicht,,,Other,,,,not,değil,не,не
+3986,B1,95,G,main,gespräch,,,Other,,,,conversation,konuşma,разговор / беседа,розмова
+3987,B1,95,D,main,dass,,,Other,,,,that,-dığını,что,що
+3988,B1,95,E,main,ein,,,Other,,,,a / one,bir,один / одна; неопределённый артикль,один / якийсь
+3989,B1,95,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,закритий
+3990,B1,95,G,main,gehört,,,Other,,,,heard,duyulmuş,услышанный / слышал,чутий / почутий
+3991,B1,95,G,main,gekommen,,,Verb,,,,come,gelmiş,пришедший / приехавший,прийшов / прибув
+3992,B1,95,S,main,schlafen,,,Verb,,,,to sleep,uyumak,спать,спати
+3993,B1,95,Z,main,-ung,,,Other,,,,(suffix -ung),-ung soneki,суффикс -ung,(суфікс -ung)
+3994,B1,95,V,main,vorbei,,,Other,,,,past / over,geçmiş,мимо / закончился,повз / минуло
+3995,B1,95,P,main,paar,,,Other,,,,a few,birkaç,пара / несколько,кілька
+3996,B1,95,B,main,bereiten,,,Verb,,,,to prepare,hazırlamak,готовить,готувати
+3997,B1,95,B,main,bereiten,,,Verb,,,,to prepare,hazırlamak,готовить,готувати
+3998,B1,95,V,main,vor,,,Other,,,,before,önce,перед / до,перед
+3999,B1,95,I,main,ich,,,Other,,,,I,ben,я,я
+4000,B1,95,S,main,solls,,,Other,,,,should,olmalı,должно / должен,має / повинно
+4001,B1,96,W,main,Ware,die,-n,Noun,,,,goods / merchandise,mal / emtia,товар,товар / товари
+4002,B1,96,W,main,warm,,,Other,,,,warm,sıcak,тёплый,теплий
+4003,B1,96,W,main,Wärme,die,,Noun,,,,warmth / heat,sıcaklık / ısı,тепло / теплота,тепло
+4004,B1,96,W,main,warnen,,,Verb,warnt,warnte,hat gewarnt,to warn,uyarmak,предупреждать,попереджати
+4005,B1,96,W,main,warten,,,Verb,wartet,wartete,hat gewartet,to wait,beklemek,ждать,чекати / очікувати
+4006,B1,96,W,main,warum,,,Other,,,,why,neden / niçin,почему,чому
+4007,B1,96,W,main,was,,,Other,,,,what,ne,что,що
+4008,B1,96,W,main,was,,,Other,,,,what,ne,что,що
+4009,B1,96,W,main,waschen,,,Verb,wäscht,wusch,hat gewaschen,to wash,yıkamak,мыть,мити / прати
+4010,B1,96,W,main,Wäsche,die,,Noun,,,,laundry / washing,çamaşır,бельё / стирка,білизна / прання
+4011,B1,96,W,main,Waschmittel,das,-,Noun,,,,laundry detergent,çamaşır deterjanı,стиральный порошок / средство для стирки,пральний порошок / засіб для прання
+4012,B1,96,W,main,Wasser,das,,Noun,,,,water,su,вода,вода
+4013,B1,96,W,main,wechseln,,,Verb,wechselt,wechselte,hat gewechselt,to change / to exchange,değiştirmek / bozmak,менять / обменивать,змінювати / обмінювати
+4014,B1,96,W,main,wecken,,,Verb,weckt,weckte,hat geweckt,to wake up,uyandırmak,будить,будити
+4015,B1,96,W,main,Wecker,der,,Noun,,,,alarm clock,çalar saat,будильник,будильник
+4016,B1,96,W,main,waagerecht,,,Other,,,,horizontal,yatay,горизонтальный,горизонтальний
+4017,B1,96,W,main,wach,,,Other,,,,awake,uyanık,бодрствующий / не спящий,неспячий / пробуджений
+4018,B1,96,W,main,wachsen,,,Verb,wächst,wuchs,ist gewachsen,to grow,büyümek,расти,рости
+4019,B1,96,W,main,Wagen,der,-,Noun,,,,car / vehicle / cart,araba / araç / el arabası,автомобиль / тележка,автомобіль / візок
+4020,B1,96,W,main,wählen,,,Verb,wählt,wählte,hat gewählt,to choose / to dial,seçmek / aramak,выбирать / набирать номер,вибирати / набирати номер
+4021,B1,96,W,main,Wahl,die,-en,Noun,,,,choice / election,seçim,выбор / выборы,вибір / вибори
+4022,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / mad / incredibly,deli / çılgın / inanılmaz derecede,сумасшедший / невероятно,шалений / надзвичайно
+4023,B1,96,W,main,wahr,,,Other,,,,true,doğru / gerçek,правда / истинный,правдивий / справжній
+4024,B1,96,W,main,Wahrheit,die,-en,Noun,,,,truth,gerçek / doğru,правда / истина,правда / істина
+4025,B1,96,W,main,während,,,Other,,,,during / while,-sırasında / -iken,во время / пока,під час / поки
+4026,B1,96,W,main,wahrscheinlich,,,Other,,,,probably / likely,muhtemelen / büyük ihtimalle,вероятно,мабуть / імовірно
+4027,B1,96,W,main,Wald,der,¨-er,Noun,,,,forest / woods,orman,лес,ліс
+4028,B1,96,W,main,Wand,die,¨-e,Noun,,,,wall,duvar,стена,стіна
+4029,B1,96,W,main,wandern,,,Verb,wandert,wanderte,ist gewandert,to hike / to wander,yürüyüşe çıkmak / dolaşmak,ходить в поход / бродить,ходити в походи / мандрувати
+4030,B1,96,W,main,Wanderung,die,-en1.,Noun,,,,hike,doğa yürüyüşü,поход / прогулка,похід / прогулянка
+4031,B1,96,W,main,warmen,,,Verb,,,,warm,sıcak,тёплый,теплий
+4032,B1,96,I,main,ist,,,Other,,,,is,-dır,есть / является,є
+4033,B1,96,G,main,gewaschen,,,Verb,,,,washed,yıkanmış,вымытый,вимитий / випраний
+4034,B1,96,A,main,aufhängen,,,Verb,,,,to hang up,asmak / telefonu kapatmak,вешать / класть трубку,вішати
+4035,B1,96,H,main,hier,,,Other,,,,here,burada,здесь,тут
+4036,B1,96,S,main,sechs,,,Other,,,,six,altı,шесть,шість
+4037,B1,96,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,зараз
+4038,B1,96,U,main,und,,,Other,,,,and,ve,и,і / та
+4039,B1,96,S,main,statt,,,Other,,,,instead of,yerine,вместо,замість
+4040,B1,96,E,main,es,,,Other,,,,it,o,это / оно,воно / це
+4041,B1,96,O,main,oder,,,Other,,,,or,ya da / veya,или,або
+4042,B1,96,W,main,wahnsinnig,,,Other,,,,crazy / incredibly,deli / inanılmaz,сумасшедший / невероятно,шалений / надзвичайно
+4043,B1,96,U,main,unsere,,,Other,,,,our,bizim,наш / наша / наши,наш / наша
+4044,B1,96,N,main,noch,,,Other,,,,still / yet,hâlâ,ещё / всё ещё,ще / все ще
+4045,B1,96,A,main,an,,,Other,,,,on / at,-de/-da,на / у / при,на / при
+4046,B1,96,H,main,hört,,,Other,,,,hears / listens,duyuyor / dinliyor,слышит / слушает,чує / слухає
+4047,B1,97,W,main,wenden,,,Verb,wendet,wendete,hat gewendet,to turn / to refer,dönmek / başvurmak,поворачивать / обращаться,повертати / звертатися
+4048,B1,97,W,main,wenig / wenige,,,Other,,,,little / few,az / birkaç,мало / немногие,мало / небагато
+4049,B1,97,W,main,wenigstens,,,Other,,,,at least,en azından,по крайней мере,принаймні
+4050,B1,97,W,main,werden,,,Verb,wird,wurde,ist gewor,to become,olmak,становиться,ставати
+4051,B1,97,W,main,werfen,,,Verb,wirft,warf,hat geworfen,to throw,atmak / fırlatmak,бросать,кидати
+4052,B1,97,W,main,Werk,das,-e,Noun,,,,work / opus,eser / yapıt,произведение / работа,твір / робота / опус
+4053,B1,97,W,main,Werkstatt,die,¨-en,Noun,,,,workshop / garage,atölye / servis,мастерская / автосервис,майстерня / автосервіс
+4054,B1,97,W,main,Werkzeug,das,-e,Noun,,,,tool,araç gereç / alet,инструмент,інструмент
+4055,B1,97,W,main,wert,,,Other,,,,worth / valued,değerli / değer,ценный / стоящий,вартий / цінний
+4056,B1,97,W,main,Wert,der,-e,Noun,,,,value / worth,değer,ценность / стоимость,вартість / цінність
+4057,B1,97,W,main,wertlos,,,Other,,,,worthless,değersiz,бесполезный / ничего не стоящий,нічого не вартий / марний
+4058,B1,97,W,main,wertvoll,,,Other,,,,valuable,değerli,ценный,цінний
+4059,B1,97,W,main,weg,,,Other,,,,away / gone,uzakta / gitmiş,прочь / ушёл,геть / пішов
+4060,B1,97,W,main,wegen,,,Verb,,,,because of / due to,nedeniyle / yüzünden,из-за,через / завдяки
+4061,B1,97,W,main,weiblich,,,Other,,,,female,kadın / dişi,женский,жіночий
+4062,B1,97,W,main,weich,,,Other,,,,soft,yumuşak,мягкий,м'який
+4063,B1,97,W,main,weil,,,Other,,,,because,çünkü,потому что,тому що
+4064,B1,97,W,main,Wein,der,"-eweinen, weint, weinte,",Noun,,,,wine,şarap,вино,вино
+4065,B1,97,W,main,weit / weiter,,,Other,,,,far / further / farther,uzak / daha ileri / daha uzak,далеко / дальше,далеко / далі
+4066,B1,97,W,main,Weiterbildung,die,-en,Noun,,,,further education / continuing education,devam eğitimi / mesleki gelişim,повышение квалификации / дополнительное обучение,підвищення кваліфікації / навчання
+4067,B1,97,W,main,Welt,die,,Noun,,,,world,dünya,мир,світ
+4068,B1,97,W,main,weltweit,,,Verb,,,,worldwide,dünya genelinde,по всему миру / всемирный,всесвітній / по всьому світу
+4069,B1,97,A,main,angeboten,,,Verb,,,,offered,sunulmuş,предложенный / предложили,запропонований
+4070,B1,97,D,main,dürfen,,,Verb,,,,may / to be allowed to,-ebilmek / izin,мочь / иметь разрешение,мати право / можна
+4071,B1,97,W,main,wenn,,,Other,,,,when / if,-diğinde / eğer,когда / если,коли / якщо
+4072,B1,97,W,main,wirst,,,Other,,,,will become,olacaksın,станешь / будешь,станеш
+4073,B1,97,V,main,verrückt,,,Other,,,,crazy / mad,deli / çılgın,сумасшедший / безумный,шалений / безумний
+4074,B1,97,G,main,geworfen,,,Verb,,,,thrown,atılmış,брошенный,кинутий
+4075,B1,97,S,main,statt,,,Other,,,,instead of,yerine,вместо,замість
+4076,B1,97,W,main,wert,,,Other,,,,worth,değerli,стоящий / ценный,вартий
+4077,B1,97,V,main,von,,,Other,,,,from / of,-den / -in,от / из,від / з
+4078,B1,97,L,main,leider,,,Other,,,,unfortunately,ne yazık ki,к сожалению,на жаль
+4079,B1,97,A,main,angenehm,,,Other,,,,pleasant / comfortable,hoş / konforlu,приятный / комфортный,приємний / зручний
+4080,B1,97,E,main,erklären,,,Verb,,,,to explain,açıklamak,объяснять,пояснювати
+4081,B1,97,N,main,nicht,,,Other,,,,not,değil,не,не
+4082,B1,97,B,main,bin,,,Other,,,,am,-im,есть / являюсь,є (я є)
+4083,B1,97,G,main,guten,,,Verb,,,,good,iyi,хороший / добрый,хорошу / доброго
+4084,B1,97,N,main,neue,,,Other,,,,new,yeni,новый / новые,новий / нова
+4085,B1,97,E,main,einfach,,,Other,,,,simple / just,basit / sadece,простой / просто,простий / просто
+4086,B1,97,R,main,ruhig,,,Other,,,,quiet / calm,sakin,спокойный / тихий,тихий / спокійний
+4087,B1,98,W,main,willkommen,,,Verb,,,,welcome,hoş geldiniz,добро пожаловать,ласкаво просимо
+4088,B1,98,W,main,Wind,der,-e,Noun,,,,wind,rüzgar,ветер,вітер
+4089,B1,98,W,main,windig,,,Other,,,,windy,rüzgarlı,ветреный,вітряний
+4090,B1,98,W,main,winken,,,Verb,winkt,winkte,hat gewinkt,to wave,el sallayarak selamlamak,махать,махати
+4091,B1,98,W,main,wirken,,,Verb,wirkt,wirkte,hat gewirkt,to work / to have an effect,çalışmak / etki etmek,действовать / производить впечатление,діяти / мати ефект
+4092,B1,98,W,main,Wirkung,die,-en,Noun,,,,effect / impact,etki,действие / эффект,ефект / вплив
+4093,B1,98,W,main,wirklich,,,Other,,,,really / truly,gerçekten,действительно,справді / насправді
+4094,B1,98,W,main,Wirklichkeit,die,,Noun,,,,reality,gerçeklik,реальность,реальність / дійсність
+4095,B1,98,W,main,Wirt,der,-edie,Noun,,,,innkeeper / host,hancı / ev sahibi,хозяин гостиницы / трактирщик,господар / власник закладу
+4096,B1,98,W,main,Wirtschaft,die,,Noun,,,,economy / business,ekonomi / ticaret,экономика / хозяйство,економіка / господарство
+4097,B1,98,W,main,wissen,,,Verb,weiß,wusste,hat gewusst,to know,bilmek,знать,знати
+4098,B1,98,W,main,Wissen,das,,Noun,,,,knowledge,bilgi,знание,знання
+4099,B1,98,W,main,Wissenschaft,die,-en,Noun,,,,science,bilim,наука,наука
+4100,B1,98,W,main,Wissenschaftler,der,-,Noun,,,,scientist (male),bilim insanı (erkek),учёный (муж.),вчений (чол.)
+4101,B1,98,W,main,Wissenschaftlerin,die,-nen,Noun,,,,scientist (female),bilim insanı (kadın),учёная (жен.),вчена (жін.)
+4102,B1,98,W,main,Witz,der,-e,Noun,,,,joke,şaka / fıkra,шутка,жарт / анекдот
+4103,B1,98,W,main,wo,,,Other,,,,where,nerede,где,де
+4104,B1,98,W,main,Wetter,das,,Noun,,,,weather,hava / hava durumu,погода,погода
+4105,B1,98,W,main,Wetterbericht,der,-e,Noun,,,,weather report,hava raporu,прогноз погоды / сводка погоды,прогноз погоди / зведення погоди
+4106,B1,98,W,main,Wettervorhersage,die,-n,Noun,,,,weather forecast,hava tahmini,прогноз погоды,прогноз погоди
+4107,B1,98,W,main,wichtig,,,Other,,,,important,önemli,важный,важливий
+4108,B1,98,W,main,widersprechen,,,Verb,widerspricht,widersprach,hat widersprochen,to contradict / to object,itiraz etmek / çelişmek,возражать / противоречить,суперечити / заперечувати
+4109,B1,98,W,main,wie,,,Other,,,,how / as,nasıl / gibi,как / словно,як
+4110,B1,98,W,main,wieder,,,Other,,,,again,yeniden / tekrar,снова / опять,знову
+4111,B1,98,W,main,wiederholen,,,Verb,wiederholt,wiederholte,hat wiederholt,to repeat,tekrarlamak,повторять,повторювати
+4112,B1,98,W,main,Wiederholung,die,-en,Noun,,,,repetition,tekrar,повторение,повторення
+4113,B1,98,W,main,wiegen,,,Verb,wiegt,wog,hat gewogen,to weigh,tartmak,весить / взвешивать,важити
+4114,B1,98,W,main,wild,,,Other,,,,wild,vahşi / yabani,дикий,дикий
+4115,B1,98,W,main,Wiese,die,-nwieso1.,Noun,,,,meadow,çayır / mera,луг,луг / галявина
+4116,B1,98,W,main,winkten,,,Verb,,,,waved,el sallamış,махали,махали
+4117,B1,98,M,main,-ment,,,Other,,,,(suffix -ment),-ment soneki,суффикс -ment,(суфікс -ment)
+4118,B1,98,W,main,wirklich,,,Other,,,,really,gerçekten,действительно,справді
+4119,B1,98,W,main,wirklich,,,Other,,,,really,gerçekten,действительно,справді
+4120,B1,98,U,main,um,,,Other,,,,around / at,etrafında,вокруг / примерно в,навколо / о (час)
+4121,B1,98,Ü,main,über,,,Other,,,,about / over,hakkında,о / над,про / над / понад
+4122,B1,98,V,main,verheiratet,,,Other,,,,married,evli,женатый / замужем,одружений / заміжня
+4123,B1,98,T,main,treffen,,,Verb,,,,to meet,buluşmak,встречаться,зустрічатися
+4124,B1,98,G,main,gelacht,,,Other,,,,laughed,gülünmüş,смеявшийся / смеялись,сміявся
+4125,B1,98,S,main,spät,,,Other,,,,late,geç,поздно / поздний,пізно
+4126,B1,98,S,main,schön,,,Other,,,,beautiful,güzel,красивый,гарний / красивий
+4127,B1,98,G,main,gehört,,,Other,,,,heard,duyulmuş,услышанный / слышал,чутий / почутий
+4128,B1,98,T,main,trocken,,,Verb,,,,dry,kuru,сухой,сухий
+4129,B1,98,A,main,aber,,,Other,,,,but,ama,но,але
+4130,B1,98,S,main,spät,,,Other,,,,late,geç,поздно / поздний,пізно
+4131,B1,98,M,main,wen,,,Verb,,,,whom,men,кого,кого
+4132,B1,98,M,main,möglich,,,Other,,,,possible,mümkün,возможный,можливий
+4133,B1,98,F,main,fragen,,,Verb,,,,to ask,sormak,спрашивать,запитувати
+4134,B1,99,W,main,wünschen,,,Verb,wünscht,wünschte,hat gewünscht,to wish,dilemek / istemek,желать,бажати
+4135,B1,99,W,main,Wunsch,der,¨-e,Noun,,,,wish / desire,dilek / istek,желание,бажання
+4136,B1,99,W,main,Wurst,die,¨-e,Noun,,,,sausage,sosis / salam,колбаса,ковбаса
+4137,B1,99,W,main,wütend,,,Other,,,,angry / furious,öfkeli / kızgın,сердитый / яростный,злий / люттєвий
+4138,B1,99,Z,main,Zahl,die,-en,Noun,,,,number / figure,sayı / rakam,число / цифра,число / цифра
+4139,B1,99,A,main,Anzahl,die,-en,Noun,,,,number / quantity,sayı / adet,количество / число,кількість
+4140,B1,99,Z,main,zahlreich,,,Other,,,,numerous,çok sayıda / kalabalık,многочисленный,численний / багато
+4141,B1,99,Z,main,zahlen,,,Verb,zahlt,zahlte,hat gezahlt,to pay,ödemek,платить,платити
+4142,B1,99,Z,main,Zahlung,die,-en,Noun,,,,payment,ödeme,платёж / оплата,оплата / платіж
+4143,B1,99,Z,main,zählen,,,Verb,zählt,zählte,hat gezählt,to count,saymak,считать,рахувати
+4144,B1,99,Z,main,Zahn,der,¨-e,Noun,,,,tooth,diş,зуб,зуб
+4145,B1,99,Z,main,Zahncreme / -pasta,die,,Noun,,,,toothpaste,diş macunu,зубная паста,зубна паста
+4146,B1,99,Z,main,Zange,die,-n,Noun,,,,pliers / tongs,pense / maşa,клещи / щипцы,кліщі / щипці
+4147,B1,99,Z,main,Zeichen,das,-wohl,Noun,,,,sign / symbol,işaret / sembol,знак / символ,знак / символ
+4148,B1,99,W,main,wohnen,,,Verb,wohnt,wohnte,hat gewohnt,to live / to reside,yaşamak / oturmak,жить / проживать,жити / мешкати
+4149,B1,99,W,main,Wohnort,der,-e,Noun,,,,place of residence,ikamet yeri,место жительства,місце проживання
+4150,B1,99,W,main,Wohnsitz,der,-e,Noun,,,,place of residence / domicile,ikamet / yerleşim yeri,место проживания / домициль,місце проживання / доміцилій
+4151,B1,99,W,main,Wohnung,die,-en,Noun,,,,apartment / flat,daire / apartman,квартира,квартира
+4152,B1,99,W,main,Wohnzimmer,das,-,Noun,,,,living room,oturma odası / salon,гостиная,вітальня
+4153,B1,99,W,main,Wolke,die,-n,Noun,,,,cloud,bulut,облако,хмара
+4154,B1,99,B,main,bewölkt,,,Other,,,,cloudy / overcast,bulutlu / kapalı,облачный / пасмурный,хмарний / похмурий
+4155,B1,99,W,main,Wolle,die,,Noun,,,,wool,yün,шерсть / шерстяная пряжа,вовна
+4156,B1,99,W,main,wollen,,,Verb,will,wollte,hat gewollt,to want,istemek,хотеть,хотіти
+4157,B1,99,W,main,worüber,,,Other,,,,about what,ne hakkında,о чём,про що
+4158,B1,99,W,main,worum,,,Other,,,,about what / for what,ne hakkında / ne için,о чём / за что,про що / навіщо
+4159,B1,99,W,main,Wort,das,¨-er,Noun,,,,word,kelime / sözcük,слово,слово
+4160,B1,99,W,main,Wort,das,-e,Noun,,,,word,kelime / sözcük,слово,слово
+4161,B1,99,W,main,Wörterbuch,das,¨-er,Noun,,,,dictionary,sözlük,словарь,словник
+4162,B1,99,W,main,Wunde,die,-n,Noun,,,,wound,yara,рана,рана
+4163,B1,99,W,main,Wunder,das,-,Noun,,,,miracle / wonder,mucize / harika,чудо,диво / чудо
+4164,B1,99,W,main,wunderbar,,,Other,,,,wonderful / great,harika / muhteşem,замечательный / чудесный,чудовий / прекрасний
+4165,B1,99,W,main,war,,,Other,,,,was,-dı/-di,был / была,був / була
+4166,B1,99,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений
+4167,B1,99,H,main,hier,,,Other,,,,here,burada,здесь,тут
+4168,B1,99,F,main,früh,,,Other,,,,early,erken,рано / ранний,рано
+4169,B1,99,L,main,los,,,Other,,,,off / away,başla / uzağa,прочь / давай / начало,геть / вперед
+4170,B1,99,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди
+4171,B1,99,M,main,musste,,,Other,,,,had to,zorunda kalmış,должен был / пришлось,мусив / мусила
+4172,B1,99,S,main,sofort,,,Other,,,,immediately,hemen,сразу / немедленно,негайно / одразу
+4173,B1,99,B,main,brauchst,,,Other,,,,need,ihtiyacın var,нуждаешься,потребуєш
+4174,B1,99,M,main,mich,,,Other,,,,me,beni,меня / мне,мене
+4175,B1,99,G,main,geplant,,,Other,,,,planned,planlanmış,запланированный,запланований
+4176,B1,99,M,main,möglichst,,,Other,,,,as ... as possible,mümkün olduğunca,по возможности,наскільки можливо
+4177,B1,99,F,main,fern,,,Verb,,,,television,televizyon,телевидение,телебачення
+4178,B1,99,G,main,gesagt,,,Other,,,,said,söylenmiş,сказанный / сказал,сказав / сказала
+4179,B1,99,N,main,nachschlagen,,,Verb,,,,to look up,araştırmak,посмотреть в справочнике / найти,шукати / переглядати
+4180,B1,99,V,main,verbinden,,,Verb,,,,to connect,bağlamak,соединять,з'єднувати
+4181,B1,99,B,main,bares,,,Other,,,,cash,nakit,наличные,готівка
+4182,B1,100,Z,main,ziehen,,,Verb,zieht,zog,,to pull / to move,çekmek / taşınmak,тянуть / переезжать,тягнути / переїжджати
+4183,B1,100,Z,main,Ziel,das,-e,Noun,,,,goal / destination / aim,hedef / varış noktası / amaç,цель / пункт назначения / задача,мета / ціль / призначення
+4184,B1,100,Z,main,ziemlich,,,Other,,,,quite / fairly / rather,oldukça / epeyce,довольно / достаточно,досить / досить-таки
+4185,B1,100,Z,main,Zigarette,die,-n,Noun,,,,cigarette,sigara,сигарета,сигарета
+4186,B1,100,Z,main,Zimmer,das,-,Noun,,,,room,oda,комната,кімната
+4187,B1,100,Z,main,Zinsen,die,,Noun,,,,interest (financial),faiz,проценты,відсотки / проценти
+4188,B1,100,Z,main,Zirkus,der,-sedie,Noun,,,,circus,sirk,цирк,цирк
+4189,B1,100,Z,main,Zivilstand,der,,Noun,,,,marital status (Swiss),medeni durum (İsviçre),семейное положение,сімейний стан (швейцарський)
+4190,B1,100,L,main,Familienstand,,,Other,,,,marital status,medeni durum,семейное положение,сімейний стан
+4191,B1,100,Z,main,Zoll,der,¨-e,Noun,,,,customs / duty / inch,gümrük / vergi / inç,таможня / пошлина / дюйм,митниця / мито / дюйм
+4192,B1,100,Z,main,Zone,die,-nder,Noun,,,,zone,bölge / alan,зона,зона
+4193,B1,100,Z,main,zubereiten,,,Verb,bereitet zu,bereitete zu,hat zubereitet,to prepare (food),pişirmek / hazırlamak (yemek),готовить (еду),готувати (їжу)
+4194,B1,100,Z,main,Zucker,der,,Noun,,,,sugar,şeker,сахар,цукор
+4195,B1,100,Z,main,zeichnen,,,Verb,zeichnet,zeichnete,hat gezeichnet,to draw,çizmek / resim yapmak,рисовать,малювати / креслити
+4196,B1,100,Z,main,Zeichnung,die,-en,Noun,,,,drawing,çizim / resim,рисунок,малюнок / креслення
+4197,B1,100,Z,main,zeigen,,,Verb,zeigt,zeigte,hat gezeigt,to show / to point,göstermek / işaret etmek,показывать / указывать,показувати / вказувати
+4198,B1,100,Z,main,Zeile,die,-n,Noun,,,,line / row,satır / sıra,строка / ряд,рядок / лінія
+4199,B1,100,Z,main,Zeit,die,,Noun,,,,time,zaman,время,час
+4200,B1,100,Z,main,Zeitpunkt,der,-,Noun,,,,point in time / moment,an / zaman noktası,момент / точка во времени,момент / точка в часі
+4201,B1,100,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar,в настоящее время,зараз / наразі
+4202,B1,100,Z,main,Zeitschrift,die,-en,Noun,,,,magazine / journal,dergi / yayın,журнал / журнал-издание,журнал / часопис
+4203,B1,100,Z,main,Zeitung,die,-endas,Noun,,,,newspaper,gazete,газета,газета
+4204,B1,100,Z,main,zelten,,,Verb,zeltet,zeltete,hat gezeltet,to camp / to go camping,kamp yapmak,разбивать лагерь / ходить в поход с палаткой,наметувати / ходити в кемпінг
+4205,B1,100,Z,main,zentral,,,Other,,,,central,merkezi,центральный,центральний
+4206,B1,100,Z,main,Zentrum,das,,Noun,,,,center / centre,merkez,центр,центр
+4207,B1,100,Z,main,zerstören,,,Verb,zerstört,zerstörte,hat zerstört,to destroy,yıkmak / tahrip etmek,разрушать,руйнувати / знищувати
+4208,B1,100,Z,main,Zertifikat,das,-e,Noun,,,,certificate,sertifika,сертификат,сертифікат
+4209,B1,100,Z,main,Zettel,der,-das,Noun,,,,slip of paper / note,not kağıdı / fiş,листок / записка,папірець / записка
+4210,B1,100,Z,main,Zeuge,der,-n,Noun,,,,witness (male),tanık (erkek),свидетель (муж.),свідок (чол.)
+4211,B1,100,Z,main,Zeugin,die,,Noun,,,,witness (female),tanık (kadın),свидетельница (жен.),свідок (жін.)
+4212,B1,100,I,main,ins,,,Other,,,,into the,-e/-a,в / внутрь,до / в
+4213,B1,100,W,main,warten,,,Verb,,,,to wait,beklemek,ждать,чекати
+4214,B1,100,S,main,serviert,,,Other,,,,served,servis edilmiş,поданный / обслуженный,подав / подала
+4215,B1,100,M,main,mein,,,Other,,,,my,benim,мой / моя / мои,моє / мій
+4216,B1,100,D,main,den,,,Verb,,,,the,-ı,определённый артикль,артикль / той
+4217,B1,100,A,main,ankreuzen,,,Verb,,,,to mark / check,işaretlemek,отмечать / ставить крестик,ставити хрестик / позначати
+4218,B1,100,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,зараз
+4219,B1,100,E,main,eine,,,Other,,,,a / one,bir,один / одна; неопределённый артикль,одна / якась
+4220,B1,100,N,main,-nen,,,Verb,,,,(verb ending -nen),-nen fiil eki,глагольное окончание -nen,(закінчення дієслова -nen)
+4221,B1,100,K,main,kaufen,,,Verb,,,,to buy,satın almak,покупать,купувати
+4222,B1,100,G,main,gerade,,,Other,,,,straight / just / currently,düz / tam şu anda,прямо / как раз / сейчас,прямо / саме / зараз
+4223,B1,100,Z,main,zeige,,,Other,,,,show,göster,покажи,показую
+4224,B1,100,W,main,Weise,,,Other,,,,way / manner,weise,образ / способ,спосіб / манера
+4225,B1,100,N,main,nehmen,,,Verb,,,,to take,almak,брать,брати
+4226,B1,100,I,main,in,,,Other,,,,in,-de/-da,в,в / у
+4227,B1,100,P,main,plätze,,,Other,,,,places,yerler,места,місця
+4228,B1,100,B,main,bekomme,,,Other,,,,receive,alıyorum,получаю,отримую
+4229,B1,100,M,main,muss,,,Other,,,,must,-malı,должен / должно,повинен / мушу
+4230,B1,100,G,main,gemacht,,,Other,,,,made,yapılmış,сделанный,зроблений
+4231,B1,101,Z,main,Zündholz,das,¨-er,Noun,,,,match / matchstick,kibrit,спичка,сірник
+4232,B1,101,Z,main,zurechtkommen,,,Verb,kommt zurecht,kam zurecht,ist zurechtgekommen,to manage / to cope,başa çıkmak / idare etmek,справляться / управляться,справлятися / давати раду
+4233,B1,101,Z,main,zurück,,,Other,,,,back / return,geri / geri dönüş,назад / обратно,назад / повернення
+4234,B1,101,Z,main,zurzeit,,,Other,,,,at the moment / currently,şu anda / şu sıralar,в настоящее время,зараз / наразі
+4235,B1,101,Z,main,zusagen,,,Verb,sagt zu,sagte zu,hat zugesagt,to agree / to accept,kabul etmek / razı olmak,соглашаться / принимать предложение,погоджуватися / приймати
+4236,B1,101,Z,main,zusammen,,,Other,,,,together,birlikte,вместе,разом
+4237,B1,101,Z,main,Zusammenarbeit,die,,Noun,,,,cooperation / teamwork,işbirliği / takım çalışması,сотрудничество,співпраця
+4238,B1,101,Z,main,zusammenfassen,,,Verb,fasst zusammen,fasste zusammen,hat zusammengefasst,to summarize,özetlemek,резюмировать / подытоживать,підсумовувати / резюмувати
+4239,B1,101,Z,main,Zusammenhang,der,¨-e,Noun,,,,context / connection,bağlam / bağlantı,связь / контекст,зв'язок / контекст
+4240,B1,101,Z,main,zusätzlich,,,Other,,,,additional / extra,ek / ilave,дополнительный,додатковий
+4241,B1,101,Z,main,zuschauen,,,Verb,schaut zu,schaute zu,hat zugeschaut,to watch / to look on,izlemek / seyretmek,наблюдать / смотреть,спостерігати / дивитися
+4242,B1,101,Z,main,Zuschauer,der,-,Noun,,,,spectator (male),seyirci (erkek),зритель (муж.),глядач (чол.)
+4243,B1,101,Z,main,Zuschauerin,die,-nen,Noun,,,,spectator (female),seyirci (kadın),зрительница (жен.),глядачка (жін.)
+4244,B1,101,Z,main,Zuschlag,der,¨-ezuerst,Noun,,,,surcharge / supplement,ek ücret / vergi,доплата / надбавка,доплата / надбавка
+4245,B1,101,Z,main,Zufall,der,¨-e,Noun,,,,coincidence / chance,tesadüf / şans,случайность / совпадение,збіг / випадок
+4246,B1,101,Z,main,zufällig,,,Other,,,,coincidentally / by chance,tesadüfen / şans eseri,случайно,випадково
+4247,B1,101,Z,main,zufrieden,,,Verb,,,,satisfied / content,memnun / tatmin olmuş,довольный / удовлетворённый,задоволений / вдоволений
+4248,B1,101,Z,main,Zugang,der,¨-e,Noun,,,,access / entry,erişim / giriş,доступ / вход,доступ / вхід
+4249,B1,101,Z,main,zugänglich,,,Other,,,,accessible,erişilebilir,доступный,доступний
+4250,B1,101,Z,main,Zug,der,¨-e,Noun,,,,train,tren,поезд,поїзд
+4251,B1,101,Z,main,zugehen,,,Verb,geht zu,ging zu,ist zugegangen,to approach / to proceed,yaklaşmak / ilerlemek,подходить / продвигаться,підходити / відбуватися
+4252,B1,101,Z,main,Zuhause,das,,Noun,,,,home,ev / evde,дом / дома,дім / домівка
+4253,B1,101,Z,main,zuhören,,,Verb,hört zu,hörte zu,hat zugehört,to listen,dinlemek,слушать,слухати
+4254,B1,101,Z,main,Zuhörer,der,-,Noun,,,,listener (male),dinleyici (erkek),слушатель (муж.),слухач (чол.)
+4255,B1,101,Z,main,Zuhörerin,die,-nen,Noun,,,,listener (female),dinleyici (kadın),слушательница (жен.),слухачка (жін.)
+4256,B1,101,Z,main,Zukunft,die,,Noun,,,,future,gelecek,будущее,майбутнє
+4257,B1,101,Z,main,zukünftig,,,Other,,,,future / upcoming,gelecekteki / yaklaşan,будущий / предстоящий,майбутній
+4258,B1,101,Z,main,zuletzt,,,Other,,,,at last / in the end,sonunda / son olarak,в конце концов / в последний раз,зрештою / наостанок
+4259,B1,101,Z,main,zumachen,,,Verb,macht zu,machte zu,hat zugemacht,to close / to shut,kapatmak,закрывать,закривати / зачиняти
+4260,B1,101,Z,main,zumindest,,,Other,,,,at least,en azından,по крайней мере,принаймні
+4261,B1,101,Z,main,zunächst,,,Other,,,,first of all / at first,her şeyden önce / ilk başta,прежде всего / сначала,спочатку / насамперед
+4262,B1,101,Z,main,ich,,,Other,,,,I,ben,я,я
+4263,B1,101,M,main,Männer,,,Noun,,,,men,erkekler,мужчины,чоловіки
+4264,B1,101,K,main,komme,,,Other,,,,come,geliyorum,прихожу,приходжу
+4265,B1,101,U,main,und,,,Other,,,,and,ve,и,і / та
+4266,B1,101,E,main,eingeladen,,,Verb,,,,invited,davet edilmiş,приглашённый,запрошений
+4267,B1,101,G,main,gespielt,,,Other,,,,played,oynamış,игранный / играл,грав / грала
+4268,B1,101,G,main,getrennt,,,Other,,,,separated,ayrılmış,разделённый / отдельно,розділений / окремо
+4269,B1,101,S,main,schreiben,,,Verb,,,,to write,yazmak,писать,писати
+4270,B1,101,Z,main,zusammenfassen,,,Verb,,,,to summarize,özetlemek,резюмировать / подытоживать,підсумовувати
+4271,B1,101,D,main,diesen,,,Verb,,,,this,bu,этот / эту / это,цього / цей
+4272,B1,101,Z,main,zusätzlich,,,Other,,,,additional,ek / ilave,дополнительно,додатковий
+4273,B1,101,S,main,schaue,,,Other,,,,watch,bakıyorum,смотрю,дивлюся
+4274,B1,101,G,main,gute,,,Other,,,,good,iyi,хороший / хорошие,хороший / добра
+4275,B1,101,I,main,ihr,,,Other,,,,you,siz,вы / ей / её,вам / ваш
+4276,B1,101,G,main,gefallen,,,Verb,,,,liked / fallen,beğenilmiş / düşmüş,понравившийся / понравился,сподобалося / впало
+4277,B1,101,G,main,getroffen,,,Verb,,,,met,buluşulmuş,встреченный / встретились,зустрів / зустріла
+4278,B1,101,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,отримувати
+4279,B1,101,S,main,schwierig,,,Other,,,,difficult,zor,трудный / сложный,важкий / складний
+4280,B1,101,E,main,en-,,,Other,,,,(prefix / fragment en-),en- öneki / parçası,приставка / фрагмент en-,(префікс / фрагмент en-)
+4281,B1,101,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,бачений / побачений
+4282,B1,102,Z,main,zweifeln,,,Verb,zweifelt,zweifelte,hat gezweifelt,to doubt,şüphe etmek / kuşku duymak,сомневаться,сумніватися
+4283,B1,102,Z,main,Zweifel,der,-,Noun,,,,doubt,şüphe / kuşku,сомнение,сумнів
+4284,B1,102,Z,main,Zwiebel,die,-n,Noun,,,,onion,soğan,лук,цибуля
+4285,B1,102,Z,main,zwingen,,,Verb,zwingt,zwang,hat gezwungen,to force / to compel,zorlamak / mecbur etmek,заставлять / принуждать,змушувати / примушувати
+4286,B1,102,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,до / занадто
+4287,B1,102,Z,main,Zustand,der,¨-e,Noun,,,,condition / state,durum / hal,состояние / положение,стан / умови
+4288,B1,102,Z,main,zuständig,,,Other,,,,responsible / in charge,yetkili / sorumlu,ответственный / компетентный,відповідальний / компетентний
+4289,B1,102,Z,main,zustimmen,,,Verb,stimmt zu,stimmte zu,hat zugestimmt,to agree / to approve,onaylamak / kabul etmek,соглашаться / одобрять,погоджуватися / схвалювати
+4290,B1,102,Z,main,Zustimmung,die,-en,Noun,,,,agreement / approval / consent,onay / rıza / kabul,согласие / одобрение,згода / схвалення
+4291,B1,102,Z,main,Zutaten,die,,Noun,,,,ingredients,malzemeler / içerikler,ингредиенты,інгредієнти
+4292,B1,102,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
+4293,B1,102,U,main,umzukehren,,,Verb,,,,to turn around / to reverse,geri dönmek / tersine çevirmek,повернуть назад / развернуться,розвертатися / повертатися
+4294,B1,102,B,main,beiden,,,Verb,,,,both,her iki,оба / обеих,обидва / обидві
+4295,B1,102,U,main,und,,,Other,,,,and,ve,и,і / та
+4296,B1,102,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,до / занадто
+4297,B1,102,D,main,diesen,,,Verb,,,,this,bu,этот / эту / это,цього / цей
