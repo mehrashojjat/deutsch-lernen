@@ -1499,506 +1499,506 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1498,B1,44,G,main,gelingen,,,Verb,gelingt,gelang,ist gelungen,to succeed,başarmak / yolunda gitmek,удаваться,вдаватися / виходити
 1499,B1,44,G,main,geeignet,,,Other,,,,suitable / appropriate,uygun / elverişli,подходящий,підходящий / відповідний
 1500,B1,44,G,main,Gefahr,die,-en,Noun,,,,danger,tehlike,опасность,небезпека
-1501,B1,44,G,main,gefährlich,,,Other,,,,dangerous,tehlikeli,опасный,
-1502,B1,44,G,main,gefallen,,,Verb,gefällt,gefiel,hat gefallen,to like / please,beğenmek / hoşuna gitmek,нравиться / доставлять удовольствие,
-1503,B1,44,G,main,Gefängnis,das,-se,Noun,,,,prison,hapishane / cezaevi,тюрьма,
-1504,B1,44,G,main,Gefühl,das,-e gegen,Noun,,,,feeling / emotion,his / duygu,чувство / эмоция,
-1505,B1,44,G,main,Gegner,der,-,Noun,,,,opponent / adversary,rakip / muhalif,противник / соперник,
-1506,B1,44,G,main,Gegend,die,-en,Noun,,,,area / region / neighborhood,bölge / semt / çevre,местность / район / окрестности,
-1507,B1,44,G,main,Gegensatz,der,¨-e,Noun,,,,contrast / opposite,zıtlık / karşıtlık,противоположность / контраст,
-1508,B1,44,G,main,Gegenstand,der,¨-e,Noun,,,,object / item,nesne / eşya,предмет / объект,
-1509,B1,44,G,main,Gegenteil,das,-e 1.,Noun,,,,opposite,zıt / karşıtı,противоположность,
-1510,B1,44,P,main,Post,der,,Noun,,,,post,posta,почта,
-1511,B1,44,N,main,nicht,,,Other,,,,not,değil,не,
-1512,B1,44,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-1513,B1,44,N,main,niemandem,,,Other,,,,nobody,kimseye,никому,
-1514,B1,44,N,main,nicht,,,Other,,,,not,değil,не,
-1515,B1,44,G,main,gegeben,,,Verb,,,,given,verilmiş,данный / дано,
-1516,B1,44,U,main,unsere,,,Other,,,,our,bizim,наша / наши,
-1517,B1,44,D,main,drei,,,Other,,,,three,üç,три,
-1518,B1,44,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,
-1519,B1,44,V,main,verurteilt,,,Other,,,,convicted,mahkum edilmiş,осуждённый,
-1520,B1,44,H,main,habe,,,Other,,,,have,sahibim,имею,
-1521,B1,44,S,main,sehr,,,Other,,,,very,çok,очень,
-1522,B1,44,S,main,sein,,,Other,,,,to be / his,olmak / onun,быть,
-1523,B1,44,S,main,starkem,,,Other,,,,strong,güçlü,сильный,
-1524,B1,44,Z,main,ziemlich,,,Other,,,,quite,oldukça,довольно / вполне,
-1525,B1,44,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-1526,B1,44,A,main,ach,,,Other,,,,oh,ah,ах / ох,
-1527,B1,44,L,main,liegen,,,Verb,,,,to lie / be located,uzanmak / bulunmak,лежать / находиться,
-1528,B1,45,G,main,gering,,,Other,,,,small / low / minor,küçük / az / önemsiz,небольшой / низкий / незначительный,
-1529,B1,45,G,main,gern / gerne,,,Other,,,,gladly / with pleasure,memnuniyetle / severek,охотно / с удовольствием,
-1530,B1,45,G,main,gesamt-,,,Other,,,,total / overall (prefix),toplam / genel (önek),общий / совокупный- (часть сложного слова),
-1531,B1,45,G,main,Geschäft,das,"-egeschehen, geschieht,",Noun,,,,shop / store / business,dükkan / mağaza / iş,магазин / дело / бизнес,
-1532,B1,45,G,main,Geschenk,das,-edie,Noun,,,,gift / present,hediye,подарок,
-1533,B1,45,G,main,geschieden,,,Verb,,,,divorced,boşanmış,разведённый,
-1534,B1,45,G,main,Geschirr,das,,Noun,,,,dishes / crockery,mutfak eşyası / tabak çanak,посуда,
-1535,B1,45,G,main,Geschlecht,das,-er der,Noun,,,,gender / sex,cinsiyet,пол / род,
-1536,B1,45,G,main,Geschwindigkeits-,die,,Noun,,,,speed (compound prefix),hız (bileşik önek),скорость- (часть сложного слова),
-1537,B1,45,G,main,Geschwister,die,,Noun,,,,siblings,kardeşler,братья и сёстры,
-1538,B1,45,G,main,Gesellschaft,die,-en,Noun,,,,society / company,toplum / şirket,общество / компания,
-1539,B1,45,G,main,Gesetz,das,-e,Noun,,,,law,yasa / kanun,закон,
-1540,B1,45,G,main,Gesicht,das,"-ergelten, gilt, galt,",Noun,,,,face,yüz,лицо,
-1541,B1,45,G,main,gemeinsam,,,Other,,,,together / joint / common,birlikte / ortak,совместный / вместе / общий,
-1542,B1,45,G,main,Gemeinschaft,die,-en,Noun,,,,community,topluluk,сообщество,
-1543,B1,45,G,main,Gemüse,das,,Noun,,,,vegetables,sebze / sebzeler,овощи,
-1544,B1,45,G,main,gemütlich,,,Other,,,,cozy / comfortable,rahat / keyifli / sıcak,уютный / комфортный,
-1545,B1,45,G,main,genau,,,Other,,,,exactly / precise,tam / kesinlikle,точно / точно по значению,
-1546,B1,45,G,main,genauso,,,Other,,,,just as / equally,aynı şekilde / eşit olarak,точно так же / одинаково,
-1547,B1,45,G,main,genehmigen,,,Verb,genehmigt,genehmigte,hat genehmigt,to approve / authorize,onaylamak / yetkilendirmek,разрешать / утверждать,
-1548,B1,45,G,main,Generation,die,-en,Noun,,,,generation,nesil / kuşak,поколение,
-1549,B1,45,G,main,genießen,,,Verb,genießt,genoss,hat genossen,to enjoy,tadını çıkarmak / keyif almak,наслаждаться,
-1550,B1,45,G,main,genug,,,Other,,,,enough,yeterli / yeterince,достаточно,
-1551,B1,45,G,main,genügen,,,Verb,genügt,genügte,hat genügt,to be enough / suffice,yeterli olmak,быть достаточным,
-1552,B1,45,G,main,Gepäck,das,,Noun,,,,luggage,bagaj,багаж,
-1553,B1,45,G,main,gerade,,,Other,,,,just / straight / at the moment,tam / düz / şu anda,как раз / прямо / в данный момент,
-1554,B1,45,G,main,geradeaus,,,Other,,,,straight ahead,dümdüz / doğruca,прямо,
-1555,B1,45,G,main,Gerät,das,-e gerecht 1.,Noun,,,,device / appliance,cihaz / alet,прибор / устройство,
-1556,B1,45,B,main,beim,,,Other,,,,at the,,у / в месте,
-1557,B1,45,G,main,geringe,,,Other,,,,small / low,az / düşük,небольшой / низкий,
-1558,B1,45,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,
-1559,B1,45,E,main,einen,,,Verb,,,,one,bir,один,
-1560,B1,45,V,main,verschenkt,,,Other,,,,given away,hediye edilmiş,подаренный / отданный,
-1561,B1,45,I,main,ist,,,Other,,,,is,,есть / является,
-1562,B1,45,G,main,geschehen,,,Verb,,,,to happen,olmak / gerçekleşmek,случаться / происходить,
-1563,B1,45,I,main,immer,,,Other,,,,always,her zaman,всегда,
-1564,B1,45,W,main,weiblich,,,Other,,,,female,kadın / dişi,женский,
-1565,B1,45,W,main,männlich,,,Other,,,,male,erkek / eril,мужской,
-1566,B1,45,W,main,wohl,,,Other,,,,probably / well,muhtemelen / iyi,вероятно / пожалуй,
-1567,B1,45,B,main,beschlossen,,,Verb,,,,decided,kararlaştırılmış,решённый / принятый,
-1568,B1,45,A,main,als,,,Other,,,,as / when,olarak / -dığında,как / когда / чем,
-1569,B1,45,H,main,helfe,,,Other,,,,help,yardım et,помогаю,
-1570,B1,45,M,main,mit,,,Other,,,,with,ile,с / при помощи,
-1571,B1,45,M,main,man,,,Verb,,,,one / you (impersonal),,"человек / безличное ""ты""",
-1572,B1,45,G,main,genießen,,,Verb,weil es zu,,,to enjoy,keyif almak,наслаждаться,
-1573,B1,45,G,main,gelassen,,,Verb,,,,let / calm,bırakmış / sakin,позволенный / спокойный,
-1574,B1,45,G,main,gebraucht,,,Other,,,,used / second-hand,kullanılmış / ikinci el,бывший в употреблении / подержанный,
-1575,B1,46,G,main,gießen,,,Verb,gießt,goss,,to pour / water (plants),dökmek / sulamak,лить / поливать,
-1576,B1,46,G,main,gegossen,,,Verb,,,,poured,dökülmüş,налитый,
-1577,B1,46,G,main,Gift,das,-e,Noun,,,,poison,zehir,яд,
-1578,B1,46,G,main,giftig,,,Other,,,,poisonous / toxic,zehirli / toksik,ядовитый,
-1579,B1,46,G,main,Gitarre,die,-ndie/das,Noun,,,,guitar,gitar,гитара,
-1580,B1,46,G,main,Glas,das,¨-er,Noun,,,,glass,cam / bardak,стакан / стекло,
-1581,B1,46,G,main,glatt,,,Other,,,,smooth / slippery,pürüzsüz / kaygan,гладкий / скользкий,
-1582,B1,46,G,main,glauben,,,Verb,glaubt,glaubte,hat geglaubt,to believe,inanmak / sanmak,верить,
-1583,B1,46,G,main,gleich,,,Other,,,,same / immediately / equal,aynı / hemen / eşit,одинаковый / сразу,
-1584,B1,46,G,main,gleichfalls,,,Other,,,,likewise / the same to you,aynı şekilde / sana da,взаимно / и вам того же,
-1585,B1,46,G,main,gleichberechtigt,,,Other,,,,equal rights / equal,eşit haklara sahip,равноправный,
-1586,B1,46,G,main,gleichzeitig,,,Other,,,,simultaneous / at the same time,eş zamanlı / aynı anda,одновременно,
-1587,B1,46,G,main,Gleis,das,-e,Noun,,,,track / platform (rail),ray / peron,путь / платформа,
-1588,B1,46,G,main,Glück,das,,Noun,,,,luck / happiness,şans / mutluluk,счастье / удача,
-1589,B1,46,G,main,glücklich,,,Other,,,,happy / lucky,mutlu / şanslı,счастливый / удачливый,
-1590,B1,46,G,main,Glückwunsch,der,¨-e,Noun,,,,congratulations,tebrikler / kutlama,поздравление,
-1591,B1,46,G,main,Gold,das,,Noun,,,,gold,altın,золото,
-1592,B1,46,G,main,gestern,,,Verb,,,,yesterday,dün,вчера,
-1593,B1,46,G,main,gesund,,,Other,,,,healthy,sağlıklı,здоровый,
-1594,B1,46,G,main,Gesundheit,die,,Noun,,,,health,sağlık,здоровье,
-1595,B1,46,G,main,Getränk,das,-e,Noun,,,,drink / beverage,içecek,напиток,
-1596,B1,46,G,main,Gewalt,die,-en,Noun,,,,violence / force / power,şiddet / güç / iktidar,насилие / сила / власть,
-1597,B1,46,G,main,Gewerkschaft,die,-en,Noun,,,,trade union,sendika,профсоюз,
-1598,B1,46,G,main,Gewicht,das,-e,Noun,,,,weight,ağırlık / kilo,вес,
-1599,B1,46,G,main,gewinnen,,,Verb,gewinnt,gewann,hat gewonnen,to win,kazanmak,выигрывать,
-1600,B1,46,G,main,Gewinn,der,-e,Noun,,,,profit / prize / winnings,kâr / ödül / kazanç,прибыль / выигрыш,
-1601,B1,46,G,main,Gewissen,das,,Noun,,,,conscience,vicdan,совесть,
-1602,B1,46,G,main,Gewitter,das,-,Noun,,,,thunderstorm,gök gürültülü fırtına,гроза,
-1603,B1,46,G,main,gewöhnen,,,Verb,gewöhnt,gewöhnte,,to get used to,alışmak,привыкать,
-1604,B1,46,G,main,Gewohnheit,die,-en,Noun,,,,habit / custom,alışkanlık,привычка / обычай,
-1605,B1,46,G,main,gewohnt,,,Other,,,,accustomed / used to,alışık / alışkın,привыкший,
-1606,B1,46,G,main,gewöhnlich,,,Other,,,,usual / usually,alışılmış / genellikle,обычный / обычно,
-1607,B1,46,M,main,man,,,Other,,,,one,kişi,"кто-то / безличное ""ты""",
-1608,B1,46,D,main,denken,,,Verb,,,,to think,düşünmek,думать,
-1609,B1,46,M,main,machen,,,Verb,,,,to make,yapmak,делать,
-1610,B1,46,E,main,einen,,,Verb,,,,one,bir,один,
-1611,B1,46,S,main,sehr,,,Other,,,,very,çok,очень,
-1612,B1,46,N,main,neues,,,Other,,,,new,yeni,новый,
-1613,B1,46,N,main,nur,,,Other,,,,only,sadece,только / просто,
-1614,B1,46,G,main,gewinnt,,,Other,,,,wins,kazanıyor,выигрывает,
-1615,B1,46,G,main,gesund,,,Other,,,,healthy,sağlıklı,здоровый,
-1616,B1,46,A,main,achten,,,Verb,,,,to pay attention / to respect,dikkat etmek / saygı göstermek,обращать внимание / уважать,
-1617,B1,46,V,main,vorkommt,,,Other,,,,occurs / comes up,gerçekleşiyor,случается / встречается,
-1618,B1,46,Ö,main,öffnen,,,Other,,,,to open,açmak,открывать,
-1619,B1,46,H,main,hängt,,,Other,,,,depends / hangs,asılı / bağlı,зависит / висит,
-1620,B1,46,G,main,gewinnen,,,Verb,,,,to win,kazanmak,выигрывать,
-1621,B1,46,G,main,ge-,,,Other,,,,(prefix ge-),ge- öneki,приставка ge-,
-1622,B1,46,M,main,macht,,,Other,,,,makes / does,yapıyor,делает,
-1623,B1,46,G,main,gewöhnt,,,Other,,,,accustomed,alışık,привыкший,
-1624,B1,46,A,main,aufzustehen,,,Verb,,,,to get up,kalkmak,вставать,
-1625,B1,46,P,main,Post,die,,Noun,,,,post office / mail,postane / posta,почта / почтовое отделение,
-1626,B1,46,J,main,jeden,,,Verb,früh ins,,,every,her,каждый,
-1627,B1,46,G,main,gehen,,,Verb,,,,to go / to walk,gitmek / yürümek,идти / ходить,
-1628,B1,47,G,main,Grundstück,das,-e,Noun,,,,plot of land / property,arsa / mülk,земельный участок,
-1629,B1,47,G,main,Gruppe,die,-n,Noun,,,,group,grup,группа,
-1630,B1,47,G,main,grüßen,,,Verb,grüßt,grüßte,hat gegrüßt,to greet,selamlamak,приветствовать,
-1631,B1,47,G,main,Gruß,der,¨-e,Noun,,,,greeting,selam,приветствие,
-1632,B1,47,G,main,gucken,,,Verb,guckt,guckte,hat geguckt,to look / to watch,bakmak / izlemek,смотреть / глядеть,
-1633,B1,47,G,main,gültig,,,Other,,,,valid,geçerli,действительный / действующий,
-1634,B1,47,G,main,günstig,,,Other,,,,affordable / favorable,uygun fiyatlı / elverişli,выгодный / недорогой,
-1635,B1,47,G,main,Gymnastik,die,,Noun,,,,gymnastics / exercise,jimnastik,гимнастика / упражнения,
-1636,B1,47,H,main,Haar,das,-e,Noun,,,,hair,saç,волосы,
-1637,B1,47,H,main,haben,,,Verb,,,hat gehabt,to have,sahip olmak,иметь,
-1638,B1,47,G,main,Grafik,die,-endas,Noun,,,,graphic / chart,grafik,графика / диаграмма,
-1639,B1,47,G,main,gratulieren,,,Verb,gratuliert,gratulierte,hat gratuliert,to congratulate,tebrik etmek,поздравлять,
-1640,B1,47,G,main,Gratulation,die,-en,Noun,,,,congratulation,tebrik,поздравление,
-1641,B1,47,G,main,gratis,,,Other,,,,free of charge,ücretsiz / bedava,бесплатно,
-1642,B1,47,G,main,greifen,,,Verb,greift,griff,hat gegriffen,to grab / to reach for,yakalamak / uzanmak,хватать / тянуться к,
-1643,B1,47,G,main,Grenze,die,-n,Noun,,,,border / boundary,sınır,граница,
-1644,B1,47,G,main,grillen,,,Verb,grillt,grillte,hat gegrillt,to grill / to barbecue,ızgara yapmak / mangal yapmak,жарить на гриле / барбекю,
-1645,B1,47,G,main,grillieren,,,Verb,grilliert,grillierte,hat grilliert,to grill (Swiss variant),ızgara yapmak (İsviçre),жарить на гриле (швейц.),
-1646,B1,47,G,main,Grill,der,,Noun,,,,grill / barbecue,ızgara / mangal,гриль / барбекю,
-1647,B1,47,G,main,Grippe,die,,Noun,,,,flu / influenza,grip / influenza,грипп,
-1648,B1,47,G,main,groß,,,Other,,,,big / large / tall,büyük,большой / высокий,
-1649,B1,47,G,main,Größe,die,-n,Noun,,,,size / height,boy / beden / büyüklük,размер / рост,
-1650,B1,47,G,main,gründen,,,Verb,gründet,gründete,hat gegründet,to found / to establish,kurmak / tesis etmek,основывать / учреждать,
-1651,B1,47,G,main,Grund,der,¨-e1.,Noun,,,,reason / ground / basis,neden / zemin / temel,причина / основание / грунт,
-1652,B1,47,R,main,reinigen,,,Verb,bevor der,,,to clean,temizlemek,чистить / убирать,
-1653,B1,47,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-1654,B1,47,H,main,hast,,,Other,,,,have,sahibin,имеешь,
-1655,B1,47,D,main,doch,,,Other,,,,but / though,ama / yine de,однако / ведь,
-1656,B1,47,G,main,gültig,,,Other,,,,valid,geçerli,действительный,
-1657,B1,47,W,main,wohnung,,,Other,,,,apartment,daire,квартира,
-1658,B1,47,G,main,gut,,,Other,,,,good,iyi,хороший,
-1659,B1,47,Ü,main,überall,,,Other,,,,everywhere,her yerde,повсюду,
-1660,B1,47,F,main,fahren,,,Other,,,,drive,sürmek,ехать,
-1661,B1,47,G,main,gewonnen,,,Verb,,,,won,kazanıldı,выигранный / выиграл,
-1662,B1,47,W,main,wir,,,Other,,,,we,biz,мы,
-1663,B1,47,W,main,wollen,,,Verb,,,,to want,istemek,хотеть,
-1664,B1,47,N,main,nicht,,,Other,,,,not,değil,не,
-1665,B1,47,W,main,wieder,,,Other,,,,again,yeniden,снова,
-1666,B1,47,G,main,gegründet,,,Other,,,,founded,kurulmuş,основанный,
-1667,B1,47,W,main,welchem,,,Other,,,,which,hangi,которому / какому,
-1668,B1,47,B,main,beschweren,,,Verb,,,,to complain,şikâyet etmek,жаловаться,
-1669,B1,48,H,main,Haltestelle,die,-n,Noun,,,,bus stop / tram stop,durak,остановка,
-1670,B1,48,H,main,Hammer,der,¨-,Noun,,,,hammer,çekiç,молоток,
-1671,B1,48,H,main,Hand,die,¨-e,Noun,,,,hand,el,рука,
-1672,B1,48,H,main,Handwerker,der,-,Noun,,,,craftsman / tradesman,usta / zanaatkâr (erkek),ремесленник / мастер,
-1673,B1,48,H,main,Handwerkerin,die,-nen,Noun,,,,craftswoman / tradeswoman,usta / zanaatkâr (kadın),ремесленница / мастер (жен.),
-1674,B1,48,H,main,handeln,,,Verb,handelt,handelte,hat gehandelt,to act / to trade / to deal,hareket etmek / ticaret yapmak,действовать / торговать / идти о,
-1675,B1,48,H,main,Handel,der,,Noun,,,,trade / commerce,ticaret,торговля,
-1676,B1,48,H,main,Händler,der,-,Noun,,,,dealer / merchant / trader,satıcı / tacir,торговец / продавец (муж.),
-1677,B1,48,H,main,Händlerin,die,-nen,Noun,,,,dealer / merchant (female),kadın satıcı / kadın tacir,торговка / продавец (жен.),
-1678,B1,48,H,main,Handy,das,-s,Noun,,,,mobile phone / cell phone,cep telefonu,мобильный телефон,
-1679,B1,48,H,main,hängen,,,Verb,hängt,,,to hang,asmak / sarkmak,висеть,
-1680,B1,48,H,main,hart,,,Other,,,,hard / tough / difficult,sert / zor,твёрдый,
-1681,B1,48,H,main,hassen,,,Verb,hasst,hasste,hat gehasst,to hate,nefret etmek,ненавидеть,
-1682,B1,48,H,main,hässlich,,,Other,,,,ugly,çirkin,уродливый,
-1683,B1,48,H,main,häufig,,,Other,,,,frequent / common,sık / yaygın,частый / распространённый,
-1684,B1,48,H,main,Hauptstadt,die,¨-edas,Noun,,,,capital city,başkent,столица,
-1685,B1,48,H,main,Hafen,der,¨-,Noun,,,,harbor / port,liman,гавань / порт,
-1686,B1,48,H,main,hageln,,,Verb,hagelt,hagelte,hat gehagelt,to hail,dolu yağmak,идти о граде,
-1687,B1,48,H,main,Hähnchen / Hühnchen,das,,Noun,,,,chicken,tavuk / piliç,цыплёнок,
-1688,B1,48,H,main,halb,,,Other,,,,half,yarım,половина,
-1689,B1,48,H,main,Halbpension,die,,Noun,,,,half board (hotel),yarım pansiyon,полупансион,
-1690,B1,48,H,main,halbtags,,,Other,,,,part-time / half-day,yarı zamanlı,на полдня / неполный день,
-1691,B1,48,H,main,Hälfte,die,-n,Noun,,,,half,yarı,половина,
-1692,B1,48,H,main,Halle,die,-n,Noun,,,,hall / indoor arena,salon / kapalı alan,зал / крытая арена,
-1693,B1,48,H,main,Hallenbad,das,¨-er,Noun,,,,indoor swimming pool,kapalı yüzme havuzu,крытый бассейн,
-1694,B1,48,H,main,hallo,,,Other,,,,hello,merhaba,привет,
-1695,B1,48,H,main,Hals,der,¨-ehalt,Noun,,,,neck / throat,boyun / boğaz,горло / шея,
-1696,B1,48,H,main,haltbar,,,Other,,,,durable / long-lasting,dayanıklı / uzun ömürlü,прочный / долговечный,
-1697,B1,48,H,main,halten,,,Verb,hält,hielt,hat gehalten6.,to hold / to keep / to stop,tutmak / durdurmak,держать / останавливаться,
-1698,B1,48,W,main,wir,,,Other,,,,we,biz,мы,
-1699,B1,48,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,
-1700,B1,48,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,
-1701,B1,48,H,main,handelt,,,Other,,,,deals / acts,davranıyor,идёт речь / действует,
-1702,B1,48,U,main,und,,,Other,,,,and,ve,и,
-1703,B1,48,G,main,gutes,,,Other,,,,good,iyi,хороший,
-1704,B1,48,D,main,dir,,,Other,,,,you (dative),sana,тебе,
-1705,B1,48,G,main,geben,,,Verb,,,,to give,vermek,давать,
-1706,B1,48,M,main,muss,,,Other,,,,must,zorunda,должен,
-1707,B1,48,U,main,unbedingt,,,Other,,,,absolutely / definitely,kesinlikle,обязательно / во что бы то ни стало,
-1708,B1,48,H,main,halben,,,Verb,,,,half,yarım,половина,
-1709,B1,48,N,main,nicht,,,Other,,,,not,değil,не,
-1710,B1,48,B,main,bekommt,,,Other,,,,receives,alıyor,получает,
-1711,B1,48,V,main,vorbei,,,Other,,,,past / over,geçmiş / bitti,мимо / закончено,
-1712,B1,48,N,main,nur,,,Other,,,,only,sadece,только / просто,
-1713,B1,48,D,main,dir,,,Other,,,,you (dative),sana,тебе,
-1714,B1,48,H,main,halten,,,Verb,,,,to hold / to keep,tutmak,держать / останавливаться,
-1715,B1,48,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,
-1716,B1,48,B,main,bauen,,,Verb,,,,to build,inşa etmek,строить,
-1717,B1,49,H,main,Held,der,-en,Noun,,,,hero,kahraman (erkek),герой,
-1718,B1,49,H,main,Heldin,die,-nen,Noun,,,,heroine,kahraman (kadın),героиня,
-1719,B1,49,H,main,helfen,,,Verb,hilft,half,hat geholfen,to help,yardım etmek,помогать,
-1720,B1,49,H,main,Hilfe,die,,Noun,,,,help,yardım,помощь,
-1721,B1,49,H,main,hell,,,Other,,,,bright / light,aydınlık / açık renk,светлый / яркий,
-1722,B1,49,H,main,Hemd,das,-en,Noun,,,,shirt,gömlek,рубашка,
-1723,B1,49,H,main,Hendel,das,-,Noun,,,,chicken (Austrian dialect),tavuk (Avusturya),курица (австр.),
-1724,B1,49,H,main,her,,,Other,,,,here / toward the speaker,buraya / bu tarafa,сюда,
-1725,B1,49,H,main,Herausforderung,die,-ender,Noun,,,,challenge,meydan okuma / zorluk,вызов / сложная задача,
-1726,B1,49,H,main,Herkunft,die,,Noun,,,,origin / descent,köken / menşei,происхождение,
-1727,B1,49,H,main,Herr,der,-en,Noun,,,,mister / sir / gentleman,bay / efendi / bey,господин / мужчина,
-1728,B1,49,H,main,herstellen,,,Verb,stellt her,stellte her,hat hergestellt,to produce / to manufacture,üretmek / imal etmek,производить / изготавливать,
-1729,B1,49,H,main,Hersteller,der,-,Noun,,,,manufacturer / producer,üretici / imalatçı,производитель,
-1730,B1,49,H,main,Haus,das,¨-er,Noun,,,,house,ev,дом,
-1731,B1,49,H,main,Hausaufgabe,die,-n,Noun,,,,homework,ödev,домашнее задание,
-1732,B1,49,H,main,Hausfrau,die,,Noun,,,,housewife,ev hanımı,домохозяйка (жен.),
-1733,B1,49,H,main,Hausmann,die,,Noun,,,,househusband,ev erkeği,домохозяин (муж.),
-1734,B1,49,M,main,mann,,,Other,,,,husband,koca,муж,
-1735,B1,49,H,main,Haushalt,der,-e,Noun,,,,household,hane / hanehalkı,домашнее хозяйство,
-1736,B1,49,H,main,Hausmeister,der,-,Noun,,,,caretaker / janitor,kapıcı / bina görevlisi,смотритель / дворник,
-1737,B1,49,H,main,Hausmeisterin,die,-nen,Noun,,,,caretaker / janitor (female),kadın kapıcı / bina görevlisi (kadın),смотрительница / дворник (жен.),
-1738,B1,49,H,main,Haut,die,,Noun,,,,skin,deri / cilt,кожа,
-1739,B1,49,H,main,heben,,,Verb,hebt,hob,hat gehoben,to lift / to raise,kaldırmak / yükseltmek,поднимать,
-1740,B1,49,H,main,Heft,das,-e,Noun,,,,notebook / booklet,defter / kitapçık,тетрадь,
-1741,B1,49,H,main,Heimat,die,,Noun,,,,home / homeland,memleket / vatan,родина / родной край,
-1742,B1,49,H,main,heimlich,,,Other,,,,secret / secretly,gizli / gizlice,тайный / тайком,
-1743,B1,49,H,main,heiß,,,Other,,,,hot,sıcak / yakıcı,горячий,
-1744,B1,49,H,main,heißen,,,Verb,heißt,hieß,hat geheißen,to be called / to mean,adı olmak / anlamına gelmek,называться,
-1745,B1,49,H,main,heizen,,,Verb,heizt,heizte,hat geheizt,to heat,ısıtmak,отапливать,
-1746,B1,49,H,main,Heizung,die,,Noun,,,,heating,ısıtma / kalorifer,отопление,
-1747,B1,49,N,main,nächsten,,,Verb,,,,next,sonraki,следующий,
-1748,B1,49,G,main,gestohlen,,,Verb,,,,stolen,çalınmış,украденный,
-1749,B1,49,H,main,hell,,,Other,,,,bright / light,aydınlık,светлый / яркий,
-1750,B1,49,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,
-1751,B1,49,S,main,sprechen,,,Verb,,,,to speak,konuşmak,говорить / разговаривать,
-1752,B1,49,A,main,an,,,Other,,,,at / on,-de,в / на / к (в зависимости от контекста),
-1753,B1,49,S,main,sich,,,Other,,,,oneself,kendisi,себя,
-1754,B1,49,I,main,ich,,,Other,,,,I,ben,я,
-1755,B1,49,H,main,heben,,,Verb,,,,to lift,kaldırmak,поднимать,
-1756,B1,49,E,main,Heim,,,Other,,,,home,eve,дом / домашний очаг,
-1757,B1,49,H,main,heißt,,,Other,,,,is called,adı ...,называется,
-1758,B1,50,H,main,historisch,,,Other,,,,historical,tarihsel,исторический,
-1759,B1,50,H,main,Hitze,die,,Noun,,,,heat / hot weather,sıcaklık / kavurucu sıcak,жара,
-1760,B1,50,H,main,Hobby,das,-s,Noun,,,,hobby,hobi,хобби,
-1761,B1,50,H,main,hoch,,,Other,,,,high / tall,yüksek,высокий,
-1762,B1,50,H,main,Höhe,die,,Noun,,,,height / altitude,yükseklik / rakım,высота,
-1763,B1,50,H,main,hochladen,,,Verb,lädt hoch,lud hoch,hat hochgela,to upload,yüklemek (internet),загружать,
-1764,B1,50,H,main,höchstens,,,Other,,,,at most / no more than,en fazla / en çok,максимум / не более чем,
-1765,B1,50,H,main,Hochzeit,die,-en,Noun,,,,wedding,düğün,свадьба,
-1766,B1,50,H,main,Hof,der,¨-e,Noun,,,,yard / courtyard / farm,avlu / çiftlik,двор / ферма,
-1767,B1,50,B,main,Bauernhof,der,¨-e,Noun,,,,farm,çiftlik,ферма,
-1768,B1,50,H,main,hoffen,,,Verb,hofft,hoffte,hat gehofft,to hope,ummak / umut etmek,надеяться,
-1769,B1,50,H,main,hoffentlich,,,Other,,,,hopefully,umarım / inşallah,надеюсь,
-1770,B1,50,H,main,Hoffnung,die,-en,Noun,,,,hope,umut,надежда,
-1771,B1,50,H,main,höflich,,,Other,,,,polite / courteous,nazik / kibar,вежливый,
-1772,B1,50,H,main,holen,,,Verb,holt,holte,hat geholt,to fetch / to get,almak / getirmek,принести / забрать,
-1773,B1,50,H,main,Holz,das,,Noun,,,,wood,tahta / odun,дерево / древесина,
-1774,B1,50,H,main,Herz,das,-en,Noun,,,,heart,kalp / yürek,сердце,
-1775,B1,50,H,main,herzlich,,,Other,,,,heartfelt / cordial,içten / samimi / kalpten,сердечный / тёплый / радушный,
-1776,B1,50,H,main,heute,,,Other,,,,today,bugün,сегодня,
-1777,B1,50,H,main,heutig,,,Other,,,,today's / current,bugünkü / mevcut,сегодняшний / современный,
-1778,B1,50,H,main,hier,,,Other,,,,here,burada,здесь,
-1779,B1,50,H,main,hierher,,,Other,,,,here / to this place,buraya,сюда,
-1780,B1,50,H,main,Himmel,der,,Noun,,,,sky / heaven,gökyüzü / cennet,небо / небеса,
-1781,B1,50,H,main,hinten,,,Verb,,,,behind,arkada,сзади / позади,
-1782,B1,50,H,main,hinter,,,Other,,,,behind / after,arkasında,позади / после,
-1783,B1,50,H,main,hinterlassen,,,Verb,hinterlässt,hinterließ,hat hinterlassen,to leave behind / to leave a message,geride bırakmak / mesaj bırakmak,оставлять / оставлять сообщение,
-1784,B1,50,H,main,hinterher,,,Other,,,,afterwards / behind,arkasından / sonra,вслед / потом,
-1785,B1,50,H,main,hinweisen,,,Verb,weist hin,wies hin,hat hingewiesen,to point out / to indicate,işaret etmek / dikkat çekmek,указывать / обращать внимание,
-1786,B1,50,H,main,höchstens,,,Other,,,,at most,en fazla,максимум,
-1787,B1,50,G,main,groß,,,Other,,,,big / large,büyük,большой / высокий,
-1788,B1,50,F,main,fünfzig,,,Other,,,,fifty,elli,пятьдесят,
-1789,B1,50,I,main,immer,,,Other,,,,always,her zaman,всегда,
-1790,B1,50,A,main,aus,,,Other,,,,from / out of,-den,из,
-1791,B1,50,N,main,nachmittags,,,Other,,,,in the afternoon,öğleden sonra,после обеда / во второй половине дня,
-1792,B1,50,Z,main,zurück,,,Other,,,,back / return,geri,назад / обратно,
-1793,B1,50,M,main,mehr,,,Other,,,,more,daha fazla,больше,
-1794,B1,50,N,main,-nung,,,Other,,,,(word fragment),,(фрагмент слова),
-1795,B1,50,H,main,hinterlassen,,,Verb,,,,to leave behind,geride bırakmak,оставлять / оставлять сообщение,
-1796,B1,50,G,main,gibt,,,Other,,,,there is / are,var,есть / имеется,
-1797,B1,50,A,main,kannst,,,Other,,,,can,,можешь,
-1798,B1,50,R,main,runterwerfen,,,Verb,,,,to throw down,aşağı atmak,сбрасывать вниз,
-1799,B1,50,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,
-1800,B1,50,V,main,vorne,,,Other,,,,in front,önde,спереди,
-1801,B1,50,H,main,Haus,das,,Noun,,,,house / home,ev / ev halkı,дом / жилище,
-1802,B1,50,N,main,nicht,,,Other,,,,not,değil,не,
-1803,B1,50,H,main,hinterlassen,,,Verb,,,,to leave behind,geride bırakmak,оставлять,
-1804,B1,50,G,main,gelernt,,,Other,,,,learned,öğrenildi,выученный / научился,
-1805,B1,50,D,main,dass,,,Other,,,,that (conjunction),-diği,что,
-1806,B1,51,I,main,Import,der,-e,Noun,,,,import,ithalat,импорт,
-1807,B1,51,I,main,in,,,Other,,,,in / into,içinde,в / внутрь,
-1808,B1,51,I,main,indem,,,Other,,,,by / while,-erek / -irken,посредством / в то время как,
-1809,B1,51,I,main,Infektion,die,-en,Noun,,,,infection,enfeksiyon,инфекция,
-1810,B1,51,I,main,informieren,,,Verb,informiert,informierte,hat informiert,to inform,bilgilendirmek,информировать,
-1811,B1,51,I,main,Information,die,-en,Noun,,,,information,bilgi / enformasyon,информация,
-1812,B1,51,I,main,Ingenieur,der,-e,Noun,,,,engineer,mühendis,инженер,
-1813,B1,51,I,main,Inhalt,der,-e,Noun,,,,content / contents,içerik / içindekiler,содержание,
-1814,B1,51,I,main,inklusive,,,Other,,,,inclusive / including,dahil / dahil olmak üzere,включительно / включая,
-1815,B1,51,I,main,innen,,,Other,,,,inside,içeride / iç tarafta,внутри,
-1816,B1,51,I,main,inner,,,Other,,,,inner / inside,iç / içsellik,внутренний / внутри,
-1817,B1,51,H,main,Hörerin,die,-nen,Noun,,,,female listener / female audience member,kadın dinleyici,слушательница (жен.),
-1818,B1,51,Z,main,Zuhörer,der,,Noun,,,,listener / audience member,dinleyici / izleyici,слушатель / аудитория,
-1819,B1,51,H,main,Hose,die,-ndas,Noun,,,,trousers / pants,pantolon,брюки,
-1820,B1,51,H,main,Hügel,der,-,Noun,,,,hill,tepe,холм,
-1821,B1,51,H,main,Humor,der,,Noun,,,,humor / sense of humor,mizah / espri,юмор / чувство юмора,
-1822,B1,51,H,main,Hunger,der,,Noun,,,,hunger,açlık,голод,
-1823,B1,51,H,main,hungrig,,,Other,,,,hungry,aç,голодный,
-1824,B1,51,H,main,hupen,,,Verb,hupt,hupte,hat gehupt,to honk / to beep,korna çalmak,сигналить,
-1825,B1,51,H,main,husten,,,Verb,hustet,hustete,hat gehustet,to cough,öksürmek,кашлять,
-1826,B1,51,H,main,Husten,der,,Noun,,,,cough,öksürük,кашель,
-1827,B1,51,H,main,Hut,der,¨-e,Noun,,,,hat,şapka,шляпа,
-1828,B1,51,H,main,Hütte,die,-n,Noun,,,,hut / cabin / mountain refuge,kulübe / dağ evi,хижина / домик / горный приют,
-1829,B1,51,I,main,Imbiss,der,-e,Noun,,,,snack bar / fast food stand,büfe / atıştırmalık,закусочная,
-1830,B1,51,S,main,schlimmer,,,Other,,,,worse,daha kötü,хуже,
-1831,B1,51,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,
-1832,B1,51,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,
-1833,B1,51,E,main,einmal,,,Other,,,,once / sometime,bir kez,один раз,
-1834,B1,51,I,main,ins,,,Other,,,,into the,içine,в / внутрь,
-1835,B1,51,H,main,hier,,,Other,,,,here,burada,здесь,
-1836,B1,51,I,main,individuell,,,Other,,,,individual,bireysel,индивидуальный,
-1837,B1,51,N,main,neuen,die,,Noun,,,,the new,yeni,новый,
-1838,B1,51,Ü,main,über,,,Other,,,,about / over,hakkında,над / о / через,
-1839,B1,51,G,main,genau,,,Other,,,,exactly,tam,точно,
-1840,B1,51,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,
-1841,B1,51,S,main,sein,,,Verb,dass,,,to be,olmak,быть,
-1842,B1,51,I,main,innerhalb,,,Other,,,,within,içinde / dahilinde,внутри / в течение,
-1843,B1,51,M,main,machen,,,Verb,,,,to make / to do,yapmak,делать,
-1844,B1,51,G,main,gefunden,,,Verb,,,,found,bulundu,найденный,
-1845,B1,51,S,main,sch,,,Other,,,,(word fragment),(kelime parçası),(фрагмент слова),
-1846,B1,51,H,main,hat,,,Other,,,,has,var,имеет,
-1847,B1,51,N,main,nicht,,,Other,,,,not,değil,не,
-1848,B1,51,H,main,habe,,,Other,,,,have,sahibim,имею,
-1849,B1,51,D,main,du,,,Other,,,,you,sen,ты,
-1850,B1,51,G,main,gehustet,,,Other,,,,coughed,öksürmüş,кашлял,
-1851,B1,51,I,main,in,,,Other,,,,in,içinde,в,
-1852,B1,51,I,main,ideal,,,Other,,,,ideal,ideal,идеальный,
-1853,B1,51,F,main,finde,,,Other,,,,find,bulmak,нахожу,
-1854,B1,52,I,main,inzwischen,,,Other,,,,meanwhile / in the meantime,bu arada / bu sırada,тем временем,
-1855,B1,52,I,main,irgend-,,,Other,,,,some- / any-,herhangi bir- / bir-,какой-то / какой-нибудь-,
-1856,B1,52,I,main,irgendein,,,Other,,,,any / some,herhangi bir,какой-нибудь / какой-то,
-1857,B1,52,I,main,irgendwann,,,Other,,,,sometime / at some point,bir zaman / bir gün,когда-нибудь,
-1858,B1,52,J,main,ja,,,Other,,,,yes,evet,да,
-1859,B1,52,J,main,Jacke,die,-n,Noun,,,,jacket,ceket,куртка,
-1860,B1,52,J,main,Jause,die,-n,Noun,,,,snack (Austrian),atıştırmalık (Avusturya),перекус,
-1861,B1,52,B,main,biss,,,Other,,,,bit / a little,biraz,кусок / немного,
-1862,B1,52,J,main,je,,,Other,,,,each / ever,her / hiç,каждый / когда-либо,
-1863,B1,52,J,main,Jeans,die,,Noun,,,,jeans,kot pantolon / jeans,джинсы,
-1864,B1,52,I,main,Inserat,das,-e,Noun,,,,advertisement / classified ad,ilan / reklam,объявление / реклама,
-1865,B1,52,I,main,insgesamt,,,Other,,,,altogether / in total,toplam / hepsi birlikte,всего / в общей сложности,
-1866,B1,52,I,main,installieren,,,Verb,installiert,installierte,hat installiert,to install,yüklemek / kurmak,устанавливать,
-1867,B1,52,I,main,Institut,das,-e,Noun,,,,institute,enstitü,институт,
-1868,B1,52,I,main,Instrument,das,"-eintegrieren, integriert, in-",Noun,,,,instrument,enstrüman / alet,инструмент,
-1869,B1,52,I,main,Integration,die,-en,Noun,,,,integration,entegrasyon / bütünleşme,интеграция,
-1870,B1,52,I,main,intelligent,,,Other,,,,intelligent,zeki / akıllı,умный / интеллектуальный,
-1871,B1,52,I,main,Intelligenz,die,,Noun,,,,intelligence,zeka,интеллект,
-1872,B1,52,I,main,intensiv,,,Other,,,,intensive,yoğun,интенсивный,
-1873,B1,52,I,main,Intensivkurs,der,-e,Noun,,,,intensive course,yoğun kurs,интенсивный курс,
-1874,B1,52,I,main,interessieren,,,Verb,interessiert,interessierte,hat interessiert,to interest / to be interested in,ilgilendirmek / ilgilenmek,интересовать,
-1875,B1,52,I,main,interessant,,,Other,,,,interesting,ilginç / ilgi çekici,интересный,
-1876,B1,52,I,main,Interesse,das,-n,Noun,,,,interest,ilgi / çıkar,интерес,
-1877,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili / meraklı,заинтересованный,
-1878,B1,52,I,main,interkulturell,,,Other,,,,intercultural,kültürlerarası,межкультурный,
-1879,B1,52,I,main,international,,,Other,,,,international,uluslararası,международный,
-1880,B1,52,S,main,interessantes,,,Other,,,,interesting,,интересный,
-1881,B1,52,K,main,können,,,Verb,,,,to be able to / can,-ebilmek,мочь / быть в состоянии,
-1882,B1,52,G,main,gesehen,,,Verb,,,,seen,görmüş,увиденный / видел,
-1883,B1,52,S,main,sondern,,,Verb,,,,but rather,aksine,а не / но скорее,
-1884,B1,52,G,main,geirrt,,,Other,,,,mistaken,yanılmış,ошибся,
-1885,B1,52,D,main,da,,,Other,,,,there / since,orada / çünkü,там / тогда,
-1886,B1,52,G,main,geht,,,Other,,,,goes,gidiyor,идёт,
-1887,B1,52,Z,main,zwischen,,,Verb,,,,between,arasında,между,
-1888,B1,52,B,main,bekommt,,,Other,,,,receives,alıyor,получает,
-1889,B1,52,B,main,besser,,,Other,,,,better,daha iyi,лучше,
-1890,B1,52,F,main,für,,,Other,,,,for,için,для,
-1891,B1,52,K,main,kleinen,,,Verb,,,,small,küçük,маленький,
-1892,B1,52,I,main,integriert,,,Other,,,,integrated,entegre edilmiş,интегрированный,
-1893,B1,52,B,main,besser,,,Other,,,,better,daha iyi,лучше,
-1894,B1,52,G,main,gut,,,Other,,,,good,iyi,хороший,
-1895,B1,52,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,
-1896,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili,заинтересованный,
-1897,B1,52,G,main,gelesen,,,Verb,,,,read,okundu,прочитанный / читал,
-1898,B1,52,A,main,aus,,,Other,,,,from / out of,-den,из,
-1899,B1,52,I,main,interkulturell,,,Other,,,,intercultural,,межкультурный,
-1900,B1,52,E,main,interkulturelles,,,Other,,,,intercultural,,межкультурный,
-1901,B1,52,S,main,sind,,,Other,,,,are,,есть / являются,
-1902,B1,52,B,main,bekannt,,,Other,,,,known,tanınan,известный,
-1903,B1,53,K,main,Kabel,das,-,Noun,,,,cable,kablo,кабель,
-1904,B1,53,K,main,Kabine,die,-n,Noun,,,,cabin / cubicle,kabin / soyunma kabini,кабина / кабинка,
-1905,B1,53,K,main,Kaffee,der,,Noun,,,,coffee,kahve,кофе,
-1906,B1,53,K,main,Kaffeehaus,das,¨-er,Noun,,,,coffee house / café,kahvehane / kafe,кофейня / кафе,
-1907,B1,53,K,main,Kakao,der,-sder,Noun,,,,cocoa / hot chocolate,kakao / sıcak çikolata,какао / горячий шоколад,
-1908,B1,53,K,main,kalt,,,Other,,,,cold,soğuk,холодный,
-1909,B1,53,K,main,Kälte,die,,Noun,,,,cold / coldness,soğuk / soğukluk,холод / мороз,
-1910,B1,53,K,main,Kamera,die,-s,Noun,,,,camera,kamera / fotoğraf makinesi,камера,
-1911,B1,53,K,main,kämpfen,,,Verb,kämpft,kämpfte,hat gekämpft,to fight / to struggle,savaşmak / mücadele etmek,бороться / сражаться,
-1912,B1,53,K,main,Kampf,der,¨-e,Noun,,,,fight / struggle / battle,savaş / mücadele,борьба / бой,
-1913,B1,53,K,main,Kanal,der,¨-e,Noun,,,,canal / channel,kanal,канал,
-1914,B1,53,K,main,Kandidat,der,-endie,Noun,,,,candidate,aday,кандидат,
-1915,B1,53,K,main,Kantine,die,-n,Noun,,,,canteen / cafeteria,kantin / yemekhane,столовая / кафетерий,
-1916,B1,53,K,main,Kapitel,das,-jederzeit,Noun,,,,chapter,bölüm / fasıl,глава,
-1917,B1,53,J,main,jedes,,,Other,,,,every / each,her,каждый,
-1918,B1,53,J,main,jedoch,,,Other,,,,however,ancak / bununla birlikte,однако,
-1919,B1,53,J,main,jemals,,,Other,,,,ever,hiç / şimdiye kadar hiç,когда-либо,
-1920,B1,53,J,main,jemand,,,Other,,,,someone,biri / birisi,кто-то,
-1921,B1,53,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,
-1922,B1,53,J,main,jeweils,,,Other,,,,each / respectively,her biri / sırasıyla,каждый раз / соответственно,
-1923,B1,53,J,main,Journalist,der,-en,Noun,,,,journalist (male),gazeteci (erkek),журналист (муж.),
-1924,B1,53,J,main,Journalistin,die,-nen,Noun,,,,journalist (female),gazeteci (kadın),журналист (жен.),
-1925,B1,53,J,main,Jugend,die,,Noun,,,,youth,gençlik,молодёжь,
-1926,B1,53,J,main,Jugendliche,der,-n,Noun,,,,young person / teenager (male),genç (erkek),подросток / молодой человек (муж.),
-1927,B1,53,J,main,Jugendliche,die,-nen,Noun,,,,young person / teenager (female),genç (kadın),подросток / молодая девушка (жен.),
-1928,B1,53,J,main,Jugendherberge,die,-n,Noun,,,,youth hostel,gençlik yurdu / hostel,молодёжный хостел,
-1929,B1,53,J,main,jung,,,Other,,,,young,genç,молодой,
-1930,B1,53,J,main,Junge,der,-n,Noun,,,,boy,erkek çocuk / oğlan,мальчик,
-1931,B1,53,G,main,gerät,,,Other,,,,device / gets,cihaz / düşüyor,устройство / попадает,
-1932,B1,53,M,main,mit,,,Other,,,,with,ile,с / при помощи,
-1933,B1,53,L,main,laden,,,Verb,,,,to load / to charge,yüklemek / şarj etmek,загружать / заряжать,
-1934,B1,53,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-1935,B1,53,E,main,essen,,,Verb,,,,to eat,yemek yemek,есть,
-1936,B1,53,Z,main,zwei,,,Other,,,,two,iki,два,
-1937,B1,53,A,main,anders,,,Other,,,,different / otherwise,farklı,по-другому / иначе,
-1938,B1,53,L,main,leihen,,,Verb,,,,to lend / to borrow,ödünç vermek / ödünç almak,одалживать / брать взаймы,
-1939,B1,53,N,main,Fitness-Studio,,,Other,,,,fitness studio,,фитнес-студия,
-1940,B1,53,M,main,meinem,,,Other,,,,my (dative),benim,моему,
-1941,B1,53,A,main,anders,,,Other,,,,different,farklı,по-другому / иначе,
-1942,B1,53,D,main,donnerstags,,,Other,,,,on Thursdays,perşembeleri,по четвергам,
-1943,B1,53,W,main,werden,,,Verb,,,,to become,olmak,становиться,
-1944,B1,53,F,main,für,,,Other,,,,for,için,для,
-1945,B1,53,I,main,ich,,,Other,,,,I,ben,я,
-1946,B1,53,T,main,-te,,,Other,,,,(word fragment),,(фрагмент слова),
-1947,B1,54,K,main,Käuferin,die,-nen,Noun,,,,female buyer / female customer,kadın alıcı / kadın müşteri,покупательница / клиентка (жен.),
-1948,B1,54,K,main,kaum,,,Other,,,,barely / hardly,neredeyse yok / güçlükle,едва / почти не,
-1949,B1,54,K,main,kein,,,Other,,,,no / not a,hiç / hiçbir,никакой / ни один,
-1950,B1,54,K,main,Keller,der,-,Noun,,,,cellar / basement,bodrum / mahzen,подвал,
-1951,B1,54,K,main,Kellner,der,-,Noun,,,,waiter / server (male),garson (erkek),официант (муж.),
-1952,B1,54,K,main,Kellnerin,die,-nen,Noun,,,,waitress / server (female),garson (kadın),официантка (жен.),
-1953,B1,54,K,main,kennen,,,Verb,kennt,kannte,hat gekannt,to know / to be familiar with,tanımak / bilmek,знать (человека или место),
-1954,B1,54,K,main,kennenlernen,,,Verb,lernt,,,to get to know / to meet,tanışmak,знакомиться / узнавать,
-1955,B1,54,K,main,kennen,,,Verb,lernte kennen,,hat kennengelernt,to know,tanımak,знать (человека или место),
-1956,B1,54,K,main,Kenntnisse,die,,Noun,,,,knowledge / skills,bilgi / beceriler,знания / навыки,
-1957,B1,54,K,main,Kennzeichen,das,-,Noun,,,,license plate / identifier,plaka / işaret,номерной знак / обозначение,
-1958,B1,54,K,main,Kerze,die,-ndie,Noun,,,,candle,mum,свеча,
-1959,B1,54,K,main,Kindergarten,der,¨-,Noun,,,,kindergarten / preschool,anaokulu,детский сад,
-1960,B1,54,K,main,Kindheit,die,,Noun,,,,childhood,çocukluk,детство,
-1961,B1,54,K,main,Kino,das,-s,Noun,,,,cinema / movie theater,sinema,кинотеатр,
-1962,B1,54,K,main,Kiosk,der,-edie,Noun,,,,kiosk / newsstand,büfe / kiosk,киоск,
-1963,B1,54,K,main,kaputtgehen,,,Verb,,,,to break down / to stop working,bozulmak / çökmek,ломаться / выходить из строя,
-1964,B1,54,K,main,kaputtmachen,,,Verb,,,,to break / to damage,bozmak / kırmak,ломать / портить,
-1965,B1,54,K,main,Karneval,der,-s/-e,Noun,,,,carnival,karnaval,карнавал,
-1966,B1,54,N,main,nacht,,,Other,,,,night,gece,ночь,
-1967,B1,54,K,main,Karotte,die,-n,Noun,,,,carrot,havuç,морковь,
-1968,B1,54,K,main,Karte,die,-n,Noun,,,,card / map / menu,kart / harita / menü,карта / меню,
-1969,B1,54,C,main,Chipkarte,die,-n,Noun,,,,chip card / smart card,çipli kart / akıllı kart,чип-карта / смарт-карта,
-1970,B1,54,F,main,Fahrkarte,die,-n,Noun,,,,ticket,bilet,билет,
-1971,B1,54,K,main,Kartoffel,die,-n,Noun,,,,potato,patates,картофель,
-1972,B1,54,D,main,dapfel,,,Other,,,,apple,elma,яблоко,
-1973,B1,54,K,main,Käse,der,,Noun,,,,cheese,peynir,сыр,
-1974,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate,kutu / kasa,ящик / коробка,
-1975,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate (duplicate),kutu / kasa,ящик / коробка,
-1976,B1,54,K,main,Katalog,der,-e,Noun,,,,catalog,katalog,каталог,
-1977,B1,54,K,main,Katastrophe,die,"-n(sich etwas) kaufen, kauft,",Noun,,,,catastrophe / disaster,felaket / yıkım,катастрофа,
-1978,B1,54,K,main,Kauf,der,,Noun,,,,purchase,satın alma,покупка,
-1979,B1,54,S,main,sprechen,,,Verb,,,,to speak,konuşmak,говорить / разговаривать,
-1980,B1,54,K,main,keins,,,Other,,,,none / no one,hiçbiri,ни один / ни у кого,
-1981,B1,54,G,main,gemütliches,,,Other,,,,cozy,rahat,уютный,
-1982,B1,54,N,main,nicht,,,Other,,,,not,değil,не,
-1983,B1,54,V,main,verbessern,,,Verb,,,,to improve,geliştirmek / iyileştirmek,улучшать,
-1984,B1,54,V,main,viele,,,Other,,,,many,çok,многие,
-1985,B1,54,D,main,dort,,,Other,,,,there,,там,
-1986,B1,54,L,main,leicht,,,Other,,,,easy / light,kolay / hafif,лёгкий,
-1987,B1,54,G,main,gegangen,,,Verb,,,,gone,gidilmiş,ушёл / пошёл,
-1988,B1,54,D,main,deutschland,,,Other,,,,Germany,Almanya,Германия,
-1989,B1,54,K,main,kaufen,,,Verb,,,,to buy,satın almak,покупать,
-1990,B1,54,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,
-1991,B1,54,B,main,bestellt,,,Other,,,,ordered,sipariş verilmiş,заказанный,
-1992,B1,54,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-1993,B1,55,K,main,Klingel,die,-n,Noun,,,,doorbell / bell,zil / kapı zili,звонок / дверной звонок,
-1994,B1,55,K,main,klingen,,,Verb,klingt,klang,hat geklungen,to ring / to sound,çalmak / ses çıkarmak,звенеть / звучать,
-1995,B1,55,K,main,Klinik,die,"-enklopfen, klopft, klopfte,",Noun,,,,clinic / hospital,klinik / hastane,клиника / больница,
-1996,B1,55,K,main,Kloß,der,¨-e,Noun,,,,dumpling,hamur topu / köfte,клёцка,
-1997,B1,55,K,main,klug,,,Other,,,,clever / smart,zeki / akıllı,умный / сообразительный,
-1998,B1,55,K,main,knapp,,,Other,,,,barely / tight / scarce,kıl payı / kıt / dar,едва / тесный / ограниченный,
-1999,B1,55,K,main,Kneipe,die,-n,Noun,,,,pub / bar,bar / meyhane,паб / бар,
-2000,B1,55,K,main,Knie,das,-der,Noun,,,,knee,diz,колено,
+1501,B1,44,G,main,gefährlich,,,Other,,,,dangerous,tehlikeli,опасный,небезпечний
+1502,B1,44,G,main,gefallen,,,Verb,gefällt,gefiel,hat gefallen,to like / please,beğenmek / hoşuna gitmek,нравиться / доставлять удовольствие,подобатися
+1503,B1,44,G,main,Gefängnis,das,-se,Noun,,,,prison,hapishane / cezaevi,тюрьма,в'язниця
+1504,B1,44,G,main,Gefühl,das,-e gegen,Noun,,,,feeling / emotion,his / duygu,чувство / эмоция,почуття / емоція
+1505,B1,44,G,main,Gegner,der,-,Noun,,,,opponent / adversary,rakip / muhalif,противник / соперник,суперник / противник
+1506,B1,44,G,main,Gegend,die,-en,Noun,,,,area / region / neighborhood,bölge / semt / çevre,местность / район / окрестности,район / місцевість
+1507,B1,44,G,main,Gegensatz,der,¨-e,Noun,,,,contrast / opposite,zıtlık / karşıtlık,противоположность / контраст,протилежність / контраст
+1508,B1,44,G,main,Gegenstand,der,¨-e,Noun,,,,object / item,nesne / eşya,предмет / объект,предмет / річ
+1509,B1,44,G,main,Gegenteil,das,-e 1.,Noun,,,,opposite,zıt / karşıtı,противоположность,протилежність
+1510,B1,44,P,main,Post,der,,Noun,,,,post,posta,почта,пошта
+1511,B1,44,N,main,nicht,,,Other,,,,not,değil,не,не
+1512,B1,44,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,(артикль)
+1513,B1,44,N,main,niemandem,,,Other,,,,nobody,kimseye,никому,нікому
+1514,B1,44,N,main,nicht,,,Other,,,,not,değil,не,не
+1515,B1,44,G,main,gegeben,,,Verb,,,,given,verilmiş,данный / дано,даний / дати
+1516,B1,44,U,main,unsere,,,Other,,,,our,bizim,наша / наши,наш / наша / наше
+1517,B1,44,D,main,drei,,,Other,,,,three,üç,три,три
+1518,B1,44,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,іти / ходити
+1519,B1,44,V,main,verurteilt,,,Other,,,,convicted,mahkum edilmiş,осуждённый,засуджений
+1520,B1,44,H,main,habe,,,Other,,,,have,sahibim,имею,маю
+1521,B1,44,S,main,sehr,,,Other,,,,very,çok,очень,дуже
+1522,B1,44,S,main,sein,,,Other,,,,to be / his,olmak / onun,быть,бути / його
+1523,B1,44,S,main,starkem,,,Other,,,,strong,güçlü,сильный,сильний
+1524,B1,44,Z,main,ziemlich,,,Other,,,,quite,oldukça,довольно / вполне,досить / доволі
+1525,B1,44,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,один / одна / одне
+1526,B1,44,A,main,ach,,,Other,,,,oh,ah,ах / ох,ах / о
+1527,B1,44,L,main,liegen,,,Verb,,,,to lie / be located,uzanmak / bulunmak,лежать / находиться,лежати / розташовуватися
+1528,B1,45,G,main,gering,,,Other,,,,small / low / minor,küçük / az / önemsiz,небольшой / низкий / незначительный,незначний / малий
+1529,B1,45,G,main,gern / gerne,,,Other,,,,gladly / with pleasure,memnuniyetle / severek,охотно / с удовольствием,охоче / із задоволенням
+1530,B1,45,G,main,gesamt-,,,Other,,,,total / overall (prefix),toplam / genel (önek),общий / совокупный- (часть сложного слова),загальний (префікс)
+1531,B1,45,G,main,Geschäft,das,"-egeschehen, geschieht,",Noun,,,,shop / store / business,dükkan / mağaza / iş,магазин / дело / бизнес,магазин / справа / бізнес
+1532,B1,45,G,main,Geschenk,das,-edie,Noun,,,,gift / present,hediye,подарок,подарунок
+1533,B1,45,G,main,geschieden,,,Verb,,,,divorced,boşanmış,разведённый,розлучений / розлучена
+1534,B1,45,G,main,Geschirr,das,,Noun,,,,dishes / crockery,mutfak eşyası / tabak çanak,посуда,посуд
+1535,B1,45,G,main,Geschlecht,das,-er der,Noun,,,,gender / sex,cinsiyet,пол / род,стать / рід
+1536,B1,45,G,main,Geschwindigkeits-,die,,Noun,,,,speed (compound prefix),hız (bileşik önek),скорость- (часть сложного слова),швидкість (префікс)
+1537,B1,45,G,main,Geschwister,die,,Noun,,,,siblings,kardeşler,братья и сёстры,брати й сестри / рідні
+1538,B1,45,G,main,Gesellschaft,die,-en,Noun,,,,society / company,toplum / şirket,общество / компания,суспільство / товариство
+1539,B1,45,G,main,Gesetz,das,-e,Noun,,,,law,yasa / kanun,закон,закон
+1540,B1,45,G,main,Gesicht,das,"-ergelten, gilt, galt,",Noun,,,,face,yüz,лицо,обличчя
+1541,B1,45,G,main,gemeinsam,,,Other,,,,together / joint / common,birlikte / ortak,совместный / вместе / общий,спільний / разом
+1542,B1,45,G,main,Gemeinschaft,die,-en,Noun,,,,community,topluluk,сообщество,громада / спільнота
+1543,B1,45,G,main,Gemüse,das,,Noun,,,,vegetables,sebze / sebzeler,овощи,овочі
+1544,B1,45,G,main,gemütlich,,,Other,,,,cozy / comfortable,rahat / keyifli / sıcak,уютный / комфортный,затишний / зручний
+1545,B1,45,G,main,genau,,,Other,,,,exactly / precise,tam / kesinlikle,точно / точно по значению,точно / саме так
+1546,B1,45,G,main,genauso,,,Other,,,,just as / equally,aynı şekilde / eşit olarak,точно так же / одинаково,так само / однаково
+1547,B1,45,G,main,genehmigen,,,Verb,genehmigt,genehmigte,hat genehmigt,to approve / authorize,onaylamak / yetkilendirmek,разрешать / утверждать,схвалювати / дозволяти
+1548,B1,45,G,main,Generation,die,-en,Noun,,,,generation,nesil / kuşak,поколение,покоління
+1549,B1,45,G,main,genießen,,,Verb,genießt,genoss,hat genossen,to enjoy,tadını çıkarmak / keyif almak,наслаждаться,насолоджуватися
+1550,B1,45,G,main,genug,,,Other,,,,enough,yeterli / yeterince,достаточно,достатньо / досить
+1551,B1,45,G,main,genügen,,,Verb,genügt,genügte,hat genügt,to be enough / suffice,yeterli olmak,быть достаточным,бути достатнім / вистачати
+1552,B1,45,G,main,Gepäck,das,,Noun,,,,luggage,bagaj,багаж,багаж
+1553,B1,45,G,main,gerade,,,Other,,,,just / straight / at the moment,tam / düz / şu anda,как раз / прямо / в данный момент,саме / прямо / зараз
+1554,B1,45,G,main,geradeaus,,,Other,,,,straight ahead,dümdüz / doğruca,прямо,прямо вперед
+1555,B1,45,G,main,Gerät,das,-e gerecht 1.,Noun,,,,device / appliance,cihaz / alet,прибор / устройство,пристрій / прилад
+1556,B1,45,B,main,beim,,,Other,,,,at the,,у / в месте,при / під час
+1557,B1,45,G,main,geringe,,,Other,,,,small / low,az / düşük,небольшой / низкий,незначний / невеликий
+1558,B1,45,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
+1559,B1,45,E,main,einen,,,Verb,,,,one,bir,один,один (знах.)
+1560,B1,45,V,main,verschenkt,,,Other,,,,given away,hediye edilmiş,подаренный / отданный,подарований / віддати в подарунок
+1561,B1,45,I,main,ist,,,Other,,,,is,,есть / является,є
+1562,B1,45,G,main,geschehen,,,Verb,,,,to happen,olmak / gerçekleşmek,случаться / происходить,відбуватися / траплятися
+1563,B1,45,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди
+1564,B1,45,W,main,weiblich,,,Other,,,,female,kadın / dişi,женский,жіночий
+1565,B1,45,W,main,männlich,,,Other,,,,male,erkek / eril,мужской,чоловічий
+1566,B1,45,W,main,wohl,,,Other,,,,probably / well,muhtemelen / iyi,вероятно / пожалуй,мабуть / добре
+1567,B1,45,B,main,beschlossen,,,Verb,,,,decided,kararlaştırılmış,решённый / принятый,вирішено / вирішений
+1568,B1,45,A,main,als,,,Other,,,,as / when,olarak / -dığında,как / когда / чем,як / коли / ніж
+1569,B1,45,H,main,helfe,,,Other,,,,help,yardım et,помогаю,допомагаю
+1570,B1,45,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / із
+1571,B1,45,M,main,man,,,Verb,,,,one / you (impersonal),,"человек / безличное ""ты""",один (безос.)
+1572,B1,45,G,main,genießen,,,Verb,weil es zu,,,to enjoy,keyif almak,наслаждаться,насолоджуватися
+1573,B1,45,G,main,gelassen,,,Verb,,,,let / calm,bırakmış / sakin,позволенный / спокойный,спокійний / дозволив
+1574,B1,45,G,main,gebraucht,,,Other,,,,used / second-hand,kullanılmış / ikinci el,бывший в употреблении / подержанный,вживаний / б/у
+1575,B1,46,G,main,gießen,,,Verb,gießt,goss,,to pour / water (plants),dökmek / sulamak,лить / поливать,поливати / лити
+1576,B1,46,G,main,gegossen,,,Verb,,,,poured,dökülmüş,налитый,вилитий / политий
+1577,B1,46,G,main,Gift,das,-e,Noun,,,,poison,zehir,яд,отрута
+1578,B1,46,G,main,giftig,,,Other,,,,poisonous / toxic,zehirli / toksik,ядовитый,отруйний / токсичний
+1579,B1,46,G,main,Gitarre,die,-ndie/das,Noun,,,,guitar,gitar,гитара,гітара
+1580,B1,46,G,main,Glas,das,¨-er,Noun,,,,glass,cam / bardak,стакан / стекло,склянка / скло
+1581,B1,46,G,main,glatt,,,Other,,,,smooth / slippery,pürüzsüz / kaygan,гладкий / скользкий,гладкий / слизький
+1582,B1,46,G,main,glauben,,,Verb,glaubt,glaubte,hat geglaubt,to believe,inanmak / sanmak,верить,вірити / думати
+1583,B1,46,G,main,gleich,,,Other,,,,same / immediately / equal,aynı / hemen / eşit,одинаковый / сразу,однаковий / рівний / зразу
+1584,B1,46,G,main,gleichfalls,,,Other,,,,likewise / the same to you,aynı şekilde / sana da,взаимно / и вам того же,так само / і вам теж
+1585,B1,46,G,main,gleichberechtigt,,,Other,,,,equal rights / equal,eşit haklara sahip,равноправный,рівноправний
+1586,B1,46,G,main,gleichzeitig,,,Other,,,,simultaneous / at the same time,eş zamanlı / aynı anda,одновременно,одночасний / одночасно
+1587,B1,46,G,main,Gleis,das,-e,Noun,,,,track / platform (rail),ray / peron,путь / платформа,колія / платформа
+1588,B1,46,G,main,Glück,das,,Noun,,,,luck / happiness,şans / mutluluk,счастье / удача,щастя / удача
+1589,B1,46,G,main,glücklich,,,Other,,,,happy / lucky,mutlu / şanslı,счастливый / удачливый,щасливий
+1590,B1,46,G,main,Glückwunsch,der,¨-e,Noun,,,,congratulations,tebrikler / kutlama,поздравление,вітання / поздоровлення
+1591,B1,46,G,main,Gold,das,,Noun,,,,gold,altın,золото,золото
+1592,B1,46,G,main,gestern,,,Verb,,,,yesterday,dün,вчера,вчора
+1593,B1,46,G,main,gesund,,,Other,,,,healthy,sağlıklı,здоровый,здоровий
+1594,B1,46,G,main,Gesundheit,die,,Noun,,,,health,sağlık,здоровье,здоров'я
+1595,B1,46,G,main,Getränk,das,-e,Noun,,,,drink / beverage,içecek,напиток,напій
+1596,B1,46,G,main,Gewalt,die,-en,Noun,,,,violence / force / power,şiddet / güç / iktidar,насилие / сила / власть,насильство / сила / влада
+1597,B1,46,G,main,Gewerkschaft,die,-en,Noun,,,,trade union,sendika,профсоюз,профспілка
+1598,B1,46,G,main,Gewicht,das,-e,Noun,,,,weight,ağırlık / kilo,вес,вага
+1599,B1,46,G,main,gewinnen,,,Verb,gewinnt,gewann,hat gewonnen,to win,kazanmak,выигрывать,вигравати / перемагати
+1600,B1,46,G,main,Gewinn,der,-e,Noun,,,,profit / prize / winnings,kâr / ödül / kazanç,прибыль / выигрыш,прибуток / виграш
+1601,B1,46,G,main,Gewissen,das,,Noun,,,,conscience,vicdan,совесть,совість
+1602,B1,46,G,main,Gewitter,das,-,Noun,,,,thunderstorm,gök gürültülü fırtına,гроза,гроза
+1603,B1,46,G,main,gewöhnen,,,Verb,gewöhnt,gewöhnte,,to get used to,alışmak,привыкать,звикати / призвичаюватися
+1604,B1,46,G,main,Gewohnheit,die,-en,Noun,,,,habit / custom,alışkanlık,привычка / обычай,звичка
+1605,B1,46,G,main,gewohnt,,,Other,,,,accustomed / used to,alışık / alışkın,привыкший,звичний / звиклий
+1606,B1,46,G,main,gewöhnlich,,,Other,,,,usual / usually,alışılmış / genellikle,обычный / обычно,звичайний / зазвичай
+1607,B1,46,M,main,man,,,Other,,,,one,kişi,"кто-то / безличное ""ты""",один (безос.)
+1608,B1,46,D,main,denken,,,Verb,,,,to think,düşünmek,думать,думати
+1609,B1,46,M,main,machen,,,Verb,,,,to make,yapmak,делать,робити
+1610,B1,46,E,main,einen,,,Verb,,,,one,bir,один,один (знах.)
+1611,B1,46,S,main,sehr,,,Other,,,,very,çok,очень,дуже
+1612,B1,46,N,main,neues,,,Other,,,,new,yeni,новый,нове
+1613,B1,46,N,main,nur,,,Other,,,,only,sadece,только / просто,лише / тільки
+1614,B1,46,G,main,gewinnt,,,Other,,,,wins,kazanıyor,выигрывает,виграє / перемагає
+1615,B1,46,G,main,gesund,,,Other,,,,healthy,sağlıklı,здоровый,здоровий
+1616,B1,46,A,main,achten,,,Verb,,,,to pay attention / to respect,dikkat etmek / saygı göstermek,обращать внимание / уважать,звертати увагу / поважати
+1617,B1,46,V,main,vorkommt,,,Other,,,,occurs / comes up,gerçekleşiyor,случается / встречается,трапляється / зустрічається
+1618,B1,46,Ö,main,öffnen,,,Other,,,,to open,açmak,открывать,відкривати
+1619,B1,46,H,main,hängt,,,Other,,,,depends / hangs,asılı / bağlı,зависит / висит,залежить / висить
+1620,B1,46,G,main,gewinnen,,,Verb,,,,to win,kazanmak,выигрывать,вигравати / перемагати
+1621,B1,46,G,main,ge-,,,Other,,,,(prefix ge-),ge- öneki,приставка ge-,(префікс ге-)
+1622,B1,46,M,main,macht,,,Other,,,,makes / does,yapıyor,делает,робить
+1623,B1,46,G,main,gewöhnt,,,Other,,,,accustomed,alışık,привыкший,звиклий / звик
+1624,B1,46,A,main,aufzustehen,,,Verb,,,,to get up,kalkmak,вставать,вставати
+1625,B1,46,P,main,Post,die,,Noun,,,,post office / mail,postane / posta,почта / почтовое отделение,пошта
+1626,B1,46,J,main,jeden,,,Verb,früh ins,,,every,her,каждый,кожен (знах.)
+1627,B1,46,G,main,gehen,,,Verb,,,,to go / to walk,gitmek / yürümek,идти / ходить,іти / ходити
+1628,B1,47,G,main,Grundstück,das,-e,Noun,,,,plot of land / property,arsa / mülk,земельный участок,земельна ділянка
+1629,B1,47,G,main,Gruppe,die,-n,Noun,,,,group,grup,группа,група
+1630,B1,47,G,main,grüßen,,,Verb,grüßt,grüßte,hat gegrüßt,to greet,selamlamak,приветствовать,вітати / привітатися
+1631,B1,47,G,main,Gruß,der,¨-e,Noun,,,,greeting,selam,приветствие,привітання
+1632,B1,47,G,main,gucken,,,Verb,guckt,guckte,hat geguckt,to look / to watch,bakmak / izlemek,смотреть / глядеть,дивитися / роздивлятися
+1633,B1,47,G,main,gültig,,,Other,,,,valid,geçerli,действительный / действующий,дійсний / чинний
+1634,B1,47,G,main,günstig,,,Other,,,,affordable / favorable,uygun fiyatlı / elverişli,выгодный / недорогой,вигідний / доступний
+1635,B1,47,G,main,Gymnastik,die,,Noun,,,,gymnastics / exercise,jimnastik,гимнастика / упражнения,гімнастика
+1636,B1,47,H,main,Haar,das,-e,Noun,,,,hair,saç,волосы,волосся / волос
+1637,B1,47,H,main,haben,,,Verb,,,hat gehabt,to have,sahip olmak,иметь,мати
+1638,B1,47,G,main,Grafik,die,-endas,Noun,,,,graphic / chart,grafik,графика / диаграмма,графіка / графік
+1639,B1,47,G,main,gratulieren,,,Verb,gratuliert,gratulierte,hat gratuliert,to congratulate,tebrik etmek,поздравлять,вітати / поздоровляти
+1640,B1,47,G,main,Gratulation,die,-en,Noun,,,,congratulation,tebrik,поздравление,вітання / поздоровлення
+1641,B1,47,G,main,gratis,,,Other,,,,free of charge,ücretsiz / bedava,бесплатно,безкоштовно
+1642,B1,47,G,main,greifen,,,Verb,greift,griff,hat gegriffen,to grab / to reach for,yakalamak / uzanmak,хватать / тянуться к,хапати / братися
+1643,B1,47,G,main,Grenze,die,-n,Noun,,,,border / boundary,sınır,граница,кордон / межа
+1644,B1,47,G,main,grillen,,,Verb,grillt,grillte,hat gegrillt,to grill / to barbecue,ızgara yapmak / mangal yapmak,жарить на гриле / барбекю,смажити на грилі
+1645,B1,47,G,main,grillieren,,,Verb,grilliert,grillierte,hat grilliert,to grill (Swiss variant),ızgara yapmak (İsviçre),жарить на гриле (швейц.),смажити на грилі (швейцар.)
+1646,B1,47,G,main,Grill,der,,Noun,,,,grill / barbecue,ızgara / mangal,гриль / барбекю,гриль
+1647,B1,47,G,main,Grippe,die,,Noun,,,,flu / influenza,grip / influenza,грипп,грип
+1648,B1,47,G,main,groß,,,Other,,,,big / large / tall,büyük,большой / высокий,великий / високий
+1649,B1,47,G,main,Größe,die,-n,Noun,,,,size / height,boy / beden / büyüklük,размер / рост,розмір / зріст
+1650,B1,47,G,main,gründen,,,Verb,gründet,gründete,hat gegründet,to found / to establish,kurmak / tesis etmek,основывать / учреждать,засновувати / заснувати
+1651,B1,47,G,main,Grund,der,¨-e1.,Noun,,,,reason / ground / basis,neden / zemin / temel,причина / основание / грунт,причина / підстава / ґрунт
+1652,B1,47,R,main,reinigen,,,Verb,bevor der,,,to clean,temizlemek,чистить / убирать,чистити / прибирати
+1653,B1,47,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,(артикль)
+1654,B1,47,H,main,hast,,,Other,,,,have,sahibin,имеешь,маєш
+1655,B1,47,D,main,doch,,,Other,,,,but / though,ama / yine de,однако / ведь,але / ж / все ж
+1656,B1,47,G,main,gültig,,,Other,,,,valid,geçerli,действительный,дійсний / чинний
+1657,B1,47,W,main,wohnung,,,Other,,,,apartment,daire,квартира,квартира
+1658,B1,47,G,main,gut,,,Other,,,,good,iyi,хороший,добре / хороший
+1659,B1,47,Ü,main,überall,,,Other,,,,everywhere,her yerde,повсюду,скрізь / усюди
+1660,B1,47,F,main,fahren,,,Other,,,,drive,sürmek,ехать,їхати / водити
+1661,B1,47,G,main,gewonnen,,,Verb,,,,won,kazanıldı,выигранный / выиграл,виграний / виграв
+1662,B1,47,W,main,wir,,,Other,,,,we,biz,мы,ми
+1663,B1,47,W,main,wollen,,,Verb,,,,to want,istemek,хотеть,хотіти / бажати
+1664,B1,47,N,main,nicht,,,Other,,,,not,değil,не,не
+1665,B1,47,W,main,wieder,,,Other,,,,again,yeniden,снова,знову / ще раз
+1666,B1,47,G,main,gegründet,,,Other,,,,founded,kurulmuş,основанный,заснований
+1667,B1,47,W,main,welchem,,,Other,,,,which,hangi,которому / какому,яким (дат.)
+1668,B1,47,B,main,beschweren,,,Verb,,,,to complain,şikâyet etmek,жаловаться,скаржитися / нарікати
+1669,B1,48,H,main,Haltestelle,die,-n,Noun,,,,bus stop / tram stop,durak,остановка,зупинка
+1670,B1,48,H,main,Hammer,der,¨-,Noun,,,,hammer,çekiç,молоток,молоток
+1671,B1,48,H,main,Hand,die,¨-e,Noun,,,,hand,el,рука,рука
+1672,B1,48,H,main,Handwerker,der,-,Noun,,,,craftsman / tradesman,usta / zanaatkâr (erkek),ремесленник / мастер,ремісник
+1673,B1,48,H,main,Handwerkerin,die,-nen,Noun,,,,craftswoman / tradeswoman,usta / zanaatkâr (kadın),ремесленница / мастер (жен.),ремісниця
+1674,B1,48,H,main,handeln,,,Verb,handelt,handelte,hat gehandelt,to act / to trade / to deal,hareket etmek / ticaret yapmak,действовать / торговать / идти о,діяти / торгувати
+1675,B1,48,H,main,Handel,der,,Noun,,,,trade / commerce,ticaret,торговля,торгівля
+1676,B1,48,H,main,Händler,der,-,Noun,,,,dealer / merchant / trader,satıcı / tacir,торговец / продавец (муж.),торговець / продавець
+1677,B1,48,H,main,Händlerin,die,-nen,Noun,,,,dealer / merchant (female),kadın satıcı / kadın tacir,торговка / продавец (жен.),торговка / продавчиня
+1678,B1,48,H,main,Handy,das,-s,Noun,,,,mobile phone / cell phone,cep telefonu,мобильный телефон,мобільний телефон
+1679,B1,48,H,main,hängen,,,Verb,hängt,,,to hang,asmak / sarkmak,висеть,висіти / вішати
+1680,B1,48,H,main,hart,,,Other,,,,hard / tough / difficult,sert / zor,твёрдый,твердий / жорсткий / важкий
+1681,B1,48,H,main,hassen,,,Verb,hasst,hasste,hat gehasst,to hate,nefret etmek,ненавидеть,ненавидіти
+1682,B1,48,H,main,hässlich,,,Other,,,,ugly,çirkin,уродливый,потворний / некрасивий
+1683,B1,48,H,main,häufig,,,Other,,,,frequent / common,sık / yaygın,частый / распространённый,частий / часто
+1684,B1,48,H,main,Hauptstadt,die,¨-edas,Noun,,,,capital city,başkent,столица,столиця
+1685,B1,48,H,main,Hafen,der,¨-,Noun,,,,harbor / port,liman,гавань / порт,порт / гавань
+1686,B1,48,H,main,hageln,,,Verb,hagelt,hagelte,hat gehagelt,to hail,dolu yağmak,идти о граде,іти граду
+1687,B1,48,H,main,Hähnchen / Hühnchen,das,,Noun,,,,chicken,tavuk / piliç,цыплёнок,курча / куріпка
+1688,B1,48,H,main,halb,,,Other,,,,half,yarım,половина,половина / пів-
+1689,B1,48,H,main,Halbpension,die,,Noun,,,,half board (hotel),yarım pansiyon,полупансион,напівпансіон
+1690,B1,48,H,main,halbtags,,,Other,,,,part-time / half-day,yarı zamanlı,на полдня / неполный день,на півдня / неповний робочий день
+1691,B1,48,H,main,Hälfte,die,-n,Noun,,,,half,yarı,половина,половина
+1692,B1,48,H,main,Halle,die,-n,Noun,,,,hall / indoor arena,salon / kapalı alan,зал / крытая арена,зал / зала
+1693,B1,48,H,main,Hallenbad,das,¨-er,Noun,,,,indoor swimming pool,kapalı yüzme havuzu,крытый бассейн,критий басейн
+1694,B1,48,H,main,hallo,,,Other,,,,hello,merhaba,привет,привіт / алло
+1695,B1,48,H,main,Hals,der,¨-ehalt,Noun,,,,neck / throat,boyun / boğaz,горло / шея,шия / горло
+1696,B1,48,H,main,haltbar,,,Other,,,,durable / long-lasting,dayanıklı / uzun ömürlü,прочный / долговечный,міцний / довготривалий
+1697,B1,48,H,main,halten,,,Verb,hält,hielt,hat gehalten6.,to hold / to keep / to stop,tutmak / durdurmak,держать / останавливаться,тримати / зупинятися / вважати
+1698,B1,48,W,main,wir,,,Other,,,,we,biz,мы,ми
+1699,B1,48,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,один (знах.)
+1700,B1,48,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,зараз / тепер
+1701,B1,48,H,main,handelt,,,Other,,,,deals / acts,davranıyor,идёт речь / действует,торгує / діє
+1702,B1,48,U,main,und,,,Other,,,,and,ve,и,і / та
+1703,B1,48,G,main,gutes,,,Other,,,,good,iyi,хороший,гарне / хороше
+1704,B1,48,D,main,dir,,,Other,,,,you (dative),sana,тебе,тобі (дат.)
+1705,B1,48,G,main,geben,,,Verb,,,,to give,vermek,давать,давати / дати
+1706,B1,48,M,main,muss,,,Other,,,,must,zorunda,должен,мушу / повинен
+1707,B1,48,U,main,unbedingt,,,Other,,,,absolutely / definitely,kesinlikle,обязательно / во что бы то ни стало,обов'язково / неодмінно
+1708,B1,48,H,main,halben,,,Verb,,,,half,yarım,половина,половину
+1709,B1,48,N,main,nicht,,,Other,,,,not,değil,не,не
+1710,B1,48,B,main,bekommt,,,Other,,,,receives,alıyor,получает,отримує
+1711,B1,48,V,main,vorbei,,,Other,,,,past / over,geçmiş / bitti,мимо / закончено,мимо / повз / закінчено
+1712,B1,48,N,main,nur,,,Other,,,,only,sadece,только / просто,лише / тільки
+1713,B1,48,D,main,dir,,,Other,,,,you (dative),sana,тебе,тобі (дат.)
+1714,B1,48,H,main,halten,,,Verb,,,,to hold / to keep,tutmak,держать / останавливаться,тримати / зупинятися
+1715,B1,48,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,зачинений / закритий
+1716,B1,48,B,main,bauen,,,Verb,,,,to build,inşa etmek,строить,будувати
+1717,B1,49,H,main,Held,der,-en,Noun,,,,hero,kahraman (erkek),герой,герой
+1718,B1,49,H,main,Heldin,die,-nen,Noun,,,,heroine,kahraman (kadın),героиня,героїня
+1719,B1,49,H,main,helfen,,,Verb,hilft,half,hat geholfen,to help,yardım etmek,помогать,допомагати
+1720,B1,49,H,main,Hilfe,die,,Noun,,,,help,yardım,помощь,допомога
+1721,B1,49,H,main,hell,,,Other,,,,bright / light,aydınlık / açık renk,светлый / яркий,яскравий / світлий
+1722,B1,49,H,main,Hemd,das,-en,Noun,,,,shirt,gömlek,рубашка,сорочка
+1723,B1,49,H,main,Hendel,das,-,Noun,,,,chicken (Austrian dialect),tavuk (Avusturya),курица (австр.),курча (австр.)
+1724,B1,49,H,main,her,,,Other,,,,here / toward the speaker,buraya / bu tarafa,сюда,сюди / до мовця
+1725,B1,49,H,main,Herausforderung,die,-ender,Noun,,,,challenge,meydan okuma / zorluk,вызов / сложная задача,виклик
+1726,B1,49,H,main,Herkunft,die,,Noun,,,,origin / descent,köken / menşei,происхождение,походження
+1727,B1,49,H,main,Herr,der,-en,Noun,,,,mister / sir / gentleman,bay / efendi / bey,господин / мужчина,пан / господар
+1728,B1,49,H,main,herstellen,,,Verb,stellt her,stellte her,hat hergestellt,to produce / to manufacture,üretmek / imal etmek,производить / изготавливать,виробляти / виготовляти
+1729,B1,49,H,main,Hersteller,der,-,Noun,,,,manufacturer / producer,üretici / imalatçı,производитель,виробник
+1730,B1,49,H,main,Haus,das,¨-er,Noun,,,,house,ev,дом,будинок / дім
+1731,B1,49,H,main,Hausaufgabe,die,-n,Noun,,,,homework,ödev,домашнее задание,домашнє завдання
+1732,B1,49,H,main,Hausfrau,die,,Noun,,,,housewife,ev hanımı,домохозяйка (жен.),домогосподарка
+1733,B1,49,H,main,Hausmann,die,,Noun,,,,househusband,ev erkeği,домохозяин (муж.),домашній господар
+1734,B1,49,M,main,mann,,,Other,,,,husband,koca,муж,чоловік
+1735,B1,49,H,main,Haushalt,der,-e,Noun,,,,household,hane / hanehalkı,домашнее хозяйство,домашнє господарство / бюджет
+1736,B1,49,H,main,Hausmeister,der,-,Noun,,,,caretaker / janitor,kapıcı / bina görevlisi,смотритель / дворник,двірник / комендант
+1737,B1,49,H,main,Hausmeisterin,die,-nen,Noun,,,,caretaker / janitor (female),kadın kapıcı / bina görevlisi (kadın),смотрительница / дворник (жен.),двірниця
+1738,B1,49,H,main,Haut,die,,Noun,,,,skin,deri / cilt,кожа,шкіра
+1739,B1,49,H,main,heben,,,Verb,hebt,hob,hat gehoben,to lift / to raise,kaldırmak / yükseltmek,поднимать,піднімати
+1740,B1,49,H,main,Heft,das,-e,Noun,,,,notebook / booklet,defter / kitapçık,тетрадь,зошит / брошура
+1741,B1,49,H,main,Heimat,die,,Noun,,,,home / homeland,memleket / vatan,родина / родной край,батьківщина / рідний край
+1742,B1,49,H,main,heimlich,,,Other,,,,secret / secretly,gizli / gizlice,тайный / тайком,таємний / таємно
+1743,B1,49,H,main,heiß,,,Other,,,,hot,sıcak / yakıcı,горячий,гарячий
+1744,B1,49,H,main,heißen,,,Verb,heißt,hieß,hat geheißen,to be called / to mean,adı olmak / anlamına gelmek,называться,називатися / означати
+1745,B1,49,H,main,heizen,,,Verb,heizt,heizte,hat geheizt,to heat,ısıtmak,отапливать,опалювати / гріти
+1746,B1,49,H,main,Heizung,die,,Noun,,,,heating,ısıtma / kalorifer,отопление,опалення
+1747,B1,49,N,main,nächsten,,,Verb,,,,next,sonraki,следующий,наступний
+1748,B1,49,G,main,gestohlen,,,Verb,,,,stolen,çalınmış,украденный,вкрадений
+1749,B1,49,H,main,hell,,,Other,,,,bright / light,aydınlık,светлый / яркий,яскравий / світлий
+1750,B1,49,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений
+1751,B1,49,S,main,sprechen,,,Verb,,,,to speak,konuşmak,говорить / разговаривать,говорити
+1752,B1,49,A,main,an,,,Other,,,,at / on,-de,в / на / к (в зависимости от контекста),на / при
+1753,B1,49,S,main,sich,,,Other,,,,oneself,kendisi,себя,себе
+1754,B1,49,I,main,ich,,,Other,,,,I,ben,я,я
+1755,B1,49,H,main,heben,,,Verb,,,,to lift,kaldırmak,поднимать,піднімати
+1756,B1,49,E,main,Heim,,,Other,,,,home,eve,дом / домашний очаг,будинок / дім
+1757,B1,49,H,main,heißt,,,Other,,,,is called,adı ...,называется,називається
+1758,B1,50,H,main,historisch,,,Other,,,,historical,tarihsel,исторический,історичний
+1759,B1,50,H,main,Hitze,die,,Noun,,,,heat / hot weather,sıcaklık / kavurucu sıcak,жара,спека
+1760,B1,50,H,main,Hobby,das,-s,Noun,,,,hobby,hobi,хобби,хобі
+1761,B1,50,H,main,hoch,,,Other,,,,high / tall,yüksek,высокий,високий
+1762,B1,50,H,main,Höhe,die,,Noun,,,,height / altitude,yükseklik / rakım,высота,висота
+1763,B1,50,H,main,hochladen,,,Verb,lädt hoch,lud hoch,hat hochgela,to upload,yüklemek (internet),загружать,завантажувати
+1764,B1,50,H,main,höchstens,,,Other,,,,at most / no more than,en fazla / en çok,максимум / не более чем,щонайбільше
+1765,B1,50,H,main,Hochzeit,die,-en,Noun,,,,wedding,düğün,свадьба,весілля
+1766,B1,50,H,main,Hof,der,¨-e,Noun,,,,yard / courtyard / farm,avlu / çiftlik,двор / ферма,двір / ферма
+1767,B1,50,B,main,Bauernhof,der,¨-e,Noun,,,,farm,çiftlik,ферма,ферма
+1768,B1,50,H,main,hoffen,,,Verb,hofft,hoffte,hat gehofft,to hope,ummak / umut etmek,надеяться,сподіватися
+1769,B1,50,H,main,hoffentlich,,,Other,,,,hopefully,umarım / inşallah,надеюсь,сподіваюся
+1770,B1,50,H,main,Hoffnung,die,-en,Noun,,,,hope,umut,надежда,надія
+1771,B1,50,H,main,höflich,,,Other,,,,polite / courteous,nazik / kibar,вежливый,ввічливий
+1772,B1,50,H,main,holen,,,Verb,holt,holte,hat geholt,to fetch / to get,almak / getirmek,принести / забрать,принести / взяти
+1773,B1,50,H,main,Holz,das,,Noun,,,,wood,tahta / odun,дерево / древесина,дерево / деревина
+1774,B1,50,H,main,Herz,das,-en,Noun,,,,heart,kalp / yürek,сердце,серце
+1775,B1,50,H,main,herzlich,,,Other,,,,heartfelt / cordial,içten / samimi / kalpten,сердечный / тёплый / радушный,сердечний / щирий
+1776,B1,50,H,main,heute,,,Other,,,,today,bugün,сегодня,сьогодні
+1777,B1,50,H,main,heutig,,,Other,,,,today's / current,bugünkü / mevcut,сегодняшний / современный,сьогоднішній / нинішній
+1778,B1,50,H,main,hier,,,Other,,,,here,burada,здесь,тут
+1779,B1,50,H,main,hierher,,,Other,,,,here / to this place,buraya,сюда,сюди
+1780,B1,50,H,main,Himmel,der,,Noun,,,,sky / heaven,gökyüzü / cennet,небо / небеса,небо / рай
+1781,B1,50,H,main,hinten,,,Verb,,,,behind,arkada,сзади / позади,ззаду / позаду
+1782,B1,50,H,main,hinter,,,Other,,,,behind / after,arkasında,позади / после,за / позаду
+1783,B1,50,H,main,hinterlassen,,,Verb,hinterlässt,hinterließ,hat hinterlassen,to leave behind / to leave a message,geride bırakmak / mesaj bırakmak,оставлять / оставлять сообщение,залишати / залишити повідомлення
+1784,B1,50,H,main,hinterher,,,Other,,,,afterwards / behind,arkasından / sonra,вслед / потом,після / позаду
+1785,B1,50,H,main,hinweisen,,,Verb,weist hin,wies hin,hat hingewiesen,to point out / to indicate,işaret etmek / dikkat çekmek,указывать / обращать внимание,вказувати на / звертати увагу
+1786,B1,50,H,main,höchstens,,,Other,,,,at most,en fazla,максимум,щонайбільше
+1787,B1,50,G,main,groß,,,Other,,,,big / large,büyük,большой / высокий,великий
+1788,B1,50,F,main,fünfzig,,,Other,,,,fifty,elli,пятьдесят,п'ятдесят
+1789,B1,50,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди
+1790,B1,50,A,main,aus,,,Other,,,,from / out of,-den,из,з / із
+1791,B1,50,N,main,nachmittags,,,Other,,,,in the afternoon,öğleden sonra,после обеда / во второй половине дня,після обіду
+1792,B1,50,Z,main,zurück,,,Other,,,,back / return,geri,назад / обратно,назад
+1793,B1,50,M,main,mehr,,,Other,,,,more,daha fazla,больше,більше
+1794,B1,50,N,main,-nung,,,Other,,,,(word fragment),,(фрагмент слова),(фрагмент)
+1795,B1,50,H,main,hinterlassen,,,Verb,,,,to leave behind,geride bırakmak,оставлять / оставлять сообщение,залишати / залишити повідомлення
+1796,B1,50,G,main,gibt,,,Other,,,,there is / are,var,есть / имеется,є / існує
+1797,B1,50,A,main,kannst,,,Other,,,,can,,можешь,можеш
+1798,B1,50,R,main,runterwerfen,,,Verb,,,,to throw down,aşağı atmak,сбрасывать вниз,кидати вниз
+1799,B1,50,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забути
+1800,B1,50,V,main,vorne,,,Other,,,,in front,önde,спереди,попереді / спереду
+1801,B1,50,H,main,Haus,das,,Noun,,,,house / home,ev / ev halkı,дом / жилище,будинок / дім
+1802,B1,50,N,main,nicht,,,Other,,,,not,değil,не,не
+1803,B1,50,H,main,hinterlassen,,,Verb,,,,to leave behind,geride bırakmak,оставлять,залишати повідомлення
+1804,B1,50,G,main,gelernt,,,Other,,,,learned,öğrenildi,выученный / научился,вивчений / навчився
+1805,B1,50,D,main,dass,,,Other,,,,that (conjunction),-diği,что,що (сполучник)
+1806,B1,51,I,main,Import,der,-e,Noun,,,,import,ithalat,импорт,імпорт
+1807,B1,51,I,main,in,,,Other,,,,in / into,içinde,в / внутрь,в / у
+1808,B1,51,I,main,indem,,,Other,,,,by / while,-erek / -irken,посредством / в то время как,"тим, що / тоді як"
+1809,B1,51,I,main,Infektion,die,-en,Noun,,,,infection,enfeksiyon,инфекция,інфекція
+1810,B1,51,I,main,informieren,,,Verb,informiert,informierte,hat informiert,to inform,bilgilendirmek,информировать,інформувати
+1811,B1,51,I,main,Information,die,-en,Noun,,,,information,bilgi / enformasyon,информация,інформація
+1812,B1,51,I,main,Ingenieur,der,-e,Noun,,,,engineer,mühendis,инженер,інженер
+1813,B1,51,I,main,Inhalt,der,-e,Noun,,,,content / contents,içerik / içindekiler,содержание,зміст / вміст
+1814,B1,51,I,main,inklusive,,,Other,,,,inclusive / including,dahil / dahil olmak üzere,включительно / включая,включно / разом з
+1815,B1,51,I,main,innen,,,Other,,,,inside,içeride / iç tarafta,внутри,всередині
+1816,B1,51,I,main,inner,,,Other,,,,inner / inside,iç / içsellik,внутренний / внутри,внутрішній
+1817,B1,51,H,main,Hörerin,die,-nen,Noun,,,,female listener / female audience member,kadın dinleyici,слушательница (жен.),слухачка
+1818,B1,51,Z,main,Zuhörer,der,,Noun,,,,listener / audience member,dinleyici / izleyici,слушатель / аудитория,слухач
+1819,B1,51,H,main,Hose,die,-ndas,Noun,,,,trousers / pants,pantolon,брюки,штани / брюки
+1820,B1,51,H,main,Hügel,der,-,Noun,,,,hill,tepe,холм,пагорб
+1821,B1,51,H,main,Humor,der,,Noun,,,,humor / sense of humor,mizah / espri,юмор / чувство юмора,гумор
+1822,B1,51,H,main,Hunger,der,,Noun,,,,hunger,açlık,голод,голод
+1823,B1,51,H,main,hungrig,,,Other,,,,hungry,aç,голодный,голодний
+1824,B1,51,H,main,hupen,,,Verb,hupt,hupte,hat gehupt,to honk / to beep,korna çalmak,сигналить,сигналити
+1825,B1,51,H,main,husten,,,Verb,hustet,hustete,hat gehustet,to cough,öksürmek,кашлять,кашляти
+1826,B1,51,H,main,Husten,der,,Noun,,,,cough,öksürük,кашель,кашель
+1827,B1,51,H,main,Hut,der,¨-e,Noun,,,,hat,şapka,шляпа,капелюх
+1828,B1,51,H,main,Hütte,die,-n,Noun,,,,hut / cabin / mountain refuge,kulübe / dağ evi,хижина / домик / горный приют,хижина / гірський притулок
+1829,B1,51,I,main,Imbiss,der,-e,Noun,,,,snack bar / fast food stand,büfe / atıştırmalık,закусочная,закусочна / кіоск
+1830,B1,51,S,main,schlimmer,,,Other,,,,worse,daha kötü,хуже,гірший
+1831,B1,51,Z,main,zu,,,Other,,,,to / too,-e / çok,к / слишком,до / занадто
+1832,B1,51,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,іти
+1833,B1,51,E,main,einmal,,,Other,,,,once / sometime,bir kez,один раз,одного разу / якось
+1834,B1,51,I,main,ins,,,Other,,,,into the,içine,в / внутрь,в
+1835,B1,51,H,main,hier,,,Other,,,,here,burada,здесь,тут
+1836,B1,51,I,main,individuell,,,Other,,,,individual,bireysel,индивидуальный,індивідуальний
+1837,B1,51,N,main,neuen,die,,Noun,,,,the new,yeni,новый,нового / нове (знах.)
+1838,B1,51,Ü,main,über,,,Other,,,,about / over,hakkında,над / о / через,про / над
+1839,B1,51,G,main,genau,,,Other,,,,exactly,tam,точно,точно
+1840,B1,51,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,один (знах.)
+1841,B1,51,S,main,sein,,,Verb,dass,,,to be,olmak,быть,бути
+1842,B1,51,I,main,innerhalb,,,Other,,,,within,içinde / dahilinde,внутри / в течение,всередині / в межах
+1843,B1,51,M,main,machen,,,Verb,,,,to make / to do,yapmak,делать,робити
+1844,B1,51,G,main,gefunden,,,Verb,,,,found,bulundu,найденный,знайдений
+1845,B1,51,S,main,sch,,,Other,,,,(word fragment),(kelime parçası),(фрагмент слова),(фрагмент)
+1846,B1,51,H,main,hat,,,Other,,,,has,var,имеет,має
+1847,B1,51,N,main,nicht,,,Other,,,,not,değil,не,не
+1848,B1,51,H,main,habe,,,Other,,,,have,sahibim,имею,маю
+1849,B1,51,D,main,du,,,Other,,,,you,sen,ты,ти
+1850,B1,51,G,main,gehustet,,,Other,,,,coughed,öksürmüş,кашлял,кашляв / кашляла
+1851,B1,51,I,main,in,,,Other,,,,in,içinde,в,в / у
+1852,B1,51,I,main,ideal,,,Other,,,,ideal,ideal,идеальный,ідеальний
+1853,B1,51,F,main,finde,,,Other,,,,find,bulmak,нахожу,знаходжу
+1854,B1,52,I,main,inzwischen,,,Other,,,,meanwhile / in the meantime,bu arada / bu sırada,тем временем,тим часом / між тим
+1855,B1,52,I,main,irgend-,,,Other,,,,some- / any-,herhangi bir- / bir-,какой-то / какой-нибудь-,якийсь- (префікс)
+1856,B1,52,I,main,irgendein,,,Other,,,,any / some,herhangi bir,какой-нибудь / какой-то,якийсь / будь-який
+1857,B1,52,I,main,irgendwann,,,Other,,,,sometime / at some point,bir zaman / bir gün,когда-нибудь,колись / якогось разу
+1858,B1,52,J,main,ja,,,Other,,,,yes,evet,да,так
+1859,B1,52,J,main,Jacke,die,-n,Noun,,,,jacket,ceket,куртка,куртка / піджак
+1860,B1,52,J,main,Jause,die,-n,Noun,,,,snack (Austrian),atıştırmalık (Avusturya),перекус,перекус (австр.)
+1861,B1,52,B,main,biss,,,Other,,,,bit / a little,biraz,кусок / немного,трохи / кусав
+1862,B1,52,J,main,je,,,Other,,,,each / ever,her / hiç,каждый / когда-либо,кожен / колись
+1863,B1,52,J,main,Jeans,die,,Noun,,,,jeans,kot pantolon / jeans,джинсы,джинси
+1864,B1,52,I,main,Inserat,das,-e,Noun,,,,advertisement / classified ad,ilan / reklam,объявление / реклама,оголошення / реклама
+1865,B1,52,I,main,insgesamt,,,Other,,,,altogether / in total,toplam / hepsi birlikte,всего / в общей сложности,загалом / разом
+1866,B1,52,I,main,installieren,,,Verb,installiert,installierte,hat installiert,to install,yüklemek / kurmak,устанавливать,встановлювати
+1867,B1,52,I,main,Institut,das,-e,Noun,,,,institute,enstitü,институт,інститут
+1868,B1,52,I,main,Instrument,das,"-eintegrieren, integriert, in-",Noun,,,,instrument,enstrüman / alet,инструмент,інструмент
+1869,B1,52,I,main,Integration,die,-en,Noun,,,,integration,entegrasyon / bütünleşme,интеграция,інтеграція
+1870,B1,52,I,main,intelligent,,,Other,,,,intelligent,zeki / akıllı,умный / интеллектуальный,розумний / інтелектуальний
+1871,B1,52,I,main,Intelligenz,die,,Noun,,,,intelligence,zeka,интеллект,інтелект
+1872,B1,52,I,main,intensiv,,,Other,,,,intensive,yoğun,интенсивный,інтенсивний
+1873,B1,52,I,main,Intensivkurs,der,-e,Noun,,,,intensive course,yoğun kurs,интенсивный курс,інтенсивний курс
+1874,B1,52,I,main,interessieren,,,Verb,interessiert,interessierte,hat interessiert,to interest / to be interested in,ilgilendirmek / ilgilenmek,интересовать,цікавити / цікавитися
+1875,B1,52,I,main,interessant,,,Other,,,,interesting,ilginç / ilgi çekici,интересный,цікавий
+1876,B1,52,I,main,Interesse,das,-n,Noun,,,,interest,ilgi / çıkar,интерес,інтерес
+1877,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili / meraklı,заинтересованный,зацікавлений
+1878,B1,52,I,main,interkulturell,,,Other,,,,intercultural,kültürlerarası,межкультурный,міжкультурний
+1879,B1,52,I,main,international,,,Other,,,,international,uluslararası,международный,міжнародний
+1880,B1,52,S,main,interessantes,,,Other,,,,interesting,,интересный,цікаве (знах.)
+1881,B1,52,K,main,können,,,Verb,,,,to be able to / can,-ebilmek,мочь / быть в состоянии,могти
+1882,B1,52,G,main,gesehen,,,Verb,,,,seen,görmüş,увиденный / видел,побачений
+1883,B1,52,S,main,sondern,,,Verb,,,,but rather,aksine,а не / но скорее,а / натомість
+1884,B1,52,G,main,geirrt,,,Other,,,,mistaken,yanılmış,ошибся,помилився
+1885,B1,52,D,main,da,,,Other,,,,there / since,orada / çünkü,там / тогда,там / оскільки
+1886,B1,52,G,main,geht,,,Other,,,,goes,gidiyor,идёт,іде
+1887,B1,52,Z,main,zwischen,,,Verb,,,,between,arasında,между,між
+1888,B1,52,B,main,bekommt,,,Other,,,,receives,alıyor,получает,отримує
+1889,B1,52,B,main,besser,,,Other,,,,better,daha iyi,лучше,краще
+1890,B1,52,F,main,für,,,Other,,,,for,için,для,для
+1891,B1,52,K,main,kleinen,,,Verb,,,,small,küçük,маленький,маленький (знах.)
+1892,B1,52,I,main,integriert,,,Other,,,,integrated,entegre edilmiş,интегрированный,інтегрований
+1893,B1,52,B,main,besser,,,Other,,,,better,daha iyi,лучше,краще
+1894,B1,52,G,main,gut,,,Other,,,,good,iyi,хороший,добре
+1895,B1,52,E,main,einen,,,Verb,,,,a / one,bir,один / какой-то,один (знах.)
+1896,B1,52,I,main,interessiert,,,Other,,,,interested,ilgili,заинтересованный,зацікавлений
+1897,B1,52,G,main,gelesen,,,Verb,,,,read,okundu,прочитанный / читал,прочитаний
+1898,B1,52,A,main,aus,,,Other,,,,from / out of,-den,из,з / із
+1899,B1,52,I,main,interkulturell,,,Other,,,,intercultural,,межкультурный,міжкультурний
+1900,B1,52,E,main,interkulturelles,,,Other,,,,intercultural,,межкультурный,міжкультурне
+1901,B1,52,S,main,sind,,,Other,,,,are,,есть / являются,є (мн.)
+1902,B1,52,B,main,bekannt,,,Other,,,,known,tanınan,известный,відомий
+1903,B1,53,K,main,Kabel,das,-,Noun,,,,cable,kablo,кабель,кабель / провід
+1904,B1,53,K,main,Kabine,die,-n,Noun,,,,cabin / cubicle,kabin / soyunma kabini,кабина / кабинка,кабіна
+1905,B1,53,K,main,Kaffee,der,,Noun,,,,coffee,kahve,кофе,кава
+1906,B1,53,K,main,Kaffeehaus,das,¨-er,Noun,,,,coffee house / café,kahvehane / kafe,кофейня / кафе,кав'ярня
+1907,B1,53,K,main,Kakao,der,-sder,Noun,,,,cocoa / hot chocolate,kakao / sıcak çikolata,какао / горячий шоколад,какао
+1908,B1,53,K,main,kalt,,,Other,,,,cold,soğuk,холодный,холодний
+1909,B1,53,K,main,Kälte,die,,Noun,,,,cold / coldness,soğuk / soğukluk,холод / мороз,холод
+1910,B1,53,K,main,Kamera,die,-s,Noun,,,,camera,kamera / fotoğraf makinesi,камера,камера / фотоапарат
+1911,B1,53,K,main,kämpfen,,,Verb,kämpft,kämpfte,hat gekämpft,to fight / to struggle,savaşmak / mücadele etmek,бороться / сражаться,боротися
+1912,B1,53,K,main,Kampf,der,¨-e,Noun,,,,fight / struggle / battle,savaş / mücadele,борьба / бой,боротьба / бій
+1913,B1,53,K,main,Kanal,der,¨-e,Noun,,,,canal / channel,kanal,канал,канал
+1914,B1,53,K,main,Kandidat,der,-endie,Noun,,,,candidate,aday,кандидат,кандидат
+1915,B1,53,K,main,Kantine,die,-n,Noun,,,,canteen / cafeteria,kantin / yemekhane,столовая / кафетерий,їдальня / кантина
+1916,B1,53,K,main,Kapitel,das,-jederzeit,Noun,,,,chapter,bölüm / fasıl,глава,розділ / глава
+1917,B1,53,J,main,jedes,,,Other,,,,every / each,her,каждый,кожен (знах.)
+1918,B1,53,J,main,jedoch,,,Other,,,,however,ancak / bununla birlikte,однако,однак / проте
+1919,B1,53,J,main,jemals,,,Other,,,,ever,hiç / şimdiye kadar hiç,когда-либо,коли-небудь
+1920,B1,53,J,main,jemand,,,Other,,,,someone,biri / birisi,кто-то,хтось
+1921,B1,53,J,main,jetzt,,,Other,,,,now,şimdi,сейчас,зараз / тепер
+1922,B1,53,J,main,jeweils,,,Other,,,,each / respectively,her biri / sırasıyla,каждый раз / соответственно,кожен / відповідно
+1923,B1,53,J,main,Journalist,der,-en,Noun,,,,journalist (male),gazeteci (erkek),журналист (муж.),журналіст
+1924,B1,53,J,main,Journalistin,die,-nen,Noun,,,,journalist (female),gazeteci (kadın),журналист (жен.),журналістка
+1925,B1,53,J,main,Jugend,die,,Noun,,,,youth,gençlik,молодёжь,молодь
+1926,B1,53,J,main,Jugendliche,der,-n,Noun,,,,young person / teenager (male),genç (erkek),подросток / молодой человек (муж.),молода людина / підліток
+1927,B1,53,J,main,Jugendliche,die,-nen,Noun,,,,young person / teenager (female),genç (kadın),подросток / молодая девушка (жен.),молода людина / підліток (жін.)
+1928,B1,53,J,main,Jugendherberge,die,-n,Noun,,,,youth hostel,gençlik yurdu / hostel,молодёжный хостел,молодіжний хостел
+1929,B1,53,J,main,jung,,,Other,,,,young,genç,молодой,молодий
+1930,B1,53,J,main,Junge,der,-n,Noun,,,,boy,erkek çocuk / oğlan,мальчик,хлопчик
+1931,B1,53,G,main,gerät,,,Other,,,,device / gets,cihaz / düşüyor,устройство / попадает,пристрій / потрапляє
+1932,B1,53,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / із
+1933,B1,53,L,main,laden,,,Verb,,,,to load / to charge,yüklemek / şarj etmek,загружать / заряжать,завантажувати / заряджати
+1934,B1,53,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,(артикль)
+1935,B1,53,E,main,essen,,,Verb,,,,to eat,yemek yemek,есть,їсти
+1936,B1,53,Z,main,zwei,,,Other,,,,two,iki,два,два
+1937,B1,53,A,main,anders,,,Other,,,,different / otherwise,farklı,по-другому / иначе,по-іншому / інакше
+1938,B1,53,L,main,leihen,,,Verb,,,,to lend / to borrow,ödünç vermek / ödünç almak,одалживать / брать взаймы,позичати / давати позику
+1939,B1,53,N,main,Fitness-Studio,,,Other,,,,fitness studio,,фитнес-студия,фітнес-зал
+1940,B1,53,M,main,meinem,,,Other,,,,my (dative),benim,моему,моєму (дат.)
+1941,B1,53,A,main,anders,,,Other,,,,different,farklı,по-другому / иначе,по-іншому
+1942,B1,53,D,main,donnerstags,,,Other,,,,on Thursdays,perşembeleri,по четвергам,щочетверга
+1943,B1,53,W,main,werden,,,Verb,,,,to become,olmak,становиться,ставати
+1944,B1,53,F,main,für,,,Other,,,,for,için,для,для
+1945,B1,53,I,main,ich,,,Other,,,,I,ben,я,я
+1946,B1,53,T,main,-te,,,Other,,,,(word fragment),,(фрагмент слова),(фрагмент)
+1947,B1,54,K,main,Käuferin,die,-nen,Noun,,,,female buyer / female customer,kadın alıcı / kadın müşteri,покупательница / клиентка (жен.),покупниця
+1948,B1,54,K,main,kaum,,,Other,,,,barely / hardly,neredeyse yok / güçlükle,едва / почти не,ледве / майже не
+1949,B1,54,K,main,kein,,,Other,,,,no / not a,hiç / hiçbir,никакой / ни один,жоден / жодна
+1950,B1,54,K,main,Keller,der,-,Noun,,,,cellar / basement,bodrum / mahzen,подвал,підвал / льох
+1951,B1,54,K,main,Kellner,der,-,Noun,,,,waiter / server (male),garson (erkek),официант (муж.),офіціант
+1952,B1,54,K,main,Kellnerin,die,-nen,Noun,,,,waitress / server (female),garson (kadın),официантка (жен.),офіціантка
+1953,B1,54,K,main,kennen,,,Verb,kennt,kannte,hat gekannt,to know / to be familiar with,tanımak / bilmek,знать (человека или место),знати / бути знайомим
+1954,B1,54,K,main,kennenlernen,,,Verb,lernt,,,to get to know / to meet,tanışmak,знакомиться / узнавать,познайомитися
+1955,B1,54,K,main,kennen,,,Verb,lernte kennen,,hat kennengelernt,to know,tanımak,знать (человека или место),знати
+1956,B1,54,K,main,Kenntnisse,die,,Noun,,,,knowledge / skills,bilgi / beceriler,знания / навыки,знання / навички
+1957,B1,54,K,main,Kennzeichen,das,-,Noun,,,,license plate / identifier,plaka / işaret,номерной знак / обозначение,номерний знак / ідентифікатор
+1958,B1,54,K,main,Kerze,die,-ndie,Noun,,,,candle,mum,свеча,свічка
+1959,B1,54,K,main,Kindergarten,der,¨-,Noun,,,,kindergarten / preschool,anaokulu,детский сад,дитячий садок
+1960,B1,54,K,main,Kindheit,die,,Noun,,,,childhood,çocukluk,детство,дитинство
+1961,B1,54,K,main,Kino,das,-s,Noun,,,,cinema / movie theater,sinema,кинотеатр,кінотеатр
+1962,B1,54,K,main,Kiosk,der,-edie,Noun,,,,kiosk / newsstand,büfe / kiosk,киоск,кіоск
+1963,B1,54,K,main,kaputtgehen,,,Verb,,,,to break down / to stop working,bozulmak / çökmek,ломаться / выходить из строя,ламатися / виходити з ладу
+1964,B1,54,K,main,kaputtmachen,,,Verb,,,,to break / to damage,bozmak / kırmak,ломать / портить,ламати / пошкоджувати
+1965,B1,54,K,main,Karneval,der,-s/-e,Noun,,,,carnival,karnaval,карнавал,карнавал
+1966,B1,54,N,main,nacht,,,Other,,,,night,gece,ночь,ніч
+1967,B1,54,K,main,Karotte,die,-n,Noun,,,,carrot,havuç,морковь,морква
+1968,B1,54,K,main,Karte,die,-n,Noun,,,,card / map / menu,kart / harita / menü,карта / меню,карта / меню / квиток
+1969,B1,54,C,main,Chipkarte,die,-n,Noun,,,,chip card / smart card,çipli kart / akıllı kart,чип-карта / смарт-карта,чіп-картка
+1970,B1,54,F,main,Fahrkarte,die,-n,Noun,,,,ticket,bilet,билет,квиток
+1971,B1,54,K,main,Kartoffel,die,-n,Noun,,,,potato,patates,картофель,картопля
+1972,B1,54,D,main,dapfel,,,Other,,,,apple,elma,яблоко,яблуко
+1973,B1,54,K,main,Käse,der,,Noun,,,,cheese,peynir,сыр,сир
+1974,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate,kutu / kasa,ящик / коробка,ящик / коробка
+1975,B1,54,K,main,Kasten,der,¨-,Noun,,,,box / crate (duplicate),kutu / kasa,ящик / коробка,ящик / коробка
+1976,B1,54,K,main,Katalog,der,-e,Noun,,,,catalog,katalog,каталог,каталог
+1977,B1,54,K,main,Katastrophe,die,"-n(sich etwas) kaufen, kauft,",Noun,,,,catastrophe / disaster,felaket / yıkım,катастрофа,катастрофа
+1978,B1,54,K,main,Kauf,der,,Noun,,,,purchase,satın alma,покупка,покупка
+1979,B1,54,S,main,sprechen,,,Verb,,,,to speak,konuşmak,говорить / разговаривать,говорити
+1980,B1,54,K,main,keins,,,Other,,,,none / no one,hiçbiri,ни один / ни у кого,жоден / ніхто
+1981,B1,54,G,main,gemütliches,,,Other,,,,cozy,rahat,уютный,затишний (знах.)
+1982,B1,54,N,main,nicht,,,Other,,,,not,değil,не,не
+1983,B1,54,V,main,verbessern,,,Verb,,,,to improve,geliştirmek / iyileştirmek,улучшать,покращувати
+1984,B1,54,V,main,viele,,,Other,,,,many,çok,многие,багато
+1985,B1,54,D,main,dort,,,Other,,,,there,,там,там
+1986,B1,54,L,main,leicht,,,Other,,,,easy / light,kolay / hafif,лёгкий,легкий / ненважкий
+1987,B1,54,G,main,gegangen,,,Verb,,,,gone,gidilmiş,ушёл / пошёл,пішов / пішла
+1988,B1,54,D,main,deutschland,,,Other,,,,Germany,Almanya,Германия,Німеччина
+1989,B1,54,K,main,kaufen,,,Verb,,,,to buy,satın almak,покупать,купувати
+1990,B1,54,B,main,bekommen,,,Verb,,,,to get / to receive,almak,получать,отримати / одержати
+1991,B1,54,B,main,bestellt,,,Other,,,,ordered,sipariş verilmiş,заказанный,замовлений
+1992,B1,54,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,(артикль)
+1993,B1,55,K,main,Klingel,die,-n,Noun,,,,doorbell / bell,zil / kapı zili,звонок / дверной звонок,дзвінок / дзвоник
+1994,B1,55,K,main,klingen,,,Verb,klingt,klang,hat geklungen,to ring / to sound,çalmak / ses çıkarmak,звенеть / звучать,дзвенів / звучати
+1995,B1,55,K,main,Klinik,die,"-enklopfen, klopft, klopfte,",Noun,,,,clinic / hospital,klinik / hastane,клиника / больница,клініка / лікарня
+1996,B1,55,K,main,Kloß,der,¨-e,Noun,,,,dumpling,hamur topu / köfte,клёцка,кльоц / кнедлик
+1997,B1,55,K,main,klug,,,Other,,,,clever / smart,zeki / akıllı,умный / сообразительный,розумний / кмітливий
+1998,B1,55,K,main,knapp,,,Other,,,,barely / tight / scarce,kıl payı / kıt / dar,едва / тесный / ограниченный,ледь / тісний / скупий
+1999,B1,55,K,main,Kneipe,die,-n,Noun,,,,pub / bar,bar / meyhane,паб / бар,паб / бар
+2000,B1,55,K,main,Knie,das,-der,Noun,,,,knee,diz,колено,коліно
 2001,B1,55,K,main,Knopf,der,¨-e,Noun,,,,button / knob,düğme / topuz,кнопка / ручка,
 2002,B1,55,K,main,kochen,,,Verb,kocht,kochte,hat gekocht,to cook,pişirmek / yemek yapmak,готовить,
 2003,B1,55,K,main,Koch,der,¨-e,Noun,,,,cook / chef (male),aşçı (erkek),повар / шеф-повар (муж.),
