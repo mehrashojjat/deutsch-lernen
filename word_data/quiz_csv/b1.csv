@@ -249,256 +249,256 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 248,B1,18,A,main,Anrede,die,"-nanrufen, ruft an, rief an,",Noun,,,,salutation / form of address,hitap / seslenme biçimi,обращение / форма обращения,форма звертання / звертання,خطاب / شیوه خطاب
 249,B1,18,A,main,Anruf,der,-e,Noun,,,,phone call,telefon araması,телефонный звонок,телефонний дзвінок,تماس تلفنی
 250,B1,18,A,main,Anrufbeantworter,der,-,Noun,,,,answering machine / voicemail,telesekreter / sesli mesaj,автоответчик / голосовая почта,автовідповідач,منشی تلفنی / پست صوتی
-251,B1,18,A,main,Ansage,die,-nder,Noun,,,,announcement,duyuru / anons,объявление,оголошення
-252,B1,18,A,main,Angebot,das,-e,Noun,,,,offer / deal,teklif / fırsat,предложение,пропозиція / угода
-253,B1,18,A,main,ander,,,Other,,,,other (variant),diğer (varyant),другой (вариант),інший (варіант)
-254,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan / diğer taraftan,с другой стороны,з іншого боку
-255,B1,18,Ä,main,ändern,,,Verb,ändert,änderte,hat geändert,to change / alter,değiştirmek,менять / изменять,змінювати
-256,B1,18,Ä,main,Änderung,die,-en,Noun,,,,change / alteration,değişiklik,изменение,зміна
-257,B1,18,A,main,anders,,,Other,,,,differently / otherwise,farklı / başka türlü,по-другому / иначе,по-іншому / інакше
-258,B1,18,A,main,anerkennen,,,Verb,erkennt an,erkannte an,hat anerkannt,to recognize / acknowledge,tanımak / kabul etmek,признавать / признавать заслуги,визнавати / визнавати заслуги
-259,B1,18,A,main,anfangen,,,Verb,fängt an,fing an,hat angefangen,to begin / start,başlamak,начинать,починати
-260,B1,18,A,main,Anfang,der,¨-e,Noun,,,,beginning / start,başlangıç,начало,початок
-261,B1,18,A,main,anfangs,,,Other,,,,at first / initially,başlangıçta / ilk başta,сначала / вначале,спочатку / на початку
-262,B1,18,A,main,angeben,,,Verb,gibt an,gab an,hat angegeben,to state / indicate / show off,belirtmek / göstermek / hava atmak,указывать / сообщать / хвастаться,вказувати / повідомляти / хизуватися
-263,B1,18,A,main,Angabe,die,-n,Noun,,,,statement / detail / information,beyan / bilgi / ayrıntı,сведение / деталь / информация,відомість / деталь / інформація
-264,B1,18,A,main,Angehörige,der,-ndie,Noun,,,,relative / family member,akraba / aile üyesi,родственник / член семьи,родич / член сім'ї
-265,B1,18,A,main,angenehm,,,Other,,,,pleasant / agreeable,hoş / keyifli,приятный,приємний
-266,B1,18,P,main,passiert,,,Other,,,,happened,oldu,случилось,сталося
-267,B1,18,G,main,geht,,,Other,,,,goes,gidiyor,идёт / ходит,іде / ходить
-268,B1,18,W,main,wird,,,Other,,,,becomes / will,olacak,становится / будет,стає / буде
-269,B1,18,S,main,schneller,,,Other,,,,faster,daha hızlı,быстрее,швидше
-270,B1,18,M,main,meine,,,Other,,,,my,benim,мой,мій / моя / моє
-271,B1,18,A,main,ankündigen,,,Verb,,,,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати
-272,B1,18,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі
-273,B1,18,U,main,unbedingt,,,Other,,,,absolutely,kesinlikle,обязательно / во что бы то ни стало,обов'язково / за всяку ціну
-274,B1,18,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири
-275,B1,18,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забувати
-276,B1,18,G,main,günstige,,,Other,,,,affordable,uygun fiyatlı,доступный по цене,доступний за ціною
-277,B1,18,G,main,gegangen,,,Verb,,,,gone,gitmiş,ушёл / ушла / пошёл,пішов / пішла
-278,B1,18,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.)
-279,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan,с другой стороны,з іншого боку
-280,B1,18,G,main,geändert,,,Other,,,,changed,değiştirilmiş,изменённый,змінений
-281,B1,18,A,main,anerkannt,,,Other,,,,recognized,tanınmış,признанный,визнаний
-282,B1,18,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто
-283,B1,18,D,main,dagegen,,,Verb,dass ich nach,,,against it,karşısında / aleyhinde,против этого,проти цього
-284,B1,18,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту)
-285,B1,19,A,main,Anwältin,die,-nen,Noun,,,,lawyer (female),avukat (kadın),адвокат (жен.),адвокат (жін.)
-286,B1,19,A,main,anzeigen,,,Verb,zeigt an,zeigte an,hat angezeigt,to display / report (to police),görüntülemek / şikâyet etmek,показывать / заявлять в полицию,показувати / заявляти до поліції
-287,B1,19,A,main,Anzeige,die,-n,Noun,,,,advertisement / notice / display,ilan / duyuru / ekran,объявление / уведомление,оголошення / повідомлення / дисплей
-288,B1,19,A,main,anziehen,,,Verb,zieht an,zog an,hat angezogen,to attract / put on (clothes),çekmek / giymek,надевать,надягати / приваблювати
-289,B1,19,A,main,Anzug,der,¨-edas,Noun,,,,suit (clothing),takım elbise,костюм,костюм
-290,B1,19,A,main,Apparat,der,-e,Noun,,,,apparatus / device / phone,cihaz / alet / telefon,аппарат / устройство / телефон,апарат / пристрій / телефон
-291,B1,19,A,main,Appetit,der,,Noun,,,,appetite,iştah,аппетит,апетит
-292,B1,19,A,main,Aprikose,die,-n,Noun,,,,apricot,kayısı,абрикос,абрикос
-293,B1,19,A,main,arbeiten,,,Verb,arbeitet,arbeitete,hat gearbeitet,to work,çalışmak,работать,працювати
-294,B1,19,A,main,Arbeit,die,-en,Noun,,,,work / job,iş / çalışma,работа / труд,робота / праця
-295,B1,19,A,main,Arbeiter,der,-,Noun,,,,worker (male),işçi (erkek),рабочий (муж.),робітник (чол.)
-296,B1,19,A,main,Arbeiterin,die,-nen,Noun,,,,worker (female),işçi (kadın),работница (жен.),робітниця (жін.)
-297,B1,19,A,main,Arbeitserlaubnis,die,,Noun,,,,work permit,çalışma izni,разрешение на работу,дозвіл на роботу
-298,B1,19,A,main,arbeitslos,,,Other,,,,unemployed,işsiz,безработный,безробітний
-299,B1,19,A,main,Arbeitslosigkeit,die,,Noun,,,,unemployment,işsizlik,безработица,безробіття
-300,B1,19,A,main,Arbeitsplatz,der,¨-e,Noun,,,,workplace / job,iş yeri / iş,рабочее место,робоче місце
-301,B1,19,A,main,Arbeitsstelle,die,"-nanschaffen, schafft an,schaffte an, hat angeschafft",Noun,,,,job / position,iş yeri / görev,рабочее место / должность,робоче місце / посада
-302,B1,19,A,main,anschließen,,,Verb,schließt an,schloss an,hat angeschlossen,to connect / attach,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати
-303,B1,19,A,main,Anschluss,der,¨-e,Noun,,,,connection / follow-up,bağlantı / devam,пересадка / соединение,пересадка / з'єднання
-304,B1,19,A,main,anschnallen,,,Verb,schnallt an,schnallte an,hat angeschnallt,to fasten (seatbelt),bağlamak (emniyet kemeri),пристёгиваться,пристібатися
-305,B1,19,A,main,ansehen,,,Verb,sieht an,sah an,hat angesehen,to look at / watch,bakmak / izlemek,смотреть / смотреть на,дивитися / дивитися на
-306,B1,19,A,main,ansprechen,,,Verb,spricht an,sprach an,hat angesprochen,to address / approach / speak to,hitap etmek / yanına gitmek / söz açmak,обращаться к / подходить / заговаривать,звертатися до / підходити / заговорювати
-307,B1,19,A,main,Anspruch,der,¨-e,Noun,,,,claim / right / demand,hak / talep / iddia,претензия / право / требование,претензія / право / вимога
-308,B1,19,A,main,anstellen,,,Verb,stellt an,stellte an,hat angestellt,to hire / employ / turn on,işe almak / devreye sokmak,нанимать / включать / ставить,наймати / вмикати / ставити
-309,B1,19,A,main,Angestellte,der,-n,Noun,,,,employee (male),çalışan (erkek),сотрудник / служащий (муж.),співробітник / службовець (чол.)
-310,B1,19,A,main,Angestellte,die,-n,Noun,,,,employee (female),çalışan (kadın),сотрудница / служащая (жен.),співробітниця / службовиця (жін.)
-311,B1,19,A,main,anstrengend,,,Other,,,,exhausting / tiring,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений
-312,B1,19,A,main,Antrag,der,¨-e,Noun,,,,application / request / motion,başvuru / talep / önerge,заявление / ходатайство / заявка,заява / клопотання / заявка
-313,B1,19,A,main,anwenden,,,Verb,wendet an,wandte an,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати
-314,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır bulunuyor,присутствующий,присутній
-315,B1,19,A,main,antworten,,,Verb,antwortet,antwortete,hat geant-wortet,to answer,cevap vermek,отвечать,відповідати
-316,B1,19,A,main,Antwort,die,,Noun,,,,answer / reply,cevap / yanıt,ответ,відповідь
-317,B1,19,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири
-318,B1,19,B,main,bekommen,,,Verb,,,,to get / receive,almak / elde etmek,получать,отримувати
-319,B1,19,E,main,erkältest,,,Other,,,,catch a cold,üşütmek,простужаешься / подхватываешь простуду,застужуєшся / підхоплюєш застуду
-320,B1,19,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений
-321,B1,19,G,main,gemietet,,,Other,,,,rented,kiralanmış,снятый / арендованный,орендований / знятий
-322,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один
-323,B1,19,L,main,leiser,,,Other,,,,quieter,daha sessiz,тише,тихіше
-324,B1,19,N,main,nichts,,,Other,,,,nothing,hiçbir şey,ничего,нічого
-325,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один
-326,B1,19,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь
-327,B1,19,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,у / при / поруч
-328,B1,19,G,main,gefunden,,,Other,,,,found,bulundu,найденный / нашли,знайдений / знайшли
-329,B1,19,A,main,anschließen,,,Verb,,,,to connect,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати
-330,B1,19,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту)
-331,B1,19,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
-332,B1,19,A,main,an,,,Other,,,,on / at,,на / у,на / у
-333,B1,19,E,main,stellen,,,Verb,,,,to place / put,,ставить / размещать,ставити / розміщувати
-334,B1,19,A,main,anstellen,,,Verb,,,,to hire / employ,işe almak,нанимать / включать,наймати / вмикати
-335,B1,19,M,main,musst,,,Other,,,,must / have to,gerekiyor,должен / обязан,повинен / зобов'язаний
-336,B1,19,A,main,anstrengend,,,Other,,,,exhausting,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений
-337,B1,19,A,main,anwenden,,,Verb,,,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати
-338,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır,присутствующий,присутній
-339,B1,19,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі
-340,B1,19,B,main,bekommen,,,Verb,,,,to get,almak,получать,отримувати
-341,B1,20,A,main,auffallen,,,Verb,fällt auf,fiel auf,ist aufgefallen,to stand out / be noticeable,dikkat çekmek / göze çarpmak,бросаться в глаза / быть заметным,кидатися у вічі / бути помітним
-342,B1,20,A,main,auffordern,,,Verb,fordert auf,forderte auf,hat aufgefordert,to call on / request,çağırmak / talep etmek,призывать / просить,закликати / просити
-343,B1,20,A,main,Aufforderung,die,-en,Noun,,,,request / demand,çağrı / talep,просьба / требование,прохання / вимога
-344,B1,20,A,main,aufführen,,,Verb,führt auf,führte auf,hat aufgeführt,to perform / list,sahnelemek / listelemek,исполнять / перечислять,виконувати / перелічувати
-345,B1,20,A,main,Aufgabe,die,-n,Noun,,,,task / exercise / responsibility,görev / alıştırma / sorumluluk,задание / упражнение,завдання / вправа / відповідальність
-346,B1,20,A,main,aufgeben,,,Verb,gibt auf,gab,hat aufgegeben,to give up / hand in / post (mail),vazgeçmek / teslim etmek / posta vermek,сдаваться / сдавать / отправлять по почте,здаватися / здавати / відправляти поштою
-347,B1,20,A,main,aufhalten,,,Verb,hält auf,hielt,hat aufgehalten,to stop / delay / stay,durdurmak / geciktirmek / kalmak,задерживать / останавливаться / пребывать,затримувати / зупинятися / перебувати
-348,B1,20,A,main,aufheben,,,Verb,hebt auf,hob auf,hat aufgehoben,to pick up / keep / abolish,kaldırmak / saklamak / lağvetmek,поднимать / сохранять / отменять,піднімати / зберігати / скасовувати
-349,B1,20,A,main,aufhören,,,Verb,hört auf,hörte auf,hat aufgehört,to stop / quit,bırakmak / durmak,переставать / прекращать,переставати / припиняти
-350,B1,20,A,main,aufladen,,,Verb,lädt auf,lud auf,hat aufgela,to charge (battery) / load,şarj etmek / yüklemek,заряжать / загружать,заряджати / завантажувати
-351,B1,20,A,main,auflösen,,,Verb,löst auf,löste auf,hat aufgelöst,to dissolve / disband,çözmek / dağıtmak,растворять / распускать,розчиняти / розпускати
-352,B1,20,A,main,aufmerksam,,,Other,,,,attentive / alert,dikkatli / uyanık,внимательный / настороженный,уважний / насторожений
-353,B1,20,A,main,aufnehmen,,,Verb,nimmt auf,nahm auf,hat aufgenommen,to record / take in / accept,kaydetmek / kabul etmek / almak,записывать / принимать / впускать,записувати / приймати / впускати
-354,B1,20,A,main,Aufnahme,die,-n der,Noun,,,,recording / admission / photo,kayıt / kabul / fotoğraf,запись / приём / фотография,запис / прийом / фотографія
-355,B1,20,Ä,main,ärgern,,,Verb,ärgert,ärgerte,hat geärgert,to annoy / get angry,kızdırmak / sinirlenmek,злиться / раздражать,злитися / дратувати
-356,B1,20,Ä,main,Ärger,der,,Noun,,,,annoyance / trouble / anger,kızgınlık / sıkıntı / öfke,раздражение / неприятность / злость,роздратування / неприємність / злість
-357,B1,20,Ä,main,ärgerlich,,,Other,,,,annoying / angry,sinir bozucu / kızgın,раздражающий / сердитый,дратівливий / сердитий
-358,B1,20,A,main,arm,,,Other,,,,poor,fakir / yoksul,бедный,бідний
-359,B1,20,A,main,Arm,der,-e,Noun,,,,arm,kol,рука,рука
-360,B1,20,A,main,Art,die,-en,Noun,,,,type / kind / species / manner,tür / çeşit / tarz,вид / род / способ,вид / рід / спосіб
-361,B1,20,A,main,Artikel,der,-,Noun,,,,article (newspaper / grammar),makale / artikel (gramer),статья / артикль,стаття / артикль
-362,B1,20,A,main,Arzt,der,¨-e,Noun,,,,doctor (male),doktor (erkek),врач (муж.),лікар (чол.)
-363,B1,20,Ä,main,Ärztin,die,-nen,Noun,,,,doctor (female),doktor (kadın),врач (жен.),лікарка (жін.)
-364,B1,20,A,main,Asyl,das,,Noun,,,,asylum,sığınma / iltica,убежище,притулок / азил
-365,B1,20,A,main,atmen,,,Verb,atmet,atmete,hat geatmet,to breathe,nefes almak / solumak,дышать,дихати
-366,B1,20,A,main,Atem,der,,Noun,,,,breath,nefes / solunum,дыхание,дихання
-367,B1,20,A,main,auch,,,Other,,,,also / too,de / da / ayrıca,тоже,також
-368,B1,20,A,main,auf,,,Other,,,,on / up,üzerinde,на / вверх,на / вгору
-369,B1,20,A,main,angenehmen,,,Verb,,,,pleasant,hoş,приятный,приємний
-370,B1,20,B,main,blass,,,Other,,,,pale,solgun,бледный,блідий
-371,B1,20,Z,main,zu,,,Other,,,,too / to,-e / fazla,слишком / к,занадто / до
-372,B1,20,A,main,aufgegeben,,,Verb,,,,given up,vazgeçilmiş,сданный / оставленный,зданий / залишений
-373,B1,20,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь
-374,B1,20,W,main,wurde,,,Other,,,,was / became,oldu,был / стала,був / стала
-375,B1,20,D,main,dass,,,Other,,,,that,ki / -diği,что,що
-376,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий
-377,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий
-378,B1,20,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди
-379,B1,20,H,main,habe,,,Other,,,,have,sahip,имею,маю
-380,B1,20,G,main,gelesen,,,Verb,,,,read,okunmuş,прочитанный / читал,прочитаний / читав
-381,B1,20,D,main,durch,,,Other,,,,through,vasıtasıyla,через / посредством,через / за допомогою
-382,B1,20,A,main,auch,,,Other,,,,also,ayrıca,тоже,також
-383,B1,20,E,main,es,,,Other,,,,it,o / bunu,это,це
-384,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований
-385,B1,21,A,main,ausdrucken,,,Verb,druckt aus,druckte aus,hat ausgedruckt,to print out,yazdırmak / çıktı almak,распечатывать,роздруковувати
-386,B1,21,A,main,Ausdruck,der,¨-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка
-387,B1,21,A,main,Ausdruck,der,-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка
-388,B1,21,A,main,auseinander,,,Other,,,,apart / separate,ayrı / birbirinden uzak,врозь / отдельно,нарізно / окремо
-389,B1,21,A,main,Ausfahrt,die,-en,Noun,,,,exit (road) / departure,çıkış (yol) / ayrılış,выезд / отправление,виїзд / відправлення
-390,B1,21,A,main,ausfallen,,,Verb,fällt aus,fiel aus,ist ausgefallen,to be cancelled / fall out,iptal olmak / düşmek,отменяться / выпадать,скасовуватися / випадати
-391,B1,21,A,main,Ausflug,der,¨-e,Noun,,,,excursion / trip,gezi / piknik,экскурсия / прогулка,екскурсія / прогулянка
-392,B1,21,A,main,ausfüllen,,,Verb,füllt aus,füllte aus,hat ausgefüllt,to fill in,doldurmak,заполнить,заповнювати
-393,B1,21,A,main,Ausgabe,die,-n,Noun,,,,edition / expenditure / issue,baskı / harcama / sayı,издание / расход / выпуск,видання / витрата / випуск
-394,B1,21,A,main,Ausgang,der,¨-e,Noun,,,,exit / outcome,çıkış / sonuç,выход,вихід
-395,B1,21,A,main,ausgeben,,,Verb,gibt aus,gab aus,hat ausgegeben,to spend (money) / give out,para harcamak / dağıtmak,тратить / раздавать,витрачати / роздавати
-396,B1,21,A,main,ausgehen,,,Verb,geht aus,ging aus,ist ausgegangen,to go out,dışarıya çıkmak,выходить / гулять,виходити / гуляти
-397,B1,21,A,main,ausgezeichnet,,,Other,,,,excellent,mükemmel,отличный,відмінний / чудовий
-398,B1,21,A,main,Aushilfe,die,-ndie,Noun,,,,temporary helper / temp,geçici yardımcı,временный помощник,тимчасовий помічник
-399,B1,21,A,main,Ausland,das,"passt auf,",Noun,,,,abroad,yurt dışı,за границей,за кордоном
-400,B1,21,A,main,aufräumen,,,Verb,räumt auf,räumte auf,hat aufgeräumt,to tidy up / clear up,toparlamak / düzenlemek,убирать / приводить в порядок,прибирати / наводити порядок
-401,B1,21,A,main,aufregen,,,Verb,regt auf,regte auf,hat aufgeregt,to excite / upset / get worked up,heyecanlandırmak / sinerlenmek,волновать / расстраивать / волноваться,хвилювати / розстроювати / хвилюватися
-402,B1,21,A,main,aufstehen,,,Verb,steht auf,stand auf,ist aufgestan,to get up / stand up,kalkmak / ayağa kalkmak,вставать,вставати
-403,B1,21,A,main,Auftrag,der,¨-e,Noun,,,,order / commission / task,sipariş / görev / komisyon,заказ / поручение / задание,замовлення / доручення / завдання
-404,B1,21,A,main,auftreten,,,Verb,tritt auf,trat auf,ist aufgetreten,to appear / perform,görünmek / sahneye çıkmak,появляться / выступать,з'являтися / виступати
-405,B1,21,A,main,Auftritt,der,-e,Noun,,,,performance / appearance,sahne çıkışı / gösteri,выступление / появление,виступ / поява
-406,B1,21,A,main,aufwachen,,,Verb,wacht auf,wachte auf,ist aufgewacht,to wake up,uyanmak,просыпаться,прокидатися
-407,B1,21,A,main,aufwärts,,,Other,,,,upward,yukarıya doğru,вверх,вгору / вище
-408,B1,21,A,main,Aufzug,der,¨-e,Noun,,,,elevator / lift,asansör,лифт,ліфт
-409,B1,21,A,main,Auge,das,-n,Noun,,,,eye,göz,глаз,око
-410,B1,21,A,main,Augenblick,der,-e,Noun,,,,moment / instant,an / kısa süre,мгновение / момент,мить / момент
-411,B1,21,A,main,aus,,,Other,,,,from / out of,-dan / dışarı,из,з
-412,B1,21,A,main,abgeschlossen,,,Verb,,,,locked / completed,kilitlenmiş / tamamlanmış,закрытый / завершённый,замкнений / завершений
-413,B1,21,S,main,sicher,,,Other,,,,safe / secure,güvenli / emin,безопасный / надёжный,безпечний / надійний
-414,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований
-415,B1,21,A,main,ausdrucken,,,Verb,,,,to print out,yazdırmak,распечатывать,роздруковувати
-416,B1,21,G,main,gehört,,,Other,,,,belongs to,ait,принадлежит,належить
-417,B1,21,V,main,von,,,Other,,,,from / of,-dan / -nın,из / от / со стороны,з / від / з боку
-418,B1,21,N,main,nicht,,,Other,,,,not,değil,не,не
-419,B1,21,U,main,Freunden,,,Verb,,,,friends,,друзья,друзі
-420,B1,21,F,main,für,,,Other,,,,for,için,для,для
-421,B1,21,L,main,Land,,,Other,,,,land / country,ülke,страна / земля,країна / земля
-422,B1,21,A,main,aufgepasst,,,Other,,,,paid attention,dikkat etmiş,обратил внимание,звернув увагу
-423,B1,21,I,main,bringt,,,Other,,,,brings,,приносит,приносить
-424,B1,21,A,main,auf,,,Other,,,,on / up,üzerinde,на / к,на / до
-425,B1,21,S,main,schon,,,Other,,,,already,zaten,уже,вже
-426,B1,21,A,main,aufregend,,,Other,,,,exciting,heyecan verici,захватывающий,захопливий
-427,B1,21,A,main,auf,,,Other,,,,on,üzerinde,на / к,на / до
-428,B1,21,K,main,können,,,Verb,,,,can,yapabilmek,мочь / быть в состоянии,могти / бути в змозі
-429,B1,21,U,main,und,,,Other,,,,and,ve,и,і / та
-430,B1,21,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато
-431,B1,21,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь
-432,B1,21,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / за допомогою
-433,B1,21,G,main,Augenblick,,,Other,,,,moment / instant,,мгновение / момент,мить / момент
-434,B1,22,A,main,aussprechen,,,Verb,spricht aus,sprach aus,hat ausgesprochen,to pronounce / speak out,telaffuz etmek / açıkça söylemek,произносить,вимовляти
-435,B1,22,A,main,Aussprache,die,,Noun,,,,pronunciation,telaffuz,произношение,вимова
-436,B1,22,A,main,ausstellen,,,Verb,stellt aus,stellte aus,hat ausgestellt,to exhibit / issue (document),sergilemek / belge düzenlemek,выставлять / выдавать документ,виставляти / видавати документ
-437,B1,22,A,main,Ausstellung,die,-en,Noun,,,,exhibition,sergi,выставка,виставка
-438,B1,22,A,main,auswählen,,,Verb,wählt aus,wählte aus,hat ausgewählt,to select / choose,seçmek,выбирать,вибирати
-439,B1,22,A,main,Auswahl,die,-en,Noun,,,,selection / choice,seçim / seçenek,выбор,вибір
-440,B1,22,A,main,Ausweis,der,-e,Noun,,,,ID card,kimlik,удостоверение личности,посвідчення особи
-441,B1,22,A,main,ausziehen,,,Verb,zieht aus,zog aus,,to move out / take off (clothes),taşınmak / çıkarmak (kıyafet),съезжать / снимать (одежду),виселятися / знімати (одяг)
-442,B1,22,A,main,Auto,das,-s,Noun,,,,car,araba,автомобиль,автомобіль
-443,B1,22,A,main,Autobahn,die,-en,Noun,,,,motorway / highway,otoyol,автомагистраль,автострада / магістраль
-444,B1,22,A,main,Automat,der,-en,Noun,,,,vending machine / automatic device,otomat / otomatik cihaz,торговый автомат,торговий автомат
-445,B1,22,A,main,automatisch,,,Other,,,,automatic / automatically,otomatik / otomatik olarak,автоматический,автоматичний / автоматично
-446,B1,22,A,main,Autor,der,-en,Noun,,,,author (male),yazar (erkek),автор (муж.),автор (чол.)
-447,B1,22,A,main,Autorin,die,-nender,Noun,,,,author (female),yazar (kadın),автор (жен.),авторка (жін.)
-448,B1,22,A,main,Ausländerin,die,-nen,Noun,,,,foreigner (female),yabancı (kadın),иностранка (жен.),іноземка (жін.)
-449,B1,22,A,main,ausländisch,,,Other,,,,foreign,yabancı / yabancı ülkeye ait,иностранный,іноземний
-450,B1,22,A,main,ausmachen,,,Verb,macht aus,machte aus,hat ausgemacht,to switch off / agree on / matter,kapatmak / anlaşmak / önemli olmak,выключать,вимикати / домовлятися
-451,B1,22,A,main,Ausnahme,die,-n,Noun,,,,exception,istisna / ayrıcalık,исключение,виняток
-452,B1,22,A,main,ausreichen,,,Verb,reicht aus,re-,hat ausgereicht,to be sufficient,yeterli olmak,быть достаточным,бути достатнім
-453,B1,22,A,main,ausreichend,,,Other,,,,sufficient / enough,yeterli / yeterince,достаточный,достатній
-454,B1,22,A,main,ausrichten,,,Verb,richtet aus,richtete aus,hat ausgerichtet,to convey / align / arrange,iletmek / hizalamak / düzenlemek,передавать / выравнивать / организовывать,передавати / вирівнювати / організовувати
-455,B1,22,A,main,ausruhen,,,Verb,ruht aus,ruhte aus,hat ausgeruht,to rest / relax,dinlenmek,отдыхать / расслабляться,відпочивати / розслаблятися
-456,B1,22,A,main,ausschließen,,,Verb,schließt aus,schloss aus,hat ausgeschlossen,to exclude,dışlamak / hariç tutmak,исключать,виключати
-457,B1,22,A,main,ausschließlich,,,Other,,,,exclusively / only,yalnızca / sadece,исключительно / только,виключно / тільки
-458,B1,22,A,main,aussehen,,,Verb,sieht aus,sah aus,hat ausgesehen,to look / appear,görünmek,выглядеть,виглядати
-459,B1,22,A,main,außen,,,Verb,,,,outside,dışarıda / dışarıdan,снаружи,зовні / назовні
-460,B1,22,A,main,außerhalb,,,Other,,,,outside (of) / beyond,dışında / ötesinde,вне / за пределами,поза / за межами
-461,B1,22,Ä,main,äußerlich,,,Other,,,,external / outward,dışsal / görünüşte,внешний / наружный,зовнішній
-462,B1,22,A,main,außer,,,Other,,,,except / apart from,hariç / dışında,кроме / помимо,крім / окрім
-463,B1,22,A,main,außerdem,,,Other,,,,moreover / in addition / besides,üstelik / ayrıca / bunun yanı sıra,кроме того / вдобавок,крім того / до того ж
-464,B1,22,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий
-465,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений
-466,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений
-467,B1,22,D,main,dauert,,,Other,,,,lasts,sürüyor,длится,триває
-468,B1,22,D,main,dich,,,Other,,,,you,seni,тебя,тебе
-469,B1,22,A,main,ausgezogen,,,Verb,,,,moved out,taşınmış,выселившийся / съехавший,виселився / з'їхав
-470,B1,22,A,main,automatisch,,,Other,,,,automatic,otomatik,автоматический,автоматичний
-471,B1,22,Z,main,zwei,,,Other,,,,two,iki,два,два
-472,B1,22,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої
-473,B1,22,E,main,etwas,,,Other,,,,something,bir şey,что-то / немного,щось / трохи
-474,B1,22,V,main,völlig,,,Other,,,,completely,tamamen,полностью / совершенно,повністю / цілком
-475,B1,22,W,main,wieder,,,Other,,,,again,tekrar,снова,знову
-476,B1,22,W,main,würde,,,Other,,,,would,olurdu,бы,б / би
-477,B1,22,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив
-478,B1,22,Ä,main,äußerlich,,,Other,,,,external,dışsal,внешний,зовнішній
-479,B1,22,G,main,geöffnet,,,Other,,,,opened,açık / açılmış,открытый,відкритий
-480,B1,22,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
-481,B1,23,B,main,bar,,,Other,,,,cash / in cash,nakit / nakit olarak,наличными,готівкою
-482,B1,23,B,main,Bargeld,das,,Noun,,,,cash,nakit para,наличными,готівка
-483,B1,23,B,main,Bart,der,¨-e,Noun,,,,beard,sakal,борода,борода
-484,B1,23,B,main,Basketball,der,¨-e,Noun,,,,basketball,basketbol,баскетбол,баскетбол
-485,B1,23,B,main,basteln,,,Verb,bastelt,bastelte,hat gebastelt,to do crafts / make things,el işi yapmak / imalat yapmak,мастерить / делать поделки,майструвати / робити поробки
-486,B1,23,B,main,Batterie,die,-nder,Noun,,,,battery,pil / batarya,батарейка,батарейка
-487,B1,23,B,main,bauen,,,Verb,baut,baute,hat gebaut,to build / construct,inşa etmek / yapmak,строить,будувати
-488,B1,23,B,main,Bau,der,,Noun,,,,construction / building,inşaat / yapı,строительство / постройка,будівництво / споруда
-489,B1,23,B,main,Baustelle,die,-n,Noun,,,,construction site,inşaat alanı,стройка,будівельний майданчик
-490,B1,23,B,main,Bauer,der,-n,Noun,,,,farmer (male),çiftçi (erkek),фермер (муж.),фермер (чол.)
-491,B1,23,B,main,Baum,der,¨-e,Noun,,,,tree,ağaç,дерево,дерево
-492,B1,23,B,main,beachten,,,Verb,beachtet,beachtete,hat beachtet,to pay attention to / follow (rules),dikkat etmek / uymak (kurallara),обращать внимание / соблюдать,звертати увагу / дотримуватися
-493,B1,23,B,main,Beamte,der,-n,Noun,,,,civil servant (male),memur (erkek),чиновник (муж.),чиновник (чол.)
-494,B1,23,B,main,Beamtin,die,-nen,Noun,,,,civil servant (female),memur (kadın),чиновница (жен.),чиновниця (жін.)
-495,B1,23,B,main,beantragen,,,Verb,beantragt,beantragte,hat beantragt,to apply for,başvurmak,подавать заявление,подавати заяву
-496,B1,23,B,main,beantworten,,,Verb,beant-,wortet,hat beantwortet,to answer,cevaplamak / yanıtlamak,отвечать,відповідати
-497,B1,23,B,main,Bedarf,der,,Noun,,,,need / demand / requirement,ihtiyaç / talep / gereklilik,потребность / спрос / необходимость,потреба / попит / необхідність
-498,B1,23,B,main,bedeuten,,,Verb,bedeutet,bedeutete,hat bedeutet,to mean,anlamına gelmek,значить / означать,значити / означати
-499,B1,23,B,main,Bedeutung,die,,Noun,,,,meaning / significance,anlam / önem,значение / смысл,значення / зміст
-500,B1,23,B,main,backen,,,Verb,,backte,hat gebacken,to bake,fırınlamak / pişirmek,печь,пекти
+251,B1,18,A,main,Ansage,die,-nder,Noun,,,,announcement,duyuru / anons,объявление,оголошення,اعلام / اطلاعیه
+252,B1,18,A,main,Angebot,das,-e,Noun,,,,offer / deal,teklif / fırsat,предложение,пропозиція / угода,پیشنهاد / معامله
+253,B1,18,A,main,ander,,,Other,,,,other (variant),diğer (varyant),другой (вариант),інший (варіант),دیگر / نوع دیگر
+254,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan / diğer taraftan,с другой стороны,з іншого боку,از طرف دیگر
+255,B1,18,Ä,main,ändern,,,Verb,ändert,änderte,hat geändert,to change / alter,değiştirmek,менять / изменять,змінювати,تغییر دادن
+256,B1,18,Ä,main,Änderung,die,-en,Noun,,,,change / alteration,değişiklik,изменение,зміна,تغییر
+257,B1,18,A,main,anders,,,Other,,,,differently / otherwise,farklı / başka türlü,по-другому / иначе,по-іншому / інакше,متفاوت / طور دیگر
+258,B1,18,A,main,anerkennen,,,Verb,erkennt an,erkannte an,hat anerkannt,to recognize / acknowledge,tanımak / kabul etmek,признавать / признавать заслуги,визнавати / визнавати заслуги,به رسمیت شناختن / تأیید کردن
+259,B1,18,A,main,anfangen,,,Verb,fängt an,fing an,hat angefangen,to begin / start,başlamak,начинать,починати,شروع کردن
+260,B1,18,A,main,Anfang,der,¨-e,Noun,,,,beginning / start,başlangıç,начало,початок,آغاز / شروع
+261,B1,18,A,main,anfangs,,,Other,,,,at first / initially,başlangıçta / ilk başta,сначала / вначале,спочатку / на початку,در ابتدا
+262,B1,18,A,main,angeben,,,Verb,gibt an,gab an,hat angegeben,to state / indicate / show off,belirtmek / göstermek / hava atmak,указывать / сообщать / хвастаться,вказувати / повідомляти / хизуватися,اظهار کردن / مشخص کردن / پز دادن
+263,B1,18,A,main,Angabe,die,-n,Noun,,,,statement / detail / information,beyan / bilgi / ayrıntı,сведение / деталь / информация,відомість / деталь / інформація,اطلاعات / جزئیات / اظهار
+264,B1,18,A,main,Angehörige,der,-ndie,Noun,,,,relative / family member,akraba / aile üyesi,родственник / член семьи,родич / член сім'ї,بستگان / عضو خانواده
+265,B1,18,A,main,angenehm,,,Other,,,,pleasant / agreeable,hoş / keyifli,приятный,приємний,دلپذیر / خوشایند
+266,B1,18,P,main,passiert,,,Other,,,,happened,oldu,случилось,сталося,اتفاق افتاد
+267,B1,18,G,main,geht,,,Other,,,,goes,gidiyor,идёт / ходит,іде / ходить,می‌رود
+268,B1,18,W,main,wird,,,Other,,,,becomes / will,olacak,становится / будет,стає / буде,می‌شود / خواهد شد
+269,B1,18,S,main,schneller,,,Other,,,,faster,daha hızlı,быстрее,швидше,سریع‌تر
+270,B1,18,M,main,meine,,,Other,,,,my,benim,мой,мій / моя / моє,مال من / من
+271,B1,18,A,main,ankündigen,,,Verb,,,,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати,اعلام کردن
+272,B1,18,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن
+273,B1,18,U,main,unbedingt,,,Other,,,,absolutely,kesinlikle,обязательно / во что бы то ни стало,обов'язково / за всяку ціну,حتماً / قطعاً
+274,B1,18,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها
+275,B1,18,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забувати,فراموش کردن
+276,B1,18,G,main,günstige,,,Other,,,,affordable,uygun fiyatlı,доступный по цене,доступний за ціною,مقرون‌به‌صرفه
+277,B1,18,G,main,gegangen,,,Verb,,,,gone,gitmiş,ушёл / ушла / пошёл,пішов / пішла,رفته
+278,B1,18,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.),حرف تعریف معین
+279,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan,с другой стороны,з іншого боку,از سوی دیگر
+280,B1,18,G,main,geändert,,,Other,,,,changed,değiştirilmiş,изменённый,змінений,تغییریافته
+281,B1,18,A,main,anerkannt,,,Other,,,,recognized,tanınmış,признанный,визнаний,به‌رسمیت‌شناخته‌شده
+282,B1,18,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто,بسیاری / زیاد
+283,B1,18,D,main,dagegen,,,Verb,dass ich nach,,,against it,karşısında / aleyhinde,против этого,проти цього,بر ضد آن / در مقابل آن
+284,B1,18,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به
+285,B1,19,A,main,Anwältin,die,-nen,Noun,,,,lawyer (female),avukat (kadın),адвокат (жен.),адвокат (жін.),وکیل (زن)
+286,B1,19,A,main,anzeigen,,,Verb,zeigt an,zeigte an,hat angezeigt,to display / report (to police),görüntülemek / şikâyet etmek,показывать / заявлять в полицию,показувати / заявляти до поліції,نمایش دادن / گزارش کردن به پلیس
+287,B1,19,A,main,Anzeige,die,-n,Noun,,,,advertisement / notice / display,ilan / duyuru / ekran,объявление / уведомление,оголошення / повідомлення / дисплей,آگهی / اعلان / نمایشگر
+288,B1,19,A,main,anziehen,,,Verb,zieht an,zog an,hat angezogen,to attract / put on (clothes),çekmek / giymek,надевать,надягати / приваблювати,جذب کردن / پوشیدن
+289,B1,19,A,main,Anzug,der,¨-edas,Noun,,,,suit (clothing),takım elbise,костюм,костюм,کت‌وشلوار
+290,B1,19,A,main,Apparat,der,-e,Noun,,,,apparatus / device / phone,cihaz / alet / telefon,аппарат / устройство / телефон,апарат / пристрій / телефон,دستگاه / تلفن
+291,B1,19,A,main,Appetit,der,,Noun,,,,appetite,iştah,аппетит,апетит,اشتها
+292,B1,19,A,main,Aprikose,die,-n,Noun,,,,apricot,kayısı,абрикос,абрикос,زردآلو
+293,B1,19,A,main,arbeiten,,,Verb,arbeitet,arbeitete,hat gearbeitet,to work,çalışmak,работать,працювати,کار کردن
+294,B1,19,A,main,Arbeit,die,-en,Noun,,,,work / job,iş / çalışma,работа / труд,робота / праця,کار / شغل
+295,B1,19,A,main,Arbeiter,der,-,Noun,,,,worker (male),işçi (erkek),рабочий (муж.),робітник (чол.),کارگر (مرد)
+296,B1,19,A,main,Arbeiterin,die,-nen,Noun,,,,worker (female),işçi (kadın),работница (жен.),робітниця (жін.),کارگر (زن)
+297,B1,19,A,main,Arbeitserlaubnis,die,,Noun,,,,work permit,çalışma izni,разрешение на работу,дозвіл на роботу,مجوز کار
+298,B1,19,A,main,arbeitslos,,,Other,,,,unemployed,işsiz,безработный,безробітний,بیکار
+299,B1,19,A,main,Arbeitslosigkeit,die,,Noun,,,,unemployment,işsizlik,безработица,безробіття,بیکاری
+300,B1,19,A,main,Arbeitsplatz,der,¨-e,Noun,,,,workplace / job,iş yeri / iş,рабочее место,робоче місце,محل کار / شغل
+301,B1,19,A,main,Arbeitsstelle,die,"-nanschaffen, schafft an,schaffte an, hat angeschafft",Noun,,,,job / position,iş yeri / görev,рабочее место / должность,робоче місце / посада,سمت / موقعیت شغلی
+302,B1,19,A,main,anschließen,,,Verb,schließt an,schloss an,hat angeschlossen,to connect / attach,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن / متصل کردن
+303,B1,19,A,main,Anschluss,der,¨-e,Noun,,,,connection / follow-up,bağlantı / devam,пересадка / соединение,пересадка / з'єднання,اتصال / ادامه
+304,B1,19,A,main,anschnallen,,,Verb,schnallt an,schnallte an,hat angeschnallt,to fasten (seatbelt),bağlamak (emniyet kemeri),пристёгиваться,пристібатися,کمربند ایمنی بستن
+305,B1,19,A,main,ansehen,,,Verb,sieht an,sah an,hat angesehen,to look at / watch,bakmak / izlemek,смотреть / смотреть на,дивитися / дивитися на,نگاه کردن / تماشا کردن
+306,B1,19,A,main,ansprechen,,,Verb,spricht an,sprach an,hat angesprochen,to address / approach / speak to,hitap etmek / yanına gitmek / söz açmak,обращаться к / подходить / заговаривать,звертатися до / підходити / заговорювати,خطاب کردن / نزدیک شدن / سر صحبت را باز کردن
+307,B1,19,A,main,Anspruch,der,¨-e,Noun,,,,claim / right / demand,hak / talep / iddia,претензия / право / требование,претензія / право / вимога,ادعا / حق / مطالبه
+308,B1,19,A,main,anstellen,,,Verb,stellt an,stellte an,hat angestellt,to hire / employ / turn on,işe almak / devreye sokmak,нанимать / включать / ставить,наймати / вмикати / ставити,استخدام کردن / روشن کردن
+309,B1,19,A,main,Angestellte,der,-n,Noun,,,,employee (male),çalışan (erkek),сотрудник / служащий (муж.),співробітник / службовець (чол.),کارمند (مرد)
+310,B1,19,A,main,Angestellte,die,-n,Noun,,,,employee (female),çalışan (kadın),сотрудница / служащая (жен.),співробітниця / службовиця (жін.),کارمند (زن)
+311,B1,19,A,main,anstrengend,,,Other,,,,exhausting / tiring,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده / طاقت‌فرسا
+312,B1,19,A,main,Antrag,der,¨-e,Noun,,,,application / request / motion,başvuru / talep / önerge,заявление / ходатайство / заявка,заява / клопотання / заявка,درخواست / تقاضا / پیشنهاد رسمی
+313,B1,19,A,main,anwenden,,,Verb,wendet an,wandte an,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,به کار بردن / استفاده کردن
+314,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır bulunuyor,присутствующий,присутній,حاضر
+315,B1,19,A,main,antworten,,,Verb,antwortet,antwortete,hat geant-wortet,to answer,cevap vermek,отвечать,відповідати,پاسخ دادن
+316,B1,19,A,main,Antwort,die,,Noun,,,,answer / reply,cevap / yanıt,ответ,відповідь,پاسخ
+317,B1,19,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها
+318,B1,19,B,main,bekommen,,,Verb,,,,to get / receive,almak / elde etmek,получать,отримувати,گرفتن / دریافت کردن
+319,B1,19,E,main,erkältest,,,Other,,,,catch a cold,üşütmek,простужаешься / подхватываешь простуду,застужуєшся / підхоплюєш застуду,سرما خوردن
+320,B1,19,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений,خریداری‌شده
+321,B1,19,G,main,gemietet,,,Other,,,,rented,kiralanmış,снятый / арендованный,орендований / знятий,اجاره‌شده
+322,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک
+323,B1,19,L,main,leiser,,,Other,,,,quieter,daha sessiz,тише,тихіше,آرام‌تر
+324,B1,19,N,main,nichts,,,Other,,,,nothing,hiçbir şey,ничего,нічого,هیچ‌چیز
+325,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک
+326,B1,19,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک
+327,B1,19,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,у / при / поруч,نزد / کنار
+328,B1,19,G,main,gefunden,,,Other,,,,found,bulundu,найденный / нашли,знайдений / знайшли,یافت‌شده / پیدا شده
+329,B1,19,A,main,anschließen,,,Verb,,,,to connect,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن
+330,B1,19,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به
+331,B1,19,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن
+332,B1,19,A,main,an,,,Other,,,,on / at,,на / у,на / у,روی / در
+333,B1,19,E,main,stellen,,,Verb,,,,to place / put,,ставить / размещать,ставити / розміщувати,گذاشتن / قرار دادن
+334,B1,19,A,main,anstellen,,,Verb,,,,to hire / employ,işe almak,нанимать / включать,наймати / вмикати,استخدام کردن
+335,B1,19,M,main,musst,,,Other,,,,must / have to,gerekiyor,должен / обязан,повинен / зобов'язаний,باید
+336,B1,19,A,main,anstrengend,,,Other,,,,exhausting,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده
+337,B1,19,A,main,anwenden,,,Verb,,,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,استفاده کردن / به کار بردن
+338,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır,присутствующий,присутній,حاضر
+339,B1,19,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن
+340,B1,19,B,main,bekommen,,,Verb,,,,to get,almak,получать,отримувати,گرفتن
+341,B1,20,A,main,auffallen,,,Verb,fällt auf,fiel auf,ist aufgefallen,to stand out / be noticeable,dikkat çekmek / göze çarpmak,бросаться в глаза / быть заметным,кидатися у вічі / бути помітним,جلب توجه کردن / به چشم آمدن
+342,B1,20,A,main,auffordern,,,Verb,fordert auf,forderte auf,hat aufgefordert,to call on / request,çağırmak / talep etmek,призывать / просить,закликати / просити,فراخواندن / درخواست کردن
+343,B1,20,A,main,Aufforderung,die,-en,Noun,,,,request / demand,çağrı / talep,просьба / требование,прохання / вимога,درخواست / مطالبه
+344,B1,20,A,main,aufführen,,,Verb,führt auf,führte auf,hat aufgeführt,to perform / list,sahnelemek / listelemek,исполнять / перечислять,виконувати / перелічувати,اجرا کردن / فهرست کردن
+345,B1,20,A,main,Aufgabe,die,-n,Noun,,,,task / exercise / responsibility,görev / alıştırma / sorumluluk,задание / упражнение,завдання / вправа / відповідальність,وظیفه / تمرین / مسئولیت
+346,B1,20,A,main,aufgeben,,,Verb,gibt auf,gab,hat aufgegeben,to give up / hand in / post (mail),vazgeçmek / teslim etmek / posta vermek,сдаваться / сдавать / отправлять по почте,здаватися / здавати / відправляти поштою,تسلیم شدن / تحویل دادن / پست کردن
+347,B1,20,A,main,aufhalten,,,Verb,hält auf,hielt,hat aufgehalten,to stop / delay / stay,durdurmak / geciktirmek / kalmak,задерживать / останавливаться / пребывать,затримувати / зупинятися / перебувати,متوقف کردن / تأخیر انداختن / ماندن
+348,B1,20,A,main,aufheben,,,Verb,hebt auf,hob auf,hat aufgehoben,to pick up / keep / abolish,kaldırmak / saklamak / lağvetmek,поднимать / сохранять / отменять,піднімати / зберігати / скасовувати,برداشتن / نگه داشتن / لغو کردن
+349,B1,20,A,main,aufhören,,,Verb,hört auf,hörte auf,hat aufgehört,to stop / quit,bırakmak / durmak,переставать / прекращать,переставати / припиняти,متوقف شدن / دست کشیدن
+350,B1,20,A,main,aufladen,,,Verb,lädt auf,lud auf,hat aufgela,to charge (battery) / load,şarj etmek / yüklemek,заряжать / загружать,заряджати / завантажувати,شارژ کردن / بار کردن
+351,B1,20,A,main,auflösen,,,Verb,löst auf,löste auf,hat aufgelöst,to dissolve / disband,çözmek / dağıtmak,растворять / распускать,розчиняти / розпускати,حل کردن / منحل کردن
+352,B1,20,A,main,aufmerksam,,,Other,,,,attentive / alert,dikkatli / uyanık,внимательный / настороженный,уважний / насторожений,هوشیار / دقیق
+353,B1,20,A,main,aufnehmen,,,Verb,nimmt auf,nahm auf,hat aufgenommen,to record / take in / accept,kaydetmek / kabul etmek / almak,записывать / принимать / впускать,записувати / приймати / впускати,ضبط کردن / پذیرفتن / داخل کردن
+354,B1,20,A,main,Aufnahme,die,-n der,Noun,,,,recording / admission / photo,kayıt / kabul / fotoğraf,запись / приём / фотография,запис / прийом / фотографія,ضبط / پذیرش / عکس
+355,B1,20,Ä,main,ärgern,,,Verb,ärgert,ärgerte,hat geärgert,to annoy / get angry,kızdırmak / sinirlenmek,злиться / раздражать,злитися / дратувати,عصبانی کردن / عصبانی شدن
+356,B1,20,Ä,main,Ärger,der,,Noun,,,,annoyance / trouble / anger,kızgınlık / sıkıntı / öfke,раздражение / неприятность / злость,роздратування / неприємність / злість,دردسر / ناراحتی / عصبانیت
+357,B1,20,Ä,main,ärgerlich,,,Other,,,,annoying / angry,sinir bozucu / kızgın,раздражающий / сердитый,дратівливий / сердитий,آزاردهنده / عصبانی
+358,B1,20,A,main,arm,,,Other,,,,poor,fakir / yoksul,бедный,бідний,فقیر
+359,B1,20,A,main,Arm,der,-e,Noun,,,,arm,kol,рука,рука,بازو
+360,B1,20,A,main,Art,die,-en,Noun,,,,type / kind / species / manner,tür / çeşit / tarz,вид / род / способ,вид / рід / спосіб,نوع / شیوه
+361,B1,20,A,main,Artikel,der,-,Noun,,,,article (newspaper / grammar),makale / artikel (gramer),статья / артикль,стаття / артикль,مقاله / حرف تعریف
+362,B1,20,A,main,Arzt,der,¨-e,Noun,,,,doctor (male),doktor (erkek),врач (муж.),лікар (чол.),پزشک (مرد)
+363,B1,20,Ä,main,Ärztin,die,-nen,Noun,,,,doctor (female),doktor (kadın),врач (жен.),лікарка (жін.),پزشک (زن)
+364,B1,20,A,main,Asyl,das,,Noun,,,,asylum,sığınma / iltica,убежище,притулок / азил,پناهندگی / پناهگاه
+365,B1,20,A,main,atmen,,,Verb,atmet,atmete,hat geatmet,to breathe,nefes almak / solumak,дышать,дихати,نفس کشیدن
+366,B1,20,A,main,Atem,der,,Noun,,,,breath,nefes / solunum,дыхание,дихання,نفس
+367,B1,20,A,main,auch,,,Other,,,,also / too,de / da / ayrıca,тоже,також,هم / همچنین
+368,B1,20,A,main,auf,,,Other,,,,on / up,üzerinde,на / вверх,на / вгору,روی / بالا
+369,B1,20,A,main,angenehmen,,,Verb,,,,pleasant,hoş,приятный,приємний,خوشایند
+370,B1,20,B,main,blass,,,Other,,,,pale,solgun,бледный,блідий,پریده‌رنگ
+371,B1,20,Z,main,zu,,,Other,,,,too / to,-e / fazla,слишком / к,занадто / до,بیش از حد / به
+372,B1,20,A,main,aufgegeben,,,Verb,,,,given up,vazgeçilmiş,сданный / оставленный,зданий / залишений,رهاشده / تسلیم‌شده
+373,B1,20,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک
+374,B1,20,W,main,wurde,,,Other,,,,was / became,oldu,был / стала,був / стала,شد / بود
+375,B1,20,D,main,dass,,,Other,,,,that,ki / -diği,что,що,که
+376,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده
+377,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده
+378,B1,20,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди,همیشه
+379,B1,20,H,main,habe,,,Other,,,,have,sahip,имею,маю,دارم
+380,B1,20,G,main,gelesen,,,Verb,,,,read,okunmuş,прочитанный / читал,прочитаний / читав,خوانده / خوانده‌شده
+381,B1,20,D,main,durch,,,Other,,,,through,vasıtasıyla,через / посредством,через / за допомогою,از طریق / از میان
+382,B1,20,A,main,auch,,,Other,,,,also,ayrıca,тоже,також,همچنین
+383,B1,20,E,main,es,,,Other,,,,it,o / bunu,это,це,آن / این
+384,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / واجد صلاحیت
+385,B1,21,A,main,ausdrucken,,,Verb,druckt aus,druckte aus,hat ausgedruckt,to print out,yazdırmak / çıktı almak,распечатывать,роздруковувати,پرینت گرفتن
+386,B1,21,A,main,Ausdruck,der,¨-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی
+387,B1,21,A,main,Ausdruck,der,-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی
+388,B1,21,A,main,auseinander,,,Other,,,,apart / separate,ayrı / birbirinden uzak,врозь / отдельно,нарізно / окремо,از هم جدا
+389,B1,21,A,main,Ausfahrt,die,-en,Noun,,,,exit (road) / departure,çıkış (yol) / ayrılış,выезд / отправление,виїзд / відправлення,خروجی / حرکت
+390,B1,21,A,main,ausfallen,,,Verb,fällt aus,fiel aus,ist ausgefallen,to be cancelled / fall out,iptal olmak / düşmek,отменяться / выпадать,скасовуватися / випадати,لغو شدن / افتادن
+391,B1,21,A,main,Ausflug,der,¨-e,Noun,,,,excursion / trip,gezi / piknik,экскурсия / прогулка,екскурсія / прогулянка,گردش / سفر کوتاه
+392,B1,21,A,main,ausfüllen,,,Verb,füllt aus,füllte aus,hat ausgefüllt,to fill in,doldurmak,заполнить,заповнювати,پر کردن
+393,B1,21,A,main,Ausgabe,die,-n,Noun,,,,edition / expenditure / issue,baskı / harcama / sayı,издание / расход / выпуск,видання / витрата / випуск,نسخه / هزینه / شماره
+394,B1,21,A,main,Ausgang,der,¨-e,Noun,,,,exit / outcome,çıkış / sonuç,выход,вихід,خروج / نتیجه
+395,B1,21,A,main,ausgeben,,,Verb,gibt aus,gab aus,hat ausgegeben,to spend (money) / give out,para harcamak / dağıtmak,тратить / раздавать,витрачати / роздавати,خرج کردن / توزیع کردن
+396,B1,21,A,main,ausgehen,,,Verb,geht aus,ging aus,ist ausgegangen,to go out,dışarıya çıkmak,выходить / гулять,виходити / гуляти,بیرون رفتن
+397,B1,21,A,main,ausgezeichnet,,,Other,,,,excellent,mükemmel,отличный,відмінний / чудовий,عالی
+398,B1,21,A,main,Aushilfe,die,-ndie,Noun,,,,temporary helper / temp,geçici yardımcı,временный помощник,тимчасовий помічник,کمک‌کار موقت
+399,B1,21,A,main,Ausland,das,"passt auf,",Noun,,,,abroad,yurt dışı,за границей,за кордоном,خارج از کشور
+400,B1,21,A,main,aufräumen,,,Verb,räumt auf,räumte auf,hat aufgeräumt,to tidy up / clear up,toparlamak / düzenlemek,убирать / приводить в порядок,прибирати / наводити порядок,مرتب کردن / جمع‌وجور کردن
+401,B1,21,A,main,aufregen,,,Verb,regt auf,regte auf,hat aufgeregt,to excite / upset / get worked up,heyecanlandırmak / sinerlenmek,волновать / расстраивать / волноваться,хвилювати / розстроювати / хвилюватися,هیجان‌زده کردن / ناراحت کردن / عصبی شدن
+402,B1,21,A,main,aufstehen,,,Verb,steht auf,stand auf,ist aufgestan,to get up / stand up,kalkmak / ayağa kalkmak,вставать,вставати,بلند شدن / از خواب بیدار شدن
+403,B1,21,A,main,Auftrag,der,¨-e,Noun,,,,order / commission / task,sipariş / görev / komisyon,заказ / поручение / задание,замовлення / доручення / завдання,سفارش / مأموریت / وظیفه
+404,B1,21,A,main,auftreten,,,Verb,tritt auf,trat auf,ist aufgetreten,to appear / perform,görünmek / sahneye çıkmak,появляться / выступать,з'являтися / виступати,ظاهر شدن / اجرا کردن
+405,B1,21,A,main,Auftritt,der,-e,Noun,,,,performance / appearance,sahne çıkışı / gösteri,выступление / появление,виступ / поява,اجرا / حضور
+406,B1,21,A,main,aufwachen,,,Verb,wacht auf,wachte auf,ist aufgewacht,to wake up,uyanmak,просыпаться,прокидатися,بیدار شدن
+407,B1,21,A,main,aufwärts,,,Other,,,,upward,yukarıya doğru,вверх,вгору / вище,رو به بالا
+408,B1,21,A,main,Aufzug,der,¨-e,Noun,,,,elevator / lift,asansör,лифт,ліфт,آسانسور
+409,B1,21,A,main,Auge,das,-n,Noun,,,,eye,göz,глаз,око,چشم
+410,B1,21,A,main,Augenblick,der,-e,Noun,,,,moment / instant,an / kısa süre,мгновение / момент,мить / момент,لحظه
+411,B1,21,A,main,aus,,,Other,,,,from / out of,-dan / dışarı,из,з,از / بیرون از
+412,B1,21,A,main,abgeschlossen,,,Verb,,,,locked / completed,kilitlenmiş / tamamlanmış,закрытый / завершённый,замкнений / завершений,قفل‌شده / تکمیل‌شده
+413,B1,21,S,main,sicher,,,Other,,,,safe / secure,güvenli / emin,безопасный / надёжный,безпечний / надійний,امن / مطمئن
+414,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / ماهر
+415,B1,21,A,main,ausdrucken,,,Verb,,,,to print out,yazdırmak,распечатывать,роздруковувати,پرینت گرفتن
+416,B1,21,G,main,gehört,,,Other,,,,belongs to,ait,принадлежит,належить,متعلق است به
+417,B1,21,V,main,von,,,Other,,,,from / of,-dan / -nın,из / от / со стороны,з / від / з боку,از / متعلق به
+418,B1,21,N,main,nicht,,,Other,,,,not,değil,не,не,نه / نیست
+419,B1,21,U,main,Freunden,,,Verb,,,,friends,,друзья,друзі,دوستان
+420,B1,21,F,main,für,,,Other,,,,for,için,для,для,برای
+421,B1,21,L,main,Land,,,Other,,,,land / country,ülke,страна / земля,країна / земля,کشور / زمین
+422,B1,21,A,main,aufgepasst,,,Other,,,,paid attention,dikkat etmiş,обратил внимание,звернув увагу,توجه کرده
+423,B1,21,I,main,bringt,,,Other,,,,brings,,приносит,приносить,می‌آورد
+424,B1,21,A,main,auf,,,Other,,,,on / up,üzerinde,на / к,на / до,روی / بالا
+425,B1,21,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً / دیگر
+426,B1,21,A,main,aufregend,,,Other,,,,exciting,heyecan verici,захватывающий,захопливий,هیجان‌انگیز
+427,B1,21,A,main,auf,,,Other,,,,on,üzerinde,на / к,на / до,روی
+428,B1,21,K,main,können,,,Verb,,,,can,yapabilmek,мочь / быть в состоянии,могти / бути в змозі,توانستن
+429,B1,21,U,main,und,,,Other,,,,and,ve,и,і / та,و
+430,B1,21,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато,بسیاری
+431,B1,21,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک
+432,B1,21,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / за допомогою,با
+433,B1,21,G,main,Augenblick,,,Other,,,,moment / instant,,мгновение / момент,мить / момент,لحظه
+434,B1,22,A,main,aussprechen,,,Verb,spricht aus,sprach aus,hat ausgesprochen,to pronounce / speak out,telaffuz etmek / açıkça söylemek,произносить,вимовляти,تلفظ کردن / صریح گفتن
+435,B1,22,A,main,Aussprache,die,,Noun,,,,pronunciation,telaffuz,произношение,вимова,تلفظ
+436,B1,22,A,main,ausstellen,,,Verb,stellt aus,stellte aus,hat ausgestellt,to exhibit / issue (document),sergilemek / belge düzenlemek,выставлять / выдавать документ,виставляти / видавати документ,به نمایش گذاشتن / صادر کردن
+437,B1,22,A,main,Ausstellung,die,-en,Noun,,,,exhibition,sergi,выставка,виставка,نمایشگاه
+438,B1,22,A,main,auswählen,,,Verb,wählt aus,wählte aus,hat ausgewählt,to select / choose,seçmek,выбирать,вибирати,انتخاب کردن
+439,B1,22,A,main,Auswahl,die,-en,Noun,,,,selection / choice,seçim / seçenek,выбор,вибір,انتخاب / گزینه
+440,B1,22,A,main,Ausweis,der,-e,Noun,,,,ID card,kimlik,удостоверение личности,посвідчення особи,کارت شناسایی
+441,B1,22,A,main,ausziehen,,,Verb,zieht aus,zog aus,,to move out / take off (clothes),taşınmak / çıkarmak (kıyafet),съезжать / снимать (одежду),виселятися / знімати (одяг),اسباب‌کشی کردن / درآوردن لباس
+442,B1,22,A,main,Auto,das,-s,Noun,,,,car,araba,автомобиль,автомобіль,ماشین
+443,B1,22,A,main,Autobahn,die,-en,Noun,,,,motorway / highway,otoyol,автомагистраль,автострада / магістраль,بزرگراه
+444,B1,22,A,main,Automat,der,-en,Noun,,,,vending machine / automatic device,otomat / otomatik cihaz,торговый автомат,торговий автомат,دستگاه خودکار
+445,B1,22,A,main,automatisch,,,Other,,,,automatic / automatically,otomatik / otomatik olarak,автоматический,автоматичний / автоматично,خودکار / به‌طور خودکار
+446,B1,22,A,main,Autor,der,-en,Noun,,,,author (male),yazar (erkek),автор (муж.),автор (чол.),نویسنده (مرد)
+447,B1,22,A,main,Autorin,die,-nender,Noun,,,,author (female),yazar (kadın),автор (жен.),авторка (жін.),نویسنده (زن)
+448,B1,22,A,main,Ausländerin,die,-nen,Noun,,,,foreigner (female),yabancı (kadın),иностранка (жен.),іноземка (жін.),خارجی (زن)
+449,B1,22,A,main,ausländisch,,,Other,,,,foreign,yabancı / yabancı ülkeye ait,иностранный,іноземний,خارجی
+450,B1,22,A,main,ausmachen,,,Verb,macht aus,machte aus,hat ausgemacht,to switch off / agree on / matter,kapatmak / anlaşmak / önemli olmak,выключать,вимикати / домовлятися,خاموش کردن / توافق کردن / مهم بودن
+451,B1,22,A,main,Ausnahme,die,-n,Noun,,,,exception,istisna / ayrıcalık,исключение,виняток,استثنا
+452,B1,22,A,main,ausreichen,,,Verb,reicht aus,re-,hat ausgereicht,to be sufficient,yeterli olmak,быть достаточным,бути достатнім,کافی بودن
+453,B1,22,A,main,ausreichend,,,Other,,,,sufficient / enough,yeterli / yeterince,достаточный,достатній,کافی
+454,B1,22,A,main,ausrichten,,,Verb,richtet aus,richtete aus,hat ausgerichtet,to convey / align / arrange,iletmek / hizalamak / düzenlemek,передавать / выравнивать / организовывать,передавати / вирівнювати / організовувати,رساندن / تنظیم کردن / ترتیب دادن
+455,B1,22,A,main,ausruhen,,,Verb,ruht aus,ruhte aus,hat ausgeruht,to rest / relax,dinlenmek,отдыхать / расслабляться,відпочивати / розслаблятися,استراحت کردن
+456,B1,22,A,main,ausschließen,,,Verb,schließt aus,schloss aus,hat ausgeschlossen,to exclude,dışlamak / hariç tutmak,исключать,виключати,مستثنا کردن / کنار گذاشتن
+457,B1,22,A,main,ausschließlich,,,Other,,,,exclusively / only,yalnızca / sadece,исключительно / только,виключно / тільки,منحصراً / فقط
+458,B1,22,A,main,aussehen,,,Verb,sieht aus,sah aus,hat ausgesehen,to look / appear,görünmek,выглядеть,виглядати,به نظر رسیدن / ظاهر شدن
+459,B1,22,A,main,außen,,,Verb,,,,outside,dışarıda / dışarıdan,снаружи,зовні / назовні,بیرون / از بیرون
+460,B1,22,A,main,außerhalb,,,Other,,,,outside (of) / beyond,dışında / ötesinde,вне / за пределами,поза / за межами,خارج از / فراتر از
+461,B1,22,Ä,main,äußerlich,,,Other,,,,external / outward,dışsal / görünüşte,внешний / наружный,зовнішній,ظاهری / بیرونی
+462,B1,22,A,main,außer,,,Other,,,,except / apart from,hariç / dışında,кроме / помимо,крім / окрім,به جز / علاوه بر
+463,B1,22,A,main,außerdem,,,Other,,,,moreover / in addition / besides,üstelik / ayrıca / bunun yanı sıra,кроме того / вдобавок,крім того / до того ж,علاوه بر این
+464,B1,22,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий,خوب
+465,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,به نمایش گذاشته‌شده
+466,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,نمایش‌داده‌شده
+467,B1,22,D,main,dauert,,,Other,,,,lasts,sürüyor,длится,триває,طول می‌کشد
+468,B1,22,D,main,dich,,,Other,,,,you,seni,тебя,тебе,تو را
+469,B1,22,A,main,ausgezogen,,,Verb,,,,moved out,taşınmış,выселившийся / съехавший,виселився / з'їхав,اسباب‌کشی کرده
+470,B1,22,A,main,automatisch,,,Other,,,,automatic,otomatik,автоматический,автоматичний,خودکار
+471,B1,22,Z,main,zwei,,,Other,,,,two,iki,два,два,دو
+472,B1,22,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої,نوشیدنی‌ها
+473,B1,22,E,main,etwas,,,Other,,,,something,bir şey,что-то / немного,щось / трохи,چیزی / کمی
+474,B1,22,V,main,völlig,,,Other,,,,completely,tamamen,полностью / совершенно,повністю / цілком,کاملاً
+475,B1,22,W,main,wieder,,,Other,,,,again,tekrar,снова,знову,دوباره
+476,B1,22,W,main,würde,,,Other,,,,would,olurdu,бы,б / би,می‌بود / می‌شد
+477,B1,22,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив,دیده / دیده‌شده
+478,B1,22,Ä,main,äußerlich,,,Other,,,,external,dışsal,внешний,зовнішній,بیرونی
+479,B1,22,G,main,geöffnet,,,Other,,,,opened,açık / açılmış,открытый,відкритий,باز / بازشده
+480,B1,22,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن
+481,B1,23,B,main,bar,,,Other,,,,cash / in cash,nakit / nakit olarak,наличными,готівкою,نقد / نقداً
+482,B1,23,B,main,Bargeld,das,,Noun,,,,cash,nakit para,наличными,готівка,پول نقد
+483,B1,23,B,main,Bart,der,¨-e,Noun,,,,beard,sakal,борода,борода,ریش
+484,B1,23,B,main,Basketball,der,¨-e,Noun,,,,basketball,basketbol,баскетбол,баскетбол,بسکتبال
+485,B1,23,B,main,basteln,,,Verb,bastelt,bastelte,hat gebastelt,to do crafts / make things,el işi yapmak / imalat yapmak,мастерить / делать поделки,майструвати / робити поробки,کاردستی درست کردن / ساختن
+486,B1,23,B,main,Batterie,die,-nder,Noun,,,,battery,pil / batarya,батарейка,батарейка,باتری
+487,B1,23,B,main,bauen,,,Verb,baut,baute,hat gebaut,to build / construct,inşa etmek / yapmak,строить,будувати,ساختن
+488,B1,23,B,main,Bau,der,,Noun,,,,construction / building,inşaat / yapı,строительство / постройка,будівництво / споруда,ساخت‌وساز / بنا
+489,B1,23,B,main,Baustelle,die,-n,Noun,,,,construction site,inşaat alanı,стройка,будівельний майданчик,محل ساخت‌وساز
+490,B1,23,B,main,Bauer,der,-n,Noun,,,,farmer (male),çiftçi (erkek),фермер (муж.),фермер (чол.),کشاورز (مرد)
+491,B1,23,B,main,Baum,der,¨-e,Noun,,,,tree,ağaç,дерево,дерево,درخت
+492,B1,23,B,main,beachten,,,Verb,beachtet,beachtete,hat beachtet,to pay attention to / follow (rules),dikkat etmek / uymak (kurallara),обращать внимание / соблюдать,звертати увагу / дотримуватися,توجه کردن به / رعایت کردن
+493,B1,23,B,main,Beamte,der,-n,Noun,,,,civil servant (male),memur (erkek),чиновник (муж.),чиновник (чол.),کارمند دولت (مرد)
+494,B1,23,B,main,Beamtin,die,-nen,Noun,,,,civil servant (female),memur (kadın),чиновница (жен.),чиновниця (жін.),کارمند دولت (زن)
+495,B1,23,B,main,beantragen,,,Verb,beantragt,beantragte,hat beantragt,to apply for,başvurmak,подавать заявление,подавати заяву,درخواست کردن
+496,B1,23,B,main,beantworten,,,Verb,beant-,wortet,hat beantwortet,to answer,cevaplamak / yanıtlamak,отвечать,відповідати,پاسخ دادن
+497,B1,23,B,main,Bedarf,der,,Noun,,,,need / demand / requirement,ihtiyaç / talep / gereklilik,потребность / спрос / необходимость,потреба / попит / необхідність,نیاز / تقاضا / ضرورت
+498,B1,23,B,main,bedeuten,,,Verb,bedeutet,bedeutete,hat bedeutet,to mean,anlamına gelmek,значить / означать,значити / означати,معنی دادن / به معنی بودن
+499,B1,23,B,main,Bedeutung,die,,Noun,,,,meaning / significance,anlam / önem,значение / смысл,значення / зміст,معنا / اهمیت
+500,B1,23,B,main,backen,,,Verb,,backte,hat gebacken,to bake,fırınlamak / pişirmek,печь,пекти,پختن
 501,B1,23,B,main,Bäckerei,die,-en,Noun,,,,bakery,fırın / ekmekçi,пекарня,пекарня
 502,B1,23,B,main,baden,,,Verb,badet,badete,,to bathe / swim,yıkanmak / yüzmek,купаться / плавать,купатися / плавати
 503,B1,23,B,main,Bad,das,¨-er,Noun,,,,bathroom / bath,banyo,ванная / купание,ванна кімната / купання
