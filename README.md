@@ -19,9 +19,9 @@ The core vocabulary comes from the official word lists published by the [Goethe-
 
 | Level | Words used (CSV rows) | Description |
 |-------|---------------------:|-------------|
-| A1 | 235 | Starter – survival communication |
-| A2 | 1056 | Elementary – everyday topics |
-| B1 | 4248 | Intermediate – independent use |
+| A1 | 812 | Starter – survival communication |
+| A2 | 1059 | Elementary – everyday topics |
+| B1 | 4272 | Intermediate – independent use |
 
 ### Additional Sources
 - **DWDS** – *Digitales Wörterbuch der deutschen Sprache* ([dwds.de](https://www.dwds.de)) — comprehensive dictionary entries with meanings, grammar, and example sentences, maintained by the Berlin-Brandenburg Academy of Sciences and Humanities.
