@@ -749,256 +749,256 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 748,B1,28,B,main,Bub,der,-en,Noun,,,,boy (Austrian),erkek çocuk (Avusturya),мальчик,хлопчик (австр.)
 749,B1,28,B,main,Buchhandlung,die,-en,Noun,,,,bookshop,kitabevi / kitapçı,книжный магазин,книжковий магазин
 750,B1,28,B,main,buchen,,,Verb,bucht,buchte,hat gebucht,to book / reserve,rezerve etmek / yer ayırtmak,бронировать / заказывать,бронювати / резервувати
-751,B1,28,B,main,Bogen,der,-/¨-,Noun,,,,arc / bow / sheet of paper,yay / kemer / kağıt,дуга / лук / лист бумаги,
-752,B1,28,B,main,Bohne,die,-ndas,Noun,,,,bean,fasulye,боб / фасоль,
-753,B1,28,B,main,Botschaft,die,-enböse,Noun,,,,embassy / message,büyükelçilik / mesaj,посольство / послание,
-754,B1,28,B,main,braten,,,Verb,brät,briet,hat gebraten,to fry / roast,kızartmak / kavurmak,жарить / запекать,
-755,B1,28,B,main,Braten,der,-,Noun,,,,roast meat,rosto / kızartma et,жаркое,
-756,B1,28,B,main,brauchen,,,Verb,braucht,brauchte,hat gebraucht,to need,ihtiyaç duymak,нуждаться,
-757,B1,28,B,main,brechen,,,Verb,bricht,brach,hat gebrochen,to break,kırmak / kırılmak,ломать / разбивать,
-758,B1,28,B,main,breit,,,Other,,,,wide / broad,geniş / enli,широкий,
-759,B1,28,B,main,Breite,die,-n,Noun,,,,width / breadth,genişlik / en,ширина,
-760,B1,28,B,main,bremsen,,,Verb,bremst,bremste,hat gebremst,to brake / slow down,frenlenmek / yavaşlamak,тормозить,
-761,B1,28,B,main,Bremse,die,-n,Noun,,,,brake,fren,тормоз,
-762,B1,28,B,main,brennen,,,Verb,brennt,brannte,hat gebrannt,to burn,yanmak,гореть,
-763,B1,28,Ü,main,über,,,Other,,,,over,hakkında,над / о / через,
-764,B1,28,N,main,neuesten,,,Verb,,,,newest,en yeni,новейший,
-765,B1,28,N,main,nicht,,,Other,,,,not,değil,не,
-766,B1,28,F,main,Fahrt,die,,Noun,,,,journey / drive,yolculuk,поездка / путь,
-767,B1,28,U,main,und,,,Other,,,,and,ve,и,
-768,B1,28,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,
-769,B1,28,B,main,besonders,,,Other,,,,especially,özellikle,особенно / в особенности,
-770,B1,28,D,main,den,,,Verb,,,,the,(isim eki),определённый артикль,
-771,B1,28,M,main,mieten,,,Verb,,,,to rent,kiralamak,снимать / арендовать,
-772,B1,28,B,main,bekommen,,,Verb,,,,to get,almak,получать,
-773,B1,28,N,main,nicht,,,Other,,,,not,değil,не,
-774,B1,28,S,main,sieht,,,Other,,,,looks / sees,görüyor,выглядит / видит,
-775,B1,28,B,main,braucht,,,Other,,,,needs,ihtiyaç duyuyor,нуждается,
-776,B1,28,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,
-777,B1,28,S,main,sein,,,Other,,,,to be / his,olmak / onun,быть,
-778,B1,28,G,main,gebrochen,,,Verb,,,,broken,kırık,сломанный,
-779,B1,28,E,main,einen,,,Verb,,,,one,bir,один,
-780,B1,28,K,main,kontrollieren,,,Verb,,,,to check,kontrol etmek,контролировать / проверять,
-781,B1,28,G,main,gebrannt,,,Other,,,,burned,yanmış,сгоревший,
-782,B1,28,A,main,aus,,,Other,,,,from,-dan,из,
-783,B1,28,L,main,Licht,das,,Noun,,,,light,ışık,свет,
-784,B1,29,C,main,Creme,die,-n/-s,Noun,,,,cream,krem / krem şanti,крем,
-785,B1,29,C,main,Cousin,der,-s,Noun,,,,cousin (male),kuzen (erkek),двоюродный брат (муж.),
-786,B1,29,C,main,Cousine,die,-n,Noun,,,,cousin (female),kuzen (kız),двоюродная сестра (жен.),
-787,B1,29,C,main,Couvert,das,-s,Noun,,,,envelope (Swiss),zarf (İsviçre),конверт,
-788,B1,29,D,main,da,,,Other,,,,there / then,orada / o zaman,там / тогда,
-789,B1,29,D,main,dabei,,,Other,,,,with it / involved,beraberinde / dahil,при этом / с собой,
-790,B1,29,D,main,Dach,das,¨-er,Noun,,,,roof,çatı,крыша,
-791,B1,29,D,main,dafür,,,Other,,,,for it / in favor of it,bunun için / lehinde,за это / в пользу этого,
-792,B1,29,D,main,dagegen,,,Verb,,,,against it,buna karşı / aleyhinde,против этого,
-793,B1,29,D,main,daher,,,Other,,,,therefore / from there,bu nedenle / oradan,поэтому / оттуда,
-794,B1,29,D,main,dahinbuchstabieren,,,Verb,buchsta-,biert,hat buchstabiert,to spell out,oraya / harf harf söylemek,произносить по буквам,
-795,B1,29,B,main,Buchstabe,der,-n,Noun,,,,letter (of alphabet),harf,буква,
-796,B1,29,B,main,Büchse,die,-n,Noun,,,,can / tin / box,kutu / teneke,банка / жестянка / коробка,
-797,B1,29,B,main,Buffet,das,-sdie,Noun,,,,buffet,büfe,буфет,
-798,B1,29,B,main,Bürger,der,-,Noun,,,,citizen (male),vatandaş (erkek),гражданин (муж.),
-799,B1,29,B,main,Bürgerin,die,-nen,Noun,,,,citizen (female),vatandaş (kadın),гражданка (жен.),
-800,B1,29,B,main,Büro,das,-s,Noun,,,,office,ofis,офис,
-801,B1,29,B,main,Bürste,die,-n,Noun,,,,brush,fırça,щётка,
-802,B1,29,Z,main,Zahnbürste,die,-n,Noun,,,,toothbrush,diş fırçası,зубная щётка,
-803,B1,29,B,main,Bus,der,-se,Noun,,,,bus,otobüs,автобус,
-804,B1,29,B,main,Butter,die,,Noun,,,,butter,tereyağı,масло,
-805,B1,29,C,main,Café,das,-s die,Noun,,,,café,kafe,кафе,
-806,B1,29,C,main,Chefin,die,-nen,Noun,,,,boss (female),patron (kadın),шеф / начальница (жен.),
-807,B1,29,C,main,Coiffeuse,die,-n,Noun,,,,"hairdresser (female, Swiss)","kuaför (kadın, İsviçre)","парикмахерша (жен., Швейцария)",
-808,B1,29,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-809,B1,29,K,main,kann,,,Other,,,,can,yapabilir,может,
-810,B1,29,G,main,gesprochen,,,Verb,,,,spoken,konuşulmuş,сказанный / spoken,
-811,B1,29,L,main,lassen,,,Verb,,,,to let,bırakmak,позволять / оставлять,
-812,B1,29,D,main,dafür,,,Other,,,,for it,bunun için,за это,
-813,B1,29,L,main,losfahren,,,Verb,,,,to drive off,yola çıkmak,отъезжать,
-814,B1,29,D,main,dagegen,,,Verb,,,,against it,buna karşı,против этого,
-815,B1,29,S,main,schon,,,Other,,,,already,zaten,уже,
-816,B1,29,N,main,nicht,,,Other,,,,not,değil,не,
-817,B1,29,D,main,dahin,,,Other,,,,there / to that place,oraya / o yöne,туда,
-818,B1,29,D,main,deiner,,,Other,,,,your,senin,твой,
-819,B1,29,Ü,main,überall,,,Other,,,,everywhere,her yerde,повсюду,
-820,B1,29,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,
-821,B1,29,S,main,sind,,,Other,,,,are,-dir/-dır,есть / являются,
-822,B1,29,E,main,einen,,,Verb,,,,one,bir,один,
-823,B1,29,Z,main,zu,,,Other,,,,to / too,-e / fazla,к / слишком,
-824,B1,29,D,main,da,,,Other,,,,there,orada,там / тогда,
-825,B1,30,D,main,Dauer,die,,Noun,,,,duration / length,süre / uzunluk,длительность / продолжительность,
-826,B1,30,D,main,dauernd,,,Other,,,,constantly / all the time,sürekli / durmadan,постоянно,
-827,B1,30,D,main,Decke,die,-n,Noun,,,,ceiling / blanket,tavan / örtü,потолок / одеяло,
-828,B1,30,D,main,dekorieren,,,Verb,dekoriert,dekorierte,hat dekoriert,to decorate,dekore etmek / süslemek,украшать,
-829,B1,30,D,main,denken,,,Verb,denkt,dachte,hat gedacht,to think,düşünmek,думать,
-830,B1,30,G,main,Gedanke,der,-n,Noun,,,,thought,düşünce / fikir,мысль,
-831,B1,30,D,main,Denkmal,das,¨-er,Noun,,,,monument / memorial,anıt / abide,памятник / мемориал,
-832,B1,30,D,main,denn,,,Other,,,,because / for / then,çünkü / zira,потому что / ведь / тогда,
-833,B1,30,D,main,dasselbe,,,Other,,,,the same,aynı şey / aynısı,тот же самый,
-834,B1,30,D,main,deshalb,,,Other,,,,therefore / that's why,bu yüzden / bu nedenle,поэтому / вот почему,
-835,B1,30,D,main,Dessert,das,-s,Noun,,,,dessert,tatlı,десерт,
-836,B1,30,D,main,deswegen,,,Other,,,,therefore / because of that,bu yüzden / bu nedenle,поэтому / из-за этого,
-837,B1,30,D,main,damals,,,Other,,,,back then / at that time,o zamanlar / o dönemde,тогда / в то время,
-838,B1,30,D,main,Dame,die,-n,Noun,,,,lady,hanımefendi,дама,
-839,B1,30,D,main,damit,,,Other,,,,so that / with it,böylece / onunla,чтобы / с этим,
-840,B1,30,D,main,danach,,,Other,,,,after that / afterwards,bundan sonra / ardından,после этого,
-841,B1,30,D,main,daneben,,,Other,,,,next to it / beside it,yanında / yanı başında,рядом / возле этого,
-842,B1,30,D,main,danken,,,Verb,dankt,dankte,hat gedankt,to thank,teşekkür etmek,благодарить,
-843,B1,30,D,main,Dank,der,,Noun,,,,thanks / gratitude,teşekkür / minnettarlık,благодарность / спасибо,
-844,B1,30,D,main,dankbar,,,Other,,,,grateful,minnettar,благодарный,
-845,B1,30,D,main,danke,,,Other,,,,thank you,teşekkürler,спасибо,
-846,B1,30,D,main,dann,,,Other,,,,then,sonra / o zaman,тогда / затем,
-847,B1,30,D,main,darstellen,,,Verb,stellt dar,stellte dar,hat dargestellt,to represent / depict,temsil etmek / tasvir etmek,изображать / представлять,
-848,B1,30,D,main,Darstellung,die,-en,Noun,,,,representation / depiction,temsil / tasvir,изображение / представление,
-849,B1,30,D,main,dass,,,Other,,,,that (conjunction),ki / -diği,что,
-850,B1,30,D,main,Datei,die,-en,Noun,,,,file (computer),dosya,файл,
-851,B1,30,D,main,Datum,das,die,Noun,,,,date,tarih,дата,
-852,B1,30,D,main,Daten,die,,Noun,,,,data,veri,данные,
-853,B1,30,H,main,halbe,,,Other,,,,half,yarım,половина,
-854,B1,30,E,main,einer,,,Other,,,,one / a,bir / birisi,один / какая-то,
-855,B1,30,I,main,interessant,,,Other,,,,interesting,ilginç,интересный,
-856,B1,30,S,main,stört,,,Other,,,,disturbs,rahatsız ediyor,мешает,
-857,B1,30,Z,main,zu,,,Other,,,,to / too,-e / fazla,к / слишком,
-858,B1,30,A,main,auszumachen,,,Verb,,,,to switch off,kapatmak,выключать,
-859,B1,30,M,main,mir,,,Other,,,,me,bana,мне,
-860,B1,30,Z,main,zusammen,,,Verb,,,,together,birlikte,вместе,
-861,B1,30,S,main,sammeln,,,Verb,,,,to collect,toplamak,собирать,
-862,B1,30,U,main,uns,,,Other,,,,us,bizi,нам,
-863,B1,30,D,main,du,,,Other,,,,you,sen,ты,
-864,B1,30,I,main,ich,,,Other,,,,I,ben,я,
-865,B1,30,I,main,im,,,Other,,,,in the,-da / -de,в / в пределах,
-866,B1,30,L,main,leckeres,,,Other,,,,delicious,lezzetli,вкусный,
-867,B1,30,H,main,habe,,,Other,,,,have,sahip,имею,
-868,B1,30,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,
-869,B1,30,G,main,grillen,,,Verb,,,,to grill,ızgara yapmak,жарить на гриле / барбекю,
-870,B1,30,D,main,daneben,,,Verb,,,,beside it / next to it,yanıbaşında / yanında,рядом с этим / возле этого,
-871,B1,30,N,main,nicht,,,Other,,,,not,değil,не,
-872,B1,30,K,main,komme,,,Other,,,,come,geliyorum,прихожу,
-873,B1,30,D,main,dann,,,Other,,,,then,sonra,тогда,
-874,B1,30,W,main,wir,,,Other,,,,we,biz,мы,
-875,B1,30,D,main,darstellen,,,Verb,,,,to represent,temsil etmek,представлять,
-876,B1,30,D,main,dieser,,,Other,,,,this,bu,этот,
-877,B1,30,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,
-878,B1,31,D,main,Diskussion,die,-en,Noun,,,,discussion,tartışma / forum,дискуссия,
-879,B1,31,D,main,Distanz,die,-en,Noun,,,,distance,mesafe / uzaklık,расстояние,
-880,B1,31,D,main,doch,,,Other,,,,but / yet / indeed,ama / yine de / hani,но / всё же / ведь,
-881,B1,31,D,main,Doktor,der,-en,Noun,,,,doctor / PhD (male),doktor (erkek),доктор / кандидат наук (муж.),
-882,B1,31,D,main,Doktorin,die,-nen,Noun,,,,doctor / PhD (female),doktor (kadın),доктор / кандидат наук (жен.),
-883,B1,31,D,main,Dokument,das,-e,Noun,,,,document,belge / doküman,документ,
-884,B1,31,D,main,donnern,,,Verb,donnert,donnerte,hat gedonnert,to thunder,gök gürültüsü çıkarmak,греметь,
-885,B1,31,D,main,Donner,der,-,Noun,,,,thunder,gök gürültüsü,гром,
-886,B1,31,D,main,doppelt,,,Other,,,,double / twice,çift / iki kat,двойной / вдвое,
-887,B1,31,D,main,Dorf,das,¨-er,Noun,,,,village,köy,деревня,
-888,B1,31,D,main,dort,,,Other,,,,there / over there,orada / oracıkta,там,
-889,B1,31,D,main,dorthin,,,Other,,,,to there / in that direction,oraya / o tarafa,туда,
-890,B1,31,D,main,Dose,die,-n,Noun,,,,can / tin,kutu / teneke kutu,банка / жестянка,
-891,B1,31,D,main,draußen,,,Verb,,,,outside,dışarıda,снаружи,
-892,B1,31,D,main,Dreck,der,,Noun,,,,dirt / filth,pislik / kir,грязь,
-893,B1,31,D,main,deutlich,,,Other,,,,clear / distinct,açık / belirgin,ясный / отчётливый,
-894,B1,31,D,main,Diät,die,,Noun,,,,diet,diyet,диета,
-895,B1,31,D,main,Dialekt,der,-eder,Noun,,,,dialect,diyalekt / ağız,диалект,
-896,B1,31,D,main,dicht,,,Other,,,,dense / close / thick,yoğun / sıkışık / kalın,плотный / густой / близкий,
-897,B1,31,D,main,dick,,,Other,,,,fat / thick,şişman / kalın,толстый / плотный,
-898,B1,31,D,main,Dieb,der,-e,Noun,,,,thief (male),hırsız (erkek),вор (муж.),
-899,B1,31,D,main,dienen,,,Verb,dient,diente,hat gedient,to serve,hizmet etmek,служить,
-900,B1,31,D,main,Dienst,der,,Noun,,,,service / duty,hizmet / görev,служба / обязанность,
-901,B1,31,D,main,dies,,,Other,,,,this / these,bu / bunlar,этот / эти,
-902,B1,31,D,main,diesmal,,,Other,,,,this time,bu sefer,на этот раз,
-903,B1,31,D,main,digital,,,Other,,,,digital,dijital,цифровой,
-904,B1,31,D,main,Ding,das,-e,Noun,,,,thing,şey,вещь,
-905,B1,31,D,main,Diplom,das,-edirekt,Noun,,,,diploma / degree,diploma / derece,диплом / степень,
-906,B1,31,D,main,Direktor,der,-en,Noun,,,,director / headmaster (male),direktör / müdür (erkek),директор школы / директор (муж.),
-907,B1,31,D,main,Direktorin,die,-nen,Noun,,,,director / headmistress (female),direktör / müdür (kadın),директор / директриса (жен.),
-908,B1,31,D,main,Diskothek,die,,Noun,,,,discotheque / nightclub,disko / gece kulübü,дискотека / ночной клуб,
-909,B1,31,Z,main,zum,,,Other,,,,to the,-e,к / в,
-910,B1,31,Ü,main,über,,,Other,,,,over,hakkında,над / о / через,
-911,B1,31,S,main,schon,,,Other,,,,already,zaten,уже,
-912,B1,31,K,main,komme,,,Other,,,,come,geliyorum,прихожу,
-913,B1,31,Z,main,zum,,,Other,,,,to the,-e,к / в,
-914,B1,31,K,main,kommt,,,Other,,,,comes,geliyor,приходит,
-915,B1,31,I,main,ich,,,Other,,,,I,ben,я,
-916,B1,31,N,main,nicht,,,Other,,,,not,değil,не,
-917,B1,31,Z,main,zieht,,,Other,,,,moves / pulls,çekiyor / taşınıyor,двигает / тянет,
-918,B1,31,E,main,essen,,,Verb,,,,to eat,yemek yemek,есть,
-919,B1,31,G,main,gedient,,,Other,,,,served,hizmet etmiş,служил,
-920,B1,31,I,main,ich,,,Other,,,,I,ben,я,
-921,B1,31,Ä,main,fährst,,,Other,,,,drive / go,,едешь,
-922,B1,31,G,main,geht,,,Other,,,,goes,gidiyor,идёт,
-923,B1,32,D,main,Durchsage,die,-n,Noun,,,,announcement,anons / duyuru,объявление,
-924,B1,32,D,main,Durchschnitt,der,-e,Noun,,,,average,ortalama,среднее значение,
-925,B1,32,D,main,durchschnittlich,,,Other,,,,average / on average,ortalama / ortalama olarak,средний / в среднем,
-926,B1,32,D,main,dürfen,,,Verb,darf,durfte,hat gedurft,may / to be allowed to,izinli olmak / -ebilir,мочь / иметь право,
-927,B1,32,D,main,Durst,der,,Noun,,,,thirst,susuzluk,жажда,
-928,B1,32,D,main,durstig,,,Other,,,,thirsty,susuz / susamış,испытывающий жажду,
-929,B1,32,D,main,duschen,,,Verb,duscht,duschte,hat geduscht,to shower,duş almak,принимать душ,
-930,B1,32,D,main,Dusche,die,-n,Noun,,,,shower,duş,душ,
-931,B1,32,D,main,duzen,,,Verb,duzt,duzte,,"to address informally (use ""du"")",sen diye hitap etmek,"обращаться на ""ты""",
-932,B1,32,E,main,eben,,,Verb,,,,just / exactly / flat,tam / düz / sadece,просто / именно / ровный,
-933,B1,32,E,main,ebenfalls,,,Other,,,,likewise / also,aynı şekilde / ayrıca,также / аналогично,
-934,B1,32,E,main,ebenso,,,Other,,,,likewise / just as,aynı şekilde / aynı derecede,также / точно так же,
-935,B1,32,E,main,drehen,,,Verb,dreht,drehte,hat gedreht,to turn / to rotate,çevirmek / döndürmek,поворачивать / крутить,
-936,B1,32,D,main,dringend,,,Other,,,,urgent,acil,срочный,
-937,B1,32,D,main,Droge,die,-n,Noun,,,,drug,uyuşturucu / ilaç,наркотик,
-938,B1,32,D,main,Drogerie,die,-n,Noun,,,,drugstore / pharmacy,eczane / droğeri,дрогери / магазин косметики и бытовых товаров,
-939,B1,32,D,main,drüben,,,Verb,,,,over there,orada / karşı tarafta,вон там / напротив,
-940,B1,32,D,main,drucken,,,Verb,druckt,druckte,hat gedruckt,to print,basmak / yazdırmak,печатать,
-941,B1,32,D,main,Drucker,der,-,Noun,,,,printer,yazıcı,принтер,
-942,B1,32,D,main,drücken,,,Verb,drückt,drückte,hat gedrückt,to press / push,basmak / itmek,нажимать / давить,
-943,B1,32,D,main,Druck,der,,Noun,,,,pressure / print,basınç / baskı,давление / печать,
-944,B1,32,D,main,dumm,,,Other,,,,stupid / dumb,aptal / ahmak,глупый,
-945,B1,32,D,main,dunkel,,,Other,,,,dark,karanlık,тёмный,
-946,B1,32,D,main,dünn,,,Other,,,,thin,ince / zayıf,тонкий,
-947,B1,32,D,main,durch,,,Other,,,,through,vasıtasıyla,через,
-948,B1,32,G,main,geheizt,,,Other,,,,heated,ısıtılmış,отапливаемый,
-949,B1,32,E,main,einen,,,Verb,,,,one,bir,один,
-950,B1,32,V,main,verstanden,,,Verb,,,,understood,anlaşıldı,понятый / понял,
-951,B1,32,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,
-952,B1,32,D,main,durchschnittlich,,,Other,,,,average,ortalama,средний / в среднем,
-953,B1,32,N,main,nicht,,,Other,,,,not,değil,не,
-954,B1,32,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,
-955,B1,32,D,main,du,,,Other,,,,you,sen,ты,
-956,B1,32,L,main,lieber,,,Other,,,,rather / preferably,daha çok / tercihan,предпочтительнее / лучше,
-957,B1,32,M,main,mit,,,Other,,,,with,ile,с / при помощи,
-958,B1,32,U,main,um,,,Other,,,,around / at,-de / -da,около / в (о времени),
-959,B1,32,D,main,dringend,,,Other,,,,urgent,acil,срочный,
-960,B1,32,D,main,drinnen,,,Verb,,,,inside,içeride,внутри,
-961,B1,32,A,main,angenehmer,,,Other,,,,more pleasant,daha hoş,приятнее,
-962,B1,32,A,main,ausgedruckt,,,Other,,,,printed out,yazdırılmış,распечатанный,
-963,B1,32,M,main,meinen,,,Verb,,,,to think / mean,düşünmek,считать / иметь в виду / полагать,
-964,B1,32,D,main,drücken,,,Verb,,,,to press,basmak,нажимать,
-965,B1,32,G,main,Gerät,das,,Noun,,,,device,cihaz,прибор / устройство,
-966,B1,32,V,main,vorderen,,,Verb,,,,front,ön,передний,
-967,B1,32,M,main,mir,,,Other,,,,me,bana,мне,
-968,B1,32,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,
-969,B1,32,W,main,wenig,,,Other,,,,little / few,az,мало / немного,
-970,B1,32,M,main,man,,,Verb,,,,one / you (impersonal),,"человек / безличное ""ты""",
-971,B1,33,E,main,Eile,die,,Noun,,,,hurry / haste,acele / telaş,спешка,
-972,B1,33,E,main,eilig,,,Other,,,,urgent / in a hurry,acil / aceleci,срочный / спешащий,
-973,B1,33,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,
-974,B1,33,E,main,Einbahnstraße,die,-n,Noun,,,,one-way street,tek yönlü yol,улица с односторонним движением,
-975,B1,33,E,main,einbrechen,,,Verb,bricht ein,brach ein,ist eingebrochen,to break in / burgle,girmek (izinsiz) / soygunculuk yapmak,вламываться / совершать кражу со взломом,
-976,B1,33,E,main,Einbrecher,der,-,Noun,,,,burglar (male),hırsız / soyguncu (erkek),взломщик (муж.),
-977,B1,33,E,main,Einbrecherin,die,-nen,Noun,,,,burglar (female),hırsız / soyguncu (kadın),взломщица (жен.),
-978,B1,33,E,main,Einbruch,der,¨-e,Noun,,,,burglary / break-in,hırsızlık / zorla giriş,взлом / кража со взломом,
-979,B1,33,E,main,eindeutig,,,Other,,,,clear / unambiguous,net / açık / belirsiz olmayan,ясный / однозначный,
-980,B1,33,E,main,Eindruck,der,¨-e,Noun,,,,impression,izlenim,впечатление,
-981,B1,33,E,main,einerseits,,,Other,,,,on the one hand,bir yandan / bir taraftan,с одной стороны,
-982,B1,33,E,main,einfach,,,Other,,,,simple / easy,basit / kolay,простой / лёгкий,
-983,B1,33,E,main,Einfahrt,die,-en,Noun,,,,driveway / entrance,araba yolu / giriş,въезд / подъезд,
-984,B1,33,E,main,einfallen,,,Verb,fällt ein,fiel ein,ist eingefallen,to occur to / come to mind,aklına gelmek,приходить в голову,
-985,B1,33,E,main,Einfall,der,¨-e,Noun,,,,idea / flash of inspiration,fikir / ilham,идея / озарение,
-986,B1,33,E,main,Einfluss,der,¨-edie e-card,Noun,,,,influence,etki / nüfuz,влияние,
-987,B1,33,E,main,echt,,,Other,,,,real / genuine / really,gerçek / hakiki / gerçekten,настоящий / подлинный / правда,
-988,B1,33,E,main,EC-Karte,die,,Noun,,,,debit card,banka kartı / debit kart,дебетовая карта,
-989,B1,33,E,main,Ecke,die,-n,Noun,,,,corner,köşe,угол,
-990,B1,33,E,main,Eck,das,-en,Noun,,,,corner (Austrian),köşe (Avusturya),угол (австр.),
-991,B1,33,E,main,eckig,,,Other,,,,angular / square,köşeli / kare,угловатый / квадратный,
-992,B1,33,E,main,egal,,,Other,,,,it doesn't matter / all the same,farketmez / önemli değil,неважно / всё равно,
-993,B1,33,E,main,Ehe,die,-n,Noun,,,,marriage,evlilik,брак,
-994,B1,33,E,main,Ehefrau,die,-en/der,Noun,,,,wife,eş (kadın) / karı,жена,
-995,B1,33,E,main,Ehepaar,das,-e,Noun,,,,married couple,evli çift,супружеская пара,
-996,B1,33,E,main,eher,,,Other,,,,rather / sooner,daha çok / daha erken,скорее,
-997,B1,33,E,main,ehrlich,,,Other,,,,honest,dürüst,честный,
-998,B1,33,E,main,Ei,das,-er,Noun,,,,egg,yumurta,яйцо,
-999,B1,33,E,main,eigen,,,Other,,,,own / personal,kendi / özel,собственный / личный,
-1000,B1,33,E,main,eigentlich,,,Other,,,,actually / in fact,aslında / gerçekte,собственно / на самом деле,
+751,B1,28,B,main,Bogen,der,-/¨-,Noun,,,,arc / bow / sheet of paper,yay / kemer / kağıt,дуга / лук / лист бумаги,дуга / лук / аркуш паперу
+752,B1,28,B,main,Bohne,die,-ndas,Noun,,,,bean,fasulye,боб / фасоль,боб / квасоля
+753,B1,28,B,main,Botschaft,die,-enböse,Noun,,,,embassy / message,büyükelçilik / mesaj,посольство / послание,посольство / послання
+754,B1,28,B,main,braten,,,Verb,brät,briet,hat gebraten,to fry / roast,kızartmak / kavurmak,жарить / запекать,смажити / запікати
+755,B1,28,B,main,Braten,der,-,Noun,,,,roast meat,rosto / kızartma et,жаркое,смажене м'ясо
+756,B1,28,B,main,brauchen,,,Verb,braucht,brauchte,hat gebraucht,to need,ihtiyaç duymak,нуждаться,потребувати
+757,B1,28,B,main,brechen,,,Verb,bricht,brach,hat gebrochen,to break,kırmak / kırılmak,ломать / разбивать,ламати / розбивати
+758,B1,28,B,main,breit,,,Other,,,,wide / broad,geniş / enli,широкий,широкий
+759,B1,28,B,main,Breite,die,-n,Noun,,,,width / breadth,genişlik / en,ширина,ширина
+760,B1,28,B,main,bremsen,,,Verb,bremst,bremste,hat gebremst,to brake / slow down,frenlenmek / yavaşlamak,тормозить,гальмувати / сповільнюватися
+761,B1,28,B,main,Bremse,die,-n,Noun,,,,brake,fren,тормоз,гальмо
+762,B1,28,B,main,brennen,,,Verb,brennt,brannte,hat gebrannt,to burn,yanmak,гореть,горіти
+763,B1,28,Ü,main,über,,,Other,,,,over,hakkında,над / о / через,над / про / через
+764,B1,28,N,main,neuesten,,,Verb,,,,newest,en yeni,новейший,найновіший
+765,B1,28,N,main,nicht,,,Other,,,,not,değil,не,не
+766,B1,28,F,main,Fahrt,die,,Noun,,,,journey / drive,yolculuk,поездка / путь,поїздка / шлях
+767,B1,28,U,main,und,,,Other,,,,and,ve,и,і / та
+768,B1,28,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
+769,B1,28,B,main,besonders,,,Other,,,,especially,özellikle,особенно / в особенности,особливо / зокрема
+770,B1,28,D,main,den,,,Verb,,,,the,(isim eki),определённый артикль,визначений артикль (знах. відм.)
+771,B1,28,M,main,mieten,,,Verb,,,,to rent,kiralamak,снимать / арендовать,орендувати / знімати
+772,B1,28,B,main,bekommen,,,Verb,,,,to get,almak,получать,отримувати
+773,B1,28,N,main,nicht,,,Other,,,,not,değil,не,не
+774,B1,28,S,main,sieht,,,Other,,,,looks / sees,görüyor,выглядит / видит,виглядає / бачить
+775,B1,28,B,main,braucht,,,Other,,,,needs,ihtiyaç duyuyor,нуждается,потребує
+776,B1,28,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,приходити
+777,B1,28,S,main,sein,,,Other,,,,to be / his,olmak / onun,быть,бути / його
+778,B1,28,G,main,gebrochen,,,Verb,,,,broken,kırık,сломанный,зламаний
+779,B1,28,E,main,einen,,,Verb,,,,one,bir,один,один
+780,B1,28,K,main,kontrollieren,,,Verb,,,,to check,kontrol etmek,контролировать / проверять,перевіряти / контролювати
+781,B1,28,G,main,gebrannt,,,Other,,,,burned,yanmış,сгоревший,згорілий
+782,B1,28,A,main,aus,,,Other,,,,from,-dan,из,з
+783,B1,28,L,main,Licht,das,,Noun,,,,light,ışık,свет,світло
+784,B1,29,C,main,Creme,die,-n/-s,Noun,,,,cream,krem / krem şanti,крем,крем
+785,B1,29,C,main,Cousin,der,-s,Noun,,,,cousin (male),kuzen (erkek),двоюродный брат (муж.),двоюрідний брат (чол.)
+786,B1,29,C,main,Cousine,die,-n,Noun,,,,cousin (female),kuzen (kız),двоюродная сестра (жен.),двоюрідна сестра (жін.)
+787,B1,29,C,main,Couvert,das,-s,Noun,,,,envelope (Swiss),zarf (İsviçre),конверт,конверт (швейц.)
+788,B1,29,D,main,da,,,Other,,,,there / then,orada / o zaman,там / тогда,там / тоді
+789,B1,29,D,main,dabei,,,Other,,,,with it / involved,beraberinde / dahil,при этом / с собой,при цьому / з собою
+790,B1,29,D,main,Dach,das,¨-er,Noun,,,,roof,çatı,крыша,дах
+791,B1,29,D,main,dafür,,,Other,,,,for it / in favor of it,bunun için / lehinde,за это / в пользу этого,за це / на користь цього
+792,B1,29,D,main,dagegen,,,Verb,,,,against it,buna karşı / aleyhinde,против этого,проти цього
+793,B1,29,D,main,daher,,,Other,,,,therefore / from there,bu nedenle / oradan,поэтому / оттуда,тому / звідти
+794,B1,29,D,main,dahinbuchstabieren,,,Verb,buchsta-,biert,hat buchstabiert,to spell out,oraya / harf harf söylemek,произносить по буквам,вимовляти по буквах
+795,B1,29,B,main,Buchstabe,der,-n,Noun,,,,letter (of alphabet),harf,буква,буква
+796,B1,29,B,main,Büchse,die,-n,Noun,,,,can / tin / box,kutu / teneke,банка / жестянка / коробка,бляшанка / жестянка / коробка
+797,B1,29,B,main,Buffet,das,-sdie,Noun,,,,buffet,büfe,буфет,буфет
+798,B1,29,B,main,Bürger,der,-,Noun,,,,citizen (male),vatandaş (erkek),гражданин (муж.),громадянин (чол.)
+799,B1,29,B,main,Bürgerin,die,-nen,Noun,,,,citizen (female),vatandaş (kadın),гражданка (жен.),громадянка (жін.)
+800,B1,29,B,main,Büro,das,-s,Noun,,,,office,ofis,офис,офіс
+801,B1,29,B,main,Bürste,die,-n,Noun,,,,brush,fırça,щётка,щітка
+802,B1,29,Z,main,Zahnbürste,die,-n,Noun,,,,toothbrush,diş fırçası,зубная щётка,зубна щітка
+803,B1,29,B,main,Bus,der,-se,Noun,,,,bus,otobüs,автобус,автобус
+804,B1,29,B,main,Butter,die,,Noun,,,,butter,tereyağı,масло,масло (вершкове)
+805,B1,29,C,main,Café,das,-s die,Noun,,,,café,kafe,кафе,кафе
+806,B1,29,C,main,Chefin,die,-nen,Noun,,,,boss (female),patron (kadın),шеф / начальница (жен.),шефиня / начальниця (жін.)
+807,B1,29,C,main,Coiffeuse,die,-n,Noun,,,,"hairdresser (female, Swiss)","kuaför (kadın, İsviçre)","парикмахерша (жен., Швейцария)","перукарка (жін., швейц.)"
+808,B1,29,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,один / якийсь
+809,B1,29,K,main,kann,,,Other,,,,can,yapabilir,может,може
+810,B1,29,G,main,gesprochen,,,Verb,,,,spoken,konuşulmuş,сказанный / spoken,сказаний / spoken
+811,B1,29,L,main,lassen,,,Verb,,,,to let,bırakmak,позволять / оставлять,дозволяти / залишати
+812,B1,29,D,main,dafür,,,Other,,,,for it,bunun için,за это,за це
+813,B1,29,L,main,losfahren,,,Verb,,,,to drive off,yola çıkmak,отъезжать,від'їжджати
+814,B1,29,D,main,dagegen,,,Verb,,,,against it,buna karşı,против этого,проти цього
+815,B1,29,S,main,schon,,,Other,,,,already,zaten,уже,вже
+816,B1,29,N,main,nicht,,,Other,,,,not,değil,не,не
+817,B1,29,D,main,dahin,,,Other,,,,there / to that place,oraya / o yöne,туда,туди
+818,B1,29,D,main,deiner,,,Other,,,,your,senin,твой,твій
+819,B1,29,Ü,main,überall,,,Other,,,,everywhere,her yerde,повсюду,скрізь / всюди
+820,B1,29,G,main,geschlossen,,,Verb,,,,closed,kapalı,закрытый,закритий
+821,B1,29,S,main,sind,,,Other,,,,are,-dir/-dır,есть / являются,є / являються
+822,B1,29,E,main,einen,,,Verb,,,,one,bir,один,один
+823,B1,29,Z,main,zu,,,Other,,,,to / too,-e / fazla,к / слишком,до / занадто
+824,B1,29,D,main,da,,,Other,,,,there,orada,там / тогда,там / тоді
+825,B1,30,D,main,Dauer,die,,Noun,,,,duration / length,süre / uzunluk,длительность / продолжительность,тривалість / тривалість часу
+826,B1,30,D,main,dauernd,,,Other,,,,constantly / all the time,sürekli / durmadan,постоянно,постійно / весь час
+827,B1,30,D,main,Decke,die,-n,Noun,,,,ceiling / blanket,tavan / örtü,потолок / одеяло,стеля / ковдра
+828,B1,30,D,main,dekorieren,,,Verb,dekoriert,dekorierte,hat dekoriert,to decorate,dekore etmek / süslemek,украшать,прикрашати
+829,B1,30,D,main,denken,,,Verb,denkt,dachte,hat gedacht,to think,düşünmek,думать,думати
+830,B1,30,G,main,Gedanke,der,-n,Noun,,,,thought,düşünce / fikir,мысль,думка / думка
+831,B1,30,D,main,Denkmal,das,¨-er,Noun,,,,monument / memorial,anıt / abide,памятник / мемориал,пам'ятник / меморіал
+832,B1,30,D,main,denn,,,Other,,,,because / for / then,çünkü / zira,потому что / ведь / тогда,тому що / адже / тоді
+833,B1,30,D,main,dasselbe,,,Other,,,,the same,aynı şey / aynısı,тот же самый,той самий
+834,B1,30,D,main,deshalb,,,Other,,,,therefore / that's why,bu yüzden / bu nedenle,поэтому / вот почему,тому / ось чому
+835,B1,30,D,main,Dessert,das,-s,Noun,,,,dessert,tatlı,десерт,десерт
+836,B1,30,D,main,deswegen,,,Other,,,,therefore / because of that,bu yüzden / bu nedenle,поэтому / из-за этого,тому / через це
+837,B1,30,D,main,damals,,,Other,,,,back then / at that time,o zamanlar / o dönemde,тогда / в то время,тоді / у той час
+838,B1,30,D,main,Dame,die,-n,Noun,,,,lady,hanımefendi,дама,дама / пані
+839,B1,30,D,main,damit,,,Other,,,,so that / with it,böylece / onunla,чтобы / с этим,щоб / з цим
+840,B1,30,D,main,danach,,,Other,,,,after that / afterwards,bundan sonra / ardından,после этого,після цього / потім
+841,B1,30,D,main,daneben,,,Other,,,,next to it / beside it,yanında / yanı başında,рядом / возле этого,поряд / біля цього
+842,B1,30,D,main,danken,,,Verb,dankt,dankte,hat gedankt,to thank,teşekkür etmek,благодарить,дякувати
+843,B1,30,D,main,Dank,der,,Noun,,,,thanks / gratitude,teşekkür / minnettarlık,благодарность / спасибо,подяка / дякую
+844,B1,30,D,main,dankbar,,,Other,,,,grateful,minnettar,благодарный,вдячний
+845,B1,30,D,main,danke,,,Other,,,,thank you,teşekkürler,спасибо,дякую
+846,B1,30,D,main,dann,,,Other,,,,then,sonra / o zaman,тогда / затем,тоді / потім
+847,B1,30,D,main,darstellen,,,Verb,stellt dar,stellte dar,hat dargestellt,to represent / depict,temsil etmek / tasvir etmek,изображать / представлять,зображати / представляти
+848,B1,30,D,main,Darstellung,die,-en,Noun,,,,representation / depiction,temsil / tasvir,изображение / представление,зображення / представлення
+849,B1,30,D,main,dass,,,Other,,,,that (conjunction),ki / -diği,что,що (сполučник)
+850,B1,30,D,main,Datei,die,-en,Noun,,,,file (computer),dosya,файл,файл (комп'ютерний)
+851,B1,30,D,main,Datum,das,die,Noun,,,,date,tarih,дата,дата
+852,B1,30,D,main,Daten,die,,Noun,,,,data,veri,данные,дані
+853,B1,30,H,main,halbe,,,Other,,,,half,yarım,половина,половина
+854,B1,30,E,main,einer,,,Other,,,,one / a,bir / birisi,один / какая-то,один / якась
+855,B1,30,I,main,interessant,,,Other,,,,interesting,ilginç,интересный,цікавий
+856,B1,30,S,main,stört,,,Other,,,,disturbs,rahatsız ediyor,мешает,заважає
+857,B1,30,Z,main,zu,,,Other,,,,to / too,-e / fazla,к / слишком,до / занадто
+858,B1,30,A,main,auszumachen,,,Verb,,,,to switch off,kapatmak,выключать,вимикати
+859,B1,30,M,main,mir,,,Other,,,,me,bana,мне,мені
+860,B1,30,Z,main,zusammen,,,Verb,,,,together,birlikte,вместе,разом
+861,B1,30,S,main,sammeln,,,Verb,,,,to collect,toplamak,собирать,збирати / колекціонувати
+862,B1,30,U,main,uns,,,Other,,,,us,bizi,нам,нам
+863,B1,30,D,main,du,,,Other,,,,you,sen,ты,ти
+864,B1,30,I,main,ich,,,Other,,,,I,ben,я,я
+865,B1,30,I,main,im,,,Other,,,,in the,-da / -de,в / в пределах,в / в межах
+866,B1,30,L,main,leckeres,,,Other,,,,delicious,lezzetli,вкусный,смачний
+867,B1,30,H,main,habe,,,Other,,,,have,sahip,имею,маю
+868,B1,30,K,main,kommen,,,Verb,,,,to come,gelmek,приходить,приходити
+869,B1,30,G,main,grillen,,,Verb,,,,to grill,ızgara yapmak,жарить на гриле / барбекю,смажити на грилі / барбекю
+870,B1,30,D,main,daneben,,,Verb,,,,beside it / next to it,yanıbaşında / yanında,рядом с этим / возле этого,поруч з цим / біля цього
+871,B1,30,N,main,nicht,,,Other,,,,not,değil,не,не
+872,B1,30,K,main,komme,,,Other,,,,come,geliyorum,прихожу,приходжу
+873,B1,30,D,main,dann,,,Other,,,,then,sonra,тогда,тоді
+874,B1,30,W,main,wir,,,Other,,,,we,biz,мы,ми
+875,B1,30,D,main,darstellen,,,Verb,,,,to represent,temsil etmek,представлять,представляти
+876,B1,30,D,main,dieser,,,Other,,,,this,bu,этот,цей
+877,B1,30,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забувати
+878,B1,31,D,main,Diskussion,die,-en,Noun,,,,discussion,tartışma / forum,дискуссия,дискусія
+879,B1,31,D,main,Distanz,die,-en,Noun,,,,distance,mesafe / uzaklık,расстояние,відстань
+880,B1,31,D,main,doch,,,Other,,,,but / yet / indeed,ama / yine de / hani,но / всё же / ведь,але / все ж / адже
+881,B1,31,D,main,Doktor,der,-en,Noun,,,,doctor / PhD (male),doktor (erkek),доктор / кандидат наук (муж.),доктор / кандидат наук (чол.)
+882,B1,31,D,main,Doktorin,die,-nen,Noun,,,,doctor / PhD (female),doktor (kadın),доктор / кандидат наук (жен.),докторка / кандидат наук (жін.)
+883,B1,31,D,main,Dokument,das,-e,Noun,,,,document,belge / doküman,документ,документ
+884,B1,31,D,main,donnern,,,Verb,donnert,donnerte,hat gedonnert,to thunder,gök gürültüsü çıkarmak,греметь,гриміти
+885,B1,31,D,main,Donner,der,-,Noun,,,,thunder,gök gürültüsü,гром,грім
+886,B1,31,D,main,doppelt,,,Other,,,,double / twice,çift / iki kat,двойной / вдвое,подвійний / вдвічі
+887,B1,31,D,main,Dorf,das,¨-er,Noun,,,,village,köy,деревня,село / селище
+888,B1,31,D,main,dort,,,Other,,,,there / over there,orada / oracıkta,там,там
+889,B1,31,D,main,dorthin,,,Other,,,,to there / in that direction,oraya / o tarafa,туда,туди
+890,B1,31,D,main,Dose,die,-n,Noun,,,,can / tin,kutu / teneke kutu,банка / жестянка,бляшанка / жестянка
+891,B1,31,D,main,draußen,,,Verb,,,,outside,dışarıda,снаружи,надворі / зовні
+892,B1,31,D,main,Dreck,der,,Noun,,,,dirt / filth,pislik / kir,грязь,бруд / нечистота
+893,B1,31,D,main,deutlich,,,Other,,,,clear / distinct,açık / belirgin,ясный / отчётливый,чіткий / виразний
+894,B1,31,D,main,Diät,die,,Noun,,,,diet,diyet,диета,дієта
+895,B1,31,D,main,Dialekt,der,-eder,Noun,,,,dialect,diyalekt / ağız,диалект,діалект
+896,B1,31,D,main,dicht,,,Other,,,,dense / close / thick,yoğun / sıkışık / kalın,плотный / густой / близкий,щільний / густий / близький
+897,B1,31,D,main,dick,,,Other,,,,fat / thick,şişman / kalın,толстый / плотный,товстий / щільний
+898,B1,31,D,main,Dieb,der,-e,Noun,,,,thief (male),hırsız (erkek),вор (муж.),злодій (чол.)
+899,B1,31,D,main,dienen,,,Verb,dient,diente,hat gedient,to serve,hizmet etmek,служить,служити
+900,B1,31,D,main,Dienst,der,,Noun,,,,service / duty,hizmet / görev,служба / обязанность,служба / обов'язок
+901,B1,31,D,main,dies,,,Other,,,,this / these,bu / bunlar,этот / эти,цей / ці
+902,B1,31,D,main,diesmal,,,Other,,,,this time,bu sefer,на этот раз,цього разу
+903,B1,31,D,main,digital,,,Other,,,,digital,dijital,цифровой,цифровий
+904,B1,31,D,main,Ding,das,-e,Noun,,,,thing,şey,вещь,річ
+905,B1,31,D,main,Diplom,das,-edirekt,Noun,,,,diploma / degree,diploma / derece,диплом / степень,диплом / ступінь
+906,B1,31,D,main,Direktor,der,-en,Noun,,,,director / headmaster (male),direktör / müdür (erkek),директор школы / директор (муж.),директор школи / директор (чол.)
+907,B1,31,D,main,Direktorin,die,-nen,Noun,,,,director / headmistress (female),direktör / müdür (kadın),директор / директриса (жен.),директорка / директриса (жін.)
+908,B1,31,D,main,Diskothek,die,,Noun,,,,discotheque / nightclub,disko / gece kulübü,дискотека / ночной клуб,дискотека / нічний клуб
+909,B1,31,Z,main,zum,,,Other,,,,to the,-e,к / в,до / в
+910,B1,31,Ü,main,über,,,Other,,,,over,hakkında,над / о / через,над / про / через
+911,B1,31,S,main,schon,,,Other,,,,already,zaten,уже,вже
+912,B1,31,K,main,komme,,,Other,,,,come,geliyorum,прихожу,приходжу
+913,B1,31,Z,main,zum,,,Other,,,,to the,-e,к / в,до / в
+914,B1,31,K,main,kommt,,,Other,,,,comes,geliyor,приходит,приходить
+915,B1,31,I,main,ich,,,Other,,,,I,ben,я,я
+916,B1,31,N,main,nicht,,,Other,,,,not,değil,не,не
+917,B1,31,Z,main,zieht,,,Other,,,,moves / pulls,çekiyor / taşınıyor,двигает / тянет,рухає / тягне
+918,B1,31,E,main,essen,,,Verb,,,,to eat,yemek yemek,есть,їсти
+919,B1,31,G,main,gedient,,,Other,,,,served,hizmet etmiş,служил,служив
+920,B1,31,I,main,ich,,,Other,,,,I,ben,я,я
+921,B1,31,Ä,main,fährst,,,Other,,,,drive / go,,едешь,їдеш
+922,B1,31,G,main,geht,,,Other,,,,goes,gidiyor,идёт,іде
+923,B1,32,D,main,Durchsage,die,-n,Noun,,,,announcement,anons / duyuru,объявление,оголошення
+924,B1,32,D,main,Durchschnitt,der,-e,Noun,,,,average,ortalama,среднее значение,середнє значення
+925,B1,32,D,main,durchschnittlich,,,Other,,,,average / on average,ortalama / ortalama olarak,средний / в среднем,середній / в середньому
+926,B1,32,D,main,dürfen,,,Verb,darf,durfte,hat gedurft,may / to be allowed to,izinli olmak / -ebilir,мочь / иметь право,можна / мати право
+927,B1,32,D,main,Durst,der,,Noun,,,,thirst,susuzluk,жажда,спрага
+928,B1,32,D,main,durstig,,,Other,,,,thirsty,susuz / susamış,испытывающий жажду,спраглий
+929,B1,32,D,main,duschen,,,Verb,duscht,duschte,hat geduscht,to shower,duş almak,принимать душ,приймати душ
+930,B1,32,D,main,Dusche,die,-n,Noun,,,,shower,duş,душ,душ
+931,B1,32,D,main,duzen,,,Verb,duzt,duzte,,"to address informally (use ""du"")",sen diye hitap etmek,"обращаться на ""ты""",говорити на «ти»
+932,B1,32,E,main,eben,,,Verb,,,,just / exactly / flat,tam / düz / sadece,просто / именно / ровный,просто / саме / рівний
+933,B1,32,E,main,ebenfalls,,,Other,,,,likewise / also,aynı şekilde / ayrıca,также / аналогично,також / аналогічно
+934,B1,32,E,main,ebenso,,,Other,,,,likewise / just as,aynı şekilde / aynı derecede,также / точно так же,також / точно так само
+935,B1,32,E,main,drehen,,,Verb,dreht,drehte,hat gedreht,to turn / to rotate,çevirmek / döndürmek,поворачивать / крутить,повертати / крутити
+936,B1,32,D,main,dringend,,,Other,,,,urgent,acil,срочный,терміновий / невідкладний
+937,B1,32,D,main,Droge,die,-n,Noun,,,,drug,uyuşturucu / ilaç,наркотик,наркотик
+938,B1,32,D,main,Drogerie,die,-n,Noun,,,,drugstore / pharmacy,eczane / droğeri,дрогери / магазин косметики и бытовых товаров,дрогері / магазин косметики та побутових товарів
+939,B1,32,D,main,drüben,,,Verb,,,,over there,orada / karşı tarafta,вон там / напротив,он там / навпроти
+940,B1,32,D,main,drucken,,,Verb,druckt,druckte,hat gedruckt,to print,basmak / yazdırmak,печатать,друкувати
+941,B1,32,D,main,Drucker,der,-,Noun,,,,printer,yazıcı,принтер,принтер
+942,B1,32,D,main,drücken,,,Verb,drückt,drückte,hat gedrückt,to press / push,basmak / itmek,нажимать / давить,натискати / тиснути
+943,B1,32,D,main,Druck,der,,Noun,,,,pressure / print,basınç / baskı,давление / печать,тиск / друк
+944,B1,32,D,main,dumm,,,Other,,,,stupid / dumb,aptal / ahmak,глупый,дурний / нерозумний
+945,B1,32,D,main,dunkel,,,Other,,,,dark,karanlık,тёмный,темний
+946,B1,32,D,main,dünn,,,Other,,,,thin,ince / zayıf,тонкий,тонкий
+947,B1,32,D,main,durch,,,Other,,,,through,vasıtasıyla,через,через
+948,B1,32,G,main,geheizt,,,Other,,,,heated,ısıtılmış,отапливаемый,опалюваний
+949,B1,32,E,main,einen,,,Verb,,,,one,bir,один,один
+950,B1,32,V,main,verstanden,,,Verb,,,,understood,anlaşıldı,понятый / понял,зрозумілий / зрозумів
+951,B1,32,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,у / при / поруч
+952,B1,32,D,main,durchschnittlich,,,Other,,,,average,ortalama,средний / в среднем,середній / в середньому
+953,B1,32,N,main,nicht,,,Other,,,,not,değil,не,не
+954,B1,32,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати
+955,B1,32,D,main,du,,,Other,,,,you,sen,ты,ти
+956,B1,32,L,main,lieber,,,Other,,,,rather / preferably,daha çok / tercihan,предпочтительнее / лучше,краще / радше
+957,B1,32,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / за допомогою
+958,B1,32,U,main,um,,,Other,,,,around / at,-de / -da,около / в (о времени),близько / о (про час)
+959,B1,32,D,main,dringend,,,Other,,,,urgent,acil,срочный,терміновий
+960,B1,32,D,main,drinnen,,,Verb,,,,inside,içeride,внутри,всередині
+961,B1,32,A,main,angenehmer,,,Other,,,,more pleasant,daha hoş,приятнее,приємніший
+962,B1,32,A,main,ausgedruckt,,,Other,,,,printed out,yazdırılmış,распечатанный,роздрукований
+963,B1,32,M,main,meinen,,,Verb,,,,to think / mean,düşünmek,считать / иметь в виду / полагать,вважати / мати на увазі
+964,B1,32,D,main,drücken,,,Verb,,,,to press,basmak,нажимать,натискати
+965,B1,32,G,main,Gerät,das,,Noun,,,,device,cihaz,прибор / устройство,пристрій / прилад
+966,B1,32,V,main,vorderen,,,Verb,,,,front,ön,передний,передній
+967,B1,32,M,main,mir,,,Other,,,,me,bana,мне,мені
+968,B1,32,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений
+969,B1,32,W,main,wenig,,,Other,,,,little / few,az,мало / немного,мало / небагато
+970,B1,32,M,main,man,,,Verb,,,,one / you (impersonal),,"человек / безличное ""ты""",людина / безособове «ти»
+971,B1,33,E,main,Eile,die,,Noun,,,,hurry / haste,acele / telaş,спешка,поспіх / квапливість
+972,B1,33,E,main,eilig,,,Other,,,,urgent / in a hurry,acil / aceleci,срочный / спешащий,"терміновий / той, хто поспішає"
+973,B1,33,E,main,ein,,,Other,,,,a / one,bir,один / какой-то,один / якийсь
+974,B1,33,E,main,Einbahnstraße,die,-n,Noun,,,,one-way street,tek yönlü yol,улица с односторонним движением,вулиця з одностороннім рухом
+975,B1,33,E,main,einbrechen,,,Verb,bricht ein,brach ein,ist eingebrochen,to break in / burgle,girmek (izinsiz) / soygunculuk yapmak,вламываться / совершать кражу со взломом,вламуватися / здійснювати крадіжку зі зломом
+976,B1,33,E,main,Einbrecher,der,-,Noun,,,,burglar (male),hırsız / soyguncu (erkek),взломщик (муж.),зломщик (чол.)
+977,B1,33,E,main,Einbrecherin,die,-nen,Noun,,,,burglar (female),hırsız / soyguncu (kadın),взломщица (жен.),зломщиця (жін.)
+978,B1,33,E,main,Einbruch,der,¨-e,Noun,,,,burglary / break-in,hırsızlık / zorla giriş,взлом / кража со взломом,злом / крадіжка зі зломом
+979,B1,33,E,main,eindeutig,,,Other,,,,clear / unambiguous,net / açık / belirsiz olmayan,ясный / однозначный,чіткий / однозначний
+980,B1,33,E,main,Eindruck,der,¨-e,Noun,,,,impression,izlenim,впечатление,враження
+981,B1,33,E,main,einerseits,,,Other,,,,on the one hand,bir yandan / bir taraftan,с одной стороны,з одного боку
+982,B1,33,E,main,einfach,,,Other,,,,simple / easy,basit / kolay,простой / лёгкий,простий / легкий
+983,B1,33,E,main,Einfahrt,die,-en,Noun,,,,driveway / entrance,araba yolu / giriş,въезд / подъезд,в'їзд / під'їзд
+984,B1,33,E,main,einfallen,,,Verb,fällt ein,fiel ein,ist eingefallen,to occur to / come to mind,aklına gelmek,приходить в голову,спадати на думку
+985,B1,33,E,main,Einfall,der,¨-e,Noun,,,,idea / flash of inspiration,fikir / ilham,идея / озарение,ідея / осяяння
+986,B1,33,E,main,Einfluss,der,¨-edie e-card,Noun,,,,influence,etki / nüfuz,влияние,вплив
+987,B1,33,E,main,echt,,,Other,,,,real / genuine / really,gerçek / hakiki / gerçekten,настоящий / подлинный / правда,справжній / підлинний / справді
+988,B1,33,E,main,EC-Karte,die,,Noun,,,,debit card,banka kartı / debit kart,дебетовая карта,дебетова картка
+989,B1,33,E,main,Ecke,die,-n,Noun,,,,corner,köşe,угол,кут / ріг
+990,B1,33,E,main,Eck,das,-en,Noun,,,,corner (Austrian),köşe (Avusturya),угол (австр.),кут (австр.)
+991,B1,33,E,main,eckig,,,Other,,,,angular / square,köşeli / kare,угловатый / квадратный,кутовий / квадратний
+992,B1,33,E,main,egal,,,Other,,,,it doesn't matter / all the same,farketmez / önemli değil,неважно / всё равно,байдуже / все одно
+993,B1,33,E,main,Ehe,die,-n,Noun,,,,marriage,evlilik,брак,шлюб
+994,B1,33,E,main,Ehefrau,die,-en/der,Noun,,,,wife,eş (kadın) / karı,жена,дружина
+995,B1,33,E,main,Ehepaar,das,-e,Noun,,,,married couple,evli çift,супружеская пара,подружня пара
+996,B1,33,E,main,eher,,,Other,,,,rather / sooner,daha çok / daha erken,скорее,радше / скоріше
+997,B1,33,E,main,ehrlich,,,Other,,,,honest,dürüst,честный,чесний
+998,B1,33,E,main,Ei,das,-er,Noun,,,,egg,yumurta,яйцо,яйце
+999,B1,33,E,main,eigen,,,Other,,,,own / personal,kendi / özel,собственный / личный,власний / особистий
+1000,B1,33,E,main,eigentlich,,,Other,,,,actually / in fact,aslında / gerçekte,собственно / на самом деле,власне кажучи / насправді
 1001,B1,33,E,main,eins,,,Other,,,,one,bir,один,
 1002,B1,33,B,main,brauchen,,,Verb,,,,to need,ihtiyaç duymak,нуждаться,
 1003,B1,33,E,main,eingebrochen,,,Verb,,,,broken in,girilmiş,со взломом / взломанный,
