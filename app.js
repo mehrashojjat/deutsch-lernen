@@ -513,6 +513,7 @@ function updateCounts() { /* word counts removed from UI */ }
 var CSV_QUIZ_DATA = { A1: null, A2: null, B1: null };
 var _csvLoadPromises = { A1: null, A2: null, B1: null };
 var _faCsvMap = {}; // normKey -> translation_fa, built as CSV levels load
+var _arCsvMap = {}; // normKey -> translation_ar, built as CSV levels load
 
 function _parseCSVText(text) {
   if (!text) return [];
@@ -609,11 +610,14 @@ function _loadCSVLevel(lv) {
       if (!CSV_QUIZ_DATA[lv].length) {
         throw new Error('CSV parsed but produced 0 quiz rows for ' + lv);
       }
-      // Build fa lookup map from this level
+      // Build fa and ar lookup maps from this level
       CSV_QUIZ_DATA[lv].forEach(function(r) {
         var k = normKey(r.word);
         if (!_faCsvMap[k] && r.translation_fa && r.translation_fa.trim()) {
           _faCsvMap[k] = r.translation_fa.trim();
+        }
+        if (!_arCsvMap[k] && r.translation_ar && r.translation_ar.trim()) {
+          _arCsvMap[k] = r.translation_ar.trim();
         }
       });
       return CSV_QUIZ_DATA[lv];
@@ -639,11 +643,7 @@ function _csvRowDisplay(row) {
   if (LANG === 'ru') return row.translation_ru || row.translation_en;
   if (LANG === 'uk') return row.translation_uk || row.translation_en;
   if (LANG === 'fa') return row.translation_fa || row.translation_en;
-  var key = normKey(row.word);
-  var cache = _arMemCache;
-  var cached = cache && cache[key] && cache[key].trim();
-  // Never fall back to English — '···' placeholder lets renderCard trigger a retry
-  return cached || '···';
+  if (LANG === 'ar') return row.translation_ar || row.translation_en;
 }
 
 // ── Build quiz queue from CSV rows ──
@@ -697,49 +697,7 @@ async function startLevel(lv) {
   if (!queue.length) { alert('No cards!'); return; }
   idx = 0; ok = 0; no = 0;
 
-  // Pre-fetch translations so choices display in the user's language.
-  // English, Turkish, Russian, Ukrainian, and Persian use CSV columns directly.
-  if (LANG === 'ar') {
-    var _lc = 'ar';
-    var _c  = _arMemCache;
-    var _sf = _arCacheSave;
-
-    // First pass: translate German words (de→target)
-    var toFetch = [];
-    queue.forEach(function(card) {
-      [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
-        var k = normKey(r.word);
-        if (_c[k] === undefined && toFetch.indexOf(r.word) === -1) toFetch.push(r.word);
-      });
-    });
-    if (toFetch.length) {
-      _ov.classList.add('active');
-      await _batchFetchTranslations(toFetch, _lc, _c, _sf);
-    }
-
-    // Second pass: for words where de→target returned nothing, translate English (en→target)
-    var defFallback = [];
-    var defCs = _defCacheFor(_lc);
-    queue.forEach(function(card) {
-      [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
-        var k = normKey(r.word);
-        if (_c[k] === '' && r.translation_en && r.translation_en.trim()) {
-          var txt = r.translation_en.trim();
-          var dk  = normDefKey(txt);
-          if (!defFallback.some(function(x){ return x.wordKey === k; })) {
-            defFallback.push({ text: txt, key: dk, wordKey: k });
-          }
-        }
-      });
-    });
-    if (defFallback.length) {
-      if (!_ov.classList.contains('active')) _ov.classList.add('active');
-      await _batchTranslateDefs(defFallback, _lc, defCs.cache, defCs.saveFn, function(item, tr) {
-        _c[item.wordKey] = tr; _sf();
-      }, 'en');
-    }
-    _ov.classList.remove('active');
-  }
+  // All languages (including Arabic) use CSV columns directly — no API pre-fetch needed.
 
   show('screen-quiz');
   renderCard();
@@ -805,44 +763,7 @@ function renderCard() {
     choicesEl.appendChild(btn);
   });
 
-  // For any choice that couldn't be translated yet (shows '···'), kick off a
-  // background per-word retry. English, Turkish, Russian, Ukrainian, and Persian use CSV columns directly.
-  if (LANG !== 'en' && LANG !== 'tr' && LANG !== 'ru' && LANG !== 'uk' && LANG !== 'fa') {
-    var _rf = fetchArabic;
-    var _rc = _arMemCache;
-    var _rs = _arCacheSave;
-    document.querySelectorAll('.cbtn').forEach(function(btn) {
-      if (btn.textContent !== '···') return;
-      var cRow = allChoiceRows.find(function(r){ return r.id === btn.dataset.csvId; });
-      if (!cRow) return;
-      (async function(b, row) {
-        var k = normKey(row.word);
-        // Clear a stale empty entry so the fetch function doesn't skip it
-        if (_rc[k] === '') delete _rc[k];
-        // Attempt 1: translate German word directly (de→target)
-        var tr = await _rf(row.word);
-        // Attempt 2: if de→target still fails, translate the English definition (en→target)
-        if (!tr && row.translation_en && row.translation_en.trim()) {
-          try {
-            var r2 = await fetch('https://api.mymemory.translated.net/get?q='
-              + encodeURIComponent(row.translation_en.trim()) + '&langpair=en|' + LANG);
-            if (r2.ok) {
-              var j2 = await r2.json();
-              if (j2.responseStatus === 200 && j2.responseData) {
-                var t2 = (j2.responseData.translatedText || '').trim();
-                if (t2 && !t2.startsWith('PLEASE SELECT')) {
-                  tr = t2;
-                  _rc[k] = t2; _rs();
-                }
-              }
-            }
-          } catch(e) {}
-        }
-        // Update the button if it's still showing '···' and is still in the DOM
-        if (tr && b.isConnected && b.textContent === '···') b.textContent = tr;
-      })(btn, cRow);
-    });
-  }
+  // All languages use CSV columns directly — no per-choice API retry needed.
 
   var fb = document.getElementById('feedback');
   fb.className = 'feedback'; fb.textContent = '';
@@ -1301,20 +1222,21 @@ function metaFromWord(word) {
     var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return normKey(x.word) === key; });
     if (r && r.translation_uk && r.translation_uk.trim()) _ukFromCsv = r.translation_uk.trim();
   });
-  // Persian: use precomputed map (O(1)) built from CSV data
+  // Persian and Arabic: use precomputed maps (O(1)) built from CSV data
   var _faFromCsv = _faCsvMap[key] || '';
+  var _arFromCsv = _arCsvMap[key] || '';
   if (SI_READY && window.SI) {
     var i = SI_KEY_MAP[key];
     if (i !== undefined) {
       var e = window.SI[i];
       // CSV (de→target) takes priority for uk and fa; API cache for others
-      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
+      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
     }
   }
   var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
   // CSV (de→target) takes priority for uk and fa; API cache for others
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
-  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: (_arMemCache&&_arMemCache[key])||'' };
+  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
+  return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
@@ -2837,57 +2759,8 @@ async function _quizRefreshLang() {
   if (!queue.length) return;
   var targetLang = LANG;
 
-  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk' || LANG === 'fa') {
-    // CSV columns are ready immediately — just re-render
-    renderCard();
-    return;
-  }
-
-  // AR: need to batch-fetch translations for all remaining cards
-  var _ov = document.getElementById('quiz-prep-overlay');
-  var _lc = 'ar';
-  var _c  = _arMemCache;
-  var _sf = _arCacheSave;
-
-  // Collect all words for remaining cards (current + future) that are not yet cached
-  var remaining = queue.slice(idx);
-  var toFetch = [];
-  remaining.forEach(function(card) {
-    [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
-      var k = normKey(r.word);
-      if (_c[k] === undefined && toFetch.indexOf(r.word) === -1) toFetch.push(r.word);
-    });
-  });
-  if (toFetch.length) {
-    _ov.classList.add('active');
-    await _batchFetchTranslations(toFetch, _lc, _c, _sf);
-  }
-
-  // Second pass: en→target fallback for words with empty de→target results
-  var defFallback = [];
-  var defCs = _defCacheFor(_lc);
-  remaining.forEach(function(card) {
-    [card._row].concat(card._distractors.slice(0, 3)).forEach(function(r) {
-      var k = normKey(r.word);
-      if (_c[k] === '' && r.translation_en && r.translation_en.trim()) {
-        var txt = r.translation_en.trim();
-        var dk  = normDefKey(txt);
-        if (!defFallback.some(function(x){ return x.wordKey === k; })) {
-          defFallback.push({ text: txt, key: dk, wordKey: k });
-        }
-      }
-    });
-  });
-  if (defFallback.length) {
-    if (!_ov.classList.contains('active')) _ov.classList.add('active');
-    await _batchTranslateDefs(defFallback, _lc, defCs.cache, defCs.saveFn, function(item, tr) {
-      _c[item.wordKey] = tr; _sf();
-    }, 'en');
-  }
-  _ov.classList.remove('active');
-
-  // Only re-render if the language hasn't changed again while we were fetching
-  if (LANG === targetLang) renderCard();
+  // All languages use CSV columns — re-render immediately
+  renderCard();
 }
 
 // ══ SEARCH ══
@@ -2998,6 +2871,7 @@ function onSearchInput(q) {
     // unrelated language — e.g. never show Turkish to an English user).
     var meaning = LANG==='tr' ? (e[3]||(_trMemCache&&_trMemCache[normKey(e[0])])||e[2]||'')
                 : LANG==='fa' ? (_faCsvMap[normKey(e[0])] || e[2]||'')
+                : LANG==='ar' ? (_arCsvMap[normKey(e[0])] || (_arMemCache&&_arMemCache[normKey(e[0])]) || e[2]||'')
                 : LANG==='ru' ? ((_ruMemCache&&_ruMemCache[normKey(e[0])])||e[2]||'')
                 : (e[2]||'');
     var label = tcNameDE(e[1]);
@@ -3019,8 +2893,7 @@ function openSRItem(i) {
 // so the card always displays in the right language on first paint.
 async function _prefetchLangMeta(word, meta) {
   if (LANG === 'tr' && !meta.tr) { var _t = await fetchTurkish(word); if (_t) meta.tr = _t; }
-  else if (LANG === 'ar' && !meta.ar) { var _t = await fetchArabic(word); if (_t) meta.ar = _t; }
-  // uk: read from CSV (translation_uk) via metaFromWord — no API fetch needed
+  // ar, uk: read from CSV via metaFromWord — no API fetch needed
 }
 
 // Pre-fetches all definition translations into cache before the card renders,

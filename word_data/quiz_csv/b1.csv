@@ -1003,7 +1003,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 1002,B1,33,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди,همیشه,دائماً
 1003,B1,33,D,main,denken,,,Verb,,,,to think,düşünmek,думать,думати,فکر کردن,يفكر
 1004,B1,33,S,main,schwimmen,,,Verb,,,,to swim,yüzmek,плавать,плавати,شنا کردن,يسبح
-1005,B1,33,T,main,-ter,,,Other,,,,(word fragment),,(фрагмент слова),(фрагмент слова),(جزء کلمه),-
+1005,B1,33,T,main,-ter,,,Other,,,,(word fragment),,(фрагмент слова),(фрагмент слова),(جزء کلمه),(جزء كلمة)
 1006,B1,33,E,main,eher,,,Other,,,,rather,daha ziyade,скорее,радше / скоріше,بیشتر / ترجیحاً,بالأحرى
 1007,B1,33,V,main,verdient,,,Other,,,,earned,kazanılmış,заработанный,зароблений,کسب شده / به دست آمده,كسب
 1008,B1,33,B,main,besuchen,,,Verb,aber dann sind,,,to visit,ziyaret etmek,посещать,відвідувати,بازدید کردن,يزور
