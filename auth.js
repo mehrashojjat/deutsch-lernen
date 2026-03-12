@@ -75,9 +75,12 @@
     var rw = Array.isArray(meta.recentWords)
       ? meta.recentWords.map(function (id) { return String(id); })
       : [];
+    // Prefer the precise float stored in passed_words (meta.skillLevel),
+    // fall back to the rounded integer in the skill_level column.
+    var sl = (meta.skillLevel != null) ? Number(meta.skillLevel) : Number(row.skill_level);
     return {
       evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
-      skillLevel      : Number(row.skill_level)            || 1,
+      skillLevel      : sl || 1,
       words           : (row.failed_words && typeof row.failed_words === 'object')
                           ? row.failed_words : {},
       recentWords     : rw
@@ -118,22 +121,22 @@
         var n = parseInt(id, 10);
         return isNaN(n) ? id : n;
       });
-      console.log('[auth] _updateRow: level=' + level + ' evaluationStage=' + progress.evaluationStage + ' skillLevel=' + progress.skillLevel);
       var res = await _db.from(TABLE)
         .upsert({
           user_id     : userId,
           level       : level,
-          skill_level : progress.skillLevel || 1,
+          // skill_level is INTEGER in DB — store rounded value to avoid type error.
+          // The precise float is preserved in passed_words.skillLevel below.
+          skill_level : Math.round(progress.skillLevel) || 1,
           failed_words: progress.words      || {},
           passed_words: {
             evaluationStage: progress.evaluationStage || 0,
+            skillLevel     : progress.skillLevel,   // precise float preserved here
             recentWords    : recentInts
           }
         }, { onConflict: 'user_id,level' });
       if (res && res.error) {
-        console.error('[auth] _updateRow Supabase error:', res.error);
-      } else {
-        console.log('[auth] _updateRow succeeded for level=' + level);
+        console.error('[auth] _updateRow error:', res.error.message);
       }
     } catch (e) {
       console.error('[auth] _updateRow exception:', e);
@@ -187,7 +190,6 @@
     if (typeof window._adaptiveSetSaveHook !== 'function') return;
     window._adaptiveSetSaveHook(function (p) {
       var lv = _currentAdaptiveLevel;  // read at call time, not captured
-      console.log('[auth] save hook called: lv=' + lv + ' evaluationStage=' + p.evaluationStage);
       _progressCache[lv] = p;          // keep cache in sync
       _updateRow(userId, lv, p);       // persist to DB
     });
