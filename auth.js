@@ -65,8 +65,8 @@
     var meta = (row.passed_words && typeof row.passed_words === 'object')
       ? row.passed_words : {};
     return {
-      evaluationStage : meta.evaluationStage || 0,
-      skillLevel      : row.skill_level      || 1,
+      evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
+      skillLevel      : Number(row.skill_level)            || 1,
       words           : (row.failed_words && typeof row.failed_words === 'object')
                           ? row.failed_words : {},
       recentWords     : Array.isArray(meta.recentWords) ? meta.recentWords : []
@@ -278,6 +278,16 @@
       _quizSnapshot   = _deepCopy(_progressCache[lv]);
 
       if (typeof _origStartAdaptive === 'function') await _origStartAdaptive();
+
+      // If the quiz screen never became visible (CSV load failure, no cards, etc.)
+      // then no quiz actually started — discard the snapshot flags immediately.
+      var quizScreen = document.getElementById('screen-quiz');
+      if (quizScreen && quizScreen.style.display === 'none') {
+        _quizInProgress = false;
+        _quizCompleted  = false;
+        _quizSnapshot   = null;
+        _quizLevel      = null;
+      }
     };
   }
 
