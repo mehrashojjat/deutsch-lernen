@@ -435,17 +435,16 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .auth-email{font-size:.78rem;color:var(--muted);margin:0 0 8px;word-break:break-all;}
 .auth-email strong{color:var(--text);}
 /* ── ADAPTIVE TIP ── */
-.adaptive-tip{display:flex;align-items:flex-start;gap:12px;margin:18px 0 0;
-  padding:14px 16px;background:rgba(107,232,160,.06);
-  border:1px solid rgba(107,232,160,.18);border-radius:14px;}
-.at-icon{font-size:1.3rem;flex-shrink:0;margin-top:1px;}
-.at-body{display:flex;flex-direction:column;gap:3px;}
+.adaptive-tip{display:flex;align-items:center;gap:12px;margin-top:auto;margin-bottom:0;
+  padding:13px 16px;background:rgba(107,232,160,.06);
+  border-radius:14px;cursor:pointer;transition:background .18s;}
+.adaptive-tip:hover{background:rgba(107,232,160,.11);}
+.adaptive-tip.hidden{display:none;}
+.at-icon{font-size:1.2rem;flex-shrink:0;}
+.at-body{display:flex;flex-direction:column;gap:2px;flex:1;}
 .at-title{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.02em;}
-.at-desc{font-size:.76rem;line-height:1.55;color:var(--muted);}
-.at-signin{font-size:.74rem;line-height:1.5;color:var(--muted);margin-top:4px;
-  padding-top:6px;border-top:1px solid rgba(107,232,160,.12);}
-.at-signin strong{color:var(--text);font-weight:600;}
-.at-signin.hidden{display:none;}
+.at-desc{font-size:.74rem;line-height:1.5;color:var(--muted);}
+.at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
@@ -541,15 +540,15 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="lv-name" id="ln-B1">Intermediate</div>
     </div>
   </div>
-  <div class="adaptive-tip">
+  <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
     <div class="at-icon">✨</div>
     <div class="at-body">
-      <div class="at-title">Gets smarter every quiz</div>
-      <div class="at-desc">Words you miss come back more often. Words you've mastered get retired. The more you practice, the more personalised your quizzes become.</div>
-      <div class="at-signin" id="at-signin">Sign in from <strong>Settings ⚙️</strong> to save your progress — so the app remembers your strengths and weaknesses between sessions.</div>
+      <div class="at-title">Save your progress</div>
+      <div class="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
     </div>
+    <div class="at-arrow">›</div>
   </div>
-  <div class="home-footer">
+  <div class="home-footer" style="margin-top:0;">
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
     <p id="footer-copy">© 2026 Mehras Hojjat</p>
   </div>

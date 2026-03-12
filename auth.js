@@ -214,9 +214,9 @@
 
   // ── UI: sign-in nudge on home screen ──────────────────────────
   function _renderHome() {
-    var nudge = document.getElementById('at-signin');
-    if (!nudge) return;
-    nudge.classList.toggle('hidden', !!_user);
+    var tip = document.getElementById('adaptive-tip');
+    if (!tip) return;
+    tip.classList.toggle('hidden', !!_user);
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────
