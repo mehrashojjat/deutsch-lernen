@@ -191,6 +191,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .random-banner:hover{border-color:rgba(232,201,122,.4);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
 .random-banner.swipe-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(107,232,160,.08));border-color:rgba(126,184,247,.24);}
 .random-banner.swipe-banner .rb-text strong{color:var(--blue);}
+.random-banner.adaptive-banner{background:linear-gradient(135deg,rgba(107,232,160,.12),rgba(232,201,122,.08));border-color:rgba(107,232,160,.28);}
+.random-banner.adaptive-banner .rb-text strong{color:#6be8a0;}
 .rb-icon{font-size:1.5rem;}
 .rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
 .rb-text span{font-size:.74rem;color:var(--muted);}
@@ -429,7 +431,23 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 :root[dir="rtl"] .rw-title,
 :root[dir="rtl"] .rw-word {
 }
+/* ── AUTH UI ── */
+.auth-email{font-size:.78rem;color:var(--muted);margin:0 0 8px;word-break:break-all;}
+.auth-email strong{color:var(--text);}
+/* ── ADAPTIVE TIP ── */
+.adaptive-tip{display:flex;align-items:center;gap:12px;margin-top:auto;margin-bottom:0;
+  padding:13px 16px;background:rgba(107,232,160,.06);
+  border-radius:14px;cursor:pointer;transition:background .18s;}
+.adaptive-tip:hover{background:rgba(107,232,160,.11);}
+.adaptive-tip.hidden{display:none;}
+.at-icon{font-size:1.2rem;flex-shrink:0;}
+.at-body{display:flex;flex-direction:column;gap:2px;flex:1;}
+.at-title{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.02em;}
+.at-desc{font-size:.74rem;line-height:1.5;color:var(--muted);}
+.at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
 <body>
 
@@ -458,6 +476,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <button class="opt-btn" id="opt-uk" onclick="setLang('uk')">🇺🇦 Українська</button>
       <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
       <button class="opt-btn" id="opt-ar" onclick="setLang('ar')">🇸🇦 العربية</button>
+    </div>
+  </div>
+
+  <div class="drawer-section">
+    <div class="drawer-section-label">Account</div>
+    <div id="auth-section-content">
+      <!-- populated by auth.js once Supabase initialises -->
+      <button class="about-btn" onclick="authSignIn()">Sign in with Google</button>
     </div>
   </div>
 
@@ -514,7 +540,15 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="lv-name" id="ln-B1">Intermediate</div>
     </div>
   </div>
-  <div class="home-footer">
+  <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
+    <div class="at-icon">✨</div>
+    <div class="at-body">
+      <div class="at-title">Save your progress</div>
+      <div class="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
+    </div>
+    <div class="at-arrow">›</div>
+  </div>
+  <div class="home-footer" style="margin-top:0;">
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
     <p id="footer-copy">© 2026 Mehras Hojjat</p>
   </div>
@@ -628,5 +662,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <script src="word_data/sources/goethe-institut/b2_words.js"></script>
 <script src="word_data/loader.js"></script>
 <script src="app.js"></script>
+<script src="adaptive.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
