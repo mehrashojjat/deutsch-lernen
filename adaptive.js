@@ -10,6 +10,12 @@
   var STORAGE_KEY = 'deutsch_adaptive_progress';
   var RECENT_LIMIT = 25;
 
+  // ── External persistence hooks (set by auth.js) ───────────────
+  // _pendingProgress : progress object pre-loaded from Supabase; consumed once by _get()
+  // _externalSaveFn  : async fn(progress) called in addition to localStorage after each quiz
+  var _pendingProgress = null;
+  var _externalSaveFn  = null;
+
   // ── State ──────────────────────────────────────────────────────
   var _active = false;          // true while an adaptive quiz is running
   var _progress = null;         // cached progress object
@@ -22,12 +28,16 @@
   }
   function _save(p) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) {}
+    if (typeof _externalSaveFn === 'function') _externalSaveFn(p); // e.g. Supabase write
   }
   function _init() {
     return { evaluationStage: 0, skillLevel: 5, words: {}, recentWords: [] };
   }
   function _get() {
-    if (!_progress) _progress = _load() || _init();
+    if (!_progress) {
+      if (_pendingProgress) { _progress = _pendingProgress; _pendingProgress = null; }
+      else { _progress = _load() || _init(); }
+    }
     return _progress;
   }
 
@@ -427,5 +437,17 @@
   } else {
     setTimeout(_onReady, 0);
   }
+
+  // ── Hooks exposed for auth.js ──────────────────────────────────
+  // Inject Supabase-loaded progress before the next quiz starts.
+  // Clears the in-memory cache so _get() picks up the new value.
+  window._adaptiveInjectProgress = function (p) {
+    _pendingProgress = p;
+    _progress = null;
+  };
+  // Register a save callback (called after every quiz alongside localStorage).
+  window._adaptiveSetSaveHook = function (fn) { _externalSaveFn = fn; };
+  // Let auth.js refresh the home badge after progress is injected.
+  window._adaptiveRefreshBadge = _updateHomeBadge;
 
 })();

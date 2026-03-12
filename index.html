@@ -431,7 +431,16 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 :root[dir="rtl"] .rw-title,
 :root[dir="rtl"] .rw-word {
 }
+/* ── AUTH UI ── */
+.auth-email{font-size:.78rem;color:var(--muted);margin:0 0 8px;word-break:break-all;}
+.auth-email strong{color:var(--text);}
+.auth-signin-msg{display:none;margin:14px 0 0;padding:14px 16px;
+  background:rgba(126,184,247,.07);border:1px solid rgba(126,184,247,.18);
+  border-radius:12px;font-size:.8rem;line-height:1.55;color:var(--muted);text-align:center;}
+.auth-signin-msg--highlight{border-color:rgba(126,184,247,.5);background:rgba(126,184,247,.13);}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
 <body>
 
@@ -460,6 +469,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <button class="opt-btn" id="opt-uk" onclick="setLang('uk')">🇺🇦 Українська</button>
       <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
       <button class="opt-btn" id="opt-ar" onclick="setLang('ar')">🇸🇦 العربية</button>
+    </div>
+  </div>
+
+  <div class="drawer-section">
+    <div class="drawer-section-label">Account</div>
+    <div id="auth-section-content">
+      <!-- populated by auth.js once Supabase initialises -->
+      <button class="about-btn" onclick="authSignIn()">Sign in with Google</button>
     </div>
   </div>
 
@@ -522,6 +539,9 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <span class="lv-badge">B1</span>
       <div class="lv-name" id="ln-B1">Intermediate</div>
     </div>
+  </div>
+  <div id="auth-signin-msg" class="auth-signin-msg">
+    Sign in to enable progressive learning. Your quizzes will automatically adapt to your strengths and weaknesses over time.
   </div>
   <div class="home-footer">
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
@@ -638,5 +658,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <script src="word_data/loader.js"></script>
 <script src="app.js"></script>
 <script src="adaptive.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
