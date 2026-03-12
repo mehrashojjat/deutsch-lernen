@@ -304,7 +304,7 @@
       // If the quiz screen never became visible (CSV load failure, no cards, etc.)
       // then no quiz actually started — discard the snapshot flags immediately.
       var quizScreen = document.getElementById('screen-quiz');
-      if (quizScreen && quizScreen.style.display === 'none') {
+      if (quizScreen && quizScreen.classList.contains('hidden')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
