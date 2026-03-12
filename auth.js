@@ -1,15 +1,17 @@
 // ══════════════════════════════════════════════════════════════════
 //  AUTHENTICATION & SUPABASE PERSISTENCE
 //
-//  Each authenticated user has ONE row per CEFR level in user_progress
-//  (enforced by UNIQUE(user_id, level)).
+//  On sign-in ALL three levels (A1, A2, B1) are fetched in parallel
+//  and cached in _progressCache.  Level switches use the cache — no
+//  extra DB round-trips.  Each level's evaluation stage, skill level,
+//  word history, and recency list are stored independently.
 //
-//  Column mapping:
+//  DB table: user_progress  UNIQUE(user_id, level)
 //    skill_level  → progress.skillLevel
 //    failed_words → progress.words          (full word-stats map)
 //    passed_words → { evaluationStage, recentWords }  (metadata)
 //
-//  Guest users: no DB interaction, simple random quizzes only.
+//  Guest users: no DB interaction, no adaptive algorithm.
 // ══════════════════════════════════════════════════════════════════
 (function () {
   'use strict';
@@ -17,12 +19,14 @@
   var SUPABASE_URL = 'https://birqofmhpstpdrmnassi.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_vRt9hVUTAhv9V0sWjF8JTg_QZHuV10T';
   var TABLE        = 'user_progress';
+  var ALL_LEVELS   = ['A1', 'A2', 'B1'];
 
-  var _db                   = null;   // Supabase client
-  var _user                 = null;   // current authenticated user or null
-  var _currentAdaptiveLevel = 'A1';   // CEFR level whose DB row is active
-  var _origStartLevel       = null;   // reference to app.js's startLevel()
-  var _origStartAdaptive    = null;   // reference to adaptive.js's startAdaptiveQuiz()
+  var _db                   = null;  // Supabase client
+  var _user                 = null;  // authenticated user or null
+  var _currentAdaptiveLevel = 'A1'; // which level's progress is injected right now
+  var _progressCache        = {};   // { A1: progressObj, A2: progressObj, B1: progressObj }
+  var _origStartLevel       = null;
+  var _origStartAdaptive    = null;
 
   // ── Supabase client ────────────────────────────────────────────
   function _initClient() {
@@ -31,7 +35,7 @@
     }
   }
 
-  // ── DB ↔ adaptive-progress mapping ────────────────────────────
+  // ── DB row → progress object ───────────────────────────────────
   function _progressFromRow(row) {
     var meta = (row.passed_words && typeof row.passed_words === 'object')
       ? row.passed_words : {};
@@ -44,8 +48,12 @@
     };
   }
 
-  // ── DB: load one level row ─────────────────────────────────────
-  async function _loadFromDB(userId, level) {
+  function _defaultProgress() {
+    return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [] };
+  }
+
+  // ── DB: fetch one level's row (returns null if missing) ────────
+  async function _fetchRow(userId, level) {
     try {
       var res = await _db.from(TABLE).select('*')
         .eq('user_id', userId)
@@ -56,7 +64,7 @@
     return null;
   }
 
-  // ── DB: ensure a row exists (upsert to respect UNIQUE constraint) ─
+  // ── DB: guarantee a row exists (safe with UNIQUE constraint) ───
   async function _ensureRow(userId, level) {
     try {
       await _db.from(TABLE).upsert({
@@ -69,8 +77,8 @@
     } catch (e) {}
   }
 
-  // ── DB: update the row for a specific level ────────────────────
-  async function _updateDB(userId, progress, level) {
+  // ── DB: update the row for one level ──────────────────────────
+  async function _updateRow(userId, level, progress) {
     try {
       await _db.from(TABLE)
         .update({
@@ -86,13 +94,32 @@
     } catch (e) {}
   }
 
-  // ── Load, upsert-default, and inject progress for a level ─────
-  async function _activateLevel(userId, level) {
-    var progress = await _loadFromDB(userId, level);
-    if (!progress) {
-      await _ensureRow(userId, level);
-      progress = { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [] };
-    }
+  // ── Load ALL levels into cache (called once on sign-in) ────────
+  async function _loadAllLevels(userId) {
+    // Fetch all three in parallel
+    var results = await Promise.all(
+      ALL_LEVELS.map(function (lv) { return _fetchRow(userId, lv); })
+    );
+
+    // For any missing row: upsert a default and use a fresh object
+    var ensures = [];
+    ALL_LEVELS.forEach(function (lv, i) {
+      if (!results[i]) {
+        ensures.push(_ensureRow(userId, lv));
+        results[i] = _defaultProgress();
+      }
+    });
+    if (ensures.length) await Promise.all(ensures);
+
+    // Populate the in-memory cache
+    ALL_LEVELS.forEach(function (lv, i) {
+      _progressCache[lv] = results[i];
+    });
+  }
+
+  // ── Inject the active level's cached progress into the algorithm ─
+  function _injectLevel(level) {
+    var progress = _progressCache[level] || _defaultProgress();
     if (typeof window._adaptiveInjectProgress === 'function') {
       window._adaptiveInjectProgress(progress);
     }
@@ -101,12 +128,15 @@
     }
   }
 
-  // ── Register the save hook (reads _currentAdaptiveLevel at call time) ─
+  // ── Save hook: update cache + DB for whichever level is active ─
+  // Reads _currentAdaptiveLevel at call time (not captured at registration),
+  // so level switches are automatically reflected in future saves.
   function _registerSaveHook(userId) {
     if (typeof window._adaptiveSetSaveHook !== 'function') return;
     window._adaptiveSetSaveHook(function (p) {
-      // _currentAdaptiveLevel is read here, not captured — always uses active level
-      _updateDB(userId, p, _currentAdaptiveLevel);
+      var lv = _currentAdaptiveLevel;  // read now, not at registration
+      _progressCache[lv] = p;          // keep cache in sync
+      _updateRow(userId, lv, p);       // persist to DB
     });
   }
 
@@ -132,7 +162,7 @@
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // ── UI: adaptive banner & sign-in message visibility ──────────
+  // ── UI: adaptive banner + sign-in message ─────────────────────
   function _renderHome() {
     var banner = document.querySelector('.adaptive-banner');
     var msg    = document.getElementById('auth-signin-msg');
@@ -145,7 +175,7 @@
     }
   }
 
-  // ── Public: Google sign-in / sign-out ─────────────────────────
+  // ── Public: Google OAuth ───────────────────────────────────────
   window.authSignIn = async function () {
     if (!_db) return;
     await _db.auth.signInWithOAuth({ provider: 'google' });
@@ -159,8 +189,16 @@
   // ── Auth event: sign-in ────────────────────────────────────────
   async function _onSignIn(user) {
     _user = user;
-    await _activateLevel(user.id, _currentAdaptiveLevel);
+
+    // Fetch all three levels in parallel, populate cache
+    await _loadAllLevels(user.id);
+
+    // Inject the currently selected level's progress
+    _injectLevel(_currentAdaptiveLevel);
+
+    // Wire up the save hook (writes cache + DB for active level)
     _registerSaveHook(user.id);
+
     _renderAuthSection();
     _renderHome();
   }
@@ -168,6 +206,7 @@
   // ── Auth event: sign-out ───────────────────────────────────────
   function _onSignOut() {
     _user = null;
+    _progressCache = {};
     if (typeof window._adaptiveSetSaveHook === 'function') {
       window._adaptiveSetSaveHook(null);
     }
@@ -175,10 +214,11 @@
     _renderHome();
   }
 
-  // ── Intercept level-card clicks ────────────────────────────────
-  // When a level card is tapped, update _currentAdaptiveLevel and,
-  // for authenticated users, load that level's adaptive row from DB
-  // so the adaptive quiz is always in sync with the selected level.
+  // ── Level-card intercept ───────────────────────────────────────
+  // A1/A2/B1 cards always run the regular quiz (existing behaviour).
+  // Additionally, when authenticated, switching levels swaps the
+  // adaptive algorithm's progress from the in-memory cache — instant,
+  // no extra DB call needed.
   function _wrapStartLevel() {
     _origStartLevel = window.startLevel;
     window.startLevel = function (lv) {
@@ -186,25 +226,23 @@
       _currentAdaptiveLevel = lv;
 
       if (_user && lv !== prevLevel) {
-        // Fire-and-forget: load the new level's row in the background.
-        // The save hook already reads _currentAdaptiveLevel at call time,
-        // so future quiz saves will automatically target the new level.
-        _activateLevel(_user.id, lv);
+        // Swap from cache — synchronous, no async needed
+        _injectLevel(lv);
       }
 
-      // Always delegate to the original startLevel for the regular quiz
+      // Delegate to original startLevel for the regular quiz
       if (typeof _origStartLevel === 'function') _origStartLevel(lv);
     };
   }
 
-  // ── Gate the adaptive quiz on auth status ──────────────────────
+  // ── Adaptive quiz gate ─────────────────────────────────────────
   function _wrapStartAdaptive() {
     _origStartAdaptive = window.startAdaptiveQuiz;
     window.startAdaptiveQuiz = async function () {
       if (_user) {
         if (typeof _origStartAdaptive === 'function') await _origStartAdaptive();
       } else {
-        // Guest: highlight the sign-in nudge (adaptive banner is hidden but kept as safety net)
+        // Guest: highlight the sign-in nudge
         var msg = document.getElementById('auth-signin-msg');
         if (msg) {
           msg.classList.add('auth-signin-msg--highlight');
@@ -222,7 +260,6 @@
     _wrapStartLevel();
     _wrapStartAdaptive();
 
-    // Listen for future auth events (sign-in after OAuth redirect, sign-out)
     _db.auth.onAuthStateChange(function (event, session) {
       if (event === 'SIGNED_IN' && session && session.user) {
         _onSignIn(session.user);
@@ -231,7 +268,6 @@
       }
     });
 
-    // Check existing session (e.g. page reload after OAuth redirect)
     var res  = await _db.auth.getUser();
     var user = res && res.data && res.data.user ? res.data.user : null;
     if (user) {
