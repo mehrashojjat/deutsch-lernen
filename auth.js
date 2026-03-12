@@ -64,12 +64,17 @@
   function _progressFromRow(row) {
     var meta = (row.passed_words && typeof row.passed_words === 'object')
       ? row.passed_words : {};
+    // recentWords are stored as integers in DB; convert to strings so they
+    // match the string IDs that the CSV parser produces (e.g. r.id === "17").
+    var rw = Array.isArray(meta.recentWords)
+      ? meta.recentWords.map(function (id) { return String(id); })
+      : [];
     return {
       evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
       skillLevel      : Number(row.skill_level)            || 1,
       words           : (row.failed_words && typeof row.failed_words === 'object')
                           ? row.failed_words : {},
-      recentWords     : Array.isArray(meta.recentWords) ? meta.recentWords : []
+      recentWords     : rw
     };
   }
 
@@ -98,20 +103,26 @@
     } catch (e) {}
   }
 
-  // ── DB: update the row for one level ──────────────────────────
+  // ── DB: upsert the row for one level ─────────────────────────
+  // Uses upsert (not update) so a row is created if _ensureRow silently
+  // failed; recentWords are converted to integers to match schema.
   async function _updateRow(userId, level, progress) {
     try {
+      var recentInts = (progress.recentWords || []).map(function (id) {
+        var n = parseInt(id, 10);
+        return isNaN(n) ? id : n;
+      });
       await _db.from(TABLE)
-        .update({
+        .upsert({
+          user_id     : userId,
+          level       : level,
           skill_level : progress.skillLevel || 1,
           failed_words: progress.words      || {},
           passed_words: {
             evaluationStage: progress.evaluationStage || 0,
-            recentWords    : progress.recentWords     || []
+            recentWords    : recentInts
           }
-        })
-        .eq('user_id', userId)
-        .eq('level',   level);
+        }, { onConflict: 'user_id,level' });
     } catch (e) {}
   }
 
@@ -215,12 +226,15 @@
 
   // ── Auth events ────────────────────────────────────────────────
   async function _onSignIn(user) {
+    // Guard: skip if already signed in as this user (INITIAL_SESSION + getUser race)
+    if (_user && _user.id === user.id) return;
     _user = user;
+    // Render immediately so the sign-out button appears without waiting for DB loads
+    _renderAuthSection();
+    _renderHome();
     await _loadAllLevels(user.id);
     _injectLevel(_currentAdaptiveLevel);
     _registerSaveHook(user.id);
-    _renderAuthSection();
-    _renderHome();
   }
 
   function _onSignOut() {
@@ -338,7 +352,9 @@
     _wrapGoHome();
 
     _db.auth.onAuthStateChange(function (event, session) {
-      if (event === 'SIGNED_IN' && session && session.user) {
+      // INITIAL_SESSION fires on page-load when a session is already stored;
+      // SIGNED_IN fires after a new OAuth login.  Handle both.
+      if ((event === 'SIGNED_IN' || event === 'INITIAL_SESSION') && session && session.user) {
         _onSignIn(session.user);
       } else if (event === 'SIGNED_OUT') {
         _onSignOut();
