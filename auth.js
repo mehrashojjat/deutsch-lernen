@@ -118,7 +118,8 @@
         var n = parseInt(id, 10);
         return isNaN(n) ? id : n;
       });
-      await _db.from(TABLE)
+      console.log('[auth] _updateRow: level=' + level + ' evaluationStage=' + progress.evaluationStage + ' skillLevel=' + progress.skillLevel);
+      var res = await _db.from(TABLE)
         .upsert({
           user_id     : userId,
           level       : level,
@@ -129,7 +130,14 @@
             recentWords    : recentInts
           }
         }, { onConflict: 'user_id,level' });
-    } catch (e) {}
+      if (res && res.error) {
+        console.error('[auth] _updateRow Supabase error:', res.error);
+      } else {
+        console.log('[auth] _updateRow succeeded for level=' + level);
+      }
+    } catch (e) {
+      console.error('[auth] _updateRow exception:', e);
+    }
   }
 
   // ── Load ALL levels into cache in one round-trip ───────────────
@@ -179,6 +187,7 @@
     if (typeof window._adaptiveSetSaveHook !== 'function') return;
     window._adaptiveSetSaveHook(function (p) {
       var lv = _currentAdaptiveLevel;  // read at call time, not captured
+      console.log('[auth] save hook called: lv=' + lv + ' evaluationStage=' + p.evaluationStage);
       _progressCache[lv] = p;          // keep cache in sync
       _updateRow(userId, lv, p);       // persist to DB
     });

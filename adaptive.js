@@ -306,10 +306,12 @@
     answers.forEach(function (a) { _updateWord(p, a.wordId, a.correct); });
     _updateRecent(p, answers.map(function (a) { return a.wordId; }));
     var stage = _stageAtStart;
+    console.log('[adaptive] _processResults: stageAtStart=' + stage + ' answers=' + answers.length + ' progress.evaluationStage(before)=' + p.evaluationStage);
     if      (stage === 0) _afterEval1(p, answers);
     else if (stage === 1) _afterEval2(p, answers);
     else if (stage === 2) _afterEval3(p, answers);
     else                  _afterNormal(p, answers);
+    console.log('[adaptive] _processResults: evaluationStage(after)=' + p.evaluationStage + ' skillLevel=' + p.skillLevel);
     _save(p);
     _progress = p; // keep cache in sync
   }
@@ -346,6 +348,7 @@
     _active = true;
     _answers = [];
     _stageAtStart = p.evaluationStage;
+    console.log('[adaptive] startAdaptiveQuiz: lv=' + lv + ' stageAtStart=' + _stageAtStart + ' skillLevel=' + p.skillLevel);
 
     var ov = document.getElementById('quiz-prep-overlay');
     ov.classList.add('active');
