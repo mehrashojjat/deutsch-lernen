@@ -191,6 +191,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .random-banner:hover{border-color:rgba(232,201,122,.4);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
 .random-banner.swipe-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(107,232,160,.08));border-color:rgba(126,184,247,.24);}
 .random-banner.swipe-banner .rb-text strong{color:var(--blue);}
+.random-banner.adaptive-banner{background:linear-gradient(135deg,rgba(107,232,160,.12),rgba(232,201,122,.08));border-color:rgba(107,232,160,.28);}
+.random-banner.adaptive-banner .rb-text strong{color:#6be8a0;}
 .rb-icon{font-size:1.5rem;}
 .rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
 .rb-text span{font-size:.74rem;color:var(--muted);}
@@ -497,6 +499,13 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <span id="swipe-banner-sub">Swipe if the meaning matches</span>
       </div>
     </div>
+    <div class="random-banner adaptive-banner" onclick="startAdaptiveQuiz()">
+      <div class="rb-icon">🎯</div>
+      <div class="rb-text">
+        <strong>Adaptive Quiz</strong>
+        <span id="adaptive-skill-badge">Start Evaluation</span>
+      </div>
+    </div>
   </div>
 
   <div class="section-label" id="lbl-select-level">Select Level</div>
@@ -628,5 +637,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <script src="word_data/sources/goethe-institut/b2_words.js"></script>
 <script src="word_data/loader.js"></script>
 <script src="app.js"></script>
+<script src="adaptive.js"></script>
 </body>
 </html>
