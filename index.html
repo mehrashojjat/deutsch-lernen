@@ -434,10 +434,18 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 /* ── AUTH UI ── */
 .auth-email{font-size:.78rem;color:var(--muted);margin:0 0 8px;word-break:break-all;}
 .auth-email strong{color:var(--text);}
-.auth-signin-msg{display:none;margin:14px 0 0;padding:14px 16px;
-  background:rgba(126,184,247,.07);border:1px solid rgba(126,184,247,.18);
-  border-radius:12px;font-size:.8rem;line-height:1.55;color:var(--muted);text-align:center;}
-.auth-signin-msg--highlight{border-color:rgba(126,184,247,.5);background:rgba(126,184,247,.13);}
+/* ── ADAPTIVE TIP ── */
+.adaptive-tip{display:flex;align-items:flex-start;gap:12px;margin:18px 0 0;
+  padding:14px 16px;background:rgba(107,232,160,.06);
+  border:1px solid rgba(107,232,160,.18);border-radius:14px;}
+.at-icon{font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+.at-body{display:flex;flex-direction:column;gap:3px;}
+.at-title{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.02em;}
+.at-desc{font-size:.76rem;line-height:1.55;color:var(--muted);}
+.at-signin{font-size:.74rem;line-height:1.5;color:var(--muted);margin-top:4px;
+  padding-top:6px;border-top:1px solid rgba(107,232,160,.12);}
+.at-signin strong{color:var(--text);font-weight:600;}
+.at-signin.hidden{display:none;}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
@@ -533,8 +541,13 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="lv-name" id="ln-B1">Intermediate</div>
     </div>
   </div>
-  <div id="auth-signin-msg" class="auth-signin-msg">
-    Sign in to enable progressive learning. Your quizzes will automatically adapt to your strengths and weaknesses over time.
+  <div class="adaptive-tip">
+    <div class="at-icon">✨</div>
+    <div class="at-body">
+      <div class="at-title">Smart Practice</div>
+      <div class="at-desc">Each quiz adapts to your level — harder words when you're doing well, easier ones when you need it.</div>
+      <div class="at-signin" id="at-signin">Sign in from <strong>Settings ⚙️</strong> to save your progress across sessions.</div>
+    </div>
   </div>
   <div class="home-footer">
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>

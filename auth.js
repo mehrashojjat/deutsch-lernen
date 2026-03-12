@@ -135,12 +135,7 @@
             recentWords    : recentInts
           }
         }, { onConflict: 'user_id,level' });
-      if (res && res.error) {
-        console.error('[auth] _updateRow error:', res.error.message);
-      }
-    } catch (e) {
-      console.error('[auth] _updateRow exception:', e);
-    }
+    } catch (e) {}
   }
 
   // ── Load ALL levels into cache in one round-trip ───────────────
@@ -219,9 +214,9 @@
 
   // ── UI: sign-in nudge on home screen ──────────────────────────
   function _renderHome() {
-    var msg = document.getElementById('auth-signin-msg');
-    if (!msg) return;
-    msg.style.display = _user ? 'none' : '';
+    var nudge = document.getElementById('at-signin');
+    if (!nudge) return;
+    nudge.classList.toggle('hidden', !!_user);
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────
