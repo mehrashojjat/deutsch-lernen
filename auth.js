@@ -47,7 +47,13 @@
   // ── Supabase client ────────────────────────────────────────────
   function _initClient() {
     if (window.supabase && window.supabase.createClient) {
-      _db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      _db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+        auth: {
+          persistSession    : true,   // always write session to localStorage
+          autoRefreshToken  : true,   // keep session alive in background
+          detectSessionInUrl: true,   // pick up ?code=… after OAuth redirect
+        }
+      });
     }
   }
 
@@ -216,7 +222,14 @@
   // ── Public: Google OAuth ───────────────────────────────────────
   window.authSignIn = async function () {
     if (!_db) return;
-    await _db.auth.signInWithOAuth({ provider: 'google' });
+    // Explicitly set redirectTo so Supabase always returns to this exact
+    // page.  The URL must also appear in Supabase Dashboard → Auth →
+    // URL Configuration → Redirect URLs (add both production and any
+    // localhost URLs you test from).
+    await _db.auth.signInWithOAuth({
+      provider: 'google',
+      options : { redirectTo: window.location.origin + window.location.pathname }
+    });
   };
 
   window.authSignOut = async function () {
@@ -352,17 +365,26 @@
     _wrapGoHome();
 
     _db.auth.onAuthStateChange(function (event, session) {
-      // INITIAL_SESSION fires on page-load when a session is already stored;
-      // SIGNED_IN fires after a new OAuth login.  Handle both.
-      if ((event === 'SIGNED_IN' || event === 'INITIAL_SESSION') && session && session.user) {
+      // INITIAL_SESSION  – fires on page-load when a session is in localStorage
+      // SIGNED_IN        – fires after a fresh OAuth login / PKCE exchange
+      // TOKEN_REFRESHED  – fires when the access token is silently renewed
+      // All three mean "there is a valid user".
+      if ((event === 'SIGNED_IN' ||
+           event === 'INITIAL_SESSION' ||
+           event === 'TOKEN_REFRESHED') && session && session.user) {
         _onSignIn(session.user);
       } else if (event === 'SIGNED_OUT') {
         _onSignOut();
       }
     });
 
-    var res  = await _db.auth.getUser();
-    var user = res && res.data && res.data.user ? res.data.user : null;
+    // getSession() reads from localStorage without a network round-trip.
+    // This is more reliable than getUser() for the "stay logged in" case
+    // because it works even when the Supabase server is slow or unreachable.
+    // The PKCE exchange (after OAuth redirect) happens in the background and
+    // fires SIGNED_IN via onAuthStateChange once it completes.
+    var res  = await _db.auth.getSession();
+    var user = res && res.data && res.data.session ? res.data.session.user : null;
     if (user) {
       await _onSignIn(user);
     } else {
