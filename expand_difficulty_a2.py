@@ -64,7 +64,7 @@ def get_new_difficulty(word: str, old_difficulty: int) -> int:
         # target band: 1–3
         if wl <= 4:
             return 1
-        elif wl <= 6:
+        elif wl <= 5:
             return 2
         else:
             return 3

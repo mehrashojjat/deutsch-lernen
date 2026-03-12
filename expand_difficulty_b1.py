@@ -78,11 +78,13 @@ def get_new_difficulty(word: str, old_difficulty: int) -> int:
             return 7   # len 9+ within the "medium" band
 
     else:  # old_difficulty == 3
-        # target band: 8–10
+        # target band: 7–10 (the shortest band-3 words drop to 7 to fill that sparse level)
         # B1 band-3 words range from len 6 (semantic overrides) to len 20 (compounds)
-        if wl <= 9:
+        if wl <= 8:
+            return 7   # short but semantically hard (abstract nouns, etc.)
+        elif wl <= 10:
             return 8
-        elif wl <= 12:
+        elif wl <= 11:
             return 9
         else:
             return 10

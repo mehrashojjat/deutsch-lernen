@@ -48,10 +48,11 @@ def get_new_difficulty(word: str, old_difficulty: int) -> int:
 
     if old_difficulty == 1:
         # target band: 1–3
-        # Band 1 words are mostly short function words → most fall at 1-2
+        # len≤4 → 1 (short function/content words), len 5 → 2, len≥6 → 3
+        # Wider level-3 window ensures at least 5% of total reach difficulty 3
         if wl <= 4:
             return 1
-        elif wl <= 6:
+        elif wl <= 5:
             return 2
         else:
             return 3
