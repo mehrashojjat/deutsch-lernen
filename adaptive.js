@@ -52,15 +52,13 @@
     return a;
   }
 
-  // ── Vocabulary pool ────────────────────────────────────────────
-  function _allWords() {
+  // ── Vocabulary pool (scoped to the level the user clicked) ────
+  function _allWords(lv) {
+    var pool = (typeof CSV_QUIZ_DATA !== 'undefined' && CSV_QUIZ_DATA[lv]) || [];
     var out = [];
-    ['A1', 'A2', 'B1'].forEach(function (lv) {
-      var pool = (typeof CSV_QUIZ_DATA !== 'undefined' && CSV_QUIZ_DATA[lv]) || [];
-      pool.forEach(function (r) {
-        var d = parseInt(r.difficulty);
-        if (d >= 1 && d <= 10) out.push(r);
-      });
+    pool.forEach(function (r) {
+      var d = parseInt(r.difficulty);
+      if (d >= 1 && d <= 10) out.push(r);
     });
     return out;
   }
@@ -243,9 +241,9 @@
     });
   }
 
-  function _buildQueue() {
+  function _buildQueue(lv) {
     var p = _get();
-    var all = _allWords();
+    var all = _allWords(lv);
     if (!all.length) return [];
     var rows;
     var stage = p.evaluationStage;
@@ -329,28 +327,21 @@
   }
 
   function _updateQuizHUD() {
-    var p = _get();
-    var tlevel = document.getElementById('tlevel');
-    if (!tlevel) return;
-    if (p.evaluationStage < 3) {
-      tlevel.textContent = 'Evaluation ' + (p.evaluationStage + 1) + '/3';
-    } else {
-      tlevel.textContent = 'Skill\u00a0' + p.skillLevel.toFixed(1);
-    }
+    // Intentionally left blank: the adaptive engine runs transparently.
+    // The quiz header already shows the correct level name via app.js's
+    // renderCard(), so we do not override it with evaluation stage labels.
   }
 
   function _updateResultsHUD() {
-    var p = _get();
-    var rSub = document.getElementById('r-sub');
-    if (!rSub) return;
-    var prefix = p.evaluationStage <= 3 && _stageAtStart < 3
-      ? 'Evaluation done \u00b7 '
-      : '';
-    rSub.textContent = prefix + 'Skill Level: ' + p.skillLevel.toFixed(1);
+    // Intentionally left blank: adaptive progress is tracked silently.
+    // The results screen shows the normal score/percentage via app.js.
   }
 
-  // ── Public: start adaptive quiz ────────────────────────────────
-  window.startAdaptiveQuiz = async function () {
+  // ── Public: start adaptive quiz for a specific level ───────────
+  // Called from auth.js's startLevel wrapper when the user is signed in.
+  // The user simply sees their chosen level quiz — the adaptive logic is
+  // transparent.
+  window.startAdaptiveQuiz = async function (lv) {
     var p = _get();
     _active = true;
     _answers = [];
@@ -360,7 +351,7 @@
     ov.classList.add('active');
 
     try {
-      await Promise.all(['A1', 'A2', 'B1'].map(function (lv) { return _loadCSVLevel(lv); }));
+      await _loadCSVLevel(lv);
     } catch (err) {
       ov.classList.remove('active');
       var msg = 'Could not load quiz data.';
@@ -370,18 +361,18 @@
       return;
     }
 
-    var cards = _buildQueue();
+    var cards = _buildQueue(lv);
     ov.classList.remove('active');
 
     if (!cards.length) { alert('No words available!'); _active = false; return; }
 
-    // Inject into the existing quiz engine
-    currentLevel = 'Adaptive';
+    // Use the real level name so the quiz header reads "Level A1" etc.
+    currentLevel = lv;
     queue = cards;
     idx = 0; ok = 0; no = 0;
 
     show('screen-quiz');
-    renderCard(); // calls our wrapped version which patches the HUD
+    renderCard();
   };
 
   // ── Wrap existing functions ────────────────────────────────────
@@ -415,10 +406,10 @@
     }
   };
 
-  // restartLevel: re-enter adaptive quiz instead of repeating same level
+  // restartLevel: re-enter adaptive quiz for the same level
   var _origRestartLevel = window.restartLevel;
   window.restartLevel = function () {
-    if (_active) { window.startAdaptiveQuiz(); }
+    if (_active) { window.startAdaptiveQuiz(currentLevel); }
     else { _origRestartLevel(); }
   };
 

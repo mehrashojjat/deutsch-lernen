@@ -206,17 +206,11 @@
       .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // ── UI: adaptive banner + sign-in message ─────────────────────
+  // ── UI: sign-in nudge on home screen ──────────────────────────
   function _renderHome() {
-    var banner = document.querySelector('.adaptive-banner');
-    var msg    = document.getElementById('auth-signin-msg');
-    if (_user) {
-      if (banner) banner.style.display = '';
-      if (msg)    msg.style.display    = 'none';
-    } else {
-      if (banner) banner.style.display = 'none';
-      if (msg)    msg.style.display    = '';
-    }
+    var msg = document.getElementById('auth-signin-msg');
+    if (!msg) return;
+    msg.style.display = _user ? 'none' : '';
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────
@@ -262,35 +256,36 @@
 
   // ── Function wrappers (set up in _init after all scripts load) ─
 
-  // 1. Level cards: update active level, inject from cache (instant)
+  // 1. Level cards: when signed in → adaptive quiz for this level;
+  //                 when guest   → regular level quiz (unchanged behaviour).
   function _wrapStartLevel() {
     _origStartLevel = window.startLevel;
-    window.startLevel = function (lv) {
-      var prev = _currentAdaptiveLevel;
+    window.startLevel = async function (lv) {
       _currentAdaptiveLevel = lv;
-      if (_user && lv !== prev) _injectLevel(lv); // swap from cache, no DB call
-      if (typeof _origStartLevel === 'function') _origStartLevel(lv);
+      if (_user) {
+        // Inject this level's cached progress so the algorithm is ready,
+        // then hand off to the adaptive entry point (which takes a snapshot
+        // and manages save-on-completion / abandonment protection).
+        _injectLevel(lv);
+        if (typeof window.startAdaptiveQuiz === 'function') {
+          await window.startAdaptiveQuiz(lv);
+        }
+      } else {
+        if (typeof _origStartLevel === 'function') _origStartLevel(lv);
+      }
     };
   }
 
-  // 2. Adaptive quiz entry point:
-  //    • ensure level is in cache (safety check + DB fallback)
-  //    • take a deep-copy snapshot of current progress
-  //    • start the quiz
+  // 2. Adaptive quiz entry point — now called from startLevel (not a button).
+  //    • receives the level directly (lv param)
+  //    • ensures level is cached, takes a snapshot, starts the quiz
   function _wrapStartAdaptive() {
     _origStartAdaptive = window.startAdaptiveQuiz;
-    window.startAdaptiveQuiz = async function () {
-      if (!_user) {
-        // Guest: highlight sign-in message
-        var msg = document.getElementById('auth-signin-msg');
-        if (msg) {
-          msg.classList.add('auth-signin-msg--highlight');
-          setTimeout(function () { msg.classList.remove('auth-signin-msg--highlight'); }, 1200);
-        }
-        return;
-      }
+    window.startAdaptiveQuiz = async function (lv) {
+      // Fallback: if somehow called without a level, use the tracked level
+      lv = lv || _currentAdaptiveLevel;
 
-      var lv = _currentAdaptiveLevel;
+      if (!_user) return; // should not happen via normal flow, but guard anyway
 
       // Safety: ensure this level has a progress object in cache
       await _ensureLevelCached(_user.id, lv);
@@ -304,7 +299,7 @@
       _quizLevel      = lv;
       _quizSnapshot   = _deepCopy(_progressCache[lv]);
 
-      if (typeof _origStartAdaptive === 'function') await _origStartAdaptive();
+      if (typeof _origStartAdaptive === 'function') await _origStartAdaptive(lv);
 
       // If the quiz screen never became visible (CSV load failure, no cards, etc.)
       // then no quiz actually started — discard the snapshot flags immediately.
