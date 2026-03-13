@@ -60,7 +60,24 @@ const UI = {
     aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
     footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Adaptive Quiz',
+    adaptiveBannerSub: 'Adjusts to your skill level',
+    adaptiveSetupTitle: 'Adaptive Quiz',
+    adaptiveSetupSubtitle: 'Adjusts difficulty to your skill level',
+    themeBannerTitle: 'Theme Quiz',
+    themeBannerSub: 'Quiz yourself on a topic',
+    themeSelectTitle: 'Theme Quiz',
+    themeSelectSubtitle: 'Pick a topic to practise',
+    dictBannerTitle: 'Dictionary',
+    dictBannerSub: 'Browse all words A–Z',
+    dictScreenTitle: 'Dictionary',
+    dictScreenSubtitle: 'All words · A–Z',
+    dictBack: '← Back',
+    dictFilterPlaceholder: 'Filter words…',
+    dictLoading: 'Loading…',
+    dictEmpty: 'No words found.',
     typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
+    categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
   },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
@@ -120,7 +137,24 @@ const UI = {
     aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
     footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Uyarlamalı Sınav',
+    adaptiveBannerSub: 'Seviyenize göre ayarlanır',
+    adaptiveSetupTitle: 'Uyarlamalı Sınav',
+    adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
+    themeBannerTitle: 'Konu Sınavı',
+    themeBannerSub: 'Bir konuyu seçerek test edin',
+    themeSelectTitle: 'Konu Sınavı',
+    themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
+    dictBannerTitle: 'Sözlük',
+    dictBannerSub: 'Tüm kelimelere A–Z göz at',
+    dictScreenTitle: 'Sözlük',
+    dictScreenSubtitle: 'Tüm kelimeler · A–Z',
+    dictBack: '← Geri',
+    dictFilterPlaceholder: 'Kelime ara…',
+    dictLoading: 'Yükleniyor…',
+    dictEmpty: 'Kelime bulunamadı.',
     typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
+    categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -180,7 +214,24 @@ const UI = {
     aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
     footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
     footerCopy: '© ۲۰۲۶ Mehras Hojjat',
+    adaptiveBannerTitle: 'آزمون تطبیقی',
+    adaptiveBannerSub: 'سطح شما را تشخیص می‌دهد',
+    adaptiveSetupTitle: 'آزمون تطبیقی',
+    adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
+    themeBannerTitle: 'آزمون موضوعی',
+    themeBannerSub: 'یک موضوع انتخاب کنید',
+    themeSelectTitle: 'آزمون موضوعی',
+    themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
+    dictBannerTitle: 'واژه‌نامه',
+    dictBannerSub: 'مرور تمام واژه‌ها از الف تا ی',
+    dictScreenTitle: 'واژه‌نامه',
+    dictScreenSubtitle: 'همه واژه‌ها · A–Z',
+    dictBack: '→ بازگشت',
+    dictFilterPlaceholder: 'جستجوی واژه…',
+    dictLoading: 'در حال بارگذاری…',
+    dictEmpty: 'واژه‌ای یافت نشد.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
+    categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
     headerSub: 'Практика слов · Падежи · Спряжение',
@@ -240,7 +291,22 @@ const UI = {
     aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
     footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Адаптивная викторина',
+    adaptiveBannerSub: 'Адаптируется к вашему уровню',
+    adaptiveSetupTitle: 'Адаптивная викторина',
+    adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
+    themeBannerTitle: 'Тематическая викторина',
+    themeBannerSub: 'Выберите тему для тренировки',
+    themeSelectTitle: 'Тематическая викторина',
+    themeSelectSubtitle: 'Выберите тему',
+    dictBannerTitle: 'Словарь',
+    dictBannerSub: 'Все слова от A до Z',
+    dictScreenTitle: 'Словарь',
+    dictScreenSubtitle: 'Все слова · A–Z',
+    dictLoading: 'Загрузка…',
+    dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
+    categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
     headerSub: 'Практика слів · Відмінки · Відмінювання',
@@ -300,7 +366,22 @@ const UI = {
     aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
     footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Адаптивна вікторина',
+    adaptiveBannerSub: 'Адаптується до вашого рівня',
+    adaptiveSetupTitle: 'Адаптивна вікторина',
+    adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
+    themeBannerTitle: 'Тематична вікторина',
+    themeBannerSub: 'Виберіть тему для практики',
+    themeSelectTitle: 'Тематична вікторина',
+    themeSelectSubtitle: 'Виберіть тему',
+    dictBannerTitle: 'Словник',
+    dictBannerSub: 'Усі слова від A до Z',
+    dictScreenTitle: 'Словник',
+    dictScreenSubtitle: 'Усі слова · A–Z',
+    dictLoading: 'Завантаження…',
+    dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
+    categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
     headerSub: 'تدريب المفردات · الحالات · تصريف الأفعال',
@@ -360,7 +441,24 @@ const UI = {
     aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
     footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'اختبار تكيّفي',
+    adaptiveBannerSub: 'يتكيّف مع مستواك',
+    adaptiveSetupTitle: 'اختبار تكيّفي',
+    adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
+    themeBannerTitle: 'اختبار موضوعي',
+    themeBannerSub: 'اختبر نفسك في موضوع محدد',
+    themeSelectTitle: 'اختبار موضوعي',
+    themeSelectSubtitle: 'اختر موضوعاً للتدرّب عليه',
+    dictBannerTitle: 'القاموس',
+    dictBannerSub: 'تصفح جميع الكلمات من A إلى Z',
+    dictScreenTitle: 'القاموس',
+    dictScreenSubtitle: 'جميع الكلمات · A–Z',
+    dictBack: '→ رجوع',
+    dictFilterPlaceholder: 'ابحث عن كلمة…',
+    dictLoading: 'جارٍ التحميل…',
+    dictEmpty: 'لا توجد كلمات.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
+    categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
 
@@ -373,6 +471,33 @@ const WORD_BANK = window.APP_DATA.WORD_BANK;
 //  VOCAB CARDS — answer/choices stored as {en, tr}
 // ══════════════════════════════════════════════════════════════════
 const VOCAB_CARDS = window.APP_DATA.VOCAB_CARDS;
+
+// ════════════════════════════════════════════════════════════════
+//  CATEGORY MAP — 21 vocabulary categories, ID 1–21
+// ════════════════════════════════════════════════════════════════
+var CATEGORY_MAP = [
+  { id:  1, name: 'Numbers & Quantities',           icon: '🔢' },
+  { id:  2, name: 'Time & Calendar',                icon: '🕐' },
+  { id:  3, name: 'Family & Relationships',         icon: '👨‍👩‍👧' },
+  { id:  4, name: 'Body & Health',                  icon: '🏥' },
+  { id:  5, name: 'Food & Drink',                   icon: '🍽️' },
+  { id:  6, name: 'Home & Living',                  icon: '🏠' },
+  { id:  7, name: 'Clothing & Appearance',          icon: '👗' },
+  { id:  8, name: 'Work & Careers',                 icon: '💼' },
+  { id:  9, name: 'Education & Learning',           icon: '📚' },
+  { id: 10, name: 'Travel & Tourism',               icon: '✈️' },
+  { id: 11, name: 'Transportation',                 icon: '🚗' },
+  { id: 12, name: 'Shopping & Finance',             icon: '🛍️' },
+  { id: 13, name: 'Language, Communication & Media', icon: '💬' },
+  { id: 14, name: 'Nature, Weather & Animals',      icon: '🌿' },
+  { id: 15, name: 'Sports & Leisure',               icon: '⚽' },
+  { id: 16, name: 'Arts & Culture',                 icon: '🎨' },
+  { id: 17, name: 'Technology & Devices',           icon: '💻' },
+  { id: 18, name: 'Society, Law & Politics',        icon: '⚖️' },
+  { id: 19, name: 'Emotions & Personal Traits',     icon: '❤️' },
+  { id: 20, name: 'Places & Geography',             icon: '🗺️' },
+  { id: 21, name: 'Grammar & Function Words',       icon: '📝' },
+];
 
 
 var FORM_INDEX = {};
@@ -422,6 +547,9 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
+var adaptiveSelectedLevel = 'A1';
+var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
+var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
 
 // ── Helpers ──
 function t(key) { return UI[LANG][key] !== undefined ? UI[LANG][key] : UI.en[key]; }
@@ -439,7 +567,11 @@ function openSettings() {
 }
 function closeSettings() {
   document.getElementById('drawer-overlay').classList.remove('open');
-  document.getElementById('settings-drawer').classList.remove('open');
+  var _dr = document.getElementById('settings-drawer');
+  _dr.classList.remove('open');
+  // Reset any drag-offset so the next open() starts clean
+  _dr.style.transition = '';
+  _dr.style.transform = '';
 }
 function openAbout() {
   document.getElementById('about-modal-overlay').classList.add('open');
@@ -456,8 +588,10 @@ function setLang(lang) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
   var isRtl = lang==='fa' || lang==='ar';
-  document.documentElement.style.setProperty('direction', isRtl?'rtl':'ltr');
+  document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
   document.body.classList.toggle('lang-fa', lang==='fa');
+  document.body.classList.toggle('lang-ar', lang==='ar');
+  document.body.classList.toggle('lang-rtl', isRtl);
   applyTranslations();
   updateCounts();
   // Immediately update the active screen so the user sees the new language at once
@@ -467,6 +601,10 @@ function setLang(lang) {
     _swipeRefreshLang();
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
+  } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
+    _renderCategoryGrid();
+  } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
+    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
   }
 }
 
@@ -481,12 +619,8 @@ function applyTranslations() {
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
   document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
   document.getElementById('swipe-banner-sub').textContent = u.swipeBannerSub;
-  document.getElementById('lbl-select-level').textContent = u.selectLevel;
   // Level names
   const ln = u.levelNames;
-  document.getElementById('ln-A1').textContent = ln.A1;
-  document.getElementById('ln-A2').textContent = ln.A2;
-  document.getElementById('ln-B1').textContent = ln.B1;
   document.getElementById('swipe-ln-A1').textContent = ln.A1;
   document.getElementById('swipe-ln-A2').textContent = ln.A2;
   document.getElementById('swipe-ln-B1').textContent = ln.B1;
@@ -522,6 +656,37 @@ function applyTranslations() {
   document.getElementById('about-close-btn').textContent = u.aboutClose;
   document.getElementById('footer-msg').textContent = u.footerMsg;
   document.getElementById('footer-copy').textContent = u.footerCopy;
+  // New banner titles
+  document.getElementById('adaptive-banner-title').textContent = u.adaptiveBannerTitle;
+  document.getElementById('adaptive-banner-sub').textContent = u.adaptiveBannerSub;
+  document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
+  document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
+  // Adaptive setup screen
+  document.getElementById('adaptive-setup-screen-title').textContent = u.adaptiveSetupTitle;
+  document.getElementById('adaptive-setup-screen-subtitle').textContent = u.adaptiveSetupSubtitle;
+  var aln = u.levelNames;
+  document.getElementById('adaptive-ln-A1').textContent = aln.A1;
+  document.getElementById('adaptive-ln-A2').textContent = aln.A2;
+  document.getElementById('adaptive-ln-B1').textContent = aln.B1;
+  document.getElementById('adaptive-launch-btn').textContent = u.prepareTen;
+  document.getElementById('adaptive-setup-back-btn').textContent = u.back;
+  // Theme select screen
+  document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
+  document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
+  document.getElementById('theme-back-btn').textContent = u.back;
+  // Dictionary screen
+  document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
+  document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
+  document.getElementById('dict-back-btn').textContent = u.dictBack;
+  document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
+  if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
+  document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
+  var _dlt = document.getElementById('dict-loading-text');
+  if (_dlt) _dlt.textContent = u.dictLoading;
+  // Refresh meanings immediately if dictionary is open
+  if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
+    _renderDictList(document.getElementById('dict-search-input').value, true);
+  }
 }
 
 
@@ -624,16 +789,16 @@ function _loadCSVLevel(lv) {
   _csvLoadPromises[lv] = _loadCSVText(url)
     .then(function(txt){
       var parsed = _parseCSVText(txt);
-      CSV_QUIZ_DATA[lv] = parsed.filter(function(r){
+      CSV_QUIZ_DATA[lv] = parsed.filter(function(r){ return r.word && r.word.trim(); });
+      var quizRows = CSV_QUIZ_DATA[lv].filter(function(r){
         return r.entry_type === 'main'
-            && r.word && r.word.trim()
             && r.translation_en && r.translation_en.trim();
       });
-      if (!CSV_QUIZ_DATA[lv].length) {
+      if (!quizRows.length) {
         throw new Error('CSV parsed but produced 0 quiz rows for ' + lv);
       }
-      // Build fa and ar lookup maps from this level
-      CSV_QUIZ_DATA[lv].forEach(function(r) {
+      // Build fa and ar lookup maps from quiz rows
+      quizRows.forEach(function(r) {
         var k = normKey(r.word);
         if (!_faCsvMap[k] && r.translation_fa && r.translation_fa.trim()) {
           _faCsvMap[k] = r.translation_fa.trim();
@@ -670,7 +835,9 @@ function _csvRowDisplay(row) {
 
 // ── Build quiz queue from CSV rows ──
 function buildQueue(level) {
-  var pool = CSV_QUIZ_DATA[level] || [];
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r){
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+  });
   if (!pool.length) return [];
 
   var selected = shuffle(pool.slice()).slice(0, QUIZ_LEN);
@@ -694,6 +861,7 @@ function buildQueue(level) {
 }
 
 async function startLevel(lv) {
+  currentThemeCategoryId = 0; // clear theme quiz state
   currentLevel = lv;
   var _ov = document.getElementById('quiz-prep-overlay');
 
@@ -847,13 +1015,180 @@ function showResults(){
   show('screen-results');
 }
 
-function restartLevel(){startLevel(currentLevel);}
+function restartLevel(){
+  if (currentThemeCategoryId) startThemeQuiz(currentThemeCategoryId);
+  else startLevel(currentLevel);
+}
 function goHome(){show('screen-levels');}
+function goQuizBack(){var t=_quizReturnScreen;_quizReturnScreen='screen-levels';window.goHome();show(t);}
 function openSwipeSetup(){ show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
   swipeSelectedLevel = lv;
   ['A1','A2','B1'].forEach(function(k){
     document.getElementById('swipe-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+// ── ADAPTIVE QUIZ SETUP ──
+function openAdaptiveSetup() {
+  show('screen-adaptive-setup');
+  if (typeof window._adaptiveRefreshBadge === 'function') window._adaptiveRefreshBadge();
+}
+function setAdaptiveLevel(lv) {
+  adaptiveSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k) {
+    document.getElementById('adaptive-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+function launchAdaptiveQuiz() {
+  _quizReturnScreen = 'screen-adaptive-setup';
+  startLevel(adaptiveSelectedLevel);
+}
+
+// ── THEME QUIZ ──
+function openThemeSelect() {
+  _loadAllCSV(); // preload in background
+  show('screen-theme-select');
+  _renderCategoryGrid();
+}
+
+function _renderCategoryGrid() {
+  var grid = document.getElementById('category-grid');
+  if (!grid) return;
+  var catNames = t('categoryNames') || {};
+  grid.innerHTML = CATEGORY_MAP.map(function(cat) {
+    return '<button class="category-card" onclick="startThemeQuiz(' + cat.id + ')">'
+      + '<span class="cat-icon">' + cat.icon + '</span>'
+      + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
+      + '</button>';
+  }).join('');
+}
+
+async function startThemeQuiz(categoryId) {
+  _quizReturnScreen = 'screen-theme-select';
+  currentThemeCategoryId = 0;
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    await _loadAllCSV();
+  } catch(err) {
+    _ov.classList.remove('active');
+    var msg = 'Could not load quiz data.';
+    if (window.location.protocol === 'file:') msg += ' Open through a local server instead of file://';
+    alert(msg);
+    return;
+  }
+  _ov.classList.remove('active');
+
+  var cards = _buildThemeQueue(categoryId);
+  if (!cards.length) {
+    alert('Not enough words available for this topic yet!');
+    return;
+  }
+  currentThemeCategoryId = categoryId;
+  currentLevel = _categoryName(categoryId);
+  queue = cards;
+  idx = 0; ok = 0; no = 0;
+  show('screen-quiz');
+  renderCard();
+}
+
+function _categoryName(id) {
+  var names = t('categoryNames') || {};
+  if (names[id]) return names[id];
+  var cat = CATEGORY_MAP.find(function(c){ return c.id === id; });
+  return cat ? cat.name : 'Theme';
+}
+
+function _buildThemeQueue(categoryId) {
+  // Gather all CSV rows across all levels matching this category
+  var pool = [];
+  ['A1','A2','B1'].forEach(function(lv) {
+    (CSV_QUIZ_DATA[lv] || []).filter(function(r){
+      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+    }).forEach(function(r) {
+      if (parseInt(r.category_id) === categoryId) pool.push(r);
+    });
+  });
+  if (!pool.length) return [];
+
+  // Determine difficulty range for this category
+  var diffs = pool.map(function(r){ return parseInt(r.difficulty); }).filter(function(d){ return d >= 1 && d <= 10; });
+  if (!diffs.length) return _buildQueueFromRows(shuffle(pool).slice(0, QUIZ_LEN));
+  var catMin = Math.min.apply(null, diffs);
+  var catMax = Math.max.apply(null, diffs);
+
+  // Determine user skill level from adaptive progress; default 4 for new users
+  var skillLevel = 4;
+  try {
+    var _ap = JSON.parse(localStorage.getItem('deutsch_adaptive_progress'));
+    if (_ap && _ap.skillLevel >= 1) skillLevel = _ap.skillLevel;
+  } catch(e) {}
+
+  // Clamp skill to category bounds
+  var effectiveDiff = Math.max(catMin, Math.min(catMax, Math.round(skillLevel)));
+  return _buildThemeQueueWithFallback(pool, effectiveDiff);
+}
+
+function _buildThemeQueueWithFallback(pool, targetDiff) {
+  var needed = QUIZ_LEN;
+  var used = {};
+  var selected = [];
+
+  // Stage 1 — exact difficulty
+  shuffle(pool.filter(function(r){ return parseInt(r.difficulty) === targetDiff; }))
+    .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
+
+  // Stage 2 — expand radius outward from targetDiff
+  if (selected.length < needed) {
+    for (var radius = 1; radius <= 9 && selected.length < needed; radius++) {
+      shuffle(pool.filter(function(r) { return Math.abs(parseInt(r.difficulty) - targetDiff) === radius; }))
+        .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
+    }
+  }
+
+  // Stage 3 — any remaining words from pool
+  if (selected.length < needed) {
+    shuffle(pool.filter(function(r){ return !used[r.id]; }))
+      .forEach(function(r){ if (selected.length < needed) { used[r.id] = true; selected.push(r); } });
+  }
+
+  return _buildQueueFromRows(selected);
+}
+
+function _buildQueueFromRows(rows) {
+  var allRows = [];
+  ['A1','A2','B1'].forEach(function(lv){
+    allRows = allRows.concat((CSV_QUIZ_DATA[lv] || []).filter(function(r){
+      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+    }));
+  });
+  return rows.map(function(row) {
+    var usedIds = {}; usedIds[row.id] = true;
+    var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
+    var distractors = [];
+    var catId = parseInt(row.category_id);
+
+    // Pass 1: same-category distractors (keeps all 4 choices thematically related)
+    shuffle(allRows.filter(function(d){ return parseInt(d.category_id) === catId; }))
+      .forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+
+    // Pass 2: global fallback if the category is too small to fill 6 slots
+    if (distractors.length < 6) {
+      shuffle(allRows).forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+    }
+
+    return { _row: row, _distractors: distractors };
   });
 }
 
@@ -905,7 +1240,9 @@ async function _resolveMeaningRows(rows) {
 }
 
 async function _buildSwipeBatch(level, count) {
-  var pool = CSV_QUIZ_DATA[level] || [];
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r){
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+  });
   if (!pool.length) return [];
   var selected = shuffle(pool.slice()).slice(0, Math.min(count, pool.length));
   var cards = selected.map(function(row) {
@@ -2801,7 +3138,8 @@ function openSearch() {
 }
 
 function closeSearch() {
-  document.getElementById('search-overlay').classList.remove('open');
+  var _so = document.getElementById('search-overlay');
+  if (_so) _so.classList.remove('open');
 }
 
 // Search result cache (indexed by position for clean onclick)
@@ -2963,12 +3301,272 @@ async function openWordCard(word, tc) {
 
 function closeWordModal(e) {
   if (e && e.target !== document.getElementById('word-modal-overlay')) return;
-  document.getElementById('word-modal-overlay').classList.remove('open');
+  var _overlay = document.getElementById('word-modal-overlay');
+  _overlay.classList.remove('open');
+  // Reset any drag-offset so the next open() starts clean
+  var _wm = _overlay.querySelector('.word-modal');
+  if (_wm) { _wm.style.transition = ''; _wm.style.transform = ''; }
 }
+
+// ══════════════════════════════════════════════════════════════════
+//  DICTIONARY
+// ══════════════════════════════════════════════════════════════════
+var _dictLoaded = false;
+var _dictAllWords = [];
+var _dictScrollPaused = false;
+var _dictScrollPauseTimer = null;
+var _dictLetterOffsets = {}; // letter → scrollTop px, built at render time
+
+function openDictionary() {
+  show('screen-dictionary');
+  document.getElementById('dict-search-input').value = '';
+  if (!_dictLoaded) {
+    _loadAllCSV().then(function() {
+      _buildDictData();
+      _dictLoaded = true;
+      _renderDictList('');
+    }).catch(function() {
+      document.getElementById('dict-list').innerHTML =
+        '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
+    });
+  } else {
+    _renderDictList('');
+  }
+}
+
+function _buildDictData() {
+  var all = [];
+  ['A1', 'A2', 'B1'].forEach(function(lv) {
+    (CSV_QUIZ_DATA[lv] || []).forEach(function(row) {
+      if (!row.word) return;
+      all.push({
+        word: row.word,
+        article: row.article || '',
+        type: row.word_type || '',
+        level: row.level || lv,
+        translation_en: row.translation_en || '',
+        translation_tr: row.translation_tr || '',
+        translation_ru: row.translation_ru || '',
+        translation_uk: row.translation_uk || '',
+        translation_fa: row.translation_fa || '',
+        translation_ar: row.translation_ar || '',
+      });
+    });
+  });
+  all.sort(function(a, b) {
+    return a.word.localeCompare(b.word, 'de', { sensitivity: 'base' });
+  });
+  _dictAllWords = all;
+  var subEl = document.getElementById('dict-screen-subtitle');
+  if (subEl) {
+    var _wLabel = {en:'words',tr:'kelime',fa:'واژه',ru:'слово',uk:'слово',ar:'كلمة'};
+    subEl.textContent = _dictAllWords.length + ' ' + (_wLabel[LANG] || 'words') + ' · A–Z';
+  }
+  _buildDictAlphaBar();
+  _initDictScrollTracker();
+}
+
+function _getDictMeaning(entry) {
+  if (LANG === 'en') return entry.translation_en;
+  if (LANG === 'tr') return entry.translation_tr || entry.translation_en;
+  if (LANG === 'ru') return entry.translation_ru || entry.translation_en;
+  if (LANG === 'uk') return entry.translation_uk || entry.translation_en;
+  if (LANG === 'fa') return entry.translation_fa || entry.translation_en;
+  if (LANG === 'ar') return entry.translation_ar || entry.translation_en;
+  return entry.translation_en;
+}
+
+function _dictFirstLetter(word) {
+  if (!word) return '#';
+  var ch = word[0].toUpperCase();
+  if (ch === '-' || (ch >= '0' && ch <= '9')) return '#';
+  return ch;
+}
+
+function _buildDictAlphaBar() {
+  var present = {};
+  _dictAllWords.forEach(function(e) { present[_dictFirstLetter(e.word)] = true; });
+
+  var alphabet = ['#','A','Ä','B','C','D','E','F','G','H','I','J','K','L',
+                  'M','N','O','Ö','P','Q','R','S','T','U','Ü','V','W','X','Y','Z'];
+  var bar = document.getElementById('dict-alpha-bar');
+  bar.innerHTML = '';
+
+  alphabet.forEach(function(l) {
+    if (!present[l]) return;
+    var sp = document.createElement('span');
+    sp.className = 'dict-alpha-letter';
+    sp.textContent = l;
+    sp.setAttribute('data-letter', l);
+    sp.addEventListener('click', function(e) { e.stopPropagation(); _dictJumpToLetter(l); });
+    bar.appendChild(sp);
+  });
+
+  // Touch drag — works like a phone-book index strip
+  bar.addEventListener('touchstart', _dictBarTouchHandler, { passive: true });
+  bar.addEventListener('touchmove',  _dictBarTouchHandler, { passive: true });
+  // touchend intentionally left without a handler — active class persists until next jump
+}
+
+function _dictBarTouchHandler(e) {
+  var touch = e.touches[0];
+  // Find closest letter by geometry (immune to RTL layout changes)
+  var bar = document.getElementById('dict-alpha-bar');
+  var letters = bar.querySelectorAll('.dict-alpha-letter');
+  var closest = null, closestDist = Infinity;
+  letters.forEach(function(sp) {
+    var r = sp.getBoundingClientRect();
+    var cy = r.top + r.height / 2;
+    var dist = Math.abs(touch.clientY - cy);
+    if (dist < closestDist) { closestDist = dist; closest = sp; }
+  });
+  if (closest && closestDist < 40) {
+    var letter = closest.getAttribute('data-letter');
+    if (letter) _dictJumpToLetter(letter);
+  }
+}
+
+function _dictSetActiveLetter(l) {
+  document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
+    sp.classList.toggle('active', sp.getAttribute('data-letter') === l);
+  });
+}
+
+function _dictJumpToLetter(l) {
+  var list = document.getElementById('dict-list');
+  var offset = _dictLetterOffsets[l];
+  // _dictLetterOffsets are captured at render time when scrollTop=0, so they
+  // are the true layout positions and are unaffected by position:sticky painting.
+  if (offset === undefined) return;
+  _dictSetActiveLetter(l);
+  _dictScrollPaused = true;
+  clearTimeout(_dictScrollPauseTimer);
+  list.scrollTop = offset;
+  _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 500);
+}
+
+function _initDictScrollTracker() {
+  var list = document.getElementById('dict-list');
+  if (!list) return;
+  if (list._dictScrollFn) list.removeEventListener('scroll', list._dictScrollFn);
+  list._dictScrollFn = function() {
+    if (_dictScrollPaused) return;
+    var headers = list.querySelectorAll('[data-dict-letter]');
+    if (!headers.length) return;
+    var listTop = list.getBoundingClientRect().top;
+    var activeLetter = null;
+    // Last header whose top is at or above the list’s own top = current section
+    headers.forEach(function(h) {
+      if (h.getBoundingClientRect().top - listTop <= 2) {
+        activeLetter = h.getAttribute('data-dict-letter');
+      }
+    });
+    if (activeLetter) _dictSetActiveLetter(activeLetter);
+  };
+  list.addEventListener('scroll', list._dictScrollFn, { passive: true });
+}
+
+function _renderDictList(filter, keepScroll) {
+  var list = document.getElementById('dict-list');
+  var savedScroll = keepScroll ? list.scrollTop : 0;
+  var filt = (filter || '').trim().toLowerCase();
+
+  var words = filt
+    ? _dictAllWords.filter(function(e) {
+        return e.word.toLowerCase().includes(filt) ||
+               _getDictMeaning(e).toLowerCase().includes(filt);
+      })
+    : _dictAllWords;
+
+  if (!words.length) {
+    list.innerHTML = '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
+    return;
+  }
+
+  var isRtl = LANG === 'fa' || LANG === 'ar';
+  var frag = document.createDocumentFragment();
+  var curLetter = null;
+
+  words.forEach(function(entry) {
+    if (!filt) {
+      var letter = _dictFirstLetter(entry.word);
+      if (letter !== curLetter) {
+        curLetter = letter;
+        var hdr = document.createElement('div');
+        hdr.className = 'dict-letter-header';
+        hdr.setAttribute('data-dict-letter', letter);
+        hdr.textContent = letter;
+        frag.appendChild(hdr);
+      }
+    }
+
+    var div = document.createElement('div');
+    div.className = 'dict-entry';
+    div.setAttribute('data-word', entry.word);
+    div.setAttribute('data-level', entry.level);
+    (function(w, tc) {
+      div.addEventListener('click', function() { openWordCard(w, tc); });
+    }(entry.word, entry.type ? typeChar(entry.type) : '?'));
+
+    var top = document.createElement('div');
+    top.className = 'dict-entry-top';
+
+    var wEl = document.createElement('span');
+    wEl.className = 'dict-word';
+    if (entry.article && entry.type === 'Noun') {
+      var artEl = document.createElement('span');
+      artEl.className = 'dict-article';
+      artEl.textContent = entry.article + ' ';
+      wEl.appendChild(artEl);
+      wEl.appendChild(document.createTextNode(entry.word));
+    } else {
+      wEl.textContent = entry.word;
+    }
+    top.appendChild(wEl);
+
+    var lvEl = document.createElement('span');
+    lvEl.className = 'dict-level';
+    lvEl.textContent = entry.level;
+    top.appendChild(lvEl);
+
+    div.appendChild(top);
+
+    var meaning = _getDictMeaning(entry);
+    if (meaning) {
+      var mEl = document.createElement('div');
+      mEl.className = 'dict-meaning';
+      // For RTL languages, give the meaning its own RTL context while the
+      // surrounding layout stays LTR (German words are always left-to-right)
+      if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
+      mEl.textContent = meaning;
+      div.appendChild(mEl);
+    }
+
+    frag.appendChild(div);
+  });
+
+  list.innerHTML = '';
+  list.appendChild(frag);
+  list.scrollTop = 0;
+  // Capture letter→scrollTop offsets NOW, while scrollTop=0 and before sticky moves anything.
+  _dictLetterOffsets = {};
+  var lr = list.getBoundingClientRect();
+  list.querySelectorAll('[data-dict-letter]').forEach(function(h) {
+    _dictLetterOffsets[h.getAttribute('data-dict-letter')] = h.getBoundingClientRect().top - lr.top;
+  });
+  if (savedScroll > 0) list.scrollTop = savedScroll;
+  _initDictScrollTracker();
+}
+
+function dictFilter(val) {
+  if (_dictLoaded) _renderDictList(val);
+}
+
+
 
 // ── Screen switcher ──
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
 }
@@ -2979,6 +3577,79 @@ updateCounts();
 document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
 });
+
+// ── Word-modal drag-to-close (handle pill) ──────────────────────────
+(function() {
+  var handle  = document.querySelector('.word-modal-handle');
+  var modal   = document.querySelector('.word-modal');
+  if (!handle || !modal) return;
+
+  // Desktop: click the pill to dismiss
+  handle.addEventListener('click', function() { closeWordModal(); });
+
+  // Mobile: swipe the pill downward to dismiss
+  var _startY, _deltaY;
+  handle.addEventListener('touchstart', function(e) {
+    _startY = e.touches[0].clientY;
+    _deltaY = 0;
+    modal.style.transition = 'none';
+  }, { passive: true });
+
+  // Track the move on the document so fast flicks don't lose the pointer
+  document.addEventListener('touchmove', function(e) {
+    if (_startY === undefined) return;
+    _deltaY = e.touches[0].clientY - _startY;
+    if (_deltaY > 0) modal.style.transform = 'translateY(' + _deltaY + 'px)';
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() {
+    if (_startY === undefined) return;
+    _startY = undefined;
+    modal.style.transition = '';
+    if (_deltaY > 80) {
+      closeWordModal();
+    } else {
+      modal.style.transform = '';
+    }
+    _deltaY = 0;
+  });
+})();
+
+// ── Settings drawer drag-to-close (handle pill) ────────────────────
+(function() {
+  var handle = document.querySelector('.drawer-handle');
+  var drawer = document.getElementById('settings-drawer');
+  if (!handle || !drawer) return;
+
+  // Desktop: click the pill to dismiss
+  handle.addEventListener('click', function() { closeSettings(); });
+
+  // Mobile: swipe the pill downward to dismiss
+  var _startY, _deltaY;
+  handle.addEventListener('touchstart', function(e) {
+    _startY = e.touches[0].clientY;
+    _deltaY = 0;
+    drawer.style.transition = 'none';
+  }, { passive: true });
+
+  document.addEventListener('touchmove', function(e) {
+    if (_startY === undefined) return;
+    _deltaY = e.touches[0].clientY - _startY;
+    if (_deltaY > 0) drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() {
+    if (_startY === undefined) return;
+    _startY = undefined;
+    drawer.style.transition = '';
+    if (_deltaY > 80) {
+      closeSettings();
+    } else {
+      drawer.style.transform = '';
+    }
+    _deltaY = 0;
+  });
+})();
 
 // ── Load search index (40k words) in background ──
 (function() {

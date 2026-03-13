@@ -136,6 +136,71 @@ For signed-in users all three levels are persisted to the database under a compo
 
 ---
 
+## Quiz Modes
+
+### Standard Quiz
+Select a CEFR level (A1 / A2 / B1) from the home screen to start a 10-question multiple-choice quiz drawn from that level's vocabulary.
+
+### Adaptive Quiz
+Tap **Adaptive Quiz** on the home screen, choose a level, and start. The quiz engine self-calibrates over three diagnostic rounds before entering a permanent adaptive mode that targets words near your demonstrated skill level. See *Adaptive Quiz System* above for full details.
+
+### Theme Quiz
+Tap **Theme Quiz** on the home screen and select one of the 21 vocabulary categories. The quiz draws 10 words from that category across all CEFR levels, targeting your current skill level (defaulting to difficulty 4 for new users). If a category has fewer words at the target difficulty, the engine expands the search outward until it fills all 10 slots.
+
+---
+
+## Vocabulary Schema
+
+CSV files under `word_data/quiz_csv/` are the single source of truth for all quiz and explorer vocabulary. Each file has the same columns:
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `id` | string | Unique row identifier |
+| `level` | string | CEFR level: `A1`, `A2`, or `B1` |
+| `source_page` | int | Page number in source booklet |
+| `section` | string | Section slug |
+| `entry_type` | string | `main` (quiz-eligible) or `section_title` |
+| `word` | string | German word or phrase |
+| `article` | string | Grammatical article (`der`/`die`/`das`) for nouns |
+| `plural` | string | Plural form (nouns) |
+| `word_type` | string | `Noun`, `Verb`, `Adjective`, `Phrase`, `Adverb`, `Number`, `Word` |
+| `translation_en` | string | English translation |
+| `translation_tr` | string | Turkish translation |
+| `translation_ru` | string | Russian translation |
+| `translation_uk` | string | Ukrainian translation |
+| `translation_fa` | string | Persian (Farsi) translation |
+| `translation_ar` | string | Arabic translation |
+| `difficulty` | int 1–10 | Difficulty rating within the level |
+| `category_id` | int 1–21 | Vocabulary category (see table below) |
+
+### Category IDs
+
+| ID | Category |
+|----|----------|
+| 1 | Numbers & Quantities |
+| 2 | Time & Calendar |
+| 3 | Family & Relationships |
+| 4 | Body & Health |
+| 5 | Food & Drink |
+| 6 | Home & Living |
+| 7 | Clothing & Appearance |
+| 8 | Work & Careers |
+| 9 | Education & Learning |
+| 10 | Travel & Tourism |
+| 11 | Transportation |
+| 12 | Shopping & Finance |
+| 13 | Language, Communication & Media |
+| 14 | Nature, Weather & Animals |
+| 15 | Sports & Leisure |
+| 16 | Arts & Culture |
+| 17 | Technology & Devices |
+| 18 | Society, Law & Politics |
+| 19 | Emotions & Personal Traits |
+| 20 | Places & Geography |
+| 21 | Grammar & Function Words |
+
+---
+
 ## License
 
 Word list data is used for educational purposes. Please refer to each source's own terms:
