@@ -299,3 +299,303 @@ id,word,difficulty,level,theme
 298,Durst,4,A1,Food & Drink
 299,duschen,8,A1,Grammar & Core Verbs
 300,Dusche,8,A1,Home & Living
+301,Ecke,8,A1,Places & Geography
+302,Ehefrau,8,A1,Family & Relationships
+303,Ehemann,8,A1,Family & Relationships
+304,Ei,1,A1,Food & Drink
+305,eilig,4,A1,Grammar & Core Verbs
+306,ein-,1,A1,Grammar & Core Verbs
+307,einfach,6,A1,Grammar & Core Verbs
+308,Eingang,6,A1,Grammar & Core Verbs
+309,einkaufen,9,A1,Shopping & Finance
+310,einladen,9,A1,Grammar & Core Verbs
+311,Einladung,9,A1,Grammar & Core Verbs
+312,einmal,5,A1,Numbers & Quantities
+313,einsteigen,9,A1,Transportation
+314,Eintritt,9,A1,Grammar & Core Verbs
+315,Einzelzimmer,10,A1,Grammar & Core Verbs
+316,Eltern,5,A1,Family & Relationships
+317,E-Mail,5,A1,"Language, Communication & Media"
+318,Empfänger,9,A1,"Language, Communication & Media"
+319,empfehlen,9,A1,Grammar & Core Verbs
+320,enden,4,A1,Grammar & Core Verbs
+321,Ende,4,A1,Time & Calendar
+322,entschuldigen,10,A1,Emotions & Personal Traits
+323,Entschuldigung,10,A1,Grammar & Core Verbs
+324,er,1,A1,Grammar & Core Verbs
+325,Ergebnis,9,A1,Grammar & Core Verbs
+326,erklären,9,A1,Grammar & Core Verbs
+327,erlauben,9,A1,Grammar & Core Verbs
+328,Erwachsene,9,A1,Family & Relationships
+329,erzählen,9,A1,Grammar & Core Verbs
+330,es,1,A1,Grammar & Core Verbs
+331,essen,2,A1,Food & Drink
+332,Essen,2,A1,Food & Drink
+333,euer,4,A1,Grammar & Core Verbs
+334,fahren,3,A1,Transportation
+335,Fahrer,5,A1,Work & Careers
+336,Fahrkarte,9,A1,Transportation
+337,Fahrrad,8,A1,Transportation
+338,falsch,5,A1,Grammar & Core Verbs
+339,Familie,2,A1,Family & Relationships
+340,Familienname,10,A1,Family & Relationships
+341,Familienstand,10,A1,Family & Relationships
+342,Farbe,2,A1,Grammar & Core Verbs
+343,Fax,4,A1,"Language, Communication & Media"
+344,Feierabend,9,A1,Work & Careers
+345,Feiertag,9,A1,Time & Calendar
+346,feiern,5,A1,Grammar & Core Verbs
+347,fehlen,5,A1,Grammar & Core Verbs
+348,Fehler,5,A1,Grammar & Core Verbs
+349,fernsehen,9,A1,Grammar & Core Verbs
+350,fertig,5,A1,Grammar & Core Verbs
+351,Feuer,4,A1,Grammar & Core Verbs
+352,Fieber,5,A1,Body & Health
+353,Film,4,A1,Arts & Culture
+354,finden,3,A1,Grammar & Core Verbs
+355,Firma,8,A1,Work & Careers
+356,Fisch,4,A1,"Nature, Weather & Animals"
+357,Flasche,8,A1,Food & Drink
+358,Fleisch,6,A1,Food & Drink
+359,fliegen,6,A1,Transportation
+360,abfliegen,9,A1,Grammar & Core Verbs
+361,Abflug,8,A1,Transportation
+362,Flughafen,9,A1,Transportation
+363,Flugzeug,9,A1,Transportation
+364,Formular,9,A1,"Language, Communication & Media"
+365,Foto,4,A1,Grammar & Core Verbs
+366,fragen,3,A1,Grammar & Core Verbs
+367,Frage,2,A1,"Language, Communication & Media"
+368,Frau,1,A1,Grammar & Core Verbs
+369,frei,1,A1,Grammar & Core Verbs
+370,Freizeit,9,A1,Sports & Leisure
+371,fremd,8,A1,Grammar & Core Verbs
+372,freuen,8,A1,Emotions & Personal Traits
+373,Freund,3,A1,Family & Relationships
+374,früher,5,A1,Time & Calendar
+375,frühstücken,10,A1,Food & Drink
+376,Frühstück,9,A1,Food & Drink
+377,Führung,8,A1,Travel & Tourism
+378,für,1,A1,Grammar & Core Verbs
+379,Fuß,1,A1,Grammar & Core Verbs
+380,Fußball,6,A1,Sports & Leisure
+381,Garten,5,A1,Home & Living
+382,Gast,4,A1,Grammar & Core Verbs
+383,geben,1,A1,Grammar & Core Verbs
+384,geboren,6,A1,Grammar & Core Verbs
+385,Geburtsjahr,10,A1,Time & Calendar
+386,Geburtsort,9,A1,Places & Geography
+387,Geburtstag,9,A1,Time & Calendar
+388,gefallen,7,A1,Grammar & Core Verbs
+389,gegen,4,A1,Grammar & Core Verbs
+390,gehen,1,A1,Grammar & Core Verbs
+391,gehören,6,A1,Grammar & Core Verbs
+392,Geld,1,A1,Shopping & Finance
+393,Gemüse,8,A1,Food & Drink
+394,Gepäck,8,A1,Travel & Tourism
+395,gerade,5,A1,Grammar & Core Verbs
+396,geradeaus,9,A1,Grammar & Core Verbs
+397,gern,4,A1,Grammar & Core Verbs
+398,Geschäft,7,A1,Shopping & Finance
+399,Geschenk,7,A1,Grammar & Core Verbs
+400,Geschwister,10,A1,Family & Relationships
+401,Gespräch,9,A1,"Language, Communication & Media"
+402,gestern,6,A1,Time & Calendar
+403,gestorben,9,A1,Grammar & Core Verbs
+404,Getränk,8,A1,Food & Drink
+405,Gewicht,6,A1,Numbers & Quantities
+406,gewinnen,7,A1,Sports & Leisure
+407,Glas,1,A1,Food & Drink
+408,glauben,6,A1,Grammar & Core Verbs
+409,gleich,5,A1,Grammar & Core Verbs
+410,Gleis,4,A1,Transportation
+411,Glück,4,A1,Grammar & Core Verbs
+412,glücklich,7,A1,Emotions & Personal Traits
+413,Glückwunsch,10,A1,Grammar & Core Verbs
+414,Grad,1,A1,Numbers & Quantities
+415,gratulieren,10,A1,Grammar & Core Verbs
+416,grillen,6,A1,Food & Drink
+417,groß,1,A1,Grammar & Core Verbs
+418,Größe,8,A1,Clothing & Appearance
+419,Großeltern,9,A1,Family & Relationships
+420,Großmutter,9,A1,Family & Relationships
+421,Großvater,9,A1,Family & Relationships
+422,Gruppe,8,A1,Grammar & Core Verbs
+423,Gruß,4,A1,Grammar & Core Verbs
+424,gültig,8,A1,Grammar & Core Verbs
+425,günstig,8,A1,Shopping & Finance
+426,gut,1,A1,Grammar & Core Verbs
+427,Haar,1,A1,Body & Health
+428,haben,1,A1,Grammar & Core Verbs
+429,Hähnchen,9,A1,Food & Drink
+430,Halbpension,10,A1,Travel & Tourism
+431,Halle,4,A1,Grammar & Core Verbs
+432,hallo,2,A1,Grammar & Core Verbs
+433,halten,5,A1,Grammar & Core Verbs
+434,Haltestelle,10,A1,Transportation
+435,Hand,1,A1,Body & Health
+436,Handy,8,A1,"Language, Communication & Media"
+437,Haus,1,A1,Home & Living
+438,Hausaufgabe,10,A1,Education & Learning
+439,Hausfrau,9,A1,Work & Careers
+440,Hausmann,9,A1,Work & Careers
+441,Heimat,8,A1,Home & Living
+442,heiraten,7,A1,Family & Relationships
+443,heißen,5,A1,Grammar & Core Verbs
+444,helfen,5,A1,Grammar & Core Verbs
+445,hell,1,A1,Grammar & Core Verbs
+446,Herd,8,A1,Home & Living
+447,Herr,1,A1,Family & Relationships
+448,herzlich,9,A1,Grammar & Core Verbs
+449,heute,2,A1,Time & Calendar
+450,hier,1,A1,Grammar & Core Verbs
+451,Hilfe,8,A1,Grammar & Core Verbs
+452,hinten,8,A1,Grammar & Core Verbs
+453,Hobby,4,A1,Sports & Leisure
+454,hoch,1,A1,Grammar & Core Verbs
+455,Hochzeit,9,A1,Family & Relationships
+456,holen,4,A1,Grammar & Core Verbs
+457,hören,2,A1,Grammar & Core Verbs
+458,Hotel,4,A1,Travel & Tourism
+459,Hund,1,A1,"Nature, Weather & Animals"
+460,Hunger,5,A1,Food & Drink
+461,ich,1,A1,Grammar & Core Verbs
+462,ihr,1,A1,Grammar & Core Verbs
+463,ihm,1,A1,Grammar & Core Verbs
+464,ihn,1,A1,Grammar & Core Verbs
+465,immer,1,A1,Grammar & Core Verbs
+466,in,1,A1,Grammar & Core Verbs
+467,Information,10,A1,"Language, Communication & Media"
+468,international,10,A1,"Society, Law & Politics"
+469,Internet,7,A1,"Language, Communication & Media"
+470,ja,1,A1,Grammar & Core Verbs
+471,Jacke,4,A1,Clothing & Appearance
+472,jed,4,A1,Grammar & Core Verbs
+473,jetzt,2,A1,Grammar & Core Verbs
+474,Job,4,A1,Work & Careers
+475,Jugendliche,10,A1,Family & Relationships
+476,jung,1,A1,Grammar & Core Verbs
+477,Junge,2,A1,Family & Relationships
+478,Kaffee,3,A1,Food & Drink
+479,kaputt,5,A1,Grammar & Core Verbs
+480,Karte,2,A1,Travel & Tourism
+481,Kartoffel,7,A1,Food & Drink
+482,Kasse,4,A1,Shopping & Finance
+483,kaufen,3,A1,Shopping & Finance
+484,kein,1,A1,Grammar & Core Verbs
+485,kennen,3,A1,Grammar & Core Verbs
+486,kennenlernen,10,A1,Grammar & Core Verbs
+487,Kind,1,A1,Family & Relationships
+488,Kindergarten,10,A1,Education & Learning
+489,Kino,1,A1,Arts & Culture
+490,Kiosk,8,A1,Grammar & Core Verbs
+491,klar,1,A1,Grammar & Core Verbs
+492,Klasse,5,A1,Education & Learning
+493,Kleidung,9,A1,Clothing & Appearance
+494,klein,2,A1,Grammar & Core Verbs
+495,kochen,5,A1,Food & Drink
+496,Koffer,8,A1,Travel & Tourism
+497,Kollege,8,A1,Work & Careers
+498,kommen,1,A1,Grammar & Core Verbs
+499,können,3,A1,Grammar & Core Verbs
+500,Konto,8,A1,Shopping & Finance
+501,Kopf,1,A1,Body & Health
+502,kosten,5,A1,Grammar & Core Verbs
+503,krank,2,A1,Body & Health
+504,kriegen,8,A1,Grammar & Core Verbs
+505,Küche,2,A1,Home & Living
+506,Kuchen,3,A1,Food & Drink
+507,Kugelschreiber,10,A1,Education & Learning
+508,Kühlschrank,10,A1,Home & Living
+509,kulturell,9,A1,Arts & Culture
+510,kümmern,8,A1,Grammar & Core Verbs
+511,Kunde,4,A1,Shopping & Finance
+512,Kurs,8,A1,Education & Learning
+513,kurz,1,A1,Grammar & Core Verbs
+514,lachen,5,A1,Emotions & Personal Traits
+515,Laden,4,A1,Shopping & Finance
+516,Land,1,A1,Places & Geography
+517,lang,1,A1,Grammar & Core Verbs
+518,lange,4,A1,Grammar & Core Verbs
+519,langsam,6,A1,Grammar & Core Verbs
+520,laufen,5,A1,Sports & Leisure
+521,laut,1,A1,Grammar & Core Verbs
+522,leben,2,A1,Grammar & Core Verbs
+523,Leben,4,A1,Grammar & Core Verbs
+524,Lebensmittel,10,A1,Food & Drink
+525,ledig,4,A1,Family & Relationships
+526,legen,4,A1,Grammar & Core Verbs
+527,Lehrer,3,A1,Work & Careers
+528,leicht,3,A1,Grammar & Core Verbs
+529,leider,8,A1,Grammar & Core Verbs
+530,leise,4,A1,Grammar & Core Verbs
+531,lernen,3,A1,Education & Learning
+532,lesen,2,A1,"Language, Communication & Media"
+533,letzt,4,A1,Grammar & Core Verbs
+534,Leute,2,A1,Grammar & Core Verbs
+535,Licht,2,A1,Grammar & Core Verbs
+536,lieb,1,A1,Grammar & Core Verbs
+537,lieben,5,A1,Emotions & Personal Traits
+538,lieber,5,A1,Grammar & Core Verbs
+539,Lieblings-,9,A1,Grammar & Core Verbs
+540,Lied,8,A1,Arts & Culture
+541,liegen,5,A1,Grammar & Core Verbs
+542,links,4,A1,Grammar & Core Verbs
+543,Lkw,8,A1,"Language, Communication & Media"
+544,Lokal,8,A1,Grammar & Core Verbs
+545,Lösung,8,A1,"Language, Communication & Media"
+546,lustig,8,A1,Grammar & Core Verbs
+547,machen,1,A1,Grammar & Core Verbs
+548,Mädchen,3,A1,Family & Relationships
+549,man,1,A1,Grammar & Core Verbs
+550,Mann,1,A1,Grammar & Core Verbs
+551,männlich,9,A1,Grammar & Core Verbs
+552,Maschine,9,A1,Technology & Devices
+553,Meer,1,A1,"Nature, Weather & Animals"
+554,mehr,1,A1,Grammar & Core Verbs
+555,mein,1,A1,Grammar & Core Verbs
+556,meist,4,A1,Grammar & Core Verbs
+557,Mensch,3,A1,Grammar & Core Verbs
+558,mieten,8,A1,Grammar & Core Verbs
+559,Miete,8,A1,Home & Living
+560,Milch,2,A1,Food & Drink
+561,mit,1,A1,Grammar & Core Verbs
+562,mitbringen,9,A1,Grammar & Core Verbs
+563,mitkommen,9,A1,Grammar & Core Verbs
+564,mitmachen,9,A1,Grammar & Core Verbs
+565,mitnehmen,9,A1,Grammar & Core Verbs
+566,Mitte,4,A1,Grammar & Core Verbs
+567,Möbel,8,A1,Home & Living
+568,möchten,3,A1,Grammar & Core Verbs
+569,mögen,4,A1,Grammar & Core Verbs
+570,möglich,8,A1,Grammar & Core Verbs
+571,Moment,8,A1,Time & Calendar
+572,morgen,3,A1,Time & Calendar
+573,müde,4,A1,Grammar & Core Verbs
+574,Mund,1,A1,Body & Health
+575,müssen,3,A1,Grammar & Core Verbs
+576,Mutter,3,A1,Family & Relationships
+577,nach,1,A1,Grammar & Core Verbs
+578,nächst,5,A1,Grammar & Core Verbs
+579,Name,1,A1,Grammar & Core Verbs
+580,nehmen,3,A1,Grammar & Core Verbs
+581,nein,1,A1,Grammar & Core Verbs
+582,neu,1,A1,Grammar & Core Verbs
+583,nicht,1,A1,Grammar & Core Verbs
+584,nichts,5,A1,Grammar & Core Verbs
+585,nie,1,A1,Grammar & Core Verbs
+586,noch,1,A1,Grammar & Core Verbs
+587,normal,8,A1,Grammar & Core Verbs
+588,Nummer,3,A1,Numbers & Quantities
+589,nur,1,A1,Grammar & Core Verbs
+590,oben,4,A1,Grammar & Core Verbs
+591,Obst,1,A1,Food & Drink
+592,oder,1,A1,Grammar & Core Verbs
+593,öffnen,5,A1,Grammar & Core Verbs
+594,geöffnet,7,A1,Grammar & Core Verbs
+595,oft,1,A1,Grammar & Core Verbs
+596,ohne,1,A1,Grammar & Core Verbs
+597,Öl,1,A1,Food & Drink
+598,Oma,1,A1,Family & Relationships
+599,Opa,1,A1,Family & Relationships
+600,Ordnung,8,A1,Grammar & Core Verbs
