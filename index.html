@@ -504,7 +504,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .dict-alpha-letter{font-size:.6rem;font-weight:700;color:var(--muted);line-height:1;
   width:20px;height:auto;min-height:14px;display:flex;align-items:center;justify-content:center;
   border-radius:3px;cursor:pointer;touch-action:none;flex-shrink:0;}
-.dict-alpha-letter:hover,.dict-alpha-letter.active{color:var(--blue);background:rgba(126,184,247,.14);}
+.dict-alpha-letter.active{color:var(--blue);background:rgba(126,184,247,.14);}
+@media(hover:hover){.dict-alpha-letter:hover{color:var(--blue);background:rgba(126,184,247,.14);}}
 .dict-empty{color:var(--muted);font-size:.9rem;text-align:center;padding:40px 16px;font-style:italic;}
 .dict-loading{display:flex;align-items:center;justify-content:center;gap:12px;
   padding:48px 20px;color:var(--muted);font-size:.9rem;}
