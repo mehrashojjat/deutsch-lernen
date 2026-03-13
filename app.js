@@ -1071,15 +1071,27 @@ function _buildQueueFromRows(rows) {
     var usedIds = {}; usedIds[row.id] = true;
     var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
     var distractors = [];
-    shuffle(allRows).forEach(function(d) {
-      if (distractors.length >= 6) return;
-      if (usedIds[d.id]) return;
-      var en = d.translation_en.trim();
-      if (en && !usedEn[en]) {
-        usedEn[en] = true; usedIds[d.id] = true;
-        distractors.push(d);
-      }
-    });
+    var catId = parseInt(row.category_id);
+
+    // Pass 1: same-category distractors (keeps all 4 choices thematically related)
+    shuffle(allRows.filter(function(d){ return parseInt(d.category_id) === catId; }))
+      .forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+
+    // Pass 2: global fallback if the category is too small to fill 6 slots
+    if (distractors.length < 6) {
+      shuffle(allRows).forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+    }
+
     return { _row: row, _distractors: distractors };
   });
 }
