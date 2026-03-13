@@ -68,6 +68,14 @@ const UI = {
     themeBannerSub: 'Quiz yourself on a topic',
     themeSelectTitle: 'Theme Quiz',
     themeSelectSubtitle: 'Pick a topic to practise',
+    dictBannerTitle: 'Dictionary',
+    dictBannerSub: 'Browse all words A–Z',
+    dictScreenTitle: 'Dictionary',
+    dictScreenSubtitle: '3331 words · A–Z',
+    dictBack: '← Back',
+    dictFilterPlaceholder: 'Filter words…',
+    dictLoading: 'Loading…',
+    dictEmpty: 'No words found.',
     typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
     categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
   },
@@ -137,6 +145,14 @@ const UI = {
     themeBannerSub: 'Bir konuyu seçerek test edin',
     themeSelectTitle: 'Konu Sınavı',
     themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
+    dictBannerTitle: 'Sözlük',
+    dictBannerSub: 'Tüm kelimelere A–Z göz at',
+    dictScreenTitle: 'Sözlük',
+    dictScreenSubtitle: '3331 kelime · A–Z',
+    dictBack: '← Geri',
+    dictFilterPlaceholder: 'Kelime ara…',
+    dictLoading: 'Yükleniyor…',
+    dictEmpty: 'Kelime bulunamadı.',
     typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
     categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
   },
@@ -206,6 +222,14 @@ const UI = {
     themeBannerSub: 'یک موضوع انتخاب کنید',
     themeSelectTitle: 'آزمون موضوعی',
     themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
+    dictBannerTitle: 'واژه‌نامه',
+    dictBannerSub: 'مرور تمام واژه‌ها از الف تا ی',
+    dictScreenTitle: 'واژه‌نامه',
+    dictScreenSubtitle: '۳۳۳۱ واژه · A–Z',
+    dictBack: '→ بازگشت',
+    dictFilterPlaceholder: 'جستجوی واژه…',
+    dictLoading: 'در حال بارگذاری…',
+    dictEmpty: 'واژه‌ای یافت نشد.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
@@ -275,6 +299,14 @@ const UI = {
     themeBannerSub: 'Выберите тему для тренировки',
     themeSelectTitle: 'Тематическая викторина',
     themeSelectSubtitle: 'Выберите тему',
+    dictBannerTitle: 'Словарь',
+    dictBannerSub: 'Все слова от A до Z',
+    dictScreenTitle: 'Словарь',
+    dictScreenSubtitle: '3331 слово · A–Z',
+    dictBack: '← Назад',
+    dictFilterPlaceholder: 'Поиск слов…',
+    dictLoading: 'Загрузка…',
+    dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
@@ -344,6 +376,14 @@ const UI = {
     themeBannerSub: 'Виберіть тему для практики',
     themeSelectTitle: 'Тематична вікторина',
     themeSelectSubtitle: 'Виберіть тему',
+    dictBannerTitle: 'Словник',
+    dictBannerSub: 'Усі слова від A до Z',
+    dictScreenTitle: 'Словник',
+    dictScreenSubtitle: '3331 слово · A–Z',
+    dictBack: '← Назад',
+    dictFilterPlaceholder: 'Пошук слів…',
+    dictLoading: 'Завантаження…',
+    dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
@@ -413,6 +453,14 @@ const UI = {
     themeBannerSub: 'اختبر نفسك في موضوع محدد',
     themeSelectTitle: 'اختبار موضوعي',
     themeSelectSubtitle: 'اختر موضوعاً للتدرّب عليه',
+    dictBannerTitle: 'القاموس',
+    dictBannerSub: 'تصفح جميع الكلمات من A إلى Z',
+    dictScreenTitle: 'القاموس',
+    dictScreenSubtitle: '٣٣٣١ كلمة · A–Z',
+    dictBack: '→ رجوع',
+    dictFilterPlaceholder: 'ابحث عن كلمة…',
+    dictLoading: 'جارٍ التحميل…',
+    dictEmpty: 'لا توجد كلمات.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
@@ -555,6 +603,8 @@ function setLang(lang) {
     _explorerRefreshLang();
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
     _renderCategoryGrid();
+  } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
+    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value);
   }
 }
 
@@ -624,6 +674,14 @@ function applyTranslations() {
   document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
   document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
   document.getElementById('theme-back-btn').textContent = u.back;
+  // Dictionary screen
+  document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
+  document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
+  document.getElementById('dict-back-btn').textContent = u.dictBack;
+  document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
+  document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
+  document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
+  document.getElementById('dict-loading-text').textContent = u.dictLoading;
 }
 
 
@@ -3230,9 +3288,211 @@ function closeWordModal(e) {
   document.getElementById('word-modal-overlay').classList.remove('open');
 }
 
+// ══════════════════════════════════════════════════════════════════
+//  DICTIONARY
+// ══════════════════════════════════════════════════════════════════
+var _dictLoaded = false;
+var _dictAllWords = []; // sorted merged word list
+
+function openDictionary() {
+  show('screen-dictionary');
+  document.getElementById('dict-search-input').value = '';
+  if (!_dictLoaded) {
+    _loadAllCSV().then(function() {
+      _buildDictData();
+      _dictLoaded = true;
+      _renderDictList('');
+    }).catch(function() {
+      document.getElementById('dict-list').innerHTML =
+        '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
+    });
+  } else {
+    _renderDictList('');
+  }
+}
+
+function _buildDictData() {
+  var seen = {};
+  var all = [];
+  ['A1', 'A2', 'B1'].forEach(function(lv) {
+    (CSV_QUIZ_DATA[lv] || []).forEach(function(row) {
+      var k = row.word.toLowerCase();
+      if (seen[k]) return;
+      seen[k] = true;
+      all.push({
+        word: row.word,
+        article: row.article || '',
+        type: row.word_type || '',
+        level: row.level || lv,
+        translation_en: row.translation_en || '',
+        translation_tr: row.translation_tr || '',
+        translation_ru: row.translation_ru || '',
+        translation_uk: row.translation_uk || '',
+        translation_fa: row.translation_fa || '',
+        translation_ar: row.translation_ar || '',
+      });
+    });
+  });
+  all.sort(function(a, b) {
+    return a.word.localeCompare(b.word, 'de', { sensitivity: 'base' });
+  });
+  _dictAllWords = all;
+  _buildDictAlphaBar();
+}
+
+function _getDictMeaning(entry) {
+  if (LANG === 'en') return entry.translation_en;
+  if (LANG === 'tr') return entry.translation_tr || entry.translation_en;
+  if (LANG === 'ru') return entry.translation_ru || entry.translation_en;
+  if (LANG === 'uk') return entry.translation_uk || entry.translation_en;
+  if (LANG === 'fa') return entry.translation_fa || entry.translation_en;
+  if (LANG === 'ar') return entry.translation_ar || entry.translation_en;
+  return entry.translation_en;
+}
+
+function _dictFirstLetter(word) {
+  if (!word) return '#';
+  var ch = word[0].toUpperCase();
+  // '-' and digits and punctuation → '#'
+  if (ch === '-' || ch >= '0' && ch <= '9') return '#';
+  return ch;
+}
+
+function _buildDictAlphaBar() {
+  var present = {};
+  _dictAllWords.forEach(function(e) { present[_dictFirstLetter(e.word)] = true; });
+
+  var alphabet = ['#','A','B','C','D','E','F','G','H','I','J','K','L',
+                  'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                  'Ä','Ö','Ü'];
+  var bar = document.getElementById('dict-alpha-bar');
+  bar.innerHTML = '';
+
+  alphabet.forEach(function(l) {
+    if (!present[l]) return;
+    var sp = document.createElement('span');
+    sp.className = 'dict-alpha-letter';
+    sp.textContent = l;
+    sp.setAttribute('data-letter', l);
+    sp.addEventListener('click', function(e) { e.stopPropagation(); _dictJumpToLetter(l); });
+    bar.appendChild(sp);
+  });
+
+  // Touch-drag: scroll letter sidebar like a phone book
+  bar.addEventListener('touchstart', _dictBarTouch, { passive: true });
+  bar.addEventListener('touchmove',  _dictBarTouch, { passive: true });
+}
+
+function _dictBarTouch(e) {
+  var touch = e.touches[0];
+  var el = document.elementFromPoint(touch.clientX, touch.clientY);
+  if (el && el.classList.contains('dict-alpha-letter')) {
+    _dictJumpToLetter(el.getAttribute('data-letter'));
+  }
+}
+
+function _dictJumpToLetter(l) {
+  var hdr = document.querySelector('.dict-list [data-dict-letter="' + l + '"]');
+  if (!hdr) return;
+  hdr.scrollIntoView({ block: 'start' });
+  // pulse the tapped letter
+  document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
+    sp.classList.toggle('active', sp.getAttribute('data-letter') === l);
+  });
+  clearTimeout(_dictJumpTimer);
+  _dictJumpTimer = setTimeout(function() {
+    document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
+      sp.classList.remove('active');
+    });
+  }, 700);
+}
+var _dictJumpTimer = null;
+
+function _renderDictList(filter) {
+  var list = document.getElementById('dict-list');
+  var filt = filter.trim().toLowerCase();
+
+  var words = filt
+    ? _dictAllWords.filter(function(e) {
+        return e.word.toLowerCase().includes(filt) ||
+               _getDictMeaning(e).toLowerCase().includes(filt);
+      })
+    : _dictAllWords;
+
+  if (!words.length) {
+    list.innerHTML = '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
+    return;
+  }
+
+  var isRtl = LANG === 'fa' || LANG === 'ar';
+  var frag = document.createDocumentFragment();
+  var curLetter = null;
+
+  words.forEach(function(entry) {
+    if (!filt) {
+      var letter = _dictFirstLetter(entry.word);
+      if (letter !== curLetter) {
+        curLetter = letter;
+        var hdr = document.createElement('div');
+        hdr.className = 'dict-letter-header';
+        hdr.setAttribute('data-dict-letter', letter);
+        hdr.textContent = letter;
+        frag.appendChild(hdr);
+      }
+    }
+
+    var div = document.createElement('div');
+    div.className = 'dict-entry';
+
+    // top row: article + word + level badge
+    var top = document.createElement('div');
+    top.className = 'dict-entry-top';
+
+    var wEl = document.createElement('span');
+    wEl.className = 'dict-word';
+    if (entry.article && entry.type === 'Noun') {
+      var artEl = document.createElement('span');
+      artEl.className = 'dict-article';
+      artEl.textContent = entry.article + ' ';
+      wEl.appendChild(artEl);
+      wEl.appendChild(document.createTextNode(entry.word));
+    } else {
+      wEl.textContent = entry.word;
+    }
+    top.appendChild(wEl);
+
+    var lvEl = document.createElement('span');
+    lvEl.className = 'dict-level';
+    lvEl.textContent = entry.level;
+    top.appendChild(lvEl);
+
+    div.appendChild(top);
+
+    // meaning row
+    var meaning = _getDictMeaning(entry);
+    if (meaning) {
+      var mEl = document.createElement('div');
+      mEl.className = 'dict-meaning';
+      if (isRtl) mEl.style.textAlign = 'right';
+      mEl.textContent = meaning;
+      div.appendChild(mEl);
+    }
+
+    frag.appendChild(div);
+  });
+
+  list.innerHTML = '';
+  list.appendChild(frag);
+  list.scrollTop = 0;
+}
+
+function dictFilter(val) {
+  if (_dictLoaded) _renderDictList(val);
+}
+
 // ── Screen switcher ──
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
 }
