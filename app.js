@@ -604,7 +604,7 @@ function setLang(lang) {
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
     _renderCategoryGrid();
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    if (_dictLoaded) _updateDictMeanings();
+    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
   }
 }
 
@@ -681,10 +681,11 @@ function applyTranslations() {
   document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
-  document.getElementById('dict-loading-text').textContent = u.dictLoading;
+  var _dlt = document.getElementById('dict-loading-text');
+  if (_dlt) _dlt.textContent = u.dictLoading;
   // Refresh meanings immediately if dictionary is open
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    _updateDictMeanings();
+    _renderDictList(document.getElementById('dict-search-input').value, true);
   }
 }
 
@@ -3451,9 +3452,10 @@ function _initDictScrollTracker() {
   list.addEventListener('scroll', list._dictScrollFn, { passive: true });
 }
 
-function _renderDictList(filter) {
+function _renderDictList(filter, keepScroll) {
   var list = document.getElementById('dict-list');
-  var filt = filter.trim().toLowerCase();
+  var savedScroll = keepScroll ? list.scrollTop : 0;
+  var filt = (filter || '').trim().toLowerCase();
 
   var words = filt
     ? _dictAllWords.filter(function(e) {
@@ -3529,13 +3531,13 @@ function _renderDictList(filter) {
   list.innerHTML = '';
   list.appendChild(frag);
   list.scrollTop = 0;
-  // Capture letter→scrollTop offsets NOW, while scrollTop=0 and sticky hasn't
-  // moved anything. getBoundingClientRect() here returns true layout positions.
+  // Capture letter→scrollTop offsets NOW, while scrollTop=0 and before sticky moves anything.
   _dictLetterOffsets = {};
   var lr = list.getBoundingClientRect();
   list.querySelectorAll('[data-dict-letter]').forEach(function(h) {
     _dictLetterOffsets[h.getAttribute('data-dict-letter')] = h.getBoundingClientRect().top - lr.top;
   });
+  if (savedScroll > 0) list.scrollTop = savedScroll;
   _initDictScrollTracker();
 }
 
@@ -3543,32 +3545,7 @@ function dictFilter(val) {
   if (_dictLoaded) _renderDictList(val);
 }
 
-function _updateDictMeanings() {
-  var list = document.getElementById('dict-list');
-  if (!list) return;
-  var isRtl = LANG === 'fa' || LANG === 'ar';
-  var map = {};
-  _dictAllWords.forEach(function(e) { map[e.word + '\x00' + e.level] = e; });
-  list.querySelectorAll('.dict-entry[data-word]').forEach(function(div) {
-    var key = div.getAttribute('data-word') + '\x00' + div.getAttribute('data-level');
-    var entry = map[key];
-    if (!entry) return;
-    var meaning = _getDictMeaning(entry);
-    var mEl = div.querySelector('.dict-meaning');
-    if (meaning) {
-      if (!mEl) {
-        mEl = document.createElement('div');
-        mEl.className = 'dict-meaning';
-        div.appendChild(mEl);
-      }
-      if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
-      else { mEl.removeAttribute('dir'); mEl.style.textAlign = ''; }
-      mEl.textContent = meaning;
-    } else if (mEl) {
-      mEl.remove();
-    }
-  });
-}
+
 
 // ── Screen switcher ──
 function show(id){
