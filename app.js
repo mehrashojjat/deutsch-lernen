@@ -71,7 +71,7 @@ const UI = {
     dictBannerTitle: 'Dictionary',
     dictBannerSub: 'Browse all words A–Z',
     dictScreenTitle: 'Dictionary',
-    dictScreenSubtitle: '3331 words · A–Z',
+    dictScreenSubtitle: 'All words · A–Z',
     dictBack: '← Back',
     dictFilterPlaceholder: 'Filter words…',
     dictLoading: 'Loading…',
@@ -148,7 +148,7 @@ const UI = {
     dictBannerTitle: 'Sözlük',
     dictBannerSub: 'Tüm kelimelere A–Z göz at',
     dictScreenTitle: 'Sözlük',
-    dictScreenSubtitle: '3331 kelime · A–Z',
+    dictScreenSubtitle: 'Tüm kelimeler · A–Z',
     dictBack: '← Geri',
     dictFilterPlaceholder: 'Kelime ara…',
     dictLoading: 'Yükleniyor…',
@@ -225,7 +225,7 @@ const UI = {
     dictBannerTitle: 'واژه‌نامه',
     dictBannerSub: 'مرور تمام واژه‌ها از الف تا ی',
     dictScreenTitle: 'واژه‌نامه',
-    dictScreenSubtitle: '۳۳۳۱ واژه · A–Z',
+    dictScreenSubtitle: 'همه واژه‌ها · A–Z',
     dictBack: '→ بازگشت',
     dictFilterPlaceholder: 'جستجوی واژه…',
     dictLoading: 'در حال بارگذاری…',
@@ -302,9 +302,7 @@ const UI = {
     dictBannerTitle: 'Словарь',
     dictBannerSub: 'Все слова от A до Z',
     dictScreenTitle: 'Словарь',
-    dictScreenSubtitle: '3331 слово · A–Z',
-    dictBack: '← Назад',
-    dictFilterPlaceholder: 'Поиск слов…',
+    dictScreenSubtitle: 'Все слова · A–Z',
     dictLoading: 'Загрузка…',
     dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
@@ -379,9 +377,7 @@ const UI = {
     dictBannerTitle: 'Словник',
     dictBannerSub: 'Усі слова від A до Z',
     dictScreenTitle: 'Словник',
-    dictScreenSubtitle: '3331 слово · A–Z',
-    dictBack: '← Назад',
-    dictFilterPlaceholder: 'Пошук слів…',
+    dictScreenSubtitle: 'Усі слова · A–Z',
     dictLoading: 'Завантаження…',
     dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
@@ -456,7 +452,7 @@ const UI = {
     dictBannerTitle: 'القاموس',
     dictBannerSub: 'تصفح جميع الكلمات من A إلى Z',
     dictScreenTitle: 'القاموس',
-    dictScreenSubtitle: '٣٣٣١ كلمة · A–Z',
+    dictScreenSubtitle: 'جميع الكلمات · A–Z',
     dictBack: '→ رجوع',
     dictFilterPlaceholder: 'ابحث عن كلمة…',
     dictLoading: 'جارٍ التحميل…',
@@ -789,16 +785,16 @@ function _loadCSVLevel(lv) {
   _csvLoadPromises[lv] = _loadCSVText(url)
     .then(function(txt){
       var parsed = _parseCSVText(txt);
-      CSV_QUIZ_DATA[lv] = parsed.filter(function(r){
+      CSV_QUIZ_DATA[lv] = parsed.filter(function(r){ return r.word && r.word.trim(); });
+      var quizRows = CSV_QUIZ_DATA[lv].filter(function(r){
         return r.entry_type === 'main'
-            && r.word && r.word.trim()
             && r.translation_en && r.translation_en.trim();
       });
-      if (!CSV_QUIZ_DATA[lv].length) {
+      if (!quizRows.length) {
         throw new Error('CSV parsed but produced 0 quiz rows for ' + lv);
       }
-      // Build fa and ar lookup maps from this level
-      CSV_QUIZ_DATA[lv].forEach(function(r) {
+      // Build fa and ar lookup maps from quiz rows
+      quizRows.forEach(function(r) {
         var k = normKey(r.word);
         if (!_faCsvMap[k] && r.translation_fa && r.translation_fa.trim()) {
           _faCsvMap[k] = r.translation_fa.trim();
@@ -835,7 +831,9 @@ function _csvRowDisplay(row) {
 
 // ── Build quiz queue from CSV rows ──
 function buildQueue(level) {
-  var pool = CSV_QUIZ_DATA[level] || [];
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r){
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+  });
   if (!pool.length) return [];
 
   var selected = shuffle(pool.slice()).slice(0, QUIZ_LEN);
@@ -1102,7 +1100,9 @@ function _buildThemeQueue(categoryId) {
   // Gather all CSV rows across all levels matching this category
   var pool = [];
   ['A1','A2','B1'].forEach(function(lv) {
-    (CSV_QUIZ_DATA[lv] || []).forEach(function(r) {
+    (CSV_QUIZ_DATA[lv] || []).filter(function(r){
+      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+    }).forEach(function(r) {
       if (parseInt(r.category_id) === categoryId) pool.push(r);
     });
   });
@@ -1154,7 +1154,11 @@ function _buildThemeQueueWithFallback(pool, targetDiff) {
 
 function _buildQueueFromRows(rows) {
   var allRows = [];
-  ['A1','A2','B1'].forEach(function(lv){ allRows = allRows.concat(CSV_QUIZ_DATA[lv] || []); });
+  ['A1','A2','B1'].forEach(function(lv){
+    allRows = allRows.concat((CSV_QUIZ_DATA[lv] || []).filter(function(r){
+      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+    }));
+  });
   return rows.map(function(row) {
     var usedIds = {}; usedIds[row.id] = true;
     var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
@@ -1232,7 +1236,9 @@ async function _resolveMeaningRows(rows) {
 }
 
 async function _buildSwipeBatch(level, count) {
-  var pool = CSV_QUIZ_DATA[level] || [];
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r){
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+  });
   if (!pool.length) return [];
   var selected = shuffle(pool.slice()).slice(0, Math.min(count, pool.length));
   var cards = selected.map(function(row) {
@@ -3320,13 +3326,10 @@ function openDictionary() {
 }
 
 function _buildDictData() {
-  var seen = {};
   var all = [];
   ['A1', 'A2', 'B1'].forEach(function(lv) {
     (CSV_QUIZ_DATA[lv] || []).forEach(function(row) {
-      var k = row.word.toLowerCase();
-      if (seen[k]) return;
-      seen[k] = true;
+      if (!row.word) return;
       all.push({
         word: row.word,
         article: row.article || '',
@@ -3346,7 +3349,10 @@ function _buildDictData() {
   });
   _dictAllWords = all;
   var subEl = document.getElementById('dict-screen-subtitle');
-  if (subEl) subEl.textContent = _dictAllWords.length + ' words · A–Z';
+  if (subEl) {
+    var _wLabel = {en:'words',tr:'kelime',fa:'واژه',ru:'слово',uk:'слово',ar:'كلمة'};
+    subEl.textContent = _dictAllWords.length + ' ' + (_wLabel[LANG] || 'words') + ' · A–Z';
+  }
   _buildDictAlphaBar();
   _initDictScrollTracker();
 }
