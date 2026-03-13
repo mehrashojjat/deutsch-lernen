@@ -79,7 +79,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   margin-bottom:20px;animation:fadeDown .5s ease both;}
 .app-header-center{text-align:center;flex:1;}
 .app-header h1{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:700;
-  color:var(--gold);letter-spacing:-1px;line-height:1;}
+  color:var(--gold);letter-spacing:-1px;line-height:1;cursor:pointer;}
 .app-header p{color:var(--muted);font-size:.82rem;margin-top:3px;font-weight:300;}
 .settings-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
   width:40px;height:40px;display:flex;align-items:center;justify-content:center;
@@ -138,14 +138,15 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .drawer-overlay.open{opacity:1;pointer-events:all;}
 .drawer{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);
   width:100%;max-width:600px;background:var(--surf);border-radius:20px 20px 0 0;
-  padding:24px 20px 40px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);}
+  padding:20px 20px 40px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);}
 .drawer.open{transform:translateX(-50%) translateY(0);}
-.drawer-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 20px;}
-.drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.2rem;color:var(--gold);margin-bottom:20px;}
-.drawer-section{margin-bottom:22px;}
-.drawer-section-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;
-  color:var(--muted);margin-bottom:10px;font-weight:600;}
-.option-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.drawer-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 16px;}
+.drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.2rem;color:var(--gold);margin-bottom:18px;}
+.drawer-section{margin-bottom:18px;}
+.drawer-section-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;
+  color:var(--muted);margin-bottom:8px;font-weight:700;}
+.option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.drawer-divider{height:1px;background:var(--border);margin:6px 0 18px;}
 .about-btn{width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--border);
   background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
   color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:4px;}
@@ -167,18 +168,23 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .home-footer p{margin:0;line-height:1.6;}
 #footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
 #footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
-.opt-btn{flex:1;padding:11px 8px;border-radius:10px;border:1.5px solid var(--border);
-  background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
+.opt-btn{flex:1;padding:10px 6px;border-radius:10px;border:1.5px solid var(--border);
+  background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.8rem;font-weight:600;
   color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;}
 .opt-btn:hover{border-color:rgba(232,201,122,.3);color:var(--text);}
 .opt-btn.active{border-color:var(--gold);background:rgba(232,201,122,.1);color:var(--gold);}
 .opt-btn.active.blue{border-color:var(--blue);background:rgba(126,184,247,.1);color:var(--blue);}
 .opt-btn.active.purple{border-color:var(--purple);background:rgba(196,160,247,.1);color:var(--purple);}
 .opt-btn.active.green{border-color:var(--green);background:rgba(107,232,160,.1);color:var(--green);}
-.drawer-close{width:100%;padding:12px;background:var(--surf3);border:none;border-radius:12px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
-  cursor:pointer;transition:all .15s;margin-top:4px;}
-.drawer-close:hover{background:var(--surf2);}
+.drawer-footer-row{display:flex;gap:8px;margin-top:6px;}
+.drawer-close{flex:1;padding:12px;background:var(--gold);border:none;border-radius:12px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;color:#0b0d13;
+  cursor:pointer;transition:all .15s;}
+.drawer-close:hover{opacity:.88;}
+.drawer-about-row{flex:0 0 auto;padding:12px 14px;background:var(--surf3);border:none;border-radius:12px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--muted);
+  cursor:pointer;transition:all .15s;white-space:nowrap;}
+.drawer-about-row:hover{color:var(--text);}
 
 /* ── HOME ACTIONS ── */
 .home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
@@ -439,7 +445,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   padding:13px 16px;background:rgba(107,232,160,.06);
   border-radius:14px;cursor:pointer;transition:background .18s;}
 .adaptive-tip:hover{background:rgba(107,232,160,.11);}
-.adaptive-tip.hidden{display:none;}
+.adaptive-tip.hidden{visibility:hidden;pointer-events:none;}
 .at-icon{font-size:1.2rem;flex-shrink:0;}
 .at-body{display:flex;flex-direction:column;gap:2px;flex:1;}
 .at-title{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.02em;}
@@ -455,7 +461,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <div class="app-header" id="app-header">
   <button class="search-btn" id="search-btn" style="visibility:hidden;pointer-events:none;" title="Search words">🔍</button>
   <div class="app-header-center">
-    <h1>DeutschLernen</h1>
+    <h1 onclick="goHome()">DeutschLernen</h1>
     <p id="header-sub">Word Practice · Cases · Verb Forms</p>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="Settings">⚙️</button>
@@ -468,7 +474,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <div class="drawer-title" id="st-title">Settings</div>
 
   <div class="drawer-section">
-    <div class="drawer-section-label" id="st-lang-label">Language / Dil</div>
+    <div class="drawer-section-label" id="st-lang-label">Language</div>
     <div class="option-row">
       <button class="opt-btn active" id="opt-en" onclick="setLang('en')">🇬🇧 English</button>
       <button class="opt-btn" id="opt-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
@@ -479,17 +485,22 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     </div>
   </div>
 
+  <div class="drawer-divider"></div>
+
   <div class="drawer-section">
-    <div class="drawer-section-label">Account</div>
+    <div class="drawer-section-label" id="st-account-label">Account</div>
     <div id="auth-section-content">
       <!-- populated by auth.js once Supabase initialises -->
       <button class="about-btn" onclick="authSignIn()">Sign in with Google</button>
     </div>
   </div>
 
-  <button class="about-btn" id="st-about-btn" onclick="openAbout()">ℹ️ About</button>
+  <div class="drawer-divider"></div>
 
-  <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Done</button>
+  <div class="drawer-footer-row">
+    <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">ℹ️ About</button>
+    <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>
+  </div>
 </div>
 
 <!-- ══ ABOUT MODAL ══ -->
@@ -543,8 +554,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
     <div class="at-icon">✨</div>
     <div class="at-body">
-      <div class="at-title">Save your progress</div>
-      <div class="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
+      <div class="at-title" id="at-title">Save your progress</div>
+      <div class="at-desc" id="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
     </div>
     <div class="at-arrow">›</div>
   </div>
@@ -593,7 +604,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
     </div>
     <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
-    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Choose level</button>
+    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
   </div>
 </div>
 

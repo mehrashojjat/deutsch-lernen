@@ -235,6 +235,7 @@
   window.authSignOut = async function () {
     if (!_db) return;
     await _db.auth.signOut();
+    window.location.href = window.location.origin + window.location.pathname;
   };
 
   // ── Auth events ────────────────────────────────────────────────
