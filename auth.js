@@ -215,8 +215,9 @@
   // ── UI: sign-in nudge on home screen ──────────────────────────
   function _renderHome() {
     var tip = document.getElementById('adaptive-tip');
-    if (!tip) return;
-    tip.classList.toggle('hidden', !!_user);
+    if (tip) tip.classList.toggle('hidden', !!_user);
+    var badge = document.getElementById('adaptive-skill-badge');
+    if (badge) badge.classList.toggle('hidden', !_user);
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────

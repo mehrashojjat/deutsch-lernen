@@ -550,12 +550,8 @@ function applyTranslations() {
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
   document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
   document.getElementById('swipe-banner-sub').textContent = u.swipeBannerSub;
-  document.getElementById('lbl-select-level').textContent = u.selectLevel;
   // Level names
   const ln = u.levelNames;
-  document.getElementById('ln-A1').textContent = ln.A1;
-  document.getElementById('ln-A2').textContent = ln.A2;
-  document.getElementById('ln-B1').textContent = ln.B1;
   document.getElementById('swipe-ln-A1').textContent = ln.A1;
   document.getElementById('swipe-ln-A2').textContent = ln.A2;
   document.getElementById('swipe-ln-B1').textContent = ln.B1;
@@ -960,7 +956,7 @@ function setAdaptiveLevel(lv) {
   });
 }
 function launchAdaptiveQuiz() {
-  if (typeof window.startAdaptiveQuiz === 'function') window.startAdaptiveQuiz(adaptiveSelectedLevel);
+  startLevel(adaptiveSelectedLevel);
 }
 
 // ── THEME QUIZ ──
