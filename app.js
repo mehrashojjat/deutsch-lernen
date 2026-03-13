@@ -3597,12 +3597,15 @@ document.addEventListener('keydown', function(e){
     _deltaY = 0;
   }, { passive: true });
 
-  // non-passive so we can preventDefault to stop scroll while dragging
+  // non-passive so we can preventDefault before the browser fires pull-to-refresh
   modal.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
     var dy = e.touches[0].clientY - _startY;
-    // Only start drag-to-close when the card is already scrolled to top
-    // and the finger is moving downward past a small threshold
+    // When already at scroll-top and moving down, block pull-to-refresh
+    // immediately — even before the drag threshold is crossed.
+    if (_startScrollTop === 0 && dy > 0) {
+      e.preventDefault();
+    }
     if (!_dragging && dy > 6 && _startScrollTop === 0) {
       _dragging = true;
       modal.style.transition = 'none';
@@ -3610,7 +3613,6 @@ document.addEventListener('keydown', function(e){
     if (_dragging) {
       _deltaY = Math.max(0, dy);
       modal.style.transform = 'translateY(' + _deltaY + 'px)';
-      e.preventDefault(); // prevent scroll while dragging to dismiss
     }
   }, { passive: false });
 
@@ -3649,10 +3651,12 @@ document.addEventListener('keydown', function(e){
     _deltaY = 0;
   }, { passive: true });
 
-  // non-passive so we can preventDefault while dragging
+  // non-passive: prevent pull-to-refresh on any downward swipe on the drawer
   drawer.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
     var dy = e.touches[0].clientY - _startY;
+    // Block pull-to-refresh immediately on any downward movement
+    if (dy > 0) e.preventDefault();
     if (!_dragging && dy > 6) {
       _dragging = true;
       drawer.style.transition = 'none';
@@ -3660,7 +3664,6 @@ document.addEventListener('keydown', function(e){
     if (_dragging) {
       _deltaY = Math.max(0, dy);
       drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
-      e.preventDefault();
     }
   }, { passive: false });
 
