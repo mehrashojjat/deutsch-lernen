@@ -1799,3 +1799,303 @@ id,word,difficulty,level,theme
 986,verletzen,9,A2,Grammar & Core Verbs
 987,verlieben,9,A2,Grammar & Core Verbs
 988,verlieren,9,A2,Sports & Leisure
+989,vermieten,9,A2,Grammar & Core Verbs
+990,Vermieter,9,A2,Home & Living
+991,Vermieterin,10,A2,Home & Living
+992,verpassen,9,A2,Grammar & Core Verbs
+993,verreisen,9,A2,Travel & Tourism
+994,verschieben,10,A2,Grammar & Core Verbs
+995,verschieden,10,A2,Grammar & Core Verbs
+996,Verspätung,10,A2,Transportation
+997,versuchen,7,A2,Grammar & Core Verbs
+998,Vertrag,8,A2,Work & Careers
+999,vielleicht,2,A2,Grammar & Core Verbs
+1000,Vogel,5,A2,"Nature, Weather & Animals"
+1001,voll,4,A2,Grammar & Core Verbs
+1002,werden,5,A2,Grammar & Core Verbs
+1003,sie,1,A2,Grammar & Core Verbs
+1004,Werkstatt,9,A2,Work & Careers
+1005,Wettbewerb,10,A2,Sports & Leisure
+1006,wie,1,A2,Grammar & Core Verbs
+1007,wieder,3,A2,Grammar & Core Verbs
+1008,wiederholen,10,A2,Education & Learning
+1009,Wiederhören,10,A2,Grammar & Core Verbs
+1010,Wiedersehen,10,A2,Grammar & Core Verbs
+1011,wirklich,2,A2,Grammar & Core Verbs
+1012,wissen,5,A2,Grammar & Core Verbs
+1013,Witz,4,A2,Arts & Culture
+1014,wo,1,A2,Grammar & Core Verbs
+1015,woher,5,A2,Grammar & Core Verbs
+1016,wohin,5,A2,Grammar & Core Verbs
+1017,wohnen,3,A2,Home & Living
+1018,Wohnung,3,A2,Home & Living
+1019,Wohnzimmer,10,A2,Home & Living
+1020,Wäsche,8,A2,Home & Living
+1021,waschen,6,A2,Home & Living
+1022,Wasser,3,A2,Food & Drink
+1023,Webseite,9,A2,"Language, Communication & Media"
+1024,wecken,5,A2,Grammar & Core Verbs
+1025,weg/weg-,9,A2,Grammar & Core Verbs
+1026,Weg,4,A2,Transportation
+1027,wegen,5,A2,Grammar & Core Verbs
+1028,weiblich,9,A2,Grammar & Core Verbs
+1029,weich,5,A2,Grammar & Core Verbs
+1030,Wein,1,A2,Food & Drink
+1031,weinen,5,A2,Emotions & Personal Traits
+1032,weit,4,A2,Grammar & Core Verbs
+1033,weiter,5,A2,Grammar & Core Verbs
+1034,Welt,1,A2,Grammar & Core Verbs
+1035,wenigstens,10,A2,Grammar & Core Verbs
+1036,Zimmer,3,A2,Home & Living
+1037,Zirkus,5,A2,Sports & Leisure
+1038,Zoo,1,A2,"Nature, Weather & Animals"
+1039,Zucker,5,A2,Food & Drink
+1040,zufrieden,7,A2,Emotions & Personal Traits
+1041,Zug,1,A2,Transportation
+1042,zuletzt,8,A2,Grammar & Core Verbs
+1043,zumachen,9,A2,Grammar & Core Verbs
+1044,zusammen,6,A2,Grammar & Core Verbs
+1045,zwischen,6,A2,Grammar & Core Verbs
+1046,wollen,3,A2,Grammar & Core Verbs
+1047,Workshop,9,A2,Grammar & Core Verbs
+1048,Wort,1,A2,"Language, Communication & Media"
+1049,wunderbar,7,A2,Grammar & Core Verbs
+1050,Wunsch,5,A2,Grammar & Core Verbs
+1051,wünschen,6,A2,Emotions & Personal Traits
+1052,Zahl,4,A2,Numbers & Quantities
+1053,Zahn,4,A2,Body & Health
+1054,zeigen,5,A2,Grammar & Core Verbs
+1055,Zeit,1,A2,Time & Calendar
+1056,Zelt,4,A2,Grammar & Core Verbs
+1057,Zettel,5,A2,Grammar & Core Verbs
+1058,Zeugnis,8,A2,Education & Learning
+1059,Ziel,4,A2,Grammar & Core Verbs
+1,Abo,4,B1,"Language, Communication & Media"
+2,Akku,4,B1,"Language, Communication & Media"
+3,Azubi,4,B1,"Language, Communication & Media"
+4,EG,1,B1,"Language, Communication & Media"
+5,Baby,2,B1,"Language, Communication & Media"
+6,Babysitter,7,B1,Work & Careers
+7,Band,4,B1,"Language, Communication & Media"
+8,Camp,4,B1,"Language, Communication & Media"
+9,übergeordneten,10,B1,"Language, Communication & Media"
+10,Smartphone,7,B1,"Language, Communication & Media"
+11,Song,4,B1,"Language, Communication & Media"
+12,Swimmingpool,10,B1,"Language, Communication & Media"
+13,Aufgabe,5,B1,"Language, Communication & Media"
+14,ankreuzen,7,B1,"Language, Communication & Media"
+15,Antwortbogen,10,B1,"Language, Communication & Media"
+16,Anzeige,5,B1,"Language, Communication & Media"
+17,richtig,3,B1,"Language, Communication & Media"
+18,Durchsage,8,B1,"Language, Communication & Media"
+19,Einleitung,8,B1,"Language, Communication & Media"
+20,Folie,3,B1,"Language, Communication & Media"
+21,Hilfsmittel,9,B1,"Language, Communication & Media"
+22,Kommentar,7,B1,"Language, Communication & Media"
+23,lösen,4,B1,"Language, Communication & Media"
+24,Moderator,8,B1,"Language, Communication & Media"
+25,Modul,4,B1,"Language, Communication & Media"
+26,Präsentation,10,B1,"Language, Communication & Media"
+27,Punkt,3,B1,"Language, Communication & Media"
+28,Rückmeldung,9,B1,"Language, Communication & Media"
+29,Struktur,7,B1,"Language, Communication & Media"
+30,Textaufbau,8,B1,"Language, Communication & Media"
+31,übertragen,8,B1,"Language, Communication & Media"
+32,zuordnen,7,B1,"Language, Communication & Media"
+33,Österreich,7,B1,Places & Geography
+34,Österreich,7,B1,Places & Geography
+35,Norden,4,B1,Places & Geography
+36,Osten,4,B1,Places & Geography
+37,-östlich,7,B1,Places & Geography
+38,Süden,4,B1,Places & Geography
+39,Deutsche,3,B1,Places & Geography
+40,Europa,3,B1,Places & Geography
+41,Europäerin,8,B1,Places & Geography
+42,europäisch,8,B1,Places & Geography
+43,Österreicher,10,B1,Places & Geography
+44,Türkei,4,B1,Places & Geography
+45,Ukraine,5,B1,Places & Geography
+46,Ukrainer,7,B1,Places & Geography
+47,Bund,4,B1,"Society, Law & Politics"
+48,Bundeskanzler,10,B1,"Society, Law & Politics"
+49,Bundeskanzlerin,10,B1,"Society, Law & Politics"
+50,Bundespräsident,10,B1,"Society, Law & Politics"
+51,Bundespräsidentin,10,B1,"Society, Law & Politics"
+52,Bürgermeister,10,B1,"Society, Law & Politics"
+53,Bürgermeisterin,10,B1,"Society, Law & Politics"
+54,Ministerin,8,B1,"Society, Law & Politics"
+55,Parlament,8,B1,"Society, Law & Politics"
+56,Partei,7,B1,"Society, Law & Politics"
+57,Staat,4,B1,"Society, Law & Politics"
+58,Bankwesen,8,B1,Shopping & Finance
+59,Affe,4,B1,"Nature, Weather & Animals"
+60,Bär,1,B1,"Nature, Weather & Animals"
+61,Frühling,6,B1,Time & Calendar
+62,Sommer,3,B1,Time & Calendar
+63,Januar,4,B1,Time & Calendar
+64,Februar,7,B1,Time & Calendar
+65,Tag,1,B1,Numbers & Quantities
+66,Morgen,3,B1,Time & Calendar
+67,Mittag,4,B1,Time & Calendar
+68,Sekunde,5,B1,Time & Calendar
+69,Minute,3,B1,Time & Calendar
+70,stündlich,8,B1,Time & Calendar
+71,Wochentag,8,B1,Time & Calendar
+72,Wochenende,8,B1,Time & Calendar
+73,Dienstag,7,B1,Time & Calendar
+74,Mittwoch,6,B1,Time & Calendar
+75,zehn,2,B1,Numbers & Quantities
+76,halb,2,B1,Numbers & Quantities
+77,Abitur,4,B1,Education & Learning
+78,abmachen,6,B1,Grammar & Core Verbs
+79,abnehmen,6,B1,Grammar & Core Verbs
+80,abonnieren,8,B1,Grammar & Core Verbs
+81,Abonnement,8,B1,Grammar & Core Verbs
+82,absagen,7,B1,Grammar & Core Verbs
+83,Abschluss,8,B1,Grammar & Core Verbs
+84,Abschnitt,8,B1,"Language, Communication & Media"
+85,Absender,7,B1,"Language, Communication & Media"
+86,Absenderin,8,B1,"Language, Communication & Media"
+87,Absicht,7,B1,Grammar & Core Verbs
+88,absolut,7,B1,Grammar & Core Verbs
+89,abstimmen,8,B1,Grammar & Core Verbs
+90,Abteilung,8,B1,Work & Careers
+91,Hausmeister,9,B1,Home & Living
+92,Hausmeisterin,10,B1,Home & Living
+93,abwärts,7,B1,Grammar & Core Verbs
+94,abwaschen,8,B1,Grammar & Core Verbs
+95,abwesend,7,B1,Grammar & Core Verbs
+96,achten,4,B1,Grammar & Core Verbs
+97,ab,1,B1,Grammar & Core Verbs
+98,abbiegen,7,B1,Transportation
+99,Abbildung,8,B1,Grammar & Core Verbs
+100,Abenteuer,8,B1,Travel & Tourism
+101,aber,2,B1,Grammar & Core Verbs
+102,abfahren,6,B1,Transportation
+103,Abfahrt,5,B1,Transportation
+104,Abfall,4,B1,Home & Living
+105,Abfalleimer,9,B1,Home & Living
+106,abhängen,6,B1,Grammar & Core Verbs
+107,abhängig,7,B1,Grammar & Core Verbs
+108,abheben,5,B1,Grammar & Core Verbs
+109,abholen,5,B1,Grammar & Core Verbs
+110,Hausaufgaben,10,B1,Education & Learning
+111,gemacht,5,B1,Grammar & Core Verbs
+112,abgelehnt,8,B1,Grammar & Core Verbs
+113,Getränke,6,B1,Food & Drink
+114,abnehmen,6,B1,Grammar & Core Verbs
+115,weil,2,B1,Grammar & Core Verbs
+116,wichtig,5,B1,Grammar & Core Verbs
+117,abwesend,7,B1,Grammar & Core Verbs
+118,abschließen,9,B1,Grammar & Core Verbs
+119,Gerät,3,B1,Technology & Devices
+120,teure Geschichten,10,B1,Grammar & Core Verbs
+121,ganz,2,B1,Grammar & Core Verbs
+122,trotzdem,6,B1,Grammar & Core Verbs
+123,sind,2,B1,Grammar & Core Verbs
+124,gehen,1,B1,Grammar & Core Verbs
+125,leider,4,B1,Grammar & Core Verbs
+126,bis,1,B1,Grammar & Core Verbs
+127,zum,1,B1,Grammar & Core Verbs
+128,verschmutzen,10,B1,Grammar & Core Verbs
+129,abhängig,7,B1,Grammar & Core Verbs
+130,meinem,4,B1,Grammar & Core Verbs
+131,abgeholt,6,B1,Grammar & Core Verbs
+132,Abitur,4,B1,Education & Learning
+133,abmachen,6,B1,Grammar & Core Verbs
+134,abnehmen,6,B1,Grammar & Core Verbs
+135,abonnieren,8,B1,Grammar & Core Verbs
+136,Abonnement,8,B1,Grammar & Core Verbs
+137,absagen,7,B1,Grammar & Core Verbs
+138,Abschluss,8,B1,Grammar & Core Verbs
+139,Abschnitt,8,B1,"Language, Communication & Media"
+140,Absender,7,B1,"Language, Communication & Media"
+141,Absenderin,8,B1,"Language, Communication & Media"
+142,Absicht,7,B1,Grammar & Core Verbs
+143,absolut,7,B1,Grammar & Core Verbs
+144,abstimmen,8,B1,Grammar & Core Verbs
+145,Abteilung,8,B1,Work & Careers
+146,abwärts,7,B1,Grammar & Core Verbs
+147,abwaschen,8,B1,Grammar & Core Verbs
+148,abwesend,7,B1,Grammar & Core Verbs
+149,achten,4,B1,Grammar & Core Verbs
+150,ab,1,B1,Grammar & Core Verbs
+151,abbiegen,7,B1,Transportation
+152,Abbildung,8,B1,Grammar & Core Verbs
+153,Abenteuer,8,B1,Travel & Tourism
+154,aber,2,B1,Grammar & Core Verbs
+155,abfahren,6,B1,Transportation
+156,Abfahrt,5,B1,Transportation
+157,Abfall,4,B1,Home & Living
+158,Abfalleimer,9,B1,Home & Living
+159,abhängen,6,B1,Grammar & Core Verbs
+160,abhängig,7,B1,Grammar & Core Verbs
+161,abheben,5,B1,Grammar & Core Verbs
+162,abholen,5,B1,Grammar & Core Verbs
+163,Hausaufgaben,10,B1,Education & Learning
+164,gemacht,5,B1,Grammar & Core Verbs
+165,abgelehnt,8,B1,Grammar & Core Verbs
+166,Getränke,6,B1,Food & Drink
+167,abnehmen,6,B1,Grammar & Core Verbs
+168,weil,2,B1,Grammar & Core Verbs
+169,wichtig,5,B1,Grammar & Core Verbs
+170,abwesend,7,B1,Grammar & Core Verbs
+171,abschließen,9,B1,Grammar & Core Verbs
+172,Gerät,3,B1,Technology & Devices
+173,teure Geschichten,10,B1,Grammar & Core Verbs
+174,ganz,2,B1,Grammar & Core Verbs
+175,trotzdem,6,B1,Grammar & Core Verbs
+176,sind,2,B1,Grammar & Core Verbs
+177,gehen,1,B1,Grammar & Core Verbs
+178,leider,4,B1,Grammar & Core Verbs
+179,bis,1,B1,Grammar & Core Verbs
+180,zum,1,B1,Grammar & Core Verbs
+181,verschmutzen,10,B1,Grammar & Core Verbs
+182,abhängig,7,B1,Grammar & Core Verbs
+183,meinem,4,B1,Grammar & Core Verbs
+184,abgeholt,6,B1,Grammar & Core Verbs
+185,Alphabet,6,B1,Education & Learning
+186,als,1,B1,Grammar & Core Verbs
+187,als,1,B1,Grammar & Core Verbs
+188,also,2,B1,Grammar & Core Verbs
+189,alt,1,B1,Grammar & Core Verbs
+190,Alter,3,B1,Grammar & Core Verbs
+191,Altenheim,8,B1,Body & Health
+192,Altersheim,8,B1,Body & Health
+193,alternativ,8,B1,Grammar & Core Verbs
+194,Alternative,9,B1,Grammar & Core Verbs
+195,Ampel,3,B1,Transportation
+196,an,1,B1,Grammar & Core Verbs
+197,analysieren,9,B1,Grammar & Core Verbs
+198,anbieten,6,B1,Grammar & Core Verbs
+199,Adresse,5,B1,"Language, Communication & Media"
+200,ähnlich,5,B1,Grammar & Core Verbs
+201,Ahnung,4,B1,Grammar & Core Verbs
+202,Aktion,7,B1,Grammar & Core Verbs
+203,Aktivität,8,B1,Sports & Leisure
+204,aktuell,5,B1,Grammar & Core Verbs
+205,akzeptieren,9,B1,Grammar & Core Verbs
+206,Alarm,3,B1,Grammar & Core Verbs
+207,Alkohol,5,B1,Food & Drink
+208,all,1,B1,Grammar & Core Verbs
+209,allein,4,B1,Grammar & Core Verbs
+210,aller,1,B1,Grammar & Core Verbs
+211,allerdings,8,B1,Grammar & Core Verbs
+212,allgemein,8,B1,Grammar & Core Verbs
+213,Alltag,7,B1,Time & Calendar
+214,langweilig,8,B1,Grammar & Core Verbs
+215,alltägliche,9,B1,Grammar & Core Verbs
+216,in,1,B1,Grammar & Core Verbs
+217,schon,1,B1,Grammar & Core Verbs
+218,auch,2,B1,Grammar & Core Verbs
+219,helfen,4,B1,Grammar & Core Verbs
+220,im,1,B1,Grammar & Core Verbs
+221,gute,2,B1,Grammar & Core Verbs
+222,dem,1,B1,Grammar & Core Verbs
+223,amüsiert,6,B1,Emotions & Personal Traits
+224,und,1,B1,Grammar & Core Verbs
+225,akzeptieren,9,B1,Grammar & Core Verbs
+226,nicht,1,B1,Grammar & Core Verbs
+227,reinigen,6,B1,Grammar & Core Verbs
+228,schaffe,5,B1,Grammar & Core Verbs
+229,schon,1,B1,Grammar & Core Verbs
