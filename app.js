@@ -679,9 +679,13 @@ function applyTranslations() {
   document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
   document.getElementById('dict-back-btn').textContent = u.dictBack;
   document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
-  document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
+  if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
   document.getElementById('dict-loading-text').textContent = u.dictLoading;
+  // Refresh meanings immediately if dictionary is open
+  if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
+    _renderDictList(document.getElementById('dict-search-input').value);
+  }
 }
 
 
@@ -3292,7 +3296,9 @@ function closeWordModal(e) {
 //  DICTIONARY
 // ══════════════════════════════════════════════════════════════════
 var _dictLoaded = false;
-var _dictAllWords = []; // sorted merged word list
+var _dictAllWords = [];
+var _dictScrollPaused = false;
+var _dictScrollPauseTimer = null;
 
 function openDictionary() {
   show('screen-dictionary');
@@ -3337,7 +3343,10 @@ function _buildDictData() {
     return a.word.localeCompare(b.word, 'de', { sensitivity: 'base' });
   });
   _dictAllWords = all;
+  var subEl = document.getElementById('dict-screen-subtitle');
+  if (subEl) subEl.textContent = _dictAllWords.length + ' words · A–Z';
   _buildDictAlphaBar();
+  _initDictScrollTracker();
 }
 
 function _getDictMeaning(entry) {
@@ -3353,8 +3362,7 @@ function _getDictMeaning(entry) {
 function _dictFirstLetter(word) {
   if (!word) return '#';
   var ch = word[0].toUpperCase();
-  // '-' and digits and punctuation → '#'
-  if (ch === '-' || ch >= '0' && ch <= '9') return '#';
+  if (ch === '-' || (ch >= '0' && ch <= '9')) return '#';
   return ch;
 }
 
@@ -3378,35 +3386,67 @@ function _buildDictAlphaBar() {
     bar.appendChild(sp);
   });
 
-  // Touch-drag: scroll letter sidebar like a phone book
-  bar.addEventListener('touchstart', _dictBarTouch, { passive: true });
-  bar.addEventListener('touchmove',  _dictBarTouch, { passive: true });
+  // Touch drag — works like a phone-book index strip
+  bar.addEventListener('touchstart', _dictBarTouchHandler, { passive: true });
+  bar.addEventListener('touchmove',  _dictBarTouchHandler, { passive: true });
+  // touchend intentionally left without a handler — active class persists until next jump
 }
 
-function _dictBarTouch(e) {
+function _dictBarTouchHandler(e) {
   var touch = e.touches[0];
-  var el = document.elementFromPoint(touch.clientX, touch.clientY);
-  if (el && el.classList.contains('dict-alpha-letter')) {
-    _dictJumpToLetter(el.getAttribute('data-letter'));
+  // Find closest letter by geometry (immune to RTL layout changes)
+  var bar = document.getElementById('dict-alpha-bar');
+  var letters = bar.querySelectorAll('.dict-alpha-letter');
+  var closest = null, closestDist = Infinity;
+  letters.forEach(function(sp) {
+    var r = sp.getBoundingClientRect();
+    var cy = r.top + r.height / 2;
+    var dist = Math.abs(touch.clientY - cy);
+    if (dist < closestDist) { closestDist = dist; closest = sp; }
+  });
+  if (closest && closestDist < 40) {
+    var letter = closest.getAttribute('data-letter');
+    if (letter) _dictJumpToLetter(letter);
   }
 }
 
-function _dictJumpToLetter(l) {
-  var hdr = document.querySelector('.dict-list [data-dict-letter="' + l + '"]');
-  if (!hdr) return;
-  hdr.scrollIntoView({ block: 'start' });
-  // pulse the tapped letter
+function _dictSetActiveLetter(l) {
   document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
     sp.classList.toggle('active', sp.getAttribute('data-letter') === l);
   });
-  clearTimeout(_dictJumpTimer);
-  _dictJumpTimer = setTimeout(function() {
-    document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
-      sp.classList.remove('active');
-    });
-  }, 700);
 }
-var _dictJumpTimer = null;
+
+function _dictJumpToLetter(l) {
+  var hdr = document.querySelector('#dict-list [data-dict-letter="' + l + '"]');
+  if (!hdr) return;
+  _dictSetActiveLetter(l);
+  // Pause scroll-tracker so our programmatic scroll doesn’t fight the active state
+  _dictScrollPaused = true;
+  clearTimeout(_dictScrollPauseTimer);
+  hdr.scrollIntoView({ block: 'start' });
+  _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 350);
+}
+
+function _initDictScrollTracker() {
+  var list = document.getElementById('dict-list');
+  if (!list) return;
+  if (list._dictScrollFn) list.removeEventListener('scroll', list._dictScrollFn);
+  list._dictScrollFn = function() {
+    if (_dictScrollPaused) return;
+    var headers = list.querySelectorAll('[data-dict-letter]');
+    if (!headers.length) return;
+    var listTop = list.getBoundingClientRect().top;
+    var activeLetter = null;
+    // Last header whose top is at or above the list’s own top = current section
+    headers.forEach(function(h) {
+      if (h.getBoundingClientRect().top - listTop <= 2) {
+        activeLetter = h.getAttribute('data-dict-letter');
+      }
+    });
+    if (activeLetter) _dictSetActiveLetter(activeLetter);
+  };
+  list.addEventListener('scroll', list._dictScrollFn, { passive: true });
+}
 
 function _renderDictList(filter) {
   var list = document.getElementById('dict-list');
@@ -3444,7 +3484,6 @@ function _renderDictList(filter) {
     var div = document.createElement('div');
     div.className = 'dict-entry';
 
-    // top row: article + word + level badge
     var top = document.createElement('div');
     top.className = 'dict-entry-top';
 
@@ -3468,12 +3507,13 @@ function _renderDictList(filter) {
 
     div.appendChild(top);
 
-    // meaning row
     var meaning = _getDictMeaning(entry);
     if (meaning) {
       var mEl = document.createElement('div');
       mEl.className = 'dict-meaning';
-      if (isRtl) mEl.style.textAlign = 'right';
+      // For RTL languages, give the meaning its own RTL context while the
+      // surrounding layout stays LTR (German words are always left-to-right)
+      if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
       mEl.textContent = meaning;
       div.appendChild(mEl);
     }
@@ -3484,6 +3524,7 @@ function _renderDictList(filter) {
   list.innerHTML = '';
   list.appendChild(frag);
   list.scrollTop = 0;
+  _initDictScrollTracker();
 }
 
 function dictFilter(val) {

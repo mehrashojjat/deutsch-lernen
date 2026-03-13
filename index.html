@@ -471,8 +471,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
 
 /* ── DICTIONARY ── */
+/* Force LTR on the dictionary screen regardless of global dir — words are German.
+   RTL languages get per-element dir="rtl" on the meaning line only. */
+#screen-dictionary { direction: ltr !important; }
 .dict-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .dict-search-wrap{margin-bottom:10px;}
+/* Force LTR on the dictionary screen regardless of global dir — words are German.
+   RTL languages get per-element dir="rtl" on the meaning line only. */
+#screen-dictionary { direction: ltr !important; }
 .dict-search-input{width:100%;padding:10px 14px;background:var(--surf);border:1.5px solid var(--border);
   border-radius:12px;font-size:.9rem;color:var(--text);
   font-family:'Outfit','Vazirmatn',sans-serif;outline:none;-webkit-appearance:none;}
