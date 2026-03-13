@@ -306,7 +306,7 @@
     } else {
       var totalWeight = 0, weightedSum = 0;
       correct.forEach(function (a) {
-        var weight = 1 + a.position / 9;
+        var weight = 1 + a.position / Math.max(answers.length - 1, 1);
         totalWeight += weight;
         weightedSum += a.difficulty * weight;
       });
@@ -328,7 +328,7 @@
   // Normal formula: skill += (accuracy - 0.65) * 0.6
   // Neutral at 65%; ±0.6 max swing per quiz (100% → +0.21, 0% → -0.39)
   function _applyNormalFormula(p, answers) {
-    var accuracy   = answers.filter(function (a) { return a.correct; }).length / answers.length;
+    var accuracy   = answers.length ? answers.filter(function (a) { return a.correct; }).length / answers.length : 0;
     p.skillLevel   = _clamp(p.skillLevel + (accuracy - 0.65) * 0.6, 1, 10);
   }
 
@@ -464,6 +464,7 @@
 
   // ── Hooks exposed for auth.js ──────────────────────────────────
   window._adaptiveInjectProgress = function (p) {
+    if (p && (isNaN(p.skillLevel) || p.skillLevel < 1)) p.skillLevel = 1;
     _pendingProgress = p;
     _progress        = null;
   };
