@@ -542,7 +542,7 @@ var SEARCH_EXTRA = [];
 // ══════════════════════════════════════════════════════════════════
 //  APP STATE
 // ══════════════════════════════════════════════════════════════════
-let LANG = 'en';
+let LANG = (function() { try { return localStorage.getItem('dl_lang') || 'en'; } catch(e) { return 'en'; } })();
 let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
@@ -586,6 +586,7 @@ function closeAbout(e) {
 // ── Set language ──
 function setLang(lang) {
   LANG = lang;
+  try { localStorage.setItem('dl_lang', lang); } catch(e) {}
   ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
@@ -3576,6 +3577,18 @@ function show(id){
 }
 
 // ── Init ──
+// Apply persisted language layout (RTL, body classes, active button) on startup
+(function() {
+  var isRtl = LANG === 'fa' || LANG === 'ar';
+  document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+  document.body.classList.toggle('lang-fa', LANG === 'fa');
+  document.body.classList.toggle('lang-ar', LANG === 'ar');
+  document.body.classList.toggle('lang-rtl', isRtl);
+  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+    var el = document.getElementById('opt-' + l);
+    if (el) el.classList.toggle('active', l === LANG);
+  });
+})();
 applyTranslations();
 updateCounts();
 document.addEventListener('keydown', function(e){
