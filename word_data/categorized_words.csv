@@ -4199,3 +4199,303 @@ id,word,difficulty,level,theme
 2327,Mehrheit,7,B1,Numbers & Quantities
 2328,Mal,1,B1,Grammar & Core Verbs
 2329,malen,3,B1,Arts & Culture
+2330,Maler,3,B1,Work & Careers
+2331,Malerin,7,B1,Work & Careers
+2332,man,1,B1,Grammar & Core Verbs
+2333,manch,3,B1,Grammar & Core Verbs
+2334,männlich,7,B1,Grammar & Core Verbs
+2335,Mannschaft,8,B1,Sports & Leisure
+2336,Mantel,4,B1,Clothing & Appearance
+2337,Margarine,8,B1,Food & Drink
+2338,Marke,3,B1,Grammar & Core Verbs
+2339,markieren,8,B1,"Language, Communication & Media"
+2340,Markt,3,B1,Places & Geography
+2341,mit,1,B1,Grammar & Core Verbs
+2342,starten,5,B1,Grammar & Core Verbs
+2343,gemacht,5,B1,Grammar & Core Verbs
+2344,geklettert,8,B1,Grammar & Core Verbs
+2345,zwei,2,B1,Numbers & Quantities
+2346,reparieren,8,B1,Grammar & Core Verbs
+2347,bei,1,B1,Grammar & Core Verbs
+2348,großes,4,B1,Grammar & Core Verbs
+2349,verschrieben,10,B1,Grammar & Core Verbs
+2350,fünf,2,B1,Numbers & Quantities
+2351,geholfen,6,B1,Grammar & Core Verbs
+2352,noch,2,B1,Grammar & Core Verbs
+2353,letzten,5,B1,Grammar & Core Verbs
+2354,niemand,5,B1,Grammar & Core Verbs
+2355,in,1,B1,Grammar & Core Verbs
+2356,lassen,3,B1,Grammar & Core Verbs
+2357,billiger,6,B1,Grammar & Core Verbs
+2358,ins,1,B1,Grammar & Core Verbs
+2359,keine,3,B1,Grammar & Core Verbs
+2360,Messer,4,B1,Food & Drink
+2361,Metall,7,B1,Grammar & Core Verbs
+2362,Metropole,8,B1,Places & Geography
+2363,Metzger,7,B1,Food & Drink
+2364,Miete,3,B1,Home & Living
+2365,Mieter,7,B1,Home & Living
+2366,Mieterin,7,B1,Home & Living
+2367,Migrant,7,B1,"Society, Law & Politics"
+2368,Migration,8,B1,"Society, Law & Politics"
+2369,Milch,3,B1,Food & Drink
+2370,mild,2,B1,"Nature, Weather & Animals"
+2371,Minderheit,8,B1,Numbers & Quantities
+2372,mindestens,8,B1,Grammar & Core Verbs
+2373,Mineralwasser,10,B1,Food & Drink
+2374,minimal,5,B1,Numbers & Quantities
+2375,mischen,5,B1,Grammar & Core Verbs
+2376,meinetwegen,9,B1,Grammar & Core Verbs
+2377,Meinung,7,B1,Grammar & Core Verbs
+2378,meist(ens),8,B1,Grammar & Core Verbs
+2379,Meister,7,B1,Work & Careers
+2380,melden,4,B1,Grammar & Core Verbs
+2381,Meldung,5,B1,"Language, Communication & Media"
+2382,Menge,3,B1,Numbers & Quantities
+2383,Mensa,3,B1,Food & Drink
+2384,Mensch,4,B1,Grammar & Core Verbs
+2385,menschlich,8,B1,Grammar & Core Verbs
+2386,Menü,2,B1,Food & Drink
+2387,merken,4,B1,Grammar & Core Verbs
+2388,merkwürdig,8,B1,Grammar & Core Verbs
+2389,Messe,3,B1,Grammar & Core Verbs
+2390,sind,2,B1,Grammar & Core Verbs
+2391,schnell,5,B1,Grammar & Core Verbs
+2392,gemietet,6,B1,Grammar & Core Verbs
+2393,gemietet,6,B1,Grammar & Core Verbs
+2394,bitte,3,B1,Grammar & Core Verbs
+2395,milder,4,B1,Grammar & Core Verbs
+2396,mindestens,8,B1,Grammar & Core Verbs
+2397,haben,1,B1,Grammar & Core Verbs
+2398,hast,2,B1,Grammar & Core Verbs
+2399,viele,1,B1,Grammar & Core Verbs
+2400,einen,1,B1,Grammar & Core Verbs
+2401,gemeldet,6,B1,Grammar & Core Verbs
+2402,große,3,B1,Grammar & Core Verbs
+2403,Stadt,3,B1,Places & Geography
+2404,anders,4,B1,Grammar & Core Verbs
+2405,aus,1,B1,Grammar & Core Verbs
+2406,so,1,B1,Grammar & Core Verbs
+2407,vergesse,6,B1,Grammar & Core Verbs
+2408,Mode,2,B1,Clothing & Appearance
+2409,Modell,7,B1,Grammar & Core Verbs
+2410,modern,4,B1,Grammar & Core Verbs
+2411,mögen,3,B1,Grammar & Core Verbs
+2412,möglich,5,B1,Grammar & Core Verbs
+2413,Möglichkeit,9,B1,Grammar & Core Verbs
+2414,möglichst,8,B1,Grammar & Core Verbs
+2415,Möhre,3,B1,Food & Drink
+2416,Moment,4,B1,Time & Calendar
+2417,Mond,2,B1,Grammar & Core Verbs
+2418,Monitor,5,B1,Technology & Devices
+2419,Motor,3,B1,Transportation
+2420,Motorrad,7,B1,Transportation
+2421,Mühe,2,B1,Grammar & Core Verbs
+2422,Müll,2,B1,Home & Living
+2423,Müllabfuhr,8,B1,Home & Living
+2424,Mitarbeiter,9,B1,Work & Careers
+2425,Mitarbeiterin,10,B1,Work & Careers
+2426,Mitte,3,B1,Grammar & Core Verbs
+2427,mitteilen,8,B1,Grammar & Core Verbs
+2428,Mittel,4,B1,Grammar & Core Verbs
+2429,mitten,4,B1,Grammar & Core Verbs
+2430,mittler,5,B1,Grammar & Core Verbs
+2431,mittlerweile,10,B1,Time & Calendar
+2432,Möbel,3,B1,Home & Living
+2433,möbliert,6,B1,Grammar & Core Verbs
+2434,möchten,5,B1,Grammar & Core Verbs
+2435,mobil,3,B1,Grammar & Core Verbs
+2436,Mobilbox,7,B1,"Language, Communication & Media"
+2437,Mobilität,8,B1,Grammar & Core Verbs
+2438,ein,1,B1,Grammar & Core Verbs
+2439,ganz,2,B1,Grammar & Core Verbs
+2440,sprechen,6,B1,Grammar & Core Verbs
+2441,zum,1,B1,Grammar & Core Verbs
+2442,haben,1,B1,Grammar & Core Verbs
+2443,mehrere,5,B1,Numbers & Quantities
+2444,im,1,B1,Grammar & Core Verbs
+2445,gekauft,5,B1,Grammar & Core Verbs
+2446,nicht,1,B1,Grammar & Core Verbs
+2447,wir,1,B1,Grammar & Core Verbs
+2448,raus,2,B1,Grammar & Core Verbs
+2449,ich,1,B1,Grammar & Core Verbs
+2450,mit,1,B1,Grammar & Core Verbs
+2451,den,1,B1,Grammar & Core Verbs
+2452,noch,2,B1,Grammar & Core Verbs
+2453,schmerzen,8,B1,Body & Health
+2454,sind,2,B1,Grammar & Core Verbs
+2455,angekommen,8,B1,Grammar & Core Verbs
+2456,mittlerweile,10,B1,Time & Calendar
+2457,sehr,2,B1,Grammar & Core Verbs
+2458,nachdenken,8,B1,Grammar & Core Verbs
+2459,Nachfrage,8,B1,Grammar & Core Verbs
+2460,nachher,5,B1,Grammar & Core Verbs
+2461,Nachhilfe,8,B1,Education & Learning
+2462,Nachricht,8,B1,"Language, Communication & Media"
+2463,nachschlagen,10,B1,Grammar & Core Verbs
+2464,Nachspeise,8,B1,Food & Drink
+2465,nächst,4,B1,Grammar & Core Verbs
+2466,Nachteil,7,B1,Grammar & Core Verbs
+2467,Nachwuchs,8,B1,Family & Relationships
+2468,Nadel,3,B1,Home & Living
+2469,Nagel,3,B1,Home & Living
+2470,nah,1,B1,Grammar & Core Verbs
+2471,Nähe,2,B1,Grammar & Core Verbs
+2472,nähen,3,B1,Clothing & Appearance
+2473,genäht,4,B1,Grammar & Core Verbs
+2474,Mund,2,B1,Body & Health
+2475,mündlich,6,B1,Grammar & Core Verbs
+2476,Münze,3,B1,Shopping & Finance
+2477,Museum,4,B1,Arts & Culture
+2478,Musik,3,B1,Education & Learning
+2479,musikalisch,9,B1,Arts & Culture
+2480,Musiker,5,B1,Work & Careers
+2481,Musikerin,8,B1,Work & Careers
+2482,Muskel,4,B1,Body & Health
+2483,müssen,4,B1,Grammar & Core Verbs
+2484,Mut,1,B1,Emotions & Personal Traits
+2485,nach,2,B1,Grammar & Core Verbs
+2486,Nachbar,5,B1,Grammar & Core Verbs
+2487,Nachbarin,8,B1,Grammar & Core Verbs
+2488,muss,2,B1,Grammar & Core Verbs
+2489,groß,2,B1,Grammar & Core Verbs
+2490,gehört,4,B1,Grammar & Core Verbs
+2491,du,1,B1,Grammar & Core Verbs
+2492,leckere,5,B1,Grammar & Core Verbs
+2493,einmal,4,B1,Numbers & Quantities
+2494,gefördert,8,B1,Grammar & Core Verbs
+2495,schlagen,6,B1,Grammar & Core Verbs
+2496,schneiden,8,B1,Food & Drink
+2497,machen,1,B1,Grammar & Core Verbs
+2498,überweisen,8,B1,Grammar & Core Verbs
+2499,arbeiten,6,B1,Work & Careers
+2500,wenn,2,B1,Grammar & Core Verbs
+2501,anfreunden,8,B1,Grammar & Core Verbs
+2502,beeilen,5,B1,Grammar & Core Verbs
+2503,nennen,4,B1,Grammar & Core Verbs
+2504,Nerv,2,B1,Grammar & Core Verbs
+2505,nervös,4,B1,Emotions & Personal Traits
+2506,nett,2,B1,Grammar & Core Verbs
+2507,Netz,2,B1,Technology & Devices
+2508,Netzwerk,7,B1,Technology & Devices
+2509,neu,1,B1,Grammar & Core Verbs
+2510,Neuigkeit,8,B1,"Language, Communication & Media"
+2511,neugierig,8,B1,Emotions & Personal Traits
+2512,neulich,5,B1,Grammar & Core Verbs
+2513,nicht,1,B1,Grammar & Core Verbs
+2514,Nichte,4,B1,Family & Relationships
+2515,Nichtraucher,10,B1,Body & Health
+2516,Nichtraucherin,10,B1,Body & Health
+2517,Name,2,B1,Grammar & Core Verbs
+2518,Familienname,10,B1,Family & Relationships
+2519,Vorname,5,B1,Grammar & Core Verbs
+2520,national,6,B1,"Society, Law & Politics"
+2521,Natur,3,B1,"Nature, Weather & Animals"
+2522,natürlich,3,B1,Grammar & Core Verbs
+2523,Nebel,3,B1,"Nature, Weather & Animals"
+2524,neblig,4,B1,"Nature, Weather & Animals"
+2525,neben,3,B1,Grammar & Core Verbs
+2526,nebenan,5,B1,Grammar & Core Verbs
+2527,nebenbei,6,B1,Grammar & Core Verbs
+2528,Neffe,3,B1,Family & Relationships
+2529,negativ,5,B1,Grammar & Core Verbs
+2530,nehmen,4,B1,Grammar & Core Verbs
+2531,erst,2,B1,Grammar & Core Verbs
+2532,nennen,4,B1,Grammar & Core Verbs
+2533,geht,2,B1,Grammar & Core Verbs
+2534,nervös,4,B1,Emotions & Personal Traits
+2535,schlossen,8,B1,Grammar & Core Verbs
+2536,erweitert,8,B1,Grammar & Core Verbs
+2537,einen,1,B1,Grammar & Core Verbs
+2538,schlecht,6,B1,Grammar & Core Verbs
+2539,stimmt,4,B1,Grammar & Core Verbs
+2540,meiner,4,B1,Grammar & Core Verbs
+2541,mehr,2,B1,Grammar & Core Verbs
+2542,-lich,3,B1,Grammar & Core Verbs
+2543,erkältet,6,B1,Body & Health
+2544,ganz,2,B1,Grammar & Core Verbs
+2545,stark,3,B1,Grammar & Core Verbs
+2546,nicht,1,B1,Grammar & Core Verbs
+2547,vorsichtig,8,B1,Grammar & Core Verbs
+2548,st-,1,B1,Grammar & Core Verbs
+2549,nebenbei,6,B1,Grammar & Core Verbs
+2550,bei,1,B1,Grammar & Core Verbs
+2551,Note,2,B1,Education & Learning
+2552,notieren,6,B1,Grammar & Core Verbs
+2553,nötig,3,B1,Grammar & Core Verbs
+2554,Notiz,3,B1,Grammar & Core Verbs
+2555,nun,1,B1,Grammar & Core Verbs
+2556,nur,1,B1,Grammar & Core Verbs
+2557,nutzen,4,B1,Grammar & Core Verbs
+2558,nützen,4,B1,Grammar & Core Verbs
+2559,nützlich,6,B1,Grammar & Core Verbs
+2560,nichts,4,B1,Grammar & Core Verbs
+2561,nie,1,B1,Grammar & Core Verbs
+2562,niedrig,5,B1,Grammar & Core Verbs
+2563,niemand,5,B1,Grammar & Core Verbs
+2564,nirgends,6,B1,Grammar & Core Verbs
+2565,nirgendwo,8,B1,Grammar & Core Verbs
+2566,noch,2,B1,Grammar & Core Verbs
+2567,noch,2,B1,Grammar & Core Verbs
+2568,nochmals,6,B1,Grammar & Core Verbs
+2569,normal,4,B1,Grammar & Core Verbs
+2570,normalerweise,10,B1,Grammar & Core Verbs
+2571,Notaufnahme,9,B1,Body & Health
+2572,Notausgang,8,B1,Grammar & Core Verbs
+2573,Notfall,7,B1,Body & Health
+2574,eine,2,B1,Grammar & Core Verbs
+2575,nötig,3,B1,Grammar & Core Verbs
+2576,geirrt,4,B1,Grammar & Core Verbs
+2577,kleiner,5,B1,Grammar & Core Verbs
+2578,nur,1,B1,Grammar & Core Verbs
+2579,leid,2,B1,Grammar & Core Verbs
+2580,und,1,B1,Grammar & Core Verbs
+2581,genommen,6,B1,Grammar & Core Verbs
+2582,nützlich,6,B1,Grammar & Core Verbs
+2583,Rand,2,B1,Grammar & Core Verbs
+2584,bitte,3,B1,Grammar & Core Verbs
+2585,einkaufen,7,B1,Shopping & Finance
+2586,arbeitet,6,B1,Grammar & Core Verbs
+2587,fünf,2,B1,Numbers & Quantities
+2588,dauert,4,B1,Grammar & Core Verbs
+2589,kommt,3,B1,Grammar & Core Verbs
+2590,normal,4,B1,Grammar & Core Verbs
+2591,-en,1,B1,Grammar & Core Verbs
+2592,oft / öfter,8,B1,Grammar & Core Verbs
+2593,ohne,2,B1,Grammar & Core Verbs
+2594,Ohr,1,B1,Body & Health
+2595,Oma,1,B1,Family & Relationships
+2596,Onkel,3,B1,Family & Relationships
+2597,Oper,2,B1,Arts & Culture
+2598,operieren,8,B1,Body & Health
+2599,Operation,8,B1,Body & Health
+2600,Opfer,3,B1,"Society, Law & Politics"
+2601,optimistisch,10,B1,Emotions & Personal Traits
+2602,Orange,4,B1,Food & Drink
+2603,Orchester,8,B1,Arts & Culture
+2604,ob,1,B1,Grammar & Core Verbs
+2605,oben,2,B1,Grammar & Core Verbs
+2606,ober,2,B1,Grammar & Core Verbs
+2607,Ober,2,B1,Food & Drink
+2608,das/der,5,B1,Grammar & Core Verbs
+2609,Obst,2,B1,Food & Drink
+2610,oder,2,B1,Grammar & Core Verbs
+2611,offen,3,B1,Grammar & Core Verbs
+2612,öffentlich,8,B1,"Society, Law & Politics"
+2613,Öffentlichkeit,10,B1,"Society, Law & Politics"
+2614,veröffentlichen,10,B1,Grammar & Core Verbs
+2615,offenbar,6,B1,Grammar & Core Verbs
+2616,offiziell,8,B1,Grammar & Core Verbs
+2617,geöffnet,6,B1,Grammar & Core Verbs
+2618,kommen,1,B1,Grammar & Core Verbs
+2619,weggefahren,9,B1,Grammar & Core Verbs
+2620,machen,1,B1,Grammar & Core Verbs
+2621,geworden,6,B1,Grammar & Core Verbs
+2622,nicht,1,B1,Grammar & Core Verbs
+2623,oben,2,B1,Grammar & Core Verbs
+2624,vermietet,8,B1,Grammar & Core Verbs
+2625,sie,1,B1,Grammar & Core Verbs
+2626,wir,1,B1,Grammar & Core Verbs
+2627,noch,2,B1,Grammar & Core Verbs
+2628,offenem,5,B1,Grammar & Core Verbs
+2629,offen,3,B1,Grammar & Core Verbs
