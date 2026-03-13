@@ -3417,14 +3417,18 @@ function _dictSetActiveLetter(l) {
 }
 
 function _dictJumpToLetter(l) {
-  var hdr = document.querySelector('#dict-list [data-dict-letter="' + l + '"]');
+  var list = document.getElementById('dict-list');
+  var hdr = list.querySelector('[data-dict-letter="' + l + '"]');
   if (!hdr) return;
   _dictSetActiveLetter(l);
-  // Pause scroll-tracker so our programmatic scroll doesn’t fight the active state
   _dictScrollPaused = true;
   clearTimeout(_dictScrollPauseTimer);
-  hdr.scrollIntoView({ block: 'start' });
-  _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 350);
+  // Direct scrollTop delta: works up AND down, immune to sticky-header quirks.
+  // scrollIntoView is unreliable for upward scrolling on mobile.
+  var listRect = list.getBoundingClientRect();
+  var hdrRect  = hdr.getBoundingClientRect();
+  list.scrollTop += (hdrRect.top - listRect.top);
+  _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 500);
 }
 
 function _initDictScrollTracker() {
