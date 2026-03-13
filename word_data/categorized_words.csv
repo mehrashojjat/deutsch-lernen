@@ -2999,3 +2999,303 @@ id,word,difficulty,level,theme
 1127,unentschieden,10,B1,Grammar & Core Verbs
 1128,entschlossen,10,B1,Grammar & Core Verbs
 1129,entschuldigen,10,B1,Emotions & Personal Traits
+1130,Entschuldigung,10,B1,Grammar & Core Verbs
+1131,entsorgen,8,B1,Grammar & Core Verbs
+1132,entspannen,8,B1,Grammar & Core Verbs
+1133,entstehen,8,B1,Grammar & Core Verbs
+1134,enttäuschen,9,B1,Grammar & Core Verbs
+1135,Enttäuschung,10,B1,Emotions & Personal Traits
+1136,entweder,6,B1,Grammar & Core Verbs
+1137,entwickeln,8,B1,Grammar & Core Verbs
+1138,Entwicklung,9,B1,Grammar & Core Verbs
+1139,Erde,2,B1,"Nature, Weather & Animals"
+1140,aus,1,B1,Grammar & Core Verbs
+1141,bekommen,6,B1,Grammar & Core Verbs
+1142,diesem,4,B1,Grammar & Core Verbs
+1143,funden,4,B1,Grammar & Core Verbs
+1144,sehr,2,B1,Grammar & Core Verbs
+1145,taten,3,B1,Grammar & Core Verbs
+1146,persönlich,8,B1,Grammar & Core Verbs
+1147,überrascht,8,B1,Emotions & Personal Traits
+1148,erhalten,6,B1,Grammar & Core Verbs
+1149,Steuern,7,B1,Shopping & Finance
+1150,da,1,B1,Grammar & Core Verbs
+1151,entschieden,9,B1,Grammar & Core Verbs
+1152,ich,1,B1,Grammar & Core Verbs
+1153,beiden,4,B1,Grammar & Core Verbs
+1154,was,1,B1,Grammar & Core Verbs
+1155,entschlossen,10,B1,Grammar & Core Verbs
+1156,störe,3,B1,Grammar & Core Verbs
+1157,Zentrum,5,B1,Places & Geography
+1158,enttäuscht,8,B1,Emotions & Personal Traits
+1159,enttäuscht,8,B1,Emotions & Personal Traits
+1160,oder,2,B1,Grammar & Core Verbs
+1161,entwickelt,8,B1,Grammar & Core Verbs
+1162,fallen,4,B1,Grammar & Core Verbs
+1163,erleichtern,9,B1,Grammar & Core Verbs
+1164,Ermäßigung,8,B1,Shopping & Finance
+1165,Ernährung,8,B1,Body & Health
+1166,ernst,3,B1,Emotions & Personal Traits
+1167,ernsthaft,8,B1,Grammar & Core Verbs
+1168,Ernte,3,B1,"Nature, Weather & Animals"
+1169,eröffnen,6,B1,Grammar & Core Verbs
+1170,Eröffnung,8,B1,Grammar & Core Verbs
+1171,erreichen,8,B1,Grammar & Core Verbs
+1172,erschöpft,8,B1,Body & Health
+1173,erschrecken,9,B1,Grammar & Core Verbs
+1174,ersetzen,6,B1,Grammar & Core Verbs
+1175,Ersatz,4,B1,Grammar & Core Verbs
+1176,Erholung,6,B1,Grammar & Core Verbs
+1177,erinnern,6,B1,Grammar & Core Verbs
+1178,Erinnerung,8,B1,Grammar & Core Verbs
+1179,erkältet,6,B1,Body & Health
+1180,Erkältung,8,B1,Body & Health
+1181,erkennen,6,B1,Grammar & Core Verbs
+1182,erklären,6,B1,Grammar & Core Verbs
+1183,Erklärung,8,B1,"Language, Communication & Media"
+1184,erlauben,6,B1,Grammar & Core Verbs
+1185,Erlaubnis,8,B1,"Society, Law & Politics"
+1186,erleben,5,B1,Grammar & Core Verbs
+1187,Erlebnis,6,B1,Grammar & Core Verbs
+1188,geklappt,6,B1,Grammar & Core Verbs
+1189,sehr,2,B1,Grammar & Core Verbs
+1190,und,1,B1,Grammar & Core Verbs
+1191,um,1,B1,Grammar & Core Verbs
+1192,wichtig,5,B1,Grammar & Core Verbs
+1193,andere,4,B1,Grammar & Core Verbs
+1194,noch,2,B1,Grammar & Core Verbs
+1195,erreichen,8,B1,Grammar & Core Verbs
+1196,nichts,4,B1,Grammar & Core Verbs
+1197,schöpft,5,B1,Grammar & Core Verbs
+1198,war,1,B1,Grammar & Core Verbs
+1199,schrecken,8,B1,Grammar & Core Verbs
+1200,ersetzen,6,B1,Grammar & Core Verbs
+1201,einen,1,B1,Grammar & Core Verbs
+1202,gefallen,6,B1,Grammar & Core Verbs
+1203,erhöht,4,B1,Grammar & Core Verbs
+1204,erholt,4,B1,Grammar & Core Verbs
+1205,schnell,5,B1,Grammar & Core Verbs
+1206,brauche,5,B1,Grammar & Core Verbs
+1207,den,1,B1,Grammar & Core Verbs
+1208,erkältet,6,B1,Body & Health
+1209,erkennen,6,B1,Grammar & Core Verbs
+1210,diesen,4,B1,Grammar & Core Verbs
+1211,gemacht,5,B1,Grammar & Core Verbs
+1212,als,1,B1,Grammar & Core Verbs
+1213,erkundigt,8,B1,Grammar & Core Verbs
+1214,lange,3,B1,Grammar & Core Verbs
+1215,-ten,2,B1,Grammar & Core Verbs
+1216,eventuell,8,B1,Grammar & Core Verbs
+1217,ewig,2,B1,Grammar & Core Verbs
+1218,Experte,7,B1,Work & Careers
+1219,extra,3,B1,Grammar & Core Verbs
+1220,extrem,7,B1,Grammar & Core Verbs
+1221,Fabrik,7,B1,Work & Careers
+1222,Fach,2,B1,Education & Learning
+1223,Fachmann,6,B1,Work & Careers
+1224,Fachfrau,6,B1,Work & Careers
+1225,Fachleute,8,B1,Work & Careers
+1226,Fähigkeit,8,B1,Grammar & Core Verbs
+1227,fahren,4,B1,Transportation
+1228,gefahren,6,B1,Grammar & Core Verbs
+1229,Fähre,3,B1,Transportation
+1230,erstellen,8,B1,Grammar & Core Verbs
+1231,erwachsen,8,B1,Grammar & Core Verbs
+1232,Erwachsene,8,B1,Family & Relationships
+1233,erwarten,6,B1,Grammar & Core Verbs
+1234,erzählen,6,B1,Grammar & Core Verbs
+1235,Erzählung,8,B1,Arts & Culture
+1236,erziehen,6,B1,Grammar & Core Verbs
+1237,Erziehung,8,B1,Grammar & Core Verbs
+1238,es,1,B1,Grammar & Core Verbs
+1239,essen,3,B1,Food & Drink
+1240,Essen,3,B1,Food & Drink
+1241,Essig,3,B1,Food & Drink
+1242,Etage,3,B1,Home & Living
+1243,ich,1,B1,Grammar & Core Verbs
+1244,etwas,3,B1,Grammar & Core Verbs
+1245,habe,2,B1,Grammar & Core Verbs
+1246,links,3,B1,Grammar & Core Verbs
+1247,am,1,B1,Grammar & Core Verbs
+1248,wieder,4,B1,Grammar & Core Verbs
+1249,immer,1,B1,Grammar & Core Verbs
+1250,musst,1,B1,Grammar & Core Verbs
+1251,um,1,B1,Grammar & Core Verbs
+1252,kaputt,4,B1,Grammar & Core Verbs
+1253,zu,1,B1,Grammar & Core Verbs
+1254,Farbe,3,B1,Grammar & Core Verbs
+1255,farbig,4,B1,Grammar & Core Verbs
+1256,Hackfleisch,9,B1,Food & Drink
+1257,fast,2,B1,Grammar & Core Verbs
+1258,faul,2,B1,Emotions & Personal Traits
+1259,faulenzen,8,B1,Grammar & Core Verbs
+1260,Fehler,4,B1,Grammar & Core Verbs
+1261,feiern,4,B1,Grammar & Core Verbs
+1262,Feier,3,B1,Arts & Culture
+1263,Feierabend,8,B1,Work & Careers
+1264,Feiertag,6,B1,Time & Calendar
+1265,Feld,2,B1,"Nature, Weather & Animals"
+1266,Fenster,5,B1,Home & Living
+1267,Fahrer,4,B1,Work & Careers
+1268,Fahrkarte,8,B1,Transportation
+1269,Fahrplan,6,B1,Transportation
+1270,Fahrrad,5,B1,Transportation
+1271,Fahrzeug,7,B1,Transportation
+1272,fair,2,B1,Emotions & Personal Traits
+1273,Faktor,7,B1,Grammar & Core Verbs
+1274,fallen,4,B1,Grammar & Core Verbs
+1275,fällig,4,B1,Grammar & Core Verbs
+1276,falls,3,B1,Grammar & Core Verbs
+1277,falsch,4,B1,Grammar & Core Verbs
+1278,Familie,5,B1,Family & Relationships
+1279,Familienstand,10,B1,Family & Relationships
+1280,fangen,4,B1,Grammar & Core Verbs
+1281,Fantasie / Phantasie,10,B1,Arts & Culture
+1282,fleißig,5,B1,Emotions & Personal Traits
+1283,faulenzen,8,B1,Grammar & Core Verbs
+1284,fehlt,3,B1,Grammar & Core Verbs
+1285,gemacht,5,B1,Grammar & Core Verbs
+1286,funden,4,B1,Grammar & Core Verbs
+1287,gefeiert,6,B1,Grammar & Core Verbs
+1288,aufmachen,8,B1,Grammar & Core Verbs
+1289,verletzt,6,B1,Body & Health
+1290,fair,2,B1,Emotions & Personal Traits
+1291,schutzfaktor,10,B1,Grammar & Core Verbs
+1292,einmal,4,B1,Numbers & Quantities
+1293,gefallen,6,B1,Grammar & Core Verbs
+1294,null,2,B1,Numbers & Quantities
+1295,fällig,4,B1,Grammar & Core Verbs
+1296,ankreuzen,7,B1,"Language, Communication & Media"
+1297,feucht,4,B1,"Nature, Weather & Animals"
+1298,Feuer,3,B1,Grammar & Core Verbs
+1299,Feuerzeug,8,B1,Grammar & Core Verbs
+1300,Feuerwehr,8,B1,Grammar & Core Verbs
+1301,Fieber,7,B1,Body & Health
+1302,Film,2,B1,Arts & Culture
+1303,finanzieren,9,B1,Grammar & Core Verbs
+1304,finanziell,8,B1,Grammar & Core Verbs
+1305,finden,4,B1,Grammar & Core Verbs
+1306,Finger,4,B1,Body & Health
+1307,Firma,3,B1,Work & Careers
+1308,Fläche,7,B1,Numbers & Quantities
+1309,Flasche,5,B1,Food & Drink
+1310,Fleck,3,B1,Grammar & Core Verbs
+1311,Fleisch,5,B1,Food & Drink
+1312,Metzgerin,8,B1,Food & Drink
+1313,fleißig,5,B1,Emotions & Personal Traits
+1314,Fernbedienung,10,B1,Home & Living
+1315,fernsehen,8,B1,Grammar & Core Verbs
+1316,Fernsehen,8,B1,"Language, Communication & Media"
+1317,Fernseher,8,B1,"Language, Communication & Media"
+1318,fertig,4,B1,Grammar & Core Verbs
+1319,fest,2,B1,Grammar & Core Verbs
+1320,Fest,2,B1,Sports & Leisure
+1321,Festplatte,8,B1,Technology & Devices
+1322,festhalten,8,B1,Grammar & Core Verbs
+1323,festlegen,8,B1,Grammar & Core Verbs
+1324,festnehmen,8,B1,Grammar & Core Verbs
+1325,festsetzen,8,B1,Grammar & Core Verbs
+1326,feststehen,8,B1,Grammar & Core Verbs
+1327,feststellen,9,B1,Grammar & Core Verbs
+1328,fett,2,B1,Grammar & Core Verbs
+1329,groß,2,B1,Grammar & Core Verbs
+1330,bekommen,6,B1,Grammar & Core Verbs
+1331,ansehen,5,B1,Grammar & Core Verbs
+1332,finanzieren,9,B1,Grammar & Core Verbs
+1333,besser,4,B1,Grammar & Core Verbs
+1334,gefunden,6,B1,Grammar & Core Verbs
+1335,zurückgeben,9,B1,Grammar & Core Verbs
+1336,immer,1,B1,Grammar & Core Verbs
+1337,gehe,2,B1,Grammar & Core Verbs
+1338,total,3,B1,Grammar & Core Verbs
+1339,neue,2,B1,Grammar & Core Verbs
+1340,noch,2,B1,Grammar & Core Verbs
+1341,großes,4,B1,Grammar & Core Verbs
+1342,festgelegt,8,B1,Grammar & Core Verbs
+1343,festgenommen,10,B1,Grammar & Core Verbs
+1344,des,1,B1,Grammar & Core Verbs
+1345,aber,2,B1,Grammar & Core Verbs
+1346,Forschung,8,B1,Grammar & Core Verbs
+1347,Fortschritt,9,B1,Grammar & Core Verbs
+1348,Fortsetzung,9,B1,Grammar & Core Verbs
+1349,Forum,3,B1,"Language, Communication & Media"
+1350,fotografieren,10,B1,Arts & Culture
+1351,Foto,2,B1,Grammar & Core Verbs
+1352,Fotoapparat,9,B1,Arts & Culture
+1353,Fotograf,6,B1,Work & Careers
+1354,Fotografie,8,B1,Arts & Culture
+1355,fragen,4,B1,Grammar & Core Verbs
+1356,Frage,3,B1,"Language, Communication & Media"
+1357,Frau,2,B1,Grammar & Core Verbs
+1358,frech,3,B1,Grammar & Core Verbs
+1359,frei,2,B1,Grammar & Core Verbs
+1360,im,1,B1,Grammar & Core Verbs
+1361,Freiheit,7,B1,"Society, Law & Politics"
+1362,Freizeit,7,B1,Sports & Leisure
+1363,flexibel,6,B1,Grammar & Core Verbs
+1364,fliegen,5,B1,Transportation
+1365,fliehen,5,B1,Grammar & Core Verbs
+1366,Flucht,4,B1,"Society, Law & Politics"
+1367,fließen,5,B1,Grammar & Core Verbs
+1368,fließend,6,B1,Grammar & Core Verbs
+1369,Flohmarkt,8,B1,Shopping & Finance
+1370,Flöte,3,B1,Arts & Culture
+1371,Flughafen,8,B1,Transportation
+1372,Flugzeug,6,B1,Transportation
+1373,Flur,2,B1,Home & Living
+1374,folgen,4,B1,Grammar & Core Verbs
+1375,Folge,3,B1,Grammar & Core Verbs
+1376,folgend,5,B1,Grammar & Core Verbs
+1377,fordern,5,B1,Grammar & Core Verbs
+1378,Forderung,8,B1,Grammar & Core Verbs
+1379,fördern,5,B1,Grammar & Core Verbs
+1380,Förderung,8,B1,"Society, Law & Politics"
+1381,Form,2,B1,Grammar & Core Verbs
+1382,nächsten,6,B1,Grammar & Core Verbs
+1383,kaufen,4,B1,Shopping & Finance
+1384,gemacht,5,B1,Grammar & Core Verbs
+1385,verstanden,8,B1,Grammar & Core Verbs
+1386,wählen,4,B1,"Society, Law & Politics"
+1387,übernachten,9,B1,Grammar & Core Verbs
+1388,Stadt,3,B1,Places & Geography
+1389,einnehmen,8,B1,Grammar & Core Verbs
+1390,-ten,2,B1,Grammar & Core Verbs
+1391,kann,2,B1,Grammar & Core Verbs
+1392,frühstücken,9,B1,Food & Drink
+1393,Frühstück,8,B1,Food & Drink
+1394,fühlen,4,B1,Grammar & Core Verbs
+1395,führen,4,B1,Grammar & Core Verbs
+1396,Führerschein,10,B1,Transportation
+1397,Führung,5,B1,Travel & Tourism
+1398,Fundbüro,7,B1,Work & Careers
+1399,funktionieren,10,B1,Grammar & Core Verbs
+1400,für,1,B1,Grammar & Core Verbs
+1401,freiwillig,8,B1,Grammar & Core Verbs
+1402,Freude,4,B1,Emotions & Personal Traits
+1403,Freund,4,B1,Family & Relationships
+1404,freundlich,8,B1,Emotions & Personal Traits
+1405,Freundschaft,10,B1,Grammar & Core Verbs
+1406,Friede,7,B1,"Society, Law & Politics"
+1407,frieren,5,B1,Grammar & Core Verbs
+1408,frisch,4,B1,Grammar & Core Verbs
+1409,Friseur,5,B1,Work & Careers
+1410,Friseurin,8,B1,Work & Careers
+1411,Frisur,4,B1,Clothing & Appearance
+1412,Frist,3,B1,Time & Calendar
+1413,froh,2,B1,Emotions & Personal Traits
+1414,fröhlich,6,B1,Grammar & Core Verbs
+1415,Frucht,4,B1,Food & Drink
+1416,früh,2,B1,Time & Calendar
+1417,gekommen,6,B1,Grammar & Core Verbs
+1418,mich,2,B1,Grammar & Core Verbs
+1419,ist,1,B1,Grammar & Core Verbs
+1420,Museum,4,B1,Arts & Culture
+1421,seit,2,B1,Grammar & Core Verbs
+1422,Automat,5,B1,Technology & Devices
+1423,sehr,2,B1,Grammar & Core Verbs
+1424,kann,2,B1,Grammar & Core Verbs
+1425,gemietet,6,B1,Grammar & Core Verbs
+1426,geklappt,6,B1,Grammar & Core Verbs
+1427,gefreut,5,B1,Grammar & Core Verbs
+1428,-sten,3,B1,Grammar & Core Verbs
+1429,hat,1,B1,Grammar & Core Verbs
