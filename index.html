@@ -199,7 +199,16 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .random-banner.swipe-banner .rb-text strong{color:var(--blue);}
 .random-banner.adaptive-banner{background:linear-gradient(135deg,rgba(107,232,160,.12),rgba(232,201,122,.08));border-color:rgba(107,232,160,.28);}
 .random-banner.adaptive-banner .rb-text strong{color:#6be8a0;}
+.random-banner.theme-banner{background:linear-gradient(135deg,rgba(183,138,247,.12),rgba(126,184,247,.08));border-color:rgba(183,138,247,.28);}
+.random-banner.theme-banner .rb-text strong{color:#b78af7;}
 .rb-icon{font-size:1.5rem;}
+.adaptive-skill-badge-display{text-align:center;font-size:.78rem;color:var(--muted);margin:10px 0 6px;min-height:20px;}
+/* ── CATEGORY GRID ── */
+.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:4px 0 20px;}
+.category-card{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:14px 10px;cursor:pointer;transition:all .18s ease;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
+.category-card:hover{border-color:rgba(183,138,247,.4);transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.25);}
+.cat-icon{font-size:1.4rem;}
+.cat-name{font-size:.74rem;color:var(--text);line-height:1.3;}
 .rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
 .rb-text span{font-size:.74rem;color:var(--muted);}
 .rb-arrow{margin-left:auto;color:var(--muted);font-size:1.1rem;}
@@ -534,6 +543,20 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <span id="swipe-banner-sub">Swipe if the meaning matches</span>
       </div>
     </div>
+    <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
+      <div class="rb-icon">🎯</div>
+      <div class="rb-text">
+        <strong id="adaptive-banner-title">Adaptive Quiz</strong>
+        <span id="adaptive-banner-sub">Adjusts to your skill level</span>
+      </div>
+    </div>
+    <div class="random-banner theme-banner" onclick="openThemeSelect()">
+      <div class="rb-icon">🗂️</div>
+      <div class="rb-text">
+        <strong id="theme-banner-title">Theme Quiz</strong>
+        <span id="theme-banner-sub">Quiz yourself on a topic</span>
+      </div>
+    </div>
   </div>
 
   <div class="section-label" id="lbl-select-level">Select Level</div>
@@ -653,6 +676,40 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <button class="swipe-btn left" onclick="swipeAction('left')" title="Wrong">✖</button>
     <button class="swipe-btn right" onclick="swipeAction('right')" title="Correct">✔</button>
   </div>
+</div>
+
+<!-- ══ ADAPTIVE QUIZ SETUP ══ -->
+<div class="screen hidden" id="screen-adaptive-setup">
+  <div class="swipe-header">
+    <button class="back-btn" id="adaptive-setup-back-btn" onclick="goHome()">← Back</button>
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
+      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
+    </div>
+    <div style="width:58px;"></div>
+  </div>
+  <div class="swipe-setup">
+    <div class="swipe-level-grid">
+      <button class="swipe-level-btn active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
+    </div>
+    <div id="adaptive-skill-badge" class="adaptive-skill-badge-display"></div>
+    <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
+  </div>
+</div>
+
+<!-- ══ THEME SELECT ══ -->
+<div class="screen hidden" id="screen-theme-select">
+  <div class="swipe-header">
+    <button class="back-btn" id="theme-back-btn" onclick="goHome()">← Back</button>
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
+      <div class="swipe-subtitle" id="theme-screen-subtitle">Pick a topic to practise</div>
+    </div>
+    <div style="width:58px;"></div>
+  </div>
+  <div class="category-grid" id="category-grid"></div>
 </div>
 
 <!-- ══ RANDOM WORD ══ -->

@@ -60,6 +60,14 @@ const UI = {
     aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
     footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Adaptive Quiz',
+    adaptiveBannerSub: 'Adjusts to your skill level',
+    adaptiveSetupTitle: 'Adaptive Quiz',
+    adaptiveSetupSubtitle: 'Adjusts difficulty to your skill level',
+    themeBannerTitle: 'Theme Quiz',
+    themeBannerSub: 'Quiz yourself on a topic',
+    themeSelectTitle: 'Theme Quiz',
+    themeSelectSubtitle: 'Pick a topic to practise',
     typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
   },
   tr: {
@@ -120,6 +128,14 @@ const UI = {
     aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
     footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Uyarlamalı Sınav',
+    adaptiveBannerSub: 'Seviyenize göre ayarlanır',
+    adaptiveSetupTitle: 'Uyarlamalı Sınav',
+    adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
+    themeBannerTitle: 'Konu Sınavı',
+    themeBannerSub: 'Bir konuyu seçerek test edin',
+    themeSelectTitle: 'Konu Sınavı',
+    themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
     typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
   },
   fa: {
@@ -180,6 +196,14 @@ const UI = {
     aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
     footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
     footerCopy: '© ۲۰۲۶ Mehras Hojjat',
+    adaptiveBannerTitle: 'آزمون تطبیقی',
+    adaptiveBannerSub: 'سطح شما را تشخیص می‌دهد',
+    adaptiveSetupTitle: 'آزمون تطبیقی',
+    adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
+    themeBannerTitle: 'آزمون موضوعی',
+    themeBannerSub: 'یک موضوع انتخاب کنید',
+    themeSelectTitle: 'آزمون موضوعی',
+    themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
   },
   ru: {
@@ -240,6 +264,14 @@ const UI = {
     aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
     footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Адаптивная викторина',
+    adaptiveBannerSub: 'Адаптируется к вашему уровню',
+    adaptiveSetupTitle: 'Адаптивная викторина',
+    adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
+    themeBannerTitle: 'Тематическая викторина',
+    themeBannerSub: 'Выберите тему для тренировки',
+    themeSelectTitle: 'Тематическая викторина',
+    themeSelectSubtitle: 'Выберите тему',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
   },
   uk: {
@@ -300,6 +332,14 @@ const UI = {
     aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
     footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Адаптивна вікторина',
+    adaptiveBannerSub: 'Адаптується до вашого рівня',
+    adaptiveSetupTitle: 'Адаптивна вікторина',
+    adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
+    themeBannerTitle: 'Тематична вікторина',
+    themeBannerSub: 'Виберіть тему для практики',
+    themeSelectTitle: 'Тематична вікторина',
+    themeSelectSubtitle: 'Виберіть тему',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
   },
   ar: {
@@ -374,6 +414,33 @@ const WORD_BANK = window.APP_DATA.WORD_BANK;
 // ══════════════════════════════════════════════════════════════════
 const VOCAB_CARDS = window.APP_DATA.VOCAB_CARDS;
 
+// ════════════════════════════════════════════════════════════════
+//  CATEGORY MAP — 21 vocabulary categories, ID 1–21
+// ════════════════════════════════════════════════════════════════
+var CATEGORY_MAP = [
+  { id:  1, name: 'Numbers & Quantities',           icon: '🔢' },
+  { id:  2, name: 'Time & Calendar',                icon: '🕐' },
+  { id:  3, name: 'Family & Relationships',         icon: '👨‍👩‍👧' },
+  { id:  4, name: 'Body & Health',                  icon: '🏥' },
+  { id:  5, name: 'Food & Drink',                   icon: '🍽️' },
+  { id:  6, name: 'Home & Living',                  icon: '🏠' },
+  { id:  7, name: 'Clothing & Appearance',          icon: '👗' },
+  { id:  8, name: 'Work & Careers',                 icon: '💼' },
+  { id:  9, name: 'Education & Learning',           icon: '📚' },
+  { id: 10, name: 'Travel & Tourism',               icon: '✈️' },
+  { id: 11, name: 'Transportation',                 icon: '🚗' },
+  { id: 12, name: 'Shopping & Finance',             icon: '🛍️' },
+  { id: 13, name: 'Language, Communication & Media', icon: '💬' },
+  { id: 14, name: 'Nature, Weather & Animals',      icon: '🌿' },
+  { id: 15, name: 'Sports & Leisure',               icon: '⚽' },
+  { id: 16, name: 'Arts & Culture',                 icon: '🎨' },
+  { id: 17, name: 'Technology & Devices',           icon: '💻' },
+  { id: 18, name: 'Society, Law & Politics',        icon: '⚖️' },
+  { id: 19, name: 'Emotions & Personal Traits',     icon: '❤️' },
+  { id: 20, name: 'Places & Geography',             icon: '🗺️' },
+  { id: 21, name: 'Grammar & Function Words',       icon: '📝' },
+];
+
 
 var FORM_INDEX = {};
 (function(){
@@ -422,6 +489,8 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
+var adaptiveSelectedLevel = 'A1';
+var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 
 // ── Helpers ──
 function t(key) { return UI[LANG][key] !== undefined ? UI[LANG][key] : UI.en[key]; }
@@ -522,6 +591,24 @@ function applyTranslations() {
   document.getElementById('about-close-btn').textContent = u.aboutClose;
   document.getElementById('footer-msg').textContent = u.footerMsg;
   document.getElementById('footer-copy').textContent = u.footerCopy;
+  // New banner titles
+  document.getElementById('adaptive-banner-title').textContent = u.adaptiveBannerTitle;
+  document.getElementById('adaptive-banner-sub').textContent = u.adaptiveBannerSub;
+  document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
+  document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
+  // Adaptive setup screen
+  document.getElementById('adaptive-setup-screen-title').textContent = u.adaptiveSetupTitle;
+  document.getElementById('adaptive-setup-screen-subtitle').textContent = u.adaptiveSetupSubtitle;
+  var aln = u.levelNames;
+  document.getElementById('adaptive-ln-A1').textContent = aln.A1;
+  document.getElementById('adaptive-ln-A2').textContent = aln.A2;
+  document.getElementById('adaptive-ln-B1').textContent = aln.B1;
+  document.getElementById('adaptive-launch-btn').textContent = u.prepareTen;
+  document.getElementById('adaptive-setup-back-btn').textContent = u.back;
+  // Theme select screen
+  document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
+  document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
+  document.getElementById('theme-back-btn').textContent = u.back;
 }
 
 
@@ -694,6 +781,7 @@ function buildQueue(level) {
 }
 
 async function startLevel(lv) {
+  currentThemeCategoryId = 0; // clear theme quiz state
   currentLevel = lv;
   var _ov = document.getElementById('quiz-prep-overlay');
 
@@ -847,13 +935,156 @@ function showResults(){
   show('screen-results');
 }
 
-function restartLevel(){startLevel(currentLevel);}
+function restartLevel(){
+  if (currentThemeCategoryId) startThemeQuiz(currentThemeCategoryId);
+  else startLevel(currentLevel);
+}
 function goHome(){show('screen-levels');}
 function openSwipeSetup(){ show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
   swipeSelectedLevel = lv;
   ['A1','A2','B1'].forEach(function(k){
     document.getElementById('swipe-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+// ── ADAPTIVE QUIZ SETUP ──
+function openAdaptiveSetup() {
+  show('screen-adaptive-setup');
+  if (typeof window._adaptiveRefreshBadge === 'function') window._adaptiveRefreshBadge();
+}
+function setAdaptiveLevel(lv) {
+  adaptiveSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k) {
+    document.getElementById('adaptive-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+function launchAdaptiveQuiz() {
+  if (typeof window.startAdaptiveQuiz === 'function') window.startAdaptiveQuiz(adaptiveSelectedLevel);
+}
+
+// ── THEME QUIZ ──
+function openThemeSelect() {
+  _loadAllCSV(); // preload in background
+  show('screen-theme-select');
+  _renderCategoryGrid();
+}
+
+function _renderCategoryGrid() {
+  var grid = document.getElementById('category-grid');
+  if (!grid) return;
+  grid.innerHTML = CATEGORY_MAP.map(function(cat) {
+    return '<button class="category-card" onclick="startThemeQuiz(' + cat.id + ')">'
+      + '<span class="cat-icon">' + cat.icon + '</span>'
+      + '<span class="cat-name">' + escHtml(cat.name) + '</span>'
+      + '</button>';
+  }).join('');
+}
+
+async function startThemeQuiz(categoryId) {
+  currentThemeCategoryId = 0;
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    await _loadAllCSV();
+  } catch(err) {
+    _ov.classList.remove('active');
+    var msg = 'Could not load quiz data.';
+    if (window.location.protocol === 'file:') msg += ' Open through a local server instead of file://';
+    alert(msg);
+    return;
+  }
+  _ov.classList.remove('active');
+
+  var cards = _buildThemeQueue(categoryId);
+  if (!cards.length) {
+    alert('Not enough words available for this topic yet!');
+    return;
+  }
+  currentThemeCategoryId = categoryId;
+  currentLevel = _categoryName(categoryId);
+  queue = cards;
+  idx = 0; ok = 0; no = 0;
+  show('screen-quiz');
+  renderCard();
+}
+
+function _categoryName(id) {
+  var cat = CATEGORY_MAP.find(function(c){ return c.id === id; });
+  return cat ? cat.name : 'Theme';
+}
+
+function _buildThemeQueue(categoryId) {
+  // Gather all CSV rows across all levels matching this category
+  var pool = [];
+  ['A1','A2','B1'].forEach(function(lv) {
+    (CSV_QUIZ_DATA[lv] || []).forEach(function(r) {
+      if (parseInt(r.category_id) === categoryId) pool.push(r);
+    });
+  });
+  if (!pool.length) return [];
+
+  // Determine difficulty range for this category
+  var diffs = pool.map(function(r){ return parseInt(r.difficulty); }).filter(function(d){ return d >= 1 && d <= 10; });
+  if (!diffs.length) return _buildQueueFromRows(shuffle(pool).slice(0, QUIZ_LEN));
+  var catMin = Math.min.apply(null, diffs);
+  var catMax = Math.max.apply(null, diffs);
+
+  // Determine user skill level from adaptive progress; default 4 for new users
+  var skillLevel = 4;
+  try {
+    var _ap = JSON.parse(localStorage.getItem('deutsch_adaptive_progress'));
+    if (_ap && _ap.skillLevel >= 1) skillLevel = _ap.skillLevel;
+  } catch(e) {}
+
+  // Clamp skill to category bounds
+  var effectiveDiff = Math.max(catMin, Math.min(catMax, Math.round(skillLevel)));
+  return _buildThemeQueueWithFallback(pool, effectiveDiff);
+}
+
+function _buildThemeQueueWithFallback(pool, targetDiff) {
+  var needed = QUIZ_LEN;
+  var used = {};
+  var selected = [];
+
+  // Stage 1 — exact difficulty
+  shuffle(pool.filter(function(r){ return parseInt(r.difficulty) === targetDiff; }))
+    .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
+
+  // Stage 2 — expand radius outward from targetDiff
+  if (selected.length < needed) {
+    for (var radius = 1; radius <= 9 && selected.length < needed; radius++) {
+      shuffle(pool.filter(function(r) { return Math.abs(parseInt(r.difficulty) - targetDiff) === radius; }))
+        .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
+    }
+  }
+
+  // Stage 3 — any remaining words from pool
+  if (selected.length < needed) {
+    shuffle(pool.filter(function(r){ return !used[r.id]; }))
+      .forEach(function(r){ if (selected.length < needed) { used[r.id] = true; selected.push(r); } });
+  }
+
+  return _buildQueueFromRows(selected);
+}
+
+function _buildQueueFromRows(rows) {
+  var allRows = [];
+  ['A1','A2','B1'].forEach(function(lv){ allRows = allRows.concat(CSV_QUIZ_DATA[lv] || []); });
+  return rows.map(function(row) {
+    var usedIds = {}; usedIds[row.id] = true;
+    var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
+    var distractors = [];
+    shuffle(allRows).forEach(function(d) {
+      if (distractors.length >= 6) return;
+      if (usedIds[d.id]) return;
+      var en = d.translation_en.trim();
+      if (en && !usedEn[en]) {
+        usedEn[en] = true; usedIds[d.id] = true;
+        distractors.push(d);
+      }
+    });
+    return { _row: row, _distractors: distractors };
   });
 }
 
@@ -2968,7 +3199,7 @@ function closeWordModal(e) {
 
 // ── Screen switcher ──
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
 }
