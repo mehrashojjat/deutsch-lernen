@@ -564,6 +564,7 @@ function rowTypeLabel(type) {
 function openSettings() {
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('settings-drawer').classList.add('open');
+  document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
 }
 function closeSettings() {
   document.getElementById('drawer-overlay').classList.remove('open');
@@ -572,6 +573,7 @@ function closeSettings() {
   // Reset any drag-offset so the next open() starts clean
   _dr.style.transition = '';
   _dr.style.transform = '';
+  document.body.style.overflow = ''; // restore scroll
 }
 function openAbout() {
   document.getElementById('about-modal-overlay').classList.add('open');
@@ -3281,6 +3283,7 @@ async function openWordCard(word, tc) {
   var content = document.getElementById('word-modal-content');
   content.innerHTML = loadingHTML();
   document.getElementById('word-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
   try {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
@@ -3306,6 +3309,7 @@ function closeWordModal(e) {
   // Reset any drag-offset so the next open() starts clean
   var _wm = _overlay.querySelector('.word-modal');
   if (_wm) { _wm.style.transition = ''; _wm.style.transform = ''; }
+  document.body.style.overflow = ''; // restore scroll
 }
 
 // ══════════════════════════════════════════════════════════════════
