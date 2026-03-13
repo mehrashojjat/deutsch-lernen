@@ -1499,3 +1499,303 @@ id,word,difficulty,level,theme
 686,manch-,8,A2,Grammar & Core Verbs
 687,Mann,1,A2,Grammar & Core Verbs
 688,Maschine,9,A2,Technology & Devices
+689,meinen,8,A2,Grammar & Core Verbs
+690,Meinung,8,A2,Grammar & Core Verbs
+691,meist-,5,A2,Grammar & Core Verbs
+692,lange,5,A2,Grammar & Core Verbs
+693,laufen,3,A2,Sports & Leisure
+694,Leben,2,A2,Grammar & Core Verbs
+695,mittel,5,A2,Grammar & Core Verbs
+696,leihen,8,A2,Grammar & Core Verbs
+697,lesen,2,A2,"Language, Communication & Media"
+698,letzt-,5,A2,Grammar & Core Verbs
+699,Leute,2,A2,Grammar & Core Verbs
+700,lieben,3,A2,Emotions & Personal Traits
+701,liegen,3,A2,Grammar & Core Verbs
+702,Moment,3,A2,Time & Calendar
+703,morgen,3,A2,Time & Calendar
+704,Motor,8,A2,Transportation
+705,Mund,1,A2,Body & Health
+706,Museum,3,A2,Arts & Culture
+707,Musik,2,A2,Education & Learning
+708,müssen,3,A2,Grammar & Core Verbs
+709,musste,5,A2,Grammar & Core Verbs
+710,Mütze,8,A2,Clothing & Appearance
+711,nach,1,A2,Grammar & Core Verbs
+712,Nachbar,8,A2,Grammar & Core Verbs
+713,Nachricht,9,A2,"Language, Communication & Media"
+714,Nähe,8,A2,Grammar & Core Verbs
+715,Name,1,A2,Grammar & Core Verbs
+716,nass,4,A2,Grammar & Core Verbs
+717,Natur,2,A2,"Nature, Weather & Animals"
+718,natürlich,2,A2,Grammar & Core Verbs
+719,neben,2,A2,Grammar & Core Verbs
+720,Mensch,3,A2,Grammar & Core Verbs
+721,merken,8,A2,Grammar & Core Verbs
+722,Messe,8,A2,Grammar & Core Verbs
+723,Messer,8,A2,Food & Drink
+724,Miete,8,A2,Home & Living
+725,mieten,8,A2,Grammar & Core Verbs
+726,Milch,2,A2,Food & Drink
+727,Mineral-,6,A2,Food & Drink
+728,mit,1,A2,Grammar & Core Verbs
+729,Mitarbeiter,10,A2,Work & Careers
+730,Mittagessen,10,A2,Food & Drink
+731,Mittel,5,A2,Grammar & Core Verbs
+732,Möbel,5,A2,Home & Living
+733,Mobil-,5,A2,"Language, Communication & Media"
+734,möchten,2,A2,Grammar & Core Verbs
+735,Mode,1,A2,Clothing & Appearance
+736,möglich,8,A2,Grammar & Core Verbs
+737,offen,2,A2,Grammar & Core Verbs
+738,öffnen,3,A2,Grammar & Core Verbs
+739,oft,1,A2,Grammar & Core Verbs
+740,Ohr,1,A2,Body & Health
+741,Öl,4,A2,Food & Drink
+742,online,3,A2,Grammar & Core Verbs
+743,Orange,3,A2,Food & Drink
+744,Ordnung,8,A2,Grammar & Core Verbs
+745,organisieren,10,A2,Grammar & Core Verbs
+746,Ort,1,A2,Places & Geography
+747,Paar,1,A2,Family & Relationships
+748,ein,1,A2,Grammar & Core Verbs
+749,packen,5,A2,Grammar & Core Verbs
+750,Paket,8,A2,"Language, Communication & Media"
+751,Partner,8,A2,Family & Relationships
+752,Partnerin,9,A2,Family & Relationships
+753,Party,2,A2,Sports & Leisure
+754,passieren,3,A2,Grammar & Core Verbs
+755,nennen,5,A2,Grammar & Core Verbs
+756,nervös,8,A2,Emotions & Personal Traits
+757,neu,1,A2,Grammar & Core Verbs
+758,nicht,2,A2,Grammar & Core Verbs
+759,nichts,3,A2,Grammar & Core Verbs
+760,nie,1,A2,Grammar & Core Verbs
+761,niemand,6,A2,Grammar & Core Verbs
+762,nirgends,9,A2,Grammar & Core Verbs
+763,noch,1,A2,Grammar & Core Verbs
+764,normal,5,A2,Grammar & Core Verbs
+765,Note,8,A2,Education & Learning
+766,Notiz,8,A2,Grammar & Core Verbs
+767,Nudel,2,A2,Food & Drink
+768,Nummer,3,A2,Numbers & Quantities
+769,nur,1,A2,Grammar & Core Verbs
+770,nützlich,9,A2,Grammar & Core Verbs
+771,oben,4,A2,Grammar & Core Verbs
+772,oder,1,A2,Grammar & Core Verbs
+773,Projekt,8,A2,Work & Careers
+774,Prospekt,9,A2,"Language, Communication & Media"
+775,prüfen,5,A2,Education & Learning
+776,Prüfung,6,A2,"Language, Communication & Media"
+777,putzen,5,A2,Home & Living
+778,Qualität,9,A2,Grammar & Core Verbs
+779,Quiz,4,A2,Education & Learning
+780,Radio,2,A2,"Language, Communication & Media"
+781,Rathaus,8,A2,"Society, Law & Politics"
+782,Rätsel,8,A2,Grammar & Core Verbs
+783,rauchen,6,A2,Grammar & Core Verbs
+784,Raum,8,A2,Grammar & Core Verbs
+785,Rechnung,9,A2,Shopping & Finance
+786,Regen,2,A2,"Nature, Weather & Animals"
+787,Reinigung,9,A2,Home & Living
+788,Pause,2,A2,Grammar & Core Verbs
+789,Person,3,A2,Grammar & Core Verbs
+790,Pizza,2,A2,Food & Drink
+791,Plakat,8,A2,Arts & Culture
+792,Plan,4,A2,Grammar & Core Verbs
+793,Platz,2,A2,Places & Geography
+794,plötzlich,9,A2,Grammar & Core Verbs
+795,Polizei,6,A2,"Society, Law & Politics"
+796,Portion,8,A2,Food & Drink
+797,Poster,5,A2,Arts & Culture
+798,Praktikum,9,A2,Work & Careers
+799,Praxis,8,A2,Grammar & Core Verbs
+800,Preis,5,A2,Shopping & Finance
+801,preiswert,9,A2,Shopping & Finance
+802,pro,1,A2,Grammar & Core Verbs
+803,probieren,7,A2,Grammar & Core Verbs
+804,Problem,3,A2,Grammar & Core Verbs
+805,rund,4,A2,Grammar & Core Verbs
+806,Rundgang,9,A2,Travel & Tourism
+807,Sache,5,A2,Grammar & Core Verbs
+808,Saft,4,A2,Food & Drink
+809,sagen,2,A2,Grammar & Core Verbs
+810,Salat,2,A2,Food & Drink
+811,Salz,1,A2,Food & Drink
+812,sammeln,6,A2,Grammar & Core Verbs
+813,Satz,8,A2,"Language, Communication & Media"
+814,Schalter,9,A2,Grammar & Core Verbs
+815,scharf,5,A2,Food & Drink
+816,scheinen,6,A2,Grammar & Core Verbs
+817,schenken,6,A2,Grammar & Core Verbs
+818,Schere,5,A2,Grammar & Core Verbs
+819,schicken,6,A2,Grammar & Core Verbs
+820,Schiff,5,A2,Transportation
+821,Schirm,5,A2,Grammar & Core Verbs
+822,Reise,5,A2,Travel & Tourism
+823,Reisebüro,9,A2,Travel & Tourism
+824,Reiseführer,10,A2,Travel & Tourism
+825,reisen,5,A2,Travel & Tourism
+826,reiten,8,A2,Sports & Leisure
+827,renovieren,10,A2,Home & Living
+828,Rentnerin,7,A2,Work & Careers
+829,Reparatur,9,A2,Grammar & Core Verbs
+830,reservieren,7,A2,Travel & Tourism
+831,Rest,4,A2,Numbers & Quantities
+832,Restaurant,3,A2,Food & Drink
+833,Rezeption,9,A2,Travel & Tourism
+834,richtig,2,A2,"Language, Communication & Media"
+835,riechen,8,A2,Food & Drink
+836,Rind,8,A2,Food & Drink
+837,Rose,1,A2,Grammar & Core Verbs
+838,Rücken,3,A2,Body & Health
+839,rufen,5,A2,Grammar & Core Verbs
+840,Ruhe,1,A2,Grammar & Core Verbs
+841,ruhig,2,A2,Emotions & Personal Traits
+842,Schüler,6,A2,Education & Learning
+843,Schülerin,7,A2,Education & Learning
+844,schwach,3,A2,Body & Health
+845,schwierig,9,A2,Grammar & Core Verbs
+846,schwimmen,7,A2,Sports & Leisure
+847,See,4,A2,"Nature, Weather & Animals"
+848,See,4,A2,"Nature, Weather & Animals"
+849,sehen,2,A2,Grammar & Core Verbs
+850,Sehens-,8,A2,Travel & Tourism
+851,sehr,1,A2,Grammar & Core Verbs
+852,Seife,8,A2,Grammar & Core Verbs
+853,Service,6,A2,Grammar & Core Verbs
+854,setzen,8,A2,Grammar & Core Verbs
+855,schlecht,2,A2,Grammar & Core Verbs
+856,schließen,7,A2,Grammar & Core Verbs
+857,Schluss,6,A2,Grammar & Core Verbs
+858,Schlüssel,7,A2,Home & Living
+859,schmecken,7,A2,Food & Drink
+860,Schmerz,6,A2,Body & Health
+861,schneien,6,A2,"Nature, Weather & Animals"
+862,schnell,2,A2,Grammar & Core Verbs
+863,schon,2,A2,Grammar & Core Verbs
+864,schön,2,A2,Grammar & Core Verbs
+865,Schrank,6,A2,Home & Living
+866,schrecklich,7,A2,Grammar & Core Verbs
+867,schreiben,3,A2,"Language, Communication & Media"
+868,schriftlich,10,A2,Grammar & Core Verbs
+869,Schuh,2,A2,Clothing & Appearance
+870,Schule,1,A2,Education & Learning
+871,spielen,2,A2,Sports & Leisure
+872,Sport,2,A2,Education & Learning
+873,Sprache,3,A2,"Language, Communication & Media"
+874,sprechen,3,A2,Grammar & Core Verbs
+875,Sprech-,8,A2,Grammar & Core Verbs
+876,Stadt,2,A2,Places & Geography
+877,stattfinden,10,A2,Grammar & Core Verbs
+878,stehen,3,A2,Grammar & Core Verbs
+879,Stelle,8,A2,Work & Careers
+880,stellen,6,A2,Grammar & Core Verbs
+881,sterben,8,A2,Grammar & Core Verbs
+882,Stiefel,8,A2,Clothing & Appearance
+883,Stipen-,8,A2,Education & Learning
+884,Stock,8,A2,Grammar & Core Verbs
+885,Strand,3,A2,Grammar & Core Verbs
+886,Straße,3,A2,Transportation
+887,streiten,9,A2,Grammar & Core Verbs
+888,singen,5,A2,Arts & Culture
+889,Situation,9,A2,Grammar & Core Verbs
+890,sitzen,3,A2,Grammar & Core Verbs
+891,Ski,4,A2,Sports & Leisure
+892,so,1,A2,Grammar & Core Verbs
+893,Sofa,4,A2,Home & Living
+894,sofort,5,A2,Time & Calendar
+895,sogar,8,A2,Grammar & Core Verbs
+896,sollen,5,A2,Grammar & Core Verbs
+897,Sonne,2,A2,"Nature, Weather & Animals"
+898,spannend,9,A2,Grammar & Core Verbs
+899,sparen,8,A2,Shopping & Finance
+900,Spaß,4,A2,Grammar & Core Verbs
+901,Spazier-,9,A2,Sports & Leisure
+902,speichern,9,A2,Technology & Devices
+903,Speisekarte,10,A2,Food & Drink
+904,Spiel,2,A2,Sports & Leisure
+905,teilnehmen,10,A2,Grammar & Core Verbs
+906,Telefon,3,A2,"Language, Communication & Media"
+907,Teller,3,A2,Food & Drink
+908,Tennis,3,A2,Sports & Leisure
+909,Tipp,8,A2,Grammar & Core Verbs
+910,Torte,8,A2,Food & Drink
+911,Tourist,3,A2,Travel & Tourism
+912,tragen,3,A2,Clothing & Appearance
+913,trainieren,10,A2,Sports & Leisure
+914,Training,9,A2,Sports & Leisure
+915,Traum,2,A2,Grammar & Core Verbs
+916,Student,6,A2,Education & Learning
+917,studieren,7,A2,Education & Learning
+918,Studium,8,A2,Education & Learning
+919,super,2,A2,Grammar & Core Verbs
+920,Supermarkt,7,A2,Shopping & Finance
+921,Suppe,2,A2,Food & Drink
+922,süß,1,A2,Food & Drink
+923,Süßigkeiten,10,A2,Grammar & Core Verbs
+924,sympathisch,7,A2,Emotions & Personal Traits
+925,Tablet,8,A2,Technology & Devices
+926,Tablette,9,A2,Body & Health
+927,tanzen,5,A2,Sports & Leisure
+928,Tasche,3,A2,Clothing & Appearance
+929,Taschengeld,10,A2,Shopping & Finance
+930,Tasse,2,A2,Food & Drink
+931,Taxi,1,A2,Transportation
+932,Tee,1,A2,Food & Drink
+933,unbedingt,9,A2,Grammar & Core Verbs
+934,und,1,A2,Grammar & Core Verbs
+935,Unfall,8,A2,Grammar & Core Verbs
+936,Universität,10,A2,Education & Learning
+937,Unterkunft,10,A2,Travel & Tourism
+938,unternehmen,10,A2,Grammar & Core Verbs
+939,Unterricht,10,A2,Education & Learning
+940,unterschreiben,10,A2,Grammar & Core Verbs
+941,Unterschrift,10,A2,"Society, Law & Politics"
+942,Urlaub,5,A2,Travel & Tourism
+943,Veranstal-,10,A2,Arts & Culture
+944,verbieten,9,A2,Grammar & Core Verbs
+945,verboten,9,A2,"Society, Law & Politics"
+946,verdienen,9,A2,Work & Careers
+947,Verein,8,A2,"Society, Law & Politics"
+948,vereinbaren,10,A2,Grammar & Core Verbs
+949,vergessen,9,A2,Grammar & Core Verbs
+950,Treppe,5,A2,Home & Living
+951,trinken,2,A2,Food & Drink
+952,trocken,6,A2,"Nature, Weather & Animals"
+953,Tür,1,A2,Home & Living
+954,üben,4,A2,Education & Learning
+955,über,1,A2,Grammar & Core Verbs
+956,übermorgen,10,A2,Time & Calendar
+957,übernachten,10,A2,Grammar & Core Verbs
+958,übersetzen,10,A2,"Language, Communication & Media"
+959,Über-,8,A2,Grammar & Core Verbs
+960,überweisen,10,A2,Grammar & Core Verbs
+961,Uhr,1,A2,Time & Calendar
+962,um,1,A2,Grammar & Core Verbs
+963,umsteigen,9,A2,Transportation
+964,umziehen,9,A2,Home & Living
+965,Umzug,8,A2,Home & Living
+966,Volleyball,10,A2,Sports & Leisure
+967,von,1,A2,Grammar & Core Verbs
+968,vor,1,A2,Grammar & Core Verbs
+969,vorbei,5,A2,Grammar & Core Verbs
+970,vorbereiten,10,A2,Grammar & Core Verbs
+971,vorgestern,10,A2,Time & Calendar
+972,vorsichtig,7,A2,Grammar & Core Verbs
+973,vorstellen,10,A2,Grammar & Core Verbs
+974,vorwärts,9,A2,Grammar & Core Verbs
+975,wach,4,A2,Grammar & Core Verbs
+976,Wagen,5,A2,Grammar & Core Verbs
+977,wählen,5,A2,"Society, Law & Politics"
+978,wahr,4,A2,Grammar & Core Verbs
+979,Wald,1,A2,"Nature, Weather & Animals"
+980,wandern,8,A2,Sports & Leisure
+981,wann,1,A2,Grammar & Core Verbs
+982,warm,1,A2,"Nature, Weather & Animals"
+983,warten,3,A2,Grammar & Core Verbs
+984,verkaufen,7,A2,Shopping & Finance
+985,Verkehr,8,A2,Transportation
+986,verletzen,9,A2,Grammar & Core Verbs
+987,verlieben,9,A2,Grammar & Core Verbs
+988,verlieren,9,A2,Sports & Leisure
