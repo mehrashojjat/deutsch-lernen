@@ -1,0 +1,301 @@
+id,word,difficulty,level,theme
+1,Zahlen,3,A1,Numbers & Quantities
+2,eins,1,A1,Numbers & Quantities
+3,zwei,1,A1,Numbers & Quantities
+4,drei,1,A1,Numbers & Quantities
+5,vier,1,A1,Numbers & Quantities
+6,fünf,1,A1,Numbers & Quantities
+7,sechs,2,A1,Numbers & Quantities
+8,sieben,3,A1,Numbers & Quantities
+9,acht,1,A1,Numbers & Quantities
+10,neun,1,A1,Numbers & Quantities
+11,zehn,1,A1,Numbers & Quantities
+12,elf,1,A1,Numbers & Quantities
+13,zwölf,2,A1,Numbers & Quantities
+14,dreizehn,7,A1,Numbers & Quantities
+15,vierzehn,7,A1,Numbers & Quantities
+16,fünfzehn,7,A1,Numbers & Quantities
+17,sechzehn,7,A1,Numbers & Quantities
+18,siebzehn,7,A1,Numbers & Quantities
+19,achtzehn,7,A1,Numbers & Quantities
+20,neunzehn,7,A1,Numbers & Quantities
+21,zwanzig,6,A1,Numbers & Quantities
+22,einundzwanzig,10,A1,Numbers & Quantities
+23,dreißig,6,A1,Numbers & Quantities
+24,vierzig,6,A1,Numbers & Quantities
+25,fünfzig,6,A1,Numbers & Quantities
+26,sechzig,6,A1,Numbers & Quantities
+27,siebzig,6,A1,Numbers & Quantities
+28,achtzig,6,A1,Numbers & Quantities
+29,neunzig,6,A1,Numbers & Quantities
+30,hundert,6,A1,Numbers & Quantities
+31,hunderteins,10,A1,Numbers & Quantities
+32,zweihundert,10,A1,Numbers & Quantities
+33,tausend,6,A1,Numbers & Quantities
+34,Million,8,A1,Numbers & Quantities
+35,Milliarde,9,A1,Numbers & Quantities
+36,erste,4,A1,Numbers & Quantities
+37,zweite,5,A1,Numbers & Quantities
+38,dritte,5,A1,Numbers & Quantities
+39,vierte,5,A1,Numbers & Quantities
+40,Datum,8,A1,Numbers & Quantities
+41,halb,1,A1,Numbers & Quantities
+42,Viertel,6,A1,Numbers & Quantities
+43,Uhrzeit,6,A1,Time & Calendar
+44,Sekunde,3,A1,Time & Calendar
+45,Minute,3,A1,Time & Calendar
+46,Stunde,3,A1,Time & Calendar
+47,Zeitmaß,8,A1,Numbers & Quantities
+48,Zeitangabe,9,A1,Numbers & Quantities
+49,Tag,1,A1,Numbers & Quantities
+50,Woche,2,A1,Numbers & Quantities
+51,Jahr,1,A1,Numbers & Quantities
+52,Wochentag,9,A1,Time & Calendar
+53,Wochenende,9,A1,Time & Calendar
+54,Sonntag,3,A1,Time & Calendar
+55,Montag,3,A1,Time & Calendar
+56,Dienstag,7,A1,Time & Calendar
+57,Mittwoch,7,A1,Time & Calendar
+58,Donnerstag,7,A1,Time & Calendar
+59,Freitag,3,A1,Time & Calendar
+60,Samstag,3,A1,Time & Calendar
+61,Sonnabend,7,A1,Time & Calendar
+62,Tageszeit,9,A1,Time & Calendar
+63,Morgen,3,A1,Time & Calendar
+64,Vormittag,7,A1,Time & Calendar
+65,Mittag,3,A1,Time & Calendar
+66,Nachmittag,7,A1,Time & Calendar
+67,Abend,2,A1,Time & Calendar
+68,Nacht,2,A1,Time & Calendar
+69,Monat,4,A1,Time & Calendar
+70,Monatsname,9,A1,Time & Calendar
+71,Januar,5,A1,Time & Calendar
+72,Februar,6,A1,Time & Calendar
+73,März,1,A1,Time & Calendar
+74,April,2,A1,Time & Calendar
+75,Mai,1,A1,Time & Calendar
+76,Juni,4,A1,Time & Calendar
+77,Juli,4,A1,Time & Calendar
+78,August,5,A1,Time & Calendar
+79,September,7,A1,Time & Calendar
+80,Oktober,6,A1,Time & Calendar
+81,November,7,A1,Time & Calendar
+82,Dezember,7,A1,Time & Calendar
+83,Jahreszeit,9,A1,Time & Calendar
+84,Frühling,7,A1,Time & Calendar
+85,Frühjahr,7,A1,Time & Calendar
+86,Sommer,3,A1,Time & Calendar
+87,Herbst,3,A1,Time & Calendar
+88,Winter,3,A1,Time & Calendar
+89,Währung,6,A1,Shopping & Finance
+90,Euro,1,A1,Shopping & Finance
+91,Cent,1,A1,Shopping & Finance
+92,Maß,4,A1,Numbers & Quantities
+93,Gewicht,6,A1,Numbers & Quantities
+94,Meter,2,A1,Numbers & Quantities
+95,Zentimeter,7,A1,Numbers & Quantities
+96,Kilometer,7,A1,Numbers & Quantities
+97,Quadratmeter,10,A1,Numbers & Quantities
+98,Grad,1,A1,Numbers & Quantities
+99,Prozent,6,A1,Numbers & Quantities
+100,Liter,2,A1,Numbers & Quantities
+101,Gramm,2,A1,Numbers & Quantities
+102,Pfund,4,A1,Numbers & Quantities
+103,Kilogramm,9,A1,Numbers & Quantities
+104,Land,1,A1,Places & Geography
+105,Ländername,9,A1,Places & Geography
+106,Nationalität,10,A1,Places & Geography
+107,Deutschland,7,A1,Places & Geography
+108,Deutschen,7,A1,Places & Geography
+109,Europa,5,A1,Places & Geography
+110,Europäer,9,A1,Places & Geography
+111,europäisch,9,A1,Places & Geography
+112,Farbe,2,A1,Grammar & Core Verbs
+113,schwarz,3,A1,Grammar & Core Verbs
+114,grau,1,A1,Grammar & Core Verbs
+115,blau,1,A1,Grammar & Core Verbs
+116,grün,1,A1,Grammar & Core Verbs
+117,weiß,1,A1,Grammar & Core Verbs
+118,rot,1,A1,Grammar & Core Verbs
+119,gelb,1,A1,Grammar & Core Verbs
+120,braun,2,A1,Grammar & Core Verbs
+121,Himmelsrichtung,10,A1,Places & Geography
+122,Norden,5,A1,Places & Geography
+123,Süden,4,A1,Places & Geography
+124,Westen,5,A1,Places & Geography
+125,Osten,4,A1,Places & Geography
+126,ab,1,A1,Grammar & Core Verbs
+127,aber,1,A1,Grammar & Core Verbs
+128,abfahren,9,A1,Transportation
+129,Abfahrt,8,A1,Transportation
+130,abgeben,8,A1,Grammar & Core Verbs
+131,abholen,8,A1,Grammar & Core Verbs
+132,Absender,9,A1,"Language, Communication & Media"
+133,Achtung,6,A1,Grammar & Core Verbs
+134,Adresse,6,A1,"Language, Communication & Media"
+135,all-,4,A1,Grammar & Core Verbs
+136,allein,5,A1,Grammar & Core Verbs
+137,also,1,A1,Grammar & Core Verbs
+138,alt,1,A1,Grammar & Core Verbs
+139,Alter,4,A1,Grammar & Core Verbs
+140,an,1,A1,Grammar & Core Verbs
+141,anbieten,9,A1,Grammar & Core Verbs
+142,Angebot,6,A1,Shopping & Finance
+143,ander-,5,A1,Grammar & Core Verbs
+144,anfangen,9,A1,Grammar & Core Verbs
+145,Anfang,5,A1,Time & Calendar
+146,anklicken,9,A1,Grammar & Core Verbs
+147,ankommen,9,A1,Transportation
+148,Ankunft,8,A1,Transportation
+149,ankreuzen,9,A1,"Language, Communication & Media"
+150,anmachen,9,A1,Technology & Devices
+151,anmelden,9,A1,Grammar & Core Verbs
+152,Anrede,8,A1,"Language, Communication & Media"
+153,anrufen,8,A1,"Language, Communication & Media"
+154,Anruf,4,A1,"Language, Communication & Media"
+155,Anruf-,5,A1,"Language, Communication & Media"
+156,Ansage,8,A1,"Language, Communication & Media"
+157,Anschluss,9,A1,Technology & Devices
+158,an sein,8,A1,Grammar & Core Verbs
+159,antworten,7,A1,Grammar & Core Verbs
+160,Antwort,6,A1,"Language, Communication & Media"
+161,Anzeige,8,A1,"Language, Communication & Media"
+162,anziehen,9,A1,Clothing & Appearance
+163,Apartment,9,A1,Home & Living
+164,Apfel,2,A1,Food & Drink
+165,Appetit,8,A1,Food & Drink
+166,arbeiten,7,A1,Work & Careers
+167,Arbeit,5,A1,Work & Careers
+168,arbeitslos,9,A1,Work & Careers
+169,Arbeitsplatz,10,A1,Work & Careers
+170,Arm,1,A1,Body & Health
+171,Arzt,4,A1,Work & Careers
+172,auch,1,A1,Grammar & Core Verbs
+173,auf,1,A1,Grammar & Core Verbs
+174,Aufgabe,8,A1,"Language, Communication & Media"
+175,aufhören,9,A1,Grammar & Core Verbs
+176,auf sein,8,A1,Grammar & Core Verbs
+177,aufstehen,9,A1,Grammar & Core Verbs
+178,Aufzug,8,A1,Home & Living
+179,Auge,1,A1,Body & Health
+180,aus,1,A1,Grammar & Core Verbs
+181,Ausflug,8,A1,Sports & Leisure
+182,ausfüllen,9,A1,Grammar & Core Verbs
+183,Ausgang,8,A1,Grammar & Core Verbs
+184,Auskunft,9,A1,"Language, Communication & Media"
+185,Ausland,8,A1,Travel & Tourism
+186,Ausländer,9,A1,"Society, Law & Politics"
+187,ausländisch,10,A1,"Society, Law & Politics"
+188,ausmachen,9,A1,Technology & Devices
+189,Aussage,8,A1,"Language, Communication & Media"
+190,aussehen,9,A1,Grammar & Core Verbs
+191,aus sein,8,A1,Grammar & Core Verbs
+192,aussteigen,9,A1,Transportation
+193,Ausweis,8,A1,"Society, Law & Politics"
+194,ausziehen,9,A1,Clothing & Appearance
+195,Autobahn,9,A1,Transportation
+196,Automat,8,A1,Technology & Devices
+197,automatisch,10,A1,Technology & Devices
+198,Baby,1,A1,"Language, Communication & Media"
+199,Bäckerei,9,A1,Food & Drink
+200,Bad,1,A1,Home & Living
+201,baden,4,A1,Grammar & Core Verbs
+202,Bahn,1,A1,Transportation
+203,Bahnhof,6,A1,Transportation
+204,Bahnsteig,9,A1,Transportation
+205,bald,4,A1,Time & Calendar
+206,Balkon,5,A1,Home & Living
+207,Banane,3,A1,Food & Drink
+208,Bank,1,A1,Shopping & Finance
+209,bar,4,A1,Grammar & Core Verbs
+210,Bauch,2,A1,Body & Health
+211,Baum,1,A1,"Nature, Weather & Animals"
+212,Beamte,8,A1,Work & Careers
+213,bedeuten,9,A1,Grammar & Core Verbs
+214,beginnen,7,A1,Grammar & Core Verbs
+215,bei,1,A1,Grammar & Core Verbs
+216,beide,4,A1,Grammar & Core Verbs
+217,Bein,1,A1,Body & Health
+218,Beispiel,7,A1,"Language, Communication & Media"
+219,bekannt,6,A1,Grammar & Core Verbs
+220,der,1,A1,Grammar & Core Verbs
+221,die,1,A1,Grammar & Core Verbs
+222,das,1,A1,Grammar & Core Verbs
+223,bekommen,7,A1,Grammar & Core Verbs
+224,benutzen,9,A1,Grammar & Core Verbs
+225,Beruf,8,A1,Work & Careers
+226,besetzt,6,A1,Grammar & Core Verbs
+227,besichtigen,10,A1,Grammar & Core Verbs
+228,besser,5,A1,Grammar & Core Verbs
+229,best-,4,A1,Grammar & Core Verbs
+230,bestellen,9,A1,Food & Drink
+231,besuchen,9,A1,Grammar & Core Verbs
+232,Bett,1,A1,Home & Living
+233,bezahlen,9,A1,Shopping & Finance
+234,Bier,1,A1,Food & Drink
+235,Bild,1,A1,Arts & Culture
+236,billig,5,A1,Shopping & Finance
+237,Birne,4,A1,Food & Drink
+238,bis,1,A1,Grammar & Core Verbs
+239,bisschen,7,A1,Grammar & Core Verbs
+240,bitte,2,A1,Grammar & Core Verbs
+241,Bitte,2,A1,Grammar & Core Verbs
+242,bitten,5,A1,Grammar & Core Verbs
+243,bitter,5,A1,Food & Drink
+244,bleiben,6,A1,Grammar & Core Verbs
+245,Bleistift,9,A1,Education & Learning
+246,Blick,8,A1,Grammar & Core Verbs
+247,Blume,2,A1,"Nature, Weather & Animals"
+248,Bogen,8,A1,"Language, Communication & Media"
+249,böse,4,A1,Grammar & Core Verbs
+250,brauchen,7,A1,Grammar & Core Verbs
+251,breit,4,A1,Grammar & Core Verbs
+252,Brief,4,A1,"Language, Communication & Media"
+253,Briefmarke,9,A1,"Language, Communication & Media"
+254,bringen,6,A1,Grammar & Core Verbs
+255,Brot,1,A1,Food & Drink
+256,Brötchen,9,A1,Food & Drink
+257,Bruder,3,A1,Family & Relationships
+258,Buch,1,A1,Grammar & Core Verbs
+259,Buchstabe,9,A1,Education & Learning
+260,buchstabieren,10,A1,"Language, Communication & Media"
+261,Bus,1,A1,Transportation
+262,Butter,3,A1,Food & Drink
+263,Café,1,A1,Food & Drink
+264,CD,1,A1,Grammar & Core Verbs
+265,Chef,1,A1,Work & Careers
+266,circa,4,A1,Numbers & Quantities
+267,ca.,4,A1,"Language, Communication & Media"
+268,Computer,7,A1,Technology & Devices
+269,da,1,A1,Grammar & Core Verbs
+270,Dame,4,A1,Family & Relationships
+271,daneben,8,A1,Grammar & Core Verbs
+272,danken,5,A1,Grammar & Core Verbs
+273,Dank,1,A1,Grammar & Core Verbs
+274,danke,1,A1,Grammar & Core Verbs
+275,dann,1,A1,Grammar & Core Verbs
+276,Datum,8,A1,Numbers & Quantities
+277,dauern,5,A1,Grammar & Core Verbs
+278,dein-,4,A1,Grammar & Core Verbs
+279,denn,4,A1,Grammar & Core Verbs
+280,der,1,A1,Grammar & Core Verbs
+281,die,1,A1,Grammar & Core Verbs
+282,das,1,A1,Grammar & Core Verbs
+283,dich,1,A1,Grammar & Core Verbs
+284,dies-,2,A1,Grammar & Core Verbs
+285,dir,1,A1,Grammar & Core Verbs
+286,Disco,4,A1,Sports & Leisure
+287,Doktor,5,A1,Work & Careers
+288,Doppelzimmer,10,A1,Grammar & Core Verbs
+289,Dorf,4,A1,Places & Geography
+290,dort,1,A1,Grammar & Core Verbs
+291,draußen,6,A1,Grammar & Core Verbs
+292,drucken,6,A1,Technology & Devices
+293,Drucker,8,A1,Technology & Devices
+294,drücken,8,A1,Grammar & Core Verbs
+295,durch,2,A1,Grammar & Core Verbs
+296,Durchsage,9,A1,"Language, Communication & Media"
+297,dürfen,5,A1,Grammar & Core Verbs
+298,Durst,4,A1,Food & Drink
+299,duschen,8,A1,Grammar & Core Verbs
+300,Dusche,8,A1,Home & Living
