@@ -899,3 +899,303 @@ id,word,difficulty,level,theme
 86,Großmutter,7,A2,Family & Relationships
 87,Oma,1,A2,Family & Relationships
 88,Großvater,7,A2,Family & Relationships
+89,Opa,1,A2,Family & Relationships
+90,Kind,1,A2,Family & Relationships
+91,Mutter,1,A2,Family & Relationships
+92,Mama,1,A2,Family & Relationships
+93,Onkel,2,A2,Family & Relationships
+94,Schwester,3,A2,Family & Relationships
+95,Sohn,1,A2,Family & Relationships
+96,Tante,2,A2,Family & Relationships
+97,Tochter,3,A2,Family & Relationships
+98,Vater,2,A2,Family & Relationships
+99,Papa,1,A2,Family & Relationships
+100,Verwandte,7,A2,Family & Relationships
+101,Familienstand,10,A2,Family & Relationships
+102,ledig,5,A2,Family & Relationships
+103,verheiratet,7,A2,Family & Relationships
+104,getrennt,6,A2,Family & Relationships
+105,geschieden,10,A2,Family & Relationships
+106,Farbe,2,A2,Grammar & Core Verbs
+107,blau,1,A2,Grammar & Core Verbs
+108,braun,2,A2,Grammar & Core Verbs
+109,gelb,1,A2,Grammar & Core Verbs
+110,grau,1,A2,Grammar & Core Verbs
+111,grün,1,A2,Grammar & Core Verbs
+112,lila,4,A2,Grammar & Core Verbs
+113,orange,3,A2,Grammar & Core Verbs
+114,rosa,1,A2,Grammar & Core Verbs
+115,rot,1,A2,Grammar & Core Verbs
+116,schwarz,2,A2,Grammar & Core Verbs
+117,weiß,1,A2,Grammar & Core Verbs
+118,Himmelsrichtung,10,A2,Places & Geography
+119,Norden,5,A2,Places & Geography
+120,Süden,5,A2,Places & Geography
+121,Osten,5,A2,Places & Geography
+122,Westen,5,A2,Places & Geography
+123,Land,1,A2,Places & Geography
+124,Nationalität,10,A2,Places & Geography
+125,Deutschland,2,A2,Places & Geography
+126,Deutsche,3,A2,Places & Geography
+127,deutsch,3,A2,Places & Geography
+128,Österreich,7,A2,Places & Geography
+129,Österreicher,10,A2,Places & Geography
+130,Österreicherin,10,A2,Places & Geography
+131,österreichisch,10,A2,Places & Geography
+132,Schweiz,6,A2,Places & Geography
+133,Schweizer,7,A2,Places & Geography
+134,Schweizerin,7,A2,Places & Geography
+135,schweizerisch,10,A2,Places & Geography
+136,Luxemburg,7,A2,Places & Geography
+137,Luxemburger,10,A2,Places & Geography
+138,Luxemburgerin,10,A2,Places & Geography
+139,luxemburgisch,10,A2,Places & Geography
+140,Europa,3,A2,Places & Geography
+141,Europäer,6,A2,Places & Geography
+142,Europäerin,7,A2,Places & Geography
+143,europäisch,7,A2,Places & Geography
+144,Währung,8,A2,Shopping & Finance
+145,Maß,4,A2,Numbers & Quantities
+146,Euro,1,A2,Shopping & Finance
+147,Cent,1,A2,Shopping & Finance
+148,Franken,6,A2,Shopping & Finance
+149,Rappen,8,A2,Shopping & Finance
+150,Meter,2,A2,Numbers & Quantities
+151,Zentimeter,7,A2,Numbers & Quantities
+152,Kilometer,7,A2,Numbers & Quantities
+153,Prozent,6,A2,Numbers & Quantities
+154,Liter,5,A2,Numbers & Quantities
+155,Gramm,5,A2,Numbers & Quantities
+156,Kilogramm,7,A2,Numbers & Quantities
+157,Grad,4,A2,Numbers & Quantities
+158,Schule,1,A2,Education & Learning
+159,Schulfach,9,A2,Education & Learning
+160,Abitur,8,A2,Education & Learning
+161,Direktor,6,A2,Education & Learning
+162,Hausaufgabe,10,A2,Education & Learning
+163,Klasse,3,A2,Education & Learning
+164,Klassenfahrt,10,A2,Education & Learning
+165,Sekretariat,10,A2,Education & Learning
+166,Stundenplan,10,A2,Education & Learning
+167,Biologie,6,A2,Education & Learning
+168,Chemie,5,A2,Education & Learning
+169,Deutsch,3,A2,Education & Learning
+170,Englisch,3,A2,Education & Learning
+171,Französisch,7,A2,Education & Learning
+172,Geografie,7,A2,Education & Learning
+173,Geschichte,7,A2,Education & Learning
+174,Kunst,2,A2,Education & Learning
+175,Latein,8,A2,Education & Learning
+176,Mathematik,7,A2,Education & Learning
+177,Musik,2,A2,Education & Learning
+178,Physik,5,A2,Education & Learning
+179,Religion,6,A2,Education & Learning
+180,Sozialkunde,10,A2,Education & Learning
+181,Sport,2,A2,Education & Learning
+182,Feiertag,6,A2,Time & Calendar
+183,Karneval,6,A2,Time & Calendar
+184,Ostern,5,A2,Time & Calendar
+185,Weihnachten,7,A2,Time & Calendar
+186,Neujahr,6,A2,Time & Calendar
+187,Silvester,7,A2,Time & Calendar
+188,Jahreszeit,10,A2,Time & Calendar
+189,Frühling,6,A2,Time & Calendar
+190,Frühjahr,6,A2,Time & Calendar
+191,Sommer,1,A2,Time & Calendar
+192,Herbst,5,A2,Time & Calendar
+193,Winter,1,A2,Time & Calendar
+194,Monat,5,A2,Time & Calendar
+195,Januar,5,A2,Time & Calendar
+196,Februar,8,A2,Time & Calendar
+197,März,1,A2,Time & Calendar
+198,April,2,A2,Time & Calendar
+199,Mai,1,A2,Time & Calendar
+200,Juni,1,A2,Time & Calendar
+201,Juli,1,A2,Time & Calendar
+202,August,3,A2,Time & Calendar
+203,September,7,A2,Time & Calendar
+204,Oktober,6,A2,Time & Calendar
+205,November,6,A2,Time & Calendar
+206,Dezember,9,A2,Time & Calendar
+207,Tageszeit,9,A2,Time & Calendar
+208,Tag,1,A2,Numbers & Quantities
+209,Morgen,1,A2,Time & Calendar
+210,Vormittag,9,A2,Time & Calendar
+211,Mittag,5,A2,Time & Calendar
+212,Nachmittag,10,A2,Time & Calendar
+213,Abend,1,A2,Time & Calendar
+214,Nacht,1,A2,Time & Calendar
+215,Mitternacht,10,A2,Time & Calendar
+216,täglich,6,A2,Time & Calendar
+217,tagsüber,6,A2,Time & Calendar
+218,morgens,6,A2,Time & Calendar
+219,vormittags,10,A2,Time & Calendar
+220,mittags,6,A2,Time & Calendar
+221,nachmittags,10,A2,Time & Calendar
+222,abends,5,A2,Time & Calendar
+223,nachts,5,A2,Time & Calendar
+224,Zahlen,3,A2,Numbers & Quantities
+225,eins,1,A2,Numbers & Quantities
+226,zwei,1,A2,Numbers & Quantities
+227,drei,1,A2,Numbers & Quantities
+228,vier,1,A2,Numbers & Quantities
+229,fünf,1,A2,Numbers & Quantities
+230,sechs,2,A2,Numbers & Quantities
+231,sieben,3,A2,Numbers & Quantities
+232,acht,1,A2,Numbers & Quantities
+233,neun,1,A2,Numbers & Quantities
+234,zehn,1,A2,Numbers & Quantities
+235,elf,1,A2,Numbers & Quantities
+236,zwölf,2,A2,Numbers & Quantities
+237,dreizehn,6,A2,Numbers & Quantities
+238,vierzehn,6,A2,Numbers & Quantities
+239,fünfzehn,6,A2,Numbers & Quantities
+240,sechzehn,6,A2,Numbers & Quantities
+241,siebzehn,6,A2,Numbers & Quantities
+242,achtzehn,6,A2,Numbers & Quantities
+243,neunzehn,6,A2,Numbers & Quantities
+244,zwanzig,6,A2,Numbers & Quantities
+245,einundzwanzig,10,A2,Numbers & Quantities
+246,dreißig,6,A2,Numbers & Quantities
+247,vierzig,6,A2,Numbers & Quantities
+248,fünfzig,6,A2,Numbers & Quantities
+249,sechzig,6,A2,Numbers & Quantities
+250,siebzig,6,A2,Numbers & Quantities
+251,achtzig,6,A2,Numbers & Quantities
+252,neunzig,6,A2,Numbers & Quantities
+253,hundert,6,A2,Numbers & Quantities
+254,hunderteins,10,A2,Numbers & Quantities
+255,zweihundert,10,A2,Numbers & Quantities
+256,tausend,6,A2,Numbers & Quantities
+257,zweitausendeins,10,A2,Numbers & Quantities
+258,Million,8,A2,Numbers & Quantities
+259,erste,5,A2,Numbers & Quantities
+260,zweite,5,A2,Numbers & Quantities
+261,dritte,5,A2,Numbers & Quantities
+262,vierte,5,A2,Numbers & Quantities
+263,erstens,8,A2,Numbers & Quantities
+264,zweitens,9,A2,Numbers & Quantities
+265,drittens,9,A2,Numbers & Quantities
+266,viertens,9,A2,Numbers & Quantities
+267,einmal,1,A2,Numbers & Quantities
+268,zweimal,6,A2,Numbers & Quantities
+269,dreimal,6,A2,Numbers & Quantities
+270,viermal,6,A2,Numbers & Quantities
+271,Uhrzeit,6,A2,Time & Calendar
+272,Sekunde,6,A2,Time & Calendar
+273,Minute,1,A2,Time & Calendar
+274,Stunde,1,A2,Time & Calendar
+275,Wochentag,7,A2,Time & Calendar
+276,Wochenende,7,A2,Time & Calendar
+277,Montag,5,A2,Time & Calendar
+278,Dienstag,9,A2,Time & Calendar
+279,Mittwoch,6,A2,Time & Calendar
+280,Donnerstag,10,A2,Time & Calendar
+281,Freitag,6,A2,Time & Calendar
+282,Samstag,6,A2,Time & Calendar
+283,Sonntag,6,A2,Time & Calendar
+284,montags,6,A2,Time & Calendar
+285,dienstags,9,A2,Time & Calendar
+286,mittwochs,7,A2,Time & Calendar
+287,donnerstags,10,A2,Time & Calendar
+288,freitags,6,A2,Time & Calendar
+289,samstags,6,A2,Time & Calendar
+290,sonntags,6,A2,Time & Calendar
+291,Arbeitstag,10,A2,Time & Calendar
+292,Werktag,6,A2,Time & Calendar
+293,Zeitmaß,6,A2,Numbers & Quantities
+294,Woche,1,A2,Numbers & Quantities
+295,Jahr,1,A2,Numbers & Quantities
+296,Angebot,6,A2,Shopping & Finance
+297,ändern,5,A2,Grammar & Core Verbs
+298,anders,5,A2,Grammar & Core Verbs
+299,anfangen,6,A2,Grammar & Core Verbs
+300,Anfang,3,A2,Time & Calendar
+301,Angst,2,A2,Emotions & Personal Traits
+302,ankommen,3,A2,Transportation
+303,anmachen,6,A2,Technology & Devices
+304,anmelden,9,A2,Grammar & Core Verbs
+305,Anmeldung,9,A2,"Language, Communication & Media"
+306,anrufen,3,A2,"Language, Communication & Media"
+307,Anruf,2,A2,"Language, Communication & Media"
+308,ansehen,8,A2,Grammar & Core Verbs
+309,antworten,3,A2,Grammar & Core Verbs
+310,Anzeige,8,A2,"Language, Communication & Media"
+311,abgeben,8,A2,Grammar & Core Verbs
+312,abholen,8,A2,Grammar & Core Verbs
+313,abschließen,10,A2,Grammar & Core Verbs
+314,Adresse,6,A2,"Language, Communication & Media"
+315,aktiv,5,A2,Sports & Leisure
+316,als,1,A2,Grammar & Core Verbs
+317,alt,1,A2,Grammar & Core Verbs
+318,Alter,5,A2,Grammar & Core Verbs
+319,an,1,A2,Grammar & Core Verbs
+320,anbieten,9,A2,Grammar & Core Verbs
+321,aus,1,A2,Grammar & Core Verbs
+322,Ausbildung,10,A2,Work & Careers
+323,Ausflug,8,A2,Sports & Leisure
+324,ausfüllen,9,A2,Grammar & Core Verbs
+325,Ausgang,8,A2,Grammar & Core Verbs
+326,ausgehen,6,A2,Grammar & Core Verbs
+327,Auskunft,9,A2,"Language, Communication & Media"
+328,Ausland,8,A2,Travel & Tourism
+329,auspacken,9,A2,Grammar & Core Verbs
+330,ausruhen,9,A2,Grammar & Core Verbs
+331,aussehen,3,A2,Grammar & Core Verbs
+332,außer,8,A2,Grammar & Core Verbs
+333,aussprechen,10,A2,Grammar & Core Verbs
+334,aussteigen,10,A2,Transportation
+335,Ausstellung,10,A2,Arts & Culture
+336,Ausweis,8,A2,"Society, Law & Politics"
+337,Auto,1,A2,Transportation
+338,arbeiten,3,A2,Work & Careers
+339,Arbeit,1,A2,Work & Careers
+340,ärgern,8,A2,Emotions & Personal Traits
+341,auch,1,A2,Grammar & Core Verbs
+342,auf,1,A2,Grammar & Core Verbs
+343,auf,1,A2,Grammar & Core Verbs
+344,aufhören,9,A2,Grammar & Core Verbs
+345,aufmachen,7,A2,Grammar & Core Verbs
+346,aufpassen,9,A2,Grammar & Core Verbs
+347,aufräumen,9,A2,Home & Living
+348,aufregend,9,A2,Grammar & Core Verbs
+349,aufstehen,9,A2,Grammar & Core Verbs
+350,Aufzug,8,A2,Home & Living
+351,Auge,1,A2,Body & Health
+352,beenden,8,A2,Grammar & Core Verbs
+353,beginnen,6,A2,Grammar & Core Verbs
+354,begründen,9,A2,Grammar & Core Verbs
+355,bei,1,A2,Grammar & Core Verbs
+356,beide,5,A2,Grammar & Core Verbs
+357,Bein,4,A2,Body & Health
+358,bekannt,6,A2,Grammar & Core Verbs
+359,bekommen,6,A2,Grammar & Core Verbs
+360,bequem,8,A2,Grammar & Core Verbs
+361,beraten,8,A2,Grammar & Core Verbs
+362,Berg,1,A2,"Nature, Weather & Animals"
+363,berichten,9,A2,Grammar & Core Verbs
+364,Beruf,5,A2,Work & Careers
+365,beschreiben,10,A2,Grammar & Core Verbs
+366,beschweren,10,A2,Grammar & Core Verbs
+367,Baby,1,A2,"Language, Communication & Media"
+368,backen,8,A2,Food & Drink
+369,Bäckerei,9,A2,Food & Drink
+370,baden,5,A2,Grammar & Core Verbs
+371,Bahn,1,A2,Transportation
+372,Bahnhof,8,A2,Transportation
+373,Balkon,5,A2,Home & Living
+374,Bank,4,A2,Shopping & Finance
+375,Bank,4,A2,Shopping & Finance
+376,Bauch,5,A2,Body & Health
+377,Baum,4,A2,"Nature, Weather & Animals"
+378,Baustelle,9,A2,Work & Careers
+379,bedanken,9,A2,Grammar & Core Verbs
+380,bedeuten,9,A2,Grammar & Core Verbs
+381,beeilen,8,A2,Grammar & Core Verbs
+382,bleiben,2,A2,Grammar & Core Verbs
+383,Bleistift,9,A2,Education & Learning
+384,braten,5,A2,Food & Drink
+385,brauchen,3,A2,Grammar & Core Verbs
+386,Brief,2,A2,"Language, Communication & Media"
+387,bringen,2,A2,Grammar & Core Verbs
+388,Brot,1,A2,Food & Drink
