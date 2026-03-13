@@ -599,3 +599,303 @@ id,word,difficulty,level,theme
 598,Oma,1,A1,Family & Relationships
 599,Opa,1,A1,Family & Relationships
 600,Ordnung,8,A1,Grammar & Core Verbs
+601,Ort,4,A1,Places & Geography
+602,Papier,3,A1,Grammar & Core Verbs
+603,Papiere,6,A1,Grammar & Core Verbs
+604,Partner,8,A1,Family & Relationships
+605,Partnerin,9,A1,Family & Relationships
+606,Party,2,A1,Sports & Leisure
+607,Pass,4,A1,Travel & Tourism
+608,Pause,8,A1,Grammar & Core Verbs
+609,Plan,1,A1,Grammar & Core Verbs
+610,Platz,2,A1,Places & Geography
+611,Polizei,6,A1,"Society, Law & Politics"
+612,Pommes frites,6,A1,Food & Drink
+613,Post,1,A1,"Language, Communication & Media"
+614,Postleitzahl,10,A1,"Language, Communication & Media"
+615,Praktikum,9,A1,Work & Careers
+616,Praxis,8,A1,Grammar & Core Verbs
+617,Preis,4,A1,Shopping & Finance
+618,Problem,6,A1,Grammar & Core Verbs
+619,Prospekt,9,A1,"Language, Communication & Media"
+620,Prüfung,8,A1,"Language, Communication & Media"
+621,pünktlich,9,A1,Time & Calendar
+622,Rad fahren,9,A1,Transportation
+623,rauchen,6,A1,Grammar & Core Verbs
+624,Raum,8,A1,Grammar & Core Verbs
+625,Rechnung,9,A1,Shopping & Finance
+626,rechts,5,A1,Grammar & Core Verbs
+627,regnen,5,A1,"Nature, Weather & Animals"
+628,Regen,4,A1,"Nature, Weather & Animals"
+629,Reis,1,A1,Food & Drink
+630,reisen,5,A1,Travel & Tourism
+631,Reise,4,A1,Travel & Tourism
+632,Reisebüro,9,A1,Travel & Tourism
+633,Reiseführer,10,A1,Travel & Tourism
+634,reparieren,9,A1,Grammar & Core Verbs
+635,Reparatur,9,A1,Grammar & Core Verbs
+636,Restaurant,7,A1,Food & Drink
+637,Rezeption,9,A1,Travel & Tourism
+638,richtig,6,A1,"Language, Communication & Media"
+639,riechen,6,A1,Food & Drink
+640,ruhig,8,A1,Emotions & Personal Traits
+641,Saft,1,A1,Food & Drink
+642,sagen,1,A1,Grammar & Core Verbs
+643,Salat,2,A1,Food & Drink
+644,Salz,1,A1,Food & Drink
+645,Satz,8,A1,"Language, Communication & Media"
+646,S-Bahn,5,A1,Transportation
+647,Schalter,9,A1,Grammar & Core Verbs
+648,scheinen,7,A1,Grammar & Core Verbs
+649,schicken,7,A1,Grammar & Core Verbs
+650,Schild,8,A1,Grammar & Core Verbs
+651,Schinken,9,A1,Food & Drink
+652,schlafen,3,A1,Grammar & Core Verbs
+653,schlecht,2,A1,Grammar & Core Verbs
+654,schließen,7,A1,Grammar & Core Verbs
+655,geschlossen,7,A1,Grammar & Core Verbs
+656,Schluss,6,A1,Grammar & Core Verbs
+657,Schlüssel,7,A1,Home & Living
+658,schmecken,7,A1,Food & Drink
+659,schnell,2,A1,Grammar & Core Verbs
+660,schon,1,A1,Grammar & Core Verbs
+661,schön,2,A1,Grammar & Core Verbs
+662,Schrank,8,A1,Home & Living
+663,schreiben,3,A1,"Language, Communication & Media"
+664,Schuh,2,A1,Clothing & Appearance
+665,Schule,3,A1,Education & Learning
+666,Schüler,8,A1,Education & Learning
+667,schwer,5,A1,Grammar & Core Verbs
+668,Schwester,3,A1,Family & Relationships
+669,schwimmen,7,A1,Sports & Leisure
+670,Schwimmbad,9,A1,Sports & Leisure
+671,See,1,A1,"Nature, Weather & Animals"
+672,sehen,2,A1,Grammar & Core Verbs
+673,Sehenswürdigkeit,10,A1,Travel & Tourism
+674,sehr,1,A1,Grammar & Core Verbs
+675,sein,1,A1,Grammar & Core Verbs
+676,seit,8,A1,Grammar & Core Verbs
+677,selbstständig,10,A1,Emotions & Personal Traits
+678,sich,1,A1,Grammar & Core Verbs
+679,sie,1,A1,Grammar & Core Verbs
+680,Sie,1,A1,Grammar & Core Verbs
+681,sitzen,8,A1,Grammar & Core Verbs
+682,so,1,A1,Grammar & Core Verbs
+683,Sofa,1,A1,Home & Living
+684,sofort,8,A1,Time & Calendar
+685,Sohn,1,A1,Family & Relationships
+686,sollen,5,A1,Grammar & Core Verbs
+687,Sonne,2,A1,"Nature, Weather & Animals"
+688,spät,4,A1,Time & Calendar
+689,später,5,A1,Grammar & Core Verbs
+690,Speisekarte,10,A1,Food & Drink
+691,spielen,2,A1,Sports & Leisure
+692,Sport,2,A1,Education & Learning
+693,Sprache,8,A1,"Language, Communication & Media"
+694,sprechen,3,A1,Grammar & Core Verbs
+695,Stadt,2,A1,Places & Geography
+696,stehen,5,A1,Grammar & Core Verbs
+697,Stelle,8,A1,Work & Careers
+698,stellen,8,A1,Grammar & Core Verbs
+699,Stock,4,A1,Grammar & Core Verbs
+700,Straße,3,A1,Transportation
+701,Straßenbahn,10,A1,Transportation
+702,studieren,9,A1,Education & Learning
+703,Studium,8,A1,Education & Learning
+704,Student,8,A1,Education & Learning
+705,Stunde,3,A1,Time & Calendar
+706,suchen,3,A1,Grammar & Core Verbs
+707,tanzen,5,A1,Sports & Leisure
+708,Tasche,3,A1,Clothing & Appearance
+709,Taxi,1,A1,Transportation
+710,Tee,1,A1,Food & Drink
+711,Teil,4,A1,"Language, Communication & Media"
+712,telefonieren,10,A1,"Language, Communication & Media"
+713,Telefon,6,A1,"Language, Communication & Media"
+714,Termin,8,A1,Time & Calendar
+715,Test,1,A1,"Language, Communication & Media"
+716,teuer,4,A1,Shopping & Finance
+717,Text,4,A1,"Language, Communication & Media"
+718,Thema,8,A1,Grammar & Core Verbs
+719,Ticket,5,A1,Travel & Tourism
+720,Tisch,2,A1,Home & Living
+721,Tochter,2,A1,Family & Relationships
+722,Toilette,3,A1,Grammar & Core Verbs
+723,Tomate,3,A1,Food & Drink
+724,tot,4,A1,Grammar & Core Verbs
+725,treffen,6,A1,Grammar & Core Verbs
+726,Treppe,5,A1,Home & Living
+727,trinken,2,A1,Food & Drink
+728,tschüss,2,A1,Grammar & Core Verbs
+729,tun,1,A1,Grammar & Core Verbs
+730,über,1,A1,Grammar & Core Verbs
+731,übernachten,10,A1,Grammar & Core Verbs
+732,überweisen,9,A1,Grammar & Core Verbs
+733,Uhr,1,A1,Time & Calendar
+734,um,1,A1,Grammar & Core Verbs
+735,umziehen,9,A1,Home & Living
+736,und,1,A1,Grammar & Core Verbs
+737,unser,4,A1,Grammar & Core Verbs
+738,unten,4,A1,Grammar & Core Verbs
+739,unter,2,A1,Grammar & Core Verbs
+740,Unterricht,9,A1,Education & Learning
+741,unterschreiben,10,A1,Grammar & Core Verbs
+742,Unterschrift,10,A1,"Society, Law & Politics"
+743,Urlaub,8,A1,Travel & Tourism
+744,Vater,2,A1,Family & Relationships
+745,verboten,9,A1,"Society, Law & Politics"
+746,verdienen,9,A1,Work & Careers
+747,Verein,8,A1,"Society, Law & Politics"
+748,verheiratet,10,A1,Family & Relationships
+749,verkaufen,7,A1,Shopping & Finance
+750,Verkäufer,9,A1,Work & Careers
+751,vermieten,9,A1,Grammar & Core Verbs
+752,Vermieter,9,A1,Home & Living
+753,verstehen,9,A1,Grammar & Core Verbs
+754,Verwandte,9,A1,Family & Relationships
+755,viel,1,A1,Grammar & Core Verbs
+756,vielleicht,7,A1,Grammar & Core Verbs
+757,von,1,A1,Grammar & Core Verbs
+758,vor,1,A1,Grammar & Core Verbs
+759,Vorname,8,A1,Grammar & Core Verbs
+760,Vorsicht,9,A1,Grammar & Core Verbs
+761,vorstellen,9,A1,Grammar & Core Verbs
+762,Vorwahl,8,A1,"Language, Communication & Media"
+763,wandern,6,A1,Sports & Leisure
+764,wann,1,A1,Grammar & Core Verbs
+765,warten,5,A1,Grammar & Core Verbs
+766,warum,2,A1,Grammar & Core Verbs
+767,was,1,A1,Grammar & Core Verbs
+768,was für ein,5,A1,Grammar & Core Verbs
+769,waschen,6,A1,Home & Living
+770,Wasser,3,A1,Food & Drink
+771,weh tun,5,A1,Grammar & Core Verbs
+772,weiblich,9,A1,Grammar & Core Verbs
+773,Wein,1,A1,Food & Drink
+774,weit,4,A1,Grammar & Core Verbs
+775,weiter,5,A1,Grammar & Core Verbs
+776,welch,4,A1,Grammar & Core Verbs
+777,Welt,1,A1,Grammar & Core Verbs
+778,wenig,4,A1,Grammar & Core Verbs
+779,wer,1,A1,Grammar & Core Verbs
+780,werden,5,A1,Grammar & Core Verbs
+781,Wetter,3,A1,"Nature, Weather & Animals"
+782,wichtig,8,A1,Grammar & Core Verbs
+783,wie,1,A1,Grammar & Core Verbs
+784,wiederholen,10,A1,Education & Learning
+785,Wiederhören,10,A1,Grammar & Core Verbs
+786,Wiedersehen,10,A1,Grammar & Core Verbs
+787,wie viel,6,A1,Grammar & Core Verbs
+788,willkommen,9,A1,Grammar & Core Verbs
+789,Wind,1,A1,"Nature, Weather & Animals"
+790,wir,1,A1,Grammar & Core Verbs
+791,wissen,5,A1,Grammar & Core Verbs
+792,wo,1,A1,Grammar & Core Verbs
+793,woher,4,A1,Grammar & Core Verbs
+794,wohin,4,A1,Grammar & Core Verbs
+795,wohnen,3,A1,Home & Living
+796,Wohnung,8,A1,Home & Living
+797,wollen,3,A1,Grammar & Core Verbs
+798,Wort,1,A1,"Language, Communication & Media"
+799,wunderbar,7,A1,Grammar & Core Verbs
+800,zahlen,5,A1,Shopping & Finance
+801,Zeit,1,A1,Time & Calendar
+802,zurzeit,6,A1,Time & Calendar
+803,Zeitung,8,A1,"Language, Communication & Media"
+804,Zigarette,7,A1,Body & Health
+805,Zimmer,3,A1,Home & Living
+806,Zoll,8,A1,Transportation
+807,zu,1,A1,Grammar & Core Verbs
+808,zufrieden,9,A1,Emotions & Personal Traits
+809,Zug,1,A1,Transportation
+810,zurück,5,A1,Grammar & Core Verbs
+811,zusammen,7,A1,Grammar & Core Verbs
+812,zwischen,7,A1,Grammar & Core Verbs
+1,Abkürzung,7,A2,"Language, Communication & Media"
+2,ca.,1,A2,"Language, Communication & Media"
+3,d.h.,1,A2,"Language, Communication & Media"
+4,ICE,4,A2,"Language, Communication & Media"
+5,Lkw,4,A2,"Language, Communication & Media"
+6,PC,1,A2,"Language, Communication & Media"
+7,SMS,1,A2,"Language, Communication & Media"
+8,usw.,1,A2,"Language, Communication & Media"
+9,WC,1,A2,"Language, Communication & Media"
+10,z.B.,1,A2,"Language, Communication & Media"
+11,Anweisungssprache,10,A2,"Language, Communication & Media"
+12,Antwortbogen,10,A2,"Language, Communication & Media"
+13,Aufgabe,6,A2,"Language, Communication & Media"
+14,Beispiel,3,A2,"Language, Communication & Media"
+15,Durchsage,9,A2,"Language, Communication & Media"
+16,Lösung,5,A2,"Language, Communication & Media"
+17,markieren,7,A2,"Language, Communication & Media"
+18,Prüfer,5,A2,"Language, Communication & Media"
+19,Prüferin,6,A2,"Language, Communication & Media"
+20,Prüfung,6,A2,"Language, Communication & Media"
+21,Punkt,2,A2,"Language, Communication & Media"
+22,Teil,1,A2,"Language, Communication & Media"
+23,Test,1,A2,"Language, Communication & Media"
+24,Text,1,A2,"Language, Communication & Media"
+25,Wörterbuch,10,A2,"Language, Communication & Media"
+26,Beruf,5,A2,Work & Careers
+27,Angestellte,10,A2,Work & Careers
+28,Arzt,4,A2,Work & Careers
+29,Ärztin,5,A2,Work & Careers
+30,Auszubildende,10,A2,Work & Careers
+31,Autor,5,A2,Work & Careers
+32,Autorin,6,A2,Work & Careers
+33,Babysitter,7,A2,Work & Careers
+34,Bäcker,5,A2,Work & Careers
+35,Bäckerin,6,A2,Work & Careers
+36,Doktor,3,A2,Work & Careers
+37,Doktorin,6,A2,Work & Careers
+38,Fahrer,5,A2,Work & Careers
+39,Fahrerin,6,A2,Work & Careers
+40,Friseur,6,A2,Work & Careers
+41,Friseurin,7,A2,Work & Careers
+42,Handwerker,10,A2,Work & Careers
+43,Handwerkerin,10,A2,Work & Careers
+44,Hausmann,6,A2,Work & Careers
+45,Hausfrau,6,A2,Work & Careers
+46,Journalist,10,A2,Work & Careers
+47,Journalistin,10,A2,Work & Careers
+48,Kaufmann,9,A2,Work & Careers
+49,Kauffrau,9,A2,Work & Careers
+50,Kellner,6,A2,Work & Careers
+51,Kellnerin,7,A2,Work & Careers
+52,Koch,1,A2,Work & Careers
+53,Köchin,5,A2,Work & Careers
+54,Krankenpfleger,10,A2,Work & Careers
+55,Krankenschwester,10,A2,Work & Careers
+56,Künstler,6,A2,Work & Careers
+57,Künstlerin,7,A2,Work & Careers
+58,Lehrer,3,A2,Work & Careers
+59,Lehrerin,3,A2,Work & Careers
+60,Mechaniker,7,A2,Work & Careers
+61,Mechanikerin,7,A2,Work & Careers
+62,Model,2,A2,Work & Careers
+63,Musiker,6,A2,Work & Careers
+64,Musikerin,7,A2,Work & Careers
+65,Polizist,6,A2,Work & Careers
+66,Polizistin,7,A2,Work & Careers
+67,Rentner,6,A2,Work & Careers
+68,Rentnerin,7,A2,Work & Careers
+69,Sänger,5,A2,Work & Careers
+70,Sängerin,6,A2,Work & Careers
+71,Schauspieler,10,A2,Work & Careers
+72,Schauspielerin,10,A2,Work & Careers
+73,Techniker,7,A2,Work & Careers
+74,Technikerin,7,A2,Work & Careers
+75,Verkäufer,7,A2,Work & Careers
+76,Verkäuferin,7,A2,Work & Careers
+77,Familienmitglied,10,A2,Family & Relationships
+78,Bruder,1,A2,Family & Relationships
+79,Cousin,5,A2,Family & Relationships
+80,Cousine,6,A2,Family & Relationships
+81,Eltern,1,A2,Family & Relationships
+82,Enkel,5,A2,Family & Relationships
+83,Enkelin,6,A2,Family & Relationships
+84,Geschwister,7,A2,Family & Relationships
+85,Großeltern,10,A2,Family & Relationships
+86,Großmutter,7,A2,Family & Relationships
+87,Oma,1,A2,Family & Relationships
+88,Großvater,7,A2,Family & Relationships
