@@ -69,6 +69,7 @@ const UI = {
     themeSelectTitle: 'Theme Quiz',
     themeSelectSubtitle: 'Pick a topic to practise',
     typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
+    categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
   },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
@@ -137,6 +138,7 @@ const UI = {
     themeSelectTitle: 'Konu Sınavı',
     themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
     typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
+    categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -205,6 +207,7 @@ const UI = {
     themeSelectTitle: 'آزمون موضوعی',
     themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
+    categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
     headerSub: 'Практика слов · Падежи · Спряжение',
@@ -273,6 +276,7 @@ const UI = {
     themeSelectTitle: 'Тематическая викторина',
     themeSelectSubtitle: 'Выберите тему',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
+    categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
     headerSub: 'Практика слів · Відмінки · Відмінювання',
@@ -341,6 +345,7 @@ const UI = {
     themeSelectTitle: 'Тематична вікторина',
     themeSelectSubtitle: 'Виберіть тему',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
+    categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
     headerSub: 'تدريب المفردات · الحالات · تصريف الأفعال',
@@ -400,7 +405,16 @@ const UI = {
     aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
     footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'اختبار تكيّفي',
+    adaptiveBannerSub: 'يتكيّف مع مستواك',
+    adaptiveSetupTitle: 'اختبار تكيّفي',
+    adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
+    themeBannerTitle: 'اختبار موضوعي',
+    themeBannerSub: 'اختبر نفسك في موضوع محدد',
+    themeSelectTitle: 'اختبار موضوعي',
+    themeSelectSubtitle: 'اختر موضوعاً للتدرّب عليه',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
+    categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
 
@@ -491,6 +505,7 @@ let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swip
 let swipePreloadPromise = null, swipeAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
+var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
 
 // ── Helpers ──
 function t(key) { return UI[LANG][key] !== undefined ? UI[LANG][key] : UI.en[key]; }
@@ -536,6 +551,8 @@ function setLang(lang) {
     _swipeRefreshLang();
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
+  } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
+    _renderCategoryGrid();
   }
 }
 
@@ -936,6 +953,7 @@ function restartLevel(){
   else startLevel(currentLevel);
 }
 function goHome(){show('screen-levels');}
+function goQuizBack(){var t=_quizReturnScreen;_quizReturnScreen='screen-levels';window.goHome();show(t);}
 function openSwipeSetup(){ show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
   swipeSelectedLevel = lv;
@@ -956,6 +974,7 @@ function setAdaptiveLevel(lv) {
   });
 }
 function launchAdaptiveQuiz() {
+  _quizReturnScreen = 'screen-adaptive-setup';
   startLevel(adaptiveSelectedLevel);
 }
 
@@ -969,15 +988,17 @@ function openThemeSelect() {
 function _renderCategoryGrid() {
   var grid = document.getElementById('category-grid');
   if (!grid) return;
+  var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
     return '<button class="category-card" onclick="startThemeQuiz(' + cat.id + ')">'
       + '<span class="cat-icon">' + cat.icon + '</span>'
-      + '<span class="cat-name">' + escHtml(cat.name) + '</span>'
+      + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
       + '</button>';
   }).join('');
 }
 
 async function startThemeQuiz(categoryId) {
+  _quizReturnScreen = 'screen-theme-select';
   currentThemeCategoryId = 0;
   var _ov = document.getElementById('quiz-prep-overlay');
   _ov.classList.add('active');
@@ -1006,6 +1027,8 @@ async function startThemeQuiz(categoryId) {
 }
 
 function _categoryName(id) {
+  var names = t('categoryNames') || {};
+  if (names[id]) return names[id];
   var cat = CATEGORY_MAP.find(function(c){ return c.id === id; });
   return cat ? cat.name : 'Theme';
 }
