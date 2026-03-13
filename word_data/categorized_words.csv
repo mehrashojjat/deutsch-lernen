@@ -5399,3 +5399,303 @@ id,word,difficulty,level,theme
 3527,Training,6,B1,Sports & Leisure
 3528,Tram,2,B1,Transportation
 3529,Träne,3,B1,Emotions & Personal Traits
+3530,Transport,8,B1,Transportation
+3531,träumen,5,B1,Emotions & Personal Traits
+3532,Traum,3,B1,Grammar & Core Verbs
+3533,traurig,5,B1,Emotions & Personal Traits
+3534,treffen,5,B1,Grammar & Core Verbs
+3535,Treffpunkt,8,B1,Grammar & Core Verbs
+3536,treiben,5,B1,Grammar & Core Verbs
+3537,trennen,5,B1,Grammar & Core Verbs
+3538,Trennung,6,B1,Family & Relationships
+3539,Tierpark,6,B1,"Nature, Weather & Animals"
+3540,Tipp,2,B1,Grammar & Core Verbs
+3541,tippen,4,B1,Technology & Devices
+3542,getippt,5,B1,Grammar & Core Verbs
+3543,Tisch,3,B1,Home & Living
+3544,Tochter,5,B1,Family & Relationships
+3545,Tod,1,B1,Grammar & Core Verbs
+3546,tödlich,7,B1,Grammar & Core Verbs
+3547,Toilette,6,B1,Grammar & Core Verbs
+3548,Paradeiser,8,B1,Food & Drink
+3549,Topf,2,B1,Food & Drink
+3550,Tor,1,B1,Grammar & Core Verbs
+3551,Torte,3,B1,Food & Drink
+3552,tot,1,B1,Grammar & Core Verbs
+3553,Tote,2,B1,Grammar & Core Verbs
+3554,Tote,2,B1,Grammar & Core Verbs
+3555,total,3,B1,Grammar & Core Verbs
+3556,Tourismus,8,B1,Travel & Tourism
+3557,Tourist,7,B1,Travel & Tourism
+3558,Touristin,8,B1,Travel & Tourism
+3559,schwer,4,B1,Grammar & Core Verbs
+3560,mitfahren,8,B1,Grammar & Core Verbs
+3561,getroffen,8,B1,Grammar & Core Verbs
+3562,sich,2,B1,Grammar & Core Verbs
+3563,kommt,3,B1,Grammar & Core Verbs
+3564,schwierig,8,B1,Grammar & Core Verbs
+3565,geschieden,8,B1,Family & Relationships
+3566,wir,1,B1,Grammar & Core Verbs
+3567,finde,3,B1,Grammar & Core Verbs
+3568,einmal,4,B1,Numbers & Quantities
+3569,tödlich,7,B1,Grammar & Core Verbs
+3570,müssen,4,B1,Grammar & Core Verbs
+3571,möchte,4,B1,Grammar & Core Verbs
+3572,schießen,6,B1,Grammar & Core Verbs
+3573,unsere,4,B1,Grammar & Core Verbs
+3574,Typ,1,B1,Grammar & Core Verbs
+3575,typisch,5,B1,Grammar & Core Verbs
+3576,U-Bahn,4,B1,Transportation
+3577,Übung,3,B1,Education & Learning
+3578,über,2,B1,Grammar & Core Verbs
+3579,überall,5,B1,Grammar & Core Verbs
+3580,überfahren,8,B1,Grammar & Core Verbs
+3581,überhaupt,8,B1,Grammar & Core Verbs
+3582,überholen,8,B1,Transportation
+3583,überlegen,8,B1,Grammar & Core Verbs
+3584,Treppenhaus,9,B1,Home & Living
+3585,treten,4,B1,Grammar & Core Verbs
+3586,treu,2,B1,Emotions & Personal Traits
+3587,trinken,5,B1,Food & Drink
+3588,Trinkgeld,8,B1,Food & Drink
+3589,trocken,5,B1,"Nature, Weather & Animals"
+3590,trocknen,6,B1,Grammar & Core Verbs
+3591,Tropfen,5,B1,Body & Health
+3592,Gehweg,4,B1,Transportation
+3593,trotz,3,B1,Grammar & Core Verbs
+3594,tun,1,B1,Grammar & Core Verbs
+3595,Tür,1,B1,Home & Living
+3596,Turm,2,B1,Places & Geography
+3597,du,1,B1,Grammar & Core Verbs
+3598,typisch,5,B1,Grammar & Core Verbs
+3599,übe,1,B1,Grammar & Core Verbs
+3600,bezahlen,6,B1,Shopping & Finance
+3601,überfahren,8,B1,Grammar & Core Verbs
+3602,nicht,1,B1,Grammar & Core Verbs
+3603,muss,2,B1,Grammar & Core Verbs
+3604,kaufen,4,B1,Shopping & Finance
+3605,und,1,B1,Grammar & Core Verbs
+3606,steigen,5,B1,Grammar & Core Verbs
+3607,ganz,2,B1,Grammar & Core Verbs
+3608,du,1,B1,Grammar & Core Verbs
+3609,nicht,1,B1,Grammar & Core Verbs
+3610,gegangen,6,B1,Grammar & Core Verbs
+3611,schwimmen,8,B1,Sports & Leisure
+3612,gekauft,5,B1,Grammar & Core Verbs
+3613,oben,2,B1,Grammar & Core Verbs
+3614,getan,3,B1,Grammar & Core Verbs
+3615,sieht,3,B1,Grammar & Core Verbs
+3616,überzeugen,8,B1,Grammar & Core Verbs
+3617,Überzeugung,9,B1,Emotions & Personal Traits
+3618,üblich,4,B1,Grammar & Core Verbs
+3619,übrig,3,B1,Grammar & Core Verbs
+3620,übrigens,6,B1,Grammar & Core Verbs
+3621,Ufer,2,B1,"Nature, Weather & Animals"
+3622,Uhr,1,B1,Time & Calendar
+3623,um,1,B1,Grammar & Core Verbs
+3624,umarmen,5,B1,Grammar & Core Verbs
+3625,um,1,B1,Grammar & Core Verbs
+3626,umdrehen,6,B1,Grammar & Core Verbs
+3627,Umfrage,5,B1,Grammar & Core Verbs
+3628,umgekehrt,8,B1,Grammar & Core Verbs
+3629,Umleitung,8,B1,Transportation
+3630,umsonst,5,B1,Grammar & Core Verbs
+3631,übermorgen,8,B1,Time & Calendar
+3632,übernachten,9,B1,Grammar & Core Verbs
+3633,Übernachtung,10,B1,Travel & Tourism
+3634,übernehmen,8,B1,Grammar & Core Verbs
+3635,überprüfen,8,B1,Grammar & Core Verbs
+3636,überqueren,8,B1,Grammar & Core Verbs
+3637,überraschen,9,B1,Grammar & Core Verbs
+3638,Überraschung,10,B1,Emotions & Personal Traits
+3639,überreden,8,B1,Grammar & Core Verbs
+3640,Überschrift,9,B1,"Language, Communication & Media"
+3641,übersetzen,8,B1,"Language, Communication & Media"
+3642,Übersetzer,8,B1,"Language, Communication & Media"
+3643,Übersetzerin,10,B1,"Language, Communication & Media"
+3644,Übersetzung,9,B1,"Language, Communication & Media"
+3645,Überstunde,8,B1,Work & Careers
+3646,über,2,B1,Grammar & Core Verbs
+3647,übertreiben,9,B1,Grammar & Core Verbs
+3648,überweisen,8,B1,Grammar & Core Verbs
+3649,Überweisung,9,B1,Shopping & Finance
+3650,meine,1,B1,Grammar & Core Verbs
+3651,gehen,1,B1,Grammar & Core Verbs
+3652,um,1,B1,Grammar & Core Verbs
+3653,machen,1,B1,Grammar & Core Verbs
+3654,auf,1,B1,Grammar & Core Verbs
+3655,schöne,4,B1,Grammar & Core Verbs
+3656,dann,2,B1,Grammar & Core Verbs
+3657,sind,2,B1,Grammar & Core Verbs
+3658,auch,2,B1,Grammar & Core Verbs
+3659,übernachtet,9,B1,Grammar & Core Verbs
+3660,-ung,2,B1,Grammar & Core Verbs
+3661,richtig,3,B1,"Language, Communication & Media"
+3662,überqueren,8,B1,Grammar & Core Verbs
+3663,den,1,B1,Grammar & Core Verbs
+3664,zum,1,B1,Grammar & Core Verbs
+3665,übersetzen,8,B1,"Language, Communication & Media"
+3666,arbeiten,6,B1,Work & Careers
+3667,gut,1,B1,Grammar & Core Verbs
+3668,man,1,B1,Grammar & Core Verbs
+3669,überwiesen,8,B1,Grammar & Core Verbs
+3670,bezahlen,6,B1,Shopping & Finance
+3671,-weisung,6,B1,Grammar & Core Verbs
+3672,Universität,9,B1,Education & Learning
+3673,unten,3,B1,Grammar & Core Verbs
+3674,unter,3,B1,Grammar & Core Verbs
+3675,unter,3,B1,Grammar & Core Verbs
+3676,unterbrechen,10,B1,Grammar & Core Verbs
+3677,unterhalten,9,B1,Grammar & Core Verbs
+3678,Unterhaltung,10,B1,Arts & Culture
+3679,Unterkunft,8,B1,Travel & Tourism
+3680,Unterlagen,8,B1,Grammar & Core Verbs
+3681,unterlassen,9,B1,Grammar & Core Verbs
+3682,unternehmen,9,B1,Grammar & Core Verbs
+3683,Unternehmer,9,B1,Work & Careers
+3684,Unternehmerin,10,B1,Work & Careers
+3685,unterrichten,10,B1,Education & Learning
+3686,Unterricht,8,B1,Education & Learning
+3687,untersagt,8,B1,Grammar & Core Verbs
+3688,unterscheiden,10,B1,Grammar & Core Verbs
+3689,Unterschied,9,B1,Grammar & Core Verbs
+3690,umtauschen,8,B1,Shopping & Finance
+3691,Umtausch,7,B1,Grammar & Core Verbs
+3692,Umwelt,4,B1,"Nature, Weather & Animals"
+3693,Umweltschutz,10,B1,"Nature, Weather & Animals"
+3694,Umweltverschmutzung,10,B1,"Nature, Weather & Animals"
+3695,umziehen,6,B1,Home & Living
+3696,Umzug,3,B1,Home & Living
+3697,un-,1,B1,Grammar & Core Verbs
+3698,unbedingt,8,B1,Grammar & Core Verbs
+3699,und,1,B1,Grammar & Core Verbs
+3700,Unfall,4,B1,Grammar & Core Verbs
+3701,ungefähr,6,B1,Grammar & Core Verbs
+3702,ungewöhnlich,10,B1,Grammar & Core Verbs
+3703,man,1,B1,Grammar & Core Verbs
+3704,unten,3,B1,Grammar & Core Verbs
+3705,wichtige,6,B1,Grammar & Core Verbs
+3706,spreche,5,B1,Grammar & Core Verbs
+3707,unterhalten,9,B1,Grammar & Core Verbs
+3708,unterhalten,9,B1,Grammar & Core Verbs
+3709,und,1,B1,Grammar & Core Verbs
+3710,und,1,B1,Grammar & Core Verbs
+3711,Post,2,B1,"Language, Communication & Media"
+3712,unterlassen,9,B1,Grammar & Core Verbs
+3713,unternehmen,9,B1,Grammar & Core Verbs
+3714,bis,1,B1,Grammar & Core Verbs
+3715,umsonst,5,B1,Grammar & Core Verbs
+3716,weiter,4,B1,Grammar & Core Verbs
+3717,umgezogen,8,B1,Grammar & Core Verbs
+3718,mich,2,B1,Grammar & Core Verbs
+3719,sprechen,6,B1,Grammar & Core Verbs
+3720,aber,2,B1,Grammar & Core Verbs
+3721,unheimlich,8,B1,Grammar & Core Verbs
+3722,Vase,2,B1,Home & Living
+3723,Vater,3,B1,Family & Relationships
+3724,verabreden,8,B1,Grammar & Core Verbs
+3725,verabredet,8,B1,Grammar & Core Verbs
+3726,Verabredung,9,B1,Grammar & Core Verbs
+3727,verabschieden,10,B1,Grammar & Core Verbs
+3728,Abschied,6,B1,Grammar & Core Verbs
+3729,verändern,8,B1,Grammar & Core Verbs
+3730,Veranstaltung,10,B1,Arts & Culture
+3731,Verantwortung,9,B1,Emotions & Personal Traits
+3732,verbessern,8,B1,Grammar & Core Verbs
+3733,verbieten,8,B1,Grammar & Core Verbs
+3734,Verbot,7,B1,"Society, Law & Politics"
+3735,verboten,7,B1,"Society, Law & Politics"
+3736,verbinden,8,B1,Grammar & Core Verbs
+3737,unterschreiben,10,B1,Grammar & Core Verbs
+3738,Unterschrift,10,B1,"Society, Law & Politics"
+3739,unterstreichen,10,B1,"Language, Communication & Media"
+3740,unterstützen,10,B1,Grammar & Core Verbs
+3741,Unterstützung,10,B1,"Society, Law & Politics"
+3742,untersuchen,9,B1,Body & Health
+3743,Untersuchung,10,B1,Body & Health
+3744,unterwegs,8,B1,Grammar & Core Verbs
+3745,Urkunde,7,B1,"Society, Law & Politics"
+3746,Urlaub,4,B1,Travel & Tourism
+3747,Ursache,7,B1,Grammar & Core Verbs
+3748,verursachen,9,B1,Grammar & Core Verbs
+3749,ursprünglich,10,B1,Grammar & Core Verbs
+3750,Urteil,7,B1,"Society, Law & Politics"
+3751,liebsten,6,B1,Grammar & Core Verbs
+3752,zur,1,B1,Grammar & Core Verbs
+3753,verabredet,8,B1,Grammar & Core Verbs
+3754,bin,1,B1,Grammar & Core Verbs
+3755,mit,1,B1,Grammar & Core Verbs
+3756,nett,2,B1,Grammar & Core Verbs
+3757,verabschieden,10,B1,Grammar & Core Verbs
+3758,fiel,2,B1,Grammar & Core Verbs
+3759,sen,1,B1,Grammar & Core Verbs
+3760,verbessert,8,B1,Grammar & Core Verbs
+3761,verboten,7,B1,"Society, Law & Politics"
+3762,rechts,4,B1,Grammar & Core Verbs
+3763,unterstreichen,10,B1,"Language, Communication & Media"
+3764,können,3,B1,Grammar & Core Verbs
+3765,lassen,3,B1,Grammar & Core Verbs
+3766,Art,1,B1,Grammar & Core Verbs
+3767,komme,3,B1,Grammar & Core Verbs
+3768,essen,3,B1,Food & Drink
+3769,bekommen,6,B1,Grammar & Core Verbs
+3770,hart,2,B1,Grammar & Core Verbs
+3771,vergnügt,6,B1,Grammar & Core Verbs
+3772,vergrößern,8,B1,Grammar & Core Verbs
+3773,verhaften,8,B1,"Society, Law & Politics"
+3774,Verhalten,8,B1,Emotions & Personal Traits
+3775,Verhältnis,8,B1,Grammar & Core Verbs
+3776,verheiratet,9,B1,Family & Relationships
+3777,verhindern,8,B1,Grammar & Core Verbs
+3778,verkaufen,8,B1,Shopping & Finance
+3779,Verkäufer,8,B1,Work & Careers
+3780,Verkehr,5,B1,Transportation
+3781,Verkehrsmittel,10,B1,Transportation
+3782,Verlag,4,B1,Grammar & Core Verbs
+3783,verlängern,8,B1,Grammar & Core Verbs
+3784,verlassen,8,B1,Grammar & Core Verbs
+3785,verbrauchen,9,B1,Grammar & Core Verbs
+3786,Verbrecher,8,B1,"Society, Law & Politics"
+3787,Verbrecherin,10,B1,"Society, Law & Politics"
+3788,verbrennen,8,B1,Grammar & Core Verbs
+3789,verbringen,8,B1,Grammar & Core Verbs
+3790,Verdacht,7,B1,"Society, Law & Politics"
+3791,verdächtig,8,B1,Grammar & Core Verbs
+3792,verdienen,8,B1,Work & Careers
+3793,Verein,7,B1,"Society, Law & Politics"
+3794,vereinbaren,9,B1,Grammar & Core Verbs
+3795,Vergangenheit,10,B1,Grammar & Core Verbs
+3796,vergeblich,8,B1,Grammar & Core Verbs
+3797,vergessen,7,B1,Grammar & Core Verbs
+3798,vergleichen,9,B1,Grammar & Core Verbs
+3799,Vergleich,8,B1,Grammar & Core Verbs
+3800,beim,2,B1,Grammar & Core Verbs
+3801,herein,4,B1,Grammar & Core Verbs
+3802,merkwürdig,8,B1,Grammar & Core Verbs
+3803,schwierigen,9,B1,Grammar & Core Verbs
+3804,meinen,4,B1,Grammar & Core Verbs
+3805,verheiratet,9,B1,Family & Relationships
+3806,verhindern,8,B1,Grammar & Core Verbs
+3807,helfen,4,B1,Grammar & Core Verbs
+3808,mit,1,B1,Grammar & Core Verbs
+3809,verlangt,6,B1,Grammar & Core Verbs
+3810,lassen,3,B1,Grammar & Core Verbs
+3811,helfe,3,B1,Grammar & Core Verbs
+3812,direkt,4,B1,Grammar & Core Verbs
+3813,verhaftet,8,B1,"Society, Law & Politics"
+3814,verbrannt,8,B1,Grammar & Core Verbs
+3815,ich,1,B1,Grammar & Core Verbs
+3816,gesehen,5,B1,Grammar & Core Verbs
+3817,dient,3,B1,Grammar & Core Verbs
+3818,diesem,4,B1,Grammar & Core Verbs
+3819,anzurufen,8,B1,Grammar & Core Verbs
+3820,vergnügt,6,B1,Grammar & Core Verbs
+3821,verpflichtet,10,B1,Grammar & Core Verbs
+3822,verraten,6,B1,Grammar & Core Verbs
+3823,verreisen,8,B1,Travel & Tourism
+3824,verrückt,6,B1,Grammar & Core Verbs
+3825,Versammlung,9,B1,"Society, Law & Politics"
+3826,verschieben,9,B1,Grammar & Core Verbs
+3827,verschieden,9,B1,Grammar & Core Verbs
+3828,verschreiben,10,B1,Grammar & Core Verbs
+3829,verschwinden,10,B1,Grammar & Core Verbs
