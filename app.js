@@ -3299,6 +3299,7 @@ var _dictLoaded = false;
 var _dictAllWords = [];
 var _dictScrollPaused = false;
 var _dictScrollPauseTimer = null;
+var _dictLetterOffsets = {}; // letter → scrollTop px, built at render time
 
 function openDictionary() {
   show('screen-dictionary');
@@ -3418,16 +3419,14 @@ function _dictSetActiveLetter(l) {
 
 function _dictJumpToLetter(l) {
   var list = document.getElementById('dict-list');
-  var hdr = list.querySelector('[data-dict-letter="' + l + '"]');
-  if (!hdr) return;
+  var offset = _dictLetterOffsets[l];
+  // _dictLetterOffsets are captured at render time when scrollTop=0, so they
+  // are the true layout positions and are unaffected by position:sticky painting.
+  if (offset === undefined) return;
   _dictSetActiveLetter(l);
   _dictScrollPaused = true;
   clearTimeout(_dictScrollPauseTimer);
-  // Direct scrollTop delta: works up AND down, immune to sticky-header quirks.
-  // scrollIntoView is unreliable for upward scrolling on mobile.
-  var listRect = list.getBoundingClientRect();
-  var hdrRect  = hdr.getBoundingClientRect();
-  list.scrollTop += (hdrRect.top - listRect.top);
+  list.scrollTop = offset;
   _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 500);
 }
 
@@ -3528,6 +3527,13 @@ function _renderDictList(filter) {
   list.innerHTML = '';
   list.appendChild(frag);
   list.scrollTop = 0;
+  // Capture letter→scrollTop offsets NOW, while scrollTop=0 and sticky hasn't
+  // moved anything. getBoundingClientRect() here returns true layout positions.
+  _dictLetterOffsets = {};
+  var lr = list.getBoundingClientRect();
+  list.querySelectorAll('[data-dict-letter]').forEach(function(h) {
+    _dictLetterOffsets[h.getAttribute('data-dict-letter')] = h.getBoundingClientRect().top - lr.top;
+  });
   _initDictScrollTracker();
 }
 
