@@ -5999,3 +5999,146 @@ id,word,difficulty,level,theme
 4127,Wohnung,5,B1,Home & Living
 4128,Wohnzimmer,8,B1,Home & Living
 4129,Wolke,3,B1,"Nature, Weather & Animals"
+4130,bewölkt,5,B1,"Nature, Weather & Animals"
+4131,Wolle,3,B1,Clothing & Appearance
+4132,wollen,4,B1,Grammar & Core Verbs
+4133,worüber,5,B1,Grammar & Core Verbs
+4134,worum,3,B1,Grammar & Core Verbs
+4135,Wort,2,B1,"Language, Communication & Media"
+4136,Wort,2,B1,"Language, Communication & Media"
+4137,Wörterbuch,8,B1,"Language, Communication & Media"
+4138,Wunde,3,B1,Body & Health
+4139,Wunder,4,B1,Grammar & Core Verbs
+4140,wunderbar,8,B1,Grammar & Core Verbs
+4141,war,1,B1,Grammar & Core Verbs
+4142,gekauft,5,B1,Grammar & Core Verbs
+4143,hier,2,B1,Grammar & Core Verbs
+4144,früh,2,B1,Time & Calendar
+4145,los,1,B1,Grammar & Core Verbs
+4146,immer,1,B1,Grammar & Core Verbs
+4147,musste,4,B1,Grammar & Core Verbs
+4148,sofort,4,B1,Time & Calendar
+4149,brauchst,6,B1,Grammar & Core Verbs
+4150,mich,2,B1,Grammar & Core Verbs
+4151,geplant,5,B1,Grammar & Core Verbs
+4152,möglichst,8,B1,Grammar & Core Verbs
+4153,fern,2,B1,Grammar & Core Verbs
+4154,gesagt,4,B1,Grammar & Core Verbs
+4155,nachschlagen,10,B1,Grammar & Core Verbs
+4156,verbinden,8,B1,Grammar & Core Verbs
+4157,bares,3,B1,Grammar & Core Verbs
+4158,ziehen,4,B1,Grammar & Core Verbs
+4159,Ziel,2,B1,Grammar & Core Verbs
+4160,ziemlich,6,B1,Grammar & Core Verbs
+4161,Zigarette,8,B1,Body & Health
+4162,Zimmer,4,B1,Home & Living
+4163,Zinsen,7,B1,Shopping & Finance
+4164,Zirkus,4,B1,Sports & Leisure
+4165,Familienstand,10,B1,Family & Relationships
+4166,Zoll,2,B1,Transportation
+4167,Zone,2,B1,"Society, Law & Politics"
+4168,zubereiten,8,B1,Food & Drink
+4169,Zucker,4,B1,Food & Drink
+4170,zeichnen,6,B1,Arts & Culture
+4171,Zeichnung,8,B1,Arts & Culture
+4172,zeigen,4,B1,Grammar & Core Verbs
+4173,Zeile,3,B1,"Language, Communication & Media"
+4174,Zeit,2,B1,Time & Calendar
+4175,Zeitpunkt,8,B1,Time & Calendar
+4176,zurzeit,5,B1,Time & Calendar
+4177,Zeitschrift,9,B1,"Language, Communication & Media"
+4178,Zeitung,5,B1,"Language, Communication & Media"
+4179,zelten,4,B1,Sports & Leisure
+4180,zentral,5,B1,Grammar & Core Verbs
+4181,Zentrum,5,B1,Places & Geography
+4182,zerstören,8,B1,Grammar & Core Verbs
+4183,Zertifikat,8,B1,Education & Learning
+4184,Zettel,4,B1,Grammar & Core Verbs
+4185,Zeuge,3,B1,"Society, Law & Politics"
+4186,Zeugin,4,B1,"Society, Law & Politics"
+4187,ins,1,B1,Grammar & Core Verbs
+4188,warten,4,B1,Grammar & Core Verbs
+4189,serviert,6,B1,Grammar & Core Verbs
+4190,mein,2,B1,Grammar & Core Verbs
+4191,den,1,B1,Grammar & Core Verbs
+4192,ankreuzen,7,B1,"Language, Communication & Media"
+4193,jetzt,3,B1,Grammar & Core Verbs
+4194,eine,2,B1,Grammar & Core Verbs
+4195,-nen,2,B1,Grammar & Core Verbs
+4196,kaufen,4,B1,Shopping & Finance
+4197,gerade,4,B1,Grammar & Core Verbs
+4198,zeige,3,B1,Grammar & Core Verbs
+4199,Weise,3,B1,Grammar & Core Verbs
+4200,nehmen,4,B1,Grammar & Core Verbs
+4201,in,1,B1,Grammar & Core Verbs
+4202,plätze,4,B1,Grammar & Core Verbs
+4203,bekomme,5,B1,Grammar & Core Verbs
+4204,muss,2,B1,Grammar & Core Verbs
+4205,gemacht,5,B1,Grammar & Core Verbs
+4206,Zündholz,6,B1,Grammar & Core Verbs
+4207,zurechtkommen,10,B1,Grammar & Core Verbs
+4208,zurück,4,B1,Grammar & Core Verbs
+4209,zurzeit,5,B1,Time & Calendar
+4210,zusagen,5,B1,Grammar & Core Verbs
+4211,zusammen,6,B1,Grammar & Core Verbs
+4212,Zusammenarbeit,10,B1,Work & Careers
+4213,zusammenfassen,10,B1,Grammar & Core Verbs
+4214,Zusammenhang,10,B1,Grammar & Core Verbs
+4215,zusätzlich,8,B1,Grammar & Core Verbs
+4216,zuschauen,8,B1,Grammar & Core Verbs
+4217,Zuschauer,8,B1,"Language, Communication & Media"
+4218,Zuschauerin,9,B1,"Language, Communication & Media"
+4219,Zuschlag,6,B1,Grammar & Core Verbs
+4220,Zufall,7,B1,Grammar & Core Verbs
+4221,zufällig,6,B1,Grammar & Core Verbs
+4222,zufrieden,8,B1,Emotions & Personal Traits
+4223,Zugang,4,B1,Grammar & Core Verbs
+4224,zugänglich,8,B1,Grammar & Core Verbs
+4225,Zug,1,B1,Transportation
+4226,zugehen,5,B1,Grammar & Core Verbs
+4227,Zuhause,5,B1,Home & Living
+4228,zuhören,5,B1,"Language, Communication & Media"
+4229,Zuhörer,5,B1,"Language, Communication & Media"
+4230,Zuhörerin,8,B1,"Language, Communication & Media"
+4231,Zukunft,7,B1,Grammar & Core Verbs
+4232,zukünftig,8,B1,Grammar & Core Verbs
+4233,zuletzt,5,B1,Grammar & Core Verbs
+4234,zumachen,6,B1,Grammar & Core Verbs
+4235,zumindest,8,B1,Grammar & Core Verbs
+4236,zunächst,6,B1,Grammar & Core Verbs
+4237,ich,1,B1,Grammar & Core Verbs
+4238,Männer,4,B1,Grammar & Core Verbs
+4239,komme,3,B1,Grammar & Core Verbs
+4240,und,1,B1,Grammar & Core Verbs
+4241,eingeladen,8,B1,Grammar & Core Verbs
+4242,gespielt,6,B1,Grammar & Core Verbs
+4243,getrennt,6,B1,Family & Relationships
+4244,schreiben,8,B1,"Language, Communication & Media"
+4245,zusammenfassen,10,B1,Grammar & Core Verbs
+4246,diesen,4,B1,Grammar & Core Verbs
+4247,zusätzlich,8,B1,Grammar & Core Verbs
+4248,schaue,4,B1,Grammar & Core Verbs
+4249,gute,2,B1,Grammar & Core Verbs
+4250,ihr,1,B1,Grammar & Core Verbs
+4251,gefallen,6,B1,Grammar & Core Verbs
+4252,getroffen,8,B1,Grammar & Core Verbs
+4253,bekommen,6,B1,Grammar & Core Verbs
+4254,schwierig,8,B1,Grammar & Core Verbs
+4255,en-,1,B1,Grammar & Core Verbs
+4256,gesehen,5,B1,Grammar & Core Verbs
+4257,zweifeln,7,B1,Emotions & Personal Traits
+4258,Zweifel,7,B1,Grammar & Core Verbs
+4259,Zwiebel,5,B1,Food & Drink
+4260,zwingen,5,B1,Grammar & Core Verbs
+4261,zu,1,B1,Grammar & Core Verbs
+4262,Zustand,7,B1,Grammar & Core Verbs
+4263,zuständig,8,B1,Grammar & Core Verbs
+4264,zustimmen,8,B1,Grammar & Core Verbs
+4265,Zustimmung,8,B1,Grammar & Core Verbs
+4266,Zutaten,5,B1,Food & Drink
+4267,haben,1,B1,Grammar & Core Verbs
+4268,umzukehren,8,B1,Grammar & Core Verbs
+4269,beiden,4,B1,Grammar & Core Verbs
+4270,und,1,B1,Grammar & Core Verbs
+4271,zu,1,B1,Grammar & Core Verbs
+4272,diesen,4,B1,Grammar & Core Verbs
