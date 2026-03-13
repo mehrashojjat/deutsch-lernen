@@ -7,36 +7,34 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'deutsch_adaptive_progress';
+  var STORAGE_KEY  = 'deutsch_adaptive_progress';
   var RECENT_LIMIT = 25;
 
   // ── External persistence hooks (set by auth.js) ───────────────
-  // _pendingProgress : progress object pre-loaded from Supabase; consumed once by _get()
-  // _externalSaveFn  : async fn(progress) called in addition to localStorage after each quiz
   var _pendingProgress = null;
   var _externalSaveFn  = null;
 
   // ── State ──────────────────────────────────────────────────────
-  var _active = false;          // true while an adaptive quiz is running
-  var _progress = null;         // cached progress object
-  var _answers = [];            // { wordId, difficulty, correct } for current quiz
-  var _stageAtStart = 0;        // evaluationStage value when this quiz began
+  var _active       = false;   // true while an adaptive quiz is running
+  var _progress     = null;    // cached progress object
+  var _answers      = [];      // { wordId, difficulty, correct, position }
+  var _stageAtStart = 0;       // evaluationStage value when this quiz began
 
-  // ── Persistence ───────────────────────────────────────────────
+  // ── Persistence ────────────────────────────────────────────────
   function _load() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; }
   }
   function _save(p) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) {}
-    if (typeof _externalSaveFn === 'function') _externalSaveFn(p); // e.g. Supabase write
+    if (typeof _externalSaveFn === 'function') _externalSaveFn(p);
   }
-  function _init() {
-    return { evaluationStage: 0, skillLevel: 5, words: {}, recentWords: [] };
+  function _initProgress() {
+    return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [] };
   }
   function _get() {
     if (!_progress) {
       if (_pendingProgress) { _progress = _pendingProgress; _pendingProgress = null; }
-      else { _progress = _load() || _init(); }
+      else { _progress = _load() || _initProgress(); }
     }
     return _progress;
   }
@@ -52,7 +50,7 @@
     return a;
   }
 
-  // ── Vocabulary pool (scoped to the level the user clicked) ────
+  // ── Vocabulary pool (scoped to selected level) ─────────────────
   function _allWords(lv) {
     var pool = (typeof CSV_QUIZ_DATA !== 'undefined' && CSV_QUIZ_DATA[lv]) || [];
     var out = [];
@@ -64,161 +62,174 @@
   }
 
   // ── Selection helpers ──────────────────────────────────────────
+
+  // Remove words already chosen for this quiz
   function _available(pool, usedIds) {
     return pool.filter(function (r) { return !usedIds[r.id]; });
   }
 
+  // Pick a random word at exactly the given difficulty; prefer words not seen recently
   function _byDifficulty(pool, diff, recentWords) {
-    var d = _clamp(Math.round(diff), 1, 10);
+    var d   = _clamp(Math.round(diff), 1, 10);
     var rSet = {};
     (recentWords || []).forEach(function (id) { rSet[id] = true; });
-    var at = pool.filter(function (r) { return parseInt(r.difficulty) === d; });
+    var at    = pool.filter(function (r) { return parseInt(r.difficulty) === d; });
     var fresh = at.filter(function (r) { return !rSet[r.id]; });
     if (fresh.length) return _shuffle(fresh)[0];
-    if (at.length) return _shuffle(at)[0];
+    if (at.length)    return _shuffle(at)[0];
     return null;
   }
 
+  // Exploration: prefer difficulty > SI+1, cap at SI+3, prefer words not recently seen
   function _exploration(pool, recentWords, skillLevel) {
-    var S = _clamp(Math.round(skillLevel), 1, 10);
-    var rSet = {};
+    var S      = _clamp(Math.round(skillLevel), 1, 10);
+    var maxDiff = Math.min(10, S + 3);
+    var rSet   = {};
     (recentWords || []).forEach(function (id) { rSet[id] = true; });
     var fresh = pool.filter(function (r) { return !rSet[r.id]; });
-    var use = fresh.length ? fresh : pool;
-    // Prefer harder words (above skill level) to increase challenge
-    var harder = use.filter(function (r) { return parseInt(r.difficulty) > S + 1; });
-    if (harder.length) return _shuffle(harder)[0];
-    var far = use.filter(function (r) { return Math.abs(parseInt(r.difficulty) - S) >= 2; });
+    var use   = fresh.length ? fresh : pool;
+    // First choice: harder than SI+1 but no harder than SI+3
+    var hard = use.filter(function (r) {
+      var d = parseInt(r.difficulty);
+      return d > S + 1 && d <= maxDiff;
+    });
+    if (hard.length) return _shuffle(hard)[0];
+    // Second choice: any word at least 2 away from skill (within cap)
+    var far = use.filter(function (r) {
+      var d = parseInt(r.difficulty);
+      return Math.abs(d - S) >= 2 && d <= maxDiff;
+    });
     if (far.length) return _shuffle(far)[0];
+    // Final fallback: any unused word
     if (use.length) return _shuffle(use)[0];
     return null;
   }
 
-  function _fallback(all, usedIds, recentWords) {
-    var pool = _available(all, usedIds);
-    var rSet = {};
+  // Fallback: any unused word, preferring words not recently seen
+  function _fallback(pool, usedIds, recentWords) {
+    var avail = _available(pool, usedIds);
+    var rSet  = {};
     (recentWords || []).forEach(function (id) { rSet[id] = true; });
-    var fresh = pool.filter(function (r) { return !rSet[r.id]; });
-    var use = fresh.length ? fresh : pool;
+    var fresh = avail.filter(function (r) { return !rSet[r.id]; });
+    var use   = fresh.length ? fresh : avail;
     return use.length ? _shuffle(use)[0] : null;
+  }
+
+  // ── Normal difficulty slot layout (shared by Eval3 and Normal mode) ──
+  // Spec: 1@SI-2, 1@SI-1, 3@SI, 2@SI+1, 2 exploration, 1 fallback = 10 slots
+  // null  = exploration slot
+  // 'fb'  = fallback slot (any difficulty, any pool)
+  function _normalDiffSlots(SI) {
+    return _shuffle([
+      _clamp(SI - 2, 1, 10),
+      _clamp(SI - 1, 1, 10),
+      SI, SI, SI,
+      _clamp(SI + 1, 1, 10),
+      _clamp(SI + 1, 1, 10),
+      null, null,   // 2 exploration
+      'fb'          // 1 explicit fallback slot
+    ]);
   }
 
   // ── Queue builders ─────────────────────────────────────────────
 
-  // Evaluation quiz 1: exactly 1 word per difficulty 1–10
+  // Evaluation quiz 1: one word per difficulty 1–10 in order
   function _buildEval1(all, p) {
     var selected = [], usedIds = {}, rw = p.recentWords || [];
     for (var d = 1; d <= 10; d++) {
       var pool = _available(all, usedIds);
-      var w = _byDifficulty(pool, d, rw) || _fallback(all, usedIds, rw);
+      var w    = _byDifficulty(pool, d, rw) || _fallback(all, usedIds, rw);
       if (w) { usedIds[w.id] = true; selected.push(w); }
     }
     return selected;
   }
 
-  // Evaluation quiz 2: distribution around skillLevel + 2 exploration
+  // Evaluation quiz 2: 2@S-2, 2@S-1, 3@S, 2@S+1, 1 exploration
   function _buildEval2(all, p) {
-    var S = _clamp(Math.round(p.skillLevel), 1, 10);
-    var dist = [S - 2, S - 1, S - 1, S, S, S + 1, S + 1, S + 2]
-      .map(function (d) { return _clamp(d, 1, 10); });
-
-    // 2 exploration slots: difficulties not already represented in dist
-    var distSet = {};
-    dist.forEach(function (d) { distSet[d] = true; });
-    var others = [];
-    for (var d = 1; d <= 10; d++) { if (!distSet[d]) others.push(d); }
-    var explDiffs = _shuffle(others).slice(0, 2);
-    // If not enough other diffs, mark as null (pure exploration)
-    while (explDiffs.length < 2) explDiffs.push(null);
-    dist = dist.concat(explDiffs);
-
+    var S    = _clamp(Math.round(p.skillLevel), 1, 10);
+    var dist = [
+      _clamp(S - 2, 1, 10), _clamp(S - 2, 1, 10),
+      _clamp(S - 1, 1, 10), _clamp(S - 1, 1, 10),
+      S, S, S,
+      _clamp(S + 1, 1, 10), _clamp(S + 1, 1, 10),
+      null  // 1 exploration
+    ];
     var selected = [], usedIds = {}, rw = p.recentWords || [];
     dist.forEach(function (d) {
       var pool = _available(all, usedIds);
-      var w = (d === null)
+      var w    = (d === null)
         ? _exploration(pool, rw, p.skillLevel)
         : _byDifficulty(pool, d, rw);
       if (!w) w = _fallback(all, usedIds, rw);
-      if (w) { usedIds[w.id] = true; selected.push(w); }
+      if (w)  { usedIds[w.id] = true; selected.push(w); }
     });
     return selected.slice(0, 10);
   }
 
-  // Evaluation quiz 3: 3×S, 3×(S-1), 3×(S+1), 1 exploration
+  // Evaluation quiz 3: same distribution as normal mode
   function _buildEval3(all, p) {
-    var S = _clamp(Math.round(p.skillLevel), 1, 10);
-    var dist = [];
-    for (var i = 0; i < 3; i++) dist.push(S);
-    for (var i = 0; i < 3; i++) dist.push(_clamp(S - 1, 1, 10));
-    for (var i = 0; i < 3; i++) dist.push(_clamp(S + 1, 1, 10));
-    dist.push(null); // exploration
-
-    var selected = [], usedIds = {}, rw = p.recentWords || [];
-    dist.forEach(function (d) {
-      var pool = _available(all, usedIds);
-      var w = (d === null)
-        ? _exploration(pool, rw, p.skillLevel)
-        : _byDifficulty(pool, d, rw);
-      if (!w) w = _fallback(all, usedIds, rw);
-      if (w) { usedIds[w.id] = true; selected.push(w); }
-    });
-    return selected.slice(0, 10);
+    return _buildNormalRows(all, p);
   }
 
-  // Normal adaptive mode: 50% new / 30% failed / 20% review
-  // crossed with difficulty targeting: 50%@S, 20%@S-1, 20%@S+1, 10% exploration
-  function _buildNormal(all, p) {
-    var S = p.skillLevel;
-    var SI = _clamp(Math.round(S), 1, 10);
+  // Normal adaptive mode rows (also used for Eval3)
+  function _buildNormalRows(all, p) {
+    var S     = p.skillLevel;
+    var SI    = _clamp(Math.round(S), 1, 10);
     var words = p.words || {};
-    var rw = p.recentWords || [];
+    var rw    = p.recentWords || [];
 
-    // Categorise all words into pools
+    // Categorise all words by history
     var pools = {
       newW:   all.filter(function (r) { return !words[r.id] || words[r.id].seenCount === 0; }),
       failed: all.filter(function (r) { return words[r.id] && words[r.id].failScore > 0; }),
-      review: all.filter(function (r) { return words[r.id] && words[r.id].failScore === 0 && words[r.id].seenCount > 0; })
+      review: all.filter(function (r) {
+        return words[r.id] && words[r.id].failScore === 0 && words[r.id].seenCount > 0;
+      })
     };
 
-    // 10 type-slots: 5 new, 3 failed, 2 review  (shuffled for mixing)
-    var typeSlots = _shuffle(['newW','newW','newW','newW','newW','failed','failed','failed','review','review']);
-    // 10 difficulty-slots: wider spread so users see words from difficulty 1 up to SI,
-    // not just the narrow ±1 band. Also 2 exploration slots biased toward harder words.
-    // 3@S, 2@(S-1), 1@(S-2), 2@(S+1), 2 exploration (prefer S+2 and above)
-    var diffSlots = _shuffle([SI, SI, SI,
-                              _clamp(SI-1,1,10), _clamp(SI-1,1,10),
-                              _clamp(SI-2,1,10),
-                              _clamp(SI+1,1,10), _clamp(SI+1,1,10),
-                              null, null]);
+    // 10 type-slots: 5 new, 3 failed, 2 review — shuffled so they interleave
+    var typeSlots = _shuffle([
+      'newW', 'newW', 'newW', 'newW', 'newW',
+      'failed', 'failed', 'failed',
+      'review', 'review'
+    ]);
+    // 10 difficulty-slots per spec
+    var diffSlots = _normalDiffSlots(SI);
 
     var selected = [], usedIds = {};
 
     for (var i = 0; i < 10; i++) {
       var tType = typeSlots[i];
       var tDiff = diffSlots[i];
-      var w = null;
+      var w     = null;
 
-      // Try preferred pool first
-      var preferred = _available(pools[tType], usedIds);
-      w = (tDiff === null)
-        ? _exploration(preferred, rw, S)
-        : _byDifficulty(preferred, tDiff, rw);
-
-      // Relax pool type, keep difficulty
-      if (!w) {
-        var anyPool = _available(all, usedIds);
+      if (tDiff === 'fb') {
+        // Explicit fallback slot: any unused word, preferred type first
+        w = _fallback(pools[tType], usedIds, rw);
+        if (!w) w = _fallback(all, usedIds, rw);
+      } else {
+        // 1. Try preferred type pool at desired difficulty / exploration
+        var preferred = _available(pools[tType], usedIds);
         w = (tDiff === null)
-          ? _exploration(anyPool, rw, S)
-          : _byDifficulty(anyPool, tDiff, rw);
-      }
+          ? _exploration(preferred, rw, S)
+          : _byDifficulty(preferred, tDiff, rw);
 
-      // Final fallback: anything unused
-      if (!w) w = _fallback(all, usedIds, rw);
+        // 2. Relax pool restriction, keep difficulty target
+        if (!w) {
+          var anyPool = _available(all, usedIds);
+          w = (tDiff === null)
+            ? _exploration(anyPool, rw, S)
+            : _byDifficulty(anyPool, tDiff, rw);
+        }
+
+        // 3. Any unused word
+        if (!w) w = _fallback(all, usedIds, rw);
+      }
 
       if (w) { usedIds[w.id] = true; selected.push(w); }
     }
 
-    // Top-up if any slots failed
+    // Top-up in case any slot could not be filled
     while (selected.length < 10) {
       var w2 = _fallback(all, usedIds, rw);
       if (!w2) break;
@@ -232,7 +243,7 @@
   function _makeCards(rows, all) {
     return rows.map(function (row) {
       var usedIds = {}; usedIds[row.id] = true;
-      var usedEn = {}; usedEn[(row.translation_en || '').trim()] = true;
+      var usedEn  = {}; usedEn[(row.translation_en || '').trim()] = true;
       var distractors = [];
       _shuffle(all).forEach(function (d) {
         if (distractors.length >= 6) return;
@@ -248,15 +259,15 @@
   }
 
   function _buildQueue(lv) {
-    var p = _get();
-    var all = _allWords(lv);
+    var p     = _get();
+    var all   = _allWords(lv);
     if (!all.length) return [];
-    var rows;
     var stage = p.evaluationStage;
+    var rows;
     if      (stage === 0) rows = _buildEval1(all, p);
     else if (stage === 1) rows = _buildEval2(all, p);
     else if (stage === 2) rows = _buildEval3(all, p);
-    else                  rows = _buildNormal(all, p);
+    else                  rows = _buildNormalRows(all, p);
     return _makeCards(rows, all);
   }
 
@@ -265,8 +276,12 @@
     if (!p.words[wordId]) p.words[wordId] = { failScore: 0, seenCount: 0, correctCount: 0 };
     var w = p.words[wordId];
     w.seenCount++;
-    if (correct) { w.correctCount++; w.failScore = Math.max(0, w.failScore - 1); }
-    else         { w.failScore += 3; }
+    if (correct) {
+      w.correctCount++;
+      w.failScore = Math.max(0, w.failScore - 1);  // recover 1 point per correct answer
+    } else {
+      w.failScore += 2;  // penalise 2 points per wrong answer; takes 2 correct to clear
+    }
   }
 
   function _updateRecent(p, ids) {
@@ -280,35 +295,54 @@
   }
 
   // ── Post-quiz: skill level updates ────────────────────────────
+
+  // Eval 1 → skill = weighted average difficulty of correct answers
+  // (cards are presented easiest→hardest so later position ≈ harder word)
+  // Weight = 1 + position/9 → linear ramp from 1.0 (first) to 2.0 (last)
   function _afterEval1(p, answers) {
-    var highest = 0;
-    answers.forEach(function (a) { if (a.correct && a.difficulty > highest) highest = a.difficulty; });
-    p.skillLevel = Math.max(1, highest);
+    var correct = answers.filter(function (a) { return a.correct; });
+    if (!correct.length) {
+      p.skillLevel = 1;
+    } else {
+      var totalWeight = 0, weightedSum = 0;
+      correct.forEach(function (a) {
+        var weight = 1 + a.position / 9;
+        totalWeight += weight;
+        weightedSum += a.difficulty * weight;
+      });
+      p.skillLevel = _clamp(weightedSum / totalWeight, 1, 10);
+    }
     p.evaluationStage = 1;
   }
 
+  // Eval 2 → average(current skill, avg difficulty of correct answers)
   function _afterEval2(p, answers) {
     var correct = answers.filter(function (a) { return a.correct; });
-    var avg = correct.length
+    var avg     = correct.length
       ? correct.reduce(function (s, a) { return s + a.difficulty; }, 0) / correct.length
       : 1;
-    p.skillLevel = _clamp((p.skillLevel + avg) / 2, 1, 10);
+    p.skillLevel    = _clamp((p.skillLevel + avg) / 2, 1, 10);
     p.evaluationStage = 2;
   }
 
+  // Normal formula: skill += (accuracy - 0.65) * 0.6
+  // Neutral at 65%; ±0.6 max swing per quiz (100% → +0.21, 0% → -0.39)
+  function _applyNormalFormula(p, answers) {
+    var accuracy   = answers.filter(function (a) { return a.correct; }).length / answers.length;
+    p.skillLevel   = _clamp(p.skillLevel + (accuracy - 0.65) * 0.6, 1, 10);
+  }
+
   function _afterEval3(p, answers) {
-    var accuracy = answers.filter(function (a) { return a.correct; }).length / 10;
-    p.skillLevel = _clamp(p.skillLevel + (accuracy - 0.6), 1, 10);
-    p.evaluationStage = 3;
+    _applyNormalFormula(p, answers);
+    p.evaluationStage = 3;  // transitions to permanent normal mode
   }
 
   function _afterNormal(p, answers) {
-    var accuracy = answers.filter(function (a) { return a.correct; }).length / answers.length;
-    p.skillLevel = _clamp(p.skillLevel + (accuracy - 0.6), 1, 10);
+    _applyNormalFormula(p, answers);
   }
 
   function _processResults(answers) {
-    var p = _get();
+    var p     = _get();
     answers.forEach(function (a) { _updateWord(p, a.wordId, a.correct); });
     _updateRecent(p, answers.map(function (a) { return a.wordId; }));
     var stage = _stageAtStart;
@@ -317,7 +351,7 @@
     else if (stage === 2) _afterEval3(p, answers);
     else                  _afterNormal(p, answers);
     _save(p);
-    _progress = p; // keep cache in sync
+    _progress = p;
   }
 
   // ── UI helpers ─────────────────────────────────────────────────
@@ -332,25 +366,14 @@
     if (el) el.textContent = _adaptiveBadgeText();
   }
 
-  function _updateQuizHUD() {
-    // Intentionally left blank: the adaptive engine runs transparently.
-    // The quiz header already shows the correct level name via app.js's
-    // renderCard(), so we do not override it with evaluation stage labels.
-  }
-
-  function _updateResultsHUD() {
-    // Intentionally left blank: adaptive progress is tracked silently.
-    // The results screen shows the normal score/percentage via app.js.
-  }
+  function _updateQuizHUD()    { /* transparent — app.js header handles level label */ }
+  function _updateResultsHUD() { /* transparent — app.js results screen handles score */ }
 
   // ── Public: start adaptive quiz for a specific level ───────────
-  // Called from auth.js's startLevel wrapper when the user is signed in.
-  // The user simply sees their chosen level quiz — the adaptive logic is
-  // transparent.
   window.startAdaptiveQuiz = async function (lv) {
     var p = _get();
-    _active = true;
-    _answers = [];
+    _active       = true;
+    _answers      = [];
     _stageAtStart = p.evaluationStage;
 
     var ov = document.getElementById('quiz-prep-overlay');
@@ -372,7 +395,6 @@
 
     if (!cards.length) { alert('No words available!'); _active = false; return; }
 
-    // Use the real level name so the quiz header reads "Level A1" etc.
     currentLevel = lv;
     queue = cards;
     idx = 0; ok = 0; no = 0;
@@ -383,25 +405,30 @@
 
   // ── Wrap existing functions ────────────────────────────────────
 
-  // renderCard: patch the level/HUD text after original runs
+  // renderCard: hook in after original renders each card
   var _origRenderCard = window.renderCard;
   window.renderCard = function () {
     _origRenderCard();
     if (_active) _updateQuizHUD();
   };
 
-  // pick: record per-answer result for adaptive processing
+  // pick: record per-answer result (with position for Eval1 weighting)
   var _origPick = window.pick;
   window.pick = function (btn, selectedId, correctId) {
     _origPick(btn, selectedId, correctId);
     if (_active) {
       var card = queue[idx];
       var diff = parseInt((card && card._row && card._row.difficulty) || '5') || 5;
-      _answers.push({ wordId: correctId, difficulty: diff, correct: selectedId === correctId });
+      _answers.push({
+        wordId    : correctId,
+        difficulty: diff,
+        correct   : selectedId === correctId,
+        position  : idx            // 0-based index in this quiz; used for Eval1 weighting
+      });
     }
   };
 
-  // showResults: process adaptive data and update results screen
+  // showResults: process adaptive data after the results screen renders
   var _origShowResults = window.showResults;
   window.showResults = function () {
     _origShowResults();
@@ -416,10 +443,10 @@
   var _origRestartLevel = window.restartLevel;
   window.restartLevel = function () {
     if (_active) { window.startAdaptiveQuiz(currentLevel); }
-    else { _origRestartLevel(); }
+    else         { _origRestartLevel(); }
   };
 
-  // goHome: reset adaptive flag and refresh home badge
+  // goHome: reset active flag (auth.js snapshot restores progress if quiz abandoned)
   var _origGoHome = window.goHome;
   window.goHome = function () {
     _active = false;
@@ -436,15 +463,11 @@
   }
 
   // ── Hooks exposed for auth.js ──────────────────────────────────
-  // Inject Supabase-loaded progress before the next quiz starts.
-  // Clears the in-memory cache so _get() picks up the new value.
   window._adaptiveInjectProgress = function (p) {
     _pendingProgress = p;
-    _progress = null;
+    _progress        = null;
   };
-  // Register a save callback (called after every quiz alongside localStorage).
-  window._adaptiveSetSaveHook = function (fn) { _externalSaveFn = fn; };
-  // Let auth.js refresh the home badge after progress is injected.
-  window._adaptiveRefreshBadge = _updateHomeBadge;
+  window._adaptiveSetSaveHook    = function (fn) { _externalSaveFn = fn; };
+  window._adaptiveRefreshBadge   = _updateHomeBadge;
 
 })();
