@@ -604,7 +604,7 @@ function setLang(lang) {
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
     _renderCategoryGrid();
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value);
+    _updateDictMeanings();
   }
 }
 
@@ -682,9 +682,9 @@ function applyTranslations() {
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
   document.getElementById('dict-loading-text').textContent = u.dictLoading;
-  // Refresh meanings immediately if dictionary is open
+  // Refresh meanings immediately if dictionary is open (in-place, preserves scroll)
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    _renderDictList(document.getElementById('dict-search-input').value);
+    _updateDictMeanings();
   }
 }
 
@@ -3486,6 +3486,7 @@ function _renderDictList(filter) {
 
     var div = document.createElement('div');
     div.className = 'dict-entry';
+    div.setAttribute('data-dict-word', entry.word);
 
     var top = document.createElement('div');
     top.className = 'dict-entry-top';
@@ -3535,6 +3536,34 @@ function _renderDictList(filter) {
     _dictLetterOffsets[h.getAttribute('data-dict-letter')] = h.getBoundingClientRect().top - lr.top;
   });
   _initDictScrollTracker();
+}
+
+// In-place meaning update — swaps translation text without touching scroll or layout
+function _updateDictMeanings() {
+  if (!_dictLoaded) return;
+  var list = document.getElementById('dict-list');
+  if (!list) return;
+  var isRtl = LANG === 'fa' || LANG === 'ar';
+  var map = {};
+  _dictAllWords.forEach(function(e) { map[e.word] = e; });
+  list.querySelectorAll('.dict-entry[data-dict-word]').forEach(function(div) {
+    var entry = map[div.getAttribute('data-dict-word')];
+    if (!entry) return;
+    var meaning = _getDictMeaning(entry);
+    var mEl = div.querySelector('.dict-meaning');
+    if (meaning) {
+      if (!mEl) {
+        mEl = document.createElement('div');
+        mEl.className = 'dict-meaning';
+        div.appendChild(mEl);
+      }
+      mEl.textContent = meaning;
+      if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
+      else { mEl.removeAttribute('dir'); mEl.style.textAlign = ''; }
+    } else if (mEl) {
+      mEl.remove();
+    }
+  });
 }
 
 function dictFilter(val) {
