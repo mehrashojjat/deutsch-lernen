@@ -604,7 +604,7 @@ function setLang(lang) {
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
     _renderCategoryGrid();
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    _updateDictMeanings();
+    if (_dictLoaded) _updateDictMeanings();
   }
 }
 
@@ -682,7 +682,7 @@ function applyTranslations() {
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
   document.getElementById('dict-loading-text').textContent = u.dictLoading;
-  // Refresh meanings immediately if dictionary is open (in-place, preserves scroll)
+  // Refresh meanings immediately if dictionary is open
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
     _updateDictMeanings();
   }
@@ -3486,7 +3486,8 @@ function _renderDictList(filter) {
 
     var div = document.createElement('div');
     div.className = 'dict-entry';
-    div.setAttribute('data-dict-word', entry.word);
+    div.setAttribute('data-word', entry.word);
+    div.setAttribute('data-level', entry.level);
 
     var top = document.createElement('div');
     top.className = 'dict-entry-top';
@@ -3538,16 +3539,19 @@ function _renderDictList(filter) {
   _initDictScrollTracker();
 }
 
-// In-place meaning update — swaps translation text without touching scroll or layout
+function dictFilter(val) {
+  if (_dictLoaded) _renderDictList(val);
+}
+
 function _updateDictMeanings() {
-  if (!_dictLoaded) return;
   var list = document.getElementById('dict-list');
   if (!list) return;
   var isRtl = LANG === 'fa' || LANG === 'ar';
   var map = {};
-  _dictAllWords.forEach(function(e) { map[e.word] = e; });
-  list.querySelectorAll('.dict-entry[data-dict-word]').forEach(function(div) {
-    var entry = map[div.getAttribute('data-dict-word')];
+  _dictAllWords.forEach(function(e) { map[e.word + '\x00' + e.level] = e; });
+  list.querySelectorAll('.dict-entry[data-word]').forEach(function(div) {
+    var key = div.getAttribute('data-word') + '\x00' + div.getAttribute('data-level');
+    var entry = map[key];
     if (!entry) return;
     var meaning = _getDictMeaning(entry);
     var mEl = div.querySelector('.dict-meaning');
@@ -3557,17 +3561,13 @@ function _updateDictMeanings() {
         mEl.className = 'dict-meaning';
         div.appendChild(mEl);
       }
-      mEl.textContent = meaning;
       if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
       else { mEl.removeAttribute('dir'); mEl.style.textAlign = ''; }
+      mEl.textContent = meaning;
     } else if (mEl) {
       mEl.remove();
     }
   });
-}
-
-function dictFilter(val) {
-  if (_dictLoaded) _renderDictList(val);
 }
 
 // ── Screen switcher ──
