@@ -3578,75 +3578,105 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
 });
 
-// ── Word-modal drag-to-close (handle pill) ──────────────────────────
+// ── Word-modal drag-to-close ─────────────────────────────────────────
+// Handle click (desktop) + full-modal swipe-down (mobile, scroll-aware)
 (function() {
-  var handle  = document.querySelector('.word-modal-handle');
-  var modal   = document.querySelector('.word-modal');
-  if (!handle || !modal) return;
+  var handle = document.querySelector('.word-modal-handle');
+  var modal  = document.querySelector('.word-modal');
+  if (!modal) return;
 
-  // Desktop: click the pill to dismiss
-  handle.addEventListener('click', function() { closeWordModal(); });
+  // Desktop: click the pill handle to dismiss
+  if (handle) handle.addEventListener('click', function() { closeWordModal(); });
 
-  // Mobile: swipe the pill downward to dismiss
-  var _startY, _deltaY;
-  handle.addEventListener('touchstart', function(e) {
+  var _startY, _startScrollTop, _dragging, _deltaY;
+
+  modal.addEventListener('touchstart', function(e) {
     _startY = e.touches[0].clientY;
+    _startScrollTop = modal.scrollTop;
+    _dragging = false;
     _deltaY = 0;
-    modal.style.transition = 'none';
   }, { passive: true });
 
-  // Track the move on the document so fast flicks don't lose the pointer
-  document.addEventListener('touchmove', function(e) {
+  // non-passive so we can preventDefault to stop scroll while dragging
+  modal.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
-    _deltaY = e.touches[0].clientY - _startY;
-    if (_deltaY > 0) modal.style.transform = 'translateY(' + _deltaY + 'px)';
-  }, { passive: true });
+    var dy = e.touches[0].clientY - _startY;
+    // Only start drag-to-close when the card is already scrolled to top
+    // and the finger is moving downward past a small threshold
+    if (!_dragging && dy > 6 && _startScrollTop === 0) {
+      _dragging = true;
+      modal.style.transition = 'none';
+    }
+    if (_dragging) {
+      _deltaY = Math.max(0, dy);
+      modal.style.transform = 'translateY(' + _deltaY + 'px)';
+      e.preventDefault(); // prevent scroll while dragging to dismiss
+    }
+  }, { passive: false });
 
-  document.addEventListener('touchend', function() {
+  modal.addEventListener('touchend', function() {
     if (_startY === undefined) return;
     _startY = undefined;
-    modal.style.transition = '';
-    if (_deltaY > 80) {
-      closeWordModal();
+    if (_dragging && _deltaY > 80) {
+      // Animate off-screen, then close
+      modal.style.transition = 'transform .2s ease-out';
+      modal.style.transform = 'translateY(110%)';
+      setTimeout(function() { closeWordModal(); }, 210);
     } else {
+      modal.style.transition = '';
       modal.style.transform = '';
     }
+    _dragging = false;
     _deltaY = 0;
   });
 })();
 
-// ── Settings drawer drag-to-close (handle pill) ────────────────────
+// ── Settings drawer drag-to-close ────────────────────────────────────
+// Handle click (desktop) + full-drawer swipe-down (mobile)
 (function() {
   var handle = document.querySelector('.drawer-handle');
   var drawer = document.getElementById('settings-drawer');
-  if (!handle || !drawer) return;
+  if (!drawer) return;
 
-  // Desktop: click the pill to dismiss
-  handle.addEventListener('click', function() { closeSettings(); });
+  // Desktop: click the pill handle to dismiss
+  if (handle) handle.addEventListener('click', function() { closeSettings(); });
 
-  // Mobile: swipe the pill downward to dismiss
-  var _startY, _deltaY;
-  handle.addEventListener('touchstart', function(e) {
+  var _startY, _dragging, _deltaY;
+
+  drawer.addEventListener('touchstart', function(e) {
     _startY = e.touches[0].clientY;
+    _dragging = false;
     _deltaY = 0;
-    drawer.style.transition = 'none';
   }, { passive: true });
 
-  document.addEventListener('touchmove', function(e) {
+  // non-passive so we can preventDefault while dragging
+  drawer.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
-    _deltaY = e.touches[0].clientY - _startY;
-    if (_deltaY > 0) drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
-  }, { passive: true });
+    var dy = e.touches[0].clientY - _startY;
+    if (!_dragging && dy > 6) {
+      _dragging = true;
+      drawer.style.transition = 'none';
+    }
+    if (_dragging) {
+      _deltaY = Math.max(0, dy);
+      drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
+      e.preventDefault();
+    }
+  }, { passive: false });
 
-  document.addEventListener('touchend', function() {
+  drawer.addEventListener('touchend', function() {
     if (_startY === undefined) return;
     _startY = undefined;
-    drawer.style.transition = '';
-    if (_deltaY > 80) {
-      closeSettings();
+    if (_dragging && _deltaY > 80) {
+      // Animate off-screen, then close
+      drawer.style.transition = 'transform .2s ease-out';
+      drawer.style.transform = 'translateX(-50%) translateY(110%)';
+      setTimeout(function() { closeSettings(); }, 210);
     } else {
+      drawer.style.transition = '';
       drawer.style.transform = '';
     }
+    _dragging = false;
     _deltaY = 0;
   });
 })();
