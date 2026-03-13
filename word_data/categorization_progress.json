@@ -1,7 +1,7 @@
 {
   "total_rows": 6143,
-  "processed_rows": 1200,
-  "last_processed_row": 1200,
+  "processed_rows": 1500,
+  "last_processed_row": 1500,
   "batch_size": 300,
   "status": "running"
 }
