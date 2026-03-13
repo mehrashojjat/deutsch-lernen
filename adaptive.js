@@ -85,6 +85,9 @@
     (recentWords || []).forEach(function (id) { rSet[id] = true; });
     var fresh = pool.filter(function (r) { return !rSet[r.id]; });
     var use = fresh.length ? fresh : pool;
+    // Prefer harder words (above skill level) to increase challenge
+    var harder = use.filter(function (r) { return parseInt(r.difficulty) > S + 1; });
+    if (harder.length) return _shuffle(harder)[0];
     var far = use.filter(function (r) { return Math.abs(parseInt(r.difficulty) - S) >= 2; });
     if (far.length) return _shuffle(far)[0];
     if (use.length) return _shuffle(use)[0];
@@ -179,11 +182,14 @@
 
     // 10 type-slots: 5 new, 3 failed, 2 review  (shuffled for mixing)
     var typeSlots = _shuffle(['newW','newW','newW','newW','newW','failed','failed','failed','review','review']);
-    // 10 difficulty-slots: 5@S, 2@(S-1), 2@(S+1), 1 exploration
-    var diffSlots = _shuffle([SI, SI, SI, SI, SI,
+    // 10 difficulty-slots: wider spread so users see words from difficulty 1 up to SI,
+    // not just the narrow ±1 band. Also 2 exploration slots biased toward harder words.
+    // 3@S, 2@(S-1), 1@(S-2), 2@(S+1), 2 exploration (prefer S+2 and above)
+    var diffSlots = _shuffle([SI, SI, SI,
                               _clamp(SI-1,1,10), _clamp(SI-1,1,10),
+                              _clamp(SI-2,1,10),
                               _clamp(SI+1,1,10), _clamp(SI+1,1,10),
-                              null]);
+                              null, null]);
 
     var selected = [], usedIds = {};
 
