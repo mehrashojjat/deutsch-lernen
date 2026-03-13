@@ -124,7 +124,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   max-height:88vh;overflow-y:auto;padding:24px 20px 40px;
   transform:translateY(40px);transition:transform .25s cubic-bezier(.32,.72,0,1);}
 .word-modal-overlay.open .word-modal{transform:translateY(0);}
-.word-modal-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 16px;}
+.word-modal-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 16px;cursor:pointer;}
+.word-modal-handle:hover{background:var(--muted);}
 .word-modal-close{float:right;background:none;border:none;color:var(--muted);
   font-size:1.2rem;cursor:pointer;padding:0 0 8px 8px;}
 
@@ -140,7 +141,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   width:100%;max-width:600px;background:var(--surf);border-radius:20px 20px 0 0;
   padding:20px 20px 40px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);}
 .drawer.open{transform:translateX(-50%) translateY(0);}
-.drawer-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 16px;}
+.drawer-handle{width:40px;height:4px;background:var(--surf3);border-radius:99px;margin:0 auto 16px;cursor:pointer;}
+.drawer-handle:hover{background:var(--muted);}
 .drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.2rem;color:var(--gold);margin-bottom:18px;}
 .drawer-section{margin-bottom:18px;}
 .drawer-section-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;
@@ -491,7 +493,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   font-family:'Fraunces','Vazirmatn',serif;font-size:1.05rem;font-weight:700;
   color:var(--gold);background:var(--bg);padding:6px 0 3px;line-height:1;}
 .dict-entry{display:flex;flex-direction:column;padding:9px 0;
-  border-bottom:1px solid var(--border);}
+  border-bottom:1px solid var(--border);cursor:pointer;}
+@media(hover:hover){.dict-entry:hover{background:rgba(126,184,247,.05);}}
 .dict-entry-top{display:flex;align-items:center;gap:6px;}
 .dict-word{font-family:'Fraunces','Vazirmatn',serif;font-size:.98rem;font-weight:600;color:var(--text);}
 .dict-article{font-size:.76rem;color:var(--muted);font-style:italic;}
@@ -572,26 +575,21 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   </div>
 </div>
 
+<!-- ══ WORD CARD MODAL ══ -->
+<div class="word-modal-overlay" id="word-modal-overlay" onclick="closeWordModal(event)">
+  <div class="word-modal">
+    <div class="word-modal-handle"></div>
+    <button class="word-modal-close" onclick="closeWordModal()">✕</button>
+    <div id="word-modal-content"></div>
+  </div>
+</div>
+
 <!-- ══ HOME ══ -->
 <div id="quiz-prep-overlay" aria-live="polite">
   <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
 </div>
 <div class="screen" id="screen-levels">
   <div class="home-actions">
-    <div class="random-banner" onclick="showRandomWord()">
-      <div class="rb-icon">🎲</div>
-      <div class="rb-text">
-        <strong id="rw-banner-title">Word Explorer</strong>
-        <span id="rw-banner-sub">Open one word card instantly</span>
-      </div>
-    </div>
-    <div class="random-banner swipe-banner" onclick="openSwipeSetup()">
-      <div class="rb-icon">🃏</div>
-      <div class="rb-text">
-        <strong id="swipe-banner-title">Swipe Check</strong>
-        <span id="swipe-banner-sub">Swipe if the meaning matches</span>
-      </div>
-    </div>
     <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
       <div class="rb-icon">🎯</div>
       <div class="rb-text">
@@ -604,6 +602,20 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="rb-text">
         <strong id="theme-banner-title">Theme Quiz</strong>
         <span id="theme-banner-sub">Quiz yourself on a topic</span>
+      </div>
+    </div>
+    <div class="random-banner swipe-banner" onclick="openSwipeSetup()">
+      <div class="rb-icon">🃏</div>
+      <div class="rb-text">
+        <strong id="swipe-banner-title">Quick Match</strong>
+        <span id="swipe-banner-sub">Swipe if the meaning matches</span>
+      </div>
+    </div>
+    <div class="random-banner" onclick="showRandomWord()">
+      <div class="rb-icon">🎲</div>
+      <div class="rb-text">
+        <strong id="rw-banner-title">Word Explorer</strong>
+        <span id="rw-banner-sub">Open one word card instantly</span>
       </div>
     </div>
     <div class="random-banner" style="background:linear-gradient(135deg,rgba(126,184,247,.1),rgba(232,201,122,.06));border-color:rgba(126,184,247,.22);" onclick="openDictionary()">

@@ -567,7 +567,11 @@ function openSettings() {
 }
 function closeSettings() {
   document.getElementById('drawer-overlay').classList.remove('open');
-  document.getElementById('settings-drawer').classList.remove('open');
+  var _dr = document.getElementById('settings-drawer');
+  _dr.classList.remove('open');
+  // Reset any drag-offset so the next open() starts clean
+  _dr.style.transition = '';
+  _dr.style.transform = '';
 }
 function openAbout() {
   document.getElementById('about-modal-overlay').classList.add('open');
@@ -3134,7 +3138,8 @@ function openSearch() {
 }
 
 function closeSearch() {
-  document.getElementById('search-overlay').classList.remove('open');
+  var _so = document.getElementById('search-overlay');
+  if (_so) _so.classList.remove('open');
 }
 
 // Search result cache (indexed by position for clean onclick)
@@ -3296,7 +3301,11 @@ async function openWordCard(word, tc) {
 
 function closeWordModal(e) {
   if (e && e.target !== document.getElementById('word-modal-overlay')) return;
-  document.getElementById('word-modal-overlay').classList.remove('open');
+  var _overlay = document.getElementById('word-modal-overlay');
+  _overlay.classList.remove('open');
+  // Reset any drag-offset so the next open() starts clean
+  var _wm = _overlay.querySelector('.word-modal');
+  if (_wm) { _wm.style.transition = ''; _wm.style.transform = ''; }
 }
 
 // ══════════════════════════════════════════════════════════════════
@@ -3378,9 +3387,8 @@ function _buildDictAlphaBar() {
   var present = {};
   _dictAllWords.forEach(function(e) { present[_dictFirstLetter(e.word)] = true; });
 
-  var alphabet = ['#','A','B','C','D','E','F','G','H','I','J','K','L',
-                  'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
-                  'Ä','Ö','Ü'];
+  var alphabet = ['#','A','Ä','B','C','D','E','F','G','H','I','J','K','L',
+                  'M','N','O','Ö','P','Q','R','S','T','U','Ü','V','W','X','Y','Z'];
   var bar = document.getElementById('dict-alpha-bar');
   bar.innerHTML = '';
 
@@ -3496,6 +3504,9 @@ function _renderDictList(filter, keepScroll) {
     div.className = 'dict-entry';
     div.setAttribute('data-word', entry.word);
     div.setAttribute('data-level', entry.level);
+    (function(w, tc) {
+      div.addEventListener('click', function() { openWordCard(w, tc); });
+    }(entry.word, entry.type ? typeChar(entry.type) : '?'));
 
     var top = document.createElement('div');
     top.className = 'dict-entry-top';
@@ -3566,6 +3577,79 @@ updateCounts();
 document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
 });
+
+// ── Word-modal drag-to-close (handle pill) ──────────────────────────
+(function() {
+  var handle  = document.querySelector('.word-modal-handle');
+  var modal   = document.querySelector('.word-modal');
+  if (!handle || !modal) return;
+
+  // Desktop: click the pill to dismiss
+  handle.addEventListener('click', function() { closeWordModal(); });
+
+  // Mobile: swipe the pill downward to dismiss
+  var _startY, _deltaY;
+  handle.addEventListener('touchstart', function(e) {
+    _startY = e.touches[0].clientY;
+    _deltaY = 0;
+    modal.style.transition = 'none';
+  }, { passive: true });
+
+  // Track the move on the document so fast flicks don't lose the pointer
+  document.addEventListener('touchmove', function(e) {
+    if (_startY === undefined) return;
+    _deltaY = e.touches[0].clientY - _startY;
+    if (_deltaY > 0) modal.style.transform = 'translateY(' + _deltaY + 'px)';
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() {
+    if (_startY === undefined) return;
+    _startY = undefined;
+    modal.style.transition = '';
+    if (_deltaY > 80) {
+      closeWordModal();
+    } else {
+      modal.style.transform = '';
+    }
+    _deltaY = 0;
+  });
+})();
+
+// ── Settings drawer drag-to-close (handle pill) ────────────────────
+(function() {
+  var handle = document.querySelector('.drawer-handle');
+  var drawer = document.getElementById('settings-drawer');
+  if (!handle || !drawer) return;
+
+  // Desktop: click the pill to dismiss
+  handle.addEventListener('click', function() { closeSettings(); });
+
+  // Mobile: swipe the pill downward to dismiss
+  var _startY, _deltaY;
+  handle.addEventListener('touchstart', function(e) {
+    _startY = e.touches[0].clientY;
+    _deltaY = 0;
+    drawer.style.transition = 'none';
+  }, { passive: true });
+
+  document.addEventListener('touchmove', function(e) {
+    if (_startY === undefined) return;
+    _deltaY = e.touches[0].clientY - _startY;
+    if (_deltaY > 0) drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() {
+    if (_startY === undefined) return;
+    _startY = undefined;
+    drawer.style.transition = '';
+    if (_deltaY > 80) {
+      closeSettings();
+    } else {
+      drawer.style.transform = '';
+    }
+    _deltaY = 0;
+  });
+})();
 
 // ── Load search index (40k words) in background ──
 (function() {
