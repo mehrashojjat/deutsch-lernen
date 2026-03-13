@@ -540,8 +540,10 @@ function setLang(lang) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
   var isRtl = lang==='fa' || lang==='ar';
-  document.documentElement.style.setProperty('direction', isRtl?'rtl':'ltr');
+  document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
   document.body.classList.toggle('lang-fa', lang==='fa');
+  document.body.classList.toggle('lang-ar', lang==='ar');
+  document.body.classList.toggle('lang-rtl', isRtl);
   applyTranslations();
   updateCounts();
   // Immediately update the active screen so the user sees the new language at once
