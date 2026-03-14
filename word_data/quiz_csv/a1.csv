@@ -499,28 +499,28 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 498,A1,18,K,main,kommen,,,Verb,to come,gelmek,приходить,приходити,آمدن,أن يأتي,1,21,Ich komme gleich.
 499,A1,18,K,main,können,,,Verb,can / to be able to,yapabilmek,мочь,могти,توانستن,أن يستطيع / يقدر,3,21,Ich kann helfen.
 500,A1,18,K,main,Konto,das,,Noun,account,hesap,счёт,рахунок,حساب,حساب,8,12,Das Konto ist gesperrt.
-501,A1,18,K,main,Kopf,der,,Noun,head,baş,голова,голова,سر,رأس,1,4
-502,A1,18,K,main,kosten,,,Verb,to cost,maliyeti olmak,стоить,коштувати,قیمت داشتن,أن يكلف,5,12
-503,A1,18,K,main,krank,,,Other,ill / sick,hasta,больной,хворий,بیمار,مريض,2,4
-504,A1,18,K,main,kriegen,,,Verb,to get,almak,получать,отримувати,گرفتن,أن يحصل على,8,21
-505,A1,18,K,main,Küche,die,,Noun,kitchen,mutfak,кухня,кухня,آشپزخانه,مطبخ,2,6
-506,A1,18,K,main,Kuchen,der,,Noun,cake,pasta / kek,торт / пирог,торт / пиріг,کیک,كعكة,3,5
-507,A1,19,K,main,Kugelschreiber,der,,Noun,ballpoint pen,tükenmez kalem,шариковая ручка,кулькова ручка,خودکار,قلم حبر جاف,10,9
-508,A1,19,K,main,Kühlschrank,der,,Noun,refrigerator,buzdolabı,холодильник,холодильник,یخچال,ثلاجة,10,6
-509,A1,19,K,main,kulturell,,,Other,cultural,kültürel,культурный,культурний,فرهنگی,ثقافي,9,16
-510,A1,19,K,main,kümmern,,,Verb,to take care,kendine / biriyle ilgilenmek,заботиться,піклуватися,رسیدگی کردن,أن يعتني / يهتم بـ,8,21
-511,A1,19,K,main,Kunde,der,-n,Noun,customer,müşteri,клиент,клієнт,مشتری,زبون / عميل,4,12
-512,A1,19,K,main,Kurs,der,-e,Noun,course,kur,курс,курс,دوره,دورة,8,9
-513,A1,19,K,main,kurz,,,Other,short,kısa,короткий,короткий,کوتاه,قصير,1,21
-514,A1,19,L,main,lachen,,,Verb,to laugh,gülmek,смеяться,сміятися,خندیدن,أن يضحك,5,19
-515,A1,19,L,main,Laden,der,-ä,Noun,shop / store,dükkan,магазин,магазин,مغازه,دكان / متجر,4,12
-516,A1,19,L,main,Land,das,"-ä, er",Noun,country / land,ülke / toprak,страна / земля,країна / земля,کشور / سرزمین,بلد / أرض,1,20
-517,A1,19,L,main,lang,,,Other,long,uzun,длинный,довгий,بلند / طولانی,طويل,1,21
-518,A1,19,L,main,lange,,,Other,for a long time / long,uzun süre,долго,довго,برای مدت طولانی,لفترة طويلة / طويلاً,4,21
-519,A1,19,L,main,langsam,,,Other,slow,yavaş,медленный,повільний,آهسته,بطيء,6,21
-520,A1,19,L,main,laufen,,,Verb,to run / walk,koşmak / yürümek,бежать / идти,бігти / ходити,دویدن / راه رفتن,أن يركض / يمشي,5,15
-521,A1,19,L,main,laut,,,Other,loud,gürültülü / yüksek sesli,громкий,гучний,بلند / پرصدا,صاخب / عالٍ,1,21
-522,A1,19,L,main,leben,,,Verb,to live,yaşamak,жить,жити,زندگی کردن,أن يعيش,2,21
+501,A1,18,K,main,Kopf,der,,Noun,head,baş,голова,голова,سر,رأس,1,4,Mein Kopf tut weh.
+502,A1,18,K,main,kosten,,,Verb,to cost,maliyeti olmak,стоить,коштувати,قیمت داشتن,أن يكلف,5,12,Das Buch kostet fünf Euro.
+503,A1,18,K,main,krank,,,Other,ill / sick,hasta,больной,хворий,بیمار,مريض,2,4,Ich bin krank.
+504,A1,18,K,main,kriegen,,,Verb,to get,almak,получать,отримувати,گرفتن,أن يحصل على,8,21,Ich kriege ein Geschenk.
+505,A1,18,K,main,Küche,die,,Noun,kitchen,mutfak,кухня,кухня,آشپزخانه,مطبخ,2,6,Die Küche ist sauber.
+506,A1,18,K,main,Kuchen,der,,Noun,cake,pasta / kek,торт / пирог,торт / пиріг,کیک,كعكة,3,5,Der Kuchen ist lecker.
+507,A1,19,K,main,Kugelschreiber,der,,Noun,ballpoint pen,tükenmez kalem,шариковая ручка,кулькова ручка,خودکار,قلم حبر جاف,10,9,Ich schreibe mit dem Kugelschreiber.
+508,A1,19,K,main,Kühlschrank,der,,Noun,refrigerator,buzdolabı,холодильник,холодильник,یخچال,ثلاجة,10,6,Der Kühlschrank ist kalt.
+509,A1,19,K,main,kulturell,,,Other,cultural,kültürel,культурный,культурний,فرهنگی,ثقافي,9,16,Das Museum ist kulturell wichtig.
+510,A1,19,K,main,kümmern,,,Verb,to take care,kendine / biriyle ilgilenmek,заботиться,піклуватися,رسیدگی کردن,أن يعتني / يهتم بـ,8,21,Ich kümmere mich darum.
+511,A1,19,K,main,Kunde,der,-n,Noun,customer,müşteri,клиент,клієнт,مشتری,زبون / عميل,4,12,Der Kunde wartet.
+512,A1,19,K,main,Kurs,der,-e,Noun,course,kur,курс,курс,دوره,دورة,8,9,Der Kurs beginnt am Montag.
+513,A1,19,K,main,kurz,,,Other,short,kısa,короткий,короткий,کوتاه,قصير,1,21,Der Film ist kurz.
+514,A1,19,L,main,lachen,,,Verb,to laugh,gülmek,смеяться,сміятися,خندیدن,أن يضحك,5,19,Ich lache.
+515,A1,19,L,main,Laden,der,-ä,Noun,shop / store,dükkan,магазин,магазин,مغازه,دكان / متجر,4,12,Der Laden ist offen.
+516,A1,19,L,main,Land,das,"-ä, er",Noun,country / land,ülke / toprak,страна / земля,країна / земля,کشور / سرزمین,بلد / أرض,1,20,Das Land ist schön.
+517,A1,19,L,main,lang,,,Other,long,uzun,длинный,довгий,بلند / طولانی,طويل,1,21,Der Weg ist lang.
+518,A1,19,L,main,lange,,,Other,for a long time / long,uzun süre,долго,довго,برای مدت طولانی,لفترة طويلة / طويلاً,4,21,Ich arbeite lange.
+519,A1,19,L,main,langsam,,,Other,slow,yavaş,медленный,повільний,آهسته,بطيء,6,21,Das Auto fährt langsam.
+520,A1,19,L,main,laufen,,,Verb,to run / walk,koşmak / yürümek,бежать / идти,бігти / ходити,دویدن / راه رفتن,أن يركض / يمشي,5,15,Ich laufe zur Schule.
+521,A1,19,L,main,laut,,,Other,loud,gürültülü / yüksek sesli,громкий,гучний,بلند / پرصدا,صاخب / عالٍ,1,21,Die Musik ist laut.
+522,A1,19,L,main,leben,,,Verb,to live,yaşamak,жить,жити,زندگی کردن,أن يعيش,2,21,Ich lebe hier.
 523,A1,19,L,sub,Leben,das,,Noun,life,hayat,жизнь,життя,زندگی,حياة,4,21
 524,A1,19,L,sub,Lebensmittel,die,,Noun,food / groceries,gıda maddeleri,продукты питания,продукти харчування,مواد غذایی,طعام / بقالة,10,5
 525,A1,19,L,main,ledig,,,Other,single (not married),bekar,неженатый / незамужняя,неодружений / незаміжня,مجرد,أعزب / غير متزوج,4,3
