@@ -28,7 +28,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 27,A1,6,zahlen,main,siebzig,,,Number,seventy,yetmiş,семьдесят,сімдесят,هفتاد,سبعون,6,1,Sie ist siebzig Jahre alt.
 28,A1,6,zahlen,main,achtzig,,,Number,eighty,seksen,восемьдесят,вісімдесят,هشتاد,ثمانون,6,1,Er ist achtzig Jahre alt.
 29,A1,6,zahlen,main,neunzig,,,Number,ninety,doksan,девяносто,дев'яносто,نود,تسعون,6,1,Er ist neunzig.
-30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz,сто,сто,صد,مئة,6,1,Das Buch kostet hundert Euro.
+30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz,сто,сто,صد,مئة,6,1,Ein hundert ist hundert.
 31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one,yüz bir,сто один,сто один,صد و یک,مئة وواحد,10,1,101 ist hunderteins.
 32,A1,6,zahlen,main,zweihundert,,,Number,two hundred,iki yüz,двести,двісті,دویست,مئتان,10,1,Zweihundert Leute kamen.
 33,A1,6,zahlen,main,tausend,,,Number,thousand,bin,тысяча,тисяча,هزار,ألف,6,1,Tausend Euro sind teuer.
@@ -125,7 +125,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 124,A1,8,himmelsrichtungen,main,Westen,der,,Noun,west,batı,запад,захід,غرب,غرب,5,20,Der Westen liegt dort.
 125,A1,8,himmelsrichtungen,main,Osten,der,,Noun,east,doğu,восток,схід,شرق,شرق,4,20,Im Osten geht die Sonne auf.
 126,A1,9,A,main,ab,,,Other,from / off,- / -den / -den,от,з / від,از,من / عن,1,21,Der Zug fährt ab.
-127,A1,9,A,main,aber,,,Other,but,ama,но,але,اما,لكن,1,21,"Ich möchte kommen, aber ich bin krank."
+127,A1,9,A,main,aber,,,Other,but,ama,но,але,اما,لكن,1,21,Ich wollte kommen
 128,A1,9,A,main,abfahren,,,Verb,to depart,ayrılmak / hareket etmek,отправляться,відправлятися,حرکت کردن,يغادر,9,11,Der Zug fährt um acht Uhr ab.
 129,A1,9,A,sub,Abfahrt,die,,Noun,departure,kalkış / ayrılış,отправление,відправлення,عزیمت,مغادرة,8,11,Die Abfahrt ist um zehn.
 130,A1,9,A,main,abgeben,,,Verb,to hand in,teslim etmek,сдать,здати,تحویل دادن,يسلّم,8,21,Ich muss das Paket abgeben.
@@ -133,15 +133,15 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 132,A1,9,A,main,Absender,der,,Noun,sender,gönderen,отправитель,відправник,فرستنده,مُرسِل,9,13,Der Absender steht auf dem Brief.
 133,A1,9,A,main,Achtung,,,Other,attention / caution,uyarı / dikkat,внимание / осторожность,увага / обережно,احتیاط,انتباه / تحذير,6,21,Achtung! Rutschgefahr.
 134,A1,9,A,main,Adresse,die,-en,Noun,address,adres,адрес,адреса,آدرس,عنوان,6,13,Schreib bitte deine Adresse.
-135,A1,9,A,main,all-,,,Other,all- (prefix),tüm- (önek),весь- (приставка),весь- (префікс),همه-,كل- (بادئة),4,21,Alle Kinder spielen draußen.
+135,A1,9,A,main,all-,,,Other,all- (prefix),tüm- (önek),весь- (приставка),весь- (префікс),همه-,كل- (بادئة),4,21,Das Wort kann mit dem Präfix all- beginnen.
 136,A1,9,A,main,allein,,,Other,alone,yalnız,одинокий,сам,تنها,وحده,5,21,Ich bin heute allein zu Hause.
-137,A1,9,A,main,also,,,Other,so / therefore,yani / bu yüzden,так / поэтому,отже,بنابراین,إذن / لذلك,1,21,Also gehen wir jetzt.
+137,A1,9,A,main,also,,,Other,so / therefore,yani / bu yüzden,так / поэтому,отже,بنابراین,إذن / لذلك,1,21,Also
 138,A1,9,A,main,alt,,,Other,old,yaşlı / eski,старый,старий,قدیمی,قديم,1,21,Meine Großmutter ist alt.
 139,A1,9,A,main,Alter,das,,Noun,age,yaş,возраст,вік,سن,عمر,4,21,Wie ist dein Alter?
 140,A1,9,A,main,an,,,Other,at / on / to, -de / -da / -e (bağlamına göre),в / на / к (в зависимости от контекста),в / на / до,در / روی / به,في / على / إلى,1,21,Ich warte an der Bushaltestelle.
 141,A1,9,A,main,anbieten,,,Verb,to offer,sunmak,предлагать,пропонувати,پیشنهاد دادن,يعرض,9,21,Er bietet mir Kaffee an.
 142,A1,9,A,sub,Angebot,das,-e,Noun,offer,teklif,предложение,пропозиція,پیشنهاد,عرض,6,12,Das Angebot ist gut.
-143,A1,9,A,main,ander-,,,Other,other- (prefix),başka- (önek),другой- (приставка),інший- (префікс),دیگر-,آخر- (بادئة),5,21,Ich brauche ein anderes Buch.
+143,A1,9,A,main,ander-,,,Other,other- (prefix),başka- (önek),другой- (приставка),інший- (префікс),دیگر-,آخر- (بادئة),5,21,Das Wort hat das Präfix ander-.
 144,A1,9,A,main,anfangen,,,Verb,to begin,başlamak,начинать,починати,شروع کردن,يبدأ,9,2,Wir fangen jetzt an.
 145,A1,9,A,sub,Anfang,der,,Noun,beginning,başlangıç,начало,початок,آغاز,بداية,5,2,Der Anfang ist schwer.
 146,A1,9,A,main,anklicken,,,Verb,to click on,tıklamak,нажать (кликнуть),натиснути,کلیک کردن,ينقر على,9,17,Klick auf den Link.
@@ -153,7 +153,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 152,A1,9,A,main,Anrede,die,,Noun,salutation / form of address,hitap / selamlama,обращение / форма обращения,форма звертання,عنوان خطاب,لقب / صيغة المخاطبة,8,13,Die Anrede steht oben im Brief.
 153,A1,9,A,main,anrufen,,,Verb,to call / phone,aramak,позвонить,дзвонити,تماس گرفتن,يتصل / يهاتف,8,13,Ich rufe dich später an.
 154,A1,9,A,main,Anruf,der,-e,Noun,phone call,telefon araması,телефонный звонок,телефонний дзвінок,تماس تلفنی,مكالمة هاتفية,4,13,Der Anruf war wichtig.
-155,A1,9,A,sub,Anruf-,der,,Noun,phone call (compound prefix),arama- (önek),звонок- (приставка),дзвінок- (префікс),تماس-,مكالمة- (بادئة),5,13,Der Anrufbeantworter ist voll.
+155,A1,9,A,sub,Anruf-,der,,Noun,phone call (compound prefix),arama- (önek),звонок- (приставка),дзвінок- (префікс),تماس-,مكالمة- (بادئة),5,13,Das Wort beginnt oft mit Anruf-.
 156,A1,10,A,main,Ansage,die,-n,Noun,announcement,anons / duyuru,объявление,оголошення,اعلامیه,إعلان,8,13,Die Ansage im Bahnhof ist laut.
 157,A1,10,A,main,Anschluss,der,,Noun,connection,bağlantı,пересадка / соединение,з'єднання / пересадка,اتصال,اتصال,9,17,Der Anschluss ist knapp.
 158,A1,10,A,main,an sein,,,Other,to be on,açık olmak / çalışıyor olmak,быть включённым,бути увімкненим,روشن بودن,يكون مشغّلاً,8,21,Das Radio ist an.
@@ -277,12 +277,12 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 276,A1,13,D,main,Datum,das,,Noun,date,tarih,дата,дата,تاریخ,تاريخ,8,1,Schreib das Datum auf.
 277,A1,13,D,main,dauern,,,Verb,to last / take time,sürmek,длиться,тривати,طول کشیدن,يستغرق / يدوم,5,2,Die Reise dauert drei Stunden.
 278,A1,13,D,main,dein-,,,Other,your,senin / senin-,твой,твій,مال تو / تو-,خاصتك / الـ- (ملكية للمفرد),4,21,Dein Buch liegt hier.
-279,A1,13,D,main,denn,,,Other,because / then,çünkü / öyleyse,потому что / же,тому що / ж,زیرا / پس,لأن / إذن,4,21,"Ich bleibe zu Hause, denn es regnet."
+279,A1,13,D,main,denn,,,Other,because / then,çünkü / öyleyse,потому что / же,тому що / ж,زیرا / پس,لأن / إذن,4,21,Ich bleibe
 280,A1,13,D,main,der,,,Other,the (masculine article),belirli artikel (eril),определённый артикль der,означений артикль (чоловічий),آرتیکل معین (مذکر) 'der',الـ (أداة التعريف المذكر),1,21,Der Hund schläft.
 281,A1,13,D,main,die,,,Other,the (feminine article),belirli artikel (dişil),определённый артикль die,означений артикль (жіночий),آرتیکل معین (مؤنث) 'die',الـ (أداة التعريف المؤنث),1,21,Die Katze schläft.
 282,A1,13,D,main,das,,,Other,the (neuter article) / that,"belirli artikel (nötr) / şu, o",определённый артикль das / то,означений артикль (середній) / той,آرتیکل معین (نُتر) 'das',الـ (أداة التعريف المحايد) / ذلك,1,21,Das Kind spielt.
 283,A1,13,D,main,dich,,,Other,you (accusative),seni,тебя,тебе,تو را,إياك (مفعول به),1,21,Ich sehe dich morgen.
-284,A1,13,D,main,dies-,,,Other,this-,bu-,этот-,цей-,این-,هذا- / هذه-,2,21,Dieses Haus ist groß.
+284,A1,13,D,main,dies-,,,Other,this-,bu-,этот-,цей-,این-,هذا- / هذه-,2,21,Dieses Wort beginnt mit dies-.
 285,A1,13,D,main,dir,,,Other,to you,sana,тебе,тобі,به تو,لك / إليك,1,21,Ich gebe dir das Buch.
 286,A1,13,D,main,Disco,die,,Noun,disco / club,disko,дискотека,дискотека,دیسکو,ديسكو / نادٍ,4,15,Wir gehen in die Disco.
 287,A1,13,D,main,Doktor,der,,Noun,doctor,doktor,доктор,лікар / доктор,دکتر,دكتور,5,8,Der Doktor ist im Krankenhaus.
@@ -304,7 +304,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 303,A1,13,E,main,Ehemann,der,¨-er/,Noun,husband,koca / eş,муж,чоловік,شوهر,زوج,8,3,Der Ehemann arbeitet viel.
 304,A1,13,E,main,Ei,das,-er,Noun,egg,yumurta,яйцо,яйце,تخم‌مرغ,بيضة,1,5,Das Ei ist frisch.
 305,A1,13,E,main,eilig,,,Other,hurried / urgent,acelesi olan / acil,спешный / срочный,терміновий / поспішний,عجول / فوری,مستعجل / عاجل,4,21,Ich habe es eilig.
-306,A1,13,E,main,ein-,,,Other,a / an,bir,неопределённый артикль ein,неозначений артикль ein,یک / آرتیکل نامعین ein,أداة التنكير (نكرة),1,21,Ein Apfel ist rot.
+306,A1,13,E,main,ein-,,,Other,a / an,bir,неопределённый артикль ein,неозначений артикль ein,یک / آرتیکل نامعین ein,أداة التنكير (نكرة),1,21,Ein Apfel
 307,A1,13,E,main,einfach,,,Other,simple / easy,basit / kolay,простой / лёгкий,простий / легкий,ساده / آسان,بسيط / سهل,6,21,Das ist einfach.
 308,A1,13,E,main,Eingang,der,,Noun,entrance,giriş,вход,вхід,ورودی,مدخل,6,6,Der Eingang ist da.
 309,A1,13,E,main,einkaufen,,,Verb,to shop,alışveriş yapmak,делать покупки,робити покупки,خرید کردن,يتسوق,9,12,Ich gehe einkaufen.
@@ -321,7 +321,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 320,A1,14,E,main,enden,,,Verb,to end,bitmek,заканчиваться,закінчуватися,تمام شدن,ينتهي,4,2,Der Film endet jetzt.
 321,A1,14,E,sub,Ende,das,,Noun,end,son,конец,кінець,پایان,نهاية,4,2,Am Ende ist alles gut.
 322,A1,14,E,main,entschuldigen,,,Verb,to excuse / apologize,affetmek / özür dilemek,извинять / извиняться,вибачати / вибачатися,معذرت خواستن / بخشیدن,يعتذر / يعفو,10,19,Entschuldigen Sie bitte.
-323,A1,14,E,sub,Entschuldigung,die,,Noun,apology / excuse me,özür / afedersiniz,извинение / извините,вибачення / вибачте,عذرخواهی / ببخشید,اعتذار / عفواً,10,21,"Entschuldigung, wo ist der Bahnhof?"
+323,A1,14,E,sub,Entschuldigung,die,,Noun,apology / excuse me,özür / afedersiniz,извинение / извините,вибачення / вибачте,عذرخواهی / ببخشید,اعتذار / عفواً,10,21,Entschuldigung
 324,A1,14,E,main,er,,,Other,he,o,он,він,او,هو,1,21,Er ist hier.
 325,A1,14,E,main,Ergebnis,das,-se,Noun,result,sonuç,результат,результат,نتیجه,نتيجة,9,21,Das Ergebnis ist gut.
 326,A1,14,E,main,erklären,,,Verb,to explain,açıklamak,объяснять,пояснювати,توضیح دادن,يشرح / يوضح,9,9,Erkläre das bitte.
@@ -448,7 +448,7 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 578,A1,20,N,main,nächst,,,Other,next,sonraki,следующий,наступний,بعدی,التالي / القادم,5,21,Nächstes Mal klappt es.
 579,A1,20,N,main,Name,der,-n,Noun,name,isim / ad,имя,ім'я,نام,اسم,1,21,Mein Name ist Anna.
 580,A1,20,N,main,nehmen,,,Verb,to take,almak,брать,брати,گرفتن,أن يأخذ,3,21,Ich nehme die Tasche.
-581,A1,20,N,main,nein,,,Other,no,hayır,нет,ні,نه,لا,1,21,"Nein, das möchte ich nicht."
+581,A1,20,N,main,nein,,,Other,no,hayır,нет,ні,نه,لا,1,21,Nein
 582,A1,20,N,main,neu,,,Other,new,yeni,новый,новий,جدید,جديد,1,21,Das ist neu.
 583,A1,20,N,main,nicht,,,Other,not,değil / değil mi,не,не,نه,لا / لم,1,21,Das ist nicht gut.
 584,A1,20,N,main,nichts,,,Other,nothing,hiçbir şey,ничего,нічого,هیچ چیز,لا شيء,5,21,Ich habe nichts.
