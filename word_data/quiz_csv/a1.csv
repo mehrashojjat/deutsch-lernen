@@ -699,115 +699,115 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,translatio
 698,A1,24,S,main,stellen,,,Verb,to put / place,koymak / yerleştirmek,ставить / помещать,ставити / розміщувати,گذاشتن / قرار دادن,يضع / يُوضع,8,21
 699,A1,24,S,main,Stock,der,,Noun,floor / story,kat,этаж,поверх,طبقه,طابق,4,21
 700,A1,24,S,main,Straße,die,-n,Noun,street,sokak / cadde,улица,вулиця,خیابان,شارع,3,11
-701,A1,24,S,main,Straßenbahn,die,,Noun,tram,tramvay,трамвай,трамвай,تراموا,ترام,10,11
-702,A1,24,S,main,studieren,,,Verb,to study (at university),üniversitede okumak,учиться / изучать,навчатися,دانشجو بودن / تحصیل کردن,يدرس (في الجامعة),9,9
-703,A1,24,S,main,Studium,das,,Noun,studies / degree,öğrenim / üniversite eğitimi,учёба / обучение,навчання / студії,تحصیل / دوره دانشگاهی,دراسة / شهادة جامعية,8,9
-704,A1,24,S,sub,Student,der,-en,Noun,student,öğrenci / üniversite öğrencisi,студент,студент,دانشجو,طالب جامعي,8,9
-705,A1,24,S,main,Stunde,die,-n,Noun,hour / lesson,saat / ders,час / урок,година / урок,ساعت / درس,ساعة / درس,3,2
-706,A1,24,S,main,suchen,,,Verb,to search / look for,aramak,искать,шукати,جستجو کردن / دنبال گشتن,يبحث عن,3,21
-707,A1,24,T,main,tanzen,,,Verb,to dance,dans etmek,танцевать,танцювати,رقصیدن,يرقص,5,15
-708,A1,24,T,main,Tasche,die,-n,Noun,bag,çanta,сумка,сумка,کیف,حقيبة,3,7
-709,A1,24,T,main,Taxi,das,-s,Noun,taxi,taksi,такси,таксі,تاکسی,تاكسي,1,11
-710,A1,24,T,main,Tee,der,,Noun,tea,çay,чай,чай,چای,شاي,1,5
-711,A1,24,T,main,Teil,der,-e,Noun,part,bölüm / parça,часть,частина,بخش / قسمت,جزء,4,13
-712,A1,24,T,main,telefonieren,,,Verb,to make a phone call,telefon etmek,звонить,телефонувати,تلفن کردن,يتصل بالهاتف,10,13
-713,A1,24,T,sub,Telefon,das,,Noun,telephone / phone,telefon,телефон,телефон,تلفن,هاتف / تلفون,6,13
-714,A1,24,T,main,Termin,der,-e,Noun,appointment,randevu,встреча / назначение,зустріч / запис,قرار ملاقات,موعد,8,2
-715,A1,24,T,main,Test,der,,Noun,test / quiz,test / sınav,тест,тест,آزمون / تست,اختبار / مسابقة,1,13
-716,A1,24,T,main,teuer,,,Other,expensive,pahalı,дорогой,дорогий,گران,غالٍ,4,12
-717,A1,24,T,main,Text,der,-e,Noun,text,metin,текст,текст,متن,نص,4,13
-718,A1,24,T,main,Thema,das,,Noun,topic / theme,konu / tema,тема,тема,موضوع,موضوع,8,21
-719,A1,24,T,main,Ticket,das,-s,Noun,ticket,bilet,билет,квиток,بلیت,تذكرة,5,10
-720,A1,24,T,main,Tisch,der,-e,Noun,table,masa,стол,стіл,میز,طاولة,2,6
-721,A1,24,T,main,Tochter,die,-ö,Noun,daughter,kız evlat,дочь,дочка,دختر,ابنة,2,3
-722,A1,24,T,main,Toilette,die,-en,Noun,toilet,tuvalet,туалет,туалет,توالت,مرحاض / دورة مياه,3,21
-723,A1,24,T,main,Tomate,die,-n,Noun,tomato,domates,помидор,помідор,گوجه‌فرنگی,طماطم,3,5
-724,A1,24,T,main,tot,,,Other,dead,ölü,мёртвый,мертвий,مرده,ميت,4,21
-725,A1,24,T,main,treffen,,,Verb,to meet,buluşmak / karşılaşmak,встречать / встречаться,зустрічати / зустрічатися,ملاقات کردن,يلتقي,6,21
-726,A1,24,T,main,Treppe,die,-n,Noun,stairs / staircase,merdiven,лестница,сходи,پله,درج / سلم,5,6
-727,A1,24,T,main,trinken,,,Verb,to drink,içmek,пить,пити,نوشیدن,يشرب,2,5
-728,A1,24,T,main,tschüss,,,Other,bye,hoşça kal / bay bay,пока,па-па / бувай,خداحافظ,مع السلامة,2,21
-729,A1,24,T,main,tun,,,Verb,to do,yapmak,делать,робити,انجام دادن,يفعل,1,21
-730,A1,24,U,main,über,,,Other,over / about,üzerinde / hakkında,над / о,над / про,روی / درباره,فوق / عن,1,21
-731,A1,24,U,main,übernachten,,,Verb,to stay overnight,gecelemek,ночевать,ночувати,شب ماندن,يبيت / يمكث ليلاً,10,10
-732,A1,24,U,main,überweisen,,,Verb,to transfer (money),havale etmek / para göndermek,переводить деньги,переказувати гроші,پول انتقال دادن,يحوّل (مالاً),9,21
-733,A1,24,U,main,Uhr,die,,Noun,clock / o'clock,saat,часы / час,годинник / година,ساعت,ساعة / الساعة,1,2
-734,A1,24,U,main,um,,,Other,at / around,saat / etrafında,в / вокруг,о / навколо,در / حدود,في / حوالي,1,21
-735,A1,24,U,main,umziehen,,,Verb,to move / get changed,taşınmak / üstünü değiştirmek,переезжать / переодеваться,переїжджати / переодягатися,اسباب‌کشی کردن / لباس عوض کردن,ينتقل / يغير ملابسه,9,6
-736,A1,24,U,main,und,,,Other,and,ve,и,і,و,و,1,21
-737,A1,25,U,main,unser,,,Other,our,bizim,наш,наш,مال ما / ما,لنا / خاصتنا,4,21
-738,A1,25,U,main,unten,,,Other,downstairs / below,aşağıda,внизу,внизу,پایین,في الأسفل / تحت,4,21
-739,A1,25,U,main,unter,,,Other,under / below,altında,под / ниже,під / нижче,زیر,تحت,2,21
-740,A1,25,U,main,Unterricht,der,,Noun,lesson / class,ders,урок / занятие,урок / заняття,درس / کلاس,درس / صف,9,9
-741,A1,25,U,main,unterschreiben,,,Verb,to sign,imzalamak,подписывать,підписувати,امضا کردن,يوقع,10,21
-742,A1,25,U,sub,Unterschrift,die,,Noun,signature,imza,подпись,підпис,امضا,توقيع,10,18
-743,A1,25,U,main,Urlaub,der,,Noun,vacation / holiday,tatil,отпуск / каникулы,відпустка / канікули,تعطیلات,إجازة / عطلة,8,10
-744,A1,25,V,main,Vater,der,-ä,Noun,father,baba,отец,батько,پدر,أب,2,3
-745,A1,25,V,main,verboten,,,Other,forbidden,yasak,запрещено,заборонено,ممنوع,ممنوع,9,18
-746,A1,25,V,main,verdienen,,,Verb,to earn,kazanmak,зарабатывать,заробляти,درآوردن / کسب کردن,يكسب,9,8
-747,A1,25,V,main,Verein,der,,Noun,club / association,dernek / kulüp,союз / клуб,спілка / клуб,انجمن / باشگاه,نادٍ / جمعية,8,18
-748,A1,25,V,main,verheiratet,,,Other,married,evli,женат / замужем,одружений / заміжня,متأهل,متزوج,10,3
-749,A1,25,V,main,verkaufen,,,Verb,to sell,satmak,продавать,продавати,فروختن,يبيع,7,12
-750,A1,25,V,sub,Verkäufer,der,-,Noun,salesman / seller,satıcı,продавец,продавець,فروشنده,بائع,9,8
-751,A1,25,V,main,vermieten,,,Verb,to rent out,kiraya vermek,сдавать в аренду,здавати в оренду,اجاره دادن,يؤجر,9,6
-752,A1,25,V,sub,Vermieter,der,,Noun,landlord / lessor,ev sahibi / kiraya veren,арендодатель,орендодавець,موجر / صاحبخانه,مؤجر / صاحب العقار,9,6
-753,A1,25,V,main,verstehen,,,Verb,to understand,anlamak,понимать,розуміти,فهمیدن,يفهم,9,21
-754,A1,25,V,main,Verwandte,der,-n,Noun,relative,akraba,родственник,родич,فامیل / خویشاوند,قريب,9,3
-755,A1,25,V,main,viel,,,Other,much / many,çok,много,багато,زیاد,كثير,1,21
-756,A1,25,V,main,vielleicht,,,Other,maybe / perhaps,belki,может быть,можливо,شاید,ربما / لعل,7,21
-757,A1,25,V,main,von,,,Other,from / of,-den / hakkında,от / о,від / про,از / درباره,من / عن,1,21
-758,A1,25,V,main,vor,,,Other,in front of / before,önünde / önce,перед / до,перед / до,جلوی / قبل از,أمام / قبل,1,21
-759,A1,25,V,main,Vorname,der,-n,Noun,first name,ad,имя,ім'я,نام کوچک,الاسم الأول,8,21
-760,A1,25,V,main,Vorsicht,die,,Noun,caution,dikkat,осторожность,обережність,احتیاط,حذر / تنبيه,9,21
-761,A1,25,V,main,vorstellen,,,Verb,to introduce / imagine,tanıtmak / hayal etmek,представлять / знакомить,представляти / знайомити,معرفی کردن / تصور کردن,يُعرِّف / يتخيل,9,3
-762,A1,25,V,main,Vorwahl,die,,Noun,area code,alan kodu,код города,код міста,پیش‌شماره,رمز المنطقة,8,13
-763,A1,25,W,main,wandern,,,Verb,to hike,yürüyüş yapmak,ходить в поход,ходити в похід,پیاده‌روی طولانی / کوهپیمایی کردن,يتنزه / يتجول في الطبيعة,6,15
-764,A1,25,W,main,wann,,,Other,when,ne zaman,когда,коли,کی,متى,1,21
-765,A1,25,W,main,warten,,,Verb,to wait,beklemek,ждать,чекати,منتظر ماندن,ينتظر,5,2
-766,A1,25,W,main,warum,,,Other,why,neden,почему,чому,چرا,لماذا,2,21
-767,A1,25,W,main,was,,,Other,what,ne,что,що,چه,ماذا,1,21
-768,A1,25,W,main,was für ein,,,Other,what kind of,nasıl bir,что за / какой,що за / який,چه نوع,ما نوع,5,21
-769,A1,25,W,main,waschen,,,Verb,to wash,yıkamak,мыть,мити,شستن,يغسل,6,6
-770,A1,25,W,main,Wasser,das,,Noun,water,su,вода,вода,آب,ماء,3,5
-771,A1,25,W,main,weh tun,,,Other,to hurt,ağrımak / acımak,болеть,боліти,درد کردن,يؤلم,5,4
-772,A1,25,W,main,weiblich,,,Other,female,kadın / dişi,женский,жіночий,مونث / زن,أنثى,9,21
-773,A1,25,W,main,Wein,der,,Noun,wine,şarap,вино,вино,شراب,نبيذ,1,5
-774,A1,25,W,main,weit,,,Other,far,uzak,далеко / далёкий,далеко / далекий,دور,بعيد,4,21
-775,A1,26,W,main,weiter,,,Other,further / continue,daha ileri / devam,дальше / далее,далі / далі,بیشتر / ادامه,أكثر / يكمل,5,21
-776,A1,26,W,main,welch,,,Other,which / what kind of,hangi,какой,який,کدام / چه,أي / ما نوع,4,21
-777,A1,26,W,main,Welt,die,,Noun,world,dünya,мир,світ,دنیا,عالم,1,21
-778,A1,26,W,main,wenig,,,Other,little / few,az,мало / немного,мало / трохи,کم,قليل,4,21
-779,A1,26,W,main,wer,,,Other,who,kim,кто,хто,چه کسی,من,1,21
-780,A1,26,W,main,werden,,,Verb,to become / will,olmak / olacak,становиться / будет,ставати / буде,شدن,يصبح / سوف,5,21
-781,A1,26,W,main,Wetter,das,,Noun,weather,hava,погода,погода,هوا,طقس,3,14
-782,A1,26,W,main,wichtig,,,Other,important,önemli,важный,важливий,مهم,مهم,8,21
-783,A1,26,W,main,wie,,,Other,how,nasıl,как,як,چطور,كيف,1,21
-784,A1,26,W,main,wiederholen,,,Verb,to repeat,tekrarlamak,повторять,повторювати,تکرار کردن,يكرر,10,9
-785,A1,26,W,main,Wiederhören,das,,Noun,goodbye (on phone),telefonda hoşça kal,до свидания (по телефону),до побачення (по телефону),خداحافظ (تلفنی),مع السلامة (عبر الهاتف),10,21
-786,A1,26,W,main,Wiedersehen,das,,Noun,goodbye / seeing again,görüşmek üzere,до свидания,до побачення,به امید دیدار,إلى اللقاء / وداع,10,21
-787,A1,26,W,main,wie viel,,,Other,how much / how many,ne kadar / kaç,сколько,скільки,چقدر / چند,كم / كم عدد,6,21
-788,A1,26,W,main,willkommen,,,Other,welcome,hoş geldiniz,добро пожаловать,ласкаво просимо,خوش آمدید,مرحباً / أهلاً وسهلاً,9,21
-789,A1,26,W,main,Wind,der,,Noun,wind,rüzgar,ветер,вітер,باد,ريح / هواء,1,14
-790,A1,26,W,main,wir,,,Other,we,biz,мы,ми,ما,نحن,1,21
-791,A1,26,W,main,wissen,,,Verb,to know,bilmek,знать,знати,دانستن,يعرف,5,9
-792,A1,26,W,main,wo,,,Other,where,nerede,где,де,کجا,أين,1,21
-793,A1,26,W,main,woher,,,Other,from where,nereden,откуда,звідки,از کجا,من أين,4,21
-794,A1,26,W,main,wohin,,,Other,to where,nereye,куда,куди,به کجا,إلى أين,4,21
-795,A1,26,W,main,wohnen,,,Verb,to live / reside,oturmak / yaşamak,жить / проживать,жити / мешкати,زندگی کردن / ساکن بودن,يسكن / يقيم,3,6
-796,A1,26,W,sub,Wohnung,die,-en,Noun,apartment / flat,daire,квартира,квартира,آپارتمان,شقة,8,6
-797,A1,26,W,main,wollen,,,Verb,to want,istemek,хотеть,хотіти,خواستن,يريد,3,21
-798,A1,26,W,main,Wort,das,"-ö, er/-e",Noun,word,kelime / söz,слово,слово,کلمه,كلمة,1,13
-799,A1,26,W,main,wunderbar,,,Other,wonderful,harika,замечательный,чудовий,عالی / فوق‌العاده,رائع,7,21
-800,A1,26,Z,main,zahlen,,,Verb,to pay / count,ödemek / saymak,платить / считать,платити / рахувати,پرداخت کردن / شمردن,يدفع / يعد,5,12
-801,A1,26,Z,main,Zeit,die,,Noun,time / time period,zaman,время,час,زمان,وقت / فترة زمنية,1,2
-802,A1,26,Z,sub,zurzeit,,,Other,currently / at the moment,şu anda,в настоящее время,зараз,در حال حاضر,حالياً / في الوقت الراهن,6,2
-803,A1,26,Z,main,Zeitung,die,-en,Noun,newspaper,gazete,газета,газета,روزنامه,جريدة / صحيفة,8,13
-804,A1,26,Z,main,Zigarette,die,-n,Noun,cigarette,sigara,сигарета,сигарета,سیگار,سيجارة,7,4
-805,A1,26,Z,main,Zimmer,das,-,Noun,room,oda,комната,кімната,اتاق,غرفة,3,6
-806,A1,26,Z,main,Zoll,der,,Noun,customs,gümrük,таможня,митниця,گمرک,جمارك,8,11
-807,A1,26,Z,main,zu,,,Other,too / to / closed,çok / -e / kapalı,слишком / к / закрыто,занадто / до / зачинено,بیش از حد / به / بسته,أكثر من اللازم / إلى / مغلق,1,21
-808,A1,27,Z,main,zufrieden,,,Other,satisfied,memnun,довольный,задоволений,راضی,راضٍ,9,19
-809,A1,27,Z,main,Zug,der,"-ü, e",Noun,train,tren,поезд,поїзд,قطار,قطار,1,11
-810,A1,27,Z,main,zurück,,,Other,back / back again,geri,назад / обратно,назад / назад,عقب / بازگشت,للخلف / عودة,5,21
-811,A1,27,Z,main,zusammen,,,Other,together,birlikte,вместе,разом,با هم,معاً,7,21
-812,A1,27,Z,main,zwischen,,,Other,between,arasında,между,між,بین,بين,7,21
+701,A1,24,S,main,Straßenbahn,die,,Noun,tram,tramvay,трамвай,трамвай,تراموا,ترام,10,11,Nimm die Straßenbahn.
+702,A1,24,S,main,studieren,,,Verb,to study (at university),üniversitede okumak,учиться / изучать,навчатися,دانشجو بودن / تحصیل کردن,يدرس (في الجامعة),9,9,Ich studiere an der Universität.
+703,A1,24,S,main,Studium,das,,Noun,studies / degree,öğrenim / üniversite eğitimi,учёба / обучение,навчання / студії,تحصیل / دوره دانشگاهی,دراسة / شهادة جامعية,8,9,Das Studium dauert drei Jahre.
+704,A1,24,S,sub,Student,der,-en,Noun,student,öğrenci / üniversite öğrencisi,студент,студент,دانشجو,طالب جامعي,8,9,Der Student lernt viel.
+705,A1,24,S,main,Stunde,die,-n,Noun,hour / lesson,saat / ders,час / урок,година / урок,ساعت / درس,ساعة / درس,3,2,Die Stunde dauert vierzig Minuten.
+706,A1,24,S,main,suchen,,,Verb,to search / look for,aramak,искать,шукати,جستجو کردن / دنبال گشتن,يبحث عن,3,21,Ich suche meine Schlüssel.
+707,A1,24,T,main,tanzen,,,Verb,to dance,dans etmek,танцевать,танцювати,رقصیدن,يرقص,5,15,Wir tanzen gern.
+708,A1,24,T,main,Tasche,die,-n,Noun,bag,çanta,сумка,сумка,کیف,حقيبة,3,7,Meine Tasche ist schwer.
+709,A1,24,T,main,Taxi,das,-s,Noun,taxi,taksi,такси,таксі,تاکسی,تاكسي,1,11,Ich nehme ein Taxi.
+710,A1,24,T,main,Tee,der,,Noun,tea,çay,чай,чай,چای,شاي,1,5,Ich trinke Tee.
+711,A1,24,T,main,Teil,der,-e,Noun,part,bölüm / parça,часть,частина,بخش / قسمت,جزء,4,13,Das ist ein Teil des Buches.
+712,A1,24,T,main,telefonieren,,,Verb,to make a phone call,telefon etmek,звонить,телефонувати,تلفن کردن,يتصل بالهاتف,10,13,Ich telefoniere mit meiner Mutter.
+713,A1,24,T,sub,Telefon,das,,Noun,telephone / phone,telefon,телефон,телефон,تلفن,هاتف / تلفون,6,13,Das Telefon klingelt.
+714,A1,24,T,main,Termin,der,-e,Noun,appointment,randevu,встреча / назначение,зустріч / запис,قرار ملاقات,موعد,8,2,Der Termin ist um neun Uhr.
+715,A1,24,T,main,Test,der,,Noun,test / quiz,test / sınav,тест,тест,آزمون / تست,اختبار / مسابقة,1,13,Der Test ist morgen.
+716,A1,24,T,main,teuer,,,Other,expensive,pahalı,дорогой,дорогий,گران,غالٍ,4,12,Das Kleid ist teuer.
+717,A1,24,T,main,Text,der,-e,Noun,text,metin,текст,текст,متن,نص,4,13,Der Text ist lang.
+718,A1,24,T,main,Thema,das,,Noun,topic / theme,konu / tema,тема,тема,موضوع,موضوع,8,21,Das Thema ist interessant.
+719,A1,24,T,main,Ticket,das,-s,Noun,ticket,bilet,билет,квиток,بلیت,تذكرة,5,10,Kauf ein Ticket.
+720,A1,24,T,main,Tisch,der,-e,Noun,table,masa,стол,стіл,میز,طاولة,2,6,Der Tisch ist rund.
+721,A1,24,T,main,Tochter,die,-ö,Noun,daughter,kız evlat,дочь,дочка,دختر,ابنة,2,3,Die Tochter spielt im Garten.
+722,A1,24,T,main,Toilette,die,-en,Noun,toilet,tuvalet,туалет,туалет,توالت,مرحاض / دورة مياه,3,21,Die Toilette ist dort.
+723,A1,24,T,main,Tomate,die,-n,Noun,tomato,domates,помидор,помідор,گوجه‌فرنگی,طماطم,3,5,Die Tomate ist rot.
+724,A1,24,T,main,tot,,,Other,dead,ölü,мёртвый,мертвий,مرده,ميت,4,21,Die Pflanze ist tot.
+725,A1,24,T,main,treffen,,,Verb,to meet,buluşmak / karşılaşmak,встречать / встречаться,зустрічати / зустрічатися,ملاقات کردن,يلتقي,6,21,Wir treffen uns um acht.
+726,A1,24,T,main,Treppe,die,-n,Noun,stairs / staircase,merdiven,лестница,сходи,پله,درج / سلم,5,6,Die Treppe ist steil.
+727,A1,24,T,main,trinken,,,Verb,to drink,içmek,пить,пити,نوشیدن,يشرب,2,5,Ich trinke Wasser.
+728,A1,24,T,main,tschüss,,,Other,bye,hoşça kal / bay bay,пока,па-па / бувай,خداحافظ,مع السلامة,2,21,Tschüss! Bis bald.
+729,A1,24,T,main,tun,,,Verb,to do,yapmak,делать,робити,انجام دادن,يفعل,1,21,Was soll ich tun?
+730,A1,24,U,main,über,,,Other,over / about,üzerinde / hakkında,над / о,над / про,روی / درباره,فوق / عن,1,21,Das Buch liegt über dem Tisch.
+731,A1,24,U,main,übernachten,,,Verb,to stay overnight,gecelemek,ночевать,ночувати,شب ماندن,يبيت / يمكث ليلاً,10,10,Wir übernachten im Hotel.
+732,A1,24,U,main,überweisen,,,Verb,to transfer (money),havale etmek / para göndermek,переводить деньги,переказувати гроші,پول انتقال دادن,يحوّل (مالاً),9,21,Ich überweise das Geld.
+733,A1,24,U,main,Uhr,die,,Noun,clock / o'clock,saat,часы / час,годинник / година,ساعت,ساعة / الساعة,1,2,Es ist zehn Uhr.
+734,A1,24,U,main,um,,,Other,at / around,saat / etrafında,в / вокруг,о / навколо,در / حدود,في / حوالي,1,21,Wir treffen uns um acht.
+735,A1,24,U,main,umziehen,,,Verb,to move / get changed,taşınmak / üstünü değiştirmek,переезжать / переодеваться,переїжджати / переодягатися,اسباب‌کشی کردن / لباس عوض کردن,ينتقل / يغير ملابسه,9,6,Wir ziehen nächste Woche um.
+736,A1,24,U,main,und,,,Other,and,ve,и,і,و,و,1,21,Du und ich gehen spazieren.
+737,A1,25,U,main,unser,,,Other,our,bizim,наш,наш,مال ما / ما,لنا / خاصتنا,4,21,Das ist unser Haus.
+738,A1,25,U,main,unten,,,Other,downstairs / below,aşağıda,внизу,внизу,پایین,في الأسفل / تحت,4,21,Unten ist die Küche.
+739,A1,25,U,main,unter,,,Other,under / below,altında,под / ниже,під / нижче,زیر,تحت,2,21,Das Buch liegt unter dem Stuhl.
+740,A1,25,U,main,Unterricht,der,,Noun,lesson / class,ders,урок / занятие,урок / заняття,درس / کلاس,درس / صف,9,9,Der Unterricht beginnt jetzt.
+741,A1,25,U,main,unterschreiben,,,Verb,to sign,imzalamak,подписывать,підписувати,امضا کردن,يوقع,10,21,Unterschreib bitte hier.
+742,A1,25,U,sub,Unterschrift,die,,Noun,signature,imza,подпись,підпис,امضا,توقيع,10,18,Setz deine Unterschrift hier.
+743,A1,25,U,main,Urlaub,der,,Noun,vacation / holiday,tatil,отпуск / каникулы,відпустка / канікули,تعطیلات,إجازة / عطلة,8,10,Ich habe Urlaub im Juli.
+744,A1,25,V,main,Vater,der,-ä,Noun,father,baba,отец,батько,پدر,أب,2,3,Mein Vater heißt Klaus.
+745,A1,25,V,main,verboten,,,Other,forbidden,yasak,запрещено,заборонено,ممنوع,ممنوع,9,18,Hier ist Rauchen verboten.
+746,A1,25,V,main,verdienen,,,Verb,to earn,kazanmak,зарабатывать,заробляти,درآوردن / کسب کردن,يكسب,9,8,Ich verdiene Geld.
+747,A1,25,V,main,Verein,der,,Noun,club / association,dernek / kulüp,союз / клуб,спілка / клуб,انجمن / باشگاه,نادٍ / جمعية,8,18,Er ist im Sportverein.
+748,A1,25,V,main,verheiratet,,,Other,married,evli,женат / замужем,одружений / заміжня,متأهل,متزوج,10,3,Sie ist verheiratet.
+749,A1,25,V,main,verkaufen,,,Verb,to sell,satmak,продавать,продавати,فروختن,يبيع,7,12,Ich verkaufe mein Fahrrad.
+750,A1,25,V,sub,Verkäufer,der,-,Noun,salesman / seller,satıcı,продавец,продавець,فروشنده,بائع,9,8,Der Verkäufer hilft mir.
+751,A1,25,V,main,vermieten,,,Verb,to rent out,kiraya vermek,сдавать в аренду,здавати в оренду,اجاره دادن,يؤجر,9,6,Wir vermieten die Wohnung.
+752,A1,25,V,sub,Vermieter,der,,Noun,landlord / lessor,ev sahibi / kiraya veren,арендодатель,орендодавець,موجر / صاحبخانه,مؤجر / صاحب العقار,9,6,Der Vermieter ist nett.
+753,A1,25,V,main,verstehen,,,Verb,to understand,anlamak,понимать,розуміти,فهمیدن,يفهم,9,21,Ich verstehe das nicht.
+754,A1,25,V,main,Verwandte,der,-n,Noun,relative,akraba,родственник,родич,فامیل / خویشاوند,قريب,9,3,Die Verwandten kommen morgen.
+755,A1,25,V,main,viel,,,Other,much / many,çok,много,багато,زیاد,كثير,1,21,Ich habe viel Arbeit.
+756,A1,25,V,main,vielleicht,,,Other,maybe / perhaps,belki,может быть,можливо,شاید,ربما / لعل,7,21,Vielleicht regnet es morgen.
+757,A1,25,V,main,von,,,Other,from / of,-den / hakkında,от / о,від / про,از / درباره,من / عن,1,21,Das Geschenk ist von mir.
+758,A1,25,V,main,vor,,,Other,in front of / before,önünde / önce,перед / до,перед / до,جلوی / قبل از,أمام / قبل,1,21,Vor dem Haus steht ein Baum.
+759,A1,25,V,main,Vorname,der,-n,Noun,first name,ad,имя,ім'я,نام کوچک,الاسم الأول,8,21,Mein Vorname ist Anna.
+760,A1,25,V,main,Vorsicht,die,,Noun,caution,dikkat,осторожность,обережність,احتیاط,حذر / تنبيه,9,21,Vorsicht! Rutschgefahr.
+761,A1,25,V,main,vorstellen,,,Verb,to introduce / imagine,tanıtmak / hayal etmek,представлять / знакомить,представляти / знайомити,معرفی کردن / تصور کردن,يُعرِّف / يتخيل,9,3,Ich stelle mich vor.
+762,A1,25,V,main,Vorwahl,die,,Noun,area code,alan kodu,код города,код міста,پیش‌شماره,رمز المنطقة,8,13,Nenn mir die Vorwahl.
+763,A1,25,W,main,wandern,,,Verb,to hike,yürüyüş yapmak,ходить в поход,ходити в похід,پیاده‌روی طولانی / کوهپیمایی کردن,يتنزه / يتجول في الطبيعة,6,15,Wir wandern im Wald.
+764,A1,25,W,main,wann,,,Other,when,ne zaman,когда,коли,کی,متى,1,21,Wann kommst du?
+765,A1,25,W,main,warten,,,Verb,to wait,beklemek,ждать,чекати,منتظر ماندن,ينتظر,5,2,Ich warte auf den Bus.
+766,A1,25,W,main,warum,,,Other,why,neden,почему,чому,چرا,لماذا,2,21,Warum bist du spät?
+767,A1,25,W,main,was,,,Other,what,ne,что,що,چه,ماذا,1,21,Was machst du?
+768,A1,25,W,main,was für ein,,,Other,what kind of,nasıl bir,что за / какой,що за / який,چه نوع,ما نوع,5,21,Was für ein Buch ist das?
+769,A1,25,W,main,waschen,,,Verb,to wash,yıkamak,мыть,мити,شستن,يغسل,6,6,Ich wasche das Auto.
+770,A1,25,W,main,Wasser,das,,Noun,water,su,вода,вода,آب,ماء,3,5,Ich brauche Wasser.
+771,A1,25,W,main,weh tun,,,Other,to hurt,ağrımak / acımak,болеть,боліти,درد کردن,يؤلم,5,4,Mein Fuß tut weh.
+772,A1,25,W,main,weiblich,,,Other,female,kadın / dişi,женский,жіночий,مونث / زن,أنثى,9,21,Die Katze ist weiblich.
+773,A1,25,W,main,Wein,der,,Noun,wine,şarap,вино,вино,شراب,نبيذ,1,5,Ich trinke ein Glas Wein.
+774,A1,25,W,main,weit,,,Other,far,uzak,далеко / далёкий,далеко / далекий,دور,بعيد,4,21,Der Weg ist weit.
+775,A1,26,W,main,weiter,,,Other,further / continue,daha ileri / devam,дальше / далее,далі / далі,بیشتر / ادامه,أكثر / يكمل,5,21,Geh weiter geradeaus.
+776,A1,26,W,main,welch,,,Other,which / what kind of,hangi,какой,який,کدام / چه,أي / ما نوع,4,21,Welche Farbe magst du?
+777,A1,26,W,main,Welt,die,,Noun,world,dünya,мир,світ,دنیا,عالم,1,21,Die Welt ist groß.
+778,A1,26,W,main,wenig,,,Other,little / few,az,мало / немного,мало / трохи,کم,قليل,4,21,Ich habe wenig Zeit.
+779,A1,26,W,main,wer,,,Other,who,kim,кто,хто,چه کسی,من,1,21,Wer kommt heute?
+780,A1,26,W,main,werden,,,Verb,to become / will,olmak / olacak,становиться / будет,ставати / буде,شدن,يصبح / سوف,5,21,Er wird Arzt.
+781,A1,26,W,main,Wetter,das,,Noun,weather,hava,погода,погода,هوا,طقس,3,14,Das Wetter ist schön.
+782,A1,26,W,main,wichtig,,,Other,important,önemli,важный,важливий,مهم,مهم,8,21,Das ist sehr wichtig.
+783,A1,26,W,main,wie,,,Other,how,nasıl,как,як,چطور,كيف,1,21,Wie heißt du?
+784,A1,26,W,main,wiederholen,,,Verb,to repeat,tekrarlamak,повторять,повторювати,تکرار کردن,يكرر,10,9,Wiederhole das bitte.
+785,A1,26,W,main,Wiederhören,das,,Noun,goodbye (on phone),telefonda hoşça kal,до свидания (по телефону),до побачення (по телефону),خداحافظ (تلفنی),مع السلامة (عبر الهاتف),10,21,Auf Wiederhören!
+786,A1,26,W,main,Wiedersehen,das,,Noun,goodbye / seeing again,görüşmek üzere,до свидания,до побачення,به امید دیدار,إلى اللقاء / وداع,10,21,Auf Wiedersehen!
+787,A1,26,W,main,wie viel,,,Other,how much / how many,ne kadar / kaç,сколько,скільки,چقدر / چند,كم / كم عدد,6,21,Wie viel kostet das?
+788,A1,26,W,main,willkommen,,,Other,welcome,hoş geldiniz,добро пожаловать,ласкаво просимо,خوش امديد,مرحباً / أهلاً وسهلاً,9,21,Herzlich willkommen!
+789,A1,26,W,main,Wind,der,,Noun,wind,rüzgar,ветер,вітер,باد,ريح / هواء,1,14,Der Wind weht stark.
+790,A1,26,W,main,wir,,,Other,we,biz,мы,ми,ما,نحن,1,21,Wir sind hier.
+791,A1,26,W,main,wissen,,,Verb,to know,bilmek,знать,знати,دانستن,يعرف,5,9,Ich weiß die Antwort.
+792,A1,26,W,main,wo,,,Other,where,nerede,где,де,کجا,أين,1,21,Wo ist das Restaurant?
+793,A1,26,W,main,woher,,,Other,from where,nereden,откуда,звідки,از کجا,من أين,4,21,Woher kommst du?
+794,A1,26,W,main,wohin,,,Other,to where,nereye,куда,куди,به کجا,إلى أين,4,21,Wohin gehst du?
+795,A1,26,W,main,wohnen,,,Verb,to live / reside,oturmak / yaşamak,жить / проживать,жити / мешкати,زندگی کردن / ساکن بودن,يسكن / يقيم,3,6,Ich wohne in Hamburg.
+796,A1,26,W,sub,Wohnung,die,-en,Noun,apartment / flat,daire,квартира,квартира,آپارتمان,شقة,8,6,Unsere Wohnung ist klein.
+797,A1,26,W,main,wollen,,,Verb,to want,istemek,хотеть,хотіти,خواستن,يريد,3,21,Ich will ein Eis.
+798,A1,26,W,main,Wort,das,"-ö, er/-e",Noun,word,kelime / söz,слово,слово,کلمه,كلمة,1,13,Das Wort ist einfach.
+799,A1,26,W,main,wunderbar,,,Other,wonderful,harika,замечательный,чудовий,عالی / فوق‌العاده,رائع,7,21,Das Wetter ist wunderbar.
+800,A1,26,Z,main,zahlen,,,Verb,to pay / count,ödemek / saymak,платить / считать,платити / рахувати,پرداخت کردن / شمردن,يدفع / يعد,5,12,Ich zahle mit Karte.
+801,A1,26,Z,main,Zeit,die,,Noun,time / time period,zaman,время,час,زمان,وقت / فترة زمنية,1,2,Ich habe keine Zeit.
+802,A1,26,Z,sub,zurzeit,,,Other,currently / at the moment,şu anda,в настоящее время,зараз,در حال حاضر,حالياً / في الوقت الراهن,6,2,Zurzeit bin ich zu Hause.
+803,A1,26,Z,main,Zeitung,die,-en,Noun,newspaper,gazete,газета,газета,روزنامه,جريدة / صحيفة,8,13,Ich lese die Zeitung.
+804,A1,26,Z,main,Zigarette,die,-n,Noun,cigarette,sigara,сигарета,сигарета,سیگار,سيجارة,7,4,Er raucht eine Zigarette.
+805,A1,26,Z,main,Zimmer,das,-,Noun,room,oda,комната,кімната,اتاق,غرفة,3,6,Mein Zimmer ist sauber.
+806,A1,26,Z,main,Zoll,der,,Noun,customs,gümrük,таможня,митниця,گمرک,جمارك,8,11,Der Zoll ist geschlossen.
+807,A1,26,Z,main,zu,,,Other,too / to / closed,çok / -e / kapalı,слишком / к / закрыто,занадто / до / зачинено,بیش از حد / به / بسته,أكثر من اللازم / إلى / مغلق,1,21,Komm zu mir.
+808,A1,27,Z,main,zufrieden,,,Other,satisfied,memnun,довольный,задоволений,راضی,راضٍ,9,19,Ich bin zufrieden.
+809,A1,27,Z,main,Zug,der,"-ü, e",Noun,train,tren,поезд,поїзд,قطار,قطار,1,11,Der Zug hat Verspätung.
+810,A1,27,Z,main,zurück,,,Other,back / back again,geri,назад / обратно,назад / назад,عقب / بازگشت,للخلف / عودة,5,21,Kommst du zurück?
+811,A1,27,Z,main,zusammen,,,Other,together,birlikte,вместе,разом,با هم,معاً,7,21,Wir arbeiten zusammen.
+812,A1,27,Z,main,zwischen,,,Other,between,arasında,между,між,بین,بين,7,21,Der Park liegt zwischen den Häusern.
