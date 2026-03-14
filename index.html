@@ -208,8 +208,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .random-banner.theme-banner{background:linear-gradient(135deg,rgba(183,138,247,.12),rgba(126,184,247,.08));border-color:rgba(183,138,247,.28);}
 .random-banner.theme-banner .rb-text strong{color:#b78af7;}
 .rb-icon{font-size:1.5rem;}
-.adaptive-skill-badge-display{text-align:center;font-size:.78rem;color:var(--muted);margin:10px 0 6px;min-height:20px;}
-.adaptive-skill-badge-display.hidden{display:none!important;}
 /* ── CATEGORY GRID ── */
 .category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:4px 0 20px;}
 .category-card{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:14px 10px;cursor:pointer;transition:all .18s ease;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
@@ -751,7 +749,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <button class="swipe-level-btn" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
       <button class="swipe-level-btn" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
     </div>
-    <div id="adaptive-skill-badge" class="adaptive-skill-badge-display hidden"></div>
     <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
   </div>
 </div>
