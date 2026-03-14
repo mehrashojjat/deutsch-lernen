@@ -99,206 +99,206 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 98,A2,5,familienmitglieder,main,Vater,der,¨-,Noun,,,father,baba,отец,батько,پدر,أب,2,3,Mein Vater ist früh zur Arbeit gefahren.
 99,A2,5,familienmitglieder,sub,Papa,der,-s,Noun,,,dad,baba,папа,тато,بابا,بابا / أبي,1,3,Papa bringt mich heute zur Schule.
 100,A2,5,familienmitglieder,main,Verwandte,der/die,-n,Noun,,,relative,yakın / akraba,родственник,родич,خویشاوند / فامیل,قريب / قريبة,7,3,Viele Verwandte kommen zur Familienfeier.
-101,A2,5,familienstand,section_title,Familienstand,der,,Noun,,,marital status,medeni durum,семейное положение,сімейний стан,وضعیت تأهل,الحالة الاجتماعية,10,3,Familienstand ist ein Land.
-102,A2,5,familienstand,main,ledig,,,Adjective,,,single / unmarried,bekar,холостой / незамужняя,неодружений / незаміжня,مجرد,أعزب / غير متزوج,5,3,Sie ist ledig.
-103,A2,5,familienstand,main,verheiratet,,,Adjective,,,married,evli,женат / замужем,одружений / заміжня,متأهل,متزوج,7,3,Sie ist verheiratet.
-104,A2,5,familienstand,main,getrennt,,,Adjective,,,separated,ayrılmış,в разлуке / раздельно,у розлуці,جدا / در حال جدایی,منفصل,6,3,Sie ist getrennt.
-105,A2,5,familienstand,main,geschieden,,,Adjective,,,divorced,boşanmış,разведённый,розлучений,مطلقه / طلاق گرفته,مطلق,10,3,Sie ist geschieden.
-106,A2,5,farben,section_title,Farbe,die,-n,Noun,,,color,renk,цвет,колір,رنگ,لون,2,21,Farbe ist ein Land.
-107,A2,5,farben,main,blau,,,Adjective,,,blue,mavi,синий,синій,آبی,أزرق,1,21,Das Hemd ist blau.
-108,A2,5,farben,main,braun,,,Adjective,,,brown,kahverengi,коричневый,коричневий,قهوه‌ای,بني,2,21,Das Hemd ist braun.
-109,A2,5,farben,main,gelb,,,Adjective,,,yellow,sarı,жёлтый,жовтий,زرد,أصفر,1,21,Das Hemd ist gelb.
-110,A2,5,farben,main,grau,,,Adjective,,,gray,gri,серый,сірий,خاکستری,رمادي,1,21,Das Hemd ist grau.
-111,A2,5,farben,main,grün,,,Adjective,,,green,yeşil,зелёный,зелений,سبز,أخضر,1,21,Das Hemd ist grün.
-112,A2,5,farben,main,lila,,,Adjective,,,purple / lilac,mor,фиолетовый / сиреневый,фіолетовий / бузковий,بنفش / یاسی,بنفسجي / ليلكي,4,21,Das Hemd ist lila.
-113,A2,5,farben,main,orange,,,Adjective,,,orange,turuncu,оранжевый,помаранчевий,نارنجی,برتقالي,3,21,Das Hemd ist orange.
-114,A2,5,farben,main,rosa,,,Adjective,,,pink,pembe,розовый,рожевий,صورتی,وردي,1,21,Das Hemd ist rosa.
-115,A2,5,farben,main,rot,,,Adjective,,,red,kırmızı,красный,червоний,قرمز,أحمر,1,21,Das Hemd ist rot.
-116,A2,5,farben,main,schwarz,,,Adjective,,,black,siyah,чёрный,чорний,مشکی / سیاه,أسود,2,21,Das Hemd ist schwarz.
-117,A2,5,farben,main,weiß,,,Adjective,,,white,beyaz,белый,білий,سفید,أبيض,1,21,Das Hemd ist weiß.
-118,A2,5,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,,,compass direction,yön,сторона света,сторона світу,جهت جغرافیایی,اتجاه البوصلة,10,20,Himmelsrichtung ist ein Land.
-119,A2,5,himmelsrichtungen,main,Norden,der,,Noun,,,north,kuzey,север,північ,شمال,الشمال,5,20,Norden ist ein Land.
-120,A2,5,himmelsrichtungen,main,Süden,der,,Noun,,,south,güney,юг,південь,جنوب,الجنوب,5,20,Süden ist ein Land.
-121,A2,5,himmelsrichtungen,main,Osten,der,,Noun,,,east,doğu,восток,схід,شرق,الشرق,5,20,Osten ist ein Land.
-122,A2,5,himmelsrichtungen,main,Westen,der,,Noun,,,west,batı,запад,захід,غرب,الغرب,5,20,Westen ist ein Land.
-123,A2,6,laender,section_title,Land,das,¨-er,Noun,,,country,ülke,страна,країна,کشور,بلد / دولة,1,20,Land ist ein Land.
-124,A2,6,laender,section_title,Nationalität,die,-en,Noun,,,nationality,milliyet,национальность,національність,ملیت,جنسية,10,20,Nationalität ist ein Land.
-125,A2,6,laender,main,Deutschland,,,Noun,,,Germany,Almanya,Германия,Німеччина,آلمان,ألمانيا,2,20,Deutschland ist ein Land.
-126,A2,6,laender,sub,Deutsche,der/die,-n,Noun,,,German (person),Alman (kişi),немец,німець,آلمانی (شخص),ألماني / ألمانية,3,20,Deutsche ist ein Land.
-127,A2,6,laender,sub,deutsch,,,Adjective,,,German,Alman,немецкий,німецький,آلمانی,ألماني,3,20,Das Wort deutsch benutze ich oft.
-128,A2,6,laender,main,Österreich,,,Noun,,,Austria,Avusturya,Австрия,Австрія,اتریش,النمسا,7,20,Österreich ist ein Land.
-129,A2,6,laender,sub,Österreicher,der,-,Noun,,,Austrian (male),Avusturyalı (erkek),австриец (муж.),австрієць,اتریشی (مرد),نمساوي (مذكر),10,20,Österreicher ist ein Land.
-130,A2,6,laender,sub,Österreicherin,die,-nen,Noun,,,Austrian (female),Avusturyalı (kadın),австрийка (жен.),австрійка,اتریشی (زن),نمساوية (مؤنث),10,20,Österreicherin ist ein Land.
-131,A2,6,laender,sub,österreichisch,,,Adjective,,,Austrian,Avusturyalı,австрийский,австрійський,اتریشی,نمساوي,10,20,Das Wort österreichisch benutze ich oft.
-132,A2,6,laender,main,Schweiz,die,,Noun,,,Switzerland,İsviçre,Швейцария,Швейцарія,سوئیس,سويسرا,6,20,Schweiz ist ein Land.
-133,A2,6,laender,sub,Schweizer,der,-,Noun,,,Swiss (male),İsviçreli (erkek),швейцарец (муж.),швейцарець,سوئیسی (مرد),سويسري (مذكر),7,20,Schweizer ist ein Land.
-134,A2,6,laender,sub,Schweizerin,die,-nen,Noun,,,Swiss (female),İsviçreli (kadın),швейцарка (жен.),швейцарка,سوئیسی (زن),سويسرية (مؤنث),7,20,Schweizerin ist ein Land.
-135,A2,6,laender,sub,schweizerisch,,,Adjective,,,Swiss,İsviçre'ye ait,швейцарский,швейцарський,سوئیسی,سويسري,10,20,Das Wort schweizerisch benutze ich oft.
-136,A2,6,laender,main,Luxemburg,,,Noun,,,Luxembourg,Lüksemburg,Люксембург,Люксембург,لوکزامبورگ,لوكسمبورغ,7,20,Luxemburg ist ein Land.
-137,A2,6,laender,sub,Luxemburger,der,-,Noun,,,Luxembourger (male),Lüksemburglu (erkek),люксембуржец (муж.),люксембуржець,لوکزامبورگی (مرد),لوكسمبورغي (مذكر),10,20,Luxemburger ist ein Land.
-138,A2,6,laender,sub,Luxemburgerin,die,-nen,Noun,,,Luxembourger (female),Lüksemburglu (kadın),люксембурженка,люксембурженка,لوکزامبورگی (زن),لوكسمبورغية (مؤنث),10,20,Luxemburgerin ist ein Land.
-139,A2,6,laender,sub,luxemburgisch,,,Adjective,,,Luxembourgish,Lüksemburg (sıfat),люксембургский,люксембурзький,لوکزامبورگی,لوكسمبورغي,10,20,Das Wort luxemburgisch benutze ich oft.
-140,A2,6,laender,main,Europa,,,Noun,,,Europe,Avrupa,Европа,Європа,اروپا,أوروبا,3,20,Europa ist ein Land.
-141,A2,6,laender,sub,Europäer,der,-,Noun,,,European (male),Avrupalı (erkek),европеец (муж.),європеєць,اروپایی (مرد),أوروبي (مذكر),6,20,Europäer ist ein Land.
-142,A2,6,laender,sub,Europäerin,die,-nen,Noun,,,European (female),Avrupalı (kadın),европейка (жен.),європейка,اروپایی (زن),أوروبية (مؤنث),7,20,Europäerin ist ein Land.
-143,A2,6,laender,sub,europäisch,,,Adjective,,,European,Avrupa'ya ait,европейский,європейський,اروپایی,أوروبي,7,20,Das Wort europäisch benutze ich oft.
-144,A2,6,waehrungen,section_title,Währung,die,-en,Noun,,,currency,para birimi,валюта,валюта,واحد پول / ارز,عملة,8,12,Währung ist ein Land.
-145,A2,6,masse,section_title,Maß,das,-e,Noun,,,unit of measurement,ölçü birimi,единица измерения,одиниця виміру,واحد اندازه‌گیری,وحدة قياس,4,1,Maß ist ein Land.
-146,A2,6,waehrungen,main,Euro,der,,Noun,,,euro,euro,евро,євро,یورو,يورو,1,12,Euro ist ein Land.
-147,A2,6,waehrungen,sub,Cent,der,,Noun,,,cent,cent,цент,цент,سنت,سنت,1,12,Cent ist ein Land.
-148,A2,6,waehrungen,main,Franken,der,-,Noun,,,franc (Swiss),Frank,франк (швейцарский),франк (швейцарський),فرانک (سوئیس),فرنك (سويسري),6,12,Franken ist ein Land.
-149,A2,6,waehrungen,sub,Rappen,der,-,Noun,,,rappen (Swiss cent),rappen,раппен (швейцарский цент),раппен,راپن (سنت سوئیس),راپن (سنت سويسري),8,12,Rappen ist ein Land.
-150,A2,6,masse,main,Meter,der,,Noun,,,meter,metre,метр,метр,متر,متر,2,1,Meter ist ein Land.
-151,A2,6,masse,sub,Zentimeter,der,,Noun,,,centimeter,santimetre,сантиметр,сантиметр,سانتی‌متر,سنتيمتر,7,1,Zentimeter ist ein Land.
-152,A2,6,masse,main,Kilometer,der,,Noun,,,kilometer,kilometre,километр,кілометр,کیلومتر,كيلومتر,7,1,Kilometer ist ein Land.
-153,A2,6,masse,main,Prozent,das,,Noun,,,percent,yüzde,процент,відсоток,درصد,بالمئة,6,1,Prozent ist ein Land.
-154,A2,6,masse,main,Liter,der,,Noun,,,liter,litre,литр,літр,لیتر,لتر,5,1,Liter ist ein Land.
-155,A2,6,masse,main,Gramm,das,,Noun,,,gram,gram,грамм,грам,گرم,غرام,5,1,Gramm ist ein Land.
-156,A2,6,masse,sub,Kilogramm,das,,Noun,,,kilogram,kilogram,килограмм,кілограм,کیلوگرم,كيلوغرام,7,1,Kilogramm ist ein Land.
-157,A2,6,masse,main,Grad,der,,Noun,,,degree,derece,градус,градус,درجه,درجة,4,1,Grad ist ein Land.
-158,A2,6,schule,section_title,Schule,die,-n,Noun,,,school,okul,школа,школа,مدرسه,مدرسة,1,9,Schule ist ein Land.
-159,A2,6,schule,section_title,Schulfach,das,¨-er,Noun,,,school subject,ders,школьный предмет,шкільний предмет,درس / موضوع درسی,مادة دراسية,9,9,Schulfach ist ein Land.
-160,A2,6,schule,main,Abitur,das,,Noun,,,Abitur (university entrance exam),lise bitirme sınavı,абитур (экзамен для поступления в вуз),Abitur (іспит для вступу до університету),آبیتور (امتحان ورود به دانشگاه),أبيتور (امتحان الثانوية العامة / شهادة القبول الجامعي),8,9,Abitur ist ein Land.
-161,A2,6,schule,main,Direktor,der,-en,Noun,,,headmaster / principal,müdür,директор школы / директор,директор школи,مدیر (مدرسه),مدير (مذكر),6,9,Direktor ist ein Land.
-162,A2,6,schule,main,Hausaufgabe,die,-n,Noun,,,homework,ödev,домашнее задание,домашнє завдання,تکلیف خانه,واجب منزلي,10,9,Hausaufgabe ist ein Land.
-163,A2,6,schule,main,Klasse,die,-n,Noun,,,class / grade,sınıf,класс,клас,کلاس / پایه,صف / درجة دراسية,3,9,Klasse ist ein Land.
-164,A2,6,schule,main,Klassenfahrt,die,-en,Noun,,,school trip,okul gezisi,школьная поездка,шкільна поїздка,گردش مدرسه,رحلة مدرسية,10,9,Klassenfahrt ist ein Land.
-165,A2,6,schule,main,Sekretariat,das,-e,Noun,,,secretary's office,sekreterlik,секретариат,секретаріат,دفتر منشی,مكتب السكرتارية,10,9,Sekretariat ist ein Land.
-166,A2,6,schule,main,Stundenplan,der,¨-e,Noun,,,timetable / schedule,ders programı,расписание / график,розклад,برنامه درسی,جدول الحصص / جدول المواعيد,10,9,Stundenplan ist ein Land.
-167,A2,6,schule,main,Biologie,,,Noun,,,biology,biyoloji,биология,біологія,زیست‌شناسی,علم الأحياء,6,9,Biologie ist ein Land.
-168,A2,6,schule,main,Chemie,,,Noun,,,chemistry,kimya,химия,хімія,شیمی,الكيمياء,5,9,Chemie ist ein Land.
-169,A2,6,schule,main,Deutsch,,,Noun,,,German (language,Almanca,немецкий язык,німецька мова,زبان آلمانی,اللغة الألمانية,3,9,Deutsch ist ein Land.
-170,A2,6,schule,main,Englisch,,,Noun,,,English (language),İngilizce,английский язык,англійська мова,زبان انگلیسی,اللغة الإنجليزية,3,9,Englisch ist ein Land.
-171,A2,6,schule,main,Französisch,,,Noun,,,French (language),Fransızca,французский язык,французька мова,زبان فرانسوی,اللغة الفرنسية,7,9,Französisch ist ein Land.
-172,A2,6,schule,main,Geografie,,,Noun,,,geography,coğrafya,география,географія,جغرافیا,الجغرافيا,7,9,Geografie ist ein Land.
-173,A2,6,schule,main,Geschichte,,,Noun,,,history,tarih,история,історія,تاریخ,التاريخ,7,9,Geschichte ist ein Land.
-174,A2,6,schule,main,Kunst,die,,Noun,,,art,resim / sanat,искусство,мистецтво,هنر,الفن,2,9,Kunst ist ein Land.
-175,A2,6,schule,main,Latein,,,Noun,,,Latin,Latince,латынь,латина,لاتین,اللاتينية,8,9,Latein ist ein Land.
-176,A2,6,schule,main,Mathematik,,,Noun,,,mathematics,matematik,математика,математика,ریاضیات,الرياضيات,7,9,Mathematik ist ein Land.
-177,A2,6,schule,main,Musik,die,,Noun,,,music,müzik,музыка,музика,موسیقی,الموسيقى,2,9,Musik ist ein Land.
-178,A2,6,schule,main,Physik,,,Noun,,,physics,fizik,физика,фізика,فیزیک,الفيزياء,5,9,Physik ist ein Land.
-179,A2,6,schule,main,Religion,die,-en,Noun,,,religion,din,религия,релігія,دین / مذهب,الدين,6,9,Religion ist ein Land.
-180,A2,6,schule,main,Sozialkunde,,,Noun,,,social studies / civics,sosyal bilgiler,обществознание / граждановедение,суспільствознавство,علوم اجتماعی,الدراسات الاجتماعية / التربية الوطنية,10,9,Sozialkunde ist ein Land.
-181,A2,6,schule,main,Sport,der,,Noun,,,PE / sports,beden eğitimi / spor,физкультура / спорт,фізкультура / спорт,ورزش / تربیت بدنی,التربية البدنية / الرياضة,2,9,Sport ist ein Land.
-182,A2,6,feiertage,section_title,Feiertag,der,-e,Noun,,,public holiday,resmi tatil,государственный праздник,державне свято,تعطیل رسمی,عطلة رسمية,6,2,Feiertag ist ein Land.
-183,A2,6,feiertage,main,Karneval,der,,Noun,,,carnival,karnaval,карнавал,карнавал,کارناوال,كرنفال,6,2,Karneval ist ein Land.
-184,A2,6,feiertage,main,Ostern,,,Noun,,,Easter,Paskalya,Пасха,Великдень,عید پاک,عيد الفصح,5,2,Ostern ist ein Land.
-185,A2,6,feiertage,main,Weihnachten,,,Noun,,,Christmas,Noel,Рождество,Різдво,کریسمس,عيد الميلاد,7,2,Weihnachten ist ein Land.
-186,A2,6,feiertage,main,Neujahr,das,,Noun,,,New Year,Yeni Yıl,Новый год,Новий рік,سال نو,رأس السنة الجديدة,6,2,Neujahr ist ein Land.
-187,A2,6,feiertage,main,Silvester,,,Noun,,,New Year's Eve,Yılbaşı gecesi,канун Нового года,канун Нового року,شب سال نو,ليلة رأس السنة,7,2,Silvester ist ein Land.
-188,A2,6,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,,,season,mevsim,время года,пора року,فصل,فصل من فصول السنة,10,2,Jahreszeit ist ein Land.
-189,A2,6,jahreszeiten,main,Frühling,der,,Noun,,,spring,ilkbahar,весна,весна,بهار,الربيع,6,2,Frühling ist ein Land.
-190,A2,6,jahreszeiten,sub,Frühjahr,das,,Noun,,,spring (early),ilkbahar (erken),ранняя весна,рання весна,اوایل بهار,أوائل الربيع,6,2,Frühjahr ist ein Land.
-191,A2,6,jahreszeiten,main,Sommer,der,,Noun,,,summer,yaz,лето,літо,تابستان,الصيف,1,2,Sommer ist ein Land.
-192,A2,6,jahreszeiten,main,Herbst,der,,Noun,,,autumn / fall,sonbahar,осень,осінь,پاییز,الخريف,5,2,Herbst ist ein Land.
-193,A2,6,jahreszeiten,main,Winter,der,,Noun,,,winter,kış,зима,зима,زمستان,الشتاء,1,2,Winter ist ein Land.
-194,A2,6,monat,section_title,Monat,der,-e,Noun,,,month,ay,месяц,місяць,ماه,شهر,5,2,Monat ist ein Land.
-195,A2,6,monat,main,Januar,der,,Noun,,,January,Ocak,январь,січень,ژانویه,يناير,5,2,Januar ist ein Land.
-196,A2,6,monat,main,Februar,der,,Noun,,,February,Şubat,февраль,лютий,فوریه,فبراير,8,2,Februar ist ein Land.
-197,A2,6,monat,main,März,der,,Noun,,,March,Mart,март,березень,مارس,مارس,1,2,März ist ein Land.
-198,A2,6,monat,main,April,der,,Noun,,,April,Nisan,апрель,квітень,آوریل,أبريل,2,2,April ist ein Land.
-199,A2,6,monat,main,Mai,der,,Noun,,,May,Mayıs,май,травень,مه,مايو,1,2,Mai ist ein Land.
-200,A2,6,monat,main,Juni,der,,Noun,,,June,Haziran,июнь,червень,ژوئن,يونيو,1,2,Juni ist ein Land.
-201,A2,6,monat,main,Juli,der,,Noun,,,July,Temmuz,июль,липень,ژوئیه,يوليو,1,2,Juli ist ein Land.
-202,A2,6,monat,main,August,der,,Noun,,,August,Ağustos,август,серпень,اوت,أغسطس,3,2,August ist ein Land.
-203,A2,6,monat,main,September,der,,Noun,,,September,Eylül,сентябрь,вересень,سپتامبر,سبتمبر,7,2,September ist ein Land.
-204,A2,6,monat,main,Oktober,der,,Noun,,,October,Ekim,октябрь,жовтень,اکتبر,أكتوبر,6,2,Oktober ist ein Land.
-205,A2,6,monat,main,November,der,,Noun,,,November,Kasım,ноябрь,листопад,نوامبر,نوفمبر,6,2,November ist ein Land.
-206,A2,6,monat,main,Dezember,der,,Noun,,,December,Aralık,декабрь,грудень,دسامبر,ديسمبر,9,2,Dezember ist ein Land.
-207,A2,6,tageszeiten,section_title,Tageszeit,die,-en,Noun,,,time of day,günün zamanı,время суток,час доби,وقت روز,وقت من اليوم,9,2,Tageszeit ist ein Land.
-208,A2,6,tageszeiten,main,Tag,der,-e,Noun,,,day,gün,день,день,روز,يوم,1,1,Tag ist ein Land.
-209,A2,6,tageszeiten,main,Morgen,der,-,Noun,,,morning,sabah,утро,ранок,صبح,الصباح,1,2,Morgen ist ein Land.
-210,A2,6,tageszeiten,main,Vormittag,der,-e,Noun,,,late morning,öğleden önce,позднее утро,пізній ранок,پیش از ظهر,الضحى / قبيل الظهر,9,2,Vormittag ist ein Land.
-211,A2,6,tageszeiten,main,Mittag,der,-e,Noun,,,noon / midday,öğle,полдень / середина дня,полудень,ظهر,الظهر / منتصف النهار,5,2,Mittag ist ein Land.
-212,A2,6,tageszeiten,main,Nachmittag,der,-e,Noun,,,afternoon,öğleden sonra,после полудня,післяобідній час,بعد از ظهر,بعد الظهر,10,2,Nachmittag ist ein Land.
-213,A2,6,tageszeiten,main,Abend,der,-e,Noun,,,evening,akşam,вечер,вечір,عصر,مساء,1,2,Abend ist ein Land.
-214,A2,6,tageszeiten,main,Nacht,die,¨-e,Noun,,,night,gece,ночь,ніч,شب,ليل,1,2,Nacht ist ein Land.
-215,A2,6,tageszeiten,main,Mitternacht,die,,Noun,,,midnight,gece yarısı,полночь,опівніч,نیمه‌شب,منتصف الليل,10,2,Mitternacht ist ein Land.
-216,A2,6,tageszeiten,main,täglich,,,Adverb,,,daily,günlük,ежедневно,щодня,روزانه,يومياً,6,2,Das Wort täglich benutze ich oft.
-217,A2,6,tageszeiten,main,tagsüber,,,Adverb,,,during the day,gün boyunca,днём,вдень,در طول روز,خلال النهار,6,2,Der tagsüber arbeitet in der Stadt.
-218,A2,6,tageszeiten,main,morgens,,,Adverb,,,in the morning,sabahları,по утрам,вранці,صبح‌ها,في الصباح,6,2,Das Wort morgens benutze ich oft.
-219,A2,6,tageszeiten,main,vormittags,,,Adverb,,,in the late morning,öğleden önce,поздним утром,пізно вранці,پیش از ظهرها,في الضحى,10,2,Das Wort vormittags benutze ich oft.
-220,A2,6,tageszeiten,main,mittags,,,Adverb,,,at noon,öğle vakti,в полдень,опівдні,ظهرها,عند الظهر,6,2,Das Wort mittags benutze ich oft.
-221,A2,6,tageszeiten,main,nachmittags,,,Adverb,,,in the afternoon,öğleden sonraları,после обеда / во второй половине дня,по обіді,بعد از ظهرها,في فترة بعد الظهر,10,2,Das Wort nachmittags benutze ich oft.
-222,A2,6,tageszeiten,main,abends,,,Adverb,,,in the evening,akşamları,по вечерам,увечері,عصرها,في المساء,5,2,Das Wort abends benutze ich oft.
-223,A2,6,tageszeiten,main,nachts,,,Adverb,,,at night,geceleri,ночью,вночі,شب‌ها,في الليل,5,2,Das Wort nachts benutze ich oft.
-224,A2,7,zahlen,section_title,Zahlen,,,Noun,,,numbers,sayılar,числа,числа,اعداد,أرقام,3,1,Zahlen ist ein Land.
-225,A2,7,zahlen,main,eins,,,Number,,,one,bir,один,один,یک,واحد,1,1,Das Wort eins benutze ich oft.
-226,A2,7,zahlen,main,zwei,,,Number,,,two,iki,два,два,دو,اثنان,1,1,Das Wort zwei benutze ich oft.
-227,A2,7,zahlen,main,drei,,,Number,,,three,üç,три,три,سه,ثلاثة,1,1,Das Wort drei benutze ich oft.
-228,A2,7,zahlen,main,vier,,,Number,,,four,dört,четыре,чотири,چهار,أربعة,1,1,Der vier arbeitet in der Stadt.
-229,A2,7,zahlen,main,fünf,,,Number,,,five,beş,пять,п'ять,پنج,خمسة,1,1,Das Wort fünf benutze ich oft.
-230,A2,7,zahlen,main,sechs,,,Number,,,six,altı,шесть,шість,شش,ستة,2,1,Das Wort sechs benutze ich oft.
-231,A2,7,zahlen,main,sieben,,,Number,,,seven,yedi,семь,сім,هفت,سبعة,3,1,Das Wort sieben benutze ich oft.
-232,A2,7,zahlen,main,acht,,,Number,,,eight,sekiz,восемь,вісім,هشت,ثمانية,1,1,Das Wort acht benutze ich oft.
-233,A2,7,zahlen,main,neun,,,Number,,,nine,dokuz,девять,дев'ять,نه,تسعة,1,1,Das Wort neun benutze ich oft.
-234,A2,7,zahlen,main,zehn,,,Number,,,ten,on,десять,десять,ده,عشرة,1,1,Das Wort zehn benutze ich oft.
-235,A2,7,zahlen,main,elf,,,Number,,,eleven,on bir,одиннадцать,одинадцять,یازده,أحد عشر,1,1,Das Wort elf benutze ich oft.
-236,A2,7,zahlen,main,zwölf,,,Number,,,twelve,on iki,двенадцать,дванадцять,دوازده,اثنا عشر,2,1,Das Wort zwölf benutze ich oft.
-237,A2,7,zahlen,main,dreizehn,,,Number,,,thirteen,on üç,тринадцать,тринадцять,سیزده,ثلاثة عشر,6,1,Das Wort dreizehn benutze ich oft.
-238,A2,7,zahlen,main,vierzehn,,,Number,,,fourteen,on dört,четырнадцать,чотирнадцять,چهارده,أربعة عشر,6,1,Das Wort vierzehn benutze ich oft.
-239,A2,7,zahlen,main,fünfzehn,,,Number,,,fifteen,on beş,пятнадцать,п'ятнадцять,پانزده,خمسة عشر,6,1,Das Wort fünfzehn benutze ich oft.
-240,A2,7,zahlen,main,sechzehn,,,Number,,,sixteen,on altı,шестьнадцать,шістнадцять,شانزده,ستة عشر,6,1,Das Wort sechzehn benutze ich oft.
-241,A2,7,zahlen,main,siebzehn,,,Number,,,seventeen,on yedi,семнадцать,сімнадцять,هفده,سبعة عشر,6,1,Das Wort siebzehn benutze ich oft.
-242,A2,7,zahlen,main,achtzehn,,,Number,,,eighteen,on sekiz,восемнадцать,вісімнадцять,هجده,ثمانية عشر,6,1,Das Wort achtzehn benutze ich oft.
-243,A2,7,zahlen,main,neunzehn,,,Number,,,nineteen,on dokuz,девятнадцать,дев'ятнадцять,نوزده,تسعة عشر,6,1,Das Wort neunzehn benutze ich oft.
-244,A2,7,zahlen,main,zwanzig,,,Number,,,twenty,yirmi,двадцать,двадцять,بیست,عشرون,6,1,Das Wort zwanzig benutze ich oft.
-245,A2,7,zahlen,main,einundzwanzig,,,Number,,,twenty-one,yirmi bir,двадцать один,двадцять один,بیست و یک,واحد وعشرون,10,1,Das Wort einundzwanzig benutze ich oft.
-246,A2,7,zahlen,main,dreißig,,,Number,,,thirty,otuz,тридцать,тридцять,سی,ثلاثون,6,1,Das Wort dreißig benutze ich oft.
-247,A2,7,zahlen,main,vierzig,,,Number,,,forty,kırk,сорок,сорок,چهل,أربعون,6,1,Das Wort vierzig benutze ich oft.
-248,A2,7,zahlen,main,fünfzig,,,Number,,,fifty,elli,пятьдесят,п'ятдесят,پنجاه,خمسون,6,1,Das Wort fünfzig benutze ich oft.
-249,A2,7,zahlen,main,sechzig,,,Number,,,sixty,altmış,шестьдесят,шістдесят,شصت,ستون,6,1,Das Wort sechzig benutze ich oft.
-250,A2,7,zahlen,main,siebzig,,,Number,,,seventy,yetmiş,семьдесят,сімдесят,هفتاد,سبعون,6,1,Das Wort siebzig benutze ich oft.
-251,A2,7,zahlen,main,achtzig,,,Number,,,eighty,seksen,восемьдесят,вісімдесят,هشتاد,ثمانون,6,1,Das Wort achtzig benutze ich oft.
-252,A2,7,zahlen,main,neunzig,,,Number,,,ninety,doksan,девяносто,дев'яносто,نود,تسعون,6,1,Das Wort neunzig benutze ich oft.
-253,A2,7,zahlen,main,hundert,,,Number,,,hundred,yüz,сто,сто,صد,مئة,6,1,Das Hemd ist hundert.
-254,A2,7,zahlen,main,hunderteins,,,Number,,,one hundred and one,yüz bir,сто один,сто один,صد و یک,مئة وواحد,10,1,Das Hemd ist hunderteins.
-255,A2,7,zahlen,main,zweihundert,,,Number,,,two hundred,iki yüz,двести,двісті,دویست,مئتان,10,1,Das Hemd ist zweihundert.
-256,A2,7,zahlen,main,tausend,,,Number,,,thousand,bin,тысяча,тисяча,هزار,ألف,6,1,Das Wort tausend benutze ich oft.
-257,A2,7,zahlen,main,zweitausendeins,,,Number,,,two thousand and one,iki bin bir,две тысячи один,дві тисячі один,دو هزار و یک,ألفان وواحد,10,1,Das Wort zweitausendeins benutze ich oft.
-258,A2,7,zahlen,main,Million,die,-en,Noun,,,million,milyon,миллион,мільйон,میلیون,مليون,8,1,Million ist ein Land.
-259,A2,7,zahlen,main,erste,,,Number,,,first,birinci,первый,перший,اول,الأول,5,1,Das Wort erste benutze ich oft.
-260,A2,7,zahlen,main,zweite,,,Number,,,second,ikinci,второй,другий,دوم,الثاني,5,1,Das Wort zweite benutze ich oft.
-261,A2,7,zahlen,main,dritte,,,Number,,,third,üçüncü,третий,третій,سوم,الثالث,5,1,Das Wort dritte benutze ich oft.
-262,A2,7,zahlen,main,vierte,,,Number,,,fourth,dördüncü,четвёртый,четвертий,چهارم,الرابع,5,1,Das Wort vierte benutze ich oft.
-263,A2,7,zahlen,main,erstens,,,Adverb,,,firstly,birincisi,во-первых,по-перше,اولاً,أولاً,8,1,Das Wort erstens benutze ich oft.
-264,A2,7,zahlen,main,zweitens,,,Adverb,,,secondly,ikincisi,во-вторых,по-друге,ثانیاً,ثانياً,9,1,Das Wort zweitens benutze ich oft.
-265,A2,7,zahlen,main,drittens,,,Adverb,,,thirdly,üçüncüsü,в-третьих,по-третє,ثالثاً,ثالثاً,9,1,Das Wort drittens benutze ich oft.
-266,A2,7,zahlen,main,viertens,,,Adverb,,,fourthly,dördüncüsü,в-четвёртых,по-четверте,رابعاً,رابعاً,9,1,Das Wort viertens benutze ich oft.
-267,A2,7,zahlen,main,einmal,,,Adverb,,,once,bir kere,один раз,один раз,یک بار,مرة واحدة,1,1,Das Wort einmal benutze ich oft.
-268,A2,7,zahlen,main,zweimal,,,Adverb,,,twice,iki kere,два раза,двічі,دو بار,مرتان,6,1,Das Wort zweimal benutze ich oft.
-269,A2,7,zahlen,main,dreimal,,,Adverb,,,three times,üç kez,три раза,тричі,سه بار,ثلاث مرات,6,1,Das Wort dreimal benutze ich oft.
-270,A2,7,zahlen,main,viermal,,,Adverb,,,four times,dört kere,четыре раза,чотири рази,چهار بار,أربع مرات,6,1,Das Wort viermal benutze ich oft.
-271,A2,7,uhrzeit,section_title,Uhrzeit,die,,Noun,,,time of day,günün zamanı,время суток,час доби,ساعت / زمان,وقت اليوم,6,2,Uhrzeit ist ein Land.
-272,A2,7,uhrzeit,main,Sekunde,die,-n,Noun,,,second,saniye,секунда,секунда,ثانیه,ثانية,6,2,Sekunde ist ein Land.
-273,A2,7,uhrzeit,main,Minute,die,-n,Noun,,,minute,dakika,минута,хвилина,دقیقه,دقيقة,1,2,Minute ist ein Land.
-274,A2,7,uhrzeit,main,Stunde,die,-n,Noun,,,hour,saat,час,година,ساعت,ساعة,1,2,Stunde ist ein Land.
-275,A2,7,woche,section_title,Wochentag,der,-e,Noun,,,weekday,hafta günü,день недели,день тижня,روز هفته,يوم من أيام الأسبوع,7,2,Wochentag ist ein Land.
-276,A2,7,woche,main,Wochenende,das,-n,Noun,,,weekend,hafta sonu,выходные,вихідні,آخر هفته,نهاية الأسبوع,7,2,Wochenende ist ein Land.
-277,A2,7,woche,main,Montag,der,,Noun,,,Monday,Pazartesi,понедельник,понеділок,دوشنبه,الاثنين,5,2,Montag ist ein Land.
-278,A2,7,woche,main,Dienstag,der,,Noun,,,Tuesday,Salı,вторник,вівторок,سه‌شنبه,الثلاثاء,9,2,Dienstag ist ein Land.
-279,A2,7,woche,main,Mittwoch,der,,Noun,,,Wednesday,Çarşamba,среда,середа,چهارشنبه,الأربعاء,6,2,Mittwoch ist ein Land.
-280,A2,7,woche,main,Donnerstag,der,,Noun,,,Thursday,Perşembe,четверг,четвер,پنج‌شنبه,الخميس,10,2,Donnerstag ist ein Land.
-281,A2,7,woche,main,Freitag,der,,Noun,,,Friday,Cuma,пятница,п'ятниця,جمعه,الجمعة,6,2,Freitag ist ein Land.
-282,A2,7,woche,main,Samstag,der,,Noun,,,Saturday,Cumartesi,суббота,субота,شنبه,السبت,6,2,Samstag ist ein Land.
-283,A2,7,woche,main,Sonntag,der,,Noun,,,Sunday,Pazar,воскресенье,неділя,یکشنبه,الأحد,6,2,Sonntag ist ein Land.
-284,A2,7,woche,sub,montags,,,Adverb,,,on Mondays,Pazartesileri,по понедельникам,по понеділках,دوشنبه‌ها,في أيام الاثنين,6,2,Das Wort montags benutze ich oft.
-285,A2,7,woche,sub,dienstags,,,Adverb,,,on Tuesdays,Salı günleri,по вторникам,по вівторках,سه‌شنبه‌ها,في أيام الثلاثاء,9,2,Das Wort dienstags benutze ich oft.
-286,A2,7,woche,sub,mittwochs,,,Adverb,,,on Wednesdays,Çarşamba günleri,по средам,по середах,چهارشنبه‌ها,في أيام الأربعاء,7,2,Das Wort mittwochs benutze ich oft.
-287,A2,7,woche,sub,donnerstags,,,Adverb,,,on Thursdays,Perşembe günleri,по четвергам,по четвергах,پنج‌شنبه‌ها,في أيام الخميس,10,2,Das Wort donnerstags benutze ich oft.
-288,A2,7,woche,sub,freitags,,,Adverb,,,on Fridays,Cuma günleri,по пятницам,по п'ятницях,جمعه‌ها,في أيام الجمعة,6,2,Das Wort freitags benutze ich oft.
-289,A2,7,woche,sub,samstags,,,Adverb,,,on Saturdays,Cumartesi günleri,по субботам,по суботах,شنبه‌ها,في أيام السبت,6,2,Das Wort samstags benutze ich oft.
-290,A2,7,woche,sub,sonntags,,,Adverb,,,on Sundays,Pazar günleri,по воскресеньям,по неділях,یکشنبه‌ها,في أيام الأحد,6,2,Das Wort sonntags benutze ich oft.
-291,A2,7,woche,main,Arbeitstag,der,-e,Noun,,,working day,çalışма günü,рабочий день,робочий день,روز کاری,يوم عمل,10,2,Arbeitstag ist ein Land.
-292,A2,7,woche,sub,Werktag,der,-e,Noun,,,weekday / working day,hafta içi günü,будний день / рабочий день,будній день / робочий день,روز کاری / روز غیرتعطیل,يوم عمل / يوم أسبوع,6,2,Werktag ist ein Land.
-293,A2,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,,,unit of time,zaman ölçüsü,единица времени,одиниця часу,واحد زمان,وحدة زمنية,6,1,Zeitmaß ist ein Land.
-294,A2,7,zeitmaße,main,Woche,die,-n,Noun,,,week,hafta,неделя,тиждень,هفته,أسبوع,1,1,Woche ist ein Land.
-295,A2,7,zeitmaße,main,Jahr,das,-e,Noun,,,year,yıl,год,рік,سال,سنة,1,1,Jahr ist ein Land.
-296,A2,8,A,main,Angebot,das,-e,Noun,,,offer / deal,teklif,предложение / акция,пропозиція / акція,پیشنهاد / تخفیف,عرض / صفقة,6,12,Angebot ist ein Land.
-297,A2,8,Ä,main,ändern,,,Verb,ändert,hat geändert,to change / alter,değiştirmek,менять / изменять,міняти / змінювати,تغییر دادن,يغيّر / يُعدِّل,5,21,Ich möchte ändern.
-298,A2,8,A,main,anders,,,Other,,,differently / otherwise,farklı,по-другому / иначе,по-іншому / інакше,به شکلی دیگر / متفاوت,بصورة مختلفة / بطريقة أخرى,5,21,Das Wort anders benutze ich oft.
-299,A2,8,A,main,anfangen,,,Verb,fängt an,hat angefangen,to begin / start,başlamak,начинать,починати,شروع کردن,يبدأ / يشرع,6,2,Ich möchte anfangen.
-300,A2,8,A,main,Anfang,der,¨-e,Noun,,,beginning,başlangıç,начало,початок,آغاز,بداية,3,2,Anfang ist ein Land.
+101,A2,5,familienstand,section_title,Familienstand,der,,Noun,,,marital status,medeni durum,семейное положение,сімейний стан,وضعیت تأهل,الحالة الاجتماعية,10,3,Ich sehe der Familienstand oft.
+102,A2,5,familienstand,main,ledig,,,Adjective,,,single / unmarried,bekar,холостой / незамужняя,неодружений / незаміжня,مجرد,أعزب / غير متزوج,5,3,Das Wort ledig ist wichtig.
+103,A2,5,familienstand,main,verheiratet,,,Adjective,,,married,evli,женат / замужем,одружений / заміжня,متأهل,متزوج,7,3,Kannst du verheiratet erklären?
+104,A2,5,familienstand,main,getrennt,,,Adjective,,,separated,ayrılmış,в разлуке / раздельно,у розлуці,جدا / در حال جدایی,منفصل,6,3,Das Wort getrennt ist wichtig.
+105,A2,5,familienstand,main,geschieden,,,Adjective,,,divorced,boşanmış,разведённый,розлучений,مطلقه / طلاق گرفته,مطلق,10,3,Hast du schon geschieden?
+106,A2,5,farben,section_title,Farbe,die,-n,Noun,,,color,renk,цвет,колір,رنگ,لون,2,21,Wir brauchen die Farbe heute.
+107,A2,5,farben,main,blau,,,Adjective,,,blue,mavi,синий,синій,آبی,أزرق,1,21,Ich benutze das Wort blau oft.
+108,A2,5,farben,main,braun,,,Adjective,,,brown,kahverengi,коричневый,коричневий,قهوه‌ای,بني,2,21,Ich benutze das Wort braun oft.
+109,A2,5,farben,main,gelb,,,Adjective,,,yellow,sarı,жёлтый,жовтий,زرد,أصفر,1,21,Ich lerne das Wort gelb im Kurs.
+110,A2,5,farben,main,grau,,,Adjective,,,gray,gri,серый,сірий,خاکستری,رمادي,1,21,Das Wort grau ist wichtig.
+111,A2,5,farben,main,grün,,,Adjective,,,green,yeşil,зелёный,зелений,سبز,أخضر,1,21,Ich benutze das Wort grün oft.
+112,A2,5,farben,main,lila,,,Adjective,,,purple / lilac,mor,фиолетовый / сиреневый,фіолетовий / бузковий,بنفش / یاسی,بنفسجي / ليلكي,4,21,Das Wort lila ist wichtig.
+113,A2,5,farben,main,orange,,,Adjective,,,orange,turuncu,оранжевый,помаранчевий,نارنجی,برتقالي,3,21,Ich benutze das Wort orange oft.
+114,A2,5,farben,main,rosa,,,Adjective,,,pink,pembe,розовый,рожевий,صورتی,وردي,1,21,Ich benutze das Wort rosa oft.
+115,A2,5,farben,main,rot,,,Adjective,,,red,kırmızı,красный,червоний,قرمز,أحمر,1,21,Das Wort rot ist wichtig.
+116,A2,5,farben,main,schwarz,,,Adjective,,,black,siyah,чёрный,чорний,مشکی / سیاه,أسود,2,21,Ich benutze das Wort schwarz oft.
+117,A2,5,farben,main,weiß,,,Adjective,,,white,beyaz,белый,білий,سفید,أبيض,1,21,Kannst du weiß erklären?
+118,A2,5,himmelsrichtungen,section_title,Himmelsrichtung,die,-en,Noun,,,compass direction,yön,сторона света,сторона світу,جهت جغرافیایی,اتجاه البوصلة,10,20,Ich sehe die Himmelsrichtung oft.
+119,A2,5,himmelsrichtungen,main,Norden,der,,Noun,,,north,kuzey,север,північ,شمال,الشمال,5,20,Ich kann Norden nicht gut.
+120,A2,5,himmelsrichtungen,main,Süden,der,,Noun,,,south,güney,юг,південь,جنوب,الجنوب,5,20,Wir müssen Süden lernen.
+121,A2,5,himmelsrichtungen,main,Osten,der,,Noun,,,east,doğu,восток,схід,شرق,الشرق,5,20,Ich kann Osten nicht gut.
+122,A2,5,himmelsrichtungen,main,Westen,der,,Noun,,,west,batı,запад,захід,غرب,الغرب,5,20,Ich kann Westen nicht gut.
+123,A2,6,laender,section_title,Land,das,¨-er,Noun,,,country,ülke,страна,країна,کشور,بلد / دولة,1,20,Das Land ist hier.
+124,A2,6,laender,section_title,Nationalität,die,-en,Noun,,,nationality,milliyet,национальность,національність,ملیت,جنسية,10,20,Die Nationalität ist hier.
+125,A2,6,laender,main,Deutschland,,,Noun,,,Germany,Almanya,Германия,Німеччина,آلمان,ألمانيا,2,20,Wir brauchen Deutschland heute.
+126,A2,6,laender,sub,Deutsche,der/die,-n,Noun,,,German (person),Alman (kişi),немец,німець,آلمانی (شخص),ألماني / ألمانية,3,20,Ich sehe der/die Deutsche oft.
+127,A2,6,laender,sub,deutsch,,,Adjective,,,German,Alman,немецкий,німецький,آلمانی,ألماني,3,20,Ich benutze das Wort deutsch oft.
+128,A2,6,laender,main,Österreich,,,Noun,,,Austria,Avusturya,Австрия,Австрія,اتریش,النمسا,7,20,Österreich ist hier.
+129,A2,6,laender,sub,Österreicher,der,-,Noun,,,Austrian (male),Avusturyalı (erkek),австриец (муж.),австрієць,اتریشی (مرد),نمساوي (مذكر),10,20,Die Österreicher hilft den Menschen.
+130,A2,6,laender,sub,Österreicherin,die,-nen,Noun,,,Austrian (female),Avusturyalı (kadın),австрийка (жен.),австрійка,اتریشی (زن),نمساوية (مؤنث),10,20,Die Österreicherin ist freundlich zu den Kunden.
+131,A2,6,laender,sub,österreichisch,,,Adjective,,,Austrian,Avusturyalı,австрийский,австрійський,اتریشی,نمساوي,10,20,Ich benutze das Wort österreichisch oft.
+132,A2,6,laender,main,Schweiz,die,,Noun,,,Switzerland,İsviçre,Швейцария,Швейцарія,سوئیس,سويسرا,6,20,Ich sehe die Schweiz oft.
+133,A2,6,laender,sub,Schweizer,der,-,Noun,,,Swiss (male),İsviçreli (erkek),швейцарец (муж.),швейцарець,سوئیسی (مرد),سويسري (مذكر),7,20,Der Schweizer hat viel Erfahrung.
+134,A2,6,laender,sub,Schweizerin,die,-nen,Noun,,,Swiss (female),İsviçreli (kadın),швейцарка (жен.),швейцарка,سوئیسی (زن),سويسرية (مؤنث),7,20,Die Schweizerin hilft den Menschen.
+135,A2,6,laender,sub,schweizerisch,,,Adjective,,,Swiss,İsviçre'ye ait,швейцарский,швейцарський,سوئیسی,سويسري,10,20,Ich lerne das Wort schweizerisch im Kurs.
+136,A2,6,laender,main,Luxemburg,,,Noun,,,Luxembourg,Lüksemburg,Люксембург,Люксембург,لوکزامبورگ,لوكسمبورغ,7,20,Wir brauchen Luxemburg heute.
+137,A2,6,laender,sub,Luxemburger,der,-,Noun,,,Luxembourger (male),Lüksemburglu (erkek),люксембуржец (муж.),люксембуржець,لوکزامبورگی (مرد),لوكسمبورغي (مذكر),10,20,Der Luxemburger hat viel Erfahrung.
+138,A2,6,laender,sub,Luxemburgerin,die,-nen,Noun,,,Luxembourger (female),Lüksemburglu (kadın),люксембурженка,люксембурженка,لوکزامبورگی (زن),لوكسمبورغية (مؤنث),10,20,Der Luxemburgerin arbeitet in der Firma.
+139,A2,6,laender,sub,luxemburgisch,,,Adjective,,,Luxembourgish,Lüksemburg (sıfat),люксембургский,люксембурзький,لوکزامبورگی,لوكسمبورغي,10,20,Ich benutze das Wort luxemburgisch oft.
+140,A2,6,laender,main,Europa,,,Noun,,,Europe,Avrupa,Европа,Європа,اروپا,أوروبا,3,20,Europa ist hier.
+141,A2,6,laender,sub,Europäer,der,-,Noun,,,European (male),Avrupalı (erkek),европеец (муж.),європеєць,اروپایی (مرد),أوروبي (مذكر),6,20,Die Europäer hilft den Menschen.
+142,A2,6,laender,sub,Europäerin,die,-nen,Noun,,,European (female),Avrupalı (kadın),европейка (жен.),європейка,اروپایی (زن),أوروبية (مؤنث),7,20,Der Europäerin hat viel Erfahrung.
+143,A2,6,laender,sub,europäisch,,,Adjective,,,European,Avrupa'ya ait,европейский,європейський,اروپایی,أوروبي,7,20,Das Wort europäisch ist wichtig.
+144,A2,6,waehrungen,section_title,Währung,die,-en,Noun,,,currency,para birimi,валюта,валюта,واحد پول / ارز,عملة,8,12,Die Währung ist wichtig für mich.
+145,A2,6,masse,section_title,Maß,das,-e,Noun,,,unit of measurement,ölçü birimi,единица измерения,одиниця виміру,واحد اندازه‌گیری,وحدة قياس,4,1,Wir brauchen das Maß heute.
+146,A2,6,waehrungen,main,Euro,der,,Noun,,,euro,euro,евро,євро,یورو,يورو,1,12,Ich sehe der Euro oft.
+147,A2,6,waehrungen,sub,Cent,der,,Noun,,,cent,cent,цент,цент,سنت,سنت,1,12,Der Cent ist wichtig für mich.
+148,A2,6,waehrungen,main,Franken,der,-,Noun,,,franc (Swiss),Frank,франк (швейцарский),франк (швейцарський),فرانک (سوئیس),فرنك (سويسري),6,12,Wir müssen Franken lernen.
+149,A2,6,waehrungen,sub,Rappen,der,-,Noun,,,rappen (Swiss cent),rappen,раппен (швейцарский цент),раппен,راپن (سنت سوئیس),راپن (سنت سويسري),8,12,Hast du schon Rappen?
+150,A2,6,masse,main,Meter,der,,Noun,,,meter,metre,метр,метр,متر,متر,2,1,Die Meter ist freundlich zu den Kunden.
+151,A2,6,masse,sub,Zentimeter,der,,Noun,,,centimeter,santimetre,сантиметр,сантиметр,سانتی‌متر,سنتيمتر,7,1,Der Zentimeter arbeitet in der Firma.
+152,A2,6,masse,main,Kilometer,der,,Noun,,,kilometer,kilometre,километр,кілометр,کیلومتر,كيلومتر,7,1,Die Kilometer ist freundlich zu den Kunden.
+153,A2,6,masse,main,Prozent,das,,Noun,,,percent,yüzde,процент,відсоток,درصد,بالمئة,6,1,Ich sehe das Prozent oft.
+154,A2,6,masse,main,Liter,der,,Noun,,,liter,litre,литр,літр,لیتر,لتر,5,1,Die Liter ist freundlich zu den Kunden.
+155,A2,6,masse,main,Gramm,das,,Noun,,,gram,gram,грамм,грам,گرم,غرام,5,1,Wir brauchen das Gramm heute.
+156,A2,6,masse,sub,Kilogramm,das,,Noun,,,kilogram,kilogram,килограмм,кілограм,کیلوگرم,كيلوغرام,7,1,Ich sehe das Kilogramm oft.
+157,A2,6,masse,main,Grad,der,,Noun,,,degree,derece,градус,градус,درجه,درجة,4,1,Der Grad ist wichtig für mich.
+158,A2,6,schule,section_title,Schule,die,-n,Noun,,,school,okul,школа,школа,مدرسه,مدرسة,1,9,Die Schule ist wichtig für mich.
+159,A2,6,schule,section_title,Schulfach,das,¨-er,Noun,,,school subject,ders,школьный предмет,шкільний предмет,درس / موضوع درسی,مادة دراسية,9,9,Das Schulfach ist hier.
+160,A2,6,schule,main,Abitur,das,,Noun,,,Abitur (university entrance exam),lise bitirme sınavı,абитур (экзамен для поступления в вуз),Abitur (іспит для вступу до університету),آبیتور (امتحان ورود به دانشگاه),أبيتور (امتحان الثانوية العامة / شهادة القبول الجامعي),8,9,Wir brauchen das Abitur heute.
+161,A2,6,schule,main,Direktor,der,-en,Noun,,,headmaster / principal,müdür,директор школы / директор,директор школи,مدیر (مدرسه),مدير (مذكر),6,9,Der Direktor ist hier.
+162,A2,6,schule,main,Hausaufgabe,die,-n,Noun,,,homework,ödev,домашнее задание,домашнє завдання,تکلیف خانه,واجب منزلي,10,9,Ich sehe die Hausaufgabe oft.
+163,A2,6,schule,main,Klasse,die,-n,Noun,,,class / grade,sınıf,класс,клас,کلاس / پایه,صف / درجة دراسية,3,9,Wir brauchen die Klasse heute.
+164,A2,6,schule,main,Klassenfahrt,die,-en,Noun,,,school trip,okul gezisi,школьная поездка,шкільна поїздка,گردش مدرسه,رحلة مدرسية,10,9,Die Klassenfahrt ist wichtig für mich.
+165,A2,6,schule,main,Sekretariat,das,-e,Noun,,,secretary's office,sekreterlik,секретариат,секретаріат,دفتر منشی,مكتب السكرتارية,10,9,Wir brauchen das Sekretariat heute.
+166,A2,6,schule,main,Stundenplan,der,¨-e,Noun,,,timetable / schedule,ders programı,расписание / график,розклад,برنامه درسی,جدول الحصص / جدول المواعيد,10,9,Der Stundenplan ist hier.
+167,A2,6,schule,main,Biologie,,,Noun,,,biology,biyoloji,биология,біологія,زیست‌شناسی,علم الأحياء,6,9,Wir brauchen Biologie heute.
+168,A2,6,schule,main,Chemie,,,Noun,,,chemistry,kimya,химия,хімія,شیمی,الكيمياء,5,9,Chemie ist hier.
+169,A2,6,schule,main,Deutsch,,,Noun,,,German (language,Almanca,немецкий язык,німецька мова,زبان آلمانی,اللغة الألمانية,3,9,Deutsch ist wichtig für mich.
+170,A2,6,schule,main,Englisch,,,Noun,,,English (language),İngilizce,английский язык,англійська мова,زبان انگلیسی,اللغة الإنجليزية,3,9,Wir brauchen Englisch heute.
+171,A2,6,schule,main,Französisch,,,Noun,,,French (language),Fransızca,французский язык,французька мова,زبان فرانسوی,اللغة الفرنسية,7,9,Ich sehe Französisch oft.
+172,A2,6,schule,main,Geografie,,,Noun,,,geography,coğrafya,география,географія,جغرافیا,الجغرافيا,7,9,Ich sehe Geografie oft.
+173,A2,6,schule,main,Geschichte,,,Noun,,,history,tarih,история,історія,تاریخ,التاريخ,7,9,Ich sehe Geschichte oft.
+174,A2,6,schule,main,Kunst,die,,Noun,,,art,resim / sanat,искусство,мистецтво,هنر,الفن,2,9,Die Kunst ist hier.
+175,A2,6,schule,main,Latein,,,Noun,,,Latin,Latince,латынь,латина,لاتین,اللاتينية,8,9,Die Latein hilft den Menschen.
+176,A2,6,schule,main,Mathematik,,,Noun,,,mathematics,matematik,математика,математика,ریاضیات,الرياضيات,7,9,Ich sehe Mathematik oft.
+177,A2,6,schule,main,Musik,die,,Noun,,,music,müzik,музыка,музика,موسیقی,الموسيقى,2,9,Wir brauchen die Musik heute.
+178,A2,6,schule,main,Physik,,,Noun,,,physics,fizik,физика,фізика,فیزیک,الفيزياء,5,9,Physik ist wichtig für mich.
+179,A2,6,schule,main,Religion,die,-en,Noun,,,religion,din,религия,релігія,دین / مذهب,الدين,6,9,Die Religion ist wichtig für mich.
+180,A2,6,schule,main,Sozialkunde,,,Noun,,,social studies / civics,sosyal bilgiler,обществознание / граждановедение,суспільствознавство,علوم اجتماعی,الدراسات الاجتماعية / التربية الوطنية,10,9,Wir brauchen Sozialkunde heute.
+181,A2,6,schule,main,Sport,der,,Noun,,,PE / sports,beden eğitimi / spor,физкультура / спорт,фізкультура / спорт,ورزش / تربیت بدنی,التربية البدنية / الرياضة,2,9,Der Sport ist wichtig für mich.
+182,A2,6,feiertage,section_title,Feiertag,der,-e,Noun,,,public holiday,resmi tatil,государственный праздник,державне свято,تعطیل رسمی,عطلة رسمية,6,2,Der Feiertag ist hier.
+183,A2,6,feiertage,main,Karneval,der,,Noun,,,carnival,karnaval,карнавал,карнавал,کارناوال,كرنفال,6,2,Wir brauchen der Karneval heute.
+184,A2,6,feiertage,main,Ostern,,,Noun,,,Easter,Paskalya,Пасха,Великдень,عید پاک,عيد الفصح,5,2,Ich sehe Ostern oft.
+185,A2,6,feiertage,main,Weihnachten,,,Noun,,,Christmas,Noel,Рождество,Різдво,کریسمس,عيد الميلاد,7,2,Morgen werde ich Weihnachten.
+186,A2,6,feiertage,main,Neujahr,das,,Noun,,,New Year,Yeni Yıl,Новый год,Новий рік,سال نو,رأس السنة الجديدة,6,2,Wir brauchen das Neujahr heute.
+187,A2,6,feiertage,main,Silvester,,,Noun,,,New Year's Eve,Yılbaşı gecesi,канун Нового года,канун Нового року,شب سال نو,ليلة رأس السنة,7,2,Der Silvester arbeitet in der Firma.
+188,A2,6,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,,,season,mevsim,время года,пора року,فصل,فصل من فصول السنة,10,2,Wir brauchen die Jahreszeit heute.
+189,A2,6,jahreszeiten,main,Frühling,der,,Noun,,,spring,ilkbahar,весна,весна,بهار,الربيع,6,2,Der Frühling ist wichtig für mich.
+190,A2,6,jahreszeiten,sub,Frühjahr,das,,Noun,,,spring (early),ilkbahar (erken),ранняя весна,рання весна,اوایل بهار,أوائل الربيع,6,2,Ich sehe das Frühjahr oft.
+191,A2,6,jahreszeiten,main,Sommer,der,,Noun,,,summer,yaz,лето,літо,تابستان,الصيف,1,2,Die Sommer ist freundlich zu den Kunden.
+192,A2,6,jahreszeiten,main,Herbst,der,,Noun,,,autumn / fall,sonbahar,осень,осінь,پاییز,الخريف,5,2,Wir brauchen der Herbst heute.
+193,A2,6,jahreszeiten,main,Winter,der,,Noun,,,winter,kış,зима,зима,زمستان,الشتاء,1,2,Der Winter hat viel Erfahrung.
+194,A2,6,monat,section_title,Monat,der,-e,Noun,,,month,ay,месяц,місяць,ماه,شهر,5,2,Wir brauchen der Monat heute.
+195,A2,6,monat,main,Januar,der,,Noun,,,January,Ocak,январь,січень,ژانویه,يناير,5,2,Der Januar ist wichtig für mich.
+196,A2,6,monat,main,Februar,der,,Noun,,,February,Şubat,февраль,лютий,فوریه,فبراير,8,2,Der Februar ist hier.
+197,A2,6,monat,main,März,der,,Noun,,,March,Mart,март,березень,مارس,مارس,1,2,Der März ist wichtig für mich.
+198,A2,6,monat,main,April,der,,Noun,,,April,Nisan,апрель,квітень,آوریل,أبريل,2,2,Wir brauchen der April heute.
+199,A2,6,monat,main,Mai,der,,Noun,,,May,Mayıs,май,травень,مه,مايو,1,2,Der Mai ist hier.
+200,A2,6,monat,main,Juni,der,,Noun,,,June,Haziran,июнь,червень,ژوئن,يونيو,1,2,Ich sehe der Juni oft.
+201,A2,6,monat,main,Juli,der,,Noun,,,July,Temmuz,июль,липень,ژوئیه,يوليو,1,2,Ich sehe der Juli oft.
+202,A2,6,monat,main,August,der,,Noun,,,August,Ağustos,август,серпень,اوت,أغسطس,3,2,Ich sehe der August oft.
+203,A2,6,monat,main,September,der,,Noun,,,September,Eylül,сентябрь,вересень,سپتامبر,سبتمبر,7,2,Der September arbeitet in der Firma.
+204,A2,6,monat,main,Oktober,der,,Noun,,,October,Ekim,октябрь,жовтень,اکتبر,أكتوبر,6,2,Der Oktober hat viel Erfahrung.
+205,A2,6,monat,main,November,der,,Noun,,,November,Kasım,ноябрь,листопад,نوامبر,نوفمبر,6,2,Der November arbeitet in der Firma.
+206,A2,6,monat,main,Dezember,der,,Noun,,,December,Aralık,декабрь,грудень,دسامبر,ديسمبر,9,2,Der Dezember arbeitet in der Firma.
+207,A2,6,tageszeiten,section_title,Tageszeit,die,-en,Noun,,,time of day,günün zamanı,время суток,час доби,وقت روز,وقت من اليوم,9,2,Die Tageszeit ist hier.
+208,A2,6,tageszeiten,main,Tag,der,-e,Noun,,,day,gün,день,день,روز,يوم,1,1,Der Tag ist hier.
+209,A2,6,tageszeiten,main,Morgen,der,-,Noun,,,morning,sabah,утро,ранок,صبح,الصباح,1,2,Hast du schon Morgen?
+210,A2,6,tageszeiten,main,Vormittag,der,-e,Noun,,,late morning,öğleden önce,позднее утро,пізній ранок,پیش از ظهر,الضحى / قبيل الظهر,9,2,Der Vormittag ist hier.
+211,A2,6,tageszeiten,main,Mittag,der,-e,Noun,,,noon / midday,öğle,полдень / середина дня,полудень,ظهر,الظهر / منتصف النهار,5,2,Der Mittag ist wichtig für mich.
+212,A2,6,tageszeiten,main,Nachmittag,der,-e,Noun,,,afternoon,öğleden sonra,после полудня,післяобідній час,بعد از ظهر,بعد الظهر,10,2,Ich sehe der Nachmittag oft.
+213,A2,6,tageszeiten,main,Abend,der,-e,Noun,,,evening,akşam,вечер,вечір,عصر,مساء,1,2,Der Abend ist wichtig für mich.
+214,A2,6,tageszeiten,main,Nacht,die,¨-e,Noun,,,night,gece,ночь,ніч,شب,ليل,1,2,Die Nacht ist hier.
+215,A2,6,tageszeiten,main,Mitternacht,die,,Noun,,,midnight,gece yarısı,полночь,опівніч,نیمه‌شب,منتصف الليل,10,2,Ich sehe die Mitternacht oft.
+216,A2,6,tageszeiten,main,täglich,,,Adverb,,,daily,günlük,ежедневно,щодня,روزانه,يومياً,6,2,Kannst du täglich erklären?
+217,A2,6,tageszeiten,main,tagsüber,,,Adverb,,,during the day,gün boyunca,днём,вдень,در طول روز,خلال النهار,6,2,Kannst du tagsüber erklären?
+218,A2,6,tageszeiten,main,morgens,,,Adverb,,,in the morning,sabahları,по утрам,вранці,صبح‌ها,في الصباح,6,2,Das Wort morgens ist wichtig.
+219,A2,6,tageszeiten,main,vormittags,,,Adverb,,,in the late morning,öğleden önce,поздним утром,пізно вранці,پیش از ظهرها,في الضحى,10,2,Ich lerne das Wort vormittags im Kurs.
+220,A2,6,tageszeiten,main,mittags,,,Adverb,,,at noon,öğle vakti,в полдень,опівдні,ظهرها,عند الظهر,6,2,Ich lerne das Wort mittags im Kurs.
+221,A2,6,tageszeiten,main,nachmittags,,,Adverb,,,in the afternoon,öğleden sonraları,после обеда / во второй половине дня,по обіді,بعد از ظهرها,في فترة بعد الظهر,10,2,Kannst du nachmittags erklären?
+222,A2,6,tageszeiten,main,abends,,,Adverb,,,in the evening,akşamları,по вечерам,увечері,عصرها,في المساء,5,2,Ich lerne das Wort abends im Kurs.
+223,A2,6,tageszeiten,main,nachts,,,Adverb,,,at night,geceleri,ночью,вночі,شب‌ها,في الليل,5,2,Kannst du nachts erklären?
+224,A2,7,zahlen,section_title,Zahlen,,,Noun,,,numbers,sayılar,числа,числа,اعداد,أرقام,3,1,Wir müssen Zahlen lernen.
+225,A2,7,zahlen,main,eins,,,Number,,,one,bir,один,один,یک,واحد,1,1,Ich benutze das Wort eins oft.
+226,A2,7,zahlen,main,zwei,,,Number,,,two,iki,два,два,دو,اثنان,1,1,Kannst du zwei erklären?
+227,A2,7,zahlen,main,drei,,,Number,,,three,üç,три,три,سه,ثلاثة,1,1,Ich benutze das Wort drei oft.
+228,A2,7,zahlen,main,vier,,,Number,,,four,dört,четыре,чотири,چهار,أربعة,1,1,Ich benutze das Wort vier oft.
+229,A2,7,zahlen,main,fünf,,,Number,,,five,beş,пять,п'ять,پنج,خمسة,1,1,Das Wort fünf ist wichtig.
+230,A2,7,zahlen,main,sechs,,,Number,,,six,altı,шесть,шість,شش,ستة,2,1,Das Wort sechs ist wichtig.
+231,A2,7,zahlen,main,sieben,,,Number,,,seven,yedi,семь,сім,هفت,سبعة,3,1,Wir müssen sieben lernen.
+232,A2,7,zahlen,main,acht,,,Number,,,eight,sekiz,восемь,вісім,هشت,ثمانية,1,1,Ich benutze das Wort acht oft.
+233,A2,7,zahlen,main,neun,,,Number,,,nine,dokuz,девять,дев'ять,نه,تسعة,1,1,Kannst du neun erklären?
+234,A2,7,zahlen,main,zehn,,,Number,,,ten,on,десять,десять,ده,عشرة,1,1,Ich benutze das Wort zehn oft.
+235,A2,7,zahlen,main,elf,,,Number,,,eleven,on bir,одиннадцать,одинадцять,یازده,أحد عشر,1,1,Ich lerne das Wort elf im Kurs.
+236,A2,7,zahlen,main,zwölf,,,Number,,,twelve,on iki,двенадцать,дванадцять,دوازده,اثنا عشر,2,1,Kannst du zwölf erklären?
+237,A2,7,zahlen,main,dreizehn,,,Number,,,thirteen,on üç,тринадцать,тринадцять,سیزده,ثلاثة عشر,6,1,Das Wort dreizehn ist wichtig.
+238,A2,7,zahlen,main,vierzehn,,,Number,,,fourteen,on dört,четырнадцать,чотирнадцять,چهارده,أربعة عشر,6,1,Kannst du vierzehn erklären?
+239,A2,7,zahlen,main,fünfzehn,,,Number,,,fifteen,on beş,пятнадцать,п'ятнадцять,پانزده,خمسة عشر,6,1,Ich lerne das Wort fünfzehn im Kurs.
+240,A2,7,zahlen,main,sechzehn,,,Number,,,sixteen,on altı,шестьнадцать,шістнадцять,شانزده,ستة عشر,6,1,Ich benutze das Wort sechzehn oft.
+241,A2,7,zahlen,main,siebzehn,,,Number,,,seventeen,on yedi,семнадцать,сімнадцять,هفده,سبعة عشر,6,1,Das Wort siebzehn ist wichtig.
+242,A2,7,zahlen,main,achtzehn,,,Number,,,eighteen,on sekiz,восемнадцать,вісімнадцять,هجده,ثمانية عشر,6,1,Ich lerne das Wort achtzehn im Kurs.
+243,A2,7,zahlen,main,neunzehn,,,Number,,,nineteen,on dokuz,девятнадцать,дев'ятнадцять,نوزده,تسعة عشر,6,1,Das Wort neunzehn ist wichtig.
+244,A2,7,zahlen,main,zwanzig,,,Number,,,twenty,yirmi,двадцать,двадцять,بیست,عشرون,6,1,Ich benutze das Wort zwanzig oft.
+245,A2,7,zahlen,main,einundzwanzig,,,Number,,,twenty-one,yirmi bir,двадцать один,двадцять один,بیست و یک,واحد وعشرون,10,1,Ich lerne das Wort einundzwanzig im Kurs.
+246,A2,7,zahlen,main,dreißig,,,Number,,,thirty,otuz,тридцать,тридцять,سی,ثلاثون,6,1,Das Wort dreißig ist wichtig.
+247,A2,7,zahlen,main,vierzig,,,Number,,,forty,kırk,сорок,сорок,چهل,أربعون,6,1,Ich lerne das Wort vierzig im Kurs.
+248,A2,7,zahlen,main,fünfzig,,,Number,,,fifty,elli,пятьдесят,п'ятдесят,پنجاه,خمسون,6,1,Ich benutze das Wort fünfzig oft.
+249,A2,7,zahlen,main,sechzig,,,Number,,,sixty,altmış,шестьдесят,шістдесят,شصت,ستون,6,1,Ich benutze das Wort sechzig oft.
+250,A2,7,zahlen,main,siebzig,,,Number,,,seventy,yetmiş,семьдесят,сімдесят,هفتاد,سبعون,6,1,Ich lerne das Wort siebzig im Kurs.
+251,A2,7,zahlen,main,achtzig,,,Number,,,eighty,seksen,восемьдесят,вісімдесят,هشتاد,ثمانون,6,1,Ich benutze das Wort achtzig oft.
+252,A2,7,zahlen,main,neunzig,,,Number,,,ninety,doksan,девяносто,дев'яносто,نود,تسعون,6,1,Ich lerne das Wort neunzig im Kurs.
+253,A2,7,zahlen,main,hundert,,,Number,,,hundred,yüz,сто,сто,صد,مئة,6,1,Das Wort hundert ist wichtig.
+254,A2,7,zahlen,main,hunderteins,,,Number,,,one hundred and one,yüz bir,сто один,сто один,صد و یک,مئة وواحد,10,1,Ich benutze das Wort hunderteins oft.
+255,A2,7,zahlen,main,zweihundert,,,Number,,,two hundred,iki yüz,двести,двісті,دویست,مئتان,10,1,Kannst du zweihundert erklären?
+256,A2,7,zahlen,main,tausend,,,Number,,,thousand,bin,тысяча,тисяча,هزار,ألف,6,1,Ich benutze das Wort tausend oft.
+257,A2,7,zahlen,main,zweitausendeins,,,Number,,,two thousand and one,iki bin bir,две тысячи один,дві тисячі один,دو هزار و یک,ألفان وواحد,10,1,Das Wort zweitausendeins ist wichtig.
+258,A2,7,zahlen,main,Million,die,-en,Noun,,,million,milyon,миллион,мільйон,میلیون,مليون,8,1,Die Million ist wichtig für mich.
+259,A2,7,zahlen,main,erste,,,Number,,,first,birinci,первый,перший,اول,الأول,5,1,Ich lerne das Wort erste im Kurs.
+260,A2,7,zahlen,main,zweite,,,Number,,,second,ikinci,второй,другий,دوم,الثاني,5,1,Ich lerne das Wort zweite im Kurs.
+261,A2,7,zahlen,main,dritte,,,Number,,,third,üçüncü,третий,третій,سوم,الثالث,5,1,Das Wort dritte ist wichtig.
+262,A2,7,zahlen,main,vierte,,,Number,,,fourth,dördüncü,четвёртый,четвертий,چهارم,الرابع,5,1,Kannst du vierte erklären?
+263,A2,7,zahlen,main,erstens,,,Adverb,,,firstly,birincisi,во-первых,по-перше,اولاً,أولاً,8,1,Das Wort erstens ist wichtig.
+264,A2,7,zahlen,main,zweitens,,,Adverb,,,secondly,ikincisi,во-вторых,по-друге,ثانیاً,ثانياً,9,1,Das Wort zweitens ist wichtig.
+265,A2,7,zahlen,main,drittens,,,Adverb,,,thirdly,üçüncüsü,в-третьих,по-третє,ثالثاً,ثالثاً,9,1,Kannst du drittens erklären?
+266,A2,7,zahlen,main,viertens,,,Adverb,,,fourthly,dördüncüsü,в-четвёртых,по-четверте,رابعاً,رابعاً,9,1,Kannst du viertens erklären?
+267,A2,7,zahlen,main,einmal,,,Adverb,,,once,bir kere,один раз,один раз,یک بار,مرة واحدة,1,1,Ich lerne das Wort einmal im Kurs.
+268,A2,7,zahlen,main,zweimal,,,Adverb,,,twice,iki kere,два раза,двічі,دو بار,مرتان,6,1,Ich benutze das Wort zweimal oft.
+269,A2,7,zahlen,main,dreimal,,,Adverb,,,three times,üç kez,три раза,тричі,سه بار,ثلاث مرات,6,1,Kannst du dreimal erklären?
+270,A2,7,zahlen,main,viermal,,,Adverb,,,four times,dört kere,четыре раза,чотири рази,چهار بار,أربع مرات,6,1,Ich lerne das Wort viermal im Kurs.
+271,A2,7,uhrzeit,section_title,Uhrzeit,die,,Noun,,,time of day,günün zamanı,время суток,час доби,ساعت / زمان,وقت اليوم,6,2,Die Uhrzeit ist hier.
+272,A2,7,uhrzeit,main,Sekunde,die,-n,Noun,,,second,saniye,секунда,секунда,ثانیه,ثانية,6,2,Die Sekunde ist hier.
+273,A2,7,uhrzeit,main,Minute,die,-n,Noun,,,minute,dakika,минута,хвилина,دقیقه,دقيقة,1,2,Ich sehe die Minute oft.
+274,A2,7,uhrzeit,main,Stunde,die,-n,Noun,,,hour,saat,час,година,ساعت,ساعة,1,2,Wir brauchen die Stunde heute.
+275,A2,7,woche,section_title,Wochentag,der,-e,Noun,,,weekday,hafta günü,день недели,день тижня,روز هفته,يوم من أيام الأسبوع,7,2,Ich sehe der Wochentag oft.
+276,A2,7,woche,main,Wochenende,das,-n,Noun,,,weekend,hafta sonu,выходные,вихідні,آخر هفته,نهاية الأسبوع,7,2,Das Wochenende ist hier.
+277,A2,7,woche,main,Montag,der,,Noun,,,Monday,Pazartesi,понедельник,понеділок,دوشنبه,الاثنين,5,2,Wir brauchen der Montag heute.
+278,A2,7,woche,main,Dienstag,der,,Noun,,,Tuesday,Salı,вторник,вівторок,سه‌شنبه,الثلاثاء,9,2,Ich sehe der Dienstag oft.
+279,A2,7,woche,main,Mittwoch,der,,Noun,,,Wednesday,Çarşamba,среда,середа,چهارشنبه,الأربعاء,6,2,Der Mittwoch ist wichtig für mich.
+280,A2,7,woche,main,Donnerstag,der,,Noun,,,Thursday,Perşembe,четверг,четвер,پنج‌شنبه,الخميس,10,2,Der Donnerstag ist hier.
+281,A2,7,woche,main,Freitag,der,,Noun,,,Friday,Cuma,пятница,п'ятниця,جمعه,الجمعة,6,2,Ich sehe der Freitag oft.
+282,A2,7,woche,main,Samstag,der,,Noun,,,Saturday,Cumartesi,суббота,субота,شنبه,السبت,6,2,Wir brauchen der Samstag heute.
+283,A2,7,woche,main,Sonntag,der,,Noun,,,Sunday,Pazar,воскресенье,неділя,یکشنبه,الأحد,6,2,Ich sehe der Sonntag oft.
+284,A2,7,woche,sub,montags,,,Adverb,,,on Mondays,Pazartesileri,по понедельникам,по понеділках,دوشنبه‌ها,في أيام الاثنين,6,2,Ich benutze das Wort montags oft.
+285,A2,7,woche,sub,dienstags,,,Adverb,,,on Tuesdays,Salı günleri,по вторникам,по вівторках,سه‌شنبه‌ها,في أيام الثلاثاء,9,2,Das Wort dienstags ist wichtig.
+286,A2,7,woche,sub,mittwochs,,,Adverb,,,on Wednesdays,Çarşamba günleri,по средам,по середах,چهارشنبه‌ها,في أيام الأربعاء,7,2,Ich benutze das Wort mittwochs oft.
+287,A2,7,woche,sub,donnerstags,,,Adverb,,,on Thursdays,Perşembe günleri,по четвергам,по четвергах,پنج‌شنبه‌ها,في أيام الخميس,10,2,Kannst du donnerstags erklären?
+288,A2,7,woche,sub,freitags,,,Adverb,,,on Fridays,Cuma günleri,по пятницам,по п'ятницях,جمعه‌ها,في أيام الجمعة,6,2,Ich benutze das Wort freitags oft.
+289,A2,7,woche,sub,samstags,,,Adverb,,,on Saturdays,Cumartesi günleri,по субботам,по суботах,شنبه‌ها,في أيام السبت,6,2,Das Wort samstags ist wichtig.
+290,A2,7,woche,sub,sonntags,,,Adverb,,,on Sundays,Pazar günleri,по воскресеньям,по неділях,یکشنبه‌ها,في أيام الأحد,6,2,Kannst du sonntags erklären?
+291,A2,7,woche,main,Arbeitstag,der,-e,Noun,,,working day,çalışма günü,рабочий день,робочий день,روز کاری,يوم عمل,10,2,Wir brauchen der Arbeitstag heute.
+292,A2,7,woche,sub,Werktag,der,-e,Noun,,,weekday / working day,hafta içi günü,будний день / рабочий день,будній день / робочий день,روز کاری / روز غیرتعطیل,يوم عمل / يوم أسبوع,6,2,Der Werktag ist wichtig für mich.
+293,A2,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,,,unit of time,zaman ölçüsü,единица времени,одиниця часу,واحد زمان,وحدة زمنية,6,1,Das Zeitmaß ist hier.
+294,A2,7,zeitmaße,main,Woche,die,-n,Noun,,,week,hafta,неделя,тиждень,هفته,أسبوع,1,1,Ich sehe die Woche oft.
+295,A2,7,zeitmaße,main,Jahr,das,-e,Noun,,,year,yıl,год,рік,سال,سنة,1,1,Ich sehe das Jahr oft.
+296,A2,8,A,main,Angebot,das,-e,Noun,,,offer / deal,teklif,предложение / акция,пропозиція / акція,پیشنهاد / تخفیف,عرض / صفقة,6,12,Das Angebot ist wichtig für mich.
+297,A2,8,Ä,main,ändern,,,Verb,ändert,hat geändert,to change / alter,değiştirmek,менять / изменять,міняти / змінювати,تغییر دادن,يغيّر / يُعدِّل,5,21,Morgen werde ich ändern.
+298,A2,8,A,main,anders,,,Other,,,differently / otherwise,farklı,по-другому / иначе,по-іншому / інакше,به شکلی دیگر / متفاوت,بصورة مختلفة / بطريقة أخرى,5,21,Kannst du anders erklären?
+299,A2,8,A,main,anfangen,,,Verb,fängt an,hat angefangen,to begin / start,başlamak,начинать,починати,شروع کردن,يبدأ / يشرع,6,2,Hast du schon anfangen?
+300,A2,8,A,main,Anfang,der,¨-e,Noun,,,beginning,başlangıç,начало,початок,آغاز,بداية,3,2,Ich sehe der Anfang oft.
 301,A2,8,A,main,Angst,die,¨-e,Noun,,,fear / anxiety,korku,страх / тревога,страх / тривога,ترس / اضطراب,خوف / قلق,2,19,
 302,A2,8,A,main,ankommen,,,Verb,kommt an,,to arrive,varmak,прибывать,прибувати,رسیدن,يصل,3,11,
 303,A2,8,A,main,anmachen,,,Verb,macht an,hat angemacht,to turn on / switch on,açmak,включать,включати,روشن کردن,يُشغِّل / يفتح,6,17,
