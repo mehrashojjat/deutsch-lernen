@@ -149,406 +149,406 @@ id,level,source_page,section,entry_type,word,article,plural,word_type,verb_prese
 148,B1,16,A,main,abwesend,,,Other,,,,absent,devamsız,отсутствующий,відсутній,غایب,غائب,7,21,Sie war bei der Sitzung abwesend und hat die Notizen später bekommen.
 149,B1,16,A,main,achten,,,Verb,achtet,achtete,hat geachtet,to pay attention to,dikkat etmek,обращать внимание,звертати увагу,توجه کردن به,يحترم,4,21,Bitte achten Sie auf die Sicherheitshinweise des Lehrers.
 150,B1,16,A,main,ab,,,Other,,,,off / away (prefix),-den / ayrı (ön ek),от,від (префікс),جدا / دور-,بعيداً,1,21,Das Flugzeug hebt um zehn Uhr ab und landet in Wien.
-151,B1,16,A,main,abbiegen,,,Verb,biegt ab,bog ab,ist abgebogen,to turn off,dönmek,сворачивать,звертати,پیچیدن,يتجه,7,11,
-152,B1,16,A,main,Abbildung,die,-en,Noun,,,,illustration,illüstrasyon,иллюстрация,ілюстрація,تصویر,رسم توضيحي,8,21,
-153,B1,16,A,main,Abenteuer,das,-,Noun,,,,adventure,macera,приключение,пригода,ماجراجویی,مغامرة,8,10,
-154,B1,16,A,main,aber,,,Other,,,,but / however,ama / ancak,но,але / проте,اما / با این حال,لكن,2,21,
-155,B1,16,A,main,abfahren,,,Verb,fährt ab,fuhr ab,ist abgefahren,to depart,ayrılmak,отправляться,від'їжджати / відправлятися,حرکت کردن,يغادر,6,11,
-156,B1,16,A,main,Abfahrt,die,-en,Noun,,,,departure,kalkış,отправление,відправлення / від'їзд,عزیمت / حرکت,مغادرة,5,11,
-157,B1,16,A,main,Abfall,der,¨-e,Noun,,,,waste / rubbish,atık / çöp,мусор / отходы,сміття / відходи,زباله / پسماند,نفايات,4,6,
-158,B1,16,A,main,Abfalleimer,der,-,Noun,,,,rubbish bin,çöp kutusu,мусорное ведро,відро для сміття,سطل زباله,سلة مهملات,9,6,
-159,B1,16,A,main,abhängen,,,Verb,hängt ab,hing,hat abgehangen,to depend on,bağlı olmak,зависеть от,залежати від,بستگی داشتن به,يعتمد على,6,21,
-160,B1,16,A,main,abhängig,,,Other,,,,dependent,bağımlı,зависимый,залежний,وابسته,معتمد,7,21,
-161,B1,16,A,main,abheben,,,Verb,hebt ab,hob ab,hat abgehoben,to withdraw (money),para çekmek,снимать деньги,знімати гроші,پول برداشت کردن,يسحب,5,21,
-162,B1,16,A,main,abholen,,,Verb,holt ab,holte ab,hat abgeholt,to pick up,almak,забрать,забирати,برداشتن / تحویل گرفتن,يستلم,5,21,
-163,B1,16,H,main,Hausaufgaben,die,,Noun,,,,homework,ev ödevi,домашнее задание,домашнє завдання,تکلیف خانه,واجب منزلي,10,9,
-164,B1,16,G,main,gemacht,,,Other,,,,done,yapılmış,сделанный / готово,зроблений / готово,انجام‌شده,منجز,5,21,
-165,B1,16,A,main,abgelehnt,,,Other,,,,rejected,reddedildi,отклонённый / отвергнутый,відхилений,ردشده,مرفوض,8,21,
-166,B1,16,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої,نوشیدنی‌ها,مشروبات,6,5,
-167,B1,16,A,main,abnehmen,,,Verb,,,,to lose weight,kilo vermek,худеть,худнути,لاغر شدن,يفقد وزنه,6,21,
-168,B1,16,W,main,weil,,,Other,,,,because,çünkü,потому что,тому що,چون,لأن,2,21,
-169,B1,16,W,main,wichtig,,,Other,,,,important,önemli,важный,важливий,مهم,مهم,5,21,
-170,B1,16,A,main,abwesend,,,Other,,,,absent,devamsız,отсутствующий,відсутній,غایب,غائب,7,21,
-171,B1,16,A,main,abschließen,,,Verb,wenn,,,to lock / conclude,kilitlemek / tamamlamak,запирать / завершать,замикати / завершувати,قفل کردن / به پایان رساندن,يغلق,9,21,
-172,B1,16,G,main,Gerät,das,,Noun,,,,device,cihaz,прибор / устройство,пристрій / прилад,دستگاه,جهاز,3,17,
-173,B1,16,T,main,teure Geschichten,,,Verb,,,,expensive stories,,дорогие истории,дорогі історії,داستان‌های گران,قصص مكلفة,10,21,
-174,B1,16,G,main,ganz,,,Other,,,,whole / completely,tüm / tamamen,целый / полностью,цілий / повністю,کامل / کاملاً,كامل,2,21,
-175,B1,16,T,main,trotzdem,,,Other,,,,nevertheless,yine de,тем не менее,тим не менше,با این حال,مع ذلك,6,21,
-176,B1,16,S,main,sind,,,Other,,,,are,-dir,есть / являются,є / являються,هستند,هم,2,21,
-177,B1,16,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,іти / їхати,رفتن,يذهب,1,21,
-178,B1,16,L,main,leider,,,Other,,,,unfortunately,ne yazık ki,к сожалению,на жаль,متأسفانه,للأسف,4,21,
-179,B1,16,B,main,bis,,,Other,,,,until,-e kadar,до,до,تا,حتى,1,21,
-180,B1,16,Z,main,zum,,,Other,,,,to the,-e,к / в,до / в,به,إلى,1,21,
-181,B1,16,V,main,verschmutzen,,,Verb,,,,to dirty / pollute,kirletmek,загрязнять,забруднювати,کثیف کردن / آلوده کردن,يلوث,10,21,
-182,B1,16,A,main,abhängig,,,Other,,,,dependent,bağımlı,зависимый,залежний,وابسته,معتمد,7,21,
-183,B1,16,M,main,meinem,,,Other,,,,my,benim,мой,мій / моєму,مال من / من,لي,4,21,
-184,B1,16,A,main,abgeholt,,,Other,,,,picked up,alındı,забранный / забрали,забраний / забрали,برداشته‌شده / تحویل گرفته‌شده,تم استلامه,6,21,
-185,B1,17,A,main,Alphabet,das,-e,Noun,,,,alphabet,alfabe,алфавит,алфавіт,الفبا,أبجدية,6,9,
-186,B1,17,A,main,als,,,Other,,,,as / when / than,-ken / -dan / olarak,как / когда / чем,як / коли / ніж,به عنوان / وقتی که / از,عندما,1,21,
-187,B1,17,A,main,als,,,Other,,,,as / when / than,-ken / -dan / olarak,как / когда / чем,як / коли / ніж,به عنوان / وقتی که / از,عندما,1,21,
-188,B1,17,A,main,also,,,Other,,,,so / therefore / well,yani / dolayısıyla,так / поэтому,отже / тому / добре,بنابراین / پس / خب,إذن,2,21,
-189,B1,17,A,main,alt,,,Other,,,,old,eski / yaşlı,старый,старий,پیر / قدیمی,قديم,1,21,
-190,B1,17,A,main,Alter,das,,Noun,,,,age,yaş,возраст,вік,سن,عمر,3,21,
-191,B1,17,A,main,Altenheim,das,-e,Noun,,,,old people's home,huzurevi,дом престарелых,будинок для людей похилого віку,خانه سالمندان,دار المسنين,8,4,
-192,B1,17,A,main,Altersheim,das,-e,Noun,,,,nursing home / old people's home,bakım evi / huzurevi,дом престарелых / пансионат,будинок для людей похилого віку / пансіонат,خانه سالمندان / آسایشگاه,دار رعاية المسنين,8,4,
-193,B1,17,A,main,alternativ,,,Other,,,,alternative,alternatif,альтернативный,альтернативний,جایگزین / آلترناتیو,بديل,8,21,
-194,B1,17,A,main,Alternative,die,-n,Noun,,,,alternative,seçenek / alternatif,альтернатива,альтернатива,گزینه / جایگزین,بديل,9,21,
-195,B1,17,A,main,Ampel,die,-ndas,Noun,,,,traffic light,trafik ışığı,светофор,світлофор,چراغ راهنمایی,إشارة مرور,3,11,
-196,B1,17,A,main,an,,,Other,,,,at / on / to,-de / -e / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,في,1,21,
-197,B1,17,A,main,analysieren,,,Verb,analysiert,analysierte,hat analysiert,to analyze,analiz etmek / çözümlemek,анализировать,аналізувати,تحلیل کردن,يحلل,9,21,
-198,B1,17,A,main,anbieten,,,Verb,bietet an,bot an,hat angeboten,to offer,teklif etmek / sunmak,предлагать,пропонувати,پیشنهاد کردن / ارائه دادن,يعرض,6,21,
-199,B1,17,A,main,Adresse,die,-n,Noun,,,,address,adres,адрес,адреса,نشانی,عنوان,5,13,
-200,B1,17,Ä,main,ähnlich,,,Other,,,,similar,benzer,похожий,схожий / подібний,مشابه,مشابه,5,21,
-201,B1,17,A,main,Ahnung,die,,Noun,,,,idea / clue / notion,fikir / ipucu / kavram,представление / понятие / догадка,уявлення / поняття / здогад,تصور / سرنخ / برداشت,فكرة,4,21,
-202,B1,17,A,main,Aktion,die,-enaktiv,Noun,,,,action / campaign,eylem / kampanya,акция / кампания,акція / кампанія,اقدام / کمپین,حملة,7,21,
-203,B1,17,A,main,Aktivität,die,-en,Noun,,,,activity,aktivite / etkinlik,активность,активність / діяльність,فعالیت,نشاط,8,15,
-204,B1,17,A,main,aktuell,,,Other,,,,current / up-to-date,güncel / günümüz,актуальный / текущий,актуальний / поточний,به‌روز / جاری,حالي,5,21,
-205,B1,17,A,main,akzeptieren,,,Verb,akzeptiert,akzeptierte,hat akzeptiert,to accept,kabul etmek,принимать / соглашаться,приймати / погоджуватися,پذیرفتن,يقبل,9,21,
-206,B1,17,A,main,Alarm,der,-e,Noun,,,,alarm,alarm,сигнал тревоги,сигнал тривоги,هشدار,إنذار,3,21,
-207,B1,17,A,main,Alkohol,der,,Noun,,,,alcohol,alkol,алкоголь,алкоголь,الکل,كحول,5,5,
-208,B1,17,A,main,all,,,Other,,,,all,tüm / hepsi,весь / все,весь / всі,همه,كل,1,21,
-209,B1,17,A,main,allein,,,Other,,,,alone,yalnız / tek başına,одинокий,самотній / один,تنها / به تنهایی,وحده,4,21,
-210,B1,17,A,main,aller,,,Other,,,,all / of all (prefix),tümü / hepsinin (önek),все / всех (в сложных словах),всі / всіх (у складних словах),همه / همگان-,كل,1,21,
-211,B1,17,A,main,allerdings,,,Other,,,,however / admittedly,ancak / bununla birlikte,однако / правда,однак / щоправда,با این حال / البته,بيد أن,8,21,
-212,B1,17,A,main,allgemein,,,Other,,,,general / in general,genel / genel olarak,общий / в целом,загальний / загалом,کلی / به طور کلی,عام,8,21,
-213,B1,17,A,main,Alltag,der,,Noun,,,,everyday life,günlük hayat,повседневная жизнь,повсякденне життя,زندگی روزمره,الحياة اليومية,7,2,
-214,B1,17,L,main,langweilig,,,Other,,,,boring,sıkıcı,скучный,нудний,خسته‌کننده,ممل,8,21,
-215,B1,17,A,main,alltägliche,,,Other,,,,everyday,günlük,повседневный,повсякденний,روزمره,يومي,9,21,
-216,B1,17,I,main,in,,,Other,,,,in,-de / -da,в / внутри,в / всередині,در,في,1,21,
-217,B1,17,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً / دیگر,بالفعل,1,21,
-218,B1,17,A,main,auch,,,Other,,,,also,ayrıca,тоже,також,همچنین,أيضاً,2,21,
-219,B1,17,H,main,helfen,,,Verb,,,,to help,yardım etmek,помогать,допомагати,کمک کردن,يساعد,4,21,
-220,B1,17,I,main,im,,,Other,,,,in the,-da / -de,в / в пределах,в / в межах,در,في,1,21,
-221,B1,17,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий,خوب,جيد,2,21,
-222,B1,17,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.),حرف تعریف معین,ال,1,21,
-223,B1,17,A,main,amüsiert,,,Other,,,,amused,eğlenmiş,развлечённый / amused,розважений / amused,سرگرم / خوشحال,مسرور,6,19,
-224,B1,17,U,main,und,,,Other,,,,and,ve,и,і / та,و,و,1,21,
-225,B1,17,A,main,akzeptieren,,,Verb,,,,to accept,kabul etmek,принимать / соглашаться,приймати / погоджуватися,پذیرفتن,يقبل,9,21,
-226,B1,17,N,main,nicht,,,Other,,,,not,değil,не,не,نه / نیست,لا,1,21,
-227,B1,17,R,main,reinigen,,,Verb,,,,to clean,temizlemek,чистить / убирать,чистити / прибирати,تمیز کردن,ينظف,6,6,
-228,B1,17,S,main,schaffe,,,Other,,,,manage,başarmak,справляюсь / удаётся,справляюся / вдається,از عهده برآمدن,يتمكن,5,21,
-229,B1,17,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً,بالفعل,1,21,
-230,B1,17,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив,دیده‌شده / دیده,رأى,5,21,
-231,B1,17,A,main,allerdings,,,Other,,,,however,ancak,однако,однак,با این حال,بيد أن,8,21,
-232,B1,17,H,main,hier,,,Other,,,,here,burada,здесь,тут,اینجا,هنا,2,21,
-233,B1,17,K,main,kochen,,,Verb,,,,to cook,yemek pişirmek,готовить,готувати,آشپزی کردن,يطبخ,4,5,
-234,B1,18,Ä,main,ängstlich,,,Other,,,,anxious / fearful,kaygılı / korkak,тревожный / боязливый,тривожний / боязливий,مضطرب / ترسو,قلق,8,19,
-235,B1,18,A,main,anhaben,,,Verb,,,hat an,to wear / have on,giymek / üstünde olmak,быть в одежде / носить на себе,бути одягненим / носити на собі,پوشیدن / تن داشتن,يرتدي,5,21,
-236,B1,18,A,main,anklicken,,,Verb,klickt an,klickte an,hat angeklickt,to click on,tıklamak,нажать (кликнуть),натиснути (клікнути),روی چیزی کلیک کردن,ينقر على,8,17,
-237,B1,18,A,main,ankommen,,,Verb,kommt an,kam an,ist angekommen,to arrive,varmak / gelmek,прибывать,прибувати,رسیدن,يصل,6,11,
-238,B1,18,A,main,Ankunft,die,,Noun,,,,arrival,varış / geliş,прибытие,прибуття,ورود / رسیدن,وصول,5,11,
-239,B1,18,A,main,ankündigen,,,Verb,kündigt an,kündigte an,hat angekündigt,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати,اعلام کردن,يعلن,8,21,
-240,B1,18,A,main,Anlage,die,-n,Noun,,,,attachment / facility / investment,ek / tesis / yatırım,вложение / объект / инвестиция,вкладення / об'єкт / інвестиція,پیوست / تأسیسات / سرمایه‌گذاری,مرفق,4,6,
-241,B1,18,A,main,Anleitung,die,-en,Noun,,,,instructions / guide,talimatlar / kılavuz,инструкция / руководство,інструкція / посібник,دستورالعمل / راهنما,تعليمات,8,13,
-242,B1,18,A,main,anmelden,,,Verb,meldet an,meldete an,hat angemeldet,to register,kayıt olmak / giriş yapmak,зарегистрироваться / войти,реєструватися / входити,ثبت‌نام کردن,يسجل,6,17,
-243,B1,18,A,main,Anmeldung,die,-en,Noun,,,,registration,kayıt,регистрация,реєстрація,ثبت‌نام,تسجيل,8,13,
-244,B1,18,A,main,annehmen,,,Verb,nimmt an,nahm an,hat angenommen,to accept / assume / take on,kabul etmek / varsaymak / üstlenmek,принимать / предполагать / брать на себя,приймати / припускати / брати на себе,پذیرفتن / فرض کردن / بر عهده گرفتن,يقبل,6,21,
-245,B1,18,A,main,Annonce,die,-n,Noun,,,,advertisement (newspaper),gazete ilanı,объявление в газете,оголошення в газеті,آگهی روزنامه,إعلان صحفي,5,13,
-246,B1,18,A,main,Anrede,die,"-nanrufen, ruft an, rief an,",Noun,,,,salutation / form of address,hitap / seslenme biçimi,обращение / форма обращения,форма звертання / звертання,خطاب / شیوه خطاب,صيغة الخطاب,4,13,
-247,B1,18,A,main,Anruf,der,-e,Noun,,,,phone call,telefon araması,телефонный звонок,телефонний дзвінок,تماس تلفنی,مكالمة هاتفية,3,13,
-248,B1,18,A,main,Anrufbeantworter,der,-,Noun,,,,answering machine / voicemail,telesekreter / sesli mesaj,автоответчик / голосовая почта,автовідповідач,منشی تلفنی / پست صوتی,جهاز رد آلي,10,13,
-249,B1,18,A,main,Ansage,die,-nder,Noun,,,,announcement,duyuru / anons,объявление,оголошення,اعلام / اطلاعیه,إعلان,7,13,
-250,B1,18,A,main,Angebot,das,-e,Noun,,,,offer / deal,teklif / fırsat,предложение,пропозиція / угода,پیشنهاد / معامله,عرض,5,12,
-251,B1,18,A,main,ander,,,Other,,,,other (variant),diğer (varyant),другой (вариант),інший (варіант),دیگر / نوع دیگر,آخر,1,21,
-252,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan / diğer taraftan,с другой стороны,з іншого боку,از طرف دیگر,من ناحية أخرى,10,21,
-253,B1,18,Ä,main,ändern,,,Verb,ändert,änderte,hat geändert,to change / alter,değiştirmek,менять / изменять,змінювати,تغییر دادن,يغير,4,21,
-254,B1,18,Ä,main,Änderung,die,-en,Noun,,,,change / alteration,değişiklik,изменение,зміна,تغییر,تغيير,6,21,
-255,B1,18,A,main,anders,,,Other,,,,differently / otherwise,farklı / başka türlü,по-другому / иначе,по-іншому / інакше,متفاوت / طور دیگر,بشكل مختلف,4,21,
-256,B1,18,A,main,anerkennen,,,Verb,erkennt an,erkannte an,hat anerkannt,to recognize / acknowledge,tanımak / kabul etmek,признавать / признавать заслуги,визнавати / визнавати заслуги,به رسمیت شناختن / تأیید کردن,يعترف,8,21,
-257,B1,18,A,main,anfangen,,,Verb,fängt an,fing an,hat angefangen,to begin / start,başlamak,начинать,починати,شروع کردن,يبدأ,6,2,
-258,B1,18,A,main,Anfang,der,¨-e,Noun,,,,beginning / start,başlangıç,начало,початок,آغاز / شروع,بداية,4,2,
-259,B1,18,A,main,anfangs,,,Other,,,,at first / initially,başlangıçta / ilk başta,сначала / вначале,спочатку / на початку,در ابتدا,في البداية,5,21,
-260,B1,18,A,main,angeben,,,Verb,gibt an,gab an,hat angegeben,to state / indicate / show off,belirtmek / göstermek / hava atmak,указывать / сообщать / хвастаться,вказувати / повідомляти / хизуватися,اظهار کردن / مشخص کردن / پز دادن,يذكر,5,21,
-261,B1,18,A,main,Angabe,die,-n,Noun,,,,statement / detail / information,beyan / bilgi / ayrıntı,сведение / деталь / информация,відомість / деталь / інформація,اطلاعات / جزئیات / اظهار,معلومة,4,21,
-262,B1,18,A,main,Angehörige,der,-ndie,Noun,,,,relative / family member,akraba / aile üyesi,родственник / член семьи,родич / член сім'ї,بستگان / عضو خانواده,قريب,8,3,
-263,B1,18,A,main,angenehm,,,Other,,,,pleasant / agreeable,hoş / keyifli,приятный,приємний,دلپذیر / خوشایند,لطيف,6,21,
-264,B1,18,P,main,passiert,,,Other,,,,happened,oldu,случилось,сталося,اتفاق افتاد,حدث,6,21,
-265,B1,18,G,main,geht,,,Other,,,,goes,gidiyor,идёт / ходит,іде / ходить,می‌رود,يذهب,2,21,
-266,B1,18,W,main,wird,,,Other,,,,becomes / will,olacak,становится / будет,стає / буде,می‌شود / خواهد شد,يصبح,2,21,
-267,B1,18,S,main,schneller,,,Other,,,,faster,daha hızlı,быстрее,швидше,سریع‌تر,أسرع,8,21,
-268,B1,18,M,main,meine,,,Other,,,,my,benim,мой,мій / моя / моє,مال من / من,لي,1,21,
-269,B1,18,A,main,ankündigen,,,Verb,,,,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати,اعلام کردن,يعلن,8,21,
-270,B1,18,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن,يعتقد,4,21,
-271,B1,18,U,main,unbedingt,,,Other,,,,absolutely,kesinlikle,обязательно / во что бы то ни стало,обов'язково / за всяку ціну,حتماً / قطعاً,بالتأكيد,8,21,
-272,B1,18,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها,شقق,8,6,
-273,B1,18,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забувати,فراموش کردن,ينسى,7,21,
-274,B1,18,G,main,günstige,,,Other,,,,affordable,uygun fiyatlı,доступный по цене,доступний за ціною,مقرون‌به‌صرفه,بأسعار معقولة,6,21,
-275,B1,18,G,main,gegangen,,,Verb,,,,gone,gitmiş,ушёл / ушла / пошёл,пішов / пішла,رفته,ذهب,6,21,
-276,B1,18,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.),حرف تعریف معین,ال,1,21,
-277,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan,с другой стороны,з іншого боку,از سوی دیگر,من ناحية أخرى,10,21,
-278,B1,18,G,main,geändert,,,Other,,,,changed,değiştirilmiş,изменённый,змінений,تغییریافته,تغير,6,21,
-279,B1,18,A,main,anerkannt,,,Other,,,,recognized,tanınmış,признанный,визнаний,به‌رسمیت‌شناخته‌شده,معترف به,8,21,
-280,B1,18,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто,بسیاری / زیاد,كثير,1,21,
-281,B1,18,D,main,dagegen,,,Verb,dass ich nach,,,against it,karşısında / aleyhinde,против этого,проти цього,بر ضد آن / در مقابل آن,ضد ذلك,5,21,
-282,B1,18,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,في,1,21,
-283,B1,19,A,main,Anwältin,die,-nen,Noun,,,,lawyer (female),avukat (kadın),адвокат (жен.),адвокат (жін.),وکیل (زن),محامية,6,18,
-284,B1,19,A,main,anzeigen,,,Verb,zeigt an,zeigte an,hat angezeigt,to display / report (to police),görüntülemek / şikâyet etmek,показывать / заявлять в полицию,показувати / заявляти до поліції,نمایش دادن / گزارش کردن به پلیس,يعرض,6,21,
-285,B1,19,A,main,Anzeige,die,-n,Noun,,,,advertisement / notice / display,ilan / duyuru / ekran,объявление / уведомление,оголошення / повідомлення / дисплей,آگهی / اعلان / نمایشگر,إعلان,5,13,
-286,B1,19,A,main,anziehen,,,Verb,zieht an,zog an,hat angezogen,to attract / put on (clothes),çekmek / giymek,надевать,надягати / приваблювати,جذب کردن / پوشیدن,يجذب,6,7,
-287,B1,19,A,main,Anzug,der,¨-edas,Noun,,,,suit (clothing),takım elbise,костюм,костюм,کت‌وشلوار,بدلة,3,7,
-288,B1,19,A,main,Apparat,der,-e,Noun,,,,apparatus / device / phone,cihaz / alet / telefon,аппарат / устройство / телефон,апарат / пристрій / телефон,دستگاه / تلفن,جهاز,5,17,
-289,B1,19,A,main,Appetit,der,,Noun,,,,appetite,iştah,аппетит,апетит,اشتها,شهية,7,5,
-290,B1,19,A,main,Aprikose,die,-n,Noun,,,,apricot,kayısı,абрикос,абрикос,زردآلو,مشمش,7,5,
-291,B1,19,A,main,arbeiten,,,Verb,arbeitet,arbeitete,hat gearbeitet,to work,çalışmak,работать,працювати,کار کردن,يعمل,6,8,
-292,B1,19,A,main,Arbeit,die,-en,Noun,,,,work / job,iş / çalışma,работа / труд,робота / праця,کار / شغل,عمل,4,8,
-293,B1,19,A,main,Arbeiter,der,-,Noun,,,,worker (male),işçi (erkek),рабочий (муж.),робітник (чол.),کارگر (مرد),عامل,6,8,
-294,B1,19,A,main,Arbeiterin,die,-nen,Noun,,,,worker (female),işçi (kadın),работница (жен.),робітниця (жін.),کارگر (زن),عاملة,8,8,
-295,B1,19,A,main,Arbeitserlaubnis,die,,Noun,,,,work permit,çalışma izni,разрешение на работу,дозвіл на роботу,مجوز کار,تصريح عمل,10,8,
-296,B1,19,A,main,arbeitslos,,,Other,,,,unemployed,işsiz,безработный,безробітний,بیکار,عاطل عن العمل,8,8,
-297,B1,19,A,main,Arbeitslosigkeit,die,,Noun,,,,unemployment,işsizlik,безработица,безробіття,بیکاری,بطالة,10,8,
-298,B1,19,A,main,Arbeitsplatz,der,¨-e,Noun,,,,workplace / job,iş yeri / iş,рабочее место,робоче місце,محل کار / شغل,مكان عمل,10,8,
-299,B1,19,A,main,Arbeitsstelle,die,"-nanschaffen, schafft an,schaffte an, hat angeschafft",Noun,,,,job / position,iş yeri / görev,рабочее место / должность,робоче місце / посада,سمت / موقعیت شغلی,وظيفة,10,8,
-300,B1,19,A,main,anschließen,,,Verb,schließt an,schloss an,hat angeschlossen,to connect / attach,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن / متصل کردن,يوصل,9,21,
-301,B1,19,A,main,Anschluss,der,¨-e,Noun,,,,connection / follow-up,bağlantı / devam,пересадка / соединение,пересадка / з'єднання,اتصال / ادامه,اتصال,8,17,
-302,B1,19,A,main,anschnallen,,,Verb,schnallt an,schnallte an,hat angeschnallt,to fasten (seatbelt),bağlamak (emniyet kemeri),пристёгиваться,пристібатися,کمربند ایمنی بستن,ربط حزام الأمان,9,21,
-303,B1,19,A,main,ansehen,,,Verb,sieht an,sah an,hat angesehen,to look at / watch,bakmak / izlemek,смотреть / смотреть на,дивитися / дивитися на,نگاه کردن / تماشا کردن,ينظر إلى,5,21,
-304,B1,19,A,main,ansprechen,,,Verb,spricht an,sprach an,hat angesprochen,to address / approach / speak to,hitap etmek / yanına gitmek / söz açmak,обращаться к / подходить / заговаривать,звертатися до / підходити / заговорювати,خطاب کردن / نزدیک شدن / سر صحبت را باز کردن,يخاطب,8,21,
-305,B1,19,A,main,Anspruch,der,¨-e,Noun,,,,claim / right / demand,hak / talep / iddia,претензия / право / требование,претензія / право / вимога,ادعا / حق / مطالبه,مطالبة,6,21,
-306,B1,19,A,main,anstellen,,,Verb,stellt an,stellte an,hat angestellt,to hire / employ / turn on,işe almak / devreye sokmak,нанимать / включать / ставить,наймати / вмикати / ставити,استخدام کردن / روشن کردن,يوظف,8,8,
-307,B1,19,A,main,Angestellte,der,-n,Noun,,,,employee (male),çalışan (erkek),сотрудник / служащий (муж.),співробітник / службовець (чол.),کارمند (مرد),موظف,9,8,
-308,B1,19,A,main,Angestellte,die,-n,Noun,,,,employee (female),çalışan (kadın),сотрудница / служащая (жен.),співробітниця / службовиця (жін.),کارمند (زن),موظفة,9,8,
-309,B1,19,A,main,anstrengend,,,Other,,,,exhausting / tiring,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده / طاقت‌فرسا,مرهق,9,21,
-310,B1,19,A,main,Antrag,der,¨-e,Noun,,,,application / request / motion,başvuru / talep / önerge,заявление / ходатайство / заявка,заява / клопотання / заявка,درخواست / تقاضا / پیشنهاد رسمی,طلب,7,13,
-311,B1,19,A,main,anwenden,,,Verb,wendet an,wandte an,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,به کار بردن / استفاده کردن,يطبق,6,21,
-312,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır bulunuyor,присутствующий,присутній,حاضر,حاضر,6,21,
-313,B1,19,A,main,antworten,,,Verb,antwortet,antwortete,hat geant-wortet,to answer,cevap vermek,отвечать,відповідати,پاسخ دادن,يجيب,8,13,
-314,B1,19,A,main,Antwort,die,,Noun,,,,answer / reply,cevap / yanıt,ответ,відповідь,پاسخ,إجابة,5,13,
-315,B1,19,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها,شقق,8,6,
-316,B1,19,B,main,bekommen,,,Verb,,,,to get / receive,almak / elde etmek,получать,отримувати,گرفتن / دریافت کردن,يحصل على,6,21,
-317,B1,19,E,main,erkältest,,,Other,,,,catch a cold,üşütmek,простужаешься / подхватываешь простуду,застужуєшся / підхоплюєш застуду,سرما خوردن,يصاب بزكام,8,4,
-318,B1,19,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений,خریداری‌شده,مشترى,5,21,
-319,B1,19,G,main,gemietet,,,Other,,,,rented,kiralanmış,снятый / арендованный,орендований / знятий,اجاره‌شده,مستأجر,6,21,
-320,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک,واحد,1,21,
-321,B1,19,L,main,leiser,,,Other,,,,quieter,daha sessiz,тише,тихіше,آرام‌تر,أهدأ,4,21,
-322,B1,19,N,main,nichts,,,Other,,,,nothing,hiçbir şey,ничего,нічого,هیچ‌چیز,لا شيء,4,21,
-323,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک,واحد,1,21,
-324,B1,19,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,
-325,B1,19,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,у / при / поруч,نزد / کنار,عند,1,21,
-326,B1,19,G,main,gefunden,,,Other,,,,found,bulundu,найденный / нашли,знайдений / знайшли,یافت‌شده / پیدا شده,موجود,6,21,
-327,B1,19,A,main,anschließen,,,Verb,,,,to connect,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن,يوصل,9,21,
-328,B1,19,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,على,1,21,
-329,B1,19,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن,يملك,1,21,
-330,B1,19,A,main,an,,,Other,,,,on / at,,на / у,на / у,روی / در,على,1,21,
-331,B1,19,E,main,stellen,,,Verb,,,,to place / put,,ставить / размещать,ставити / розміщувати,گذاشتن / قرار دادن,يضع,5,21,
-332,B1,19,A,main,anstellen,,,Verb,,,,to hire / employ,işe almak,нанимать / включать,наймати / вмикати,استخدام کردن,يوظف,8,8,
-333,B1,19,M,main,musst,,,Other,,,,must / have to,gerekiyor,должен / обязан,повинен / зобов'язаний,باید,يجب,1,21,
-334,B1,19,A,main,anstrengend,,,Other,,,,exhausting,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده,مرهق,9,21,
-335,B1,19,A,main,anwenden,,,Verb,,,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,استفاده کردن / به کار بردن,يطبق,6,21,
-336,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır,присутствующий,присутній,حاضر,حاضر,6,21,
-337,B1,19,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن,يعني,4,21,
-338,B1,19,B,main,bekommen,,,Verb,,,,to get,almak,получать,отримувати,گرفتن,يحصل على,6,21,
-339,B1,20,A,main,auffallen,,,Verb,fällt auf,fiel auf,ist aufgefallen,to stand out / be noticeable,dikkat çekmek / göze çarpmak,бросаться в глаза / быть заметным,кидатися у вічі / бути помітним,جلب توجه کردن / به چشم آمدن,يلفت الانتباه,8,21,
-340,B1,20,A,main,auffordern,,,Verb,fordert auf,forderte auf,hat aufgefordert,to call on / request,çağırmak / talep etmek,призывать / просить,закликати / просити,فراخواندن / درخواست کردن,يطلب,8,21,
-341,B1,20,A,main,Aufforderung,die,-en,Noun,,,,request / demand,çağrı / talep,просьба / требование,прохання / вимога,درخواست / مطالبه,طلب,10,21,
-342,B1,20,A,main,aufführen,,,Verb,führt auf,führte auf,hat aufgeführt,to perform / list,sahnelemek / listelemek,исполнять / перечислять,виконувати / перелічувати,اجرا کردن / فهرست کردن,يؤدي,8,16,
-343,B1,20,A,main,Aufgabe,die,-n,Noun,,,,task / exercise / responsibility,görev / alıştırma / sorumluluk,задание / упражнение,завдання / вправа / відповідальність,وظیفه / تمرین / مسئولیت,مهمة,5,13,
-344,B1,20,A,main,aufgeben,,,Verb,gibt auf,gab,hat aufgegeben,to give up / hand in / post (mail),vazgeçmek / teslim etmek / posta vermek,сдаваться / сдавать / отправлять по почте,здаватися / здавати / відправляти поштою,تسلیم شدن / تحویل دادن / پست کردن,يتخلى عن,6,21,
-345,B1,20,A,main,aufhalten,,,Verb,hält auf,hielt,hat aufgehalten,to stop / delay / stay,durdurmak / geciktirmek / kalmak,задерживать / останавливаться / пребывать,затримувати / зупинятися / перебувати,متوقف کردن / تأخیر انداختن / ماندن,يوقف,8,21,
-346,B1,20,A,main,aufheben,,,Verb,hebt auf,hob auf,hat aufgehoben,to pick up / keep / abolish,kaldırmak / saklamak / lağvetmek,поднимать / сохранять / отменять,піднімати / зберігати / скасовувати,برداشتن / نگه داشتن / لغو کردن,يرفع,6,21,
-347,B1,20,A,main,aufhören,,,Verb,hört auf,hörte auf,hat aufgehört,to stop / quit,bırakmak / durmak,переставать / прекращать,переставати / припиняти,متوقف شدن / دست کشیدن,يتوقف,6,2,
-348,B1,20,A,main,aufladen,,,Verb,lädt auf,lud auf,hat aufgela,to charge (battery) / load,şarj etmek / yüklemek,заряжать / загружать,заряджати / завантажувати,شارژ کردن / بار کردن,يشحن,6,17,
-349,B1,20,A,main,auflösen,,,Verb,löst auf,löste auf,hat aufgelöst,to dissolve / disband,çözmek / dağıtmak,растворять / распускать,розчиняти / розпускати,حل کردن / منحل کردن,يذوب,6,21,
-350,B1,20,A,main,aufmerksam,,,Other,,,,attentive / alert,dikkatli / uyanık,внимательный / настороженный,уважний / насторожений,هوشیار / دقیق,منتبه,8,21,
-351,B1,20,A,main,aufnehmen,,,Verb,nimmt auf,nahm auf,hat aufgenommen,to record / take in / accept,kaydetmek / kabul etmek / almak,записывать / принимать / впускать,записувати / приймати / впускати,ضبط کردن / پذیرفتن / داخل کردن,يسجل,8,21,
-352,B1,20,A,main,Aufnahme,die,-n der,Noun,,,,recording / admission / photo,kayıt / kabul / fotoğraf,запись / приём / фотография,запис / прийом / фотографія,ضبط / پذیرش / عکس,تسجيل,6,21,
-353,B1,20,Ä,main,ärgern,,,Verb,ärgert,ärgerte,hat geärgert,to annoy / get angry,kızdırmak / sinirlenmek,злиться / раздражать,злитися / дратувати,عصبانی کردن / عصبانی شدن,يغضب,4,19,
-354,B1,20,Ä,main,Ärger,der,,Noun,,,,annoyance / trouble / anger,kızgınlık / sıkıntı / öfke,раздражение / неприятность / злость,роздратування / неприємність / злість,دردسر / ناراحتی / عصبانیت,غضب,3,19,
-355,B1,20,Ä,main,ärgerlich,,,Other,,,,annoying / angry,sinir bozucu / kızgın,раздражающий / сердитый,дратівливий / сердитий,آزاردهنده / عصبانی,مزعج,8,19,
-356,B1,20,A,main,arm,,,Other,,,,poor,fakir / yoksul,бедный,бідний,فقیر,فقير,1,4,
-357,B1,20,A,main,Arm,der,-e,Noun,,,,arm,kol,рука,рука,بازو,ذراع,1,4,
-358,B1,20,A,main,Art,die,-en,Noun,,,,type / kind / species / manner,tür / çeşit / tarz,вид / род / способ,вид / рід / спосіб,نوع / شیوه,نوع,1,21,
-359,B1,20,A,main,Artikel,der,-,Noun,,,,article (newspaper / grammar),makale / artikel (gramer),статья / артикль,стаття / артикль,مقاله / حرف تعریف,مقالة,5,13,
-360,B1,20,A,main,Arzt,der,¨-e,Noun,,,,doctor (male),doktor (erkek),врач (муж.),лікар (чол.),پزشک (مرد),طبيب,2,8,
-361,B1,20,Ä,main,Ärztin,die,-nen,Noun,,,,doctor (female),doktor (kadın),врач (жен.),лікарка (жін.),پزشک (زن),طبيبة,4,8,
-362,B1,20,A,main,Asyl,das,,Noun,,,,asylum,sığınma / iltica,убежище,притулок / азил,پناهندگی / پناهگاه,لجوء,2,18,
-363,B1,20,A,main,atmen,,,Verb,atmet,atmete,hat geatmet,to breathe,nefes almak / solumak,дышать,дихати,نفس کشیدن,يتنفس,3,4,
-364,B1,20,A,main,Atem,der,,Noun,,,,breath,nefes / solunum,дыхание,дихання,نفس,نفس,2,4,
-365,B1,20,A,main,auch,,,Other,,,,also / too,de / da / ayrıca,тоже,також,هم / همچنین,أيضاً,2,21,
-366,B1,20,A,main,auf,,,Other,,,,on / up,üzerinde,на / вверх,на / вгору,روی / بالا,على,1,21,
-367,B1,20,A,main,angenehmen,,,Verb,,,,pleasant,hoş,приятный,приємний,خوشایند,ممتع,8,21,
-368,B1,20,B,main,blass,,,Other,,,,pale,solgun,бледный,блідий,پریده‌رنگ,شاحب,3,21,
-369,B1,20,Z,main,zu,,,Other,,,,too / to,-e / fazla,слишком / к,занадто / до,بیش از حد / به,جداً,1,21,
-370,B1,20,A,main,aufgegeben,,,Verb,,,,given up,vazgeçilmiş,сданный / оставленный,зданий / залишений,رهاشده / تسلیم‌شده,متخلى عنه,8,21,
-371,B1,20,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,
-372,B1,20,W,main,wurde,,,Other,,,,was / became,oldu,был / стала,був / стала,شد / بود,كان,1,21,
-373,B1,20,D,main,dass,,,Other,,,,that,ki / -diği,что,що,که,أن,2,21,
-374,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده,مسجل,9,21,
-375,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده,مسجل,9,21,
-376,B1,20,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди,همیشه,دائماً,1,21,
-377,B1,20,H,main,habe,,,Other,,,,have,sahip,имею,маю,دارم,أملك,2,21,
-378,B1,20,G,main,gelesen,,,Verb,,,,read,okunmuş,прочитанный / читал,прочитаний / читав,خوانده / خوانده‌شده,مقروء,5,21,
-379,B1,20,D,main,durch,,,Other,,,,through,vasıtasıyla,через / посредством,через / за допомогою,از طریق / از میان,من خلال,2,21,
-380,B1,20,A,main,auch,,,Other,,,,also,ayrıca,тоже,також,همچنین,أيضاً,2,21,
-381,B1,20,E,main,es,,,Other,,,,it,o / bunu,это,це,آن / این,هو,1,21,
-382,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / واجد صلاحیت,مدرب,9,21,
-383,B1,21,A,main,ausdrucken,,,Verb,druckt aus,druckte aus,hat ausgedruckt,to print out,yazdırmak / çıktı almak,распечатывать,роздруковувати,پرینت گرفتن,يطبع,8,17,
-384,B1,21,A,main,Ausdruck,der,¨-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی,تعبير,7,13,
-385,B1,21,A,main,Ausdruck,der,-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی,تعبير,7,13,
-386,B1,21,A,main,auseinander,,,Other,,,,apart / separate,ayrı / birbirinden uzak,врозь / отдельно,нарізно / окремо,از هم جدا,منفصل,9,21,
-387,B1,21,A,main,Ausfahrt,die,-en,Noun,,,,exit (road) / departure,çıkış (yol) / ayrılış,выезд / отправление,виїзд / відправлення,خروجی / حرکت,مخرج,6,11,
-388,B1,21,A,main,ausfallen,,,Verb,fällt aus,fiel aus,ist ausgefallen,to be cancelled / fall out,iptal olmak / düşmek,отменяться / выпадать,скасовуватися / випадати,لغو شدن / افتادن,يُلغى,8,21,
-389,B1,21,A,main,Ausflug,der,¨-e,Noun,,,,excursion / trip,gezi / piknik,экскурсия / прогулка,екскурсія / прогулянка,گردش / سفر کوتاه,رحلة,5,15,
-390,B1,21,A,main,ausfüllen,,,Verb,füllt aus,füllte aus,hat ausgefüllt,to fill in,doldurmak,заполнить,заповнювати,پر کردن,يملأ,8,21,
-391,B1,21,A,main,Ausgabe,die,-n,Noun,,,,edition / expenditure / issue,baskı / harcama / sayı,издание / расход / выпуск,видання / витрата / випуск,نسخه / هزینه / شماره,إصدار,5,12,
-392,B1,21,A,main,Ausgang,der,¨-e,Noun,,,,exit / outcome,çıkış / sonuç,выход,вихід,خروج / نتیجه,مخرج,5,6,
-393,B1,21,A,main,ausgeben,,,Verb,gibt aus,gab aus,hat ausgegeben,to spend (money) / give out,para harcamak / dağıtmak,тратить / раздавать,витрачати / роздавати,خرج کردن / توزیع کردن,ينفق,6,12,
-394,B1,21,A,main,ausgehen,,,Verb,geht aus,ging aus,ist ausgegangen,to go out,dışarıya çıkmak,выходить / гулять,виходити / гуляти,بیرون رفتن,يخرج,6,21,
-395,B1,21,A,main,ausgezeichnet,,,Other,,,,excellent,mükemmel,отличный,відмінний / чудовий,عالی,ممتاز,10,21,
-396,B1,21,A,main,Aushilfe,die,-ndie,Noun,,,,temporary helper / temp,geçici yardımcı,временный помощник,тимчасовий помічник,کمک‌کار موقت,مساعد مؤقت,6,8,
-397,B1,21,A,main,Ausland,das,"passt auf,",Noun,,,,abroad,yurt dışı,за границей,за кордоном,خارج از کشور,خارج البلاد,5,10,
-398,B1,21,A,main,aufräumen,,,Verb,räumt auf,räumte auf,hat aufgeräumt,to tidy up / clear up,toparlamak / düzenlemek,убирать / приводить в порядок,прибирати / наводити порядок,مرتب کردن / جمع‌وجور کردن,يرتب,8,6,
-399,B1,21,A,main,aufregen,,,Verb,regt auf,regte auf,hat aufgeregt,to excite / upset / get worked up,heyecanlandırmak / sinerlenmek,волновать / расстраивать / волноваться,хвилювати / розстроювати / хвилюватися,هیجان‌زده کردن / ناراحت کردن / عصبی شدن,يثير,6,21,
-400,B1,21,A,main,aufstehen,,,Verb,steht auf,stand auf,ist aufgestan,to get up / stand up,kalkmak / ayağa kalkmak,вставать,вставати,بلند شدن / از خواب بیدار شدن,يقوم,8,21,
-401,B1,21,A,main,Auftrag,der,¨-e,Noun,,,,order / commission / task,sipariş / görev / komisyon,заказ / поручение / задание,замовлення / доручення / завдання,سفارش / مأموریت / وظیفه,أمر,7,8,
-402,B1,21,A,main,auftreten,,,Verb,tritt auf,trat auf,ist aufgetreten,to appear / perform,görünmek / sahneye çıkmak,появляться / выступать,з'являтися / виступати,ظاهر شدن / اجرا کردن,يظهر,8,21,
-403,B1,21,A,main,Auftritt,der,-e,Noun,,,,performance / appearance,sahne çıkışı / gösteri,выступление / появление,виступ / поява,اجرا / حضور,أداء,7,8,
-404,B1,21,A,main,aufwachen,,,Verb,wacht auf,wachte auf,ist aufgewacht,to wake up,uyanmak,просыпаться,прокидатися,بیدار شدن,يستيقظ,8,21,
-405,B1,21,A,main,aufwärts,,,Other,,,,upward,yukarıya doğru,вверх,вгору / вище,رو به بالا,لأعلى,7,21,
-406,B1,21,A,main,Aufzug,der,¨-e,Noun,,,,elevator / lift,asansör,лифт,ліфт,آسانسور,مصعد,4,6,
-407,B1,21,A,main,Auge,das,-n,Noun,,,,eye,göz,глаз,око,چشم,عين,2,4,
-408,B1,21,A,main,Augenblick,der,-e,Noun,,,,moment / instant,an / kısa süre,мгновение / момент,мить / момент,لحظه,لحظة,8,2,
-409,B1,21,A,main,aus,,,Other,,,,from / out of,-dan / dışarı,из,з,از / بیرون از,من,1,21,
-410,B1,21,A,main,abgeschlossen,,,Verb,,,,locked / completed,kilitlenmiş / tamamlanmış,закрытый / завершённый,замкнений / завершений,قفل‌شده / تکمیل‌شده,مغلق,10,21,
-411,B1,21,S,main,sicher,,,Other,,,,safe / secure,güvenli / emin,безопасный / надёжный,безпечний / надійний,امن / مطمئن,آمن,4,21,
-412,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / ماهر,مدرب,9,21,
-413,B1,21,A,main,ausdrucken,,,Verb,,,,to print out,yazdırmak,распечатывать,роздруковувати,پرینت گرفتن,يطبع,8,17,
-414,B1,21,G,main,gehört,,,Other,,,,belongs to,ait,принадлежит,належить,متعلق است به,ينتمي إلى,4,21,
-415,B1,21,V,main,von,,,Other,,,,from / of,-dan / -nın,из / от / со стороны,з / від / з боку,از / متعلق به,من,1,21,
-416,B1,21,N,main,nicht,,,Other,,,,not,değil,не,не,نه / نیست,لا,1,21,
-417,B1,21,U,main,Freunden,,,Verb,,,,friends,,друзья,друзі,دوستان,أصدقاء,6,3,
-418,B1,21,F,main,für,,,Other,,,,for,için,для,для,برای,لـ,1,21,
-419,B1,21,L,main,Land,,,Other,,,,land / country,ülke,страна / земля,країна / земля,کشور / زمین,بلد,2,20,
-420,B1,21,A,main,aufgepasst,,,Other,,,,paid attention,dikkat etmiş,обратил внимание,звернув увагу,توجه کرده,منتبه,8,21,
-421,B1,21,I,main,bringt,,,Other,,,,brings,,приносит,приносить,می‌آورد,يجلب,4,21,
-422,B1,21,A,main,auf,,,Other,,,,on / up,üzerinde,на / к,на / до,روی / بالا,على,1,21,
-423,B1,21,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً / دیگر,بالفعل,1,21,
-424,B1,21,A,main,aufregend,,,Other,,,,exciting,heyecan verici,захватывающий,захопливий,هیجان‌انگیز,مثير,8,21,
-425,B1,21,A,main,auf,,,Other,,,,on,üzerinde,на / к,на / до,روی,على,1,21,
-426,B1,21,K,main,können,,,Verb,,,,can,yapabilmek,мочь / быть в состоянии,могти / бути в змозі,توانستن,يستطيع,3,21,
-427,B1,21,U,main,und,,,Other,,,,and,ve,и,і / та,و,و,1,21,
-428,B1,21,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато,بسیاری,كثير,1,21,
-429,B1,21,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,
-430,B1,21,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / за допомогою,با,مع,1,21,
-431,B1,21,G,main,Augenblick,,,Other,,,,moment / instant,,мгновение / момент,мить / момент,لحظه,لحظة,8,2,
-432,B1,22,A,main,aussprechen,,,Verb,spricht aus,sprach aus,hat ausgesprochen,to pronounce / speak out,telaffuz etmek / açıkça söylemek,произносить,вимовляти,تلفظ کردن / صریح گفتن,ينطق,9,21,
-433,B1,22,A,main,Aussprache,die,,Noun,,,,pronunciation,telaffuz,произношение,вимова,تلفظ,نطق,8,13,
-434,B1,22,A,main,ausstellen,,,Verb,stellt aus,stellte aus,hat ausgestellt,to exhibit / issue (document),sergilemek / belge düzenlemek,выставлять / выдавать документ,виставляти / видавати документ,به نمایش گذاشتن / صادر کردن,يعرض,8,21,
-435,B1,22,A,main,Ausstellung,die,-en,Noun,,,,exhibition,sergi,выставка,виставка,نمایشگاه,معرض,9,16,
-436,B1,22,A,main,auswählen,,,Verb,wählt aus,wählte aus,hat ausgewählt,to select / choose,seçmek,выбирать,вибирати,انتخاب کردن,يختار,8,21,
-437,B1,22,A,main,Auswahl,die,-en,Noun,,,,selection / choice,seçim / seçenek,выбор,вибір,انتخاب / گزینه,اختيار,5,21,
-438,B1,22,A,main,Ausweis,der,-e,Noun,,,,ID card,kimlik,удостоверение личности,посвідчення особи,کارت شناسایی,بطاقة هوية,7,18,
-439,B1,22,A,main,ausziehen,,,Verb,zieht aus,zog aus,,to move out / take off (clothes),taşınmak / çıkarmak (kıyafet),съезжать / снимать (одежду),виселятися / знімати (одяг),اسباب‌کشی کردن / درآوردن لباس,ينتقل,8,7,
-440,B1,22,A,main,Auto,das,-s,Noun,,,,car,araba,автомобиль,автомобіль,ماشین,سيارة,2,11,
-441,B1,22,A,main,Autobahn,die,-en,Noun,,,,motorway / highway,otoyol,автомагистраль,автострада / магістраль,بزرگراه,طريق سريع,6,11,
-442,B1,22,A,main,Automat,der,-en,Noun,,,,vending machine / automatic device,otomat / otomatik cihaz,торговый автомат,торговий автомат,دستگاه خودکار,آلة بيع,5,17,
-443,B1,22,A,main,automatisch,,,Other,,,,automatic / automatically,otomatik / otomatik olarak,автоматический,автоматичний / автоматично,خودکار / به‌طور خودکار,تلقائي,9,17,
-444,B1,22,A,main,Autor,der,-en,Noun,,,,author (male),yazar (erkek),автор (муж.),автор (чол.),نویسنده (مرد),مؤلف,3,8,
-445,B1,22,A,main,Autorin,die,-nender,Noun,,,,author (female),yazar (kadın),автор (жен.),авторка (жін.),نویسنده (زن),مؤلفة,5,8,
-446,B1,22,A,main,Ausländerin,die,-nen,Noun,,,,foreigner (female),yabancı (kadın),иностранка (жен.),іноземка (жін.),خارجی (زن),أجنبية,9,18,
-447,B1,22,A,main,ausländisch,,,Other,,,,foreign,yabancı / yabancı ülkeye ait,иностранный,іноземний,خارجی,أجنبي,9,18,
-448,B1,22,A,main,ausmachen,,,Verb,macht aus,machte aus,hat ausgemacht,to switch off / agree on / matter,kapatmak / anlaşmak / önemli olmak,выключать,вимикати / домовлятися,خاموش کردن / توافق کردن / مهم بودن,يطفئ,8,17,
-449,B1,22,A,main,Ausnahme,die,-n,Noun,,,,exception,istisna / ayrıcalık,исключение,виняток,استثنا,استثناء,6,21,
-450,B1,22,A,main,ausreichen,,,Verb,reicht aus,re-,hat ausgereicht,to be sufficient,yeterli olmak,быть достаточным,бути достатнім,کافی بودن,يكفي,8,21,
-451,B1,22,A,main,ausreichend,,,Other,,,,sufficient / enough,yeterli / yeterince,достаточный,достатній,کافی,كافٍ,9,21,
-452,B1,22,A,main,ausrichten,,,Verb,richtet aus,richtete aus,hat ausgerichtet,to convey / align / arrange,iletmek / hizalamak / düzenlemek,передавать / выравнивать / организовывать,передавати / вирівнювати / організовувати,رساندن / تنظیم کردن / ترتیب دادن,ينقل,8,21,
-453,B1,22,A,main,ausruhen,,,Verb,ruht aus,ruhte aus,hat ausgeruht,to rest / relax,dinlenmek,отдыхать / расслабляться,відпочивати / розслаблятися,استراحت کردن,يستريح,6,21,
-454,B1,22,A,main,ausschließen,,,Verb,schließt aus,schloss aus,hat ausgeschlossen,to exclude,dışlamak / hariç tutmak,исключать,виключати,مستثنا کردن / کنار گذاشتن,يستبعد,10,21,
-455,B1,22,A,main,ausschließlich,,,Other,,,,exclusively / only,yalnızca / sadece,исключительно / только,виключно / тільки,منحصراً / فقط,حصراً,10,21,
-456,B1,22,A,main,aussehen,,,Verb,sieht aus,sah aus,hat ausgesehen,to look / appear,görünmek,выглядеть,виглядати,به نظر رسیدن / ظاهر شدن,يبدو,6,21,
-457,B1,22,A,main,außen,,,Verb,,,,outside,dışarıda / dışarıdan,снаружи,зовні / назовні,بیرون / از بیرون,خارج,3,21,
-458,B1,22,A,main,außerhalb,,,Other,,,,outside (of) / beyond,dışında / ötesinde,вне / за пределами,поза / за межами,خارج از / فراتر از,خارج,8,20,
-459,B1,22,Ä,main,äußerlich,,,Other,,,,external / outward,dışsal / görünüşte,внешний / наружный,зовнішній,ظاهری / بیرونی,خارجي,8,21,
-460,B1,22,A,main,außer,,,Other,,,,except / apart from,hariç / dışında,кроме / помимо,крім / окрім,به جز / علاوه بر,إلا,3,21,
-461,B1,22,A,main,außerdem,,,Other,,,,moreover / in addition / besides,üstelik / ayrıca / bunun yanı sıra,кроме того / вдобавок,крім того / до того ж,علاوه بر این,علاوة على ذلك,6,21,
-462,B1,22,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий,خوب,جيد,2,21,
-463,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,به نمایش گذاشته‌شده,معروض,9,21,
-464,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,نمایش‌داده‌شده,معروض,9,21,
-465,B1,22,D,main,dauert,,,Other,,,,lasts,sürüyor,длится,триває,طول می‌کشد,يستمر,4,21,
-466,B1,22,D,main,dich,,,Other,,,,you,seni,тебя,тебе,تو را,إياك,2,21,
-467,B1,22,A,main,ausgezogen,,,Verb,,,,moved out,taşınmış,выселившийся / съехавший,виселився / з'їхав,اسباب‌کشی کرده,انتقل,8,21,
-468,B1,22,A,main,automatisch,,,Other,,,,automatic,otomatik,автоматический,автоматичний,خودکار,تلقائي,9,17,
-469,B1,22,Z,main,zwei,,,Other,,,,two,iki,два,два,دو,اثنان,2,1,
-470,B1,22,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої,نوشیدنی‌ها,مشروبات,6,5,
-471,B1,22,E,main,etwas,,,Other,,,,something,bir şey,что-то / немного,щось / трохи,چیزی / کمی,شيء ما,3,21,
-472,B1,22,V,main,völlig,,,Other,,,,completely,tamamen,полностью / совершенно,повністю / цілком,کاملاً,تماماً,4,21,
-473,B1,22,W,main,wieder,,,Other,,,,again,tekrar,снова,знову,دوباره,مرة أخرى,4,21,
-474,B1,22,W,main,würde,,,Other,,,,would,olurdu,бы,б / би,می‌بود / می‌شد,سيكون,3,21,
-475,B1,22,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив,دیده / دیده‌شده,مرئي,5,21,
-476,B1,22,Ä,main,äußerlich,,,Other,,,,external,dışsal,внешний,зовнішній,بیرونی,خارجي,8,21,
-477,B1,22,G,main,geöffnet,,,Other,,,,opened,açık / açılmış,открытый,відкритий,باز / بازشده,مفتوح,6,21,
-478,B1,22,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن,يملك,1,21,
-479,B1,23,B,main,bar,,,Other,,,,cash / in cash,nakit / nakit olarak,наличными,готівкою,نقد / نقداً,نقداً,1,21,
-480,B1,23,B,main,Bargeld,das,,Noun,,,,cash,nakit para,наличными,готівка,پول نقد,نقود,5,12,
-481,B1,23,B,main,Bart,der,¨-e,Noun,,,,beard,sakal,борода,борода,ریش,لحية,2,4,
-482,B1,23,B,main,Basketball,der,¨-e,Noun,,,,basketball,basketbol,баскетбол,баскетбол,بسکتبال,كرة السلة,8,15,
-483,B1,23,B,main,basteln,,,Verb,bastelt,bastelte,hat gebastelt,to do crafts / make things,el işi yapmak / imalat yapmak,мастерить / делать поделки,майструвати / робити поробки,کاردستی درست کردن / ساختن,يصنع يدوياً,5,16,
-484,B1,23,B,main,Batterie,die,-nder,Noun,,,,battery,pil / batarya,батарейка,батарейка,باتری,بطارية,6,17,
-485,B1,23,B,main,bauen,,,Verb,baut,baute,hat gebaut,to build / construct,inşa etmek / yapmak,строить,будувати,ساختن,يبني,3,21,
-486,B1,23,B,main,Bau,der,,Noun,,,,construction / building,inşaat / yapı,строительство / постройка,будівництво / споруда,ساخت‌وساز / بنا,بناء,1,21,
-487,B1,23,B,main,Baustelle,die,-n,Noun,,,,construction site,inşaat alanı,стройка,будівельний майданчик,محل ساخت‌وساز,موقع بناء,8,8,
-488,B1,23,B,main,Bauer,der,-n,Noun,,,,farmer (male),çiftçi (erkek),фермер (муж.),фермер (чол.),کشاورز (مرد),مزارع,3,14,
-489,B1,23,B,main,Baum,der,¨-e,Noun,,,,tree,ağaç,дерево,дерево,درخت,شجرة,2,14,
-490,B1,23,B,main,beachten,,,Verb,beachtet,beachtete,hat beachtet,to pay attention to / follow (rules),dikkat etmek / uymak (kurallara),обращать внимание / соблюдать,звертати увагу / дотримуватися,توجه کردن به / رعایت کردن,ينتبه إلى,6,21,
-491,B1,23,B,main,Beamte,der,-n,Noun,,,,civil servant (male),memur (erkek),чиновник (муж.),чиновник (чол.),کارمند دولت (مرد),موظف حكومي,7,8,
-492,B1,23,B,main,Beamtin,die,-nen,Noun,,,,civil servant (female),memur (kadın),чиновница (жен.),чиновниця (жін.),کارمند دولت (زن),موظفة حكومية,7,8,
-493,B1,23,B,main,beantragen,,,Verb,beantragt,beantragte,hat beantragt,to apply for,başvurmak,подавать заявление,подавати заяву,درخواست کردن,يتقدم بطلب,8,21,
-494,B1,23,B,main,beantworten,,,Verb,beant-,wortet,hat beantwortet,to answer,cevaplamak / yanıtlamak,отвечать,відповідати,پاسخ دادن,يجيب على,9,21,
-495,B1,23,B,main,Bedarf,der,,Noun,,,,need / demand / requirement,ihtiyaç / talep / gereklilik,потребность / спрос / необходимость,потреба / попит / необхідність,نیاز / تقاضا / ضرورت,حاجة,7,21,
-496,B1,23,B,main,bedeuten,,,Verb,bedeutet,bedeutete,hat bedeutet,to mean,anlamına gelmek,значить / означать,значити / означати,معنی دادن / به معنی بودن,يعني,6,21,
-497,B1,23,B,main,Bedeutung,die,,Noun,,,,meaning / significance,anlam / önem,значение / смысл,значення / зміст,معنا / اهمیت,معنى,8,21,
-498,B1,23,B,main,backen,,,Verb,,backte,hat gebacken,to bake,fırınlamak / pişirmek,печь,пекти,پختن,يخبز,4,5,
-499,B1,23,B,main,Bäckerei,die,-en,Noun,,,,bakery,fırın / ekmekçi,пекарня,пекарня,نانوایی,مخبز,6,5,
-500,B1,23,B,main,baden,,,Verb,badet,badete,,to bathe / swim,yıkanmak / yüzmek,купаться / плавать,купатися / плавати,حمام کردن / شنا کردن,يستحم,3,21,
-501,B1,23,B,main,Bad,das,¨-er,Noun,,,,bathroom / bath,banyo,ванная / купание,ванна кімната / купання,حمام,حمام,1,6,
-502,B1,23,B,main,Badewanne,die,-n,Noun,,,,bathtub,küvet,ванна,ванна (посудина),وان حمام,حوض استحمام,8,6,
-503,B1,23,B,main,Bahn,die,-en,Noun,,,,train / railway,tren / demiryolu,поезд / железная дорога,потяг / залізниця,قطار / راه‌آهن,قطار,2,11,
-504,B1,23,S,main,Straßenbahn,die,-en,Noun,,,,tram / streetcar,tramvay,трамвай,трамвай,تراموا,ترام,9,11,
-505,B1,23,U,main,U-Bahn,die,-en,Noun,,,,subway / underground,metro,метро,метро,مترو,مترو,4,11,
-506,B1,23,B,main,Bahnhof,der,¨-e,Noun,,,,train station,tren garı / istasyon,вокзал,вокзал,ایستگاه قطار,محطة قطار,5,11,
-507,B1,23,B,main,Bahnsteig,der,-e,Noun,,,,platform,peron,платформа,перон / платформа,سکوی قطار,رصيف,8,11,
-508,B1,23,B,main,Balkon,der,-e,Noun,,,,balcony,balkon,балкон,балкон,بالکن,شرفة,4,6,
-509,B1,23,B,main,Ball,der,¨-edas,Noun,,,,ball,top,мяч,м'яч,توپ,كرة,2,15,
-510,B1,23,B,main,Bank,die,¨-e,Noun,,,,bank (financial),banka,банк,банк (фінансовий),بانک (مالی),بنك,2,12,
-511,B1,23,B,main,Bank,die,-en,Noun,,,,bench,bank / oturak,скамейка,лавка / лава,نیمکت,مقعد,2,12,
-512,B1,23,B,main,Bankleitzahl,die,-endie,Noun,,,,bank sort code,banka kodu / şube kodu,банковский код,банківський код,کد بانکی,رمز بنكي,10,12,
-513,B1,23,B,main,beantragt,,,Other,,,,applied for,başvurulmuş,подал заявление,подав заяву,درخواست شده,مُقدَّم,8,21,
-514,B1,23,B,main,beantwortet,,,Other,,,,answered,cevaplandı,ответил,відповів,پاسخ داده شده,مُجاب,9,21,
-515,B1,23,Z,main,-lich,,,Other,,,,(adjective/adverb suffix),,(суффикс прилагательного/наречия),(суфікс прикметника/прислівника),(پسوند صفت / قید),لاحقة,3,21,
-516,B1,23,H,main,heute,,,Other,,,,today,bugün,сегодня,сьогодні,امروز,اليوم,3,2,
-517,B1,23,S,main,sich,,,Other,,,,oneself,(dönüşlülük),себя,себе / собою,خود,نفسه,2,21,
-518,B1,23,S,main,sie,,,Other,,,,she / they,o / onlar,она / они,вона / вони,او / آن‌ها,هي,1,21,
-519,B1,23,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто,بسیار / خیلی,كثير,1,21,
-520,B1,23,M,main,möglich,,,Other,,,,possible,mümkün,возможный,можливий,ممکن,ممكن,5,21,
-521,B1,23,T,main,tanzen,,,Verb,,,,to dance,dans etmek,танцевать,танцювати,رقصیدن,يرقص,4,15,
-522,B1,23,V,main,vorne,,,Other,,,,at the front,önde,спереди,спереду,جلو,في الأمام,3,21,
-523,B1,23,Z,main,zahlen,,,Verb,,,,to pay,ödemek,платить,платити,پرداختن,يدفع,4,12,
-524,B1,24,B,main,behindern,,,Verb,behindert,behinderte,hat behindertbehindert,to hinder / obstruct,engellemek,мешать / препятствовать,заважати / перешкоджати,مانع شدن / ممانعت کردن,يعيق,8,21,
-525,B1,24,B,main,Behörde,die,-nbei,Noun,,,,authority / government office,makam / resmi kurum,ведомство / государственный орган,відомство / державний орган,اداره / مقام دولتی,سلطة حكومية,7,18,
-526,B1,24,B,main,beide,,,Other,,,,both,her ikisi (varyant),оба,обидва,هر دو,كلاهما,3,21,
-527,B1,24,B,main,Bein,das,-e,Noun,,,,leg,bacak,нога,нога,پا,ساق,2,4,
-528,B1,24,B,main,beinahe,,,Other,,,,almost / nearly,neredeyse / az kalsın,почти,майже,تقریباً / نزدیک بود,تقريباً,5,21,
-529,B1,24,B,main,Beispiel,das,-e,Noun,,,,example,örnek,пример,приклад,مثال / نمونه,مثال,6,13,
-530,B1,24,B,main,beißen,,,Verb,beißt,biss,hat gebissen,to bite,ısırmak,кусать,кусати,گاز گرفتن,يعض,7,21,
-531,B1,24,B,main,Beitrag,der,¨-e,Noun,,,,contribution / article / fee,katkı / makale / ücret,вклад / статья / взнос,внесок / стаття / внесок (фінансовий),مشارکت / مقاله / حق‌عضویت,مساهمة,7,21,
-532,B1,24,B,main,bekannt,,,Other,,,,known / famous,tanınan / ünlü,известный,відомий,معروف / مشهور,معروف,5,3,
-533,B1,24,B,main,Bekannte,der,-n,Noun,,,,acquaintance (male),tanıdık (erkek),знакомый (муж.),знайомий (чол.),آشنا (مرد),معارف,6,3,
-534,B1,24,B,main,Bekannte,die,-n,Noun,,,,acquaintance (female),tanıdık (kadın),знакомая (жен.),знайома (жін.),آشنا (زن),معارفة,6,3,
-535,B1,24,B,main,bekannt,,,Other,,,,known / famous,tanınan / ünlü,известный,відомий,معروف / مشهور,معروف,5,3,
-536,B1,24,B,main,bekommen,,,Verb,bekommt,bekam,hat bekommenbedienen,to get / receive,almak / elde etmek,получать,отримувати,گرفتن / دریافت کردن,يحصل على,6,21,
-537,B1,24,B,main,Bedienungsanleitung,die,,Noun,,,,operating instructions / manual,kullanım kılavuzu,инструкция по эксплуатации,інструкція з експлуатації / посібник,دستورالعمل استفاده / راهنما,دليل الاستخدام,10,17,
-538,B1,24,B,main,Bedingung,die,-en,Noun,,,,condition / requirement,koşul / şart,условие / требование,умова / вимога,شرط / الزام,شرط,8,21,
-539,B1,24,B,main,beenden,,,Verb,beendet,beendete,hat beendet,to end / finish,bitirmek / sona erdirmek,заканчивать,закінчувати / завершувати,پایان دادن / تمام کردن,ينهي,5,21,
-540,B1,24,B,main,befreit,,,Other,,,,freed / relieved,serbest bırakılmış / rahatlamış,освобождённый / испытывающий облегчение,звільнений / полегшений,آزاد شده / آسوده,محرر,5,19,
-541,B1,24,B,main,befriedigend,,,Other,,,,satisfactory,tatmin edici / yeterli,удовлетворительный,задовільний,رضایت‌بخش,مُرضٍ,10,21,
-542,B1,24,B,main,begegnen,,,Verb,begegnet,begegnete,ist begegnet,to meet / encounter,karşılaşmak / tanışmak,встречать / сталкиваться,зустрічати / стикатися,ملاقات کردن / روبرو شدن,يلتقي,6,21,
-543,B1,24,B,main,begeistert,,,Other,,,,enthusiastic / thrilled,hevesli / coşkulu,в восторге / воодушевлённый,у захваті / натхненний,مشتاق / شیفته,متحمس,8,19,
-544,B1,24,B,main,beginnen,,,Verb,beginnt,begann,hat begonnen,to begin,başlamak,начинать,починати,شروع کردن / آغاز کردن,يبدأ,6,2,
-545,B1,24,B,main,Beginn,der,,Noun,,,,beginning / start,başlangıç,начало,початок,شروع / آغاز,بداية,4,2,
-546,B1,24,B,main,begleiten,,,Verb,begleitet,begleitete,hat begleitet,to accompany,eşlik etmek,сопровождать,супроводжувати,همراهی کردن,يرافق,8,21,
-547,B1,24,B,main,begrenzen,,,Verb,begründet,begründete,hat begründet,to limit,sınırlamak,ограничивать,обмежувати,محدود کردن,يحدد,8,21,
-548,B1,24,B,main,begründen,,,Verb,begründet,begründete,hat begründet,to justify / to give reasons,gerekçelendirmek / nedenini açıklamak,обосновывать / аргументировать,обґрунтовувати / аргументувати,توجیه کردن / استدلال کردن,يبرر,8,21,
-549,B1,24,B,main,Begründung,die,-en,Noun,,,,justification / reason,gerekçe / neden,обоснование / причина,обґрунтування / причина,توجیه / دلیل,تبرير,8,21,
-550,B1,24,B,main,begrüßen,,,Verb,begrüßt,begrüßte,hat begrüßt,to greet / welcome,selamlamak / hoş karşılamak,приветствовать,вітати / привітально зустрічати,خوش‌آمد گفتن / سلام کردن,يرحب,6,21,
+151,B1,16,A,main,abbiegen,,,Verb,biegt ab,bog ab,ist abgebogen,to turn off,dönmek,сворачивать,звертати,پیچیدن,يتجه,7,11,Biegen Sie an der nächsten Kreuzung links ab.
+152,B1,16,A,main,Abbildung,die,-en,Noun,,,,illustration,illüstrasyon,иллюстрация,ілюстрація,تصویر,رسم توضيحي,8,21,Sieh dir die Abbildung auf Seite fünf an und beschreibe sie.
+153,B1,16,A,main,Abenteuer,das,-,Noun,,,,adventure,macera,приключение,пригода,ماجراجویی,مغامرة,8,10,Die Wanderung durch die Wildnis war ein großes Abenteuer.
+154,B1,16,A,main,aber,,,Other,,,,but / however,ama / ancak,но,але / проте,اما / با این حال,لكن,2,21,"Ich wollte kommen, aber ich hatte leider keine Zeit."
+155,B1,16,A,main,abfahren,,,Verb,fährt ab,fuhr ab,ist abgefahren,to depart,ayrılmak,отправляться,від'їжджати / відправлятися,حرکت کردن,يغادر,6,11,Der letzte Zug nach Berlin fährt um 22 Uhr ab.
+156,B1,16,A,main,Abfahrt,die,-en,Noun,,,,departure,kalkış,отправление,відправлення / від'їзд,عزیمت / حرکت,مغادرة,5,11,Die Abfahrt des Zuges ist auf Gleis drei um 14 Uhr.
+157,B1,16,A,main,Abfall,der,¨-e,Noun,,,,waste / rubbish,atık / çöp,мусор / отходы,сміття / відходи,زباله / پسماند,نفايات,4,6,Bitte werfen Sie Ihren Abfall in den dafür vorgesehenen Behälter.
+158,B1,16,A,main,Abfalleimer,der,-,Noun,,,,rubbish bin,çöp kutusu,мусорное ведро,відро для сміття,سطل زباله,سلة مهملات,9,6,Der Abfalleimer in der Küche war schon wieder voll.
+159,B1,16,A,main,abhängen,,,Verb,hängt ab,hing,hat abgehangen,to depend on,bağlı olmak,зависеть от,залежати від,بستگی داشتن به,يعتمد على,6,21,Der Preis hängt von der Qualität des Produktes ab.
+160,B1,16,A,main,abhängig,,,Other,,,,dependent,bağımlı,зависимый,залежний,وابسته,معتمد,7,21,Er ist stark abhängig von Kaffee und trinkt es morgens zuerst.
+161,B1,16,A,main,abheben,,,Verb,hebt ab,hob ab,hat abgehoben,to withdraw (money),para çekmek,снимать деньги,знімати гроші,پول برداشت کردن,يسحب,5,21,"Ich muss noch Geld abheben, bevor die Bank schließt."
+162,B1,16,A,main,abholen,,,Verb,holt ab,holte ab,hat abgeholt,to pick up,almak,забрать,забирати,برداشتن / تحویل گرفتن,يستلم,5,21,Meine Mutter hat mich heute vom Flughafen abgeholt.
+163,B1,16,H,main,Hausaufgaben,die,,Noun,,,,homework,ev ödevi,домашнее задание,домашнє завдання,تکلیف خانه,واجب منزلي,10,9,Die Lehrerin hat die Hausaufgaben eingesammelt und korrigiert.
+164,B1,16,G,main,gemacht,,,Other,,,,done,yapılmış,сделанный / готово,зроблений / готово,انجام‌شده,منجز,5,21,Ich habe meine Aufgaben gemacht und kann jetzt ausruhen.
+165,B1,16,A,main,abgelehnt,,,Other,,,,rejected,reddedildi,отклонённый / отвергнутый,відхилений,ردشده,مرفوض,8,21,Sein Antrag auf Urlaub wurde vom Chef abgelehnt.
+166,B1,16,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої,نوشیدنی‌ها,مشروبات,6,5,Bei dem Fest gab es viele kalte und warme Getränke.
+167,B1,16,A,main,abnehmen,,,Verb,,,,to lose weight,kilo vermek,худеть,худнути,لاغر شدن,يفقد وزنه,6,21,Er hat durch regelmäßiges Joggen drei Kilo abgenommen.
+168,B1,16,W,main,weil,,,Other,,,,because,çünkü,потому что,тому що,چون,لأن,2,21,"Ich bin früh aufgestanden, weil ich einen frühen Zug hatte."
+169,B1,16,W,main,wichtig,,,Other,,,,important,önemli,важный,важливий,مهم,مهم,5,21,"Es ist sehr wichtig, pünktlich zu Terminen zu erscheinen."
+170,B1,16,A,main,abwesend,,,Other,,,,absent,devamsız,отсутствующий,відсутній,غایب,غائب,7,21,Die Lehrerin war abwesend und eine Vertretung hat unterrichtet.
+171,B1,16,A,main,abschließen,,,Verb,wenn,,,to lock / conclude,kilitlemek / tamamlamak,запирать / завершать,замикати / завершувати,قفل کردن / به پایان رساندن,يغلق,9,21,"Denk daran, die Tür abzuschließen, wenn du das Haus verlässt."
+172,B1,16,G,main,Gerät,das,,Noun,,,,device,cihaz,прибор / устройство,пристрій / прилад,دستگاه,جهاز,3,17,Dieses Gerät kann man sowohl zu Hause als auch im Büro nutzen.
+173,B1,16,T,main,teure Geschichten,,,Verb,,,,expensive stories,,дорогие истории,дорогі історії,داستان‌های گران,قصص مكلفة,10,21,"Er erzählt immer teure Geschichten, aber nicht alle sind wahr."
+174,B1,16,G,main,ganz,,,Other,,,,whole / completely,tüm / tamamen,целый / полностью,цілий / повністю,کامل / کاملاً,كامل,2,21,"Ich bin ganz sicher, dass er pünktlich kommt."
+175,B1,16,T,main,trotzdem,,,Other,,,,nevertheless,yine de,тем не менее,тим не менше,با این حال,مع ذلك,6,21,"Es war kalt draußen, trotzdem sind wir spazieren gegangen."
+176,B1,16,S,main,sind,,,Other,,,,are,-dir,есть / являются,є / являються,هستند,هم,2,21,Wir sind heute Morgen früh aufgestanden.
+177,B1,16,G,main,gehen,,,Verb,,,,to go,gitmek,идти / ехать,іти / їхати,رفتن,يذهب,1,21,Wir gehen jeden Freitagabend zusammen ins Kino.
+178,B1,16,L,main,leider,,,Other,,,,unfortunately,ne yazık ki,к сожалению,на жаль,متأسفانه,للأسف,4,21,Leider konnte ich an der Besprechung nicht teilnehmen.
+179,B1,16,B,main,bis,,,Other,,,,until,-e kadar,до,до,تا,حتى,1,21,"Ich warte hier, bis er von der Arbeit zurückkommt."
+180,B1,16,Z,main,zum,,,Other,,,,to the,-e,к / в,до / в,به,إلى,1,21,Ich fahre heute zum Arzt.
+181,B1,16,V,main,verschmutzen,,,Verb,,,,to dirty / pollute,kirletmek,загрязнять,забруднювати,کثیف کردن / آلوده کردن,يلوث,10,21,Die alten Autos haben früher den Fluss stark verschmutzt.
+182,B1,16,A,main,abhängig,,,Other,,,,dependent,bağımlı,зависимый,залежний,وابسته,معتمد,7,21,Raucher sind oft stark abhängig vom Nikotin.
+183,B1,16,M,main,meinem,,,Other,,,,my,benim,мой,мій / моєму,مال من / من,لي,4,21,Ich fahre heute mit meinem Fahrrad zur Arbeit.
+184,B1,16,A,main,abgeholt,,,Other,,,,picked up,alındı,забранный / забрали,забраний / забрали,برداشته‌شده / تحویل گرفته‌شده,تم استلامه,6,21,Er wurde pünktlich von der Schule abgeholt.
+185,B1,17,A,main,Alphabet,das,-e,Noun,,,,alphabet,alfabe,алфавит,алфавіт,الفبا,أبجدية,6,9,Kinder lernen in der Schule das Alphabet.
+186,B1,17,A,main,als,,,Other,,,,as / when / than,-ken / -dan / olarak,как / когда / чем,як / коли / ніж,به عنوان / وقتی که / از,عندما,1,21,Er ist kleiner als sein Bruder.
+187,B1,17,A,main,als,,,Other,,,,as / when / than,-ken / -dan / olarak,как / когда / чем,як / коли / ніж,به عنوان / وقتی که / از,عندما,1,21,"Als er jung war, wohnte er in München."
+188,B1,17,A,main,also,,,Other,,,,so / therefore / well,yani / dolayısıyla,так / поэтому,отже / тому / добре,بنابراین / پس / خب,إذن,2,21,"Also, fangen wir jetzt mit dem Unterricht an."
+189,B1,17,A,main,alt,,,Other,,,,old,eski / yaşlı,старый,старий,پیر / قدیمی,قديم,1,21,Die alte Kirche in der Stadtmitte ist sehr schön.
+190,B1,17,A,main,Alter,das,,Noun,,,,age,yaş,возраст,вік,سن,عمر,3,21,In welchem Alter darf man in Deutschland Auto fahren?
+191,B1,17,A,main,Altenheim,das,-e,Noun,,,,old people's home,huzurevi,дом престарелых,будинок для людей похилого віку,خانه سالمندان,دار المسنين,8,4,Meine Großmutter lebt seit drei Jahren im Altenheim.
+192,B1,17,A,main,Altersheim,das,-e,Noun,,,,nursing home / old people's home,bakım evi / huzurevi,дом престарелых / пансионат,будинок для людей похилого віку / пансіонат,خانه سالمندان / آسایشگاه,دار رعاية المسنين,8,4,Das neue Altersheim bietet den Bewohnern viele Aktivitäten an.
+193,B1,17,A,main,alternativ,,,Other,,,,alternative,alternatif,альтернативный,альтернативний,جایگزین / آلترناتیو,بديل,8,21,"Es gibt immer eine alternative Möglichkeit, das Problem zu lösen."
+194,B1,17,A,main,Alternative,die,-n,Noun,,,,alternative,seçenek / alternatif,альтернатива,альтернатива,گزینه / جایگزین,بديل,9,21,"Wenn der Bus nicht fährt, gibt es zum Glück eine Alternative."
+195,B1,17,A,main,Ampel,die,-ndas,Noun,,,,traffic light,trafik ışığı,светофор,світлофор,چراغ راهنمایی,إشارة مرور,3,11,"Die Ampel war rot, also bin ich stehen geblieben."
+196,B1,17,A,main,an,,,Other,,,,at / on / to,-de / -e / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,في,1,21,Er steht jeden Morgen früh an der Haltestelle.
+197,B1,17,A,main,analysieren,,,Verb,analysiert,analysierte,hat analysiert,to analyze,analiz etmek / çözümlemek,анализировать,аналізувати,تحلیل کردن,يحلل,9,21,Sie hat den Text genau analysiert und wichtige Punkte gefunden.
+198,B1,17,A,main,anbieten,,,Verb,bietet an,bot an,hat angeboten,to offer,teklif etmek / sunmak,предлагать,пропонувати,پیشنهاد کردن / ارائه دادن,يعرض,6,21,Das Restaurant bietet jeden Tag frische Gerichte an.
+199,B1,17,A,main,Adresse,die,-n,Noun,,,,address,adres,адрес,адреса,نشانی,عنوان,5,13,Bitte schreiben Sie Ihre Adresse und Telefonnummer auf das Formular.
+200,B1,17,Ä,main,ähnlich,,,Other,,,,similar,benzer,похожий,схожий / подібний,مشابه,مشابه,5,21,Die zwei Bücher sind sich sehr ähnlich – sie haben fast dasselbe Thema.
+201,B1,17,A,main,Ahnung,die,,Noun,,,,idea / clue / notion,fikir / ipucu / kavram,представление / понятие / догадка,уявлення / поняття / здогад,تصور / سرنخ / برداشت,فكرة,4,21,"Ich habe keine Ahnung, wo ich mein Portemonnaie hingelegt habe."
+202,B1,17,A,main,Aktion,die,-enaktiv,Noun,,,,action / campaign,eylem / kampanya,акция / кампания,акція / кампанія,اقدام / کمپین,حملة,7,21,Der Supermarkt hat eine große Aktion – alle Produkte sind 20% günstiger.
+203,B1,17,A,main,Aktivität,die,-en,Noun,,,,activity,aktivite / etkinlik,активность,активність / діяльність,فعالیت,نشاط,8,15,Sport und andere Aktivitäten sind gut für die Gesundheit.
+204,B1,17,A,main,aktuell,,,Other,,,,current / up-to-date,güncel / günümüz,актуальный / текущий,актуальний / поточний,به‌روز / جاری,حالي,5,21,Was sind die aktuellen Nachrichten aus der Politik?
+205,B1,17,A,main,akzeptieren,,,Verb,akzeptiert,akzeptierte,hat akzeptiert,to accept,kabul etmek,принимать / соглашаться,приймати / погоджуватися,پذیرفتن,يقبل,9,21,Er konnte die Entschuldigung seines Freundes gut akzeptieren.
+206,B1,17,A,main,Alarm,der,-e,Noun,,,,alarm,alarm,сигнал тревоги,сигнал тривоги,هشدار,إنذار,3,21,Der Alarm hat uns mitten in der Nacht geweckt.
+207,B1,17,A,main,Alkohol,der,,Noun,,,,alcohol,alkol,алкоголь,алкоголь,الکل,كحول,5,5,Zu viel Alkohol ist schädlich für die Gesundheit.
+208,B1,17,A,main,all,,,Other,,,,all,tüm / hepsi,весь / все,весь / всі,همه,كل,1,21,Alle Schüler müssen morgen die Hausaufgaben mitbringen.
+209,B1,17,A,main,allein,,,Other,,,,alone,yalnız / tek başına,одинокий,самотній / один,تنها / به تنهایی,وحده,4,21,Sie lebt allein in einer kleinen Wohnung in der Innenstadt.
+210,B1,17,A,main,aller,,,Other,,,,all / of all (prefix),tümü / hepsinin (önek),все / всех (в сложных словах),всі / всіх (у складних словах),همه / همگان-,كل,1,21,"Das war das allerbeste Konzert, das ich je gesehen habe."
+211,B1,17,A,main,allerdings,,,Other,,,,however / admittedly,ancak / bununla birlikte,однако / правда,однак / щоправда,با این حال / البته,بيد أن,8,21,"Das Wetter war gut, allerdings war es etwas windig."
+212,B1,17,A,main,allgemein,,,Other,,,,general / in general,genel / genel olarak,общий / в целом,загальний / загалом,کلی / به طور کلی,عام,8,21,Allgemein gesagt ist das Niveau der Schüler sehr gut.
+213,B1,17,A,main,Alltag,der,,Noun,,,,everyday life,günlük hayat,повседневная жизнь,повсякденне життя,زندگی روزمره,الحياة اليومية,7,2,Der Alltag als Elternteil kann manchmal sehr stressig sein.
+214,B1,17,L,main,langweilig,,,Other,,,,boring,sıkıcı,скучный,нудний,خسته‌کننده,ممل,8,21,Der Film war wirklich langweilig – ich bin fast eingeschlafen.
+215,B1,17,A,main,alltägliche,,,Other,,,,everyday,günlük,повседневный,повсякденний,روزمره,يومي,9,21,"Das ist eine alltägliche Situation, die fast jeder kennt."
+216,B1,17,I,main,in,,,Other,,,,in,-de / -da,в / внутри,в / всередині,در,في,1,21,Sie arbeitet in einem Büro in der Innenstadt.
+217,B1,17,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً / دیگر,بالفعل,1,21,Er hat schon alle Aufgaben erledigt.
+218,B1,17,A,main,auch,,,Other,,,,also,ayrıca,тоже,також,همچنین,أيضاً,2,21,Ich spreche Deutsch und auch ein bisschen Englisch.
+219,B1,17,H,main,helfen,,,Verb,,,,to help,yardım etmek,помогать,допомагати,کمک کردن,يساعد,4,21,Kannst du mir bitte beim Umzug helfen?
+220,B1,17,I,main,im,,,Other,,,,in the,-da / -de,в / в пределах,в / в межах,در,في,1,21,Wir treffen uns im Café an der Ecke.
+221,B1,17,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий,خوب,جيد,2,21,Das war eine gute Idee – gut gemacht!
+222,B1,17,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.),حرف تعریف معین,ال,1,21,"Das ist dem Mann, dem ich gestern begegnet bin."
+223,B1,17,A,main,amüsiert,,,Other,,,,amused,eğlenmiş,развлечённый / amused,розважений / amused,سرگرم / خوشحال,مسرور,6,19,Die Kinder waren sehr amüsiert von dem lustigen Clown.
+224,B1,17,U,main,und,,,Other,,,,and,ve,и,і / та,و,و,1,21,Er kauft Brot und Milch im Supermarkt.
+225,B1,17,A,main,akzeptieren,,,Verb,,,,to accept,kabul etmek,принимать / соглашаться,приймати / погоджуватися,پذیرفتن,يقبل,9,21,"Es ist nicht leicht, Kritik zu akzeptieren."
+226,B1,17,N,main,nicht,,,Other,,,,not,değil,не,не,نه / نیست,لا,1,21,Ich verstehe das nicht – das ist mir nicht klar.
+227,B1,17,R,main,reinigen,,,Verb,,,,to clean,temizlemek,чистить / убирать,чистити / прибирати,تمیز کردن,ينظف,6,6,Du musst das Badezimmer gründlich reinigen.
+228,B1,17,S,main,schaffe,,,Other,,,,manage,başarmak,справляюсь / удаётся,справляюся / вдається,از عهده برآمدن,يتمكن,5,21,"Ich schaffe das alleine, keine Sorge."
+229,B1,17,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً,بالفعل,1,21,"Hast du schon gegessen? – Ja, ich habe schon gegessen."
+230,B1,17,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив,دیده‌شده / دیده,رأى,5,21,Hast du den neuen Film schon gesehen?
+231,B1,17,A,main,allerdings,,,Other,,,,however,ancak,однако,однак,با این حال,بيد أن,8,21,"Das war günstig, allerdings war die Qualität nicht so gut."
+232,B1,17,H,main,hier,,,Other,,,,here,burada,здесь,тут,اینجا,هنا,2,21,Er wohnt hier in der Nähe des Bahnhofs.
+233,B1,17,K,main,kochen,,,Verb,,,,to cook,yemek pişirmek,готовить,готувати,آشپزی کردن,يطبخ,4,5,Heute Abend koche ich Spaghetti für die ganze Familie.
+234,B1,18,Ä,main,ängstlich,,,Other,,,,anxious / fearful,kaygılı / korkak,тревожный / боязливый,тривожний / боязливий,مضطرب / ترسو,قلق,8,19,Das Kind war ängstlich und wollte nicht alleine schlafen.
+235,B1,18,A,main,anhaben,,,Verb,,,hat an,to wear / have on,giymek / üstünde olmak,быть в одежде / носить на себе,бути одягненим / носити на собі,پوشیدن / تن داشتن,يرتدي,5,21,Sie hat heute ein Kleid und einen Mantel an.
+236,B1,18,A,main,anklicken,,,Verb,klickt an,klickte an,hat angeklickt,to click on,tıklamak,нажать (кликнуть),натиснути (клікнути),روی چیزی کلیک کردن,ينقر على,8,17,Bitte klicke auf den Link und fülle das Formular aus.
+237,B1,18,A,main,ankommen,,,Verb,kommt an,kam an,ist angekommen,to arrive,varmak / gelmek,прибывать,прибувати,رسیدن,يصل,6,11,Der Zug ist pünktlich um 10 Uhr auf dem Bahnhof angekommen.
+238,B1,18,A,main,Ankunft,die,,Noun,,,,arrival,varış / geliş,прибытие,прибуття,ورود / رسیدن,وصول,5,11,"Auf der Ankunftstafel steht, dass der Flug Verspätung hat."
+239,B1,18,A,main,ankündigen,,,Verb,kündigt an,kündigte an,hat angekündigt,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати,اعلام کردن,يعلن,8,21,Die Firma hat einen neuen Verkaufsstart für nächste Woche angekündigt.
+240,B1,18,A,main,Anlage,die,-n,Noun,,,,attachment / facility / investment,ek / tesis / yatırım,вложение / объект / инвестиция,вкладення / об'єкт / інвестиція,پیوست / تأسیسات / سرمایه‌گذاری,مرفق,4,6,Bitte schicken Sie die Dokumente als Anlage per E-Mail.
+241,B1,18,A,main,Anleitung,die,-en,Noun,,,,instructions / guide,talimatlar / kılavuz,инструкция / руководство,інструкція / посібник,دستورالعمل / راهنما,تعليمات,8,13,Die Anleitung für das Gerät ist leider sehr schwer zu verstehen.
+242,B1,18,A,main,anmelden,,,Verb,meldet an,meldete an,hat angemeldet,to register,kayıt olmak / giriş yapmak,зарегистрироваться / войти,реєструватися / входити,ثبت‌نام کردن,يسجل,6,17,Du kannst dich online für den Kurs anmelden.
+243,B1,18,A,main,Anmeldung,die,-en,Noun,,,,registration,kayıt,регистрация,реєстрація,ثبت‌نام,تسجيل,8,13,Die Anmeldung für die Veranstaltung ist bis Freitag möglich.
+244,B1,18,A,main,annehmen,,,Verb,nimmt an,nahm an,hat angenommen,to accept / assume / take on,kabul etmek / varsaymak / üstlenmek,принимать / предполагать / брать на себя,приймати / припускати / брати на себе,پذیرفتن / فرض کردن / بر عهده گرفتن,يقبل,6,21,Er konnte das Angebot leider nicht annehmen.
+245,B1,18,A,main,Annonce,die,-n,Noun,,,,advertisement (newspaper),gazete ilanı,объявление в газете,оголошення в газеті,آگهی روزنامه,إعلان صحفي,5,13,"Ich habe eine Annonce in der Zeitung gefunden, die perfekt zu mir passt."
+246,B1,18,A,main,Anrede,die,"-nanrufen, ruft an, rief an,",Noun,,,,salutation / form of address,hitap / seslenme biçimi,обращение / форма обращения,форма звертання / звертання,خطاب / شیوه خطاب,صيغة الخطاب,4,13,In formellen Briefen beginnt die Anrede mit „Sehr geehrte Damen und Herren“.
+247,B1,18,A,main,Anruf,der,-e,Noun,,,,phone call,telefon araması,телефонный звонок,телефонний дзвінок,تماس تلفنی,مكالمة هاتفية,3,13,Ich habe gerade einen Anruf von meiner Mutter bekommen.
+248,B1,18,A,main,Anrufbeantworter,der,-,Noun,,,,answering machine / voicemail,telesekreter / sesli mesaj,автоответчик / голосовая почта,автовідповідач,منشی تلفنی / پست صوتی,جهاز رد آلي,10,13,Bitte hinterlasse eine Nachricht auf dem Anrufbeantworter.
+249,B1,18,A,main,Ansage,die,-nder,Noun,,,,announcement,duyuru / anons,объявление,оголошення,اعلام / اطلاعیه,إعلان,7,13,Am Flughafen gab es eine wichtige Ansage über die Sicherheitsregeln.
+250,B1,18,A,main,Angebot,das,-e,Noun,,,,offer / deal,teklif / fırsat,предложение,пропозиція / угода,پیشنهاد / معامله,عرض,5,12,Das Geschäft hat ein tolles Angebot für das Wochenende.
+251,B1,18,A,main,ander,,,Other,,,,other (variant),diğer (varyant),другой (вариант),інший (варіант),دیگر / نوع دیگر,آخر,1,21,Die Lehrerin hat uns einen anderen Text zum Lesen gegeben.
+252,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan / diğer taraftan,с другой стороны,з іншого боку,از طرف دیگر,من ناحية أخرى,10,21,"Einerseits ist das Angebot günstig, andererseits ist die Qualität schlecht."
+253,B1,18,Ä,main,ändern,,,Verb,ändert,änderte,hat geändert,to change / alter,değiştirmek,менять / изменять,змінювати,تغییر دادن,يغير,4,21,Sie möchte ihren Alltag ändern und mehr Sport treiben.
+254,B1,18,Ä,main,Änderung,die,-en,Noun,,,,change / alteration,değişiklik,изменение,зміна,تغییر,تغيير,6,21,Die Änderung des Stundenplans wurde kurzfristig bekannt gegeben.
+255,B1,18,A,main,anders,,,Other,,,,differently / otherwise,farklı / başka türlü,по-другому / иначе,по-іншому / інакше,متفاوت / طور دیگر,بشكل مختلف,4,21,Das hat er diesmal anders gemacht als beim letzten Mal.
+256,B1,18,A,main,anerkennen,,,Verb,erkennt an,erkannte an,hat anerkannt,to recognize / acknowledge,tanımak / kabul etmek,признавать / признавать заслуги,визнавати / визнавати заслуги,به رسمیت شناختن / تأیید کردن,يعترف,8,21,Sein Abschluss wurde in Deutschland leider nicht anerkannt.
+257,B1,18,A,main,anfangen,,,Verb,fängt an,fing an,hat angefangen,to begin / start,başlamak,начинать,починати,شروع کردن,يبدأ,6,2,Wann fängst du mit dem neuen Job an?
+258,B1,18,A,main,Anfang,der,¨-e,Noun,,,,beginning / start,başlangıç,начало,початок,آغاز / شروع,بداية,4,2,Am Anfang war die Sprache sehr schwierig für mich.
+259,B1,18,A,main,anfangs,,,Other,,,,at first / initially,başlangıçta / ilk başta,сначала / вначале,спочатку / на початку,در ابتدا,في البداية,5,21,"Anfangs hatte sie Angst, aber dann hat sie sich schnell gewöhnt."
+260,B1,18,A,main,angeben,,,Verb,gibt an,gab an,hat angegeben,to state / indicate / show off,belirtmek / göstermek / hava atmak,указывать / сообщать / хвастаться,вказувати / повідомляти / хизуватися,اظهار کردن / مشخص کردن / پز دادن,يذكر,5,21,Auf dem Formular müssen Sie Ihren Namen und Ihre Adresse angeben.
+261,B1,18,A,main,Angabe,die,-n,Noun,,,,statement / detail / information,beyan / bilgi / ayrıntı,сведение / деталь / информация,відомість / деталь / інформація,اطلاعات / جزئیات / اظهار,معلومة,4,21,Bitte überprüfen Sie alle Angaben auf dem Formular sorgfältig.
+262,B1,18,A,main,Angehörige,der,-ndie,Noun,,,,relative / family member,akraba / aile üyesi,родственник / член семьи,родич / член сім'ї,بستگان / عضو خانواده,قريب,8,3,Nach dem Unfall wurden alle Angehörigen sofort informiert.
+263,B1,18,A,main,angenehm,,,Other,,,,pleasant / agreeable,hoş / keyifli,приятный,приємний,دلپذیر / خوشایند,لطيف,6,21,Das Wetter heute ist sehr angenehm – nicht zu heiß und nicht zu kalt.
+264,B1,18,P,main,passiert,,,Other,,,,happened,oldu,случилось,сталося,اتفاق افتاد,حدث,6,21,Was ist gestern Abend auf der Party passiert?
+265,B1,18,G,main,geht,,,Other,,,,goes,gidiyor,идёт / ходит,іде / ходить,می‌رود,يذهب,2,21,"Wie geht es dir? – Es geht mir gut, danke."
+266,B1,18,W,main,wird,,,Other,,,,becomes / will,olacak,становится / будет,стає / буде,می‌شود / خواهد شد,يصبح,2,21,Es wird bald dunkel – wir sollten nach Hause gehen.
+267,B1,18,S,main,schneller,,,Other,,,,faster,daha hızlı,быстрее,швидше,سریع‌تر,أسرع,8,21,Mit dem neuen Zug kommen wir viel schneller ans Ziel.
+268,B1,18,M,main,meine,,,Other,,,,my,benim,мой,мій / моя / моє,مال من / من,لي,1,21,Meine Schwester studiert in Wien.
+269,B1,18,A,main,ankündigen,,,Verb,,,,to announce,duyurmak / haber vermek,объявлять / анонсировать,оголошувати / анонсувати,اعلام کردن,يعلن,8,21,Das Konzert wurde bereits für die nächste Woche angekündigt.
+270,B1,18,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن,يعتقد,4,21,Was meinst du damit? Kannst du das genauer erklären?
+271,B1,18,U,main,unbedingt,,,Other,,,,absolutely,kesinlikle,обязательно / во что бы то ни стало,обов'язково / за всяку ціну,حتماً / قطعاً,بالتأكيد,8,21,Du musst unbedingt zum Arzt gehen – das klingt ernst.
+272,B1,18,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها,شقق,8,6,In dieser Stadt sind die Wohnungen sehr teuer und schwer zu finden.
+273,B1,18,V,main,vergessen,,,Verb,,,,to forget,unutmak,забывать,забувати,فراموش کردن,ينسى,7,21,"Bitte vergessen Sie nicht, das Formular bis Freitag abzugeben."
+274,B1,18,G,main,günstige,,,Other,,,,affordable,uygun fiyatlı,доступный по цене,доступний за ціною,مقرون‌به‌صرفه,بأسعار معقولة,6,21,Wir suchen eine günstige Wohnung in der Nähe der Universität.
+275,B1,18,G,main,gegangen,,,Verb,,,,gone,gitmiş,ушёл / ушла / пошёл,пішов / пішла,رفته,ذهب,6,21,Er ist schon früh am Morgen zum Supermarkt gegangen.
+276,B1,18,D,main,dem,,,Other,,,,the,(isim eki),определённый артикль,визначений артикль (дав. відм.),حرف تعریف معین,ال,1,21,Das Buch gehört dem Schüler in der ersten Reihe.
+277,B1,18,A,main,andererseits,,,Other,,,,on the other hand,öte yandan,с другой стороны,з іншого боку,از سوی دیگر,من ناحية أخرى,10,21,"Einerseits ist es praktisch, andererseits kostet es viel."
+278,B1,18,G,main,geändert,,,Other,,,,changed,değiştirilmiş,изменённый,змінений,تغییریافته,تغير,6,21,Das Gesetz hat sich in diesem Jahr stark geändert.
+279,B1,18,A,main,anerkannt,,,Other,,,,recognized,tanınmış,признанный,визнаний,به‌رسمیت‌شناخته‌شده,معترف به,8,21,Sein Diplom wurde nach vielen Monaten endlich anerkannt.
+280,B1,18,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто,بسیاری / زیاد,كثير,1,21,An dem Kurs haben viele Studenten aus verschiedenen Ländern teilgenommen.
+281,B1,18,D,main,dagegen,,,Verb,dass ich nach,,,against it,karşısında / aleyhinde,против этого,проти цього,بر ضد آن / در مقابل آن,ضد ذلك,5,21,"Ich bin dagegen, dass wir das Projekt ohne Plan beginnen."
+282,B1,18,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,في,1,21,Das Konzert findet an diesem Wochenende statt.
+283,B1,19,A,main,Anwältin,die,-nen,Noun,,,,lawyer (female),avukat (kadın),адвокат (жен.),адвокат (жін.),وکیل (زن),محامية,6,18,Die Anwältin hat ihren Mandanten sehr gut vor Gericht vertreten.
+284,B1,19,A,main,anzeigen,,,Verb,zeigt an,zeigte an,hat angezeigt,to display / report (to police),görüntülemek / şikâyet etmek,показывать / заявлять в полицию,показувати / заявляти до поліції,نمایش دادن / گزارش کردن به پلیس,يعرض,6,21,Das Display zeigt die aktuelle Temperatur an.
+285,B1,19,A,main,Anzeige,die,-n,Noun,,,,advertisement / notice / display,ilan / duyuru / ekran,объявление / уведомление,оголошення / повідомлення / дисплей,آگهی / اعلان / نمایشگر,إعلان,5,13,Er hat eine Anzeige wegen Diebstahls bei der Polizei erstattet.
+286,B1,19,A,main,anziehen,,,Verb,zieht an,zog an,hat angezogen,to attract / put on (clothes),çekmek / giymek,надевать,надягати / приваблювати,جذب کردن / پوشیدن,يجذب,6,7,Das Plakat zieht viele Besucher an.
+287,B1,19,A,main,Anzug,der,¨-edas,Noun,,,,suit (clothing),takım elbise,костюм,костюм,کت‌وشلوار,بدلة,3,7,Er trägt zum Vorstellungsgespräch immer einen Anzug.
+288,B1,19,A,main,Apparat,der,-e,Noun,,,,apparatus / device / phone,cihaz / alet / telefon,аппарат / устройство / телефон,апарат / пристрій / телефон,دستگاه / تلفن,جهاز,5,17,Bitte legen Sie das Telefon auf den Apparat und warten Sie.
+289,B1,19,A,main,Appetit,der,,Noun,,,,appetite,iştah,аппетит,апетит,اشتها,شهية,7,5,Nach dem langen Spaziergang hatte ich großen Appetit.
+290,B1,19,A,main,Aprikose,die,-n,Noun,,,,apricot,kayısı,абрикос,абрикос,زردآلو,مشمش,7,5,Aprikosen sind im Sommer besonders süß und lecker.
+291,B1,19,A,main,arbeiten,,,Verb,arbeitet,arbeitete,hat gearbeitet,to work,çalışmak,работать,працювати,کار کردن,يعمل,6,8,Sie arbeitet seit fünf Jahren in einer Schule als Lehrerin.
+292,B1,19,A,main,Arbeit,die,-en,Noun,,,,work / job,iş / çalışma,работа / труд,робота / праця,کار / شغل,عمل,4,8,"Die Arbeit macht ihm viel Spaß, weil das Team sehr nett ist."
+293,B1,19,A,main,Arbeiter,der,-,Noun,,,,worker (male),işçi (erkek),рабочий (муж.),робітник (чол.),کارگر (مرد),عامل,6,8,Der Arbeiter hat den ganzen Tag auf der Baustelle gearbeitet.
+294,B1,19,A,main,Arbeiterin,die,-nen,Noun,,,,worker (female),işçi (kadın),работница (жен.),робітниця (жін.),کارگر (زن),عاملة,8,8,Die Arbeiterin hat ihre Schicht pünktlich begonnen.
+295,B1,19,A,main,Arbeitserlaubnis,die,,Noun,,,,work permit,çalışma izni,разрешение на работу,дозвіл на роботу,مجوز کار,تصريح عمل,10,8,Ohne Arbeitserlaubnis darf er in Deutschland nicht arbeiten.
+296,B1,19,A,main,arbeitslos,,,Other,,,,unemployed,işsiz,безработный,безробітний,بیکار,عاطل عن العمل,8,8,Er ist seit sechs Monaten arbeitslos und sucht eine neue Stelle.
+297,B1,19,A,main,Arbeitslosigkeit,die,,Noun,,,,unemployment,işsizlik,безработица,безробіття,بیکاری,بطالة,10,8,Die Arbeitslosigkeit ist in dieser Region leider sehr hoch.
+298,B1,19,A,main,Arbeitsplatz,der,¨-e,Noun,,,,workplace / job,iş yeri / iş,рабочее место,робоче місце,محل کار / شغل,مكان عمل,10,8,Sie sucht einen modernen Arbeitsplatz mit guter Ausstattung.
+299,B1,19,A,main,Arbeitsstelle,die,"-nanschaffen, schafft an,schaffte an, hat angeschafft",Noun,,,,job / position,iş yeri / görev,рабочее место / должность,робоче місце / посада,سمت / موقعیت شغلی,وظيفة,10,8,Er hat eine neue Arbeitsstelle als Ingenieur gefunden.
+300,B1,19,A,main,anschließen,,,Verb,schließt an,schloss an,hat angeschlossen,to connect / attach,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن / متصل کردن,يوصل,9,21,Kannst du bitte den Drucker an den Computer anschließen?
+301,B1,19,A,main,Anschluss,der,¨-e,Noun,,,,connection / follow-up,bağlantı / devam,пересадка / соединение,пересадка / з'єднання,اتصال / ادامه,اتصال,8,17,Er hat den Anschluss an die neue Stelle problemlos geschafft.
+302,B1,19,A,main,anschnallen,,,Verb,schnallt an,schnallte an,hat angeschnallt,to fasten (seatbelt),bağlamak (emniyet kemeri),пристёгиваться,пристібатися,کمربند ایمنی بستن,ربط حزام الأمان,9,21,Bitte schnallen Sie sich an – wir fahren gleich los.
+303,B1,19,A,main,ansehen,,,Verb,sieht an,sah an,hat angesehen,to look at / watch,bakmak / izlemek,смотреть / смотреть на,дивитися / дивитися на,نگاه کردن / تماشا کردن,ينظر إلى,5,21,Wir haben uns gemeinsam einen Film im Kino angesehen.
+304,B1,19,A,main,ansprechen,,,Verb,spricht an,sprach an,hat angesprochen,to address / approach / speak to,hitap etmek / yanına gitmek / söz açmak,обращаться к / подходить / заговаривать,звертатися до / підходити / заговорювати,خطاب کردن / نزدیک شدن / سر صحبت را باز کردن,يخاطب,8,21,Darf ich Sie kurz ansprechen? Ich habe eine Frage.
+305,B1,19,A,main,Anspruch,der,¨-e,Noun,,,,claim / right / demand,hak / talep / iddia,претензия / право / требование,претензія / право / вимога,ادعا / حق / مطالبه,مطالبة,6,21,Du hast keinen Anspruch auf eine Rückerstattung ohne Quittung.
+306,B1,19,A,main,anstellen,,,Verb,stellt an,stellte an,hat angestellt,to hire / employ / turn on,işe almak / devreye sokmak,нанимать / включать / ставить,наймати / вмикати / ставити,استخدام کردن / روشن کردن,يوظف,8,8,Die Firma hat drei neue Mitarbeiter angestellt.
+307,B1,19,A,main,Angestellte,der,-n,Noun,,,,employee (male),çalışan (erkek),сотрудник / служащий (муж.),співробітник / службовець (чол.),کارمند (مرد),موظف,9,8,Der Angestellte arbeitet seit zehn Jahren in diesem Büro.
+308,B1,19,A,main,Angestellte,die,-n,Noun,,,,employee (female),çalışan (kadın),сотрудница / служащая (жен.),співробітниця / службовиця (жін.),کارمند (زن),موظفة,9,8,Die Angestellte hat alle Dokumente sorgfältig vorbereitet.
+309,B1,19,A,main,anstrengend,,,Other,,,,exhausting / tiring,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده / طاقت‌فرسا,مرهق,9,21,Die lange Reise war sehr anstrengend – wir sind alle erschöpft.
+310,B1,19,A,main,Antrag,der,¨-e,Noun,,,,application / request / motion,başvuru / talep / önerge,заявление / ходатайство / заявка,заява / клопотання / заявка,درخواست / تقاضا / پیشنهاد رسمی,طلب,7,13,Er hat einen Antrag auf Kindergeld beim Amt gestellt.
+311,B1,19,A,main,anwenden,,,Verb,wendet an,wandte an,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,به کار بردن / استفاده کردن,يطبق,6,21,Diese Regel wird in der Praxis selten angewendet.
+312,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır bulunuyor,присутствующий,присутній,حاضر,حاضر,6,21,Alle Teilnehmer müssen bei der Sitzung anwesend sein.
+313,B1,19,A,main,antworten,,,Verb,antwortet,antwortete,hat geant-wortet,to answer,cevap vermek,отвечать,відповідати,پاسخ دادن,يجيب,8,13,Bitte antworte auf die Frage in einem ganzen Satz.
+314,B1,19,A,main,Antwort,die,,Noun,,,,answer / reply,cevap / yanıt,ответ,відповідь,پاسخ,إجابة,5,13,Die Antwort auf die erste Frage war leider falsch.
+315,B1,19,W,main,Wohnungen,die,,Noun,,,,apartments,daireler,квартиры,квартири,آپارتمان‌ها,شقق,8,6,In dieser Stadt sind die Wohnungen sehr begehrt.
+316,B1,19,B,main,bekommen,,,Verb,,,,to get / receive,almak / elde etmek,получать,отримувати,گرفتن / دریافت کردن,يحصل على,6,21,Hast du schon eine Antwort auf deine Bewerbung bekommen?
+317,B1,19,E,main,erkältest,,,Other,,,,catch a cold,üşütmek,простужаешься / подхватываешь простуду,застужуєшся / підхоплюєш застуду,سرما خوردن,يصاب بزكام,8,4,"Wenn du dich erkältest, solltest du viel Tee trinken."
+318,B1,19,G,main,gekauft,,,Other,,,,bought,satın alınmış,купленный,куплений,خریداری‌شده,مشترى,5,21,Sie hat gestern ein neues Buch im Buchladen gekauft.
+319,B1,19,G,main,gemietet,,,Other,,,,rented,kiralanmış,снятый / арендованный,орендований / знятий,اجاره‌شده,مستأجر,6,21,Wir haben eine kleine Wohnung in der Nähe des Zentrums gemietet.
+320,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک,واحد,1,21,Hast du einen Stift? Ich brauche einen zum Schreiben.
+321,B1,19,L,main,leiser,,,Other,,,,quieter,daha sessiz,тише,тихіше,آرام‌تر,أهدأ,4,21,Bitte stell die Musik leiser – das Baby schläft.
+322,B1,19,N,main,nichts,,,Other,,,,nothing,hiçbir şey,ничего,нічого,هیچ‌چیز,لا شيء,4,21,Ich habe nichts falsch gemacht – das war ein Versehen.
+323,B1,19,E,main,einen,,,Verb,,,,one,bir,один,один,یک,واحد,1,21,Ich suche einen guten Mechaniker für mein Auto.
+324,B1,19,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,Er hat eine neue Arbeitsstelle in München gefunden.
+325,B1,19,B,main,bei,,,Other,,,,at / near,yanında,у / при / возле,у / при / поруч,نزد / کنار,عند,1,21,Das Restaurant liegt direkt bei der Kirche.
+326,B1,19,G,main,gefunden,,,Other,,,,found,bulundu,найденный / нашли,знайдений / знайшли,یافت‌شده / پیدا شده,موجود,6,21,Ich habe meinen verlorenen Schlüssel endlich gefunden.
+327,B1,19,A,main,anschließen,,,Verb,,,,to connect,bağlamak / eklemek,подключать / присоединять,підключати / приєднувати,وصل کردن,يوصل,9,21,"Du musst zuerst das Kabel anschließen, bevor du es einschaltest."
+328,B1,19,A,main,an,,,Other,,,,at / on,-de / -a,в / на / к (в зависимости от контекста),в / на / до (залежно від контексту),در / روی / به,على,1,21,Das Schild an der Wand zeigt den Weg zur Toilette.
+329,B1,19,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن,يملك,1,21,"Wir haben noch viel zu erledigen, bevor wir anfangen können."
+330,B1,19,A,main,an,,,Other,,,,on / at,,на / у,на / у,روی / در,على,1,21,Er hat das Radio leise angemacht.
+331,B1,19,E,main,stellen,,,Verb,,,,to place / put,,ставить / размещать,ставити / розміщувати,گذاشتن / قرار دادن,يضع,5,21,Stell die Blumen bitte in eine Vase und stelle sie auf den Tisch.
+332,B1,19,A,main,anstellen,,,Verb,,,,to hire / employ,işe almak,нанимать / включать,наймати / вмикати,استخدام کردن,يوظف,8,8,Das Unternehmen möchte nächsten Monat neue Mitarbeiter anstellen.
+333,B1,19,M,main,musst,,,Other,,,,must / have to,gerekiyor,должен / обязан,повинен / зобов'язаний,باید,يجب,1,21,Musst du morgen früh aufstehen?
+334,B1,19,A,main,anstrengend,,,Other,,,,exhausting,yorucu / bitici,утомительный / напряжённый,виснажливий / напружений,خسته‌کننده,مرهق,9,21,"Die Klausur war sehr anstrengend, aber ich glaube, ich habe sie bestanden."
+335,B1,19,A,main,anwenden,,,Verb,,,,to apply / use,uygulamak / kullanmak,применять / использовать,застосовувати / використовувати,استفاده کردن / به کار بردن,يطبق,6,21,Diese Methode kann man in vielen Situationen anwenden.
+336,B1,19,A,main,anwesend,,,Other,,,,present (not absent),mevcut / hazır,присутствующий,присутній,حاضر,حاضر,6,21,Beim Elternabend müssen alle Eltern anwesend sein.
+337,B1,19,M,main,meinen,,,Verb,,,,to think / mean,düşünmek / demek,считать / иметь в виду / полагать,вважати / мати на увазі,فکر کردن / منظور داشتن,يعني,4,21,"Ich meine, wir sollten das Problem direkt ansprechen."
+338,B1,19,B,main,bekommen,,,Verb,,,,to get,almak,получать,отримувати,گرفتن,يحصل على,6,21,"Wann bekommst du Bescheid, ob du den Job bekommst?"
+339,B1,20,A,main,auffallen,,,Verb,fällt auf,fiel auf,ist aufgefallen,to stand out / be noticeable,dikkat çekmek / göze çarpmak,бросаться в глаза / быть заметным,кидатися у вічі / бути помітним,جلب توجه کردن / به چشم آمدن,يلفت الانتباه,8,21,Ihr rotes Kleid ist ihr gestern sofort aufgefallen.
+340,B1,20,A,main,auffordern,,,Verb,fordert auf,forderte auf,hat aufgefordert,to call on / request,çağırmak / talep etmek,призывать / просить,закликати / просити,فراخواندن / درخواست کردن,يطلب,8,21,"Der Lehrer hat die Klasse aufgefordert, ruhig zu sein."
+341,B1,20,A,main,Aufforderung,die,-en,Noun,,,,request / demand,çağrı / talep,просьба / требование,прохання / вимога,درخواست / مطالبه,طلب,10,21,Die Aufforderung zur Zahlung kam per Post an.
+342,B1,20,A,main,aufführen,,,Verb,führt auf,führte auf,hat aufgeführt,to perform / list,sahnelemek / listelemek,исполнять / перечислять,виконувати / перелічувати,اجرا کردن / فهرست کردن,يؤدي,8,16,Das Theaterstück wurde sehr erfolgreich aufgeführt.
+343,B1,20,A,main,Aufgabe,die,-n,Noun,,,,task / exercise / responsibility,görev / alıştırma / sorumluluk,задание / упражнение,завдання / вправа / відповідальність,وظیفه / تمرین / مسئولیت,مهمة,5,13,"Die Aufgabe war schwieriger als erwartet, aber lösbar."
+344,B1,20,A,main,aufgeben,,,Verb,gibt auf,gab,hat aufgegeben,to give up / hand in / post (mail),vazgeçmek / teslim etmek / posta vermek,сдаваться / сдавать / отправлять по почте,здаватися / здавати / відправляти поштою,تسلیم شدن / تحویل دادن / پست کردن,يتخلى عن,6,21,Er hat das Rennen nach einem Sturz aufgegeben.
+345,B1,20,A,main,aufhalten,,,Verb,hält auf,hielt,hat aufgehalten,to stop / delay / stay,durdurmak / geciktirmek / kalmak,задерживать / останавливаться / пребывать,затримувати / зупинятися / перебувати,متوقف کردن / تأخیر انداختن / ماندن,يوقف,8,21,Der Stau hat uns zwei Stunden aufgehalten.
+346,B1,20,A,main,aufheben,,,Verb,hebt auf,hob auf,hat aufgehoben,to pick up / keep / abolish,kaldırmak / saklamak / lağvetmek,поднимать / сохранять / отменять,піднімати / зберігати / скасовувати,برداشتن / نگه داشتن / لغو کردن,يرفع,6,21,Bitte heb den Beleg auf – du könntest ihn später brauchen.
+347,B1,20,A,main,aufhören,,,Verb,hört auf,hörte auf,hat aufgehört,to stop / quit,bırakmak / durmak,переставать / прекращать,переставати / припиняти,متوقف شدن / دست کشیدن,يتوقف,6,2,Er hat mit dem Rauchen aufgehört und fühlt sich viel besser.
+348,B1,20,A,main,aufladen,,,Verb,lädt auf,lud auf,hat aufgela,to charge (battery) / load,şarj etmek / yüklemek,заряжать / загружать,заряджати / завантажувати,شارژ کردن / بار کردن,يشحن,6,17,"Vergiss nicht, dein Handy vor dem Schlafen aufzuladen."
+349,B1,20,A,main,auflösen,,,Verb,löst auf,löste auf,hat aufgelöst,to dissolve / disband,çözmek / dağıtmak,растворять / распускать,розчиняти / розпускати,حل کردن / منحل کردن,يذوب,6,21,Der Verein wurde nach dem Skandal aufgelöst.
+350,B1,20,A,main,aufmerksam,,,Other,,,,attentive / alert,dikkatli / uyanık,внимательный / настороженный,уважний / насторожений,هوشیار / دقیق,منتبه,8,21,"Die Schüler haben aufmerksam zugehört, als die Lehrerin erklärte."
+351,B1,20,A,main,aufnehmen,,,Verb,nimmt auf,nahm auf,hat aufgenommen,to record / take in / accept,kaydetmek / kabul etmek / almak,записывать / принимать / впускать,записувати / приймати / впускати,ضبط کردن / پذیرفتن / داخل کردن,يسجل,8,21,Das Interview wurde live im Radio aufgenommen.
+352,B1,20,A,main,Aufnahme,die,-n der,Noun,,,,recording / admission / photo,kayıt / kabul / fotoğraf,запись / приём / фотография,запис / прийом / фотографія,ضبط / پذیرش / عکس,تسجيل,6,21,Die Aufnahme des Konzerts ist von sehr guter Qualität.
+353,B1,20,Ä,main,ärgern,,,Verb,ärgert,ärgerte,hat geärgert,to annoy / get angry,kızdırmak / sinirlenmek,злиться / раздражать,злитися / дратувати,عصبانی کردن / عصبانی شدن,يغضب,4,19,"Er ärgert sich darüber, dass der Bus wieder Verspätung hat."
+354,B1,20,Ä,main,Ärger,der,,Noun,,,,annoyance / trouble / anger,kızgınlık / sıkıntı / öfke,раздражение / неприятность / злость,роздратування / неприємність / злість,دردسر / ناراحتی / عصبانیت,غضب,3,19,Sie hat viel Ärger mit ihrem Vermieter wegen der Heizung.
+355,B1,20,Ä,main,ärgerlich,,,Other,,,,annoying / angry,sinir bozucu / kızgın,раздражающий / сердитый,дратівливий / сердитий,آزاردهنده / عصبانی,مزعج,8,19,"Es ist ärgerlich, wenn man am Morgen den Zug verpasst."
+356,B1,20,A,main,arm,,,Other,,,,poor,fakir / yoksul,бедный,бідний,فقیر,فقير,1,4,In dieser Stadt sind viele Familien arm und brauchen Hilfe.
+357,B1,20,A,main,Arm,der,-e,Noun,,,,arm,kol,рука,рука,بازو,ذراع,1,4,Er hat sich den Arm bei einem Sportunfall gebrochen.
+358,B1,20,A,main,Art,die,-en,Noun,,,,type / kind / species / manner,tür / çeşit / tarz,вид / род / способ,вид / рід / спосіб,نوع / شیوه,نوع,1,21,"Es gibt verschiedene Arten, Deutsch zu lernen."
+359,B1,20,A,main,Artikel,der,-,Noun,,,,article (newspaper / grammar),makale / artikel (gramer),статья / артикль,стаття / артикль,مقاله / حرف تعریف,مقالة,5,13,Der Artikel in der Zeitung handelt von einem neuen Forschungsprojekt.
+360,B1,20,A,main,Arzt,der,¨-e,Noun,,,,doctor (male),doktor (erkek),врач (муж.),лікар (чол.),پزشک (مرد),طبيب,2,8,"Der Arzt hat mir geraten, mehr Wasser zu trinken."
+361,B1,20,Ä,main,Ärztin,die,-nen,Noun,,,,doctor (female),doktor (kadın),врач (жен.),лікарка (жін.),پزشک (زن),طبيبة,4,8,Die Ärztin hat sich alle Symptome genau angehört.
+362,B1,20,A,main,Asyl,das,,Noun,,,,asylum,sığınma / iltica,убежище,притулок / азил,پناهندگی / پناهگاه,لجوء,2,18,Er hat in Deutschland Asyl beantragt.
+363,B1,20,A,main,atmen,,,Verb,atmet,atmete,hat geatmet,to breathe,nefes almak / solumak,дышать,дихати,نفس کشیدن,يتنفس,3,4,"Beim Sport ist es wichtig, tief und regelmäßig zu atmen."
+364,B1,20,A,main,Atem,der,,Noun,,,,breath,nefes / solunum,дыхание,дихання,نفس,نفس,2,4,Nach dem langen Laufen war er außer Atem.
+365,B1,20,A,main,auch,,,Other,,,,also / too,de / da / ayrıca,тоже,також,هم / همچنین,أيضاً,2,21,Er spricht Englisch und auch ein wenig Französisch.
+366,B1,20,A,main,auf,,,Other,,,,on / up,üzerinde,на / вверх,на / вгору,روی / بالا,على,1,21,Das Buch liegt auf dem Tisch.
+367,B1,20,A,main,angenehmen,,,Verb,,,,pleasant,hoş,приятный,приємний,خوشایند,ممتع,8,21,Wir haben einen angenehmen Abend mit Freunden verbracht.
+368,B1,20,B,main,blass,,,Other,,,,pale,solgun,бледный,блідий,پریده‌رنگ,شاحب,3,21,"Er war blass vor Schreck, als er die Nachricht hörte."
+369,B1,20,Z,main,zu,,,Other,,,,too / to,-e / fazla,слишком / к,занадто / до,بیش از حد / به,جداً,1,21,Das Essen war zu salzig und zu scharf.
+370,B1,20,A,main,aufgegeben,,,Verb,,,,given up,vazgeçilmiş,сданный / оставленный,зданий / залишений,رهاشده / تسلیم‌شده,متخلى عنه,8,21,Er hat die Hoffnung auf eine bessere Zukunft nicht aufgegeben.
+371,B1,20,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,"Ich brauche eine Stunde, um zur Arbeit zu fahren."
+372,B1,20,W,main,wurde,,,Other,,,,was / became,oldu,был / стала,був / стала,شد / بود,كان,1,21,Das Gebäude wurde im Jahr 1920 gebaut.
+373,B1,20,D,main,dass,,,Other,,,,that,ki / -diği,что,що,که,أن,2,21,"Ich bin sicher, dass er das gesagt hat."
+374,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده,مسجل,9,21,Das Gespräch wurde auf Band aufgenommen.
+375,B1,20,A,main,aufgenommen,,,Verb,,,,recorded / admitted,kaydedilmiş,записанный / принятый,записаний / прийнятий,ضبط‌شده / پذیرفته‌شده,مسجل,9,21,Das Konzert wurde auf Video aufgenommen.
+376,B1,20,I,main,immer,,,Other,,,,always,her zaman,всегда,завжди,همیشه,دائماً,1,21,Ich lese immer Zeitung am Morgen.
+377,B1,20,H,main,habe,,,Other,,,,have,sahip,имею,маю,دارم,أملك,2,21,Ich habe heute keine Zeit mehr.
+378,B1,20,G,main,gelesen,,,Verb,,,,read,okunmuş,прочитанный / читал,прочитаний / читав,خوانده / خوانده‌شده,مقروء,5,21,Er hat das Buch in zwei Tagen gelesen.
+379,B1,20,D,main,durch,,,Other,,,,through,vasıtasıyla,через / посредством,через / за допомогою,از طریق / از میان,من خلال,2,21,Wir sind durch den Park spaziert.
+380,B1,20,A,main,auch,,,Other,,,,also,ayrıca,тоже,також,همچنین,أيضاً,2,21,"Ich mag Sport, und ich spiele auch gerne Musik."
+381,B1,20,E,main,es,,,Other,,,,it,o / bunu,это,це,آن / این,هو,1,21,Hast du es schon gesehen? Es liegt auf dem Tisch.
+382,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / واجد صلاحیت,مدرب,9,21,Er ist ausgebildeter Koch und arbeitet in einem Fünf-Sterne-Hotel.
+383,B1,21,A,main,ausdrucken,,,Verb,druckt aus,druckte aus,hat ausgedruckt,to print out,yazdırmak / çıktı almak,распечатывать,роздруковувати,پرینت گرفتن,يطبع,8,17,Kannst du das Dokument bitte ausdrucken und mir bringen?
+384,B1,21,A,main,Ausdruck,der,¨-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی,تعبير,7,13,"Der Ausdruck 'unter Druck stehen' bedeutet, sehr beschäftigt zu sein."
+385,B1,21,A,main,Ausdruck,der,-e,Noun,,,,expression / printout,ifade / çıktı,выражение / распечатка,вираз / роздруківка,عبارت / نسخه چاپی,تعبير,7,13,Bitte machen Sie einen Ausdruck des Formulars und bringen ihn mit.
+386,B1,21,A,main,auseinander,,,Other,,,,apart / separate,ayrı / birbirinden uzak,врозь / отдельно,нарізно / окремо,از هم جدا,منفصل,9,21,"Die zwei Brüder leben jetzt auseinander – einer in Berlin, einer in Wien."
+387,B1,21,A,main,Ausfahrt,die,-en,Noun,,,,exit (road) / departure,çıkış (yol) / ayrılış,выезд / отправление,виїзд / відправлення,خروجی / حرکت,مخرج,6,11,Die Ausfahrt zur Autobahn ist in zwei Kilometern.
+388,B1,21,A,main,ausfallen,,,Verb,fällt aus,fiel aus,ist ausgefallen,to be cancelled / fall out,iptal olmak / düşmek,отменяться / выпадать,скасовуватися / випадати,لغو شدن / افتادن,يُلغى,8,21,Der Unterricht ist heute wegen Schnee ausgefallen.
+389,B1,21,A,main,Ausflug,der,¨-e,Noun,,,,excursion / trip,gezi / piknik,экскурсия / прогулка,екскурсія / прогулянка,گردش / سفر کوتاه,رحلة,5,15,Am Wochenende machen wir einen Ausflug in die Berge.
+390,B1,21,A,main,ausfüllen,,,Verb,füllt aus,füllte aus,hat ausgefüllt,to fill in,doldurmak,заполнить,заповнювати,پر کردن,يملأ,8,21,Bitte füllen Sie das Anmeldeformular vollständig aus.
+391,B1,21,A,main,Ausgabe,die,-n,Noun,,,,edition / expenditure / issue,baskı / harcama / sayı,издание / расход / выпуск,видання / витрата / випуск,نسخه / هزینه / شماره,إصدار,5,12,Die neuste Ausgabe des Magazins ist gestern erschienen.
+392,B1,21,A,main,Ausgang,der,¨-e,Noun,,,,exit / outcome,çıkış / sonuç,выход,вихід,خروج / نتیجه,مخرج,5,6,Der Ausgang des Museums ist auf der rechten Seite.
+393,B1,21,A,main,ausgeben,,,Verb,gibt aus,gab aus,hat ausgegeben,to spend (money) / give out,para harcamak / dağıtmak,тратить / раздавать,витрачати / роздавати,خرج کردن / توزیع کردن,ينفق,6,12,Er gibt zu viel Geld für Kleidung aus.
+394,B1,21,A,main,ausgehen,,,Verb,geht aus,ging aus,ist ausgegangen,to go out,dışarıya çıkmak,выходить / гулять,виходити / гуляти,بیرون رفتن,يخرج,6,21,"Gehst du heute Abend aus? – Ja, wir gehen in eine Bar."
+395,B1,21,A,main,ausgezeichnet,,,Other,,,,excellent,mükemmel,отличный,відмінний / чудовий,عالی,ممتاز,10,21,Das Restaurant war ausgezeichnet – das Essen war fantastisch.
+396,B1,21,A,main,Aushilfe,die,-ndie,Noun,,,,temporary helper / temp,geçici yardımcı,временный помощник,тимчасовий помічник,کمک‌کار موقت,مساعد مؤقت,6,8,Als Aushilfe in der Sporthalle arbeite ich nur am Wochenende.
+397,B1,21,A,main,Ausland,das,"passt auf,",Noun,,,,abroad,yurt dışı,за границей,за кордоном,خارج از کشور,خارج البلاد,5,10,Sie hat zwei Jahre im Ausland gelebt und viele Sprachen gelernt.
+398,B1,21,A,main,aufräumen,,,Verb,räumt auf,räumte auf,hat aufgeräumt,to tidy up / clear up,toparlamak / düzenlemek,убирать / приводить в порядок,прибирати / наводити порядок,مرتب کردن / جمع‌وجور کردن,يرتب,8,6,"Wir müssen das Zimmer aufräumen, bevor die Gäste kommen."
+399,B1,21,A,main,aufregen,,,Verb,regt auf,regte auf,hat aufgeregt,to excite / upset / get worked up,heyecanlandırmak / sinerlenmek,волновать / расстраивать / волноваться,хвилювати / розстроювати / хвилюватися,هیجان‌زده کردن / ناراحت کردن / عصبی شدن,يثير,6,21,Reg dich nicht so auf – das ist doch kein Problem.
+400,B1,21,A,main,aufstehen,,,Verb,steht auf,stand auf,ist aufgestan,to get up / stand up,kalkmak / ayağa kalkmak,вставать,вставати,بلند شدن / از خواب بیدار شدن,يقوم,8,21,Er steht jeden Morgen um sechs Uhr auf.
+401,B1,21,A,main,Auftrag,der,¨-e,Noun,,,,order / commission / task,sipariş / görev / komisyon,заказ / поручение / задание,замовлення / доручення / завдання,سفارش / مأموریت / وظیفه,أمر,7,8,Die Firma hat mir einen neuen Auftrag gegeben.
+402,B1,21,A,main,auftreten,,,Verb,tritt auf,trat auf,ist aufgetreten,to appear / perform,görünmek / sahneye çıkmak,появляться / выступать,з'являтися / виступати,ظاهر شدن / اجرا کردن,يظهر,8,21,Die Sängerin tritt heute Abend auf einer großen Bühne auf.
+403,B1,21,A,main,Auftritt,der,-e,Noun,,,,performance / appearance,sahne çıkışı / gösteri,выступление / появление,виступ / поява,اجرا / حضور,أداء,7,8,Ihr erster Auftritt auf der Bühne war sehr beeindruckend.
+404,B1,21,A,main,aufwachen,,,Verb,wacht auf,wachte auf,ist aufgewacht,to wake up,uyanmak,просыпаться,прокидатися,بیدار شدن,يستيقظ,8,21,Er wacht jeden Morgen um sieben Uhr auf.
+405,B1,21,A,main,aufwärts,,,Other,,,,upward,yukarıya doğru,вверх,вгору / вище,رو به بالا,لأعلى,7,21,Die Konjunktur entwickelt sich wieder aufwärts.
+406,B1,21,A,main,Aufzug,der,¨-e,Noun,,,,elevator / lift,asansör,лифт,ліфт,آسانسور,مصعد,4,6,Der Aufzug ist außer Betrieb – wir müssen die Treppe nehmen.
+407,B1,21,A,main,Auge,das,-n,Noun,,,,eye,göz,глаз,око,چشم,عين,2,4,Sie hat braune Augen und lange Haare.
+408,B1,21,A,main,Augenblick,der,-e,Noun,,,,moment / instant,an / kısa süre,мгновение / момент,мить / момент,لحظه,لحظة,8,2,Warte kurz – ich komme in einem Augenblick.
+409,B1,21,A,main,aus,,,Other,,,,from / out of,-dan / dışarı,из,з,از / بیرون از,من,1,21,Er kommt aus Deutschland und lebt jetzt in Österreich.
+410,B1,21,A,main,abgeschlossen,,,Verb,,,,locked / completed,kilitlenmiş / tamamlanmış,закрытый / завершённый,замкнений / завершений,قفل‌شده / تکمیل‌شده,مغلق,10,21,Er hat die Tür abgeschlossen und den Schlüssel mitgenommen.
+411,B1,21,S,main,sicher,,,Other,,,,safe / secure,güvenli / emin,безопасный / надёжный,безпечний / надійний,امن / مطمئن,آمن,4,21,"Ist es sicher, nachts alleine durch dieses Viertel zu gehen?"
+412,B1,21,A,main,ausgebildet,,,Other,,,,trained / qualified,eğitilmiş / nitelikli,обученный / квалифицированный,навчений / кваліфікований,آموزش‌دیده / ماهر,مدرب,9,21,Sie ist ausgebildete Krankenschwester und arbeitet im Krankenhaus.
+413,B1,21,A,main,ausdrucken,,,Verb,,,,to print out,yazdırmak,распечатывать,роздруковувати,پرینت گرفتن,يطبع,8,17,Kannst du das Dokument bitte ausdrucken?
+414,B1,21,G,main,gehört,,,Other,,,,belongs to,ait,принадлежит,належить,متعلق است به,ينتمي إلى,4,21,Das Buch gehört zum Pflichtprogramm dieses Kurses.
+415,B1,21,V,main,von,,,Other,,,,from / of,-dan / -nın,из / от / со стороны,з / від / з боку,از / متعلق به,من,1,21,Das Paket kommt von einer Freundin aus der Schweiz.
+416,B1,21,N,main,nicht,,,Other,,,,not,değil,не,не,نه / نیست,لا,1,21,Er versteht das Problem nicht.
+417,B1,21,U,main,Freunden,,,Verb,,,,friends,,друзья,друзі,دوستان,أصدقاء,6,3,Er hat das Wochenende mit Freunden in Hamburg verbracht.
+418,B1,21,F,main,für,,,Other,,,,for,için,для,для,برای,لـ,1,21,Dieses Geschenk ist für meine Mutter zum Geburtstag.
+419,B1,21,L,main,Land,,,Other,,,,land / country,ülke,страна / земля,країна / земля,کشور / زمین,بلد,2,20,Das ist ein schönes Land mit viel Geschichte.
+420,B1,21,A,main,aufgepasst,,,Other,,,,paid attention,dikkat etmiş,обратил внимание,звернув увагу,توجه کرده,منتبه,8,21,Hast du aufgepasst? Die Lehrerin hat eine wichtige Erklärung gegeben.
+421,B1,21,I,main,bringt,,,Other,,,,brings,,приносит,приносить,می‌آورد,يجلب,4,21,Das bringt mir sehr viel – danke für die Hilfe.
+422,B1,21,A,main,auf,,,Other,,,,on / up,üzerinde,на / к,на / до,روی / بالا,على,1,21,Das Buch liegt auf dem Regal.
+423,B1,21,S,main,schon,,,Other,,,,already,zaten,уже,вже,قبلاً / دیگر,بالفعل,1,21,Er hat schon das Frühstück vorbereitet.
+424,B1,21,A,main,aufregend,,,Other,,,,exciting,heyecan verici,захватывающий,захопливий,هیجان‌انگیز,مثير,8,21,Die Reise durch die Alpen war sehr aufregend.
+425,B1,21,A,main,auf,,,Other,,,,on,üzerinde,на / к,на / до,روی,على,1,21,Der Unterricht findet auf dem Schulgelände statt.
+426,B1,21,K,main,können,,,Verb,,,,can,yapabilmek,мочь / быть в состоянии,могти / бути в змозі,توانستن,يستطيع,3,21,"Wir können uns morgen treffen, wenn du kannst."
+427,B1,21,U,main,und,,,Other,,,,and,ve,и,і / та,و,و,1,21,Er kauft Zeitung und Kaffee jeden Morgen.
+428,B1,21,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато,بسیاری,كثير,1,21,An der Konferenz haben viele Experten aus aller Welt teilgenommen.
+429,B1,21,E,main,eine,,,Other,,,,a / one,bir,один / какой-то,один / якийсь,یک,واحدة,2,21,Er braucht eine Stunde für den Weg zur Arbeit.
+430,B1,21,M,main,mit,,,Other,,,,with,ile,с / при помощи,з / за допомогою,با,مع,1,21,Wir fahren mit dem Zug und kommen gegen Abend an.
+431,B1,21,G,main,Augenblick,,,Other,,,,moment / instant,,мгновение / момент,мить / момент,لحظه,لحظة,8,2,Warte einen Augenblick – ich bin gleich fertig.
+432,B1,22,A,main,aussprechen,,,Verb,spricht aus,sprach aus,hat ausgesprochen,to pronounce / speak out,telaffuz etmek / açıkça söylemek,произносить,вимовляти,تلفظ کردن / صریح گفتن,ينطق,9,21,"Es ist wichtig, deutsche Wörter richtig auszusprechen."
+433,B1,22,A,main,Aussprache,die,,Noun,,,,pronunciation,telaffuz,произношение,вимова,تلفظ,نطق,8,13,"Ihre Aussprache ist sehr gut für jemanden, der erst sechs Monate Deutsch lernt."
+434,B1,22,A,main,ausstellen,,,Verb,stellt aus,stellte aus,hat ausgestellt,to exhibit / issue (document),sergilemek / belge düzenlemek,выставлять / выдавать документ,виставляти / видавати документ,به نمایش گذاشتن / صادر کردن,يعرض,8,21,Das Museum stellt Gemälde aus dem 19. Jahrhundert aus.
+435,B1,22,A,main,Ausstellung,die,-en,Noun,,,,exhibition,sergi,выставка,виставка,نمایشگاه,معرض,9,16,Die Ausstellung im Stadtmuseum zeigt alte Fotos der Stadt.
+436,B1,22,A,main,auswählen,,,Verb,wählt aus,wählte aus,hat ausgewählt,to select / choose,seçmek,выбирать,вибирати,انتخاب کردن,يختار,8,21,Du kannst aus drei verschiedenen Farben auswählen.
+437,B1,22,A,main,Auswahl,die,-en,Noun,,,,selection / choice,seçim / seçenek,выбор,вибір,انتخاب / گزینه,اختيار,5,21,Im Supermarkt gibt es eine große Auswahl an frischem Obst.
+438,B1,22,A,main,Ausweis,der,-e,Noun,,,,ID card,kimlik,удостоверение личности,посвідчення особи,کارت شناسایی,بطاقة هوية,7,18,"Du brauchst einen gültigen Ausweis, um ein Konto zu eröffnen."
+439,B1,22,A,main,ausziehen,,,Verb,zieht aus,zog aus,,to move out / take off (clothes),taşınmak / çıkarmak (kıyafet),съезжать / снимать (одежду),виселятися / знімати (одяг),اسباب‌کشی کردن / درآوردن لباس,ينتقل,8,7,Sie ist letzten Monat aus ihrer alten Wohnung ausgezogen.
+440,B1,22,A,main,Auto,das,-s,Noun,,,,car,araba,автомобиль,автомобіль,ماشین,سيارة,2,11,Er fährt jeden Tag mit dem Auto zur Arbeit.
+441,B1,22,A,main,Autobahn,die,-en,Noun,,,,motorway / highway,otoyol,автомагистраль,автострада / магістраль,بزرگراه,طريق سريع,6,11,Auf der Autobahn darf man in manchen Abschnitten so schnell fahren wie man möchte.
+442,B1,22,A,main,Automat,der,-en,Noun,,,,vending machine / automatic device,otomat / otomatik cihaz,торговый автомат,торговий автомат,دستگاه خودکار,آلة بيع,5,17,Der Automat gibt kein Wechselgeld zurück – bitte passend zahlen.
+443,B1,22,A,main,automatisch,,,Other,,,,automatic / automatically,otomatik / otomatik olarak,автоматический,автоматичний / автоматично,خودکار / به‌طور خودکار,تلقائي,9,17,"Das Licht geht automatisch aus, wenn niemand im Raum ist."
+444,B1,22,A,main,Autor,der,-en,Noun,,,,author (male),yazar (erkek),автор (муж.),автор (чол.),نویسنده (مرد),مؤلف,3,8,Der Autor dieses Romans ist sehr bekannt in Deutschland.
+445,B1,22,A,main,Autorin,die,-nender,Noun,,,,author (female),yazar (kadın),автор (жен.),авторка (жін.),نویسنده (زن),مؤلفة,5,8,Die Autorin hat ihr neues Buch heute auf der Buchmesse vorgestellt.
+446,B1,22,A,main,Ausländerin,die,-nen,Noun,,,,foreigner (female),yabancı (kadın),иностранка (жен.),іноземка (жін.),خارجی (زن),أجنبية,9,18,Die Ausländerin arbeitet seit einem Jahr in Deutschland.
+447,B1,22,A,main,ausländisch,,,Other,,,,foreign,yabancı / yabancı ülkeye ait,иностранный,іноземний,خارجی,أجنبي,9,18,Er hat viele ausländische Freunde und spricht mehrere Sprachen.
+448,B1,22,A,main,ausmachen,,,Verb,macht aus,machte aus,hat ausgemacht,to switch off / agree on / matter,kapatmak / anlaşmak / önemli olmak,выключать,вимикати / домовлятися,خاموش کردن / توافق کردن / مهم بودن,يطفئ,8,17,"Bitte mach das Licht aus und schließ die Fenster, bevor du gehst."
+449,B1,22,A,main,Ausnahme,die,-n,Noun,,,,exception,istisna / ayrıcalık,исключение,виняток,استثنا,استثناء,6,21,In diesem Fall machen wir eine Ausnahme – das passiert nicht nochmal.
+450,B1,22,A,main,ausreichen,,,Verb,reicht aus,re-,hat ausgereicht,to be sufficient,yeterli olmak,быть достаточным,бути достатнім,کافی بودن,يكفي,8,21,"Das Geld reicht nicht aus, um die Miete zu bezahlen."
+451,B1,22,A,main,ausreichend,,,Other,,,,sufficient / enough,yeterli / yeterince,достаточный,достатній,کافی,كافٍ,9,21,"Das Ergebnis ist ausreichend, aber er könnte besser werden."
+452,B1,22,A,main,ausrichten,,,Verb,richtet aus,richtete aus,hat ausgerichtet,to convey / align / arrange,iletmek / hizalamak / düzenlemek,передавать / выравнивать / организовывать,передавати / вирівнювати / організовувати,رساندن / تنظیم کردن / ترتیب دادن,ينقل,8,21,"Kannst du der Kollegin bitte ausrichten, dass das Meeting verschoben wurde?"
+453,B1,22,A,main,ausruhen,,,Verb,ruht aus,ruhte aus,hat ausgeruht,to rest / relax,dinlenmek,отдыхать / расслабляться,відпочивати / розслаблятися,استراحت کردن,يستريح,6,21,"Nach der langen Reise brauche ich dringend eine Pause, um mich auszuruhen."
+454,B1,22,A,main,ausschließen,,,Verb,schließt aus,schloss aus,hat ausgeschlossen,to exclude,dışlamak / hariç tutmak,исключать,виключати,مستثنا کردن / کنار گذاشتن,يستبعد,10,21,"Er wurde aus dem Wettbewerb ausgeschlossen, weil er gegen die Regeln verstoßen hat."
+455,B1,22,A,main,ausschließlich,,,Other,,,,exclusively / only,yalnızca / sadece,исключительно / только,виключно / тільки,منحصراً / فقط,حصراً,10,21,Diese Information ist ausschließlich für Mitglieder des Clubs.
+456,B1,22,A,main,aussehen,,,Verb,sieht aus,sah aus,hat ausgesehen,to look / appear,görünmek,выглядеть,виглядати,به نظر رسیدن / ظاهر شدن,يبدو,6,21,Du siehst heute sehr müde aus – hast du schlecht geschlafen?
+457,B1,22,A,main,außen,,,Verb,,,,outside,dışarıda / dışarıdan,снаружи,зовні / назовні,بیرون / از بیرون,خارج,3,21,Das Haus sieht von außen sehr schön aus.
+458,B1,22,A,main,außerhalb,,,Other,,,,outside (of) / beyond,dışında / ötesinde,вне / за пределами,поза / за межами,خارج از / فراتر از,خارج,8,20,Das Büro befindet sich außerhalb der Stadt und ist nur mit dem Auto erreichbar.
+459,B1,22,Ä,main,äußerlich,,,Other,,,,external / outward,dışsal / görünüşte,внешний / наружный,зовнішній,ظاهری / بیرونی,خارجي,8,21,Ich beurteile den Menschen nicht nach seinem äußerlichen Aussehen.
+460,B1,22,A,main,außer,,,Other,,,,except / apart from,hariç / dışında,кроме / помимо,крім / окрім,به جز / علاوه بر,إلا,3,21,Alle außer ihm haben an dem Ausflug teilgenommen.
+461,B1,22,A,main,außerdem,,,Other,,,,moreover / in addition / besides,üstelik / ayrıca / bunun yanı sıra,кроме того / вдобавок,крім того / до того ж,علاوه بر این,علاوة على ذلك,6,21,Er spricht Deutsch und außerdem noch zwei weitere Sprachen.
+462,B1,22,G,main,gute,,,Other,,,,good,iyi,хороший,хороший / добрий,خوب,جيد,2,21,"Das ist eine gute Möglichkeit, etwas Neues zu lernen."
+463,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,به نمایش گذاشته‌شده,معروض,9,21,Das Bild wurde in einer Galerie ausgestellt.
+464,B1,22,A,main,ausgestellt,,,Other,,,,exhibited,sergilenmiş,выставленный,виставлений,نمایش‌داده‌شده,معروض,9,21,Sein Führerschein wurde ihm nach einem Unfall ausgestellt.
+465,B1,22,D,main,dauert,,,Other,,,,lasts,sürüyor,длится,триває,طول می‌کشد,يستمر,4,21,Wie lange dauert die Reise von Berlin nach München?
+466,B1,22,D,main,dich,,,Other,,,,you,seni,тебя,тебе,تو را,إياك,2,21,Ich sehe dich morgen – wir treffen uns vor dem Kino.
+467,B1,22,A,main,ausgezogen,,,Verb,,,,moved out,taşınmış,выселившийся / съехавший,виселився / з'їхав,اسباب‌کشی کرده,انتقل,8,21,Er ist letzten Monat aus seiner alten Wohnung ausgezogen.
+468,B1,22,A,main,automatisch,,,Other,,,,automatic,otomatik,автоматический,автоматичний,خودکار,تلقائي,9,17,"Das System startet automatisch neu, wenn ein Fehler auftritt."
+469,B1,22,Z,main,zwei,,,Other,,,,two,iki,два,два,دو,اثنان,2,1,Er hat zwei Sprachen gelernt und möchte noch eine weitere dazufügen.
+470,B1,22,G,main,Getränke,die,,Noun,,,,drinks,içecekler,напитки,напої,نوشیدنی‌ها,مشروبات,6,5,Der Kellner hat uns verschiedene Getränke angeboten.
+471,B1,22,E,main,etwas,,,Other,,,,something,bir şey,что-то / немного,щось / трохи,چیزی / کمی,شيء ما,3,21,"Möchtest du etwas trinken? – Ja, gerne einen Kaffee."
+472,B1,22,V,main,völlig,,,Other,,,,completely,tamamen,полностью / совершенно,повністю / цілком,کاملاً,تماماً,4,21,Ich war völlig erschöpft nach dem langen Arbeitstag.
+473,B1,22,W,main,wieder,,,Other,,,,again,tekrar,снова,знову,دوباره,مرة أخرى,4,21,"Wenn du wieder in der Stadt bist, sollten wir uns treffen."
+474,B1,22,W,main,würde,,,Other,,,,would,olurdu,бы,б / би,می‌بود / می‌شد,سيكون,3,21,Das würde ich gerne noch einmal machen.
+475,B1,22,G,main,gesehen,,,Verb,,,,seen,görülmüş,увиденный / видел,побачений / бачив,دیده / دیده‌شده,مرئي,5,21,"Ich habe den Film schon gesehen, aber er ist wirklich gut."
+476,B1,22,Ä,main,äußerlich,,,Other,,,,external,dışsal,внешний,зовнішній,بیرونی,خارجي,8,21,Das äußerliche Erscheinungsbild ist nicht das Wichtigste.
+477,B1,22,G,main,geöffnet,,,Other,,,,opened,açık / açılmış,открытый,відкритий,باز / بازشده,مفتوح,6,21,Das Museum ist heute geöffnet und der Eintritt kostet fünf Euro.
+478,B1,22,H,main,haben,,,Verb,,,,to have,sahip olmak,иметь,мати,داشتن,يملك,1,21,Ich bin zu beschäftigt – ich habe keine Zeit dafür.
+479,B1,23,B,main,bar,,,Other,,,,cash / in cash,nakit / nakit olarak,наличными,готівкою,نقد / نقداً,نقداً,1,21,Kann ich bar bezahlen oder nur mit Karte?
+480,B1,23,B,main,Bargeld,das,,Noun,,,,cash,nakit para,наличными,готівка,پول نقد,نقود,5,12,Ich habe leider kein Bargeld dabei – kann ich mit Karte zahlen?
+481,B1,23,B,main,Bart,der,¨-e,Noun,,,,beard,sakal,борода,борода,ریش,لحية,2,4,Er hat sich einen Bart wachsen lassen und sieht jetzt ganz anders aus.
+482,B1,23,B,main,Basketball,der,¨-e,Noun,,,,basketball,basketbol,баскетбол,баскетбол,بسکتبال,كرة السلة,8,15,Sie spielt jeden Mittwoch Basketball mit ihrer Schulmannschaft.
+483,B1,23,B,main,basteln,,,Verb,bastelt,bastelte,hat gebastelt,to do crafts / make things,el işi yapmak / imalat yapmak,мастерить / делать поделки,майструвати / робити поробки,کاردستی درست کردن / ساختن,يصنع يدوياً,5,16,Die Kinder haben im Kunstunterricht gebastelt und bunte Figuren gemacht.
+484,B1,23,B,main,Batterie,die,-nder,Noun,,,,battery,pil / batarya,батарейка,батарейка,باتری,بطارية,6,17,Die Batterie des Handys ist leer und muss aufgeladen werden.
+485,B1,23,B,main,bauen,,,Verb,baut,baute,hat gebaut,to build / construct,inşa etmek / yapmak,строить,будувати,ساختن,يبني,3,21,Er hat in drei Monaten ein kleines Holzhaus im Garten gebaut.
+486,B1,23,B,main,Bau,der,,Noun,,,,construction / building,inşaat / yapı,строительство / постройка,будівництво / споруда,ساخت‌وساز / بنا,بناء,1,21,Der Bau des neuen Bahnhofs dauert noch zwei Jahre.
+487,B1,23,B,main,Baustelle,die,-n,Noun,,,,construction site,inşaat alanı,стройка,будівельний майданчик,محل ساخت‌وساز,موقع بناء,8,8,Die Baustelle hat den Verkehr stark verlangsamt.
+488,B1,23,B,main,Bauer,der,-n,Noun,,,,farmer (male),çiftçi (erkek),фермер (муж.),фермер (чол.),کشاورز (مرد),مزارع,3,14,Der Bauer arbeitet jeden Tag früh morgens auf dem Feld.
+489,B1,23,B,main,Baum,der,¨-e,Noun,,,,tree,ağaç,дерево,дерево,درخت,شجرة,2,14,Im Herbst verlieren die Bäume im Park ihre Blätter.
+490,B1,23,B,main,beachten,,,Verb,beachtet,beachtete,hat beachtet,to pay attention to / follow (rules),dikkat etmek / uymak (kurallara),обращать внимание / соблюдать,звертати увагу / дотримуватися,توجه کردن به / رعایت کردن,ينتبه إلى,6,21,Bitte beachten Sie die Hinweisschilder im Gebäude.
+491,B1,23,B,main,Beamte,der,-n,Noun,,,,civil servant (male),memur (erkek),чиновник (муж.),чиновник (чол.),کارمند دولت (مرد),موظف حكومي,7,8,Der Beamte hat alle Dokumente geprüft und den Antrag bearbeitet.
+492,B1,23,B,main,Beamtin,die,-nen,Noun,,,,civil servant (female),memur (kadın),чиновница (жен.),чиновниця (жін.),کارمند دولت (زن),موظفة حكومية,7,8,Die Beamtin hat alle Fragen geduldig und freundlich beantwortet.
+493,B1,23,B,main,beantragen,,,Verb,beantragt,beantragte,hat beantragt,to apply for,başvurmak,подавать заявление,подавати заяву,درخواست کردن,يتقدم بطلب,8,21,Er hat einen Antrag auf Wohngeld beim Amt beantragt.
+494,B1,23,B,main,beantworten,,,Verb,beant-,wortet,hat beantwortet,to answer,cevaplamak / yanıtlamak,отвечать,відповідати,پاسخ دادن,يجيب على,9,21,Bitte beantworte alle Fragen vollständig und ehrlich.
+495,B1,23,B,main,Bedarf,der,,Noun,,,,need / demand / requirement,ihtiyaç / talep / gereklilik,потребность / спрос / необходимость,потреба / попит / необхідність,نیاز / تقاضا / ضرورت,حاجة,7,21,Der Bedarf an Pflegepersonal ist in Deutschland sehr hoch.
+496,B1,23,B,main,bedeuten,,,Verb,bedeutet,bedeutete,hat bedeutet,to mean,anlamına gelmek,значить / означать,значити / означати,معنی دادن / به معنی بودن,يعني,6,21,Was bedeutet dieses Wort auf Deutsch?
+497,B1,23,B,main,Bedeutung,die,,Noun,,,,meaning / significance,anlam / önem,значение / смысл,значення / зміст,معنا / اهمیت,معنى,8,21,Die Bedeutung dieses Satzes ist mir nicht ganz klar.
+498,B1,23,B,main,backen,,,Verb,,backte,hat gebacken,to bake,fırınlamak / pişirmek,печь,пекти,پختن,يخبز,4,5,An Weihnachten backt sie immer Kekse für die ganze Familie.
+499,B1,23,B,main,Bäckerei,die,-en,Noun,,,,bakery,fırın / ekmekçi,пекарня,пекарня,نانوایی,مخبز,6,5,Die Bäckerei um die Ecke hat frisches Brot und Brötchen.
+500,B1,23,B,main,baden,,,Verb,badet,badete,,to bathe / swim,yıkanmak / yüzmek,купаться / плавать,купатися / плавати,حمام کردن / شنا کردن,يستحم,3,21,Er geht am Wochenende gerne im See Baden.
+501,B1,23,B,main,Bad,das,¨-er,Noun,,,,bathroom / bath,banyo,ванная / купание,ванна кімната / купання,حمام,حمام,1,6,Das Bad in diesem Hotel ist sehr sauber und modern.
+502,B1,23,B,main,Badewanne,die,-n,Noun,,,,bathtub,küvet,ванна,ванна (посудина),وان حمام,حوض استحمام,8,6,Er liegt gerne in der Badewanne und liest ein Buch.
+503,B1,23,B,main,Bahn,die,-en,Noun,,,,train / railway,tren / demiryolu,поезд / железная дорога,потяг / залізниця,قطار / راه‌آهن,قطار,2,11,Wir fahren mit der Bahn nach Hamburg – das ist günstiger als das Flugzeug.
+504,B1,23,S,main,Straßenbahn,die,-en,Noun,,,,tram / streetcar,tramvay,трамвай,трамвай,تراموا,ترام,9,11,Die Straßenbahn hält direkt vor dem Rathaus.
+505,B1,23,U,main,U-Bahn,die,-en,Noun,,,,subway / underground,metro,метро,метро,مترو,مترو,4,11,Die U-Bahn fährt hier alle fünf Minuten.
+506,B1,23,B,main,Bahnhof,der,¨-e,Noun,,,,train station,tren garı / istasyon,вокзал,вокзал,ایستگاه قطار,محطة قطار,5,11,Wir treffen uns am Bahnhof um halb acht.
+507,B1,23,B,main,Bahnsteig,der,-e,Noun,,,,platform,peron,платформа,перон / платформа,سکوی قطار,رصيف,8,11,Bitte gehen Sie auf Bahnsteig drei – Ihr Zug fährt gleich ab.
+508,B1,23,B,main,Balkon,der,-e,Noun,,,,balcony,balkon,балкон,балкон,بالکن,شرفة,4,6,Auf dem Balkon meiner Wohnung wachsen Blumen und Kräuter.
+509,B1,23,B,main,Ball,der,¨-edas,Noun,,,,ball,top,мяч,м'яч,توپ,كرة,2,15,Die Kinder spielen im Garten mit dem Ball.
+510,B1,23,B,main,Bank,die,¨-e,Noun,,,,bank (financial),banka,банк,банк (фінансовий),بانک (مالی),بنك,2,12,"Er hebt Geld von der Bank ab, um den Vermieter zu bezahlen."
+511,B1,23,B,main,Bank,die,-en,Noun,,,,bench,bank / oturak,скамейка,лавка / лава,نیمکت,مقعد,2,12,Er sitzt auf der Bank im Park und liest die Zeitung.
+512,B1,23,B,main,Bankleitzahl,die,-endie,Noun,,,,bank sort code,banka kodu / şube kodu,банковский код,банківський код,کد بانکی,رمز بنكي,10,12,Bitte geben Sie Ihre Bankleitzahl beim Überweisungsformular an.
+513,B1,23,B,main,beantragt,,,Other,,,,applied for,başvurulmuş,подал заявление,подав заяву,درخواست شده,مُقدَّم,8,21,Sein Visum wurde beantragt und wir warten auf eine Antwort.
+514,B1,23,B,main,beantwortet,,,Other,,,,answered,cevaplandı,ответил,відповів,پاسخ داده شده,مُجاب,9,21,Die E-Mail wurde innerhalb von 24 Stunden beantwortet.
+515,B1,23,Z,main,-lich,,,Other,,,,(adjective/adverb suffix),,(суффикс прилагательного/наречия),(суфікс прикметника/прислівника),(پسوند صفت / قید),لاحقة,3,21,Das Wort 'freundlich' endet mit dem Suffix -lich.
+516,B1,23,H,main,heute,,,Other,,,,today,bugün,сегодня,сьогодні,امروز,اليوم,3,2,Heute ist das Wetter besonders schön.
+517,B1,23,S,main,sich,,,Other,,,,oneself,(dönüşlülük),себя,себе / собою,خود,نفسه,2,21,Er hat sich beim Arzt vorgestellt.
+518,B1,23,S,main,sie,,,Other,,,,she / they,o / onlar,она / они,вона / вони,او / آن‌ها,هي,1,21,"Sie war nicht zu Hause, als ich anrief."
+519,B1,23,V,main,viele,,,Other,,,,many,çok / birçok,многие,багато / багато хто,بسیار / خیلی,كثير,1,21,Es haben viele Personen an der Veranstaltung teilgenommen.
+520,B1,23,M,main,möglich,,,Other,,,,possible,mümkün,возможный,можливий,ممکن,ممكن,5,21,"Ist es möglich, morgen früh einen Termin zu bekommen?"
+521,B1,23,T,main,tanzen,,,Verb,,,,to dance,dans etmek,танцевать,танцювати,رقصیدن,يرقص,4,15,Sie tanzt seit ihrer Kindheit und nimmt jeden Samstag Unterricht.
+522,B1,23,V,main,vorne,,,Other,,,,at the front,önde,спереди,спереду,جلو,في الأمام,3,21,"Setzen Sie sich vorne, damit Sie die Tafel gut sehen können."
+523,B1,23,Z,main,zahlen,,,Verb,,,,to pay,ödemek,платить,платити,پرداختن,يدفع,4,12,kannst du bitte für das Abendessen zahlen? Ich habe kein Bargeld.
+524,B1,24,B,main,behindern,,,Verb,behindert,behinderte,hat behindertbehindert,to hinder / obstruct,engellemek,мешать / препятствовать,заважати / перешкоджати,مانع شدن / ممانعت کردن,يعيق,8,21,Der Lärm von der Baustelle behindert uns beim Arbeiten.
+525,B1,24,B,main,Behörde,die,-nbei,Noun,,,,authority / government office,makam / resmi kurum,ведомство / государственный орган,відомство / державний орган,اداره / مقام دولتی,سلطة حكومية,7,18,Er muss viele Formulare bei der Behörde einreichen.
+526,B1,24,B,main,beide,,,Other,,,,both,her ikisi (varyant),оба,обидва,هر دو,كلاهما,3,21,Beide Kinder gehen in dieselbe Schule.
+527,B1,24,B,main,Bein,das,-e,Noun,,,,leg,bacak,нога,нога,پا,ساق,2,4,Er hat sich das Bein beim Skifahren gebrochen.
+528,B1,24,B,main,beinahe,,,Other,,,,almost / nearly,neredeyse / az kalsın,почти,майже,تقریباً / نزدیک بود,تقريباً,5,21,Ich habe beinahe den letzten Bus verpasst.
+529,B1,24,B,main,Beispiel,das,-e,Noun,,,,example,örnek,пример,приклад,مثال / نمونه,مثال,6,13,Zum Beispiel kann man Deutsch durch Bücher und Filme lernen.
+530,B1,24,B,main,beißen,,,Verb,beißt,biss,hat gebissen,to bite,ısırmak,кусать,кусати,گاز گرفتن,يعض,7,21,Der Hund hat ihn ins Bein gebissen.
+531,B1,24,B,main,Beitrag,der,¨-e,Noun,,,,contribution / article / fee,katkı / makale / ücret,вклад / статья / взнос,внесок / стаття / внесок (фінансовий),مشارکت / مقاله / حق‌عضویت,مساهمة,7,21,Er zahlt monatlich einen Beitrag für den Sportverein.
+532,B1,24,B,main,bekannt,,,Other,,,,known / famous,tanınan / ünlü,известный,відомий,معروف / مشهور,معروف,5,3,Dieser Schauspieler ist in ganz Deutschland bekannt.
+533,B1,24,B,main,Bekannte,der,-n,Noun,,,,acquaintance (male),tanıdık (erkek),знакомый (муж.),знайомий (чол.),آشنا (مرد),معارف,6,3,Ein Bekannter von mir hat mir eine gute Stelle empfohlen.
+534,B1,24,B,main,Bekannte,die,-n,Noun,,,,acquaintance (female),tanıdık (kadın),знакомая (жен.),знайома (жін.),آشنا (زن),معارفة,6,3,Eine Bekannte hat mir dieses Restaurant empfohlen.
+535,B1,24,B,main,bekannt,,,Other,,,,known / famous,tanınan / ünlü,известный,відомий,معروف / مشهور,معروف,5,3,Das ist das bekannteste Wahrzeichen der Stadt.
+536,B1,24,B,main,bekommen,,,Verb,bekommt,bekam,hat bekommenbedienen,to get / receive,almak / elde etmek,получать,отримувати,گرفتن / دریافت کردن,يحصل على,6,21,Ich bekomme jeden Monat mein Gehalt auf das Konto.
+537,B1,24,B,main,Bedienungsanleitung,die,,Noun,,,,operating instructions / manual,kullanım kılavuzu,инструкция по эксплуатации,інструкція з експлуатації / посібник,دستورالعمل استفاده / راهنما,دليل الاستخدام,10,17,"Die Bedienungsanleitung erklärt Schritt für Schritt, wie man das Gerät bedient."
+538,B1,24,B,main,Bedingung,die,-en,Noun,,,,condition / requirement,koşul / şart,условие / требование,умова / вимога,شرط / الزام,شرط,8,21,"Eine wichtige Bedingung für den Job ist, dass man Deutsch spricht."
+539,B1,24,B,main,beenden,,,Verb,beendet,beendete,hat beendet,to end / finish,bitirmek / sona erdirmek,заканчивать,закінчувати / завершувати,پایان دادن / تمام کردن,ينهي,5,21,Er hat die Aufgabe pünktlich beendet und das Ergebnis abgegeben.
+540,B1,24,B,main,befreit,,,Other,,,,freed / relieved,serbest bırakılmış / rahatlamış,освобождённый / испытывающий облегчение,звільнений / полегшений,آزاد شده / آسوده,محرر,5,19,Sie hat die Prüfung bestanden und fühlt sich befreit.
+541,B1,24,B,main,befriedigend,,,Other,,,,satisfactory,tatmin edici / yeterli,удовлетворительный,задовільний,رضایت‌بخش,مُرضٍ,10,21,"Die Leistung war befriedigend, aber noch nicht ausgezeichnet."
+542,B1,24,B,main,begegnen,,,Verb,begegnet,begegnete,ist begegnet,to meet / encounter,karşılaşmak / tanışmak,встречать / сталкиваться,зустрічати / стикатися,ملاقات کردن / روبرو شدن,يلتقي,6,21,Ich habe ihn gestern zufällig auf der Straße begegnet.
+543,B1,24,B,main,begeistert,,,Other,,,,enthusiastic / thrilled,hevesli / coşkulu,в восторге / воодушевлённый,у захваті / натхненний,مشتاق / شیفته,متحمس,8,19,Die Fans waren begeistert von dem Konzert.
+544,B1,24,B,main,beginnen,,,Verb,beginnt,begann,hat begonnen,to begin,başlamak,начинать,починати,شروع کردن / آغاز کردن,يبدأ,6,2,Der Unterricht beginnt jeden Morgen pünktlich um acht Uhr.
+545,B1,24,B,main,Beginn,der,,Noun,,,,beginning / start,başlangıç,начало,початок,شروع / آغاز,بداية,4,2,Am Beginn des Kurses stellt sich jeder kurz vor.
+546,B1,24,B,main,begleiten,,,Verb,begleitet,begleitete,hat begleitet,to accompany,eşlik etmek,сопровождать,супроводжувати,همراهی کردن,يرافق,8,21,Er begleitet seine Mutter jeden Samstag zum Markt.
+547,B1,24,B,main,begrenzen,,,Verb,begründet,begründete,hat begründet,to limit,sınırlamak,ограничивать,обмежувати,محدود کردن,يحدد,8,21,Das Budget für das Projekt wurde auf 10.000 Euro begrenzt.
+548,B1,24,B,main,begründen,,,Verb,begründet,begründete,hat begründet,to justify / to give reasons,gerekçelendirmek / nedenini açıklamak,обосновывать / аргументировать,обґрунтовувати / аргументувати,توجیه کردن / استدلال کردن,يبرر,8,21,Bitte begründe deine Antwort mit einem oder zwei Sätzen.
+549,B1,24,B,main,Begründung,die,-en,Noun,,,,justification / reason,gerekçe / neden,обоснование / причина,обґрунтування / причина,توجیه / دلیل,تبرير,8,21,Die Begründung für die Entscheidung war nicht überzeugend.
+550,B1,24,B,main,begrüßen,,,Verb,begrüßt,begrüßte,hat begrüßt,to greet / welcome,selamlamak / hoş karşılamak,приветствовать,вітати / привітально зустрічати,خوش‌آمد گفتن / سلام کردن,يرحب,6,21,Der Gastgeber hat die Gäste herzlich begrüßt.
 551,B1,24,B,main,behalten,,,Verb,behält,behielt,hat behalten,to keep / retain,tutmak / elinde bulundurmak,оставлять / сохранять,залишати / зберігати,نگه داشتن / حفظ کردن,يحتفظ,6,21,
 552,B1,24,B,main,behandeln,,,Verb,behandelt,behandelte,hat behandelt1.,to treat / deal with,tedavi etmek / ele almak,лечить / рассматривать,лікувати / розглядати,درمان کردن / رسیدگی کردن,يعالج,8,4,
 553,B1,24,W,main,wichtig,,,Other,,,,important,önemli,важный,важливий,مهم,مهم,5,21,
