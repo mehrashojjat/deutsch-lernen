@@ -1,104 +1,104 @@
-id,level,source_page,section,entry_type,word,article,plural,word_type,translation_en,translation_tr,translation_ru,translation_uk,translation_fa,translation_ar,difficulty,category_id
-1,A1,6,zahlen,section_title,Zahlen,,,Noun,numbers,sayılar,числа,числа,اعداد,أرقام,3,1
-2,A1,6,zahlen,main,eins,,,Number,one,bir,один,один,یک,واحد,1,1
-3,A1,6,zahlen,main,zwei,,,Number,two,iki,два,два,دو,اثنان,1,1
-4,A1,6,zahlen,main,drei,,,Number,three,üç,три,три,سه,ثلاثة,1,1
-5,A1,6,zahlen,main,vier,,,Number,four,dört,четыре,чотири,چهار,أربعة,1,1
-6,A1,6,zahlen,main,fünf,,,Number,five,beş,пять,п'ять,پنج,خمسة,1,1
-7,A1,6,zahlen,main,sechs,,,Number,six,altı,шесть,шість,شش,ستة,2,1
-8,A1,6,zahlen,main,sieben,,,Number,seven,yedi,семь,сім,هفت,سبعة,3,1
-9,A1,6,zahlen,main,acht,,,Number,eight,sekiz,восемь,вісім,هشت,ثمانية,1,1
-10,A1,6,zahlen,main,neun,,,Number,nine,dokuz,девять,дев'ять,نه,تسعة,1,1
-11,A1,6,zahlen,main,zehn,,,Number,ten,on,десять,десять,ده,عشرة,1,1
-12,A1,6,zahlen,main,elf,,,Number,eleven,on bir,одиннадцать,одинадцять,یازده,أحد عشر,1,1
-13,A1,6,zahlen,main,zwölf,,,Number,twelve,on iki,двенадцать,двана́дцять,دوازده,اثنا عشر,2,1
-14,A1,6,zahlen,main,dreizehn,,,Number,thirteen,on üç,тринадцать,тринадцять,سیزده,ثلاثة عشر,7,1
-15,A1,6,zahlen,main,vierzehn,,,Number,fourteen,on dört,четырнадцать,чотирнадцять,چهارده,أربعة عشر,7,1
-16,A1,6,zahlen,main,fünfzehn,,,Number,fifteen,on beş,пятнадцать,п'ятнадцять,پانزده,خمسة عشر,7,1
-17,A1,6,zahlen,main,sechzehn,,,Number,sixteen,on altı,шестнадцать,шістнадцять,شانزده,ستة عشر,7,1
-18,A1,6,zahlen,main,siebzehn,,,Number,seventeen,on yedi,семнадцать,сімнадцять,هفده,سبعة عشر,7,1
-19,A1,6,zahlen,main,achtzehn,,,Number,eighteen,on sekiz,восемнадцать,вісімнадцять,هجده,ثمانية عشر,7,1
-20,A1,6,zahlen,main,neunzehn,,,Number,nineteen,on dokuz,девятнадцать,дев'ятнадцять,نوزده,تسعة عشر,7,1
-21,A1,6,zahlen,main,zwanzig,,,Number,twenty,yirmi,двадцать,двадцять,بیست,عشرون,6,1
-22,A1,6,zahlen,main,einundzwanzig,,,Number,twenty-one,yirmi bir,двадцать один,двадцять один,بیست و یک,واحد وعشرون,10,1
-23,A1,6,zahlen,main,dreißig,,,Number,thirty,otuz,тридцать,тридцять,سی,ثلاثون,6,1
-24,A1,6,zahlen,main,vierzig,,,Number,forty,kırk,сорок,сорок,چهل,أربعون,6,1
-25,A1,6,zahlen,main,fünfzig,,,Number,fifty,elli,пятьдесят,п'ятдесят,پنجاه,خمسون,6,1
-26,A1,6,zahlen,main,sechzig,,,Number,sixty,altmış,шестьдесят,шістдесят,شصت,ستون,6,1
-27,A1,6,zahlen,main,siebzig,,,Number,seventy,yetmiş,семьдесят,сімдесят,هفتاد,سبعون,6,1
-28,A1,6,zahlen,main,achtzig,,,Number,eighty,seksen,восемьдесят,вісімдесят,هشتاد,ثمانون,6,1
-29,A1,6,zahlen,main,neunzig,,,Number,ninety,doksan,девяносто,дев'яносто,نود,تسعون,6,1
-30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz,сто,сто,صد,مئة,6,1
-31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one,yüz bir,сто один,сто один,صد و یک,مئة وواحد,10,1
-32,A1,6,zahlen,main,zweihundert,,,Number,two hundred,iki yüz,двести,двісті,دویست,مئتان,10,1
-33,A1,6,zahlen,main,tausend,,,Number,thousand,bin,тысяча,тисяча,هزار,ألف,6,1
-34,A1,6,zahlen,main,Million,die,-en,Noun,million,milyon,миллион,мільйон,میلیون,مليون,8,1
-35,A1,6,zahlen,main,Milliarde,die,-en,Noun,billion,milyar,миллиард,мільярд,میلیارد,مليار,9,1
-36,A1,6,zahlen,main,erste,,,Number,first,birinci,первый,перший,اول,الأول,4,1
-37,A1,6,zahlen,main,zweite,,,Number,second,ikinci,второй,другий,دوم,الثاني,5,1
-38,A1,6,zahlen,main,dritte,,,Number,third,üçüncü,третий,третій,سوم,الثالث,5,1
-39,A1,6,zahlen,main,vierte,,,Number,fourth,dördüncü,четвёртый,четвертий,چهارم,الرابع,5,1
-40,A1,6,zahlen,main,Datum,das,,Noun,date,tarih,дата,дата,تاریخ,تاريخ,8,1
-41,A1,6,zahlen,main,halb,,,Other,half,yarım,половина,половина,نیم,نصف,1,1
-42,A1,6,zahlen,main,Viertel,das,,Noun,quarter,çeyrek,четверть,чверть,ربع,ربع,6,1
-43,A1,7,uhrzeit,section_title,Uhrzeit,die,,Noun,time of day,saat / günün zamanı,время суток,час доби,زمان روز,وقت اليوم,6,2
-44,A1,7,uhrzeit,main,Sekunde,die,-n,Noun,second,saniye,секунда,секунда,ثانیه,ثانية,3,2
-45,A1,7,uhrzeit,main,Minute,die,-n,Noun,minute,dakika,минута,хвилина,دقیقه,دقيقة,3,2
-46,A1,7,uhrzeit,main,Stunde,die,-n,Noun,hour,saat,час,година,ساعت,ساعة,3,2
-47,A1,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,unit of time,zaman birimi,единица времени,одиниця часу,واحد زمان,وحدة زمن,8,1
-48,A1,7,zeitmaße,section_title,Zeitangabe,die,-n,Noun,time expression,zaman ifadesi,указание времени,позначення часу,عبارت زمانی,تعبير زمني,9,1
-49,A1,7,zeitmaße,main,Tag,der,-e,Noun,day,gün,день,день,روز,يوم,1,1
-50,A1,7,zeitmaße,main,Woche,die,-n,Noun,week,hafta,неделя,тиждень,هفته,أسبوع,2,1
-51,A1,7,zeitmaße,main,Jahr,das,-e,Noun,year,yıl,год,рік,سال,سنة,1,1
-52,A1,7,woche,section_title,Wochentag,der,-e,Noun,weekday,hafta günü,день недели,день тижня,روز هفته,يوم الأسبوع,9,2
-53,A1,7,woche,main,Wochenende,das,,Noun,weekend,hafta sonu,выходные,вихідні,آخر هفته,عطلة نهاية الأسبوع,9,2
-54,A1,7,woche,main,Sonntag,der,,Noun,Sunday,Pazar,воскресенье,неділя,یکشنبه,الأحد,3,2
-55,A1,7,woche,main,Montag,der,,Noun,Monday,Pazartesi,понедельник,понеділок,دوشنبه,الاثنين,3,2
-56,A1,7,woche,main,Dienstag,der,,Noun,Tuesday,Sali,вторник,вівторок,سه‌شنبه,الثلاثاء,7,2
-57,A1,7,woche,main,Mittwoch,der,,Noun,Wednesday,Çarşamba,среда,середа,چهارشنبه,الأربعاء,7,2
-58,A1,7,woche,main,Donnerstag,der,,Noun,Thursday,Perşembe,четверг,четвер,پنج‌شنبه,الخميس,7,2
-59,A1,7,woche,main,Freitag,der,,Noun,Friday,Cuma,пятница,п'ятниця,جمعه,الجمعة,3,2
-60,A1,7,woche,main,Samstag,der,,Noun,Saturday,Cumartesi,суббота,субота,شنبه,السبت,3,2
-61,A1,7,woche,sub,Sonnabend,der,,Noun,Saturday (northern German),Cumartesi (Kuzey Almanya),суббота (северная Германия),субота (північна Німеччина),شنبه (آلمان شمالی),السبت (شمال ألمانيا),7,2
-62,A1,7,tageszeiten,section_title,Tageszeit,die,-en,Noun,time of day,günün saati,время суток,час доби,زمان روز,وقت اليوم,9,2
-63,A1,7,tageszeiten,main,Morgen,der,,Noun,morning,sabah,утро,ранок,صبح,صباح,3,2
-64,A1,7,tageszeiten,main,Vormittag,der,-e,Noun,late morning,öğleden önce,позднее утро,пізній ранок,اواخر صبح,الضحى,7,2
-65,A1,7,tageszeiten,main,Mittag,der,,Noun,noon,öğle,полдень,полудень,ظهر,ظهر,3,2
-66,A1,7,tageszeiten,main,Nachmittag,der,-e,Noun,afternoon,öğleden sonra,после полудня,після полудня,بعد از ظهر,بعد الظهر,7,2
-67,A1,7,tageszeiten,main,Abend,der,-e,Noun,evening,akşam,вечер,вечір,عصر,مساء,2,2
-68,A1,7,tageszeiten,main,Nacht,die,¨-e,Noun,night,gece,ночь,ніч,شب,ليل,2,2
-69,A1,7,monat,section_title,Monat,der,-e,Noun,month,ay,месяц,місяць,ماه,شهر,4,2
-70,A1,7,monat,section_title,Monatsname,der,-n,Noun,name of the month,ay adı,название месяца,назва місяця,نام ماه,اسم الشهر,9,2
-71,A1,7,monat,main,Januar,der,,Noun,January,Ocak,январь,січень,ژانویه,يناير,5,2
-72,A1,7,monat,main,Februar,der,,Noun,February,Şubat,февраль,лютий,فوریه,فبراير,6,2
-73,A1,7,monat,main,März,der,,Noun,March,Mart,март,березень,مارس,مارس,1,2
-74,A1,7,monat,main,April,der,,Noun,April,Nisan,апрель,квітень,آوریل,أبريل,2,2
-75,A1,7,monat,main,Mai,der,,Noun,May,Mayıs,май,травень,مه,مايو,1,2
-76,A1,7,monat,main,Juni,der,,Noun,June,Haziran,июнь,червень,ژوئن,يونيو,4,2
-77,A1,7,monat,main,Juli,der,,Noun,July,Temmuz,июль,липень,ژوئیه,يوليو,4,2
-78,A1,7,monat,main,August,der,,Noun,August,Ağustos,август,серпень,آگوست,أغسطس,5,2
-79,A1,7,monat,main,September,der,,Noun,September,Eylül,сентябрь,вересень,سپتامبر,سبتمبر,7,2
-80,A1,7,monat,main,Oktober,der,,Noun,October,Ekim,октябрь,жовтень,اکتبر,أكتوبر,6,2
-81,A1,7,monat,main,November,der,,Noun,November,Kasım,ноябрь,листопад,نوامبر,نوفمبر,7,2
-82,A1,7,monat,main,Dezember,der,,Noun,December,Aralık,декабрь,грудень,دسامبر,ديسمبر,7,2
-83,A1,8,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,season,mevsim,время года,пора року,فصل,فصل,9,2
-84,A1,8,jahreszeiten,main,Frühling,der,,Noun,spring,ilkbahar,весна,весна,بهار,ربيع,7,2
-85,A1,8,jahreszeiten,sub,Frühjahr,das,,Noun,spring,ilkbahar,весна,весна,بهار,ربيع,7,2
-86,A1,8,jahreszeiten,main,Sommer,der,,Noun,summer,yaz,лето,літо,تابستان,صيف,3,2
-87,A1,8,jahreszeiten,main,Herbst,der,,Noun,autumn,sonbahar,осень,осінь,پاییز,خريف,3,2
-88,A1,8,jahreszeiten,main,Winter,der,,Noun,winter,kış,зима,зима,زمستان,شتاء,3,2
-89,A1,8,waehrungen,section_title,Währung,die,-en,Noun,currency,para birimi,валюта,валюта,ارز,عملة,6,12
-90,A1,8,waehrungen,main,Euro,der,,Noun,euro,euro,евро,євро,یورو,يورو,1,12
-91,A1,8,waehrungen,sub,Cent,der,,Noun,cent,cent,цент,цент,سنت,سنت,1,12
-92,A1,8,masse,section_title,Maß,das,-e,Noun,measure / unit,ölçü / birim,мера / единица,міра / одиниця,واحد / اندازه,مقياس / وحدة,4,1
-93,A1,8,masse,section_title,Gewicht,das,-e,Noun,weight,ağırlık,вес,вага,وزن,وزن,6,1
-94,A1,8,masse,main,Meter,der,,Noun,meter,metre,метр,метр,متر,متر,2,1
-95,A1,8,masse,sub,Zentimeter,der,,Noun,centimeter,santimetre,сантиметр,сантиметр,سانتی‌متر,سنتيمتر,7,1
-96,A1,8,masse,main,Kilometer,der,,Noun,kilometer,kilometre,километр,кілометр,کیلومتر,كيلومتر,7,1
-97,A1,8,masse,main,Quadratmeter,der,,Noun,square meter,metrekare,квадратный метр,квадратний метр,متر مربع,متر مربع,10,1
-98,A1,8,masse,main,Grad,der,,Noun,degree,derece,градус,градус,درجه,درجة,1,1
-99,A1,8,masse,main,Prozent,das,,Noun,percent,yüzde,процент,відсоток,درصد,بالمئة,6,1
-100,A1,8,masse,main,Liter,der,,Noun,liter,litre,литр,літр,لیتر,لتر,2,1
+id,level,source_page,section,entry_type,word,article,plural,word_type,translation_en,translation_tr,translation_ru,translation_uk,translation_fa,translation_ar,difficulty,category_id,example_de
+1,A1,6,zahlen,section_title,Zahlen,,,Noun,numbers,sayılar,числа,числа,اعداد,أرقام,3,1,Die Zahlen sind wichtig.
+2,A1,6,zahlen,main,eins,,,Number,one,bir,один,один,یک,واحد,1,1,Eins ist die erste Zahl.
+3,A1,6,zahlen,main,zwei,,,Number,two,iki,два,два,دو,اثنان,1,1,Ich habe zwei Äpfel.
+4,A1,6,zahlen,main,drei,,,Number,three,üç,три,три,سه,ثلاثة,1,1,Heute sind drei Gäste da.
+5,A1,6,zahlen,main,vier,,,Number,four,dört,четыре,чотири,چهار,أربعة,1,1,Es sind vier Stühle im Zimmer.
+6,A1,6,zahlen,main,fünf,,,Number,five,beş,пять,п'ять,پنج,خمسة,1,1,Ich habe fünf Euro.
+7,A1,6,zahlen,main,sechs,,,Number,six,altı,шесть,шість,شش,ستة,2,1,Sechs ist meine Lieblingszahl.
+8,A1,6,zahlen,main,sieben,,,Number,seven,yedi,семь,сім,هفت,سبعة,3,1,Sieben ist größer als fünf.
+9,A1,6,zahlen,main,acht,,,Number,eight,sekiz,восемь,вісім,هشت,ثمانية,1,1,Das Auto kostet acht Euro.
+10,A1,6,zahlen,main,neun,,,Number,nine,dokuz,девять,дев'ять,نه,تسعة,1,1,Ich habe neun Fotos.
+11,A1,6,zahlen,main,zehn,,,Number,ten,on,десять,десять,ده,عشرة,1,1,Ich bin zehn Jahre alt.
+12,A1,6,zahlen,main,elf,,,Number,eleven,on bir,одиннадцать,одинадцять,یازده,أحد عشر,1,1,Mein Bruder ist elf Jahre alt.
+13,A1,6,zahlen,main,zwölf,,,Number,twelve,on iki,двенадцать,двана́дцять,دوازده,اثنا عشر,2,1,Zwölf Uhr ist Mittag.
+14,A1,6,zahlen,main,dreizehn,,,Number,thirteen,on üç,тринадцать,тринадцять,سیزده,ثلاثة عشر,7,1,Er ist dreizehn Jahre alt.
+15,A1,6,zahlen,main,vierzehn,,,Number,fourteen,on dört,четырнадцать,чотирнадцять,چهارده,أربعة عشر,7,1,Sie ist vierzehn Jahre alt.
+16,A1,6,zahlen,main,fünfzehn,,,Number,fifteen,on beş,пятнадцать,п'ятнадцять,پانزده,خمسة عشر,7,1,Ich werde fünfzehn.
+17,A1,6,zahlen,main,sechzehn,,,Number,sixteen,on altı,шестнадцать,шістнадцять,شانزده,ستة عشر,7,1,Ich bin sechzehn Jahre alt.
+18,A1,6,zahlen,main,siebzehn,,,Number,seventeen,on yedi,семнадцать,сімнадцять,هفده,سبعة عشر,7,1,Siebzehn Schüler sind im Raum.
+19,A1,6,zahlen,main,achtzehn,,,Number,eighteen,on sekiz,восемнадцать,вісімнадцять,هجده,ثمانية عشر,7,1,Er ist achtzehn Jahre alt.
+20,A1,6,zahlen,main,neunzehn,,,Number,nineteen,on dokuz,девятнадцать,дев'ятнадцять,نوزده,تسعة عشر,7,1,Er ist neunzehn.
+21,A1,6,zahlen,main,zwanzig,,,Number,twenty,yirmi,двадцать,двадцять,بیست,عشرون,6,1,Zwanzig Gäste sind eingeladen.
+22,A1,6,zahlen,main,einundzwanzig,,,Number,twenty-one,yirmi bir,двадцать один,двадцять один,بیست و یک,واحد وعشرون,10,1,Ich bin einundzwanzig Jahre alt.
+23,A1,6,zahlen,main,dreißig,,,Number,thirty,otuz,тридцать,тридцять,سی,ثلاثون,6,1,Er ist dreißig Jahre alt.
+24,A1,6,zahlen,main,vierzig,,,Number,forty,kırk,сорок,сорок,چهل,أربعون,6,1,Mein Vater ist vierzig.
+25,A1,6,zahlen,main,fünfzig,,,Number,fifty,elli,пятьдесят,п'ятдесят,پنجاه,خمسون,6,1,Die Straße ist fünfzig Meter lang.
+26,A1,6,zahlen,main,sechzig,,,Number,sixty,altmış,шестьдесят,шістдесят,شصت,ستون,6,1,Meine Oma ist sechzig.
+27,A1,6,zahlen,main,siebzig,,,Number,seventy,yetmiş,семьдесят,сімдесят,هفتاد,سبعون,6,1,Sie ist siebzig Jahre alt.
+28,A1,6,zahlen,main,achtzig,,,Number,eighty,seksen,восемьдесят,вісімдесят,هشتاد,ثمانون,6,1,Er ist achtzig Jahre alt.
+29,A1,6,zahlen,main,neunzig,,,Number,ninety,doksan,девяносто,дев'яносто,نود,تسعون,6,1,Er ist neunzig.
+30,A1,6,zahlen,main,hundert,,,Number,hundred,yüz,сто,сто,صد,مئة,6,1,Ein hundert ist hundert.
+31,A1,6,zahlen,main,hunderteins,,,Number,one hundred and one,yüz bir,сто один,сто один,صد و یک,مئة وواحد,10,1,101 ist hunderteins.
+32,A1,6,zahlen,main,zweihundert,,,Number,two hundred,iki yüz,двести,двісті,دویست,مئتان,10,1,Zweihundert Leute kamen.
+33,A1,6,zahlen,main,tausend,,,Number,thousand,bin,тысяча,тисяча,هزار,ألف,6,1,Tausend Euro sind teuer.
+34,A1,6,zahlen,main,Million,die,-en,Noun,million,milyon,миллион,мільйон,میلیون,مليون,8,1,Eine Million Menschen leben hier.
+35,A1,6,zahlen,main,Milliarde,die,-en,Noun,billion,milyar,миллиард,мільярд,میلیارد,مليار,9,1,Eine Milliarde ist sehr viel.
+36,A1,6,zahlen,main,erste,,,Number,first,birinci,первый,перший,اول,الأول,4,1,Er ist der erste.
+37,A1,6,zahlen,main,zweite,,,Number,second,ikinci,второй,другий,دوم,الثاني,5,1,Sie ist die zweite in der Klasse.
+38,A1,6,zahlen,main,dritte,,,Number,third,üçüncü,третий,третій,سوم,الثالث,5,1,Er ist der dritte.
+39,A1,6,zahlen,main,vierte,,,Number,fourth,dördüncü,четвёртый,четвертий,چهارم,الرابع,5,1,Das ist die vierte Seite.
+40,A1,6,zahlen,main,Datum,das,,Noun,date,tarih,дата,дата,تاریخ,تاريخ,8,1,Welches Datum ist heute?
+41,A1,6,zahlen,main,halb,,,Other,half,yarım,половина,половина,نیم,نصف,1,1,Es ist halb sieben.
+42,A1,6,zahlen,main,Viertel,das,,Noun,quarter,çeyrek,четверть,чверть,ربع,ربع,6,1,Es ist Viertel nach neun.
+43,A1,7,uhrzeit,section_title,Uhrzeit,die,,Noun,time of day,saat / günün zamanı,время суток,час доби,زمان روز,وقت اليوم,6,2,Die Uhrzeit ist wichtig.
+44,A1,7,uhrzeit,main,Sekunde,die,-n,Noun,second,saniye,секунда,секунда,ثانیه,ثانية,3,2,Eine Sekunde ist kurz.
+45,A1,7,uhrzeit,main,Minute,die,-n,Noun,minute,dakika,минута,хвилина,دقیقه,دقيقة,3,2,Eine Minute hat sechzig Sekunden.
+46,A1,7,uhrzeit,main,Stunde,die,-n,Noun,hour,saat,час,година,ساعت,ساعة,3,2,Eine Stunde dauert sechzig Minuten.
+47,A1,7,zeitmaße,section_title,Zeitmaß,das,-e,Noun,unit of time,zaman birimi,единица времени,одиниця часу,واحد زمان,وحدة زمن,8,1,Das Zeitmaß ist wichtig.
+48,A1,7,zeitmaße,section_title,Zeitangabe,die,-n,Noun,time expression,zaman ifadesi,указание времени,позначення часу,عبارت زمانی,تعبير زمني,9,1,Die Zeitangabe steht auf dem Formular.
+49,A1,7,zeitmaße,main,Tag,der,-e,Noun,day,gün,день,день,روز,يوم,1,1,Heute ist ein schöner Tag.
+50,A1,7,zeitmaße,main,Woche,die,-n,Noun,week,hafta,неделя,тиждень,هفته,أسبوع,2,1,Eine Woche hat sieben Tage.
+51,A1,7,zeitmaße,main,Jahr,das,-e,Noun,year,yıl,год,рік,سال,سنة,1,1,Ein Jahr hat zwölf Monate.
+52,A1,7,woche,section_title,Wochentag,der,-e,Noun,weekday,hafta günü,день недели,день тижня,روز هفته,يوم الأسبوع,9,2,Die Wochentage sind wichtig.
+53,A1,7,woche,main,Wochenende,das,,Noun,weekend,hafta sonu,выходные,вихідні,آخر هفته,عطلة نهاية الأسبوع,9,2,Am Wochenende schlafe ich lange.
+54,A1,7,woche,main,Sonntag,der,,Noun,Sunday,Pazar,воскресенье,неділя,یکشنبه,الأحد,3,2,Am Sonntag haben viele Leute frei.
+55,A1,7,woche,main,Montag,der,,Noun,Monday,Pazartesi,понедельник,понеділок,دوشنبه,الاثنين,3,2,Am Montag arbeite ich.
+56,A1,7,woche,main,Dienstag,der,,Noun,Tuesday,Sali,вторник,вівторок,سه‌شنبه,الثلاثاء,7,2,Dienstag ist mein freier Tag.
+57,A1,7,woche,main,Mittwoch,der,,Noun,Wednesday,Çarşamba,среда,середа,چهارشنبه,الأربعاء,7,2,Mittwoch ist die Wochenmitte.
+58,A1,7,woche,main,Donnerstag,der,,Noun,Thursday,Perşembe,четверг,четвер,پنج‌شنبه,الخميس,7,2,Am Donnerstag habe ich Schule.
+59,A1,7,woche,main,Freitag,der,,Noun,Friday,Cuma,пятница,п'ятниця,جمعه,الجمعة,3,2,Am Freitag ist Feierabend.
+60,A1,7,woche,main,Samstag,der,,Noun,Saturday,Cumartesi,суббота,субота,شنبه,السبت,3,2,Samstag kaufe ich ein.
+61,A1,7,woche,sub,Sonnabend,der,,Noun,Saturday (northern German),Cumartesi (Kuzey Almanya),суббота (северная Германия),субота (північна Німеччина),شنبه (آلمان شمالی),السبت (شمال ألمانيا),7,2,Sonnabend ist ein anderes Wort für Samstag.
+62,A1,7,tageszeiten,section_title,Tageszeit,die,-en,Noun,time of day,günün saati,время суток,час доби,زمان روز,وقت اليوم,9,2,Die Tageszeit beeinflusst die Stimmung.
+63,A1,7,tageszeiten,main,Morgen,der,,Noun,morning,sabah,утро,ранок,صبح,صباح,3,2,Am Morgen trinke ich Kaffee.
+64,A1,7,tageszeiten,main,Vormittag,der,-e,Noun,late morning,öğleden önce,позднее утро,пізній ранок,اواخر صبح,الضحى,7,2,Am Vormittag habe ich Unterricht.
+65,A1,7,tageszeiten,main,Mittag,der,,Noun,noon,öğle,полдень,полудень,ظهر,ظهر,3,2,Zum Mittag esse ich.
+66,A1,7,tageszeiten,main,Nachmittag,der,-e,Noun,afternoon,öğleden sonra,после полудня,після полудня,بعد از ظهر,بعد الظهر,7,2,Am Nachmittag gehe ich spazieren.
+67,A1,7,tageszeiten,main,Abend,der,-e,Noun,evening,akşam,вечер,вечір,عصر,مساء,2,2,Am Abend sehe ich fern.
+68,A1,7,tageszeiten,main,Nacht,die,¨-e,Noun,night,gece,ночь,ніч,شب,ليل,2,2,In der Nacht schlafe ich.
+69,A1,7,monat,section_title,Monat,der,-e,Noun,month,ay,месяц,місяць,ماه,شهر,4,2,Der Monat hat vier Wochen.
+70,A1,7,monat,section_title,Monatsname,der,-n,Noun,name of the month,ay adı,название месяца,назва місяця,نام ماه,اسم الشهر,9,2,Der Monatsname ist Januar.
+71,A1,7,monat,main,Januar,der,,Noun,January,Ocak,январь,січень,ژانویه,يناير,5,2,Im Januar ist es kalt.
+72,A1,7,monat,main,Februar,der,,Noun,February,Şubat,февраль,лютий,فوریه,فبراير,6,2,Im Februar liegt oft Schnee.
+73,A1,7,monat,main,März,der,,Noun,March,Mart,март,березень,مارس,مارس,1,2,Im März beginnt der Frühling.
+74,A1,7,monat,main,April,der,,Noun,April,Nisan,апрель,квітень,آوریل,أبريل,2,2,Im April regnet es viel.
+75,A1,7,monat,main,Mai,der,,Noun,May,Mayıs,май,травень,مه,مايو,1,2,Im Mai blühen die Blumen.
+76,A1,7,monat,main,Juni,der,,Noun,June,Haziran,июнь,червень,ژوئن,يونيو,4,2,Im Juni beginnt der Sommer.
+77,A1,7,monat,main,Juli,der,,Noun,July,Temmuz,июль,липень,ژوئیه,يوليو,4,2,Im Juli fahre ich in Urlaub.
+78,A1,7,monat,main,August,der,,Noun,August,Ağustos,август,серпень,آگوست,أغسطس,5,2,Im August ist es sehr heiß.
+79,A1,7,monat,main,September,der,,Noun,September,Eylül,сентябрь,вересень,سپتامبر,سبتمبر,7,2,Im September beginnt die Schule wieder.
+80,A1,7,monat,main,Oktober,der,,Noun,October,Ekim,октябрь,жовтень,اکتبر,أكتوبر,6,2,Im Oktober wird es kühler.
+81,A1,7,monat,main,November,der,,Noun,November,Kasım,ноябрь,листопад,نوامبر,نوفمبر,7,2,Im November ist es oft grau.
+82,A1,7,monat,main,Dezember,der,,Noun,December,Aralık,декабрь,грудень,دسامبر,ديسمبر,7,2,Im Dezember ist Weihnachten.
+83,A1,8,jahreszeiten,section_title,Jahreszeit,die,-en,Noun,season,mevsim,время года,пора року,فصل,فصل,9,2,Die Jahreszeiten sind vier.
+84,A1,8,jahreszeiten,main,Frühling,der,,Noun,spring,ilkbahar,весна,весна,بهار,ربيع,7,2,Im Frühling blühen die Bäume.
+85,A1,8,jahreszeiten,sub,Frühjahr,das,,Noun,spring,ilkbahar,весна,весна,بهار,ربيع,7,2,Im Frühjahr ist das Wetter mild.
+86,A1,8,jahreszeiten,main,Sommer,der,,Noun,summer,yaz,лето,літо,تابستان,صيف,3,2,Im Sommer schwimme ich gern.
+87,A1,8,jahreszeiten,main,Herbst,der,,Noun,autumn,sonbahar,осень,осінь,پاییز,خريف,3,2,Im Herbst fallen die Blätter.
+88,A1,8,jahreszeiten,main,Winter,der,,Noun,winter,kış,зима,зима,زمستان,شتاء,3,2,Im Winter ist es kalt.
+89,A1,8,waehrungen,section_title,Währung,die,-en,Noun,currency,para birimi,валюта,валюта,ارز,عملة,6,12,Die Währung ist wichtig beim Reisen.
+90,A1,8,waehrungen,main,Euro,der,,Noun,euro,euro,евро,євро,یورو,يورو,1,12,Der Euro ist die Währung in Deutschland.
+91,A1,8,waehrungen,sub,Cent,der,,Noun,cent,cent,цент,цент,سنت,سنت,1,12,Ein Euro hat hundert Cent.
+92,A1,8,masse,section_title,Maß,das,-e,Noun,measure / unit,ölçü / birim,мера / единица,міра / одиниця,واحد / اندازه,مقياس / وحدة,4,1,Maße und Einheiten sind wichtig.
+93,A1,8,masse,section_title,Gewicht,das,-e,Noun,weight,ağırlık,вес,вага,وزن,وزن,6,1,Das Gewicht ist fünf Kilo.
+94,A1,8,masse,main,Meter,der,,Noun,meter,metre,метр,метр,متر,متر,2,1,Der Raum ist drei Meter breit.
+95,A1,8,masse,sub,Zentimeter,der,,Noun,centimeter,santimetre,сантиметр,сантиметр,سانتی‌متر,سنتيمتر,7,1,Der Stift ist fünfzehn Zentimeter lang.
+96,A1,8,masse,main,Kilometer,der,,Noun,kilometer,kilometre,километр,кілометр,کیلومتر,كيلومتر,7,1,Die Stadt ist zehn Kilometer entfernt.
+97,A1,8,masse,main,Quadratmeter,der,,Noun,square meter,metrekare,квадратный метр,квадратний метр,متر مربع,متر مربع,10,1,Die Wohnung hat fünfzig Quadratmeter.
+98,A1,8,masse,main,Grad,der,,Noun,degree,derece,градус,градус,درجه,درجة,1,1,Die Temperatur ist zwanzig Grad.
+99,A1,8,masse,main,Prozent,das,,Noun,percent,yüzde,процент,відсоток,درصد,بالمئة,6,1,Es gibt zwanzig Prozent Rabatt.
+100,A1,8,masse,main,Liter,der,,Noun,liter,litre,литр,літр,لیتر,لتر,2,1,Die Flasche hat zwei Liter Wasser.
 101,A1,8,masse,main,Gramm,das,,Noun,gram,gram,грамм,грам,گرم,غرام,2,1
 102,A1,8,masse,sub,Pfund,das,,Noun,pound,pound (yabancı),фунт,фунт,پوند,رطل,4,1
 103,A1,8,masse,main,Kilogramm,das,,Noun,kilogram,kilogram,килограмм,кілограм,کیلوگرم,كيلوغرام,9,1
