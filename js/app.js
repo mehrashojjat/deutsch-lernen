@@ -672,10 +672,8 @@ function applyTranslations() {
   document.getElementById('install-tip-title').textContent = u.installTipTitle;
   document.getElementById('install-tip-desc').textContent = u.installTipDesc;
   document.getElementById('install-guide-title').textContent = u.installGuideTitle;
-  document.getElementById('install-guide-sub').textContent = u.installGuideSub;
   document.getElementById('install-step1-title').textContent = u.installStep1Title;
   document.getElementById('install-step2-title').textContent = u.installStep2Title;
-  document.getElementById('install-step2-desc').textContent = u.installStep2Desc;
   document.getElementById('install-share-btn').textContent = u.installOpenShare;
   document.getElementById('install-guide-dismiss-btn').textContent = u.installClose;
   document.getElementById('at-title').textContent = u.tipTitle;
@@ -720,28 +718,11 @@ function applyTranslations() {
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
     _renderDictList(document.getElementById('dict-search-input').value, true);
   }
-  _setInstallStep1Text();
+  _refreshInstallGuideContent();
 }
 
 function _setInstallStep1Text() {
-  var el = document.getElementById('install-step1-desc');
-  if (!el) return;
-  el.innerHTML = '';
-  el.appendChild(document.createTextNode('Tap the '));
-  var icon = document.createElement('span');
-  icon.className = 'share-glyph-inline';
-  icon.setAttribute('aria-hidden', 'true');
-  icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  el.appendChild(icon);
-  el.appendChild(document.createTextNode(' Share button in your browser, or '));
-  var link = document.createElement('button');
-  link.type = 'button';
-  link.className = 'install-inline-link';
-  link.id = 'install-step1-link';
-  link.textContent = 'click here';
-  el.appendChild(link);
-  el.appendChild(document.createTextNode('.'));
-  _wireInstallShareActions();
+  _refreshInstallGuideContent();
 }
 
 function _isIosVisitor() {
@@ -763,13 +744,88 @@ function _detectStandaloneMode() {
   return !!((mq && mq.matches) || window.navigator.standalone);
 }
 
+function _installGuideText(key) {
+  var copy = {
+    en: {
+      guideSub: 'Use your browser\'s Share menu to add the app to your home screen.',
+      step1Lead: 'Tap the ',
+      step1Tail: ' Share button in your browser.',
+      step2Safari: 'In the menu that opens, tap Add to Home Screen, then confirm to install.',
+      step2Other: 'If you see Add to Home Screen, tap it. If you do not, open this page in Safari and use Safari\'s Share menu instead.'
+    },
+    tr: {
+      guideSub: 'Uygulamayi ana ekraniniza eklemek için tarayicinizin Paylas menüsünü kullanin.',
+      step1Lead: 'Tarayicinizdaki ',
+      step1Tail: ' Paylas dügmesine dokunun.',
+      step2Safari: 'Acilan menüden Ana Ekrana Ekle\'ye dokunun ve kurulumu onaylayin.',
+      step2Other: 'Ana Ekrana Ekle seçenegini görürseniz ona dokunun. Görmüyorsaniz bu sayfayi Safari\'de açip Safari\'nin Paylas menüsünü kullanin.'
+    },
+    fa: {
+      guideSub: 'برای افزودن برنامه به صفحه اصلی، از منوی اشتراک گذاری مرورگر خود استفاده کنید.',
+      step1Lead: 'روی دکمه ',
+      step1Tail: ' اشتراک گذاری در مرورگر خود بزنید.',
+      step2Safari: 'در منوی بازشده، Add to Home Screen را بزنید و نصب را تایید کنید.',
+      step2Other: 'اگر Add to Home Screen را می‌بینید، آن را بزنید. اگر نمی‌بینید، این صفحه را در Safari باز کنید و از منوی اشتراک گذاری Safari استفاده کنید.'
+    },
+    ru: {
+      guideSub: 'Используйте меню Поделиться в вашем браузере, чтобы добавить приложение на главный экран.',
+      step1Lead: 'Нажмите кнопку ',
+      step1Tail: ' Поделиться в вашем браузере.',
+      step2Safari: 'В открывшемся меню нажмите Add to Home Screen и подтвердите установку.',
+      step2Other: 'Если вы видите Add to Home Screen, нажмите его. Если нет, откройте эту страницу в Safari и используйте меню Поделиться Safari.'
+    },
+    uk: {
+      guideSub: 'Скористайтеся меню Поділитися у вашому браузері, щоб додати застосунок на головний екран.',
+      step1Lead: 'Натисніть кнопку ',
+      step1Tail: ' Поділитися у вашому браузері.',
+      step2Safari: 'У меню, що відкриється, натисніть Add to Home Screen і підтвердьте встановлення.',
+      step2Other: 'Якщо ви бачите Add to Home Screen, натисніть його. Якщо ні, відкрийте цю сторінку в Safari і скористайтеся меню Поділитися Safari.'
+    },
+    ar: {
+      guideSub: 'استخدم قائمة المشاركة في متصفحك لإضافة التطبيق إلى الشاشة الرئيسية.',
+      step1Lead: 'اضغط على زر ',
+      step1Tail: ' المشاركة في متصفحك.',
+      step2Safari: 'في القائمة التي تفتح، اضغط Add to Home Screen ثم أكد التثبيت.',
+      step2Other: 'إذا رأيت Add to Home Screen فاضغط عليه. وإذا لم تره، فافتح هذه الصفحة في Safari واستخدم قائمة المشاركة الخاصة بـ Safari.'
+    }
+  };
+  var langCopy = copy[LANG] || copy.en;
+  return langCopy[key] || copy.en[key] || '';
+}
+
+function _refreshInstallGuideContent() {
+  var sub = document.getElementById('install-guide-sub');
+  var step1 = document.getElementById('install-step1-desc');
+  var step2 = document.getElementById('install-step2-desc');
+  var primaryBtn = document.getElementById('install-share-btn');
+  if (!sub || !step1 || !step2 || !primaryBtn) return;
+
+  sub.textContent = _installGuideText('guideSub');
+
+  step1.innerHTML = '';
+  step1.appendChild(document.createTextNode(_installGuideText('step1Lead')));
+  var icon = document.createElement('span');
+  icon.className = 'share-glyph-inline';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  step1.appendChild(icon);
+  step1.appendChild(document.createTextNode(_installGuideText('step1Tail')));
+
+  step2.textContent = _isIosSafariInstallable()
+    ? _installGuideText('step2Safari')
+    : _installGuideText('step2Other');
+
+  // A webpage cannot open the browser's own install-capable Share menu.
+  primaryBtn.style.display = _isIosVisitor() ? 'none' : '';
+}
+
 function refreshInstallTip() {
   var tip = document.getElementById('install-tip');
   if (!tip) return;
   _isStandaloneMode = _detectStandaloneMode();
   var shouldShow = false;
   if (!_isStandaloneMode && !_installDismissed) {
-    if (_isIosSafariInstallable()) shouldShow = true;
+    if (_isIosVisitor()) shouldShow = true;
     else if (_installPromptReady) shouldShow = true;
   }
   tip.classList.toggle('hidden', !shouldShow);
@@ -806,7 +862,7 @@ window.triggerIosShareMenu = triggerIosShareMenu;
 
 async function handleInstallCTA() {
   if (_detectStandaloneMode()) return;
-  if (_isIosSafariInstallable()) {
+  if (_isIosVisitor()) {
     openInstallGuide();
     return;
   }
