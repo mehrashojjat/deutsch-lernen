@@ -1,138 +1,59 @@
 # DeutschLernen
 
-A simple, browser-based flashcard game for learning German vocabulary — no installation, no login, just open and play.
+A browser-based German vocabulary learning app — no installation, no build step, just open and play.
 
 ---
 
 ## What is this?
 
-**rovi Deutsch Lernen** is an interactive card game that helps you build German vocabulary across all CEFR levels (A1 → B2). Each round presents you with a word or phrase and asks you to pick the correct meaning. Cards cover nouns with their grammatical gender and cases, verbs with conjugations, adjectives with comparatives, and common phrases.
+**rovi Deutsch Lernen** is an interactive app that helps you build German vocabulary across CEFR levels A1, A2, and B1. It includes multiple quiz modes, a full dictionary with A–Z browsing, and a word explorer that shows Wiktionary grammar data for any word. All features work offline after the first load.
 
-It runs entirely in the browser as a static HTML/JS app — no server or build step required.
+It runs entirely in the browser as a static HTML/JS app — no server required.
 
 ---
 
-## Word Sources
+## Repository Structure
 
-### Goethe-Institut Official Wortlisten *(primary)*
-The core vocabulary comes from the official word lists published by the [Goethe-Institut](https://www.goethe.de) — Germany's internationally recognised language and cultural institute. These lists are the canonical CEFR-aligned references used in all Goethe-Zertifikat examinations.
-
-| Level | Words used (CSV rows) | Description |
-|-------|---------------------:|-------------|
-| A1 | 812 | Starter – survival communication |
-| A2 | 1059 | Elementary – everyday topics |
-| B1 | 4272 | Intermediate – independent use |
-
-### Additional Sources
-- **DWDS** – *Digitales Wörterbuch der deutschen Sprache* ([dwds.de](https://www.dwds.de)) — comprehensive dictionary entries with meanings, grammar, and example sentences, maintained by the Berlin-Brandenburg Academy of Sciences and Humanities.
-- **Leipzig Corpora / German Frequency Lists** ([wortschatz.uni-leipzig.de](https://wortschatz.uni-leipzig.de)) — the ~3 000 most frequently used German words, based on a 100M+ sentence corpus.
-- **German–Turkish word list** — a bilingual reference included to support Turkish-speaking learners.
+```
+/
+├── index.html               # App entry point
+├── js/
+│   ├── app.js               # Main application logic
+│   ├── adaptive.js          # Adaptive quiz engine
+│   └── auth.js              # Supabase authentication
+├── data/
+│   ├── a1.csv               # A1 vocabulary (812 words)
+│   ├── a2.csv               # A2 vocabulary (1059 words)
+│   └── b1.csv               # B1 vocabulary (4272 words)
+├── icons/                   # PWA + favicon assets
+├── site.webmanifest         # PWA manifest
+├── favicon.ico
+├── apple-touch-icon.png
+├── CNAME                    # GitHub Pages custom domain
+└── start_local_server.command  # macOS: double-click to serve locally
+```
 
 ---
 
 ## How to Run
 
-Open `index.html` in any modern browser. That's it.
+**Locally:** Double-click `start_local_server.command` (macOS), then open `http://localhost:8000` in your browser.
+
+**Live:** Hosted at [wort.rovi.so](https://wort.rovi.so) via GitHub Pages.
 
 ---
 
----
+## Word Data
 
-## Adaptive Quiz System
+All vocabulary is stored in three CSV files under `data/`. These are the single source of truth for every feature in the app.
 
-### Overview
+| File | Level | Rows | Description |
+|------|-------|-----:|-------------|
+| `data/a1.csv` | A1 | 812 | Starter – survival communication |
+| `data/a2.csv` | A2 | 1059 | Elementary – everyday topics |
+| `data/b1.csv` | B1 | 4272 | Intermediate – independent use |
 
-Each word in the dataset carries a **difficulty rating from 1 to 10**. Each user maintains a floating-point **skill level** on the same scale. The system uses these two numbers to continuously tailor each quiz — targeting words near the user's current level, reinforcing previously failed words, and periodically probing for potential improvement.
-
----
-
-### Word Difficulty (1–10)
-
-Difficulty values are assigned per word in the CSV data and represent increasing linguistic complexity within each CEFR level. Level A1 contains words rated 1–10 within the beginner range; A2 and B1 each have their own independent 1–10 scale calibrated to their respective vocabulary demands. A score of 1 within a level means the simplest, highest-frequency words for that level; a score of 10 means the most demanding vocabulary within that level.
-
----
-
-### Evaluation Phase
-
-Before entering adaptive mode, each user completes three diagnostic quizzes designed to estimate their starting skill level as precisely as possible.
-
-**Eval 1 — Breadth scan**
-One word is selected from each difficulty tier 1 through 10, giving a 10-card quiz spanning the full range. After the quiz, skill is calculated as the **position-weighted average difficulty of all correct answers**. Cards answered later in the quiz (higher difficulty) receive a higher weight (up to 2×), so a user who handles harder words correctly earns a proportionally higher initial estimate.
-
-**Eval 2 — Focused confirmation**
-Using the Eval 1 estimate as a starting point (S), the quiz is built with: 2 words at S−2, 2 at S−1, 3 at S, 2 at S+1, and 1 exploration word beyond S+1. After the quiz, skill is updated to the **average of the old skill and the average difficulty of all correct answers**, converging toward the user's demonstrated ability.
-
-**Eval 3 — Normal-mode trial**
-Uses the same word distribution as normal quizzes (see below) and applies the same skill update formula. After Eval 3 completes, `evaluationStage` is set to 3 and the user enters permanent adaptive mode.
-
----
-
-### Adaptive Quiz Logic
-
-Every quiz is generated along two independent dimensions that are then combined:
-
-**Word history dimension** — 10 type slots are filled as:
-- 5 × New (never seen before)
-- 3 × Failed (previously answered incorrectly)
-- 2 × Review (seen before, currently failing-score-free)
-
-**Difficulty dimension** — 10 difficulty slots are generated around the user's current skill index (SI = rounded skill level):
-- 1 × SI−2
-- 1 × SI−1
-- 3 × SI
-- 2 × SI+1
-- 2 × Exploration
-- 1 × Fallback
-
-All difficulty values are clamped to [1, 10]. The type slots and difficulty slots are each independently shuffled, then paired positionally. This ensures each quiz has both the correct type mix and the correct difficulty spread without any fixed ordering.
-
-For each slot, the system first tries to find a word from the preferred type pool at the target difficulty. If none is available it relaxes the type restriction while keeping the difficulty target. If still no word is found it falls back to any unused word regardless of type or difficulty.
-
----
-
-### Skill Adjustment
-
-After every quiz (Eval 3 and all normal quizzes), skill level is updated with:
-
-```
-skillLevel += (accuracy - 0.65) * 0.6
-skillLevel  = clamp(skillLevel, 1, 10)
-```
-
-The neutral point is **65% accuracy**. Scoring above 65% raises the skill level; below 65% lowers it. The maximum possible change per quiz is +0.21 (100% accuracy) or −0.39 (0% accuracy). This asymmetry means the system is slightly conservative — it requires consistently strong performance to push the skill level up, while a single poor quiz has a modest corrective effect.
-
-Skill level is **only updated when a quiz is completed normally** (reaching the results screen). Leaving a quiz mid-way or refreshing the page has no effect on stored progress.
-
----
-
-### Memory Reinforcement
-
-Each word tracks a **fail score** that accumulates with incorrect answers and decays with correct ones:
-
-- Wrong answer → `failScore += 2`
-- Correct answer → `failScore -= 1` (minimum 0)
-
-This means a single wrong answer requires **two correct answers to clear**. Words with a positive fail score are classified as "Failed" and occupy 3 of the 10 slots in every quiz until they are fully recovered. This forces repeated exposure to difficult words and prevents them from being buried by new vocabulary.
-
----
-
-### Exploration
-
-Two of the 10 difficulty slots in every quiz are designated **exploration slots**. The exploration selector prefers words with difficulty **strictly above SI+1**, with a hard cap at **SI+3**. If no words exist in that range, it widens to any word at least 2 difficulty levels from the current skill. This gives the system a systematic way to test whether the user is ready to advance, without overwhelming the quiz with material that is too far out of reach.
-
----
-
-### Anti-Repetition
-
-Every word the user sees is added to a **recentWords list** capped at the 25 most recent word IDs. When selecting words for any slot, the system first attempts to pick from words not on this list. Only if no such candidate exists does it allow recently seen words. This prevents the same words from appearing across back-to-back quizzes and encourages broader vocabulary coverage over time.
-
----
-
-### Level Isolation
-
-A1, A2, and B1 each maintain completely independent progress records. Skill level, evaluation stage, word history (fail scores, seen counts), and the recent-words list are all stored and updated separately for each level. A user can be in Eval 2 on A1, normal adaptive mode on A2, and untouched on B1 simultaneously, with no cross-level interference.
-
-For signed-in users all three levels are persisted to the database under a composite key of `(user_id, level)`, and all three are loaded in parallel on sign-in so level switching requires no extra network round-trips.
+Vocabulary is sourced from the official word lists published by the [Goethe-Institut](https://www.goethe.de) — the canonical CEFR-aligned references used in Goethe-Zertifikat examinations. Translations (EN/TR/RU/UK/FA/AR) and example sentences are enriched from DWDS, MyMemory API, and manual curation.
 
 ---
 
@@ -142,16 +63,26 @@ For signed-in users all three levels are persisted to the database under a compo
 Select a CEFR level (A1 / A2 / B1) from the home screen to start a 10-question multiple-choice quiz drawn from that level's vocabulary.
 
 ### Adaptive Quiz
-Tap **Adaptive Quiz** on the home screen, choose a level, and start. The quiz engine self-calibrates over three diagnostic rounds before entering a permanent adaptive mode that targets words near your demonstrated skill level. See *Adaptive Quiz System* above for full details.
+Tap **Adaptive Quiz** on the home screen, choose a level, and start. The quiz engine self-calibrates over three diagnostic rounds before entering a permanent adaptive mode that targets words near your demonstrated skill level. See *Adaptive Quiz System* below for full details.
 
 ### Theme Quiz
-Tap **Theme Quiz** on the home screen and select one of the 21 vocabulary categories. The quiz draws 10 words from that category across all CEFR levels, targeting your current skill level (defaulting to difficulty 4 for new users). If a category has fewer words at the target difficulty, the engine expands the search outward until it fills all 10 slots.
+Tap **Theme Quiz** on the home screen and select one of the 21 vocabulary categories. The quiz draws 10 words from that category across all CEFR levels, targeting your current skill level (defaulting to difficulty 4 for new users).
+
+---
+
+## Features
+
+- **Word Explorer** — tap any word to open a card with Wiktionary grammar data (declension tables, conjugation, IPA, definitions), plus the CSV example sentence
+- **Dictionary** — full A–Z list of all ~6 000 words with alphabet jump bar and live search, filterable by the active display language
+- **Swipe Mode** — swipe-based flashcard review
+- **6 display languages** — English, Turkish, Persian, Russian, Ukrainian, Arabic (RTL-aware)
+- **PWA** — installable on iOS and Android, works offline
 
 ---
 
 ## Vocabulary Schema
 
-CSV files under `word_data/quiz_csv/` are the single source of truth for all quiz and explorer vocabulary. Each file has the same columns:
+Each CSV row has the following columns:
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -172,6 +103,7 @@ CSV files under `word_data/quiz_csv/` are the single source of truth for all qui
 | `translation_ar` | string | Arabic translation |
 | `difficulty` | int 1–10 | Difficulty rating within the level |
 | `category_id` | int 1–21 | Vocabulary category (see table below) |
+| `example_de` | string | German example sentence |
 
 ### Category IDs
 
@@ -201,9 +133,80 @@ CSV files under `word_data/quiz_csv/` are the single source of truth for all qui
 
 ---
 
+## Adaptive Quiz System
+
+### Overview
+
+Each word in the dataset carries a **difficulty rating from 1 to 10**. Each user maintains a floating-point **skill level** on the same scale. The system uses these two numbers to continuously tailor each quiz — targeting words near the user's current level, reinforcing previously failed words, and periodically probing for potential improvement.
+
+---
+
+### Word Difficulty (1–10)
+
+Difficulty values are assigned per word in the CSV data. Level A1 contains words rated 1–10 within the beginner range; A2 and B1 each have their own independent 1–10 scale calibrated to their respective vocabulary demands.
+
+---
+
+### Evaluation Phase
+
+Before entering adaptive mode, each user completes three diagnostic quizzes designed to estimate their starting skill level as precisely as possible.
+
+**Eval 1 — Breadth scan**
+One word is selected from each difficulty tier 1 through 10, giving a 10-card quiz spanning the full range. Skill is calculated as the **position-weighted average difficulty of all correct answers**.
+
+**Eval 2 — Focused confirmation**
+Using the Eval 1 estimate as a starting point (S), the quiz is built with: 2 words at S−2, 2 at S−1, 3 at S, 2 at S+1, and 1 exploration word beyond S+1. Skill updates to the **average of the old skill and the average difficulty of all correct answers**.
+
+**Eval 3 — Normal-mode trial**
+Uses the same word distribution as normal quizzes and applies the same skill update formula. After Eval 3, the user enters permanent adaptive mode.
+
+---
+
+### Adaptive Quiz Logic
+
+Every quiz is generated along two independent dimensions:
+
+**Word history dimension** — 10 type slots:
+- 5 × New (never seen before)
+- 3 × Failed (previously answered incorrectly)
+- 2 × Review (seen before, no outstanding fail score)
+
+**Difficulty dimension** — 10 slots around the user's current skill index (SI = rounded skill level):
+- 1 × SI−2, 1 × SI−1, 3 × SI, 2 × SI+1, 2 × Exploration, 1 × Fallback
+
+Type and difficulty slots are each independently shuffled and then paired positionally.
+
+---
+
+### Skill Adjustment
+
+After every quiz:
+
+```
+skillLevel += (accuracy - 0.65) * 0.6
+skillLevel  = clamp(skillLevel, 1, 10)
+```
+
+The neutral point is **65% accuracy**. The maximum change per quiz is +0.21 (100%) or −0.39 (0%).
+
+---
+
+### Memory Reinforcement
+
+Each word tracks a **fail score**:
+- Wrong answer → `failScore += 2`
+- Correct answer → `failScore -= 1` (minimum 0)
+
+Words with a positive fail score occupy 3 of the 10 slots in every quiz until cleared.
+
+---
+
+### Level Isolation
+
+A1, A2, and B1 each maintain completely independent progress records (skill level, evaluation stage, word history, recent-words list). For signed-in users, all three levels are persisted to the database and loaded in parallel on sign-in.
+
+---
+
 ## License
 
-Word list data is used for educational purposes. Please refer to each source's own terms:
-- Goethe-Institut Wortlisten: freely available exam-preparation material
-- DWDS: [CC-BY open data](https://www.dwds.de/d/nutzungsbedingungen)
-- Leipzig Corpora: free for research and educational use
+Word list data is used for educational purposes. Vocabulary sourced from Goethe-Institut freely available exam-preparation material. Translations enriched via [MyMemory API](https://mymemory.translated.net/) and [DWDS](https://www.dwds.de/).

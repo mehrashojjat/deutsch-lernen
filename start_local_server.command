@@ -1,3 +1,3 @@
 #!/bin/zsh
 cd /Users/mehrashojjat/Desktop/Works/MI/DL
-python3 scripts/serve_local.py
+python3 -m http.server 8000
