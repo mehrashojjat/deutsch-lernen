@@ -919,6 +919,9 @@ function _initInstallExperience() {
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(function() {});
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      window.location.reload();
+    });
   }
 
   window.addEventListener('beforeinstallprompt', function(e) {
