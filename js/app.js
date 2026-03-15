@@ -829,13 +829,9 @@ function _refreshInstallGuideContent() {
 function refreshInstallTip() {
   var tip = document.getElementById('install-tip');
   if (!tip) return;
-  _isStandaloneMode = _detectStandaloneMode();
-  var shouldShow = false;
-  if (!_isStandaloneMode && !_installDismissed) {
-    if (_isIosVisitor()) shouldShow = true;
-    else if (_installPromptReady) shouldShow = true;
-  }
-  tip.classList.toggle('hidden', !shouldShow);
+  // Install tip banner is temporarily disabled — always keep it hidden
+  tip.classList.add('hidden');
+  tip.style.display = 'none';
 }
 
 window.refreshInstallTip = refreshInstallTip;
