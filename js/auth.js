@@ -216,7 +216,7 @@
   function _renderHome() {
     var tip = document.getElementById('adaptive-tip');
     if (tip) tip.classList.toggle('hidden', !!_user);
-
+    if (typeof window.refreshInstallTip === 'function') window.refreshInstallTip();
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────

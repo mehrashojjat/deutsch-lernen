@@ -22,6 +22,16 @@ const UI = {
     resultSub: (lv,p) => `Level ${lv} · ${p}% correct`,
     scoreLbl: 'Score', correctLbl: 'Correct', wrongLbl: 'Wrong',
     accountLabel: 'Account',
+    installTipTitle: 'Install the app',
+    installTipDesc: 'Install it on your home screen for faster access and an app-like experience.',
+    installGuideTitle: 'Install this app',
+    installGuideSub: 'Use these two quick steps to install the app on your home screen.',
+    installStep1Title: 'Open the Share menu',
+    installStep1Desc: 'Tap the Share button in your browser, or click here.',
+    installStep2Title: 'Choose Add to Home Screen',
+    installStep2Desc: 'In the menu that opens, tap Add to Home Screen, then confirm to install.',
+    installOpenShare: 'Open Share Menu',
+    installClose: 'Close',
     tipTitle: 'Save your progress',
     tipDesc: 'Sign in from Settings to keep your progress and get smarter quizzes.',
     playAgain: 'Play again', chooseLevel: 'Back Home',
@@ -501,6 +511,35 @@ let swipePreloadPromise = null, swipeAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
+var _deferredInstallPrompt = null;
+var _installPromptReady = false;
+var _installDismissed = false;
+var _installStateMedia = null;
+var _isStandaloneMode = false;
+var _installGuideCloseTimer = null;
+var _installExperienceInitialized = false;
+var _installShareActionsBound = false;
+
+function _readInstallDismissed() {
+  try { return localStorage.getItem('dl_install_dismissed') === '1'; }
+  catch (e) { return false; }
+}
+
+function _writeInstallDismissed(v) {
+  _installDismissed = !!v;
+  try {
+    if (_installDismissed) localStorage.setItem('dl_install_dismissed', '1');
+    else localStorage.removeItem('dl_install_dismissed');
+  } catch (e) {}
+}
+
+function _installLog(level, message, extra) {
+  if (!window.console) return;
+  var prefix = '[install] ' + message;
+  if (level === 'error' && console.error) console.error(prefix, extra || '');
+  else if (level === 'warn' && console.warn) console.warn(prefix, extra || '');
+  else if (console.log) console.log(prefix, extra || '');
+}
 
 // ── Helpers ──
 function t(key) { return UI[LANG][key] !== undefined ? UI[LANG][key] : UI.en[key]; }
@@ -532,6 +571,37 @@ function openAbout() {
 function closeAbout(e) {
   if (e && e.target !== document.getElementById('about-modal-overlay')) return;
   document.getElementById('about-modal-overlay').classList.remove('open');
+}
+function openInstallGuide() {
+  var overlay = document.getElementById('install-guide-overlay');
+  var guide = document.querySelector('.install-guide');
+  if (!overlay) return;
+  if (_installGuideCloseTimer) {
+    clearTimeout(_installGuideCloseTimer);
+    _installGuideCloseTimer = null;
+  }
+  if (guide) {
+    guide.style.transition = '';
+    guide.style.transform = '';
+  }
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeInstallGuide(e) {
+  if (e && e.target !== document.getElementById('install-guide-overlay')) return;
+  var overlay = document.getElementById('install-guide-overlay');
+  var guide = document.querySelector('.install-guide');
+  if (!overlay) return;
+  if (_installGuideCloseTimer) clearTimeout(_installGuideCloseTimer);
+  overlay.classList.remove('open');
+  _installGuideCloseTimer = setTimeout(function() {
+    if (guide) {
+      guide.style.transition = '';
+      guide.style.transform = '';
+    }
+    document.body.style.overflow = '';
+    _installGuideCloseTimer = null;
+  }, 300);
 }
 
 // ── Set language ──
@@ -599,6 +669,15 @@ function applyTranslations() {
   document.getElementById('swipe-subtitle').textContent = u.swipeSubtitle;
   // Account section label & adaptive tip
   document.getElementById('st-account-label').textContent = u.accountLabel;
+  document.getElementById('install-tip-title').textContent = u.installTipTitle;
+  document.getElementById('install-tip-desc').textContent = u.installTipDesc;
+  document.getElementById('install-guide-title').textContent = u.installGuideTitle;
+  document.getElementById('install-guide-sub').textContent = u.installGuideSub;
+  document.getElementById('install-step1-title').textContent = u.installStep1Title;
+  document.getElementById('install-step2-title').textContent = u.installStep2Title;
+  document.getElementById('install-step2-desc').textContent = u.installStep2Desc;
+  document.getElementById('install-share-btn').textContent = u.installOpenShare;
+  document.getElementById('install-guide-dismiss-btn').textContent = u.installClose;
   document.getElementById('at-title').textContent = u.tipTitle;
   document.getElementById('at-desc').textContent = u.tipDesc;
   // About & footer
@@ -641,6 +720,172 @@ function applyTranslations() {
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
     _renderDictList(document.getElementById('dict-search-input').value, true);
   }
+  _setInstallStep1Text();
+}
+
+function _setInstallStep1Text() {
+  var el = document.getElementById('install-step1-desc');
+  if (!el) return;
+  el.innerHTML = '';
+  el.appendChild(document.createTextNode('Tap the '));
+  var icon = document.createElement('span');
+  icon.className = 'share-glyph-inline';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  el.appendChild(icon);
+  el.appendChild(document.createTextNode(' Share button in your browser, or '));
+  var link = document.createElement('button');
+  link.type = 'button';
+  link.className = 'install-inline-link';
+  link.id = 'install-step1-link';
+  link.textContent = 'click here';
+  el.appendChild(link);
+  el.appendChild(document.createTextNode('.'));
+  _wireInstallShareActions();
+}
+
+function _isIosVisitor() {
+  var ua = window.navigator.userAgent || '';
+  var platform = window.navigator.platform || '';
+  var touchMac = platform === 'MacIntel' && window.navigator.maxTouchPoints > 1;
+  return /iPad|iPhone|iPod/.test(ua) || touchMac;
+}
+
+function _isIosSafariInstallable() {
+  var ua = window.navigator.userAgent || '';
+  return _isIosVisitor() &&
+    /Safari/i.test(ua) &&
+    !/CriOS|FxiOS|EdgiOS|OPiOS|YaBrowser/i.test(ua);
+}
+
+function _detectStandaloneMode() {
+  var mq = window.matchMedia ? window.matchMedia('(display-mode: standalone)') : null;
+  return !!((mq && mq.matches) || window.navigator.standalone);
+}
+
+function refreshInstallTip() {
+  var tip = document.getElementById('install-tip');
+  if (!tip) return;
+  _isStandaloneMode = _detectStandaloneMode();
+  var shouldShow = false;
+  if (!_isStandaloneMode && !_installDismissed) {
+    if (_isIosSafariInstallable()) shouldShow = true;
+    else if (_installPromptReady) shouldShow = true;
+  }
+  tip.classList.toggle('hidden', !shouldShow);
+}
+
+window.refreshInstallTip = refreshInstallTip;
+
+async function triggerIosShareMenu(e) {
+  if (e) {
+    if (typeof e.preventDefault === 'function') e.preventDefault();
+    if (typeof e.stopPropagation === 'function') e.stopPropagation();
+  }
+  _installLog('log', 'share requested', {
+    shareAvailable: typeof navigator.share === 'function',
+    currentUrl: String(window.location.href),
+    userActivation: !!(navigator.userActivation && navigator.userActivation.isActive)
+  });
+  if (typeof navigator.share !== 'function') return false;
+  try {
+    var shareData = {
+      title: document.title,
+      url: String(window.location.href)
+    };
+    await navigator.share(shareData);
+    _installLog('log', 'share sheet opened');
+    return true;
+  } catch (err) {
+    _installLog('warn', 'share failed', err && (err.message || err.name || err));
+    return false;
+  }
+}
+
+window.triggerIosShareMenu = triggerIosShareMenu;
+
+async function handleInstallCTA() {
+  if (_detectStandaloneMode()) return;
+  if (_isIosSafariInstallable()) {
+    openInstallGuide();
+    return;
+  }
+  if (!_deferredInstallPrompt) return;
+  try {
+    _deferredInstallPrompt.prompt();
+    var choice = await _deferredInstallPrompt.userChoice;
+    if (choice && choice.outcome === 'accepted') _writeInstallDismissed(true);
+  } catch (e) {
+  } finally {
+    _deferredInstallPrompt = null;
+    _installPromptReady = false;
+    refreshInstallTip();
+  }
+}
+
+window.handleInstallCTA = handleInstallCTA;
+
+function _initInstallExperience() {
+  if (_installExperienceInitialized) return;
+  _installExperienceInitialized = true;
+  _installLog('log', 'init install experience', { readyState: document.readyState });
+  _installDismissed = _readInstallDismissed();
+  _isStandaloneMode = _detectStandaloneMode();
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(function() {});
+  }
+
+  window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    _deferredInstallPrompt = e;
+    _installPromptReady = true;
+    refreshInstallTip();
+  });
+
+  window.addEventListener('appinstalled', function() {
+    _deferredInstallPrompt = null;
+    _installPromptReady = false;
+    _writeInstallDismissed(true);
+    closeInstallGuide();
+    refreshInstallTip();
+  });
+
+  if (window.matchMedia) {
+    _installStateMedia = window.matchMedia('(display-mode: standalone)');
+    if (_installStateMedia && _installStateMedia.addEventListener) {
+      _installStateMedia.addEventListener('change', refreshInstallTip);
+    } else if (_installStateMedia && _installStateMedia.addListener) {
+      _installStateMedia.addListener(refreshInstallTip);
+    }
+  }
+
+  window.addEventListener('pageshow', refreshInstallTip);
+  window.addEventListener('focus', refreshInstallTip);
+  refreshInstallTip();
+  _wireInstallShareActions();
+}
+
+function _wireInstallShareActions() {
+  var overlay = document.getElementById('install-guide-overlay');
+  if (!overlay) {
+    _installLog('warn', 'install guide overlay not found');
+    return;
+  }
+  if (_installShareActionsBound) return;
+  _installShareActionsBound = true;
+  _installLog('log', 'share actions bound', {
+    primaryFound: !!document.getElementById('install-share-btn'),
+    inlineFound: !!document.getElementById('install-step1-link')
+  });
+  overlay.addEventListener('click', async function(ev) {
+    var target = ev.target && ev.target.closest
+      ? ev.target.closest('#install-share-btn, #install-step1-link')
+      : null;
+    if (!target) return;
+    _installLog('log', 'share button tapped', { id: target.id || '(unknown)' });
+    await triggerIosShareMenu(ev);
+  });
 }
 
 
@@ -3372,8 +3617,16 @@ function show(id){
 })();
 applyTranslations();
 updateCounts();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
+} else {
+  _initInstallExperience();
+}
 document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') { closeWordModal(); }
+  if (e.key === 'Escape') {
+    closeWordModal();
+    closeInstallGuide();
+  }
 });
 
 // ── Word-modal drag-to-close ─────────────────────────────────────────
@@ -3482,6 +3735,57 @@ document.addEventListener('keydown', function(e){
   });
 })();
 
+// ── Install guide drag-to-close ──────────────────────────────────────
+// Same close behavior as the settings drawer: tap the handle or swipe down.
+(function() {
+  var handle = document.querySelector('.install-guide-handle');
+  var guide = document.querySelector('.install-guide');
+  if (!guide) return;
 
+  if (handle) handle.addEventListener('click', function() { closeInstallGuide(); });
 
+  var _startY, _dragging, _deltaY;
 
+  guide.addEventListener('touchstart', function(e) {
+    _startY = e.touches[0].clientY;
+    _dragging = false;
+    _deltaY = 0;
+  }, { passive: true });
+
+  guide.addEventListener('touchmove', function(e) {
+    if (_startY === undefined) return;
+    var dy = e.touches[0].clientY - _startY;
+    if (dy > 0) e.preventDefault();
+    if (!_dragging && dy > 6) {
+      _dragging = true;
+      guide.style.transition = 'none';
+    }
+    if (_dragging) {
+      _deltaY = Math.max(0, dy);
+      guide.style.transform = 'translateY(' + _deltaY + 'px)';
+    }
+  }, { passive: false });
+
+  guide.addEventListener('touchend', function() {
+    if (_startY === undefined) return;
+    _startY = undefined;
+    if (_dragging && _deltaY > 80) {
+      guide.style.transition = 'transform .2s ease-out';
+      guide.style.transform = 'translateY(110%)';
+      setTimeout(function() { closeInstallGuide(); }, 210);
+    } else {
+      guide.style.transition = '';
+      guide.style.transform = '';
+    }
+    _dragging = false;
+    _deltaY = 0;
+  });
+
+  guide.addEventListener('touchcancel', function() {
+    _startY = undefined;
+    guide.style.transition = '';
+    guide.style.transform = '';
+    _dragging = false;
+    _deltaY = 0;
+  });
+})();

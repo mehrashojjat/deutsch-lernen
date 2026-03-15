@@ -114,7 +114,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
 /* ── SETTINGS DRAWER ── */
 .drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;
-  opacity:0;pointer-events:none;transition:opacity .25s;}
+  opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(12px);}
 .drawer-overlay.open{opacity:1;pointer-events:all;}
 .drawer{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);
   width:100%;max-width:600px;background:var(--surf);border-radius:20px 20px 0 0;
@@ -411,6 +411,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes cardIn{from{opacity:0;transform:scale(.97) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes sheetFade{from{opacity:0}to{opacity:1}}
 .pop{animation:pop .22s ease;}
 #screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;}
 #screen-levels .home-footer{margin-top:auto;}
@@ -445,11 +446,56 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   border-radius:14px;cursor:pointer;transition:background .18s;}
 .adaptive-tip:hover{background:rgba(107,232,160,.11);}
 .adaptive-tip.hidden{visibility:hidden;pointer-events:none;}
+.home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
+.home-tips .adaptive-tip{margin-top:0;}
+.install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));}
+.install-tip:hover{background:linear-gradient(135deg,rgba(126,184,247,.18),rgba(232,201,122,.12));}
+.install-tip .at-title{color:var(--blue);}
+.install-tip .at-icon{font-size:1.15rem;}
 .at-icon{font-size:1.2rem;flex-shrink:0;}
 .at-body{display:flex;flex-direction:column;gap:2px;flex:1;}
 .at-title{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.02em;}
 .at-desc{font-size:.74rem;line-height:1.5;color:var(--muted);}
 .at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
+.install-guide-overlay{position:fixed;inset:0;background:rgba(6,8,16,.7);display:flex;
+  align-items:flex-end;justify-content:center;padding:16px;z-index:1400;backdrop-filter:blur(12px);
+  opacity:0;pointer-events:none;transition:opacity .25s;}
+.install-guide-overlay.open{opacity:1;pointer-events:all;}
+.install-guide{width:min(100%,460px);max-height:min(86vh,760px);overflow:auto;
+  background:linear-gradient(180deg,rgba(21,28,46,.98),rgba(14,18,31,.98));
+  border:1px solid rgba(126,184,247,.22);border-radius:24px 24px 20px 20px;
+  box-shadow:0 28px 80px rgba(0,0,0,.42);padding:18px 18px 20px;
+  will-change:transform;transform:translateY(100%);
+  transition:transform .3s cubic-bezier(.32,.72,0,1),opacity .18s ease;}
+.install-guide-overlay.open .install-guide{transform:translateY(0);}
+.install-guide-handle{width:54px;height:5px;border-radius:999px;background:rgba(255,255,255,.15);
+  margin:0 auto 14px;}
+.install-guide-head{display:block;margin-bottom:14px;}
+.install-guide-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.4rem;font-weight:700;color:var(--text);}
+.install-guide-sub{font-size:.84rem;line-height:1.5;color:var(--muted);margin-top:4px;}
+.share-glyph,.share-glyph-inline{display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:10px;background:rgba(0,122,255,.16);color:#4aa3ff;
+  border:1px solid rgba(74,163,255,.28);vertical-align:middle;}
+.share-glyph svg,.share-glyph-inline svg{width:17px;height:17px;display:block;}
+.share-glyph-inline{width:20px;height:20px;border-radius:7px;margin:0 2px;transform:translateY(-1px);}
+.install-inline-link{display:inline;border:0;background:none;color:var(--blue);font:inherit;
+  padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:2px;}
+.install-steps{display:flex;flex-direction:column;gap:12px;}
+.install-step{display:flex;gap:12px;padding:14px;border-radius:18px;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);}
+.install-step-num{width:28px;height:28px;border-radius:999px;background:rgba(126,184,247,.16);
+  color:var(--blue);font-size:.84rem;font-weight:700;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;}
+.install-step-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;}
+.install-step-desc{font-size:.82rem;line-height:1.6;color:var(--muted);}
+.install-guide-actions{display:flex;gap:10px;margin-top:16px;}
+.install-guide-btn{flex:1;border:0;border-radius:14px;padding:12px 14px;font-size:.9rem;font-weight:700;cursor:pointer;}
+.install-guide-btn.primary{background:linear-gradient(135deg,var(--blue),#5ba8ff);color:#08111f;}
+.install-guide-btn.secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.08);}
+.install-guide-btn[disabled]{opacity:.45;cursor:default;}
+@media(max-width:640px){
+  .install-guide{padding:16px 16px 18px;}
+}
 
 /* ── DICTIONARY ── */
 /* Force LTR on the dictionary screen regardless of global dir — words are German.
@@ -554,6 +600,39 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   </div>
 </div>
 
+<!-- ══ IOS INSTALL GUIDE ══ -->
+<div class="install-guide-overlay" id="install-guide-overlay" onclick="closeInstallGuide(event)">
+  <div class="install-guide">
+    <div class="install-guide-handle"></div>
+    <div class="install-guide-head">
+      <div>
+        <div class="install-guide-title" id="install-guide-title">Install this app</div>
+        <div class="install-guide-sub" id="install-guide-sub">Use these two quick steps to install the app on your home screen.</div>
+      </div>
+    </div>
+    <div class="install-steps">
+      <div class="install-step">
+        <div class="install-step-num">1</div>
+        <div>
+          <div class="install-step-title" id="install-step1-title">Open the Share menu</div>
+          <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Share button in your browser, or <button type="button" class="install-inline-link" id="install-step1-link">click here</button>.</div>
+        </div>
+      </div>
+      <div class="install-step">
+        <div class="install-step-num">2</div>
+        <div>
+          <div class="install-step-title" id="install-step2-title">Choose Add to Home Screen</div>
+          <div class="install-step-desc" id="install-step2-desc">In the menu that opens, tap Add to Home Screen, then confirm to install.</div>
+        </div>
+      </div>
+    </div>
+    <div class="install-guide-actions">
+      <button class="install-guide-btn primary" id="install-share-btn" type="button">Open Share Menu</button>
+      <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" onclick="closeInstallGuide()">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- ══ WORD CARD MODAL ══ -->
 <div class="word-modal-overlay" id="word-modal-overlay" onclick="closeWordModal(event)">
   <div class="word-modal">
@@ -605,14 +684,23 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     </div>
   </div>
 
-
-  <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
-    <div class="at-icon">✨</div>
-    <div class="at-body">
-      <div class="at-title" id="at-title">Save your progress</div>
-      <div class="at-desc" id="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
+  <div class="home-tips">
+    <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()">
+      <div class="at-icon">⬇️</div>
+      <div class="at-body">
+        <div class="at-title" id="install-tip-title">Install the app</div>
+        <div class="at-desc" id="install-tip-desc">Install it on your home screen for faster access and an app-like experience.</div>
+      </div>
+      <div class="at-arrow">›</div>
     </div>
-    <div class="at-arrow">›</div>
+    <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
+      <div class="at-icon">✨</div>
+      <div class="at-body">
+        <div class="at-title" id="at-title">Save your progress</div>
+        <div class="at-desc" id="at-desc">Sign in from Settings to keep your progress and get smarter quizzes.</div>
+      </div>
+      <div class="at-arrow">›</div>
+    </div>
   </div>
   <div class="home-footer" style="margin-top:0;">
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
