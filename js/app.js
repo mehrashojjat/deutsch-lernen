@@ -552,6 +552,7 @@ let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swip
 let swipePreloadPromise = null, swipeAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
+var _rwFirstLoad = false;
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
 var _deferredInstallPrompt = null;
 var _installPromptReady = false;
@@ -594,6 +595,7 @@ function rowTypeLabel(type) {
 
 // ── Settings drawer ──
 function openSettings() {
+  window.umami?.track('settings_opened');
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('settings-drawer').classList.add('open');
   document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
@@ -608,6 +610,7 @@ function closeSettings() {
   document.body.style.overflow = ''; // restore scroll
 }
 function openAbout() {
+  window.umami?.track('about_opened');
   document.getElementById('about-modal-overlay').classList.add('open');
 }
 function closeAbout(e) {
@@ -648,6 +651,7 @@ function closeInstallGuide(e) {
 
 // ── Set language ──
 function setLang(lang) {
+  window.umami?.track('language_changed', { language: lang });
   LANG = lang;
   try { localStorage.setItem('dl_lang', lang); } catch(e) {}
   ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
@@ -857,7 +861,9 @@ function refreshInstallTip() {
     if (_isIosVisitor()) shouldShow = true;
     else if (_installPromptReady) shouldShow = true;
   }
+  var wasHidden = tip.classList.contains('hidden');
   tip.classList.toggle('hidden', !shouldShow);
+  if (shouldShow && wasHidden) window.umami?.track('install_banner_shown');
 }
 
 window.refreshInstallTip = refreshInstallTip;
@@ -892,14 +898,19 @@ window.triggerIosShareMenu = triggerIosShareMenu;
 async function handleInstallCTA() {
   if (_detectStandaloneMode()) return;
   if (_isIosVisitor()) {
+    window.umami?.track('install_guide_opened', { platform: 'ios' });
     openInstallGuide();
     return;
   }
   if (!_deferredInstallPrompt) return;
   try {
+    window.umami?.track('install_prompt_shown', { platform: 'android' });
     _deferredInstallPrompt.prompt();
     var choice = await _deferredInstallPrompt.userChoice;
-    if (choice && choice.outcome === 'accepted') _writeInstallDismissed(true);
+    if (choice && choice.outcome === 'accepted') {
+      window.umami?.track('install_accepted');
+      _writeInstallDismissed(true);
+    }
   } catch (e) {
   } finally {
     _deferredInstallPrompt = null;
@@ -1274,6 +1285,7 @@ function showResults(){
   if(pct>=90){emoji='🏆';title=rt.great;}
   else if(pct>=70){emoji='🎉';title=rt.good;}
   else if(pct>=50){emoji='👍';title=rt.ok;}
+  window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : 'adaptive', level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
   document.getElementById('r-emoji').textContent=emoji;
   document.getElementById('r-title').textContent=title;
   document.getElementById('r-score').textContent=ok+'/'+total;
@@ -1291,7 +1303,7 @@ function restartLevel(){
 }
 function goHome(){show('screen-levels');}
 function goQuizBack(){var t=_quizReturnScreen;_quizReturnScreen='screen-levels';window.goHome();show(t);}
-function openSwipeSetup(){ show('screen-swipe-setup'); }
+function openSwipeSetup(){ window.umami?.track('quick_match_opened'); show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
   swipeSelectedLevel = lv;
   ['A1','A2','B1'].forEach(function(k){
@@ -1301,6 +1313,7 @@ function setSwipeLevel(lv){
 
 // ── ADAPTIVE QUIZ SETUP ──
 function openAdaptiveSetup() {
+  window.umami?.track('adaptive_quiz_opened');
   show('screen-adaptive-setup');
   if (typeof window._adaptiveRefreshBadge === 'function') window._adaptiveRefreshBadge();
 }
@@ -1311,12 +1324,14 @@ function setAdaptiveLevel(lv) {
   });
 }
 function launchAdaptiveQuiz() {
+  window.umami?.track('adaptive_quiz_started', { level: adaptiveSelectedLevel });
   _quizReturnScreen = 'screen-adaptive-setup';
   startLevel(adaptiveSelectedLevel);
 }
 
 // ── THEME QUIZ ──
 function openThemeSelect() {
+  window.umami?.track('theme_quiz_opened');
   _loadAllCSV(); // preload in background
   show('screen-theme-select');
   _renderCategoryGrid();
@@ -1359,6 +1374,7 @@ async function startThemeQuiz(categoryId) {
   currentLevel = _categoryName(categoryId);
   queue = cards;
   idx = 0; ok = 0; no = 0;
+  window.umami?.track('theme_quiz_started', { category_id: categoryId, category_name: currentLevel });
   show('screen-quiz');
   renderCard();
 }
@@ -1549,6 +1565,7 @@ async function prepareSwipeGame() {
     swipeBad = 0;
     swipePreloadPromise = null;
     swipeAnimating = false;
+    window.umami?.track('quick_match_started', { level: swipeSelectedLevel });
     show('screen-swipe');
     renderSwipeCards();
   } catch (err) {
@@ -3237,7 +3254,7 @@ var _randUsed = new Set();
 var _currentRandRow  = null;  // CSV row object
 var _currentWiktData = null;  // Wiktionary data object (null when offline/failed)
 
-function showRandomWord() { show('screen-random'); renderRandomWord(); }
+function showRandomWord() { window.umami?.track('word_explorer_opened'); _rwFirstLoad = true; show('screen-random'); renderRandomWord(); }
 
 // Build a flat pool of all CSV rows across A1/A2/B1 (cached after first build)
 var _csvRandPool = null;
@@ -3255,6 +3272,7 @@ function _getCsvRandPool() {
 }
 
 async function renderRandomWord() {
+  if (_rwFirstLoad) { _rwFirstLoad = false; } else { window.umami?.track('word_refreshed'); }
   // Ensure CSV data is loaded (fast no-op if already done)
   await _loadAllCSV();
 
@@ -3426,6 +3444,7 @@ var _dictScrollPauseTimer = null;
 var _dictLetterOffsets = {}; // letter → scrollTop px, built at render time
 
 function openDictionary() {
+  window.umami?.track('dictionary_opened');
   show('screen-dictionary');
   document.getElementById('dict-search-input').value = '';
   if (!_dictLoaded) {
