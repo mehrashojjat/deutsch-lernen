@@ -746,37 +746,49 @@ function _installGuideText(key) {
     en: {
       guideSub: 'Use your browser\'s Share menu to add the app to your home screen.',
       step1Lead: 'Tap the ',
-      step1Tail: ' Share button in your browser.',
+      step1Tail: ' Share button in your browser',
+      step1Or: ', or ',
+      step1ClickHere: 'tap here',
       step2: 'Then tap Add to Home Screen and confirm to install.'
     },
     tr: {
       guideSub: 'Uygulamayi ana ekraniniza eklemek için tarayicinizin Paylas menüsünü kullanin.',
       step1Lead: 'Tarayicinizdaki ',
-      step1Tail: ' Paylas dügmesine dokunun.',
+      step1Tail: ' Paylas dügmesine dokunun',
+      step1Or: ' ya da ',
+      step1ClickHere: 'buraya dokunun',
       step2: 'Ardindan Ana Ekrana Ekle\'ye dokunun ve kurulumu onaylayin.'
     },
     fa: {
       guideSub: 'برای افزودن برنامه به صفحه اصلی، از منوی اشتراک گذاری مرورگر خود استفاده کنید.',
       step1Lead: 'روی دکمه ',
-      step1Tail: ' اشتراک گذاری در مرورگر خود بزنید.',
+      step1Tail: ' اشتراک گذاری در مرورگر خود بزنید',
+      step1Or: '، یا ',
+      step1ClickHere: 'اینجا بزنید',
       step2: 'سپس Add to Home Screen را بزنید و نصب را تایید کنید.'
     },
     ru: {
       guideSub: 'Используйте меню Поделиться в вашем браузере, чтобы добавить приложение на главный экран.',
       step1Lead: 'Нажмите кнопку ',
-      step1Tail: ' Поделиться в вашем браузере.',
+      step1Tail: ' Поделиться в вашем браузере',
+      step1Or: ' или ',
+      step1ClickHere: 'нажмите здесь',
       step2: 'Затем нажмите Add to Home Screen и подтвердите установку.'
     },
     uk: {
       guideSub: 'Скористайтеся меню Поділитися у вашому браузері, щоб додати застосунок на головний екран.',
       step1Lead: 'Натисніть кнопку ',
-      step1Tail: ' Поділитися у вашому браузері.',
+      step1Tail: ' Поділитися у вашому браузері',
+      step1Or: ' або ',
+      step1ClickHere: 'натисніть тут',
       step2: 'Потім натисніть Add to Home Screen і підтвердьте встановлення.'
     },
     ar: {
       guideSub: 'استخدم قائمة المشاركة في متصفحك لإضافة التطبيق إلى الشاشة الرئيسية.',
       step1Lead: 'اضغط على زر ',
-      step1Tail: ' المشاركة في متصفحك.',
+      step1Tail: ' المشاركة في متصفحك',
+      step1Or: '، أو ',
+      step1ClickHere: 'اضغط هنا',
       step2: 'ثم اضغط Add to Home Screen وأكد التثبيت.'
     }
   };
@@ -801,9 +813,17 @@ function _refreshInstallGuideContent() {
   icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   step1.appendChild(icon);
   step1.appendChild(document.createTextNode(_installGuideText('step1Tail')));
+  step1.appendChild(document.createTextNode(_installGuideText('step1Or')));
+  var step1Link = document.createElement('button');
+  step1Link.type = 'button';
+  step1Link.className = 'install-inline-link';
+  step1Link.id = 'install-step1-link';
+  step1Link.textContent = _installGuideText('step1ClickHere');
+  step1.appendChild(step1Link);
+  step1.appendChild(document.createTextNode('.'));
 
   step2.textContent = _installGuideText('step2');
-  primaryBtn.style.display = _canTriggerShareSheet() ? '' : 'none';
+  primaryBtn.style.display = '';
 }
 
 function refreshInstallTip() {
@@ -921,13 +941,22 @@ function _wireInstallShareActions() {
     primaryFound: !!document.getElementById('install-share-btn'),
     inlineFound: !!document.getElementById('install-step1-link')
   });
-  overlay.addEventListener('click', async function(ev) {
+  overlay.addEventListener('click', function(ev) {
     var target = ev.target && ev.target.closest
       ? ev.target.closest('#install-share-btn, #install-step1-link')
       : null;
     if (!target) return;
+    ev.preventDefault();
+    ev.stopPropagation();
     _installLog('log', 'share button tapped', { id: target.id || '(unknown)' });
-    await triggerIosShareMenu(ev);
+    if (typeof navigator.share === 'function') {
+      navigator.share({
+        title: document.title,
+        url: String(window.location.href)
+      }).catch(function(err) {
+        _installLog('warn', 'share failed', err && (err.message || err.name || err));
+      });
+    }
   });
 }
 
