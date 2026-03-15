@@ -662,6 +662,10 @@ function setLang(lang) {
   document.body.classList.toggle('lang-fa', lang==='fa');
   document.body.classList.toggle('lang-ar', lang==='ar');
   document.body.classList.toggle('lang-rtl', isRtl);
+  var backBtn = document.getElementById('app-back-btn');
+  if (backBtn && !backBtn.classList.contains('hidden')) {
+    backBtn.innerHTML = _backArrowSvg(isRtl);
+  }
   applyTranslations();
   updateCounts();
   // Immediately update the active screen so the user sees the new language at once
@@ -3693,6 +3697,10 @@ function dictFilter(val) {
 
 // ── Screen switcher ──
 var _appBackAction = function(){};
+function _backArrowSvg(isRtl) {
+  var pts = isRtl ? '10,6 0,0 0,12' : '0,6 10,0 10,12';
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
+}
 function show(id){
   ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
@@ -3700,7 +3708,6 @@ function show(id){
   var btn = document.getElementById('app-back-btn');
   if (!btn) return;
   var isRtl = document.body.classList.contains('lang-rtl');
-  var arrow = isRtl ? '\u25b6' : '\u25c4';
   var backMap = {
     'screen-quiz':             function(){ goQuizBack(); },
     'screen-results':          null,
@@ -3714,7 +3721,7 @@ function show(id){
   var action = backMap[id];
   var show = !!action;
   btn.classList.toggle('hidden', !show);
-  btn.textContent = arrow;
+  btn.innerHTML = _backArrowSvg(isRtl);
   _appBackAction = action || function(){};
 }
 
