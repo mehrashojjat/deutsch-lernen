@@ -732,16 +732,13 @@ function _isIosVisitor() {
   return /iPad|iPhone|iPod/.test(ua) || touchMac;
 }
 
-function _isIosSafariInstallable() {
-  var ua = window.navigator.userAgent || '';
-  return _isIosVisitor() &&
-    /Safari/i.test(ua) &&
-    !/CriOS|FxiOS|EdgiOS|OPiOS|YaBrowser/i.test(ua);
-}
-
 function _detectStandaloneMode() {
   var mq = window.matchMedia ? window.matchMedia('(display-mode: standalone)') : null;
   return !!((mq && mq.matches) || window.navigator.standalone);
+}
+
+function _canTriggerShareSheet() {
+  return typeof navigator.share === 'function';
 }
 
 function _installGuideText(key) {
@@ -750,43 +747,37 @@ function _installGuideText(key) {
       guideSub: 'Use your browser\'s Share menu to add the app to your home screen.',
       step1Lead: 'Tap the ',
       step1Tail: ' Share button in your browser.',
-      step2Safari: 'In the menu that opens, tap Add to Home Screen, then confirm to install.',
-      step2Other: 'If you see Add to Home Screen, tap it. If you do not, open this page in Safari and use Safari\'s Share menu instead.'
+      step2: 'Then tap Add to Home Screen and confirm to install.'
     },
     tr: {
       guideSub: 'Uygulamayi ana ekraniniza eklemek için tarayicinizin Paylas menüsünü kullanin.',
       step1Lead: 'Tarayicinizdaki ',
       step1Tail: ' Paylas dügmesine dokunun.',
-      step2Safari: 'Acilan menüden Ana Ekrana Ekle\'ye dokunun ve kurulumu onaylayin.',
-      step2Other: 'Ana Ekrana Ekle seçenegini görürseniz ona dokunun. Görmüyorsaniz bu sayfayi Safari\'de açip Safari\'nin Paylas menüsünü kullanin.'
+      step2: 'Ardindan Ana Ekrana Ekle\'ye dokunun ve kurulumu onaylayin.'
     },
     fa: {
       guideSub: 'برای افزودن برنامه به صفحه اصلی، از منوی اشتراک گذاری مرورگر خود استفاده کنید.',
       step1Lead: 'روی دکمه ',
       step1Tail: ' اشتراک گذاری در مرورگر خود بزنید.',
-      step2Safari: 'در منوی بازشده، Add to Home Screen را بزنید و نصب را تایید کنید.',
-      step2Other: 'اگر Add to Home Screen را می‌بینید، آن را بزنید. اگر نمی‌بینید، این صفحه را در Safari باز کنید و از منوی اشتراک گذاری Safari استفاده کنید.'
+      step2: 'سپس Add to Home Screen را بزنید و نصب را تایید کنید.'
     },
     ru: {
       guideSub: 'Используйте меню Поделиться в вашем браузере, чтобы добавить приложение на главный экран.',
       step1Lead: 'Нажмите кнопку ',
       step1Tail: ' Поделиться в вашем браузере.',
-      step2Safari: 'В открывшемся меню нажмите Add to Home Screen и подтвердите установку.',
-      step2Other: 'Если вы видите Add to Home Screen, нажмите его. Если нет, откройте эту страницу в Safari и используйте меню Поделиться Safari.'
+      step2: 'Затем нажмите Add to Home Screen и подтвердите установку.'
     },
     uk: {
       guideSub: 'Скористайтеся меню Поділитися у вашому браузері, щоб додати застосунок на головний екран.',
       step1Lead: 'Натисніть кнопку ',
       step1Tail: ' Поділитися у вашому браузері.',
-      step2Safari: 'У меню, що відкриється, натисніть Add to Home Screen і підтвердьте встановлення.',
-      step2Other: 'Якщо ви бачите Add to Home Screen, натисніть його. Якщо ні, відкрийте цю сторінку в Safari і скористайтеся меню Поділитися Safari.'
+      step2: 'Потім натисніть Add to Home Screen і підтвердьте встановлення.'
     },
     ar: {
       guideSub: 'استخدم قائمة المشاركة في متصفحك لإضافة التطبيق إلى الشاشة الرئيسية.',
       step1Lead: 'اضغط على زر ',
       step1Tail: ' المشاركة في متصفحك.',
-      step2Safari: 'في القائمة التي تفتح، اضغط Add to Home Screen ثم أكد التثبيت.',
-      step2Other: 'إذا رأيت Add to Home Screen فاضغط عليه. وإذا لم تره، فافتح هذه الصفحة في Safari واستخدم قائمة المشاركة الخاصة بـ Safari.'
+      step2: 'ثم اضغط Add to Home Screen وأكد التثبيت.'
     }
   };
   var langCopy = copy[LANG] || copy.en;
@@ -811,12 +802,8 @@ function _refreshInstallGuideContent() {
   step1.appendChild(icon);
   step1.appendChild(document.createTextNode(_installGuideText('step1Tail')));
 
-  step2.textContent = _isIosSafariInstallable()
-    ? _installGuideText('step2Safari')
-    : _installGuideText('step2Other');
-
-  // A webpage cannot open the browser's own install-capable Share menu.
-  primaryBtn.style.display = _isIosVisitor() ? 'none' : '';
+  step2.textContent = _installGuideText('step2');
+  primaryBtn.style.display = _canTriggerShareSheet() ? '' : 'none';
 }
 
 function refreshInstallTip() {
@@ -839,11 +826,11 @@ async function triggerIosShareMenu(e) {
     if (typeof e.stopPropagation === 'function') e.stopPropagation();
   }
   _installLog('log', 'share requested', {
-    shareAvailable: typeof navigator.share === 'function',
+    shareAvailable: _canTriggerShareSheet(),
     currentUrl: String(window.location.href),
     userActivation: !!(navigator.userActivation && navigator.userActivation.isActive)
   });
-  if (typeof navigator.share !== 'function') return false;
+  if (!_canTriggerShareSheet()) return false;
   try {
     var shareData = {
       title: document.title,
