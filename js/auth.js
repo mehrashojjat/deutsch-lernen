@@ -195,11 +195,14 @@
     var el = document.getElementById('auth-section-content');
     if (!el) return;
     if (_user) {
+      var _u = (typeof UI !== 'undefined' && typeof LANG !== 'undefined' && UI[LANG]) ? UI[LANG] : (typeof UI !== 'undefined' ? UI.en : null);
+      var _signedInAs = (_u && _u.signedInAs) ? _u.signedInAs : 'Signed in as:';
+      var _signOutLbl = (_u && _u.signOut) ? _u.signOut : 'Sign out';
       el.innerHTML =
-        '<p class="auth-email">Signed in as: <strong>' +
+        '<p class="auth-email">' + _escHtml(_signedInAs) + ' <strong>' +
           _escHtml(_user.email || _user.id) +
         '</strong></p>' +
-        '<button class="auth-signout-btn" onclick="authSignOut()">Sign out</button>';
+        '<button class="auth-signout-btn" onclick="authSignOut()">' + _escHtml(_signOutLbl) + '</button>';
     } else {
       el.innerHTML =
         '<button class="gsi-material-button" onclick="authSignIn()">' +

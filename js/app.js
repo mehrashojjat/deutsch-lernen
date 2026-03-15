@@ -87,6 +87,8 @@ const UI = {
     dictLoading: 'Loading…',
     dictEmpty: 'No words found.',
     typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
+    signedInAs: 'Signed in as:',
+    signOut: 'Sign out',
     categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
   },
   tr: {
@@ -170,6 +172,8 @@ const UI = {
     dictLoading: 'Yükleniyor…',
     dictEmpty: 'Kelime bulunamadı.',
     typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
+    signedInAs: 'Giriş yapıldı:',
+    signOut: 'Çıkış yap',
     categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
   },
   fa: {
@@ -253,6 +257,8 @@ const UI = {
     dictLoading: 'در حال بارگذاری…',
     dictEmpty: 'واژه‌ای یافت نشد.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
+    signedInAs: 'وارد شده به عنوان:',
+    signOut: 'خروج از حساب',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
@@ -334,6 +340,8 @@ const UI = {
     dictLoading: 'Загрузка…',
     dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
+    signedInAs: 'Вы вошли как:',
+    signOut: 'Выйти',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
@@ -415,6 +423,8 @@ const UI = {
     dictLoading: 'Завантаження…',
     dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
+    signedInAs: 'Ввійшли як:',
+    signOut: 'Вийти',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
@@ -498,6 +508,8 @@ const UI = {
     dictLoading: 'جارٍ التحميل…',
     dictEmpty: 'لا توجد كلمات.',
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
+    signedInAs: 'تسجيل الدخول باسم:',
+    signOut: 'تسجيل الخروج',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };

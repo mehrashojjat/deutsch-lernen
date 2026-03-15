@@ -137,10 +137,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
 .about-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;
-  align-items:flex-end;justify-content:center;}
+  align-items:flex-end;justify-content:center;padding-bottom:12px;}
 .about-modal-overlay.open{display:flex;}
 .about-modal{background:linear-gradient(180deg,rgba(21,28,46,.99),rgba(14,18,31,.99));
-  border:1px solid rgba(126,184,247,.18);border-radius:24px 24px 20px 20px;
+  border:1px solid rgba(126,184,247,.18);border-radius:24px;
   width:min(calc(100% - 24px),480px);padding:24px 22px 32px;max-height:80vh;overflow-y:auto;
   box-shadow:0 28px 80px rgba(0,0,0,.48);}
 .about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.15rem;margin:0 0 16px;}
@@ -474,14 +474,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 /* ── AUTH UI ── */
 .auth-email{font-size:.8rem;color:var(--muted);margin:0 0 10px;word-break:break-all;
   padding:10px 12px;background:rgba(255,255,255,.04);border-radius:10px;
-  border:1px solid rgba(255,255,255,.07);line-height:1.5;}
+  border:1px solid rgba(255,255,255,.07);line-height:1.5;direction:ltr;text-align:left;}
 .auth-email strong{color:var(--text);display:block;font-size:.85rem;}
 /* ── ADAPTIVE TIP ── */
 .adaptive-tip{display:flex;align-items:center;gap:12px;margin-top:auto;margin-bottom:0;
   padding:13px 16px;background:rgba(107,232,160,.06);
   border-radius:14px;cursor:pointer;transition:background .18s;}
 .adaptive-tip:hover{background:rgba(107,232,160,.11);}
-.adaptive-tip.hidden{visibility:hidden;pointer-events:none;}
+.adaptive-tip.hidden{display:none;}
 .home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
 .home-tips .adaptive-tip{margin-top:0;}
 .install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));}
