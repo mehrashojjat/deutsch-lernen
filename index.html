@@ -685,13 +685,19 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   </div>
 
   <div class="home-tips">
-    <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()" style="display:none!important">
+    <!-- INSTALL TIP BANNER — temporarily hidden, re-enable when ready
+    <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()">
       <div class="at-icon">⬇️</div>
       <div class="at-body">
         <div class="at-title" id="install-tip-title">Install the app</div>
         <div class="at-desc" id="install-tip-desc">Install it on your home screen for faster access and an app-like experience.</div>
       </div>
       <div class="at-arrow">›</div>
+    </div>
+    -->
+    <!-- Placeholder to keep JS getElementById calls from erroring -->
+    <div id="install-tip" style="display:none!important" aria-hidden="true">
+      <span id="install-tip-title"></span><span id="install-tip-desc"></span>
     </div>
     <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
       <div class="at-icon">✨</div>
