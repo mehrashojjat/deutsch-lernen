@@ -506,27 +506,27 @@ const UI = {
 //  CATEGORY MAP — 21 vocabulary categories, ID 1–21
 // ════════════════════════════════════════════════════════════════
 var CATEGORY_MAP = [
-  { id:  1, name: 'Numbers & Quantities',           icon: '🔢' },
-  { id:  2, name: 'Time & Calendar',                icon: '🕐' },
-  { id:  3, name: 'Family & Relationships',         icon: '👨‍👩‍👧' },
-  { id:  4, name: 'Body & Health',                  icon: '🏥' },
-  { id:  5, name: 'Food & Drink',                   icon: '🍽️' },
-  { id:  6, name: 'Home & Living',                  icon: '🏠' },
-  { id:  7, name: 'Clothing & Appearance',          icon: '👗' },
-  { id:  8, name: 'Work & Careers',                 icon: '💼' },
-  { id:  9, name: 'Education & Learning',           icon: '📚' },
-  { id: 10, name: 'Travel & Tourism',               icon: '✈️' },
-  { id: 11, name: 'Transportation',                 icon: '🚗' },
-  { id: 12, name: 'Shopping & Finance',             icon: '🛍️' },
-  { id: 13, name: 'Language, Communication & Media', icon: '💬' },
-  { id: 14, name: 'Nature, Weather & Animals',      icon: '🌿' },
-  { id: 15, name: 'Sports & Leisure',               icon: '⚽' },
-  { id: 16, name: 'Arts & Culture',                 icon: '🎨' },
-  { id: 17, name: 'Technology & Devices',           icon: '💻' },
-  { id: 18, name: 'Society, Law & Politics',        icon: '⚖️' },
-  { id: 19, name: 'Emotions & Personal Traits',     icon: '❤️' },
-  { id: 20, name: 'Places & Geography',             icon: '🗺️' },
-  { id: 21, name: 'Grammar & Function Words',       icon: '📝' },
+  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)' },
+  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)' },
+  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)' },
+  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)' },
+  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)'  },
+  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
+  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)' },
+  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)' },
+  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)' },
+  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)' },
+  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)' },
+  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)' },
+  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)' },
+  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)' },
+  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)' },
+  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)'  },
+  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)'  },
+  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
+  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)'  },
+  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)'  },
+  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)' },
 ];
 
 
@@ -684,11 +684,7 @@ function applyTranslations() {
   document.getElementById('r-lbl-wrong').textContent = u.wrongLbl;
   document.getElementById('btn-play-again').textContent = u.playAgain;
   document.getElementById('btn-choose-level').textContent = u.chooseLevel;
-  // Quiz buttons
-  document.getElementById('quiz-back-btn').textContent = u.back;
-  document.getElementById('rw-back-btn').textContent = u.back;
-  document.getElementById('swipe-setup-back-btn').textContent = u.back;
-  document.getElementById('swipe-back-btn').textContent = u.back;
+  // Quiz buttons (back buttons are now in app-header, not in screens)
   document.getElementById('rw-screen-title').textContent = u.rwTitle;
   document.getElementById('swipe-setup-screen-title').textContent = u.swipeSetupTitle;
   document.getElementById('swipe-setup-screen-subtitle').textContent = u.swipeSubtitle;
@@ -708,7 +704,7 @@ function applyTranslations() {
   document.getElementById('at-title').textContent = u.tipTitle;
   document.getElementById('at-desc').textContent = u.tipDesc;
   // About & footer
-  document.getElementById('st-about-btn').textContent = u.aboutBtn;
+  document.getElementById('st-about-btn').textContent = u.aboutTitle;
   document.getElementById('about-title').textContent = u.aboutTitle;
   document.getElementById('about-p1').textContent = u.aboutP1;
   document.getElementById('about-p2').innerHTML = u.aboutP2html;
@@ -729,15 +725,12 @@ function applyTranslations() {
   document.getElementById('adaptive-ln-A2').textContent = aln.A2;
   document.getElementById('adaptive-ln-B1').textContent = aln.B1;
   document.getElementById('adaptive-launch-btn').textContent = u.prepareTen;
-  document.getElementById('adaptive-setup-back-btn').textContent = u.back;
   // Theme select screen
   document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
   document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
-  document.getElementById('theme-back-btn').textContent = u.back;
   // Dictionary screen
   document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
   document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
-  document.getElementById('dict-back-btn').textContent = u.dictBack;
   document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
@@ -1319,7 +1312,7 @@ function _renderCategoryGrid() {
   if (!grid) return;
   var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
-    return '<button class="category-card" onclick="startThemeQuiz(' + cat.id + ')">'
+    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-color:' + cat.b + '" onclick="startThemeQuiz(' + cat.id + ')">'
       + '<span class="cat-icon">' + cat.icon + '</span>'
       + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
       + '</button>';
@@ -3665,10 +3658,30 @@ function dictFilter(val) {
 
 
 // ── Screen switcher ──
+var _appBackAction = function(){};
 function show(id){
   ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
+  var btn = document.getElementById('app-back-btn');
+  if (!btn) return;
+  var isRtl = document.body.classList.contains('lang-rtl');
+  var arrow = isRtl ? '\u25b6' : '\u25c4';
+  var backMap = {
+    'screen-quiz':             function(){ goQuizBack(); },
+    'screen-results':          null,
+    'screen-swipe-setup':      function(){ goHome(); },
+    'screen-swipe':            function(){ openSwipeSetup(); },
+    'screen-adaptive-setup':   function(){ goHome(); },
+    'screen-theme-select':     function(){ goHome(); },
+    'screen-random':           function(){ goHome(); },
+    'screen-dictionary':       function(){ goHome(); }
+  };
+  var action = backMap[id];
+  var show = !!action;
+  btn.classList.toggle('hidden', !show);
+  btn.textContent = arrow;
+  _appBackAction = action || function(){};
 }
 
 // ── Init ──
@@ -3754,30 +3767,29 @@ document.addEventListener('keydown', function(e){
 })();
 
 // ── Settings drawer drag-to-close ────────────────────────────────────
-// Handle click (desktop) + full-drawer swipe-down (mobile)
+// Handle click (desktop) + swipe-down on the whole panel (mobile)
 (function() {
   var handle = document.querySelector('.drawer-handle');
   var drawer = document.getElementById('settings-drawer');
   if (!drawer) return;
 
-  // Desktop: click the pill handle to dismiss
+  // Desktop / tap: click the pill handle to dismiss
   if (handle) handle.addEventListener('click', function() { closeSettings(); });
 
   var _startY, _dragging, _deltaY;
 
+  // Listen on the whole drawer (same pattern as install guide which works)
   drawer.addEventListener('touchstart', function(e) {
     _startY = e.touches[0].clientY;
     _dragging = false;
     _deltaY = 0;
   }, { passive: true });
 
-  // non-passive: prevent pull-to-refresh on any downward swipe on the drawer
   drawer.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
     var dy = e.touches[0].clientY - _startY;
-    // Block pull-to-refresh immediately on any downward movement
     if (dy > 0) e.preventDefault();
-    if (!_dragging && dy > 6) {
+    if (!_dragging && dy > 8) {
       _dragging = true;
       drawer.style.transition = 'none';
     }
@@ -3790,10 +3802,9 @@ document.addEventListener('keydown', function(e){
   drawer.addEventListener('touchend', function() {
     if (_startY === undefined) return;
     _startY = undefined;
-    if (_dragging && _deltaY > 80) {
-      // Animate off-screen, then close
+    if (_dragging && _deltaY > 60) {
       drawer.style.transition = 'transform .2s ease-out';
-      drawer.style.transform = 'translateX(-50%) translateY(110%)';
+      drawer.style.transform = 'translateX(-50%) translateY(calc(100% + 28px))';
       setTimeout(function() { closeSettings(); }, 210);
     } else {
       drawer.style.transition = '';

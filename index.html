@@ -81,10 +81,13 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .app-header h1{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:700;
   color:var(--gold);letter-spacing:-1px;line-height:1;cursor:pointer;}
 .app-header p{color:var(--muted);font-size:.82rem;margin-top:3px;font-weight:300;}
-.settings-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
+.settings-btn,.app-back-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
   width:40px;height:40px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;}
+  cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;
+  padding:0;line-height:1;direction:ltr;}
 .settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
+.app-back-btn:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);}
+.app-back-btn.hidden{visibility:hidden;pointer-events:none;}
 
 
 /* ── Quiz prep loading overlay ── */
@@ -113,61 +116,91 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .screen.hidden{display:none!important;}
 
 /* ── SETTINGS DRAWER ── */
-.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;
-  opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(12px);}
+.drawer-overlay{position:fixed;inset:0;background:rgba(6,8,16,.70);z-index:100;
+  opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(14px);}
 .drawer-overlay.open{opacity:1;pointer-events:all;}
-.drawer{position:fixed;bottom:0;left:50%;transform:translateX(-50%) translateY(100%);
-  width:100%;max-width:600px;background:var(--surf);border-radius:20px 20px 0 0;
-  padding:20px 20px 40px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);
-  overscroll-behavior:none;}
+.drawer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%) translateY(calc(100% + 16px));
+  width:calc(100% - 24px);max-width:560px;
+  background:linear-gradient(180deg,rgba(21,28,46,.98),rgba(14,18,31,.98));
+  border:1px solid rgba(126,184,247,.22);border-radius:24px;
+  padding:18px 18px 24px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);
+  box-shadow:0 28px 80px rgba(0,0,0,.48);overscroll-behavior:none;}
 .drawer.open{transform:translateX(-50%) translateY(0);}
-.drawer-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:32px;margin:0 0 4px;cursor:pointer;}
-.drawer-handle::before{content:'';width:40px;height:4px;background:var(--surf3);border-radius:99px;transition:background .15s;}
-.drawer-handle:hover::before{background:var(--muted);}
-.drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.2rem;color:var(--gold);margin-bottom:18px;}
-.drawer-section{margin-bottom:18px;}
-.drawer-section-label{font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;
-  color:var(--muted);margin-bottom:8px;font-weight:700;}
-.option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
-.drawer-divider{height:1px;background:var(--border);margin:6px 0 18px;}
-.about-btn{width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--border);
-  background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:600;
-  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:4px;}
-.about-btn:hover{border-color:rgba(232,201,122,.3);color:var(--text);}
+.drawer-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:28px;margin:0 0 6px;cursor:pointer;}
+.drawer-handle::before{content:'';width:44px;height:5px;background:rgba(255,255,255,.15);border-radius:999px;transition:background .15s;}
+.drawer-handle:hover::before{background:rgba(255,255,255,.28);}
+.drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;font-weight:700;color:var(--text);margin-bottom:20px;}
+.drawer-section{margin-bottom:22px;}
+.drawer-section-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--muted);margin-bottom:10px;font-weight:700;}
+.option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
 .about-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;
   align-items:flex-end;justify-content:center;}
 .about-modal-overlay.open{display:flex;}
-.about-modal{background:var(--surf);border-radius:18px 18px 0 0;width:100%;max-width:480px;
-  padding:24px 22px 32px;max-height:80vh;overflow-y:auto;}
-.about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.1rem;margin:0 0 14px;}
-.about-modal p{font-size:.85rem;line-height:1.65;color:var(--text);margin:0 0 10px;}
+.about-modal{background:linear-gradient(180deg,rgba(21,28,46,.99),rgba(14,18,31,.99));
+  border:1px solid rgba(126,184,247,.18);border-radius:24px 24px 20px 20px;
+  width:min(calc(100% - 24px),480px);padding:24px 22px 32px;max-height:80vh;overflow-y:auto;
+  box-shadow:0 28px 80px rgba(0,0,0,.48);}
+.about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.15rem;margin:0 0 16px;}
+.about-modal p{font-size:.85rem;line-height:1.7;color:var(--text);margin:0 0 12px;}
 .about-modal a{color:var(--gold);text-decoration:none;font-weight:600;}
 .about-modal a:hover{text-decoration:underline;}
-.about-modal-close{width:100%;padding:11px;background:var(--surf3);border:none;border-radius:10px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
-  cursor:pointer;margin-top:14px;}
-.about-modal-close:hover{background:var(--surf2);}
+.about-modal-close{width:100%;padding:13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
+  cursor:pointer;margin-top:16px;transition:background .15s;}
+.about-modal-close:hover{background:rgba(255,255,255,.11);}
 .home-footer{text-align:center;padding:12px 20px 12px;}
 .home-footer p{margin:0;line-height:1.6;}
 #footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
 #footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
-.opt-btn{flex:1;padding:10px 6px;border-radius:10px;border:1.5px solid var(--border);
-  background:var(--surf2);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.8rem;font-weight:600;
-  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;}
+.opt-btn{padding:10px 4px;border-radius:12px;border:1.5px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:600;
+  color:var(--muted);cursor:pointer;transition:all .15s;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;min-height:60px;width:100%;line-height:1.2;}
 .opt-btn:hover{border-color:rgba(232,201,122,.3);color:var(--text);}
 .opt-btn.active{border-color:var(--gold);background:rgba(232,201,122,.1);color:var(--gold);}
 .opt-btn.active.blue{border-color:var(--blue);background:rgba(126,184,247,.1);color:var(--blue);}
 .opt-btn.active.purple{border-color:var(--purple);background:rgba(196,160,247,.1);color:var(--purple);}
 .opt-btn.active.green{border-color:var(--green);background:rgba(107,232,160,.1);color:var(--green);}
-.drawer-footer-row{display:flex;gap:8px;margin-top:6px;}
-.drawer-close{flex:1;padding:12px;background:var(--gold);border:none;border-radius:12px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;color:#0b0d13;
-  cursor:pointer;transition:all .15s;}
+.drawer-footer-row{display:flex;gap:10px;margin-top:8px;}
+.drawer-close{flex:1;padding:13px;background:linear-gradient(135deg,var(--blue),#5ba8ff);border:none;border-radius:16px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;color:#08111f;
+  cursor:pointer;transition:opacity .15s;}
 .drawer-close:hover{opacity:.88;}
-.drawer-about-row{flex:0 0 auto;padding:12px 14px;background:var(--surf3);border:none;border-radius:12px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--muted);
-  cursor:pointer;transition:all .15s;white-space:nowrap;}
-.drawer-about-row:hover{color:var(--text);}
+.drawer-about-row{flex:1;padding:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:16px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
+  cursor:pointer;transition:background .15s;text-align:center;}
+.drawer-about-row:hover{background:rgba(255,255,255,.10);}
+/* ── GOOGLE SIGN-IN BUTTON ── */
+.gsi-material-button{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+  -webkit-appearance:none;background-color:#131314;background-image:none;
+  border:1px solid #8e918f;border-radius:20px;box-sizing:border-box;color:#e3e3e3;
+  cursor:pointer;font-family:'Roboto',arial,sans-serif;font-size:14px;
+  height:44px;letter-spacing:.25px;outline:none;overflow:hidden;
+  padding:0 16px;position:relative;text-align:center;
+  transition:background-color .218s,border-color .218s,box-shadow .218s;
+  vertical-align:middle;white-space:nowrap;width:100%;}
+.gsi-material-button .gsi-material-button-icon{height:20px;margin-right:10px;min-width:20px;width:20px;}
+.gsi-material-button .gsi-material-button-content-wrapper{
+  align-items:center;display:flex;flex-direction:row;flex-wrap:nowrap;
+  height:100%;justify-content:center;position:relative;width:100%;}
+.gsi-material-button .gsi-material-button-contents{
+  flex-grow:0;font-family:'Roboto',arial,sans-serif;font-weight:500;
+  overflow:hidden;text-overflow:ellipsis;vertical-align:top;}
+.gsi-material-button .gsi-material-button-state{
+  transition:opacity .218s;bottom:0;left:0;opacity:0;
+  position:absolute;right:0;top:0;}
+.gsi-material-button:not(:disabled):hover{box-shadow:0 1px 2px 0 rgba(60,64,67,.30),0 1px 3px 1px rgba(60,64,67,.15);}
+.gsi-material-button:not(:disabled):hover .gsi-material-button-state{background-color:#fff;opacity:.08;}
+.gsi-material-button:not(:disabled):active .gsi-material-button-state{background-color:#fff;opacity:.12;}
+/* ── AUTH SIGNED-IN STATE ── */
+.auth-signout-btn{width:100%;padding:10px 14px;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.09);border-radius:12px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.83rem;font-weight:600;
+  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:8px;}
+.auth-signout-btn:hover{color:var(--text);border-color:rgba(255,255,255,.18);}
 
 /* ── HOME ACTIONS ── */
 .home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
@@ -438,8 +471,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   font-family:'Vazirmatn',serif;
 }
 /* ── AUTH UI ── */
-.auth-email{font-size:.78rem;color:var(--muted);margin:0 0 8px;word-break:break-all;}
-.auth-email strong{color:var(--text);}
+.auth-email{font-size:.8rem;color:var(--muted);margin:0 0 10px;word-break:break-all;
+  padding:10px 12px;background:rgba(255,255,255,.04);border-radius:10px;
+  border:1px solid rgba(255,255,255,.07);line-height:1.5;}
+.auth-email strong{color:var(--text);display:block;font-size:.85rem;}
 /* ── ADAPTIVE TIP ── */
 .adaptive-tip{display:flex;align-items:center;gap:12px;margin-top:auto;margin-bottom:0;
   padding:13px 16px;background:rgba(107,232,160,.06);
@@ -546,7 +581,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
 <!-- ══ PERSISTENT HEADER ══ -->
 <div class="app-header" id="app-header">
-  <div style="width:40px"></div>
+  <button class="app-back-btn hidden" id="app-back-btn" onclick="_appBackAction()"></button>
   <div class="app-header-center">
     <h1 onclick="goHome()">DeutschLernen</h1>
     <p id="header-sub">Word Practice · Cases · Verb Forms</p>
@@ -557,18 +592,18 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ SETTINGS DRAWER ══ -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="closeSettings()"></div>
 <div class="drawer" id="settings-drawer">
-  <div class="drawer-handle"></div>
+  <div class="drawer-handle" onclick="closeSettings()"></div>
   <div class="drawer-title" id="st-title">Settings</div>
 
   <div class="drawer-section">
     <div class="drawer-section-label" id="st-lang-label">Language</div>
     <div class="option-row">
-      <button class="opt-btn active" id="opt-en" onclick="setLang('en')">🇬🇧 English</button>
-      <button class="opt-btn" id="opt-tr" onclick="setLang('tr')">🇹🇷 Türkçe</button>
-      <button class="opt-btn" id="opt-ru" onclick="setLang('ru')">🇷🇺 Русский</button>
-      <button class="opt-btn" id="opt-uk" onclick="setLang('uk')">🇺🇦 Українська</button>
-      <button class="opt-btn" id="opt-fa" onclick="setLang('fa')">🇮🇷 فارسی</button>
-      <button class="opt-btn" id="opt-ar" onclick="setLang('ar')">🇸🇦 العربية</button>
+      <button class="opt-btn active" id="opt-en" onclick="setLang('en')"><span>🇬🇧</span><span>English</span></button>
+      <button class="opt-btn" id="opt-tr" onclick="setLang('tr')"><span>🇹🇷</span><span>Türkçe</span></button>
+      <button class="opt-btn" id="opt-ru" onclick="setLang('ru')"><span>🇷🇺</span><span>Русский</span></button>
+      <button class="opt-btn" id="opt-uk" onclick="setLang('uk')"><span>🇺🇦</span><span>Українська</span></button>
+      <button class="opt-btn" id="opt-fa" onclick="setLang('fa')"><span>🇮🇷</span><span>فارسی</span></button>
+      <button class="opt-btn" id="opt-ar" onclick="setLang('ar')"><span>🇸🇦</span><span>العربية</span></button>
     </div>
   </div>
 
@@ -578,14 +613,27 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <div class="drawer-section-label" id="st-account-label">Account</div>
     <div id="auth-section-content">
       <!-- populated by auth.js once Supabase initialises -->
-      <button class="about-btn" onclick="authSignIn()">Sign in with Google</button>
+      <button class="gsi-material-button" onclick="authSignIn()">
+        <div class="gsi-material-button-state"></div>
+        <div class="gsi-material-button-content-wrapper">
+          <div class="gsi-material-button-icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </div>
+          <span class="gsi-material-button-contents">Sign in with Google</span>
+        </div>
+      </button>
     </div>
   </div>
 
   <div class="drawer-divider"></div>
 
   <div class="drawer-footer-row">
-    <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">ℹ️ About</button>
+    <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">About</button>
     <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>
   </div>
 </div>
@@ -680,7 +728,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
       <div class="rb-icon">📖</div>
       <div class="rb-text">
         <strong id="dict-banner-title" style="color:var(--blue)">Dictionary</strong>
-        <span id="dict-banner-sub">Browse all words A–Z</span>
+        <span id="dict-banner-sub">Browse all words</span>
       </div>
     </div>
   </div>
@@ -712,7 +760,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ QUIZ ══ -->
 <div class="screen hidden" id="screen-quiz">
   <div class="quiz-header">
-    <button class="back-btn" id="quiz-back-btn" onclick="goQuizBack()">← Back</button>
     <div class="hud">
       <div class="hud-pill"><span class="dot"></span><span id="sc-ok">0</span></div>
       <div class="hud-pill"><span class="dot r"></span><span id="sc-no">0</span></div>
@@ -755,12 +802,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ SWIPE SETUP ══ -->
 <div class="screen hidden" id="screen-swipe-setup">
   <div class="swipe-header">
-    <button class="back-btn" id="swipe-setup-back-btn" onclick="goHome()">← Back</button>
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="swipe-setup-screen-title">Quick Match</div>
       <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
     </div>
-    <div style="width:58px;"></div>
   </div>
   <div class="swipe-setup">
     <div class="swipe-setup-title" id="swipe-setup-title"></div>
@@ -777,12 +822,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ SWIPE GAME ══ -->
 <div class="screen hidden" id="screen-swipe">
   <div class="swipe-header">
-    <button class="back-btn" id="swipe-back-btn" onclick="openSwipeSetup()">← Back</button>
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="swipe-title">Swipe Check</div>
       <div class="swipe-subtitle" id="swipe-subtitle">Swipe if the meaning matches</div>
     </div>
-    <div style="width:58px;"></div>
   </div>
   <div class="swipe-stage">
     <div class="swipe-flash" id="swipe-flash">
@@ -802,12 +845,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ ADAPTIVE QUIZ SETUP ══ -->
 <div class="screen hidden" id="screen-adaptive-setup">
   <div class="swipe-header">
-    <button class="back-btn" id="adaptive-setup-back-btn" onclick="goHome()">← Back</button>
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
       <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
     </div>
-    <div style="width:58px;"></div>
   </div>
   <div class="swipe-setup">
     <div class="swipe-level-grid">
@@ -822,12 +863,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ THEME SELECT ══ -->
 <div class="screen hidden" id="screen-theme-select">
   <div class="swipe-header">
-    <button class="back-btn" id="theme-back-btn" onclick="goHome()">← Back</button>
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
       <div class="swipe-subtitle" id="theme-screen-subtitle">Pick a topic to practise</div>
     </div>
-    <div style="width:58px;"></div>
   </div>
   <div class="category-grid" id="category-grid"></div>
 </div>
@@ -835,7 +874,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ RANDOM WORD ══ -->
 <div class="screen hidden" id="screen-random">
   <div class="rw-header">
-    <button class="back-btn" id="rw-back-btn" onclick="goHome()">← Back</button>
     <div class="rw-title" id="rw-screen-title">Word Explorer</div>
     <button class="refresh-btn" onclick="renderRandomWord()" id="rw-refresh-btn" title="New word">↻</button>
   </div>
@@ -845,12 +883,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 <!-- ══ DICTIONARY ══ -->
 <div class="screen hidden" id="screen-dictionary">
   <div class="dict-header">
-    <button class="back-btn" id="dict-back-btn" onclick="goHome()">← Back</button>
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)">Dictionary</div>
-      <div class="swipe-subtitle" id="dict-screen-subtitle">All words · A–Z</div>
+      <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
     </div>
-    <div style="width:58px;"></div>
   </div>
   <div class="dict-search-wrap">
     <input type="search" class="dict-search-input" id="dict-search-input"
