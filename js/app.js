@@ -79,9 +79,9 @@ const UI = {
     themeSelectTitle: 'Theme Quiz',
     themeSelectSubtitle: 'Pick a topic to practise',
     dictBannerTitle: 'Dictionary',
-    dictBannerSub: 'Browse all words A–Z',
+    dictBannerSub: 'Browse all words',
     dictScreenTitle: 'Dictionary',
-    dictScreenSubtitle: 'All words · A–Z',
+    dictScreenSubtitle: 'All words',
     dictBack: '← Back',
     dictFilterPlaceholder: 'Filter words…',
     dictLoading: 'Loading…',
@@ -109,6 +109,12 @@ const UI = {
     resultSub: (lv,p) => `Seviye ${lv} · %${p} doğru`,
     scoreLbl: 'Puan', correctLbl: 'Doğru', wrongLbl: 'Yanlış',
     accountLabel: 'Hesap',
+    installTipTitle: 'Uygulamayı yükle',
+    installTipDesc: 'Daha hızlı erişim ve uygulama deneyimi için ana ekranınıza yükleyin.',
+    installGuideTitle: 'Bu uygulamayı yükle',
+    installStep1Title: 'Paylaş menüsünü aç',
+    installStep2Title: 'Ana Ekrana Ekle\'yi seç',
+    installClose: 'Kapat',
     tipTitle: 'İlerlemenizi kaydedin',
     tipDesc: 'İlerlemenizi korumak ve daha akıllı quizler almak için Ayarlar\'dan giriş yapın.',
     playAgain: 'Tekrar oyna', chooseLevel: 'Ana Sayfaya Dön',
@@ -156,9 +162,9 @@ const UI = {
     themeSelectTitle: 'Konu Sınavı',
     themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
     dictBannerTitle: 'Sözlük',
-    dictBannerSub: 'Tüm kelimelere A–Z göz at',
+    dictBannerSub: 'Tüm kelimelere göz at',
     dictScreenTitle: 'Sözlük',
-    dictScreenSubtitle: 'Tüm kelimeler · A–Z',
+    dictScreenSubtitle: 'Tüm kelimeler',
     dictBack: '← Geri',
     dictFilterPlaceholder: 'Kelime ara…',
     dictLoading: 'Yükleniyor…',
@@ -186,8 +192,14 @@ const UI = {
     resultSub: (lv,p) => `سطح ${lv} · ${p}٪ درست`,
     scoreLbl: 'امتیاز', correctLbl: 'درست', wrongLbl: 'اشتباه',
     accountLabel: 'حساب کاربری',
+    installTipTitle: 'نصب برنامه',
+    installTipDesc: 'برای دسترسی سریع‌تر و تجربه‌ای روان‌تر، روی صفحه اصلی نصب کنید.',
+    installGuideTitle: 'این برنامه را نصب کنید',
+    installStep1Title: 'منوی اشتراک‌گذاری را باز کنید',
+    installStep2Title: '«Add to Home Screen» را انتخاب کنید',
+    installClose: 'بستن',
     tipTitle: 'پیشرفت خود را ذخیره کنید',
-    tipDesc: 'برای حفظ پیشرفت و دریافت آزمون‌های هوشمندتر از طریق تنظیمات وارد شوید.',
+    tipDesc: 'برای حفظ پیشرفت و دریافت آزمون‌های هوشمندتر، وارد حساب کاربری خود شوید.',
     playAgain: 'دوباره بازی کن', chooseLevel: 'بازگشت به خانه',
     rwTitle: 'کاوشگر واژه',
     cases: 'حالت‌ها (Kasus)', plural: 'جمع',
@@ -233,9 +245,9 @@ const UI = {
     themeSelectTitle: 'آزمون موضوعی',
     themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
     dictBannerTitle: 'واژه‌نامه',
-    dictBannerSub: 'مرور تمام واژه‌ها از الف تا ی',
+    dictBannerSub: 'مرور همه واژه‌ها',
     dictScreenTitle: 'واژه‌نامه',
-    dictScreenSubtitle: 'همه واژه‌ها · A–Z',
+    dictScreenSubtitle: 'همه واژه‌ها',
     dictBack: '→ بازگشت',
     dictFilterPlaceholder: 'جستجوی واژه…',
     dictLoading: 'در حال بارگذاری…',
@@ -263,8 +275,14 @@ const UI = {
     resultSub: (lv,p) => `Уровень ${lv} · ${p}% правильно`,
     scoreLbl: 'Счёт', correctLbl: 'Правильно', wrongLbl: 'Неверно',
     accountLabel: 'Аккаунт',
+    installTipTitle: 'Установить приложение',
+    installTipDesc: 'Установите на главный экран для быстрого доступа и удобного использования.',
+    installGuideTitle: 'Установить это приложение',
+    installStep1Title: 'Откройте меню «Поделиться»',
+    installStep2Title: 'Выберите «Add to Home Screen»',
+    installClose: 'Закрыть',
     tipTitle: 'Сохраните прогресс',
-    tipDesc: 'Войдите через Настройки, чтобы сохранить прогресс и получать более умные тесты.',
+    tipDesc: 'Войдите в свой аккаунт, чтобы сохранить прогресс и получать более умные тесты.',
     playAgain: 'Играть снова', chooseLevel: 'На главную',
     rwTitle: 'Исследователь слов',
     cases: 'Падежи (Kasus)', plural: 'Множественное число',
@@ -310,9 +328,9 @@ const UI = {
     themeSelectTitle: 'Тематическая викторина',
     themeSelectSubtitle: 'Выберите тему',
     dictBannerTitle: 'Словарь',
-    dictBannerSub: 'Все слова от A до Z',
+    dictBannerSub: 'Все слова',
     dictScreenTitle: 'Словарь',
-    dictScreenSubtitle: 'Все слова · A–Z',
+    dictScreenSubtitle: 'Все слова',
     dictLoading: 'Загрузка…',
     dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
@@ -338,8 +356,14 @@ const UI = {
     resultSub: (lv,p) => `Рівень ${lv} · ${p}% правильно`,
     scoreLbl: 'Рахунок', correctLbl: 'Правильно', wrongLbl: 'Неправильно',
     accountLabel: 'Акаунт',
+    installTipTitle: 'Встановити додаток',
+    installTipDesc: 'Встановіть на головний екран для швидкого доступу та зручного використання.',
+    installGuideTitle: 'Встановити цей додаток',
+    installStep1Title: 'Відкрийте меню «Поділитися»',
+    installStep2Title: 'Виберіть «Add to Home Screen»',
+    installClose: 'Закрити',
     tipTitle: 'Збережіть прогрес',
-    tipDesc: 'Увійдіть через Налаштування, щоб зберегти прогрес і отримувати розумніші тести.',
+    tipDesc: 'Увійдіть до свого акаунту, щоб зберегти прогрес і отримувати розумніші тести.',
     playAgain: 'Грати знову', chooseLevel: 'На головну',
     rwTitle: 'Дослідник слів',
     cases: 'Відмінки (Kasus)', plural: 'Множина',
@@ -385,9 +409,9 @@ const UI = {
     themeSelectTitle: 'Тематична вікторина',
     themeSelectSubtitle: 'Виберіть тему',
     dictBannerTitle: 'Словник',
-    dictBannerSub: 'Усі слова від A до Z',
+    dictBannerSub: 'Усі слова',
     dictScreenTitle: 'Словник',
-    dictScreenSubtitle: 'Усі слова · A–Z',
+    dictScreenSubtitle: 'Усі слова',
     dictLoading: 'Завантаження…',
     dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
@@ -413,6 +437,12 @@ const UI = {
     resultSub: (lv,p) => `المستوى ${lv} · ${p}% صحيح`,
     scoreLbl: 'النقاط', correctLbl: 'صحيح', wrongLbl: 'خطأ',
     accountLabel: 'الحساب',
+    installTipTitle: 'ثبّت التطبيق',
+    installTipDesc: 'ثبّته على شاشتك الرئيسية للوصول السريع وتجربة سلسة.',
+    installGuideTitle: 'ثبّت هذا التطبيق',
+    installStep1Title: 'افتح قائمة المشاركة',
+    installStep2Title: 'اختر «Add to Home Screen»',
+    installClose: 'إغلاق',
     tipTitle: 'احفظ تقدمك',
     tipDesc: 'سجّل الدخول من الإعدادات للحفاظ على تقدمك والحصول على اختبارات أذكى.',
     playAgain: 'العب مرة أخرى', chooseLevel: 'العودة للرئيسية',
@@ -460,9 +490,9 @@ const UI = {
     themeSelectTitle: 'اختبار موضوعي',
     themeSelectSubtitle: 'اختر موضوعاً للتدرّب عليه',
     dictBannerTitle: 'القاموس',
-    dictBannerSub: 'تصفح جميع الكلمات من A إلى Z',
+    dictBannerSub: 'تصفح جميع الكلمات',
     dictScreenTitle: 'القاموس',
-    dictScreenSubtitle: 'جميع الكلمات · A–Z',
+    dictScreenSubtitle: 'جميع الكلمات',
     dictBack: '→ رجوع',
     dictFilterPlaceholder: 'ابحث عن كلمة…',
     dictLoading: 'جارٍ التحميل…',
@@ -674,7 +704,6 @@ function applyTranslations() {
   document.getElementById('install-guide-title').textContent = u.installGuideTitle;
   document.getElementById('install-step1-title').textContent = u.installStep1Title;
   document.getElementById('install-step2-title').textContent = u.installStep2Title;
-  document.getElementById('install-share-btn').textContent = u.installOpenShare;
   document.getElementById('install-guide-dismiss-btn').textContent = u.installClose;
   document.getElementById('at-title').textContent = u.tipTitle;
   document.getElementById('at-desc').textContent = u.tipDesc;
@@ -797,13 +826,9 @@ function _installGuideText(key) {
 }
 
 function _refreshInstallGuideContent() {
-  var sub = document.getElementById('install-guide-sub');
   var step1 = document.getElementById('install-step1-desc');
   var step2 = document.getElementById('install-step2-desc');
-  var primaryBtn = document.getElementById('install-share-btn');
-  if (!sub || !step1 || !step2 || !primaryBtn) return;
-
-  sub.textContent = _installGuideText('guideSub');
+  if (!step1 || !step2) return;
 
   step1.innerHTML = '';
   step1.appendChild(document.createTextNode(_installGuideText('step1Lead')));
@@ -813,17 +838,9 @@ function _refreshInstallGuideContent() {
   icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   step1.appendChild(icon);
   step1.appendChild(document.createTextNode(_installGuideText('step1Tail')));
-  step1.appendChild(document.createTextNode(_installGuideText('step1Or')));
-  var step1Link = document.createElement('button');
-  step1Link.type = 'button';
-  step1Link.className = 'install-inline-link';
-  step1Link.id = 'install-step1-link';
-  step1Link.textContent = _installGuideText('step1ClickHere');
-  step1.appendChild(step1Link);
   step1.appendChild(document.createTextNode('.'));
 
   step2.textContent = _installGuideText('step2');
-  primaryBtn.style.display = '';
 }
 
 function refreshInstallTip() {
@@ -937,27 +954,7 @@ function _wireInstallShareActions() {
   }
   if (_installShareActionsBound) return;
   _installShareActionsBound = true;
-  _installLog('log', 'share actions bound', {
-    primaryFound: !!document.getElementById('install-share-btn'),
-    inlineFound: !!document.getElementById('install-step1-link')
-  });
-  overlay.addEventListener('click', function(ev) {
-    var target = ev.target && ev.target.closest
-      ? ev.target.closest('#install-share-btn, #install-step1-link')
-      : null;
-    if (!target) return;
-    ev.preventDefault();
-    ev.stopPropagation();
-    _installLog('log', 'share button tapped', { id: target.id || '(unknown)' });
-    if (typeof navigator.share === 'function') {
-      navigator.share({
-        title: document.title,
-        url: String(window.location.href)
-      }).catch(function(err) {
-        _installLog('warn', 'share failed', err && (err.message || err.name || err));
-      });
-    }
-  });
+  _installLog('log', 'share actions bound');
 }
 
 

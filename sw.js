@@ -1,4 +1,4 @@
-var CACHE_NAME = 'deutschlernen-shell-v1.01';
+var CACHE_NAME = 'deutschlernen-shell-v1.02';
 var APP_SHELL = [
   '/',
   '/index.html',
@@ -7,7 +7,9 @@ var APP_SHELL = [
   '/apple-touch-icon.png',
   '/js/app.js',
   '/js/adaptive.js',
-  '/js/auth.js'
+  '/js/auth.js',
+  '/assets/ShareButton.png',
+  '/assets/A2HS.png'
 ];
 
 self.addEventListener('install', function(event) {

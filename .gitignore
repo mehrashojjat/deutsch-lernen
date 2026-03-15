@@ -1,1 +1,8 @@
 __pycache__/
+*.pem
+*.key
+rootCA.crt
+https_server.py
+android_server.py
+.DS_Store
+.venv/

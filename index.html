@@ -489,6 +489,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .install-step-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;}
 .install-step-desc{font-size:.82rem;line-height:1.6;color:var(--muted);}
 .install-guide-actions{display:flex;gap:10px;margin-top:16px;}
+.install-step-img{display:block;width:auto;max-width:110px;border-radius:8px;margin-top:8px;}
 .install-guide-btn{flex:1;border:0;border-radius:14px;padding:12px 14px;font-size:.9rem;font-weight:700;cursor:pointer;}
 .install-guide-btn.primary{background:linear-gradient(135deg,var(--blue),#5ba8ff);color:#08111f;}
 .install-guide-btn.secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.08);}
@@ -607,7 +608,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <div class="install-guide-head">
       <div>
         <div class="install-guide-title" id="install-guide-title">Install this app</div>
-        <div class="install-guide-sub" id="install-guide-sub">Use these two quick steps to install the app on your home screen.</div>
       </div>
     </div>
     <div class="install-steps">
@@ -615,7 +615,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <div class="install-step-num">1</div>
         <div>
           <div class="install-step-title" id="install-step1-title">Open the Share menu</div>
-          <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Share button in your browser, or <button type="button" class="install-inline-link" id="install-step1-link">click here</button>.</div>
+          <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Share button in your browser.</div>
+          <img src="assets/ShareButton.png" alt="Share button location" class="install-step-img">
         </div>
       </div>
       <div class="install-step">
@@ -623,11 +624,11 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <div>
           <div class="install-step-title" id="install-step2-title">Choose Add to Home Screen</div>
           <div class="install-step-desc" id="install-step2-desc">In the menu that opens, tap Add to Home Screen, then confirm to install.</div>
+          <img src="assets/A2HS.png" alt="Add to Home Screen option" class="install-step-img">
         </div>
       </div>
     </div>
     <div class="install-guide-actions">
-      <button class="install-guide-btn primary" id="install-share-btn" type="button">Open Share Menu</button>
       <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" onclick="closeInstallGuide()">Close</button>
     </div>
   </div>
@@ -685,7 +686,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   </div>
 
   <div class="home-tips">
-    <!-- INSTALL TIP BANNER — temporarily hidden, re-enable when ready
     <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()">
       <div class="at-icon">⬇️</div>
       <div class="at-body">
@@ -693,11 +693,6 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <div class="at-desc" id="install-tip-desc">Install it on your home screen for faster access and an app-like experience.</div>
       </div>
       <div class="at-arrow">›</div>
-    </div>
-    -->
-    <!-- Placeholder to keep JS getElementById calls from erroring -->
-    <div id="install-tip" style="display:none!important" aria-hidden="true">
-      <span id="install-tip-title"></span><span id="install-tip-desc"></span>
     </div>
     <div class="adaptive-tip" id="adaptive-tip" onclick="openSettings()">
       <div class="at-icon">✨</div>
