@@ -462,16 +462,6 @@ const UI = {
   }
 };
 
-// ══════════════════════════════════════════════════════════════════
-//  WORD BANK  — each entry has meaning_en AND meaning_tr
-// ══════════════════════════════════════════════════════════════════
-const WORD_BANK = window.APP_DATA.WORD_BANK;
-
-// ══════════════════════════════════════════════════════════════════
-//  VOCAB CARDS — answer/choices stored as {en, tr}
-// ══════════════════════════════════════════════════════════════════
-const VOCAB_CARDS = window.APP_DATA.VOCAB_CARDS;
-
 // ════════════════════════════════════════════════════════════════
 //  CATEGORY MAP — 21 vocabulary categories, ID 1–21
 // ════════════════════════════════════════════════════════════════
@@ -499,45 +489,6 @@ var CATEGORY_MAP = [
   { id: 21, name: 'Grammar & Function Words',       icon: '📝' },
 ];
 
-
-var FORM_INDEX = {};
-(function(){
-  WORD_BANK.forEach(function(w){
-    FORM_INDEX[w.word.toLowerCase()] = w.word;
-    if(w.type==='Noun'){
-      if(w.cases) Object.values(w.cases).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
-      if(w.plural) FORM_INDEX[w.plural.toLowerCase()]=w.word;
-    }
-    if(w.type==='Verb'){
-      if(w.conjugation) Object.values(w.conjugation).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
-      if(w['präteritum']) Object.values(w['präteritum']).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()]=w.word; });
-      if(w.perfekt){ FORM_INDEX[w.perfekt.toLowerCase()]=w.word; w.perfekt.toLowerCase().split(' ').forEach(function(p){ if(!FORM_INDEX[p]) FORM_INDEX[p]=w.word; }); }
-    }
-    if(w.type==='Adjective'){
-      if(w.comparative) FORM_INDEX[w.comparative.toLowerCase()]=w.word;
-      if(w.superlative) FORM_INDEX[w.superlative.toLowerCase()]=w.word;
-    }
-  });
-})();
-
-// SEARCH_EXTRA: vocab words from QUESTIONS not in WORD_BANK
-var SEARCH_EXTRA = [];
-(function(){
-  var wbWords = {};
-  WORD_BANK.forEach(function(w){ wbWords[w.word.toLowerCase()] = true; });
-  var seen = {};
-  Object.values(VOCAB_CARDS).forEach(function(lvArr){ (lvArr||[]).forEach(function(q){
-    if(!q.answer || typeof q.answer !== 'object' || !q.answer.en) return;
-    var raw = (q.main||'').replace(/·.*$/,'').trim();
-    if(!raw || raw.includes('___') || raw.includes('→') || raw.includes('"')) return;
-    var key = raw.toLowerCase();
-    if(seen[key] || wbWords[key]) return;
-    seen[key] = true;
-    var type = q.badgeType==='noun'?'Noun':q.badgeType==='verb'?'Verb':q.badgeType==='adjective'?'Adjective':'Word';
-    SEARCH_EXTRA.push({ word:raw, type:type, meaning_en:q.answer.en||'', meaning_tr:q.answer.tr||'', meaning_fa:q.answer.fa||'', level:'—', fromQuiz:true });
-    if(!FORM_INDEX[key]) FORM_INDEX[key] = raw;
-  }); });
-})();
 
 // ══════════════════════════════════════════════════════════════════
 //  APP STATE
@@ -788,7 +739,7 @@ function _loadCSVText(url) {
 function _loadCSVLevel(lv) {
   if (CSV_QUIZ_DATA[lv]) return Promise.resolve(CSV_QUIZ_DATA[lv]);
   if (_csvLoadPromises[lv]) return _csvLoadPromises[lv];
-  var url = 'word_data/quiz_csv/' + lv.toLowerCase() + '.csv';
+  var url = 'data/' + lv.toLowerCase() + '.csv';
   _csvLoadPromises[lv] = _loadCSVText(url)
     .then(function(txt){
       var parsed = _parseCSVText(txt);
@@ -927,14 +878,8 @@ function renderCard() {
   // Show article + word for nouns (e.g. "der Hund"); plain word for verbs/others
   document.getElementById('cmain').textContent = (row.article ? row.article + ' ' : '') + expandOptional(row.word);
 
-  // Sub-line: plural hint for nouns, present-tense hint for verbs
-  var sub = '';
-  if (row.plural && row.plural.trim()) {
-    sub = 'Pl.: ' + row.plural;
-  } else if (row.verb_present && row.verb_present.trim()) {
-    sub = row.verb_present;
-  }
-  document.getElementById('csub').textContent = sub;
+  // Sub-line: example sentence from CSV
+  document.getElementById('csub').textContent = (row.example_de && row.example_de.trim()) ? row.example_de.trim() : '';
 
   // Each choice button carries the CSV row id as its identity.
   // Correctness is checked by comparing ids — NEVER by comparing displayed strings.
@@ -1461,26 +1406,21 @@ let lastRandIdx = -1;
 let rwWordKey = null;
 
 function getFallbackWordExample(wordKey) {
-  const wordEntry = WORD_BANK.find(function(w){ return w.word === wordKey; });
-  if (!wordEntry || !wordEntry.example) return null;
-  return wordEntry.example;
+  var key = normKey(wordKey);
+  var found = null;
+  ['A1','A2','B1'].forEach(function(lv) {
+    if (found) return;
+    var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return normKey(x.word) === key; });
+    if (r && r.example_de && r.example_de.trim()) found = r.example_de.trim();
+  });
+  return found;
 }
 
 function getExampleForForm(wordKey, formKey) {
-  const formMap = FORM_EX[wordKey] || {};
-  if (formMap[formKey]) return { text: formMap[formKey], isHtml: false };
-  const fallback = getFallbackWordExample(wordKey);
-  if (fallback) return { text: fallback, isHtml: true };
+  var fallback = getFallbackWordExample(wordKey);
+  if (fallback) return { text: fallback, isHtml: false };
   return null;
 }
-
-// ── Per-form example sentences ──
-// Sources (priority order):
-// 1. Goethe-Institut Zertifikat A1/A2/B1 Modelltest example sentences
-// 2. DWDS — Digitales Wörterbuch der deutschen Sprache (dwds.de)
-// 3. Hueber Verlag "Schritte" / "Menschen" textbook corpus
-// 4. Duden Grammatik — only where no corpus example available
-const FORM_EX = window.APP_DATA.FORM_EX;
 
 function pickFormExample(el, key, modal) {
   var scope = modal
@@ -1499,21 +1439,6 @@ function pickFormExample(el, key, modal) {
   } else {
     box.textContent = UI[LANG].noExample;
     box.classList.remove('lit');
-  }
-}
-
-// ══════════════════════════════════════════════════════════════════
-//  SEARCH INDEX (SI) STATE
-// ══════════════════════════════════════════════════════════════════
-var SI_READY = false;
-var SI_KEY_MAP = {}; // norm_key → SI array index
-
-function onSILoaded() {
-  SI_READY = true;
-  var arr = window.SI || [];
-  for (var i = 0; i < arr.length; i++) {
-    var k = arr[i][0].replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
-    if (!SI_KEY_MAP.hasOwnProperty(k)) SI_KEY_MAP[k] = i;
   }
 }
 
@@ -1575,35 +1500,26 @@ function wiktLookupWord(word, tc) {
     : base.charAt(0).toUpperCase() + base.slice(1);
 }
 function metaFromWord(word) {
-  // Check SI first, then WORD_BANK
   var key = normKey(word);
-  // Look up Ukrainian translation from CSV data (translation_uk column)
-  var _ukFromCsv = '';
+  // Look up from CSV data
+  var csvRow = null;
   ['A1','A2','B1'].forEach(function(lv) {
-    if (_ukFromCsv) return;
+    if (csvRow) return;
     var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return normKey(x.word) === key; });
-    if (r && r.translation_uk && r.translation_uk.trim()) _ukFromCsv = r.translation_uk.trim();
+    if (r) csvRow = r;
   });
-  // Persian and Arabic: use precomputed maps (O(1)) built from CSV data
+  var _ukFromCsv = csvRow && csvRow.translation_uk ? csvRow.translation_uk.trim() : '';
   var _faFromCsv = _faCsvMap[key] || '';
   var _arFromCsv = _arCsvMap[key] || '';
-  if (SI_READY && window.SI) {
-    var i = SI_KEY_MAP[key];
-    if (i !== undefined) {
-      var e = window.SI[i];
-      // CSV (de→target) takes priority for uk and fa; API cache for others
-      return { word: e[0], tc: e[1], en: e[2], tr: (_trMemCache&&_trMemCache[key]) || e[3]||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
-    }
+  if (csvRow) {
+    return { word: csvRow.word, tc: typeChar(csvRow.word_type), en: csvRow.translation_en||'', tr: (_trMemCache&&_trMemCache[key]) || csvRow.translation_tr||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key]) || csvRow.translation_ru||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
   }
-  var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
-  // CSV (de→target) takes priority for uk and fa; API cache for others
-  if (wb) return { word: wb.word, tc: typeChar(wb.type), en: wb.meaning_en||'', tr: (_trMemCache&&_trMemCache[key]) || wb.meaning_tr||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key]) || wb.meaning_fa||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
   return { word: word, tc: '?', en: '', tr: (_trMemCache&&_trMemCache[key])||'', fa: _faFromCsv || (_faMemCache&&_faMemCache[key])||'', ru: (_ruMemCache&&_ruMemCache[key])||'', uk: _ukFromCsv, ar: _arFromCsv || (_arMemCache&&_arMemCache[key])||'' };
 }
 
 // ── German verb lemmatizer ─────────────────────────────────────────
 // Given an inflected (conjugated/participle) form, return the likely
-// infinitive if it can be found in SI or WORD_BANK.
+// infinitive using the CSV vocabulary data.
 // e.g. "verschwendet" → "verschwenden", "gespielt" → "spielen"
 // Irregular (strong) verb Präteritum forms → infinitive.
 // Covers A1–B2 vocabulary plus the most common irregular verbs a learner meets.
@@ -1731,12 +1647,13 @@ function deduceLemma(word) {
 
   for (var ci = 0; ci < candidates.length; ci++) {
     var c = candidates[ci];
-    if (SI_READY && window.SI) {
-      var si = SI_KEY_MAP[c];
-      if (si !== undefined && window.SI[si][1] === 'V') return window.SI[si][0];
-    }
-    var wbm = WORD_BANK.find(function(x){ return x.word.toLowerCase() === c && x.type === 'Verb'; });
-    if (wbm) return wbm.word;
+    var csvVerb = null;
+    ['A1','A2','B1'].every(function(lv) {
+      var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return x.word.toLowerCase() === c && x.word_type === 'Verb'; });
+      if (r) { csvVerb = r.word; return false; }
+      return true;
+    });
+    if (csvVerb) return csvVerb;
   }
   return null;
 }
@@ -2563,8 +2480,13 @@ function renderWiktCard(data, meta, targetId) {
     meaning = data.autoTranslation;
     meaningIsAuto = true;
   }
-  var wb = WORD_BANK.find(function(w){ return normKey(w.word)===normKey(word); });
-  var level = wb ? wb.level : '';
+  var _csvLevelRow = null;
+  ['A1','A2','B1'].forEach(function(lv) {
+    if (_csvLevelRow) return;
+    var r = (CSV_QUIZ_DATA[lv]||[]).find(function(x){ return normKey(x.word)===normKey(word); });
+    if (r) _csvLevelRow = r;
+  });
+  var level = _csvLevelRow ? (_csvLevelRow.level || '') : '';
 
   var html = '<div class="rw-card">';
   html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcNameDE(tc) + '</div>';
@@ -2694,8 +2616,6 @@ function renderWiktCard(data, meta, targetId) {
       if (!_exTxt && _ed.examples && _ed.examples.length) _exTxt = _ed.examples[0];
     });
   });
-  // 2. Fall back to WORD_BANK example
-  if (!_exTxt && wb && wb.example) _exTxt = wb.example;
   if (_exTxt) {
     html += '<div class="rw-section"><div class="rw-section-title">Beispiel</div>'
       + '<div class="rw-example-box lit">' + escHtml(_exTxt) + '</div></div>';
@@ -3063,17 +2983,11 @@ async function renderRandomWord() {
   }).catch(function() {
     _currentRandRow  = row;
     _currentWiktData = null;
-    // Offline fallback: render with whatever is cached; pass CSV meta.en so
-    // _autoFetchLangMeaning can translate via en→target even without WORD_BANK
-    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
+    // Offline fallback: render with whatever is cached
     var data = { found: false, word: word, ipa: '', sections: [] };
     content.innerHTML = renderWiktCard(data, meta);
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content, meta.en);
-    if (wb) {
-      var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-      if (chip) { rwWordKey = word; chip.click(); }
-    }
   });
 }
 
@@ -3104,14 +3018,9 @@ async function _explorerRefreshLang() {
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } else {
-    var wb = WORD_BANK.find(function(w){ return normKey(w.word) === key; });
     content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content, meta.en);
-    if (wb) {
-      var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-      if (chip) { rwWordKey = word; chip.click(); }
-    }
   }
 }
 
@@ -3123,133 +3032,6 @@ async function _quizRefreshLang() {
 
   // All languages use CSV columns — re-render immediately
   renderCard();
-}
-
-// ══ SEARCH ══
-function openSearch() {
-  var overlay = document.getElementById('search-overlay');
-  var box = document.getElementById('search-box');
-  box.value = '';
-  box.placeholder = LANG==='tr' ? 'Kelime ara...' : LANG==='fa' ? 'جستجوی کلمه...' : LANG==='ru' ? 'Поиск слова...' : 'Search a word...';
-  document.getElementById('search-results').innerHTML = '';
-  overlay.classList.add('open');
-  requestAnimationFrame(function(){
-    box.focus();
-    box.click();
-    setTimeout(function(){ box.focus(); }, 50);
-  });
-}
-
-function closeSearch() {
-  var _so = document.getElementById('search-overlay');
-  if (_so) _so.classList.remove('open');
-}
-
-// Search result cache (indexed by position for clean onclick)
-var _lastSR = [];
-
-function onSearchInput(q) {
-  var container = document.getElementById('search-results');
-  var ql = q.trim().toLowerCase();
-  if (!ql) { container.innerHTML = ''; _lastSR = []; return; }
-
-  var seen = {};
-  var results = []; // each: [word, tc, en, tr]
-
-  // ── Search window.SI (40 k entries) if ready ──
-  if (SI_READY && window.SI) {
-    var arr = window.SI;
-    // Pass 1: prefix match on bare word
-    for (var i = 0; i < arr.length && results.length < 80; i++) {
-      var e = arr[i], wl = e[0].toLowerCase(), base = normKey(e[0]);
-      if (wl.startsWith(ql) || base.startsWith(ql)) {
-        if (!seen[wl]) { seen[wl] = true; results.push(e); }
-      }
-    }
-    // Pass 2: meaning match
-    for (var i = 0; i < arr.length && results.length < 120; i++) {
-      var e = arr[i], wl = e[0].toLowerCase();
-      if (!seen[wl] && (e[2].toLowerCase().includes(ql) || e[3].toLowerCase().includes(ql))) {
-        seen[wl] = true; results.push(e);
-      }
-    }
-    // Pass 3: substring in word
-    for (var i = 0; i < arr.length && results.length < 150; i++) {
-      var e = arr[i], wl = e[0].toLowerCase();
-      if (!seen[wl] && wl.includes(ql)) { seen[wl] = true; results.push(e); }
-    }
-  } else {
-    // Fallback: WORD_BANK + SEARCH_EXTRA
-    WORD_BANK.concat(SEARCH_EXTRA).forEach(function(w) {
-      var wl = w.word.toLowerCase();
-      if (!seen[wl] && (wl.includes(ql)||(w.meaning_en||'').toLowerCase().includes(ql)||(w.meaning_tr||'').toLowerCase().includes(ql))) {
-        seen[wl] = true;
-        results.push([w.word, typeChar(w.type), w.meaning_en||'', w.meaning_tr||'']);
-      }
-    });
-  }
-
-  // ── Pass 4: FORM_INDEX — inflected form → base word ──────────────────────
-  // e.g. "isst" → "essen", "aß" → "essen", so typing any form finds its lemma.
-  // Also check STRONG_PAST for forms not in FORM_INDEX (irregular verbs).
-  var _baseFromForm = FORM_INDEX[ql] || (STRONG_PAST[ql] ? STRONG_PAST[ql] : null);
-  if (_baseFromForm) {
-    var _bk = normKey(_baseFromForm);
-    if (!seen[_bk]) {
-      // Try SI first, then WORD_BANK
-      var _bIdx = SI_READY && window.SI ? SI_KEY_MAP[_bk] : undefined;
-      if (_bIdx !== undefined) {
-        seen[_bk] = true; results.unshift(window.SI[_bIdx]);
-      } else {
-        var _bwb = WORD_BANK.find(function(w){ return normKey(w.word) === _bk; });
-        if (_bwb) { seen[_bk] = true; results.unshift([_bwb.word, typeChar(_bwb.type), _bwb.meaning_en||'', _bwb.meaning_tr||'']); }
-      }
-    }
-  }
-
-  // Sort: exact match (norm == query) → prefix → base-prefix → rest
-  // Within each tier, alphabetical by normalised key.
-  results.sort(function(a, b) {
-    var al = a[0].toLowerCase(), bl = b[0].toLowerCase();
-    var nka = normKey(al), nkb = normKey(bl);
-    var score = function(l, nk) {
-      if (nk === ql || l === ql) return -1;          // exact → top
-      if (l.startsWith(ql))      return 0;            // prefix match
-      if (nk.startsWith(ql))     return 1;            // article-stripped prefix
-      return 2;                                        // substring / meaning
-    };
-    return score(al,nka) - score(bl,nkb) || nka.localeCompare(nkb);
-  });
-
-  _lastSR = results.slice(0, 60);
-
-  if (!_lastSR.length) {
-    container.innerHTML = '<div class="search-empty">' +
-      (LANG==='tr'?'Sonuç bulunamadı.':LANG==='fa'?'نتیجه‌ای یافت نشد.':'No results found.') +
-      '</div>';
-    return;
-  }
-  container.innerHTML = _lastSR.map(function(e, i) {
-    // Show meaning in selected language; fall back to English (never to an
-    // unrelated language — e.g. never show Turkish to an English user).
-    var meaning = LANG==='tr' ? (e[3]||(_trMemCache&&_trMemCache[normKey(e[0])])||e[2]||'')
-                : LANG==='fa' ? (_faCsvMap[normKey(e[0])] || e[2]||'')
-                : LANG==='ar' ? (_arCsvMap[normKey(e[0])] || (_arMemCache&&_arMemCache[normKey(e[0])]) || e[2]||'')
-                : LANG==='ru' ? ((_ruMemCache&&_ruMemCache[normKey(e[0])])||e[2]||'')
-                : (e[2]||'');
-    var label = tcNameDE(e[1]);
-    return '<div class="search-result-item" onclick="openSRItem(' + i + ')">'
-      + '<div><div class="sri-word">' + escHtml(e[0]) + '</div>'
-      + '<div class="sri-meta">' + escHtml(label) + '</div></div>'
-      + '<div class="sri-meaning">' + escHtml(meaning) + '</div>'
-      + '</div>';
-  }).join('');
-}
-
-function openSRItem(i) {
-  var e = _lastSR[i];
-  if (!e) return;
-  openWordCard(e[0], e[1]);
 }
 
 // Pre-fetch the active language translation into meta before rendering
@@ -3277,7 +3059,6 @@ async function _prefetchDefTranslations(data) {
 }
 
 async function openWordCard(word, tc) {
-  closeSearch();
   if (!word) return;
   var meta = metaFromWord(word);
   if (tc && meta.tc === '?') meta.tc = tc;
@@ -3592,7 +3373,7 @@ function show(id){
 applyTranslations();
 updateCounts();
 document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') { closeSearch(); closeWordModal(); }
+  if (e.key === 'Escape') { closeWordModal(); }
 });
 
 // ── Word-modal drag-to-close ─────────────────────────────────────────
@@ -3701,45 +3482,6 @@ document.addEventListener('keydown', function(e){
   });
 })();
 
-// ── Load search index (40k words) in background ──
-(function() {
-  var s = document.createElement('script');
-  s.src = 'word_data/search_index.js';
-  s.async = true;
-  // onSILoaded() is called from inside the script when it finishes
-  document.body.appendChild(s);
-})();
 
-// ── Load dictionary in background (doesn't block UI) ──
-(function() {
-  var s = document.createElement('script');
-  s.src = 'word_data/sources/dictionary/dictionary.js';
-  s.async = true;
-  s.onload = function() {
-    // Re-run loader merge so dictionary words appear in search
-    if (window._GS && window._GS.length) {
-      var lastChunk = window._GS[window._GS.length - 1];
-      var seen = {};
-      WORD_BANK.forEach(function(w) {
-        seen[(w.word||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase()] = true;
-      });
-      (lastChunk.WORD_BANK || []).forEach(function(w) {
-        var key = (w.word||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
-        if (!seen[key]) {
-          seen[key] = true;
-          WORD_BANK.push(w);
-          // Also index the new word for search
-          FORM_INDEX[w.word.toLowerCase()] = w.word;
-          if (w.type === 'Verb' && w.conjugation) {
-            Object.values(w.conjugation).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()] = w.word; });
-          }
-          if (w.type === 'Noun') {
-            if (w.cases) Object.values(w.cases).forEach(function(v){ if(v) FORM_INDEX[v.toLowerCase()] = w.word; });
-            if (w.plural) FORM_INDEX[w.plural.toLowerCase()] = w.word;
-          }
-        }
-      });
-    }
-  };
-  document.body.appendChild(s);
-})();
+
+

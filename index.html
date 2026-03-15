@@ -85,30 +85,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   width:40px;height:40px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;}
 .settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
-.search-btn{background:var(--surf);border:1px solid var(--border);border-radius:10px;
-  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1.1rem;transition:all .18s;color:var(--text);flex-shrink:0;}
-.search-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
 
-/* Search overlay */
-.search-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;
-  display:none;flex-direction:column;align-items:center;padding:60px 16px 20px;}
-.search-overlay.open{display:flex;}
-.search-box{width:100%;max-width:560px;background:var(--surf);border:1.5px solid var(--gold);
-  border-radius:14px;padding:12px 16px;font-size:1rem;color:var(--text);
-  font-family:'Outfit','Vazirmatn',sans-serif;outline:none;}
-.search-box::placeholder{color:var(--muted);}
-.search-results{width:100%;max-width:560px;margin-top:10px;display:flex;flex-direction:column;gap:6px;
-  max-height:55vh;overflow-y:auto;}
-.search-result-item{background:var(--surf);border:1px solid var(--border);border-radius:12px;
-  padding:12px 16px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:12px;}
-.search-result-item:hover{border-color:var(--gold);background:rgba(232,201,122,.07);}
-.sri-word{font-family:'Fraunces','Vazirmatn',serif;font-size:1.1rem;font-weight:700;color:var(--text);}
-.sri-meta{font-size:.72rem;color:var(--muted);}
-.sri-meaning{font-size:.82rem;color:var(--muted);font-style:italic;margin-left:auto;text-align:right;max-width:45%;}
-.search-empty{color:var(--muted);font-size:.9rem;text-align:center;padding:20px;}
-.search-close{position:absolute;top:16px;right:16px;background:none;border:none;
-  color:var(--muted);font-size:1.4rem;cursor:pointer;padding:8px;}
 
 /* ── Quiz prep loading overlay ── */
 #quiz-prep-overlay{display:none;position:fixed;inset:0;background:var(--bg);z-index:400;
@@ -268,7 +245,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .card-q{font-size:.8rem;color:var(--muted);margin-bottom:9px;line-height:1.55;}
 .card-q em{color:var(--gold);font-style:normal;font-weight:600;}
 .card-main{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;line-height:1.15;margin-bottom:7px;}
-.card-sub{font-size:.8rem;color:var(--muted);line-height:1.6;white-space:pre-line;}
+.card-sub{font-size:.8rem;color:var(--muted);line-height:1.55;font-style:italic;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:13px;}
 .cbtn{background:var(--surf);border:1.5px solid var(--border);border-radius:12px;
   padding:13px 11px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--text);
@@ -522,7 +499,7 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
 <!-- ══ PERSISTENT HEADER ══ -->
 <div class="app-header" id="app-header">
-  <button class="search-btn" id="search-btn" style="visibility:hidden;pointer-events:none;" title="Search words">🔍</button>
+  <div style="width:40px"></div>
   <div class="app-header-center">
     <h1 onclick="goHome()">DeutschLernen</h1>
     <p id="header-sub">Word Practice · Cases · Verb Forms</p>
@@ -661,8 +638,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   </div>
   <div class="word-card">
     <div class="card-q" id="cquestion"></div>
-    <div class="card-main" id="cmain"></div>
-    <div class="card-sub" id="csub"></div>
+    <div class="card-main" id="cmain" dir="ltr"></div>
+    <div class="card-sub" id="csub" dir="ltr"></div>
   </div>
   <div class="choices" id="choices"></div>
   <div class="feedback" id="feedback"></div>
@@ -802,14 +779,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 </div>
 
 <!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="word_data/game_data.js"></script>
-<script src="word_data/sources/goethe-institut/a1_words.js"></script>
-<script src="word_data/sources/goethe-institut/a2_words.js"></script>
-<script src="word_data/sources/goethe-institut/b1_words.js"></script>
-<script src="word_data/sources/goethe-institut/b2_words.js"></script>
-<script src="word_data/loader.js"></script>
-<script src="app.js"></script>
-<script src="adaptive.js"></script>
-<script src="auth.js"></script>
+<script src="js/app.js"></script>
+<script src="js/adaptive.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>
