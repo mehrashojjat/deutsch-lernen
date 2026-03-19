@@ -1,4 +1,4 @@
-var CACHE_NAME = 'deutschlernen-shell-v1.05';
+var CACHE_NAME = 'deutschlernen-shell-v1.06';
 var APP_SHELL = [
   '/',
   '/index.html',
