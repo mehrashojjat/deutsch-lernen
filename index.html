@@ -634,6 +634,16 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
   <div class="drawer-divider"></div>
 
+  <div class="drawer-section">
+    <div class="drawer-section-label">Share this app</div>
+    <div class="drawer-footer-row">
+      <button class="drawer-about-row" onclick="shareApp()">Share</button>
+      <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
+    </div>
+  </div>
+
+  <div class="drawer-divider"></div>
+
   <div class="drawer-footer-row">
     <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">About</button>
     <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>

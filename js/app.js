@@ -613,6 +613,25 @@ function openAbout() {
   window.umami?.track('about_opened');
   document.getElementById('about-modal-overlay').classList.add('open');
 }
+function shareApp() {
+  window.umami?.track('share_app');
+  var shareData = { title: 'DeutschLernen', text: 'Learn German with this app', url: 'https://wort.rovi.so' };
+  if (navigator.share) {
+    navigator.share(shareData).catch(function() {});
+  } else {
+    _copyAppLink();
+  }
+}
+function copyAppLink() {
+  window.umami?.track('share_app');
+  _copyAppLink();
+}
+function _copyAppLink() {
+  navigator.clipboard.writeText('https://wort.rovi.so').then(function() {
+    var btn = document.getElementById('copy-link-btn');
+    if (btn) { var orig = btn.textContent; btn.textContent = 'Link copied'; setTimeout(function() { btn.textContent = orig; }, 2000); }
+  }).catch(function() {});
+}
 function closeAbout(e) {
   if (e && e.target !== document.getElementById('about-modal-overlay')) return;
   document.getElementById('about-modal-overlay').classList.remove('open');
