@@ -68,6 +68,7 @@ const UI = {
     aboutP1: 'I built this free mini-game for myself — a simple way to practice German without any paywalls. I wanted it available as a free resource for anyone learning German.',
     aboutP2html: 'Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.',
     aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
+    aboutP4: 'Originally named DeutschLernen during early development.',
     footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Adaptive Quiz',
@@ -153,6 +154,7 @@ const UI = {
     aboutP1: 'Bu ücretsiz mini oyunu kendim için yaptım — Almanca kelime pratiği yapmanın basit bir yolu, ücret ödemeden. Almanca öğrenen herkes için ücretsiz bir kaynak olarak sunmak istedim.',
     aboutP2html: 'Yapımcı: <strong>Mehras Hojjat</strong>. Özellik istekleri veya geri bildirim için <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> ya da <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>\'dan ulaşabilirsiniz.',
     aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
+    aboutP4: 'Erken geliştirme döneminde DeutschLernen adıyla biliniyordu.',
     footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Uyarlamalı Sınav',
@@ -238,6 +240,7 @@ const UI = {
     aboutP1: 'این بازی رایگان کوچک را برای خودم ساختم — روشی ساده برای تمرین واژگان آلمانی بدون هیچ هزینه‌ای. می‌خواستم برای هر کسی که آلمانی می‌آموزد در دسترس باشد.',
     aboutP2html: 'ساخته <strong>Mehras Hojjat</strong>. برای درخواست ویژگی یا بازخورد از طریق <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> یا <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> در تماس باشید.',
     aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
+    aboutP4: 'در مراحل اولیه توسعه با نام DeutschLernen شناخته می‌شد.',
     footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
     footerCopy: '© ۲۰۲۶ Mehras Hojjat',
     adaptiveBannerTitle: 'آزمون تطبیقی',
@@ -323,6 +326,7 @@ const UI = {
     aboutP1: 'Я создал эту бесплатную мини-игру для себя — простой способ практиковать немецкую лексику без платных подписок. Хотел сделать её доступной бесплатно для всех, кто учит немецкий.',
     aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запросов функций или обратной связи пишите в <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> или <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
+    aboutP4: 'В начале разработки приложение называлось DeutschLernen.',
     footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивная викторина',
@@ -406,6 +410,7 @@ const UI = {
     aboutP1: 'Я створив цю безкоштовну міні-гру для себе — простий спосіб практикувати німецьку лексику без будь-яких платежів. Хотів зробити її доступною безкоштовно для всіх, хто вивчає німецьку.',
     aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запитів щодо функцій або відгуків пишіть у <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> або <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
+    aboutP4: 'На початку розробки додаток мав назву DeutschLernen.',
     footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивна вікторина',
@@ -489,6 +494,7 @@ const UI = {
     aboutP1: 'صنعت هذه اللعبة المجانية الصغيرة لنفسي — طريقة بسيطة لتدريب المفردات الألمانية دون أي رسوم. أردت أن تكون متاحة كمورد مجاني لأي شخص يتعلم الألمانية.',
     aboutP2html: 'صنعه <strong>Mehras Hojjat</strong>. للتواصل بشأن طلبات الميزات أو الملاحظات عبر <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> أو <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
+    aboutP4: 'كان اسم التطبيق DeutschLernen في مراحل التطوير الأولى.',
     footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'اختبار تكيّفي',
@@ -615,7 +621,7 @@ function openAbout() {
 }
 function shareApp() {
   window.umami?.track('share_app');
-  var shareData = { title: 'DeutschLernen', text: 'Learn German with this app', url: 'https://wort.rovi.so' };
+  var shareData = { title: 'Wortschatz', text: 'Learn German with this app', url: 'https://wortschatzapp.de' };
   if (navigator.share) {
     navigator.share(shareData).catch(function() {});
   } else {
@@ -627,7 +633,7 @@ function copyAppLink() {
   _copyAppLink();
 }
 function _copyAppLink() {
-  navigator.clipboard.writeText('https://wort.rovi.so').then(function() {
+  navigator.clipboard.writeText('https://wortschatzapp.de').then(function() {
     var btn = document.getElementById('copy-link-btn');
     if (btn) { var orig = btn.textContent; btn.textContent = 'Link copied'; setTimeout(function() { btn.textContent = orig; }, 2000); }
   }).catch(function() {});
@@ -748,6 +754,7 @@ function applyTranslations() {
   document.getElementById('about-p1').textContent = u.aboutP1;
   document.getElementById('about-p2').innerHTML = u.aboutP2html;
   document.getElementById('about-p3').innerHTML = u.aboutP3html;
+  document.getElementById('about-p4').textContent = u.aboutP4;
   document.getElementById('about-close-btn').textContent = u.aboutClose;
   document.getElementById('footer-msg').textContent = u.footerMsg;
   document.getElementById('footer-copy').textContent = u.footerCopy;
