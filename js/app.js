@@ -91,6 +91,12 @@ const UI = {
     signedInAs: 'Signed in as:',
     signOut: 'Sign out',
     categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
+    practiceBannerTitle: 'Practice',
+    practiceBannerSub: 'Flip cards to learn words',
+    practiceSetupTitle: 'Practice',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Flip cards to reveal meanings',
+    practiceMeaningLabel: 'Meaning',
   },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
@@ -177,6 +183,12 @@ const UI = {
     signedInAs: 'Giriş yapıldı:',
     signOut: 'Çıkış yap',
     categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
+    practiceBannerTitle: 'Pratik',
+    practiceBannerSub: 'Kartları çevirerek kelime öğren',
+    practiceSetupTitle: 'Pratik',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Anlamı görmek için kartı çevir',
+    practiceMeaningLabel: 'Anlam',
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -262,6 +274,12 @@ const UI = {
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
     signedInAs: 'وارد شده به عنوان:',
     signOut: 'خروج از حساب',
+    practiceBannerTitle: 'تمرین',
+    practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها یاد بگیرید',
+    practiceSetupTitle: 'تمرین',
+    practiceSetupSub: '',
+    practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
+    practiceMeaningLabel: 'معنی',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
@@ -346,6 +364,12 @@ const UI = {
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
     signedInAs: 'Вы вошли как:',
     signOut: 'Выйти',
+    practiceBannerTitle: 'Практика',
+    practiceBannerSub: 'Переворачивайте карточки, чтобы учить слова',
+    practiceSetupTitle: 'Практика',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
+    practiceMeaningLabel: 'Значение',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
@@ -430,6 +454,12 @@ const UI = {
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
     signedInAs: 'Ввійшли як:',
     signOut: 'Вийти',
+    practiceBannerTitle: 'Практика',
+    practiceBannerSub: 'Перевертайте картки, щоб вивчати слова',
+    practiceSetupTitle: 'Практика',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Переверни картку, щоб побачити значення',
+    practiceMeaningLabel: 'Значення',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
@@ -516,6 +546,12 @@ const UI = {
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
     signedInAs: 'تسجيل الدخول باسم:',
     signOut: 'تسجيل الخروج',
+    practiceBannerTitle: 'تدريب',
+    practiceBannerSub: 'اقلب البطاقات لتعلم الكلمات',
+    practiceSetupTitle: 'تدريب',
+    practiceSetupSub: '',
+    practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
+    practiceMeaningLabel: 'المعنى',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
@@ -556,6 +592,9 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
+var practiceSelectedLevel = 'A1';
+var practiceDeck = [], practiceIdx = 0, practiceCurrDifficulty = 1;
+var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _rwFirstLoad = false;
@@ -704,6 +743,8 @@ function setLang(lang) {
     _renderCategoryGrid();
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
     if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
+  } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
+    _practiceRefreshCards();
   }
 }
 
@@ -774,6 +815,18 @@ function applyTranslations() {
   // Theme select screen
   document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
   document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
+  // Practice banner + setup screen
+  document.getElementById('practice-banner-title').textContent = u.practiceBannerTitle;
+  document.getElementById('practice-banner-sub').textContent = u.practiceBannerSub;
+  document.getElementById('practice-setup-screen-title').textContent = u.practiceSetupTitle;
+  document.getElementById('practice-setup-screen-subtitle').textContent = u.practiceSubtitle;
+  document.getElementById('practice-title').textContent = u.practiceSetupTitle;
+  document.getElementById('practice-subtitle').textContent = u.practiceSubtitle;
+  document.getElementById('practice-prepare-btn').textContent = u.prepareTen;
+  var pln = u.levelNames;
+  document.getElementById('practice-ln-A1').textContent = pln.A1;
+  document.getElementById('practice-ln-A2').textContent = pln.A2;
+  document.getElementById('practice-ln-B1').textContent = pln.B1;
   // Dictionary screen
   document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
   document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
@@ -1766,6 +1819,196 @@ async function _swipeRefreshLang() {
   } finally {
     _ov.classList.remove('active');
   }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  PRACTICE MODE
+// ══════════════════════════════════════════════════════════════════
+function openPracticeSetup() {
+  window.umami?.track('practice_opened');
+  show('screen-practice-setup');
+}
+
+function setPracticeLevel(lv) {
+  practiceSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k) {
+    document.getElementById('practice-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+function _nextPracticeDifficulty(d) {
+  return (d % 10) + 1;
+}
+
+function _buildPracticeBatch(level, difficulty) {
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
+    return r.entry_type === 'main'
+        && parseInt(r.difficulty) === difficulty
+        && r.word && r.word.trim();
+  });
+  return shuffle(pool.slice());
+}
+
+async function startPracticeGame() {
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    await _loadCSVLevel(practiceSelectedLevel);
+    practiceCurrDifficulty = 1;
+    var attempts = 0;
+    while (attempts < 10) {
+      practiceDeck = _buildPracticeBatch(practiceSelectedLevel, practiceCurrDifficulty);
+      if (practiceDeck.length) break;
+      practiceCurrDifficulty = _nextPracticeDifficulty(practiceCurrDifficulty);
+      attempts++;
+    }
+    if (!practiceDeck.length) { alert('No practice cards found.'); return; }
+    practiceIdx = 0;
+    practicePreloadPromise = null;
+    practiceAnimating = false;
+    window.umami?.track('practice_started', { level: practiceSelectedLevel });
+    show('screen-practice');
+    renderPracticeCards();
+  } catch (err) {
+    alert('Could not load practice data.\n' + (err && err.message ? err.message : ''));
+  } finally {
+    _ov.classList.remove('active');
+  }
+}
+
+function _renderPracticeCardHtml(row, posClass) {
+  var word = (row.article ? row.article + ' ' : '') + expandOptional(row.word);
+  var example = (row.example_de || '').trim();
+  var meaning = _csvRowDisplay(row) || '';
+  return '<div class="practice-card ' + posClass + '">'
+    + '<div class="practice-card-inner">'
+    + '<div class="practice-front" dir="ltr">'
+    + '<div class="practice-word">' + escHtml(word) + '</div>'
+    + (example ? '<div class="practice-example">' + escHtml(example) + '</div>' : '')
+    + '</div>'
+    + '<div class="practice-back">'
+    + '<div class="practice-meaning-label">' + escHtml(t('practiceMeaningLabel')) + '</div>'
+    + '<div class="practice-meaning">' + escHtml(meaning) + '</div>'
+    + '</div>'
+    + '</div>'
+    + '</div>';
+}
+
+function _practiceRefreshCards() {
+  if (!practiceDeck.length) return;
+  renderPracticeCards();
+}
+
+function renderPracticeCards() {
+  var stack = document.getElementById('practice-card-stack');
+  var current = practiceDeck[practiceIdx];
+  if (!current) {
+    stack.innerHTML = '<div class="swipe-empty"><strong>All done</strong><span>Loading next difficulty...</span></div>';
+    return;
+  }
+  var next1 = practiceDeck[practiceIdx + 1];
+  var next2 = practiceDeck[practiceIdx + 2];
+  stack.innerHTML =
+    (next2 ? _renderPracticeCardHtml(next2, 'under-2') : '') +
+    (next1 ? _renderPracticeCardHtml(next1, 'under-1') : '') +
+    _renderPracticeCardHtml(current, 'top');
+  _attachPracticeGesture(stack.querySelector('.practice-card.top'));
+  _ensurePracticePrefetch();
+}
+
+function _attachPracticeGesture(cardEl) {
+  if (!cardEl) return;
+  var startX = 0, startY = 0, currentX = 0, dragging = false, moved = false;
+  cardEl.onpointerdown = function(e) {
+    if (practiceAnimating) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = true; moved = false;
+    startX = e.clientX; startY = e.clientY; currentX = 0;
+    cardEl.setPointerCapture(e.pointerId);
+  };
+  cardEl.onpointermove = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    currentX = e.clientX - startX;
+    var dy = e.clientY - startY;
+    if (Math.abs(currentX) > 10 || Math.abs(dy) > 10) {
+      moved = true;
+      if (!cardEl.classList.contains('dragging')) cardEl.classList.add('dragging');
+    }
+    if (moved) {
+      var rot = currentX * 0.05;
+      cardEl.style.transform = 'translateX(' + currentX + 'px) rotate(' + rot + 'deg)';
+    }
+  };
+  cardEl.onpointerup = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.releasePointerCapture(e.pointerId);
+    if (!moved) {
+      cardEl.style.transform = '';
+      cardEl.classList.toggle('flipped');
+    } else if (Math.abs(currentX) > 90) {
+      _animatePracticeDismiss(currentX > 0 ? 'right' : 'left', cardEl);
+    } else {
+      cardEl.style.transform = '';
+    }
+  };
+  cardEl.onpointercancel = function(e) {
+    if (e && e.cancelable) e.preventDefault();
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+  };
+}
+
+function practiceFlipAction() {
+  var top = document.querySelector('#practice-card-stack .practice-card.top');
+  if (top && !practiceAnimating) top.classList.toggle('flipped');
+}
+
+function practiceDismissAction() {
+  var top = document.querySelector('#practice-card-stack .practice-card.top');
+  if (top) _animatePracticeDismiss('right', top);
+}
+
+function _animatePracticeDismiss(dir, cardEl) {
+  if (practiceAnimating) return;
+  practiceAnimating = true;
+  if (cardEl) {
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+    cardEl.classList.add(dir === 'right' ? 'swipe-right' : 'swipe-left');
+  }
+  setTimeout(function() {
+    practiceIdx++;
+    renderPracticeCards();
+    practiceAnimating = false;
+  }, 190);
+}
+
+function _ensurePracticePrefetch() {
+  if (practicePreloadPromise) return;
+  if (practiceDeck.length - practiceIdx > 5) return;
+  var nextDiff = _nextPracticeDifficulty(practiceCurrDifficulty);
+  practicePreloadPromise = Promise.resolve().then(function() {
+    var batch = [];
+    var skipped = 0;
+    while (!batch.length && skipped < 10) {
+      batch = _buildPracticeBatch(practiceSelectedLevel, nextDiff);
+      if (!batch.length) {
+        nextDiff = _nextPracticeDifficulty(nextDiff);
+        skipped++;
+      }
+    }
+    if (batch.length) {
+      practiceDeck = practiceDeck.concat(batch);
+      practiceCurrDifficulty = nextDiff;
+    }
+  }).catch(function(){}).finally(function() {
+    practicePreloadPromise = null;
+  });
 }
 
 // ══════════════════════════════════════════════════════════════════
@@ -3728,7 +3971,7 @@ function _backArrowSvg(isRtl) {
   return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
 }
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
   var btn = document.getElementById('app-back-btn');
@@ -3742,7 +3985,9 @@ function show(id){
     'screen-adaptive-setup':   function(){ goHome(); },
     'screen-theme-select':     function(){ goHome(); },
     'screen-random':           function(){ goHome(); },
-    'screen-dictionary':       function(){ goHome(); }
+    'screen-dictionary':       function(){ goHome(); },
+    'screen-practice-setup':   function(){ goHome(); },
+    'screen-practice':         function(){ openPracticeSetup(); }
   };
   var action = backMap[id];
   var show = !!action;
