@@ -700,6 +700,8 @@ function setLang(lang) {
     _quizRefreshLang();
   } else if (!document.getElementById('screen-swipe').classList.contains('hidden')) {
     _swipeRefreshLang();
+  } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
+    _practiceRefreshLang();
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
@@ -1959,6 +1961,22 @@ function _ensurePracticePrefetch() {
     })
     .catch(function() {})
     .finally(function() { practicePrefetchPromise = null; });
+}
+
+async function _practiceRefreshLang() {
+  if (!practiceDeck.length) return;
+  var ov = document.getElementById('quiz-prep-overlay');
+  ov.classList.add('active');
+  try {
+    var rows = practiceDeck.slice(practiceIdx).map(function(c) { return c.row; });
+    var meaningMap = await _resolveMeaningRows(rows);
+    practiceDeck.forEach(function(card) {
+      if (meaningMap[card.row.id]) card.meaningText = meaningMap[card.row.id];
+    });
+    renderPracticeCards();
+  } finally {
+    ov.classList.remove('active');
+  }
 }
 
 // ══════════════════════════════════════════════════════════════════
@@ -3921,7 +3939,7 @@ function _backArrowSvg(isRtl) {
   return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
 }
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-practice-setup','screen-practice','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
   var btn = document.getElementById('app-back-btn');
@@ -3932,6 +3950,8 @@ function show(id){
     'screen-results':          null,
     'screen-swipe-setup':      function(){ goHome(); },
     'screen-swipe':            function(){ openSwipeSetup(); },
+    'screen-practice-setup':   function(){ goHome(); },
+    'screen-practice':         function(){ openPracticeSetup(); },
     'screen-adaptive-setup':   function(){ goHome(); },
     'screen-theme-select':     function(){ goHome(); },
     'screen-random':           function(){ goHome(); },
