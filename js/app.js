@@ -689,7 +689,8 @@ const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
 var practiceSelectedLevel = 'A1';
-var practiceDeck = [], practiceIdx = 0, practiceCurrDifficulty = 1;
+var practiceDeck = [], practiceIdx = 0;
+var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
@@ -1967,16 +1968,19 @@ function setPracticeLevel(lv) {
   });
 }
 
-function _nextPracticeDifficulty(d) {
-  return (d % 10) + 1;
-}
-
-function _buildPracticeBatch(level, difficulty) {
-  return (CSV_QUIZ_DATA[level] || []).filter(function(r) {
-    return r.entry_type === 'main'
-        && parseInt(r.difficulty) === difficulty
-        && r.word && r.word.trim();
+function _buildPracticeBatch(level) {
+  var all = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
+    return r.entry_type === 'main' && r.word && r.word.trim();
   });
+  var unseen = all.filter(function(r) { return !practiceSeenIds[r.id]; });
+  if (!unseen.length) {
+    // All words shown — clear memory and start over
+    practiceSeenIds = {};
+    unseen = all.slice();
+  }
+  var batch = shuffle(unseen.slice()).slice(0, QUIZ_LEN);
+  batch.forEach(function(r) { practiceSeenIds[r.id] = true; });
+  return batch;
 }
 
 async function startPracticeGame() {
@@ -1984,14 +1988,8 @@ async function startPracticeGame() {
   _ov.classList.add('active');
   try {
     await _loadCSVLevel(practiceSelectedLevel);
-    practiceCurrDifficulty = 1;
-    var attempts = 0;
-    while (attempts < 10) {
-      practiceDeck = _buildPracticeBatch(practiceSelectedLevel, practiceCurrDifficulty);
-      if (practiceDeck.length) break;
-      practiceCurrDifficulty = _nextPracticeDifficulty(practiceCurrDifficulty);
-      attempts++;
-    }
+    practiceSeenIds = {};
+    practiceDeck = _buildPracticeBatch(practiceSelectedLevel);
     if (!practiceDeck.length) { alert('No practice cards found.'); return; }
     practiceIdx = 0;
     practicePreloadPromise = null;
@@ -2121,21 +2119,9 @@ function _animatePracticeDismiss(dir, cardEl) {
 function _ensurePracticePrefetch() {
   if (practicePreloadPromise) return;
   if (practiceDeck.length - practiceIdx > 5) return;
-  var nextDiff = _nextPracticeDifficulty(practiceCurrDifficulty);
   practicePreloadPromise = Promise.resolve().then(function() {
-    var batch = [];
-    var skipped = 0;
-    while (!batch.length && skipped < 10) {
-      batch = _buildPracticeBatch(practiceSelectedLevel, nextDiff);
-      if (!batch.length) {
-        nextDiff = _nextPracticeDifficulty(nextDiff);
-        skipped++;
-      }
-    }
-    if (batch.length) {
-      practiceDeck = practiceDeck.concat(batch);
-      practiceCurrDifficulty = nextDiff;
-    }
+    var batch = _buildPracticeBatch(practiceSelectedLevel);
+    if (batch.length) practiceDeck = practiceDeck.concat(batch);
   }).catch(function(){}).finally(function() {
     practicePreloadPromise = null;
   });
