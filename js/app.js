@@ -98,6 +98,102 @@ const UI = {
     practiceSubtitle: 'Flip cards to reveal meanings',
     practiceMeaningLabel: 'Meaning',
   },
+  de: {
+    headerSub: 'Wortübung · Fälle · Verbformen',
+    settingsTitle: 'Einstellungen',
+    langLabel: 'Sprache',
+    closeDone: 'Schließen',
+    rwBannerTitle: 'Wort-Explorer',
+    rwBannerSub: 'Jedes Wort mit allen Formen, Fällen und Beispielen ansehen',
+    swipeBannerTitle: 'Quick Match',
+    swipeBannerSub: 'Wische, wenn die Bedeutung passt',
+    selectLevel: 'Niveau wählen',
+    levelNames: { A1:'Anfänger', A2:'Grundstufe', B1:'Mittelstufe', B2:'Obere Mittelstufe' },
+    cardCount: (n) => n + ' Lernkarten',
+    back: '← Zurück',
+    next: 'Weiter →',
+    correct: '✓ Richtig!',
+    wrong: (a) => `✗ Falsch. Richtige Antwort: <strong>${a}</strong>`,
+    resultTitles: { great:'Ausgezeichnet!', good:'Gut gemacht!', ok:'Guter Versuch!', low:'Weiter üben!' },
+    resultSub: (lv,p) => `Niveau ${lv} · ${p}% richtig`,
+    scoreLbl: 'Punkte', correctLbl: 'Richtig', wrongLbl: 'Falsch',
+    accountLabel: 'Konto',
+    installTipTitle: 'App installieren',
+    installTipDesc: 'Auf dem Startbildschirm installieren für schnelleren Zugriff und ein App-ähnliches Erlebnis.',
+    installGuideTitle: 'Diese App installieren',
+    installGuideSub: 'Zwei einfache Schritte zur Installation auf dem Startbildschirm.',
+    installStep1Title: 'Teilen-Menü öffnen',
+    installStep1Desc: 'Auf die Teilen-Schaltfläche im Browser tippen oder hier klicken.',
+    installStep2Title: '„Zum Home-Bildschirm" wählen',
+    installStep2Desc: 'Im Menü „Zum Home-Bildschirm hinzufügen" antippen und bestätigen.',
+    installOpenShare: 'Teilen-Menü öffnen',
+    installClose: 'Schließen',
+    tipTitle: 'Fortschritt speichern',
+    tipDesc: 'In den Einstellungen anmelden, um Fortschritt zu speichern und klügere Tests zu erhalten.',
+    playAgain: 'Nochmal spielen', chooseLevel: 'Zur Startseite',
+    rwTitle: 'Wort-Explorer',
+    cases: 'Fälle (Kasus)', plural: 'Plural',
+    presentTense: 'Präsens', pastSimple: 'Präteritum', perfekt: 'Perfekt',
+    comparatives: 'Komparativ & Superlativ', adjEndings: 'Adjektivendungen (Nom.)', examples: 'Beispiele',
+    source: 'Quelle: Goethe-Institut Wortliste',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Wortübung',
+    meaning: 'Bedeutung',
+    tapPrompt: '👆 Auf eine Form oben tippen, um einen Beispielsatz zu sehen.',
+    noExample: 'Kein Beispiel verfügbar.',
+    quizQuestion: 'Was bedeutet dieses Wort?',
+    swipeSetupTitle: 'Quick Match',
+    swipeSetupSub: '',
+    prepareTen: 'Starten',
+    swipeSubtitle: 'Wische, wenn die Bedeutung passt',
+    swipeMeaningLabel: 'Bedeutung',
+    swipeEmptyTitle: 'Stapel beendet',
+    swipeEmptySub: 'Neue Runde starten, um weiterzumachen.',
+    swipeToastGoodMatch: 'Richtig',
+    swipeToastGoodMiss: 'Richtig',
+    swipeToastBadMatch: 'Falsch',
+    swipeToastBadMiss: 'Falsch',
+    levelLabel: 'Niveau',
+    wiktSource: 'Quelle',
+    meanings: 'Bedeutungen',
+    autoTranslated: 'Automatisch übersetzt',
+    offlineNote: 'ⓘ Offline-Daten · Wiktionary nicht erreichbar',
+    aboutBtn: 'ℹ️ Über',
+    aboutTitle: 'Über',
+    aboutClose: 'Schließen',
+    aboutP1: 'Ich habe dieses kostenlose Mini-Spiel für mich selbst erstellt — ein einfacher Weg, Deutsch zu üben ohne Bezahlschranken. Ich wollte es als kostenloses Angebot für alle Deutschlernenden bereitstellen.',
+    aboutP2html: 'Erstellt von <strong>Mehras Hojjat</strong>. Für Funktionswünsche oder Feedback auf <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> oder <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
+    aboutP3html: 'Wortlisten von <strong>Goethe-Institut</strong> · Übersetzungen via <strong>MyMemory API</strong> · Open Source auf <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Erstellt mit <strong>Claude AI</strong>.',
+    aboutP4: 'In der frühen Entwicklungsphase unter dem Namen DeutschLernen bekannt.',
+    footerMsg: 'Hallo! Ich habe das für mein eigenes Deutschlernen gebaut — hoffe, es hilft dir auch. Komplett kostenlos 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Adaptives Quiz',
+    adaptiveBannerSub: 'Passt sich deinem Niveau an',
+    adaptiveSetupTitle: 'Adaptives Quiz',
+    adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
+    themeBannerTitle: 'Themen-Quiz',
+    themeBannerSub: 'Über ein Thema testen',
+    themeSelectTitle: 'Themen-Quiz',
+    themeSelectSubtitle: 'Thema zum Üben wählen',
+    dictBannerTitle: 'Wörterbuch',
+    dictBannerSub: 'Alle Wörter durchsuchen',
+    dictScreenTitle: 'Wörterbuch',
+    dictScreenSubtitle: 'Alle Wörter',
+    dictBack: '← Zurück',
+    dictFilterPlaceholder: 'Wörter filtern…',
+    dictLoading: 'Wird geladen…',
+    dictEmpty: 'Keine Wörter gefunden.',
+    typeBadge: { Noun: 'Nomen', Verb: 'Verb', Adjective: 'Adjektiv', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Wort' },
+    signedInAs: 'Angemeldet als:',
+    signOut: 'Abmelden',
+    practiceBannerTitle: 'Üben',
+    practiceBannerSub: 'Karten umdrehen und Wörter lernen',
+    practiceSetupTitle: 'Üben',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
+    practiceMeaningLabel: 'Bedeutung',
+    categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
+  },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
     settingsTitle: 'Ayarlar',
@@ -715,6 +811,7 @@ function closeInstallGuide(e) {
 
 // ── Custom language dropdown ──
 var _LANG_LABELS = {
+  de: '🇩🇪 Deutsch',
   en: '🇬🇧 English',
   tr: '🇹🇷 Türkçe',
   ru: '🇷🇺 Русский',
@@ -752,7 +849,7 @@ function setLang(lang) {
   var sel = document.getElementById('lang-select');
   if (sel) sel.value = lang;
   _langDdSync(lang);
-  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+  ['de','en','tr','fa','ru','uk','ar'].forEach(function(l) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
   var isRtl = lang==='fa' || lang==='ar';
@@ -1229,7 +1326,7 @@ function _loadAllCSV() {
 // The row's unique `id` field is used for correct-answer checking instead,
 // so translations in any language can never accidentally swap answers.
 function _csvRowDisplay(row) {
-  if (LANG === 'en') return row.translation_en;
+  if (LANG === 'en' || LANG === 'de') return row.translation_en;
   if (LANG === 'tr') return row.translation_tr || row.translation_en;
   if (LANG === 'ru') return row.translation_ru || row.translation_en;
   if (LANG === 'uk') return row.translation_uk || row.translation_en;
@@ -1599,12 +1696,12 @@ function _buildQueueFromRows(rows) {
 //  SWIPE CHECK
 // ══════════════════════════════════════════════════════════════════
 function _rowMeaningForLang(row) {
-  if (LANG === 'en') return row.translation_en || '';
+  if (LANG === 'en' || LANG === 'de') return row.translation_en || '';
   if (LANG === 'tr') return row.translation_tr || row.translation_en || '';
   if (LANG === 'ru') return row.translation_ru || row.translation_en || '';
   if (LANG === 'uk') return row.translation_uk || row.translation_en || '';
   if (LANG === 'fa') return row.translation_fa || row.translation_en || '';
-  return '';
+  return row.translation_en || '';
 }
 
 async function _resolveMeaningRows(rows) {
@@ -1616,7 +1713,7 @@ async function _resolveMeaningRows(rows) {
     seen[r.id] = true;
     uniq.push(r);
   });
-  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk' || LANG === 'fa') {
+  if (LANG === 'de' || LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk' || LANG === 'fa') {
     uniq.forEach(function(r){ map[r.id] = _rowMeaningForLang(r); });
     return map;
   }
@@ -4038,7 +4135,7 @@ function show(id){
   document.body.classList.toggle('lang-fa', LANG === 'fa');
   document.body.classList.toggle('lang-ar', LANG === 'ar');
   document.body.classList.toggle('lang-rtl', isRtl);
-  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+  ['de','en','tr','fa','ru','uk','ar'].forEach(function(l) {
     var el = document.getElementById('opt-' + l);
     if (el) el.classList.toggle('active', l === LANG);
   });
