@@ -218,6 +218,8 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .random-banner.adaptive-banner .rb-text strong{color:#6be8a0;}
 .random-banner.theme-banner{background:linear-gradient(135deg,rgba(183,138,247,.12),rgba(126,184,247,.08));border-color:rgba(183,138,247,.28);}
 .random-banner.theme-banner .rb-text strong{color:#b78af7;}
+.random-banner.practice-banner{background:linear-gradient(135deg,rgba(100,200,255,.12),rgba(80,160,255,.08));border-color:rgba(100,200,255,.28);}
+.random-banner.practice-banner .rb-text strong{color:#64c8ff;}
 .rb-icon{font-size:1.5rem;}
 /* ── CATEGORY GRID ── */
 .category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:4px 0 20px;}
@@ -322,6 +324,26 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .swipe-card.dragging{transition:none;}
 .swipe-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
 .swipe-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
+/* ── PRACTICE FLIP CARD ── */
+.practice-card{position:absolute;inset:0;touch-action:none;user-select:none;transition:transform .18s ease,opacity .18s ease;transform-origin:center;}
+.practice-card.under-1{transform:translateY(8px) scale(.98);opacity:1;filter:brightness(.92);pointer-events:none;}
+.practice-card.under-2{transform:translateY(14px) scale(.96);opacity:1;filter:brightness(.84);pointer-events:none;}
+.practice-card.swipe-left{transform:translateX(-120%) rotate(-18deg) !important;opacity:0;}
+.practice-card.swipe-right{transform:translateX(120%) rotate(18deg) !important;opacity:0;}
+.practice-card-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .45s ease;transform:perspective(1200px) rotateY(0deg);cursor:pointer;}
+.practice-card-inner.flipped{transform:perspective(1200px) rotateY(180deg);}
+.practice-card-face{position:absolute;inset:0;background:#0d1220;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:20px 20px 16px;box-shadow:0 16px 34px rgba(0,0,0,.28);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.practice-card-back-face{transform:rotateY(180deg);background:#101828;border-color:rgba(100,200,255,.18);}
+.practice-tap-hint{font-size:11px;color:rgba(255,255,255,.35);text-align:center;margin-top:12px;letter-spacing:.5px;}
+.practice-meaning-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px;}
+.practice-meaning{font-size:22px;font-weight:700;color:#fff;line-height:1.3;}
+.practice-example{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5;font-style:italic;margin-top:10px;}
+.swipe-btn.practice-flip-btn{font-size:26px;border-color:rgba(100,200,255,.45);background:rgba(100,200,255,.08);}
+.swipe-btn.practice-flip-btn:hover{border-color:rgba(100,200,255,.9);background:rgba(100,200,255,.2);box-shadow:0 0 16px rgba(100,200,255,.3);}
+.swipe-btn.practice-flip-btn:active{transform:scale(.92);background:rgba(100,200,255,.3);}
+.swipe-btn.practice-next-btn{font-size:22px;border-color:rgba(107,232,160,.45);background:rgba(107,232,160,.08);}
+.swipe-btn.practice-next-btn:hover{border-color:rgba(107,232,160,.85);background:rgba(107,232,160,.22);box-shadow:0 0 16px rgba(107,232,160,.28);}
+.swipe-btn.practice-next-btn:active{transform:scale(.92);background:rgba(107,232,160,.3);}
 .swipe-word-block{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:154px;}
 .swipe-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,7vw,2.65rem);line-height:1.02;color:var(--text);text-align:center;margin:0;}
 .swipe-helper{font-size:.76rem;color:var(--muted);text-align:center;min-height:18px;}
@@ -730,6 +752,13 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
         <span id="swipe-banner-sub">Swipe if the meaning matches</span>
       </div>
     </div>
+    <div class="random-banner practice-banner" onclick="openPracticeSetup()">
+      <div class="rb-icon">🔄</div>
+      <div class="rb-text">
+        <strong>Practice</strong>
+        <span>Flip cards to reveal meanings</span>
+      </div>
+    </div>
     <div class="random-banner" onclick="showRandomWord()">
       <div class="rb-icon">🎲</div>
       <div class="rb-text">
@@ -852,6 +881,43 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   <div class="swipe-actions">
     <button class="swipe-btn left" onclick="swipeAction('left')" title="Wrong">✖</button>
     <button class="swipe-btn right" onclick="swipeAction('right')" title="Correct">✔</button>
+  </div>
+</div>
+
+<!-- ══ PRACTICE SETUP ══ -->
+<div class="screen hidden" id="screen-practice-setup">
+  <div class="swipe-header">
+    <button class="back-btn" onclick="show('screen-levels')">‹</button>
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" style="color:#64c8ff">Practice</div>
+      <div class="swipe-subtitle">Flip cards to learn vocabulary</div>
+    </div>
+  </div>
+  <div class="swipe-setup">
+    <div class="swipe-level-grid">
+      <button class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
+    </div>
+    <button class="btn-primary" onclick="preparePracticeGame()">Start</button>
+  </div>
+</div>
+
+<!-- ══ PRACTICE GAME ══ -->
+<div class="screen hidden" id="screen-practice">
+  <div class="swipe-header">
+    <button class="back-btn" onclick="show('screen-practice-setup')">‹</button>
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" style="color:#64c8ff">Practice</div>
+      <div class="swipe-subtitle">Tap card to reveal meaning</div>
+    </div>
+  </div>
+  <div class="swipe-stage">
+    <div class="swipe-card-stack" id="practice-card-stack"></div>
+  </div>
+  <div class="swipe-actions">
+    <button class="swipe-btn practice-flip-btn" onclick="practiceFlipCard()" title="Flip">↻</button>
+    <button class="swipe-btn practice-next-btn" onclick="practiceNextCard()" title="Next">→</button>
   </div>
 </div>
 

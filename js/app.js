@@ -556,6 +556,8 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
+let practiceSelectedLevel = 'A1', practiceDeck = [], practiceIdx = 0, practiceCurrentDifficulty = 1;
+let practiceIsFlipped = false, practiceAnimating = false, practicePrefetchPromise = null;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _rwFirstLoad = false;
@@ -1766,6 +1768,197 @@ async function _swipeRefreshLang() {
   } finally {
     _ov.classList.remove('active');
   }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  PRACTICE GAME
+// ══════════════════════════════════════════════════════════════════
+function openPracticeSetup() {
+  show('screen-practice-setup');
+}
+
+function setPracticeLevel(lv) {
+  practiceSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k) {
+    document.getElementById('practice-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+async function preparePracticeGame() {
+  var ov = document.getElementById('quiz-prep-overlay');
+  ov.classList.add('active');
+  try {
+    await _loadCSVLevel(practiceSelectedLevel);
+    practiceCurrentDifficulty = 1;
+    practiceDeck = await _buildPracticeBatch(practiceSelectedLevel, practiceCurrentDifficulty);
+    // If difficulty 1 has no cards, try higher difficulties
+    if (!practiceDeck.length) {
+      for (var d = 2; d <= 10; d++) {
+        practiceDeck = await _buildPracticeBatch(practiceSelectedLevel, d);
+        if (practiceDeck.length) { practiceCurrentDifficulty = d; break; }
+      }
+    }
+    practiceIdx = 0;
+    practiceIsFlipped = false;
+    practiceAnimating = false;
+    practicePrefetchPromise = null;
+    show('screen-practice');
+    renderPracticeCards();
+  } catch (err) {
+    alert('Could not load practice cards.' + (err && err.message ? '\n\n' + err.message : ''));
+  } finally {
+    ov.classList.remove('active');
+  }
+}
+
+async function _buildPracticeBatch(level, difficulty) {
+  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
+    return r.entry_type === 'main'
+      && r.word && r.word.trim()
+      && r.translation_en && r.translation_en.trim()
+      && parseInt(r.difficulty, 10) === difficulty;
+  });
+  if (!pool.length) return [];
+  var selected = shuffle(pool.slice());
+  var meaningMap = await _resolveMeaningRows(selected);
+  return selected.map(function(row) {
+    return { row: row, meaningText: meaningMap[row.id] || row.translation_en || '' };
+  });
+}
+
+function renderPracticeCards() {
+  var stack = document.getElementById('practice-card-stack');
+  var current = practiceDeck[practiceIdx];
+  if (!current) {
+    stack.innerHTML = '<div class="swipe-empty"><strong>All done!</strong><span>You\'ve gone through all the cards.</span></div>';
+    return;
+  }
+  var next1 = practiceDeck[practiceIdx + 1];
+  var next2 = practiceDeck[practiceIdx + 2];
+  stack.innerHTML =
+    (next2 ? _renderPracticeCardHtml(next2, 'under-2') : '') +
+    (next1 ? _renderPracticeCardHtml(next1, 'under-1') : '') +
+    _renderPracticeCardHtml(current, 'top');
+  var topCard = stack.querySelector('.practice-card.top');
+  if (topCard) {
+    if (practiceIsFlipped) topCard.querySelector('.practice-card-inner').classList.add('flipped');
+    _attachPracticeGesture(topCard);
+  }
+  _ensurePracticePrefetch();
+}
+
+function _renderPracticeCardHtml(card, posClass) {
+  var row = card.row;
+  var wordLabel = escHtml(_swipeWordLabel(row));
+  var example = row.example_de ? escHtml(row.example_de.trim()) : '';
+  var meaning = escHtml(card.meaningText);
+  var sub = '';
+  if (row.plural && row.plural.trim()) sub = '<div class="swipe-helper">Pl.: ' + escHtml(row.plural) + '</div>';
+  else if (row.verb_present && row.verb_present.trim()) sub = '<div class="swipe-helper">' + escHtml(row.verb_present) + '</div>';
+  return '<div class="practice-card ' + posClass + '">'
+    + '<div class="practice-card-inner">'
+      + '<div class="practice-card-face">'
+        + '<div class="swipe-word-block">'
+          + '<div class="swipe-word">' + wordLabel + '</div>'
+          + sub
+        + '</div>'
+        + (example ? '<div class="practice-example">' + example + '</div>' : '')
+        + '<div class="practice-tap-hint">Tap to reveal meaning</div>'
+      + '</div>'
+      + '<div class="practice-card-face practice-card-back-face">'
+        + '<div class="swipe-word-block">'
+          + '<div class="swipe-word">' + wordLabel + '</div>'
+        + '</div>'
+        + '<div>'
+          + '<div class="practice-meaning-label">Meaning</div>'
+          + '<div class="practice-meaning">' + meaning + '</div>'
+        + '</div>'
+      + '</div>'
+    + '</div>'
+  + '</div>';
+}
+
+function _attachPracticeGesture(cardEl) {
+  if (!cardEl) return;
+  var startX = 0, startY = 0, currentX = 0, dragging = false;
+  cardEl.onpointerdown = function(e) {
+    if (practiceAnimating) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = true;
+    startX = e.clientX; startY = e.clientY; currentX = 0;
+    cardEl.setPointerCapture(e.pointerId);
+  };
+  cardEl.onpointermove = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    currentX = e.clientX - startX;
+    cardEl.style.transform = 'translateX(' + currentX + 'px) rotate(' + (currentX * 0.05) + 'deg)';
+  };
+  cardEl.onpointerup = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = false;
+    cardEl.releasePointerCapture(e.pointerId);
+    var dx = e.clientX - startX, dy = e.clientY - startY;
+    if (Math.abs(dx) < 15 && Math.abs(dy) < 15) {
+      cardEl.style.transform = '';
+      _togglePracticeFlip(cardEl);
+    } else if (Math.abs(dx) > 90) {
+      _animatePracticeSwipe(dx > 0 ? 'right' : 'left', cardEl);
+    } else {
+      cardEl.style.transform = '';
+    }
+  };
+  cardEl.onpointercancel = function() {
+    dragging = false;
+    cardEl.style.transform = '';
+  };
+}
+
+function _togglePracticeFlip(cardEl) {
+  practiceIsFlipped = !practiceIsFlipped;
+  var el = cardEl || document.querySelector('#practice-card-stack .practice-card.top');
+  var inner = el && el.querySelector('.practice-card-inner');
+  if (inner) inner.classList.toggle('flipped', practiceIsFlipped);
+}
+
+function practiceFlipCard() {
+  if (practiceAnimating) return;
+  _togglePracticeFlip(null);
+}
+
+function practiceNextCard() {
+  if (practiceAnimating) return;
+  var top = document.querySelector('#practice-card-stack .practice-card.top');
+  if (top) _animatePracticeSwipe('right', top);
+}
+
+function _animatePracticeSwipe(dir, cardEl) {
+  if (practiceAnimating) return;
+  practiceAnimating = true;
+  if (cardEl) {
+    cardEl.style.transform = '';
+    cardEl.classList.add(dir === 'right' ? 'swipe-right' : 'swipe-left');
+  }
+  setTimeout(function() {
+    practiceIdx++;
+    practiceIsFlipped = false;
+    practiceAnimating = false;
+    renderPracticeCards();
+  }, 190);
+}
+
+function _ensurePracticePrefetch() {
+  var remaining = practiceDeck.length - practiceIdx;
+  if (remaining > 5 || practicePrefetchPromise) return;
+  var nextDiff = practiceCurrentDifficulty >= 10 ? 1 : practiceCurrentDifficulty + 1;
+  practicePrefetchPromise = _buildPracticeBatch(practiceSelectedLevel, nextDiff)
+    .then(function(batch) {
+      practiceCurrentDifficulty = nextDiff;
+      if (batch.length) practiceDeck = practiceDeck.concat(batch);
+    })
+    .catch(function() {})
+    .finally(function() { practicePrefetchPromise = null; });
 }
 
 // ══════════════════════════════════════════════════════════════════
