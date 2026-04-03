@@ -1972,12 +1972,11 @@ function _nextPracticeDifficulty(d) {
 }
 
 function _buildPracticeBatch(level, difficulty) {
-  var pool = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
+  return (CSV_QUIZ_DATA[level] || []).filter(function(r) {
     return r.entry_type === 'main'
         && parseInt(r.difficulty) === difficulty
         && r.word && r.word.trim();
   });
-  return shuffle(pool.slice());
 }
 
 async function startPracticeGame() {
