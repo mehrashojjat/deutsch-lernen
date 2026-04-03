@@ -135,6 +135,21 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .drawer-section-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.14em;
   color:var(--muted);margin-bottom:10px;font-weight:700;}
 .option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.lang-select{display:none;}
+/* ── Custom lang dropdown ── */
+.lang-dd{position:relative;width:100%;user-select:none;}
+.lang-dd-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s;direction:ltr;box-sizing:border-box;}
+.lang-dd-trigger:hover{border-color:rgba(232,201,122,.35);background:rgba(255,255,255,.07);}
+.lang-dd.open .lang-dd-trigger{border-color:var(--gold);background:rgba(232,201,122,.07);}
+.lang-dd-trigger-text{display:flex;align-items:center;gap:8px;}
+.lang-dd-chevron{width:14px;height:14px;flex-shrink:0;transition:transform .2s ease;color:rgba(255,255,255,.4);}
+.lang-dd.open .lang-dd-chevron{transform:rotate(180deg);}
+.lang-dd-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:linear-gradient(180deg,#16203a,#111827);border:1.5px solid rgba(255,255,255,.11);border-radius:18px;overflow:hidden;z-index:999;box-shadow:0 12px 36px rgba(0,0,0,.5);direction:ltr;}
+.lang-dd.open .lang-dd-panel{display:block;}
+.lang-dd-option{display:flex;align-items:center;gap:10px;padding:11px 16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;font-weight:600;color:var(--muted);cursor:pointer;transition:background .12s,color .12s;}
+.lang-dd-option:hover{background:rgba(255,255,255,.06);color:var(--text);}
+.lang-dd-option.active{color:var(--gold);background:rgba(232,201,122,.08);}
+.lang-dd-option+.lang-dd-option{border-top:1px solid rgba(255,255,255,.06);}
 .drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
 .about-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;
   align-items:flex-end;justify-content:center;padding-bottom:12px;}
@@ -623,14 +638,24 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 
   <div class="drawer-section">
     <div class="drawer-section-label" id="st-lang-label">Language</div>
-    <div class="option-row">
-      <button class="opt-btn active" id="opt-en" onclick="setLang('en')"><span>🇬🇧</span><span>English</span></button>
-      <button class="opt-btn" id="opt-tr" onclick="setLang('tr')"><span>🇹🇷</span><span>Türkçe</span></button>
-      <button class="opt-btn" id="opt-ru" onclick="setLang('ru')"><span>🇷🇺</span><span>Русский</span></button>
-      <button class="opt-btn" id="opt-uk" onclick="setLang('uk')"><span>🇺🇦</span><span>Українська</span></button>
-      <button class="opt-btn" id="opt-fa" onclick="setLang('fa')"><span>🇮🇷</span><span>فارسی</span></button>
-      <button class="opt-btn" id="opt-ar" onclick="setLang('ar')"><span>🇸🇦</span><span>العربية</span></button>
+    <div class="lang-dd" id="lang-dd">
+      <button class="lang-dd-trigger" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
+        <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
+        <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lang-dd-panel" id="lang-dd-panel">
+        <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
+        <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
+        <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
+        <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
+        <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
+        <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
+      </div>
     </div>
+    <!-- hidden opt-* anchors kept for JS compat -->
+    <span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
+    <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
+    <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
   </div>
 
   <div class="drawer-divider"></div>

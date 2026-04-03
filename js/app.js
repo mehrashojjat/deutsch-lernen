@@ -713,11 +713,45 @@ function closeInstallGuide(e) {
   }, 300);
 }
 
+// ── Custom language dropdown ──
+var _LANG_LABELS = {
+  en: '🇬🇧 English',
+  tr: '🇹🇷 Türkçe',
+  ru: '🇷🇺 Русский',
+  uk: '🇺🇦 Українська',
+  fa: '🇮🇷 فارسی',
+  ar: '🇸🇦 العربية'
+};
+function _langDdSync(lang) {
+  var lbl = document.getElementById('lang-dd-label');
+  if (lbl) lbl.textContent = _LANG_LABELS[lang] || lang;
+  var opts = document.querySelectorAll('#lang-dd-panel .lang-dd-option');
+  opts.forEach(function(o){ o.classList.toggle('active', o.dataset.lang === lang); });
+}
+function _langDdToggle() {
+  var dd = document.getElementById('lang-dd');
+  if (dd) dd.classList.toggle('open');
+}
+function _langDdSelect(lang) {
+  var dd = document.getElementById('lang-dd');
+  if (dd) dd.classList.remove('open');
+  setLang(lang);
+}
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('lang-dd');
+  if (dd && dd.classList.contains('open') && !dd.contains(e.target)) {
+    dd.classList.remove('open');
+  }
+});
+
 // ── Set language ──
 function setLang(lang) {
   window.umami?.track('language_changed', { language: lang });
   LANG = lang;
   try { localStorage.setItem('dl_lang', lang); } catch(e) {}
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
+  _langDdSync(lang);
   ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
@@ -4008,6 +4042,9 @@ function show(id){
     var el = document.getElementById('opt-' + l);
     if (el) el.classList.toggle('active', l === LANG);
   });
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.value = LANG;
+  _langDdSync(LANG);
 })();
 applyTranslations();
 updateCounts();
