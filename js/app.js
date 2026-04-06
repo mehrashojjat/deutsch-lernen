@@ -68,6 +68,7 @@ const UI = {
     aboutP1: 'I built this free mini-game for myself — a simple way to practice German without any paywalls. I wanted it available as a free resource for anyone learning German.',
     aboutP2html: 'Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.',
     aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
+    aboutP4: 'Originally named DeutschLernen during early development.',
     footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Adaptive Quiz',
@@ -90,6 +91,116 @@ const UI = {
     signedInAs: 'Signed in as:',
     signOut: 'Sign out',
     categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
+    practiceBannerTitle: 'Practice',
+    practiceBannerSub: 'Flip cards to learn words',
+    practiceSetupTitle: 'Practice',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Flip cards to reveal meanings',
+    practiceMeaningLabel: 'Meaning',
+    offlineTitle: "You're Offline",
+    offlineMessage: 'This app needs an internet connection to work.',
+    offlineRefreshBtn: 'Refresh',
+    offlineChecking: 'Checking…',
+  },
+  de: {
+    headerSub: 'Wortübung · Fälle · Verbformen',
+    settingsTitle: 'Einstellungen',
+    langLabel: 'Sprache',
+    closeDone: 'Schließen',
+    rwBannerTitle: 'Wort-Explorer',
+    rwBannerSub: 'Jedes Wort mit allen Formen, Fällen und Beispielen ansehen',
+    swipeBannerTitle: 'Quick Match',
+    swipeBannerSub: 'Wische, wenn die Bedeutung passt',
+    selectLevel: 'Niveau wählen',
+    levelNames: { A1:'Anfänger', A2:'Grundstufe', B1:'Mittelstufe', B2:'Obere Mittelstufe' },
+    cardCount: (n) => n + ' Lernkarten',
+    back: '← Zurück',
+    next: 'Weiter →',
+    correct: '✓ Richtig!',
+    wrong: (a) => `✗ Falsch. Richtige Antwort: <strong>${a}</strong>`,
+    resultTitles: { great:'Ausgezeichnet!', good:'Gut gemacht!', ok:'Guter Versuch!', low:'Weiter üben!' },
+    resultSub: (lv,p) => `Niveau ${lv} · ${p}% richtig`,
+    scoreLbl: 'Punkte', correctLbl: 'Richtig', wrongLbl: 'Falsch',
+    accountLabel: 'Konto',
+    installTipTitle: 'App installieren',
+    installTipDesc: 'Auf dem Startbildschirm installieren für schnelleren Zugriff und ein App-ähnliches Erlebnis.',
+    installGuideTitle: 'Diese App installieren',
+    installGuideSub: 'Zwei einfache Schritte zur Installation auf dem Startbildschirm.',
+    installStep1Title: 'Teilen-Menü öffnen',
+    installStep1Desc: 'Auf die Teilen-Schaltfläche im Browser tippen oder hier klicken.',
+    installStep2Title: '„Zum Home-Bildschirm" wählen',
+    installStep2Desc: 'Im Menü „Zum Home-Bildschirm hinzufügen" antippen und bestätigen.',
+    installOpenShare: 'Teilen-Menü öffnen',
+    installClose: 'Schließen',
+    tipTitle: 'Fortschritt speichern',
+    tipDesc: 'In den Einstellungen anmelden, um Fortschritt zu speichern und klügere Tests zu erhalten.',
+    playAgain: 'Nochmal spielen', chooseLevel: 'Zur Startseite',
+    rwTitle: 'Wort-Explorer',
+    cases: 'Fälle (Kasus)', plural: 'Plural',
+    presentTense: 'Präsens', pastSimple: 'Präteritum', perfekt: 'Perfekt',
+    comparatives: 'Komparativ & Superlativ', adjEndings: 'Adjektivendungen (Nom.)', examples: 'Beispiele',
+    source: 'Quelle: Goethe-Institut Wortliste',
+    modeIcons: { vocab:'📖' },
+    vocabBadge: 'Wortübung',
+    meaning: 'Bedeutung',
+    tapPrompt: '👆 Auf eine Form oben tippen, um einen Beispielsatz zu sehen.',
+    noExample: 'Kein Beispiel verfügbar.',
+    quizQuestion: 'Was bedeutet dieses Wort?',
+    swipeSetupTitle: 'Quick Match',
+    swipeSetupSub: '',
+    prepareTen: 'Starten',
+    swipeSubtitle: 'Wische, wenn die Bedeutung passt',
+    swipeMeaningLabel: 'Bedeutung',
+    swipeEmptyTitle: 'Stapel beendet',
+    swipeEmptySub: 'Neue Runde starten, um weiterzumachen.',
+    swipeToastGoodMatch: 'Richtig',
+    swipeToastGoodMiss: 'Richtig',
+    swipeToastBadMatch: 'Falsch',
+    swipeToastBadMiss: 'Falsch',
+    levelLabel: 'Niveau',
+    wiktSource: 'Quelle',
+    meanings: 'Bedeutungen',
+    autoTranslated: 'Automatisch übersetzt',
+    offlineNote: 'ⓘ Offline-Daten · Wiktionary nicht erreichbar',
+    aboutBtn: 'ℹ️ Über',
+    aboutTitle: 'Über',
+    aboutClose: 'Schließen',
+    aboutP1: 'Ich habe dieses kostenlose Mini-Spiel für mich selbst erstellt — ein einfacher Weg, Deutsch zu üben ohne Bezahlschranken. Ich wollte es als kostenloses Angebot für alle Deutschlernenden bereitstellen.',
+    aboutP2html: 'Erstellt von <strong>Mehras Hojjat</strong>. Für Funktionswünsche oder Feedback auf <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> oder <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
+    aboutP3html: 'Wortlisten von <strong>Goethe-Institut</strong> · Übersetzungen via <strong>MyMemory API</strong> · Open Source auf <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Erstellt mit <strong>Claude AI</strong>.',
+    aboutP4: 'In der frühen Entwicklungsphase unter dem Namen DeutschLernen bekannt.',
+    footerMsg: 'Hallo! Ich habe das für mein eigenes Deutschlernen gebaut — hoffe, es hilft dir auch. Komplett kostenlos 🇩🇪',
+    footerCopy: '© 2026 Mehras Hojjat',
+    adaptiveBannerTitle: 'Adaptives Quiz',
+    adaptiveBannerSub: 'Passt sich deinem Niveau an',
+    adaptiveSetupTitle: 'Adaptives Quiz',
+    adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
+    themeBannerTitle: 'Themen-Quiz',
+    themeBannerSub: 'Über ein Thema testen',
+    themeSelectTitle: 'Themen-Quiz',
+    themeSelectSubtitle: 'Thema zum Üben wählen',
+    dictBannerTitle: 'Wörterbuch',
+    dictBannerSub: 'Alle Wörter durchsuchen',
+    dictScreenTitle: 'Wörterbuch',
+    dictScreenSubtitle: 'Alle Wörter',
+    dictBack: '← Zurück',
+    dictFilterPlaceholder: 'Wörter filtern…',
+    dictLoading: 'Wird geladen…',
+    dictEmpty: 'Keine Wörter gefunden.',
+    typeBadge: { Noun: 'Nomen', Verb: 'Verb', Adjective: 'Adjektiv', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Wort' },
+    signedInAs: 'Angemeldet als:',
+    signOut: 'Abmelden',
+    practiceBannerTitle: 'Üben',
+    practiceBannerSub: 'Karten umdrehen und Wörter lernen',
+    practiceSetupTitle: 'Üben',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
+    practiceMeaningLabel: 'Bedeutung',
+    offlineTitle: 'Kein Internet',
+    offlineMessage: 'Diese App benötigt eine Internetverbindung.',
+    offlineRefreshBtn: 'Neu laden',
+    offlineChecking: 'Prüfen…',
+    categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
   },
   tr: {
     headerSub: 'Kelime Pratiği · Hâller · Fiil Çekimi',
@@ -153,6 +264,7 @@ const UI = {
     aboutP1: 'Bu ücretsiz mini oyunu kendim için yaptım — Almanca kelime pratiği yapmanın basit bir yolu, ücret ödemeden. Almanca öğrenen herkes için ücretsiz bir kaynak olarak sunmak istedim.',
     aboutP2html: 'Yapımcı: <strong>Mehras Hojjat</strong>. Özellik istekleri veya geri bildirim için <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> ya da <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>\'dan ulaşabilirsiniz.',
     aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
+    aboutP4: 'Erken geliştirme döneminde DeutschLernen adıyla biliniyordu.',
     footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Uyarlamalı Sınav',
@@ -175,6 +287,16 @@ const UI = {
     signedInAs: 'Giriş yapıldı:',
     signOut: 'Çıkış yap',
     categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
+    practiceBannerTitle: 'Pratik',
+    practiceBannerSub: 'Kartları çevirerek kelime öğren',
+    practiceSetupTitle: 'Pratik',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Anlamı görmek için kartı çevir',
+    practiceMeaningLabel: 'Anlam',
+    offlineTitle: 'Çevrimedışısınız',
+    offlineMessage: 'Bu uygulama çalışmak için internet bağlantısı gerektirir.',
+    offlineRefreshBtn: 'Yenile',
+    offlineChecking: 'Kontrol ediliyor…',
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -238,6 +360,7 @@ const UI = {
     aboutP1: 'این بازی رایگان کوچک را برای خودم ساختم — روشی ساده برای تمرین واژگان آلمانی بدون هیچ هزینه‌ای. می‌خواستم برای هر کسی که آلمانی می‌آموزد در دسترس باشد.',
     aboutP2html: 'ساخته <strong>Mehras Hojjat</strong>. برای درخواست ویژگی یا بازخورد از طریق <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> یا <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> در تماس باشید.',
     aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
+    aboutP4: 'در مراحل اولیه توسعه با نام DeutschLernen شناخته می‌شد.',
     footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
     footerCopy: '© ۲۰۲۶ Mehras Hojjat',
     adaptiveBannerTitle: 'آزمون تطبیقی',
@@ -259,6 +382,16 @@ const UI = {
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
     signedInAs: 'وارد شده به عنوان:',
     signOut: 'خروج از حساب',
+    practiceBannerTitle: 'تمرین',
+    practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها یاد بگیرید',
+    practiceSetupTitle: 'تمرین',
+    practiceSetupSub: '',
+    practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
+    practiceMeaningLabel: 'معنی',
+    offlineTitle: 'آفلاین هستید',
+    offlineMessage: 'این برنامه برای کار کردن به اتصال اینترنت نیاز دارد.',
+    offlineRefreshBtn: 'بارگذاری مجدد',
+    offlineChecking: 'در حال بررسی…',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
@@ -323,6 +456,7 @@ const UI = {
     aboutP1: 'Я создал эту бесплатную мини-игру для себя — простой способ практиковать немецкую лексику без платных подписок. Хотел сделать её доступной бесплатно для всех, кто учит немецкий.',
     aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запросов функций или обратной связи пишите в <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> или <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
+    aboutP4: 'В начале разработки приложение называлось DeutschLernen.',
     footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивная викторина',
@@ -342,6 +476,16 @@ const UI = {
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
     signedInAs: 'Вы вошли как:',
     signOut: 'Выйти',
+    practiceBannerTitle: 'Практика',
+    practiceBannerSub: 'Переворачивайте карточки, чтобы учить слова',
+    practiceSetupTitle: 'Практика',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
+    practiceMeaningLabel: 'Значение',
+    offlineTitle: 'Нет подключения',
+    offlineMessage: 'Для работы приложения необходимо подключение к интернету.',
+    offlineRefreshBtn: 'Обновить',
+    offlineChecking: 'Проверка…',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
@@ -406,6 +550,7 @@ const UI = {
     aboutP1: 'Я створив цю безкоштовну міні-гру для себе — простий спосіб практикувати німецьку лексику без будь-яких платежів. Хотів зробити її доступною безкоштовно для всіх, хто вивчає німецьку.',
     aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запитів щодо функцій або відгуків пишіть у <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> або <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
+    aboutP4: 'На початку розробки додаток мав назву DeutschLernen.',
     footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивна вікторина',
@@ -425,6 +570,16 @@ const UI = {
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
     signedInAs: 'Ввійшли як:',
     signOut: 'Вийти',
+    practiceBannerTitle: 'Практика',
+    practiceBannerSub: 'Перевертайте картки, щоб вивчати слова',
+    practiceSetupTitle: 'Практика',
+    practiceSetupSub: '',
+    practiceSubtitle: 'Переверни картку, щоб побачити значення',
+    practiceMeaningLabel: 'Значення',
+    offlineTitle: 'Немає інтернету',
+    offlineMessage: 'Для роботи додатку потрібне підключення до інтернету.',
+    offlineRefreshBtn: 'Оновити',
+    offlineChecking: 'Перевірка…',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
@@ -489,6 +644,7 @@ const UI = {
     aboutP1: 'صنعت هذه اللعبة المجانية الصغيرة لنفسي — طريقة بسيطة لتدريب المفردات الألمانية دون أي رسوم. أردت أن تكون متاحة كمورد مجاني لأي شخص يتعلم الألمانية.',
     aboutP2html: 'صنعه <strong>Mehras Hojjat</strong>. للتواصل بشأن طلبات الميزات أو الملاحظات عبر <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> أو <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
     aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
+    aboutP4: 'كان اسم التطبيق DeutschLernen في مراحل التطوير الأولى.',
     footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'اختبار تكيّفي',
@@ -510,6 +666,16 @@ const UI = {
     typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
     signedInAs: 'تسجيل الدخول باسم:',
     signOut: 'تسجيل الخروج',
+    practiceBannerTitle: 'تدريب',
+    practiceBannerSub: 'اقلب البطاقات لتعلم الكلمات',
+    practiceSetupTitle: 'تدريب',
+    practiceSetupSub: '',
+    practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
+    practiceMeaningLabel: 'المعنى',
+    offlineTitle: 'أنت غير متصل',
+    offlineMessage: 'يحتاج هذا التطبيق إلى اتصال بالإنترنت للعمل.',
+    offlineRefreshBtn: 'تحديث',
+    offlineChecking: 'جارٍ التحقق…',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
@@ -518,27 +684,27 @@ const UI = {
 //  CATEGORY MAP — 21 vocabulary categories, ID 1–21
 // ════════════════════════════════════════════════════════════════
 var CATEGORY_MAP = [
-  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)' },
-  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)' },
-  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)' },
-  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)' },
-  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)'  },
-  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
-  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)' },
-  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)' },
-  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)' },
-  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)' },
-  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)' },
-  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)' },
-  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)' },
-  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)' },
-  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)' },
-  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)'  },
-  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)'  },
-  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
-  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)'  },
-  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)'  },
-  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)' },
+  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
+  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)', bl: 'rgb(117 81 159)',  br: 'rgb(111 77 150)'  },
+  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
+  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)', bl: 'rgb(146 65 77)',   br: 'rgb(127 55 66)'   },
+  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)',  bl: 'rgb(146 111 51)',  br: 'rgb(127 95 44)'   },
+  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
+  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)', bl: 'rgb(146 90 117)',  br: 'rgb(127 78 101)'  },
+  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)', bl: 'rgb(59 143 122)',  br: 'rgb(51 123 105)'  },
+  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)', bl: 'rgb(59 111 158)',  br: 'rgb(51 95 127)'   },
+  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)', bl: 'rgb(59 137 158)',  br: 'rgb(51 117 127)'  },
+  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
+  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
+  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
+  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
+  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)', bl: 'rgb(89 143 64)',   br: 'rgb(77 123 55)'   },
+  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)',  bl: 'rgb(146 91 51)',   br: 'rgb(127 78 44)'   },
+  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)',  bl: 'rgb(47 143 154)',  br: 'rgb(40 123 132)'  },
+  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
+  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)',  bl: 'rgb(146 52 64)',   br: 'rgb(127 44 55)'   },
+  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)',  bl: 'rgb(47 130 128)',  br: 'rgb(40 112 110)'  },
+  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
 ];
 
 
@@ -550,6 +716,10 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
+var practiceSelectedLevel = 'A1';
+var practiceDeck = [], practiceIdx = 0;
+var practiceSeenIds = {};
+var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _rwFirstLoad = false;
@@ -613,24 +783,98 @@ function openAbout() {
   window.umami?.track('about_opened');
   document.getElementById('about-modal-overlay').classList.add('open');
 }
-function shareApp() {
-  window.umami?.track('share_app');
-  var shareData = { title: 'DeutschLernen', text: 'Learn German with this app', url: 'https://wort.rovi.so' };
-  if (navigator.share) {
-    navigator.share(shareData).catch(function() {});
-  } else {
-    _copyAppLink();
+function _trackUmamiEvent(name, payload) {
+  try {
+    if (window.umami && typeof window.umami.track === 'function') {
+      window.umami.track(name, payload);
+    }
+  } catch (e) {}
+}
+function _publicAppUrl() {
+  var canonical = document.querySelector('link[rel="canonical"]');
+  var href = canonical && canonical.getAttribute('href');
+  if (href) {
+    try { return String(new URL(href, window.location.href)); }
+    catch (e) {}
+  }
+  return 'https://wortschatzapp.de/';
+}
+function _canUseWebShare(shareData) {
+  if (typeof navigator.share !== 'function') return false;
+  if (typeof navigator.canShare === 'function') {
+    try { return navigator.canShare(shareData); }
+    catch (e) { return true; }
+  }
+  return true;
+}
+async function shareApp(e) {
+  if (e && typeof e.preventDefault === 'function') e.preventDefault();
+  var btn = document.getElementById('share-app-btn');
+  var orig = btn ? btn.textContent : '';
+  function flash(label) {
+    if (!btn) return;
+    btn.textContent = label;
+    setTimeout(function() { btn.textContent = orig; }, 1800);
+  }
+  var shareData = {
+    title: 'Wortschatz',
+    text: 'Learn German with this app',
+    url: _publicAppUrl()
+  };
+
+  if (!_canUseWebShare(shareData)) {
+    _installLog('warn', 'settings share unavailable');
+    flash('Share unavailable');
+    return false;
+  }
+
+  try {
+    // Call share immediately in the click handler task to preserve user activation.
+    var sharePromise = navigator.share(shareData);
+    _trackUmamiEvent('share_app');
+    await sharePromise;
+    return true;
+  } catch (err) {
+    if (err && err.name === 'AbortError') return false;
+    _installLog('warn', 'settings share failed', err && (err.message || err.name || err));
+    flash('Share failed');
+    return false;
   }
 }
-function copyAppLink() {
-  window.umami?.track('share_app');
-  _copyAppLink();
-}
-function _copyAppLink() {
-  navigator.clipboard.writeText('https://wort.rovi.so').then(function() {
-    var btn = document.getElementById('copy-link-btn');
-    if (btn) { var orig = btn.textContent; btn.textContent = 'Link copied'; setTimeout(function() { btn.textContent = orig; }, 2000); }
-  }).catch(function() {});
+function copyAppLink(opts) {
+  opts = opts || {};
+  if (opts.track !== false) _trackUmamiEvent('copy_link');
+  var url = _publicAppUrl();
+  var btn = document.getElementById(opts.buttonId || 'copy-link-btn');
+  var orig = btn ? btn.textContent : '';
+  var copiedLabel = opts.copiedLabel || 'Link copied';
+  function onCopied() {
+    if (btn) {
+      btn.textContent = copiedLabel;
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    }
+  }
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    navigator.clipboard.writeText(url).then(onCopied).catch(function() {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      onCopied();
+    });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = url;
+    ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    onCopied();
+  }
 }
 function closeAbout(e) {
   if (e && e.target !== document.getElementById('about-modal-overlay')) return;
@@ -668,12 +912,47 @@ function closeInstallGuide(e) {
   }, 300);
 }
 
+// ── Custom language dropdown ──
+var _LANG_LABELS = {
+  de: '🇩🇪 Deutsch',
+  en: '🇬🇧 English',
+  tr: '🇹🇷 Türkçe',
+  ru: '🇷🇺 Русский',
+  uk: '🇺🇦 Українська',
+  fa: '🇮🇷 فارسی',
+  ar: '🇸🇦 العربية'
+};
+function _langDdSync(lang) {
+  var lbl = document.getElementById('lang-dd-label');
+  if (lbl) lbl.textContent = _LANG_LABELS[lang] || lang;
+  var opts = document.querySelectorAll('#lang-dd-panel .lang-dd-option');
+  opts.forEach(function(o){ o.classList.toggle('active', o.dataset.lang === lang); });
+}
+function _langDdToggle() {
+  var dd = document.getElementById('lang-dd');
+  if (dd) dd.classList.toggle('open');
+}
+function _langDdSelect(lang) {
+  var dd = document.getElementById('lang-dd');
+  if (dd) dd.classList.remove('open');
+  setLang(lang);
+}
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('lang-dd');
+  if (dd && dd.classList.contains('open') && !dd.contains(e.target)) {
+    dd.classList.remove('open');
+  }
+});
+
 // ── Set language ──
 function setLang(lang) {
   window.umami?.track('language_changed', { language: lang });
   LANG = lang;
   try { localStorage.setItem('dl_lang', lang); } catch(e) {}
-  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
+  _langDdSync(lang);
+  ['de','en','tr','fa','ru','uk','ar'].forEach(function(l) {
     document.getElementById('opt-'+l).classList.toggle('active', lang===l);
   });
   var isRtl = lang==='fa' || lang==='ar';
@@ -687,6 +966,7 @@ function setLang(lang) {
   }
   applyTranslations();
   updateCounts();
+  _renderCategoryGrid();
   // Immediately update the active screen so the user sees the new language at once
   if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
     _quizRefreshLang();
@@ -695,9 +975,11 @@ function setLang(lang) {
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
-    _renderCategoryGrid();
+    // already re-rendered unconditionally above
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
     if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
+  } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
+    _practiceRefreshCards();
   }
 }
 
@@ -748,6 +1030,7 @@ function applyTranslations() {
   document.getElementById('about-p1').textContent = u.aboutP1;
   document.getElementById('about-p2').innerHTML = u.aboutP2html;
   document.getElementById('about-p3').innerHTML = u.aboutP3html;
+  document.getElementById('about-p4').textContent = u.aboutP4;
   document.getElementById('about-close-btn').textContent = u.aboutClose;
   document.getElementById('footer-msg').textContent = u.footerMsg;
   document.getElementById('footer-copy').textContent = u.footerCopy;
@@ -767,9 +1050,23 @@ function applyTranslations() {
   // Theme select screen
   document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
   document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
+  // Practice banner + setup screen
+  document.getElementById('practice-banner-title').textContent = u.practiceBannerTitle;
+  document.getElementById('practice-banner-sub').textContent = u.practiceBannerSub;
+  document.getElementById('practice-setup-screen-title').textContent = u.practiceSetupTitle;
+  document.getElementById('practice-setup-screen-subtitle').textContent = u.practiceSubtitle;
+  document.getElementById('practice-title').textContent = u.practiceSetupTitle;
+  document.getElementById('practice-subtitle').textContent = u.practiceSubtitle;
+  document.getElementById('practice-prepare-btn').textContent = u.prepareTen;
+  var pln = u.levelNames;
+  document.getElementById('practice-ln-A1').textContent = pln.A1;
+  document.getElementById('practice-ln-A2').textContent = pln.A2;
+  document.getElementById('practice-ln-B1').textContent = pln.B1;
   // Dictionary screen
-  document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
-  document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
+  var _dbt = document.getElementById('dict-banner-title');
+  if (_dbt) _dbt.textContent = u.dictBannerTitle;
+  var _dbs = document.getElementById('dict-banner-sub');
+  if (_dbs) _dbs.textContent = u.dictBannerSub;
   document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
@@ -779,6 +1076,13 @@ function applyTranslations() {
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
     _renderDictList(document.getElementById('dict-search-input').value, true);
   }
+  // Offline screen
+  var _os = document.getElementById('offline-title');
+  if (_os) _os.textContent = u.offlineTitle;
+  var _om = document.getElementById('offline-message');
+  if (_om) _om.textContent = u.offlineMessage;
+  var _or = document.getElementById('offline-refresh-btn');
+  if (_or) _or.textContent = u.offlineRefreshBtn;
   _refreshInstallGuideContent();
 }
 
@@ -1135,7 +1439,7 @@ function _loadAllCSV() {
 // The row's unique `id` field is used for correct-answer checking instead,
 // so translations in any language can never accidentally swap answers.
 function _csvRowDisplay(row) {
-  if (LANG === 'en') return row.translation_en;
+  if (LANG === 'en' || LANG === 'de') return row.translation_en;
   if (LANG === 'tr') return row.translation_tr || row.translation_en;
   if (LANG === 'ru') return row.translation_ru || row.translation_en;
   if (LANG === 'uk') return row.translation_uk || row.translation_en;
@@ -1365,7 +1669,7 @@ function _renderCategoryGrid() {
   if (!grid) return;
   var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
-    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-color:' + cat.b + '" onclick="startThemeQuiz(' + cat.id + ')">'
+    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-left:1px solid ' + cat.bl + ';border-right:1px solid ' + cat.br + '" onclick="startThemeQuiz(' + cat.id + ')">'
       + '<span class="cat-icon">' + cat.icon + '</span>'
       + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
       + '</button>';
@@ -1505,12 +1809,12 @@ function _buildQueueFromRows(rows) {
 //  SWIPE CHECK
 // ══════════════════════════════════════════════════════════════════
 function _rowMeaningForLang(row) {
-  if (LANG === 'en') return row.translation_en || '';
+  if (LANG === 'en' || LANG === 'de') return row.translation_en || '';
   if (LANG === 'tr') return row.translation_tr || row.translation_en || '';
   if (LANG === 'ru') return row.translation_ru || row.translation_en || '';
   if (LANG === 'uk') return row.translation_uk || row.translation_en || '';
   if (LANG === 'fa') return row.translation_fa || row.translation_en || '';
-  return '';
+  return row.translation_en || '';
 }
 
 async function _resolveMeaningRows(rows) {
@@ -1522,7 +1826,7 @@ async function _resolveMeaningRows(rows) {
     seen[r.id] = true;
     uniq.push(r);
   });
-  if (LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk' || LANG === 'fa') {
+  if (LANG === 'de' || LANG === 'en' || LANG === 'tr' || LANG === 'ru' || LANG === 'uk' || LANG === 'fa') {
     uniq.forEach(function(r){ map[r.id] = _rowMeaningForLang(r); });
     return map;
   }
@@ -1759,6 +2063,180 @@ async function _swipeRefreshLang() {
   } finally {
     _ov.classList.remove('active');
   }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  PRACTICE MODE
+// ══════════════════════════════════════════════════════════════════
+function openPracticeSetup() {
+  window.umami?.track('practice_opened');
+  show('screen-practice-setup');
+}
+
+function setPracticeLevel(lv) {
+  practiceSelectedLevel = lv;
+  ['A1','A2','B1'].forEach(function(k) {
+    document.getElementById('practice-level-' + k).classList.toggle('active', k === lv);
+  });
+}
+
+function _buildPracticeBatch(level) {
+  var all = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
+    return r.entry_type === 'main' && r.word && r.word.trim();
+  });
+  var unseen = all.filter(function(r) { return !practiceSeenIds[r.id]; });
+  if (!unseen.length) {
+    // All words shown — clear memory and start over
+    practiceSeenIds = {};
+    unseen = all.slice();
+  }
+  var batch = shuffle(unseen.slice()).slice(0, QUIZ_LEN);
+  batch.forEach(function(r) { practiceSeenIds[r.id] = true; });
+  return batch;
+}
+
+async function startPracticeGame() {
+  var _ov = document.getElementById('quiz-prep-overlay');
+  _ov.classList.add('active');
+  try {
+    await _loadCSVLevel(practiceSelectedLevel);
+    practiceSeenIds = {};
+    practiceDeck = _buildPracticeBatch(practiceSelectedLevel);
+    if (!practiceDeck.length) { alert('No practice cards found.'); return; }
+    practiceIdx = 0;
+    practicePreloadPromise = null;
+    practiceAnimating = false;
+    window.umami?.track('practice_started', { level: practiceSelectedLevel });
+    show('screen-practice');
+    renderPracticeCards();
+  } catch (err) {
+    alert('Could not load practice data.\n' + (err && err.message ? err.message : ''));
+  } finally {
+    _ov.classList.remove('active');
+  }
+}
+
+function _renderPracticeCardHtml(row, posClass) {
+  var word = (row.article ? row.article + ' ' : '') + expandOptional(row.word);
+  var example = (row.example_de || '').trim();
+  var meaning = _csvRowDisplay(row) || '';
+  return '<div class="practice-card ' + posClass + '">'
+    + '<div class="practice-card-inner">'
+    + '<div class="practice-front" dir="ltr">'
+    + '<div class="practice-word">' + escHtml(word) + '</div>'
+    + (example ? '<div class="practice-example">' + escHtml(example) + '</div>' : '')
+    + '</div>'
+    + '<div class="practice-back">'
+    + '<div class="practice-meaning-label">' + escHtml(t('practiceMeaningLabel')) + '</div>'
+    + '<div class="practice-meaning">' + escHtml(meaning) + '</div>'
+    + '</div>'
+    + '</div>'
+    + '</div>';
+}
+
+function _practiceRefreshCards() {
+  if (!practiceDeck.length) return;
+  renderPracticeCards();
+}
+
+function renderPracticeCards() {
+  var stack = document.getElementById('practice-card-stack');
+  var current = practiceDeck[practiceIdx];
+  if (!current) {
+    stack.innerHTML = '<div class="swipe-empty"><strong>All done</strong><span>Loading next difficulty...</span></div>';
+    return;
+  }
+  var next1 = practiceDeck[practiceIdx + 1];
+  var next2 = practiceDeck[practiceIdx + 2];
+  stack.innerHTML =
+    (next2 ? _renderPracticeCardHtml(next2, 'under-2') : '') +
+    (next1 ? _renderPracticeCardHtml(next1, 'under-1') : '') +
+    _renderPracticeCardHtml(current, 'top');
+  _attachPracticeGesture(stack.querySelector('.practice-card.top'));
+  _ensurePracticePrefetch();
+}
+
+function _attachPracticeGesture(cardEl) {
+  if (!cardEl) return;
+  var startX = 0, startY = 0, currentX = 0, dragging = false, moved = false;
+  cardEl.onpointerdown = function(e) {
+    if (practiceAnimating) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = true; moved = false;
+    startX = e.clientX; startY = e.clientY; currentX = 0;
+    cardEl.setPointerCapture(e.pointerId);
+  };
+  cardEl.onpointermove = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    currentX = e.clientX - startX;
+    var dy = e.clientY - startY;
+    if (Math.abs(currentX) > 10 || Math.abs(dy) > 10) {
+      moved = true;
+      if (!cardEl.classList.contains('dragging')) cardEl.classList.add('dragging');
+    }
+    if (moved) {
+      var rot = currentX * 0.05;
+      cardEl.style.transform = 'translateX(' + currentX + 'px) rotate(' + rot + 'deg)';
+    }
+  };
+  cardEl.onpointerup = function(e) {
+    if (!dragging) return;
+    if (e.cancelable) e.preventDefault();
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.releasePointerCapture(e.pointerId);
+    if (!moved) {
+      cardEl.style.transform = '';
+      cardEl.classList.toggle('flipped');
+    } else if (Math.abs(currentX) > 90) {
+      _animatePracticeDismiss(currentX > 0 ? 'right' : 'left', cardEl);
+    } else {
+      cardEl.style.transform = '';
+    }
+  };
+  cardEl.onpointercancel = function(e) {
+    if (e && e.cancelable) e.preventDefault();
+    dragging = false;
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+  };
+}
+
+function practiceFlipAction() {
+  var top = document.querySelector('#practice-card-stack .practice-card.top');
+  if (top && !practiceAnimating) top.classList.toggle('flipped');
+}
+
+function practiceDismissAction() {
+  var top = document.querySelector('#practice-card-stack .practice-card.top');
+  if (top) _animatePracticeDismiss('right', top);
+}
+
+function _animatePracticeDismiss(dir, cardEl) {
+  if (practiceAnimating) return;
+  practiceAnimating = true;
+  if (cardEl) {
+    cardEl.classList.remove('dragging');
+    cardEl.style.transform = '';
+    cardEl.classList.add(dir === 'right' ? 'swipe-right' : 'swipe-left');
+  }
+  setTimeout(function() {
+    practiceIdx++;
+    renderPracticeCards();
+    practiceAnimating = false;
+  }, 190);
+}
+
+function _ensurePracticePrefetch() {
+  if (practicePreloadPromise) return;
+  if (practiceDeck.length - practiceIdx > 5) return;
+  practicePreloadPromise = Promise.resolve().then(function() {
+    var batch = _buildPracticeBatch(practiceSelectedLevel);
+    if (batch.length) practiceDeck = practiceDeck.concat(batch);
+  }).catch(function(){}).finally(function() {
+    practicePreloadPromise = null;
+  });
 }
 
 // ══════════════════════════════════════════════════════════════════
@@ -3721,7 +4199,7 @@ function _backArrowSvg(isRtl) {
   return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
 }
 function show(id){
-  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary'].forEach(s=>{
+  ['screen-levels','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
   var btn = document.getElementById('app-back-btn');
@@ -3735,13 +4213,64 @@ function show(id){
     'screen-adaptive-setup':   function(){ goHome(); },
     'screen-theme-select':     function(){ goHome(); },
     'screen-random':           function(){ goHome(); },
-    'screen-dictionary':       function(){ goHome(); }
+    'screen-dictionary':       function(){ goHome(); },
+    'screen-practice-setup':   function(){ goHome(); },
+    'screen-practice':         function(){ openPracticeSetup(); }
   };
   var action = backMap[id];
   var show = !!action;
   btn.classList.toggle('hidden', !show);
   btn.innerHTML = _backArrowSvg(isRtl);
   _appBackAction = action || function(){};
+}
+
+function showOfflineScreen() {
+  window.APP_OFFLINE = true;
+  var el = document.getElementById('offline-screen');
+  if (el) el.classList.remove('hidden');
+}
+
+function hideOfflineScreen() {
+  window.APP_OFFLINE = false;
+  var el = document.getElementById('offline-screen');
+  if (el) el.classList.add('hidden');
+  if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
+}
+
+function checkOnline() {
+  var btn = document.getElementById('offline-refresh-btn');
+  var origText = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = t('offlineChecking') || '…'; }
+
+  var _done = false;
+  function _restore() {
+    if (_done) return;
+    _done = true;
+    if (btn) { btn.disabled = false; btn.textContent = origText; }
+  }
+
+  // Safety net: never leave the button stuck for more than 7 seconds.
+  var _timer = setTimeout(_restore, 7000);
+
+  // GET with a cache-bust query string: the SW won't find it in cache,
+  // so it hits the real network. Succeeds online, rejects offline.
+  // GET is used (not HEAD) because some WebKit PWA environments silently
+  // hang on fetch() for methods the SW doesn't handle via respondWith().
+  fetch('/sw.js?_nc=' + Date.now(), { cache: 'no-store' })
+    .then(function(res) {
+      clearTimeout(_timer);
+      if (_done) return;
+      _done = true;
+      if (res.ok) {
+        hideOfflineScreen();
+      } else {
+        _restore();
+      }
+    })
+    .catch(function() {
+      clearTimeout(_timer);
+      _restore();
+    });
 }
 
 // ── Init ──
@@ -3752,12 +4281,57 @@ function show(id){
   document.body.classList.toggle('lang-fa', LANG === 'fa');
   document.body.classList.toggle('lang-ar', LANG === 'ar');
   document.body.classList.toggle('lang-rtl', isRtl);
-  ['en','tr','fa','ru','uk','ar'].forEach(function(l) {
+  ['de','en','tr','fa','ru','uk','ar'].forEach(function(l) {
     var el = document.getElementById('opt-' + l);
     if (el) el.classList.toggle('active', l === LANG);
   });
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.value = LANG;
+  _langDdSync(LANG);
 })();
 applyTranslations();
+// ── Connectivity probe ───────────────────────────────────────────────────
+// Fetches a cache-busted URL through the real network (SW passes _nc=
+// requests un-cached). Times out after 5 s to handle captive-portal /
+// server-unreachable scenarios that don't give an immediate connection error.
+function _startConnectivityProbe(onFail) {
+  var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 5000) : null;
+  fetch('/sw.js?_nc=' + Date.now(), {
+    cache: 'no-store',
+    signal: ctrl ? ctrl.signal : undefined
+  }).then(function(res) {
+    if (timer) clearTimeout(timer);
+    if (!res.ok) onFail();
+  }).catch(function() {
+    if (timer) clearTimeout(timer);
+    onFail();
+  });
+}
+
+// Connectivity check on startup.
+// navigator.onLine is unreliable (reports true when a network interface is
+// active even without real internet), so we probe the network directly.
+// Runs in all contexts (browser tab + standalone PWA) because browsers cache
+// the page via the service worker and will serve it even with no internet —
+// we need to detect that and show the offline screen regardless.
+if (!navigator.onLine) {
+  // Synchronous fast path: browser already knows it's offline.
+  showOfflineScreen();
+} else {
+  // Async probe with 5-second timeout.
+  _startConnectivityProbe(showOfflineScreen);
+}
+
+// React to connectivity changes while the page is open.
+window.addEventListener('offline', function() { showOfflineScreen(); });
+window.addEventListener('online', function() {
+  // Browser says a network interface is back. Optimistically hide the screen
+  // and re-probe; if the probe fails (captive portal / server still down),
+  // the offline screen re-appears.
+  hideOfflineScreen();
+  _startConnectivityProbe(showOfflineScreen);
+});
 updateCounts();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
@@ -3827,25 +4401,28 @@ document.addEventListener('keydown', function(e){
 })();
 
 // ── Settings drawer drag-to-close ────────────────────────────────────
-// Handle click (desktop) + swipe-down on the whole panel (mobile)
+// Handle click (desktop) + drag-to-close via the handle pill only (mobile)
 (function() {
   var handle = document.querySelector('.drawer-handle');
   var drawer = document.getElementById('settings-drawer');
   if (!drawer) return;
 
-  // Desktop / tap: click the pill handle to dismiss
+  // Desktop: click the handle to dismiss
   if (handle) handle.addEventListener('click', function() { closeSettings(); });
+
+  // Mobile drag-to-close — listen ONLY on the handle, not the whole drawer.
+  // This means buttons in the drawer body receive clean, uninterrupted taps.
+  if (!handle) return;
 
   var _startY, _dragging, _deltaY;
 
-  // Listen on the whole drawer (same pattern as install guide which works)
-  drawer.addEventListener('touchstart', function(e) {
+  handle.addEventListener('touchstart', function(e) {
     _startY = e.touches[0].clientY;
     _dragging = false;
     _deltaY = 0;
   }, { passive: true });
 
-  drawer.addEventListener('touchmove', function(e) {
+  handle.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
     var dy = e.touches[0].clientY - _startY;
     if (dy > 0) e.preventDefault();
@@ -3859,7 +4436,7 @@ document.addEventListener('keydown', function(e){
     }
   }, { passive: false });
 
-  drawer.addEventListener('touchend', function() {
+  handle.addEventListener('touchend', function() {
     if (_startY === undefined) return;
     _startY = undefined;
     if (_dragging && _deltaY > 60) {
@@ -3872,6 +4449,14 @@ document.addEventListener('keydown', function(e){
     }
     _dragging = false;
     _deltaY = 0;
+  });
+
+  handle.addEventListener('touchcancel', function() {
+    _startY = undefined;
+    _dragging = false;
+    _deltaY = 0;
+    drawer.style.transition = '';
+    drawer.style.transform = '';
   });
 })();
 

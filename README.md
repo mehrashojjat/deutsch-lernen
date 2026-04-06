@@ -1,12 +1,14 @@
-# DeutschLernen
+# Wortschatz
 
 A browser-based German vocabulary learning app — no installation, no build step, just open and play.
+
+> Originally developed under the name **DeutschLernen** during early development.
 
 ---
 
 ## What is this?
 
-**rovi Deutsch Lernen** is an interactive app that helps you build German vocabulary across CEFR levels A1, A2, and B1. It includes multiple quiz modes, a full dictionary with A–Z browsing, and a word explorer that shows Wiktionary grammar data for any word. All features work offline after the first load.
+**Wortschatz** is an interactive app that helps you build German vocabulary across CEFR levels A1, A2, and B1. It includes multiple quiz modes, a full dictionary with A–Z browsing, and a word explorer that shows Wiktionary grammar data for any word. All features work offline after the first load.
 
 It runs entirely in the browser as a static HTML/JS app — no server required.
 
@@ -39,7 +41,7 @@ It runs entirely in the browser as a static HTML/JS app — no server required.
 
 **Locally:** Double-click `start_local_server.command` (macOS), then open `http://localhost:8000` in your browser.
 
-**Live:** Hosted at [wort.rovi.so](https://wort.rovi.so) via GitHub Pages.
+**Live:** Hosted at [wortschatzapp.de](https://wortschatzapp.de) via GitHub Pages.
 
 ---
 

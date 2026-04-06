@@ -1,6 +1,6 @@
 {
-  "name": "DeutschLernen",
-  "short_name": "DeutschLernen",
+  "name": "Wortschatz",
+  "short_name": "Wortschatz",
   "description": "A free mini-game to practice and memorize German vocabulary — built on Goethe-Institut word lists.",
   "start_url": "/",
   "display": "standalone",
