@@ -783,22 +783,74 @@ function openAbout() {
   window.umami?.track('about_opened');
   document.getElementById('about-modal-overlay').classList.add('open');
 }
-function shareApp() {
-  window.umami?.track('share_app');
-  navigator.share({
+function _trackUmamiEvent(name, payload) {
+  try {
+    if (window.umami && typeof window.umami.track === 'function') {
+      window.umami.track(name, payload);
+    }
+  } catch (e) {}
+}
+function _publicAppUrl() {
+  var canonical = document.querySelector('link[rel="canonical"]');
+  var href = canonical && canonical.getAttribute('href');
+  if (href) {
+    try { return String(new URL(href, window.location.href)); }
+    catch (e) {}
+  }
+  return 'https://wortschatzapp.de/';
+}
+function _canUseWebShare(shareData) {
+  if (typeof navigator.share !== 'function') return false;
+  if (typeof navigator.canShare === 'function') {
+    try { return navigator.canShare(shareData); }
+    catch (e) { return true; }
+  }
+  return true;
+}
+async function shareApp(e) {
+  if (e && typeof e.preventDefault === 'function') e.preventDefault();
+  var btn = document.getElementById('share-app-btn');
+  var orig = btn ? btn.textContent : '';
+  function flash(label) {
+    if (!btn) return;
+    btn.textContent = label;
+    setTimeout(function() { btn.textContent = orig; }, 1800);
+  }
+  var shareData = {
     title: 'Wortschatz',
     text: 'Learn German with this app',
-    url: 'https://wortschatzapp.de'
-  }).catch(function() {});
+    url: _publicAppUrl()
+  };
+
+  if (!_canUseWebShare(shareData)) {
+    _installLog('warn', 'settings share unavailable');
+    flash('Share unavailable');
+    return false;
+  }
+
+  try {
+    // Call share immediately in the click handler task to preserve user activation.
+    var sharePromise = navigator.share(shareData);
+    _trackUmamiEvent('share_app');
+    await sharePromise;
+    return true;
+  } catch (err) {
+    if (err && err.name === 'AbortError') return false;
+    _installLog('warn', 'settings share failed', err && (err.message || err.name || err));
+    flash('Share failed');
+    return false;
+  }
 }
-function copyAppLink() {
-  window.umami?.track('copy_link');
-  var url = 'https://wortschatzapp.de';
-  var btn = document.getElementById('copy-link-btn');
+function copyAppLink(opts) {
+  opts = opts || {};
+  if (opts.track !== false) _trackUmamiEvent('copy_link');
+  var url = _publicAppUrl();
+  var btn = document.getElementById(opts.buttonId || 'copy-link-btn');
   var orig = btn ? btn.textContent : '';
+  var copiedLabel = opts.copiedLabel || 'Link copied';
   function onCopied() {
     if (btn) {
-      btn.textContent = 'Link copied';
+      btn.textContent = copiedLabel;
       setTimeout(function() { btn.textContent = orig; }, 2000);
     }
   }
