@@ -684,27 +684,27 @@ const UI = {
 //  CATEGORY MAP — 21 vocabulary categories, ID 1–21
 // ════════════════════════════════════════════════════════════════
 var CATEGORY_MAP = [
-  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)' },
-  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)' },
-  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)' },
-  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)' },
-  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)'  },
-  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
-  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)' },
-  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)' },
-  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)' },
-  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)' },
-  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)' },
-  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)' },
-  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)' },
-  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)' },
-  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)' },
-  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)'  },
-  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)'  },
-  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)' },
-  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)'  },
-  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)'  },
-  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)' },
+  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
+  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)', bl: 'rgb(117 81 159)',  br: 'rgb(111 77 150)'  },
+  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
+  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)', bl: 'rgb(146 65 77)',   br: 'rgb(127 55 66)'   },
+  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)',  bl: 'rgb(146 111 51)',  br: 'rgb(127 95 44)'   },
+  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
+  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)', bl: 'rgb(146 90 117)',  br: 'rgb(127 78 101)'  },
+  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)', bl: 'rgb(59 143 122)',  br: 'rgb(51 123 105)'  },
+  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)', bl: 'rgb(59 111 158)',  br: 'rgb(51 95 127)'   },
+  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)', bl: 'rgb(59 137 158)',  br: 'rgb(51 117 127)'  },
+  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
+  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
+  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
+  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
+  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)', bl: 'rgb(89 143 64)',   br: 'rgb(77 123 55)'   },
+  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)',  bl: 'rgb(146 91 51)',   br: 'rgb(127 78 44)'   },
+  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)',  bl: 'rgb(47 143 154)',  br: 'rgb(40 123 132)'  },
+  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
+  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)',  bl: 'rgb(146 52 64)',   br: 'rgb(127 44 55)'   },
+  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)',  bl: 'rgb(47 130 128)',  br: 'rgb(40 112 110)'  },
+  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
 ];
 
 
@@ -892,6 +892,7 @@ function setLang(lang) {
   }
   applyTranslations();
   updateCounts();
+  _renderCategoryGrid();
   // Immediately update the active screen so the user sees the new language at once
   if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
     _quizRefreshLang();
@@ -900,7 +901,7 @@ function setLang(lang) {
   } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
     _explorerRefreshLang();
   } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
-    _renderCategoryGrid();
+    // already re-rendered unconditionally above
   } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
     if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
   } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
@@ -1592,7 +1593,7 @@ function _renderCategoryGrid() {
   if (!grid) return;
   var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
-    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-color:' + cat.b + '" onclick="startThemeQuiz(' + cat.id + ')">'
+    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-left:1px solid ' + cat.bl + ';border-right:1px solid ' + cat.br + '" onclick="startThemeQuiz(' + cat.id + ')">'
       + '<span class="cat-icon">' + cat.icon + '</span>'
       + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
       + '</button>';
