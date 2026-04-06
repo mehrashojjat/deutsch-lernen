@@ -785,22 +785,44 @@ function openAbout() {
 }
 function shareApp() {
   window.umami?.track('share_app');
-  var shareData = { title: 'Wortschatz', text: 'Learn German with this app', url: 'https://wortschatzapp.de' };
-  if (navigator.share) {
-    navigator.share(shareData).catch(function() {});
-  } else {
-    _copyAppLink();
-  }
+  navigator.share({
+    title: 'Wortschatz',
+    text: 'Learn German with this app',
+    url: 'https://wortschatzapp.de'
+  }).catch(function() {});
 }
 function copyAppLink() {
-  window.umami?.track('share_app');
-  _copyAppLink();
-}
-function _copyAppLink() {
-  navigator.clipboard.writeText('https://wortschatzapp.de').then(function() {
-    var btn = document.getElementById('copy-link-btn');
-    if (btn) { var orig = btn.textContent; btn.textContent = 'Link copied'; setTimeout(function() { btn.textContent = orig; }, 2000); }
-  }).catch(function() {});
+  window.umami?.track('copy_link');
+  var url = 'https://wortschatzapp.de';
+  var btn = document.getElementById('copy-link-btn');
+  var orig = btn ? btn.textContent : '';
+  function onCopied() {
+    if (btn) {
+      btn.textContent = 'Link copied';
+      setTimeout(function() { btn.textContent = orig; }, 2000);
+    }
+  }
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    navigator.clipboard.writeText(url).then(onCopied).catch(function() {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      onCopied();
+    });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = url;
+    ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    onCopied();
+  }
 }
 function closeAbout(e) {
   if (e && e.target !== document.getElementById('about-modal-overlay')) return;
@@ -989,8 +1011,10 @@ function applyTranslations() {
   document.getElementById('practice-ln-A2').textContent = pln.A2;
   document.getElementById('practice-ln-B1').textContent = pln.B1;
   // Dictionary screen
-  document.getElementById('dict-banner-title').textContent = u.dictBannerTitle;
-  document.getElementById('dict-banner-sub').textContent = u.dictBannerSub;
+  var _dbt = document.getElementById('dict-banner-title');
+  if (_dbt) _dbt.textContent = u.dictBannerTitle;
+  var _dbs = document.getElementById('dict-banner-sub');
+  if (_dbs) _dbs.textContent = u.dictBannerSub;
   document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
   if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
@@ -4214,21 +4238,48 @@ function checkOnline() {
   _langDdSync(LANG);
 })();
 applyTranslations();
-// Connectivity check on PWA startup.
+// ── Connectivity probe ───────────────────────────────────────────────────
+// Fetches a cache-busted URL through the real network (SW passes _nc=
+// requests un-cached). Times out after 5 s to handle captive-portal /
+// server-unreachable scenarios that don't give an immediate connection error.
+function _startConnectivityProbe(onFail) {
+  var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 5000) : null;
+  fetch('/sw.js?_nc=' + Date.now(), {
+    cache: 'no-store',
+    signal: ctrl ? ctrl.signal : undefined
+  }).then(function(res) {
+    if (timer) clearTimeout(timer);
+    if (!res.ok) onFail();
+  }).catch(function() {
+    if (timer) clearTimeout(timer);
+    onFail();
+  });
+}
+
+// Connectivity check on startup.
 // navigator.onLine is unreliable (reports true when a network interface is
 // active even without real internet), so we probe the network directly.
-// Only runs in standalone / installed-PWA mode, not in browser tabs.
-if (_detectStandaloneMode()) {
-  // Synchronous fast path: if the browser already knows it's offline, show immediately.
-  if (!navigator.onLine) {
-    showOfflineScreen();
-  } else {
-    // Async probe: fetch a tiny known asset with a cache-bust so the SW
-    // bypasses its cache and hits the actual network.
-    fetch('/sw.js?_nc=' + Date.now(), { cache: 'no-store' })
-      .catch(function() { showOfflineScreen(); });
-  }
+// Runs in all contexts (browser tab + standalone PWA) because browsers cache
+// the page via the service worker and will serve it even with no internet —
+// we need to detect that and show the offline screen regardless.
+if (!navigator.onLine) {
+  // Synchronous fast path: browser already knows it's offline.
+  showOfflineScreen();
+} else {
+  // Async probe with 5-second timeout.
+  _startConnectivityProbe(showOfflineScreen);
 }
+
+// React to connectivity changes while the page is open.
+window.addEventListener('offline', function() { showOfflineScreen(); });
+window.addEventListener('online', function() {
+  // Browser says a network interface is back. Optimistically hide the screen
+  // and re-probe; if the probe fails (captive portal / server still down),
+  // the offline screen re-appears.
+  hideOfflineScreen();
+  _startConnectivityProbe(showOfflineScreen);
+});
 updateCounts();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
@@ -4298,25 +4349,28 @@ document.addEventListener('keydown', function(e){
 })();
 
 // ── Settings drawer drag-to-close ────────────────────────────────────
-// Handle click (desktop) + swipe-down on the whole panel (mobile)
+// Handle click (desktop) + drag-to-close via the handle pill only (mobile)
 (function() {
   var handle = document.querySelector('.drawer-handle');
   var drawer = document.getElementById('settings-drawer');
   if (!drawer) return;
 
-  // Desktop / tap: click the pill handle to dismiss
+  // Desktop: click the handle to dismiss
   if (handle) handle.addEventListener('click', function() { closeSettings(); });
+
+  // Mobile drag-to-close — listen ONLY on the handle, not the whole drawer.
+  // This means buttons in the drawer body receive clean, uninterrupted taps.
+  if (!handle) return;
 
   var _startY, _dragging, _deltaY;
 
-  // Listen on the whole drawer (same pattern as install guide which works)
-  drawer.addEventListener('touchstart', function(e) {
+  handle.addEventListener('touchstart', function(e) {
     _startY = e.touches[0].clientY;
     _dragging = false;
     _deltaY = 0;
   }, { passive: true });
 
-  drawer.addEventListener('touchmove', function(e) {
+  handle.addEventListener('touchmove', function(e) {
     if (_startY === undefined) return;
     var dy = e.touches[0].clientY - _startY;
     if (dy > 0) e.preventDefault();
@@ -4330,7 +4384,7 @@ document.addEventListener('keydown', function(e){
     }
   }, { passive: false });
 
-  drawer.addEventListener('touchend', function() {
+  handle.addEventListener('touchend', function() {
     if (_startY === undefined) return;
     _startY = undefined;
     if (_dragging && _deltaY > 60) {
@@ -4343,6 +4397,14 @@ document.addEventListener('keydown', function(e){
     }
     _dragging = false;
     _deltaY = 0;
+  });
+
+  handle.addEventListener('touchcancel', function() {
+    _startY = undefined;
+    _dragging = false;
+    _deltaY = 0;
+    drawer.style.transition = '';
+    drawer.style.transform = '';
   });
 })();
 
