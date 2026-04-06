@@ -194,18 +194,24 @@
   function _renderAuthSection() {
     var el = document.getElementById('auth-section-content');
     if (!el) return;
+    var _offline = !!window.APP_OFFLINE;
     if (_user) {
       var _u = (typeof UI !== 'undefined' && typeof LANG !== 'undefined' && UI[LANG]) ? UI[LANG] : (typeof UI !== 'undefined' ? UI.en : null);
       var _signedInAs = (_u && _u.signedInAs) ? _u.signedInAs : 'Signed in as:';
       var _signOutLbl = (_u && _u.signOut) ? _u.signOut : 'Sign out';
+      var _signOutBtn = _offline
+        ? '<button class="auth-signout-btn auth-btn-offline" disabled>' + _escHtml(_signOutLbl) + '</button>'
+        : '<button class="auth-signout-btn" onclick="authSignOut()">' + _escHtml(_signOutLbl) + '</button>';
       el.innerHTML =
         '<p class="auth-email">' + _escHtml(_signedInAs) + ' <strong>' +
           _escHtml(_user.email || _user.id) +
-        '</strong></p>' +
-        '<button class="auth-signout-btn" onclick="authSignOut()">' + _escHtml(_signOutLbl) + '</button>';
+        '</strong></p>' + _signOutBtn;
     } else {
+      var _btnExtra = _offline
+        ? ' class="gsi-material-button auth-btn-offline" disabled'
+        : ' class="gsi-material-button" onclick="authSignIn()"';
       el.innerHTML =
-        '<button class="gsi-material-button" onclick="authSignIn()">' +
+        '<button' + _btnExtra + '>' +
         '<div class="gsi-material-button-state"></div>' +
         '<div class="gsi-material-button-content-wrapper">' +
         '<div class="gsi-material-button-icon">' +
@@ -414,5 +420,9 @@
   } else {
     _init();
   }
+
+  // Expose auth re-render so the in-app offline screen can restore the auth
+  // section without a page reload once connectivity is detected.
+  window.APP_AUTH_RENDER = function() { _renderAuthSection(); };
 
 })();

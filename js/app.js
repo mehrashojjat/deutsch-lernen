@@ -97,6 +97,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Flip cards to reveal meanings',
     practiceMeaningLabel: 'Meaning',
+    offlineTitle: "You're Offline",
+    offlineMessage: 'This app needs an internet connection to work.',
+    offlineRefreshBtn: 'Refresh',
+    offlineChecking: 'Checking…',
   },
   de: {
     headerSub: 'Wortübung · Fälle · Verbformen',
@@ -192,6 +196,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
     practiceMeaningLabel: 'Bedeutung',
+    offlineTitle: 'Kein Internet',
+    offlineMessage: 'Diese App benötigt eine Internetverbindung.',
+    offlineRefreshBtn: 'Neu laden',
+    offlineChecking: 'Prüfen…',
     categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
   },
   tr: {
@@ -285,6 +293,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Anlamı görmek için kartı çevir',
     practiceMeaningLabel: 'Anlam',
+    offlineTitle: 'Çevrimedışısınız',
+    offlineMessage: 'Bu uygulama çalışmak için internet bağlantısı gerektirir.',
+    offlineRefreshBtn: 'Yenile',
+    offlineChecking: 'Kontrol ediliyor…',
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -376,6 +388,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
     practiceMeaningLabel: 'معنی',
+    offlineTitle: 'آفلاین هستید',
+    offlineMessage: 'این برنامه برای کار کردن به اتصال اینترنت نیاز دارد.',
+    offlineRefreshBtn: 'بارگذاری مجدد',
+    offlineChecking: 'در حال بررسی…',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
@@ -466,6 +482,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
     practiceMeaningLabel: 'Значение',
+    offlineTitle: 'Нет подключения',
+    offlineMessage: 'Для работы приложения необходимо подключение к интернету.',
+    offlineRefreshBtn: 'Обновить',
+    offlineChecking: 'Проверка…',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
@@ -556,6 +576,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Переверни картку, щоб побачити значення',
     practiceMeaningLabel: 'Значення',
+    offlineTitle: 'Немає інтернету',
+    offlineMessage: 'Для роботи додатку потрібне підключення до інтернету.',
+    offlineRefreshBtn: 'Оновити',
+    offlineChecking: 'Перевірка…',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
@@ -648,6 +672,10 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
     practiceMeaningLabel: 'المعنى',
+    offlineTitle: 'أنت غير متصل',
+    offlineMessage: 'يحتاج هذا التطبيق إلى اتصال بالإنترنت للعمل.',
+    offlineRefreshBtn: 'تحديث',
+    offlineChecking: 'جارٍ التحقق…',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
@@ -971,6 +999,13 @@ function applyTranslations() {
   if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
     _renderDictList(document.getElementById('dict-search-input').value, true);
   }
+  // Offline screen
+  var _os = document.getElementById('offline-title');
+  if (_os) _os.textContent = u.offlineTitle;
+  var _om = document.getElementById('offline-message');
+  if (_om) _om.textContent = u.offlineMessage;
+  var _or = document.getElementById('offline-refresh-btn');
+  if (_or) _or.textContent = u.offlineRefreshBtn;
   _refreshInstallGuideContent();
 }
 
@@ -4112,6 +4147,55 @@ function show(id){
   _appBackAction = action || function(){};
 }
 
+function showOfflineScreen() {
+  window.APP_OFFLINE = true;
+  var el = document.getElementById('offline-screen');
+  if (el) el.classList.remove('hidden');
+}
+
+function hideOfflineScreen() {
+  window.APP_OFFLINE = false;
+  var el = document.getElementById('offline-screen');
+  if (el) el.classList.add('hidden');
+  if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
+}
+
+function checkOnline() {
+  var btn = document.getElementById('offline-refresh-btn');
+  var origText = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = t('offlineChecking') || '…'; }
+
+  var _done = false;
+  function _restore() {
+    if (_done) return;
+    _done = true;
+    if (btn) { btn.disabled = false; btn.textContent = origText; }
+  }
+
+  // Safety net: never leave the button stuck for more than 7 seconds.
+  var _timer = setTimeout(_restore, 7000);
+
+  // GET with a cache-bust query string: the SW won't find it in cache,
+  // so it hits the real network. Succeeds online, rejects offline.
+  // GET is used (not HEAD) because some WebKit PWA environments silently
+  // hang on fetch() for methods the SW doesn't handle via respondWith().
+  fetch('/sw.js?_nc=' + Date.now(), { cache: 'no-store' })
+    .then(function(res) {
+      clearTimeout(_timer);
+      if (_done) return;
+      _done = true;
+      if (res.ok) {
+        hideOfflineScreen();
+      } else {
+        _restore();
+      }
+    })
+    .catch(function() {
+      clearTimeout(_timer);
+      _restore();
+    });
+}
+
 // ── Init ──
 // Apply persisted language layout (RTL, body classes, active button) on startup
 (function() {
@@ -4129,6 +4213,21 @@ function show(id){
   _langDdSync(LANG);
 })();
 applyTranslations();
+// Connectivity check on PWA startup.
+// navigator.onLine is unreliable (reports true when a network interface is
+// active even without real internet), so we probe the network directly.
+// Only runs in standalone / installed-PWA mode, not in browser tabs.
+if (_detectStandaloneMode()) {
+  // Synchronous fast path: if the browser already knows it's offline, show immediately.
+  if (!navigator.onLine) {
+    showOfflineScreen();
+  } else {
+    // Async probe: fetch a tiny known asset with a cache-bust so the SW
+    // bypasses its cache and hits the actual network.
+    fetch('/sw.js?_nc=' + Date.now(), { cache: 'no-store' })
+      .catch(function() { showOfflineScreen(); });
+  }
+}
 updateCounts();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });

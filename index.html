@@ -90,6 +90,20 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 .app-back-btn:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);}
 .app-back-btn.hidden{visibility:hidden;pointer-events:none;}
 
+/* ── Offline screen ── */
+.app-header{position:relative;z-index:60;}
+#offline-screen{position:fixed;inset:0;z-index:50;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:2rem;gap:.75rem;}
+#offline-screen.hidden{display:none;}
+#offline-screen h2{font-family:'Fraunces','Vazirmatn',serif;font-size:1.5rem;font-weight:700;
+  color:var(--text);margin:0;}
+#offline-screen p{color:var(--muted);font-size:.9rem;max-width:280px;margin:0;line-height:1.5;}
+#offline-refresh-btn{margin-top:.5rem;padding:11px 28px;background:var(--gold);
+  color:#1a1a1a;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;
+  border:none;border-radius:12px;cursor:pointer;transition:opacity .15s;}
+#offline-refresh-btn:hover{opacity:.85;}
+.auth-btn-offline{opacity:.45!important;pointer-events:none!important;cursor:default!important;}
 
 /* ── Quiz prep loading overlay ── */
 #quiz-prep-overlay{display:none;position:fixed;inset:0;background:var(--bg);z-index:400;
@@ -628,6 +642,14 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
     <p id="header-sub">Word Practice · Cases · Verb Forms</p>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="Settings">⛭</button>
+</div>
+
+<!-- ══ OFFLINE SCREEN ══ -->
+<div id="offline-screen" class="hidden">
+  <div style="font-size:2.5rem;line-height:1;">📡</div>
+  <h2 id="offline-title">You're Offline</h2>
+  <p id="offline-message">This app needs an internet connection to work.</p>
+  <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
 </div>
 
 <!-- ══ SETTINGS DRAWER ══ -->
