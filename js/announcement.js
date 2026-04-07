@@ -61,8 +61,9 @@
     }
   ];
 
-  // Only show on the old domain.
-  if (window.location.hostname !== 'wort.rovi.so') return;
+  // Only show on the old domain (works for both http and https).
+  var _host = window.location.hostname;
+  if (_host !== 'wort.rovi.so' && _host !== 'www.wort.rovi.so') return;
 
   // Always show the most-recent announcement on every page load.
   var active = ANNOUNCEMENTS[ANNOUNCEMENTS.length - 1];
