@@ -1,4 +1,4 @@
-var CACHE_NAME = 'wortschatz-shell-v2.1.6';
+var CACHE_NAME = 'wortschatz-shell-v1.1';
 var APP_SHELL = [
   '/index.html',
   '/site.webmanifest',
