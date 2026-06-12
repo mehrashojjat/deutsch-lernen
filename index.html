@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Wortschatz — Free German Vocabulary Game</title>
 <meta name="description" content="Wortschatz is a free mini-game to practice and memorize German vocabulary. Study Goethe-Institut word lists through interactive multiple-choice quizzes — no paywall, no account needed.">
 <meta name="keywords" content="Wortschatz, German vocabulary, learn German, German quiz, Goethe-Institut word list, free German game, German flashcards, vocabulary practice">
@@ -73,6 +73,10 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
   display:flex;flex-direction:column;align-items:center;padding:18px 14px 18px;
   overflow-x:hidden;background-image:radial-gradient(ellipse at 10% 0%,rgba(232,201,122,.07) 0%,transparent 50%),
     radial-gradient(ellipse at 90% 95%,rgba(126,184,247,.06) 0%,transparent 50%);}
+
+/* Native shell: keep content below system status area while letting page
+   background extend into the notch area (no black strip). */
+body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 /* ── HEADER ── */
 .app-header{width:100%;max-width:600px;display:flex;align-items:center;justify-content:space-between;

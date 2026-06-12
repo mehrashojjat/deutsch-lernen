@@ -12,7 +12,7 @@
   },
   "plugins": {
     "StatusBar": {
-      "overlaysWebView": false
+      "overlaysWebView": true
     }
   }
 }

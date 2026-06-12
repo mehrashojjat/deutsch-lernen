@@ -747,6 +747,47 @@ var _installGuideCloseTimer = null;
 var _installExperienceInitialized = false;
 var _installShareActionsBound = false;
 
+function _applyNativeShellInsets() {
+  if (!_isCapacitorNativeRuntime) return;
+  if (document.body) document.body.classList.add('native-shell');
+
+  try {
+    var plugins = window.Capacitor && window.Capacitor.Plugins;
+    var statusBar = plugins && plugins.StatusBar;
+    if (statusBar && typeof statusBar.setOverlaysWebView === 'function') {
+      // Keep webpage drawing into the status area; CSS safe-area padding
+      // moves interactive content below the notch/notification bar.
+      statusBar.setOverlaysWebView({ overlay: true }).catch(function() {});
+    }
+    if (statusBar && typeof statusBar.setBackgroundColor === 'function') {
+      statusBar.setBackgroundColor({ color: '#0b0d13' }).catch(function() {});
+    }
+  } catch (e) {}
+}
+
+function _wireNativeShellInsetGuards() {
+  if (!_isCapacitorNativeRuntime) return;
+  _applyNativeShellInsets();
+
+  window.addEventListener('pageshow', _applyNativeShellInsets);
+  window.addEventListener('focus', _applyNativeShellInsets);
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) _applyNativeShellInsets();
+  });
+
+  try {
+    var app = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App;
+    if (app && typeof app.addListener === 'function') {
+      app.addListener('appStateChange', function (state) {
+        if (state && state.isActive) _applyNativeShellInsets();
+      });
+      app.addListener('appUrlOpen', function () {
+        _applyNativeShellInsets();
+      });
+    }
+  } catch (e) {}
+}
+
 function _readInstallDismissed() {
   try { return localStorage.getItem('dl_install_dismissed') === '1'; }
   catch (e) { return false; }
@@ -4353,6 +4394,7 @@ window.addEventListener('online', function() {
   _startConnectivityProbe(showOfflineScreen);
 });
 updateCounts();
+_wireNativeShellInsetGuards();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
 } else {
