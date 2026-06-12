@@ -403,6 +403,40 @@
     renderCard();
   };
 
+  window.startAdaptiveReviewQuiz = async function (lv, rows, returnScreen) {
+    var p = _get();
+    _active       = true;
+    _answers      = [];
+    _stageAtStart = Math.max(3, p.evaluationStage || 0);
+
+    var ov = document.getElementById('quiz-prep-overlay');
+    ov.classList.add('active');
+
+    try {
+      await _loadCSVLevel(lv);
+    } catch (err) {
+      ov.classList.remove('active');
+      alert('Could not load quiz data.');
+      _active = false;
+      return;
+    }
+
+    var all = _allWords(lv);
+    var cards = _makeCards((rows || []).slice(0, 10), all);
+    ov.classList.remove('active');
+
+    if (!cards.length) { alert('No words available!'); _active = false; return; }
+
+    currentThemeCategoryId = 0;
+    currentLevel = lv;
+    queue = cards;
+    idx = 0; ok = 0; no = 0;
+    if (returnScreen) _quizReturnScreen = returnScreen;
+
+    show('screen-quiz');
+    renderCard();
+  };
+
   // ── Wrap existing functions ────────────────────────────────────
 
   // renderCard: hook in after original renders each card

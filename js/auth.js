@@ -16,6 +16,7 @@
 //    skill_level  → progress.skillLevel
 //    failed_words → progress.words          (full word-stats map)
 //    passed_words → { evaluationStage, recentWords }  (metadata)
+//    quiz_stats   → progress.quizStats      (quiz completion counters)
 //
 //  Guest users: no DB interaction, no adaptive algorithm.
 // ══════════════════════════════════════════════════════════════════
@@ -140,8 +141,90 @@
     try { return JSON.parse(JSON.stringify(obj)); } catch (e) { return null; }
   }
 
+  function _defaultQuizStats() {
+    return { adaptive: _emptyStats(), theme: {} };
+  }
+
+  function _emptyStats() {
+    return { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 };
+  }
+
   function _defaultProgress() {
-    return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [] };
+    return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [], quizStats: _defaultQuizStats() };
+  }
+
+  function _isMetaKey(key) {
+    return key === 'evaluationStage' || key === 'skillLevel' || key === 'recentWords';
+  }
+
+  function _countFromValue(value, fallback) {
+    if (typeof value === 'number') return Math.max(0, value);
+    if (value === true) return fallback;
+    if (value && typeof value === 'object') {
+      return Number(value.count || value.seenCount || value.attempts || value.correctCount ||
+        value.correct || value.incorrectCount || value.wrongCount || value.failCount || value.failScore) || fallback;
+    }
+    return fallback;
+  }
+
+  function _mergeWordRecord(words, id, patch) {
+    id = String(id);
+    if (!id || _isMetaKey(id)) return;
+    var cur = words[id] || { failScore: 0, seenCount: 0, correctCount: 0 };
+    cur.failScore = Math.max(Number(cur.failScore) || 0, Number(patch.failScore) || 0);
+    cur.seenCount = Math.max(Number(cur.seenCount) || 0, Number(patch.seenCount) || 0);
+    cur.correctCount = Math.max(Number(cur.correctCount) || 0, Number(patch.correctCount) || 0);
+    if (patch.recent) cur.recent = true;
+    words[id] = cur;
+  }
+
+  function _mergeHistoryValue(words, id, value, kind) {
+    if (!id || _isMetaKey(String(id))) return;
+    if (value && typeof value === 'object' && (
+      value.seenCount != null || value.correctCount != null || value.failScore != null ||
+      value.correct != null || value.incorrectCount != null || value.wrongCount != null
+    )) {
+      var correct = Number(value.correctCount || value.correct || value.passedCount || 0) || 0;
+      var incorrect = Number(value.incorrectCount || value.wrongCount || value.failedCount || value.failCount || 0) || 0;
+      var fail = Number(value.failScore) || (kind === 'failed' ? Math.max(2, incorrect * 2) : 0);
+      var seen = Number(value.seenCount || value.attempts || 0) || 0;
+      if (!seen) seen = Math.max(correct + incorrect, correct, kind === 'failed' ? 1 : 0);
+      _mergeWordRecord(words, id, { seenCount: seen, correctCount: correct, failScore: fail });
+      return;
+    }
+
+    var count = _countFromValue(value, 1);
+    if (kind === 'passed') {
+      _mergeWordRecord(words, id, { seenCount: count, correctCount: count, failScore: 0 });
+    } else {
+      _mergeWordRecord(words, id, { seenCount: count, correctCount: 0, failScore: Math.max(2, count * 2) });
+    }
+  }
+
+  function _mergeHistorySource(words, source, kind) {
+    if (!source) return;
+    if (Array.isArray(source)) {
+      source.forEach(function (item) {
+        if (item && typeof item === 'object') {
+          _mergeHistoryValue(words, item.id || item.wordId || item.word_id || item.csvId, item, kind);
+        } else {
+          _mergeHistoryValue(words, item, true, kind);
+        }
+      });
+      return;
+    }
+    if (typeof source !== 'object') return;
+    Object.keys(source).forEach(function (id) {
+      if (_isMetaKey(id)) return;
+      _mergeHistoryValue(words, id, source[id], kind);
+    });
+  }
+
+  function _wordHistoryFromRow(row) {
+    var words = {};
+    _mergeHistorySource(words, row.passed_words, 'passed');
+    _mergeHistorySource(words, row.failed_words, 'failed');
+    return words;
   }
 
   // ── DB row → progress object ───────────────────────────────────
@@ -159,10 +242,34 @@
     return {
       evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
       skillLevel      : sl || 1,
-      words           : (row.failed_words && typeof row.failed_words === 'object')
-                          ? row.failed_words : {},
-      recentWords     : rw
+      words           : _wordHistoryFromRow(row),
+      recentWords     : rw,
+      quizStats       : _normalizeQuizStats(row.quiz_stats)
     };
+  }
+
+  function _normalizeStats(s) {
+    s = (s && typeof s === 'object') ? s : {};
+    return {
+      quizzesCompleted: Number(s.quizzesCompleted) || 0,
+      correctAnswers: Number(s.correctAnswers) || 0,
+      incorrectAnswers: Number(s.incorrectAnswers) || 0,
+      studyTimeSeconds: Number(s.studyTimeSeconds) || 0
+    };
+  }
+
+  function _normalizeQuizStats(stats) {
+    stats = (stats && typeof stats === 'object') ? stats : {};
+    var out = { adaptive: _normalizeStats(stats.adaptive), theme: {} };
+    var theme = (stats.theme && typeof stats.theme === 'object') ? stats.theme : {};
+    Object.keys(theme).forEach(function(key) {
+      out.theme[key] = _normalizeStats(theme[key]);
+    });
+    return out;
+  }
+
+  function _rowLevelKey(row) {
+    return String(row && row.level || '').toUpperCase();
   }
 
   // ── DB: fetch one level row (null if missing / error) ─────────
@@ -170,11 +277,25 @@
     try {
       var res = await _db.from(TABLE).select('*')
         .eq('user_id', userId)
-        .eq('level',   level)
-        .single();
-      if (!res.error && res.data) return _progressFromRow(res.data);
-    } catch (e) {}
+        .ilike('level', level)
+        .limit(1);
+      if (!res.error && res.data && res.data[0]) return _progressFromRow(res.data[0]);
+      if (res.error && console && console.warn) console.warn('[auth] progress fetch failed', level, res.error);
+    } catch (e) {
+      if (console && console.warn) console.warn('[auth] progress fetch exception', level, e);
+    }
     return null;
+  }
+
+  async function _fetchAllRows(userId) {
+    try {
+      var res = await _db.from(TABLE).select('*').eq('user_id', userId);
+      if (!res.error && Array.isArray(res.data)) return res.data;
+      if (res.error && console && console.warn) console.warn('[auth] progress fetch-all failed', res.error);
+    } catch (e) {
+      if (console && console.warn) console.warn('[auth] progress fetch-all exception', e);
+    }
+    return [];
   }
 
   // ── DB: guarantee a row exists; safe against UNIQUE violation ─
@@ -185,7 +306,8 @@
         level       : level,
         skill_level : 1,
         failed_words: {},
-        passed_words: { evaluationStage: 0, recentWords: [] }
+        passed_words: { evaluationStage: 0, recentWords: [] },
+        quiz_stats  : _defaultQuizStats()
       }, { onConflict: 'user_id,level' });
     } catch (e) {}
   }
@@ -211,16 +333,23 @@
             evaluationStage: progress.evaluationStage || 0,
             skillLevel     : progress.skillLevel,   // precise float preserved here
             recentWords    : recentInts
-          }
+          },
+          quiz_stats  : _normalizeQuizStats(progress.quizStats)
         }, { onConflict: 'user_id,level' });
     } catch (e) {}
   }
 
   // ── Load ALL levels into cache in one round-trip ───────────────
   async function _loadAllLevels(userId) {
-    var results = await Promise.all(
-      ALL_LEVELS.map(function (lv) { return _fetchRow(userId, lv); })
-    );
+    var rows = await _fetchAllRows(userId);
+    var byLevel = {};
+    rows.forEach(function(row) {
+      var key = _rowLevelKey(row);
+      if (key && !byLevel[key]) byLevel[key] = row;
+    });
+    var results = ALL_LEVELS.map(function(lv) {
+      return byLevel[lv] ? _progressFromRow(byLevel[lv]) : null;
+    });
 
     var ensures = [];
     ALL_LEVELS.forEach(function (lv, i) {
@@ -266,6 +395,48 @@
       _progressCache[lv] = p;          // keep cache in sync
       _updateRow(userId, lv, p);       // persist to DB
     });
+  }
+
+  function _statKeyForCategory(categoryId) {
+    try {
+      var cat = (typeof CATEGORY_MAP !== 'undefined' ? CATEGORY_MAP : []).find(function(c) {
+        return c.id === Number(categoryId);
+      });
+      var name = cat ? cat.name : String(categoryId || 'theme');
+      return name.toLowerCase()
+        .replace(/&/g, 'and')
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_+|_+$/g, '');
+    } catch (e) {
+      return String(categoryId || 'theme');
+    }
+  }
+
+  function _incrementStats(target, payload) {
+    target = _normalizeStats(target);
+    target.quizzesCompleted += 1;
+    target.correctAnswers += Number(payload.correctAnswers) || 0;
+    target.incorrectAnswers += Number(payload.incorrectAnswers) || 0;
+    target.studyTimeSeconds += Number(payload.studyTimeSeconds) || 0;
+    return target;
+  }
+
+  function _recordQuizStats(payload) {
+    if (!_user || !payload) return;
+    var mode = payload.mode === 'theme' ? 'theme' : 'adaptive';
+    var lv = _currentAdaptiveLevel || 'A1';
+    var progress = _progressCache[lv] || _defaultProgress();
+    progress.quizStats = _normalizeQuizStats(progress.quizStats);
+
+    if (mode === 'theme') {
+      var key = _statKeyForCategory(payload.categoryId);
+      progress.quizStats.theme[key] = _incrementStats(progress.quizStats.theme[key], payload);
+    } else {
+      progress.quizStats.adaptive = _incrementStats(progress.quizStats.adaptive, payload);
+    }
+
+    _progressCache[lv] = progress;
+    _updateRow(_user.id, lv, progress);
   }
 
   // ── UI: settings drawer account section ───────────────────────
@@ -314,6 +485,10 @@
   function _renderHome() {
     var tip = document.getElementById('adaptive-tip');
     if (tip) tip.classList.toggle('hidden', !!_user);
+    var profile = document.getElementById('learning-profile-banner');
+    if (profile) profile.classList.toggle('hidden', !_user);
+    var actions = document.querySelector('.home-actions');
+    if (actions) actions.classList.toggle('profile-visible', !!_user);
     if (typeof window.refreshInstallTip === 'function') window.refreshInstallTip();
   }
 
@@ -350,6 +525,98 @@
     window.location.href = window.location.origin + window.location.pathname;
   };
 
+  window.APP_AUTH_IS_SIGNED_IN = function () {
+    return !!_user;
+  };
+
+  window.APP_AUTH_GET_LEARNING_PROFILE = function (level) {
+    if (!_user) return { signedIn: false, level: level || _currentAdaptiveLevel, progress: null };
+    var lv = level || _currentAdaptiveLevel || 'A1';
+    return {
+      signedIn: true,
+      level: lv,
+      progress: _deepCopy(_progressCache[lv] || _defaultProgress())
+    };
+  };
+
+  window.APP_AUTH_USE_LEARNING_LEVEL = function (level) {
+    if (!level) return;
+    _currentAdaptiveLevel = level;
+    _injectLevel(level);
+  };
+
+  window.APP_AUTH_RECORD_QUIZ_STATS = function (payload) {
+    _recordQuizStats(payload);
+  };
+
+  function _jsonShape(value) {
+    if (value == null) return { type: String(value), keys: [], sample: null };
+    if (Array.isArray(value)) {
+      return { type: 'array', length: value.length, sample: value.slice(0, 3) };
+    }
+    if (typeof value === 'object') {
+      var keys = Object.keys(value);
+      return { type: 'object', keyCount: keys.length, keys: keys.slice(0, 12), sample: keys.slice(0, 3).reduce(function(out, key) {
+        out[key] = value[key];
+        return out;
+      }, {}) };
+    }
+    return { type: typeof value, sample: value };
+  }
+
+  window.APP_AUTH_DEBUG_PROGRESS = async function () {
+    if (!_db) return { error: 'Supabase client is not initialized.' };
+    var sessionRes = await _db.auth.getSession();
+    var user = sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.user;
+    if (!user) return { error: 'No signed-in Supabase session found.' };
+    var rows = await _fetchAllRows(user.id);
+    var parsed = {};
+    rows.forEach(function(row) {
+      var key = _rowLevelKey(row) || String(row.level || 'unknown');
+      var progress = _progressFromRow(row);
+      var wordKeys = Object.keys(progress.words || {});
+      parsed[key] = {
+        dbLevel: row.level,
+        skillLevel: progress.skillLevel,
+        evaluationStage: progress.evaluationStage,
+        recentWords: (progress.recentWords || []).length,
+        parsedWordCount: wordKeys.length,
+        parsedSample: wordKeys.slice(0, 5).reduce(function(out, id) {
+          out[id] = progress.words[id];
+          return out;
+        }, {}),
+        quizStats: progress.quizStats
+      };
+    });
+    return {
+      userId: user.id,
+      email: user.email,
+      rowCount: rows.length,
+      cacheLevels: Object.keys(_progressCache),
+      cacheSummary: ALL_LEVELS.reduce(function(out, lv) {
+        var p = _progressCache[lv] || {};
+        out[lv] = {
+          words: Object.keys(p.words || {}).length,
+          recentWords: (p.recentWords || []).length,
+          skillLevel: p.skillLevel,
+          evaluationStage: p.evaluationStage
+        };
+        return out;
+      }, {}),
+      rawRows: rows.map(function(row) {
+        return {
+          id: row.id,
+          level: row.level,
+          skill_level: row.skill_level,
+          passed_words_shape: _jsonShape(row.passed_words),
+          failed_words_shape: _jsonShape(row.failed_words),
+          quiz_stats_shape: _jsonShape(row.quiz_stats)
+        };
+      }),
+      parsed: parsed
+    };
+  };
+
   // ── Auth events ────────────────────────────────────────────────
   async function _onSignIn(user) {
     // Guard: skip if already signed in as this user (INITIAL_SESSION + getUser race)
@@ -361,6 +628,11 @@
     await _loadAllLevels(user.id);
     _injectLevel(_currentAdaptiveLevel);
     _registerSaveHook(user.id);
+    var profileScreen = document.getElementById('screen-learning-profile');
+    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+        typeof window.renderLearningProfile === 'function') {
+      window.renderLearningProfile();
+    }
   }
 
   function _onSignOut() {
@@ -516,6 +788,6 @@
 
   // Expose auth re-render so the in-app offline screen can restore the auth
   // section without a page reload once connectivity is detected.
-  window.APP_AUTH_RENDER = function() { _renderAuthSection(); };
+  window.APP_AUTH_RENDER = function() { _renderAuthSection(); _renderHome(); };
 
 })();

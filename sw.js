@@ -1,12 +1,12 @@
-var CACHE_NAME = 'wortschatz-shell-v1.1.h';
+var CACHE_NAME = 'wortschatz-shell-v1.1.i';
 var APP_SHELL = [
   '/index.html',
   '/site.webmanifest',
   '/favicon.ico',
   '/apple-touch-icon.png',
-  '/js/app.js?v=1.9',
-  '/js/adaptive.js?v=1.9',
-  '/js/auth.js?v=1.9',
+  '/js/app.js?v=2.0',
+  '/js/adaptive.js?v=2.0',
+  '/js/auth.js?v=2.0',
   '/assets/ShareButton.png',
   '/assets/A2HS.png'
 ];

@@ -238,6 +238,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 /* ── HOME ACTIONS ── */
 .home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.home-primary-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;grid-column:1/-1;}
 
 /* ── RANDOM BANNER ── */
 .random-banner{background:linear-gradient(135deg,rgba(232,201,122,.1),rgba(126,184,247,.08));
@@ -250,9 +251,14 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .random-banner.swipe-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(107,232,160,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);}
 .random-banner.swipe-banner .rb-text strong{color:var(--blue);}
 .random-banner.adaptive-banner{background:linear-gradient(135deg,rgba(107,232,160,.12),rgba(232,201,122,.08));border-left:1px solid rgb(69 127 90);border-right:1px solid rgb(54 95 69);grid-column:1/-1;}
+.home-actions.profile-visible .home-primary-actions .random-banner.adaptive-banner{grid-column:span 2;}
 .random-banner.adaptive-banner .rb-text strong{color:#6be8a0;font-size:1rem;}
 .random-banner.adaptive-banner .rb-icon{font-size:3rem;}
 .random-banner.adaptive-banner .rb-text span{font-size:.9rem;}
+.random-banner.learning-profile-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(121 107 68);}
+.random-banner.learning-profile-banner .rb-text strong{color:var(--blue);}
+.random-banner.learning-profile-banner .rb-icon{font-size:2.2rem;}
+.random-banner.learning-profile-banner.hidden{display:none;}
 .random-banner.theme-banner{background:linear-gradient(135deg,rgba(183,138,247,.12),rgba(126,184,247,.08));border-left:1px solid rgb(117 81 159);border-right:1px solid rgb(111 77 150);}
 .random-banner.theme-banner .rb-text strong{color:#b78af7;}
 .random-banner.practice-banner{border-left:1px solid rgb(121 107 68);border-right:1px solid rgb(111 98 62);}
@@ -271,6 +277,36 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 /* ── SECTION LABEL ── */
 .section-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--muted);margin:16px 0 10px;}
+
+@media (max-width:560px){
+  .home-actions{grid-template-columns:1fr 1fr;}
+  .random-banner.adaptive-banner{grid-column:1/-1;}
+  .profile-header{display:block;}
+  .profile-level-tabs{margin-top:12px;}
+  .profile-performance{grid-template-columns:1fr;}
+}
+
+/* ── LEARNING PROFILE ── */
+.profile-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px;}
+.profile-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.55rem;font-weight:700;color:var(--text);line-height:1.15;}
+.profile-subtitle{font-size:.82rem;color:var(--muted);margin-top:5px;}
+.profile-level-tabs{display:flex;gap:6px;flex-shrink:0;}
+.profile-level-tab{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--muted);border-radius:999px;padding:7px 10px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.75rem;font-weight:700;cursor:pointer;}
+.profile-level-tab.active{border-color:rgba(126,184,247,.45);background:rgba(126,184,247,.12);color:var(--blue);}
+.profile-section{margin-bottom:20px;}
+.profile-section-title{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 10px;}
+.profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.profile-stat{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;}
+.profile-stat strong{display:block;font-size:1.35rem;color:var(--text);line-height:1;}
+.profile-stat span{display:block;font-size:.74rem;color:var(--muted);margin-top:7px;}
+.profile-performance{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.profile-list{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;min-height:128px;}
+.profile-list-title{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:9px;}
+.profile-list div:not(.profile-list-title){font-size:.84rem;color:var(--muted);line-height:1.8;}
+.profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
+.profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
+.profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
+.profile-empty{color:var(--muted);font-size:.84rem;line-height:1.6;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:16px;}
 
 
 
@@ -793,11 +829,19 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 </div>
 <div class="screen" id="screen-levels">
   <div class="home-actions">
-    <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
-      <div class="rb-icon">🎯</div>
-      <div class="rb-text">
-        <strong id="adaptive-banner-title">Adaptive Quiz</strong>
-        <span id="adaptive-banner-sub">Adjusts to your skill level</span>
+    <div class="home-primary-actions">
+      <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
+        <div class="rb-icon">🎯</div>
+        <div class="rb-text">
+          <strong id="adaptive-banner-title">Adaptive Quiz</strong>
+          <span id="adaptive-banner-sub">Adjusts to your skill level</span>
+        </div>
+      </div>
+      <div class="random-banner learning-profile-banner hidden" id="learning-profile-banner" onclick="openLearningProfile()">
+        <div class="rb-icon">👨🏻‍💻</div>
+        <div class="rb-text">
+          <strong id="learning-profile-banner-title">Learning Profile</strong>
+        </div>
       </div>
     </div>
     <div class="random-banner practice-banner" onclick="openPracticeSetup()">
@@ -861,6 +905,21 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
     <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
     <p id="footer-copy">© 2026 Mehras Hojjat</p>
   </div>
+</div>
+
+<!-- ══ LEARNING PROFILE ══ -->
+<div class="screen hidden" id="screen-learning-profile">
+  <div class="profile-header">
+    <div>
+      <div class="profile-title" id="learning-profile-title">Learning Profile</div>
+    </div>
+    <div class="profile-level-tabs">
+      <button class="profile-level-tab active" id="profile-level-A1" onclick="setLearningProfileLevel('A1')">A1</button>
+      <button class="profile-level-tab" id="profile-level-A2" onclick="setLearningProfileLevel('A2')">A2</button>
+      <button class="profile-level-tab" id="profile-level-B1" onclick="setLearningProfileLevel('B1')">B1</button>
+    </div>
+  </div>
+  <div id="learning-profile-content"></div>
 </div>
 
 <!-- ══ QUIZ ══ -->
@@ -1045,9 +1104,9 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 </div>
 
 <!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="js/app.js?v=1.9"></script>
-<script src="js/adaptive.js?v=1.9"></script>
-<script src="js/auth.js?v=1.9"></script>
+<script src="js/app.js?v=2.0"></script>
+<script src="js/adaptive.js?v=2.0"></script>
+<script src="js/auth.js?v=2.0"></script>
 <script src="js/announcement.js?v=1.2"></script>
 </body>
 </html>
