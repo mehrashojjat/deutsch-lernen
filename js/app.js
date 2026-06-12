@@ -749,15 +749,15 @@ var _installShareActionsBound = false;
 
 function _applyNativeShellInsets() {
   if (!_isCapacitorNativeRuntime) return;
-  if (document.body) document.body.classList.add('native-shell');
+  if (document.body) document.body.classList.remove('native-shell');
 
   try {
     var plugins = window.Capacitor && window.Capacitor.Plugins;
     var statusBar = plugins && plugins.StatusBar;
     if (statusBar && typeof statusBar.setOverlaysWebView === 'function') {
-      // Keep webpage drawing into the status area; CSS safe-area padding
-      // moves interactive content below the notch/notification bar.
-      statusBar.setOverlaysWebView({ overlay: true }).catch(function() {});
+      // Use native-managed inset to keep web content reliably below
+      // status/notch area across auth return and app resume transitions.
+      statusBar.setOverlaysWebView({ overlay: false }).catch(function() {});
     }
     if (statusBar && typeof statusBar.setBackgroundColor === 'function') {
       statusBar.setBackgroundColor({ color: '#0b0d13' }).catch(function() {});
