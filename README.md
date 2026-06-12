@@ -28,6 +28,10 @@ It runs entirely in the browser as a static HTML/JS app — no server required.
 │   ├── a2.csv               # A2 vocabulary (1059 words)
 │   └── b1.csv               # B1 vocabulary (4272 words)
 ├── icons/                   # PWA + favicon assets
+├── mobile/                  # Capacitor shell workspace
+│   ├── ios/                 # Native iOS project
+│   ├── android/             # Native Android project
+│   └── capacitor.config.json
 ├── site.webmanifest         # PWA manifest
 ├── favicon.ico
 ├── apple-touch-icon.png
@@ -42,6 +46,19 @@ It runs entirely in the browser as a static HTML/JS app — no server required.
 **Locally:** Double-click `start_local_server.command` (macOS), then open `http://localhost:8000` in your browser.
 
 **Live:** Hosted at [wortschatzapp.de](https://wortschatzapp.de) via GitHub Pages.
+
+### Mobile Shell (Capacitor)
+
+Capacitor setup is isolated under `mobile/` so GitHub Pages deployment from repository root stays unchanged.
+
+From `mobile/`:
+
+- `npm install`
+- `npm run sync`
+- `npm run open:ios`
+- `npm run open:android`
+
+The shell currently loads the live website URL in a WebView for MVP testing.
 
 ---
 

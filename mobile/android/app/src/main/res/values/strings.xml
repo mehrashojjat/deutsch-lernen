@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Wortschatz</string>
+    <string name="title_activity_main">Wortschatz</string>
+    <string name="package_name">so.rovi.wortschatz</string>
+    <string name="custom_url_scheme">so.rovi.wortschatz</string>
+</resources>

@@ -1,7 +1,7 @@
 {
   "name": "Wortschatz",
   "short_name": "Wortschatz",
-  "description": "A free mini-game to practice and memorize German vocabulary — built on Goethe-Institut word lists.",
+  "description": "A gamified quiz app to practice and memorize German vocabulary",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f0e8",

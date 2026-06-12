@@ -43,6 +43,84 @@
   var _origStartAdaptive = null;
   var _origShowResults   = null;
   var _origGoHome        = null;
+  var _capAppListener    = null;
+
+  function _isCapacitorNative() {
+    try {
+      return !!(window.Capacitor &&
+        typeof window.Capacitor.isNativePlatform === 'function' &&
+        window.Capacitor.isNativePlatform());
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function _oauthRedirectTo() {
+    if (_isCapacitorNative()) return 'so.rovi.wortschatz://auth/callback';
+    return window.location.origin + window.location.pathname;
+  }
+
+  async function _openExternalAuthUrl(url) {
+    var browser = window.Capacitor &&
+      window.Capacitor.Plugins &&
+      window.Capacitor.Plugins.Browser;
+
+    if (browser && typeof browser.open === 'function') {
+      await browser.open({ url: url });
+      return;
+    }
+    window.open(url, '_blank');
+  }
+
+  async function _handleCapacitorAuthUrl(url) {
+    if (!_db || !url) return;
+    try {
+      var parsed = new URL(url);
+      if (parsed.protocol !== 'so.rovi.wortschatz:') return;
+
+      // Support both OAuth return shapes:
+      // 1) PKCE: ?code=...
+      // 2) Implicit: #access_token=...&refresh_token=...
+      var code = parsed.searchParams.get('code');
+      var hashParams = new URLSearchParams((parsed.hash || '').replace(/^#/, ''));
+      var accessToken = hashParams.get('access_token');
+      var refreshToken = hashParams.get('refresh_token');
+
+      if (code) {
+        var exchanged = await _db.auth.exchangeCodeForSession(code);
+        if (exchanged && exchanged.data && exchanged.data.session && exchanged.data.session.user) {
+          await _onSignIn(exchanged.data.session.user);
+        }
+      } else if (accessToken && refreshToken) {
+        var setRes = await _db.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken
+        });
+        if (setRes && setRes.data && setRes.data.user) {
+          await _onSignIn(setRes.data.user);
+        }
+      }
+
+      var browser = window.Capacitor &&
+        window.Capacitor.Plugins &&
+        window.Capacitor.Plugins.Browser;
+      if (browser && typeof browser.close === 'function') {
+        await browser.close().catch(function() {});
+      }
+    } catch (e) {}
+  }
+
+  function _wireCapacitorAuthCallback() {
+    if (!_isCapacitorNative() || _capAppListener) return;
+    var app = window.Capacitor &&
+      window.Capacitor.Plugins &&
+      window.Capacitor.Plugins.App;
+    if (!app || typeof app.addListener !== 'function') return;
+    _capAppListener = app.addListener('appUrlOpen', function (data) {
+      if (!data || !data.url) return;
+      _handleCapacitorAuthUrl(data.url);
+    });
+  }
 
   // ── Supabase client ────────────────────────────────────────────
   function _initClient() {
@@ -242,13 +320,27 @@
   // ── Public: Google OAuth ───────────────────────────────────────
   window.authSignIn = async function () {
     if (!_db) return;
-    // Explicitly set redirectTo so Supabase always returns to this exact
-    // page.  The URL must also appear in Supabase Dashboard → Auth →
-    // URL Configuration → Redirect URLs (add both production and any
-    // localhost URLs you test from).
+    var redirectTo = _oauthRedirectTo();
+
+    // Web: keep current in-page redirect flow.
+    // Native: request provider URL and open in external browser, then handle
+    // callback via App.appUrlOpen.
+    if (_isCapacitorNative()) {
+      var nativeRes = await _db.auth.signInWithOAuth({
+        provider: 'google',
+        options : {
+          redirectTo: redirectTo,
+          skipBrowserRedirect: true
+        }
+      });
+      var authUrl = nativeRes && nativeRes.data ? nativeRes.data.url : null;
+      if (authUrl) await _openExternalAuthUrl(authUrl);
+      return;
+    }
+
     await _db.auth.signInWithOAuth({
       provider: 'google',
-      options : { redirectTo: window.location.origin + window.location.pathname }
+      options : { redirectTo: redirectTo }
     });
   };
 
@@ -379,6 +471,7 @@
   async function _init() {
     _initClient();
     if (!_db) return;
+    _wireCapacitorAuthCallback();
 
     // All wrappers must be registered after adaptive.js has run
     _wrapStartLevel();

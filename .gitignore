@@ -6,3 +6,15 @@ https_server.py
 android_server.py
 .DS_Store
 .venv/
+
+# Capacitor mobile workspace
+mobile/node_modules/
+mobile/.idea/
+mobile/.gradle/
+mobile/android/.gradle/
+mobile/android/**/build/
+mobile/android/local.properties
+mobile/ios/DerivedData/
+mobile/ios/**/*.xcuserstate
+mobile/ios/**/*.xcworkspace/xcuserdata/
+mobile/ios/**/*.xcodeproj/xcuserdata/

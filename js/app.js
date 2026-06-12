@@ -729,6 +729,20 @@ var _installPromptReady = false;
 var _installDismissed = false;
 var _installStateMedia = null;
 var _isStandaloneMode = false;
+var _isCapacitorNativeRuntime = (function() {
+  try {
+    if (!window.Capacitor) return false;
+    if (typeof window.Capacitor.isNativePlatform === 'function') {
+      return !!window.Capacitor.isNativePlatform();
+    }
+    if (typeof window.Capacitor.getPlatform === 'function') {
+      return window.Capacitor.getPlatform() !== 'web';
+    }
+    return false;
+  } catch (e) {
+    return false;
+  }
+})();
 var _installGuideCloseTimer = null;
 var _installExperienceInitialized = false;
 var _installShareActionsBound = false;
@@ -1182,6 +1196,10 @@ function _refreshInstallGuideContent() {
 function refreshInstallTip() {
   var tip = document.getElementById('install-tip');
   if (!tip) return;
+  if (_isCapacitorNativeRuntime) {
+    tip.classList.add('hidden');
+    return;
+  }
   _isStandaloneMode = _detectStandaloneMode();
   var shouldShow = false;
   if (!_isStandaloneMode && !_installDismissed) {
@@ -1253,36 +1271,38 @@ function _initInstallExperience() {
   _installExperienceInitialized = true;
   _installLog('log', 'init install experience', { readyState: document.readyState });
   _installDismissed = _readInstallDismissed();
-  _isStandaloneMode = _detectStandaloneMode();
+  _isStandaloneMode = _detectStandaloneMode() || _isCapacitorNativeRuntime;
 
-  if ('serviceWorker' in navigator) {
+  if (!_isCapacitorNativeRuntime && 'serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(function() {});
     navigator.serviceWorker.addEventListener('controllerchange', function() {
       window.location.reload();
     });
   }
 
-  window.addEventListener('beforeinstallprompt', function(e) {
-    e.preventDefault();
-    _deferredInstallPrompt = e;
-    _installPromptReady = true;
-    refreshInstallTip();
-  });
+  if (!_isCapacitorNativeRuntime) {
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.preventDefault();
+      _deferredInstallPrompt = e;
+      _installPromptReady = true;
+      refreshInstallTip();
+    });
 
-  window.addEventListener('appinstalled', function() {
-    _deferredInstallPrompt = null;
-    _installPromptReady = false;
-    _writeInstallDismissed(true);
-    closeInstallGuide();
-    refreshInstallTip();
-  });
+    window.addEventListener('appinstalled', function() {
+      _deferredInstallPrompt = null;
+      _installPromptReady = false;
+      _writeInstallDismissed(true);
+      closeInstallGuide();
+      refreshInstallTip();
+    });
 
-  if (window.matchMedia) {
-    _installStateMedia = window.matchMedia('(display-mode: standalone)');
-    if (_installStateMedia && _installStateMedia.addEventListener) {
-      _installStateMedia.addEventListener('change', refreshInstallTip);
-    } else if (_installStateMedia && _installStateMedia.addListener) {
-      _installStateMedia.addListener(refreshInstallTip);
+    if (window.matchMedia) {
+      _installStateMedia = window.matchMedia('(display-mode: standalone)');
+      if (_installStateMedia && _installStateMedia.addEventListener) {
+        _installStateMedia.addEventListener('change', refreshInstallTip);
+      } else if (_installStateMedia && _installStateMedia.addListener) {
+        _installStateMedia.addListener(refreshInstallTip);
+      }
     }
   }
 

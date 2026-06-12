@@ -1,0 +1,18 @@
+{
+  "appId": "so.rovi.wortschatz",
+  "appName": "Wortschatz",
+  "webDir": "www",
+  "server": {
+    "url": "https://wortschatzapp.de",
+    "cleartext": false,
+    "allowNavigation": [
+      "wortschatzapp.de",
+      "*.supabase.co"
+    ]
+  },
+  "plugins": {
+    "StatusBar": {
+      "overlaysWebView": false
+    }
+  }
+}
