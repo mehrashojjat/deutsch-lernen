@@ -1,4 +1,4 @@
-var CACHE_NAME = 'wortschatz-shell-v1.1.i';
+var CACHE_NAME = 'wortschatz-shell-v1.1.j';
 var APP_SHELL = [
   '/index.html',
   '/site.webmanifest',
@@ -35,6 +35,11 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   if (event.request.method !== 'GET') return;
 
+  // Ignore unsupported schemes (e.g. browser extension resources).
+  var reqUrl;
+  try { reqUrl = new URL(event.request.url); } catch (e) { return; }
+  if (reqUrl.protocol !== 'http:' && reqUrl.protocol !== 'https:') return;
+
   // HTML navigation requests: network-first; fall back to cached shell offline.
   if (event.request.mode === 'navigate') {
     event.respondWith(
@@ -59,7 +64,9 @@ self.addEventListener('fetch', function(event) {
       fetch(event.request, { cache: 'no-cache' }).then(function(response) {
         if (!response || response.status !== 200 || response.type !== 'basic') return response;
         var clone = response.clone();
-        caches.open(CACHE_NAME).then(function(cache) { cache.put(event.request, clone); });
+        caches.open(CACHE_NAME).then(function(cache) {
+          return cache.put(event.request, clone).catch(function() {});
+        }).catch(function() {});
         return response;
       }).catch(function() {
         return caches.match(event.request);
@@ -76,8 +83,8 @@ self.addEventListener('fetch', function(event) {
         if (!response || response.status !== 200 || response.type !== 'basic') return response;
         var responseToCache = response.clone();
         caches.open(CACHE_NAME).then(function(cache) {
-          cache.put(event.request, responseToCache);
-        });
+          return cache.put(event.request, responseToCache).catch(function() {});
+        }).catch(function() {});
         return response;
       });
     })

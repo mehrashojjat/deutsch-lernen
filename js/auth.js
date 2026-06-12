@@ -167,6 +167,19 @@
     return fallback;
   }
 
+  function _parseJsonLike(value) {
+    if (value == null) return value;
+    if (typeof value === 'string') {
+      var s = value.trim();
+      if (!s) return null;
+      try { return JSON.parse(s); } catch (e) { return value; }
+    }
+    if (value && typeof value === 'object' && value.value != null) {
+      return _parseJsonLike(value.value);
+    }
+    return value;
+  }
+
   function _mergeWordRecord(words, id, patch) {
     id = String(id);
     if (!id || _isMetaKey(id)) return;
@@ -202,6 +215,7 @@
   }
 
   function _mergeHistorySource(words, source, kind) {
+    source = _parseJsonLike(source);
     if (!source) return;
     if (Array.isArray(source)) {
       source.forEach(function (item) {
@@ -222,15 +236,17 @@
 
   function _wordHistoryFromRow(row) {
     var words = {};
-    _mergeHistorySource(words, row.passed_words, 'passed');
-    _mergeHistorySource(words, row.failed_words, 'failed');
+    _mergeHistorySource(words, _parseJsonLike(row.passed_words), 'passed');
+    _mergeHistorySource(words, _parseJsonLike(row.failed_words), 'failed');
     return words;
   }
 
   // ── DB row → progress object ───────────────────────────────────
   function _progressFromRow(row) {
-    var meta = (row.passed_words && typeof row.passed_words === 'object')
-      ? row.passed_words : {};
+    var passed = _parseJsonLike(row.passed_words);
+    var failed = _parseJsonLike(row.failed_words);
+    var meta = (passed && typeof passed === 'object' && !Array.isArray(passed))
+      ? passed : {};
     // recentWords are stored as integers in DB; convert to strings so they
     // match the string IDs that the CSV parser produces (e.g. r.id === "17").
     var rw = Array.isArray(meta.recentWords)
@@ -242,19 +258,26 @@
     return {
       evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
       skillLevel      : sl || 1,
-      words           : _wordHistoryFromRow(row),
+      words           : _wordHistoryFromRow({ passed_words: passed, failed_words: failed }),
       recentWords     : rw,
-      quizStats       : _normalizeQuizStats(row.quiz_stats)
+      quizStats       : _normalizeQuizStats(_parseJsonLike(row.quiz_stats))
     };
   }
 
   function _normalizeStats(s) {
     s = (s && typeof s === 'object') ? s : {};
+    function _pickNum(obj, keys) {
+      for (var i = 0; i < keys.length; i++) {
+        var v = Number(obj[keys[i]]);
+        if (isFinite(v) && v >= 0) return v;
+      }
+      return 0;
+    }
     return {
-      quizzesCompleted: Number(s.quizzesCompleted) || 0,
-      correctAnswers: Number(s.correctAnswers) || 0,
-      incorrectAnswers: Number(s.incorrectAnswers) || 0,
-      studyTimeSeconds: Number(s.studyTimeSeconds) || 0
+      quizzesCompleted: _pickNum(s, ['quizzesCompleted', 'quizzes_completed', 'completed', 'quizCount']),
+      correctAnswers: _pickNum(s, ['correctAnswers', 'correct_answers', 'correct', 'answersCorrect']),
+      incorrectAnswers: _pickNum(s, ['incorrectAnswers', 'incorrect_answers', 'incorrect', 'wrong', 'answersIncorrect']),
+      studyTimeSeconds: _pickNum(s, ['studyTimeSeconds', 'study_time_seconds', 'studyTime', 'timeSeconds', 'durationSeconds'])
     };
   }
 
@@ -392,6 +415,11 @@
     if (typeof window._adaptiveSetSaveHook !== 'function') return;
     window._adaptiveSetSaveHook(function (p) {
       var lv = _currentAdaptiveLevel;  // read at call time, not captured
+      // Adaptive engine saves core progress fields only.
+      // Preserve quizStats from cache so adaptive saves do not wipe activity data.
+      var prev = _progressCache[lv] || _defaultProgress();
+      p = p && typeof p === 'object' ? p : _defaultProgress();
+      p.quizStats = _normalizeQuizStats((p.quizStats && typeof p.quizStats === 'object') ? p.quizStats : prev.quizStats);
       _progressCache[lv] = p;          // keep cache in sync
       _updateRow(userId, lv, p);       // persist to DB
     });

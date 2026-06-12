@@ -1887,6 +1887,18 @@ function _buildQueueFromRows(rows) {
 // ── LEARNING PROFILE ──
 function openLearningProfile() {
   if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && !window.APP_AUTH_IS_SIGNED_IN()) return;
+  if (typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
+    var snap = window.APP_AUTH_GET_LEARNING_PROFILE();
+    if (snap && snap.level) learningProfileSelectedLevel = String(snap.level).toUpperCase();
+  }
+  var bestLevel = _bestLearningProfileLevel();
+  if (bestLevel && _profileLevelScore(bestLevel) > 0) {
+    learningProfileSelectedLevel = bestLevel;
+  }
+  ['A1','A2','B1'].forEach(function(k) {
+    var el = document.getElementById('profile-level-' + k);
+    if (el) el.classList.toggle('active', k === learningProfileSelectedLevel);
+  });
   window.umami?.track('learning_profile_opened');
   show('screen-learning-profile');
   renderLearningProfile();
@@ -1912,9 +1924,16 @@ function _profileWordRows(progress) {
   var words = (progress && progress.words) || {};
   return Object.keys(words).map(function(id) {
     var w = words[id] || {};
-    var seen = Number(w.seenCount) || 0;
-    var correct = Number(w.correctCount) || 0;
+    var correct = Number(w.correctCount);
+    if (!isFinite(correct)) correct = Number(w.correct) || Number(w.passedCount) || 0;
+    var seen = Number(w.seenCount);
+    if (!isFinite(seen) || seen <= 0) {
+      var incorrectLegacy = Number(w.incorrectCount) || Number(w.wrongCount) || Number(w.failedCount) || Number(w.failCount) || 0;
+      seen = Math.max(correct + incorrectLegacy, correct, Number(w.attempts) || 0, Number(w.failScore) > 0 ? 1 : 0);
+    }
     var fail = Number(w.failScore) || 0;
+    if (!isFinite(correct) || correct < 0) correct = 0;
+    if (!isFinite(seen) || seen < 0) seen = 0;
     return {
       id: String(id),
       seenCount: seen,
@@ -1931,10 +1950,13 @@ function _profileTotals(progress) {
   var correct = rows.reduce(function(sum, w) { return sum + w.correctCount; }, 0);
   var seen = rows.reduce(function(sum, w) { return sum + w.seenCount; }, 0);
   var mastered = rows.filter(function(w) {
-    return w.seenCount >= 3 && w.failScore === 0 && w.accuracy >= 0.8;
+    return w.seenCount >= 4 && w.accuracy >= 0.85 && w.incorrectCount <= 1 && w.failScore <= 1;
   }).length;
   var struggling = rows.filter(function(w) {
-    return w.failScore >= 2 || w.incorrectCount >= 2 || (w.seenCount >= 2 && w.accuracy < 0.6);
+    var repeatedIncorrect = w.incorrectCount >= 2;
+    var lowAccuracyWithHistory = w.seenCount >= 4 && w.accuracy < 0.65;
+    var elevatedFailPressure = w.failScore >= 4 && w.accuracy < 0.8;
+    return repeatedIncorrect || lowAccuracyWithHistory || elevatedFailPressure;
   }).length;
   return {
     wordsSeen: rows.length,
@@ -1963,6 +1985,56 @@ function _activityTotals(quizStats) {
   var theme = (quizStats && quizStats.theme) || {};
   Object.keys(theme).forEach(function(key) { total = _addStats(total, theme[key]); });
   return total;
+}
+
+function _deriveActivityFromWords(progress) {
+  var rows = _profileWordRows(progress || {});
+  var correct = rows.reduce(function(sum, w) { return sum + (Number(w.correctCount) || 0); }, 0);
+  var incorrect = rows.reduce(function(sum, w) { return sum + (Number(w.incorrectCount) || 0); }, 0);
+  var answers = correct + incorrect;
+  return {
+    quizzesCompleted: answers > 0 ? Math.max(1, Math.floor(answers / Math.max(1, QUIZ_LEN || 10))) : 0,
+    correctAnswers: correct,
+    incorrectAnswers: incorrect,
+    studyTimeSeconds: 0
+  };
+}
+
+function _activityTotalsWithFallback(progress) {
+  var stats = _activityTotals((progress && progress.quizStats) || {});
+  var hasTracked = (Number(stats.quizzesCompleted) || 0) > 0 ||
+    (Number(stats.correctAnswers) || 0) > 0 ||
+    (Number(stats.incorrectAnswers) || 0) > 0 ||
+    (Number(stats.studyTimeSeconds) || 0) > 0;
+  if (hasTracked) return stats;
+  return _deriveActivityFromWords(progress);
+}
+
+function _profileLevelScore(level) {
+  var snap = _profileSnapshot(level);
+  if (!snap || !snap.signedIn) return -1;
+  var progress = snap.progress || {};
+  var totals = _profileTotals(progress);
+  var activity = _activityTotalsWithFallback(progress);
+  var answers = (Number(activity.correctAnswers) || 0) + (Number(activity.incorrectAnswers) || 0);
+  var timeBoost = Math.min(1000, Math.max(0, Number(activity.studyTimeSeconds) || 0) / 10);
+  return (Number(totals.wordsSeen) || 0) * 100 +
+    (Number(activity.quizzesCompleted) || 0) * 50 +
+    answers + timeBoost;
+}
+
+function _bestLearningProfileLevel() {
+  var levels = ['A1', 'A2', 'B1'];
+  var best = levels[0];
+  var bestScore = _profileLevelScore(best);
+  levels.slice(1).forEach(function(level) {
+    var score = _profileLevelScore(level);
+    if (score > bestScore) {
+      best = level;
+      bestScore = score;
+    }
+  });
+  return best;
 }
 
 function _formatStudyTime(seconds) {
@@ -2012,8 +2084,11 @@ function renderLearningProfile() {
   }
   var progress = snap.progress || {};
   var totals = _profileTotals(progress);
-  var activity = _activityTotals(progress.quizStats || {});
+  var activity = _activityTotalsWithFallback(progress);
   var perf = _performanceLists(progress.quizStats || {});
+  var selectedScore = _profileLevelScore(learningProfileSelectedLevel);
+  var bestLevel = _bestLearningProfileLevel();
+  var bestScore = _profileLevelScore(bestLevel);
   function stat(label, value) {
     return '<div class="profile-stat"><strong>' + escHtml(value) + '</strong><span>' + escHtml(label) + '</span></div>';
   }
@@ -2023,7 +2098,13 @@ function renderLearningProfile() {
     }).join('') : '<div>' + escHtml(empty) + '</div>';
     return '<div class="profile-list"><div class="profile-list-title">' + escHtml(title) + '</div>' + body + '</div>';
   }
+  var levelHint = '';
+  if (selectedScore <= 0 && bestLevel && bestLevel !== learningProfileSelectedLevel && bestScore > 0) {
+    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">No tracked data for ' +
+      escHtml(learningProfileSelectedLevel) + '. Try the ' + escHtml(bestLevel) + ' tab.</div>';
+  }
   el.innerHTML =
+    levelHint +
     '<div class="profile-section"><div class="profile-section-title">Overview</div><div class="profile-grid">' +
       stat('Words Seen', totals.wordsSeen) +
       stat('Words Mastered', totals.wordsMastered) +
@@ -2046,6 +2127,25 @@ function renderLearningProfile() {
       '<button onclick="startLearningProfileReview(\'mixed\')">Review Mixed Practice</button>' +
     '</div></div>';
 }
+
+window.APP_DEBUG_LEARNING_PROFILE = function(level) {
+  var lv = (level || learningProfileSelectedLevel || 'A1');
+  var snap = _profileSnapshot(lv);
+  var progress = (snap && snap.progress) || {};
+  return {
+    level: lv,
+    signedIn: !!(snap && snap.signedIn),
+    wordKeys: Object.keys(progress.words || {}).length,
+    recentWords: (progress.recentWords || []).length,
+    totals: _profileTotals(progress),
+    activity: _activityTotalsWithFallback(progress),
+    quizStats: progress.quizStats || null,
+    sampleWords: Object.keys(progress.words || {}).slice(0, 5).reduce(function(out, id) {
+      out[id] = progress.words[id];
+      return out;
+    }, {})
+  };
+};
 
 function _rowsByIds(level, ids) {
   var map = {};
@@ -2607,7 +2707,17 @@ function pickFormExample(el, key, modal) {
 //  UTILITIES
 // ══════════════════════════════════════════════════════════════════
 function escHtml(s) {
-  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  if (s == null) return '';
+  if (typeof s === 'object') {
+    try {
+      s = JSON.stringify(s);
+    } catch (e) {
+      s = String(s);
+    }
+  } else {
+    s = String(s);
+  }
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 function typeChar(t) {
   t = (t||'').toLowerCase();
