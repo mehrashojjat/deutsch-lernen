@@ -682,6 +682,118 @@ const UI = {
   }
 };
 
+const PROFILE_I18N = {
+  en: {
+    title: 'Learning Profile',
+    overview: 'Overview', activity: 'Activity', performance: 'Performance', review: 'Review',
+    wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
+    quizzesCompleted: 'Quizzes Completed', correctAnswers: 'Correct Answers', incorrectAnswers: 'Incorrect Answers', totalStudyTime: 'Total Study Time',
+    strongest: 'Strongest', needsPractice: 'Needs Practice', notEnoughCategoryData: 'Not enough category data yet',
+    reviewWeakWords: 'Review Weak Words', reviewRecentMistakes: 'Review Recent Mistakes', reviewMixedPractice: 'Review Mixed Practice',
+    seenWords: 'Seen Words', strugglingWords: 'Struggling Words',
+    loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
+    signInPrompt: 'Sign in to see your learning profile.',
+    noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
+    metaSeen: 'Seen', metaRight: 'Right', metaWrong: 'Wrong',
+    uncategorized: 'Uncategorized'
+  },
+  de: {
+    title: 'Lernprofil',
+    overview: 'Überblick', activity: 'Aktivität', performance: 'Leistung', review: 'Wiederholen',
+    wordsSeen: 'Gesehene Wörter', wordsStruggling: 'Schwierige Wörter', accuracyPct: 'Genauigkeit %', wordsReviewed: 'Überprüfte Wörter',
+    quizzesCompleted: 'Abgeschlossene Quizze', correctAnswers: 'Richtige Antworten', incorrectAnswers: 'Falsche Antworten', totalStudyTime: 'Gesamtlernzeit',
+    strongest: 'Stärkste Bereiche', needsPractice: 'Mehr Übung nötig', notEnoughCategoryData: 'Noch nicht genug Kategoriedaten',
+    reviewWeakWords: 'Schwache Wörter wiederholen', reviewRecentMistakes: 'Letzte Fehler wiederholen', reviewMixedPractice: 'Gemischte Wiederholung',
+    seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter',
+    loadingLevelWords: 'Wörter für dieses Niveau werden geladen...', noWordsInList: 'Noch keine Wörter in dieser Liste.',
+    signInPrompt: 'Melde dich an, um dein Lernprofil zu sehen.',
+    noTrackedFor: 'Keine erfassten Daten für {level}. Wechsle zum Tab {best}.',
+    metaSeen: 'Gesehen', metaRight: 'Richtig', metaWrong: 'Falsch',
+    uncategorized: 'Ohne Kategorie'
+  },
+  tr: {
+    title: 'Öğrenme Profili',
+    overview: 'Genel Bakış', activity: 'Aktivite', performance: 'Performans', review: 'Tekrar',
+    wordsSeen: 'Görülen Kelimeler', wordsStruggling: 'Zorlanılan Kelimeler', accuracyPct: 'Doğruluk %', wordsReviewed: 'İncelenen Kelimeler',
+    quizzesCompleted: 'Tamamlanan Quizler', correctAnswers: 'Doğru Cevaplar', incorrectAnswers: 'Yanlış Cevaplar', totalStudyTime: 'Toplam Çalışma Süresi',
+    strongest: 'En Güçlü Alanlar', needsPractice: 'Daha Fazla Pratik', notEnoughCategoryData: 'Henüz yeterli kategori verisi yok',
+    reviewWeakWords: 'Zayıf Kelimeleri Tekrar Et', reviewRecentMistakes: 'Son Hataları Tekrar Et', reviewMixedPractice: 'Karışık Tekrar',
+    seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler',
+    loadingLevelWords: 'Bu seviye için kelimeler yükleniyor...', noWordsInList: 'Bu listede henüz kelime yok.',
+    signInPrompt: 'Öğrenme profilini görmek için giriş yap.',
+    noTrackedFor: '{level} için takip edilen veri yok. {best} sekmesini dene.',
+    metaSeen: 'Görüldü', metaRight: 'Doğru', metaWrong: 'Yanlış',
+    uncategorized: 'Kategorisiz'
+  },
+  fa: {
+    title: 'پروفایل یادگیری',
+    overview: 'نمای کلی', activity: 'فعالیت', performance: 'عملکرد', review: 'مرور',
+    wordsSeen: 'واژه‌های دیده‌شده', wordsStruggling: 'واژه‌های دشوار', accuracyPct: 'دقت ٪', wordsReviewed: 'واژه‌های مرورشده',
+    quizzesCompleted: 'کوئیزهای تکمیل‌شده', correctAnswers: 'پاسخ‌های درست', incorrectAnswers: 'پاسخ‌های نادرست', totalStudyTime: 'کل زمان مطالعه',
+    strongest: 'قوی‌ترین دسته‌ها', needsPractice: 'نیاز به تمرین', notEnoughCategoryData: 'هنوز دادهٔ کافی برای دسته‌ها نیست',
+    reviewWeakWords: 'مرور واژه‌های ضعیف', reviewRecentMistakes: 'مرور اشتباهات اخیر', reviewMixedPractice: 'مرور ترکیبی',
+    seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار',
+    loadingLevelWords: 'در حال بارگذاری واژه‌های این سطح...', noWordsInList: 'هنوز واژه‌ای در این فهرست نیست.',
+    signInPrompt: 'برای دیدن پروفایل یادگیری وارد شوید.',
+    noTrackedFor: 'برای {level} دادهٔ ثبت‌شده‌ای نیست. تب {best} را امتحان کنید.',
+    metaSeen: 'دیده', metaRight: 'درست', metaWrong: 'نادرست',
+    uncategorized: 'بدون دسته'
+  },
+  ru: {
+    title: 'Профиль обучения',
+    overview: 'Обзор', activity: 'Активность', performance: 'Результаты', review: 'Повторение',
+    wordsSeen: 'Просмотрено слов', wordsStruggling: 'Сложные слова', accuracyPct: 'Точность %', wordsReviewed: 'Повторенные слова',
+    quizzesCompleted: 'Завершено викторин', correctAnswers: 'Правильные ответы', incorrectAnswers: 'Неправильные ответы', totalStudyTime: 'Общее время обучения',
+    strongest: 'Сильные категории', needsPractice: 'Нужно подтянуть', notEnoughCategoryData: 'Недостаточно данных по категориям',
+    reviewWeakWords: 'Повторить слабые слова', reviewRecentMistakes: 'Повторить недавние ошибки', reviewMixedPractice: 'Смешанная практика',
+    seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова',
+    loadingLevelWords: 'Загрузка слов для этого уровня...', noWordsInList: 'В этом списке пока нет слов.',
+    signInPrompt: 'Войдите, чтобы увидеть профиль обучения.',
+    noTrackedFor: 'Нет данных для {level}. Попробуйте вкладку {best}.',
+    metaSeen: 'Просм.', metaRight: 'Верно', metaWrong: 'Неверно',
+    uncategorized: 'Без категории'
+  },
+  uk: {
+    title: 'Профіль навчання',
+    overview: 'Огляд', activity: 'Активність', performance: 'Результати', review: 'Повторення',
+    wordsSeen: 'Переглянуто слів', wordsStruggling: 'Складні слова', accuracyPct: 'Точність %', wordsReviewed: 'Повторені слова',
+    quizzesCompleted: 'Завершено вікторин', correctAnswers: 'Правильні відповіді', incorrectAnswers: 'Неправильні відповіді', totalStudyTime: 'Загальний час навчання',
+    strongest: 'Найсильніші категорії', needsPractice: 'Потрібно попрактикувати', notEnoughCategoryData: 'Недостатньо даних за категоріями',
+    reviewWeakWords: 'Повторити слабкі слова', reviewRecentMistakes: 'Повторити недавні помилки', reviewMixedPractice: 'Змішана практика',
+    seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова',
+    loadingLevelWords: 'Завантаження слів для цього рівня...', noWordsInList: 'У цьому списку поки немає слів.',
+    signInPrompt: 'Увійдіть, щоб побачити профіль навчання.',
+    noTrackedFor: 'Немає даних для {level}. Спробуйте вкладку {best}.',
+    metaSeen: 'Перегл.', metaRight: 'Прав.', metaWrong: 'Неправ.',
+    uncategorized: 'Без категорії'
+  },
+  ar: {
+    title: 'ملف التعلم',
+    overview: 'نظرة عامة', activity: 'النشاط', performance: 'الأداء', review: 'مراجعة',
+    wordsSeen: 'الكلمات التي تمت رؤيتها', wordsStruggling: 'الكلمات الصعبة', accuracyPct: 'الدقة %', wordsReviewed: 'الكلمات المُراجَعة',
+    quizzesCompleted: 'الاختبارات المكتملة', correctAnswers: 'الإجابات الصحيحة', incorrectAnswers: 'الإجابات الخاطئة', totalStudyTime: 'إجمالي وقت الدراسة',
+    strongest: 'أقوى الفئات', needsPractice: 'تحتاج إلى تدريب', notEnoughCategoryData: 'لا توجد بيانات فئات كافية بعد',
+    reviewWeakWords: 'مراجعة الكلمات الضعيفة', reviewRecentMistakes: 'مراجعة الأخطاء الأخيرة', reviewMixedPractice: 'مراجعة مختلطة',
+    seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة',
+    loadingLevelWords: 'جارٍ تحميل كلمات هذا المستوى...', noWordsInList: 'لا توجد كلمات في هذه القائمة بعد.',
+    signInPrompt: 'سجّل الدخول لعرض ملف التعلم.',
+    noTrackedFor: 'لا توجد بيانات متتبعة للمستوى {level}. جرّب تبويب {best}.',
+    metaSeen: 'شوهد', metaRight: 'صحيح', metaWrong: 'خطأ',
+    uncategorized: 'غير مصنف'
+  }
+};
+
+function _lp(key, vars) {
+  var dict = PROFILE_I18N[LANG] || PROFILE_I18N.en;
+  var text = dict[key] || PROFILE_I18N.en[key] || '';
+  if (vars && typeof text === 'string') {
+    Object.keys(vars).forEach(function(k) {
+      text = text.replace(new RegExp('\\{' + k + '\\}', 'g'), String(vars[k]));
+    });
+  }
+  return text;
+}
+
 // ════════════════════════════════════════════════════════════════
 //  CATEGORY MAP — 21 vocabulary categories, ID 1–21
 // ════════════════════════════════════════════════════════════════
@@ -725,6 +837,7 @@ var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var learningProfileSelectedLevel = 'A1';
+var learningProfileDetailMode = null;
 var _quizStartedAtMs = 0;
 var _rwFirstLoad = false;
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
@@ -1039,6 +1152,8 @@ function setLang(lang) {
     if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
   } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
     _practiceRefreshCards();
+  } else if (!document.getElementById('screen-learning-profile').classList.contains('hidden')) {
+    renderLearningProfile();
   }
 }
 
@@ -1096,8 +1211,8 @@ function applyTranslations() {
   // New banner titles
   document.getElementById('adaptive-banner-title').textContent = u.adaptiveBannerTitle;
   document.getElementById('adaptive-banner-sub').textContent = u.adaptiveBannerSub;
-  document.getElementById('learning-profile-banner-title').textContent = u.learningProfileBannerTitle;
-  document.getElementById('learning-profile-title').textContent = u.learningProfileTitle;
+  document.getElementById('learning-profile-banner-title').textContent = _lp('title');
+  document.getElementById('learning-profile-title').textContent = _lp('title');
   document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
   document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
   // Adaptive setup screen
@@ -1902,15 +2017,26 @@ function openLearningProfile() {
   window.umami?.track('learning_profile_opened');
   show('screen-learning-profile');
   renderLearningProfile();
+  if (typeof _loadCSVLevel === 'function') {
+    _loadCSVLevel(learningProfileSelectedLevel).then(function() {
+      renderLearningProfile();
+    }).catch(function() {});
+  }
 }
 
 function setLearningProfileLevel(lv) {
   learningProfileSelectedLevel = lv;
+  learningProfileDetailMode = null;
   ['A1','A2','B1'].forEach(function(k) {
     var el = document.getElementById('profile-level-' + k);
     if (el) el.classList.toggle('active', k === lv);
   });
   renderLearningProfile();
+  if (typeof _loadCSVLevel === 'function') {
+    _loadCSVLevel(lv).then(function() {
+      renderLearningProfile();
+    }).catch(function() {});
+  }
 }
 
 function _profileSnapshot(level) {
@@ -1945,22 +2071,20 @@ function _profileWordRows(progress) {
   }).filter(function(w) { return w.seenCount > 0; });
 }
 
+function _isStrugglingWord(w) {
+  var repeatedIncorrect = (Number(w.incorrectCount) || 0) >= 2;
+  var lowAccuracyWithHistory = (Number(w.seenCount) || 0) >= 4 && (Number(w.accuracy) || 0) < 0.65;
+  var elevatedFailPressure = (Number(w.failScore) || 0) >= 4 && (Number(w.accuracy) || 0) < 0.8;
+  return repeatedIncorrect || lowAccuracyWithHistory || elevatedFailPressure;
+}
+
 function _profileTotals(progress) {
   var rows = _profileWordRows(progress);
   var correct = rows.reduce(function(sum, w) { return sum + w.correctCount; }, 0);
   var seen = rows.reduce(function(sum, w) { return sum + w.seenCount; }, 0);
-  var mastered = rows.filter(function(w) {
-    return w.seenCount >= 4 && w.accuracy >= 0.85 && w.incorrectCount <= 1 && w.failScore <= 1;
-  }).length;
-  var struggling = rows.filter(function(w) {
-    var repeatedIncorrect = w.incorrectCount >= 2;
-    var lowAccuracyWithHistory = w.seenCount >= 4 && w.accuracy < 0.65;
-    var elevatedFailPressure = w.failScore >= 4 && w.accuracy < 0.8;
-    return repeatedIncorrect || lowAccuracyWithHistory || elevatedFailPressure;
-  }).length;
+  var struggling = rows.filter(_isStrugglingWord).length;
   return {
     wordsSeen: rows.length,
-    wordsMastered: mastered,
     wordsStruggling: struggling,
     accuracyPct: seen ? Math.round(correct / seen * 100) : 0
   };
@@ -2059,14 +2183,10 @@ function _categoryNameFromStatKey(key) {
 }
 
 function _performanceLists(quizStats) {
-  var theme = (quizStats && quizStats.theme) || {};
-  var rows = Object.keys(theme).map(function(key) {
-    var s = theme[key] || {};
-    var correct = Number(s.correctAnswers) || 0;
-    var incorrect = Number(s.incorrectAnswers) || 0;
-    var attempts = correct + incorrect;
-    return { key: key, name: _categoryNameFromStatKey(key), attempts: attempts, accuracy: attempts ? correct / attempts : 0 };
-  }).filter(function(row) { return row.attempts >= 10; });
+  var rows = [];
+  if (quizStats && Array.isArray(quizStats.__wordCategoryRows)) {
+    rows = quizStats.__wordCategoryRows.slice();
+  }
   rows.sort(function(a, b) { return b.accuracy - a.accuracy || b.attempts - a.attempts; });
   return {
     strongest: rows.slice(0, 3),
@@ -2074,23 +2194,109 @@ function _performanceLists(quizStats) {
   };
 }
 
+function _profileWordJoin(level, progress) {
+  var rows = _profileWordRows(progress);
+  var hasCsv = !!(CSV_QUIZ_DATA[level] && CSV_QUIZ_DATA[level].length);
+  var csvMap = {};
+  (CSV_QUIZ_DATA[level] || []).forEach(function(r) { csvMap[String(r.id)] = r; });
+  return rows.map(function(w) {
+    var row = csvMap[w.id] || null;
+    var wordLabel = row ? ((row.article ? row.article + ' ' : '') + expandOptional(row.word || w.id)) : (hasCsv ? ('#' + w.id) : '');
+    var meaning = row ? (_csvRowDisplay(row) || row.translation_en || '') : (hasCsv ? '' : _lp('loadingLevelWords'));
+    var catId = row ? Number(row.category_id) || 0 : 0;
+    return {
+      id: w.id,
+      seenCount: w.seenCount,
+      correctCount: w.correctCount,
+      incorrectCount: w.incorrectCount,
+      failScore: w.failScore,
+      accuracy: w.accuracy,
+      word: wordLabel,
+      meaning: meaning,
+      categoryId: catId,
+      categoryName: catId ? _categoryName(catId) : _lp('uncategorized')
+    };
+  });
+}
+
+function _categoryPerformanceFromWords(wordRows) {
+  var byCat = {};
+  (wordRows || []).forEach(function(w) {
+    if (!w.categoryId) return;
+    if (!byCat[w.categoryId]) {
+      byCat[w.categoryId] = {
+        key: String(w.categoryId),
+        name: w.categoryName,
+        attempts: 0,
+        correct: 0,
+        incorrect: 0,
+        accuracy: 0
+      };
+    }
+    byCat[w.categoryId].attempts += Number(w.seenCount) || 0;
+    byCat[w.categoryId].correct += Number(w.correctCount) || 0;
+    byCat[w.categoryId].incorrect += Number(w.incorrectCount) || 0;
+  });
+  return Object.keys(byCat).map(function(key) {
+    var c = byCat[key];
+    c.accuracy = c.attempts ? c.correct / c.attempts : 0;
+    return c;
+  }).filter(function(c) {
+    return c.attempts >= 5;
+  });
+}
+
+function _profileWordListHtml(title, rows) {
+  if (!rows.length) {
+    return '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('noWordsInList')) + '</div>';
+  }
+  var items = rows.map(function(w) {
+    return '<div class="profile-word-item">'
+      + '<div class="profile-word-main">' + escHtml(w.word) + '</div>'
+      + (w.meaning ? '<div class="profile-word-meaning">' + escHtml(w.meaning) + '</div>' : '')
+      + '</div>';
+  }).join('');
+  return '<div class="profile-section" style="margin-top:10px;"><div class="profile-section-title">' + escHtml(title) + '</div><div class="profile-word-list">' + items + '</div></div>';
+}
+
+window.toggleLearningProfileDetail = function(mode) {
+  if (learningProfileDetailMode === mode) learningProfileDetailMode = null;
+  else learningProfileDetailMode = mode;
+  if (learningProfileDetailMode && typeof _loadCSVLevel === 'function' && !(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length)) {
+    renderLearningProfile();
+    _loadCSVLevel(learningProfileSelectedLevel).then(function() {
+      renderLearningProfile();
+    }).catch(function() {
+      renderLearningProfile();
+    });
+    return;
+  }
+  renderLearningProfile();
+};
+
 function renderLearningProfile() {
   var el = document.getElementById('learning-profile-content');
   if (!el) return;
   var snap = _profileSnapshot(learningProfileSelectedLevel);
   if (!snap || !snap.signedIn) {
-    el.innerHTML = '<div class="profile-empty">Sign in to see your learning profile.</div>';
+    el.innerHTML = '<div class="profile-empty">' + escHtml(_lp('signInPrompt')) + '</div>';
     return;
   }
   var progress = snap.progress || {};
+  var joinedWords = _profileWordJoin(learningProfileSelectedLevel, progress);
   var totals = _profileTotals(progress);
   var activity = _activityTotalsWithFallback(progress);
-  var perf = _performanceLists(progress.quizStats || {});
+  var perf = _performanceLists({ __wordCategoryRows: _categoryPerformanceFromWords(joinedWords) });
   var selectedScore = _profileLevelScore(learningProfileSelectedLevel);
   var bestLevel = _bestLearningProfileLevel();
   var bestScore = _profileLevelScore(bestLevel);
-  function stat(label, value) {
-    return '<div class="profile-stat"><strong>' + escHtml(value) + '</strong><span>' + escHtml(label) + '</span></div>';
+  function stat(label, value, extraClass, clickMode, selected) {
+    var cls = 'profile-stat';
+    if (extraClass) cls += ' ' + extraClass;
+    if (clickMode) cls += ' profile-stat-clickable';
+    if (selected) cls += ' active';
+    var onClick = clickMode ? ' onclick="toggleLearningProfileDetail(\'' + clickMode + '\')"' : '';
+    return '<div class="' + cls + '"' + onClick + '><strong>' + escHtml(value) + '</strong><span>' + escHtml(label) + '</span></div>';
   }
   function list(title, rows, mark, empty) {
     var body = rows.length ? rows.map(function(r) {
@@ -2100,31 +2306,51 @@ function renderLearningProfile() {
   }
   var levelHint = '';
   if (selectedScore <= 0 && bestLevel && bestLevel !== learningProfileSelectedLevel && bestScore > 0) {
-    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">No tracked data for ' +
-      escHtml(learningProfileSelectedLevel) + '. Try the ' + escHtml(bestLevel) + ' tab.</div>';
+    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">'
+      + escHtml(_lp('noTrackedFor', { level: learningProfileSelectedLevel, best: bestLevel }))
+      + '</div>';
   }
+  var seenListRows = joinedWords.slice().sort(function(a, b) {
+    return (Number(b.seenCount) || 0) - (Number(a.seenCount) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
+  }).slice(0, 60);
+  var strugglingListRows = joinedWords.filter(_isStrugglingWord).sort(function(a, b) {
+    return (Number(b.failScore) || 0) - (Number(a.failScore) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
+  }).slice(0, 60);
+  var detailsCsvReady = !!(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length);
+  var detailHtml = '';
+  if (learningProfileDetailMode === 'seen') {
+    detailHtml = detailsCsvReady
+      ? _profileWordListHtml(_lp('seenWords'), seenListRows)
+      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+  } else if (learningProfileDetailMode === 'struggling') {
+    detailHtml = detailsCsvReady
+      ? _profileWordListHtml(_lp('strugglingWords'), strugglingListRows)
+      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+  }
+
   el.innerHTML =
     levelHint +
-    '<div class="profile-section"><div class="profile-section-title">Overview</div><div class="profile-grid">' +
-      stat('Words Seen', totals.wordsSeen) +
-      stat('Words Mastered', totals.wordsMastered) +
-      stat('Words Struggling', totals.wordsStruggling) +
-      stat('Accuracy %', totals.accuracyPct + '%') +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('overview')) + '</div><div class="profile-grid">' +
+      stat(_lp('wordsSeen'), totals.wordsSeen, 'profile-stat-seen', 'seen', learningProfileDetailMode === 'seen') +
+      stat(_lp('wordsStruggling'), totals.wordsStruggling, 'profile-stat-struggling', 'struggling', learningProfileDetailMode === 'struggling') +
+      stat(_lp('accuracyPct'), totals.accuracyPct + '%') +
+      stat(_lp('wordsReviewed'), joinedWords.length) +
     '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">Activity</div><div class="profile-grid">' +
-      stat('Quizzes Completed', activity.quizzesCompleted) +
-      stat('Correct Answers', activity.correctAnswers) +
-      stat('Incorrect Answers', activity.incorrectAnswers) +
-      stat('Total Study Time', _formatStudyTime(activity.studyTimeSeconds)) +
+    detailHtml +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('activity')) + '</div><div class="profile-grid">' +
+      stat(_lp('quizzesCompleted'), activity.quizzesCompleted) +
+      stat(_lp('correctAnswers'), activity.correctAnswers) +
+      stat(_lp('incorrectAnswers'), activity.incorrectAnswers) +
+      stat(_lp('totalStudyTime'), _formatStudyTime(activity.studyTimeSeconds)) +
     '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">Performance</div><div class="profile-performance">' +
-      list('Strongest', perf.strongest, '✓', 'Not enough theme quiz data yet') +
-      list('Needs Practice', perf.weakest, '⚠', 'Not enough theme quiz data yet') +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('performance')) + '</div><div class="profile-performance">' +
+      list(_lp('strongest'), perf.strongest, '✓', _lp('notEnoughCategoryData')) +
+      list(_lp('needsPractice'), perf.weakest, '⚠', _lp('notEnoughCategoryData')) +
     '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">Review</div><div class="profile-review-actions">' +
-      '<button onclick="startLearningProfileReview(\'weak\')">Review Weak Words</button>' +
-      '<button onclick="startLearningProfileReview(\'recent\')">Review Recent Mistakes</button>' +
-      '<button onclick="startLearningProfileReview(\'mixed\')">Review Mixed Practice</button>' +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('review')) + '</div><div class="profile-review-actions">' +
+      '<button onclick="startLearningProfileReview(\'weak\')">' + escHtml(_lp('reviewWeakWords')) + '</button>' +
+      '<button onclick="startLearningProfileReview(\'recent\')">' + escHtml(_lp('reviewRecentMistakes')) + '</button>' +
+      '<button onclick="startLearningProfileReview(\'mixed\')">' + escHtml(_lp('reviewMixedPractice')) + '</button>' +
     '</div></div>';
 }
 
@@ -2140,6 +2366,7 @@ window.APP_DEBUG_LEARNING_PROFILE = function(level) {
     totals: _profileTotals(progress),
     activity: _activityTotalsWithFallback(progress),
     quizStats: progress.quizStats || null,
+    categoryPerformance: _categoryPerformanceFromWords(_profileWordJoin(lv, progress)),
     sampleWords: Object.keys(progress.words || {}).slice(0, 5).reduce(function(out, id) {
       out[id] = progress.words[id];
       return out;

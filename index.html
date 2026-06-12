@@ -299,10 +299,21 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .profile-stat{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;}
 .profile-stat strong{display:block;font-size:1.35rem;color:var(--text);line-height:1;}
 .profile-stat span{display:block;font-size:.74rem;color:var(--muted);margin-top:7px;}
+.profile-stat-clickable{cursor:pointer;transition:all .15s ease;}
+.profile-stat-clickable:hover{transform:translateY(-1px);}
+.profile-stat.profile-stat-seen{border-color:rgba(107,232,160,.28);background:linear-gradient(180deg,rgba(107,232,160,.12),rgba(107,232,160,.05));}
+.profile-stat.profile-stat-seen strong{color:#8cf1b5;}
+.profile-stat.profile-stat-struggling{border-color:rgba(240,112,112,.35);background:linear-gradient(180deg,rgba(240,112,112,.14),rgba(240,112,112,.06));}
+.profile-stat.profile-stat-struggling strong{color:#ff9a9a;}
+.profile-stat.active{box-shadow:0 0 0 1px rgba(255,255,255,.16) inset;}
 .profile-performance{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .profile-list{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;min-height:128px;}
 .profile-list-title{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:9px;}
 .profile-list div:not(.profile-list-title){font-size:.84rem;color:var(--muted);line-height:1.8;}
+.profile-word-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.profile-word-item{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:10px 12px;}
+.profile-word-main{font-size:1.02rem;color:var(--text);font-weight:700;line-height:1.25;}
+.profile-word-meaning{font-size:.84rem;color:var(--blue);}
 .profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
 .profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
 .profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
