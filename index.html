@@ -314,6 +314,9 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .profile-word-item{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:10px 12px;}
 .profile-word-main{font-size:1.02rem;color:var(--text);font-weight:700;line-height:1.25;}
 .profile-word-meaning{font-size:.84rem;color:var(--blue);}
+.profile-detail-wrap{max-height:0;opacity:0;overflow:hidden;transform:translateY(-6px);transition:max-height .28s ease,opacity .2s ease,transform .28s ease;}
+.profile-detail-wrap.open{max-height:980px;opacity:1;transform:translateY(0);margin-bottom:8px;}
+.profile-detail-inner{padding-top:2px;}
 .profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
 .profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
 .profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}

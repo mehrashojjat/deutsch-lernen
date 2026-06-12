@@ -838,6 +838,7 @@ var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var learningProfileSelectedLevel = 'A1';
 var learningProfileDetailMode = null;
+var learningProfileLastDetailHtml = '';
 var _quizStartedAtMs = 0;
 var _rwFirstLoad = false;
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
@@ -2027,6 +2028,7 @@ function openLearningProfile() {
 function setLearningProfileLevel(lv) {
   learningProfileSelectedLevel = lv;
   learningProfileDetailMode = null;
+  learningProfileLastDetailHtml = '';
   ['A1','A2','B1'].forEach(function(k) {
     var el = document.getElementById('profile-level-' + k);
     if (el) el.classList.toggle('active', k === lv);
@@ -2260,8 +2262,23 @@ function _profileWordListHtml(title, rows) {
 }
 
 window.toggleLearningProfileDetail = function(mode) {
-  if (learningProfileDetailMode === mode) learningProfileDetailMode = null;
-  else learningProfileDetailMode = mode;
+  if (learningProfileDetailMode === mode) {
+    var wrap = document.getElementById('profile-detail-wrap');
+    if (wrap) {
+      wrap.classList.remove('open');
+      setTimeout(function() {
+        learningProfileDetailMode = null;
+        learningProfileLastDetailHtml = '';
+        renderLearningProfile();
+      }, 300);
+      return;
+    }
+    learningProfileDetailMode = null;
+    learningProfileLastDetailHtml = '';
+    renderLearningProfile();
+    return;
+  }
+  learningProfileDetailMode = mode;
   if (learningProfileDetailMode && typeof _loadCSVLevel === 'function' && !(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length)) {
     renderLearningProfile();
     _loadCSVLevel(learningProfileSelectedLevel).then(function() {
@@ -2327,16 +2344,23 @@ function renderLearningProfile() {
       ? _profileWordListHtml(_lp('strugglingWords'), strugglingListRows)
       : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   }
+  var detailIsOpen = !!learningProfileDetailMode;
+  if (detailIsOpen && detailHtml) {
+    learningProfileLastDetailHtml = detailHtml;
+  }
+  var detailPanelHtml =
+    '<div id="profile-detail-wrap" class="profile-detail-wrap' + (detailIsOpen ? ' has-content' : '') + '">' +
+      '<div class="profile-detail-inner">' + (learningProfileLastDetailHtml || '') + '</div>' +
+    '</div>';
 
   el.innerHTML =
     levelHint +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('overview')) + '</div><div class="profile-grid">' +
       stat(_lp('wordsSeen'), totals.wordsSeen, 'profile-stat-seen', 'seen', learningProfileDetailMode === 'seen') +
       stat(_lp('wordsStruggling'), totals.wordsStruggling, 'profile-stat-struggling', 'struggling', learningProfileDetailMode === 'struggling') +
-      stat(_lp('accuracyPct'), totals.accuracyPct + '%') +
-      stat(_lp('wordsReviewed'), joinedWords.length) +
+      stat(_lp('accuracyPct').replace(/[%٪]/g, '').trim(), totals.accuracyPct + '%') +
     '</div></div>' +
-    detailHtml +
+    detailPanelHtml +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('activity')) + '</div><div class="profile-grid">' +
       stat(_lp('quizzesCompleted'), activity.quizzesCompleted) +
       stat(_lp('correctAnswers'), activity.correctAnswers) +
@@ -2352,6 +2376,13 @@ function renderLearningProfile() {
       '<button onclick="startLearningProfileReview(\'recent\')">' + escHtml(_lp('reviewRecentMistakes')) + '</button>' +
       '<button onclick="startLearningProfileReview(\'mixed\')">' + escHtml(_lp('reviewMixedPractice')) + '</button>' +
     '</div></div>';
+
+  if (detailIsOpen) {
+    requestAnimationFrame(function() {
+      var wrap = document.getElementById('profile-detail-wrap');
+      if (wrap) wrap.classList.add('open');
+    });
+  }
 }
 
 window.APP_DEBUG_LEARNING_PROFILE = function(level) {
