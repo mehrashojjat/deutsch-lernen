@@ -79,6 +79,8 @@ const UI = {
     adaptiveV2StatusCal1: 'Calibration quiz 1 of 2',
     adaptiveV2StatusCal2: 'Calibration quiz 2 of 2',
     adaptiveV2StatusSkill: (n) => 'Your skill level: ' + n,
+    adaptiveV2PhaseReview: 'Review',
+    adaptiveV2PhaseChallenge: 'Challenge',
     learningProfileBannerTitle: 'Learning Profile',
     learningProfileTitle: 'Learning Profile',
     adaptiveSetupTitle: 'Adaptive Quiz',
@@ -738,6 +740,12 @@ const PROFILE_I18N = {
     signInPrompt: 'Sign in to sync your progress across devices.',
     guestProfileEmpty: 'Complete a quiz at this level to see stats here.',
     noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
+    adaptiveBand: 'CEFR band',
+    adaptiveSkill: 'Skill level',
+    adaptivePhase: 'Learning phase',
+    bandCoverage: 'Band coverage',
+    globalCoverage: 'Global coverage',
+    recalibrateAdaptive: 'Recalibrate level',
     metaSeen: 'Seen', metaRight: 'Right', metaWrong: 'Wrong',
     uncategorized: 'Uncategorized'
   },
@@ -2191,8 +2199,12 @@ function _emptyGuestProgress() {
   return {
     evaluationStage: 0,
     skillLevel: 1,
+    cefrBand: 'A1',
+    learningPhase: 'active',
     words: {},
     recentWords: [],
+    crossBandLog: [],
+    challengeLowStreak: 0,
     quizStats: { adaptive: _emptyStats(), theme: {} }
   };
 }
@@ -2479,6 +2491,14 @@ window.toggleLearningProfileDetail = function(mode) {
   renderLearningProfile();
 };
 
+function recalibrateAdaptiveV2() {
+  if (typeof window._adaptiveV2Recalibrate === 'function') {
+    window._adaptiveV2Recalibrate();
+    renderLearningProfile();
+    if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+  }
+}
+
 function renderLearningProfile() {
   var el = document.getElementById('learning-profile-content');
   if (!el) return;
@@ -2543,8 +2563,29 @@ function renderLearningProfile() {
       '<div class="profile-detail-inner">' + (learningProfileLastDetailHtml || '') + '</div>' +
     '</div>';
 
+  var adaptiveSection = '';
+  if (learningProfileSelectedLevel === 'ALL') {
+    var band = progress.cefrBand || 'A1';
+    var phase = progress.learningPhase || 'active';
+    var phaseDisplay = phase === 'band_review' ? 'Review' : phase === 'challenge' ? 'Challenge' : 'Active';
+    var cov = typeof window._adaptiveV2BandCoverage === 'function'
+      ? window._adaptiveV2BandCoverage() : { band: 0, global: 0 };
+    adaptiveSection =
+      '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('adaptive')) + '</div><div class="profile-grid">' +
+        stat(_lp('adaptiveBand'), band) +
+        stat(_lp('adaptiveSkill'), (Number(progress.skillLevel) || 1).toFixed(1)) +
+        stat(_lp('adaptivePhase'), phaseDisplay) +
+        stat(_lp('bandCoverage'), cov.band + '%') +
+        (phase === 'challenge' ? stat(_lp('globalCoverage'), cov.global + '%') : '') +
+      '</div>' +
+      '<div class="profile-review-actions" style="margin-top:10px;">' +
+        '<button onclick="recalibrateAdaptiveV2()">' + escHtml(_lp('recalibrateAdaptive')) + '</button>' +
+      '</div></div>';
+  }
+
   el.innerHTML =
     levelHint +
+    adaptiveSection +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('overview')) + '</div><div class="profile-grid">' +
       stat(_lp('wordsSeen'), totals.wordsSeen, 'profile-stat-seen', 'seen', learningProfileDetailMode === 'seen') +
       stat(_lp('wordsStruggling'), totals.wordsStruggling, 'profile-stat-struggling', 'struggling', learningProfileDetailMode === 'struggling') +

@@ -90,7 +90,17 @@ Select a CEFR level (A1 / A2 / B1) from the home screen to start a 10-question m
 Tap **Adaptive Quiz** on the home screen, choose a level, and start. The quiz engine self-calibrates over three diagnostic rounds before entering a permanent adaptive mode that targets words near your demonstrated skill level. See *Adaptive Quiz System* below for full details.
 
 ### Adaptive V2 (Beta)
-Tap **Adaptive V2 (Beta)** on the home screen to start a level-agnostic quiz across the entire vocabulary database (~6 000 words). No A1/A2/B1 picker — the engine runs a two-phase calibration (unless bootstrapped from existing legacy progress), then adapts continuously. Progress is stored under a separate `ALL` profile row and does not overwrite legacy per-level adaptive data.
+Tap **Adaptive V2 (Beta)** on the home screen to start a level-agnostic quiz across the entire vocabulary database (~6 000 words). No A1/A2/B1 picker — the engine uses **CEFR-stratified calibration**, then adapts continuously within your assigned band. Progress is stored under `user_progress.level = 'ALL'` and does not overwrite legacy per-level adaptive data.
+
+**Calibration (fresh users):**
+- **Phase A** — 10 questions: 4 from A1, 3 from A2, 3 from B1 (spread difficulties; numbers deprioritized). Sets `cefrBand` (A1/A2/B1) and within-band `skillLevel`.
+- **Phase B** — 10 questions focused within and adjacent to the assigned band; confirms placement.
+
+**Legacy import:** Existing A1/A2/B1 adaptive progress is merged into `ALL` with a confidence score. High confidence skips calibration; medium runs Phase B only; low runs both phases.
+
+**Normal mode:** 3 struggling + 3 unseen + 2 stable + 1 confidence + 1 explore (within band). Cross-band words appear as skill rises (7+). Promotion A1→A2→B1 uses crossover accuracy.
+
+**B1 endgame:** At high B1 coverage, `band_review` then `challenge` phases cover the full corpus including newly added JSON words (detected via `seenCount === 0`, no marker needed).
 
 Regenerate the unified vocabulary file after CSV edits:
 

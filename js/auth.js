@@ -170,6 +170,24 @@
     return total;
   }
 
+  function _defaultProgress(level) {
+    var lv = String(level || '').toUpperCase();
+    var base = {
+      evaluationStage: 0,
+      skillLevel: 1,
+      words: {},
+      recentWords: [],
+      quizStats: _defaultQuizStats()
+    };
+    if (lv === V2_LEVEL) {
+      base.cefrBand = 'A1';
+      base.learningPhase = 'active';
+      base.crossBandLog = [];
+      base.challengeLowStreak = 0;
+    }
+    return base;
+  }
+
   function _bootstrapAllFromLegacy(legacyByLevel) {
     if (typeof window._v2BootstrapFromLegacyLevels === 'function') {
       return window._v2BootstrapFromLegacyLevels(legacyByLevel);
@@ -186,7 +204,9 @@
   }
 
   function _isMetaKey(key) {
-    return key === 'evaluationStage' || key === 'skillLevel' || key === 'recentWords';
+    return key === 'evaluationStage' || key === 'skillLevel' || key === 'recentWords' ||
+      key === 'cefrBand' || key === 'learningPhase' || key === 'legacyConfidence' ||
+      key === 'crossBandLog' || key === 'challengeLowStreak';
   }
 
   function _countFromValue(value, fallback) {
@@ -287,13 +307,21 @@
     // Prefer the precise float stored in passed_words (meta.skillLevel),
     // fall back to the rounded integer in the skill_level column.
     var sl = (meta.skillLevel != null) ? Number(meta.skillLevel) : Number(row.skill_level);
-    return {
+    var progress = {
       evaluationStage : parseInt(meta.evaluationStage, 10) || 0,
       skillLevel      : sl || 1,
       words           : _wordHistoryFromRow({ passed_words: passed, failed_words: failed }),
       recentWords     : rw,
       quizStats       : _normalizeQuizStats(_parseJsonLike(row.quiz_stats))
     };
+    if (_rowLevelKey(row) === V2_LEVEL) {
+      progress.cefrBand = meta.cefrBand || 'A1';
+      progress.learningPhase = meta.learningPhase || 'active';
+      if (meta.legacyConfidence != null) progress.legacyConfidence = Number(meta.legacyConfidence);
+      progress.crossBandLog = Array.isArray(meta.crossBandLog) ? meta.crossBandLog : [];
+      progress.challengeLowStreak = Number(meta.challengeLowStreak) || 0;
+    }
+    return progress;
   }
 
   function _normalizeStats(s) {
@@ -356,12 +384,17 @@
   // ── DB: guarantee a row exists; safe against UNIQUE violation ─
   async function _ensureRow(userId, level) {
     try {
+      var passedDefault = { evaluationStage: 0, recentWords: [] };
+      if (String(level).toUpperCase() === V2_LEVEL) {
+        passedDefault.cefrBand = 'A1';
+        passedDefault.learningPhase = 'active';
+      }
       await _db.from(TABLE).upsert({
         user_id     : userId,
         level       : level,
         skill_level : 1,
         failed_words: {},
-        passed_words: { evaluationStage: 0, recentWords: [] },
+        passed_words: passedDefault,
         quiz_stats  : _defaultQuizStats()
       }, { onConflict: 'user_id,level' });
     } catch (e) {}
@@ -376,6 +409,18 @@
         var n = parseInt(id, 10);
         return isNaN(n) ? id : n;
       });
+      var passedMeta = {
+        evaluationStage: progress.evaluationStage || 0,
+        skillLevel     : progress.skillLevel,
+        recentWords    : recentInts
+      };
+      if (level === V2_LEVEL) {
+        passedMeta.cefrBand = progress.cefrBand || 'A1';
+        passedMeta.learningPhase = progress.learningPhase || 'active';
+        if (progress.legacyConfidence != null) passedMeta.legacyConfidence = progress.legacyConfidence;
+        passedMeta.crossBandLog = progress.crossBandLog || [];
+        passedMeta.challengeLowStreak = Number(progress.challengeLowStreak) || 0;
+      }
       var res = await _db.from(TABLE)
         .upsert({
           user_id     : userId,
@@ -384,11 +429,7 @@
           // The precise float is preserved in passed_words.skillLevel below.
           skill_level : Math.round(progress.skillLevel) || 1,
           failed_words: progress.words      || {},
-          passed_words: {
-            evaluationStage: progress.evaluationStage || 0,
-            skillLevel     : progress.skillLevel,   // precise float preserved here
-            recentWords    : recentInts
-          },
+          passed_words: passedMeta,
           quiz_stats  : _normalizeQuizStats(progress.quizStats)
         }, { onConflict: 'user_id,level' });
     } catch (e) {}
@@ -425,7 +466,7 @@
         await _updateRow(userId, V2_LEVEL, boot);
       } else {
         ensures.push(_ensureRow(userId, V2_LEVEL));
-        _progressCache[V2_LEVEL] = _defaultProgress();
+        _progressCache[V2_LEVEL] = _defaultProgress(V2_LEVEL);
       }
     }
 
@@ -458,7 +499,7 @@
     }
     if (!progress) {
       await _ensureRow(userId, level);
-      progress = _defaultProgress();
+      progress = _defaultProgress(level);
     }
     _progressCache[level] = progress;
   }
@@ -467,7 +508,7 @@
     if (typeof window._adaptiveV2SetAccountMode === 'function') {
       window._adaptiveV2SetAccountMode(true);
     }
-    var progress = _progressCache[V2_LEVEL] || _defaultProgress();
+    var progress = _progressCache[V2_LEVEL] || _defaultProgress(V2_LEVEL);
     if (typeof window._adaptiveV2InjectProgress === 'function') {
       window._adaptiveV2InjectProgress(progress);
     }
@@ -491,8 +532,8 @@
   function _registerV2SaveHook(userId) {
     if (typeof window._adaptiveV2SetSaveHook !== 'function') return;
     window._adaptiveV2SetSaveHook(function (p) {
-      var prev = _progressCache[V2_LEVEL] || _defaultProgress();
-      p = p && typeof p === 'object' ? p : _defaultProgress();
+      var prev = _progressCache[V2_LEVEL] || _defaultProgress(V2_LEVEL);
+      p = p && typeof p === 'object' ? p : _defaultProgress(V2_LEVEL);
       p.quizStats = _normalizeQuizStats((p.quizStats && typeof p.quizStats === 'object') ? p.quizStats : prev.quizStats);
       _progressCache[V2_LEVEL] = p;
       _updateRow(userId, V2_LEVEL, p);
