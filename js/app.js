@@ -73,6 +73,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Adaptive Quiz',
     adaptiveBannerSub: 'Adjusts to your skill level',
+    adaptiveV2BannerTitle: 'Adaptive V2 (Beta)',
+    adaptiveV2BannerSub: 'Quizzes across all vocabulary levels',
+    adaptiveV2BannerStatusDefault: 'Finds your level automatically',
+    adaptiveV2StatusCal1: 'Calibration quiz 1 of 2',
+    adaptiveV2StatusCal2: 'Calibration quiz 2 of 2',
+    adaptiveV2StatusSkill: (n) => 'Your skill level: ' + n,
     learningProfileBannerTitle: 'Learning Profile',
     learningProfileTitle: 'Learning Profile',
     adaptiveSetupTitle: 'Adaptive Quiz',
@@ -175,6 +181,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Adaptives Quiz',
     adaptiveBannerSub: 'Passt sich deinem Niveau an',
+    adaptiveV2BannerTitle: 'Adaptiv V2 (Beta)',
+    adaptiveV2BannerSub: 'Quiz über alle Wortlisten-Niveaus',
+    adaptiveV2BannerStatusDefault: 'Findet dein Niveau automatisch',
+    adaptiveV2StatusCal1: 'Kalibrierungs-Quiz 1 von 2',
+    adaptiveV2StatusCal2: 'Kalibrierungs-Quiz 2 von 2',
+    adaptiveV2StatusSkill: (n) => 'Dein Niveau: ' + n,
     adaptiveSetupTitle: 'Adaptives Quiz',
     adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
     themeBannerTitle: 'Themen-Quiz',
@@ -271,6 +283,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Uyarlamalı Sınav',
     adaptiveBannerSub: 'Seviyenize göre ayarlanır',
+    adaptiveV2BannerTitle: 'Uyarlamalı V2 (Beta)',
+    adaptiveV2BannerSub: 'Tüm kelime listesi seviyelerinde quiz',
+    adaptiveV2BannerStatusDefault: 'Seviyenizi otomatik bulur',
+    adaptiveV2StatusCal1: 'Kalibrasyon quizi 1 / 2',
+    adaptiveV2StatusCal2: 'Kalibrasyon quizi 2 / 2',
+    adaptiveV2StatusSkill: (n) => 'Seviyeniz: ' + n,
     adaptiveSetupTitle: 'Uyarlamalı Sınav',
     adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
     themeBannerTitle: 'Konu Sınavı',
@@ -367,6 +385,12 @@ const UI = {
     footerCopy: '© ۲۰۲۶ Mehras Hojjat',
     adaptiveBannerTitle: 'آزمون تطبیقی',
     adaptiveBannerSub: 'سطح شما را تشخیص می‌دهد',
+    adaptiveV2BannerTitle: 'آزمون تطبیقی V2 (بتا)',
+    adaptiveV2BannerSub: 'آزمون در همه سطوح واژگان',
+    adaptiveV2BannerStatusDefault: 'سطح شما را خودکار پیدا می‌کند',
+    adaptiveV2StatusCal1: 'آزمون کالیبراسیون ۱ از ۲',
+    adaptiveV2StatusCal2: 'آزمون کالیبراسیون ۲ از ۲',
+    adaptiveV2StatusSkill: (n) => 'سطح مهارت شما: ' + n,
     adaptiveSetupTitle: 'آزمون تطبیقی',
     adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
     themeBannerTitle: 'آزمون موضوعی',
@@ -463,6 +487,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивная викторина',
     adaptiveBannerSub: 'Адаптируется к вашему уровню',
+    adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
+    adaptiveV2BannerSub: 'Викторина по всему словарю',
+    adaptiveV2BannerStatusDefault: 'Автоматически определяет ваш уровень',
+    adaptiveV2StatusCal1: 'Калибровочная викторина 1 из 2',
+    adaptiveV2StatusCal2: 'Калибровочная викторина 2 из 2',
+    adaptiveV2StatusSkill: (n) => 'Ваш уровень: ' + n,
     adaptiveSetupTitle: 'Адаптивная викторина',
     adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
     themeBannerTitle: 'Тематическая викторина',
@@ -557,6 +587,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'Адаптивна вікторина',
     adaptiveBannerSub: 'Адаптується до вашого рівня',
+    adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
+    adaptiveV2BannerSub: 'Вікторина по всьому словнику',
+    adaptiveV2BannerStatusDefault: 'Автоматично визначає ваш рівень',
+    adaptiveV2StatusCal1: 'Калібрувальна вікторина 1 з 2',
+    adaptiveV2StatusCal2: 'Калібрувальна вікторина 2 з 2',
+    adaptiveV2StatusSkill: (n) => 'Ваш рівень: ' + n,
     adaptiveSetupTitle: 'Адаптивна вікторина',
     adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
     themeBannerTitle: 'Тематична вікторина',
@@ -651,6 +687,12 @@ const UI = {
     footerCopy: '© 2026 Mehras Hojjat',
     adaptiveBannerTitle: 'اختبار تكيّفي',
     adaptiveBannerSub: 'يتكيّف مع مستواك',
+    adaptiveV2BannerTitle: 'اختبار تكيّفي V2 (تجريبي)',
+    adaptiveV2BannerSub: 'اختبار على كل مستويات المفردات',
+    adaptiveV2BannerStatusDefault: 'يكتشف مستواك تلقائياً',
+    adaptiveV2StatusCal1: 'اختبار المعايرة 1 من 2',
+    adaptiveV2StatusCal2: 'اختبار المعايرة 2 من 2',
+    adaptiveV2StatusSkill: (n) => 'مستوى مهارتك: ' + n,
     adaptiveSetupTitle: 'اختبار تكيّفي',
     adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
     themeBannerTitle: 'اختبار موضوعي',
@@ -685,6 +727,7 @@ const UI = {
 const PROFILE_I18N = {
   en: {
     title: 'Learning Profile',
+    adaptive: 'Adaptive',
     overview: 'Overview', activity: 'Activity', performance: 'Performance', review: 'Review',
     wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
     quizzesCompleted: 'Quizzes Completed', correctAnswers: 'Correct Answers', incorrectAnswers: 'Incorrect Answers', totalStudyTime: 'Total Study Time',
@@ -692,13 +735,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'Review Weak Words', reviewRecentMistakes: 'Review Recent Mistakes', reviewMixedPractice: 'Review Mixed Practice',
     seenWords: 'Seen Words', strugglingWords: 'Struggling Words',
     loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
-    signInPrompt: 'Sign in to see your learning profile.',
+    signInPrompt: 'Sign in to sync your progress across devices.',
+    guestProfileEmpty: 'Complete a quiz at this level to see stats here.',
     noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
     metaSeen: 'Seen', metaRight: 'Right', metaWrong: 'Wrong',
     uncategorized: 'Uncategorized'
   },
   de: {
     title: 'Lernprofil',
+    adaptive: 'Adaptiv',
     overview: 'Überblick', activity: 'Aktivität', performance: 'Leistung', review: 'Wiederholen',
     wordsSeen: 'Gesehene Wörter', wordsStruggling: 'Schwierige Wörter', accuracyPct: 'Genauigkeit %', wordsReviewed: 'Überprüfte Wörter',
     quizzesCompleted: 'Abgeschlossene Quizze', correctAnswers: 'Richtige Antworten', incorrectAnswers: 'Falsche Antworten', totalStudyTime: 'Gesamtlernzeit',
@@ -706,13 +751,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'Schwache Wörter wiederholen', reviewRecentMistakes: 'Letzte Fehler wiederholen', reviewMixedPractice: 'Gemischte Wiederholung',
     seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter',
     loadingLevelWords: 'Wörter für dieses Niveau werden geladen...', noWordsInList: 'Noch keine Wörter in dieser Liste.',
-    signInPrompt: 'Melde dich an, um dein Lernprofil zu sehen.',
+    signInPrompt: 'Melde dich an, um deinen Fortschritt geräteübergreifend zu synchronisieren.',
+    guestProfileEmpty: 'Spiele ein Quiz auf diesem Niveau, um hier Statistiken zu sehen.',
     noTrackedFor: 'Keine erfassten Daten für {level}. Wechsle zum Tab {best}.',
     metaSeen: 'Gesehen', metaRight: 'Richtig', metaWrong: 'Falsch',
     uncategorized: 'Ohne Kategorie'
   },
   tr: {
     title: 'Öğrenme Profili',
+    adaptive: 'Uyarlamalı',
     overview: 'Genel Bakış', activity: 'Aktivite', performance: 'Performans', review: 'Tekrar',
     wordsSeen: 'Görülen Kelimeler', wordsStruggling: 'Zorlanılan Kelimeler', accuracyPct: 'Doğruluk %', wordsReviewed: 'İncelenen Kelimeler',
     quizzesCompleted: 'Tamamlanan Quizler', correctAnswers: 'Doğru Cevaplar', incorrectAnswers: 'Yanlış Cevaplar', totalStudyTime: 'Toplam Çalışma Süresi',
@@ -720,13 +767,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'Zayıf Kelimeleri Tekrar Et', reviewRecentMistakes: 'Son Hataları Tekrar Et', reviewMixedPractice: 'Karışık Tekrar',
     seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler',
     loadingLevelWords: 'Bu seviye için kelimeler yükleniyor...', noWordsInList: 'Bu listede henüz kelime yok.',
-    signInPrompt: 'Öğrenme profilini görmek için giriş yap.',
+    signInPrompt: 'İlerlemenizi cihazlar arasında senkronize etmek için giriş yapın.',
+    guestProfileEmpty: 'Burada istatistik görmek için bu seviyede bir quiz tamamlayın.',
     noTrackedFor: '{level} için takip edilen veri yok. {best} sekmesini dene.',
     metaSeen: 'Görüldü', metaRight: 'Doğru', metaWrong: 'Yanlış',
     uncategorized: 'Kategorisiz'
   },
   fa: {
     title: 'پروفایل یادگیری',
+    adaptive: 'تطبیقی',
     overview: 'نمای کلی', activity: 'فعالیت', performance: 'عملکرد', review: 'مرور',
     wordsSeen: 'واژه‌های دیده‌شده', wordsStruggling: 'واژه‌های دشوار', accuracyPct: 'دقت ٪', wordsReviewed: 'واژه‌های مرورشده',
     quizzesCompleted: 'کوئیزهای تکمیل‌شده', correctAnswers: 'پاسخ‌های درست', incorrectAnswers: 'پاسخ‌های نادرست', totalStudyTime: 'کل زمان مطالعه',
@@ -734,13 +783,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'مرور واژه‌های ضعیف', reviewRecentMistakes: 'مرور اشتباهات اخیر', reviewMixedPractice: 'مرور ترکیبی',
     seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار',
     loadingLevelWords: 'در حال بارگذاری واژه‌های این سطح...', noWordsInList: 'هنوز واژه‌ای در این فهرست نیست.',
-    signInPrompt: 'برای دیدن پروفایل یادگیری وارد شوید.',
+    signInPrompt: 'برای همگام‌سازی پیشرفت بین دستگاه‌ها وارد شوید.',
+    guestProfileEmpty: 'برای دیدن آمار این سطح، یک آزمون کامل کنید.',
     noTrackedFor: 'برای {level} دادهٔ ثبت‌شده‌ای نیست. تب {best} را امتحان کنید.',
     metaSeen: 'دیده', metaRight: 'درست', metaWrong: 'نادرست',
     uncategorized: 'بدون دسته'
   },
   ru: {
     title: 'Профиль обучения',
+    adaptive: 'Адаптив',
     overview: 'Обзор', activity: 'Активность', performance: 'Результаты', review: 'Повторение',
     wordsSeen: 'Просмотрено слов', wordsStruggling: 'Сложные слова', accuracyPct: 'Точность %', wordsReviewed: 'Повторенные слова',
     quizzesCompleted: 'Завершено викторин', correctAnswers: 'Правильные ответы', incorrectAnswers: 'Неправильные ответы', totalStudyTime: 'Общее время обучения',
@@ -748,13 +799,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'Повторить слабые слова', reviewRecentMistakes: 'Повторить недавние ошибки', reviewMixedPractice: 'Смешанная практика',
     seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова',
     loadingLevelWords: 'Загрузка слов для этого уровня...', noWordsInList: 'В этом списке пока нет слов.',
-    signInPrompt: 'Войдите, чтобы увидеть профиль обучения.',
+    signInPrompt: 'Войдите, чтобы синхронизировать прогресс между устройствами.',
+    guestProfileEmpty: 'Пройдите викторину на этом уровне, чтобы увидеть статистику.',
     noTrackedFor: 'Нет данных для {level}. Попробуйте вкладку {best}.',
     metaSeen: 'Просм.', metaRight: 'Верно', metaWrong: 'Неверно',
     uncategorized: 'Без категории'
   },
   uk: {
     title: 'Профіль навчання',
+    adaptive: 'Адаптив',
     overview: 'Огляд', activity: 'Активність', performance: 'Результати', review: 'Повторення',
     wordsSeen: 'Переглянуто слів', wordsStruggling: 'Складні слова', accuracyPct: 'Точність %', wordsReviewed: 'Повторені слова',
     quizzesCompleted: 'Завершено вікторин', correctAnswers: 'Правильні відповіді', incorrectAnswers: 'Неправильні відповіді', totalStudyTime: 'Загальний час навчання',
@@ -762,13 +815,15 @@ const PROFILE_I18N = {
     reviewWeakWords: 'Повторити слабкі слова', reviewRecentMistakes: 'Повторити недавні помилки', reviewMixedPractice: 'Змішана практика',
     seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова',
     loadingLevelWords: 'Завантаження слів для цього рівня...', noWordsInList: 'У цьому списку поки немає слів.',
-    signInPrompt: 'Увійдіть, щоб побачити профіль навчання.',
+    signInPrompt: 'Увійдіть, щоб синхронізувати прогрес між пристроями.',
+    guestProfileEmpty: 'Пройдіть вікторину на цьому рівні, щоб побачити статистику.',
     noTrackedFor: 'Немає даних для {level}. Спробуйте вкладку {best}.',
     metaSeen: 'Перегл.', metaRight: 'Прав.', metaWrong: 'Неправ.',
     uncategorized: 'Без категорії'
   },
   ar: {
     title: 'ملف التعلم',
+    adaptive: 'تكيّفي',
     overview: 'نظرة عامة', activity: 'النشاط', performance: 'الأداء', review: 'مراجعة',
     wordsSeen: 'الكلمات التي تمت رؤيتها', wordsStruggling: 'الكلمات الصعبة', accuracyPct: 'الدقة %', wordsReviewed: 'الكلمات المُراجَعة',
     quizzesCompleted: 'الاختبارات المكتملة', correctAnswers: 'الإجابات الصحيحة', incorrectAnswers: 'الإجابات الخاطئة', totalStudyTime: 'إجمالي وقت الدراسة',
@@ -776,7 +831,8 @@ const PROFILE_I18N = {
     reviewWeakWords: 'مراجعة الكلمات الضعيفة', reviewRecentMistakes: 'مراجعة الأخطاء الأخيرة', reviewMixedPractice: 'مراجعة مختلطة',
     seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة',
     loadingLevelWords: 'جارٍ تحميل كلمات هذا المستوى...', noWordsInList: 'لا توجد كلمات في هذه القائمة بعد.',
-    signInPrompt: 'سجّل الدخول لعرض ملف التعلم.',
+    signInPrompt: 'سجّل الدخول لمزامنة تقدمك عبر الأجهزة.',
+    guestProfileEmpty: 'أكمل اختباراً على هذا المستوى لرؤية الإحصائيات هنا.',
     noTrackedFor: 'لا توجد بيانات متتبعة للمستوى {level}. جرّب تبويب {best}.',
     metaSeen: 'شوهد', metaRight: 'صحيح', metaWrong: 'خطأ',
     uncategorized: 'غير مصنف'
@@ -836,7 +892,7 @@ var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
-var learningProfileSelectedLevel = 'A1';
+var learningProfileSelectedLevel = 'ALL';
 var learningProfileDetailMode = null;
 var learningProfileLastDetailHtml = '';
 var _quizStartedAtMs = 0;
@@ -1212,6 +1268,13 @@ function applyTranslations() {
   // New banner titles
   document.getElementById('adaptive-banner-title').textContent = u.adaptiveBannerTitle;
   document.getElementById('adaptive-banner-sub').textContent = u.adaptiveBannerSub;
+  var v2Title = document.getElementById('adaptive-v2-banner-title');
+  if (v2Title) v2Title.textContent = u.adaptiveV2BannerTitle;
+  var v2Sub = document.getElementById('adaptive-v2-banner-sub');
+  if (v2Sub) v2Sub.textContent = u.adaptiveV2BannerSub;
+  if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+  var profileAllTab = document.getElementById('profile-level-ALL');
+  if (profileAllTab) profileAllTab.textContent = _lp('adaptive');
   document.getElementById('learning-profile-banner-title').textContent = _lp('title');
   document.getElementById('learning-profile-title').textContent = _lp('title');
   document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
@@ -1475,6 +1538,15 @@ function _initInstallExperience() {
   _wireInstallShareActions();
 }
 
+function _ensureHomeLayout() {
+  var actions = document.querySelector('.home-actions');
+  if (actions) actions.classList.add('profile-visible');
+  var profile = document.getElementById('learning-profile-banner');
+  if (profile) profile.classList.remove('hidden');
+}
+
+window._ensureHomeLayout = _ensureHomeLayout;
+
 function _wireInstallShareActions() {
   var overlay = document.getElementById('install-guide-overlay');
   if (!overlay) {
@@ -1616,6 +1688,68 @@ function _loadCSVLevel(lv) {
 function _loadAllCSV() {
   return Promise.all(['A1','A2','B1'].map(_loadCSVLevel));
 }
+
+// ── Unified V2 vocabulary (ALL level) ──
+var V2_VOCAB = null;
+var V2_QUIZ_ROWS = null;
+var _v2LoadPromise = null;
+
+var _V2_TYPE_LABELS = { N: 'Noun', V: 'Verb', A: 'Adjective', P: 'Phrase', D: 'Adverb', '#': 'Number', W: 'Word' };
+var _V2_ARTICLE_LABELS = { r: 'der', e: 'die', s: 'das' };
+var _V2_TR_KEYS = ['translation_en', 'translation_tr', 'translation_fa', 'translation_ru', 'translation_uk', 'translation_ar'];
+
+function _v2EntryToRow(id, entry) {
+  var tr = entry[3] || [];
+  var row = {
+    id: String(id),
+    word: (entry[8] || entry[0] || '').trim() || entry[0] || '',
+    word_type: _V2_TYPE_LABELS[entry[1]] || 'Word',
+    article: _V2_ARTICLE_LABELS[entry[2]] || '',
+    difficulty: String(entry[4] || ''),
+    category_id: String(entry[5] || ''),
+    entry_type: 'main',
+    example_de: (entry[6] || '').trim(),
+    plural: (entry[7] || '').trim()
+  };
+  _V2_TR_KEYS.forEach(function(key, idx) {
+    row[key] = (tr[idx] || '').trim();
+  });
+  return row;
+}
+
+function _loadV2Vocab() {
+  if (V2_VOCAB) return Promise.resolve(V2_VOCAB);
+  if (_v2LoadPromise) return _v2LoadPromise;
+  _v2LoadPromise = _loadCSVText('data/vocabulary.v2.min.json')
+    .then(function(txt) {
+      var parsed = JSON.parse(txt);
+      V2_VOCAB = parsed;
+      V2_QUIZ_ROWS = Object.keys(parsed).map(function(id) {
+        return _v2EntryToRow(id, parsed[id]);
+      }).filter(function(r) {
+        return r.translation_en && r.translation_en.trim();
+      });
+      if (!V2_QUIZ_ROWS.length) throw new Error('V2 vocabulary parsed but produced 0 quiz rows');
+      return V2_VOCAB;
+    })
+    .catch(function(err) {
+      _v2LoadPromise = null;
+      throw err;
+    });
+  return _v2LoadPromise;
+}
+
+window._loadV2Vocab = _loadV2Vocab;
+
+window._v2AllQuizRows = function() {
+  return (V2_QUIZ_ROWS || []).slice();
+};
+
+window._v2RowById = function(id) {
+  if (!V2_VOCAB || id == null) return null;
+  var entry = V2_VOCAB[String(id)];
+  return entry ? _v2EntryToRow(String(id), entry) : null;
+};
 
 // ── Get display label for a CSV row in the active language ──
 // Correctness is NEVER determined by comparing this text.
@@ -1797,15 +1931,16 @@ function showResults(){
   else if(pct>=50){emoji='👍';title=rt.ok;}
   var elapsedSeconds = _quizStartedAtMs ? Math.max(0, Math.round((Date.now() - _quizStartedAtMs) / 1000)) : 0;
   if (typeof window.APP_AUTH_RECORD_QUIZ_STATS === 'function') {
+    var quizMode = currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive');
     window.APP_AUTH_RECORD_QUIZ_STATS({
-      mode: currentThemeCategoryId > 0 ? 'theme' : 'adaptive',
+      mode: quizMode,
       categoryId: currentThemeCategoryId || null,
       correctAnswers: ok,
       incorrectAnswers: no,
       studyTimeSeconds: elapsedSeconds
     });
   }
-  window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : 'adaptive', level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
+  window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'), level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
   document.getElementById('r-emoji').textContent=emoji;
   document.getElementById('r-title').textContent=title;
   document.getElementById('r-score').textContent=ok+'/'+total;
@@ -1848,6 +1983,13 @@ function launchAdaptiveQuiz() {
   _quizReturnScreen = 'screen-adaptive-setup';
   _quizStartedAtMs = Date.now();
   startLevel(adaptiveSelectedLevel);
+}
+
+function openAdaptiveV2() {
+  window.umami?.track('adaptive_v2_opened');
+  if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+  _quizStartedAtMs = Date.now();
+  if (typeof window.startAdaptiveV2Quiz === 'function') window.startAdaptiveV2Quiz();
 }
 
 // ── THEME QUIZ ──
@@ -2002,24 +2144,35 @@ function _buildQueueFromRows(rows) {
 
 // ── LEARNING PROFILE ──
 function openLearningProfile() {
-  if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && !window.APP_AUTH_IS_SIGNED_IN()) return;
-  if (typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
-    var snap = window.APP_AUTH_GET_LEARNING_PROFILE();
-    if (snap && snap.level) learningProfileSelectedLevel = String(snap.level).toUpperCase();
-  }
-  var bestLevel = _bestLearningProfileLevel();
-  if (bestLevel && _profileLevelScore(bestLevel) > 0) {
-    learningProfileSelectedLevel = bestLevel;
-  }
-  ['A1','A2','B1'].forEach(function(k) {
-    var el = document.getElementById('profile-level-' + k);
-    if (el) el.classList.toggle('active', k === learningProfileSelectedLevel);
-  });
+  _ensureHomeLayout();
+  learningProfileSelectedLevel = 'ALL';
+  _setLearningProfileTabActive(learningProfileSelectedLevel);
   window.umami?.track('learning_profile_opened');
   show('screen-learning-profile');
   renderLearningProfile();
+  _ensureLearningProfileData(learningProfileSelectedLevel);
+}
+
+function _profileLevels() {
+  return ['ALL', 'A1', 'A2', 'B1'];
+}
+
+function _setLearningProfileTabActive(lv) {
+  _profileLevels().forEach(function(k) {
+    var el = document.getElementById('profile-level-' + k);
+    if (el) el.classList.toggle('active', k === lv);
+  });
+}
+
+function _ensureLearningProfileData(lv) {
+  if (lv === 'ALL') {
+    _loadV2Vocab().then(function() {
+      renderLearningProfile();
+    }).catch(function() {});
+    return;
+  }
   if (typeof _loadCSVLevel === 'function') {
-    _loadCSVLevel(learningProfileSelectedLevel).then(function() {
+    _loadCSVLevel(lv).then(function() {
       renderLearningProfile();
     }).catch(function() {});
   }
@@ -2029,23 +2182,45 @@ function setLearningProfileLevel(lv) {
   learningProfileSelectedLevel = lv;
   learningProfileDetailMode = null;
   learningProfileLastDetailHtml = '';
-  ['A1','A2','B1'].forEach(function(k) {
-    var el = document.getElementById('profile-level-' + k);
-    if (el) el.classList.toggle('active', k === lv);
-  });
+  _setLearningProfileTabActive(lv);
   renderLearningProfile();
-  if (typeof _loadCSVLevel === 'function') {
-    _loadCSVLevel(lv).then(function() {
-      renderLearningProfile();
-    }).catch(function() {});
+  _ensureLearningProfileData(lv);
+}
+
+function _emptyGuestProgress() {
+  return {
+    evaluationStage: 0,
+    skillLevel: 1,
+    words: {},
+    recentWords: [],
+    quizStats: { adaptive: _emptyStats(), theme: {} }
+  };
+}
+
+function _guestProfileProgress(level) {
+  if (level === 'ALL') {
+    if (typeof window._adaptiveV2GetProgress === 'function') {
+      return window._adaptiveV2GetProgress() || _emptyGuestProgress();
+    }
+    return _emptyGuestProgress();
   }
+  if (typeof window._adaptiveGetGuestProgress === 'function') {
+    return window._adaptiveGetGuestProgress(level) || _emptyGuestProgress();
+  }
+  return _emptyGuestProgress();
 }
 
 function _profileSnapshot(level) {
-  if (typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
+  level = level || learningProfileSelectedLevel || 'ALL';
+  if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN() &&
+      typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
     return window.APP_AUTH_GET_LEARNING_PROFILE(level);
   }
-  return null;
+  return {
+    signedIn: false,
+    level: level,
+    progress: _guestProfileProgress(level)
+  };
 }
 
 function _profileWordRows(progress) {
@@ -2138,7 +2313,7 @@ function _activityTotalsWithFallback(progress) {
 
 function _profileLevelScore(level) {
   var snap = _profileSnapshot(level);
-  if (!snap || !snap.signedIn) return -1;
+  if (!snap || !snap.progress) return -1;
   var progress = snap.progress || {};
   var totals = _profileTotals(progress);
   var activity = _activityTotalsWithFallback(progress);
@@ -2150,8 +2325,8 @@ function _profileLevelScore(level) {
 }
 
 function _bestLearningProfileLevel() {
-  var levels = ['A1', 'A2', 'B1'];
-  var best = levels[0];
+  var levels = _profileLevels();
+  var best = 'ALL';
   var bestScore = _profileLevelScore(best);
   levels.slice(1).forEach(function(level) {
     var score = _profileLevelScore(level);
@@ -2198,11 +2373,15 @@ function _performanceLists(quizStats) {
 
 function _profileWordJoin(level, progress) {
   var rows = _profileWordRows(progress);
-  var hasCsv = !!(CSV_QUIZ_DATA[level] && CSV_QUIZ_DATA[level].length);
   var csvMap = {};
-  (CSV_QUIZ_DATA[level] || []).forEach(function(r) { csvMap[String(r.id)] = r; });
+  if (level === 'ALL') {
+    (V2_QUIZ_ROWS || []).forEach(function(r) { csvMap[String(r.id)] = r; });
+  } else {
+    (CSV_QUIZ_DATA[level] || []).forEach(function(r) { csvMap[String(r.id)] = r; });
+  }
+  var hasCsv = level === 'ALL' ? !!V2_QUIZ_ROWS : !!(CSV_QUIZ_DATA[level] && CSV_QUIZ_DATA[level].length);
   return rows.map(function(w) {
-    var row = csvMap[w.id] || null;
+    var row = csvMap[w.id] || (level === 'ALL' && typeof window._v2RowById === 'function' ? window._v2RowById(w.id) : null);
     var wordLabel = row ? ((row.article ? row.article + ' ' : '') + expandOptional(row.word || w.id)) : (hasCsv ? ('#' + w.id) : '');
     var meaning = row ? (_csvRowDisplay(row) || row.translation_en || '') : (hasCsv ? '' : _lp('loadingLevelWords'));
     var catId = row ? Number(row.category_id) || 0 : 0;
@@ -2279,6 +2458,15 @@ window.toggleLearningProfileDetail = function(mode) {
     return;
   }
   learningProfileDetailMode = mode;
+  if (learningProfileDetailMode && learningProfileSelectedLevel === 'ALL') {
+    renderLearningProfile();
+    _loadV2Vocab().then(function() {
+      renderLearningProfile();
+    }).catch(function() {
+      renderLearningProfile();
+    });
+    return;
+  }
   if (learningProfileDetailMode && typeof _loadCSVLevel === 'function' && !(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length)) {
     renderLearningProfile();
     _loadCSVLevel(learningProfileSelectedLevel).then(function() {
@@ -2295,11 +2483,7 @@ function renderLearningProfile() {
   var el = document.getElementById('learning-profile-content');
   if (!el) return;
   var snap = _profileSnapshot(learningProfileSelectedLevel);
-  if (!snap || !snap.signedIn) {
-    el.innerHTML = '<div class="profile-empty">' + escHtml(_lp('signInPrompt')) + '</div>';
-    return;
-  }
-  var progress = snap.progress || {};
+  var progress = (snap && snap.progress) || _emptyGuestProgress();
   var joinedWords = _profileWordJoin(learningProfileSelectedLevel, progress);
   var totals = _profileTotals(progress);
   var activity = _activityTotalsWithFallback(progress);
@@ -2307,6 +2491,7 @@ function renderLearningProfile() {
   var selectedScore = _profileLevelScore(learningProfileSelectedLevel);
   var bestLevel = _bestLearningProfileLevel();
   var bestScore = _profileLevelScore(bestLevel);
+  var isGuest = !(snap && snap.signedIn);
   function stat(label, value, extraClass, clickMode, selected) {
     var cls = 'profile-stat';
     if (extraClass) cls += ' ' + extraClass;
@@ -2322,7 +2507,10 @@ function renderLearningProfile() {
     return '<div class="profile-list"><div class="profile-list-title">' + escHtml(title) + '</div>' + body + '</div>';
   }
   var levelHint = '';
-  if (selectedScore <= 0 && bestLevel && bestLevel !== learningProfileSelectedLevel && bestScore > 0) {
+  if (selectedScore <= 0 && totals.wordsSeen === 0 && learningProfileSelectedLevel !== 'ALL') {
+    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">'
+      + escHtml(_lp('guestProfileEmpty')) + '</div>';
+  } else if (selectedScore <= 0 && bestLevel && bestLevel !== learningProfileSelectedLevel && bestScore > 0) {
     levelHint = '<div class="profile-empty" style="margin-bottom:12px;">'
       + escHtml(_lp('noTrackedFor', { level: learningProfileSelectedLevel, best: bestLevel }))
       + '</div>';
@@ -2333,7 +2521,9 @@ function renderLearningProfile() {
   var strugglingListRows = joinedWords.filter(_isStrugglingWord).sort(function(a, b) {
     return (Number(b.failScore) || 0) - (Number(a.failScore) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
   }).slice(0, 60);
-  var detailsCsvReady = !!(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length);
+  var detailsCsvReady = learningProfileSelectedLevel === 'ALL'
+    ? !!V2_QUIZ_ROWS
+    : !!(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length);
   var detailHtml = '';
   if (learningProfileDetailMode === 'seen') {
     detailHtml = detailsCsvReady
@@ -2375,7 +2565,8 @@ function renderLearningProfile() {
       '<button onclick="startLearningProfileReview(\'weak\')">' + escHtml(_lp('reviewWeakWords')) + '</button>' +
       '<button onclick="startLearningProfileReview(\'recent\')">' + escHtml(_lp('reviewRecentMistakes')) + '</button>' +
       '<button onclick="startLearningProfileReview(\'mixed\')">' + escHtml(_lp('reviewMixedPractice')) + '</button>' +
-    '</div></div>';
+    '</div></div>' +
+    (isGuest ? '<div class="profile-empty" style="margin-top:4px;">' + escHtml(_lp('signInPrompt')) + '</div>' : '');
 
   if (detailIsOpen) {
     requestAnimationFrame(function() {
@@ -2407,10 +2598,14 @@ window.APP_DEBUG_LEARNING_PROFILE = function(level) {
 
 function _rowsByIds(level, ids) {
   var map = {};
-  (CSV_QUIZ_DATA[level] || []).forEach(function(r) { map[String(r.id)] = r; });
+  if (level === 'ALL') {
+    (V2_QUIZ_ROWS || []).forEach(function(r) { map[String(r.id)] = r; });
+  } else {
+    (CSV_QUIZ_DATA[level] || []).forEach(function(r) { map[String(r.id)] = r; });
+  }
   var out = [];
   ids.forEach(function(id) {
-    var r = map[String(id)];
+    var r = map[String(id)] || (level === 'ALL' && typeof window._v2RowById === 'function' ? window._v2RowById(id) : null);
     if (r && r.entry_type === 'main' && r.translation_en && r.translation_en.trim()) out.push(r);
   });
   return out;
@@ -2418,13 +2613,14 @@ function _rowsByIds(level, ids) {
 
 async function startLearningProfileReview(mode) {
   var snap = _profileSnapshot(learningProfileSelectedLevel);
-  if (!snap || !snap.signedIn) return;
+  if (!snap) return;
   var progress = snap.progress || {};
   var words = _profileWordRows(progress);
   var ov = document.getElementById('quiz-prep-overlay');
   ov.classList.add('active');
   try {
-    await _loadCSVLevel(learningProfileSelectedLevel);
+    if (learningProfileSelectedLevel === 'ALL') await _loadV2Vocab();
+    else await _loadCSVLevel(learningProfileSelectedLevel);
   } catch (err) {
     ov.classList.remove('active');
     alert('Could not load quiz data.');
@@ -2456,7 +2652,10 @@ async function startLearningProfileReview(mode) {
   });
   var rows = _rowsByIds(learningProfileSelectedLevel, ids).slice(0, QUIZ_LEN);
   if (rows.length < QUIZ_LEN) {
-    var pool = shuffle((CSV_QUIZ_DATA[learningProfileSelectedLevel] || []).filter(function(r) {
+    var poolSource = learningProfileSelectedLevel === 'ALL'
+      ? (V2_QUIZ_ROWS || [])
+      : (CSV_QUIZ_DATA[learningProfileSelectedLevel] || []);
+    var pool = shuffle(poolSource.filter(function(r) {
       return r.entry_type === 'main' && r.translation_en && r.translation_en.trim() && !used[String(r.id)];
     }));
     rows = rows.concat(pool.slice(0, QUIZ_LEN - rows.length));
@@ -2466,12 +2665,14 @@ async function startLearningProfileReview(mode) {
     alert('Complete an adaptive quiz first so your review set has words to use.');
     return;
   }
-  if (typeof window.APP_AUTH_USE_LEARNING_LEVEL === 'function') {
+  if (typeof window.APP_AUTH_USE_LEARNING_LEVEL === 'function' && snap.signedIn) {
     window.APP_AUTH_USE_LEARNING_LEVEL(learningProfileSelectedLevel);
   }
   _quizStartedAtMs = Date.now();
   window.umami?.track('learning_profile_review_started', { mode: mode, level: learningProfileSelectedLevel });
-  if (typeof window.startAdaptiveReviewQuiz === 'function') {
+  if (learningProfileSelectedLevel === 'ALL' && typeof window.startAdaptiveV2ReviewQuiz === 'function') {
+    await window.startAdaptiveV2ReviewQuiz(rows, 'screen-learning-profile');
+  } else if (typeof window.startAdaptiveReviewQuiz === 'function') {
     await window.startAdaptiveReviewQuiz(learningProfileSelectedLevel, rows, 'screen-learning-profile');
   } else {
     currentThemeCategoryId = 0;
@@ -4980,6 +5181,11 @@ function checkOnline() {
   _langDdSync(LANG);
 })();
 applyTranslations();
+_ensureHomeLayout();
+window.addEventListener('pageshow', function() {
+  _ensureHomeLayout();
+  if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+});
 // ── Connectivity probe ───────────────────────────────────────────────────
 // Fetches a cache-busted URL through the real network (SW passes _nc=
 // requests un-cached). Times out after 5 s to handle captive-portal /

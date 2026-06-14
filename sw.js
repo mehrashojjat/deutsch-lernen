@@ -1,12 +1,11 @@
-var CACHE_NAME = 'wortschatz-shell-v1.1.k';
+var CACHE_NAME = 'wortschatz-shell-v1.3';
+
+// Static assets only — never pre-cache index.html or versioned JS (they go stale
+// quickly and cause layout/behaviour mismatches on soft refresh).
 var APP_SHELL = [
-  '/index.html',
   '/site.webmanifest',
   '/favicon.ico',
   '/apple-touch-icon.png',
-  '/js/app.js?v=2.0',
-  '/js/adaptive.js?v=2.0',
-  '/js/auth.js?v=2.0',
   '/assets/ShareButton.png',
   '/assets/A2HS.png'
 ];
@@ -35,15 +34,25 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', function(event) {
   if (event.request.method !== 'GET') return;
 
-  // Ignore unsupported schemes (e.g. browser extension resources).
   var reqUrl;
   try { reqUrl = new URL(event.request.url); } catch (e) { return; }
   if (reqUrl.protocol !== 'http:' && reqUrl.protocol !== 'https:') return;
 
-  // HTML navigation requests: network-first; fall back to cached shell offline.
+  // Skip connectivity-probe requests (contain _nc= query param).
+  if (event.request.url.indexOf('_nc=') !== -1) return;
+
+  // HTML navigation: always revalidate so soft refresh picks up new inline CSS/markup.
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request).catch(function() {
+      fetch(event.request, { cache: 'no-cache' }).then(function(response) {
+        if (response && response.status === 200 && response.type === 'basic') {
+          var clone = response.clone();
+          caches.open(CACHE_NAME).then(function(cache) {
+            return cache.put('/index.html', clone).catch(function() {});
+          }).catch(function() {});
+        }
+        return response;
+      }).catch(function() {
         return caches.open(CACHE_NAME).then(function(cache) {
           return cache.match('/index.html');
         });
@@ -52,14 +61,9 @@ self.addEventListener('fetch', function(event) {
     return;
   }
 
-  // Skip connectivity-probe requests (contain _nc= query param).
-  if (event.request.url.indexOf('_nc=') !== -1) return;
-
-  // JavaScript and CSS: NETWORK-FIRST so updates are always served fresh
-  // in browser tabs. Falls back to cache when offline.
-  // This prevents the browser from persisting stale JS the way a PWA does.
+  // JavaScript and CSS: network-first; fall back to cache when offline.
   var url = event.request.url;
-  if (url.indexOf('/js/') !== -1 || url.match(/\.js(\?|$)/) || url.match(/\.css(\?|$)/)) {
+  if (url.indexOf('/js/') !== -1 || url.indexOf('/data/') !== -1 || url.match(/\.js(\?|$)/) || url.match(/\.json(\?|$)/)) {
     event.respondWith(
       fetch(event.request, { cache: 'no-cache' }).then(function(response) {
         if (!response || response.status !== 200 || response.type !== 'basic') return response;

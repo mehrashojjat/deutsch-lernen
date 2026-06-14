@@ -26,7 +26,9 @@
   var SUPABASE_URL = 'https://birqofmhpstpdrmnassi.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_vRt9hVUTAhv9V0sWjF8JTg_QZHuV10T';
   var TABLE        = 'user_progress';
-  var ALL_LEVELS   = ['A1', 'A2', 'B1'];
+  var LEGACY_LEVELS = ['A1', 'A2', 'B1'];
+  var ALL_LEVELS   = ['A1', 'A2', 'B1', 'ALL'];
+  var V2_LEVEL     = 'ALL';
 
   var _db                   = null;   // Supabase client
   var _user                 = null;   // authenticated user or null
@@ -42,6 +44,8 @@
   // ── Original function references (set during _init) ───────────
   var _origStartLevel    = null;
   var _origStartAdaptive = null;
+  var _origStartAdaptiveV2 = null;
+  var _origStartAdaptiveV2Review = null;
   var _origShowResults   = null;
   var _origGoHome        = null;
   var _capAppListener    = null;
@@ -149,8 +153,36 @@
     return { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 };
   }
 
-  function _defaultProgress() {
-    return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [], quizStats: _defaultQuizStats() };
+  function _clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+  function _toUnifiedId(level, srcId) {
+    var digit = level === 'A1' ? '1' : level === 'A2' ? '2' : '3';
+    return String(parseInt(String(digit) + String(srcId), 10));
+  }
+
+  function _legacyAttemptWeight(progress) {
+    var words = (progress && progress.words) || {};
+    var total = 0;
+    Object.keys(words).forEach(function (id) {
+      var w = words[id] || {};
+      total += Number(w.seenCount) || 0;
+    });
+    return total;
+  }
+
+  function _bootstrapAllFromLegacy(legacyByLevel) {
+    if (typeof window._v2BootstrapFromLegacyLevels === 'function') {
+      return window._v2BootstrapFromLegacyLevels(legacyByLevel);
+    }
+    return _defaultProgress();
+  }
+
+  function _legacyProgressMap() {
+    var out = {};
+    LEGACY_LEVELS.forEach(function (lv) {
+      out[lv] = _progressCache[lv] || null;
+    });
+    return out;
   }
 
   function _isMetaKey(key) {
@@ -370,33 +402,78 @@
       var key = _rowLevelKey(row);
       if (key && !byLevel[key]) byLevel[key] = row;
     });
-    var results = ALL_LEVELS.map(function(lv) {
-      return byLevel[lv] ? _progressFromRow(byLevel[lv]) : null;
-    });
 
     var ensures = [];
-    ALL_LEVELS.forEach(function (lv, i) {
-      if (!results[i]) {
+    LEGACY_LEVELS.forEach(function (lv) {
+      if (byLevel[lv]) {
+        _progressCache[lv] = _progressFromRow(byLevel[lv]);
+      } else {
         ensures.push(_ensureRow(userId, lv));
-        results[i] = _defaultProgress();
+        _progressCache[lv] = _defaultProgress();
       }
     });
-    if (ensures.length) await Promise.all(ensures);
 
-    ALL_LEVELS.forEach(function (lv, i) { _progressCache[lv] = results[i]; });
+    if (byLevel[V2_LEVEL]) {
+      _progressCache[V2_LEVEL] = _progressFromRow(byLevel[V2_LEVEL]);
+    } else {
+      var legacyHasData = LEGACY_LEVELS.some(function (lv) {
+        return _legacyAttemptWeight(_progressCache[lv]) > 0;
+      });
+      if (legacyHasData) {
+        var boot = _bootstrapAllFromLegacy(_legacyProgressMap());
+        _progressCache[V2_LEVEL] = boot;
+        await _updateRow(userId, V2_LEVEL, boot);
+      } else {
+        ensures.push(_ensureRow(userId, V2_LEVEL));
+        _progressCache[V2_LEVEL] = _defaultProgress();
+      }
+    }
+
+    if (ensures.length) await Promise.all(ensures);
   }
 
   // ── Safety: ensure one level is cached (fallback for quiz start) ─
   // Called before each quiz in case the cache was not populated
   // (e.g. sign-in only partially loaded before the user tapped the quiz).
   async function _ensureLevelCached(userId, level) {
-    if (_progressCache[level]) return; // already there — nothing to do
+    if (_progressCache[level]) return;
     var progress = await _fetchRow(userId, level);
+    if (!progress && level === V2_LEVEL) {
+      for (var li = 0; li < LEGACY_LEVELS.length; li++) {
+        var legacyLv = LEGACY_LEVELS[li];
+        if (!_progressCache[legacyLv]) {
+          var legacyProgress = await _fetchRow(userId, legacyLv);
+          _progressCache[legacyLv] = legacyProgress || _defaultProgress();
+        }
+      }
+      var legacyHasData = LEGACY_LEVELS.some(function (lv) {
+        return _legacyAttemptWeight(_progressCache[lv]) > 0;
+      });
+      if (legacyHasData) {
+        progress = _bootstrapAllFromLegacy(_legacyProgressMap());
+        _progressCache[V2_LEVEL] = progress;
+        await _updateRow(userId, V2_LEVEL, progress);
+        return;
+      }
+    }
     if (!progress) {
       await _ensureRow(userId, level);
       progress = _defaultProgress();
     }
     _progressCache[level] = progress;
+  }
+
+  function _injectV2Level() {
+    if (typeof window._adaptiveV2SetAccountMode === 'function') {
+      window._adaptiveV2SetAccountMode(true);
+    }
+    var progress = _progressCache[V2_LEVEL] || _defaultProgress();
+    if (typeof window._adaptiveV2InjectProgress === 'function') {
+      window._adaptiveV2InjectProgress(progress);
+    }
+    if (typeof window._adaptiveV2RefreshBadge === 'function') {
+      window._adaptiveV2RefreshBadge();
+    }
   }
 
   // ── Inject a level's cached progress into the adaptive algorithm ─
@@ -411,6 +488,17 @@
   }
 
   // ── Save hook: update cache + DB for whichever level is active ─
+  function _registerV2SaveHook(userId) {
+    if (typeof window._adaptiveV2SetSaveHook !== 'function') return;
+    window._adaptiveV2SetSaveHook(function (p) {
+      var prev = _progressCache[V2_LEVEL] || _defaultProgress();
+      p = p && typeof p === 'object' ? p : _defaultProgress();
+      p.quizStats = _normalizeQuizStats((p.quizStats && typeof p.quizStats === 'object') ? p.quizStats : prev.quizStats);
+      _progressCache[V2_LEVEL] = p;
+      _updateRow(userId, V2_LEVEL, p);
+    });
+  }
+
   function _registerSaveHook(userId) {
     if (typeof window._adaptiveSetSaveHook !== 'function') return;
     window._adaptiveSetSaveHook(function (p) {
@@ -451,8 +539,8 @@
 
   function _recordQuizStats(payload) {
     if (!_user || !payload) return;
-    var mode = payload.mode === 'theme' ? 'theme' : 'adaptive';
-    var lv = _currentAdaptiveLevel || 'A1';
+    var mode = payload.mode === 'theme' ? 'theme' : (payload.mode === 'adaptive_v2' ? 'adaptive_v2' : 'adaptive');
+    var lv = mode === 'adaptive_v2' ? V2_LEVEL : (_currentAdaptiveLevel || 'A1');
     var progress = _progressCache[lv] || _defaultProgress();
     progress.quizStats = _normalizeQuizStats(progress.quizStats);
 
@@ -513,10 +601,7 @@
   function _renderHome() {
     var tip = document.getElementById('adaptive-tip');
     if (tip) tip.classList.toggle('hidden', !!_user);
-    var profile = document.getElementById('learning-profile-banner');
-    if (profile) profile.classList.toggle('hidden', !_user);
-    var actions = document.querySelector('.home-actions');
-    if (actions) actions.classList.toggle('profile-visible', !!_user);
+    if (typeof window._ensureHomeLayout === 'function') window._ensureHomeLayout();
     if (typeof window.refreshInstallTip === 'function') window.refreshInstallTip();
   }
 
@@ -569,6 +654,10 @@
 
   window.APP_AUTH_USE_LEARNING_LEVEL = function (level) {
     if (!level) return;
+    if (String(level).toUpperCase() === V2_LEVEL) {
+      _injectV2Level();
+      return;
+    }
     _currentAdaptiveLevel = level;
     _injectLevel(level);
   };
@@ -655,7 +744,9 @@
     _renderHome();
     await _loadAllLevels(user.id);
     _injectLevel(_currentAdaptiveLevel);
+    _injectV2Level();
     _registerSaveHook(user.id);
+    _registerV2SaveHook(user.id);
     var profileScreen = document.getElementById('screen-learning-profile');
     if (profileScreen && !profileScreen.classList.contains('hidden') &&
         typeof window.renderLearningProfile === 'function') {
@@ -668,6 +759,9 @@
     _progressCache = {};
     if (typeof window._adaptiveSetSaveHook === 'function') {
       window._adaptiveSetSaveHook(null);
+    }
+    if (typeof window._adaptiveV2SetSaveHook === 'function') {
+      window._adaptiveV2SetSaveHook(null);
     }
     _renderAuthSection();
     _renderHome();
@@ -732,6 +826,37 @@
     };
   }
 
+  function _wrapStartAdaptiveV2() {
+    _origStartAdaptiveV2 = window.startAdaptiveV2Quiz;
+    _origStartAdaptiveV2Review = window.startAdaptiveV2ReviewQuiz;
+
+    async function _runV2Quiz(fn, args) {
+      if (_user) {
+        await _ensureLevelCached(_user.id, V2_LEVEL);
+        _injectV2Level();
+        _quizInProgress = true;
+        _quizCompleted  = false;
+        _quizLevel      = V2_LEVEL;
+        _quizSnapshot   = _deepCopy(_progressCache[V2_LEVEL]);
+      }
+      if (typeof fn === 'function') await fn.apply(null, args);
+      var quizScreen = document.getElementById('screen-quiz');
+      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+        _quizInProgress = false;
+        _quizCompleted  = false;
+        _quizSnapshot   = null;
+        _quizLevel      = null;
+      }
+    }
+
+    window.startAdaptiveV2Quiz = function () {
+      return _runV2Quiz(_origStartAdaptiveV2, []);
+    };
+    window.startAdaptiveV2ReviewQuiz = function (rows, returnScreen) {
+      return _runV2Quiz(_origStartAdaptiveV2Review, [rows, returnScreen]);
+    };
+  }
+
   // 3. showResults: mark quiz as completed so goHome knows not to restore snapshot
   function _wrapShowResults() {
     _origShowResults = window.showResults;
@@ -755,7 +880,8 @@
       if (_quizInProgress && !_quizCompleted && _quizLevel && _quizSnapshot) {
         // Mid-quiz abandonment: discard in-progress changes, restore snapshot
         _progressCache[_quizLevel] = _quizSnapshot;
-        _injectLevel(_quizLevel);
+        if (_quizLevel === V2_LEVEL) _injectV2Level();
+        else _injectLevel(_quizLevel);
       }
       // Reset tracking flags regardless
       _quizInProgress = false;
@@ -776,6 +902,7 @@
     // All wrappers must be registered after adaptive.js has run
     _wrapStartLevel();
     _wrapStartAdaptive();
+    _wrapStartAdaptiveV2();
     _wrapShowResults();
     _wrapGoHome();
 

@@ -9,6 +9,7 @@
 
   var STORAGE_KEY  = 'deutsch_adaptive_progress';
   var RECENT_LIMIT = 25;
+  var _cachedLevel = null;
 
   // ── External persistence hooks (set by auth.js) ───────────────
   var _pendingProgress = null;
@@ -21,20 +22,54 @@
   var _stageAtStart = 0;       // evaluationStage value when this quiz began
 
   // ── Persistence ────────────────────────────────────────────────
+  function _guestStorageKey(lv) {
+    return STORAGE_KEY + '_' + String(lv || currentLevel || 'A1').toUpperCase();
+  }
+
+  function _migrateLegacyGuestStorage() {
+    try {
+      var legacy = localStorage.getItem(STORAGE_KEY);
+      var last = localStorage.getItem(STORAGE_KEY + '__last_level');
+      if (legacy && last && !localStorage.getItem(_guestStorageKey(last))) {
+        localStorage.setItem(_guestStorageKey(last), legacy);
+      }
+    } catch (e) {}
+  }
+
+  function _loadForGuestLevel(lv) {
+    _migrateLegacyGuestStorage();
+    try { return JSON.parse(localStorage.getItem(_guestStorageKey(lv))); } catch (e) { return null; }
+  }
+
   function _load() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; }
   }
+
   function _save(p) {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); } catch (e) {}
-    if (typeof _externalSaveFn === 'function') _externalSaveFn(p);
+    if (typeof _externalSaveFn === 'function') {
+      _externalSaveFn(p);
+      return;
+    }
+    var lv = currentLevel || 'A1';
+    try {
+      localStorage.setItem(_guestStorageKey(lv), JSON.stringify(p));
+      localStorage.setItem(STORAGE_KEY + '__last_level', lv);
+    } catch (e) {}
   }
+
   function _initProgress() {
     return { evaluationStage: 0, skillLevel: 1, words: {}, recentWords: [] };
   }
+
   function _get() {
-    if (!_progress) {
+    if (!_progress || (! _externalSaveFn && _cachedLevel !== currentLevel)) {
       if (_pendingProgress) { _progress = _pendingProgress; _pendingProgress = null; }
-      else { _progress = _load() || _initProgress(); }
+      else if (typeof _externalSaveFn === 'function') {
+        _progress = _load() || _initProgress();
+      } else {
+        _progress = _loadForGuestLevel(currentLevel) || _initProgress();
+      }
+      _cachedLevel = currentLevel;
     }
     return _progress;
   }
@@ -371,6 +406,9 @@
 
   // ── Public: start adaptive quiz for a specific level ───────────
   window.startAdaptiveQuiz = async function (lv) {
+    currentLevel = lv;
+    _progress = null;
+    _cachedLevel = null;
     var p = _get();
     _active       = true;
     _answers      = [];
@@ -504,5 +542,8 @@
   };
   window._adaptiveSetSaveHook    = function (fn) { _externalSaveFn = fn; };
   window._adaptiveRefreshBadge   = _updateHomeBadge;
+  window._adaptiveGetGuestProgress = function (level) {
+    return _loadForGuestLevel(level);
+  };
 
 })();
