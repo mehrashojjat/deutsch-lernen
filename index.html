@@ -328,6 +328,29 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
 .profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
 .profile-empty{color:var(--muted);font-size:.84rem;line-height:1.6;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:16px;}
+.profile-journey-wrap{margin-bottom:14px;}
+.profile-journey-bar{display:flex;position:relative;height:10px;border-radius:999px;overflow:hidden;border:1px solid var(--border);background:rgba(0,0,0,.2);}
+.profile-journey-seg{flex:1;position:relative;border-right:1px solid rgba(255,255,255,.1);overflow:hidden;}
+.profile-journey-seg:last-child{border-right:none;}
+.profile-journey-seg-fill{position:absolute;left:0;top:0;bottom:0;transition:width .3s ease;}
+.profile-journey-seg-a1 .profile-journey-seg-fill{background:rgba(107,232,160,.45);}
+.profile-journey-seg-a2 .profile-journey-seg-fill{background:rgba(126,184,247,.45);}
+.profile-journey-seg-b1 .profile-journey-seg-fill{background:rgba(196,160,247,.45);}
+.profile-journey-marker{position:absolute;top:1px;bottom:1px;border-radius:999px;background:linear-gradient(180deg,#fff5d6,var(--gold));box-shadow:0 0 0 1px rgba(0,0,0,.3);z-index:2;min-width:3px;}
+.profile-journey-legend{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:8px;font-size:.72rem;color:var(--muted);line-height:1.3;}
+.profile-journey-legend-bands{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;}
+.profile-journey-chip{display:inline-flex;align-items:center;gap:5px;}
+.profile-journey-chip-band{font-weight:700;color:var(--text);letter-spacing:.03em;}
+.profile-journey-chip-meta{opacity:.85;}
+.profile-journey-chip-gold .profile-journey-chip-band{font-weight:600;color:var(--muted);}
+.profile-journey-dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px;border:1px solid rgba(255,255,255,.15);}
+.profile-journey-dot-a1{background:rgba(107,232,160,.85);}
+.profile-journey-dot-a2{background:rgba(126,184,247,.85);}
+.profile-journey-dot-b1{background:rgba(196,160,247,.85);}
+.profile-journey-dot-gold{background:linear-gradient(180deg,#fff5d6,var(--gold));}
+.profile-danger-zone{margin-top:8px;padding-top:4px;}
+.profile-reset-btn{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(240,112,112,.45);background:rgba(240,112,112,.08);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:#ff9a9a;cursor:pointer;transition:all .15s;}
+.profile-reset-btn:hover{border-color:rgba(240,112,112,.65);background:rgba(240,112,112,.14);}
 
 
 
@@ -855,8 +878,8 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
         <div class="rb-icon">🚀</div>
         <div class="rb-text">
           <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
-          <span id="adaptive-v2-banner-sub">Quizzes across all vocabulary levels</span>
-          <span id="adaptive-v2-banner-status">Finds your level automatically</span>
+          <span id="adaptive-v2-banner-sub">Finds your level · adapts each quiz</span>
+          <span id="adaptive-v2-banner-status" style="display:none"></span>
         </div>
       </div>
       <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
@@ -1134,10 +1157,10 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 </div>
 
 <!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="js/app.js?v=2.3"></script>
-<script src="js/adaptive.js?v=2.3"></script>
-<script src="js/adaptive_v2.js?v=2.3"></script>
-<script src="js/auth.js?v=2.2"></script>
+<script src="js/app.js?v=3.0"></script>
+<script src="js/adaptive.js?v=2.5"></script>
+<script src="js/adaptive_v2.js?v=3.0"></script>
+<script src="js/auth.js?v=2.4"></script>
 <script src="js/announcement.js?v=1.2"></script>
 </body>
 </html>

@@ -32,6 +32,30 @@
     return { adaptive: { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 }, theme: {} };
   }
 
+  function _normalizeQuizStats(stats) {
+    stats = (stats && typeof stats === 'object') ? stats : {};
+    var adaptive = stats.adaptive || {};
+    var theme = (stats.theme && typeof stats.theme === 'object') ? stats.theme : {};
+    return {
+      adaptive: {
+        quizzesCompleted: Number(adaptive.quizzesCompleted) || 0,
+        correctAnswers: Number(adaptive.correctAnswers) || 0,
+        incorrectAnswers: Number(adaptive.incorrectAnswers) || 0,
+        studyTimeSeconds: Number(adaptive.studyTimeSeconds) || 0
+      },
+      theme: theme
+    };
+  }
+
+  function _incrementQuizStats(target, payload) {
+    target = target || { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 };
+    target.quizzesCompleted += 1;
+    target.correctAnswers += Number(payload.correctAnswers) || 0;
+    target.incorrectAnswers += Number(payload.incorrectAnswers) || 0;
+    target.studyTimeSeconds += Number(payload.studyTimeSeconds) || 0;
+    return target;
+  }
+
   function _clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
   function _shuffle(arr) {
@@ -690,6 +714,70 @@
     return picked;
   }
 
+  function _bandHasUnseen(all, p, band) {
+    return _filterByBand(all, band).some(function (r) { return _isUnseen(p, r.id); });
+  }
+
+  function _countUnseenInBand(all, p, band) {
+    return _filterByBand(all, band).filter(function (r) { return _isUnseen(p, r.id); }).length;
+  }
+
+  function _shouldPrioritizeGlobalUnseen(p) {
+    var band = p.cefrBand || 'A1';
+    var skill = Number(p.skillLevel) || 1;
+    if (band === 'B1' && skill >= 4) return true;
+    if (band === 'A2' && skill >= 6) return true;
+    if (band === 'A1' && skill >= 8) return true;
+    if (p.learningPhase === 'band_review') return true;
+    return false;
+  }
+
+  function _pickUnseenByBandPriority(all, p, usedIds, count, bandOrder) {
+    var picked = [];
+    bandOrder = bandOrder || ['B1', 'A2', 'A1'];
+    bandOrder.forEach(function (band) {
+      while (picked.length < count) {
+        var pool = _available(_filterByBand(all, band), usedIds);
+        var w = _pickUnseen(pool, p, {});
+        if (!w) break;
+        usedIds[w.id] = true;
+        picked.push(w);
+      }
+    });
+    while (picked.length < count) {
+      var any = _pickUnseen(_available(all, usedIds), p, {});
+      if (!any) break;
+      usedIds[any.id] = true;
+      picked.push(any);
+    }
+    return picked;
+  }
+
+  function _placementUncertainty(p) {
+    var stage = Number(p.evaluationStage) || 0;
+    if (stage === 0) return 1;
+    if (stage === 1) return 0.78;
+    var quizzes = (p.quizStats && p.quizStats.adaptive && p.quizStats.adaptive.quizzesCompleted) || 0;
+    var u = 0.65;
+    if (quizzes >= 2) u = 0.5;
+    if (quizzes >= 5) u = 0.38;
+    if (quizzes >= 12) u = 0.26;
+    if (quizzes >= 25) u = 0.16;
+    var seenWords = 0;
+    Object.keys(p.words || {}).forEach(function (id) {
+      if ((p.words[id].seenCount || 0) > 0) seenWords++;
+    });
+    if (seenWords < 25) u = Math.max(u, 0.55);
+    else if (seenWords < 80) u = Math.max(u, 0.35);
+    var acc = Number(p.lastQuizAccuracy);
+    if (!isNaN(acc)) {
+      if (acc < 0.45) u = Math.min(1, u + 0.3);
+      else if (acc < 0.6) u = Math.min(1, u + 0.15);
+      else if (acc >= 0.8) u = Math.max(0.12, u - 0.08);
+    }
+    return _clamp(u, 0.1, 1);
+  }
+
   function _crossBandSlotCount(p) {
     if (p.learningPhase !== 'active') return 0;
     var band = p.cefrBand || 'A1';
@@ -705,9 +793,45 @@
     var skill = p.skillLevel;
     var usedIds = {};
     var selected = [];
+    var prioritizeUnseen = _shouldPrioritizeGlobalUnseen(p);
+
+    if (prioritizeUnseen) {
+      var pools = _classifyWords(all, p, null);
+      function takeFromRanked(ranked, count) {
+        var picked = [];
+        for (var i = 0; i < ranked.length && picked.length < count; i++) {
+          if (usedIds[ranked[i].id]) continue;
+          usedIds[ranked[i].id] = true;
+          picked.push(ranked[i].row);
+        }
+        return picked;
+      }
+      selected = selected.concat(takeFromRanked(pools.struggling, 2));
+      selected = selected.concat(_pickUnseenByBandPriority(all, p, usedIds, 5, ['B1', 'A2', 'A1']));
+      if (_countUnseenInBand(all, p, 'B1') + _countUnseenInBand(all, p, 'A2') + _countUnseenInBand(all, p, 'A1') === 0) {
+        selected = selected.concat(takeFromRanked(pools.stable, 1));
+      }
+      var confBand = band === 'A1' && skill >= 8 ? 'A2' : band;
+      var confidencePool = _deprioritizeNumbers(_available(_filterByBand(all, confBand), usedIds), true);
+      var confidence = _byDifficulty(confidencePool, _clamp(skill - 1.5, 1, 10), p.recentWords) ||
+        _nearestDifficulty(confidencePool, skill);
+      if (confidence) { usedIds[confidence.id] = true; selected.push(confidence); }
+      var explore = _pickUnseen(_available(_filterByBand(all, 'B1'), usedIds), p, {}) ||
+        _pickUnseen(_available(_filterByBand(all, 'A2'), usedIds), p, {}) ||
+        _byDifficulty(_available(_filterByBand(all, band), usedIds), _clamp(skill + 1, 1, 10), p.recentWords);
+      if (explore) { usedIds[explore.id] = true; selected.push(explore); }
+      while (selected.length < QUIZ_LEN) {
+        var fb = _pickUnseen(_available(all, usedIds), p, {}) ||
+          _fallback(_available(all, usedIds), usedIds, p.recentWords);
+        if (!fb) break;
+        usedIds[fb.id] = true;
+        selected.push(fb);
+      }
+      return _shuffle(selected).slice(0, QUIZ_LEN);
+    }
+
     var crossSlots = _crossBandSlotCount(p);
     var exploreIsCross = crossSlots >= 1;
-
     var pools = _classifyWords(all, p, band);
 
     function takeFromRanked(ranked, count) {
@@ -780,7 +904,6 @@
   function _buildBandReviewRows(all, p) {
     var usedIds = {};
     var selected = [];
-    var band = 'B1';
     var pools = _classifyWords(all, p, null);
 
     function take(ranked, n) {
@@ -793,34 +916,39 @@
       return picked;
     }
 
-    selected = selected.concat(take(pools.struggling, 3));
+    var unseenLeft = _countUnseenInBand(all, p, 'B1') +
+      _countUnseenInBand(all, p, 'A2') + _countUnseenInBand(all, p, 'A1');
 
-    var lowAccB1 = pools.stable.filter(function (it) {
-      return window._v2BandFromId(it.id) === 'B1' && it.accuracy < 0.7;
-    }).sort(_compareCandidates);
-    selected = selected.concat(take(lowAccB1, 2));
+    selected = selected.concat(take(pools.struggling, 2));
+    selected = selected.concat(_pickUnseenByBandPriority(all, p, usedIds, unseenLeft > 0 ? 5 : 2, ['B1', 'A2', 'A1']));
 
-    var unseenB1 = _pickLearningRows(all, p, p.skillLevel, 'B1', 2, usedIds, 0);
-    selected = selected.concat(unseenB1);
+    if (unseenLeft === 0) {
+      var lowAccB1 = pools.stable.filter(function (it) {
+        return window._v2BandFromId(it.id) === 'B1' && it.accuracy < 0.7;
+      }).sort(_compareCandidates);
+      selected = selected.concat(take(lowAccB1, 2));
+    }
 
     var confPool = _available(_filterByBand(all, 'B1'), usedIds);
     var conf = _byDifficulty(confPool, _clamp(p.skillLevel - 1.5, 1, 10), p.recentWords);
     if (conf) { usedIds[conf.id] = true; selected.push(conf); }
 
-    var reactPool = _available(all.filter(function (r) {
-      var b = window._v2BandFromId(r.id);
-      return (b === 'A2' || b === 'A1') && parseInt(r.difficulty, 10) >= 8;
-    }), usedIds);
-    var react = _byDifficulty(reactPool, 9, p.recentWords) || _fallback(reactPool, usedIds, p.recentWords);
-    if (react) { usedIds[react.id] = true; selected.push(react); }
-
-    var explore = _pickUnseen(_available(_filterByBand(all, 'B1').filter(function (r) {
-      return parseInt(r.difficulty, 10) >= 9;
-    }), usedIds), p, {}) || _byDifficulty(_available(_filterByBand(all, 'B1'), usedIds), 10, p.recentWords);
-    if (explore) { usedIds[explore.id] = true; selected.push(explore); }
+    if (unseenLeft === 0) {
+      var reactPool = _available(all.filter(function (r) {
+        var b = window._v2BandFromId(r.id);
+        return (b === 'A2' || b === 'A1') && parseInt(r.difficulty, 10) >= 8;
+      }), usedIds);
+      var react = _byDifficulty(reactPool, 9, p.recentWords) || _fallback(reactPool, usedIds, p.recentWords);
+      if (react) { usedIds[react.id] = true; selected.push(react); }
+    } else {
+      var explore = _pickUnseen(_available(_filterByBand(all, 'B1'), usedIds), p, {}) ||
+        _byDifficulty(_available(_filterByBand(all, 'B1'), usedIds), 10, p.recentWords);
+      if (explore) { usedIds[explore.id] = true; selected.push(explore); }
+    }
 
     while (selected.length < QUIZ_LEN) {
-      var fb = _fallback(_available(all, usedIds), usedIds, p.recentWords);
+      var fb = _pickUnseen(_available(all, usedIds), p, {}) ||
+        _fallback(_available(all, usedIds), usedIds, p.recentWords);
       if (!fb) break;
       usedIds[fb.id] = true;
       selected.push(fb);
@@ -1014,6 +1142,8 @@
     var p = _get();
     var all = _allWords();
     _phaseAEarlyExit = false;
+    var accuracy = answers.length ? answers.filter(function (a) { return a.correct; }).length / answers.length : 0;
+    p.lastQuizAccuracy = accuracy;
     answers.forEach(function (a) { _updateWord(p, a.wordId, a.correct); });
     _updateRecent(p, answers.map(function (a) { return a.wordId; }));
     var stage = _stageAtStart;
@@ -1034,11 +1164,10 @@
       if (val != null && val !== key) return val;
     }
     var fallback = {
-      adaptiveV2BannerStatusDefault: 'Finds your level automatically',
-      adaptiveV2StatusCal1: 'Calibration quiz 1 of 2',
-      adaptiveV2StatusCal2: 'Calibration quiz 2 of 2',
-      adaptiveV2PhaseReview: 'Review',
-      adaptiveV2PhaseChallenge: 'Challenge'
+      adaptiveV2StatusCal1: 'Calibration · step 1 of 2',
+      adaptiveV2StatusCal2: 'Calibration · step 2 of 2',
+      adaptiveV2PhaseReview: 'Review mode',
+      adaptiveV2PhaseChallenge: 'Challenge mode'
     };
     return fallback[key] || '';
   }
@@ -1047,24 +1176,17 @@
     var p = _get();
     if (p.evaluationStage === 0) return _v2Ui('adaptiveV2StatusCal1');
     if (p.evaluationStage === 1) return _v2Ui('adaptiveV2StatusCal2');
-    if (p.learningPhase === 'band_review') {
-      return _v2Ui('adaptiveV2PhaseReview') + ' · B1 · ' + p.skillLevel.toFixed(1);
-    }
-    if (p.learningPhase === 'challenge') {
-      return _v2Ui('adaptiveV2PhaseChallenge') + ' · ' + p.skillLevel.toFixed(1);
-    }
-    return (p.cefrBand || 'A1') + ' · ' + p.skillLevel.toFixed(1);
+    if (p.learningPhase === 'band_review') return _v2Ui('adaptiveV2PhaseReview');
+    if (p.learningPhase === 'challenge') return _v2Ui('adaptiveV2PhaseChallenge');
+    return '';
   }
 
   function _updateHomeBadge() {
     var statusEl = document.getElementById('adaptive-v2-banner-status');
     if (!statusEl) return;
-    var p = _get();
-    if (p.evaluationStage >= 3 || _hasMeaningfulProgress(p)) {
-      statusEl.textContent = _badgeText();
-    } else {
-      statusEl.textContent = _v2Ui('adaptiveV2BannerStatusDefault');
-    }
+    var text = _badgeText();
+    statusEl.textContent = text;
+    statusEl.style.display = text ? '' : 'none';
   }
 
   window.startAdaptiveV2Quiz = async function () {
@@ -1104,8 +1226,7 @@
     idx = 0; ok = 0; no = 0;
     _quizReturnScreen = 'screen-levels';
 
-    if (typeof window._quizStartedAtMs !== 'undefined') window._quizStartedAtMs = Date.now();
-    else if (typeof _quizStartedAtMs !== 'undefined') _quizStartedAtMs = Date.now();
+    window._quizStartedAtMs = Date.now();
 
     window.umami?.track('adaptive_v2_started', {
       stage: _stageAtStart, skill: p.skillLevel, band: p.cefrBand, phase: p.learningPhase
@@ -1149,19 +1270,84 @@
     idx = 0; ok = 0; no = 0;
     if (returnScreen) _quizReturnScreen = returnScreen;
 
+    window._quizStartedAtMs = Date.now();
+
     show('screen-quiz');
     renderCard();
   };
 
-  window._adaptiveV2Recalibrate = function () {
+  window._adaptiveV2RecordQuizStats = function (payload) {
+    if (_accountMode || !payload) return;
     var p = _get();
-    p.evaluationStage = 0;
-    p.learningPhase = 'active';
-    p.crossBandLog = [];
-    p.challengeLowStreak = 0;
+    p.quizStats = _normalizeQuizStats(p.quizStats);
+    p.quizStats.adaptive = _incrementQuizStats(p.quizStats.adaptive, payload);
     _save(p);
     _progress = p;
+  };
+
+  window._adaptiveV2ResetProgress = function () {
+    var fresh = _initProgress();
+    _progress = fresh;
+    _pendingProgress = null;
+    if (!_accountMode) {
+      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+      _saveToLocal(fresh);
+    }
+    if (typeof _externalSaveFn === 'function') _externalSaveFn(fresh);
     _updateHomeBadge();
+    return fresh;
+  };
+
+  window._adaptiveV2JourneyVisual = function () {
+    var p = _get();
+    var all = _allWords();
+    var bands = ['A1', 'A2', 'B1'];
+    var stage = Number(p.evaluationStage) || 0;
+    if (!all.length) {
+      return {
+        segments: bands.map(function (b) { return { band: b, coverage: 0 }; }),
+        markerLo: 1, markerHi: 99, markerCenter: 50,
+        cefrBand: p.cefrBand || 'A1', skillLevel: Number(p.skillLevel) || 1,
+        uncertainty: 1
+      };
+    }
+    var segments = bands.map(function (b) {
+      var bw = _filterByBand(all, b);
+      var seen = bw.filter(function (r) { return !_isUnseen(p, r.id); }).length;
+      return { band: b, coverage: bw.length ? seen / bw.length : 0 };
+    });
+    var bandIdx = bands.indexOf(p.cefrBand || 'A1');
+    if (bandIdx < 0) bandIdx = 0;
+    var skill = _clamp(Number(p.skillLevel) || 1, 1, 10);
+    var segW = 100 / 3;
+    var within = (skill - 1) / 9;
+    var center = bandIdx * segW + within * segW + segW * 0.05;
+    var uncertainty = _placementUncertainty(p);
+
+    if (stage === 0) {
+      return {
+        segments: segments,
+        markerLo: 1,
+        markerHi: 99,
+        markerCenter: 50,
+        cefrBand: p.cefrBand || 'A1',
+        skillLevel: skill,
+        uncertainty: 1
+      };
+    }
+
+    var rangeHalf = (segW * 0.52) * uncertainty;
+    if (stage === 1) rangeHalf = Math.max(rangeHalf, segW * 0.35);
+
+    return {
+      segments: segments,
+      markerLo: Math.max(0, center - rangeHalf),
+      markerHi: Math.min(100, center + rangeHalf),
+      markerCenter: center,
+      cefrBand: p.cefrBand || 'A1',
+      skillLevel: skill,
+      uncertainty: uncertainty
+    };
   };
 
   window._adaptiveV2BandCoverage = function () {
@@ -1221,6 +1407,11 @@
     if (wasActive) {
       _processResults(_answers);
       _updateHomeBadge();
+      var profileScreen = document.getElementById('screen-learning-profile');
+      if (profileScreen && !profileScreen.classList.contains('hidden') &&
+          typeof window.renderLearningProfile === 'function') {
+        window.renderLearningProfile();
+      }
     }
   };
 
@@ -1252,8 +1443,7 @@
   window._adaptiveV2SetSaveHook = function (fn) { _externalSaveFn = fn; };
   window._adaptiveV2RefreshBadge = _updateHomeBadge;
   window._adaptiveV2GetProgress = function () {
-    if (_accountMode) return null;
-    return _deepCopyProgress(_progress || _resolveGuestProgress());
+    return _deepCopyProgress(_get());
   };
 
   function _deepCopyProgress(obj) {

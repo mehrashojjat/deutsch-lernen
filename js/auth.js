@@ -206,7 +206,7 @@
   function _isMetaKey(key) {
     return key === 'evaluationStage' || key === 'skillLevel' || key === 'recentWords' ||
       key === 'cefrBand' || key === 'learningPhase' || key === 'legacyConfidence' ||
-      key === 'crossBandLog' || key === 'challengeLowStreak';
+      key === 'crossBandLog' || key === 'challengeLowStreak' || key === 'lastQuizAccuracy';
   }
 
   function _countFromValue(value, fallback) {
@@ -320,6 +320,7 @@
       if (meta.legacyConfidence != null) progress.legacyConfidence = Number(meta.legacyConfidence);
       progress.crossBandLog = Array.isArray(meta.crossBandLog) ? meta.crossBandLog : [];
       progress.challengeLowStreak = Number(meta.challengeLowStreak) || 0;
+      if (meta.lastQuizAccuracy != null) progress.lastQuizAccuracy = Number(meta.lastQuizAccuracy);
     }
     return progress;
   }
@@ -420,6 +421,7 @@
         if (progress.legacyConfidence != null) passedMeta.legacyConfidence = progress.legacyConfidence;
         passedMeta.crossBandLog = progress.crossBandLog || [];
         passedMeta.challengeLowStreak = Number(progress.challengeLowStreak) || 0;
+        if (progress.lastQuizAccuracy != null) passedMeta.lastQuizAccuracy = progress.lastQuizAccuracy;
       }
       var res = await _db.from(TABLE)
         .upsert({
@@ -534,7 +536,7 @@
     window._adaptiveV2SetSaveHook(function (p) {
       var prev = _progressCache[V2_LEVEL] || _defaultProgress(V2_LEVEL);
       p = p && typeof p === 'object' ? p : _defaultProgress(V2_LEVEL);
-      p.quizStats = _normalizeQuizStats((p.quizStats && typeof p.quizStats === 'object') ? p.quizStats : prev.quizStats);
+      p.quizStats = _normalizeQuizStats(prev.quizStats);
       _progressCache[V2_LEVEL] = p;
       _updateRow(userId, V2_LEVEL, p);
     });
@@ -548,7 +550,7 @@
       // Preserve quizStats from cache so adaptive saves do not wipe activity data.
       var prev = _progressCache[lv] || _defaultProgress();
       p = p && typeof p === 'object' ? p : _defaultProgress();
-      p.quizStats = _normalizeQuizStats((p.quizStats && typeof p.quizStats === 'object') ? p.quizStats : prev.quizStats);
+      p.quizStats = _normalizeQuizStats(prev.quizStats);
       _progressCache[lv] = p;          // keep cache in sync
       _updateRow(userId, lv, p);       // persist to DB
     });
@@ -681,6 +683,20 @@
 
   window.APP_AUTH_IS_SIGNED_IN = function () {
     return !!_user;
+  };
+
+  window.APP_AUTH_RESET_ADAPTIVE_V2 = async function () {
+    if (!_user) return false;
+    var fresh = _defaultProgress(V2_LEVEL);
+    await _updateRow(_user.id, V2_LEVEL, fresh);
+    _progressCache[V2_LEVEL] = fresh;
+    if (typeof window._adaptiveV2InjectProgress === 'function') {
+      window._adaptiveV2InjectProgress(fresh);
+    }
+    if (typeof window._adaptiveV2RefreshBadge === 'function') {
+      window._adaptiveV2RefreshBadge();
+    }
+    return true;
   };
 
   window.APP_AUTH_GET_LEARNING_PROFILE = function (level) {

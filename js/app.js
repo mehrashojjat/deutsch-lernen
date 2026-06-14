@@ -74,13 +74,13 @@ const UI = {
     adaptiveBannerTitle: 'Adaptive Quiz',
     adaptiveBannerSub: 'Adjusts to your skill level',
     adaptiveV2BannerTitle: 'Adaptive V2 (Beta)',
-    adaptiveV2BannerSub: 'Quizzes across all vocabulary levels',
-    adaptiveV2BannerStatusDefault: 'Finds your level automatically',
-    adaptiveV2StatusCal1: 'Calibration quiz 1 of 2',
-    adaptiveV2StatusCal2: 'Calibration quiz 2 of 2',
+    adaptiveV2BannerSub: 'Finds your level · adapts each quiz',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'Calibration · step 1 of 2',
+    adaptiveV2StatusCal2: 'Calibration · step 2 of 2',
     adaptiveV2StatusSkill: (n) => 'Your skill level: ' + n,
-    adaptiveV2PhaseReview: 'Review',
-    adaptiveV2PhaseChallenge: 'Challenge',
+    adaptiveV2PhaseReview: 'Review mode',
+    adaptiveV2PhaseChallenge: 'Challenge mode',
     learningProfileBannerTitle: 'Learning Profile',
     learningProfileTitle: 'Learning Profile',
     adaptiveSetupTitle: 'Adaptive Quiz',
@@ -184,10 +184,10 @@ const UI = {
     adaptiveBannerTitle: 'Adaptives Quiz',
     adaptiveBannerSub: 'Passt sich deinem Niveau an',
     adaptiveV2BannerTitle: 'Adaptiv V2 (Beta)',
-    adaptiveV2BannerSub: 'Quiz über alle Wortlisten-Niveaus',
-    adaptiveV2BannerStatusDefault: 'Findet dein Niveau automatisch',
-    adaptiveV2StatusCal1: 'Kalibrierungs-Quiz 1 von 2',
-    adaptiveV2StatusCal2: 'Kalibrierungs-Quiz 2 von 2',
+    adaptiveV2BannerSub: 'Findet dein Niveau · passt sich an',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'Kalibrierung · Schritt 1 von 2',
+    adaptiveV2StatusCal2: 'Kalibrierung · Schritt 2 von 2',
     adaptiveV2StatusSkill: (n) => 'Dein Niveau: ' + n,
     adaptiveSetupTitle: 'Adaptives Quiz',
     adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
@@ -286,10 +286,10 @@ const UI = {
     adaptiveBannerTitle: 'Uyarlamalı Sınav',
     adaptiveBannerSub: 'Seviyenize göre ayarlanır',
     adaptiveV2BannerTitle: 'Uyarlamalı V2 (Beta)',
-    adaptiveV2BannerSub: 'Tüm kelime listesi seviyelerinde quiz',
-    adaptiveV2BannerStatusDefault: 'Seviyenizi otomatik bulur',
-    adaptiveV2StatusCal1: 'Kalibrasyon quizi 1 / 2',
-    adaptiveV2StatusCal2: 'Kalibrasyon quizi 2 / 2',
+    adaptiveV2BannerSub: 'Seviyeni bulur · quizler uyum sağlar',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'Kalibrasyon · adım 1 / 2',
+    adaptiveV2StatusCal2: 'Kalibrasyon · adım 2 / 2',
     adaptiveV2StatusSkill: (n) => 'Seviyeniz: ' + n,
     adaptiveSetupTitle: 'Uyarlamalı Sınav',
     adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
@@ -388,10 +388,10 @@ const UI = {
     adaptiveBannerTitle: 'آزمون تطبیقی',
     adaptiveBannerSub: 'سطح شما را تشخیص می‌دهد',
     adaptiveV2BannerTitle: 'آزمون تطبیقی V2 (بتا)',
-    adaptiveV2BannerSub: 'آزمون در همه سطوح واژگان',
-    adaptiveV2BannerStatusDefault: 'سطح شما را خودکار پیدا می‌کند',
-    adaptiveV2StatusCal1: 'آزمون کالیبراسیون ۱ از ۲',
-    adaptiveV2StatusCal2: 'آزمون کالیبراسیون ۲ از ۲',
+    adaptiveV2BannerSub: 'سطحت را پیدا می‌کند · هر آزمون تطبیق می‌یابد',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'کالیبراسیون · گام ۱ از ۲',
+    adaptiveV2StatusCal2: 'کالیبراسیون · گام ۲ از ۲',
     adaptiveV2StatusSkill: (n) => 'سطح مهارت شما: ' + n,
     adaptiveSetupTitle: 'آزمون تطبیقی',
     adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
@@ -490,10 +490,10 @@ const UI = {
     adaptiveBannerTitle: 'Адаптивная викторина',
     adaptiveBannerSub: 'Адаптируется к вашему уровню',
     adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
-    adaptiveV2BannerSub: 'Викторина по всему словарю',
-    adaptiveV2BannerStatusDefault: 'Автоматически определяет ваш уровень',
-    adaptiveV2StatusCal1: 'Калибровочная викторина 1 из 2',
-    adaptiveV2StatusCal2: 'Калибровочная викторина 2 из 2',
+    adaptiveV2BannerSub: 'Находит уровень · подстраивает каждый квиз',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'Калибровка · шаг 1 из 2',
+    adaptiveV2StatusCal2: 'Калибровка · шаг 2 из 2',
     adaptiveV2StatusSkill: (n) => 'Ваш уровень: ' + n,
     adaptiveSetupTitle: 'Адаптивная викторина',
     adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
@@ -590,10 +590,10 @@ const UI = {
     adaptiveBannerTitle: 'Адаптивна вікторина',
     adaptiveBannerSub: 'Адаптується до вашого рівня',
     adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
-    adaptiveV2BannerSub: 'Вікторина по всьому словнику',
-    adaptiveV2BannerStatusDefault: 'Автоматично визначає ваш рівень',
-    adaptiveV2StatusCal1: 'Калібрувальна вікторина 1 з 2',
-    adaptiveV2StatusCal2: 'Калібрувальна вікторина 2 з 2',
+    adaptiveV2BannerSub: 'Знаходить рівень · підлаштовує кожну вікторину',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'Калібрування · крок 1 з 2',
+    adaptiveV2StatusCal2: 'Калібрування · крок 2 з 2',
     adaptiveV2StatusSkill: (n) => 'Ваш рівень: ' + n,
     adaptiveSetupTitle: 'Адаптивна вікторина',
     adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
@@ -690,10 +690,10 @@ const UI = {
     adaptiveBannerTitle: 'اختبار تكيّفي',
     adaptiveBannerSub: 'يتكيّف مع مستواك',
     adaptiveV2BannerTitle: 'اختبار تكيّفي V2 (تجريبي)',
-    adaptiveV2BannerSub: 'اختبار على كل مستويات المفردات',
-    adaptiveV2BannerStatusDefault: 'يكتشف مستواك تلقائياً',
-    adaptiveV2StatusCal1: 'اختبار المعايرة 1 من 2',
-    adaptiveV2StatusCal2: 'اختبار المعايرة 2 من 2',
+    adaptiveV2BannerSub: 'يكتشف مستواك · يتكيّف كل اختبار',
+    adaptiveV2BannerStatusDefault: '',
+    adaptiveV2StatusCal1: 'المعايرة · الخطوة 1 من 2',
+    adaptiveV2StatusCal2: 'المعايرة · الخطوة 2 من 2',
     adaptiveV2StatusSkill: (n) => 'مستوى مهارتك: ' + n,
     adaptiveSetupTitle: 'اختبار تكيّفي',
     adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
@@ -742,10 +742,11 @@ const PROFILE_I18N = {
     noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
     adaptiveBand: 'CEFR band',
     adaptiveSkill: 'Skill level',
-    adaptivePhase: 'Learning phase',
-    bandCoverage: 'Band coverage',
-    globalCoverage: 'Global coverage',
-    recalibrateAdaptive: 'Recalibrate level',
+    journeySeenShort: '{pct}% seen',
+    journeyGoldShort: 'Your level',
+    journeyGoldHint: 'wide = calibrating · narrow = confident',
+    resetAdaptiveProgress: 'Reset adaptive progress',
+    resetAdaptiveConfirm: 'Reset all Adaptive V2 progress? This deletes your word history, skill level, and calibration. This cannot be undone.',
     metaSeen: 'Seen', metaRight: 'Right', metaWrong: 'Wrong',
     uncategorized: 'Uncategorized'
   },
@@ -762,6 +763,13 @@ const PROFILE_I18N = {
     signInPrompt: 'Melde dich an, um deinen Fortschritt geräteübergreifend zu synchronisieren.',
     guestProfileEmpty: 'Spiele ein Quiz auf diesem Niveau, um hier Statistiken zu sehen.',
     noTrackedFor: 'Keine erfassten Daten für {level}. Wechsle zum Tab {best}.',
+    adaptiveBand: 'CEFR-Niveau',
+    adaptiveSkill: 'Fähigkeitsstufe',
+    journeySeenShort: '{pct}% gesehen',
+    journeyGoldShort: 'Dein Niveau',
+    journeyGoldHint: 'breit = kalibrieren · schmal = sicher',
+    resetAdaptiveProgress: 'Adaptiven Fortschritt zurücksetzen',
+    resetAdaptiveConfirm: 'Gesamten adaptiven V2-Fortschritt zurücksetzen? Wortverlauf, Niveau und Kalibrierung werden gelöscht. Das kann nicht rückgängig gemacht werden.',
     metaSeen: 'Gesehen', metaRight: 'Richtig', metaWrong: 'Falsch',
     uncategorized: 'Ohne Kategorie'
   },
@@ -1938,15 +1946,18 @@ function showResults(){
   else if(pct>=70){emoji='🎉';title=rt.good;}
   else if(pct>=50){emoji='👍';title=rt.ok;}
   var elapsedSeconds = _quizStartedAtMs ? Math.max(0, Math.round((Date.now() - _quizStartedAtMs) / 1000)) : 0;
+  var statsPayload = {
+    mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'),
+    categoryId: currentThemeCategoryId || null,
+    correctAnswers: ok,
+    incorrectAnswers: no,
+    studyTimeSeconds: elapsedSeconds
+  };
   if (typeof window.APP_AUTH_RECORD_QUIZ_STATS === 'function') {
-    var quizMode = currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive');
-    window.APP_AUTH_RECORD_QUIZ_STATS({
-      mode: quizMode,
-      categoryId: currentThemeCategoryId || null,
-      correctAnswers: ok,
-      incorrectAnswers: no,
-      studyTimeSeconds: elapsedSeconds
-    });
+    window.APP_AUTH_RECORD_QUIZ_STATS(statsPayload);
+  }
+  if (currentLevel === 'ALL' && typeof window._adaptiveV2RecordQuizStats === 'function') {
+    window._adaptiveV2RecordQuizStats(statsPayload);
   }
   window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'), level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
   document.getElementById('r-emoji').textContent=emoji;
@@ -2224,6 +2235,13 @@ function _guestProfileProgress(level) {
 
 function _profileSnapshot(level) {
   level = level || learningProfileSelectedLevel || 'ALL';
+  if (level === 'ALL' && typeof window._adaptiveV2GetProgress === 'function') {
+    var live = window._adaptiveV2GetProgress();
+    if (live) {
+      var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
+      return { signedIn: signedIn, level: level, progress: live };
+    }
+  }
   if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN() &&
       typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
     return window.APP_AUTH_GET_LEARNING_PROFILE(level);
@@ -2261,6 +2279,8 @@ function _profileWordRows(progress) {
 }
 
 function _isStrugglingWord(w) {
+  if ((Number(w.failScore) || 0) >= 1) return true;
+  if ((Number(w.incorrectCount) || 0) >= 1 && (Number(w.accuracy) || 0) < 1) return true;
   var repeatedIncorrect = (Number(w.incorrectCount) || 0) >= 2;
   var lowAccuracyWithHistory = (Number(w.seenCount) || 0) >= 4 && (Number(w.accuracy) || 0) < 0.65;
   var elevatedFailPressure = (Number(w.failScore) || 0) >= 4 && (Number(w.accuracy) || 0) < 0.8;
@@ -2376,11 +2396,21 @@ function _performanceLists(quizStats) {
   if (quizStats && Array.isArray(quizStats.__wordCategoryRows)) {
     rows = quizStats.__wordCategoryRows.slice();
   }
+  if (!rows.length) return { strongest: [], weakest: [] };
   rows.sort(function(a, b) { return b.accuracy - a.accuracy || b.attempts - a.attempts; });
-  return {
-    strongest: rows.slice(0, 3),
-    weakest: rows.slice().reverse().slice(0, 3)
-  };
+
+  var strongest = rows.slice(0, 3);
+  var used = {};
+  strongest.forEach(function(r) { used[r.key] = true; });
+
+  var medianAcc = rows[Math.floor(rows.length / 2)].accuracy;
+  var weakest = rows.slice().reverse().filter(function(r) {
+    if (used[r.key]) return false;
+    if (rows.length > 3 && r.accuracy >= medianAcc) return false;
+    return true;
+  }).slice(0, 3);
+
+  return { strongest: strongest, weakest: weakest };
 }
 
 function _profileWordJoin(level, progress) {
@@ -2491,12 +2521,50 @@ window.toggleLearningProfileDetail = function(mode) {
   renderLearningProfile();
 };
 
-function recalibrateAdaptiveV2() {
-  if (typeof window._adaptiveV2Recalibrate === 'function') {
-    window._adaptiveV2Recalibrate();
-    renderLearningProfile();
-    if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+function _profileJourneyBarHtml(journey) {
+  if (!journey || !journey.segments) return '';
+  var segs = journey.segments.map(function (s) {
+    var pct = Math.round((s.coverage || 0) * 100);
+    return '<div class="profile-journey-seg profile-journey-seg-' + s.band.toLowerCase() + '">' +
+      '<div class="profile-journey-seg-fill" style="width:' + pct + '%"></div>' +
+    '</div>';
+  }).join('');
+  var lo = journey.markerLo.toFixed(1);
+  var w = Math.max(1, journey.markerHi - journey.markerLo).toFixed(1);
+  var tip = (journey.cefrBand || 'A1') + ' · ' + (Number(journey.skillLevel) || 1).toFixed(1) + ' / 10';
+  var bandChips = journey.segments.map(function (s) {
+    var pct = Math.round((s.coverage || 0) * 100);
+    return '<span class="profile-journey-chip">' +
+      '<span class="profile-journey-dot profile-journey-dot-' + s.band.toLowerCase() + '" aria-hidden="true"></span>' +
+      '<span class="profile-journey-chip-band">' + escHtml(s.band) + '</span>' +
+      '<span class="profile-journey-chip-meta">' + escHtml(_lp('journeySeenShort', { pct: pct })) + '</span>' +
+    '</span>';
+  }).join('');
+  return '<div class="profile-journey-wrap">' +
+    '<div class="profile-journey-bar">' + segs +
+      '<div class="profile-journey-marker" style="left:' + lo + '%;width:' + w + '%" title="' + escHtml(tip) + '"></div>' +
+    '</div>' +
+    '<div class="profile-journey-legend">' +
+      '<div class="profile-journey-legend-bands">' + bandChips + '</div>' +
+      '<span class="profile-journey-chip profile-journey-chip-gold">' +
+        '<span class="profile-journey-dot profile-journey-dot-gold" aria-hidden="true"></span>' +
+        '<span class="profile-journey-chip-band">' + escHtml(_lp('journeyGoldShort')) + '</span>' +
+        '<span class="profile-journey-chip-meta">' + escHtml(_lp('journeyGoldHint')) + '</span>' +
+      '</span>' +
+    '</div>' +
+  '</div>';
+}
+
+async function resetAdaptiveV2Progress() {
+  if (!confirm(_lp('resetAdaptiveConfirm'))) return;
+  var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
+  if (signedIn && typeof window.APP_AUTH_RESET_ADAPTIVE_V2 === 'function') {
+    await window.APP_AUTH_RESET_ADAPTIVE_V2();
+  } else if (typeof window._adaptiveV2ResetProgress === 'function') {
+    window._adaptiveV2ResetProgress();
   }
+  renderLearningProfile();
+  if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
 }
 
 function renderLearningProfile() {
@@ -2566,21 +2634,16 @@ function renderLearningProfile() {
   var adaptiveSection = '';
   if (learningProfileSelectedLevel === 'ALL') {
     var band = progress.cefrBand || 'A1';
-    var phase = progress.learningPhase || 'active';
-    var phaseDisplay = phase === 'band_review' ? 'Review' : phase === 'challenge' ? 'Challenge' : 'Active';
-    var cov = typeof window._adaptiveV2BandCoverage === 'function'
-      ? window._adaptiveV2BandCoverage() : { band: 0, global: 0 };
+    var skillNum = Number(progress.skillLevel) || 1;
+    var journey = typeof window._adaptiveV2JourneyVisual === 'function'
+      ? window._adaptiveV2JourneyVisual() : null;
     adaptiveSection =
-      '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('adaptive')) + '</div><div class="profile-grid">' +
-        stat(_lp('adaptiveBand'), band) +
-        stat(_lp('adaptiveSkill'), (Number(progress.skillLevel) || 1).toFixed(1)) +
-        stat(_lp('adaptivePhase'), phaseDisplay) +
-        stat(_lp('bandCoverage'), cov.band + '%') +
-        (phase === 'challenge' ? stat(_lp('globalCoverage'), cov.global + '%') : '') +
-      '</div>' +
-      '<div class="profile-review-actions" style="margin-top:10px;">' +
-        '<button onclick="recalibrateAdaptiveV2()">' + escHtml(_lp('recalibrateAdaptive')) + '</button>' +
-      '</div></div>';
+      '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('adaptive')) + '</div>' +
+        _profileJourneyBarHtml(journey) +
+        '<div class="profile-grid">' +
+          stat(_lp('adaptiveBand'), band) +
+          stat(_lp('adaptiveSkill'), skillNum.toFixed(1) + ' / 10') +
+        '</div></div>';
   }
 
   el.innerHTML =
@@ -2607,7 +2670,13 @@ function renderLearningProfile() {
       '<button onclick="startLearningProfileReview(\'recent\')">' + escHtml(_lp('reviewRecentMistakes')) + '</button>' +
       '<button onclick="startLearningProfileReview(\'mixed\')">' + escHtml(_lp('reviewMixedPractice')) + '</button>' +
     '</div></div>' +
-    (isGuest ? '<div class="profile-empty" style="margin-top:4px;">' + escHtml(_lp('signInPrompt')) + '</div>' : '');
+    (isGuest ? '<div class="profile-empty" style="margin-top:4px;">' + escHtml(_lp('signInPrompt')) + '</div>' : '') +
+    (learningProfileSelectedLevel === 'ALL'
+      ? '<div class="profile-section profile-danger-zone">' +
+          '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
+            escHtml(_lp('resetAdaptiveProgress')) +
+          '</button></div>'
+      : '');
 
   if (detailIsOpen) {
     requestAnimationFrame(function() {
