@@ -203,6 +203,81 @@
     return out;
   }
 
+  var GUEST_LEGACY_PREFIX = 'deutsch_adaptive_progress_';
+
+  function _hasMeaningfulV2Progress(p) {
+    if (typeof window._adaptiveV2HasMeaningfulProgress === 'function') {
+      return window._adaptiveV2HasMeaningfulProgress(p);
+    }
+    if (!p) return false;
+    if ((Number(p.evaluationStage) || 0) > 0) return true;
+    if (Object.keys(p.words || {}).length > 0) return true;
+    if ((Number(p.skillLevel) || 1) > 1) return true;
+    if (p.cefrBand && p.cefrBand !== 'A1') return true;
+    return false;
+  }
+
+  function _readGuestLegacyLevel(lv) {
+    try {
+      var raw = localStorage.getItem(GUEST_LEGACY_PREFIX + lv);
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return null;
+  }
+
+  function _legacyProgressMapForBootstrap() {
+    var out = {};
+    LEGACY_LEVELS.forEach(function (lv) {
+      var online = _progressCache[lv] || null;
+      var guest = _readGuestLegacyLevel(lv);
+      var onlineWeight = _legacyAttemptWeight(online);
+      var guestWeight = _legacyAttemptWeight(guest);
+      out[lv] = guestWeight > onlineWeight ? guest : online;
+    });
+    return out;
+  }
+
+  async function _resolveAllProgress(userId, byLevel) {
+    byLevel = byLevel || {};
+    var online = byLevel[V2_LEVEL] ? _progressFromRow(byLevel[V2_LEVEL]) : null;
+    if (_hasMeaningfulV2Progress(online)) {
+      _progressCache[V2_LEVEL] = online;
+      return online;
+    }
+
+    var local = null;
+    if (typeof window._adaptiveV2ReadGuestProgress === 'function') {
+      local = window._adaptiveV2ReadGuestProgress();
+    }
+    if (_hasMeaningfulV2Progress(local)) {
+      var migrated = (typeof window._adaptiveV2MigrateProgress === 'function')
+        ? window._adaptiveV2MigrateProgress(local)
+        : local;
+      _progressCache[V2_LEVEL] = migrated;
+      await _updateRow(userId, V2_LEVEL, migrated);
+      if (typeof window._adaptiveV2ClearGuestProgress === 'function') {
+        window._adaptiveV2ClearGuestProgress();
+      }
+      return migrated;
+    }
+
+    var legacyMap = _legacyProgressMapForBootstrap();
+    var legacyHasData = LEGACY_LEVELS.some(function (lv) {
+      return _legacyAttemptWeight(legacyMap[lv]) > 0;
+    });
+    if (legacyHasData) {
+      var boot = _bootstrapAllFromLegacy(legacyMap);
+      _progressCache[V2_LEVEL] = boot;
+      await _updateRow(userId, V2_LEVEL, boot);
+      return boot;
+    }
+
+    await _ensureRow(userId, V2_LEVEL);
+    var fresh = _defaultProgress(V2_LEVEL);
+    _progressCache[V2_LEVEL] = fresh;
+    return fresh;
+  }
+
   function _isMetaKey(key) {
     return key === 'evaluationStage' || key === 'skillLevel' || key === 'recentWords' ||
       key === 'cefrBand' || key === 'learningPhase' || key === 'legacyConfidence' ||
@@ -456,21 +531,7 @@
       }
     });
 
-    if (byLevel[V2_LEVEL]) {
-      _progressCache[V2_LEVEL] = _progressFromRow(byLevel[V2_LEVEL]);
-    } else {
-      var legacyHasData = LEGACY_LEVELS.some(function (lv) {
-        return _legacyAttemptWeight(_progressCache[lv]) > 0;
-      });
-      if (legacyHasData) {
-        var boot = _bootstrapAllFromLegacy(_legacyProgressMap());
-        _progressCache[V2_LEVEL] = boot;
-        await _updateRow(userId, V2_LEVEL, boot);
-      } else {
-        ensures.push(_ensureRow(userId, V2_LEVEL));
-        _progressCache[V2_LEVEL] = _defaultProgress(V2_LEVEL);
-      }
-    }
+    await _resolveAllProgress(userId, byLevel);
 
     if (ensures.length) await Promise.all(ensures);
   }
@@ -480,8 +541,7 @@
   // (e.g. sign-in only partially loaded before the user tapped the quiz).
   async function _ensureLevelCached(userId, level) {
     if (_progressCache[level]) return;
-    var progress = await _fetchRow(userId, level);
-    if (!progress && level === V2_LEVEL) {
+    if (level === V2_LEVEL) {
       for (var li = 0; li < LEGACY_LEVELS.length; li++) {
         var legacyLv = LEGACY_LEVELS[li];
         if (!_progressCache[legacyLv]) {
@@ -489,16 +549,16 @@
           _progressCache[legacyLv] = legacyProgress || _defaultProgress();
         }
       }
-      var legacyHasData = LEGACY_LEVELS.some(function (lv) {
-        return _legacyAttemptWeight(_progressCache[lv]) > 0;
+      var rows = await _fetchAllRows(userId);
+      var byLevel = {};
+      rows.forEach(function (row) {
+        var key = _rowLevelKey(row);
+        if (key === V2_LEVEL && !byLevel[key]) byLevel[key] = row;
       });
-      if (legacyHasData) {
-        progress = _bootstrapAllFromLegacy(_legacyProgressMap());
-        _progressCache[V2_LEVEL] = progress;
-        await _updateRow(userId, V2_LEVEL, progress);
-        return;
-      }
+      await _resolveAllProgress(userId, byLevel);
+      return;
     }
+    var progress = await _fetchRow(userId, level);
     if (!progress) {
       await _ensureRow(userId, level);
       progress = _defaultProgress(level);

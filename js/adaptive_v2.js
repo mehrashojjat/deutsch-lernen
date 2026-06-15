@@ -1442,6 +1442,14 @@
 
   window._adaptiveV2SetSaveHook = function (fn) { _externalSaveFn = fn; };
   window._adaptiveV2RefreshBadge = _updateHomeBadge;
+  window._adaptiveV2HasMeaningfulProgress = _hasMeaningfulProgress;
+  window._adaptiveV2ReadGuestProgress = _loadFromLocal;
+  window._adaptiveV2ClearGuestProgress = function () {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  };
+  window._adaptiveV2MigrateProgress = function (p) {
+    return _migrateProgress(p, null);
+  };
   window._adaptiveV2GetProgress = function () {
     return _deepCopyProgress(_get());
   };
