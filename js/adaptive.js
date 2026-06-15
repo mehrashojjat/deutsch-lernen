@@ -426,8 +426,8 @@
       await _loadCSVLevel(lv);
     } catch (err) {
       ov.classList.remove('active');
-      var msg = 'Could not load quiz data.';
-      if (window.location.protocol === 'file:') msg += ' Open through a local server instead of file://.';
+      var msg = (typeof t === 'function' ? t('errLoadQuiz') : 'Could not load quiz data.');
+      if (window.location.protocol === 'file:') msg += (typeof t === 'function' ? t('errFileProtocol') : ' Open through a local server instead of file://.');
       alert(msg);
       _active = false;
       return;
@@ -436,7 +436,7 @@
     var cards = _buildQueue(lv);
     ov.classList.remove('active');
 
-    if (!cards.length) { alert('No words available!'); _active = false; return; }
+    if (!cards.length) { alert(typeof t === 'function' ? t('errNoWords') : 'No words available!'); _active = false; return; }
 
     currentLevel = lv;
     queue = cards;
@@ -468,7 +468,7 @@
     var cards = _makeCards((rows || []).slice(0, 10), all);
     ov.classList.remove('active');
 
-    if (!cards.length) { alert('No words available!'); _active = false; return; }
+    if (!cards.length) { alert(typeof t === 'function' ? t('errNoWords') : 'No words available!'); _active = false; return; }
 
     currentThemeCategoryId = 0;
     currentLevel = lv;

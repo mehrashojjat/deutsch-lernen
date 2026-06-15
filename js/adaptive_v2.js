@@ -1244,7 +1244,7 @@
     var statusEl = document.getElementById('adaptive-v2-banner-status');
     if (!statusEl) return;
     var text = _badgeText();
-    statusEl.textContent = text;
+    statusEl.textContent = (typeof formatNumStr === 'function') ? formatNumStr(text) : text;
     statusEl.style.display = text ? '' : 'none';
   }
 
@@ -1262,8 +1262,8 @@
       if (typeof window._loadV2Vocab === 'function') await window._loadV2Vocab();
     } catch (err) {
       ov.classList.remove('active');
-      var msg = 'Could not load vocabulary data.';
-      if (window.location.protocol === 'file:') msg += ' Open through a local server instead of file://.';
+      var msg = (typeof t === 'function' ? t('errLoadQuiz') : 'Could not load vocabulary data.');
+      if (window.location.protocol === 'file:') msg += (typeof t === 'function' ? t('errFileProtocol') : ' Open through a local server instead of file://.');
       alert(msg);
       _active = false;
       return;
@@ -1274,7 +1274,7 @@
     ov.classList.remove('active');
 
     if (!cards.length) {
-      alert('No words available!');
+      alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
       _active = false;
       return;
     }
@@ -1318,7 +1318,7 @@
     ov.classList.remove('active');
 
     if (!cards.length) {
-      alert('No words available!');
+      alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
       _active = false;
       return;
     }
@@ -1466,15 +1466,15 @@
     if (_active) {
       var mb = document.getElementById('tmode-badge');
       if (mb) {
-        mb.textContent = 'Adaptive V2';
+        mb.textContent = (typeof t === 'function' ? t('adaptiveV2Badge') : 'Adaptive V2');
         mb.className = 'tmode-badge grammar';
       }
       var tl = document.getElementById('tlevel');
       if (tl) {
         var p = _get();
         var label = p.cefrBand || 'ALL';
-        if (p.learningPhase === 'band_review') label = 'B1 Review';
-        else if (p.learningPhase === 'challenge') label = 'Challenge';
+        if (p.learningPhase === 'band_review') label = (typeof t === 'function' ? t('adaptiveV2ReviewLabel') : 'B1 Review');
+        else if (p.learningPhase === 'challenge') label = (typeof t === 'function' ? t('adaptiveV2ChallengeLabel') : 'Challenge');
         tl.textContent = (typeof t === 'function' ? t('levelLabel') : 'Level') + ' ' + label;
       }
     }

@@ -13,13 +13,13 @@ const UI = {
     swipeBannerSub: 'Swipe if the meaning matches',
     selectLevel: 'Select Level',
     levelNames: { A1:'Starter', A2:'Elementary', B1:'Intermediate', B2:'Upper-Intermediate' },
-    cardCount: (n) => n + ' word practice cards',
+    cardCount: (n) => formatNum(n) + ' word practice cards',
     back: '← Back',
     next: 'Next →',
     correct: '✓ Correct!',
     wrong: (a) => `✗ Wrong. Correct answer: <strong>${a}</strong>`,
     resultTitles: { great:'Excellent!', good:'Well done!', ok:'Good effort!', low:'Keep practicing!' },
-    resultSub: (lv,p) => `Level ${lv} · ${p}% correct`,
+    resultSub: (lv,p) => `Level ${lv} · ${formatNum(p)}% correct`,
     scoreLbl: 'Score', correctLbl: 'Correct', wrongLbl: 'Wrong',
     accountLabel: 'Account',
     installTipTitle: 'Install the app',
@@ -78,7 +78,7 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'Calibration · step 1 of 2',
     adaptiveV2StatusCal2: 'Calibration · step 2 of 2',
-    adaptiveV2StatusSkill: (n) => 'Your skill level: ' + n,
+    adaptiveV2StatusSkill: (n) => 'Your skill level: ' + formatNum(n),
     adaptiveV2PhaseReview: 'Review mode',
     adaptiveV2PhaseChallenge: 'Challenge mode',
     learningProfileBannerTitle: 'Learning Profile',
@@ -119,6 +119,28 @@ const UI = {
     offlineMessage: 'This app needs an internet connection to work.',
     offlineRefreshBtn: 'Refresh',
     offlineChecking: 'Checking…',
+    practiceDoneTitle: 'All done',
+    practiceDoneSub: 'Loading next difficulty…',
+    errLoadQuiz: 'Could not load quiz data.',
+    errLoadQuizLevel: (lv) => 'Could not load ' + lv + ' quiz data.',
+    errNoCards: 'No cards!',
+    errNoWords: 'No words available!',
+    errNoWordsTopic: 'Not enough words available for this topic yet!',
+    errCompleteAdaptiveFirst: 'Complete an adaptive quiz first so your review set has words to use.',
+    errSwipePrepare: 'Could not prepare swipe cards.',
+    errNoPracticeCards: 'No practice cards found.',
+    errLoadPractice: 'Could not load practice data.',
+    errFileProtocol: ' Open the app through a local server instead of file://.',
+    adaptiveV2Badge: 'Adaptive V2',
+    adaptiveV2ReviewLabel: 'B1 Review',
+    adaptiveV2ChallengeLabel: 'Challenge',
+    shareSectionLabel: 'Share this app',
+    shareAppLabel: 'Share',
+    copyLinkLabel: 'Copy link',
+    linkCopied: 'Link copied',
+    shareUnavailable: 'Share unavailable',
+    shareFailed: 'Share failed',
+    rwTapFormHint: 'Tap a form to see an example',
   },
   de: {
     headerSub: 'Wortübung · Fälle · Verbformen',
@@ -131,13 +153,13 @@ const UI = {
     swipeBannerSub: 'Wische, wenn die Bedeutung passt',
     selectLevel: 'Niveau wählen',
     levelNames: { A1:'Anfänger', A2:'Grundstufe', B1:'Mittelstufe', B2:'Obere Mittelstufe' },
-    cardCount: (n) => n + ' Lernkarten',
+    cardCount: (n) => formatNum(n) + ' Lernkarten',
     back: '← Zurück',
     next: 'Weiter →',
     correct: '✓ Richtig!',
     wrong: (a) => `✗ Falsch. Richtige Antwort: <strong>${a}</strong>`,
     resultTitles: { great:'Ausgezeichnet!', good:'Gut gemacht!', ok:'Guter Versuch!', low:'Weiter üben!' },
-    resultSub: (lv,p) => `Niveau ${lv} · ${p}% richtig`,
+    resultSub: (lv,p) => `Niveau ${lv} · ${formatNum(p)}% richtig`,
     scoreLbl: 'Punkte', correctLbl: 'Richtig', wrongLbl: 'Falsch',
     accountLabel: 'Konto',
     installTipTitle: 'App installieren',
@@ -196,7 +218,11 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'Kalibrierung · Schritt 1 von 2',
     adaptiveV2StatusCal2: 'Kalibrierung · Schritt 2 von 2',
-    adaptiveV2StatusSkill: (n) => 'Dein Niveau: ' + n,
+    adaptiveV2StatusSkill: (n) => 'Dein Niveau: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'Wiederholmodus',
+    adaptiveV2PhaseChallenge: 'Herausforderungsmodus',
+    learningProfileBannerTitle: 'Lernprofil',
+    learningProfileTitle: 'Lernprofil',
     adaptiveSetupTitle: 'Adaptives Quiz',
     adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
     themeBannerTitle: 'Themen-Quiz',
@@ -232,6 +258,28 @@ const UI = {
     offlineMessage: 'Diese App benötigt eine Internetverbindung.',
     offlineRefreshBtn: 'Neu laden',
     offlineChecking: 'Prüfen…',
+    practiceDoneTitle: 'Fertig',
+    practiceDoneSub: 'Nächste Schwierigkeit wird geladen…',
+    errLoadQuiz: 'Quiz-Daten konnten nicht geladen werden.',
+    errLoadQuizLevel: (lv) => lv + '-Quiz-Daten konnten nicht geladen werden.',
+    errNoCards: 'Keine Karten!',
+    errNoWords: 'Keine Wörter verfügbar!',
+    errNoWordsTopic: 'Für dieses Thema noch nicht genug Wörter.',
+    errCompleteAdaptiveFirst: 'Zuerst ein adaptives Quiz absolvieren, damit Wörter zum Wiederholen vorhanden sind.',
+    errSwipePrepare: 'Swipe-Karten konnten nicht vorbereitet werden.',
+    errNoPracticeCards: 'Keine Übungskarten gefunden.',
+    errLoadPractice: 'Übungsdaten konnten nicht geladen werden.',
+    errFileProtocol: ' App über einen lokalen Server statt file:// öffnen.',
+    adaptiveV2Badge: 'Adaptiv V2',
+    adaptiveV2ReviewLabel: 'B1-Wiederholung',
+    adaptiveV2ChallengeLabel: 'Herausforderung',
+    shareSectionLabel: 'App teilen',
+    shareAppLabel: 'Teilen',
+    copyLinkLabel: 'Link kopieren',
+    linkCopied: 'Link kopiert',
+    shareUnavailable: 'Teilen nicht verfügbar',
+    shareFailed: 'Teilen fehlgeschlagen',
+    rwTapFormHint: 'Form antippen für ein Beispiel',
     categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
   },
   tr: {
@@ -245,20 +293,24 @@ const UI = {
     swipeBannerSub: 'Anlam eşleşiyorsa kaydır',
     selectLevel: 'Seviye Seç',
     levelNames: { A1:'Başlangıç', A2:'Temel', B1:'Orta', B2:'Üst-Orta' },
-    cardCount: (n) => n + ' kelime pratiği kartı',
+    cardCount: (n) => formatNum(n) + ' kelime pratiği kartı',
     back: '← Geri',
     next: 'Sonraki →',
     correct: '✓ Doğru!',
     wrong: (a) => `✗ Yanlış. Doğru cevap: <strong>${a}</strong>`,
     resultTitles: { great:'Mükemmel!', good:'Çok iyi!', ok:'Güzel deneme!', low:'Pratik yapmaya devam!' },
-    resultSub: (lv,p) => `Seviye ${lv} · %${p} doğru`,
+    resultSub: (lv,p) => `Seviye ${lv} · %${formatNum(p)} doğru`,
     scoreLbl: 'Puan', correctLbl: 'Doğru', wrongLbl: 'Yanlış',
     accountLabel: 'Hesap',
     installTipTitle: 'Uygulamayı yükle',
     installTipDesc: 'Daha hızlı erişim ve uygulama deneyimi için ana ekranınıza yükleyin.',
     installGuideTitle: 'Bu uygulamayı yükle',
+    installGuideSub: 'Uygulamayı ana ekranınıza eklemek için bu iki hızlı adımı izleyin.',
     installStep1Title: 'Paylaş menüsünü aç',
+    installStep1Desc: 'Tarayıcınızdaki Paylaş düğmesine dokunun veya buraya tıklayın.',
     installStep2Title: 'Ana Ekrana Ekle\'yi seç',
+    installStep2Desc: 'Açılan menüden Ana Ekrana Ekle\'ye dokunun ve onaylayın.',
+    installOpenShare: 'Paylaş menüsünü aç',
     installClose: 'Kapat',
     tipTitle: 'İlerleme kaydedilmedi',
     tipDesc: 'Öğrenme geçmişinizi ve quiz sonuçlarınızı korumak için giriş yapın.',
@@ -306,7 +358,11 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'Kalibrasyon · adım 1 / 2',
     adaptiveV2StatusCal2: 'Kalibrasyon · adım 2 / 2',
-    adaptiveV2StatusSkill: (n) => 'Seviyeniz: ' + n,
+    adaptiveV2StatusSkill: (n) => 'Seviyeniz: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'Tekrar modu',
+    adaptiveV2PhaseChallenge: 'Meydan okuma modu',
+    learningProfileBannerTitle: 'Öğrenme Profili',
+    learningProfileTitle: 'Öğrenme Profili',
     adaptiveSetupTitle: 'Uyarlamalı Sınav',
     adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
     themeBannerTitle: 'Konu Sınavı',
@@ -333,7 +389,7 @@ const UI = {
     practiceMeaningLabel: 'Anlam',
     practiceFilterDifficulty: 'Zorluk',
     practiceFilterType: 'Kelime türü',
-    practiceFilterArticle: 'Artikel (isimler)',
+    practiceFilterArticle: 'Tanımlık (isimler)',
     practiceFilterTopics: 'Konular',
     practiceFilterAll: 'Tümü',
     practiceClearFilters: 'Filtreleri temizle',
@@ -343,6 +399,28 @@ const UI = {
     offlineMessage: 'Bu uygulama çalışmak için internet bağlantısı gerektirir.',
     offlineRefreshBtn: 'Yenile',
     offlineChecking: 'Kontrol ediliyor…',
+    practiceDoneTitle: 'Tamamlandı',
+    practiceDoneSub: 'Sonraki zorluk yükleniyor…',
+    errLoadQuiz: 'Quiz verileri yüklenemedi.',
+    errLoadQuizLevel: (lv) => lv + ' quiz verileri yüklenemedi.',
+    errNoCards: 'Kart yok!',
+    errNoWords: 'Kelime bulunamadı!',
+    errNoWordsTopic: 'Bu konu için henüz yeterli kelime yok.',
+    errCompleteAdaptiveFirst: 'Tekrar setinizde kelime olması için önce uyarlamalı bir quiz tamamlayın.',
+    errSwipePrepare: 'Kaydırma kartları hazırlanamadı.',
+    errNoPracticeCards: 'Pratik kartı bulunamadı.',
+    errLoadPractice: 'Pratik verileri yüklenemedi.',
+    errFileProtocol: ' Uygulamayı file:// yerine yerel sunucu üzerinden açın.',
+    adaptiveV2Badge: 'Uyarlamalı V2',
+    adaptiveV2ReviewLabel: 'B1 Tekrar',
+    adaptiveV2ChallengeLabel: 'Meydan okuma',
+    shareSectionLabel: 'Bu uygulamayı paylaş',
+    shareAppLabel: 'Paylaş',
+    copyLinkLabel: 'Bağlantıyı kopyala',
+    linkCopied: 'Bağlantı kopyalandı',
+    shareUnavailable: 'Paylaşım kullanılamıyor',
+    shareFailed: 'Paylaşım başarısız',
+    rwTapFormHint: 'Örnek için bir biçime dokun',
   },
   fa: {
     headerSub: 'تمرین واژگان · حالت‌ها · صرف فعل',
@@ -355,20 +433,24 @@ const UI = {
     swipeBannerSub: 'اگر معنی درست است، بکش',
     selectLevel: 'انتخاب سطح',
     levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
-    cardCount: (n) => n + ' کارت تمرین واژگان',
+    cardCount: (n) => formatNum(n) + ' کارت تمرین واژگان',
     back: '→ بازگشت',
     next: 'بعدی ←',
     correct: '✓ درست!',
     wrong: (a) => `✗ اشتباه. جواب درست: <strong>${a}</strong>`,
     resultTitles: { great:'عالی!', good:'خیلی خوب!', ok:'تلاش خوبی بود!', low:'به تمرین ادامه بده!' },
-    resultSub: (lv,p) => `سطح ${lv} · ${p}٪ درست`,
+    resultSub: (lv,p) => `سطح ${lv} · ${formatNum(p)}٪ درست`,
     scoreLbl: 'امتیاز', correctLbl: 'درست', wrongLbl: 'اشتباه',
     accountLabel: 'حساب کاربری',
     installTipTitle: 'نصب برنامه',
     installTipDesc: 'برای دسترسی سریع‌تر و تجربه‌ای روان‌تر، روی صفحه اصلی نصب کنید.',
     installGuideTitle: 'این برنامه را نصب کنید',
+    installGuideSub: 'برای نصب برنامه روی صفحهٔ اصلی این دو گام ساده را انجام دهید.',
     installStep1Title: 'منوی اشتراک‌گذاری را باز کنید',
+    installStep1Desc: 'روی دکمهٔ اشتراک‌گذاری در مرورگر بزنید یا اینجا کلیک کنید.',
     installStep2Title: '«Add to Home Screen» را انتخاب کنید',
+    installStep2Desc: 'در منوی بازشده «Add to Home Screen» را بزنید و تأیید کنید.',
+    installOpenShare: 'باز کردن منوی اشتراک‌گذاری',
     installClose: 'بستن',
     tipTitle: 'پیشرفت ذخیره نشده',
     tipDesc: 'برای حفظ تاریخچهٔ یادگیری و نتایج آزمون وارد شوید.',
@@ -416,7 +498,11 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'کالیبراسیون · گام ۱ از ۲',
     adaptiveV2StatusCal2: 'کالیبراسیون · گام ۲ از ۲',
-    adaptiveV2StatusSkill: (n) => 'سطح مهارت شما: ' + n,
+    adaptiveV2StatusSkill: (n) => 'سطح مهارت شما: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'حالت مرور',
+    adaptiveV2PhaseChallenge: 'حالت چالش',
+    learningProfileBannerTitle: 'پروفایل یادگیری',
+    learningProfileTitle: 'پروفایل یادگیری',
     adaptiveSetupTitle: 'آزمون تطبیقی',
     adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
     themeBannerTitle: 'آزمون موضوعی',
@@ -442,16 +528,38 @@ const UI = {
     practiceMeaningLabel: 'معنی',
     practiceFilterDifficulty: 'سختی',
     practiceFilterType: 'نوع واژه',
-    practiceFilterArticle: 'آرتikel (اسم)',
+    practiceFilterArticle: 'حرف تعریف (اسم)',
     practiceFilterTopics: 'موضوعات',
     practiceFilterAll: 'همه',
     practiceClearFilters: 'پاک کردن فیلترها',
-    practiceWordCount: 'واژه در دور شما',
+    practiceWordCount: 'واژه در لیست شما',
     practiceNoWordsHint: 'واژه‌ای پیدا نشد — سطح یا فیلترها را تغییر دهید.',
     offlineTitle: 'آفلاین هستید',
     offlineMessage: 'این برنامه برای کار کردن به اتصال اینترنت نیاز دارد.',
     offlineRefreshBtn: 'بارگذاری مجدد',
     offlineChecking: 'در حال بررسی…',
+    practiceDoneTitle: 'تمام شد',
+    practiceDoneSub: 'در حال بارگذاری سختی بعدی…',
+    errLoadQuiz: 'دادهٔ آزمون بارگذاری نشد.',
+    errLoadQuizLevel: (lv) => 'دادهٔ آزمون ' + lv + ' بارگذاری نشد.',
+    errNoCards: 'کارتی نیست!',
+    errNoWords: 'واژه‌ای در دسترس نیست!',
+    errNoWordsTopic: 'برای این موضوع هنوز واژهٔ کافی نیست.',
+    errCompleteAdaptiveFirst: 'ابتدا یک آزمون تطبیقی کامل کنید تا واژه‌های مرور داشته باشید.',
+    errSwipePrepare: 'کارت‌های تطبیق آماده نشد.',
+    errNoPracticeCards: 'کارتی برای تمرین پیدا نشد.',
+    errLoadPractice: 'دادهٔ تمرین بارگذاری نشد.',
+    errFileProtocol: ' برنامه را از طریق سرور محلی باز کنید، نه file://.',
+    adaptiveV2Badge: 'تطبیقی V2',
+    adaptiveV2ReviewLabel: 'مرور B1',
+    adaptiveV2ChallengeLabel: 'چالش',
+    shareSectionLabel: 'اشتراک‌گذاری این برنامه',
+    shareAppLabel: 'اشتراک‌گذاری',
+    copyLinkLabel: 'کپی پیوند',
+    linkCopied: 'پیوند کپی شد',
+    shareUnavailable: 'اشتراک‌گذاری در دسترس نیست',
+    shareFailed: 'اشتراک‌گذاری ناموفق بود',
+    rwTapFormHint: 'برای مثال روی یک شکل بزنید',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
   },
   ru: {
@@ -465,20 +573,24 @@ const UI = {
     swipeBannerSub: 'Смахни, если значение подходит',
     selectLevel: 'Выбрать уровень',
     levelNames: { A1:'Начальный', A2:'Элементарный', B1:'Средний', B2:'Выше среднего' },
-    cardCount: (n) => n + ' карточек практики слов',
+    cardCount: (n) => formatNum(n) + ' карточек практики слов',
     back: '← Назад',
     next: 'Далее →',
     correct: '✓ Правильно!',
     wrong: (a) => `✗ Неверно. Правильный ответ: <strong>${a}</strong>`,
     resultTitles: { great:'Отлично!', good:'Хорошо!', ok:'Неплохая попытка!', low:'Продолжай практиковаться!' },
-    resultSub: (lv,p) => `Уровень ${lv} · ${p}% правильно`,
+    resultSub: (lv,p) => `Уровень ${lv} · ${formatNum(p)}% правильно`,
     scoreLbl: 'Счёт', correctLbl: 'Правильно', wrongLbl: 'Неверно',
     accountLabel: 'Аккаунт',
     installTipTitle: 'Установить приложение',
     installTipDesc: 'Установите на главный экран для быстрого доступа и удобного использования.',
     installGuideTitle: 'Установить это приложение',
+    installGuideSub: 'Два простых шага для установки приложения на главный экран.',
     installStep1Title: 'Откройте меню «Поделиться»',
+    installStep1Desc: 'Нажмите кнопку «Поделиться» в браузере или нажмите здесь.',
     installStep2Title: 'Выберите «Add to Home Screen»',
+    installStep2Desc: 'В открывшемся меню выберите «Add to Home Screen» и подтвердите.',
+    installOpenShare: 'Открыть меню «Поделиться»',
     installClose: 'Закрыть',
     tipTitle: 'Прогресс не сохранён',
     tipDesc: 'Войдите, чтобы сохранить историю обучения и результаты викторин.',
@@ -526,7 +638,11 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'Калибровка · шаг 1 из 2',
     adaptiveV2StatusCal2: 'Калибровка · шаг 2 из 2',
-    adaptiveV2StatusSkill: (n) => 'Ваш уровень: ' + n,
+    adaptiveV2StatusSkill: (n) => 'Ваш уровень: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'Режим повторения',
+    adaptiveV2PhaseChallenge: 'Режим вызова',
+    learningProfileBannerTitle: 'Профиль обучения',
+    learningProfileTitle: 'Профиль обучения',
     adaptiveSetupTitle: 'Адаптивная викторина',
     adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
     themeBannerTitle: 'Тематическая викторина',
@@ -537,6 +653,8 @@ const UI = {
     dictBannerSub: 'Все слова',
     dictScreenTitle: 'Словарь',
     dictScreenSubtitle: 'Все слова',
+    dictBack: '← Назад',
+    dictFilterPlaceholder: 'Фильтр слов…',
     dictLoading: 'Загрузка…',
     dictEmpty: 'Слова не найдены.',
     typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
@@ -560,6 +678,28 @@ const UI = {
     offlineMessage: 'Для работы приложения необходимо подключение к интернету.',
     offlineRefreshBtn: 'Обновить',
     offlineChecking: 'Проверка…',
+    practiceDoneTitle: 'Готово',
+    practiceDoneSub: 'Загрузка следующей сложности…',
+    errLoadQuiz: 'Не удалось загрузить данные викторины.',
+    errLoadQuizLevel: (lv) => 'Не удалось загрузить данные викторины ' + lv + '.',
+    errNoCards: 'Нет карточек!',
+    errNoWords: 'Нет доступных слов!',
+    errNoWordsTopic: 'Для этой темы пока недостаточно слов.',
+    errCompleteAdaptiveFirst: 'Сначала пройдите адаптивную викторину, чтобы были слова для повторения.',
+    errSwipePrepare: 'Не удалось подготовить карточки для свайпа.',
+    errNoPracticeCards: 'Карточки для практики не найдены.',
+    errLoadPractice: 'Не удалось загрузить данные практики.',
+    errFileProtocol: ' Откройте приложение через локальный сервер, а не file://.',
+    adaptiveV2Badge: 'Адаптив V2',
+    adaptiveV2ReviewLabel: 'Повторение B1',
+    adaptiveV2ChallengeLabel: 'Вызов',
+    shareSectionLabel: 'Поделиться приложением',
+    shareAppLabel: 'Поделиться',
+    copyLinkLabel: 'Копировать ссылку',
+    linkCopied: 'Ссылка скопирована',
+    shareUnavailable: 'Поделиться недоступно',
+    shareFailed: 'Не удалось поделиться',
+    rwTapFormHint: 'Нажмите на форму, чтобы увидеть пример',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
   },
   uk: {
@@ -573,20 +713,24 @@ const UI = {
     swipeBannerSub: 'Свайпни, якщо значення підходить',
     selectLevel: 'Обрати рівень',
     levelNames: { A1:'Початківець', A2:'Елементарний', B1:'Середній', B2:'Вище середнього' },
-    cardCount: (n) => n + ' карток практики слів',
+    cardCount: (n) => formatNum(n) + ' карток практики слів',
     back: '← Назад',
     next: 'Далі →',
     correct: '✓ Правильно!',
     wrong: (a) => `✗ Неправильно. Правильна відповідь: <strong>${a}</strong>`,
     resultTitles: { great:'Відмінно!', good:'Молодець!', ok:'Непогана спроба!', low:'Продовжуй практикуватись!' },
-    resultSub: (lv,p) => `Рівень ${lv} · ${p}% правильно`,
+    resultSub: (lv,p) => `Рівень ${lv} · ${formatNum(p)}% правильно`,
     scoreLbl: 'Рахунок', correctLbl: 'Правильно', wrongLbl: 'Неправильно',
     accountLabel: 'Акаунт',
     installTipTitle: 'Встановити додаток',
     installTipDesc: 'Встановіть на головний екран для швидкого доступу та зручного використання.',
     installGuideTitle: 'Встановити цей додаток',
+    installGuideSub: 'Два прості кроки для встановлення додатку на головний екран.',
     installStep1Title: 'Відкрийте меню «Поділитися»',
+    installStep1Desc: 'Натисніть кнопку «Поділитися» в браузері або натисніть тут.',
     installStep2Title: 'Виберіть «Add to Home Screen»',
+    installStep2Desc: 'У меню, що відкриється, виберіть «Add to Home Screen» і підтвердіть.',
+    installOpenShare: 'Відкрити меню «Поділитися»',
     installClose: 'Закрити',
     tipTitle: 'Прогрес не збережено',
     tipDesc: 'Увійдіть, щоб зберегти історію навчання та результати вікторин.',
@@ -634,7 +778,11 @@ const UI = {
     adaptiveV2BannerStatusDefault: '',
     adaptiveV2StatusCal1: 'Калібрування · крок 1 з 2',
     adaptiveV2StatusCal2: 'Калібрування · крок 2 з 2',
-    adaptiveV2StatusSkill: (n) => 'Ваш рівень: ' + n,
+    adaptiveV2StatusSkill: (n) => 'Ваш рівень: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'Режим повторення',
+    adaptiveV2PhaseChallenge: 'Режим виклику',
+    learningProfileBannerTitle: 'Профіль навчання',
+    learningProfileTitle: 'Профіль навчання',
     adaptiveSetupTitle: 'Адаптивна вікторина',
     adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
     themeBannerTitle: 'Тематична вікторина',
@@ -645,6 +793,8 @@ const UI = {
     dictBannerSub: 'Усі слова',
     dictScreenTitle: 'Словник',
     dictScreenSubtitle: 'Усі слова',
+    dictBack: '← Назад',
+    dictFilterPlaceholder: 'Фільтр слів…',
     dictLoading: 'Завантаження…',
     dictEmpty: 'Слова не знайдено.',
     typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
@@ -668,6 +818,28 @@ const UI = {
     offlineMessage: 'Для роботи додатку потрібне підключення до інтернету.',
     offlineRefreshBtn: 'Оновити',
     offlineChecking: 'Перевірка…',
+    practiceDoneTitle: 'Готово',
+    practiceDoneSub: 'Завантаження наступної складності…',
+    errLoadQuiz: 'Не вдалося завантажити дані вікторини.',
+    errLoadQuizLevel: (lv) => 'Не вдалося завантажити дані вікторини ' + lv + '.',
+    errNoCards: 'Немає карток!',
+    errNoWords: 'Немає доступних слів!',
+    errNoWordsTopic: 'Для цієї теми поки недостатньо слів.',
+    errCompleteAdaptiveFirst: 'Спочатку пройдіть адаптивну вікторину, щоб були слова для повторення.',
+    errSwipePrepare: 'Не вдалося підготувати картки для свайпу.',
+    errNoPracticeCards: 'Картки для практики не знайдено.',
+    errLoadPractice: 'Не вдалося завантажити дані практики.',
+    errFileProtocol: ' Відкрийте додаток через локальний сервер, а не file://.',
+    adaptiveV2Badge: 'Адаптив V2',
+    adaptiveV2ReviewLabel: 'Повторення B1',
+    adaptiveV2ChallengeLabel: 'Виклик',
+    shareSectionLabel: 'Поділитися додатком',
+    shareAppLabel: 'Поділитися',
+    copyLinkLabel: 'Копіювати посилання',
+    linkCopied: 'Посилання скопійовано',
+    shareUnavailable: 'Поділитися недоступно',
+    shareFailed: 'Не вдалося поділитися',
+    rwTapFormHint: 'Натисніть на форму, щоб побачити приклад',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
   },
   ar: {
@@ -681,20 +853,24 @@ const UI = {
     swipeBannerSub: 'اسحب إذا كان المعنى صحيحاً',
     selectLevel: 'اختر المستوى',
     levelNames: { A1:'مبتدئ', A2:'أساسي', B1:'متوسط', B2:'فوق المتوسط' },
-    cardCount: (n) => n + ' بطاقة تدريب مفردات',
+    cardCount: (n) => formatNum(n) + ' بطاقة تدريب مفردات',
     back: '→ رجوع',
     next: '← التالي',
     correct: '✓ صحيح!',
     wrong: (a) => `✗ خطأ. الإجابة الصحيحة: <strong>${a}</strong>`,
     resultTitles: { great:'ممتاز!', good:'أحسنت!', ok:'محاولة جيدة!', low:'واصل التدريب!' },
-    resultSub: (lv,p) => `المستوى ${lv} · ${p}% صحيح`,
+    resultSub: (lv,p) => `المستوى ${lv} · ${formatNum(p)}% صحيح`,
     scoreLbl: 'النقاط', correctLbl: 'صحيح', wrongLbl: 'خطأ',
     accountLabel: 'الحساب',
     installTipTitle: 'ثبّت التطبيق',
     installTipDesc: 'ثبّته على شاشتك الرئيسية للوصول السريع وتجربة سلسة.',
     installGuideTitle: 'ثبّت هذا التطبيق',
+    installGuideSub: 'خطوتان سريعتان لتثبيت التطبيق على شاشتك الرئيسية.',
     installStep1Title: 'افتح قائمة المشاركة',
+    installStep1Desc: 'اضغط زر المشاركة في متصفحك، أو انقر هنا.',
     installStep2Title: 'اختر «Add to Home Screen»',
+    installStep2Desc: 'في القائمة التي تفتح، اضغط Add to Home Screen ثم أكّد التثبيت.',
+    installOpenShare: 'فتح قائمة المشاركة',
     installClose: 'إغلاق',
     tipTitle: 'التقدم غير محفوظ',
     tipDesc: 'سجّل الدخول للاحتفاظ بسجل تعلّمك ونتائج الاختبارات.',
@@ -740,9 +916,13 @@ const UI = {
     adaptiveV2BannerTitle: 'اختبار تكيّفي V2 (تجريبي)',
     adaptiveV2BannerSub: 'يكتشف مستواك · يتكيّف كل اختبار',
     adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'المعايرة · الخطوة 1 من 2',
-    adaptiveV2StatusCal2: 'المعايرة · الخطوة 2 من 2',
-    adaptiveV2StatusSkill: (n) => 'مستوى مهارتك: ' + n,
+    adaptiveV2StatusCal1: 'المعايرة · الخطوة ١ من ٢',
+    adaptiveV2StatusCal2: 'المعايرة · الخطوة ٢ من ٢',
+    adaptiveV2StatusSkill: (n) => 'مستوى مهارتك: ' + formatNum(n),
+    adaptiveV2PhaseReview: 'وضع المراجعة',
+    adaptiveV2PhaseChallenge: 'وضع التحدي',
+    learningProfileBannerTitle: 'ملف التعلم',
+    learningProfileTitle: 'ملف التعلم',
     adaptiveSetupTitle: 'اختبار تكيّفي',
     adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
     themeBannerTitle: 'اختبار موضوعي',
@@ -778,6 +958,28 @@ const UI = {
     offlineMessage: 'يحتاج هذا التطبيق إلى اتصال بالإنترنت للعمل.',
     offlineRefreshBtn: 'تحديث',
     offlineChecking: 'جارٍ التحقق…',
+    practiceDoneTitle: 'اكتمل',
+    practiceDoneSub: 'جارٍ تحميل الصعوبة التالية…',
+    errLoadQuiz: 'تعذّر تحميل بيانات الاختبار.',
+    errLoadQuizLevel: (lv) => 'تعذّر تحميل بيانات اختبار ' + lv + '.',
+    errNoCards: 'لا توجد بطاقات!',
+    errNoWords: 'لا توجد كلمات متاحة!',
+    errNoWordsTopic: 'لا توجد كلمات كافية لهذا الموضوع بعد.',
+    errCompleteAdaptiveFirst: 'أكمل اختباراً تكيّفياً أولاً ليكون لديك كلمات للمراجعة.',
+    errSwipePrepare: 'تعذّر تجهيز بطاقات السحب.',
+    errNoPracticeCards: 'لم يتم العثور على بطاقات تدريب.',
+    errLoadPractice: 'تعذّر تحميل بيانات التدريب.',
+    errFileProtocol: ' افتح التطبيق عبر خادم محلي بدلاً من file://.',
+    adaptiveV2Badge: 'تكيّفي V2',
+    adaptiveV2ReviewLabel: 'مراجعة B1',
+    adaptiveV2ChallengeLabel: 'تحدي',
+    shareSectionLabel: 'شارك هذا التطبيق',
+    shareAppLabel: 'مشاركة',
+    copyLinkLabel: 'نسخ الرابط',
+    linkCopied: 'تم نسخ الرابط',
+    shareUnavailable: 'المشاركة غير متاحة',
+    shareFailed: 'فشلت المشاركة',
+    rwTapFormHint: 'اضغط على شكل لرؤية مثال',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
   }
 };
@@ -832,87 +1034,138 @@ const PROFILE_I18N = {
     resetAdaptiveProgress: 'Adaptiven Fortschritt zurücksetzen',
     resetAdaptiveConfirm: 'Gesamten adaptiven V2-Fortschritt zurücksetzen? Wortverlauf, Niveau und Kalibrierung werden gelöscht. Das kann nicht rückgängig gemacht werden.',
     metaSeen: 'Gesehen', metaRight: 'Richtig', metaWrong: 'Falsch',
-    uncategorized: 'Ohne Kategorie'
+    uncategorized: 'Ohne Kategorie',
+    topics: 'Themen', topicCoverage: 'Abdeckung', topicAccuracy: 'Genauigkeit', practiceTopic: 'Üben'
   },
   tr: {
     title: 'Öğrenme Profili',
     adaptive: 'Uyarlamalı',
     overview: 'Genel Bakış', activity: 'Aktivite', performance: 'Performans', review: 'Tekrar',
-    wordsSeen: 'Görülen Kelimeler', wordsStruggling: 'Zorlanılan Kelimeler', accuracyPct: 'Doğruluk %', wordsReviewed: 'İncelenen Kelimeler',
+    wordsSeen: 'Görülen Kelimeler', wordsStruggling: 'Zorlanılan Kelimeler', wordsMastered: 'Uzmanlaşılan Kelimeler', accuracyPct: 'Doğruluk %', wordsReviewed: 'İncelenen Kelimeler',
     quizzesCompleted: 'Tamamlanan Quizler', correctAnswers: 'Doğru Cevaplar', incorrectAnswers: 'Yanlış Cevaplar', totalStudyTime: 'Toplam Çalışma Süresi',
     strongest: 'En Güçlü Alanlar', needsPractice: 'Daha Fazla Pratik', notEnoughCategoryData: 'Henüz yeterli kategori verisi yok',
     reviewWeakWords: 'Zayıf Kelimeleri Tekrar Et', reviewRecentMistakes: 'Son Hataları Tekrar Et', reviewMixedPractice: 'Karışık Tekrar',
-    seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler',
+    seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler', masteredWords: 'Uzmanlaşılan Kelimeler',
     loadingLevelWords: 'Bu seviye için kelimeler yükleniyor...', noWordsInList: 'Bu listede henüz kelime yok.',
+    signInUnlock: 'Kilidi açmak için giriş yap:',
+    signInBtn: 'Giriş yap',
     signInPrompt: 'İlerlemenizi cihazlar arasında senkronize etmek için giriş yapın.',
     guestProfileEmpty: 'Burada istatistik görmek için bu seviyede bir quiz tamamlayın.',
     noTrackedFor: '{level} için takip edilen veri yok. {best} sekmesini dene.',
+    adaptiveBand: 'CEFR seviyesi',
+    adaptiveSkill: 'Yetenek seviyesi',
+    journeySeenShort: '%{pct} görüldü',
+    journeyGoldShort: 'Seviyeniz',
+    journeyGoldHint: 'geniş = kalibrasyon · dar = emin',
+    resetAdaptiveProgress: 'Uyarlamalı ilerlemeyi sıfırla',
+    resetAdaptiveConfirm: 'Tüm Uyarlamalı V2 ilerlemesini sıfırla? Kelime geçmişi, seviye ve kalibrasyon silinir. Bu geri alınamaz.',
     metaSeen: 'Görüldü', metaRight: 'Doğru', metaWrong: 'Yanlış',
-    uncategorized: 'Kategorisiz'
+    uncategorized: 'Kategorisiz',
+    topics: 'Konular', topicCoverage: 'Kapsam', topicAccuracy: 'Doğruluk', practiceTopic: 'Pratik'
   },
   fa: {
     title: 'پروفایل یادگیری',
     adaptive: 'تطبیقی',
     overview: 'نمای کلی', activity: 'فعالیت', performance: 'عملکرد', review: 'مرور',
-    wordsSeen: 'واژه‌های دیده‌شده', wordsStruggling: 'واژه‌های دشوار', accuracyPct: 'دقت ٪', wordsReviewed: 'واژه‌های مرورشده',
+    wordsSeen: 'واژه‌های دیده‌شده', wordsStruggling: 'واژه‌های دشوار', wordsMastered: 'واژه‌های مسلط', accuracyPct: 'دقت ٪', wordsReviewed: 'واژه‌های مرورشده',
     quizzesCompleted: 'کوئیزهای تکمیل‌شده', correctAnswers: 'پاسخ‌های درست', incorrectAnswers: 'پاسخ‌های نادرست', totalStudyTime: 'کل زمان مطالعه',
     strongest: 'قوی‌ترین دسته‌ها', needsPractice: 'نیاز به تمرین', notEnoughCategoryData: 'هنوز دادهٔ کافی برای دسته‌ها نیست',
     reviewWeakWords: 'مرور واژه‌های ضعیف', reviewRecentMistakes: 'مرور اشتباهات اخیر', reviewMixedPractice: 'مرور ترکیبی',
-    seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار',
+    seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار', masteredWords: 'واژه‌های مسلط',
     loadingLevelWords: 'در حال بارگذاری واژه‌های این سطح...', noWordsInList: 'هنوز واژه‌ای در این فهرست نیست.',
+    signInUnlock: 'برای باز کردن قفل وارد شوید:',
+    signInBtn: 'ورود',
     signInPrompt: 'برای همگام‌سازی پیشرفت بین دستگاه‌ها وارد شوید.',
     guestProfileEmpty: 'برای دیدن آمار این سطح، یک آزمون کامل کنید.',
     noTrackedFor: 'برای {level} دادهٔ ثبت‌شده‌ای نیست. تب {best} را امتحان کنید.',
+    adaptiveBand: 'سطح CEFR',
+    adaptiveSkill: 'سطح مهارت',
+    journeySeenShort: '{pct}٪ دیده‌شده',
+    journeyGoldShort: 'سطح شما',
+    journeyGoldHint: 'عریض = کالیبراسیون · باریک = اطمینان',
+    resetAdaptiveProgress: 'بازنشانی پیشرفت تطبیقی',
+    resetAdaptiveConfirm: 'همهٔ پیشرفت تطبیقی V2 بازنشانی شود؟ تاریخچهٔ واژه‌ها، سطح و کالیبراسیون حذف می‌شود. این کار برگشت‌پذیر نیست.',
     metaSeen: 'دیده', metaRight: 'درست', metaWrong: 'نادرست',
-    uncategorized: 'بدون دسته'
+    uncategorized: 'بدون دسته',
+    topics: 'موضوعات', topicCoverage: 'پوشش', topicAccuracy: 'دقت', practiceTopic: 'تمرین'
   },
   ru: {
     title: 'Профиль обучения',
     adaptive: 'Адаптив',
     overview: 'Обзор', activity: 'Активность', performance: 'Результаты', review: 'Повторение',
-    wordsSeen: 'Просмотрено слов', wordsStruggling: 'Сложные слова', accuracyPct: 'Точность %', wordsReviewed: 'Повторенные слова',
+    wordsSeen: 'Просмотрено слов', wordsStruggling: 'Сложные слова', wordsMastered: 'Освоенные слова', accuracyPct: 'Точность %', wordsReviewed: 'Повторенные слова',
     quizzesCompleted: 'Завершено викторин', correctAnswers: 'Правильные ответы', incorrectAnswers: 'Неправильные ответы', totalStudyTime: 'Общее время обучения',
     strongest: 'Сильные категории', needsPractice: 'Нужно подтянуть', notEnoughCategoryData: 'Недостаточно данных по категориям',
     reviewWeakWords: 'Повторить слабые слова', reviewRecentMistakes: 'Повторить недавние ошибки', reviewMixedPractice: 'Смешанная практика',
-    seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова',
+    seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова', masteredWords: 'Освоенные слова',
     loadingLevelWords: 'Загрузка слов для этого уровня...', noWordsInList: 'В этом списке пока нет слов.',
+    signInUnlock: 'Войдите, чтобы разблокировать:',
+    signInBtn: 'Войти',
     signInPrompt: 'Войдите, чтобы синхронизировать прогресс между устройствами.',
     guestProfileEmpty: 'Пройдите викторину на этом уровне, чтобы увидеть статистику.',
     noTrackedFor: 'Нет данных для {level}. Попробуйте вкладку {best}.',
+    adaptiveBand: 'Уровень CEFR',
+    adaptiveSkill: 'Уровень навыка',
+    journeySeenShort: '{pct}% просмотрено',
+    journeyGoldShort: 'Ваш уровень',
+    journeyGoldHint: 'широко = калибровка · узко = уверенно',
+    resetAdaptiveProgress: 'Сбросить адаптивный прогресс',
+    resetAdaptiveConfirm: 'Сбросить весь прогресс Adaptive V2? История слов, уровень и калибровка будут удалены. Это нельзя отменить.',
     metaSeen: 'Просм.', metaRight: 'Верно', metaWrong: 'Неверно',
-    uncategorized: 'Без категории'
+    uncategorized: 'Без категории',
+    topics: 'Темы', topicCoverage: 'Охват', topicAccuracy: 'Точность', practiceTopic: 'Практика'
   },
   uk: {
     title: 'Профіль навчання',
     adaptive: 'Адаптив',
     overview: 'Огляд', activity: 'Активність', performance: 'Результати', review: 'Повторення',
-    wordsSeen: 'Переглянуто слів', wordsStruggling: 'Складні слова', accuracyPct: 'Точність %', wordsReviewed: 'Повторені слова',
+    wordsSeen: 'Переглянуто слів', wordsStruggling: 'Складні слова', wordsMastered: 'Опановані слова', accuracyPct: 'Точність %', wordsReviewed: 'Повторені слова',
     quizzesCompleted: 'Завершено вікторин', correctAnswers: 'Правильні відповіді', incorrectAnswers: 'Неправильні відповіді', totalStudyTime: 'Загальний час навчання',
     strongest: 'Найсильніші категорії', needsPractice: 'Потрібно попрактикувати', notEnoughCategoryData: 'Недостатньо даних за категоріями',
     reviewWeakWords: 'Повторити слабкі слова', reviewRecentMistakes: 'Повторити недавні помилки', reviewMixedPractice: 'Змішана практика',
-    seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова',
+    seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова', masteredWords: 'Опановані слова',
     loadingLevelWords: 'Завантаження слів для цього рівня...', noWordsInList: 'У цьому списку поки немає слів.',
+    signInUnlock: 'Увійдіть, щоб розблокувати:',
+    signInBtn: 'Увійти',
     signInPrompt: 'Увійдіть, щоб синхронізувати прогрес між пристроями.',
     guestProfileEmpty: 'Пройдіть вікторину на цьому рівні, щоб побачити статистику.',
     noTrackedFor: 'Немає даних для {level}. Спробуйте вкладку {best}.',
+    adaptiveBand: 'Рівень CEFR',
+    adaptiveSkill: 'Рівень навички',
+    journeySeenShort: '{pct}% переглянуто',
+    journeyGoldShort: 'Ваш рівень',
+    journeyGoldHint: 'широко = калібрування · вузько = впевнено',
+    resetAdaptiveProgress: 'Скинути адаптивний прогрес',
+    resetAdaptiveConfirm: 'Скинути весь прогрес Adaptive V2? Історія слів, рівень і калібрування будуть видалені. Це не можна скасувати.',
     metaSeen: 'Перегл.', metaRight: 'Прав.', metaWrong: 'Неправ.',
-    uncategorized: 'Без категорії'
+    uncategorized: 'Без категорії',
+    topics: 'Теми', topicCoverage: 'Охоплення', topicAccuracy: 'Точність', practiceTopic: 'Практика'
   },
   ar: {
     title: 'ملف التعلم',
     adaptive: 'تكيّفي',
     overview: 'نظرة عامة', activity: 'النشاط', performance: 'الأداء', review: 'مراجعة',
-    wordsSeen: 'الكلمات التي تمت رؤيتها', wordsStruggling: 'الكلمات الصعبة', accuracyPct: 'الدقة %', wordsReviewed: 'الكلمات المُراجَعة',
+    wordsSeen: 'الكلمات التي تمت رؤيتها', wordsStruggling: 'الكلمات الصعبة', wordsMastered: 'الكلمات المتقنة', accuracyPct: 'الدقة %', wordsReviewed: 'الكلمات المُراجَعة',
     quizzesCompleted: 'الاختبارات المكتملة', correctAnswers: 'الإجابات الصحيحة', incorrectAnswers: 'الإجابات الخاطئة', totalStudyTime: 'إجمالي وقت الدراسة',
     strongest: 'أقوى الفئات', needsPractice: 'تحتاج إلى تدريب', notEnoughCategoryData: 'لا توجد بيانات فئات كافية بعد',
     reviewWeakWords: 'مراجعة الكلمات الضعيفة', reviewRecentMistakes: 'مراجعة الأخطاء الأخيرة', reviewMixedPractice: 'مراجعة مختلطة',
-    seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة',
+    seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة', masteredWords: 'الكلمات المتقنة',
     loadingLevelWords: 'جارٍ تحميل كلمات هذا المستوى...', noWordsInList: 'لا توجد كلمات في هذه القائمة بعد.',
+    signInUnlock: 'سجّل الدخول للفتح:',
+    signInBtn: 'تسجيل الدخول',
     signInPrompt: 'سجّل الدخول لمزامنة تقدمك عبر الأجهزة.',
     guestProfileEmpty: 'أكمل اختباراً على هذا المستوى لرؤية الإحصائيات هنا.',
     noTrackedFor: 'لا توجد بيانات متتبعة للمستوى {level}. جرّب تبويب {best}.',
+    adaptiveBand: 'مستوى CEFR',
+    adaptiveSkill: 'مستوى المهارة',
+    journeySeenShort: '{pct}% شوهد',
+    journeyGoldShort: 'مستواك',
+    journeyGoldHint: 'عريض = معايرة · ضيق = ثقة',
+    resetAdaptiveProgress: 'إعادة تعيين التقدم التكيّفي',
+    resetAdaptiveConfirm: 'إعادة تعيين كل تقدم Adaptive V2؟ سيتم حذف سجل الكلمات والمستوى والمعايرة. لا يمكن التراجع عن ذلك.',
     metaSeen: 'شوهد', metaRight: 'صحيح', metaWrong: 'خطأ',
-    uncategorized: 'غير مصنف'
+    uncategorized: 'غير مصنف',
+    topics: 'المواضيع', topicCoverage: 'التغطية', topicAccuracy: 'الدقة', practiceTopic: 'تدريب'
   }
 };
 
@@ -921,7 +1174,7 @@ function _lp(key, vars) {
   var text = dict[key] || PROFILE_I18N.en[key] || '';
   if (vars && typeof text === 'string') {
     Object.keys(vars).forEach(function(k) {
-      text = text.replace(new RegExp('\\{' + k + '\\}', 'g'), String(vars[k]));
+      text = text.replace(new RegExp('\\{' + k + '\\}', 'g'), formatNumStr(String(vars[k])));
     });
   }
   return text;
@@ -959,6 +1212,22 @@ var CATEGORY_MAP = [
 //  APP STATE
 // ══════════════════════════════════════════════════════════════════
 let LANG = (function() { try { return localStorage.getItem('dl_lang') || 'en'; } catch(e) { return 'en'; } })();
+var _FA_DIGITS = '۰۱۲۳۴۵۶۷۸۹';
+var _AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
+function formatNum(n) {
+  if (n == null && n !== 0) return '';
+  var s = String(n);
+  if (LANG === 'fa') return s.replace(/[0-9]/g, function(c) { return _FA_DIGITS[+c]; });
+  if (LANG === 'ar') return s.replace(/[0-9]/g, function(c) { return _AR_DIGITS[+c]; });
+  return s;
+}
+function formatNumStr(s) {
+  if (s == null) return '';
+  s = String(s);
+  if (LANG === 'fa') return s.replace(/[0-9]/g, function(c) { return _FA_DIGITS[+c]; });
+  if (LANG === 'ar') return s.replace(/[0-9]/g, function(c) { return _AR_DIGITS[+c]; });
+  return s;
+}
 let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
@@ -1140,7 +1409,7 @@ async function shareApp(e) {
 
   if (!_canUseWebShare(shareData)) {
     _installLog('warn', 'settings share unavailable');
-    flash('Share unavailable');
+    flash(t('shareUnavailable'));
     return false;
   }
 
@@ -1153,7 +1422,7 @@ async function shareApp(e) {
   } catch (err) {
     if (err && err.name === 'AbortError') return false;
     _installLog('warn', 'settings share failed', err && (err.message || err.name || err));
-    flash('Share failed');
+    flash(t('shareFailed'));
     return false;
   }
 }
@@ -1163,7 +1432,7 @@ function copyAppLink(opts) {
   var url = _publicAppUrl();
   var btn = document.getElementById(opts.buttonId || 'copy-link-btn');
   var orig = btn ? btn.textContent : '';
-  var copiedLabel = opts.copiedLabel || 'Link copied';
+  var copiedLabel = opts.copiedLabel || t('linkCopied');
   function onCopied() {
     if (btn) {
       btn.textContent = copiedLabel;
@@ -1334,6 +1603,12 @@ function applyTranslations() {
   document.getElementById('swipe-subtitle').textContent = u.swipeSubtitle;
   // Account section label & adaptive tip
   document.getElementById('st-account-label').textContent = u.accountLabel;
+  var shareLbl = document.getElementById('st-share-label');
+  if (shareLbl) shareLbl.textContent = u.shareSectionLabel;
+  var shareBtn = document.getElementById('share-app-btn');
+  if (shareBtn) shareBtn.textContent = u.shareAppLabel;
+  var copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) copyBtn.textContent = u.copyLinkLabel;
   document.getElementById('install-tip-title').textContent = u.installTipTitle;
   document.getElementById('install-tip-desc').textContent = u.installTipDesc;
   document.getElementById('install-guide-title').textContent = u.installGuideTitle;
@@ -1938,11 +2213,11 @@ async function startLevel(lv) {
       await _loadCSVLevel(lv);
     } catch (err) {
       _ov.classList.remove('active');
-      var msg = 'Could not load ' + lv + ' quiz data.';
+      var msg = t('errLoadQuizLevel')(lv);
       if (window.location.protocol === 'file:') {
-        msg += ' Open the app through a local server instead of file://.';
+        msg += t('errFileProtocol');
       }
-      if (err && err.message) msg += '\n\nDetails: ' + err.message;
+      if (err && err.message) msg += '\n\n' + err.message;
       alert(msg);
       return;
     }
@@ -1950,7 +2225,7 @@ async function startLevel(lv) {
   }
 
   queue = buildQueue(lv);
-  if (!queue.length) { alert('No cards!'); return; }
+  if (!queue.length) { alert(t('errNoCards')); return; }
   idx = 0; ok = 0; no = 0;
 
   // All languages (including Arabic) use CSV columns directly — no API pre-fetch needed.
@@ -1966,9 +2241,9 @@ function renderCard() {
   var row   = card._row;
 
   document.getElementById('prog').style.width = (idx / total * 100) + '%';
-  document.getElementById('sc-ok').textContent  = ok;
-  document.getElementById('sc-no').textContent  = no;
-  document.getElementById('hud-pos').textContent = (idx + 1) + '/' + total;
+  document.getElementById('sc-ok').textContent  = formatNum(ok);
+  document.getElementById('sc-no').textContent  = formatNum(no);
+  document.getElementById('hud-pos').textContent = formatNum(idx + 1) + '/' + formatNum(total);
 
   // Word-type badge — from CSV word_type column (Noun, Verb, Adjective, etc.)
   var badge = document.getElementById('tbadge');
@@ -2060,8 +2335,8 @@ function pick(btn, selectedId, correctId) {
       });
     }
   }
-  document.getElementById('sc-ok').textContent = ok;
-  document.getElementById('sc-no').textContent = no;
+  document.getElementById('sc-ok').textContent = formatNum(ok);
+  document.getElementById('sc-no').textContent = formatNum(no);
   document.getElementById('next-btn').classList.add('show');
 }
 
@@ -2101,11 +2376,11 @@ function showResults(){
   window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'), level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
   document.getElementById('r-emoji').textContent=emoji;
   document.getElementById('r-title').textContent=title;
-  document.getElementById('r-score').textContent=ok+'/'+total;
+  document.getElementById('r-score').textContent=formatNum(ok)+'/'+formatNum(total);
   document.getElementById('r-sub').textContent=t('resultSub')(currentLevel,pct);
-  document.getElementById('r-pct').textContent=pct+'%';
-  document.getElementById('r-ok').textContent=ok;
-  document.getElementById('r-no').textContent=no;
+  document.getElementById('r-pct').textContent=formatNum(pct)+'%';
+  document.getElementById('r-ok').textContent=formatNum(ok);
+  document.getElementById('r-no').textContent=formatNum(no);
   document.getElementById('prog').style.width='100%';
   show('screen-results');
 }
@@ -2183,8 +2458,8 @@ async function startThemeQuiz(categoryId) {
     await _loadV2Vocab();
   } catch(err) {
     _ov.classList.remove('active');
-    var msg = 'Could not load quiz data.';
-    if (window.location.protocol === 'file:') msg += ' Open through a local server instead of file://';
+    var msg = t('errLoadQuiz');
+    if (window.location.protocol === 'file:') msg += t('errFileProtocol');
     alert(msg);
     return;
   }
@@ -2192,7 +2467,7 @@ async function startThemeQuiz(categoryId) {
 
   var cards = _buildThemeQueue(categoryId);
   if (!cards.length) {
-    alert('Not enough words available for this topic yet!');
+    alert(t('errNoWordsTopic'));
     return;
   }
   currentThemeCategoryId = categoryId;
@@ -2724,12 +2999,12 @@ function _profileTopicsHtml(topics) {
       + '<div class="profile-topic-name">' + escHtml(topic.name) + '</div>'
       + '<div class="profile-topic-meta">'
       + escHtml(_lp('topicCoverage')) + ': ' + escHtml(topic.coverageLabel) + ' · '
-      + escHtml(_lp('topicAccuracy')) + ': ' + topic.accuracy + '%'
+      + escHtml(_lp('topicAccuracy')) + ': ' + formatNumStr(String(topic.accuracy) + '%')
       + '</div>'
       + '<div class="profile-topic-meta profile-topic-activity">'
-      + escHtml(_lp('quizzesCompleted')) + ': ' + topic.quizzesCompleted + ' · '
-      + escHtml(_lp('correctAnswers')) + ': ' + topic.correctAnswers + ' · '
-      + escHtml(_lp('incorrectAnswers')) + ': ' + topic.incorrectAnswers + ' · '
+      + escHtml(_lp('quizzesCompleted')) + ': ' + formatNum(topic.quizzesCompleted) + ' · '
+      + escHtml(_lp('correctAnswers')) + ': ' + formatNum(topic.correctAnswers) + ' · '
+      + escHtml(_lp('incorrectAnswers')) + ': ' + formatNum(topic.incorrectAnswers) + ' · '
       + escHtml(_lp('totalStudyTime')) + ': ' + escHtml(_formatStudyTime(topic.studyTimeSeconds))
       + '</div>'
       + '<div class="profile-topic-bar"><span style="width:' + topic.coveragePct + '%"></span></div>'
@@ -2874,7 +3149,7 @@ function renderLearningProfile() {
     if (clickMode) cls += ' profile-stat-clickable';
     if (selected) cls += ' active';
     var onClick = clickMode ? ' onclick="toggleLearningProfileDetail(\'' + clickMode + '\')"' : '';
-    return '<div class="' + cls + '"' + onClick + '><strong>' + escHtml(value) + '</strong><span>' + escHtml(label) + '</span></div>';
+    return '<div class="' + cls + '"' + onClick + '><strong>' + escHtml(typeof value === 'number' ? formatNum(value) : formatNumStr(String(value))) + '</strong><span>' + escHtml(label) + '</span></div>';
   }
   var seenListRows = joinedWords.slice().sort(function(a, b) {
     return (Number(b.seenCount) || 0) - (Number(a.seenCount) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
@@ -2918,7 +3193,7 @@ function renderLearningProfile() {
       _profileJourneyBarHtml(journey) +
       '<div class="profile-grid">' +
         stat(_lp('adaptiveBand'), band) +
-        stat(_lp('adaptiveSkill'), skillNum.toFixed(1) + ' / 10') +
+        stat(_lp('adaptiveSkill'), formatNumStr(skillNum.toFixed(1) + ' / 10')) +
       '</div></div>';
 
   var reviewBtnClass = isGuest ? ' profile-review-btn-locked' : '';
@@ -3029,7 +3304,7 @@ async function startLearningProfileReview(mode) {
     await _loadV2Vocab();
   } catch (err) {
     ov.classList.remove('active');
-    alert('Could not load quiz data.');
+    alert(t('errLoadQuiz'));
     return;
   }
   var ids = [];
@@ -3068,7 +3343,7 @@ async function startLearningProfileReview(mode) {
   }
   ov.classList.remove('active');
   if (!rows.length) {
-    alert('Complete an adaptive quiz first so your review set has words to use.');
+    alert(t('errCompleteAdaptiveFirst'));
     return;
   }
   if (typeof window.APP_AUTH_USE_LEARNING_LEVEL === 'function' && snap.signedIn) {
@@ -3182,8 +3457,8 @@ async function prepareSwipeGame() {
     show('screen-swipe');
     renderSwipeCards();
   } catch (err) {
-    var msg = 'Could not prepare swipe cards.';
-    if (err && err.message) msg += '\n\nDetails: ' + err.message;
+    var msg = t('errSwipePrepare');
+    if (err && err.message) msg += '\n\n' + err.message;
     alert(msg);
   } finally {
     _ov.classList.remove('active');
@@ -3432,7 +3707,7 @@ function _updatePracticeMatchCount() {
   var wrapEl = document.getElementById('practice-match-count');
   var hintEl = document.getElementById('practice-match-hint');
   var btnEl = document.getElementById('practice-prepare-btn');
-  if (numEl) numEl.textContent = String(count);
+  if (numEl) numEl.textContent = formatNum(count);
   if (wrapEl) wrapEl.classList.toggle('is-empty', count === 0);
   if (hintEl) hintEl.classList.toggle('hidden', count > 0);
   if (btnEl) btnEl.disabled = count === 0;
@@ -3458,7 +3733,7 @@ function _renderPracticeSetupFilters() {
   var diffEl = document.getElementById('practice-difficulty-chips');
   if (diffEl) {
     var diffHtml = _practiceAllChip('difficulties');
-    for (var d = 1; d <= 10; d++) diffHtml += _renderPracticeChip('difficulties', String(d), String(d));
+    for (var d = 1; d <= 10; d++) diffHtml += _renderPracticeChip('difficulties', String(d), formatNum(d));
     diffEl.innerHTML = diffHtml;
   }
   var typeEl = document.getElementById('practice-type-chips');
@@ -3557,7 +3832,7 @@ async function startPracticeGame() {
     await _loadCSVLevel(practiceSelectedLevel);
     practiceSeenIds = {};
     practiceDeck = _buildPracticeBatch(practiceSelectedLevel);
-    if (!practiceDeck.length) { alert('No practice cards found.'); return; }
+    if (!practiceDeck.length) { alert(t('errNoPracticeCards')); return; }
     practiceIdx = 0;
     practicePreloadPromise = null;
     practiceAnimating = false;
@@ -3569,7 +3844,7 @@ async function startPracticeGame() {
     show('screen-practice');
     renderPracticeCards();
   } catch (err) {
-    alert('Could not load practice data.\n' + (err && err.message ? err.message : ''));
+    alert(t('errLoadPractice') + (err && err.message ? '\n' + err.message : ''));
   } finally {
     _ov.classList.remove('active');
   }
@@ -3602,7 +3877,7 @@ function renderPracticeCards() {
   var stack = document.getElementById('practice-card-stack');
   var current = practiceDeck[practiceIdx];
   if (!current) {
-    stack.innerHTML = '<div class="swipe-empty"><strong>All done</strong><span>Loading next difficulty...</span></div>';
+    stack.innerHTML = '<div class="swipe-empty"><strong>' + escHtml(t('practiceDoneTitle')) + '</strong><span>' + escHtml(t('practiceDoneSub')) + '</span></div>';
     return;
   }
   var next1 = practiceDeck[practiceIdx + 1];
@@ -3793,8 +4068,7 @@ function normKey(w) {
   return expandOptional(w||'').replace(/^(der|die|das|ein|eine)\s+/i,'').trim().toLowerCase();
 }
 function loadingHTML() {
-  var msg = LANG==='tr' ? 'Yükleniyor…' : LANG==='fa' ? 'در حال بارگذاری…' : LANG==='ru' ? 'Загрузка…' : LANG==='uk' ? 'Завантаження…' : LANG==='ar' ? 'جارٍ التحميل…' : 'Loading…';
-  return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + msg + '</span></div>';
+  return '<div class="wikt-loading"><div class="wikt-spinner"></div><span>' + t('dictLoading') + '</span></div>';
 }
 function wiktLookupWord(word, tc) {
   var base = expandOptional(word).replace(/^(der|die|das|ein|eine)\s+/i,'').trim();
@@ -5171,7 +5445,7 @@ function _tryChips(trows) {
 function renderOfflineWordBody(w) {
   var u = UI[LANG];
   var html = '';
-  var hint = LANG==='tr'?'Örnek için bir biçime dokun':LANG==='fa'?'برای مثال روی یک شکل بزنید':'Tap a form to see an example';
+  var hint = t('rwTapFormHint');
   function chip(label, value, cls, key) {
     var enc = encodeURIComponent(key);
     return '<div class="rw-form" onclick="pickFormExample(this,decodeURIComponent(\''+enc+'\'))">'+'<span class="fl">'+label+'</span><span class="fv'+(cls?' '+cls:'')+'">'+value+'</span></div>';
@@ -5205,12 +5479,12 @@ function renderOfflineWordBody(w) {
     html += '<div class="rw-section"><div class="rw-section-title-row"><span>'+u.comparatives+'</span><span class="rw-click-hint">'+hint+'</span></div><div class="rw-forms">'+chip('Komparativ',w.comparative,'gold','Komparativ')+chip('Superlativ',w.superlative,'blue','Superlativ')+'</div></div>';
     if (w.endingNote) html += '<div class="rw-section"><div class="rw-section-title">'+u.adjEndings+'</div><div class="rw-example">'+w.endingNote+'</div></div>';
   }
-  var tapMsg = LANG==='tr'?'Örnek görmek için bir biçime dokunun.':LANG==='fa'?'برای مشاهده مثال روی یک شکل بزنید.':'Tap any form above to see an example sentence.';
+  var tapMsg = t('tapPrompt');
   html += '<div class="rw-divider" style="margin-top:6px"></div>';
   if (!hasGrammar && w.example) {
     html += '<div class="rw-section"><div class="rw-section-title">'+u.examples+'</div><div class="rw-example-box lit">'+w.example+'</div></div>';
   } else {
-    html += '<div class="rw-section"><div class="rw-section-title">'+u.examples+'</div><div class="rw-example-box" id="rw-ex-box">'+(hasGrammar ? tapMsg : (w.example||'No example available.'))+'</div></div>';
+    html += '<div class="rw-section"><div class="rw-section-title">'+u.examples+'</div><div class="rw-example-box" id="rw-ex-box">'+(hasGrammar ? tapMsg : (w.example||t('noExample')))+'</div></div>';
   }
   html += '<div class="rw-source">'+(w.source?w.source:UI[LANG].source)+' · '+w.level+'</div>';
   return html;
@@ -5456,8 +5730,8 @@ function _buildDictData() {
   _dictAllWords = all;
   var subEl = document.getElementById('dict-screen-subtitle');
   if (subEl) {
-    var _wLabel = {en:'words',tr:'kelime',fa:'واژه',ru:'слово',uk:'слово',ar:'كلمة'};
-    subEl.textContent = _dictAllWords.length + ' ' + (_wLabel[LANG] || 'words') + ' · A–Z';
+    var _wLabel = {en:'words',de:'Wörter',tr:'kelime',fa:'واژه',ru:'слов',uk:'слів',ar:'كلمة'};
+    subEl.textContent = formatNum(_dictAllWords.length) + ' ' + (_wLabel[LANG] || 'words') + ' · A–Z';
   }
   _buildDictAlphaBar();
   _initDictScrollTracker();
