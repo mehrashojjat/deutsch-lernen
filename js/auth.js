@@ -426,6 +426,46 @@
     return base;
   }
 
+  function _maxStats(a, b) {
+    a = _normalizeStats(a);
+    b = _normalizeStats(b);
+    return {
+      quizzesCompleted: Math.max(a.quizzesCompleted, b.quizzesCompleted),
+      correctAnswers: Math.max(a.correctAnswers, b.correctAnswers),
+      incorrectAnswers: Math.max(a.incorrectAnswers, b.incorrectAnswers),
+      studyTimeSeconds: Math.max(a.studyTimeSeconds, b.studyTimeSeconds)
+    };
+  }
+
+  function _mergeThemeStatEntry(a, b) {
+    a = _normalizeThemeStatEntry(a);
+    b = _normalizeThemeStatEntry(b);
+    var seenSet = {};
+    a.seenWordIds.forEach(function (id) { seenSet[id] = true; });
+    b.seenWordIds.forEach(function (id) { seenSet[id] = true; });
+    return {
+      quizzesCompleted: Math.max(a.quizzesCompleted, b.quizzesCompleted),
+      correctAnswers: Math.max(a.correctAnswers, b.correctAnswers),
+      incorrectAnswers: Math.max(a.incorrectAnswers, b.incorrectAnswers),
+      studyTimeSeconds: Math.max(a.studyTimeSeconds, b.studyTimeSeconds),
+      seenWordIds: Object.keys(seenSet),
+      lastSeenAt: Math.max(a.lastSeenAt, b.lastSeenAt)
+    };
+  }
+
+  function _mergeQuizStats(incoming, prev) {
+    incoming = _normalizeQuizStats(incoming);
+    prev = _normalizeQuizStats(prev);
+    var out = { adaptive: _maxStats(incoming.adaptive, prev.adaptive), theme: {} };
+    var keys = {};
+    Object.keys(prev.theme).forEach(function (k) { keys[k] = true; });
+    Object.keys(incoming.theme).forEach(function (k) { keys[k] = true; });
+    Object.keys(keys).forEach(function (k) {
+      out.theme[k] = _mergeThemeStatEntry(incoming.theme[k], prev.theme[k]);
+    });
+    return out;
+  }
+
   function _normalizeQuizStats(stats) {
     stats = (stats && typeof stats === 'object') ? stats : {};
     var out = { adaptive: _normalizeStats(stats.adaptive), theme: {} };
@@ -605,7 +645,7 @@
     window._adaptiveV2SetSaveHook(function (p) {
       var prev = _progressCache[V2_LEVEL] || _defaultProgress(V2_LEVEL);
       p = p && typeof p === 'object' ? p : _defaultProgress(V2_LEVEL);
-      p.quizStats = _normalizeQuizStats(p.quizStats || prev.quizStats);
+      p.quizStats = _mergeQuizStats(p.quizStats, prev.quizStats);
       _progressCache[V2_LEVEL] = p;
       _updateRow(userId, V2_LEVEL, p);
     });
@@ -882,6 +922,9 @@
     }
     if (typeof window._adaptiveV2SetSaveHook === 'function') {
       window._adaptiveV2SetSaveHook(null);
+    }
+    if (typeof window._adaptiveV2SetAccountMode === 'function') {
+      window._adaptiveV2SetAccountMode(false);
     }
     _renderAuthSection();
     _renderHome();
