@@ -21,11 +21,12 @@ if ! command -v tar >/dev/null 2>&1; then
 	exit 1
 fi
 
-# Pick a random free port in 8100-9000 on every run.
-while true; do
-	PORT=$(( RANDOM % 901 + 8100 ))
-	lsof -nP -iTCP:$PORT -sTCP:LISTEN -t >/dev/null 2>&1 || break
-done
+PORT=3000
+if lsof -nP -iTCP:$PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
+	echo "Error: port $PORT is already in use."
+	echo "Stop the other process or run: lsof -ti tcp:$PORT | xargs kill"
+	exit 1
+fi
 
 # Try common macOS interfaces first, then fall back to parsing ifconfig.
 IP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null || \
