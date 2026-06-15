@@ -527,9 +527,12 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 #screen-practice-setup{position:relative;width:100%;max-width:600px;overflow:visible;}
 #screen-practice-setup .practice-setup-header{position:relative;z-index:78;margin-bottom:14px;background:transparent;}
 #screen-practice-setup .practice-setup-header .swipe-title-wrap{background:transparent;}
-#screen-practice-setup .practice-setup-scroll{position:fixed;top:0;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:600px;height:100dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;z-index:85;pointer-events:none;padding-top:0;padding-bottom:var(--practice-scroll-pad,112px);box-sizing:border-box;scrollbar-width:none;-ms-overflow-style:none;}
+#screen-practice-setup .practice-setup-scroll{position:fixed;top:0;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:600px;height:100dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;z-index:85;pointer-events:auto;padding-top:0;padding-bottom:var(--practice-scroll-pad,112px);box-sizing:border-box;scrollbar-width:none;-ms-overflow-style:none;}
 #screen-practice-setup .practice-setup-scroll::-webkit-scrollbar{display:none;width:0;height:0;}
-#screen-practice-setup .practice-setup-filters{overflow:visible;margin-bottom:0;pointer-events:auto;}
+#screen-practice-setup .practice-setup-filters{overflow:visible;margin-bottom:0;touch-action:pan-y;}
+#screen-practice-setup .practice-setup-filters .swipe-level-btn,
+#screen-practice-setup .practice-setup-filters .practice-chip,
+#screen-practice-setup .practice-setup-filters .practice-filter-clear{touch-action:pan-y;}
 #screen-practice-setup .practice-setup-footer{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));width:calc(100% - 28px);max-width:600px;z-index:90;padding:14px 15px 12px;box-shadow:0 -10px 28px rgba(0,0,0,.32);pointer-events:auto;}
 #screen-practice-setup .practice-setup-footer .btn-primary{margin-bottom:0;}
 body.practice-setup-scroll-lock{overflow:hidden;overscroll-behavior:none;}
