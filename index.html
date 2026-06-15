@@ -255,7 +255,8 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .random-banner.adaptive-banner .rb-text strong{color:#6be8a0;font-size:1rem;}
 .random-banner.adaptive-banner .rb-icon{font-size:3rem;}
 .random-banner.adaptive-banner .rb-text span{font-size:.9rem;}
-.random-banner.adaptive-v2-banner{background:linear-gradient(135deg,rgba(196,160,247,.14),rgba(107,232,160,.08));border-left:1px solid rgb(117 81 159);border-right:1px solid rgb(69 127 90);grid-column:1/-1;}
+.random-banner.adaptive-v2-banner{background:linear-gradient(135deg,rgba(196,160,247,.14),rgba(107,232,160,.08));border-left:1px solid rgb(117 81 159);border-right:1px solid rgb(69 127 90);}
+.home-actions.profile-visible .home-primary-actions .random-banner.adaptive-v2-banner{grid-column:span 2;}
 .random-banner.adaptive-v2-banner .rb-text strong{color:#c4a0f7;font-size:1rem;}
 .random-banner.adaptive-v2-banner .rb-icon{font-size:2.6rem;}
 .random-banner.adaptive-v2-banner .rb-text span{font-size:.86rem;display:block;line-height:1.45;}
@@ -287,10 +288,8 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 @media (max-width:560px){
   .home-actions{grid-template-columns:1fr 1fr;}
-  .home-actions.profile-visible .home-primary-actions .random-banner.adaptive-banner{grid-column:span 2;}
+  .home-actions.profile-visible .home-primary-actions .random-banner.adaptive-v2-banner{grid-column:span 2;}
   .profile-header{display:block;}
-  .profile-level-tabs{margin-top:12px;}
-  .profile-performance{grid-template-columns:1fr;}
 }
 
 /* ── LEARNING PROFILE ── */
@@ -312,18 +311,26 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .profile-stat.profile-stat-seen strong{color:#8cf1b5;}
 .profile-stat.profile-stat-struggling{border-color:rgba(240,112,112,.35);background:linear-gradient(180deg,rgba(240,112,112,.14),rgba(240,112,112,.06));}
 .profile-stat.profile-stat-struggling strong{color:#ff9a9a;}
+.profile-stat.profile-stat-mastered{border-color:rgba(232,201,122,.35);background:linear-gradient(180deg,rgba(232,201,122,.14),rgba(232,201,122,.06));}
+.profile-stat.profile-stat-mastered strong{color:var(--gold);}
 .profile-stat.active{box-shadow:0 0 0 1px rgba(255,255,255,.16) inset;}
-.profile-performance{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.profile-list{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;min-height:128px;}
-.profile-list-title{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:9px;}
-.profile-list div:not(.profile-list-title){font-size:.84rem;color:var(--muted);line-height:1.8;}
+.profile-activity-grid{display:flex;flex-direction:column;gap:10px;}
+.profile-signin-unlock{background:var(--surf);border:1px solid rgba(232,201,122,.28);border-radius:18px;padding:14px;}
+.profile-signin-unlock-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.profile-signin-unlock-label{font-size:.84rem;color:var(--muted);font-weight:600;}
+.profile-signin-btn{flex-shrink:0;padding:8px 16px;border-radius:999px;border:1px solid rgba(232,201,122,.45);background:rgba(232,201,122,.12);color:var(--gold);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;}
+.profile-signin-btn:hover{background:rgba(232,201,122,.2);border-color:var(--gold);}
+.profile-review-actions-inbox{gap:8px;}
+.profile-review-actions-inbox button{background:rgba(0,0,0,.12);border-color:rgba(255,255,255,.08);}
+.profile-review-actions button.profile-review-btn-locked{opacity:.45;cursor:not-allowed;color:var(--muted);}
+.profile-review-actions button.profile-review-btn-locked:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.05);}
 .profile-word-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
 .profile-word-item{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:10px 12px;}
 .profile-word-main{font-size:1.02rem;color:var(--text);font-weight:700;line-height:1.25;}
 .profile-word-meaning{font-size:.84rem;color:var(--blue);}
 .profile-detail-wrap{max-height:0;opacity:0;overflow:hidden;transform:translateY(-6px);transition:max-height .28s ease,opacity .2s ease,transform .28s ease;}
-.profile-detail-wrap.open{max-height:980px;opacity:1;transform:translateY(0);margin-bottom:8px;}
-.profile-detail-inner{padding-top:2px;}
+.profile-detail-wrap.open{max-height:5000px;opacity:1;transform:translateY(0);margin-bottom:8px;}
+.profile-detail-inner{padding-top:2px;max-height:65vh;overflow-y:auto;}
 .profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
 .profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
 .profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
@@ -882,6 +889,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
           <span id="adaptive-v2-banner-status" style="display:none"></span>
         </div>
       </div>
+      <!-- Legacy adaptive quiz — hidden while V2 is primary
       <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
         <div class="rb-icon">🎯</div>
         <div class="rb-text">
@@ -889,6 +897,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
           <span id="adaptive-banner-sub">Adjusts to your skill level</span>
         </div>
       </div>
+      -->
       <div class="random-banner learning-profile-banner" id="learning-profile-banner" onclick="openLearningProfile()">
         <div class="rb-icon">👨🏻‍💻</div>
         <div class="rb-text">
@@ -962,15 +971,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 <!-- ══ LEARNING PROFILE ══ -->
 <div class="screen hidden" id="screen-learning-profile">
   <div class="profile-header">
-    <div>
-      <div class="profile-title" id="learning-profile-title">Learning Profile</div>
-    </div>
-    <div class="profile-level-tabs has-adaptive-tab">
-      <button class="profile-level-tab adaptive-tab active" id="profile-level-ALL" onclick="setLearningProfileLevel('ALL')">Adaptive</button>
-      <button class="profile-level-tab" id="profile-level-A1" onclick="setLearningProfileLevel('A1')">A1</button>
-      <button class="profile-level-tab" id="profile-level-A2" onclick="setLearningProfileLevel('A2')">A2</button>
-      <button class="profile-level-tab" id="profile-level-B1" onclick="setLearningProfileLevel('B1')">B1</button>
-    </div>
+    <div class="profile-title" id="learning-profile-title">Learning Profile</div>
   </div>
   <div id="learning-profile-content"></div>
 </div>
@@ -1157,7 +1158,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 </div>
 
 <!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="js/app.js?v=3.0"></script>
+<script src="js/app.js?v=3.2"></script>
 <script src="js/adaptive.js?v=2.5"></script>
 <script src="js/adaptive_v2.js?v=3.0"></script>
 <script src="js/auth.js?v=2.4"></script>

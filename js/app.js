@@ -731,12 +731,14 @@ const PROFILE_I18N = {
     title: 'Learning Profile',
     adaptive: 'Adaptive',
     overview: 'Overview', activity: 'Activity', performance: 'Performance', review: 'Review',
-    wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
+    wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', wordsMastered: 'Words Mastered', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
     quizzesCompleted: 'Quizzes Completed', correctAnswers: 'Correct Answers', incorrectAnswers: 'Incorrect Answers', totalStudyTime: 'Total Study Time',
     strongest: 'Strongest', needsPractice: 'Needs Practice', notEnoughCategoryData: 'Not enough category data yet',
     reviewWeakWords: 'Review Weak Words', reviewRecentMistakes: 'Review Recent Mistakes', reviewMixedPractice: 'Review Mixed Practice',
-    seenWords: 'Seen Words', strugglingWords: 'Struggling Words',
+    seenWords: 'Seen Words', strugglingWords: 'Struggling Words', masteredWords: 'Mastered Words',
     loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
+    signInUnlock: 'Sign in to unlock:',
+    signInBtn: 'Sign in',
     signInPrompt: 'Sign in to sync your progress across devices.',
     guestProfileEmpty: 'Complete a quiz at this level to see stats here.',
     noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
@@ -754,12 +756,14 @@ const PROFILE_I18N = {
     title: 'Lernprofil',
     adaptive: 'Adaptiv',
     overview: 'Überblick', activity: 'Aktivität', performance: 'Leistung', review: 'Wiederholen',
-    wordsSeen: 'Gesehene Wörter', wordsStruggling: 'Schwierige Wörter', accuracyPct: 'Genauigkeit %', wordsReviewed: 'Überprüfte Wörter',
+    wordsSeen: 'Gesehene Wörter', wordsStruggling: 'Schwierige Wörter', wordsMastered: 'Gemeisterte Wörter', accuracyPct: 'Genauigkeit %', wordsReviewed: 'Überprüfte Wörter',
     quizzesCompleted: 'Abgeschlossene Quizze', correctAnswers: 'Richtige Antworten', incorrectAnswers: 'Falsche Antworten', totalStudyTime: 'Gesamtlernzeit',
     strongest: 'Stärkste Bereiche', needsPractice: 'Mehr Übung nötig', notEnoughCategoryData: 'Noch nicht genug Kategoriedaten',
     reviewWeakWords: 'Schwache Wörter wiederholen', reviewRecentMistakes: 'Letzte Fehler wiederholen', reviewMixedPractice: 'Gemischte Wiederholung',
-    seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter',
+    seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter', masteredWords: 'Gemeisterte Wörter',
     loadingLevelWords: 'Wörter für dieses Niveau werden geladen...', noWordsInList: 'Noch keine Wörter in dieser Liste.',
+    signInUnlock: 'Anmelden zum Freischalten:',
+    signInBtn: 'Anmelden',
     signInPrompt: 'Melde dich an, um deinen Fortschritt geräteübergreifend zu synchronisieren.',
     guestProfileEmpty: 'Spiele ein Quiz auf diesem Niveau, um hier Statistiken zu sehen.',
     noTrackedFor: 'Keine erfassten Daten für {level}. Wechsle zum Tab {best}.',
@@ -1282,15 +1286,15 @@ function applyTranslations() {
   document.getElementById('footer-msg').textContent = u.footerMsg;
   document.getElementById('footer-copy').textContent = u.footerCopy;
   // New banner titles
-  document.getElementById('adaptive-banner-title').textContent = u.adaptiveBannerTitle;
-  document.getElementById('adaptive-banner-sub').textContent = u.adaptiveBannerSub;
+  var adaptiveBannerTitle = document.getElementById('adaptive-banner-title');
+  if (adaptiveBannerTitle) adaptiveBannerTitle.textContent = u.adaptiveBannerTitle;
+  var adaptiveBannerSub = document.getElementById('adaptive-banner-sub');
+  if (adaptiveBannerSub) adaptiveBannerSub.textContent = u.adaptiveBannerSub;
   var v2Title = document.getElementById('adaptive-v2-banner-title');
   if (v2Title) v2Title.textContent = u.adaptiveV2BannerTitle;
   var v2Sub = document.getElementById('adaptive-v2-banner-sub');
   if (v2Sub) v2Sub.textContent = u.adaptiveV2BannerSub;
   if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
-  var profileAllTab = document.getElementById('profile-level-ALL');
-  if (profileAllTab) profileAllTab.textContent = _lp('adaptive');
   document.getElementById('learning-profile-banner-title').textContent = _lp('title');
   document.getElementById('learning-profile-title').textContent = _lp('title');
   document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
@@ -2287,14 +2291,22 @@ function _isStrugglingWord(w) {
   return repeatedIncorrect || lowAccuracyWithHistory || elevatedFailPressure;
 }
 
+function _isMasteredWord(w) {
+  return (Number(w.seenCount) || 0) >= 3 &&
+    (Number(w.failScore) || 0) === 0 &&
+    (Number(w.accuracy) || 0) >= 0.8;
+}
+
 function _profileTotals(progress) {
   var rows = _profileWordRows(progress);
   var correct = rows.reduce(function(sum, w) { return sum + w.correctCount; }, 0);
   var seen = rows.reduce(function(sum, w) { return sum + w.seenCount; }, 0);
   var struggling = rows.filter(_isStrugglingWord).length;
+  var mastered = rows.filter(_isMasteredWord).length;
   return {
     wordsSeen: rows.length,
     wordsStruggling: struggling,
+    wordsMastered: mastered,
     accuracyPct: seen ? Math.round(correct / seen * 100) : 0
   };
 }
@@ -2500,18 +2512,9 @@ window.toggleLearningProfileDetail = function(mode) {
     return;
   }
   learningProfileDetailMode = mode;
-  if (learningProfileDetailMode && learningProfileSelectedLevel === 'ALL') {
+  if (learningProfileDetailMode) {
     renderLearningProfile();
     _loadV2Vocab().then(function() {
-      renderLearningProfile();
-    }).catch(function() {
-      renderLearningProfile();
-    });
-    return;
-  }
-  if (learningProfileDetailMode && typeof _loadCSVLevel === 'function' && !(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length)) {
-    renderLearningProfile();
-    _loadCSVLevel(learningProfileSelectedLevel).then(function() {
       renderLearningProfile();
     }).catch(function() {
       renderLearningProfile();
@@ -2570,15 +2573,12 @@ async function resetAdaptiveV2Progress() {
 function renderLearningProfile() {
   var el = document.getElementById('learning-profile-content');
   if (!el) return;
-  var snap = _profileSnapshot(learningProfileSelectedLevel);
+  learningProfileSelectedLevel = 'ALL';
+  var snap = _profileSnapshot('ALL');
   var progress = (snap && snap.progress) || _emptyGuestProgress();
-  var joinedWords = _profileWordJoin(learningProfileSelectedLevel, progress);
+  var joinedWords = _profileWordJoin('ALL', progress);
   var totals = _profileTotals(progress);
   var activity = _activityTotalsWithFallback(progress);
-  var perf = _performanceLists({ __wordCategoryRows: _categoryPerformanceFromWords(joinedWords) });
-  var selectedScore = _profileLevelScore(learningProfileSelectedLevel);
-  var bestLevel = _bestLearningProfileLevel();
-  var bestScore = _profileLevelScore(bestLevel);
   var isGuest = !(snap && snap.signedIn);
   function stat(label, value, extraClass, clickMode, selected) {
     var cls = 'profile-stat';
@@ -2588,30 +2588,16 @@ function renderLearningProfile() {
     var onClick = clickMode ? ' onclick="toggleLearningProfileDetail(\'' + clickMode + '\')"' : '';
     return '<div class="' + cls + '"' + onClick + '><strong>' + escHtml(value) + '</strong><span>' + escHtml(label) + '</span></div>';
   }
-  function list(title, rows, mark, empty) {
-    var body = rows.length ? rows.map(function(r) {
-      return '<div>' + escHtml(mark + ' ' + r.name) + '</div>';
-    }).join('') : '<div>' + escHtml(empty) + '</div>';
-    return '<div class="profile-list"><div class="profile-list-title">' + escHtml(title) + '</div>' + body + '</div>';
-  }
-  var levelHint = '';
-  if (selectedScore <= 0 && totals.wordsSeen === 0 && learningProfileSelectedLevel !== 'ALL') {
-    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">'
-      + escHtml(_lp('guestProfileEmpty')) + '</div>';
-  } else if (selectedScore <= 0 && bestLevel && bestLevel !== learningProfileSelectedLevel && bestScore > 0) {
-    levelHint = '<div class="profile-empty" style="margin-bottom:12px;">'
-      + escHtml(_lp('noTrackedFor', { level: learningProfileSelectedLevel, best: bestLevel }))
-      + '</div>';
-  }
   var seenListRows = joinedWords.slice().sort(function(a, b) {
     return (Number(b.seenCount) || 0) - (Number(a.seenCount) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
-  }).slice(0, 60);
+  });
   var strugglingListRows = joinedWords.filter(_isStrugglingWord).sort(function(a, b) {
     return (Number(b.failScore) || 0) - (Number(a.failScore) || 0) || (Number(a.accuracy) || 0) - (Number(b.accuracy) || 0);
-  }).slice(0, 60);
-  var detailsCsvReady = learningProfileSelectedLevel === 'ALL'
-    ? !!V2_QUIZ_ROWS
-    : !!(CSV_QUIZ_DATA[learningProfileSelectedLevel] && CSV_QUIZ_DATA[learningProfileSelectedLevel].length);
+  });
+  var masteredListRows = joinedWords.filter(_isMasteredWord).sort(function(a, b) {
+    return (Number(b.seenCount) || 0) - (Number(a.seenCount) || 0) || (Number(b.accuracy) || 0) - (Number(a.accuracy) || 0);
+  });
+  var detailsCsvReady = !!V2_QUIZ_ROWS;
   var detailHtml = '';
   if (learningProfileDetailMode === 'seen') {
     detailHtml = detailsCsvReady
@@ -2620,6 +2606,10 @@ function renderLearningProfile() {
   } else if (learningProfileDetailMode === 'struggling') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('strugglingWords'), strugglingListRows)
+      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+  } else if (learningProfileDetailMode === 'mastered') {
+    detailHtml = detailsCsvReady
+      ? _profileWordListHtml(_lp('masteredWords'), masteredListRows)
       : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   }
   var detailIsOpen = !!learningProfileDetailMode;
@@ -2631,52 +2621,70 @@ function renderLearningProfile() {
       '<div class="profile-detail-inner">' + (learningProfileLastDetailHtml || '') + '</div>' +
     '</div>';
 
-  var adaptiveSection = '';
-  if (learningProfileSelectedLevel === 'ALL') {
-    var band = progress.cefrBand || 'A1';
-    var skillNum = Number(progress.skillLevel) || 1;
-    var journey = typeof window._adaptiveV2JourneyVisual === 'function'
-      ? window._adaptiveV2JourneyVisual() : null;
-    adaptiveSection =
-      '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('adaptive')) + '</div>' +
-        _profileJourneyBarHtml(journey) +
-        '<div class="profile-grid">' +
-          stat(_lp('adaptiveBand'), band) +
-          stat(_lp('adaptiveSkill'), skillNum.toFixed(1) + ' / 10') +
-        '</div></div>';
+  var band = progress.cefrBand || 'A1';
+  var skillNum = Number(progress.skillLevel) || 1;
+  var journey = typeof window._adaptiveV2JourneyVisual === 'function'
+    ? window._adaptiveV2JourneyVisual() : null;
+  var adaptiveSection =
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('adaptive')) + '</div>' +
+      _profileJourneyBarHtml(journey) +
+      '<div class="profile-grid">' +
+        stat(_lp('adaptiveBand'), band) +
+        stat(_lp('adaptiveSkill'), skillNum.toFixed(1) + ' / 10') +
+      '</div></div>';
+
+  var reviewBtnClass = isGuest ? ' profile-review-btn-locked' : '';
+  var reviewBtnDisabled = isGuest ? ' disabled' : '';
+  function reviewBtn(mode, label) {
+    return '<button type="button" class="profile-review-btn' + reviewBtnClass + '"' + reviewBtnDisabled +
+      (isGuest ? '' : ' onclick="startLearningProfileReview(\'' + mode + '\')"') + '>' +
+      escHtml(label) + '</button>';
   }
+  var reviewSectionHtml = isGuest
+    ? '<div class="profile-signin-unlock">' +
+        '<div class="profile-signin-unlock-head">' +
+          '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
+          '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
+        '</div>' +
+        '<div class="profile-review-actions profile-review-actions-inbox">' +
+          reviewBtn('weak', _lp('reviewWeakWords')) +
+          reviewBtn('recent', _lp('reviewRecentMistakes')) +
+          reviewBtn('mixed', _lp('reviewMixedPractice')) +
+        '</div>' +
+      '</div>'
+    : '<div class="profile-review-actions">' +
+        reviewBtn('weak', _lp('reviewWeakWords')) +
+        reviewBtn('recent', _lp('reviewRecentMistakes')) +
+        reviewBtn('mixed', _lp('reviewMixedPractice')) +
+      '</div>';
 
   el.innerHTML =
-    levelHint +
     adaptiveSection +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('overview')) + '</div><div class="profile-grid">' +
       stat(_lp('wordsSeen'), totals.wordsSeen, 'profile-stat-seen', 'seen', learningProfileDetailMode === 'seen') +
       stat(_lp('wordsStruggling'), totals.wordsStruggling, 'profile-stat-struggling', 'struggling', learningProfileDetailMode === 'struggling') +
+      stat(_lp('wordsMastered'), totals.wordsMastered, 'profile-stat-mastered', 'mastered', learningProfileDetailMode === 'mastered') +
       stat(_lp('accuracyPct').replace(/[%٪]/g, '').trim(), totals.accuracyPct + '%') +
     '</div></div>' +
     detailPanelHtml +
-    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('activity')) + '</div><div class="profile-grid">' +
-      stat(_lp('quizzesCompleted'), activity.quizzesCompleted) +
-      stat(_lp('correctAnswers'), activity.correctAnswers) +
-      stat(_lp('incorrectAnswers'), activity.incorrectAnswers) +
-      stat(_lp('totalStudyTime'), _formatStudyTime(activity.studyTimeSeconds)) +
-    '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('performance')) + '</div><div class="profile-performance">' +
-      list(_lp('strongest'), perf.strongest, '✓', _lp('notEnoughCategoryData')) +
-      list(_lp('needsPractice'), perf.weakest, '⚠', _lp('notEnoughCategoryData')) +
-    '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('review')) + '</div><div class="profile-review-actions">' +
-      '<button onclick="startLearningProfileReview(\'weak\')">' + escHtml(_lp('reviewWeakWords')) + '</button>' +
-      '<button onclick="startLearningProfileReview(\'recent\')">' + escHtml(_lp('reviewRecentMistakes')) + '</button>' +
-      '<button onclick="startLearningProfileReview(\'mixed\')">' + escHtml(_lp('reviewMixedPractice')) + '</button>' +
-    '</div></div>' +
-    (isGuest ? '<div class="profile-empty" style="margin-top:4px;">' + escHtml(_lp('signInPrompt')) + '</div>' : '') +
-    (learningProfileSelectedLevel === 'ALL'
-      ? '<div class="profile-section profile-danger-zone">' +
-          '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
-            escHtml(_lp('resetAdaptiveProgress')) +
-          '</button></div>'
-      : '');
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('activity')) + '</div>' +
+      '<div class="profile-activity-grid">' +
+        '<div class="profile-grid">' +
+          stat(_lp('quizzesCompleted'), activity.quizzesCompleted) +
+          stat(_lp('totalStudyTime'), _formatStudyTime(activity.studyTimeSeconds)) +
+        '</div>' +
+        '<div class="profile-grid">' +
+          stat(_lp('correctAnswers'), activity.correctAnswers) +
+          stat(_lp('incorrectAnswers'), activity.incorrectAnswers) +
+        '</div>' +
+      '</div></div>' +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('review')) + '</div>' +
+      reviewSectionHtml +
+    '</div>' +
+    '<div class="profile-section profile-danger-zone">' +
+      '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
+        escHtml(_lp('resetAdaptiveProgress')) +
+      '</button></div>';
 
   if (detailIsOpen) {
     requestAnimationFrame(function() {
@@ -2722,6 +2730,10 @@ function _rowsByIds(level, ids) {
 }
 
 async function startLearningProfileReview(mode) {
+  if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && !window.APP_AUTH_IS_SIGNED_IN()) {
+    if (typeof openSettings === 'function') openSettings();
+    return;
+  }
   var snap = _profileSnapshot(learningProfileSelectedLevel);
   if (!snap) return;
   var progress = snap.progress || {};
@@ -2750,7 +2762,7 @@ async function startLearningProfileReview(mode) {
     var struggling = words.filter(function(w) { return w.failScore >= 2 || w.incorrectCount >= 2; })
       .sort(function(a, b) { return b.failScore - a.failScore; });
     var recentWords = (progress.recentWords || []).slice().reverse().map(function(id) { return { id: String(id) }; });
-    var mastered = words.filter(function(w) { return w.seenCount >= 3 && w.failScore === 0 && w.accuracy >= 0.8; });
+    var mastered = words.filter(_isMasteredWord);
     ids = struggling.concat(recentWords, mastered).map(function(w) { return w.id; });
   }
   var used = {};
