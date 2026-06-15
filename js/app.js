@@ -111,6 +111,7 @@ const UI = {
     practiceFilterType: 'Word type',
     practiceFilterArticle: 'Article (nouns)',
     practiceFilterTopics: 'Topics',
+    practiceFilterAll: 'All',
     practiceClearFilters: 'Clear filters',
     practiceWordCount: 'words in your loop',
     practiceNoWordsHint: 'No words match — try another level or loosen filters.',
@@ -223,6 +224,7 @@ const UI = {
     practiceFilterType: 'Wortart',
     practiceFilterArticle: 'Artikel (Nomen)',
     practiceFilterTopics: 'Themen',
+    practiceFilterAll: 'Alle',
     practiceClearFilters: 'Filter löschen',
     practiceWordCount: 'Wörter in deiner Runde',
     practiceNoWordsHint: 'Keine Wörter passen — anderes Niveau oder weniger Filter.',
@@ -333,6 +335,7 @@ const UI = {
     practiceFilterType: 'Kelime türü',
     practiceFilterArticle: 'Artikel (isimler)',
     practiceFilterTopics: 'Konular',
+    practiceFilterAll: 'Tümü',
     practiceClearFilters: 'Filtreleri temizle',
     practiceWordCount: 'turundaki kelime',
     practiceNoWordsHint: 'Eşleşen kelime yok — seviye veya filtreleri değiştirin.',
@@ -441,6 +444,7 @@ const UI = {
     practiceFilterType: 'نوع واژه',
     practiceFilterArticle: 'آرتikel (اسم)',
     practiceFilterTopics: 'موضوعات',
+    practiceFilterAll: 'همه',
     practiceClearFilters: 'پاک کردن فیلترها',
     practiceWordCount: 'واژه در دور شما',
     practiceNoWordsHint: 'واژه‌ای پیدا نشد — سطح یا فیلترها را تغییر دهید.',
@@ -548,6 +552,7 @@ const UI = {
     practiceFilterType: 'Тип слова',
     practiceFilterArticle: 'Артикль (существ.)',
     practiceFilterTopics: 'Темы',
+    practiceFilterAll: 'Все',
     practiceClearFilters: 'Сбросить фильтры',
     practiceWordCount: 'слов в наборе',
     practiceNoWordsHint: 'Нет подходящих слов — смените уровень или фильтры.',
@@ -655,6 +660,7 @@ const UI = {
     practiceFilterType: 'Тип слова',
     practiceFilterArticle: 'Артикль (іменники)',
     practiceFilterTopics: 'Теми',
+    practiceFilterAll: 'Усі',
     practiceClearFilters: 'Скинути фільтри',
     practiceWordCount: 'слів у наборі',
     practiceNoWordsHint: 'Немає відповідних слів — змініть рівень або фільтри.',
@@ -764,6 +770,7 @@ const UI = {
     practiceFilterType: 'نوع الكلمة',
     practiceFilterArticle: 'أداة التعريف (الأسماء)',
     practiceFilterTopics: 'المواضيع',
+    practiceFilterAll: 'الكل',
     practiceClearFilters: 'مسح الفلاتر',
     practiceWordCount: 'كلمة في مجموعتك',
     practiceNoWordsHint: 'لا توجد كلمات مطابقة — غيّر المستوى أو الفلاتر.',
@@ -960,7 +967,13 @@ var practiceSelectedLevel = 'A1';
 var practiceDeck = [], practiceIdx = 0;
 var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
-var practiceFilters = { difficulties: {}, categories: {}, wordTypes: {}, articles: {} };
+var practiceFilters = {
+  difficulties: { __all__: true },
+  categories: { __all__: true },
+  wordTypes: { __all__: true },
+  articles: { __all__: true }
+};
+var PRACTICE_ALL_KEY = '__all__';
 var PRACTICE_WORD_TYPES = ['Noun', 'Verb', 'Adjective', 'Phrase', 'Adverb', 'Word'];
 var PRACTICE_ARTICLES = ['der', 'die', 'das'];
 var adaptiveSelectedLevel = 'A1';
@@ -3342,22 +3355,29 @@ async function _swipeRefreshLang() {
 //  PRACTICE MODE
 // ══════════════════════════════════════════════════════════════════
 function _practiceFilterKeys(group) {
-  return Object.keys(practiceFilters[group] || {}).filter(function(k) { return practiceFilters[group][k]; });
+  return Object.keys(practiceFilters[group] || {}).filter(function(k) {
+    return k !== PRACTICE_ALL_KEY && practiceFilters[group][k];
+  });
+}
+
+function _practiceGroupIsAll(group) {
+  var g = practiceFilters[group] || {};
+  if (g[PRACTICE_ALL_KEY]) return true;
+  return _practiceFilterKeys(group).length === 0;
 }
 
 function _practiceHasActiveFilters() {
-  return _practiceFilterKeys('difficulties').length > 0 ||
-    _practiceFilterKeys('categories').length > 0 ||
-    _practiceFilterKeys('wordTypes').length > 0 ||
-    _practiceFilterKeys('articles').length > 0;
+  return ['difficulties', 'categories', 'wordTypes', 'articles'].some(function(g) {
+    return !_practiceGroupIsAll(g);
+  });
 }
 
 function _getPracticeFilteredPool(level) {
   var pool = (CSV_QUIZ_DATA[level || practiceSelectedLevel] || []).filter(function(r) {
     return r.entry_type === 'main' && r.word && r.word.trim();
   });
-  var diffs = _practiceFilterKeys('difficulties');
-  if (diffs.length) {
+  if (!_practiceGroupIsAll('difficulties')) {
+    var diffs = _practiceFilterKeys('difficulties');
     var diffSet = {};
     diffs.forEach(function(d) { diffSet[parseInt(d, 10)] = true; });
     pool = pool.filter(function(r) {
@@ -3365,25 +3385,45 @@ function _getPracticeFilteredPool(level) {
       return diffSet[d];
     });
   }
-  var cats = _practiceFilterKeys('categories');
-  if (cats.length) {
+  if (!_practiceGroupIsAll('categories')) {
+    var cats = _practiceFilterKeys('categories');
     var catSet = {};
     cats.forEach(function(c) { catSet[parseInt(c, 10)] = true; });
     pool = pool.filter(function(r) { return catSet[parseInt(r.category_id, 10)]; });
   }
-  var types = _practiceFilterKeys('wordTypes');
-  if (types.length) {
+  if (!_practiceGroupIsAll('wordTypes')) {
+    var types = _practiceFilterKeys('wordTypes');
     var typeSet = {};
     types.forEach(function(tk) { typeSet[tk] = true; });
     pool = pool.filter(function(r) { return typeSet[r.word_type]; });
   }
-  var arts = _practiceFilterKeys('articles');
-  if (arts.length) {
+  if (!_practiceGroupIsAll('articles')) {
+    var arts = _practiceFilterKeys('articles');
     var artSet = {};
     arts.forEach(function(a) { artSet[a] = true; });
     pool = pool.filter(function(r) { return r.article && artSet[r.article]; });
   }
   return pool;
+}
+
+function _syncPracticeLayout() {
+  var screen = document.getElementById('screen-practice-setup');
+  var header = screen && screen.querySelector('.practice-setup-header');
+  var scroll = document.getElementById('practice-setup-scroll');
+  var footer = screen && screen.querySelector('.practice-setup-footer');
+  if (!screen || screen.classList.contains('hidden') || !header || !scroll) return;
+  scroll.style.paddingTop = Math.round(header.getBoundingClientRect().bottom + 14) + 'px';
+  if (footer) {
+    scroll.style.setProperty('--practice-scroll-pad', (footer.offsetHeight + 26) + 'px');
+  }
+}
+
+if (typeof window !== 'undefined' && !window._practiceLayoutResizeBound) {
+  window._practiceLayoutResizeBound = true;
+  window.addEventListener('resize', function() {
+    var scr = document.getElementById('screen-practice-setup');
+    if (scr && !scr.classList.contains('hidden')) _syncPracticeLayout();
+  });
 }
 
 function _updatePracticeMatchCount() {
@@ -3396,10 +3436,13 @@ function _updatePracticeMatchCount() {
   if (wrapEl) wrapEl.classList.toggle('is-empty', count === 0);
   if (hintEl) hintEl.classList.toggle('hidden', count > 0);
   if (btnEl) btnEl.disabled = count === 0;
+  _syncPracticeLayout();
 }
 
 function _renderPracticeChip(group, key, label, extraClass, icon) {
-  var active = !!(practiceFilters[group] && practiceFilters[group][key]);
+  var active = key === PRACTICE_ALL_KEY
+    ? _practiceGroupIsAll(group)
+    : (!_practiceGroupIsAll(group) && !!(practiceFilters[group] && practiceFilters[group][key]));
   return '<button type="button" class="practice-chip' + (active ? ' active' : '') +
     (extraClass ? ' ' + extraClass : '') + '" onclick="practiceToggleFilter(\'' + group + '\',\'' +
     String(key).replace(/'/g, "\\'") + '\')">' +
@@ -3407,30 +3450,34 @@ function _renderPracticeChip(group, key, label, extraClass, icon) {
     escHtml(label) + '</button>';
 }
 
+function _practiceAllChip(group) {
+  return _renderPracticeChip(group, PRACTICE_ALL_KEY, t('practiceFilterAll'), 'all-chip');
+}
+
 function _renderPracticeSetupFilters() {
   var diffEl = document.getElementById('practice-difficulty-chips');
   if (diffEl) {
-    var diffHtml = '';
+    var diffHtml = _practiceAllChip('difficulties');
     for (var d = 1; d <= 10; d++) diffHtml += _renderPracticeChip('difficulties', String(d), String(d));
     diffEl.innerHTML = diffHtml;
   }
   var typeEl = document.getElementById('practice-type-chips');
   if (typeEl) {
     var badges = t('typeBadge') || {};
-    typeEl.innerHTML = PRACTICE_WORD_TYPES.map(function(wt) {
+    typeEl.innerHTML = _practiceAllChip('wordTypes') + PRACTICE_WORD_TYPES.map(function(wt) {
       return _renderPracticeChip('wordTypes', wt, badges[wt] || wt);
     }).join('');
   }
   var artEl = document.getElementById('practice-article-chips');
   if (artEl) {
-    artEl.innerHTML = PRACTICE_ARTICLES.map(function(a) {
+    artEl.innerHTML = _practiceAllChip('articles') + PRACTICE_ARTICLES.map(function(a) {
       return _renderPracticeChip('articles', a, a);
     }).join('');
   }
   var catEl = document.getElementById('practice-category-chips');
   if (catEl) {
     var catNames = t('categoryNames') || {};
-    catEl.innerHTML = CATEGORY_MAP.map(function(cat) {
+    catEl.innerHTML = _practiceAllChip('categories') + CATEGORY_MAP.map(function(cat) {
       var label = catNames[cat.id] || cat.name;
       return _renderPracticeChip('categories', String(cat.id), label, 'cat-chip', cat.icon);
     }).join('');
@@ -3439,14 +3486,25 @@ function _renderPracticeSetupFilters() {
 
 function practiceToggleFilter(group, key) {
   if (!practiceFilters[group]) practiceFilters[group] = {};
-  if (practiceFilters[group][key]) delete practiceFilters[group][key];
-  else practiceFilters[group][key] = true;
+  if (key === PRACTICE_ALL_KEY) {
+    practiceFilters[group] = { __all__: true };
+  } else {
+    delete practiceFilters[group][PRACTICE_ALL_KEY];
+    if (practiceFilters[group][key]) delete practiceFilters[group][key];
+    else practiceFilters[group][key] = true;
+    if (!_practiceFilterKeys(group).length) practiceFilters[group] = { __all__: true };
+  }
   _renderPracticeSetupFilters();
   _updatePracticeMatchCount();
 }
 
 function practiceClearFilters() {
-  practiceFilters = { difficulties: {}, categories: {}, wordTypes: {}, articles: {} };
+  practiceFilters = {
+    difficulties: { __all__: true },
+    categories: { __all__: true },
+    wordTypes: { __all__: true },
+    articles: { __all__: true }
+  };
   _renderPracticeSetupFilters();
   _updatePracticeMatchCount();
 }
@@ -3454,11 +3512,17 @@ function practiceClearFilters() {
 async function openPracticeSetup() {
   window.umami?.track('practice_opened');
   show('screen-practice-setup');
+  var scrollEl = document.getElementById('practice-setup-scroll');
+  if (scrollEl) scrollEl.scrollTop = 0;
   try {
     await _loadV2Vocab();
   } catch (e) {}
   _renderPracticeSetupFilters();
   _updatePracticeMatchCount();
+  requestAnimationFrame(function() {
+    _syncPracticeLayout();
+    requestAnimationFrame(_syncPracticeLayout);
+  });
 }
 
 function setPracticeLevel(lv) {
@@ -5607,6 +5671,7 @@ function show(id){
   ['screen-levels','screen-learning-profile','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
+  document.body.classList.toggle('practice-setup-scroll-lock', id === 'screen-practice-setup');
   var btn = document.getElementById('app-back-btn');
   if (!btn) return;
   var isRtl = document.body.classList.contains('lang-rtl');
