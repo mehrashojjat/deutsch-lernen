@@ -79,9 +79,9 @@ body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(
 body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 /* ── HEADER ── */
-.app-header{width:100%;max-width:600px;display:flex;align-items:center;justify-content:space-between;
+.app-header{width:100%;max-width:600px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;
   margin-bottom:20px;animation:fadeDown .5s ease both;}
-.app-header-center{text-align:center;flex:1;}
+.app-header-center{text-align:center;min-width:0;grid-column:2;}
 .app-header h1{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:700;
   color:var(--gold);letter-spacing:-1px;line-height:1;cursor:pointer;}
 .app-header p{color:var(--muted);font-size:.82rem;margin-top:3px;font-weight:300;}
@@ -90,6 +90,8 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
   cursor:pointer;font-size:1.3rem;transition:all .18s;color:var(--text);flex-shrink:0;
   padding:0;line-height:1;direction:ltr;
   font-family:system-ui,-apple-system,'Apple Color Emoji','Segoe UI Emoji',sans-serif!important;}
+.app-back-btn{grid-column:1;justify-self:center;}
+.settings-btn{grid-column:3;justify-self:center;}
 .settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
 .app-back-btn:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);}
 .app-back-btn.hidden{visibility:hidden;pointer-events:none;}
