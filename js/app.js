@@ -107,6 +107,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Flip cards to reveal meanings',
     practiceMeaningLabel: 'Meaning',
+    practiceFilterDifficulty: 'Difficulty',
+    practiceFilterType: 'Word type',
+    practiceFilterArticle: 'Article (nouns)',
+    practiceFilterTopics: 'Topics',
+    practiceClearFilters: 'Clear filters',
+    practiceWordCount: 'words in your loop',
+    practiceNoWordsHint: 'No words match — try another level or loosen filters.',
     offlineTitle: "You're Offline",
     offlineMessage: 'This app needs an internet connection to work.',
     offlineRefreshBtn: 'Refresh',
@@ -212,6 +219,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
     practiceMeaningLabel: 'Bedeutung',
+    practiceFilterDifficulty: 'Schwierigkeit',
+    practiceFilterType: 'Wortart',
+    practiceFilterArticle: 'Artikel (Nomen)',
+    practiceFilterTopics: 'Themen',
+    practiceClearFilters: 'Filter löschen',
+    practiceWordCount: 'Wörter in deiner Runde',
+    practiceNoWordsHint: 'Keine Wörter passen — anderes Niveau oder weniger Filter.',
     offlineTitle: 'Kein Internet',
     offlineMessage: 'Diese App benötigt eine Internetverbindung.',
     offlineRefreshBtn: 'Neu laden',
@@ -315,6 +329,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Anlamı görmek için kartı çevir',
     practiceMeaningLabel: 'Anlam',
+    practiceFilterDifficulty: 'Zorluk',
+    practiceFilterType: 'Kelime türü',
+    practiceFilterArticle: 'Artikel (isimler)',
+    practiceFilterTopics: 'Konular',
+    practiceClearFilters: 'Filtreleri temizle',
+    practiceWordCount: 'turundaki kelime',
+    practiceNoWordsHint: 'Eşleşen kelime yok — seviye veya filtreleri değiştirin.',
     offlineTitle: 'Çevrimedışısınız',
     offlineMessage: 'Bu uygulama çalışmak için internet bağlantısı gerektirir.',
     offlineRefreshBtn: 'Yenile',
@@ -416,6 +437,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
     practiceMeaningLabel: 'معنی',
+    practiceFilterDifficulty: 'سختی',
+    practiceFilterType: 'نوع واژه',
+    practiceFilterArticle: 'آرتikel (اسم)',
+    practiceFilterTopics: 'موضوعات',
+    practiceClearFilters: 'پاک کردن فیلترها',
+    practiceWordCount: 'واژه در دور شما',
+    practiceNoWordsHint: 'واژه‌ای پیدا نشد — سطح یا فیلترها را تغییر دهید.',
     offlineTitle: 'آفلاین هستید',
     offlineMessage: 'این برنامه برای کار کردن به اتصال اینترنت نیاز دارد.',
     offlineRefreshBtn: 'بارگذاری مجدد',
@@ -516,6 +544,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
     practiceMeaningLabel: 'Значение',
+    practiceFilterDifficulty: 'Сложность',
+    practiceFilterType: 'Тип слова',
+    practiceFilterArticle: 'Артикль (существ.)',
+    practiceFilterTopics: 'Темы',
+    practiceClearFilters: 'Сбросить фильтры',
+    practiceWordCount: 'слов в наборе',
+    practiceNoWordsHint: 'Нет подходящих слов — смените уровень или фильтры.',
     offlineTitle: 'Нет подключения',
     offlineMessage: 'Для работы приложения необходимо подключение к интернету.',
     offlineRefreshBtn: 'Обновить',
@@ -616,6 +651,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'Переверни картку, щоб побачити значення',
     practiceMeaningLabel: 'Значення',
+    practiceFilterDifficulty: 'Складність',
+    practiceFilterType: 'Тип слова',
+    practiceFilterArticle: 'Артикль (іменники)',
+    practiceFilterTopics: 'Теми',
+    practiceClearFilters: 'Скинути фільтри',
+    practiceWordCount: 'слів у наборі',
+    practiceNoWordsHint: 'Немає відповідних слів — змініть рівень або фільтри.',
     offlineTitle: 'Немає інтернету',
     offlineMessage: 'Для роботи додатку потрібне підключення до інтернету.',
     offlineRefreshBtn: 'Оновити',
@@ -718,6 +760,13 @@ const UI = {
     practiceSetupSub: '',
     practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
     practiceMeaningLabel: 'المعنى',
+    practiceFilterDifficulty: 'الصعوبة',
+    practiceFilterType: 'نوع الكلمة',
+    practiceFilterArticle: 'أداة التعريف (الأسماء)',
+    practiceFilterTopics: 'المواضيع',
+    practiceClearFilters: 'مسح الفلاتر',
+    practiceWordCount: 'كلمة في مجموعتك',
+    practiceNoWordsHint: 'لا توجد كلمات مطابقة — غيّر المستوى أو الفلاتر.',
     offlineTitle: 'أنت غير متصل',
     offlineMessage: 'يحتاج هذا التطبيق إلى اتصال بالإنترنت للعمل.',
     offlineRefreshBtn: 'تحديث',
@@ -911,6 +960,9 @@ var practiceSelectedLevel = 'A1';
 var practiceDeck = [], practiceIdx = 0;
 var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
+var practiceFilters = { difficulties: {}, categories: {}, wordTypes: {}, articles: {} };
+var PRACTICE_WORD_TYPES = ['Noun', 'Verb', 'Adjective', 'Phrase', 'Adverb', 'Word'];
+var PRACTICE_ARTICLES = ['der', 'die', 'das'];
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _themeAnswers = [];
@@ -1324,6 +1376,24 @@ function applyTranslations() {
   document.getElementById('practice-ln-A1').textContent = pln.A1;
   document.getElementById('practice-ln-A2').textContent = pln.A2;
   document.getElementById('practice-ln-B1').textContent = pln.B1;
+  var pfl = document.getElementById('practice-filter-difficulty-label');
+  if (pfl) pfl.textContent = u.practiceFilterDifficulty;
+  pfl = document.getElementById('practice-filter-type-label');
+  if (pfl) pfl.textContent = u.practiceFilterType;
+  pfl = document.getElementById('practice-filter-article-label');
+  if (pfl) pfl.textContent = u.practiceFilterArticle;
+  pfl = document.getElementById('practice-filter-topics-label');
+  if (pfl) pfl.textContent = u.practiceFilterTopics;
+  pfl = document.getElementById('practice-clear-filters-btn');
+  if (pfl) pfl.textContent = u.practiceClearFilters;
+  pfl = document.getElementById('practice-match-label');
+  if (pfl) pfl.textContent = u.practiceWordCount;
+  pfl = document.getElementById('practice-match-hint');
+  if (pfl) pfl.textContent = u.practiceNoWordsHint;
+  if (!document.getElementById('screen-practice-setup').classList.contains('hidden')) {
+    _renderPracticeSetupFilters();
+    _updatePracticeMatchCount();
+  }
   // Dictionary screen
   var _dbt = document.getElementById('dict-banner-title');
   if (_dbt) _dbt.textContent = u.dictBannerTitle;
@@ -3271,9 +3341,124 @@ async function _swipeRefreshLang() {
 // ══════════════════════════════════════════════════════════════════
 //  PRACTICE MODE
 // ══════════════════════════════════════════════════════════════════
-function openPracticeSetup() {
+function _practiceFilterKeys(group) {
+  return Object.keys(practiceFilters[group] || {}).filter(function(k) { return practiceFilters[group][k]; });
+}
+
+function _practiceHasActiveFilters() {
+  return _practiceFilterKeys('difficulties').length > 0 ||
+    _practiceFilterKeys('categories').length > 0 ||
+    _practiceFilterKeys('wordTypes').length > 0 ||
+    _practiceFilterKeys('articles').length > 0;
+}
+
+function _getPracticeFilteredPool(level) {
+  var pool = (CSV_QUIZ_DATA[level || practiceSelectedLevel] || []).filter(function(r) {
+    return r.entry_type === 'main' && r.word && r.word.trim();
+  });
+  var diffs = _practiceFilterKeys('difficulties');
+  if (diffs.length) {
+    var diffSet = {};
+    diffs.forEach(function(d) { diffSet[parseInt(d, 10)] = true; });
+    pool = pool.filter(function(r) {
+      var d = parseInt(r.difficulty, 10);
+      return diffSet[d];
+    });
+  }
+  var cats = _practiceFilterKeys('categories');
+  if (cats.length) {
+    var catSet = {};
+    cats.forEach(function(c) { catSet[parseInt(c, 10)] = true; });
+    pool = pool.filter(function(r) { return catSet[parseInt(r.category_id, 10)]; });
+  }
+  var types = _practiceFilterKeys('wordTypes');
+  if (types.length) {
+    var typeSet = {};
+    types.forEach(function(tk) { typeSet[tk] = true; });
+    pool = pool.filter(function(r) { return typeSet[r.word_type]; });
+  }
+  var arts = _practiceFilterKeys('articles');
+  if (arts.length) {
+    var artSet = {};
+    arts.forEach(function(a) { artSet[a] = true; });
+    pool = pool.filter(function(r) { return r.article && artSet[r.article]; });
+  }
+  return pool;
+}
+
+function _updatePracticeMatchCount() {
+  var count = _getPracticeFilteredPool(practiceSelectedLevel).length;
+  var numEl = document.getElementById('practice-match-num');
+  var wrapEl = document.getElementById('practice-match-count');
+  var hintEl = document.getElementById('practice-match-hint');
+  var btnEl = document.getElementById('practice-prepare-btn');
+  if (numEl) numEl.textContent = String(count);
+  if (wrapEl) wrapEl.classList.toggle('is-empty', count === 0);
+  if (hintEl) hintEl.classList.toggle('hidden', count > 0);
+  if (btnEl) btnEl.disabled = count === 0;
+}
+
+function _renderPracticeChip(group, key, label, extraClass, icon) {
+  var active = !!(practiceFilters[group] && practiceFilters[group][key]);
+  return '<button type="button" class="practice-chip' + (active ? ' active' : '') +
+    (extraClass ? ' ' + extraClass : '') + '" onclick="practiceToggleFilter(\'' + group + '\',\'' +
+    String(key).replace(/'/g, "\\'") + '\')">' +
+    (icon ? '<span class="chip-icon">' + icon + '</span>' : '') +
+    escHtml(label) + '</button>';
+}
+
+function _renderPracticeSetupFilters() {
+  var diffEl = document.getElementById('practice-difficulty-chips');
+  if (diffEl) {
+    var diffHtml = '';
+    for (var d = 1; d <= 10; d++) diffHtml += _renderPracticeChip('difficulties', String(d), String(d));
+    diffEl.innerHTML = diffHtml;
+  }
+  var typeEl = document.getElementById('practice-type-chips');
+  if (typeEl) {
+    var badges = t('typeBadge') || {};
+    typeEl.innerHTML = PRACTICE_WORD_TYPES.map(function(wt) {
+      return _renderPracticeChip('wordTypes', wt, badges[wt] || wt);
+    }).join('');
+  }
+  var artEl = document.getElementById('practice-article-chips');
+  if (artEl) {
+    artEl.innerHTML = PRACTICE_ARTICLES.map(function(a) {
+      return _renderPracticeChip('articles', a, a);
+    }).join('');
+  }
+  var catEl = document.getElementById('practice-category-chips');
+  if (catEl) {
+    var catNames = t('categoryNames') || {};
+    catEl.innerHTML = CATEGORY_MAP.map(function(cat) {
+      var label = catNames[cat.id] || cat.name;
+      return _renderPracticeChip('categories', String(cat.id), label, 'cat-chip', cat.icon);
+    }).join('');
+  }
+}
+
+function practiceToggleFilter(group, key) {
+  if (!practiceFilters[group]) practiceFilters[group] = {};
+  if (practiceFilters[group][key]) delete practiceFilters[group][key];
+  else practiceFilters[group][key] = true;
+  _renderPracticeSetupFilters();
+  _updatePracticeMatchCount();
+}
+
+function practiceClearFilters() {
+  practiceFilters = { difficulties: {}, categories: {}, wordTypes: {}, articles: {} };
+  _renderPracticeSetupFilters();
+  _updatePracticeMatchCount();
+}
+
+async function openPracticeSetup() {
   window.umami?.track('practice_opened');
   show('screen-practice-setup');
+  try {
+    await _loadV2Vocab();
+  } catch (e) {}
+  _renderPracticeSetupFilters();
+  _updatePracticeMatchCount();
 }
 
 function setPracticeLevel(lv) {
@@ -3281,15 +3466,13 @@ function setPracticeLevel(lv) {
   ['A1','A2','B1'].forEach(function(k) {
     document.getElementById('practice-level-' + k).classList.toggle('active', k === lv);
   });
+  _updatePracticeMatchCount();
 }
 
 function _buildPracticeBatch(level) {
-  var all = (CSV_QUIZ_DATA[level] || []).filter(function(r) {
-    return r.entry_type === 'main' && r.word && r.word.trim();
-  });
+  var all = _getPracticeFilteredPool(level);
   var unseen = all.filter(function(r) { return !practiceSeenIds[r.id]; });
   if (!unseen.length) {
-    // All words shown — clear memory and start over
     practiceSeenIds = {};
     unseen = all.slice();
   }
@@ -3299,6 +3482,11 @@ function _buildPracticeBatch(level) {
 }
 
 async function startPracticeGame() {
+  var pool = _getPracticeFilteredPool(practiceSelectedLevel);
+  if (!pool.length) {
+    _updatePracticeMatchCount();
+    return;
+  }
   var _ov = document.getElementById('quiz-prep-overlay');
   _ov.classList.add('active');
   try {
@@ -3309,7 +3497,11 @@ async function startPracticeGame() {
     practiceIdx = 0;
     practicePreloadPromise = null;
     practiceAnimating = false;
-    window.umami?.track('practice_started', { level: practiceSelectedLevel });
+    window.umami?.track('practice_started', {
+      level: practiceSelectedLevel,
+      filtered_count: pool.length,
+      filters_active: _practiceHasActiveFilters()
+    });
     show('screen-practice');
     renderPracticeCards();
   } catch (err) {

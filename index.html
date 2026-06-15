@@ -133,6 +133,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 /* ── SCREENS ── */
 .screen{width:100%;max-width:600px;}
 .screen.hidden{display:none!important;}
+.hidden{display:none!important;}
 
 /* ── SETTINGS DRAWER ── */
 .drawer-overlay{position:fixed;inset:0;background:rgba(6,8,16,.70);z-index:100;
@@ -520,6 +521,26 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
   background:linear-gradient(135deg,var(--gold),#c8a050);border:none;border-radius:50px;
   font-family:'Outfit','Vazirmatn',sans-serif;font-size:.92rem;font-weight:700;color:#0b0d13;cursor:pointer;transition:all .15s;}
 .btn-primary:hover{opacity:.88;}
+.btn-primary:disabled,.btn-primary[disabled]{opacity:.38;cursor:not-allowed;pointer-events:none;}
+#screen-practice-setup{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
+#screen-practice-setup .practice-setup-panel{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;}
+.practice-filter-section{margin-bottom:14px;}
+.practice-filter-label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.practice-filter-label-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;}
+.practice-filter-label-row .practice-filter-label{margin-bottom:0;}
+.practice-filter-clear{background:none;border:none;padding:0;font-size:.72rem;color:rgba(126,184,247,.85);cursor:pointer;font-family:inherit;}
+.practice-filter-clear:hover{color:#7eb8f7;text-decoration:underline;}
+.practice-chip-row,.practice-chip-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+.practice-chip-wrap{max-height:148px;overflow-y:auto;padding-right:2px;}
+.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;border:1px solid var(--border);background:var(--surf2);color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:all .15s ease;font-family:inherit;white-space:nowrap;}
+.practice-chip:hover{border-color:rgba(126,184,247,.35);color:var(--text);}
+.practice-chip.active{border-color:rgba(126,184,247,.65);background:rgba(126,184,247,.14);color:var(--text);box-shadow:0 0 0 1px rgba(126,184,247,.12);}
+.practice-chip.cat-chip{font-size:.72rem;max-width:100%;white-space:normal;text-align:start;}
+.practice-chip .chip-icon{font-size:.85rem;line-height:1;flex-shrink:0;}
+.practice-match-count{text-align:center;font-size:.82rem;color:var(--muted);margin:4px 0 12px;line-height:1.45;}
+.practice-match-count.is-empty{color:rgba(247,138,168,.92);}
+.practice-match-count .practice-match-num{font-family:'Fraunces','Vazirmatn',serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
+.practice-match-hint{display:block;font-size:.72rem;margin-top:3px;opacity:.85;}
 .btn-outline{width:100%;padding:11px;background:transparent;border:1.5px solid var(--border);
   border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--muted);cursor:pointer;transition:all .15s;}
 .btn-outline:hover{border-color:rgba(255,255,255,.15);color:var(--text);}
@@ -1083,13 +1104,36 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
       <div class="swipe-subtitle" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</div>
     </div>
   </div>
-  <div class="swipe-setup">
+  <div class="swipe-setup practice-setup-panel">
     <div class="swipe-level-grid">
       <button class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
       <button class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
       <button class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
     </div>
-    <button class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()">Start</button>
+    <div class="practice-filter-section">
+      <span class="practice-filter-label" id="practice-filter-difficulty-label">Difficulty</span>
+      <div class="practice-chip-row" id="practice-difficulty-chips"></div>
+    </div>
+    <div class="practice-filter-section">
+      <span class="practice-filter-label" id="practice-filter-type-label">Word type</span>
+      <div class="practice-chip-row" id="practice-type-chips"></div>
+    </div>
+    <div class="practice-filter-section">
+      <span class="practice-filter-label" id="practice-filter-article-label">Article</span>
+      <div class="practice-chip-row" id="practice-article-chips"></div>
+    </div>
+    <div class="practice-filter-section">
+      <div class="practice-filter-label-row">
+        <span class="practice-filter-label" id="practice-filter-topics-label">Topics</span>
+        <button type="button" class="practice-filter-clear" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
+      </div>
+      <div class="practice-chip-wrap" id="practice-category-chips"></div>
+    </div>
+    <div class="practice-match-count" id="practice-match-count">
+      <span><span class="practice-match-num" id="practice-match-num">0</span> <span id="practice-match-label">words in your loop</span></span>
+      <span class="practice-match-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
+    </div>
+    <button class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
   </div>
 </div>
 
@@ -1172,7 +1216,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 </div>
 
 <!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="js/app.js?v=3.6"></script>
+<script src="js/app.js?v=3.7"></script>
 <script src="js/adaptive.js?v=2.6"></script>
 <script src="js/adaptive_v2.js?v=3.3"></script>
 <script src="js/auth.js?v=2.9"></script>
