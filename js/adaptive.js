@@ -1,6 +1,6 @@
 // ══════════════════════════════════════════════════════════════════
 //  ADAPTIVE VOCABULARY QUIZ SYSTEM
-//  Depends on: app.js (CSV_QUIZ_DATA, _loadCSVLevel, queue, idx,
+//  Depends on: app.js (CSV_QUIZ_DATA, _loadV2Vocab, queue, idx,
 //              ok, no, currentLevel, renderCard, pick, showResults,
 //              restartLevel, goHome, show)
 // ══════════════════════════════════════════════════════════════════
@@ -70,6 +70,11 @@
         _progress = _loadForGuestLevel(currentLevel) || _initProgress();
       }
       _cachedLevel = currentLevel;
+      if (_progress && typeof window._v2MigrateLevelProgressIds === 'function') {
+        if (window._v2MigrateLevelProgressIds(_progress, currentLevel)) {
+          _save(_progress);
+        }
+      }
     }
     return _progress;
   }
@@ -543,7 +548,15 @@
   window._adaptiveSetSaveHook    = function (fn) { _externalSaveFn = fn; };
   window._adaptiveRefreshBadge   = _updateHomeBadge;
   window._adaptiveGetGuestProgress = function (level) {
-    return _loadForGuestLevel(level);
+    var p = _loadForGuestLevel(level);
+    if (p && typeof window._v2MigrateLevelProgressIds === 'function') {
+      if (window._v2MigrateLevelProgressIds(p, level)) {
+        try {
+          localStorage.setItem(_guestStorageKey(level), JSON.stringify(p));
+        } catch (e) {}
+      }
+    }
+    return p;
   };
 
 })();

@@ -1585,67 +1585,12 @@ function _wireInstallShareActions() {
 // ── Card counts — no longer shown on level cards ──
 function updateCounts() { /* word counts removed from UI */ }
 
-// ── CSV-based quiz data ──
-// CSVs are the single source of truth for quiz/explorer vocabulary data.
-// Quiz mode loads only the selected level; explorer can intentionally load all levels.
+// ── Unified vocabulary (vocabulary.v2.min.json — single source for all modes) ──
 var CSV_QUIZ_DATA = { A1: null, A2: null, B1: null };
-var _csvLoadPromises = { A1: null, A2: null, B1: null };
-var _faCsvMap = {}; // normKey -> translation_fa, built as CSV levels load
-var _arCsvMap = {}; // normKey -> translation_ar, built as CSV levels load
+var _faCsvMap = {};
+var _arCsvMap = {};
 
-function _parseCSVText(text) {
-  if (!text) return [];
-  text = text.replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n');
-  var records = [];
-  var row = [];
-  var field = '';
-  var inQuotes = false;
-
-  for (var i = 0; i < text.length; i++) {
-    var ch = text[i];
-    if (inQuotes) {
-      if (ch === '"') {
-        if (text[i + 1] === '"') {
-          field += '"';
-          i++;
-        } else {
-          inQuotes = false;
-        }
-      } else {
-        field += ch;
-      }
-      continue;
-    }
-    if (ch === '"') {
-      inQuotes = true;
-    } else if (ch === ',') {
-      row.push(field);
-      field = '';
-    } else if (ch === '\n') {
-      row.push(field);
-      field = '';
-      if (row.some(function(v){ return v !== ''; })) records.push(row);
-      row = [];
-    } else {
-      field += ch;
-    }
-  }
-  row.push(field);
-  if (row.some(function(v){ return v !== ''; })) records.push(row);
-  if (!records.length) return [];
-
-  var headers = records[0].map(function(h){ return (h || '').trim(); });
-  var rows = [];
-  for (var r = 1; r < records.length; r++) {
-    var vals = records[r];
-    var obj = {};
-    headers.forEach(function(h, idx){ obj[h] = (vals[idx] || '').trim(); });
-    rows.push(obj);
-  }
-  return rows;
-}
-
-function _loadCSVText(url) {
+function _loadText(url) {
   return fetch(url)
     .then(function(r){
       if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -1661,10 +1606,10 @@ function _loadCSVText(url) {
             if ((xhr.status >= 200 && xhr.status < 300) || (xhr.status === 0 && xhr.responseText)) {
               resolve(xhr.responseText);
             } else {
-              reject(fetchErr || new Error('CSV load failed'));
+              reject(fetchErr || new Error('Load failed'));
             }
           };
-          xhr.onerror = function() { reject(fetchErr || new Error('CSV load failed')); };
+          xhr.onerror = function() { reject(fetchErr || new Error('Load failed')); };
           xhr.send();
         } catch (xhrErr) {
           reject(fetchErr || xhrErr);
@@ -1674,41 +1619,20 @@ function _loadCSVText(url) {
 }
 
 function _loadCSVLevel(lv) {
-  if (CSV_QUIZ_DATA[lv]) return Promise.resolve(CSV_QUIZ_DATA[lv]);
-  if (_csvLoadPromises[lv]) return _csvLoadPromises[lv];
-  var url = 'data/' + lv.toLowerCase() + '.csv';
-  _csvLoadPromises[lv] = _loadCSVText(url)
-    .then(function(txt){
-      var parsed = _parseCSVText(txt);
-      CSV_QUIZ_DATA[lv] = parsed.filter(function(r){ return r.word && r.word.trim(); });
-      var quizRows = CSV_QUIZ_DATA[lv].filter(function(r){
-        return r.entry_type === 'main'
-            && r.translation_en && r.translation_en.trim();
-      });
-      if (!quizRows.length) {
-        throw new Error('CSV parsed but produced 0 quiz rows for ' + lv);
-      }
-      // Build fa and ar lookup maps from quiz rows
-      quizRows.forEach(function(r) {
-        var k = normKey(r.word);
-        if (!_faCsvMap[k] && r.translation_fa && r.translation_fa.trim()) {
-          _faCsvMap[k] = r.translation_fa.trim();
-        }
-        if (!_arCsvMap[k] && r.translation_ar && r.translation_ar.trim()) {
-          _arCsvMap[k] = r.translation_ar.trim();
-        }
-      });
-      return CSV_QUIZ_DATA[lv];
-    })
-    .catch(function(err){
-      _csvLoadPromises[lv] = null;
-      throw err;
-    });
-  return _csvLoadPromises[lv];
+  lv = String(lv || '').toUpperCase();
+  if (CSV_QUIZ_DATA[lv] && CSV_QUIZ_DATA[lv].length) {
+    return Promise.resolve(CSV_QUIZ_DATA[lv]);
+  }
+  return _loadV2Vocab().then(function () {
+    if (!CSV_QUIZ_DATA[lv] || !CSV_QUIZ_DATA[lv].length) {
+      throw new Error('No vocabulary rows for ' + lv);
+    }
+    return CSV_QUIZ_DATA[lv];
+  });
 }
 
 function _loadAllCSV() {
-  return Promise.all(['A1','A2','B1'].map(_loadCSVLevel));
+  return _loadV2Vocab();
 }
 
 // ── Unified V2 vocabulary (ALL level) ──
@@ -1720,10 +1644,83 @@ var _V2_TYPE_LABELS = { N: 'Noun', V: 'Verb', A: 'Adjective', P: 'Phrase', D: 'A
 var _V2_ARTICLE_LABELS = { r: 'der', e: 'die', s: 'das' };
 var _V2_TR_KEYS = ['translation_en', 'translation_tr', 'translation_fa', 'translation_ru', 'translation_uk', 'translation_ar'];
 
+function _v2BandFromId(id) {
+  var d = String(id || '')[0];
+  if (d === '2') return 'A2';
+  if (d === '3') return 'B1';
+  return 'A1';
+}
+
+function _v2ToUnifiedId(level, srcId) {
+  var digit = level === 'A1' ? '1' : level === 'A2' ? '2' : '3';
+  return String(parseInt(String(digit) + String(srcId), 10));
+}
+
+function _v2IsUnifiedId(id) {
+  var c = String(id || '')[0];
+  return c === '1' || c === '2' || c === '3';
+}
+
+function _syncCsvQuizDataFromV2() {
+  if (!V2_QUIZ_ROWS) return;
+  CSV_QUIZ_DATA.A1 = [];
+  CSV_QUIZ_DATA.A2 = [];
+  CSV_QUIZ_DATA.B1 = [];
+  _faCsvMap = {};
+  _arCsvMap = {};
+  _csvRandPool = null;
+  V2_QUIZ_ROWS.forEach(function(row) {
+    var lv = row.level || _v2BandFromId(row.id);
+    row.level = lv;
+    CSV_QUIZ_DATA[lv].push(row);
+    var k = normKey(row.word);
+    if (row.translation_fa && row.translation_fa.trim() && !_faCsvMap[k]) {
+      _faCsvMap[k] = row.translation_fa.trim();
+    }
+    if (row.translation_ar && row.translation_ar.trim() && !_arCsvMap[k]) {
+      _arCsvMap[k] = row.translation_ar.trim();
+    }
+  });
+}
+
+function _v2MigrateLevelProgressIds(progress, level) {
+  if (!progress || !progress.words || !level) return false;
+  if (level !== 'A1' && level !== 'A2' && level !== 'B1') return false;
+  if (progress.vocabIdFormat === 'unified') return false;
+  var words = progress.words;
+  var nextWords = {};
+  Object.keys(words).forEach(function(id) {
+    var uid = _v2ToUnifiedId(level, String(id));
+    var w = words[id] || {};
+    if (!nextWords[uid]) {
+      nextWords[uid] = {
+        failScore: Number(w.failScore) || 0,
+        seenCount: Number(w.seenCount) || 0,
+        correctCount: Number(w.correctCount) || 0
+      };
+      return;
+    }
+    var cur = nextWords[uid];
+    cur.failScore = Math.max(Number(cur.failScore) || 0, Number(w.failScore) || 0);
+    cur.seenCount = Math.max(Number(cur.seenCount) || 0, Number(w.seenCount) || 0);
+    cur.correctCount = Math.max(Number(cur.correctCount) || 0, Number(w.correctCount) || 0);
+  });
+  progress.words = nextWords;
+  if (progress.recentWords) {
+    progress.recentWords = progress.recentWords.map(function(id) {
+      return _v2ToUnifiedId(level, String(id));
+    });
+  }
+  progress.vocabIdFormat = 'unified';
+  return true;
+}
+
 function _v2EntryToRow(id, entry) {
   var tr = entry[3] || [];
+  var uid = String(id);
   var row = {
-    id: String(id),
+    id: uid,
+    level: _v2BandFromId(uid),
     word: (entry[8] || entry[0] || '').trim() || entry[0] || '',
     word_type: _V2_TYPE_LABELS[entry[1]] || 'Word',
     article: _V2_ARTICLE_LABELS[entry[2]] || '',
@@ -1742,7 +1739,7 @@ function _v2EntryToRow(id, entry) {
 function _loadV2Vocab() {
   if (V2_VOCAB) return Promise.resolve(V2_VOCAB);
   if (_v2LoadPromise) return _v2LoadPromise;
-  _v2LoadPromise = _loadCSVText('data/vocabulary.v2.min.json')
+  _v2LoadPromise = _loadText('data/vocabulary.v2.min.json')
     .then(function(txt) {
       var parsed = JSON.parse(txt);
       V2_VOCAB = parsed;
@@ -1751,7 +1748,8 @@ function _loadV2Vocab() {
       }).filter(function(r) {
         return r.translation_en && r.translation_en.trim();
       });
-      if (!V2_QUIZ_ROWS.length) throw new Error('V2 vocabulary parsed but produced 0 quiz rows');
+      if (!V2_QUIZ_ROWS.length) throw new Error('Vocabulary parsed but produced 0 quiz rows');
+      _syncCsvQuizDataFromV2();
       return V2_VOCAB;
     })
     .catch(function(err) {
@@ -1762,6 +1760,38 @@ function _loadV2Vocab() {
 }
 
 window._loadV2Vocab = _loadV2Vocab;
+window._v2BandFromId = _v2BandFromId;
+window._v2ToUnifiedId = _v2ToUnifiedId;
+window._v2IsUnifiedId = _v2IsUnifiedId;
+window._v2MigrateLevelProgressIds = _v2MigrateLevelProgressIds;
+
+function _v2ResolveRowId(level, id) {
+  var sid = String(id);
+  if (level === 'ALL') return sid;
+  var row = _v2RowLookup(level, sid);
+  return row ? String(row.id) : _v2ToUnifiedId(level, sid);
+}
+
+function _v2RowLookup(level, id) {
+  var sid = String(id);
+  if (level === 'ALL') {
+    if (typeof window._v2RowById === 'function') {
+      var byId = window._v2RowById(sid);
+      if (byId) return byId;
+    }
+    return (V2_QUIZ_ROWS || []).find(function(r) { return String(r.id) === sid; }) || null;
+  }
+  var rows = CSV_QUIZ_DATA[level] || [];
+  var row = rows.find(function(r) { return String(r.id) === sid; });
+  if (row) return row;
+  var uid = _v2ToUnifiedId(level, sid);
+  if (uid !== sid) {
+    return rows.find(function(r) { return String(r.id) === uid; }) || null;
+  }
+  return null;
+}
+
+window._v2RowLookup = _v2RowLookup;
 
 window._v2AllQuizRows = function() {
   return (V2_QUIZ_ROWS || []).slice();
@@ -1818,14 +1848,14 @@ async function startLevel(lv) {
   currentLevel = lv;
   var _ov = document.getElementById('quiz-prep-overlay');
 
-  // Ensure CSV data is loaded
-  if (!CSV_QUIZ_DATA[lv]) {
+  // Ensure vocabulary data is loaded
+  if (!CSV_QUIZ_DATA[lv] || !CSV_QUIZ_DATA[lv].length) {
     _ov.classList.add('active');
     try {
       await _loadCSVLevel(lv);
     } catch (err) {
       _ov.classList.remove('active');
-      var msg = 'Could not load ' + lv + ' quiz data from CSV.';
+      var msg = 'Could not load ' + lv + ' quiz data.';
       if (window.location.protocol === 'file:') {
         msg += ' Open the app through a local server instead of file://.';
       }
@@ -2041,7 +2071,7 @@ function openAdaptiveV2() {
 function openThemeSelect() {
   window.umami?.track('theme_quiz_opened');
   show('screen-theme-select');
-  Promise.all([_loadAllCSV(), _loadV2Vocab()]).finally(function() {
+  _loadV2Vocab().finally(function() {
     _renderCategoryGrid();
   });
 }
@@ -2067,7 +2097,7 @@ async function startThemeQuiz(categoryId) {
   var _ov = document.getElementById('quiz-prep-overlay');
   _ov.classList.add('active');
   try {
-    await Promise.all([_loadAllCSV(), _loadV2Vocab()]);
+    await _loadV2Vocab();
   } catch(err) {
     _ov.classList.remove('active');
     var msg = 'Could not load quiz data.';
@@ -2207,11 +2237,8 @@ function _buildThemeQueueFromV2Rows(rows) {
 }
 
 function _buildQueueFromRows(rows) {
-  var allRows = [];
-  ['A1','A2','B1'].forEach(function(lv){
-    allRows = allRows.concat((CSV_QUIZ_DATA[lv] || []).filter(function(r){
-      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
-    }));
+  var allRows = (V2_QUIZ_ROWS || []).filter(function(r) {
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
   });
   return rows.map(function(row) {
     var usedIds = {}; usedIds[row.id] = true;
@@ -2505,17 +2532,11 @@ function _performanceLists(quizStats) {
 
 function _profileWordJoin(level, progress) {
   var rows = _profileWordRows(progress);
-  var csvMap = {};
-  if (level === 'ALL') {
-    (V2_QUIZ_ROWS || []).forEach(function(r) { csvMap[String(r.id)] = r; });
-  } else {
-    (CSV_QUIZ_DATA[level] || []).forEach(function(r) { csvMap[String(r.id)] = r; });
-  }
-  var hasCsv = level === 'ALL' ? !!V2_QUIZ_ROWS : !!(CSV_QUIZ_DATA[level] && CSV_QUIZ_DATA[level].length);
+  var hasVocab = level === 'ALL' ? !!(V2_QUIZ_ROWS && V2_QUIZ_ROWS.length) : !!(CSV_QUIZ_DATA[level] && CSV_QUIZ_DATA[level].length);
   return rows.map(function(w) {
-    var row = csvMap[w.id] || (level === 'ALL' && typeof window._v2RowById === 'function' ? window._v2RowById(w.id) : null);
-    var wordLabel = row ? ((row.article ? row.article + ' ' : '') + expandOptional(row.word || w.id)) : (hasCsv ? ('#' + w.id) : '');
-    var meaning = row ? (_csvRowDisplay(row) || row.translation_en || '') : (hasCsv ? '' : _lp('loadingLevelWords'));
+    var row = _v2RowLookup(level, w.id);
+    var wordLabel = row ? ((row.article ? row.article + ' ' : '') + expandOptional(row.word || w.id)) : (hasVocab ? ('#' + w.id) : '');
+    var meaning = row ? (_csvRowDisplay(row) || row.translation_en || '') : (hasVocab ? '' : _lp('loadingLevelWords'));
     var catId = row ? Number(row.category_id) || 0 : 0;
     return {
       id: w.id,
@@ -2902,15 +2923,9 @@ window.APP_DEBUG_LEARNING_PROFILE = function(level) {
 };
 
 function _rowsByIds(level, ids) {
-  var map = {};
-  if (level === 'ALL') {
-    (V2_QUIZ_ROWS || []).forEach(function(r) { map[String(r.id)] = r; });
-  } else {
-    (CSV_QUIZ_DATA[level] || []).forEach(function(r) { map[String(r.id)] = r; });
-  }
   var out = [];
   ids.forEach(function(id) {
-    var r = map[String(id)] || (level === 'ALL' && typeof window._v2RowById === 'function' ? window._v2RowById(id) : null);
+    var r = _v2RowLookup(level, id);
     if (r && r.entry_type === 'main' && r.translation_en && r.translation_en.trim()) out.push(r);
   });
   return out;
@@ -2928,8 +2943,7 @@ async function startLearningProfileReview(mode) {
   var ov = document.getElementById('quiz-prep-overlay');
   ov.classList.add('active');
   try {
-    if (learningProfileSelectedLevel === 'ALL') await _loadV2Vocab();
-    else await _loadCSVLevel(learningProfileSelectedLevel);
+    await _loadV2Vocab();
   } catch (err) {
     ov.classList.remove('active');
     alert('Could not load quiz data.');
@@ -3085,7 +3099,7 @@ async function prepareSwipeGame() {
     show('screen-swipe');
     renderSwipeCards();
   } catch (err) {
-    var msg = 'Could not prepare swipe cards from CSV.';
+    var msg = 'Could not prepare swipe cards.';
     if (err && err.message) msg += '\n\nDetails: ' + err.message;
     alert(msg);
   } finally {

@@ -574,6 +574,9 @@
     LEGACY_LEVELS.forEach(function (lv) {
       if (byLevel[lv]) {
         _progressCache[lv] = _progressFromRow(byLevel[lv]);
+        if (typeof window._v2MigrateLevelProgressIds === 'function') {
+          window._v2MigrateLevelProgressIds(_progressCache[lv], lv);
+        }
       } else {
         ensures.push(_ensureRow(userId, lv));
         _progressCache[lv] = _defaultProgress();
