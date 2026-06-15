@@ -734,6 +734,7 @@ const PROFILE_I18N = {
     wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', wordsMastered: 'Words Mastered', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
     quizzesCompleted: 'Quizzes Completed', correctAnswers: 'Correct Answers', incorrectAnswers: 'Incorrect Answers', totalStudyTime: 'Total Study Time',
     strongest: 'Strongest', needsPractice: 'Needs Practice', notEnoughCategoryData: 'Not enough category data yet',
+    topics: 'Topics', topicCoverage: 'Coverage', topicAccuracy: 'Accuracy', practiceTopic: 'Practice',
     reviewWeakWords: 'Review Weak Words', reviewRecentMistakes: 'Review Recent Mistakes', reviewMixedPractice: 'Review Mixed Practice',
     seenWords: 'Seen Words', strugglingWords: 'Struggling Words', masteredWords: 'Mastered Words',
     loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
@@ -912,6 +913,7 @@ var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
 var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
+var _themeAnswers = [];
 var learningProfileSelectedLevel = 'ALL';
 var learningProfileDetailMode = null;
 var learningProfileLastDetailHtml = '';
@@ -1918,6 +1920,13 @@ function pick(btn, selectedId, correctId) {
     ok++; btn.classList.add('pop');
     fb.textContent = t('correct');
     fb.className = 'feedback c show';
+    if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
+      _themeAnswers.push({
+        wordId: String(queue[idx]._row.id),
+        correct: true,
+        categoryId: currentThemeCategoryId
+      });
+    }
   } else {
     btn.classList.add('wrong'); btn.classList.remove('disabled');
     no++;
@@ -1930,6 +1939,13 @@ function pick(btn, selectedId, correctId) {
     });
     fb.innerHTML = t('wrong')(correctText);
     fb.className = 'feedback w show';
+    if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
+      _themeAnswers.push({
+        wordId: String(queue[idx]._row.id),
+        correct: false,
+        categoryId: currentThemeCategoryId
+      });
+    }
   }
   document.getElementById('sc-ok').textContent = ok;
   document.getElementById('sc-no').textContent = no;
@@ -1957,11 +1973,17 @@ function showResults(){
     incorrectAnswers: no,
     studyTimeSeconds: elapsedSeconds
   };
-  if (typeof window.APP_AUTH_RECORD_QUIZ_STATS === 'function') {
-    window.APP_AUTH_RECORD_QUIZ_STATS(statsPayload);
-  }
-  if (currentLevel === 'ALL' && typeof window._adaptiveV2RecordQuizStats === 'function') {
-    window._adaptiveV2RecordQuizStats(statsPayload);
+  if (currentThemeCategoryId > 0) {
+    if (typeof window._adaptiveV2ApplyThemeResults === 'function') {
+      window._adaptiveV2ApplyThemeResults(_themeAnswers.slice(), statsPayload);
+    }
+  } else {
+    if (typeof window.APP_AUTH_RECORD_QUIZ_STATS === 'function') {
+      window.APP_AUTH_RECORD_QUIZ_STATS(statsPayload);
+    }
+    if (currentLevel === 'ALL' && typeof window._adaptiveV2RecordQuizStats === 'function') {
+      window._adaptiveV2RecordQuizStats(statsPayload);
+    }
   }
   window.umami?.track('quiz_completed', { mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'), level: currentLevel, score_pct: pct, correct: ok, wrong: no, total: total });
   document.getElementById('r-emoji').textContent=emoji;
@@ -2018,9 +2040,10 @@ function openAdaptiveV2() {
 // ── THEME QUIZ ──
 function openThemeSelect() {
   window.umami?.track('theme_quiz_opened');
-  _loadAllCSV(); // preload in background
   show('screen-theme-select');
-  _renderCategoryGrid();
+  Promise.all([_loadAllCSV(), _loadV2Vocab()]).finally(function() {
+    _renderCategoryGrid();
+  });
 }
 
 function _renderCategoryGrid() {
@@ -2028,9 +2051,11 @@ function _renderCategoryGrid() {
   if (!grid) return;
   var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
+    var badge = _categoryGridBadge(cat.id);
     return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-left:1px solid ' + cat.bl + ';border-right:1px solid ' + cat.br + '" onclick="startThemeQuiz(' + cat.id + ')">'
       + '<span class="cat-icon">' + cat.icon + '</span>'
       + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
+      + badge
       + '</button>';
   }).join('');
 }
@@ -2038,10 +2063,11 @@ function _renderCategoryGrid() {
 async function startThemeQuiz(categoryId) {
   _quizReturnScreen = 'screen-theme-select';
   currentThemeCategoryId = 0;
+  _themeAnswers = [];
   var _ov = document.getElementById('quiz-prep-overlay');
   _ov.classList.add('active');
   try {
-    await _loadAllCSV();
+    await Promise.all([_loadAllCSV(), _loadV2Vocab()]);
   } catch(err) {
     _ov.classList.remove('active');
     var msg = 'Could not load quiz data.';
@@ -2073,60 +2099,111 @@ function _categoryName(id) {
   return cat ? cat.name : 'Theme';
 }
 
-function _buildThemeQueue(categoryId) {
-  // Gather all CSV rows across all levels matching this category
-  var pool = [];
-  ['A1','A2','B1'].forEach(function(lv) {
-    (CSV_QUIZ_DATA[lv] || []).filter(function(r){
-      return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
-    }).forEach(function(r) {
-      if (parseInt(r.category_id) === categoryId) pool.push(r);
-    });
-  });
-  if (!pool.length) return [];
-
-  // Determine difficulty range for this category
-  var diffs = pool.map(function(r){ return parseInt(r.difficulty); }).filter(function(d){ return d >= 1 && d <= 10; });
-  if (!diffs.length) return _buildQueueFromRows(shuffle(pool).slice(0, QUIZ_LEN));
-  var catMin = Math.min.apply(null, diffs);
-  var catMax = Math.max.apply(null, diffs);
-
-  // Determine user skill level from adaptive progress; default 4 for new users
-  var skillLevel = 4;
-  try {
-    var _ap = JSON.parse(localStorage.getItem('deutsch_adaptive_progress'));
-    if (_ap && _ap.skillLevel >= 1) skillLevel = _ap.skillLevel;
-  } catch(e) {}
-
-  // Clamp skill to category bounds
-  var effectiveDiff = Math.max(catMin, Math.min(catMax, Math.round(skillLevel)));
-  return _buildThemeQueueWithFallback(pool, effectiveDiff);
+function _themeSkillLevel() {
+  if (typeof window._adaptiveV2GetProgress === 'function') {
+    var p = window._adaptiveV2GetProgress();
+    if (p && Number(p.skillLevel) >= 1) return Number(p.skillLevel);
+  }
+  return 4;
 }
 
-function _buildThemeQueueWithFallback(pool, targetDiff) {
-  var needed = QUIZ_LEN;
-  var used = {};
-  var selected = [];
+function _buildThemeQueue(categoryId) {
+  var pool = (V2_QUIZ_ROWS || []).filter(function(r) {
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim() &&
+      parseInt(r.category_id, 10) === categoryId;
+  });
+  if (!pool.length) return [];
+  return _buildThemeCoverageQueue(pool, categoryId, _themeSkillLevel());
+}
 
-  // Stage 1 — exact difficulty
-  shuffle(pool.filter(function(r){ return parseInt(r.difficulty) === targetDiff; }))
-    .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
-
-  // Stage 2 — expand radius outward from targetDiff
-  if (selected.length < needed) {
-    for (var radius = 1; radius <= 9 && selected.length < needed; radius++) {
-      shuffle(pool.filter(function(r) { return Math.abs(parseInt(r.difficulty) - targetDiff) === radius; }))
-        .forEach(function(r){ if (selected.length < needed && !used[r.id]) { used[r.id] = true; selected.push(r); } });
+function _buildThemeCoverageQueue(pool, categoryId, skillLevel) {
+  var progress = typeof window._adaptiveV2GetProgress === 'function'
+    ? window._adaptiveV2GetProgress() : null;
+  var catKey = _categorySlug(categoryId);
+  var themeSeenMeta = {};
+  if (progress && progress.quizStats && progress.quizStats.theme && progress.quizStats.theme[catKey]) {
+    (progress.quizStats.theme[catKey].seenWordIds || []).forEach(function(id) {
+      themeSeenMeta[String(id)] = true;
+    });
+  }
+  function readStat(row) {
+    if (progress && typeof window._adaptiveV2ReadWordStat === 'function') {
+      return window._adaptiveV2ReadWordStat(progress, row.id);
     }
+    return { themeSeenCount: 0, failScore: 0 };
   }
-
-  // Stage 3 — any remaining words from pool
-  if (selected.length < needed) {
-    shuffle(pool.filter(function(r){ return !used[r.id]; }))
-      .forEach(function(r){ if (selected.length < needed) { used[r.id] = true; selected.push(r); } });
+  function diffGap(row) {
+    var d = parseInt(row.difficulty, 10);
+    if (!(d >= 1 && d <= 10)) return 99;
+    return Math.abs(d - skillLevel);
   }
+  function bucket(row) {
+    var st = readStat(row);
+    var themeSeen = Number(st.themeSeenCount) || 0;
+    if (themeSeen === 0 && !themeSeenMeta[String(row.id)]) return 0;
+    if ((Number(st.failScore) || 0) > 0) return 1;
+    return 2;
+  }
+  var sorted = pool.slice().sort(function(a, b) {
+    var ba = bucket(a);
+    var bb = bucket(b);
+    if (ba !== bb) return ba - bb;
+    if (ba === 2) {
+      var ta = Number(readStat(a).themeSeenCount) || 0;
+      var tb = Number(readStat(b).themeSeenCount) || 0;
+      if (ta !== tb) return ta - tb;
+    }
+    var da = diffGap(a);
+    var db = diffGap(b);
+    if (da !== db) return da - db;
+    return Math.random() - 0.5;
+  });
+  var selected = [];
+  var used = {};
+  sorted.forEach(function(r) {
+    if (selected.length >= QUIZ_LEN || used[r.id]) return;
+    used[r.id] = true;
+    selected.push(r);
+  });
+  if (selected.length < QUIZ_LEN) {
+    shuffle(pool).forEach(function(r) {
+      if (selected.length >= QUIZ_LEN || used[r.id]) return;
+      used[r.id] = true;
+      selected.push(r);
+    });
+  }
+  return _buildThemeQueueFromV2Rows(selected);
+}
 
-  return _buildQueueFromRows(selected);
+function _buildThemeQueueFromV2Rows(rows) {
+  var allRows = (V2_QUIZ_ROWS || []).filter(function(r) {
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim();
+  });
+  return rows.map(function(row) {
+    var usedIds = {}; usedIds[row.id] = true;
+    var usedEn  = {}; usedEn[row.translation_en.trim()] = true;
+    var distractors = [];
+    var catId = parseInt(row.category_id, 10);
+
+    shuffle(allRows.filter(function(d) { return parseInt(d.category_id, 10) === catId; }))
+      .forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+
+    if (distractors.length < 6) {
+      shuffle(allRows).forEach(function(d) {
+        if (distractors.length >= 6) return;
+        if (usedIds[d.id]) return;
+        var en = d.translation_en.trim();
+        if (en && !usedEn[en]) { usedEn[en] = true; usedIds[d.id] = true; distractors.push(d); }
+      });
+    }
+
+    return { _row: row, _distractors: distractors };
+  });
 }
 
 function _buildQueueFromRows(rows) {
@@ -2239,15 +2316,15 @@ function _guestProfileProgress(level) {
 
 function _profileSnapshot(level) {
   level = level || learningProfileSelectedLevel || 'ALL';
+  var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
+  if (level === 'ALL' && signedIn && typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
+    return window.APP_AUTH_GET_LEARNING_PROFILE('ALL');
+  }
   if (level === 'ALL' && typeof window._adaptiveV2GetProgress === 'function') {
     var live = window._adaptiveV2GetProgress();
-    if (live) {
-      var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
-      return { signedIn: signedIn, level: level, progress: live };
-    }
+    if (live) return { signedIn: signedIn, level: level, progress: live };
   }
-  if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN() &&
-      typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
+  if (signedIn && typeof window.APP_AUTH_GET_LEARNING_PROFILE === 'function') {
     return window.APP_AUTH_GET_LEARNING_PROFILE(level);
   }
   return {
@@ -2397,6 +2474,7 @@ function _categorySlug(id) {
   var name = cat ? cat.name : String(id || 'theme');
   return name.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
 }
+window._categorySlug = _categorySlug;
 
 function _categoryNameFromStatKey(key) {
   var cat = CATEGORY_MAP.find(function(c) { return _categorySlug(c.id) === key || String(c.id) === key; });
@@ -2452,6 +2530,110 @@ function _profileWordJoin(level, progress) {
       categoryName: catId ? _categoryName(catId) : _lp('uncategorized')
     };
   });
+}
+
+function _v2CategoryPool(categoryId) {
+  return (V2_QUIZ_ROWS || []).filter(function(r) {
+    return r.entry_type === 'main' && r.translation_en && r.translation_en.trim() &&
+      parseInt(r.category_id, 10) === Number(categoryId);
+  });
+}
+
+function _themeCategoryCoverage(categoryId, progress) {
+  var pool = _v2CategoryPool(categoryId);
+  if (!pool.length) return { seen: 0, total: 0, pct: 0 };
+  var seen = 0;
+  pool.forEach(function(r) {
+    var w = (progress && progress.words && progress.words[r.id]) || null;
+    if ((Number(w && w.seenCount) || 0) > 0) seen++;
+  });
+  return {
+    seen: seen,
+    total: pool.length,
+    pct: Math.round(seen / pool.length * 100)
+  };
+}
+
+function _categoryGridBadge(categoryId) {
+  var progress = typeof window._adaptiveV2GetProgress === 'function'
+    ? window._adaptiveV2GetProgress() : null;
+  if (!progress) return '';
+  var cov = _themeCategoryCoverage(categoryId, progress);
+  if (!cov.total) return '';
+  return '<span class="cat-coverage">' + cov.seen + '/' + cov.total + '</span>';
+}
+
+function _themeStatEntry(progress, categoryId) {
+  var theme = (progress && progress.quizStats && progress.quizStats.theme) || {};
+  var entry = theme[_categorySlug(categoryId)] || {};
+  return {
+    quizzesCompleted: Number(entry.quizzesCompleted) || 0,
+    correctAnswers: Number(entry.correctAnswers) || 0,
+    incorrectAnswers: Number(entry.incorrectAnswers) || 0,
+    studyTimeSeconds: Number(entry.studyTimeSeconds) || 0,
+    seenWordIds: Array.isArray(entry.seenWordIds) ? entry.seenWordIds : []
+  };
+}
+
+function _profileTopics(progress) {
+  var joined = _profileWordJoin('ALL', progress || {});
+  var catPerf = {};
+  joined.forEach(function(w) {
+    if (!w.categoryId) return;
+    if (!catPerf[w.categoryId]) {
+      catPerf[w.categoryId] = { attempts: 0, correct: 0, name: w.categoryName };
+    }
+    catPerf[w.categoryId].attempts += Number(w.seenCount) || 0;
+    catPerf[w.categoryId].correct += Number(w.correctCount) || 0;
+  });
+  var topics = [];
+  CATEGORY_MAP.forEach(function(cat) {
+    var cov = _themeCategoryCoverage(cat.id, progress);
+    var perf = catPerf[cat.id] || { attempts: 0, correct: 0, name: _categoryName(cat.id) };
+    var activity = _themeStatEntry(progress, cat.id);
+    if (activity.quizzesCompleted < 1 && perf.attempts < 5) return;
+    topics.push({
+      id: cat.id,
+      name: _categoryName(cat.id),
+      coveragePct: cov.pct,
+      coverageLabel: cov.seen + '/' + cov.total,
+      accuracy: perf.attempts ? Math.round(perf.correct / perf.attempts * 100) : 0,
+      quizzesCompleted: activity.quizzesCompleted,
+      correctAnswers: activity.correctAnswers,
+      incorrectAnswers: activity.incorrectAnswers,
+      studyTimeSeconds: activity.studyTimeSeconds
+    });
+  });
+  topics.sort(function(a, b) {
+    return b.coveragePct - a.coveragePct || b.quizzesCompleted - a.quizzesCompleted;
+  });
+  return topics;
+}
+
+function _profileTopicsHtml(topics) {
+  if (!topics.length) {
+    return '<div class="profile-empty">' + escHtml(_lp('notEnoughCategoryData')) + '</div>';
+  }
+  return topics.map(function(topic) {
+    return '<div class="profile-topic-row">'
+      + '<div class="profile-topic-main">'
+      + '<div class="profile-topic-name">' + escHtml(topic.name) + '</div>'
+      + '<div class="profile-topic-meta">'
+      + escHtml(_lp('topicCoverage')) + ': ' + escHtml(topic.coverageLabel) + ' · '
+      + escHtml(_lp('topicAccuracy')) + ': ' + topic.accuracy + '%'
+      + '</div>'
+      + '<div class="profile-topic-meta profile-topic-activity">'
+      + escHtml(_lp('quizzesCompleted')) + ': ' + topic.quizzesCompleted + ' · '
+      + escHtml(_lp('correctAnswers')) + ': ' + topic.correctAnswers + ' · '
+      + escHtml(_lp('incorrectAnswers')) + ': ' + topic.incorrectAnswers + ' · '
+      + escHtml(_lp('totalStudyTime')) + ': ' + escHtml(_formatStudyTime(topic.studyTimeSeconds))
+      + '</div>'
+      + '<div class="profile-topic-bar"><span style="width:' + topic.coveragePct + '%"></span></div>'
+      + '</div>'
+      + '<button type="button" class="profile-topic-btn" onclick="startThemeQuiz(' + topic.id + ')">'
+      + escHtml(_lp('practiceTopic')) + '</button>'
+      + '</div>';
+  }).join('');
 }
 
 function _categoryPerformanceFromWords(wordRows) {
@@ -2579,6 +2761,8 @@ function renderLearningProfile() {
   var joinedWords = _profileWordJoin('ALL', progress);
   var totals = _profileTotals(progress);
   var activity = _activityTotalsWithFallback(progress);
+  var topics = _profileTopics(progress);
+  var topicsHtml = _profileTopicsHtml(topics);
   var isGuest = !(snap && snap.signedIn);
   function stat(label, value, extraClass, clickMode, selected) {
     var cls = 'profile-stat';
@@ -2678,6 +2862,9 @@ function renderLearningProfile() {
           stat(_lp('incorrectAnswers'), activity.incorrectAnswers) +
         '</div>' +
       '</div></div>' +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('topics')) + '</div>' +
+      topicsHtml +
+    '</div>' +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('review')) + '</div>' +
       reviewSectionHtml +
     '</div>' +

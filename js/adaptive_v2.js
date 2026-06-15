@@ -208,7 +208,10 @@
         var w = p.words[srcId];
         if (!w) return;
         if (!mergedWords[uid]) {
-          mergedWords[uid] = { failScore: 0, seenCount: 0, correctCount: 0, lastSeenQuiz: 0 };
+          mergedWords[uid] = {
+            failScore: 0, seenCount: 0, correctCount: 0, lastSeenQuiz: 0,
+            themeSeenCount: 0, adaptiveSeenCount: 0
+          };
         }
         var dst = mergedWords[uid];
         dst.failScore = Math.max(Number(dst.failScore) || 0, Number(w.failScore) || 0);
@@ -254,9 +257,21 @@
     return 'A1';
   }
 
+  function _migrateWordRecord(w) {
+    if (!w || typeof w !== 'object') return;
+    var seen = Number(w.seenCount) || 0;
+    var themeSeen = Number(w.themeSeenCount) || 0;
+    var adaptiveSeen = Number(w.adaptiveSeenCount);
+    if (!isFinite(adaptiveSeen)) {
+      w.adaptiveSeenCount = themeSeen > 0 ? Math.max(0, seen - themeSeen) : seen;
+    }
+    if (w.themeSeenCount == null) w.themeSeenCount = Math.max(0, seen - (Number(w.adaptiveSeenCount) || 0));
+  }
+
   function _migrateProgress(p, all) {
     if (!p || typeof p !== 'object') return _initProgress();
     if (!p.words) p.words = {};
+    Object.keys(p.words).forEach(function (id) { _migrateWordRecord(p.words[id]); });
     if (!p.recentWords) p.recentWords = [];
     if (!p.quizStats) p.quizStats = _defaultQuizStats();
     if (!p.cefrBand) p.cefrBand = all && all.length ? _inferBandFromWords(p, all) : 'A1';
@@ -348,18 +363,28 @@
       failScore: Number(w && w.failScore) || 0,
       seenCount: Number(w && w.seenCount) || 0,
       correctCount: Number(w && w.correctCount) || 0,
-      lastSeenQuiz: Number(w && w.lastSeenQuiz) || 0
+      lastSeenQuiz: Number(w && w.lastSeenQuiz) || 0,
+      themeSeenCount: Number(w && w.themeSeenCount) || 0,
+      adaptiveSeenCount: Number(w && w.adaptiveSeenCount) || 0
     };
   }
 
   function _wordStat(p, id) {
-    if (!p.words[id]) p.words[id] = { failScore: 0, seenCount: 0, correctCount: 0, lastSeenQuiz: 0 };
+    if (!p.words[id]) {
+      p.words[id] = {
+        failScore: 0, seenCount: 0, correctCount: 0, lastSeenQuiz: 0,
+        themeSeenCount: 0, adaptiveSeenCount: 0
+      };
+    }
     return p.words[id];
   }
 
   function _isUnseen(p, id) {
-    var w = _readWordStat(p, id);
-    return w.seenCount === 0;
+    return (Number(_readWordStat(p, id).adaptiveSeenCount) || 0) === 0;
+  }
+
+  function _hasExposure(p, id) {
+    return (Number(_readWordStat(p, id).seenCount) || 0) > 0;
   }
 
   function _isNumberRow(row) {
@@ -891,13 +916,13 @@
   function _bandCoverage(all, p, band) {
     var bw = _filterByBand(all, band);
     if (!bw.length) return 1;
-    var seen = bw.filter(function (r) { return !_isUnseen(p, r.id); }).length;
+    var seen = bw.filter(function (r) { return _hasExposure(p, r.id); }).length;
     return seen / bw.length;
   }
 
   function _globalCoverage(all, p) {
     if (!all.length) return 1;
-    var seen = all.filter(function (r) { return !_isUnseen(p, r.id); }).length;
+    var seen = all.filter(function (r) { return _hasExposure(p, r.id); }).length;
     return seen / all.length;
   }
 
@@ -1042,6 +1067,7 @@
   function _updateWord(p, wordId, correct) {
     var w = _wordStat(p, wordId);
     w.seenCount++;
+    w.adaptiveSeenCount = (Number(w.adaptiveSeenCount) || 0) + 1;
     w.lastSeenQuiz = _quizCounter;
     if (correct) {
       w.correctCount++;
@@ -1049,6 +1075,39 @@
     } else {
       w.failScore += 2;
     }
+  }
+
+  function _themeStatKey(categoryId) {
+    if (typeof window._categorySlug === 'function') {
+      return window._categorySlug(categoryId);
+    }
+    return String(categoryId || 'theme');
+  }
+
+  function _normalizeThemeStatEntry(entry) {
+    entry = (entry && typeof entry === 'object') ? entry : {};
+    return {
+      quizzesCompleted: Number(entry.quizzesCompleted) || 0,
+      correctAnswers: Number(entry.correctAnswers) || 0,
+      incorrectAnswers: Number(entry.incorrectAnswers) || 0,
+      studyTimeSeconds: Number(entry.studyTimeSeconds) || 0,
+      seenWordIds: Array.isArray(entry.seenWordIds) ? entry.seenWordIds.map(String) : [],
+      lastSeenAt: Number(entry.lastSeenAt) || 0
+    };
+  }
+
+  function _applyThemeWordResults(p, answers) {
+    answers.forEach(function (a) {
+      var w = _wordStat(p, a.wordId);
+      w.seenCount++;
+      w.themeSeenCount = (Number(w.themeSeenCount) || 0) + 1;
+      if (a.correct) {
+        w.correctCount++;
+        w.failScore = Math.max(0, w.failScore - 1);
+      } else {
+        w.failScore += 2;
+      }
+    });
   }
 
   function _updateRecent(p, ids) {
@@ -1285,6 +1344,46 @@
     _progress = p;
   };
 
+  window._adaptiveV2ApplyThemeResults = function (answers, payload) {
+    if (!payload || !payload.categoryId) return null;
+    answers = answers || [];
+    var p = _get();
+    var before = {
+      skillLevel: p.skillLevel,
+      cefrBand: p.cefrBand,
+      evaluationStage: p.evaluationStage
+    };
+    if (answers.length) _applyThemeWordResults(p, answers);
+    p.quizStats = _normalizeQuizStats(p.quizStats);
+    var catKey = _themeStatKey(payload.categoryId);
+    var themeEntry = _normalizeThemeStatEntry(p.quizStats.theme[catKey]);
+    themeEntry = _incrementQuizStats(themeEntry, payload);
+    if (answers.length) {
+      var seenSet = {};
+      themeEntry.seenWordIds.forEach(function (id) { seenSet[id] = true; });
+      answers.forEach(function (a) {
+        if (a && a.wordId) seenSet[String(a.wordId)] = true;
+      });
+      themeEntry.seenWordIds = Object.keys(seenSet);
+    }
+    themeEntry.lastSeenAt = Date.now();
+    p.quizStats.theme[catKey] = themeEntry;
+    _save(p);
+    _progress = p;
+    _updateHomeBadge();
+    var profileScreen = document.getElementById('screen-learning-profile');
+    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+        typeof window.renderLearningProfile === 'function') {
+      window.renderLearningProfile();
+    }
+    return before;
+  };
+
+  window._adaptiveV2ReadWordStat = function (progress, id) {
+    progress = progress || _get();
+    return _readWordStat(progress, id);
+  };
+
   window._adaptiveV2ResetProgress = function () {
     var fresh = _initProgress();
     _progress = fresh;
@@ -1313,7 +1412,7 @@
     }
     var segments = bands.map(function (b) {
       var bw = _filterByBand(all, b);
-      var seen = bw.filter(function (r) { return !_isUnseen(p, r.id); }).length;
+      var seen = bw.filter(function (r) { return _hasExposure(p, r.id); }).length;
       return { band: b, coverage: bw.length ? seen / bw.length : 0 };
     });
     var bandIdx = bands.indexOf(p.cefrBand || 'A1');

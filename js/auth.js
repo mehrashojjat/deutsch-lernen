@@ -417,12 +417,21 @@
     };
   }
 
+  function _normalizeThemeStatEntry(entry) {
+    var base = _normalizeStats(entry);
+    entry = (entry && typeof entry === 'object') ? entry : {};
+    base.seenWordIds = Array.isArray(entry.seenWordIds)
+      ? entry.seenWordIds.map(function (id) { return String(id); }) : [];
+    base.lastSeenAt = Number(entry.lastSeenAt) || 0;
+    return base;
+  }
+
   function _normalizeQuizStats(stats) {
     stats = (stats && typeof stats === 'object') ? stats : {};
     var out = { adaptive: _normalizeStats(stats.adaptive), theme: {} };
     var theme = (stats.theme && typeof stats.theme === 'object') ? stats.theme : {};
     Object.keys(theme).forEach(function(key) {
-      out.theme[key] = _normalizeStats(theme[key]);
+      out.theme[key] = _normalizeThemeStatEntry(theme[key]);
     });
     return out;
   }
@@ -596,7 +605,7 @@
     window._adaptiveV2SetSaveHook(function (p) {
       var prev = _progressCache[V2_LEVEL] || _defaultProgress(V2_LEVEL);
       p = p && typeof p === 'object' ? p : _defaultProgress(V2_LEVEL);
-      p.quizStats = _normalizeQuizStats(prev.quizStats);
+      p.quizStats = _normalizeQuizStats(p.quizStats || prev.quizStats);
       _progressCache[V2_LEVEL] = p;
       _updateRow(userId, V2_LEVEL, p);
     });
@@ -643,17 +652,11 @@
   function _recordQuizStats(payload) {
     if (!_user || !payload) return;
     var mode = payload.mode === 'theme' ? 'theme' : (payload.mode === 'adaptive_v2' ? 'adaptive_v2' : 'adaptive');
+    if (mode === 'theme') return;
     var lv = mode === 'adaptive_v2' ? V2_LEVEL : (_currentAdaptiveLevel || 'A1');
     var progress = _progressCache[lv] || _defaultProgress();
     progress.quizStats = _normalizeQuizStats(progress.quizStats);
-
-    if (mode === 'theme') {
-      var key = _statKeyForCategory(payload.categoryId);
-      progress.quizStats.theme[key] = _incrementStats(progress.quizStats.theme[key], payload);
-    } else {
-      progress.quizStats.adaptive = _incrementStats(progress.quizStats.adaptive, payload);
-    }
-
+    progress.quizStats.adaptive = _incrementStats(progress.quizStats.adaptive, payload);
     _progressCache[lv] = progress;
     _updateRow(_user.id, lv, progress);
   }
