@@ -997,6 +997,7 @@ const PROFILE_I18N = {
     seenWords: 'Seen Words', strugglingWords: 'Struggling Words', masteredWords: 'Mastered Words',
     loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
     signInUnlock: 'Sign in to unlock:',
+    signInUnlockTopicsHint: 'Coverage and accuracy for each vocabulary topic.',
     signInBtn: 'Sign in',
     signInPrompt: 'Sign in to sync your progress across devices.',
     guestProfileEmpty: 'Complete a quiz at this level to see stats here.',
@@ -1022,6 +1023,7 @@ const PROFILE_I18N = {
     seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter', masteredWords: 'Gemeisterte Wörter',
     loadingLevelWords: 'Wörter für dieses Niveau werden geladen...', noWordsInList: 'Noch keine Wörter in dieser Liste.',
     signInUnlock: 'Anmelden zum Freischalten:',
+    signInUnlockTopicsHint: 'Abdeckung und Genauigkeit für jedes Vokabelthema.',
     signInBtn: 'Anmelden',
     signInPrompt: 'Melde dich an, um deinen Fortschritt geräteübergreifend zu synchronisieren.',
     guestProfileEmpty: 'Spiele ein Quiz auf diesem Niveau, um hier Statistiken zu sehen.',
@@ -1048,6 +1050,7 @@ const PROFILE_I18N = {
     seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler', masteredWords: 'Uzmanlaşılan Kelimeler',
     loadingLevelWords: 'Bu seviye için kelimeler yükleniyor...', noWordsInList: 'Bu listede henüz kelime yok.',
     signInUnlock: 'Kilidi açmak için giriş yap:',
+    signInUnlockTopicsHint: 'Her konudaki kapsama ve doğruluk oranlarını gör.',
     signInBtn: 'Giriş yap',
     signInPrompt: 'İlerlemenizi cihazlar arasında senkronize etmek için giriş yapın.',
     guestProfileEmpty: 'Burada istatistik görmek için bu seviyede bir quiz tamamlayın.',
@@ -1074,6 +1077,7 @@ const PROFILE_I18N = {
     seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار', masteredWords: 'واژه‌های مسلط',
     loadingLevelWords: 'در حال بارگذاری واژه‌های این سطح...', noWordsInList: 'هنوز واژه‌ای در این فهرست نیست.',
     signInUnlock: 'برای باز کردن قفل وارد شوید:',
+    signInUnlockTopicsHint: 'پوشش و دقت هر موضوع واژگان را ببینید.',
     signInBtn: 'ورود',
     signInPrompt: 'برای همگام‌سازی پیشرفت بین دستگاه‌ها وارد شوید.',
     guestProfileEmpty: 'برای دیدن آمار این سطح، یک آزمون کامل کنید.',
@@ -1100,6 +1104,7 @@ const PROFILE_I18N = {
     seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова', masteredWords: 'Освоенные слова',
     loadingLevelWords: 'Загрузка слов для этого уровня...', noWordsInList: 'В этом списке пока нет слов.',
     signInUnlock: 'Войдите, чтобы разблокировать:',
+    signInUnlockTopicsHint: 'Охват и точность по каждой теме словаря.',
     signInBtn: 'Войти',
     signInPrompt: 'Войдите, чтобы синхронизировать прогресс между устройствами.',
     guestProfileEmpty: 'Пройдите викторину на этом уровне, чтобы увидеть статистику.',
@@ -1126,6 +1131,7 @@ const PROFILE_I18N = {
     seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова', masteredWords: 'Опановані слова',
     loadingLevelWords: 'Завантаження слів для цього рівня...', noWordsInList: 'У цьому списку поки немає слів.',
     signInUnlock: 'Увійдіть, щоб розблокувати:',
+    signInUnlockTopicsHint: 'Охоплення й точність для кожної теми словника.',
     signInBtn: 'Увійти',
     signInPrompt: 'Увійдіть, щоб синхронізувати прогрес між пристроями.',
     guestProfileEmpty: 'Пройдіть вікторину на цьому рівні, щоб побачити статистику.',
@@ -1152,6 +1158,7 @@ const PROFILE_I18N = {
     seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة', masteredWords: 'الكلمات المتقنة',
     loadingLevelWords: 'جارٍ تحميل كلمات هذا المستوى...', noWordsInList: 'لا توجد كلمات في هذه القائمة بعد.',
     signInUnlock: 'سجّل الدخول للفتح:',
+    signInUnlockTopicsHint: 'التغطية والدقة لكل موضوع مفردات.',
     signInBtn: 'تسجيل الدخول',
     signInPrompt: 'سجّل الدخول لمزامنة تقدمك عبر الأجهزة.',
     guestProfileEmpty: 'أكمل اختباراً على هذا المستوى لرؤية الإحصائيات هنا.',
@@ -3287,6 +3294,15 @@ function renderLearningProfile() {
         reviewBtn('recent', _lp('reviewRecentMistakes')) +
         reviewBtn('mixed', _lp('reviewMixedPractice')) +
       '</div>';
+  var topicsSectionHtml = isGuest
+    ? '<div class="profile-signin-unlock">' +
+        '<div class="profile-signin-unlock-head profile-signin-unlock-head--compact">' +
+          '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
+          '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
+        '</div>' +
+        '<p class="profile-signin-unlock-hint">' + escHtml(_lp('signInUnlockTopicsHint')) + '</p>' +
+      '</div>'
+    : topicsHtml;
 
   el.innerHTML =
     adaptiveSection +
@@ -3308,11 +3324,11 @@ function renderLearningProfile() {
           stat(_lp('incorrectAnswers'), activity.incorrectAnswers) +
         '</div>' +
       '</div></div>' +
-    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('topics')) + '</div>' +
-      topicsHtml +
-    '</div>' +
     '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('review')) + '</div>' +
       reviewSectionHtml +
+    '</div>' +
+    '<div class="profile-section"><div class="profile-section-title">' + escHtml(_lp('topics')) + '</div>' +
+      topicsSectionHtml +
     '</div>' +
     '<div class="profile-section profile-danger-zone">' +
       '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
