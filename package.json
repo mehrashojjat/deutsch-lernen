@@ -1,5 +1,6 @@
 {
   "name": "wortschatz",
+  "description": "German vocabulary app — static web root with npm dev server",
   "private": true,
   "type": "module",
   "scripts": {

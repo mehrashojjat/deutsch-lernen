@@ -1,10 +1,10 @@
 // ══════════════════════════════════════════════════════════════════
 //  AUTHENTICATION & SUPABASE PERSISTENCE
 //
-//  On sign-in ALL three levels (A1, A2, B1) are fetched in parallel
+//  On sign-in all four levels (A1, A2, B1, ALL) are fetched in parallel
 //  and cached in _progressCache.  Level switches use the cache —
-//  no extra DB round-trips.  Each level's evaluation stage, skill
-//  level, word history and recency list are stored independently.
+//  no extra DB round-trips.  Legacy A1/A2/B1 and Adaptive V2 (ALL)
+//  progress are stored independently.
 //
 //  Mid-quiz abandonment protection:
 //    A snapshot of the active level's progress is taken at quiz start.
@@ -18,7 +18,8 @@
 //    passed_words → { evaluationStage, recentWords }  (metadata)
 //    quiz_stats   → progress.quizStats      (quiz completion counters)
 //
-//  Guest users: no DB interaction, no adaptive algorithm.
+//  Guest users: no DB interaction; adaptive engines run locally via
+//  localStorage (deutsch_adaptive_v2_progress + per-level legacy keys).
 // ══════════════════════════════════════════════════════════════════
 (function () {
   'use strict';

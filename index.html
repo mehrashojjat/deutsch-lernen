@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Wortschatz — Free German Vocabulary Game</title>
-<meta name="description" content="Wortschatz is a free mini-game to practice and memorize German vocabulary. Study Goethe-Institut word lists through interactive multiple-choice quizzes — no paywall, no account needed.">
+<meta name="description" content="Free German vocabulary app with adaptive quizzes, flashcard practice, theme quizzes, and a learning profile. Goethe-Institut A1–B1 lists (~6 000 words). No paywall; optional Google sign-in syncs progress.">
 <meta name="keywords" content="Wortschatz, German vocabulary, learn German, German quiz, Goethe-Institut word list, free German game, German flashcards, vocabulary practice">
 <meta name="author" content="Mehras Hojjat">
 <meta name="robots" content="index, follow">
@@ -26,7 +26,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wortschatzapp.de/">
 <meta property="og:title" content="Wortschatz — Free German Vocabulary Game">
-<meta property="og:description" content="A free mini-game to practice and memorize German vocabulary. Study Goethe-Institut word lists through interactive multiple-choice quizzes — no paywall, no account needed.">
+<meta property="og:description" content="Adaptive German vocabulary quizzes, flashcard practice, theme quizzes, and progress tracking. Goethe-Institut A1–B1 word lists. Free — optional sign-in to sync.">
 <meta property="og:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
 <meta property="og:site_name" content="Wortschatz">
 <meta property="og:locale" content="en">
@@ -34,7 +34,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wortschatz — Free German Vocabulary Game">
-<meta name="twitter:description" content="A free mini-game to practice and memorize German vocabulary. Goethe-Institut word lists, multiple-choice quizzes, no paywall.">
+<meta name="twitter:description" content="Adaptive German vocabulary app: quizzes, practice cards, learning profile. Goethe-Institut A1–B1. Free with optional progress sync.">
 <meta name="twitter:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
 
 <!-- Structured Data (JSON-LD) -->
@@ -44,7 +44,7 @@
   "@type": "WebApplication",
   "name": "Wortschatz",
   "url": "https://wortschatzapp.de/",
-  "description": "A free mini-game to practice and memorize German vocabulary through interactive multiple-choice quizzes based on Goethe-Institut word lists.",
+  "description": "Free German vocabulary app with adaptive quizzes, flashcard practice, theme quizzes, and a learning profile. Based on Goethe-Institut A1–B1 word lists.",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Any",
   "offers": {
@@ -794,7 +794,7 @@ body.practice-setup-scroll-lock .settings-btn{right:max(14px,calc(50vw - 286px))
   <button class="app-back-btn hidden" id="app-back-btn" onclick="_appBackAction()"></button>
   <div class="app-header-center">
     <h1 onclick="goHome()">Wortschatz</h1>
-    <p id="header-sub">Word Practice · Cases · Verb Forms</p>
+    <p id="header-sub">Adaptive quizzes · Practice · Learning profile</p>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="Settings">⛭</button>
 </div>
@@ -881,7 +881,7 @@ body.practice-setup-scroll-lock .settings-btn{right:max(14px,calc(50vw - 286px))
 <div class="about-modal-overlay" id="about-modal-overlay" onclick="closeAbout(event)">
   <div class="about-modal">
     <h3 id="about-title">About</h3>
-    <p id="about-p1">I built this free mini-game for myself — a simple way to practice German without any paywalls. I wanted it available as a free resource for anyone learning German.</p>
+    <p id="about-p1">I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.</p>
     <p id="about-p2">Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
     <p id="about-p3">Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.</p>
     <p id="about-p4">Originally named DeutschLernen during early development.</p>

@@ -1,7 +1,7 @@
 {
   "name": "Wortschatz",
   "short_name": "Wortschatz",
-  "description": "A gamified quiz app to practice and memorize German vocabulary",
+  "description": "Adaptive German vocabulary quizzes, flashcard practice, and learning profile",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f0e8",
