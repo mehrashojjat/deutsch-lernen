@@ -2583,58 +2583,103 @@ function _buildThemeCoverageQueue(pool, categoryId, skillLevel) {
     ? window._adaptiveV2GetProgress() : null;
   var catKey = _categorySlug(categoryId);
   var themeSeenMeta = {};
+  var themeRecentSet = {};
   if (progress && progress.quizStats && progress.quizStats.theme && progress.quizStats.theme[catKey]) {
-    (progress.quizStats.theme[catKey].seenWordIds || []).forEach(function(id) {
+    var themeEntry = progress.quizStats.theme[catKey];
+    (themeEntry.seenWordIds || []).forEach(function(id) {
       themeSeenMeta[String(id)] = true;
+    });
+    (themeEntry.themeRecentWords || []).forEach(function(id) {
+      themeRecentSet[String(id)] = true;
     });
   }
   function readStat(row) {
     if (progress && typeof window._adaptiveV2ReadWordStat === 'function') {
       return window._adaptiveV2ReadWordStat(progress, row.id);
     }
-    return { themeSeenCount: 0, failScore: 0 };
+    return { themeSeenCount: 0, failScore: 0, lastSeenQuiz: 0 };
   }
   function diffGap(row) {
     var d = parseInt(row.difficulty, 10);
     if (!(d >= 1 && d <= 10)) return 99;
     return Math.abs(d - skillLevel);
   }
-  function bucket(row) {
+  function cmpId(a, b) {
+    return String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
+  }
+  function toItem(row) {
     var st = readStat(row);
-    var themeSeen = Number(st.themeSeenCount) || 0;
-    if (themeSeen === 0 && !themeSeenMeta[String(row.id)]) return 0;
-    if ((Number(st.failScore) || 0) > 0) return 1;
-    return 2;
+    return {
+      row: row,
+      id: String(row.id),
+      failScore: Number(st.failScore) || 0,
+      themeSeenCount: Number(st.themeSeenCount) || 0,
+      lastSeenQuiz: Number(st.lastSeenQuiz) || 0,
+      diffGap: diffGap(row),
+      inRecent: !!themeRecentSet[String(row.id)]
+    };
   }
-  var sorted = pool.slice().sort(function(a, b) {
-    var ba = bucket(a);
-    var bb = bucket(b);
-    if (ba !== bb) return ba - bb;
-    if (ba === 2) {
-      var ta = Number(readStat(a).themeSeenCount) || 0;
-      var tb = Number(readStat(b).themeSeenCount) || 0;
-      if (ta !== tb) return ta - tb;
+  function isThemeUnseen(item) {
+    return item.themeSeenCount === 0 && !themeSeenMeta[item.id] && item.failScore === 0;
+  }
+  function isStable(item) {
+    return item.failScore === 0 && (item.themeSeenCount > 0 || themeSeenMeta[item.id]);
+  }
+  var items = pool.map(toItem);
+  var unseenRanked = items.filter(isThemeUnseen).sort(function(a, b) {
+    if (a.inRecent !== b.inRecent) return a.inRecent ? 1 : -1;
+    if (a.lastSeenQuiz !== b.lastSeenQuiz) return a.lastSeenQuiz - b.lastSeenQuiz;
+    if (a.themeSeenCount !== b.themeSeenCount) return a.themeSeenCount - b.themeSeenCount;
+    if (a.diffGap !== b.diffGap) return a.diffGap - b.diffGap;
+    return cmpId(a, b);
+  });
+  var strugglingRanked = items.filter(function(i) { return i.failScore > 0; }).sort(function(a, b) {
+    if (b.failScore !== a.failScore) return b.failScore - a.failScore;
+    if (a.lastSeenQuiz !== b.lastSeenQuiz) return a.lastSeenQuiz - b.lastSeenQuiz;
+    if (a.diffGap !== b.diffGap) return a.diffGap - b.diffGap;
+    return cmpId(a, b);
+  });
+  var stableRanked = items.filter(isStable).sort(function(a, b) {
+    if (a.themeSeenCount !== b.themeSeenCount) return a.themeSeenCount - b.themeSeenCount;
+    if (a.lastSeenQuiz !== b.lastSeenQuiz) return a.lastSeenQuiz - b.lastSeenQuiz;
+    if (a.diffGap !== b.diffGap) return a.diffGap - b.diffGap;
+    return cmpId(a, b);
+  });
+  var challengeRanked = items.slice().sort(function(a, b) {
+    if (a.diffGap !== b.diffGap) return a.diffGap - b.diffGap;
+    if (a.inRecent !== b.inRecent) return a.inRecent ? 1 : -1;
+    if (a.lastSeenQuiz !== b.lastSeenQuiz) return a.lastSeenQuiz - b.lastSeenQuiz;
+    return cmpId(a, b);
+  });
+  function takeFrom(ranked, count, used) {
+    var picked = [];
+    for (var i = 0; i < ranked.length && picked.length < count; i++) {
+      if (used[ranked[i].id]) continue;
+      used[ranked[i].id] = true;
+      picked.push(ranked[i].row);
     }
-    var da = diffGap(a);
-    var db = diffGap(b);
-    if (da !== db) return da - db;
-    return Math.random() - 0.5;
-  });
-  var selected = [];
-  var used = {};
-  sorted.forEach(function(r) {
-    if (selected.length >= QUIZ_LEN || used[r.id]) return;
-    used[r.id] = true;
-    selected.push(r);
-  });
-  if (selected.length < QUIZ_LEN) {
-    shuffle(pool).forEach(function(r) {
-      if (selected.length >= QUIZ_LEN || used[r.id]) return;
-      used[r.id] = true;
-      selected.push(r);
-    });
+    return picked;
   }
-  return _buildThemeQueueFromV2Rows(selected);
+  var used = {};
+  var selected = [];
+  selected = selected.concat(takeFrom(unseenRanked, 4, used));
+  selected = selected.concat(takeFrom(strugglingRanked, 3, used));
+  selected = selected.concat(takeFrom(stableRanked, 2, used));
+  selected = selected.concat(takeFrom(challengeRanked, 1, used));
+  var fillPools = [unseenRanked, strugglingRanked, stableRanked, challengeRanked, items];
+  while (selected.length < QUIZ_LEN) {
+    var added = false;
+    for (var p = 0; p < fillPools.length; p++) {
+      var extra = takeFrom(fillPools[p], 1, used);
+      if (extra.length) {
+        selected = selected.concat(extra);
+        added = true;
+        break;
+      }
+    }
+    if (!added) break;
+  }
+  return _buildThemeQueueFromV2Rows(shuffle(selected));
 }
 
 function _buildThemeQueueFromV2Rows(rows) {

@@ -1102,15 +1102,32 @@
       incorrectAnswers: Number(entry.incorrectAnswers) || 0,
       studyTimeSeconds: Number(entry.studyTimeSeconds) || 0,
       seenWordIds: Array.isArray(entry.seenWordIds) ? entry.seenWordIds.map(String) : [],
+      themeRecentWords: Array.isArray(entry.themeRecentWords) ? entry.themeRecentWords.map(String) : [],
       lastSeenAt: Number(entry.lastSeenAt) || 0
     };
   }
 
+  function _updateThemeRecentWords(themeEntry, wordIds) {
+    themeEntry = _normalizeThemeStatEntry(themeEntry);
+    var rw = themeEntry.themeRecentWords.slice();
+    (wordIds || []).forEach(function (id) {
+      id = String(id);
+      if (!id) return;
+      var i = rw.indexOf(id);
+      if (i !== -1) rw.splice(i, 1);
+      rw.push(id);
+    });
+    themeEntry.themeRecentWords = rw.slice(-RECENT_LIMIT);
+    return themeEntry;
+  }
+
   function _applyThemeWordResults(p, answers) {
+    if (answers.length) _quizCounter++;
     answers.forEach(function (a) {
       var w = _wordStat(p, a.wordId);
       w.seenCount++;
       w.themeSeenCount = (Number(w.themeSeenCount) || 0) + 1;
+      w.lastSeenQuiz = _quizCounter;
       if (a.correct) {
         w.correctCount++;
         w.failScore = Math.max(0, w.failScore - 1);
@@ -1371,10 +1388,15 @@
     if (answers.length) {
       var seenSet = {};
       themeEntry.seenWordIds.forEach(function (id) { seenSet[id] = true; });
+      var recentIds = [];
       answers.forEach(function (a) {
-        if (a && a.wordId) seenSet[String(a.wordId)] = true;
+        if (a && a.wordId) {
+          seenSet[String(a.wordId)] = true;
+          recentIds.push(String(a.wordId));
+        }
       });
       themeEntry.seenWordIds = Object.keys(seenSet);
+      themeEntry = _updateThemeRecentWords(themeEntry, recentIds);
     }
     themeEntry.lastSeenAt = Date.now();
     p.quizStats.theme[catKey] = themeEntry;

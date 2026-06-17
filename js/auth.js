@@ -426,6 +426,8 @@
     entry = (entry && typeof entry === 'object') ? entry : {};
     base.seenWordIds = Array.isArray(entry.seenWordIds)
       ? entry.seenWordIds.map(function (id) { return String(id); }) : [];
+    base.themeRecentWords = Array.isArray(entry.themeRecentWords)
+      ? entry.themeRecentWords.map(function (id) { return String(id); }) : [];
     base.lastSeenAt = Number(entry.lastSeenAt) || 0;
     return base;
   }
@@ -447,12 +449,22 @@
     var seenSet = {};
     a.seenWordIds.forEach(function (id) { seenSet[id] = true; });
     b.seenWordIds.forEach(function (id) { seenSet[id] = true; });
+    var recent = a.themeRecentWords.concat(b.themeRecentWords);
+    var recentSeen = {};
+    var mergedRecent = [];
+    recent.forEach(function (id) {
+      if (recentSeen[id]) return;
+      recentSeen[id] = true;
+      mergedRecent.push(id);
+    });
+    if (mergedRecent.length > 25) mergedRecent = mergedRecent.slice(-25);
     return {
       quizzesCompleted: Math.max(a.quizzesCompleted, b.quizzesCompleted),
       correctAnswers: Math.max(a.correctAnswers, b.correctAnswers),
       incorrectAnswers: Math.max(a.incorrectAnswers, b.incorrectAnswers),
       studyTimeSeconds: Math.max(a.studyTimeSeconds, b.studyTimeSeconds),
       seenWordIds: Object.keys(seenSet),
+      themeRecentWords: mergedRecent,
       lastSeenAt: Math.max(a.lastSeenAt, b.lastSeenAt)
     };
   }
