@@ -41,14 +41,21 @@ It runs entirely in the browser as a static HTML/JS app — no server required.
 ├── favicon.ico
 ├── apple-touch-icon.png
 ├── CNAME                    # GitHub Pages custom domain
-└── start_local_server.command  # macOS: double-click to serve locally
+└── package.json             # npm dev server + Cloudflare tunnel
 ```
 
 ---
 
 ## How to Run
 
-**Locally:** Double-click `start_local_server.command` (macOS), then open `http://localhost:8000` in your browser.
+**Locally:**
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000` in your browser. The dev script also starts a trusted Cloudflare HTTPS tunnel for mobile testing (Web Share, etc.).
 
 **Live:** Hosted at [wortschatzapp.de](https://wortschatzapp.de) via GitHub Pages.
 
