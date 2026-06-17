@@ -237,12 +237,20 @@
     return out;
   }
 
+  async function _finalizeV2Progress(userId, progress, opts) {
+    opts = opts || {};
+    var changed = typeof window._v2RepairProgressWordIds === 'function' &&
+      window._v2RepairProgressWordIds(progress);
+    _progressCache[V2_LEVEL] = progress;
+    if (changed || opts.persist) await _updateRow(userId, V2_LEVEL, progress);
+    return progress;
+  }
+
   async function _resolveAllProgress(userId, byLevel) {
     byLevel = byLevel || {};
     var online = byLevel[V2_LEVEL] ? _progressFromRow(byLevel[V2_LEVEL]) : null;
     if (_hasMeaningfulV2Progress(online)) {
-      _progressCache[V2_LEVEL] = online;
-      return online;
+      return _finalizeV2Progress(userId, online);
     }
 
     var local = null;
@@ -253,12 +261,10 @@
       var migrated = (typeof window._adaptiveV2MigrateProgress === 'function')
         ? window._adaptiveV2MigrateProgress(local)
         : local;
-      _progressCache[V2_LEVEL] = migrated;
-      await _updateRow(userId, V2_LEVEL, migrated);
       if (typeof window._adaptiveV2ClearGuestProgress === 'function') {
         window._adaptiveV2ClearGuestProgress();
       }
-      return migrated;
+      return _finalizeV2Progress(userId, migrated, { persist: true });
     }
 
     var legacyMap = _legacyProgressMapForBootstrap();
@@ -267,9 +273,7 @@
     });
     if (legacyHasData) {
       var boot = _bootstrapAllFromLegacy(legacyMap);
-      _progressCache[V2_LEVEL] = boot;
-      await _updateRow(userId, V2_LEVEL, boot);
-      return boot;
+      return _finalizeV2Progress(userId, boot, { persist: true });
     }
 
     await _ensureRow(userId, V2_LEVEL);

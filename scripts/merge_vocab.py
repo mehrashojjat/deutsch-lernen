@@ -112,6 +112,47 @@ def load_level(level: str, level_digit: int, path: Path) -> tuple[dict, dict, li
     return payload, sidecar, errors
 
 
+def collect_eligible_csv_ids() -> set[str]:
+    """Return unified id strings for every CSV main row that merge_vocab would include."""
+    ids: set[str] = set()
+    for level, level_digit, path in LEVELS:
+        with path.open(newline="", encoding="utf-8") as fh:
+            reader = csv.DictReader(fh)
+            for row in reader:
+                parsed = parse_row(row, level, level_digit)
+                if parsed:
+                    ids.add(str(parsed[0]))
+    return ids
+
+
+def check_output_parity(payload: dict[str, list], sidecar: dict[str, dict]) -> list[str]:
+    """Ensure min payload, map sidecar, and eligible CSV rows share identical key sets."""
+    errors: list[str] = []
+    payload_keys = set(payload.keys())
+    sidecar_keys = set(sidecar.keys())
+
+    if payload_keys != sidecar_keys:
+        only_min = sorted(payload_keys - sidecar_keys, key=int)[:5]
+        only_map = sorted(sidecar_keys - payload_keys, key=int)[:5]
+        errors.append(
+            "vocabulary.v2.min.json keys differ from vocabulary.v2.map.json entries "
+            f"(only in min: {', '.join(only_min) or 'none'}; "
+            f"only in map: {', '.join(only_map) or 'none'})"
+        )
+
+    csv_ids = collect_eligible_csv_ids()
+    missing_from_json = sorted(csv_ids - payload_keys, key=int)
+    extra_in_json = sorted(payload_keys - csv_ids, key=int)
+    if missing_from_json:
+        sample = ", ".join(missing_from_json[:5])
+        errors.append(f"Eligible CSV rows missing from JSON ({len(missing_from_json)}): {sample}")
+    if extra_in_json:
+        sample = ", ".join(extra_in_json[:5])
+        errors.append(f"JSON entries not sourced from eligible CSV rows ({len(extra_in_json)}): {sample}")
+
+    return errors
+
+
 def validate(payload: dict[str, list], sidecar: dict[str, dict]) -> list[str]:
     errors: list[str] = []
     ids = list(payload.keys())
@@ -188,6 +229,7 @@ def main() -> int:
 
     validation_errors = validate(merged, sidecar)
     all_errors.extend(validation_errors)
+    all_errors.extend(check_output_parity(merged, sidecar))
 
     out_min = DATA_DIR / "vocabulary.v2.min.json"
     out_map = DATA_DIR / "vocabulary.v2.map.json"

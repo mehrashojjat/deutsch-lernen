@@ -2019,6 +2019,66 @@ function _v2IsUnifiedId(id) {
   return c === '1' || c === '2' || c === '3';
 }
 
+function _v2VocabHasId(id) {
+  return !!(V2_VOCAB && V2_VOCAB[String(id)]);
+}
+
+function _v2CanonicalProgressId(id) {
+  var sid = String(id);
+  if (!V2_VOCAB) return sid;
+  while (!_v2VocabHasId(sid) && _v2IsUnifiedId(sid) && sid.length > 1) {
+    var prefix = sid[0];
+    var stripped = sid.slice(1);
+    if (!_v2IsUnifiedId(stripped) || stripped[0] !== prefix) break;
+    sid = stripped;
+  }
+  return sid;
+}
+
+function _mergeV2WordStats(a, b) {
+  a = a || {};
+  b = b || {};
+  return {
+    failScore: Math.max(Number(a.failScore) || 0, Number(b.failScore) || 0),
+    seenCount: Math.max(Number(a.seenCount) || 0, Number(b.seenCount) || 0),
+    correctCount: Math.max(Number(a.correctCount) || 0, Number(b.correctCount) || 0),
+    lastSeenQuiz: Math.max(Number(a.lastSeenQuiz) || 0, Number(b.lastSeenQuiz) || 0),
+    themeSeenCount: Math.max(Number(a.themeSeenCount) || 0, Number(b.themeSeenCount) || 0),
+    adaptiveSeenCount: Math.max(Number(a.adaptiveSeenCount) || 0, Number(b.adaptiveSeenCount) || 0)
+  };
+}
+
+function _v2RepairProgressWordIds(progress) {
+  if (!progress || !progress.words) return false;
+  var words = progress.words;
+  var nextWords = {};
+  var changed = false;
+  Object.keys(words).forEach(function(id) {
+    var canonical = _v2CanonicalProgressId(id);
+    if (canonical !== String(id)) changed = true;
+    if (nextWords[canonical]) changed = true;
+    nextWords[canonical] = _mergeV2WordStats(nextWords[canonical], words[id]);
+  });
+  if (Object.keys(nextWords).length !== Object.keys(words).length) changed = true;
+  progress.words = nextWords;
+  if (Array.isArray(progress.recentWords)) {
+    var seen = {};
+    var rw = [];
+    progress.recentWords.forEach(function(id) {
+      var c = _v2CanonicalProgressId(id);
+      if (String(id) !== c) changed = true;
+      if (!seen[c]) {
+        seen[c] = true;
+        rw.push(c);
+      } else {
+        changed = true;
+      }
+    });
+    progress.recentWords = rw;
+  }
+  return changed;
+}
+
 function _syncCsvQuizDataFromV2() {
   if (!V2_QUIZ_ROWS) return;
   CSV_QUIZ_DATA.A1 = [];
@@ -2100,13 +2160,17 @@ function _loadV2Vocab() {
   _v2LoadPromise = _loadText('data/vocabulary.v2.min.json')
     .then(function(txt) {
       var parsed = JSON.parse(txt);
+      var vocabKeys = Object.keys(parsed);
       V2_VOCAB = parsed;
-      V2_QUIZ_ROWS = Object.keys(parsed).map(function(id) {
+      V2_QUIZ_ROWS = vocabKeys.map(function(id) {
         return _v2EntryToRow(id, parsed[id]);
       }).filter(function(r) {
         return r.translation_en && r.translation_en.trim();
       });
       if (!V2_QUIZ_ROWS.length) throw new Error('Vocabulary parsed but produced 0 quiz rows');
+      if (V2_QUIZ_ROWS.length !== vocabKeys.length && console && console.warn) {
+        console.warn('[vocab] quiz rows', V2_QUIZ_ROWS.length, 'vs vocabulary.v2.min.json keys', vocabKeys.length);
+      }
       _syncCsvQuizDataFromV2();
       return V2_VOCAB;
     })
@@ -2122,6 +2186,8 @@ window._v2BandFromId = _v2BandFromId;
 window._v2ToUnifiedId = _v2ToUnifiedId;
 window._v2IsUnifiedId = _v2IsUnifiedId;
 window._v2MigrateLevelProgressIds = _v2MigrateLevelProgressIds;
+window._v2CanonicalProgressId = _v2CanonicalProgressId;
+window._v2RepairProgressWordIds = _v2RepairProgressWordIds;
 
 function _v2ResolveRowId(level, id) {
   var sid = String(id);
@@ -2133,6 +2199,7 @@ function _v2ResolveRowId(level, id) {
 function _v2RowLookup(level, id) {
   var sid = String(id);
   if (level === 'ALL') {
+    sid = _v2CanonicalProgressId(sid);
     if (typeof window._v2RowById === 'function') {
       var byId = window._v2RowById(sid);
       if (byId) return byId;

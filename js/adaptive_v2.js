@@ -72,6 +72,12 @@
     return String(parseInt(String(digit) + String(srcId), 10));
   }
 
+  function _toUnifiedIdSafe(level, srcId) {
+    var sid = String(srcId);
+    if (window._v2IsUnifiedId && window._v2IsUnifiedId(sid)) return sid;
+    return _toUnifiedId(level, sid);
+  }
+
   window._v2BandFromId = function (id) {
     var d = String(id || '')[0];
     if (d === '2') return 'A2';
@@ -204,7 +210,7 @@
       var p = legacyByLevel[lv];
       if (!p) return;
       Object.keys(p.words || {}).forEach(function (srcId) {
-        var uid = _toUnifiedId(lv, srcId);
+        var uid = _toUnifiedIdSafe(lv, srcId);
         var w = p.words[srcId];
         if (!w) return;
         if (!mergedWords[uid]) {
@@ -219,7 +225,7 @@
         dst.correctCount = Math.max(Number(dst.correctCount) || 0, Number(w.correctCount) || 0);
       });
       (p.recentWords || []).forEach(function (srcId) {
-        mergedRecent.push(_toUnifiedId(lv, srcId));
+        mergedRecent.push(_toUnifiedIdSafe(lv, srcId));
       });
     });
 
@@ -280,6 +286,9 @@
     if (p.challengeLowStreak == null) p.challengeLowStreak = 0;
     if (isNaN(p.skillLevel) || p.skillLevel < 1) p.skillLevel = 1;
     if (isNaN(p.evaluationStage)) p.evaluationStage = 0;
+    if (typeof window._v2RepairProgressWordIds === 'function') {
+      if (window._v2RepairProgressWordIds(p) && !_accountMode) _saveToLocal(p);
+    }
     return p;
   }
 
@@ -335,7 +344,8 @@
         _saveToLocal(loaded);
       }
     }
-    return _migrateProgress(loaded || _initProgress(), null);
+    var result = _migrateProgress(loaded || _initProgress(), null);
+    return result;
   }
 
   function _get() {
