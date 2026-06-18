@@ -11017,14 +11017,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Das Seminar ist zweitägig und endet am Freitag.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "two-day",
+        "tr": "iki günlük",
+        "fa": "دوروزه",
+        "ru": "двухдневный",
+        "uk": "дводенний",
+        "ar": "لمدة يومين"
       }
     },
     "34823": {
@@ -11037,14 +11037,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Montags gehe ich nach der Arbeit schwimmen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on Mondays",
+        "tr": "pazartesileri",
+        "fa": "دوشنبه‌ها",
+        "ru": "по понедельникам",
+        "uk": "щопонеділка",
+        "ar": "أيام الاثنين"
       }
     },
     "34824": {
@@ -11057,14 +11057,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Dienstags findet der Yogakurs statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on Tuesdays",
+        "tr": "salıları",
+        "fa": "سه‌شنبه‌ها",
+        "ru": "по вторникам",
+        "uk": "щовівторка",
+        "ar": "أيام الثلاثاء"
       }
     },
     "34825": {
@@ -11077,14 +11077,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Mittwochs trainieren wir in der Turnhalle.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on Wednesdays",
+        "tr": "çarşambaları",
+        "fa": "چهارشنبه‌ها",
+        "ru": "по средам",
+        "uk": "щосереди",
+        "ar": "أيام الأربعاء"
       }
     },
     "34826": {
@@ -11097,14 +11097,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Freitags treffen wir uns oft im Verein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on Fridays",
+        "tr": "cumaları",
+        "fa": "جمعه‌ها",
+        "ru": "по пятницам",
+        "uk": "щопʼятниці",
+        "ar": "أيام الجمعة"
       }
     },
     "34827": {
@@ -11117,14 +11117,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Sonntags bleibt das Vereinsbüro geschlossen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on Sundays",
+        "tr": "pazarları",
+        "fa": "یکشنبه‌ها",
+        "ru": "по воскресеньям",
+        "uk": "щонеділі",
+        "ar": "أيام الأحد"
       }
     },
     "34828": {
@@ -11137,14 +11137,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Kurs ist besonders für Einsteiger geeignet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "beginner / newcomer",
+        "tr": "yeni başlayan erkek",
+        "fa": "مبتدی مرد / تازه‌کار مرد",
+        "ru": "новичок",
+        "uk": "новачок",
+        "ar": "مبتدئ"
       }
     },
     "34829": {
@@ -11157,14 +11157,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Als Einsteigerin braucht sie zuerst einfache Übungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female beginner / newcomer",
+        "tr": "yeni başlayan kadın",
+        "fa": "مبتدی زن / تازه‌کار زن",
+        "ru": "новичок-женщина",
+        "uk": "новачка",
+        "ar": "مبتدئة"
       }
     },
     "34830": {
@@ -11177,14 +11177,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Für Anfänger gibt es einen langsamen Lauf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male beginner",
+        "tr": "erkek acemi / yeni başlayan",
+        "fa": "مبتدی مرد",
+        "ru": "начинающий",
+        "uk": "початківець",
+        "ar": "مبتدئ"
       }
     },
     "34831": {
@@ -11197,14 +11197,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Anfängerin lernt die Technik Schritt für Schritt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female beginner",
+        "tr": "kadın acemi / yeni başlayan",
+        "fa": "مبتدی زن",
+        "ru": "начинающая",
+        "uk": "початківиця",
+        "ar": "مبتدئة"
       }
     },
     "34832": {
@@ -11217,14 +11217,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Der Senior trainiert zweimal pro Woche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "senior man / elderly man",
+        "tr": "yaşlı erkek / kıdemli erkek",
+        "fa": "مرد سالمند / ارشد",
+        "ru": "пожилой мужчина / сеньор",
+        "uk": "літній чоловік / сеньйор",
+        "ar": "رجل مسن / كبير السن"
       }
     },
     "34833": {
@@ -11237,14 +11237,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Seniorin macht jeden Morgen Gymnastik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "senior woman / elderly woman",
+        "tr": "yaşlı kadın / kıdemli kadın",
+        "fa": "زن سالمند / ارشد زن",
+        "ru": "пожилая женщина",
+        "uk": "літня жінка",
+        "ar": "امرأة مسنة / كبيرة السن"
       }
     },
     "34834": {
@@ -11257,14 +11257,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Achtung! Der Boden ist nass.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "attention! / warning!",
+        "tr": "dikkat!",
+        "fa": "توجه! / مراقب باش!",
+        "ru": "внимание!",
+        "uk": "увага!",
+        "ar": "انتبه! / تحذير!"
       }
     },
     "34835": {
@@ -11277,14 +11277,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Mit regelmäßigem Training kann man die Leistung steigern.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to increase / to improve",
+        "tr": "artırmak / yükseltmek",
+        "fa": "افزایش دادن / بهتر کردن",
+        "ru": "повышать / увеличивать",
+        "uk": "підвищувати / збільшувати",
+        "ar": "يزيد / يحسن"
       }
     },
     "34836": {
@@ -11297,14 +11297,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Beim Stadtlauf bin ich dieses Jahr auch dabei.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be there / to take part",
+        "tr": "katılmak / orada olmak",
+        "fa": "حضور داشتن / شرکت داشتن",
+        "ru": "участвовать / быть при деле",
+        "uk": "брати участь / бути присутнім",
+        "ar": "يشارك / يكون حاضرًا"
       }
     },
     "34837": {
@@ -11317,14 +11317,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Gruppe ist gemischt, mit Kindern und Erwachsenen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mixed",
+        "tr": "karışık / karma",
+        "fa": "مختلط / ترکیبی",
+        "ru": "смешанный",
+        "uk": "змішаний",
+        "ar": "مختلط / متنوع"
       }
     },
     "34838": {
@@ -11337,14 +11337,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 1,
-      "example_de": "",
+      "example_de": "Der See ist fünf Kilometer von hier entfernt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "kilometer",
+        "tr": "kilometre",
+        "fa": "کیلومتر",
+        "ru": "километр",
+        "uk": "кілометр",
+        "ar": "كيلومتر"
       }
     },
     "34839": {
@@ -11357,14 +11357,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Wir laufen noch eine Runde um den Park.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "round / lap",
+        "tr": "tur / raunt",
+        "fa": "دور / مرحله",
+        "ru": "круг / раунд",
+        "uk": "коло / раунд",
+        "ar": "جولة / دورة"
       }
     },
     "34840": {
@@ -11377,14 +11377,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der DJ spielt Musik bis Mitternacht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "DJ",
+        "tr": "DJ / disk jokey",
+        "fa": "دی‌جی",
+        "ru": "диджей",
+        "uk": "діджей",
+        "ar": "دي جي"
       }
     },
     "34841": {
@@ -11397,14 +11397,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Heute Abend legt ein bekannter DJ im Club auf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to DJ / to play records",
+        "tr": "DJ’lik yapmak / müzik çalmak",
+        "fa": "دی‌جی کردن / موسیقی پخش کردن",
+        "ru": "играть музыку как диджей",
+        "uk": "грати музику як діджей",
+        "ar": "يشغل الموسيقى كدي جي"
       }
     },
     "34842": {
@@ -11417,14 +11417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für den Wettkampf gilt ein Mindestalter von sechzehn Jahren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "minimum age",
+        "tr": "asgari yaş / minimum yaş",
+        "fa": "حداقل سن",
+        "ru": "минимальный возраст",
+        "uk": "мінімальний вік",
+        "ar": "الحد الأدنى للعمر"
       }
     },
     "34843": {
@@ -11437,14 +11437,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Verein veranstaltet jedes Jahr ein Turnier.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to organize / to hold an event",
+        "tr": "düzenlemek",
+        "fa": "برگزار کردن",
+        "ru": "организовывать / проводить",
+        "uk": "організовувати / проводити",
+        "ar": "ينظم / يقيم"
       }
     },
     "34844": {
@@ -11457,14 +11457,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Veranstalter informiert die Teilnehmer per E-Mail.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "organizer",
+        "tr": "organizatör / düzenleyen kişi",
+        "fa": "برگزارکننده مرد / سازمان‌دهنده",
+        "ru": "организатор",
+        "uk": "організатор",
+        "ar": "منظم الفعالية"
       }
     },
     "34845": {
@@ -11477,14 +11477,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Läufer erreicht das Ziel nach einer Stunde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male runner",
+        "tr": "erkek koşucu",
+        "fa": "دونده مرد",
+        "ru": "бегун",
+        "uk": "бігун",
+        "ar": "عداء"
       }
     },
     "34846": {
@@ -11497,14 +11497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Läuferin bereitet sich auf den Marathon vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female runner",
+        "tr": "kadın koşucu",
+        "fa": "دونده زن",
+        "ru": "бегунья",
+        "uk": "бігунка",
+        "ar": "عداءة"
       }
     },
     "34847": {
@@ -11517,14 +11517,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Auch Kinder dürfen beim kurzen Lauf mitlaufen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to run along / to take part in a run",
+        "tr": "birlikte koşmak / koşuya katılmak",
+        "fa": "همراه دویدن / در مسابقه دو شرکت کردن",
+        "ru": "бежать вместе / участвовать в забеге",
+        "uk": "бігти разом / брати участь у забігу",
+        "ar": "يركض مع / يشارك في السباق"
       }
     },
     "34848": {
@@ -11537,14 +11537,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Lauf durch die Stadt beginnt am Rathaus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "run / race",
+        "tr": "koşu / yarış",
+        "fa": "مسابقه دو / دویدن",
+        "ru": "забег / бег",
+        "uk": "забіг / біг",
+        "ar": "سباق جري / ركض"
       }
     },
     "34849": {
@@ -11557,14 +11557,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Mit jeder Spende helfen wir dem Jugendteam.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "donation",
+        "tr": "bağış",
+        "fa": "کمک مالی / اهدا",
+        "ru": "пожертвование",
+        "uk": "пожертва",
+        "ar": "تبرع"
       }
     },
     "34850": {
@@ -11577,14 +11577,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Spender möchte anonym bleiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male donor",
+        "tr": "erkek bağışçı",
+        "fa": "اهداکننده مرد / کمک‌کننده مرد",
+        "ru": "донор / жертвователь",
+        "uk": "донор / жертводавець",
+        "ar": "متبرع"
       }
     },
     "34851": {
@@ -11597,14 +11597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Spenderin unterstützt den Verein regelmäßig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female donor",
+        "tr": "kadın bağışçı",
+        "fa": "اهداکننده زن / کمک‌کننده زن",
+        "ru": "донор-женщина / жертвовательница",
+        "uk": "донорка / жертводавиця",
+        "ar": "متبرعة"
       }
     },
     "34852": {
@@ -11617,14 +11617,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Um neun Uhr laufen alle Teilnehmer los.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to start running",
+        "tr": "koşmaya başlamak",
+        "fa": "شروع به دویدن کردن",
+        "ru": "начать бежать",
+        "uk": "почати бігти",
+        "ar": "ينطلق راكضًا"
       }
     },
     "34853": {
@@ -11637,14 +11637,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Für das Training brauche ich neue Sportschuhe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "sports shoe",
+        "tr": "spor ayakkabısı",
+        "fa": "کفش ورزشی",
+        "ru": "спортивная обувь / кроссовок",
+        "uk": "спортивне взуття / кросівок",
+        "ar": "حذاء رياضي"
       }
     },
     "34854": {
@@ -11657,14 +11657,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Wir fahren morgen früh in den Urlaub weg.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to leave / to go away by vehicle",
+        "tr": "yola çıkmak / uzaklaşmak",
+        "fa": "راه افتادن / با وسیله رفتن",
+        "ru": "уезжать",
+        "uk": "відʼїжджати",
+        "ar": "يغادر / يسافر"
       }
     },
     "34855": {
@@ -11677,14 +11677,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte ruf mich an, bevor du losfährst.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "before",
+        "tr": "önce / -meden önce",
+        "fa": "قبل از اینکه",
+        "ru": "прежде чем / до того как",
+        "uk": "перед тим як",
+        "ar": "قبل أن"
       }
     },
     "34856": {
@@ -11697,14 +11697,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir treffen uns um acht Uhr, davor habe ich noch Zeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "before that",
+        "tr": "ondan önce",
+        "fa": "قبل از آن",
+        "ru": "до этого",
+        "uk": "до цього",
+        "ar": "قبل ذلك"
       }
     },
     "34857": {
@@ -11717,14 +11717,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Umfrage ergibt ein klares Ergebnis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to result in / to produce",
+        "tr": "sonuç vermek / ortaya çıkarmak",
+        "fa": "نتیجه دادن / به دست آمدن",
+        "ru": "давать результат / получаться",
+        "uk": "давати результат / виходити",
+        "ar": "ينتج / يسفر عن"
       }
     },
     "34858": {
@@ -11737,14 +11737,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Der Verein bekam eine großzügige Spende.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "generous",
+        "tr": "cömert",
+        "fa": "سخاوتمندانه / دست‌ودل‌باز",
+        "ru": "щедрый",
+        "uk": "щедрий",
+        "ar": "كريم / سخي"
       }
     },
     "34859": {
@@ -11757,14 +11757,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Jugendteam trainiert jeden Mittwoch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "youth team",
+        "tr": "genç takımı",
+        "fa": "تیم جوانان",
+        "ru": "молодёжная команда",
+        "uk": "молодіжна команда",
+        "ar": "فريق الشباب"
       }
     },
     "34860": {
@@ -11777,14 +11777,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Sportevent zieht viele Besucher an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "sports event",
+        "tr": "spor etkinliği",
+        "fa": "رویداد ورزشی",
+        "ru": "спортивное мероприятие",
+        "uk": "спортивний захід",
+        "ar": "فعالية رياضية"
       }
     },
     "34861": {
@@ -11797,14 +11797,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Unser Team nimmt an einem Turnier teil.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tournament",
+        "tr": "turnuva",
+        "fa": "تورنمنت / مسابقات",
+        "ru": "турнир",
+        "uk": "турнір",
+        "ar": "بطولة / دورة رياضية"
       }
     },
     "34862": {
@@ -11817,14 +11817,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Tennisturnier findet im Sommer statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tennis tournament",
+        "tr": "tenis turnuvası",
+        "fa": "مسابقات تنیس",
+        "ru": "теннисный турнир",
+        "uk": "тенісний турнір",
+        "ar": "بطولة تنس"
       }
     },
     "34863": {
@@ -11837,14 +11837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Für den Marathon trainiert er seit Monaten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "marathon",
+        "tr": "maraton",
+        "fa": "ماراتن",
+        "ru": "марафон",
+        "uk": "марафон",
+        "ar": "ماراثون"
       }
     },
     "34864": {
@@ -11857,14 +11857,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Mit der Tageskarte kann man alle Kurse besuchen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "day ticket / day pass",
+        "tr": "günlük bilet",
+        "fa": "بلیط روزانه",
+        "ru": "дневной билет",
+        "uk": "денний квиток",
+        "ar": "تذكرة يومية"
       }
     },
     "34865": {
@@ -11877,14 +11877,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Anmeldung ist im Vereinsbüro möglich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "club office",
+        "tr": "kulüp ofisi / dernek bürosu",
+        "fa": "دفتر باشگاه / دفتر انجمن",
+        "ru": "офис клуба",
+        "uk": "офіс клубу",
+        "ar": "مكتب النادي"
       }
     },
     "34866": {
@@ -11897,14 +11897,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Buslinie fährt direkt zum Stadion.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bus line",
+        "tr": "otobüs hattı",
+        "fa": "خط اتوبوس",
+        "ru": "автобусный маршрут",
+        "uk": "автобусна лінія",
+        "ar": "خط الحافلات"
       }
     },
     "34867": {
@@ -11917,14 +11917,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach dem Training bin ich ein wenig müde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "a little / a bit",
+        "tr": "biraz",
+        "fa": "کمی / اندکی",
+        "ru": "немного",
+        "uk": "трохи",
+        "ar": "قليلًا"
       }
     },
     "34868": {
@@ -11937,14 +11937,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Das ist keine gute Ausrede für die Verspätung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "excuse",
+        "tr": "bahane / mazeret",
+        "fa": "بهانه / عذر",
+        "ru": "отговорка / оправдание",
+        "uk": "відмовка / виправдання",
+        "ar": "عذر / حجة"
       }
     },
     "34869": {
@@ -11957,14 +11957,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Er besitzt ein Fahrrad und ein kleines Auto.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to own / to possess",
+        "tr": "sahip olmak",
+        "fa": "داشتن / مالک بودن",
+        "ru": "владеть / обладать",
+        "uk": "володіти / мати",
+        "ar": "يمتلك"
       }
     },
     "34870": {
@@ -11977,14 +11977,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich verstehe nicht, weshalb du so früh gehst.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "why / for what reason",
+        "tr": "neden / niçin",
+        "fa": "چرا / به چه دلیل",
+        "ru": "почему / по какой причине",
+        "uk": "чому / з якої причини",
+        "ar": "لماذا / لأي سبب"
       }
     },
     "34871": {
@@ -11997,14 +11997,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Sie möchte in zwei Jahren ein Kind bekommen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to have a child",
+        "tr": "çocuk sahibi olmak",
+        "fa": "بچه‌دار شدن / فرزند آوردن",
+        "ru": "родить ребёнка / завести ребёнка",
+        "uk": "народити дитину / мати дитину",
+        "ar": "ينجب طفلًا / يحصل على طفل"
       }
     },
     "34872": {
