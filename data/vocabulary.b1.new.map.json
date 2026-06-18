@@ -18017,14 +18017,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Ich möchte noch ein paar Jahre in dieser Stadt hierbleiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to stay here",
+        "tr": "burada kalmak",
+        "fa": "اینجا ماندن",
+        "ru": "оставаться здесь",
+        "uk": "залишатися тут",
+        "ar": "يبقى هنا"
       }
     },
     "35173": {
@@ -18037,14 +18037,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Für den Test lerne ich jeden Tag neue Vokabeln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vocabulary word",
+        "tr": "kelime / sözcük",
+        "fa": "واژه / لغت",
+        "ru": "слово / лексическая единица",
+        "uk": "слово / лексична одиниця",
+        "ar": "مفردة / كلمة"
       }
     },
     "35174": {
@@ -18057,14 +18057,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Lebensqualität ist in dieser Stadt sehr hoch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "quality of life",
+        "tr": "yaşam kalitesi",
+        "fa": "کیفیت زندگی",
+        "ru": "качество жизни",
+        "uk": "якість життя",
+        "ar": "جودة الحياة"
       }
     },
     "35175": {
@@ -18077,14 +18077,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Die Digitalisierung verändert viele Arbeitsplätze.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "digitalization",
+        "tr": "dijitalleşme",
+        "fa": "دیجیتالی‌سازی / دیجیتالی شدن",
+        "ru": "цифровизация",
+        "uk": "цифровізація",
+        "ar": "الرقمنة"
       }
     },
     "35176": {
@@ -18097,14 +18097,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Bei vielen Anträgen gibt es zu viel Bürokratie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bureaucracy",
+        "tr": "bürokrasi",
+        "fa": "بوروکراسی / کاغذبازی اداری",
+        "ru": "бюрократия",
+        "uk": "бюрократія",
+        "ar": "بيروقراطية"
       }
     },
     "35177": {
@@ -18117,14 +18117,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Das Ergebnis der Prüfung war hervorragend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "excellent / outstanding",
+        "tr": "mükemmel / olağanüstü",
+        "fa": "عالی / برجسته",
+        "ru": "превосходный / выдающийся",
+        "uk": "відмінний / видатний",
+        "ar": "ممتاز / رائع"
       }
     },
     "35178": {
@@ -18137,14 +18137,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte beachten Sie Folgendes vor der Anmeldung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "the following",
+        "tr": "aşağıdaki / şu husus",
+        "fa": "مورد زیر / موارد زیر",
+        "ru": "следующее",
+        "uk": "наступне",
+        "ar": "ما يلي"
       }
     },
     "35179": {
@@ -18157,14 +18157,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Der Hund wirkt aggressiv, wenn man zu nah kommt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "aggressive",
+        "tr": "agresif / saldırgan",
+        "fa": "پرخاشگر / تهاجمی",
+        "ru": "агрессивный",
+        "uk": "агресивний",
+        "ar": "عدواني"
       }
     },
     "35180": {
@@ -18177,14 +18177,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Der Titel des Buches klingt interessant.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "title",
+        "tr": "başlık / unvan",
+        "fa": "عنوان / لقب",
+        "ru": "название / титул",
+        "uk": "назва / титул",
+        "ar": "عنوان / لقب"
       }
     },
     "35181": {
@@ -18197,14 +18197,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Ich werde ungeduldig, wenn ich lange warten muss.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "impatient",
+        "tr": "sabırsız",
+        "fa": "بی‌صبر / کم‌حوصله",
+        "ru": "нетерпеливый",
+        "uk": "нетерплячий",
+        "ar": "غير صبور"
       }
     },
     "35182": {
@@ -18217,14 +18217,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Vor dem Gespräch bin ich immer etwas nervös.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be nervous",
+        "tr": "gergin olmak / heyecanlı olmak",
+        "fa": "عصبی بودن / استرس داشتن",
+        "ru": "нервничать",
+        "uk": "нервувати",
+        "ar": "يكون متوترًا"
       }
     },
     "35183": {
@@ -18237,14 +18237,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach der langen Reise bin ich völlig erschöpft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be exhausted",
+        "tr": "bitkin olmak / tükenmiş olmak",
+        "fa": "خسته و فرسوده بودن",
+        "ru": "быть измотанным",
+        "uk": "бути виснаженим",
+        "ar": "يكون مرهقًا"
       }
     },
     "35184": {
@@ -18257,14 +18257,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Juhu! Wir haben die Prüfung bestanden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hooray! / yay!",
+        "tr": "yaşasın!",
+        "fa": "هورا! / آخ جون!",
+        "ru": "ура!",
+        "uk": "ура!",
+        "ar": "مرحى!"
       }
     },
     "35185": {
@@ -18277,14 +18277,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Stress ist endlich vorbei.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be over",
+        "tr": "bitmiş olmak / sona ermiş olmak",
+        "fa": "تمام شدن / گذشته بودن",
+        "ru": "закончиться / быть позади",
+        "uk": "закінчитися / минути",
+        "ar": "ينتهي / يكون قد مضى"
       }
     },
     "35186": {
@@ -18297,14 +18297,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach dem Arzttermin bin ich sehr erleichtert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be relieved",
+        "tr": "rahatlamış olmak",
+        "fa": "خیالش راحت شدن / آسوده شدن",
+        "ru": "быть облегчённым",
+        "uk": "відчувати полегшення",
+        "ar": "يشعر بالارتياح"
       }
     },
     "35187": {
@@ -18317,14 +18317,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach der Prüfung belohne ich mich mit einem Eis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to reward oneself",
+        "tr": "kendini ödüllendirmek",
+        "fa": "به خود پاداش دادن",
+        "ru": "наградить себя",
+        "uk": "винагородити себе",
+        "ar": "يكافئ نفسه"
       }
     },
     "35188": {
@@ -18337,14 +18337,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Ich bin gespannt, wie die Reise wird.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be curious / excited",
+        "tr": "meraklı olmak / heyecanla beklemek",
+        "fa": "مشتاق و کنجکاو بودن",
+        "ru": "с нетерпением ждать / быть заинтригованным",
+        "uk": "з нетерпінням чекати / бути зацікавленим",
+        "ar": "يكون متشوقًا / فضوليًا"
       }
     },
     "35189": {
@@ -18357,14 +18357,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Aus dem Urlaub schicke ich meiner Oma eine Postkarte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "postcard",
+        "tr": "kartpostal",
+        "fa": "کارت‌پستال",
+        "ru": "открытка",
+        "uk": "листівка",
+        "ar": "بطاقة بريدية"
       }
     },
     "35190": {
@@ -18377,14 +18377,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Mein ehemaliger Lehrer lebt jetzt in Köln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "former",
+        "tr": "eski / önceki",
+        "fa": "سابق / پیشین",
+        "ru": "бывший",
+        "uk": "колишній",
+        "ar": "سابق"
       }
     },
     "35191": {
@@ -18397,14 +18397,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Die Reisegruppe trifft sich am Bus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "travel group / tour group",
+        "tr": "seyahat grubu / tur grubu",
+        "fa": "گروه سفر / گروه تور",
+        "ru": "туристическая группа",
+        "uk": "туристична група",
+        "ar": "مجموعة سفر / مجموعة سياحية"
       }
     },
     "35192": {
@@ -18417,14 +18417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Wir treffen uns am Hauptbahnhof vor Gleis drei.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "central station / main train station",
+        "tr": "ana tren istasyonu",
+        "fa": "ایستگاه مرکزی قطار",
+        "ru": "главный вокзал",
+        "uk": "головний вокзал",
+        "ar": "محطة القطار الرئيسية"
       }
     },
     "35193": {
@@ -18437,14 +18437,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Verbindung nach Hamburg ist heute sehr gut.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "connection",
+        "tr": "bağlantı / sefer bağlantısı",
+        "fa": "ارتباط / مسیر اتصال",
+        "ru": "соединение / пересадка",
+        "uk": "сполучення / пересадка",
+        "ar": "اتصال / خط مواصلات"
       }
     },
     "35194": {
@@ -18457,14 +18457,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Das Zugticket habe ich online gekauft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "train ticket",
+        "tr": "tren bileti",
+        "fa": "بلیط قطار",
+        "ru": "билет на поезд",
+        "uk": "квиток на поїзд",
+        "ar": "تذكرة قطار"
       }
     },
     "35195": {
@@ -18477,14 +18477,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Mit dem Sparpreis ist die Reise viel günstiger.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "discount fare / saver fare",
+        "tr": "indirimli fiyat / ekonomik bilet",
+        "fa": "قیمت تخفیفی / کرایه اقتصادی",
+        "ru": "скидочный тариф",
+        "uk": "знижений тариф",
+        "ar": "سعر مخفض / تعرفة اقتصادية"
       }
     },
     "35196": {
@@ -18497,14 +18497,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich komme später nach, wenn mein Termin vorbei ist.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to follow / to come later",
+        "tr": "sonradan gelmek / yetişmek",
+        "fa": "بعداً آمدن / به دنبال آمدن",
+        "ru": "приходить позже / следовать",
+        "uk": "приходити пізніше / слідувати",
+        "ar": "يلحق لاحقًا / يأتي بعد"
       }
     },
     "35197": {
@@ -18517,14 +18517,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Wir fragen ein Angebot für zwanzig Personen an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to inquire / to request",
+        "tr": "talep etmek / sormak",
+        "fa": "درخواست کردن / استعلام گرفتن",
+        "ru": "запрашивать",
+        "uk": "запитувати",
+        "ar": "يستفسر / يطلب"
       }
     },
     "35198": {
@@ -18537,14 +18537,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Das Hostel liegt direkt in der Nähe vom Bahnhof.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hostel",
+        "tr": "hostel / gençlik yurdu",
+        "fa": "هاستل / خوابگاه مسافری",
+        "ru": "хостел",
+        "uk": "хостел",
+        "ar": "نزل / هوستل"
       }
     },
     "35199": {
@@ -18557,14 +18557,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Für die Besprechung haben wir einen Raum zur Verfügung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to have available",
+        "tr": "kullanımda olmak / elinde olmak",
+        "fa": "در اختیار داشتن",
+        "ru": "иметь в распоряжении",
+        "uk": "мати в розпорядженні",
+        "ar": "يكون متاحًا لديه"
       }
     },
     "35200": {
@@ -18577,14 +18577,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Zuerst kaufen wir die Tickets, dann gehen wir zum Gleis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "first / at first",
+        "tr": "önce / ilk olarak",
+        "fa": "اول / نخست",
+        "ru": "сначала",
+        "uk": "спочатку",
+        "ar": "أولًا"
       }
     },
     "35201": {
@@ -18597,14 +18597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Straßenbahnlinie fährt bis zum Museum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tram line",
+        "tr": "tramvay hattı",
+        "fa": "خط تراموا",
+        "ru": "трамвайная линия",
+        "uk": "трамвайна лінія",
+        "ar": "خط الترام"
       }
     },
     "35202": {
@@ -18617,14 +18617,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Am Nachmittag machen wir eine Stadtrundfahrt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "city tour / sightseeing tour",
+        "tr": "şehir turu",
+        "fa": "تور شهری / گشت شهری",
+        "ru": "обзорная экскурсия по городу",
+        "uk": "оглядова екскурсія містом",
+        "ar": "جولة في المدينة"
       }
     },
     "35203": {
@@ -18637,14 +18637,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die alte Fabrik ist heute ein Industriedenkmal.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "industrial monument / industrial heritage site",
+        "tr": "endüstri anıtı",
+        "fa": "یادمان صنعتی / اثر صنعتی تاریخی",
+        "ru": "памятник промышленности",
+        "uk": "памʼятка промисловості",
+        "ar": "معلم صناعي تاريخي"
       }
     },
     "35204": {
@@ -18657,14 +18657,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ich schreibe eine Telefonnotiz für meine Kollegin.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "telephone note / phone message",
+        "tr": "telefon notu",
+        "fa": "یادداشت تلفنی",
+        "ru": "телефонная записка",
+        "uk": "телефонна нотатка",
+        "ar": "ملاحظة هاتفية"
       }
     },
     "35205": {
@@ -18677,14 +18677,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Bei einem Brand muss man sofort die Feuerwehr alarmieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to alert / to alarm",
+        "tr": "alarm vermek / haberdar etmek",
+        "fa": "هشدار دادن / خبر کردن",
+        "ru": "тревожить / оповещать",
+        "uk": "сповіщати / піднімати тривогу",
+        "ar": "ينبه / يطلق إنذارًا"
       }
     },
     "35206": {
@@ -18697,14 +18697,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Kriminelle Gruppen nutzen manchmal falsche Namen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "criminal",
+        "tr": "suçlu / kriminal",
+        "fa": "جنایی / مجرمانه",
+        "ru": "криминальный / преступный",
+        "uk": "кримінальний / злочинний",
+        "ar": "إجرامي / مجرم"
       }
     },
     "35207": {
@@ -18717,14 +18717,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Im Film wird ein Kind entführt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to kidnap / to abduct",
+        "tr": "kaçırmak",
+        "fa": "ربودن / آدم‌ربایی کردن",
+        "ru": "похищать",
+        "uk": "викрадати",
+        "ar": "يخطف"
       }
     },
     "35208": {
@@ -18737,14 +18737,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Einbrecher hat ein Fenster eingeschlagen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to smash / to break in",
+        "tr": "kırmak / zorla girmek",
+        "fa": "شکستن / با زور وارد شدن",
+        "ru": "разбивать / врываться",
+        "uk": "розбивати / вриватися",
+        "ar": "يكسر / يقتحم"
       }
     },
     "35209": {
@@ -18757,14 +18757,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der Lift ist kaputt, wir nehmen die Treppe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "elevator / lift",
+        "tr": "asansör",
+        "fa": "آسانسور",
+        "ru": "лифт",
+        "uk": "ліфт",
+        "ar": "مصعد"
       }
     },
     "35210": {
@@ -18777,14 +18777,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Vom Bahnhof her ist der Eingang leicht zu finden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "from ... side / coming from",
+        "tr": "-den tarafından / bakımından",
+        "fa": "از سمت ... / از نظر ...",
+        "ru": "со стороны / с точки зрения",
+        "uk": "з боку / з погляду",
+        "ar": "من جهة ... / من حيث"
       }
     },
     "35211": {
@@ -18797,14 +18797,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Der Haupteingang befindet sich neben dem Café.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "main entrance",
+        "tr": "ana giriş",
+        "fa": "ورودی اصلی",
+        "ru": "главный вход",
+        "uk": "головний вхід",
+        "ar": "المدخل الرئيسي"
       }
     },
     "35212": {
@@ -18817,14 +18817,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Kuchen ist selbstgemacht und sehr lecker.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "homemade / self-made",
+        "tr": "ev yapımı / kendi yapımı",
+        "fa": "خانگی / دست‌ساز",
+        "ru": "домашний / самодельный",
+        "uk": "домашній / саморобний",
+        "ar": "مصنوع منزليًا / صنع يدوي"
       }
     },
     "35213": {
@@ -18837,14 +18837,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Wir müssen bis elf Uhr aus dem Hotel auschecken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to check out",
+        "tr": "çıkış yapmak",
+        "fa": "تسویه و خروج کردن / چک‌اوت کردن",
+        "ru": "выписываться из отеля",
+        "uk": "виселятися з готелю",
+        "ar": "يسجل الخروج"
       }
     },
     "35214": {
@@ -18857,14 +18857,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Das Brandenburger Tor ist ein bekanntes Wahrzeichen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "landmark",
+        "tr": "simgesel yapı / önemli işaret",
+        "fa": "نماد شهر / بنای شاخص",
+        "ru": "достопримечательность / символ",
+        "uk": "визначна памʼятка / символ",
+        "ar": "معلم بارز"
       }
     },
     "35215": {
@@ -18877,14 +18877,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die moderne Architektur des Museums gefällt mir.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "architecture",
+        "tr": "mimari",
+        "fa": "معماری",
+        "ru": "архитектура",
+        "uk": "архітектура",
+        "ar": "عمارة / هندسة معمارية"
       }
     },
     "35216": {
@@ -18897,14 +18897,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Kirche stammt aus dem Mittelalter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "Middle Ages",
+        "tr": "Orta Çağ",
+        "fa": "قرون وسطی",
+        "ru": "Средневековье",
+        "uk": "Середньовіччя",
+        "ar": "العصور الوسطى"
       }
     },
     "35217": {
@@ -18917,14 +18917,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Wir laufen am Fluss entlang bis zur Brücke.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to walk along",
+        "tr": "boyunca yürümek",
+        "fa": "در امتداد چیزی راه رفتن",
+        "ru": "идти вдоль",
+        "uk": "йти вздовж",
+        "ar": "يمشي بمحاذاة"
       }
     },
     "35218": {
@@ -18937,14 +18937,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Die Lebensmittelindustrie produziert viele Fertiggerichte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "food industry",
+        "tr": "gıda endüstrisi",
+        "fa": "صنعت مواد غذایی",
+        "ru": "пищевая промышленность",
+        "uk": "харчова промисловість",
+        "ar": "صناعة الأغذية"
       }
     },
     "35219": {
@@ -18957,14 +18957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Marzipan wird oft aus Mandeln gemacht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "marzipan",
+        "tr": "marzipan / badem ezmesi",
+        "fa": "مارسیپان / خمیر بادام",
+        "ru": "марципан",
+        "uk": "марципан",
+        "ar": "مرصبان / عجينة اللوز"
       }
     },
     "35220": {
@@ -18977,14 +18977,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Am Strand sehen wir den Sonnenuntergang.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "sunset",
+        "tr": "gün batımı",
+        "fa": "غروب آفتاب",
+        "ru": "закат",
+        "uk": "захід сонця",
+        "ar": "غروب الشمس"
       }
     },
     "35221": {
@@ -18997,14 +18997,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Fußball-Stadion ist am Wochenende ausverkauft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "football stadium / soccer stadium",
+        "tr": "futbol stadyumu",
+        "fa": "استادیوم فوتبال",
+        "ru": "футбольный стадион",
+        "uk": "футбольний стадіон",
+        "ar": "ملعب كرة قدم"
       }
     },
     "35222": {
