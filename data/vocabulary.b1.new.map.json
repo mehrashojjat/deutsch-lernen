@@ -17017,14 +17017,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Meinungsfreiheit ist ein wichtiges Recht in einer Demokratie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "freedom of speech / freedom of opinion",
+        "tr": "ifade özgürlüğü / düşünce özgürlüğü",
+        "fa": "آزادی بیان / آزادی عقیده",
+        "ru": "свобода мнения / свобода слова",
+        "uk": "свобода думки / свобода слова",
+        "ar": "حرية الرأي / حرية التعبير"
       }
     },
     "35123": {
@@ -17037,14 +17037,14 @@
       "word_type": "Word",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Polizei konnte den Mann schnell identifizieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to identify",
+        "tr": "kimliğini belirlemek / tanımlamak",
+        "fa": "شناسایی کردن",
+        "ru": "идентифицировать / опознать",
+        "uk": "ідентифікувати / упізнати",
+        "ar": "يحدد الهوية / يتعرف على"
       }
     },
     "35124": {
@@ -17057,14 +17057,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Gegen die Abschiebung kann man rechtlich vorgehen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "deportation",
+        "tr": "sınır dışı etme",
+        "fa": "اخراج از کشور / دیپورت",
+        "ru": "депортация / высылка",
+        "uk": "депортація / вислання",
+        "ar": "ترحيل"
       }
     },
     "35125": {
@@ -17077,14 +17077,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für den Antrag muss ich zum Amt gehen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "office / public authority",
+        "tr": "daire / resmi kurum",
+        "fa": "اداره / نهاد رسمی",
+        "ru": "ведомство / учреждение",
+        "uk": "відомство / установа",
+        "ar": "دائرة حكومية / مكتب رسمي"
       }
     },
     "35126": {
@@ -17097,14 +17097,14 @@
       "word_type": "Word",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Sie möchte bei der nächsten Wahl kandidieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to run as a candidate",
+        "tr": "aday olmak",
+        "fa": "نامزد شدن / کاندیدا شدن",
+        "ru": "баллотироваться / выдвигаться",
+        "uk": "балотуватися / кандидувати",
+        "ar": "يترشح"
       }
     },
     "35127": {
@@ -17117,14 +17117,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Auf der Internetseite gibt es viel Wissenswertes zum Thema.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "worth knowing / useful to know",
+        "tr": "bilinmeye değer",
+        "fa": "دانستنی / ارزش دانستن دارد",
+        "ru": "полезный для знания / стоит знать",
+        "uk": "вартий знання / корисний",
+        "ar": "جدير بالمعرفة / مفيد معرفته"
       }
     },
     "35128": {
@@ -17137,14 +17137,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Den Einbürgerungsantrag kann man beim Amt bekommen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "naturalization application",
+        "tr": "vatandaşlığa geçme başvurusu",
+        "fa": "درخواست تابعیت / درخواست شهروندی",
+        "ru": "заявление на натурализацию",
+        "uk": "заява на натуралізацію",
+        "ar": "طلب التجنس"
       }
     },
     "35129": {
@@ -17157,14 +17157,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte füllen Sie das Formular vollständig aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "complete / completely",
+        "tr": "tam / eksiksiz",
+        "fa": "کامل / به‌طور کامل",
+        "ru": "полный / полностью",
+        "uk": "повний / повністю",
+        "ar": "كامل / بالكامل"
       }
     },
     "35130": {
@@ -17177,14 +17177,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Gleichberechtigung ist ein wichtiger Grundwert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "basic value / fundamental value",
+        "tr": "temel değer",
+        "fa": "ارزش بنیادین / ارزش اساسی",
+        "ru": "основная ценность",
+        "uk": "основна цінність",
+        "ar": "قيمة أساسية"
       }
     },
     "35131": {
@@ -17197,14 +17197,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für den Ausweis brauche ich ein neues Passfoto.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "passport photo",
+        "tr": "vesikalık fotoğraf / pasaport fotoğrafı",
+        "fa": "عکس پاسپورتی",
+        "ru": "фотография на паспорт",
+        "uk": "фото на паспорт",
+        "ar": "صورة جواز سفر"
       }
     },
     "35132": {
@@ -17217,14 +17217,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Geburtsurkunde muss im Original vorliegen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "birth certificate",
+        "tr": "doğum belgesi",
+        "fa": "گواهی تولد / شناسنامه تولد",
+        "ru": "свидетельство о рождении",
+        "uk": "свідоцтво про народження",
+        "ar": "شهادة ميلاد"
       }
     },
     "35133": {
@@ -17237,14 +17237,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für manche Anträge braucht man die Heiratsurkunde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "marriage certificate",
+        "tr": "evlilik belgesi",
+        "fa": "گواهی ازدواج / سند ازدواج",
+        "ru": "свидетельство о браке",
+        "uk": "свідоцтво про шлюб",
+        "ar": "شهادة زواج"
       }
     },
     "35134": {
@@ -17257,14 +17257,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wenn Sie schon einen Nachweis haben, entfällt der Test.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be omitted / to no longer apply",
+        "tr": "ortadan kalkmak / gerek kalmamak",
+        "fa": "حذف شدن / لازم نبودن",
+        "ru": "отпадать / не требоваться",
+        "uk": "відпадати / не бути потрібним",
+        "ar": "يسقط / لا يعود لازمًا"
       }
     },
     "35135": {
@@ -17277,14 +17277,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Als Nachweis reicht oft eine Kopie des Vertrags.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "proof / evidence",
+        "tr": "kanıt / belge",
+        "fa": "مدرک / گواهی",
+        "ru": "доказательство / подтверждение",
+        "uk": "доказ / підтвердження",
+        "ar": "إثبات / دليل"
       }
     },
     "35136": {
@@ -17297,14 +17297,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Bank verlangt einen Einkommensnachweis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "proof of income",
+        "tr": "gelir belgesi",
+        "fa": "مدرک درآمد / گواهی درآمد",
+        "ru": "справка о доходах",
+        "uk": "довідка про доходи",
+        "ar": "إثبات الدخل"
       }
     },
     "35137": {
@@ -17317,14 +17317,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Ausbildungsvertrag beginnt im September.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "training contract / apprenticeship contract",
+        "tr": "mesleki eğitim sözleşmesi",
+        "fa": "قرارداد آموزش حرفه‌ای / قرارداد کارآموزی",
+        "ru": "договор об обучении",
+        "uk": "договір про навчання",
+        "ar": "عقد تدريب مهني"
       }
     },
     "35138": {
@@ -17337,14 +17337,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Bitte bringen Sie die letzte Gehaltsabrechnung mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "pay slip / salary statement",
+        "tr": "maaş bordrosu",
+        "fa": "فیش حقوقی",
+        "ru": "расчётный лист / ведомость зарплаты",
+        "uk": "розрахунковий лист / відомість зарплати",
+        "ar": "قسيمة راتب / كشف راتب"
       }
     },
     "35139": {
@@ -17357,14 +17357,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Den Einbürgerungstest kann man mehrmals machen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "naturalization test",
+        "tr": "vatandaşlık testi",
+        "fa": "آزمون تابعیت / آزمون شهروندی",
+        "ru": "тест на гражданство",
+        "uk": "тест на громадянство",
+        "ar": "اختبار التجنس"
       }
     },
     "35140": {
@@ -17377,14 +17377,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie müssen die Unterlagen bis Freitag vorlegen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to present / to submit",
+        "tr": "sunmak / ibraz etmek",
+        "fa": "ارائه کردن / تحویل دادن",
+        "ru": "предъявлять / представлять",
+        "uk": "предʼявляти / подавати",
+        "ar": "يقدم / يبرز"
       }
     },
     "35141": {
@@ -17397,14 +17397,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "In einer Demokratie dürfen Bürger frei wählen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "democracy",
+        "tr": "demokrasi",
+        "fa": "دموکراسی",
+        "ru": "демократия",
+        "uk": "демократія",
+        "ar": "ديمقراطية"
       }
     },
     "35142": {
@@ -17417,14 +17417,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Der englischsprachige Kurs beginnt im April.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "English-speaking / English-language",
+        "tr": "İngilizce konuşulan / İngilizce dilinde",
+        "fa": "انگلیسی‌زبان / به زبان انگلیسی",
+        "ru": "англоязычный",
+        "uk": "англомовний",
+        "ar": "ناطق بالإنجليزية / باللغة الإنجليزية"
       }
     },
     "35143": {
@@ -17437,14 +17437,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Für die Ausbildung braucht er einen Deutschtest.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "German test",
+        "tr": "Almanca testi",
+        "fa": "آزمون آلمانی",
+        "ru": "тест по немецкому языку",
+        "uk": "тест з німецької мови",
+        "ar": "اختبار ألمانية"
       }
     },
     "35144": {
@@ -17457,14 +17457,14 @@
       "word_type": "Adjective",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Amt verlangt ein biometrisches Passbild.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "biometric",
+        "tr": "biyometrik",
+        "fa": "بیومتریک / زیست‌سنجی",
+        "ru": "биометрический",
+        "uk": "біометричний",
+        "ar": "بيومتري / حيوي القياسات"
       }
     },
     "35145": {
@@ -17477,14 +17477,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 7,
-      "example_de": "",
+      "example_de": "Auf dem Passfoto ist eine Kopfbedeckung nur manchmal erlaubt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "head covering",
+        "tr": "baş örtüsü / başlık",
+        "fa": "پوشش سر / کلاه",
+        "ru": "головной убор",
+        "uk": "головний убір",
+        "ar": "غطاء الرأس"
       }
     },
     "35146": {
@@ -17497,14 +17497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 7,
-      "example_de": "",
+      "example_de": "Sie trägt aus religiösen Gründen ein Kopftuch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "headscarf",
+        "tr": "başörtüsü",
+        "fa": "روسری / حجاب",
+        "ru": "платок / головной платок",
+        "uk": "хустка / головна хустка",
+        "ar": "حجاب / غطاء رأس"
       }
     },
     "35147": {
@@ -17517,14 +17517,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Religiöse Gründe können bei Regeln eine Rolle spielen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "religious",
+        "tr": "dini",
+        "fa": "مذهبی / دینی",
+        "ru": "религиозный",
+        "uk": "релігійний",
+        "ar": "ديني"
       }
     },
     "35148": {
@@ -17537,14 +17537,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Passbild darf nicht älter als sechs Monate sein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "passport photo",
+        "tr": "vesikalık fotoğraf / pasaport fotoğrafı",
+        "fa": "عکس پاسپورتی",
+        "ru": "фото на паспорт",
+        "uk": "фото на паспорт",
+        "ar": "صورة جواز سفر"
       }
     },
     "35149": {
@@ -17557,14 +17557,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach der guten Nachricht strahlte sie vor Freude.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to shine / to beam",
+        "tr": "parlamak / sevinçle gülümsemek",
+        "fa": "درخشیدن / از شادی برق زدن",
+        "ru": "сиять / излучать радость",
+        "uk": "сяяти",
+        "ar": "يشع / يتهلل"
       }
     },
     "35150": {
@@ -17577,14 +17577,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Müll beginnt in der Sonne zu stinken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to stink",
+        "tr": "kötü kokmak",
+        "fa": "بوی بد دادن / گندیدن",
+        "ru": "вонять",
+        "uk": "смердіти",
+        "ar": "ينتن / تفوح منه رائحة كريهة"
       }
     },
     "35151": {
@@ -17597,14 +17597,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Der Pfeil zeigt den Weg zum Ausgang.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "arrow",
+        "tr": "ok / işaret oku",
+        "fa": "فلش / پیکان",
+        "ru": "стрелка",
+        "uk": "стрілка",
+        "ar": "سهم"
       }
     },
     "35152": {
@@ -17617,14 +17617,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Auf keinen Fall darfst du das Formular leer abgeben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "under no circumstances / no way",
+        "tr": "asla / hiçbir şekilde",
+        "fa": "به هیچ وجه / اصلاً",
+        "ru": "ни в коем случае",
+        "uk": "у жодному разі",
+        "ar": "على الإطلاق / بأي حال من الأحوال"
       }
     },
     "35153": {
@@ -17637,14 +17637,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir müssen die Zahl der Unfälle runterbringen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to bring down / to reduce",
+        "tr": "azaltmak / düşürmek",
+        "fa": "کاهش دادن / پایین آوردن",
+        "ru": "снижать / уменьшать",
+        "uk": "знижувати / зменшувати",
+        "ar": "يخفض / يقلل"
       }
     },
     "35154": {
@@ -17657,14 +17657,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 1,
-      "example_de": "",
+      "example_de": "Der Anstieg der Mieten ist für viele ein Problem.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "increase / rise",
+        "tr": "artış / yükseliş",
+        "fa": "افزایش / رشد",
+        "ru": "рост / повышение",
+        "uk": "зростання / підвищення",
+        "ar": "ارتفاع / زيادة"
       }
     },
     "35155": {
@@ -17677,14 +17677,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Neubürger werden im Rathaus begrüßt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "new citizen",
+        "tr": "yeni vatandaş erkek",
+        "fa": "شهروند جدید مرد",
+        "ru": "новый гражданин",
+        "uk": "новий громадянин",
+        "ar": "مواطن جديد"
       }
     },
     "35156": {
@@ -17697,14 +17697,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Neubürgerin erhält heute ihre Urkunde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female new citizen",
+        "tr": "yeni vatandaş kadın",
+        "fa": "شهروند جدید زن",
+        "ru": "новая гражданка",
+        "uk": "нова громадянка",
+        "ar": "مواطنة جديدة"
       }
     },
     "35157": {
@@ -17717,14 +17717,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Innenminister spricht über neue Regeln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "interior minister",
+        "tr": "içişleri bakanı",
+        "fa": "وزیر کشور",
+        "ru": "министр внутренних дел",
+        "uk": "міністр внутрішніх справ",
+        "ar": "وزير الداخلية"
       }
     },
     "35158": {
@@ -17737,14 +17737,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Einbürgerungsurkunde wird feierlich überreicht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "naturalization certificate",
+        "tr": "vatandaşlık belgesi",
+        "fa": "گواهی تابعیت / سند شهروندی",
+        "ru": "свидетельство о натурализации",
+        "uk": "свідоцтво про натуралізацію",
+        "ar": "شهادة التجنس"
       }
     },
     "35159": {
@@ -17757,14 +17757,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Arbeitsmigrant fand schnell eine Stelle.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male labor migrant",
+        "tr": "erkek iş göçmeni",
+        "fa": "مهاجر کاری مرد",
+        "ru": "трудовой мигрант",
+        "uk": "трудовий мігрант",
+        "ar": "مهاجر عمل"
       }
     },
     "35160": {
@@ -17777,14 +17777,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Arbeitsmigrantin besucht abends einen Deutschkurs.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female labor migrant",
+        "tr": "kadın iş göçmeni",
+        "fa": "مهاجر کاری زن",
+        "ru": "трудовая мигрантка",
+        "uk": "трудова мігрантка",
+        "ar": "مهاجرة عمل"
       }
     },
     "35161": {
@@ -17797,14 +17797,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Gute Deutschkenntnisse helfen bei der Arbeitssuche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "German skills / knowledge of German",
+        "tr": "Almanca bilgisi",
+        "fa": "دانش زبان آلمانی / مهارت آلمانی",
+        "ru": "знание немецкого языка",
+        "uk": "знання німецької мови",
+        "ar": "مهارات اللغة الألمانية"
       }
     },
     "35162": {
@@ -17817,14 +17817,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie muss ihre Sprachkenntnisse nachweisen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to prove / to provide evidence",
+        "tr": "kanıtlamak / belgelemek",
+        "fa": "اثبات کردن / مدرک ارائه دادن",
+        "ru": "доказывать / подтверждать",
+        "uk": "доводити / підтверджувати",
+        "ar": "يثبت / يقدم دليلًا"
       }
     },
     "35163": {
@@ -17837,14 +17837,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Jeder kann etwas zur Gemeinschaft beitragen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to contribute",
+        "tr": "katkıda bulunmak",
+        "fa": "مشارکت کردن / سهم داشتن",
+        "ru": "вносить вклад",
+        "uk": "робити внесок",
+        "ar": "يساهم"
       }
     },
     "35164": {
@@ -17857,14 +17857,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Staatsbürgerschaft bekommt man nicht automatisch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "citizenship / nationality",
+        "tr": "vatandaşlık",
+        "fa": "تابعیت / شهروندی",
+        "ru": "гражданство",
+        "uk": "громадянство",
+        "ar": "جنسية / مواطنة"
       }
     },
     "35165": {
@@ -17877,14 +17877,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Seit dem letzten Treffen sind zwei Monate vergangen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "past / passed",
+        "tr": "geçmiş / geçen",
+        "fa": "گذشته / سپری‌شده",
+        "ru": "прошедший / прошёл",
+        "uk": "минулий / минув",
+        "ar": "ماضٍ / مضى"
       }
     },
     "35166": {
@@ -17897,14 +17897,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Im Vorjahr gab es weniger Anträge.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "previous year",
+        "tr": "önceki yıl",
+        "fa": "سال قبل / سال گذشته",
+        "ru": "предыдущий год",
+        "uk": "попередній рік",
+        "ar": "السنة السابقة"
       }
     },
     "35167": {
@@ -17917,14 +17917,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Firma belohnt gute Leistungen mit einer Prämie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to reward",
+        "tr": "ödüllendirmek",
+        "fa": "پاداش دادن",
+        "ru": "вознаграждать / награждать",
+        "uk": "винагороджувати",
+        "ar": "يكافئ"
       }
     },
     "35168": {
@@ -17937,14 +17937,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Darf ich die Veranstaltung filmen?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to film",
+        "tr": "filme çekmek",
+        "fa": "فیلم گرفتن",
+        "ru": "снимать на видео",
+        "uk": "знімати на відео",
+        "ar": "يصوّر فيديو"
       }
     },
     "35169": {
@@ -17957,14 +17957,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte fassen Sie den Text kurz zusammen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to grasp / to summarize",
+        "tr": "tutmak / özetlemek",
+        "fa": "گرفتن / خلاصه کردن",
+        "ru": "хватать / обобщать",
+        "uk": "хапати / узагальнювати",
+        "ar": "يمسك / يلخص"
       }
     },
     "35170": {
@@ -17977,14 +17977,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Daumen tut mir nach dem Sturz weh.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "thumb",
+        "tr": "başparmak",
+        "fa": "شست دست",
+        "ru": "большой палец",
+        "uk": "великий палець",
+        "ar": "إبهام"
       }
     },
     "35171": {
@@ -17997,14 +17997,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Nach fünf Jahren kann sie die Staatsbürgerschaft erwerben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to acquire / to purchase",
+        "tr": "edinmek / satın almak",
+        "fa": "به دست آوردن / خریدن",
+        "ru": "приобретать / покупать",
+        "uk": "набувати / купувати",
+        "ar": "يكتسب / يشتري"
       }
     },
     "35172": {
