@@ -12017,14 +12017,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Während des Mutterschutzes darf sie nicht arbeiten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "maternity protection / maternity leave",
+        "tr": "doğum koruması / doğum izni",
+        "fa": "حمایت دوران بارداری / مرخصی زایمان",
+        "ru": "декретная защита / отпуск по беременности",
+        "uk": "декретний захист / відпустка у звʼязку з вагітністю",
+        "ar": "حماية الأمومة / إجازة أمومة"
       }
     },
     "34873": {
@@ -12037,14 +12037,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Viele Eltern beantragen nach der Geburt Elterngeld.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "parental allowance",
+        "tr": "ebeveyn parası / ebeveyn yardımı",
+        "fa": "کمک‌هزینه والدین",
+        "ru": "родительское пособие",
+        "uk": "батьківська допомога",
+        "ar": "بدل الوالدين / إعانة الوالدين"
       }
     },
     "34874": {
@@ -12057,14 +12057,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Vorfreude auf das Baby ist groß.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "joyful anticipation",
+        "tr": "heyecanlı bekleyiş / ön sevinç",
+        "fa": "شوق انتظار / ذوق قبل از اتفاق",
+        "ru": "радостное ожидание",
+        "uk": "радісне очікування",
+        "ar": "فرحة الانتظار"
       }
     },
     "34875": {
@@ -12077,14 +12077,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir bereiten uns gut auf die Geburt vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to prepare for",
+        "tr": "için hazırlanmak",
+        "fa": "برای چیزی آماده شدن",
+        "ru": "готовиться к",
+        "uk": "готуватися до",
+        "ar": "يستعد لـ"
       }
     },
     "34876": {
@@ -12097,14 +12097,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Spielsachen liegen im Kinderzimmer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "toys",
+        "tr": "oyuncaklar",
+        "fa": "اسباب‌بازی‌ها",
+        "ru": "игрушки",
+        "uk": "іграшки",
+        "ar": "ألعاب"
       }
     },
     "34877": {
@@ -12117,14 +12117,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Das Baby braucht eine frische Windel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "diaper / nappy",
+        "tr": "bebek bezi",
+        "fa": "پوشک",
+        "ru": "подгузник",
+        "uk": "підгузок",
+        "ar": "حفاض"
       }
     },
     "34878": {
@@ -12137,14 +12137,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Anmeldung hat problemlos funktioniert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "without problems / problem-free",
+        "tr": "sorunsuz",
+        "fa": "بی‌مشکل / بدون دردسر",
+        "ru": "без проблем",
+        "uk": "без проблем",
+        "ar": "بلا مشاكل"
       }
     },
     "34879": {
@@ -12157,14 +12157,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Teamleitung bespricht den Plan mit allen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "team leadership / team management",
+        "tr": "ekip yönetimi / takım liderliği",
+        "fa": "رهبری تیم / مدیریت تیم",
+        "ru": "руководство команды",
+        "uk": "керівництво команди",
+        "ar": "قيادة الفريق / إدارة الفريق"
       }
     },
     "34880": {
@@ -12177,14 +12177,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Unser Sohn kam im Mai auf die Welt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be born / to come into the world",
+        "tr": "dünyaya gelmek / doğmak",
+        "fa": "به دنیا آمدن",
+        "ru": "появиться на свет / родиться",
+        "uk": "зʼявитися на світ / народитися",
+        "ar": "يولد / يأتي إلى الدنيا"
       }
     },
     "34881": {
@@ -12197,14 +12197,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Regel existiert schon lange.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to exist",
+        "tr": "var olmak",
+        "fa": "وجود داشتن",
+        "ru": "существовать",
+        "uk": "існувати",
+        "ar": "يوجد"
       }
     },
     "34882": {
@@ -12217,14 +12217,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Wir teilen die Aufgaben in der Familie gerecht auf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to divide / to split up",
+        "tr": "paylaştırmak / bölmek",
+        "fa": "تقسیم کردن",
+        "ru": "разделять / распределять",
+        "uk": "ділити / розподіляти",
+        "ar": "يقسم / يوزع"
       }
     },
     "34883": {
@@ -12237,14 +12237,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Das soziale Umfeld ist für Kinder wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "environment / surroundings",
+        "tr": "çevre / sosyal ortam",
+        "fa": "محیط اطراف / فضای اجتماعی",
+        "ru": "окружение / среда",
+        "uk": "оточення / середовище",
+        "ar": "محيط / بيئة"
       }
     },
     "34884": {
@@ -12257,14 +12257,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Mutterrolle verändert sich mit der Zeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mother role / role of mother",
+        "tr": "anne rolü",
+        "fa": "نقش مادر",
+        "ru": "роль матери",
+        "uk": "роль матері",
+        "ar": "دور الأم"
       }
     },
     "34885": {
@@ -12277,14 +12277,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Eltern tragen Verantwortung für ihre Kinder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to bear responsibility",
+        "tr": "sorumluluk taşımak / sorumluluk almak",
+        "fa": "مسئولیت داشتن / مسئولیت به عهده داشتن",
+        "ru": "нести ответственность",
+        "uk": "нести відповідальність",
+        "ar": "يتحمل المسؤولية"
       }
     },
     "34886": {
@@ -12297,14 +12297,14 @@
       "word_type": "Adjective",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Deine Sorge ist gut verständlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "understandable",
+        "tr": "anlaşılır",
+        "fa": "قابل فهم / قابل درک",
+        "ru": "понятный / объяснимый",
+        "uk": "зрозумілий",
+        "ar": "مفهوم / قابل للفهم"
       }
     },
     "34887": {
@@ -12317,14 +12317,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Der Vater kann das Baby schon sicher wickeln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to change a diaper / to wrap",
+        "tr": "bebek bezi değiştirmek / sarmak",
+        "fa": "پوشک عوض کردن / پیچیدن",
+        "ru": "пеленать / менять подгузник",
+        "uk": "сповивати / міняти підгузок",
+        "ar": "يغير الحفاض / يلف"
       }
     },
     "34888": {
@@ -12337,14 +12337,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Abends surfe ich oft im Internet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to surf the internet",
+        "tr": "internette gezinmek",
+        "fa": "در اینترنت گشتن",
+        "ru": "сидеть в интернете / искать в интернете",
+        "uk": "серфити в інтернеті",
+        "ar": "يتصفح الإنترنت"
       }
     },
     "34889": {
@@ -12357,14 +12357,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die neue Situation fühlt sich noch ungewohnt an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "unfamiliar / unusual",
+        "tr": "alışılmadık / yabancı",
+        "fa": "ناآشنا / غیرمعمول",
+        "ru": "непривычный",
+        "uk": "незвичний",
+        "ar": "غير مألوف"
       }
     },
     "34890": {
@@ -12377,14 +12377,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Frauenrolle hat sich in vielen Familien verändert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "role of women",
+        "tr": "kadın rolü",
+        "fa": "نقش زن",
+        "ru": "роль женщины",
+        "uk": "роль жінки",
+        "ar": "دور المرأة"
       }
     },
     "34891": {
@@ -12397,14 +12397,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Auch die Männerrolle wird heute anders verstanden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "role of men",
+        "tr": "erkek rolü",
+        "fa": "نقش مرد",
+        "ru": "роль мужчины",
+        "uk": "роль чоловіка",
+        "ar": "دور الرجل"
       }
     },
     "34892": {
@@ -12417,14 +12417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Im Radiointerview spricht sie über Kinderbetreuung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "radio interview",
+        "tr": "radyo röportajı",
+        "fa": "مصاحبه رادیویی",
+        "ru": "радиоинтервью",
+        "uk": "радіоінтервʼю",
+        "ar": "مقابلة إذاعية"
       }
     },
     "34893": {
@@ -12437,14 +12437,14 @@
       "word_type": "Word",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Sie ist alleinerziehend und arbeitet halbtags.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "single-parent / raising a child alone",
+        "tr": "tek başına çocuk yetiştiren",
+        "fa": "تک‌والد / فرزند را تنها بزرگ‌کننده",
+        "ru": "одинокий родитель / воспитывающий в одиночку",
+        "uk": "одинокий батько чи мати",
+        "ar": "والد وحيد / يربي الطفل وحده"
       }
     },
     "34894": {
@@ -12457,14 +12457,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Ein Vollzeitjob ist mit kleinen Kindern oft anstrengend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "full-time job",
+        "tr": "tam zamanlı iş",
+        "fa": "شغل تمام‌وقت",
+        "ru": "работа на полный день",
+        "uk": "робота на повний день",
+        "ar": "وظيفة بدوام كامل"
       }
     },
     "34895": {
@@ -12477,14 +12477,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Bitte schicken Sie die Bewerbung bis Freitag ab.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to send off / to submit",
+        "tr": "göndermek / yollamak",
+        "fa": "ارسال کردن / فرستادن",
+        "ru": "отправлять",
+        "uk": "відправляти",
+        "ar": "يرسل"
       }
     },
     "34896": {
@@ -12497,14 +12497,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Am Samstag machen wir die Wohnung sauber.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to clean",
+        "tr": "temizlemek",
+        "fa": "تمیز کردن",
+        "ru": "убираться / чистить",
+        "uk": "прибирати / чистити",
+        "ar": "ينظف"
       }
     },
     "34897": {
@@ -12517,14 +12517,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Kindertagesstätte öffnet morgens um sieben Uhr.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "daycare center",
+        "tr": "kreş / gündüz bakım evi",
+        "fa": "مهدکودک / مرکز نگهداری روزانه کودک",
+        "ru": "детский сад / дневной центр",
+        "uk": "дитячий садок / денний центр",
+        "ar": "روضة / مركز رعاية نهارية للأطفال"
       }
     },
     "34898": {
@@ -12537,14 +12537,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Wir suchen noch einen Kita-Platz für unsere Tochter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "daycare place",
+        "tr": "kreş yeri",
+        "fa": "جای مهدکودک",
+        "ru": "место в детском саду",
+        "uk": "місце в дитячому садку",
+        "ar": "مكان في الروضة"
       }
     },
     "34899": {
@@ -12557,14 +12557,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Das Kind braucht noch sprachliche Unterstützung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "linguistic / language-related",
+        "tr": "dilsel / dil ile ilgili",
+        "fa": "زبانی / مربوط به زبان",
+        "ru": "языковой",
+        "uk": "мовний",
+        "ar": "لغوي"
       }
     },
     "34900": {
@@ -12577,14 +12577,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Tageseltern betreuen Kinder in einer kleinen Gruppe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "childminders / daycare parents",
+        "tr": "gündüz bakım ebeveynleri",
+        "fa": "مربیان روزانه کودک",
+        "ru": "дневные воспитатели",
+        "uk": "денні вихователі",
+        "ar": "مربو أطفال نهاريون"
       }
     },
     "34901": {
@@ -12597,14 +12597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Der Sportverein hat ein Zusatzangebot für Kinder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "additional offer",
+        "tr": "ek teklif / ek hizmet",
+        "fa": "پیشنهاد اضافی / خدمات تکمیلی",
+        "ru": "дополнительное предложение",
+        "uk": "додаткова пропозиція",
+        "ar": "عرض إضافي"
       }
     },
     "34902": {
@@ -12617,14 +12617,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Alle Arbeitnehmer müssen Steuern zahlen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to pay taxes",
+        "tr": "vergi ödemek",
+        "fa": "مالیات پرداخت کردن",
+        "ru": "платить налоги",
+        "uk": "платити податки",
+        "ar": "يدفع الضرائب"
       }
     },
     "34903": {
@@ -12637,14 +12637,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Seine Stiefmutter lebt in einer anderen Stadt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "stepmother",
+        "tr": "üvey anne",
+        "fa": "نامادری",
+        "ru": "мачеха",
+        "uk": "мачуха",
+        "ar": "زوجة الأب"
       }
     },
     "34904": {
@@ -12657,14 +12657,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Mein Stiefvater hat mir beim Umzug geholfen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "stepfather",
+        "tr": "üvey baba",
+        "fa": "ناپدری",
+        "ru": "отчим",
+        "uk": "вітчим",
+        "ar": "زوج الأم"
       }
     },
     "34905": {
@@ -12677,14 +12677,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Trotz der Probleme möchten sie zusammenbleiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to stay together",
+        "tr": "birlikte kalmak",
+        "fa": "با هم ماندن",
+        "ru": "оставаться вместе",
+        "uk": "залишатися разом",
+        "ar": "يبقيان معًا"
       }
     },
     "34906": {
@@ -12697,14 +12697,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Nach vielen Gesprächen lassen sie sich scheiden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to get divorced",
+        "tr": "boşanmak",
+        "fa": "طلاق گرفتن",
+        "ru": "разводиться",
+        "uk": "розлучатися",
+        "ar": "يتطلق / يحصل على الطلاق"
       }
     },
     "34907": {
@@ -12717,14 +12717,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die neue Arbeit fühlt sich am Anfang schwierig an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to feel / to feel like",
+        "tr": "hissettirmek / gibi gelmek",
+        "fa": "حس شدن / احساس شدن",
+        "ru": "ощущаться",
+        "uk": "відчуватися",
+        "ar": "يشعر بأنه / يبدو شعوريًا"
       }
     },
     "34908": {
@@ -12737,14 +12737,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "In einer Patchworkfamilie leben Kinder aus verschiedenen Beziehungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "blended family / patchwork family",
+        "tr": "karma aile",
+        "fa": "خانواده ترکیبی / خانواده ناتنی",
+        "ru": "смешанная семья",
+        "uk": "змішана сімʼя",
+        "ar": "عائلة مختلطة"
       }
     },
     "34909": {
@@ -12757,14 +12757,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Der Ehepartner muss den Antrag auch unterschreiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "husband / spouse",
+        "tr": "eş erkek / eş",
+        "fa": "همسر مرد / شریک زندگی",
+        "ru": "супруг",
+        "uk": "чоловік / подружній партнер",
+        "ar": "زوج / شريك زوجي"
       }
     },
     "34910": {
@@ -12777,14 +12777,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Ehepartnerin begleitet ihn zum Termin.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wife / spouse",
+        "tr": "eş kadın / eş",
+        "fa": "همسر زن / شریک زندگی",
+        "ru": "супруга",
+        "uk": "дружина / подружня партнерка",
+        "ar": "زوجة / شريكة زوجية"
       }
     },
     "34911": {
@@ -12797,14 +12797,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Eine Fernbeziehung braucht viel Vertrauen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "long-distance relationship",
+        "tr": "uzak mesafe ilişkisi",
+        "fa": "رابطه از راه دور",
+        "ru": "отношения на расстоянии",
+        "uk": "стосунки на відстані",
+        "ar": "علاقة عن بعد"
       }
     },
     "34912": {
@@ -12817,14 +12817,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Ihre Liebesbeziehung begann vor drei Jahren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "romantic relationship / love relationship",
+        "tr": "aşk ilişkisi",
+        "fa": "رابطه عاشقانه",
+        "ru": "любовные отношения",
+        "uk": "любовні стосунки",
+        "ar": "علاقة حب"
       }
     },
     "34913": {
@@ -12837,14 +12837,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach der Arbeit bin ich oft sehr müde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tired",
+        "tr": "yorgun",
+        "fa": "خسته",
+        "ru": "уставший",
+        "uk": "втомлений",
+        "ar": "متعب"
       }
     },
     "34914": {
@@ -12857,14 +12857,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Die neue Version der App ist schneller.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "version",
+        "tr": "sürüm / versiyon",
+        "fa": "نسخه",
+        "ru": "версия",
+        "uk": "версія",
+        "ar": "نسخة"
       }
     },
     "34915": {
@@ -12877,14 +12877,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Zum Film essen wir Chips.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chips / crisps",
+        "tr": "cips",
+        "fa": "چیپس",
+        "ru": "чипсы",
+        "uk": "чипси",
+        "ar": "رقائق البطاطس / شيبس"
       }
     },
     "34916": {
@@ -12897,14 +12897,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Atmosphäre im kleinen Hotel ist sehr familiär.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "family-like / familiar",
+        "tr": "ailevi / samimi",
+        "fa": "خانوادگی / صمیمی",
+        "ru": "семейный / фамильярный",
+        "uk": "сімейний / фамільярний",
+        "ar": "عائلي / حميم"
       }
     },
     "34917": {
@@ -12917,14 +12917,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Es ist egoistisch, nie an die anderen zu denken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "selfish",
+        "tr": "bencil",
+        "fa": "خودخواه",
+        "ru": "эгоистичный",
+        "uk": "егоїстичний",
+        "ar": "أناني"
       }
     },
     "34918": {
@@ -12937,14 +12937,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Die Trauung findet im Rathaus statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wedding ceremony / marriage ceremony",
+        "tr": "nikâh töreni",
+        "fa": "مراسم عقد / مراسم ازدواج",
+        "ru": "церемония бракосочетания",
+        "uk": "церемонія одруження",
+        "ar": "مراسم الزواج / عقد القران"
       }
     },
     "34919": {
@@ -12957,14 +12957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Ihr Gatte arbeitet als Lehrer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "husband / spouse",
+        "tr": "koca / eş",
+        "fa": "شوهر / همسر مرد",
+        "ru": "супруг / муж",
+        "uk": "чоловік / супруг",
+        "ar": "زوج"
       }
     },
     "34920": {
@@ -12977,14 +12977,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Seine Gattin kommt später zur Feier.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wife / spouse",
+        "tr": "eş / kadın eş",
+        "fa": "زن / همسر زن",
+        "ru": "супруга / жена",
+        "uk": "дружина / супруга",
+        "ar": "زوجة"
       }
     },
     "34921": {
@@ -12997,14 +12997,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für ausländische Abschlüsse braucht man oft eine Anerkennung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "recognition / approval",
+        "tr": "tanıma / onay",
+        "fa": "به رسمیت شناختن / تأیید",
+        "ru": "признание / подтверждение",
+        "uk": "визнання / підтвердження",
+        "ar": "اعتراف / اعتماد"
       }
     },
     "34922": {
