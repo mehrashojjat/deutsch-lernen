@@ -633,7 +633,7 @@ const UI = {
     signedInAs: 'وارد شده به عنوان:',
     signOut: 'خروج از حساب',
     practiceBannerTitle: 'تمرین',
-    practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها یاد بگیرید',
+    practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها را یاد بگیرید',
     practiceSetupTitle: 'تمرین',
     practiceSetupSub: '',
     practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
@@ -4184,24 +4184,25 @@ function _getPracticeFilteredPool(level) {
   return pool;
 }
 
+function _syncPracticeScrollTop() {
+  var scroll = document.getElementById('practice-setup-scroll');
+  var appHdr = document.getElementById('app-header');
+  if (!scroll || !appHdr) return;
+  scroll.style.setProperty('--practice-scroll-top', Math.round(appHdr.getBoundingClientRect().bottom + 14) + 'px');
+}
+
 function _syncPracticeLayout() {
+  _syncPracticeScrollTop();
   var screen = document.getElementById('screen-practice-setup');
-  var header = screen && screen.querySelector('.practice-setup-header');
   var scroll = document.getElementById('practice-setup-scroll');
   var footer = screen && screen.querySelector('.practice-setup-footer');
-  if (!screen || screen.classList.contains('hidden') || !header || !scroll) return;
-  scroll.style.paddingTop = Math.round(header.getBoundingClientRect().bottom + 14) + 'px';
-  if (footer) {
-    scroll.style.setProperty('--practice-scroll-pad', (footer.offsetHeight + 26) + 'px');
-  }
+  if (!screen || screen.classList.contains('hidden') || !scroll || !footer) return;
+  scroll.style.setProperty('--practice-scroll-pad', (footer.offsetHeight + 26) + 'px');
 }
 
 if (typeof window !== 'undefined' && !window._practiceLayoutResizeBound) {
   window._practiceLayoutResizeBound = true;
-  window.addEventListener('resize', function() {
-    var scr = document.getElementById('screen-practice-setup');
-    if (scr && !scr.classList.contains('hidden')) _syncPracticeLayout();
-  });
+  window.addEventListener('resize', _syncPracticeScrollTop);
 }
 
 function _updatePracticeMatchCount() {
@@ -4289,7 +4290,9 @@ function practiceClearFilters() {
 
 async function openPracticeSetup() {
   window.umami?.track('practice_opened');
+  _syncPracticeScrollTop();
   show('screen-practice-setup');
+  _syncPracticeScrollTop();
   var scrollEl = document.getElementById('practice-setup-scroll');
   if (scrollEl) scrollEl.scrollTop = 0;
   try {
@@ -4297,10 +4300,6 @@ async function openPracticeSetup() {
   } catch (e) {}
   _renderPracticeSetupFilters();
   _updatePracticeMatchCount();
-  requestAnimationFrame(function() {
-    _syncPracticeLayout();
-    requestAnimationFrame(_syncPracticeLayout);
-  });
 }
 
 function setPracticeLevel(lv) {
@@ -6595,6 +6594,7 @@ window.addEventListener('online', function() {
   _startConnectivityProbe(showOfflineScreen);
 });
 updateCounts();
+_syncPracticeScrollTop();
 _wireNativeShellInsetGuards();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
