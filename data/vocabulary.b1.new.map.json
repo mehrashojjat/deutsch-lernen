@@ -14017,14 +14017,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Kauffrau arbeitet in einem kleinen Betrieb.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "businesswoman / female commercial employee",
+        "tr": "kadın tüccar / kadın ticaret çalışanı",
+        "fa": "بازرگان زن / کارمند تجاری زن",
+        "ru": "коммерсантка / торговая служащая",
+        "uk": "комерсантка / торговельна працівниця",
+        "ar": "تاجرة / موظفة تجارية"
       }
     },
     "34973": {
@@ -14037,14 +14037,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Kaufleute brauchen gute Kenntnisse in Mathe und Kommunikation.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "businesspeople / commercial employees",
+        "tr": "ticaret çalışanları / tüccarlar",
+        "fa": "بازرگانان / کارکنان تجاری",
+        "ru": "коммерсанты / торговые служащие",
+        "uk": "комерсанти / торговельні працівники",
+        "ar": "تجار / موظفون تجاريون"
       }
     },
     "34974": {
@@ -14057,14 +14057,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Pflegehelfer bringt dem Patienten ein Glas Wasser.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male care assistant",
+        "tr": "erkek bakım yardımcısı",
+        "fa": "کمک‌پرستار مرد / کمک‌مراقب مرد",
+        "ru": "помощник по уходу",
+        "uk": "помічник з догляду",
+        "ar": "مساعد رعاية"
       }
     },
     "34975": {
@@ -14077,14 +14077,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Pflegehelferin unterstützt die Bewohner beim Essen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female care assistant",
+        "tr": "kadın bakım yardımcısı",
+        "fa": "کمک‌پرستار زن / کمک‌مراقب زن",
+        "ru": "помощница по уходу",
+        "uk": "помічниця з догляду",
+        "ar": "مساعدة رعاية"
       }
     },
     "34976": {
@@ -14097,14 +14097,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Apotheker erklärt mir die Einnahme der Tabletten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male pharmacist",
+        "tr": "erkek eczacı",
+        "fa": "داروساز مرد / داروفروش مرد",
+        "ru": "аптекарь / фармацевт",
+        "uk": "аптекар / фармацевт",
+        "ar": "صيدلي"
       }
     },
     "34977": {
@@ -14117,14 +14117,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Apothekerin gibt mir ein Mittel gegen Husten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female pharmacist",
+        "tr": "kadın eczacı",
+        "fa": "داروساز زن / داروفروش زن",
+        "ru": "аптекарша / фармацевтка",
+        "uk": "аптекарка / фармацевтка",
+        "ar": "صيدلانية"
       }
     },
     "34978": {
@@ -14137,14 +14137,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Buchhändler empfiehlt mir einen neuen Roman.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male bookseller",
+        "tr": "erkek kitapçı",
+        "fa": "کتاب‌فروش مرد",
+        "ru": "продавец книг",
+        "uk": "продавець книг",
+        "ar": "بائع كتب"
       }
     },
     "34979": {
@@ -14157,14 +14157,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Buchhändlerin kennt viele gute Kinderbücher.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female bookseller",
+        "tr": "kadın kitapçı",
+        "fa": "کتاب‌فروش زن",
+        "ru": "продавщица книг",
+        "uk": "продавчиня книг",
+        "ar": "بائعة كتب"
       }
     },
     "34980": {
@@ -14177,14 +14177,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Fliesenleger arbeitet heute im Badezimmer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male tiler",
+        "tr": "erkek fayans ustası",
+        "fa": "کاشی‌کار مرد",
+        "ru": "плиточник",
+        "uk": "плиточник",
+        "ar": "مبلط / عامل تركيب البلاط"
       }
     },
     "34981": {
@@ -14197,14 +14197,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Fliesenlegerin verlegt neue Fliesen in der Küche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female tiler",
+        "tr": "kadın fayans ustası",
+        "fa": "کاشی‌کار زن",
+        "ru": "плиточница",
+        "uk": "плиточниця",
+        "ar": "مبلطة / عاملة تركيب البلاط"
       }
     },
     "34982": {
@@ -14217,14 +14217,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Der Flugbegleiter begrüßt die Passagiere im Flugzeug.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male flight attendant",
+        "tr": "erkek kabin memuru",
+        "fa": "مهماندار مرد هواپیما",
+        "ru": "бортпроводник",
+        "uk": "бортпровідник",
+        "ar": "مضيف طيران"
       }
     },
     "34983": {
@@ -14237,14 +14237,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Die Flugbegleiterin erklärt die Sicherheitsregeln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female flight attendant",
+        "tr": "kadın kabin memuru",
+        "fa": "مهماندار زن هواپیما",
+        "ru": "бортпроводница",
+        "uk": "бортпровідниця",
+        "ar": "مضيفة طيران"
       }
     },
     "34984": {
@@ -14257,14 +14257,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Gärtner schneidet die Bäume im Park.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male gardener",
+        "tr": "erkek bahçıvan",
+        "fa": "باغبان مرد",
+        "ru": "садовник",
+        "uk": "садівник",
+        "ar": "بستاني / عامل حديقة"
       }
     },
     "34985": {
@@ -14277,14 +14277,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Gärtnerin pflanzt Blumen vor dem Haus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female gardener",
+        "tr": "kadın bahçıvan",
+        "fa": "باغبان زن",
+        "ru": "садовница",
+        "uk": "садівниця",
+        "ar": "بستانية / عاملة حديقة"
       }
     },
     "34986": {
@@ -14297,14 +14297,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Gebäudereiniger putzt die Fenster des Büros.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male building cleaner",
+        "tr": "erkek bina temizlik görevlisi",
+        "fa": "نظافتچی مرد ساختمان",
+        "ru": "уборщик зданий",
+        "uk": "прибиральник будівель",
+        "ar": "عامل تنظيف مبان"
       }
     },
     "34987": {
@@ -14317,14 +14317,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Gebäudereinigerin reinigt jeden Morgen die Praxis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female building cleaner",
+        "tr": "kadın bina temizlik görevlisi",
+        "fa": "نظافتچی زن ساختمان",
+        "ru": "уборщица зданий",
+        "uk": "прибиральниця будівель",
+        "ar": "عاملة تنظيف مبان"
       }
     },
     "34988": {
@@ -14337,14 +14337,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Krankenpflegerin misst den Blutdruck der Patientin.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female nurse",
+        "tr": "kadın hemşire",
+        "fa": "پرستار زن",
+        "ru": "медсестра",
+        "uk": "медсестра",
+        "ar": "ممرضة"
       }
     },
     "34989": {
@@ -14357,14 +14357,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Bildung ist wichtig für die berufliche Zukunft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "education",
+        "tr": "eğitim",
+        "fa": "آموزش / تحصیلات",
+        "ru": "образование",
+        "uk": "освіта",
+        "ar": "تعليم"
       }
     },
     "34990": {
@@ -14377,14 +14377,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Handwerk werden viele Fachkräfte gesucht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "craft / skilled trades",
+        "tr": "zanaat / el sanatları meslekleri",
+        "fa": "حرفه‌های فنی / صنایع دستی",
+        "ru": "ремесло / ручной труд",
+        "uk": "ремесло / ручна праця",
+        "ar": "حرفة / أعمال يدوية مهنية"
       }
     },
     "34991": {
@@ -14397,14 +14397,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "In der Gastronomie arbeitet man oft am Wochenende.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "gastronomy / hospitality industry",
+        "tr": "gastronomi / yeme içme sektörü",
+        "fa": "صنعت غذا و رستوران / پذیرایی",
+        "ru": "гастрономия / ресторанное дело",
+        "uk": "гастрономія / ресторанна справа",
+        "ar": "فن الطهي / قطاع المطاعم"
       }
     },
     "34992": {
@@ -14417,14 +14417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Logistik sorgt dafür, dass die Waren pünktlich ankommen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "logistics",
+        "tr": "lojistik",
+        "fa": "لجستیک",
+        "ru": "логистика",
+        "uk": "логістика",
+        "ar": "لوجستيات"
       }
     },
     "34993": {
@@ -14437,14 +14437,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Zu diesem Beruf gehören auch Beratung und Dokumentation dazu.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be part of / to belong to it",
+        "tr": "dahil olmak / ait olmak",
+        "fa": "جزء چیزی بودن / متعلق بودن",
+        "ru": "относиться к / входить в состав",
+        "uk": "належати до / входити до",
+        "ar": "ينتمي إلى / يكون جزءًا من"
       }
     },
     "34994": {
@@ -14457,14 +14457,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Für mich kommt Nachtarbeit nicht infrage.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be an option / to come into question",
+        "tr": "söz konusu olmak / uygun olmak",
+        "fa": "مطرح بودن / گزینه بودن",
+        "ru": "рассматриваться / подходить",
+        "uk": "розглядатися / підходити",
+        "ar": "يكون واردًا / يكون خيارًا"
       }
     },
     "34995": {
@@ -14477,14 +14477,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Nachtarbeit kann auf Dauer sehr anstrengend sein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "night work",
+        "tr": "gece çalışması",
+        "fa": "کار شبانه",
+        "ru": "ночная работа",
+        "uk": "нічна робота",
+        "ar": "عمل ليلي"
       }
     },
     "34996": {
@@ -14497,14 +14497,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Sauberkeit ist in einer Küche besonders wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cleanliness",
+        "tr": "temizlik",
+        "fa": "تمیزی / پاکیزگی",
+        "ru": "чистота",
+        "uk": "чистота",
+        "ar": "نظافة"
       }
     },
     "34997": {
@@ -14517,14 +14517,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Sie hat eine Vorliebe für ruhige Musik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "preference / liking",
+        "tr": "tercih / düşkünlük",
+        "fa": "علاقه خاص / ترجیح",
+        "ru": "предпочтение / склонность",
+        "uk": "уподобання / схильність",
+        "ar": "تفضيل / ميل"
       }
     },
     "34998": {
@@ -14537,14 +14537,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Er arbeitet ehrenamtlich im Jugendzentrum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "voluntary / unpaid volunteer",
+        "tr": "gönüllü / fahri",
+        "fa": "داوطلبانه / افتخاری",
+        "ru": "волонтёрский / на общественных началах",
+        "uk": "волонтерський / громадський",
+        "ar": "تطوعي / بلا أجر"
       }
     },
     "34999": {
@@ -14557,14 +14557,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Helfer verteilt Essen an die Besucher.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male helper",
+        "tr": "erkek yardımcı / gönüllü",
+        "fa": "کمک‌کننده مرد / داوطلب مرد",
+        "ru": "помощник",
+        "uk": "помічник",
+        "ar": "مساعد"
       }
     },
     "35000": {
@@ -14577,14 +14577,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Helferin begleitet ältere Menschen zum Arzt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female helper",
+        "tr": "kadın yardımcı / gönüllü",
+        "fa": "کمک‌کننده زن / داوطلب زن",
+        "ru": "помощница",
+        "uk": "помічниця",
+        "ar": "مساعدة"
       }
     },
     "35001": {
@@ -14597,14 +14597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Sein soziales Engagement beeindruckt viele Menschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "commitment / engagement",
+        "tr": "bağlılık / gönüllü katkı",
+        "fa": "تعهد / مشارکت اجتماعی",
+        "ru": "участие / вовлечённость",
+        "uk": "залученість / громадська активність",
+        "ar": "التزام / مشاركة"
       }
     },
     "35002": {
@@ -14617,14 +14617,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Viele Bürger beteiligen sich an der Aktion.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to participate / to get involved",
+        "tr": "katılmak / dahil olmak",
+        "fa": "شرکت کردن / مشارکت داشتن",
+        "ru": "участвовать",
+        "uk": "брати участь",
+        "ar": "يشارك"
       }
     },
     "35003": {
@@ -14637,14 +14637,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die soziale Einrichtung hilft Familien in Not.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "social institution / social facility",
+        "tr": "sosyal kurum",
+        "fa": "مؤسسه اجتماعی / مرکز خدمات اجتماعی",
+        "ru": "социальное учреждение",
+        "uk": "соціальна установа",
+        "ar": "مؤسسة اجتماعية"
       }
     },
     "35004": {
@@ -14657,14 +14657,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Bufdi arbeitet ein Jahr lang im Krankenhaus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "federal volunteer service participant",
+        "tr": "federal gönüllü hizmet katılımcısı",
+        "fa": "داوطلب خدمات فدرال",
+        "ru": "участник федеральной добровольной службы",
+        "uk": "учасник федеральної волонтерської служби",
+        "ar": "مشارك في الخدمة التطوعية الاتحادية"
       }
     },
     "35005": {
@@ -14677,14 +14677,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Hilfsangebot richtet sich an ältere Menschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "help offer / support service",
+        "tr": "yardım teklifi / destek hizmeti",
+        "fa": "پیشنهاد کمک / خدمات حمایتی",
+        "ru": "предложение помощи",
+        "uk": "пропозиція допомоги",
+        "ar": "عرض مساعدة / خدمة دعم"
       }
     },
     "35006": {
@@ -14697,14 +14697,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Menschen mit Behinderung brauchen oft barrierefreie Wege.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "disability",
+        "tr": "engellilik",
+        "fa": "معلولیت / ناتوانی",
+        "ru": "инвалидность / ограничение возможностей",
+        "uk": "інвалідність / обмеження можливостей",
+        "ar": "إعاقة"
       }
     },
     "35007": {
@@ -14717,14 +14717,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Zum Jubiläum des Vereins gibt es ein großes Fest.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "anniversary",
+        "tr": "yıl dönümü",
+        "fa": "سالگرد",
+        "ru": "юбилей / годовщина",
+        "uk": "ювілей / річниця",
+        "ar": "ذكرى سنوية / يوبيل"
       }
     },
     "35008": {
@@ -14737,14 +14737,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Nach dem Unfall bestand Lebensgefahr.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "danger to life",
+        "tr": "hayati tehlike",
+        "fa": "خطر جانی / خطر مرگ",
+        "ru": "опасность для жизни",
+        "uk": "небезпека для життя",
+        "ar": "خطر على الحياة"
       }
     },
     "35009": {
@@ -14757,14 +14757,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Einsatz der freiwilligen Helfer dauerte die ganze Nacht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "operation / deployment / effort",
+        "tr": "görev / müdahale / çaba",
+        "fa": "عملیات / مأموریت / تلاش",
+        "ru": "операция / Einsatz / применение",
+        "uk": "операція / залучення",
+        "ar": "عملية / تدخل / جهد"
       }
     },
     "35010": {
@@ -14777,14 +14777,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Einerseits ist die Arbeit anstrengend, andererseits hilft sie vielen Menschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on the one hand ... on the other hand",
+        "tr": "bir yandan ... diğer yandan",
+        "fa": "از یک طرف ... از طرف دیگر",
+        "ru": "с одной стороны ... с другой стороны",
+        "uk": "з одного боку ... з іншого боку",
+        "ar": "من جهة ... ومن جهة أخرى"
       }
     },
     "35011": {
@@ -14797,14 +14797,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Empathie ist in sozialen Berufen sehr wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "empathy",
+        "tr": "empati",
+        "fa": "همدلی",
+        "ru": "эмпатия",
+        "uk": "емпатія",
+        "ar": "تعاطف"
       }
     },
     "35012": {
@@ -14817,14 +14817,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Toleranz hilft beim Zusammenleben in einer Gruppe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tolerance",
+        "tr": "hoşgörü",
+        "fa": "مدارا / تحمل",
+        "ru": "терпимость / толерантность",
+        "uk": "терпимість / толерантність",
+        "ar": "تسامح"
       }
     },
     "35013": {
@@ -14837,14 +14837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Im Jugendzentrum gibt es Kurse und Freizeitangebote.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "youth center",
+        "tr": "gençlik merkezi",
+        "fa": "مرکز جوانان",
+        "ru": "молодёжный центр",
+        "uk": "молодіжний центр",
+        "ar": "مركز شباب"
       }
     },
     "35014": {
@@ -14857,14 +14857,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Das Konzert gestern war wirklich klasse.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "great / excellent",
+        "tr": "harika / süper",
+        "fa": "عالی / فوق‌العاده",
+        "ru": "классный / отличный",
+        "uk": "класний / чудовий",
+        "ar": "رائع / ممتاز"
       }
     },
     "35015": {
@@ -14877,14 +14877,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die Kursleiterin begrüßt alle Teilnehmer freundlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female course instructor",
+        "tr": "kadın kurs eğitmeni",
+        "fa": "مدرس زن دوره / رهبر زن کلاس",
+        "ru": "руководительница курса",
+        "uk": "керівниця курсу",
+        "ar": "مدربة الدورة / قائدة الدورة"
       }
     },
     "35016": {
@@ -14897,14 +14897,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Kinder durften die Rettung miterleben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to experience / to witness",
+        "tr": "tanık olmak / yaşamak",
+        "fa": "تجربه کردن / شاهد بودن",
+        "ru": "пережить / стать свидетелем",
+        "uk": "пережити / бути свідком",
+        "ar": "يشهد / يعيش التجربة"
       }
     },
     "35017": {
@@ -14917,14 +14917,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Rettungshund findet vermisste Personen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rescue dog",
+        "tr": "kurtarma köpeği",
+        "fa": "سگ نجات",
+        "ru": "спасательная собака",
+        "uk": "рятувальний собака",
+        "ar": "كلب إنقاذ"
       }
     },
     "35018": {
@@ -14937,14 +14937,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Nach dem Unglück kamen viele Helfer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "accident / misfortune / disaster",
+        "tr": "kaza / felaket / talihsizlik",
+        "fa": "حادثه / بدبختی / فاجعه",
+        "ru": "несчастье / беда",
+        "uk": "нещастя / лихо",
+        "ar": "مصيبة / حادث"
       }
     },
     "35019": {
@@ -14957,14 +14957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Aufruf zur Hilfe wurde schnell geteilt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "appeal / call",
+        "tr": "çağrı",
+        "fa": "فراخوان / دعوت به اقدام",
+        "ru": "призыв / обращение",
+        "uk": "заклик / звернення",
+        "ar": "نداء / دعوة"
       }
     },
     "35020": {
@@ -14977,14 +14977,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Über Social Media erreichen wir viele junge Menschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "social media",
+        "tr": "sosyal medya",
+        "fa": "شبکه‌های اجتماعی",
+        "ru": "социальные сети",
+        "uk": "соціальні мережі",
+        "ar": "وسائل التواصل الاجتماعي"
       }
     },
     "35021": {
@@ -14997,14 +14997,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Sein wichtigstes Argument überzeugt viele Zuhörer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "argument",
+        "tr": "argüman / gerekçe",
+        "fa": "استدلال / دلیل",
+        "ru": "аргумент / довод",
+        "uk": "аргумент / доказ",
+        "ar": "حجة / دليل"
       }
     },
     "35022": {
