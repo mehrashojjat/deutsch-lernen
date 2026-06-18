@@ -4017,13 +4017,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Die Vorspeise ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Als Vorspeise gibt es heute eine Suppe.",
       "translations": {
-        "en": "Appetiser",
-        "tr": "Ordövr",
-        "fa": "پیش غذا",
-        "ru": "Закуска",
-        "uk": "Закуска",
+        "en": "starter / appetizer",
+        "tr": "başlangıç yemeği",
+        "fa": "پیش‌غذا",
+        "ru": "закуска / первое блюдо",
+        "uk": "закуска / перша страва",
         "ar": "مقبلات"
       }
     },
@@ -4037,14 +4037,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Die Nuss sind im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Nuss schmeckt frisch und leicht süß.",
       "translations": {
-        "en": "Nut",
-        "tr": "yuva için",
-        "fa": "مهره",
-        "ru": "Орех",
-        "uk": "Гайка",
-        "ar": "أتريد بعض البندق؟"
+        "en": "nut",
+        "tr": "fındık / kuruyemiş",
+        "fa": "مغز / آجیل",
+        "ru": "орех",
+        "uk": "горіх",
+        "ar": "جوز / مكسرات"
       }
     },
     "34474": {
@@ -4057,14 +4057,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Der Geschmack ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Der Geschmack der Soße ist sehr mild.",
       "translations": {
-        "en": "Taste",
-        "tr": "Lezzet",
-        "fa": "طعم",
-        "ru": "Вкус",
-        "uk": "Смак",
-        "ar": "مذاق"
+        "en": "taste / flavor",
+        "tr": "tat / lezzet",
+        "fa": "طعم / مزه",
+        "ru": "вкус",
+        "uk": "смак",
+        "ar": "طعم / مذاق"
       }
     },
     "34475": {
@@ -4077,14 +4077,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 1,
-      "example_de": "Das Drittel ist im Bereich Zahlen und Mengen wichtig.",
+      "example_de": "Ein Drittel der Gruppe isst vegetarisch.",
       "translations": {
-        "en": "One-third",
+        "en": "third / one third",
         "tr": "üçte bir",
-        "fa": "سوم",
-        "ru": "Третьи",
-        "uk": "Треті",
-        "ar": "الأثلاث"
+        "fa": "یک‌سوم",
+        "ru": "треть / одна треть",
+        "uk": "третина",
+        "ar": "ثلث"
       }
     },
     "34476": {
@@ -4097,14 +4097,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken kann man sich ernähren.",
+      "example_de": "Sie ernährt sich seit Jahren sehr gesund.",
       "translations": {
-        "en": "to feed oneself",
-        "tr": "kendini beslemek",
-        "fa": "- تغذيه -",
-        "ru": "кормить себя",
-        "uk": "годувати себе",
-        "ar": "-يتغذى"
+        "en": "to eat / nourish oneself",
+        "tr": "beslenmek",
+        "fa": "تغذیه کردن / غذا خوردن",
+        "ru": "питаться",
+        "uk": "харчуватися",
+        "ar": "يتغذى"
       }
     },
     "34477": {
@@ -4117,14 +4117,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Der Ernährungsberater ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Der Ernährungsberater gibt Tipps für den Alltag.",
       "translations": {
-        "en": "Dietitian",
-        "tr": "DİYETİSYEN",
-        "fa": "متخصص تغذیه",
-        "ru": "Диетолог",
-        "uk": "Дієтолог",
-        "ar": "أخصائية تغذية"
+        "en": "nutritionist / dietary adviser",
+        "tr": "beslenme danışmanı",
+        "fa": "مشاور تغذیه مرد",
+        "ru": "консультант по питанию",
+        "uk": "консультант з харчування",
+        "ar": "مستشار تغذية"
       }
     },
     "34478": {
@@ -4137,14 +4137,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Die Ernährungsberaterin ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Ernährungsberaterin erklärt einen gesunden Speiseplan.",
       "translations": {
-        "en": "Nutritionist",
-        "tr": "Diyetisyen olarak",
-        "fa": "متخصص تغذیه",
-        "ru": "Диетолог",
-        "uk": "Дієтолог",
-        "ar": "أخصائية تغذية"
+        "en": "female nutritionist / dietary adviser",
+        "tr": "kadın beslenme danışmanı",
+        "fa": "مشاور تغذیه زن",
+        "ru": "консультантка по питанию",
+        "uk": "консультантка з харчування",
+        "ar": "مستشارة تغذية"
       }
     },
     "34479": {
@@ -4157,14 +4157,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Der Speiseplan ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Der Speiseplan für diese Woche hängt in der Küche.",
       "translations": {
-        "en": "Meal plan",
-        "tr": "Yemek çizelgesi",
-        "fa": "منو",
-        "ru": "Меню",
-        "uk": "План харчування",
-        "ar": "الخطة الغذائية"
+        "en": "meal plan / menu",
+        "tr": "yemek planı / menü",
+        "fa": "برنامه غذایی / منو",
+        "ru": "план питания / меню",
+        "uk": "план харчування / меню",
+        "ar": "خطة الوجبات / قائمة الطعام"
       }
     },
     "34480": {
@@ -4177,14 +4177,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Das Fertigprodukt ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Ein Fertigprodukt spart Zeit, ist aber oft teuer.",
       "translations": {
-        "en": "Final product",
-        "tr": "Bitmiş ürün",
-        "fa": "محصول نهایی",
-        "ru": "Готовый продукт",
-        "uk": "Готовий продукт",
-        "ar": "المنتج النهائي"
+        "en": "ready-made product",
+        "tr": "hazır ürün",
+        "fa": "محصول آماده",
+        "ru": "готовый продукт",
+        "uk": "готовий продукт",
+        "ar": "منتج جاهز"
       }
     },
     "34481": {
@@ -4197,14 +4197,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "Im Bereich Gesundheit kann man oft zunehmen.",
+      "example_de": "Viele Menschen nehmen im Winter etwas zu.",
       "translations": {
-        "en": "the statement said.",
-        "tr": "yükseltmek",
-        "fa": "افزایش وزن",
-        "ru": "увеличивать(ся)",
-        "uk": "збільшення",
-        "ar": "زيادة"
+        "en": "to gain weight / increase",
+        "tr": "kilo almak / artmak",
+        "fa": "وزن اضافه کردن / افزایش یافتن",
+        "ru": "набирать вес / увеличиваться",
+        "uk": "набирати вагу / збільшуватися",
+        "ar": "يزداد / يكتسب وزنًا"
       }
     },
     "34482": {
@@ -4217,14 +4217,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "Der Workshop ist im Bereich Lernen wichtig.",
+      "example_de": "Im Workshop lernen wir neue Methoden kennen.",
       "translations": {
-        "en": "Workshop",
-        "tr": "İş Atölyesi̇",
-        "fa": "کارگاه",
-        "ru": "Семинар",
-        "uk": "Воркшоп",
-        "ar": "ورشة العمل"
+        "en": "workshop",
+        "tr": "atölye çalışması",
+        "fa": "کارگاه آموزشی",
+        "ru": "семинар / мастер-класс",
+        "uk": "воркшоп / майстер-клас",
+        "ar": "ورشة عمل"
       }
     },
     "34483": {
@@ -4237,14 +4237,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "Die Teilnehmende ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Teilnehmende stellt am Anfang eine Frage.",
       "translations": {
-        "en": "Participants",
-        "tr": "Katılımcılar",
-        "fa": "شرکت‌کنندگان",
-        "ru": "Участники",
-        "uk": "Учасниик",
-        "ar": "المشاركون"
+        "en": "participant",
+        "tr": "katılımcı",
+        "fa": "شرکت‌کننده",
+        "ru": "участница / участник",
+        "uk": "учасниця / учасник",
+        "ar": "مشاركة / مشارك"
       }
     },
     "34484": {
@@ -4257,14 +4257,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "Der Stichpunkt ist im Bereich Kommunikation wichtig.",
+      "example_de": "Der Stichpunkt steht oben auf der Folie.",
       "translations": {
-        "en": "Key Point",
-        "tr": "Madde işareti",
-        "fa": "نکته‌ی کلیدی",
-        "ru": "Пункт маркера",
-        "uk": "Пункт маркера",
-        "ar": "نقطة التعداد النقطي"
+        "en": "bullet point / key point",
+        "tr": "madde / ana nokta",
+        "fa": "نکته کلیدی / مورد فهرست",
+        "ru": "пункт / тезис",
+        "uk": "пункт / теза",
+        "ar": "نقطة رئيسية"
       }
     },
     "34485": {
@@ -4277,14 +4277,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache kann man sich interessieren für.",
+      "example_de": "Ich interessiere mich für moderne Kunst.",
       "translations": {
-        "en": "are interested in",
-        "tr": "ile ilgileniyorlar",
-        "fa": "علاقه دارند",
-        "ru": "интересуются",
-        "uk": "зацікавлені в",
-        "ar": "مهتمون"
+        "en": "to be interested in",
+        "tr": "ilgilenmek",
+        "fa": "علاقه‌مند بودن به",
+        "ru": "интересоваться",
+        "uk": "цікавитися",
+        "ar": "يهتم بـ"
       }
     },
     "34486": {
@@ -4297,14 +4297,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache kann man oft verstärken.",
+      "example_de": "Diese Übung kann den Effekt verstärken.",
       "translations": {
-        "en": "reinforce",
-        "tr": "? iddetini art",
-        "fa": "تقویت کردن",
-        "ru": "Укрепление",
-        "uk": "ампліфікувати",
-        "ar": "ضخّم"
+        "en": "to strengthen / intensify",
+        "tr": "güçlendirmek / artırmak",
+        "fa": "تقویت کردن / شدت بخشیدن",
+        "ru": "усиливать",
+        "uk": "посилювати",
+        "ar": "يعزز / يقوي"
       }
     },
     "34487": {
@@ -4317,14 +4317,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften ist das Wort \"unglaublich\" nützlich.",
+      "example_de": "Die Aussicht vom Turm ist unglaublich schön.",
       "translations": {
-        "en": "unbelievably",
+        "en": "incredible / unbelievable",
         "tr": "inanılmaz",
-        "fa": "باور نکردنيه",
-        "ru": "Невероятно.",
-        "uk": "Бог великий, я маленька",
-        "ar": "إنه لا يصدق."
+        "fa": "باورنکردنی",
+        "ru": "невероятный",
+        "uk": "неймовірний",
+        "ar": "لا يصدق / مذهل"
       }
     },
     "34488": {
@@ -4337,14 +4337,14 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"ah\".",
+      "example_de": "Ah, jetzt verstehe ich die Aufgabe.",
       "translations": {
-        "en": "UH",
-        "tr": "ah",
-        "fa": "آه...",
-        "ru": "Ah",
-        "uk": "Ага.",
-        "ar": "\"اسمع يا \"ميمفيس \"انه ابنك \"مامبو"
+        "en": "ah",
+        "tr": "aa / ah",
+        "fa": "آه / آها",
+        "ru": "ах / а",
+        "uk": "ах / а",
+        "ar": "آه / ها"
       }
     },
     "34489": {
@@ -4357,14 +4357,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "Die Denkblase ist im Bereich Kommunikation wichtig.",
+      "example_de": "In der Denkblase steht der Gedanke der Figur.",
       "translations": {
-        "en": "Thinking Bubble",
-        "tr": "Düşünme Balonu",
-        "fa": "حباب فکری",
-        "ru": "Мыслящий пузырь",
-        "uk": "Мисленнєва бульбашка",
-        "ar": "فقاعة التفكير"
+        "en": "thought bubble",
+        "tr": "düşünce balonu",
+        "fa": "حباب فکر",
+        "ru": "облачко мысли",
+        "uk": "хмаринка думки",
+        "ar": "فقاعة تفكير"
       }
     },
     "34490": {
@@ -4377,14 +4377,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"stehen bleiben\".",
+      "example_de": "Bitte bleiben Sie an der Ampel stehen.",
       "translations": {
-        "en": "Parked",
-        "tr": "hareketsiz durmak",
-        "fa": "! ايست",
-        "ru": "Ни с места!",
-        "uk": "стояти на місці",
-        "ar": "(فينس) إنتظار! توقّفْ!"
+        "en": "to stop / remain standing",
+        "tr": "durmak",
+        "fa": "ایستادن / متوقف ماندن",
+        "ru": "остановиться / стоять",
+        "uk": "зупинитися / стояти",
+        "ar": "يتوقف / يبقى واقفًا"
       }
     },
     "34491": {
@@ -4397,14 +4397,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "Der Kurier ist im Bereich Arbeit wichtig.",
+      "example_de": "Der Kurier bringt die Unterlagen ins Büro.",
       "translations": {
-        "en": "Messenger",
-        "tr": "Kurye;",
-        "fa": "پیک",
-        "ru": "курьером.",
-        "uk": "Кур 'єр",
-        "ar": "شريك التوصيل"
+        "en": "courier",
+        "tr": "kurye",
+        "fa": "پیک / قاصد",
+        "ru": "курьер",
+        "uk": "курʼєр",
+        "ar": "ساعي / مندوب توصيل"
       }
     },
     "34492": {
@@ -4417,14 +4417,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften kann man sich wundern.",
+      "example_de": "Ich wundere mich über diese schnelle Antwort.",
       "translations": {
-        "en": "wonder",
-        "tr": "hayret",
+        "en": "to be surprised / wonder",
+        "tr": "şaşırmak",
         "fa": "تعجب کردن",
-        "ru": "чудо",
-        "uk": "диво",
-        "ar": "عجب"
+        "ru": "удивляться",
+        "uk": "дивуватися",
+        "ar": "يتعجب / يستغرب"
       }
     },
     "34493": {
@@ -4437,14 +4437,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "Die Amtssprache ist im Bereich Kommunikation wichtig.",
+      "example_de": "Deutsch ist in Deutschland die Amtssprache.",
       "translations": {
-        "en": "Official language",
-        "tr": "Resmî dil",
+        "en": "official language",
+        "tr": "resmî dil",
         "fa": "زبان رسمی",
-        "ru": "Официальный язык",
-        "uk": "Офіційна мова",
-        "ar": "اللغة الرسمية"
+        "ru": "официальный язык",
+        "uk": "офіційна мова",
+        "ar": "لغة رسمية"
       }
     },
     "34494": {
@@ -4457,14 +4457,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 13,
-      "example_de": "Die Sprachbiografie ist im Bereich Kommunikation wichtig.",
+      "example_de": "In ihrer Sprachbiografie beschreibt sie alle Sprachen.",
       "translations": {
-        "en": "Language biography",
-        "tr": "Dil biyografisi",
-        "fa": "بیوگرافی زبان",
-        "ru": "Биография языка",
-        "uk": "Мовна біографія",
-        "ar": "السيرة الذاتية للغة"
+        "en": "language biography",
+        "tr": "dil biyografisi",
+        "fa": "زندگی‌نامه زبانی",
+        "ru": "языковая биография",
+        "uk": "мовна біографія",
+        "ar": "سيرة لغوية"
       }
     },
     "34495": {
@@ -4477,13 +4477,13 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 9,
-      "example_de": "Das Auslandssemester ist im Bereich Lernen wichtig.",
+      "example_de": "Das Auslandssemester in Spanien war sehr spannend.",
       "translations": {
-        "en": "Semester abroad",
-        "tr": "Yurtdışı dönemi",
-        "fa": "ترم تحصیلی خارج از کشور",
-        "ru": "Семестр за границей",
-        "uk": "Семестр за кордоном",
+        "en": "semester abroad",
+        "tr": "yurt dışı dönemi",
+        "fa": "ترم تحصیلی در خارج",
+        "ru": "семестр за границей",
+        "uk": "семестр за кордоном",
         "ar": "فصل دراسي في الخارج"
       }
     },
@@ -4497,13 +4497,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 9,
-      "example_de": "Die Vorlesung ist im Bereich Lernen wichtig.",
+      "example_de": "Die Vorlesung beginnt heute um zehn Uhr.",
       "translations": {
-        "en": "Lecture",
-        "tr": "Lec",
-        "fa": "سخنرانی",
+        "en": "lecture",
+        "tr": "ders / konferans",
+        "fa": "سخنرانی دانشگاهی / درس",
         "ru": "лекция",
-        "uk": "Лекція",
+        "uk": "лекція",
         "ar": "محاضرة"
       }
     },
@@ -4517,14 +4517,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Die Gemeinsamkeit ist im Bereich Grammatik und Alltagssprache wichtig.",
+      "example_de": "Wir haben trotz Unterschiede eine Gemeinsamkeit gefunden.",
       "translations": {
-        "en": "Common Ground",
-        "tr": "Ortaklık",
-        "fa": "زمینه مشترک",
-        "ru": "Общность",
-        "uk": "Поширеність",
-        "ar": "القواسم المشتركة"
+        "en": "similarity / common feature",
+        "tr": "ortak nokta",
+        "fa": "وجه مشترک",
+        "ru": "сходство / общая черта",
+        "uk": "спільна риса",
+        "ar": "قاسم مشترك / تشابه"
       }
     },
     "34498": {
@@ -4537,14 +4537,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften lernt man \"erleichtert\".",
+      "example_de": "Nach der Prüfung war sie sehr erleichtert.",
       "translations": {
-        "en": "relieves",
+        "en": "relieved",
         "tr": "rahatlamış",
-        "fa": "حالا ميتونه خيالت راحت باشه",
-        "ru": "erleichtert",
-        "uk": "erleichtert",
-        "ar": "erleichtert"
+        "fa": "آسوده / راحت‌شده",
+        "ru": "облегчённый",
+        "uk": "полегшений",
+        "ar": "مرتاح"
       }
     },
     "34499": {
@@ -4557,14 +4557,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Der Biergarten ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Im Biergarten sitzen wir unter alten Bäumen.",
       "translations": {
-        "en": "Beer garden",
-        "tr": "Bira bahçeleri",
+        "en": "beer garden",
+        "tr": "bira bahçesi",
         "fa": "باغ آبجو",
-        "ru": "Пивной сад",
-        "uk": "Пивний сад",
-        "ar": "Biergarten"
+        "ru": "пивной сад",
+        "uk": "пивний сад",
+        "ar": "حديقة بيرة"
       }
     },
     "34500": {
@@ -4577,14 +4577,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "Die Sprachkenntnisse ist im Bereich Kommunikation wichtig.",
+      "example_de": "Gute Sprachkenntnisse helfen bei der Arbeit.",
       "translations": {
-        "en": "Language skills",
-        "tr": "Dil becerileri",
-        "fa": "Sprachkenntnisse",
-        "ru": "Sprachkenntnisse",
-        "uk": "Sprachkenntnisse",
-        "ar": "Sprachkenntnisse"
+        "en": "language skills",
+        "tr": "dil bilgisi / dil becerileri",
+        "fa": "دانش زبان / مهارت زبانی",
+        "ru": "знание языка",
+        "uk": "знання мови",
+        "ar": "مهارات لغوية"
       }
     },
     "34501": {
@@ -4597,14 +4597,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "Im Bereich Kommunikation lernt man \"beherrschen\".",
+      "example_de": "Sie beherrscht Deutsch schon sehr gut.",
       "translations": {
-        "en": "command",
-        "tr": "denetlemek",
-        "fa": "فرمان",
-        "ru": "beherrschen",
-        "uk": "beherrschen",
-        "ar": "beherrschen"
+        "en": "to master / command",
+        "tr": "hakim olmak / iyi bilmek",
+        "fa": "مسلط بودن به",
+        "ru": "владеть / хорошо знать",
+        "uk": "володіти / добре знати",
+        "ar": "يتقن"
       }
     },
     "34502": {
@@ -4617,14 +4617,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "Im Bereich Kommunikation ist das Wort \"flüssig\" nützlich.",
+      "example_de": "Er spricht inzwischen flüssig Deutsch.",
       "translations": {
-        "en": "Liquid",
-        "tr": "flüssig",
-        "fa": "flüssig",
-        "ru": "flüssig",
-        "uk": "flüssig",
-        "ar": "flüssig"
+        "en": "fluent",
+        "tr": "akıcı",
+        "fa": "روان",
+        "ru": "беглый / свободный",
+        "uk": "вільний / плавний",
+        "ar": "بطلاقة"
       }
     },
     "34503": {
@@ -4637,14 +4637,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften lernt man \"gelangweilt\".",
+      "example_de": "Im langen Vortrag war ich etwas gelangweilt.",
       "translations": {
         "en": "bored",
         "tr": "sıkılmış",
-        "fa": "gelangweilt",
-        "ru": "gelangweilt",
-        "uk": "gelangweilt",
-        "ar": "gelangweilt"
+        "fa": "حوصله‌سررفته",
+        "ru": "скучающий",
+        "uk": "занудьгований",
+        "ar": "ملول / ضجر"
       }
     },
     "34504": {
@@ -4657,14 +4657,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 3,
-      "example_de": "Im Bereich Familie und Beziehungen kann man sich treffen mit.",
+      "example_de": "Ich treffe mich morgen mit einer Freundin.",
       "translations": {
-        "en": "Meeting with",
-        "tr": "ile buluşmak",
-        "fa": "sich treffen mit",
-        "ru": "sich treffen mit",
-        "uk": "sich treffen mit",
-        "ar": "sich treffen mit"
+        "en": "to meet with",
+        "tr": "buluşmak",
+        "fa": "ملاقات کردن با",
+        "ru": "встречаться с",
+        "uk": "зустрічатися з",
+        "ar": "يلتقي بـ"
       }
     },
     "34505": {
@@ -4677,14 +4677,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften kann man sich aufregen über.",
+      "example_de": "Er regt sich über den Lärm auf.",
       "translations": {
-        "en": "sich aufregen über",
-        "tr": "sich aufregen über",
-        "fa": "sich aufregen über",
-        "ru": "sich aufregen über",
-        "uk": "sich aufregen über",
-        "ar": "sich aufregen über"
+        "en": "to get upset about",
+        "tr": "bir şeye sinirlenmek",
+        "fa": "از چیزی عصبانی شدن",
+        "ru": "возмущаться из-за",
+        "uk": "обурюватися через",
+        "ar": "ينزعج من"
       }
     },
     "34506": {
@@ -4697,14 +4697,14 @@
       "word_type": "Adjective",
       "difficulty": 2,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften ist das Wort \"furchtbar\" nützlich.",
+      "example_de": "Der Geruch im Keller ist furchtbar.",
       "translations": {
-        "en": "furchtbar",
-        "tr": "furchtbar",
-        "fa": "furchtbar",
-        "ru": "furchtbar",
-        "uk": "furchtbar",
-        "ar": "furchtbar"
+        "en": "terrible / awful",
+        "tr": "korkunç / berbat",
+        "fa": "وحشتناک / افتضاح",
+        "ru": "ужасный",
+        "uk": "жахливий",
+        "ar": "فظيع / سيئ جدًا"
       }
     },
     "34507": {
@@ -4717,14 +4717,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 19,
-      "example_de": "Die Direktheit ist im Bereich Gefühle und Eigenschaften wichtig.",
+      "example_de": "Ihre Direktheit überrascht manche Kollegen.",
       "translations": {
-        "en": "Direktheit",
-        "tr": "Direktheit",
-        "fa": "Direktheit",
-        "ru": "Direktheit",
-        "uk": "Direktheit",
-        "ar": "Direktheit"
+        "en": "directness",
+        "tr": "doğrudanlık",
+        "fa": "صراحت / رک بودن",
+        "ru": "прямота",
+        "uk": "прямота",
+        "ar": "صراحة / مباشرة"
       }
     },
     "34508": {
@@ -4737,14 +4737,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache kann man sich gewöhnen an.",
+      "example_de": "Man muss sich an neue Regeln gewöhnen.",
       "translations": {
-        "en": "sich gewöhnen an",
-        "tr": "sich gewöhnen an",
-        "fa": "sich gewöhnen an",
-        "ru": "sich gewöhnen an",
-        "uk": "sich gewöhnen an",
-        "ar": "sich gewöhnen an"
+        "en": "to get used to",
+        "tr": "alışmak",
+        "fa": "عادت کردن به",
+        "ru": "привыкать к",
+        "uk": "звикати до",
+        "ar": "يعتاد على"
       }
     },
     "34509": {
@@ -4757,14 +4757,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"optimal\".",
+      "example_de": "Diese Lösung ist für uns optimal.",
       "translations": {
-        "en": "optimal",
-        "tr": "optimal",
-        "fa": "optimal",
-        "ru": "optimal",
-        "uk": "optimal",
-        "ar": "optimal"
+        "en": "optimal / ideal",
+        "tr": "en uygun / ideal",
+        "fa": "بهینه / ایده‌آل",
+        "ru": "оптимальный",
+        "uk": "оптимальний",
+        "ar": "مثالي / أمثل"
       }
     },
     "34510": {
@@ -4777,14 +4777,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"davon\".",
+      "example_de": "Davon habe ich gestern nichts gehört.",
       "translations": {
-        "en": "davon",
-        "tr": "davon",
-        "fa": "davon",
-        "ru": "davon",
-        "uk": "davon",
-        "ar": "davon"
+        "en": "of that / from it",
+        "tr": "ondan / bunun hakkında",
+        "fa": "از آن / درباره آن",
+        "ru": "об этом / от этого",
+        "uk": "про це / від цього",
+        "ar": "من ذلك / عنه"
       }
     },
     "34511": {
@@ -4797,14 +4797,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"wofür\".",
+      "example_de": "Wofür brauchst du diese Unterlagen?",
       "translations": {
-        "en": "wofür",
-        "tr": "wofür",
-        "fa": "wofür",
-        "ru": "wofür",
-        "uk": "wofür",
-        "ar": "wofür"
+        "en": "what for",
+        "tr": "ne için",
+        "fa": "برای چه",
+        "ru": "для чего",
+        "uk": "для чого",
+        "ar": "لأي غرض"
       }
     },
     "34512": {
@@ -4817,14 +4817,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"woran\".",
+      "example_de": "Woran denkst du gerade?",
       "translations": {
-        "en": "woran",
-        "tr": "woran",
-        "fa": "woran",
-        "ru": "woran",
-        "uk": "woran",
-        "ar": "woran"
+        "en": "what ... about / at what",
+        "tr": "neye",
+        "fa": "به چه چیزی",
+        "ru": "о чём / на чём",
+        "uk": "про що / на чому",
+        "ar": "بماذا / على ماذا"
       }
     },
     "34513": {
@@ -4837,14 +4837,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Die Jahreskarte ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Mit der Jahreskarte fährt sie jeden Tag Bus.",
       "translations": {
-        "en": "Jahreskarte",
-        "tr": "Jahreskarte",
-        "fa": "Jahreskarte",
-        "ru": "Jahreskarte",
-        "uk": "Jahreskarte",
-        "ar": "Jahreskarte"
+        "en": "annual pass",
+        "tr": "yıllık kart",
+        "fa": "کارت سالانه",
+        "ru": "годовой абонемент",
+        "uk": "річний абонемент",
+        "ar": "بطاقة سنوية"
       }
     },
     "34514": {
@@ -4857,14 +4857,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften lernt man \"unangenehm\".",
+      "example_de": "Das Gespräch war kurz unangenehm.",
       "translations": {
-        "en": "unangenehm",
-        "tr": "unangenehm",
-        "fa": "unangenehm",
-        "ru": "unangenehm",
-        "uk": "unangenehm",
-        "ar": "unangenehm"
+        "en": "unpleasant",
+        "tr": "rahatsız edici / hoş olmayan",
+        "fa": "ناخوشایند",
+        "ru": "неприятный",
+        "uk": "неприємний",
+        "ar": "غير مريح / مزعج"
       }
     },
     "34515": {
@@ -4877,14 +4877,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 17,
-      "example_de": "Das Computerprogramm ist im Bereich Technik wichtig.",
+      "example_de": "Das Computerprogramm speichert die Daten automatisch.",
       "translations": {
-        "en": "Computerprogramm",
-        "tr": "Computerprogramm",
-        "fa": "Computerprogramm",
-        "ru": "Computerprogramm",
-        "uk": "Computerprogramm",
-        "ar": "Computerprogramm"
+        "en": "computer program",
+        "tr": "bilgisayar programı",
+        "fa": "برنامه کامپیوتری",
+        "ru": "компьютерная программа",
+        "uk": "компʼютерна програма",
+        "ar": "برنامج حاسوب"
       }
     },
     "34516": {
@@ -4897,14 +4897,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "Der Mitschüler ist im Bereich Lernen wichtig.",
+      "example_de": "Der Mitschüler hilft mir bei den Hausaufgaben.",
       "translations": {
-        "en": "Mitschüler",
-        "tr": "Mitschüler",
-        "fa": "Mitschüler",
-        "ru": "Mitschüler",
-        "uk": "Mitschüler",
-        "ar": "Mitschüler"
+        "en": "male classmate",
+        "tr": "erkek sınıf arkadaşı",
+        "fa": "همکلاسی پسر",
+        "ru": "одноклассник",
+        "uk": "однокласник",
+        "ar": "زميل الصف"
       }
     },
     "34517": {
@@ -4917,14 +4917,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "Die Mitschülerin ist im Bereich Lernen wichtig.",
+      "example_de": "Die Mitschülerin sitzt neben mir im Kurs.",
       "translations": {
-        "en": "Mitschülerin",
-        "tr": "Mitschülerin",
-        "fa": "Mitschülerin",
-        "ru": "Mitschülerin",
-        "uk": "Mitschülerin",
-        "ar": "Mitschülerin"
+        "en": "female classmate",
+        "tr": "kız sınıf arkadaşı",
+        "fa": "همکلاسی دختر",
+        "ru": "одноклассница",
+        "uk": "однокласниця",
+        "ar": "زميلة الصف"
       }
     },
     "34518": {
@@ -4937,14 +4937,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Das Tabu ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Geld ist in manchen Familien ein Tabu.",
       "translations": {
-        "en": "Tabu",
-        "tr": "Tabu",
-        "fa": "Tabu",
-        "ru": "Tabu",
-        "uk": "Tabu",
-        "ar": "Tabu"
+        "en": "taboo",
+        "tr": "tabu",
+        "fa": "تابو / موضوع ممنوع",
+        "ru": "табу",
+        "uk": "табу",
+        "ar": "تابو / أمر محظور"
       }
     },
     "34519": {
@@ -4957,14 +4957,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Im Bereich Gesellschaft lernt man \"tabu\".",
+      "example_de": "Dieses Thema ist für viele Menschen tabu.",
       "translations": {
-        "en": "tabu",
+        "en": "taboo",
         "tr": "tabu",
-        "fa": "tabu",
-        "ru": "tabu",
-        "uk": "tabu",
-        "ar": "tabu"
+        "fa": "تابو / ممنوع",
+        "ru": "табуированный",
+        "uk": "табуйований",
+        "ar": "محظور / تابو"
       }
     },
     "34520": {
@@ -4977,14 +4977,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 18,
-      "example_de": "Im Bereich Gesellschaft lernt man \"Gott\".",
+      "example_de": "Viele Menschen glauben an Gott.",
       "translations": {
-        "en": "Gott",
-        "tr": "Gott",
-        "fa": "Gott",
-        "ru": "Gott",
-        "uk": "Gott",
-        "ar": "Gott"
+        "en": "God",
+        "tr": "Tanrı",
+        "fa": "خدا",
+        "ru": "Бог",
+        "uk": "Бог",
+        "ar": "الله / إله"
       }
     },
     "34521": {
@@ -4997,14 +4997,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 18,
-      "example_de": "Die Religion ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Religion spielt in ihrem Leben eine wichtige Rolle.",
       "translations": {
-        "en": "Religion",
-        "tr": "Religion",
-        "fa": "Religion",
-        "ru": "Religion",
-        "uk": "Religion",
-        "ar": "Religion"
+        "en": "religion",
+        "tr": "din",
+        "fa": "دین",
+        "ru": "религия",
+        "uk": "релігія",
+        "ar": "دين"
       }
     },
     "34522": {
