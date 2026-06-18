@@ -3017,14 +3017,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"abbuchen\".",
+      "example_de": "Die Bank bucht den Betrag morgen ab.",
       "translations": {
-        "en": "Transfer <ph id=\"1\" equiv-text=\"{amount}\"/>",
-        "tr": "para Çekme",
-        "fa": "بدهی",
-        "ru": "вывести",
-        "uk": "зняти",
-        "ar": "سحب"
+        "en": "to debit / withdraw automatically",
+        "tr": "hesaptan çekmek",
+        "fa": "از حساب برداشت کردن",
+        "ru": "списывать со счёта",
+        "uk": "списувати з рахунку",
+        "ar": "يخصم من الحساب"
       }
     },
     "34423": {
@@ -3037,13 +3037,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Die Lastschrift ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Miete wird per Lastschrift bezahlt.",
       "translations": {
-        "en": "Debit",
-        "tr": "Otomatik ödeme",
-        "fa": "بدهی مستقیم",
-        "ru": "Списание",
-        "uk": "Безакцептне списання",
+        "en": "direct debit",
+        "tr": "otomatik tahsilat",
+        "fa": "برداشت مستقیم از حساب",
+        "ru": "прямое списание",
+        "uk": "пряме списання",
         "ar": "خصم مباشر"
       }
     },
@@ -3057,14 +3057,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 8,
-      "example_de": "Die Versicherungsvertreterin ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Versicherungsvertreterin besucht den Kunden im Büro.",
       "translations": {
-        "en": "Insurance Agent",
-        "tr": "Sigorta Acentesi",
-        "fa": "نماینده بیمه",
-        "ru": "Страховой агент",
-        "uk": "Страховий агент",
-        "ar": "وكيل التأمين"
+        "en": "female insurance agent",
+        "tr": "kadın sigorta temsilcisi",
+        "fa": "نماینده زن بیمه",
+        "ru": "страховая представительница",
+        "uk": "представниця страхової компанії",
+        "ar": "ممثلة تأمين"
       }
     },
     "34425": {
@@ -3077,14 +3077,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 19,
-      "example_de": "Die Panik ist im Bereich Gefühle und Eigenschaften wichtig.",
+      "example_de": "Bei Feuer soll niemand in Panik geraten.",
       "translations": {
-        "en": "Panic",
-        "tr": "Panik",
-        "fa": "ترسه",
-        "ru": "Паника",
-        "uk": "Паніка",
-        "ar": "فزع"
+        "en": "panic",
+        "tr": "panik",
+        "fa": "وحشت / هراس",
+        "ru": "паника",
+        "uk": "паніка",
+        "ar": "ذعر / هلع"
       }
     },
     "34426": {
@@ -3097,13 +3097,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Die Kontogebühr ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Kontogebühr wird jeden Monat abgebucht.",
       "translations": {
-        "en": "Account fee",
-        "tr": "Hesap Ücreti",
+        "en": "account fee",
+        "tr": "hesap ücreti",
         "fa": "کارمزد حساب",
-        "ru": "Комиссия аккаунта",
-        "uk": "Комісія за рахунок",
+        "ru": "плата за счёт",
+        "uk": "плата за рахунок",
         "ar": "رسوم الحساب"
       }
     },
@@ -3117,14 +3117,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache kann man sich lohnen.",
+      "example_de": "Ein Vergleich kann sich beim Einkauf lohnen.",
       "translations": {
-        "en": "are worthwhile",
-        "tr": "zahmete değer",
-        "fa": "ارزشمند باشید",
-        "ru": "стоят",
-        "uk": "Мати сенс",
-        "ar": "جديرة بالاهتمام"
+        "en": "to be worth it",
+        "tr": "değmek / faydalı olmak",
+        "fa": "ارزش داشتن / به‌صرفه بودن",
+        "ru": "стоить того / быть выгодным",
+        "uk": "бути вартим / окупатися",
+        "ar": "يستحق / يكون مجديًا"
       }
     },
     "34428": {
@@ -3137,14 +3137,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 18,
-      "example_de": "Die Verbraucherzentrale ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Die Verbraucherzentrale gibt Tipps zu Verträgen.",
       "translations": {
-        "en": "Verbraucherzentrale",
-        "tr": "Tüketici danışma merkezi",
-        "fa": "مرکز مشاوره مصرف‌کنندگان",
-        "ru": "Потребительский центр",
-        "uk": "Центр споживачів",
-        "ar": "مركز المستهلك"
+        "en": "consumer advice center",
+        "tr": "tüketici danışma merkezi",
+        "fa": "مرکز حمایت از مصرف‌کنندگان",
+        "ru": "центр защиты прав потребителей",
+        "uk": "центр захисту прав споживачів",
+        "ar": "مركز حماية المستهلك"
       }
     },
     "34429": {
@@ -3157,14 +3157,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "Im Bereich Gesundheit ist das Wort \"allergisch\" nützlich.",
+      "example_de": "Mein Bruder ist gegen Nüsse allergisch.",
       "translations": {
-        "en": "Allergic",
-        "tr": "Alerji",
-        "fa": "آلرژیک",
+        "en": "allergic",
+        "tr": "alerjik",
+        "fa": "حساسیت‌دار / آلرژیک",
         "ru": "аллергический",
-        "uk": "Алергія",
-        "ar": "أرجية"
+        "uk": "алергічний",
+        "ar": "مصاب بحساسية"
       }
     },
     "34430": {
@@ -3177,14 +3177,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "Die Hautcreme ist im Bereich Gesundheit wichtig.",
+      "example_de": "Die Hautcreme hilft gegen trockene Haut.",
       "translations": {
-        "en": "Cream, Skin",
-        "tr": "Cilt Kremi",
+        "en": "skin cream",
+        "tr": "cilt kremi",
         "fa": "کرم پوست",
-        "ru": "Крем",
-        "uk": "Крем для шкіри",
-        "ar": "دهان جلديّ."
+        "ru": "крем для кожи",
+        "uk": "крем для шкіри",
+        "ar": "كريم للبشرة"
       }
     },
     "34431": {
@@ -3197,14 +3197,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "Im Bereich Arbeit ist das Wort \"freiberuflich\" nützlich.",
+      "example_de": "Sie arbeitet freiberuflich als Übersetzerin.",
       "translations": {
-        "en": "Freelancer",
-        "tr": "Serbest Çalışma",
-        "fa": "فریلنسر",
-        "ru": "фриланс",
-        "uk": "позаштатний працівник",
-        "ar": "ذو أعمال حرة"
+        "en": "freelance",
+        "tr": "serbest çalışan",
+        "fa": "آزادکار / فریلنس",
+        "ru": "внештатный / фрилансерский",
+        "uk": "позаштатний / фрилансерський",
+        "ar": "مستقل / حرّ"
       }
     },
     "34432": {
@@ -3217,14 +3217,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld kann man sich absichern.",
+      "example_de": "Man sollte sich gegen wichtige Risiken absichern.",
       "translations": {
-        "en": "hedge",
-        "tr": "çit",
-        "fa": "برای محافظت از خود",
-        "ru": "хеджирование",
-        "uk": "хеджування",
-        "ar": "تحوط"
+        "en": "to protect oneself / insure oneself",
+        "tr": "kendini güvenceye almak",
+        "fa": "خود را بیمه / ایمن کردن",
+        "ru": "застраховаться / обезопасить себя",
+        "uk": "застрахуватися / убезпечити себе",
+        "ar": "يؤمّن نفسه / يحمي نفسه"
       }
     },
     "34433": {
@@ -3237,14 +3237,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "Im Bereich Umwelt und Natur ist das Wort \"umweltfreundlich\" nützlich.",
+      "example_de": "Umweltfreundliche Produkte schonen oft Ressourcen.",
       "translations": {
-        "en": "Environmentally friendly",
-        "tr": "Çevre dostu",
-        "fa": "سازگار با محیط زیست",
-        "ru": "• экологически безвредные",
-        "uk": "екологічно чисті",
-        "ar": "صديقة للبيئة"
+        "en": "environmentally friendly",
+        "tr": "çevre dostu",
+        "fa": "دوستدار محیط زیست",
+        "ru": "экологичный",
+        "uk": "екологічний",
+        "ar": "صديق للبيئة"
       }
     },
     "34434": {
@@ -3257,14 +3257,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Die Beratungsstelle ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Die Beratungsstelle hilft bei sozialen Fragen.",
       "translations": {
-        "en": "Advice centre",
-        "tr": "Danışma merkezi",
+        "en": "advice center",
+        "tr": "danışma merkezi",
         "fa": "مرکز مشاوره",
-        "ru": "Консультационный центр",
-        "uk": "Центр консультування",
-        "ar": "مركز الاستشارات"
+        "ru": "консультационный центр",
+        "uk": "консультаційний центр",
+        "ar": "مركز استشارات"
       }
     },
     "34435": {
@@ -3277,14 +3277,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "Der Ratgeber ist im Bereich Kommunikation wichtig.",
+      "example_de": "Der Ratgeber erklärt das Thema einfach.",
       "translations": {
-        "en": "Advisor",
-        "tr": "Danışman",
-        "fa": "مشاور",
-        "ru": "Справочник",
-        "uk": "Порадник",
-        "ar": "نصيحة"
+        "en": "guidebook / adviser",
+        "tr": "rehber / danışman kitap",
+        "fa": "راهنما / کتاب راهنما",
+        "ru": "справочник / советчик",
+        "uk": "порадник / довідник",
+        "ar": "دليل إرشادي"
       }
     },
     "34436": {
@@ -3297,14 +3297,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache ist das Wort \"wesentlich\" nützlich.",
+      "example_de": "Eine klare Information ist dabei wesentlich.",
       "translations": {
-        "en": "a substantially",
-        "tr": "temel",
-        "fa": "خيلي؟",
-        "ru": "главный",
-        "uk": "основний",
-        "ar": "رئيسي"
+        "en": "essential / significant",
+        "tr": "önemli / temel",
+        "fa": "اساسی / مهم",
+        "ru": "существенный / важный",
+        "uk": "суттєвий / важливий",
+        "ar": "أساسي / مهم"
       }
     },
     "34437": {
@@ -3317,14 +3317,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Im Bereich Gesellschaft kann man sich engagieren.",
+      "example_de": "Viele Jugendliche engagieren sich im Verein.",
       "translations": {
-        "en": "Engage!",
-        "tr": "siz de dahil olun",
-        "fa": "درگیر شدن",
-        "ru": "принять участие",
-        "uk": "взяти участь",
-        "ar": "المشاركة"
+        "en": "to get involved / volunteer",
+        "tr": "gönüllü olarak katılmak",
+        "fa": "فعالیت داوطلبانه کردن",
+        "ru": "участвовать активно / заниматься общественной работой",
+        "uk": "активно долучатися / займатися громадською роботою",
+        "ar": "ينخرط / يتطوع"
       }
     },
     "34438": {
@@ -3337,14 +3337,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 18,
-      "example_de": "Die Politik ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Politik betrifft viele Bereiche unseres Lebens.",
       "translations": {
-        "en": "Politics",
-        "tr": "Politika",
+        "en": "politics",
+        "tr": "politika",
         "fa": "سیاست",
-        "ru": "Политика",
-        "uk": "Політика",
-        "ar": "السياسة"
+        "ru": "политика",
+        "uk": "політика",
+        "ar": "سياسة"
       }
     },
     "34439": {
@@ -3357,14 +3357,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Die Institution ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Diese Institution unterstützt Familien in der Stadt.",
       "translations": {
-        "en": "Institution",
-        "tr": "Kurumu",
-        "fa": "موسسه",
-        "ru": "Орган",
-        "uk": "Соціальний інститут",
-        "ar": "مؤسسه"
+        "en": "institution",
+        "tr": "kurum",
+        "fa": "نهاد / مؤسسه",
+        "ru": "учреждение / институт",
+        "uk": "установа / інституція",
+        "ar": "مؤسسة"
       }
     },
     "34440": {
@@ -3377,13 +3377,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 9,
-      "example_de": "Die Erwachsenenbildung ist im Bereich Lernen wichtig.",
+      "example_de": "Die Erwachsenenbildung bietet Kurse am Abend an.",
       "translations": {
         "en": "adult education",
-        "tr": "YETİŞKİN EĞİTİMİ",
-        "fa": "[آموزش و پرورش بزرگسالان]",
-        "ru": "Обучение взрослых",
-        "uk": "Освіта дорослих",
+        "tr": "yetişkin eğitimi",
+        "fa": "آموزش بزرگسالان",
+        "ru": "образование взрослых",
+        "uk": "освіта дорослих",
         "ar": "تعليم الكبار"
       }
     },
@@ -3397,14 +3397,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 17,
-      "example_de": "Im Bereich Technik kann man oft herunterladen.",
+      "example_de": "Man kann das Formular online herunterladen.",
       "translations": {
-        "en": "download",
-        "tr": "İndir",
-        "fa": "در حال بارگیری",
-        "ru": "скачать",
-        "uk": "звантаження",
-        "ar": "تنزيل"
+        "en": "to download",
+        "tr": "indirmek",
+        "fa": "دانلود کردن",
+        "ru": "скачивать",
+        "uk": "завантажувати",
+        "ar": "ينزّل / يحمل"
       }
     },
     "34442": {
@@ -3417,14 +3417,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 17,
-      "example_de": "Der Internetanschluss ist im Bereich Technik wichtig.",
+      "example_de": "Ohne Internetanschluss kann ich nicht arbeiten.",
       "translations": {
-        "en": "Internet connection",
-        "tr": "Internet bağlantısı",
-        "fa": "اتصال به اینترنت",
-        "ru": "Доступ в Интернет",
-        "uk": "Підключення до Інтернету",
-        "ar": "الاتصال بالإنترنت"
+        "en": "internet connection",
+        "tr": "internet bağlantısı",
+        "fa": "اتصال اینترنت",
+        "ru": "интернет-подключение",
+        "uk": "інтернет-зʼєднання",
+        "ar": "اتصال بالإنترنت"
       }
     },
     "34443": {
@@ -3437,14 +3437,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Die Essgewohnheit ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Gesunde Essgewohnheiten sind für Kinder wichtig.",
       "translations": {
-        "en": "Eating Habit",
-        "tr": "Yeme Alışkanlığı",
-        "fa": "عادات غذایی",
-        "ru": "Привычка к еде",
-        "uk": "Звичка до їжі",
-        "ar": "عادة الأكل"
+        "en": "eating habit",
+        "tr": "beslenme alışkanlığı",
+        "fa": "عادت غذایی",
+        "ru": "пищевые привычки",
+        "uk": "харчові звички",
+        "ar": "عادة غذائية"
       }
     },
     "34444": {
@@ -3457,13 +3457,13 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Die Avocado ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Avocado passt gut in den Salat.",
       "translations": {
         "en": "avocado",
         "tr": "avokado",
         "fa": "آووکادو",
         "ru": "авокадо",
-        "uk": "Авокадо",
+        "uk": "авокадо",
         "ar": "أفوكادو"
       }
     },
@@ -3477,14 +3477,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Das Familienessen ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Beim Familienessen sprechen alle miteinander.",
       "translations": {
-        "en": "Family Dinner",
-        "tr": "Aile Yemeği",
-        "fa": "ناهار با خانواده",
-        "ru": "Семейный ужин",
-        "uk": "Сімейна вечеря",
-        "ar": "عشاء أسري."
+        "en": "family meal",
+        "tr": "aile yemeği",
+        "fa": "غذای خانوادگی",
+        "ru": "семейный обед / ужин",
+        "uk": "сімейна трапеза",
+        "ar": "وجبة عائلية"
       }
     },
     "34446": {
@@ -3497,14 +3497,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 6,
-      "example_de": "Die Frischhaltedose ist im Bereich Wohnen wichtig.",
+      "example_de": "In der Frischhaltedose bleibt das Essen frisch.",
       "translations": {
-        "en": "Food storage box",
-        "tr": "Gıda saklama kutusu",
-        "fa": "ظرف نگهداری مواد غذایی",
-        "ru": "Коробка для хранения продуктов",
-        "uk": "Коробка для зберігання продуктів",
-        "ar": "صندوق تخزين الطعام"
+        "en": "food storage container",
+        "tr": "saklama kabı",
+        "fa": "ظرف نگهداری غذا",
+        "ru": "контейнер для хранения еды",
+        "uk": "контейнер для зберігання їжі",
+        "ar": "علبة حفظ الطعام"
       }
     },
     "34447": {
@@ -3517,14 +3517,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"zum Mitnehmen\".",
+      "example_de": "Ich nehme einen Kaffee zum Mitnehmen.",
       "translations": {
-        "en": "to go",
-        "tr": "götürmek",
-        "fa": "برداشتن",
-        "ru": "Взять с собой:",
-        "uk": "забрати",
-        "ar": "سآخذ طـلبى معى"
+        "en": "to take away / takeaway",
+        "tr": "paket servis / alıp götürmek için",
+        "fa": "برای بردن / بیرون‌بر",
+        "ru": "на вынос",
+        "uk": "із собою / на виніс",
+        "ar": "لأخذه خارجًا / سفري"
       }
     },
     "34448": {
@@ -3537,14 +3537,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Das Süße ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Nach dem Essen mag ich etwas Süßes.",
       "translations": {
-        "en": "Sweetness",
-        "tr": "yanim",
-        "fa": "آره، عزيزم",
-        "ru": "Сладость",
-        "uk": "Солодкість",
-        "ar": "(عزيزتي،هذا(جون..."
+        "en": "something sweet",
+        "tr": "tatlı bir şey",
+        "fa": "چیز شیرین",
+        "ru": "что-то сладкое",
+        "uk": "щось солодке",
+        "ar": "شيء حلو"
       }
     },
     "34449": {
@@ -3557,14 +3557,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Das Fertiggericht ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Ein Fertiggericht ist schnell warm.",
       "translations": {
-        "en": "Prepackaged meal",
-        "tr": "Yemeye hazır yemek",
+        "en": "ready meal",
+        "tr": "hazır yemek",
         "fa": "غذای آماده",
-        "ru": "Готовая к употреблению еда",
-        "uk": "Готова їжа",
-        "ar": "- ماذا؟ وجبات جاهزة للاكل"
+        "ru": "готовое блюдо",
+        "uk": "готова страва",
+        "ar": "وجبة جاهزة"
       }
     },
     "34450": {
@@ -3577,14 +3577,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften ist das Wort \"trendig\" nützlich.",
+      "example_de": "Das kleine Restaurant wirkt sehr trendig.",
       "translations": {
-        "en": "Trendy",
-        "tr": "modaya uygun",
+        "en": "trendy",
+        "tr": "moda / trend",
         "fa": "مد روز",
         "ru": "модный",
         "uk": "модний",
-        "ar": "عصري"
+        "ar": "رائج / عصري"
       }
     },
     "34451": {
@@ -3597,12 +3597,12 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 4,
-      "example_de": "Im Bereich Gesundheit lernt man \"ungesund\".",
+      "example_de": "Zu viel Zucker ist ungesund.",
       "translations": {
-        "en": "Unhealthy",
+        "en": "unhealthy",
         "tr": "sağlıksız",
         "fa": "ناسالم",
-        "ru": "Нездоровое",
+        "ru": "нездоровый",
         "uk": "нездоровий",
         "ar": "غير صحي"
       }
@@ -3617,14 +3617,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken ist das Wort \"vegetarisch\" nützlich.",
+      "example_de": "Meine Schwester isst vegetarisch.",
       "translations": {
-        "en": "Vegetarian",
+        "en": "vegetarian",
         "tr": "vejetaryen",
-        "fa": "گیاهخواری",
-        "ru": "Вегетарианские блюда",
-        "uk": "Вегетаріанство",
-        "ar": "الطعام النباتي"
+        "fa": "گیاه‌خوارانه / گیاه‌خواری",
+        "ru": "вегетарианский",
+        "uk": "вегетаріанський",
+        "ar": "نباتي"
       }
     },
     "34453": {
@@ -3637,14 +3637,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 2,
-      "example_de": "Im Bereich Zeit und Termine lernt man \"zwischendurch\".",
+      "example_de": "Zwischendurch trinke ich gern einen Tee.",
       "translations": {
-        "en": "during breaks",
-        "tr": "arasında",
-        "fa": "در بین",
-        "ru": "между",
-        "uk": "між",
-        "ar": "بين"
+        "en": "in between / now and then",
+        "tr": "arada / ara sıra",
+        "fa": "بینابین / گاهی",
+        "ru": "между делом / время от времени",
+        "uk": "між іншим / час від часу",
+        "ar": "بين الحين والآخر"
       }
     },
     "34454": {
@@ -3657,14 +3657,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 5,
-      "example_de": "Die Nudel ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Nudel ist noch zu hart.",
       "translations": {
-        "en": "Noodle",
-        "tr": "MAKARNALAR",
-        "fa": "اوه خدايا چه بلايي سر سگم اومده؟",
-        "ru": "Лапша",
-        "uk": "Локшина",
-        "ar": "نودل"
+        "en": "noodle / pasta",
+        "tr": "erişte / makarna",
+        "fa": "نودل / رشته",
+        "ru": "лапша / макароны",
+        "uk": "локшина / макарони",
+        "ar": "معكرونة / نودلز"
       }
     },
     "34455": {
@@ -3677,14 +3677,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Die Süßigkeit ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Kinder essen oft gern Süßigkeiten.",
       "translations": {
-        "en": "Candy",
-        "tr": "Şekerleme",
-        "fa": "-کندي؟",
-        "ru": "Кондитерские изделия",
-        "uk": "Кондитерські вироби",
-        "ar": "سكاكر"
+        "en": "sweet / candy",
+        "tr": "şekerleme / tatlı",
+        "fa": "شیرینی / آب‌نبات",
+        "ru": "сладость / конфета",
+        "uk": "солодощі / цукерка",
+        "ar": "حلوى"
       }
     },
     "34456": {
@@ -3697,14 +3697,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Die Salami-Pizza ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Salami-Pizza riecht sehr gut.",
       "translations": {
-        "en": "pepperoni pizza",
-        "tr": "Salamlı Pizza",
-        "fa": "پیتزا سالامی",
-        "ru": "Пицца с салями",
-        "uk": "Піца салямі",
-        "ar": "بيتزا سلامي"
+        "en": "salami pizza",
+        "tr": "salamlı pizza",
+        "fa": "پیتزای سالامی",
+        "ru": "пицца с салями",
+        "uk": "піца з салямі",
+        "ar": "بيتزا بالسلامي"
       }
     },
     "34457": {
@@ -3717,14 +3717,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Das Supermarktregal ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Im Supermarktregal stehen viele Nudeln.",
       "translations": {
-        "en": "Supermarket shelf",
-        "tr": "Süpermarket rafı",
+        "en": "supermarket shelf",
+        "tr": "süpermarket rafı",
         "fa": "قفسه سوپرمارکت",
-        "ru": "Полка супермаркета",
-        "uk": "Полиця супермаркету",
-        "ar": "رف السوبر ماركت"
+        "ru": "полка супермаркета",
+        "uk": "полиця супермаркету",
+        "ar": "رف السوبرماركت"
       }
     },
     "34458": {
@@ -3737,14 +3737,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"glutenfrei\".",
+      "example_de": "Das Brot ist glutenfrei.",
       "translations": {
-        "en": "gluten free",
-        "tr": "Glutensiz",
+        "en": "gluten-free",
+        "tr": "glütensiz",
         "fa": "بدون گلوتن",
-        "ru": "клейковины",
-        "uk": "Глютен",
-        "ar": "منتجات خالية من الغلوتين"
+        "ru": "безглютеновый",
+        "uk": "безглютеновий",
+        "ar": "خالٍ من الغلوتين"
       }
     },
     "34459": {
@@ -3757,13 +3757,13 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"proteinreich\".",
+      "example_de": "Diese Mahlzeit ist proteinreich.",
       "translations": {
-        "en": "high-protein",
-        "tr": "protein içeriği yüksek",
-        "fa": "پروتئین بالا",
-        "ru": "высокое содержание белка",
-        "uk": "високий вміст білка",
+        "en": "rich in protein",
+        "tr": "protein açısından zengin",
+        "fa": "سرشار از پروتئین",
+        "ru": "богатый белком",
+        "uk": "багатий на білок",
         "ar": "غني بالبروتين"
       }
     },
@@ -3777,14 +3777,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 2,
-      "example_de": "Das Jahrzehnt ist im Bereich Zeit und Termine wichtig.",
+      "example_de": "In diesem Jahrzehnt hat sich viel verändert.",
       "translations": {
-        "en": "Decade",
-        "tr": "On yıl",
+        "en": "decade",
+        "tr": "on yıl",
         "fa": "دهه",
-        "ru": "Десятилетие",
-        "uk": "Десятиліття",
-        "ar": "عقد"
+        "ru": "десятилетие",
+        "uk": "десятиліття",
+        "ar": "عقد / عشر سنوات"
       }
     },
     "34461": {
@@ -3797,14 +3797,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Die Pasta ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Pasta mit Tomatensoße esse ich gern.",
       "translations": {
-        "en": "Pasta",
-        "tr": "Makarna",
-        "fa": "-پاستا !",
-        "ru": "Макаронные изделия",
-        "uk": "Макаронні вироби",
-        "ar": "المعكرونة"
+        "en": "pasta",
+        "tr": "makarna",
+        "fa": "پاستا",
+        "ru": "паста / макароны",
+        "uk": "паста / макарони",
+        "ar": "معكرونة"
       }
     },
     "34462": {
@@ -3817,14 +3817,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"sorgen für\".",
+      "example_de": "Gute Planung kann für weniger Stress sorgen.",
       "translations": {
-        "en": "provide for",
-        "tr": "sağlamak",
-        "fa": "اطمینان حاصل کردن",
-        "ru": "предусматривают",
-        "uk": "передбачити",
-        "ar": "توفير"
+        "en": "to provide for / ensure",
+        "tr": "sağlamak / ilgilenmek",
+        "fa": "فراهم کردن / موجب شدن",
+        "ru": "заботиться о / обеспечивать",
+        "uk": "дбати про / забезпечувати",
+        "ar": "يضمن / يعتني بـ"
       }
     },
     "34463": {
@@ -3837,14 +3837,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 3,
-      "example_de": "Das Lebensmodell ist im Bereich Familie und Beziehungen wichtig.",
+      "example_de": "Ihr Lebensmodell passt gut zu ihrer Familie.",
       "translations": {
-        "en": "Life model",
-        "tr": "Yaşam modeli",
-        "fa": "سبک زندگی",
-        "ru": "Модель жизни",
-        "uk": "Модель життя",
-        "ar": "النموذج الحياتي"
+        "en": "life model / way of life",
+        "tr": "yaşam modeli",
+        "fa": "سبک زندگی / مدل زندگی",
+        "ru": "модель жизни",
+        "uk": "модель життя",
+        "ar": "نمط حياة"
       }
     },
     "34464": {
@@ -3857,14 +3857,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Der Sonntagsbraten ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Am Sonntag gibt es oft Sonntagsbraten.",
       "translations": {
         "en": "Sunday roast",
-        "tr": "Pazar rostosu",
-        "fa": "کباب یکشنبه",
-        "ru": "Воскресная обжарка",
-        "uk": "Недільне смаження",
-        "ar": "مشوي يوم الأحد"
+        "tr": "pazar rostosu",
+        "fa": "کباب / خوراک مخصوص یکشنبه",
+        "ru": "воскресное жаркое",
+        "uk": "недільна печеня",
+        "ar": "لحم مشوي ليوم الأحد"
       }
     },
     "34465": {
@@ -3877,14 +3877,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken ist das Wort \"exotisch\" nützlich.",
+      "example_de": "Exotische Früchte sind oft teuer.",
       "translations": {
-        "en": "Exotic",
+        "en": "exotic",
         "tr": "egzotik",
-        "fa": "عجیب و غریب",
+        "fa": "عجیب / استوایی",
         "ru": "экзотический",
         "uk": "екзотичний",
-        "ar": "اوه ، هذا غريب"
+        "ar": "غريب / استوائي"
       }
     },
     "34466": {
@@ -3897,14 +3897,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"konservieren\".",
+      "example_de": "Man kann Obst durch Einkochen konservieren.",
       "translations": {
-        "en": "Canning",
-        "tr": "Muhafaza etme",
-        "fa": "منظورت اينه که نگهش داري ؟ ميتوني بهم ياد بدي ؟",
-        "ru": "сохранить",
-        "uk": "зберегти",
-        "ar": "يحافظ على"
+        "en": "to preserve",
+        "tr": "korumak / konserve yapmak",
+        "fa": "نگهداری کردن / حفظ کردن",
+        "ru": "консервировать / сохранять",
+        "uk": "консервувати / зберігати",
+        "ar": "يحفظ / يعلّب"
       }
     },
     "34467": {
@@ -3917,14 +3917,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"einmachen\".",
+      "example_de": "Meine Oma kann Marmelade einmachen.",
       "translations": {
-        "en": "canning",
-        "tr": "konserve",
-        "fa": "می‌تواند",
-        "ru": "консервирование",
-        "uk": "консервування",
-        "ar": "تعليب"
+        "en": "to preserve in jars",
+        "tr": "konserve yapmak",
+        "fa": "کنسرو کردن / در شیشه نگه داشتن",
+        "ru": "консервировать в банках",
+        "uk": "консервувати в банках",
+        "ar": "يحفظ في مرطبانات"
       }
     },
     "34468": {
@@ -3937,14 +3937,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken kann man oft einlegen.",
+      "example_de": "Wir legen Gurken in Essig ein.",
       "translations": {
-        "en": "install",
-        "tr": "takma",
-        "fa": "درج",
-        "ru": "вставка",
-        "uk": "Квашення",
-        "ar": "تخليل"
+        "en": "to pickle / preserve",
+        "tr": "turşu yapmak / salamuraya koymak",
+        "fa": "ترشی انداختن / خواباندن",
+        "ru": "мариновать / консервировать",
+        "uk": "маринувати / консервувати",
+        "ar": "يخلل / ينقع"
       }
     },
     "34469": {
@@ -3957,14 +3957,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Der Kochabend ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Beim Kochabend probieren wir neue Rezepte.",
       "translations": {
-        "en": "Cooking Evening",
-        "tr": "Aşçılık Akşamı",
-        "fa": "عصر آشپزی",
-        "ru": "Кулинарный вечер",
-        "uk": "Кулінарний вечір",
-        "ar": "أمسية الطبخ"
+        "en": "cooking evening",
+        "tr": "yemek pişirme akşamı",
+        "fa": "شب آشپزی",
+        "ru": "кулинарный вечер",
+        "uk": "кулінарний вечір",
+        "ar": "أمسية طبخ"
       }
     },
     "34470": {
@@ -3977,14 +3977,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"roh\".",
+      "example_de": "Rohes Gemüse ist oft sehr gesund.",
       "translations": {
         "en": "raw",
-        "tr": "ham",
-        "fa": "خام",
+        "tr": "çiğ",
+        "fa": "خام / نپخته",
         "ru": "сырой",
-        "uk": "без обробки",
-        "ar": "خام"
+        "uk": "сирий",
+        "ar": "نيء"
       }
     },
     "34471": {
@@ -3997,13 +3997,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 20,
-      "example_de": "Das Herkunftsland ist im Bereich Orte und Städte wichtig.",
+      "example_de": "Auf dem Formular steht das Herkunftsland.",
       "translations": {
-        "en": "Country of origin",
-        "tr": "Menşe Ülke",
-        "fa": "کشور مبدا",
-        "ru": "Страна-изготовитель",
-        "uk": "Батьківщина",
+        "en": "country of origin",
+        "tr": "menşe ülke",
+        "fa": "کشور مبدأ",
+        "ru": "страна происхождения",
+        "uk": "країна походження",
         "ar": "بلد المنشأ"
       }
     },
