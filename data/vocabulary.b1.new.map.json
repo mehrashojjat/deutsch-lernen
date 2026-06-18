@@ -13017,14 +13017,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Arbeitsmarkt verändert sich durch neue Technologien.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "labor market / job market",
+        "tr": "iş piyasası",
+        "fa": "بازار کار",
+        "ru": "рынок труда",
+        "uk": "ринок праці",
+        "ar": "سوق العمل"
       }
     },
     "34923": {
@@ -13037,14 +13037,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Der Englischlehrer erklärt die Grammatik sehr klar.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male English teacher",
+        "tr": "erkek İngilizce öğretmeni",
+        "fa": "معلم مرد انگلیسی",
+        "ru": "учитель английского языка",
+        "uk": "учитель англійської мови",
+        "ar": "معلم اللغة الإنجليزية"
       }
     },
     "34924": {
@@ -13057,14 +13057,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die Englischlehrerin übt mit uns das Sprechen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female English teacher",
+        "tr": "kadın İngilizce öğretmeni",
+        "fa": "معلم زن انگلیسی",
+        "ru": "учительница английского языка",
+        "uk": "учителька англійської мови",
+        "ar": "معلمة اللغة الإنجليزية"
       }
     },
     "34925": {
@@ -13077,14 +13077,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Erzieher betreut die Kinder im Kindergarten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male educator / childcare worker",
+        "tr": "erkek eğitimci / çocuk bakıcısı",
+        "fa": "مربی مرد کودک",
+        "ru": "воспитатель",
+        "uk": "вихователь",
+        "ar": "مربي أطفال"
       }
     },
     "34926": {
@@ -13097,14 +13097,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Erzieherin liest den Kindern eine Geschichte vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female educator / childcare worker",
+        "tr": "kadın eğitimci / çocuk bakıcısı",
+        "fa": "مربی زن کودک",
+        "ru": "воспитательница",
+        "uk": "вихователька",
+        "ar": "مربية أطفال"
       }
     },
     "34927": {
@@ -13117,14 +13117,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Der IT-Spezialist repariert das Netzwerk.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male IT specialist",
+        "tr": "erkek bilişim uzmanı",
+        "fa": "متخصص مرد فناوری اطلاعات",
+        "ru": "IT-специалист",
+        "uk": "IT-спеціаліст",
+        "ar": "أخصائي تقنية المعلومات"
       }
     },
     "34928": {
@@ -13137,14 +13137,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Die IT-Spezialistin schützt die Daten der Firma.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female IT specialist",
+        "tr": "kadın bilişim uzmanı",
+        "fa": "متخصص زن فناوری اطلاعات",
+        "ru": "IT-специалистка",
+        "uk": "IT-спеціалістка",
+        "ar": "أخصائية تقنية المعلومات"
       }
     },
     "34929": {
@@ -13157,14 +13157,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der Kfz-Mechatroniker prüft die Bremsen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male automotive mechatronics technician",
+        "tr": "erkek otomotiv mekatronik teknisyeni",
+        "fa": "مکانیک مرد خودرو / تکنسین مکاترونیک خودرو",
+        "ru": "автомобильный мехатроник",
+        "uk": "автомобільний мехатронік",
+        "ar": "فني ميكاترونكس سيارات"
       }
     },
     "34930": {
@@ -13177,14 +13177,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Kfz-Mechatronikerin arbeitet in einer großen Werkstatt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female automotive mechatronics technician",
+        "tr": "kadın otomotiv mekatronik teknisyeni",
+        "fa": "مکانیک زن خودرو / تکنسین زن مکاترونیک خودرو",
+        "ru": "автомобильный мехатроник-женщина",
+        "uk": "автомобільна мехатронікиня",
+        "ar": "فنية ميكاترونكس سيارات"
       }
     },
     "34931": {
@@ -13197,14 +13197,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Zeitarbeit kann für den Einstieg in den Beruf helfen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "temporary agency work",
+        "tr": "geçici iş / kiralık işçilik",
+        "fa": "کار موقت از طریق آژانس",
+        "ru": "временная работа через агентство",
+        "uk": "тимчасова робота через агентство",
+        "ar": "عمل مؤقت عبر وكالة"
       }
     },
     "34932": {
@@ -13217,14 +13217,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Arbeitnehmer hat Anspruch auf Urlaub.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male employee",
+        "tr": "erkek çalışan / işçi",
+        "fa": "کارمند مرد / کارگر مرد",
+        "ru": "работник",
+        "uk": "працівник",
+        "ar": "عامل / موظف"
       }
     },
     "34933": {
@@ -13237,14 +13237,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Arbeitnehmerin unterschreibt den Vertrag.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female employee",
+        "tr": "kadın çalışan / işçi",
+        "fa": "کارمند زن / کارگر زن",
+        "ru": "работница",
+        "uk": "працівниця",
+        "ar": "عاملة / موظفة"
       }
     },
     "34934": {
@@ -13257,14 +13257,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Ihre Ausbildung ist eine echte Erfolgsgeschichte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "success story",
+        "tr": "başarı hikâyesi",
+        "fa": "داستان موفقیت",
+        "ru": "история успеха",
+        "uk": "історія успіху",
+        "ar": "قصة نجاح"
       }
     },
     "34935": {
@@ -13277,14 +13277,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Für den Antrag brauche ich eine Arbeitsbescheinigung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "employment certificate",
+        "tr": "çalışma belgesi",
+        "fa": "گواهی اشتغال به کار",
+        "ru": "справка с места работы",
+        "uk": "довідка з місця роботи",
+        "ar": "شهادة عمل"
       }
     },
     "34936": {
@@ -13297,14 +13297,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Das Arbeitszeugnis beschreibt ihre Leistungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "employment reference",
+        "tr": "iş referans belgesi / çalışma belgesi",
+        "fa": "گواهی کاری / توصیه‌نامه شغلی",
+        "ru": "трудовая характеристика",
+        "uk": "трудова характеристика",
+        "ar": "شهادة خبرة عمل"
       }
     },
     "34937": {
@@ -13317,14 +13317,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Anerkennungsverfahren dauert mehrere Monate.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "recognition procedure",
+        "tr": "tanıma süreci",
+        "fa": "فرآیند به رسمیت شناختن",
+        "ru": "процедура признания",
+        "uk": "процедура визнання",
+        "ar": "إجراء الاعتراف"
       }
     },
     "34938": {
@@ -13337,14 +13337,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Berater hilft mir bei der Bewerbung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male advisor / consultant",
+        "tr": "erkek danışman",
+        "fa": "مشاور مرد",
+        "ru": "консультант / советник",
+        "uk": "консультант / радник",
+        "ar": "مستشار"
       }
     },
     "34939": {
@@ -13357,14 +13357,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Beraterin erklärt die nächsten Schritte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female advisor / consultant",
+        "tr": "kadın danışman",
+        "fa": "مشاور زن",
+        "ru": "консультантка / советница",
+        "uk": "консультантка / радниця",
+        "ar": "مستشارة"
       }
     },
     "34940": {
@@ -13377,14 +13377,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Bitte dokumentieren Sie alle Arbeitsschritte genau.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to document",
+        "tr": "belgelemek / dokümante etmek",
+        "fa": "مستند کردن",
+        "ru": "документировать",
+        "uk": "документувати",
+        "ar": "يوثق"
       }
     },
     "34941": {
@@ -13397,14 +13397,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Zufriedenheit der Kunden ist für uns wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "satisfaction",
+        "tr": "memnuniyet",
+        "fa": "رضایت",
+        "ru": "удовлетворённость",
+        "uk": "задоволеність",
+        "ar": "رضا"
       }
     },
     "34942": {
@@ -13417,14 +13417,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Mit einem Lächeln kann man Freude ausdrücken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to express",
+        "tr": "ifade etmek",
+        "fa": "بیان کردن",
+        "ru": "выражать",
+        "uk": "виражати",
+        "ar": "يعبر"
       }
     },
     "34943": {
@@ -13437,14 +13437,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nachdem sie den Kurs beendet hatte, fand sie eine Stelle.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "after / after that",
+        "tr": "-den sonra",
+        "fa": "بعد از اینکه",
+        "ru": "после того как",
+        "uk": "після того як",
+        "ar": "بعد أن"
       }
     },
     "34944": {
@@ -13457,14 +13457,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Eine gute Schulbildung öffnet viele Wege.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "school education",
+        "tr": "okul eğitimi",
+        "fa": "تحصیلات مدرسه‌ای",
+        "ru": "школьное образование",
+        "uk": "шкільна освіта",
+        "ar": "تعليم مدرسي"
       }
     },
     "34945": {
@@ -13477,14 +13477,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Kinder besuchen zuerst die Grundschule.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "primary school",
+        "tr": "ilkokul",
+        "fa": "دبستان / مدرسه ابتدایی",
+        "ru": "начальная школа",
+        "uk": "початкова школа",
+        "ar": "مدرسة ابتدائية"
       }
     },
     "34946": {
@@ -13497,14 +13497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "An der Gesamtschule lernen Kinder mit verschiedenen Abschlüssen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "comprehensive school",
+        "tr": "kapsamlı okul / karma ortaokul",
+        "fa": "مدرسه جامع",
+        "ru": "общеобразовательная школа",
+        "uk": "загальноосвітня школа",
+        "ar": "مدرسة شاملة"
       }
     },
     "34947": {
@@ -13517,14 +13517,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Nach der Grundschule ging er auf die Realschule.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "secondary modern school / Realschule",
+        "tr": "Realschule / ortaokul türü",
+        "fa": "رئال‌شوله / نوعی مدرسه متوسطه",
+        "ru": "реальная школа",
+        "uk": "реальна школа",
+        "ar": "مدرسة ريالشوله"
       }
     },
     "34948": {
@@ -13537,14 +13537,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Das Gymnasium führt oft zum Abitur.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "grammar school / academic high school",
+        "tr": "Gymnasium / akademik lise",
+        "fa": "گیمنازیوم / دبیرستان نظری",
+        "ru": "гимназия",
+        "uk": "гімназія",
+        "ar": "مدرسة ثانوية أكاديمية"
       }
     },
     "34949": {
@@ -13557,14 +13557,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die berufsbildende Schule verbindet Theorie und Praxis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vocational school",
+        "tr": "meslek okulu",
+        "fa": "مدرسه فنی‌وحرفه‌ای",
+        "ru": "профессиональное училище",
+        "uk": "професійна школа",
+        "ar": "مدرسة مهنية"
       }
     },
     "34950": {
@@ -13577,14 +13577,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Mit diesem Schulabschluss kann sie eine Ausbildung beginnen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "school-leaving certificate",
+        "tr": "okul diploması / mezuniyet belgesi",
+        "fa": "مدرک پایان مدرسه",
+        "ru": "школьный аттестат",
+        "uk": "шкільний атестат",
+        "ar": "شهادة مدرسية"
       }
     },
     "34951": {
@@ -13597,14 +13597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Schülerpraktikum lernte er den Beruf kennen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "student internship",
+        "tr": "öğrenci stajı",
+        "fa": "کارآموزی دانش‌آموزی",
+        "ru": "школьная практика",
+        "uk": "учнівська практика",
+        "ar": "تدريب مدرسي"
       }
     },
     "34952": {
@@ -13617,14 +13617,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Montagehelfer baut die Teile zusammen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male assembly assistant",
+        "tr": "erkek montaj yardımcısı",
+        "fa": "کمک‌کار مرد مونتاژ",
+        "ru": "помощник монтажника",
+        "uk": "помічник монтажника",
+        "ar": "مساعد تركيب"
       }
     },
     "34953": {
@@ -13637,14 +13637,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Montagehelferin arbeitet in der Produktion.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female assembly assistant",
+        "tr": "kadın montaj yardımcısı",
+        "fa": "کمک‌کار زن مونتاژ",
+        "ru": "помощница монтажника",
+        "uk": "помічниця монтажника",
+        "ar": "مساعدة تركيب"
       }
     },
     "34954": {
@@ -13657,14 +13657,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "In der Klimatechnik gibt es viele neue Jobs.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "air-conditioning technology / climate control technology",
+        "tr": "iklimlendirme teknolojisi",
+        "fa": "فناوری تهویه و سرمایش",
+        "ru": "климатическая техника",
+        "uk": "кліматична техніка",
+        "ar": "تقنية التكييف"
       }
     },
     "34955": {
@@ -13677,14 +13677,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Als Kind war Pilot sein Traumberuf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "dream profession",
+        "tr": "hayal mesleği",
+        "fa": "شغل رؤیایی / حرفه مورد علاقه",
+        "ru": "профессия мечты",
+        "uk": "професія мрії",
+        "ar": "مهنة الأحلام"
       }
     },
     "34956": {
@@ -13697,14 +13697,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Das Berufsprofil beschreibt Aufgaben und Anforderungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "job profile",
+        "tr": "meslek profili",
+        "fa": "پروفایل شغلی / شرح حرفه",
+        "ru": "профиль профессии",
+        "uk": "профіль професії",
+        "ar": "ملف مهني / وصف الوظيفة"
       }
     },
     "34957": {
@@ -13717,14 +13717,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Fahrzeugelektronik wird in modernen Autos immer wichtiger.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vehicle electronics",
+        "tr": "araç elektroniği",
+        "fa": "الکترونیک خودرو",
+        "ru": "автомобильная электроника",
+        "uk": "автомобільна електроніка",
+        "ar": "إلكترونيات المركبات"
       }
     },
     "34958": {
@@ -13737,14 +13737,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "In der Flasche ist eine rote Flüssigkeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "liquid",
+        "tr": "sıvı",
+        "fa": "مایع",
+        "ru": "жидкость",
+        "uk": "рідина",
+        "ar": "سائل"
       }
     },
     "34959": {
@@ -13757,14 +13757,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Werkstatt kontrolliert die Bremsflüssigkeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "brake fluid",
+        "tr": "fren hidroliği",
+        "fa": "روغن ترمز / مایع ترمز",
+        "ru": "тормозная жидкость",
+        "uk": "гальмівна рідина",
+        "ar": "سائل الفرامل"
       }
     },
     "34960": {
@@ -13777,14 +13777,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Mit der Freisprechanlage kann ich sicher telefonieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hands-free system",
+        "tr": "eller serbest sistemi",
+        "fa": "سیستم هندزفری خودرو",
+        "ru": "система громкой связи",
+        "uk": "система гучного звʼязку",
+        "ar": "نظام التحدث الحر"
       }
     },
     "34961": {
@@ -13797,14 +13797,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Das Navigationsgerät zeigt die schnellste Route.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "navigation device",
+        "tr": "navigasyon cihazı",
+        "fa": "دستگاه مسیریاب",
+        "ru": "навигационное устройство",
+        "uk": "навігаційний пристрій",
+        "ar": "جهاز ملاحة"
       }
     },
     "34962": {
@@ -13817,14 +13817,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Beim Ölwechsel wird auch der Filter ersetzt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "oil change",
+        "tr": "yağ değişimi",
+        "fa": "تعویض روغن",
+        "ru": "замена масла",
+        "uk": "заміна оливи",
+        "ar": "تغيير الزيت"
       }
     },
     "34963": {
@@ -13837,14 +13837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Vor dem Kauf machen wir eine Probefahrt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "test drive",
+        "tr": "test sürüşü",
+        "fa": "رانندگی آزمایشی",
+        "ru": "тест-драйв",
+        "uk": "тест-драйв",
+        "ar": "قيادة تجريبية"
       }
     },
     "34964": {
@@ -13857,14 +13857,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Geschwindigkeit ist auf der Autobahn höher.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "speed",
+        "tr": "hız",
+        "fa": "سرعت",
+        "ru": "скорость",
+        "uk": "швидкість",
+        "ar": "سرعة"
       }
     },
     "34965": {
@@ -13877,14 +13877,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir tauschen die defekte Lampe aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to replace / to exchange",
+        "tr": "değiştirmek / takas etmek",
+        "fa": "تعویض کردن / عوض کردن",
+        "ru": "заменять / обменивать",
+        "uk": "замінювати / обмінювати",
+        "ar": "يستبدل / يبادل"
       }
     },
     "34966": {
@@ -13897,14 +13897,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte bringen Sie Ihren Pass bzw. Ihren Ausweis mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "or rather / respectively",
+        "tr": "ya da / daha doğrusu",
+        "fa": "یا به عبارت دیگر / به‌ترتیب",
+        "ru": "соответственно / или точнее",
+        "uk": "відповідно / або точніше",
+        "ar": "أو بالأحرى / على التوالي"
       }
     },
     "34967": {
@@ -13917,14 +13917,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Der Drucker ist defekt und muss repariert werden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "defective / broken",
+        "tr": "bozuk / arızalı",
+        "fa": "خراب / معیوب",
+        "ru": "неисправный / дефектный",
+        "uk": "несправний / дефектний",
+        "ar": "معطل / تالف"
       }
     },
     "34968": {
@@ -13937,14 +13937,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Kontrolle wird jeden Morgen durchgeführt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to carry out / to perform",
+        "tr": "yapmak / gerçekleştirmek",
+        "fa": "انجام دادن / اجرا کردن",
+        "ru": "проводить / выполнять",
+        "uk": "проводити / виконувати",
+        "ar": "ينفذ / يجري"
       }
     },
     "34969": {
@@ -13957,14 +13957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Die Betonung liegt auf der ersten Silbe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "stress / emphasis",
+        "tr": "vurgu",
+        "fa": "تکیه / تأکید",
+        "ru": "ударение / акцент",
+        "uk": "наголос / акцент",
+        "ar": "نبرة / تأكيد"
       }
     },
     "34970": {
@@ -13977,14 +13977,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nomen muss man im Deutschen großschreiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to capitalize / to write with a capital letter",
+        "tr": "büyük harfle yazmak",
+        "fa": "با حرف بزرگ نوشتن",
+        "ru": "писать с большой буквы",
+        "uk": "писати з великої літери",
+        "ar": "يكتب بحرف كبير"
       }
     },
     "34971": {
@@ -13997,14 +13997,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Kaufmann arbeitet im Großhandel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "businessman / merchant",
+        "tr": "tüccar / erkek ticaret çalışanı",
+        "fa": "بازرگان مرد / کارمند تجاری مرد",
+        "ru": "коммерсант / торговец",
+        "uk": "комерсант / торговець",
+        "ar": "تاجر / موظف تجاري"
       }
     },
     "34972": {
