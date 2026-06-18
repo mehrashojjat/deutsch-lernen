@@ -1239,7 +1239,7 @@ let currentLevel = null, queue = [], idx = 0, ok = 0, no = 0, answered = false;
 const QUIZ_LEN = 10;
 let swipeSelectedLevel = 'A1', swipeDeck = [], swipeIdx = 0, swipeGood = 0, swipeBad = 0;
 let swipePreloadPromise = null, swipeAnimating = false;
-var practiceSelectedLevel = 'A1';
+var practiceSelectedLevels = { A1: true };
 var practiceDeck = [], practiceIdx = 0;
 var practiceSeenIds = {};
 var practicePreloadPromise = null, practiceAnimating = false;
@@ -3879,9 +3879,17 @@ function _practiceHasActiveFilters() {
   });
 }
 
+function _practiceSelectedLevelKeys() {
+  return ['A1', 'A2', 'B1'].filter(function(k) { return practiceSelectedLevels[k]; });
+}
+
 function _getPracticeFilteredPool(level) {
-  var pool = (CSV_QUIZ_DATA[level || practiceSelectedLevel] || []).filter(function(r) {
-    return r.entry_type === 'main' && r.word && r.word.trim();
+  var levels = level ? [level] : _practiceSelectedLevelKeys();
+  var pool = [];
+  levels.forEach(function(lv) {
+    (CSV_QUIZ_DATA[lv] || []).forEach(function(r) {
+      if (r.entry_type === 'main' && r.word && r.word.trim()) pool.push(r);
+    });
   });
   if (!_practiceGroupIsAll('difficulties')) {
     var diffs = _practiceFilterKeys('difficulties');
@@ -3934,7 +3942,7 @@ if (typeof window !== 'undefined' && !window._practiceLayoutResizeBound) {
 }
 
 function _updatePracticeMatchCount() {
-  var count = _getPracticeFilteredPool(practiceSelectedLevel).length;
+  var count = _getPracticeFilteredPool().length;
   var numEl = document.getElementById('practice-match-num');
   var wrapEl = document.getElementById('practice-match-count');
   var hintEl = document.getElementById('practice-match-hint');
@@ -4033,15 +4041,18 @@ async function openPracticeSetup() {
 }
 
 function setPracticeLevel(lv) {
-  practiceSelectedLevel = lv;
+  var keys = _practiceSelectedLevelKeys();
+  if (practiceSelectedLevels[lv] && keys.length <= 1) return;
+  if (practiceSelectedLevels[lv]) delete practiceSelectedLevels[lv];
+  else practiceSelectedLevels[lv] = true;
   ['A1','A2','B1'].forEach(function(k) {
-    document.getElementById('practice-level-' + k).classList.toggle('active', k === lv);
+    document.getElementById('practice-level-' + k).classList.toggle('active', !!practiceSelectedLevels[k]);
   });
   _updatePracticeMatchCount();
 }
 
-function _buildPracticeBatch(level) {
-  var all = _getPracticeFilteredPool(level);
+function _buildPracticeBatch() {
+  var all = _getPracticeFilteredPool();
   var unseen = all.filter(function(r) { return !practiceSeenIds[r.id]; });
   if (!unseen.length) {
     practiceSeenIds = {};
@@ -4053,7 +4064,8 @@ function _buildPracticeBatch(level) {
 }
 
 async function startPracticeGame() {
-  var pool = _getPracticeFilteredPool(practiceSelectedLevel);
+  var levels = _practiceSelectedLevelKeys();
+  var pool = _getPracticeFilteredPool();
   if (!pool.length) {
     _updatePracticeMatchCount();
     return;
@@ -4061,15 +4073,15 @@ async function startPracticeGame() {
   var _ov = document.getElementById('quiz-prep-overlay');
   _ov.classList.add('active');
   try {
-    await _loadCSVLevel(practiceSelectedLevel);
+    await Promise.all(levels.map(function(lv) { return _loadCSVLevel(lv); }));
     practiceSeenIds = {};
-    practiceDeck = _buildPracticeBatch(practiceSelectedLevel);
+    practiceDeck = _buildPracticeBatch();
     if (!practiceDeck.length) { alert(t('errNoPracticeCards')); return; }
     practiceIdx = 0;
     practicePreloadPromise = null;
     practiceAnimating = false;
     window.umami?.track('practice_started', {
-      level: practiceSelectedLevel,
+      level: levels.join(','),
       filtered_count: pool.length,
       filters_active: _practiceHasActiveFilters()
     });
@@ -4198,7 +4210,7 @@ function _ensurePracticePrefetch() {
   if (practicePreloadPromise) return;
   if (practiceDeck.length - practiceIdx > 5) return;
   practicePreloadPromise = Promise.resolve().then(function() {
-    var batch = _buildPracticeBatch(practiceSelectedLevel);
+    var batch = _buildPracticeBatch();
     if (batch.length) practiceDeck = practiceDeck.concat(batch);
   }).catch(function(){}).finally(function() {
     practicePreloadPromise = null;
