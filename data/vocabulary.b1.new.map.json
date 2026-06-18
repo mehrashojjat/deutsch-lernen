@@ -1017,14 +1017,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "Der Blogeintrag ist im Bereich Kommunikation wichtig.",
+      "example_de": "Im Blogeintrag beschreibt sie ihr Leben in der Stadt.",
       "translations": {
-        "en": "Blog Post",
-        "tr": "Blog gönderisi",
-        "fa": "پست وبلاگ",
-        "ru": "Запись в блоге",
-        "uk": "Допис у блозі",
-        "ar": "منشور المدونة"
+        "en": "blog post",
+        "tr": "blog yazısı",
+        "fa": "نوشته وبلاگ",
+        "ru": "запись в блоге",
+        "uk": "запис у блозі",
+        "ar": "تدوينة"
       }
     },
     "34323": {
@@ -1037,13 +1037,13 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"erstens\".",
+      "example_de": "Erstens müssen wir den Müll richtig trennen.",
       "translations": {
-        "en": "Firstly,",
-        "tr": "önce",
-        "fa": ".يک",
-        "ru": "сначала",
-        "uk": "Спочатку.",
+        "en": "firstly",
+        "tr": "birincisi",
+        "fa": "اولاً",
+        "ru": "во-первых",
+        "uk": "по-перше",
         "ar": "أولاً"
       }
     },
@@ -1057,14 +1057,14 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"zweitens\".",
+      "example_de": "Zweitens sollten alle Nachbarn die Ruhezeiten beachten.",
       "translations": {
-        "en": "Second",
-        "tr": "İkincisi:",
-        "fa": "و دوم،",
-        "ru": "во-вторых,",
-        "uk": "секунда",
-        "ar": "ثانياً.."
+        "en": "secondly",
+        "tr": "ikincisi",
+        "fa": "دوم",
+        "ru": "во-вторых",
+        "uk": "по-друге",
+        "ar": "ثانياً"
       }
     },
     "34325": {
@@ -1077,14 +1077,14 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"drittens\".",
+      "example_de": "Drittens ist gegenseitige Rücksicht sehr wichtig.",
       "translations": {
-        "en": "third",
-        "tr": "Üçüncüsü:",
-        "fa": "سه.",
-        "ru": "в-третьих,",
-        "uk": "третій",
-        "ar": "(رقم ثلاثة:"
+        "en": "thirdly",
+        "tr": "üçüncüsü",
+        "fa": "سوم",
+        "ru": "в-третьих",
+        "uk": "по-третє",
+        "ar": "ثالثاً"
       }
     },
     "34326": {
@@ -1097,14 +1097,14 @@
       "word_type": "Adverb",
       "difficulty": 2,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften lernt man \"hipp\".",
+      "example_de": "Das neue Café im Stadtteil ist sehr hipp.",
       "translations": {
-        "en": "hipp",
-        "tr": "Hipp)",
-        "fa": "هیپ",
-        "ru": "Hipp",
-        "uk": "hIPP",
-        "ar": "عصري"
+        "en": "hip / trendy",
+        "tr": "havalı / moda",
+        "fa": "مد روز / شیک",
+        "ru": "модный / стильный",
+        "uk": "модний / стильний",
+        "ar": "عصري / رائج"
       }
     },
     "34327": {
@@ -1117,13 +1117,13 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"weniger\".",
+      "example_de": "Ich möchte weniger Plastik im Alltag benutzen.",
       "translations": {
-        "en": "under",
-        "tr": "Daha az",
-        "fa": "Phonon:: MMF:: EffectFactory",
-        "ru": "менее.",
-        "uk": "&#x0A;менше&#x0D;",
+        "en": "less / fewer",
+        "tr": "daha az",
+        "fa": "کمتر",
+        "ru": "меньше",
+        "uk": "менше",
         "ar": "أقل"
       }
     },
@@ -1137,14 +1137,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 20,
-      "example_de": "Der Stadtteil ist im Bereich Orte und Städte wichtig.",
+      "example_de": "Unser Stadtteil ist ruhig und sehr grün.",
       "translations": {
-        "en": "Quarter",
-        "tr": "Mahalle",
-        "fa": "ناحیه",
-        "ru": "Район",
-        "uk": "Район міста",
-        "ar": "الحي"
+        "en": "district / neighborhood",
+        "tr": "semt / mahalle",
+        "fa": "محله / منطقه شهری",
+        "ru": "район города",
+        "uk": "район міста",
+        "ar": "حي / منطقة في المدينة"
       }
     },
     "34329": {
@@ -1157,14 +1157,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 20,
-      "example_de": "Die Querstraße ist im Bereich Orte und Städte wichtig.",
+      "example_de": "Die Bäckerei liegt in einer kleinen Querstraße.",
       "translations": {
-        "en": "Cross Street",
-        "tr": "Kavşak",
-        "fa": "خیابان متقاطع",
-        "ru": "Перекресток",
-        "uk": "Перехрестя",
-        "ar": "مفترق طرق"
+        "en": "side street / cross street",
+        "tr": "ara sokak",
+        "fa": "خیابان فرعی",
+        "ru": "поперечная улица / переулок",
+        "uk": "поперечна вулиця / провулок",
+        "ar": "شارع جانبي"
       }
     },
     "34330": {
@@ -1177,14 +1177,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Die Apfelwein-Wirtschaft ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "In der Apfelwein-Wirtschaft essen wir regionale Spezialitäten.",
       "translations": {
-        "en": "Cider economy",
-        "tr": "Elma şarabı ekonomisi",
-        "fa": "میخانه سیدر",
-        "ru": "Экономика сидра",
-        "uk": "Економія сидру",
-        "ar": "اقتصاد عصير التفاح"
+        "en": "apple wine tavern",
+        "tr": "elma şarabı lokantası",
+        "fa": "رستوران شراب سیب",
+        "ru": "таверна с яблочным вином",
+        "uk": "таверна з яблучним вином",
+        "ar": "حانة نبيذ التفاح"
       }
     },
     "34331": {
@@ -1197,14 +1197,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 6,
-      "example_de": "Das Hochhaus ist im Bereich Wohnen wichtig.",
+      "example_de": "Das Hochhaus hat zwanzig Stockwerke.",
       "translations": {
-        "en": "Apartment Block No",
-        "tr": "Yüksek katlı",
-        "fa": "آسمان خراش",
-        "ru": "Высотное здание",
-        "uk": "Багатоквартирний будинок",
-        "ar": "برج شاهق"
+        "en": "high-rise building",
+        "tr": "yüksek bina",
+        "fa": "ساختمان بلند",
+        "ru": "высотное здание",
+        "uk": "висотна будівля",
+        "ar": "مبنى شاهق"
       }
     },
     "34332": {
@@ -1217,14 +1217,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 20,
-      "example_de": "Die Skyline ist im Bereich Orte und Städte wichtig.",
+      "example_de": "Von der Brücke sieht man die Skyline der Stadt.",
       "translations": {
-        "en": "Skyline",
-        "tr": "Silüet",
-        "fa": "دورنمای شهری",
-        "ru": "Скайлайн",
-        "uk": "Лінія горизонту",
-        "ar": "خط سماء"
+        "en": "skyline",
+        "tr": "şehir silueti",
+        "fa": "خط آسمان شهر",
+        "ru": "силуэт города",
+        "uk": "силует міста",
+        "ar": "أفق المدينة"
       }
     },
     "34333": {
@@ -1237,14 +1237,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 11,
-      "example_de": "Die U-Bahn-Station ist im Bereich Verkehr wichtig.",
+      "example_de": "Die U-Bahn-Station ist nur fünf Minuten entfernt.",
       "translations": {
-        "en": "Subway station",
-        "tr": "Yeraltı istasyonu",
+        "en": "underground station",
+        "tr": "metro istasyonu",
         "fa": "ایستگاه مترو",
-        "ru": "Станция метро",
-        "uk": "Станція метро",
-        "ar": "محطة مترو أنفاق"
+        "ru": "станция метро",
+        "uk": "станція метро",
+        "ar": "محطة مترو"
       }
     },
     "34334": {
@@ -1257,14 +1257,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Das Päckchen ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Das Päckchen kommt morgen mit der Post.",
       "translations": {
-        "en": "Packet",
-        "tr": "Koli",
-        "fa": "بسته",
-        "ru": "Мелкий пакет",
-        "uk": "Бандероль",
-        "ar": "القضبان"
+        "en": "small parcel",
+        "tr": "küçük paket",
+        "fa": "بسته کوچک",
+        "ru": "небольшая посылка",
+        "uk": "невелика посилка",
+        "ar": "طرد صغير"
       }
     },
     "34335": {
@@ -1277,14 +1277,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"Schlange stehen\".",
+      "example_de": "An der Kasse müssen wir Schlange stehen.",
       "translations": {
-        "en": "Schlange stehen.",
-        "tr": "gerek yok.",
+        "en": "to stand in line",
+        "tr": "sırada beklemek",
         "fa": "در صف ایستادن",
-        "ru": "Очередь вверх",
-        "uk": "Черга вгору",
-        "ar": "هذا صحيح"
+        "ru": "стоять в очереди",
+        "uk": "стояти в черзі",
+        "ar": "يقف في الطابور"
       }
     },
     "34336": {
@@ -1297,14 +1297,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"den Empfang bestätigen\".",
+      "example_de": "Bitte bestätigen Sie den Empfang per E-Mail.",
       "translations": {
-        "en": "Confirm receipt",
-        "tr": "makbuzu onaylayın",
-        "fa": "تایید رسید",
+        "en": "to confirm receipt",
+        "tr": "teslim alındığını onaylamak",
+        "fa": "دریافت را تأیید کردن",
         "ru": "подтвердить получение",
         "uk": "підтвердити отримання",
-        "ar": "الإقرار بالاستلام"
+        "ar": "يؤكد الاستلام"
       }
     },
     "34337": {
@@ -1317,14 +1317,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Beleg ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Bewahren Sie den Beleg bitte gut auf.",
       "translations": {
-        "en": "Document",
-        "tr": "Evrak",
-        "fa": "من نمي‌دونم",
-        "ru": "Документ",
-        "uk": "Квитанція",
-        "ar": "/-/"
+        "en": "receipt / proof",
+        "tr": "fiş / belge",
+        "fa": "رسید / مدرک",
+        "ru": "квитанция / чек",
+        "uk": "квитанція / чек",
+        "ar": "إيصال / مستند"
       }
     },
     "34338": {
@@ -1337,14 +1337,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld kann man oft verlangen.",
+      "example_de": "Der Verkäufer darf einen Ausweis verlangen.",
       "translations": {
-        "en": "require",
-        "tr": "gerektirmek",
-        "fa": ".",
-        "ru": "требовать",
-        "uk": "попит",
-        "ar": "-"
+        "en": "to demand / request",
+        "tr": "istemek / talep etmek",
+        "fa": "درخواست کردن / مطالبه کردن",
+        "ru": "требовать / просить",
+        "uk": "вимагати / просити",
+        "ar": "يطلب / يطالب"
       }
     },
     "34339": {
@@ -1357,14 +1357,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Der Pfirsich ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Der Pfirsich schmeckt süß und frisch.",
       "translations": {
-        "en": "Peach",
-        "tr": "Şeftali",
-        "fa": "- فقط چيزي رو که ميشنوي تکرار کن",
-        "ru": "Персик",
-        "uk": "Персик",
-        "ar": "دراق"
+        "en": "peach",
+        "tr": "şeftali",
+        "fa": "هلو",
+        "ru": "персик",
+        "uk": "персик",
+        "ar": "خوخ"
       }
     },
     "34340": {
@@ -1377,14 +1377,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Das Einkaufszentrum ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Im Einkaufszentrum gibt es viele Geschäfte.",
       "translations": {
-        "en": "Shopping Mall",
-        "tr": "Alışveriş Merkezi",
-        "fa": "-اوهوم .",
-        "ru": "Торговый центр",
-        "uk": "Торговий центр",
-        "ar": "مراكز التسوق"
+        "en": "shopping center",
+        "tr": "alışveriş merkezi",
+        "fa": "مرکز خرید",
+        "ru": "торговый центр",
+        "uk": "торговий центр",
+        "ar": "مركز تجاري"
       }
     },
     "34341": {
@@ -1397,14 +1397,14 @@
       "word_type": "Phrase",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"auf sein\".",
+      "example_de": "Der Supermarkt ist heute bis acht Uhr auf.",
       "translations": {
-        "en": "on his",
-        "tr": "on his",
-        "fa": "سر حال بودن",
-        "ru": "на его",
-        "uk": "на його",
-        "ar": "على"
+        "en": "to be open",
+        "tr": "açık olmak",
+        "fa": "باز بودن",
+        "ru": "быть открытым",
+        "uk": "бути відчиненим",
+        "ar": "يكون مفتوحًا"
       }
     },
     "34342": {
@@ -1417,13 +1417,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 6,
-      "example_de": "Das Streichholz ist im Bereich Wohnen wichtig.",
+      "example_de": "Mit einem Streichholz zündet er die Kerze an.",
       "translations": {
-        "en": "Match",
-        "tr": "Kibrit",
-        "fa": "مطابقت",
-        "ru": "Спичка",
-        "uk": "Збіг",
+        "en": "match",
+        "tr": "kibrit",
+        "fa": "کبریت",
+        "ru": "спичка",
+        "uk": "сірник",
         "ar": "عود ثقاب"
       }
     },
@@ -1437,13 +1437,13 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 10,
-      "example_de": "Das Souvenir ist im Bereich Reisen wichtig.",
+      "example_de": "Ich kaufe ein Souvenir für meine Schwester.",
       "translations": {
-        "en": "Souvenir",
-        "tr": "Hediyelik eşya",
-        "fa": "؟ - يادگاريه-",
-        "ru": "Сувенир",
-        "uk": "Сувенір",
+        "en": "souvenir",
+        "tr": "hediyelik eşya",
+        "fa": "سوغاتی",
+        "ru": "сувенир",
+        "uk": "сувенір",
         "ar": "تذكار"
       }
     },
@@ -1457,13 +1457,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 7,
-      "example_de": "Der Wollpullover ist im Bereich Kleidung wichtig.",
+      "example_de": "Der Wollpullover hält im Winter sehr warm.",
       "translations": {
-        "en": "Wool sweater",
-        "tr": "Yün kazak",
-        "fa": "ژاکت پشمی",
-        "ru": "Шерстяной свитер",
-        "uk": "Вовняний светр",
+        "en": "wool sweater",
+        "tr": "yün kazak",
+        "fa": "پلیور پشمی",
+        "ru": "шерстяной свитер",
+        "uk": "вовняний светр",
         "ar": "سترة صوفية"
       }
     },
@@ -1477,14 +1477,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Der Pfeffer ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Ich gebe etwas Pfeffer auf die Suppe.",
       "translations": {
-        "en": "Pepper",
-        "tr": "Karabiber",
+        "en": "pepper",
+        "tr": "karabiber",
         "fa": "فلفل",
-        "ru": "Перец",
-        "uk": "Перець чорний",
-        "ar": "فلفل أسود"
+        "ru": "перец",
+        "uk": "перець",
+        "ar": "فلفل"
       }
     },
     "34346": {
@@ -1497,13 +1497,13 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Der Quark ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Zum Frühstück esse ich Quark mit Obst.",
       "translations": {
-        "en": "Cottage cheese",
-        "tr": "Quark",
-        "fa": "کوارک",
-        "ru": "творог",
-        "uk": "Кварк",
+        "en": "quark / curd cheese",
+        "tr": "lor peyniri / quark",
+        "fa": "پنیر کوارک",
+        "ru": "творог / кварк",
+        "uk": "творог / кварк",
         "ar": "جبن كوارك"
       }
     },
@@ -1517,13 +1517,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Die Schachtel Pralinen ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Sie bringt eine Schachtel Pralinen mit.",
       "translations": {
-        "en": "Box of Chocolates",
-        "tr": "Bir kutu çikolata",
+        "en": "box of chocolates",
+        "tr": "kutu çikolata",
         "fa": "جعبه شکلات",
-        "ru": "Коробка конфет",
-        "uk": "Коробка цукерок",
+        "ru": "коробка конфет",
+        "uk": "коробка цукерок",
         "ar": "علبة شوكولاتة"
       }
     },
@@ -1537,13 +1537,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Lieferservice ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Lieferservice bringt das Essen nach Hause.",
       "translations": {
-        "en": "Delivery Service",
-        "tr": "Evlere servis",
+        "en": "delivery service",
+        "tr": "teslimat servisi",
         "fa": "خدمات تحویل",
-        "ru": "курьерская служба",
-        "uk": "Служба доставки",
+        "ru": "служба доставки",
+        "uk": "служба доставки",
         "ar": "خدمة التوصيل"
       }
     },
@@ -1557,14 +1557,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Die Metzgerei ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "In der Metzgerei kaufe ich frisches Fleisch.",
       "translations": {
-        "en": "Butcher Shop",
-        "tr": "Kasaplık",
+        "en": "butcher shop",
+        "tr": "kasap dükkânı",
         "fa": "قصابی",
-        "ru": "Мясной цех",
-        "uk": "М 'ясна лавка",
-        "ar": "مجزرة"
+        "ru": "мясная лавка",
+        "uk": "мʼясна крамниця",
+        "ar": "محل جزارة"
       }
     },
     "34350": {
@@ -1577,14 +1577,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 2,
-      "example_de": "Im Bereich Zeit und Termine lernt man \"heutzutage\".",
+      "example_de": "Heutzutage bestellen viele Menschen online.",
       "translations": {
         "en": "nowadays",
-        "tr": "bugünlerde",
-        "fa": "خانم کلي.",
-        "ru": "в настоящее время",
-        "uk": "в наш час",
-        "ar": "هذه الأيام"
+        "tr": "günümüzde",
+        "fa": "امروزه",
+        "ru": "в наши дни",
+        "uk": "у наш час",
+        "ar": "في الوقت الحاضر"
       }
     },
     "34351": {
@@ -1597,13 +1597,13 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Die Einkaufsliste ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Auf der Einkaufsliste stehen Milch und Brot.",
       "translations": {
-        "en": "Shopping list",
-        "tr": "Alışveriş Listesi",
-        "fa": "لیست خرید",
-        "ru": "Список покупок",
-        "uk": "Список закупівель@ title: window",
+        "en": "shopping list",
+        "tr": "alışveriş listesi",
+        "fa": "فهرست خرید",
+        "ru": "список покупок",
+        "uk": "список покупок",
         "ar": "قائمة التسوق"
       }
     },
@@ -1617,13 +1617,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Das Tiefkühlprodukt ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Das Tiefkühlprodukt muss sofort in den Gefrierschrank.",
       "translations": {
-        "en": "Frozen product",
-        "tr": "Dondurulmuş ürün",
+        "en": "frozen product",
+        "tr": "dondurulmuş ürün",
         "fa": "محصول منجمد",
-        "ru": "Замороженный продукт",
-        "uk": "Заморожений продукт",
+        "ru": "замороженный продукт",
+        "uk": "заморожений продукт",
         "ar": "منتج مجمد"
       }
     },
@@ -1637,12 +1637,12 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Im Bereich Essen und Trinken lernt man \"saisonal\".",
+      "example_de": "Saisonales Gemüse ist oft besonders frisch.",
       "translations": {
-        "en": "Seasonal",
+        "en": "seasonal",
         "tr": "mevsimlik",
         "fa": "فصلی",
-        "ru": "Сезон",
+        "ru": "сезонный",
         "uk": "сезонний",
         "ar": "موسمي"
       }
@@ -1657,14 +1657,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "Die Bäuerin ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Bäuerin verkauft Eier auf dem Markt.",
       "translations": {
-        "en": "Peasant (female)",
-        "tr": "Çiftçi",
-        "fa": "همسر کشاورز",
-        "ru": "Фермер",
-        "uk": "Фермер",
-        "ar": "فلاح"
+        "en": "female farmer",
+        "tr": "kadın çiftçi",
+        "fa": "کشاورز زن",
+        "ru": "фермерша / крестьянка",
+        "uk": "фермерка / селянка",
+        "ar": "مزارعة"
       }
     },
     "34355": {
@@ -1677,14 +1677,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "Im Bereich Umwelt und Natur ist das Wort \"biologisch\" nützlich.",
+      "example_de": "Biologisches Gemüse wächst ohne viele Chemikalien.",
       "translations": {
-        "en": "biological",
-        "tr": "BİYOLOJİK",
-        "fa": "واسه سلامتي خوبه.",
-        "ru": "органический",
-        "uk": "органічний",
-        "ar": "بيولوجيّ"
+        "en": "organic / biological",
+        "tr": "organik / biyolojik",
+        "fa": "زیستی / ارگانیک",
+        "ru": "биологический / органический",
+        "uk": "біологічний / органічний",
+        "ar": "عضوي / بيولوجي"
       }
     },
     "34356": {
@@ -1697,14 +1697,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Die Bestellung ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Bestellung kommt morgen bei uns an.",
       "translations": {
-        "en": "Ordine",
-        "tr": "Order",
-        "fa": "سفارش دهید",
+        "en": "order",
+        "tr": "sipariş",
+        "fa": "سفارش",
         "ru": "заказ",
-        "uk": "Замовлення на закупівлю",
-        "ar": "طلب الشراء"
+        "uk": "замовлення",
+        "ar": "طلبية"
       }
     },
     "34357": {
@@ -1717,14 +1717,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"etwas reklamieren\".",
+      "example_de": "Ich möchte das kaputte Gerät reklamieren.",
       "translations": {
-        "en": "complain about something",
-        "tr": "bir şeyden şikayet etmek",
+        "en": "to make a complaint about something",
+        "tr": "bir şeyi şikâyet etmek",
         "fa": "از چیزی شکایت کردن",
-        "ru": "жаловаться на что-то",
-        "uk": "скаржитися на щось",
-        "ar": "اشتكي من شيء ما"
+        "ru": "подать жалобу на товар",
+        "uk": "поскаржитися на товар",
+        "ar": "يشتكي من شيء"
       }
     },
     "34358": {
@@ -1737,14 +1737,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Die Reklamation ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Reklamation wurde schnell bearbeitet.",
       "translations": {
-        "en": "Complaint",
-        "tr": "SIKAYETI",
-        "fa": "شکایت",
-        "ru": "Рекламация",
-        "uk": "Рекламація",
-        "ar": "شكوى مستهلك"
+        "en": "complaint / claim",
+        "tr": "şikâyet / iade talebi",
+        "fa": "شکایت / اعتراض به کالا",
+        "ru": "рекламация / жалоба",
+        "uk": "рекламація / скарга",
+        "ar": "شكوى / مطالبة"
       }
     },
     "34359": {
@@ -1757,12 +1757,12 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Die Kundennummer ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Bitte geben Sie Ihre Kundennummer an.",
       "translations": {
-        "en": "Customer number",
-        "tr": "Müşteri Numarası",
+        "en": "customer number",
+        "tr": "müşteri numarası",
         "fa": "شماره مشتری",
-        "ru": "Номер клиента",
+        "ru": "номер клиента",
         "uk": "номер клієнта",
         "ar": "رقم العميل"
       }
@@ -1777,14 +1777,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld kann man oft zurückschicken.",
+      "example_de": "Ich muss das Paket zurückschicken.",
       "translations": {
-        "en": "Training Grounds.",
-        "tr": "geri gönder",
-        "fa": "بازگشت",
+        "en": "to send back",
+        "tr": "geri göndermek",
+        "fa": "پس فرستادن",
         "ru": "отправить обратно",
         "uk": "відправити назад",
-        "ar": "إرسال مرة أخرى"
+        "ar": "يرسل مرة أخرى"
       }
     },
     "34361": {
@@ -1797,14 +1797,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"(nicht) in Ordnung sein\".",
+      "example_de": "Die Lieferung ist leider nicht in Ordnung.",
       "translations": {
-        "en": "everything is in order",
-        "tr": "düzen",
-        "fa": "درست مي شه",
-        "ru": "В норме",
-        "uk": "бути в порядку",
-        "ar": "حسنا , سنكون بخير."
+        "en": "to be okay / not okay",
+        "tr": "uygun olmak / olmamak",
+        "fa": "درست بودن / نبودن",
+        "ru": "быть в порядке / не в порядке",
+        "uk": "бути в порядку / не в порядку",
+        "ar": "يكون على ما يرام / غير مناسب"
       }
     },
     "34362": {
@@ -1817,14 +1817,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"umgehend\".",
+      "example_de": "Bitte antworten Sie umgehend auf diese E-Mail.",
       "translations": {
-        "en": "to destroy",
-        "tr": "hemen",
-        "fa": "اونم همين الان...",
-        "ru": "срочный, немедленный, безотлагательный",
+        "en": "immediately / without delay",
+        "tr": "derhal",
+        "fa": "فوراً / بی‌درنگ",
+        "ru": "немедленно",
         "uk": "негайно",
-        "ar": "-حالًا ."
+        "ar": "فورًا"
       }
     },
     "34363": {
@@ -1837,13 +1837,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Kundenservice ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Kundenservice hilft bei Problemen mit der Bestellung.",
       "translations": {
-        "en": "Customer Service",
-        "tr": "Müşteri Hizmetleri",
-        "fa": "خدمات مشتری",
-        "ru": "Центр поддержки клиентов",
-        "uk": "Обслуговування клієнтів",
+        "en": "customer service",
+        "tr": "müşteri hizmetleri",
+        "fa": "خدمات مشتریان",
+        "ru": "служба поддержки клиентов",
+        "uk": "служба обслуговування клієнтів",
         "ar": "خدمة العملاء"
       }
     },
@@ -1857,13 +1857,13 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"korrekt\".",
+      "example_de": "Die Adresse auf dem Paket ist korrekt.",
       "translations": {
-        "en": "accurate",
+        "en": "correct",
         "tr": "doğru",
-        "fa": "اصلاح",
+        "fa": "درست / صحیح",
         "ru": "правильный",
-        "uk": "Виправити",
+        "uk": "правильний",
         "ar": "صحيح"
       }
     },
@@ -1877,14 +1877,14 @@
       "word_type": "Verb",
       "difficulty": 2,
       "category_id": 13,
-      "example_de": "Im Bereich Kommunikation kann man oft senden.",
+      "example_de": "Bitte senden Sie das Formular per E-Mail.",
       "translations": {
-        "en": "send",
-        "tr": "Gönder",
-        "fa": "Ø§Ø±Ø³Ø§Ù",
-        "ru": "отправить",
-        "uk": "Надіслати",
-        "ar": "إرسال"
+        "en": "to send",
+        "tr": "göndermek",
+        "fa": "فرستادن",
+        "ru": "отправлять",
+        "uk": "надсилати",
+        "ar": "يرسل"
       }
     },
     "34366": {
@@ -1897,14 +1897,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "Das Steak ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Das Steak liegt schon auf dem Grill.",
       "translations": {
-        "en": "Steak",
-        "tr": "Biftek",
-        "fa": "-ميخواي استيک بخري؟",
-        "ru": "Стейк",
-        "uk": "Стейк",
-        "ar": "ستيك"
+        "en": "steak",
+        "tr": "biftek",
+        "fa": "استیک",
+        "ru": "стейк",
+        "uk": "стейк",
+        "ar": "شريحة لحم"
       }
     },
     "34367": {
@@ -1917,14 +1917,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 5,
-      "example_de": "Das Verfallsdatum ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Prüfen Sie vor dem Kauf das Verfallsdatum.",
       "translations": {
-        "en": "Expiry date",
-        "tr": "Zaman aşımı tarihi",
+        "en": "expiry date",
+        "tr": "son kullanma tarihi",
         "fa": "تاریخ انقضا",
-        "ru": "дата истечения срока хранения (продуктов и т. п.)",
-        "uk": "Дата завершення строку дії",
-        "ar": "حد التقادم"
+        "ru": "срок годности",
+        "uk": "термін придатності",
+        "ar": "تاريخ انتهاء الصلاحية"
       }
     },
     "34368": {
@@ -1937,14 +1937,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Kassenbon ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Kassenbon liegt noch in meiner Tasche.",
       "translations": {
-        "en": "Pick up",
-        "tr": "Dekont",
-        "fa": "رسید",
-        "ru": "Кассовый чек",
-        "uk": "Квитанція",
-        "ar": "اتريد ايصال ؟"
+        "en": "receipt",
+        "tr": "kasa fişi",
+        "fa": "رسید خرید",
+        "ru": "кассовый чек",
+        "uk": "касовий чек",
+        "ar": "إيصال الشراء"
       }
     },
     "34369": {
@@ -1957,14 +1957,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Das Wechselgeld ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Kassiererin gibt mir das Wechselgeld zurück.",
       "translations": {
-        "en": "Cash in hand",
-        "tr": "Para üstü",
-        "fa": "تغییر",
-        "ru": "мелочь",
-        "uk": "Змінити",
-        "ar": "وبعض الفكة."
+        "en": "change",
+        "tr": "para üstü",
+        "fa": "باقی پول",
+        "ru": "сдача",
+        "uk": "решта",
+        "ar": "الباقي من النقود"
       }
     },
     "34370": {
@@ -1977,14 +1977,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Der Großhandel ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Großhandel verkauft Waren an Geschäfte.",
       "translations": {
-        "en": "Wholesale",
-        "tr": "Toptan ticaret",
-        "fa": "يه جا پرداخت مي کنه.",
-        "ru": "Оптовая торговля",
+        "en": "wholesale trade",
+        "tr": "toptan ticaret",
+        "fa": "عمده‌فروشی",
+        "ru": "оптовая торговля",
         "uk": "оптова торгівля",
-        "ar": "البيع بالجملة"
+        "ar": "تجارة الجملة"
       }
     },
     "34371": {
@@ -1997,14 +1997,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Der Einzelhandel ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Einzelhandel verkauft direkt an Kunden.",
       "translations": {
-        "en": "Retail",
-        "tr": "Perakende",
-        "fa": "-نه",
-        "ru": "Ретейл",
-        "uk": "Роздрібна торгівля",
-        "ar": "بيع قطاعي"
+        "en": "retail trade",
+        "tr": "perakende ticaret",
+        "fa": "خرده‌فروشی",
+        "ru": "розничная торговля",
+        "uk": "роздрібна торгівля",
+        "ar": "تجارة التجزئة"
       }
     },
     "34372": {
@@ -2121,7 +2121,7 @@
       "translations": {
         "en": "Strawberry",
         "tr": "Çilek",
-        "fa": "گیاه توت‌فرنگی",
+        "fa": "توت‌فرنگی",
         "ru": "Земляника",
         "uk": "Полуниця",
         "ar": "شليك"
