@@ -10017,14 +10017,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte bringen Sie Ihren Ausweis sowie die Anmeldung mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "as well as / and",
+        "tr": "ve / ayrıca",
+        "fa": "و همچنین / نیز",
+        "ru": "а также / и",
+        "uk": "а також / і",
+        "ar": "وكذلك / و"
       }
     },
     "34773": {
@@ -10037,14 +10037,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Kannst du die Zeugnisse bei der Bewerbung mitschicken?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to send along / to include",
+        "tr": "birlikte göndermek / eklemek",
+        "fa": "همراه فرستادن / ضمیمه کردن",
+        "ru": "приложить и отправить",
+        "uk": "додати й надіслати",
+        "ar": "يرسل مع / يرفق"
       }
     },
     "34774": {
@@ -10057,14 +10057,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Jacke ist für kaltes Wetter gut geeignet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be suitable for",
+        "tr": "için uygun olmak",
+        "fa": "برای چیزی مناسب بودن",
+        "ru": "быть подходящим для",
+        "uk": "бути придатним для",
+        "ar": "يكون مناسبًا لـ"
       }
     },
     "34775": {
@@ -10077,14 +10077,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie kennt sich mit Computern sehr gut aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to know one’s way around / to be familiar with",
+        "tr": "iyi bilmek / aşina olmak",
+        "fa": "آشنا بودن با / سررشته داشتن از",
+        "ru": "разбираться в",
+        "uk": "розбиратися в",
+        "ar": "يكون ملمًا بـ / يعرف جيدًا"
       }
     },
     "34776": {
@@ -10097,14 +10097,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Projektmanager plant die nächsten Schritte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "project manager",
+        "tr": "proje yöneticisi",
+        "fa": "مدیر پروژه مرد",
+        "ru": "менеджер проекта",
+        "uk": "менеджер проєкту",
+        "ar": "مدير مشروع"
       }
     },
     "34777": {
@@ -10117,14 +10117,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Projektmanagerin leitet das internationale Team.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female project manager",
+        "tr": "kadın proje yöneticisi",
+        "fa": "مدیر پروژه زن",
+        "ru": "менеджер проекта-женщина",
+        "uk": "менеджерка проєкту",
+        "ar": "مديرة مشروع"
       }
     },
     "34778": {
@@ -10137,14 +10137,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Assistent bereitet die Unterlagen vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "assistant",
+        "tr": "asistan erkek / yardımcı",
+        "fa": "دستیار مرد / معاون",
+        "ru": "ассистент",
+        "uk": "асистент",
+        "ar": "مساعد"
       }
     },
     "34779": {
@@ -10157,14 +10157,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Assistentin organisiert die Termine im Büro.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female assistant",
+        "tr": "asistan kadın / yardımcı",
+        "fa": "دستیار زن / معاون زن",
+        "ru": "ассистентка",
+        "uk": "асистентка",
+        "ar": "مساعدة"
       }
     },
     "34780": {
@@ -10177,14 +10177,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Bürokauffrau arbeitet in der Verwaltung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female office administrator",
+        "tr": "kadın büro memuru / ofis çalışanı",
+        "fa": "کارمند اداری زن",
+        "ru": "офисная служащая",
+        "uk": "офісна службовиця",
+        "ar": "موظفة إدارية"
       }
     },
     "34781": {
@@ -10197,14 +10197,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Bürokaufmann schreibt Angebote und Rechnungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male office administrator",
+        "tr": "erkek büro memuru / ofis çalışanı",
+        "fa": "کارمند اداری مرد",
+        "ru": "офисный служащий",
+        "uk": "офісний службовець",
+        "ar": "موظف إداري"
       }
     },
     "34782": {
@@ -10217,14 +10217,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Im Team sprechen wir offen miteinander.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "with each other / together",
+        "tr": "birbirimizle / birlikte",
+        "fa": "با یکدیگر / با هم",
+        "ru": "друг с другом / вместе",
+        "uk": "одне з одним / разом",
+        "ar": "مع بعضنا / معًا"
       }
     },
     "34783": {
@@ -10237,14 +10237,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Eine Schwäche von mir ist, dass ich ungeduldig bin.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "weakness",
+        "tr": "zayıflık / zayıf yön",
+        "fa": "نقطه ضعف / ضعف",
+        "ru": "слабость / слабая сторона",
+        "uk": "слабкість / слабка сторона",
+        "ar": "نقطة ضعف / ضعف"
       }
     },
     "34784": {
@@ -10257,14 +10257,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Ihre größte Stärke ist die gute Kommunikation.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "strength",
+        "tr": "güçlü yön / kuvvet",
+        "fa": "نقطه قوت / قدرت",
+        "ru": "сила / сильная сторона",
+        "uk": "сила / сильна сторона",
+        "ar": "نقطة قوة / قوة"
       }
     },
     "34785": {
@@ -10277,14 +10277,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Pünktlichkeit ist bei diesem Job sehr wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "punctuality",
+        "tr": "dakiklik",
+        "fa": "وقت‌شناسی",
+        "ru": "пунктуальность",
+        "uk": "пунктуальність",
+        "ar": "الالتزام بالمواعيد"
       }
     },
     "34786": {
@@ -10297,14 +10297,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Körpersprache spielt im Vorstellungsgespräch eine große Rolle.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "body language",
+        "tr": "beden dili",
+        "fa": "زبان بدن",
+        "ru": "язык тела",
+        "uk": "мова тіла",
+        "ar": "لغة الجسد"
       }
     },
     "34787": {
@@ -10317,14 +10317,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "An ihrer Mimik erkennt man sofort die Freude.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "facial expression",
+        "tr": "yüz ifadesi / mimik",
+        "fa": "حالت چهره / میمیک",
+        "ru": "мимика",
+        "uk": "міміка",
+        "ar": "تعبير الوجه"
       }
     },
     "34788": {
@@ -10337,14 +10337,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Mit seiner Gestik macht er die Erklärung klarer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "gestures",
+        "tr": "jestler / el hareketleri",
+        "fa": "حرکات دست و بدن / ژست",
+        "ru": "жестикуляция",
+        "uk": "жестикуляція",
+        "ar": "إيماءات / حركات اليد"
       }
     },
     "34789": {
@@ -10357,14 +10357,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Ehrlichkeit ist die Basis für Vertrauen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "honesty",
+        "tr": "dürüstlük",
+        "fa": "صداقت",
+        "ru": "честность",
+        "uk": "чесність",
+        "ar": "صدق / أمانة"
       }
     },
     "34790": {
@@ -10377,14 +10377,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "In dem Text geht es um Sport und Gesundheit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be about",
+        "tr": "hakkında olmak",
+        "fa": "درباره چیزی بودن",
+        "ru": "речь идёт о",
+        "uk": "йдеться про",
+        "ar": "يدور حول"
       }
     },
     "34791": {
@@ -10397,14 +10397,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich möchte herausfinden, welcher Kurs zu mir passt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to find out",
+        "tr": "öğrenmek / ortaya çıkarmak",
+        "fa": "فهمیدن / پی بردن",
+        "ru": "выяснять",
+        "uk": "зʼясовувати",
+        "ar": "يكتشف / يعرف"
       }
     },
     "34792": {
@@ -10417,14 +10417,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Solche Fragen kommen oft im Gespräch vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "such",
+        "tr": "böyle / bu tür",
+        "fa": "چنین / این‌گونه",
+        "ru": "такой",
+        "uk": "такий",
+        "ar": "مثل هذا / كهذا"
       }
     },
     "34793": {
@@ -10437,14 +10437,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich erkundige mich nach den Öffnungszeiten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to inquire / to ask about",
+        "tr": "bilgi almak / sormak",
+        "fa": "پرس‌وجو کردن / سؤال کردن درباره",
+        "ru": "справляться / узнавать",
+        "uk": "дізнаватися / запитувати",
+        "ar": "يستفسر عن"
       }
     },
     "34794": {
@@ -10457,14 +10457,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Regel gilt für alle Mitglieder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to apply / to be valid",
+        "tr": "geçerli olmak",
+        "fa": "اعتبار داشتن / شامل شدن",
+        "ru": "действовать / быть действительным",
+        "uk": "діяти / бути чинним",
+        "ar": "ينطبق / يكون ساريًا"
       }
     },
     "34795": {
@@ -10477,14 +10477,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Wenn er die Prüfung schaffen will, muss er sich anstrengen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to make an effort",
+        "tr": "çaba göstermek",
+        "fa": "تلاش کردن / زحمت کشیدن",
+        "ru": "стараться / прилагать усилия",
+        "uk": "старатися / докладати зусиль",
+        "ar": "يبذل جهدًا"
       }
     },
     "34796": {
@@ -10497,14 +10497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Nach der Arbeit mache ich ein kurzes Workout.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "workout",
+        "tr": "antrenman / egzersiz",
+        "fa": "تمرین ورزشی",
+        "ru": "тренировка",
+        "uk": "тренування",
+        "ar": "تمرين رياضي"
       }
     },
     "34797": {
@@ -10517,14 +10517,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Krafttraining stärkt die Muskeln.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "strength training",
+        "tr": "kuvvet antrenmanı",
+        "fa": "تمرین قدرتی",
+        "ru": "силовая тренировка",
+        "uk": "силове тренування",
+        "ar": "تمارين القوة"
       }
     },
     "34798": {
@@ -10537,14 +10537,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der Wettkampf beginnt am Sonntagmorgen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "competition",
+        "tr": "yarışma / müsabaka",
+        "fa": "مسابقه / رقابت",
+        "ru": "соревнование",
+        "uk": "змагання",
+        "ar": "منافسة / مسابقة"
       }
     },
     "34799": {
@@ -10557,14 +10557,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Mannschaft gewann die Meisterschaft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "championship",
+        "tr": "şampiyona / şampiyonluk",
+        "fa": "قهرمانی / مسابقات قهرمانی",
+        "ru": "чемпионат / первенство",
+        "uk": "чемпіонат / першість",
+        "ar": "بطولة"
       }
     },
     "34800": {
@@ -10577,14 +10577,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Für Anfänger ist dieser Kurs am besten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be best",
+        "tr": "en iyisi olmak",
+        "fa": "بهترین بودن",
+        "ru": "быть лучшим",
+        "uk": "бути найкращим",
+        "ar": "يكون الأفضل"
       }
     },
     "34801": {
@@ -10597,14 +10597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Mein Bruder ist ein großer Fan von Basketball.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "fan",
+        "tr": "hayran / taraftar",
+        "fa": "طرفدار / هوادار",
+        "ru": "фанат / болельщик",
+        "uk": "фанат / уболівальник",
+        "ar": "معجب / مشجع"
       }
     },
     "34802": {
@@ -10617,14 +10617,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Meine Lieblingsmannschaft spielt heute Abend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "favorite team",
+        "tr": "favori takım",
+        "fa": "تیم مورد علاقه",
+        "ru": "любимая команда",
+        "uk": "улюблена команда",
+        "ar": "الفريق المفضل"
       }
     },
     "34803": {
@@ -10637,14 +10637,14 @@
       "word_type": "Adjective",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Sie war mutig und hat ihre Meinung gesagt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "brave / courageous",
+        "tr": "cesur",
+        "fa": "شجاع",
+        "ru": "смелый",
+        "uk": "сміливий",
+        "ar": "شجاع"
       }
     },
     "34804": {
@@ -10657,14 +10657,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "In diesem Fitnessstudio fühle ich mich wohl.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to feel comfortable / to feel well",
+        "tr": "rahat hissetmek / iyi hissetmek",
+        "fa": "احساس راحتی کردن / حال خوب داشتن",
+        "ru": "чувствовать себя хорошо / комфортно",
+        "uk": "почуватися добре / комфортно",
+        "ar": "يشعر بالراحة / يشعر بخير"
       }
     },
     "34805": {
@@ -10677,14 +10677,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Eishockey ist in Kanada sehr beliebt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "ice hockey",
+        "tr": "buz hokeyi",
+        "fa": "هاکی روی یخ",
+        "ru": "хоккей с шайбой",
+        "uk": "хокей із шайбою",
+        "ar": "هوكي الجليد"
       }
     },
     "34806": {
@@ -10697,14 +10697,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Im Sommer spielen wir Beachvolleyball am See.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "beach volleyball",
+        "tr": "plaj voleybolu",
+        "fa": "والیبال ساحلی",
+        "ru": "пляжный волейбол",
+        "uk": "пляжний волейбол",
+        "ar": "كرة الطائرة الشاطئية"
       }
     },
     "34807": {
@@ -10717,14 +10717,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Tennis kann man allein oder zu zweit trainieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tennis",
+        "tr": "tenis",
+        "fa": "تنیس",
+        "ru": "теннис",
+        "uk": "теніс",
+        "ar": "تنس"
       }
     },
     "34808": {
@@ -10737,14 +10737,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Joggen hilft mir, den Kopf frei zu bekommen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "jogging",
+        "tr": "koşu / jogging",
+        "fa": "دویدن آرام / جاگینگ",
+        "ru": "бег трусцой",
+        "uk": "біг підтюпцем",
+        "ar": "الركض الخفيف"
       }
     },
     "34809": {
@@ -10757,14 +10757,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Yoga entspannt den Körper und den Geist.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "yoga",
+        "tr": "yoga",
+        "fa": "یوگا",
+        "ru": "йога",
+        "uk": "йога",
+        "ar": "يوغا"
       }
     },
     "34810": {
@@ -10777,14 +10777,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Fitnessprogramm dauert zwölf Wochen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "fitness program",
+        "tr": "fitness programı",
+        "fa": "برنامه تناسب اندام",
+        "ru": "фитнес-программа",
+        "uk": "фітнес-програма",
+        "ar": "برنامج لياقة بدنية"
       }
     },
     "34811": {
@@ -10797,14 +10797,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Ausdauertraining verbessert die Kondition.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "endurance training",
+        "tr": "dayanıklılık antrenmanı",
+        "fa": "تمرین استقامتی",
+        "ru": "тренировка выносливости",
+        "uk": "тренування витривалості",
+        "ar": "تدريب التحمل"
       }
     },
     "34812": {
@@ -10817,14 +10817,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Beim Lauftraining üben wir auch die richtige Technik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "running training",
+        "tr": "koşu antrenmanı",
+        "fa": "تمرین دویدن",
+        "ru": "беговая тренировка",
+        "uk": "бігове тренування",
+        "ar": "تدريب الجري"
       }
     },
     "34813": {
@@ -10837,14 +10837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Turnhalle ist heute bis spät geöffnet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "gymnasium / sports hall",
+        "tr": "spor salonu",
+        "fa": "سالن ورزش",
+        "ru": "спортзал",
+        "uk": "спортзал",
+        "ar": "صالة رياضية"
       }
     },
     "34814": {
@@ -10857,14 +10857,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "In der Umgebung gibt es viele schöne Parks.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "surroundings / area",
+        "tr": "çevre / civar",
+        "fa": "اطراف / محیط اطراف",
+        "ru": "окрестности / окружение",
+        "uk": "околиця / оточення",
+        "ar": "محيط / منطقة قريبة"
       }
     },
     "34815": {
@@ -10877,14 +10877,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die Ausstattung des Studios ist modern.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "equipment / facilities",
+        "tr": "donanım / ekipman",
+        "fa": "تجهیزات / امکانات",
+        "ru": "оборудование / оснащение",
+        "uk": "обладнання / оснащення",
+        "ar": "تجهيزات / معدات"
       }
     },
     "34816": {
@@ -10897,14 +10897,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Nach dem Training gehen wir in den Wellnessbereich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wellness area",
+        "tr": "wellness alanı / spa bölümü",
+        "fa": "بخش سلامت و آرامش / اسپا",
+        "ru": "зона отдыха и здоровья",
+        "uk": "велнес-зона",
+        "ar": "منطقة الاسترخاء والعافية"
       }
     },
     "34817": {
@@ -10917,14 +10917,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Der Kursstart ist nächste Woche Montag.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "course start",
+        "tr": "kurs başlangıcı",
+        "fa": "شروع دوره",
+        "ru": "начало курса",
+        "uk": "початок курсу",
+        "ar": "بداية الدورة"
       }
     },
     "34818": {
@@ -10937,14 +10937,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "In der Schnupperwoche kann man alle Kurse testen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "trial week",
+        "tr": "deneme haftası",
+        "fa": "هفته آزمایشی",
+        "ru": "пробная неделя",
+        "uk": "пробний тиждень",
+        "ar": "أسبوع تجريبي"
       }
     },
     "34819": {
@@ -10957,14 +10957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Mitgliedschaft kann man online abschließen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "membership",
+        "tr": "üyelik",
+        "fa": "عضویت",
+        "ru": "членство",
+        "uk": "членство",
+        "ar": "عضوية"
       }
     },
     "34820": {
@@ -10977,14 +10977,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Der Mitgliedsbeitrag wird jeden Monat bezahlt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "membership fee",
+        "tr": "üyelik ücreti",
+        "fa": "حق عضویت",
+        "ru": "членский взнос",
+        "uk": "членський внесок",
+        "ar": "رسوم العضوية"
       }
     },
     "34821": {
@@ -10997,14 +10997,14 @@
       "word_type": "Adjective",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Die Miete wird monatlich bezahlt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "monthly",
+        "tr": "aylık / her ay",
+        "fa": "ماهانه",
+        "ru": "ежемесячный / ежемесячно",
+        "uk": "щомісячний / щомісяця",
+        "ar": "شهريًا"
       }
     },
     "34822": {
