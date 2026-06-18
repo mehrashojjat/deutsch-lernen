@@ -524,6 +524,20 @@ Each `vocabulary.v2.map.json` entry has the following fields:
 | 20 | Places & Geography |
 | 21 | Grammar & Function Words |
 
+### Adding New Vocabulary
+
+When adding new words, first remove true duplicates against the existing `vocabulary.v2.map.json`. Treat obvious variants of the same lexical item carefully: keep distinct useful entries such as gendered profession forms, fixed phrases, separable verbs, or different meanings, but do not add a word only because the source uses a different inflected form. New `unified_id` values must continue from the current highest ID with no gaps.
+
+Difficulty is an integer from 1–10 within the CEFR level, not a global A1–B1 scale. For B1 imports, use the source level split as the starting band: B1.1 words should normally be 1–5, B1.2 words should normally be 6–10, and appendix or grammar-pattern entries should be assigned by complexity. Then refine per word: common everyday concrete words are lower, abstract/legal/work/administrative terms are higher, and verb-preposition or grammar-function patterns are usually higher if they require structure knowledge.
+
+Choose `category_id` by the actual meaning and likely learning context of the word, not by a page title alone. Prefer the existing 21 categories. Use category `21` for grammar/function words, connectors, preposition patterns, and general phrases that do not belong to a topic category. For words that could fit multiple categories, choose the category where the example sentence and quiz context will be clearest; for example, `Visum` belongs in Travel, while `Aufenthaltserlaubnis` belongs in Society/Law/Politics.
+
+Write `example_de` as one natural B1-level German sentence. It should demonstrate the word’s normal usage, article/case or required preposition when relevant, and match the selected category. Keep it short and concrete, avoid rare idioms, and do not make the sentence a translation exercise. For fixed phrases and verb-preposition entries, the sentence must show the full pattern, such as `sich freuen auf`, `warten auf`, or `sich kümmern um`.
+
+Translations are for the word or phrase itself, not for the German example sentence. Fill all six languages: `en`, `tr`, `fa`, `ru`, `uk`, `ar`. Keep translations concise, natural, and meaning-focused; include a slash-separated alternative only when one word has multiple common senses or when gender/context needs clarification. Manually review machine translations and reject nonsense or unrelated output. For Farsi and Arabic, normalize any digits into the correct script and do not leave Latin digits in those fields.
+
+After editing, regenerate/update the compact `vocabulary.v2.min.json` so it exactly matches the map entry. Validate that map/min counts match, all new entries have non-empty `example_de` and six translations, Farsi/Arabic contain no Latin digits, `unified_id` equals the entry key, and the new ID range is contiguous.
+
 ---
 
 ## Unified Vocabulary (V2)
