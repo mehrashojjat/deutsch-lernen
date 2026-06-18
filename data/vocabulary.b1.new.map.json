@@ -8017,14 +8017,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Der alte Turm ist eine bekannte Attraktion der Stadt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "attraction",
+        "tr": "cazibe / ilgi çekici yer",
+        "fa": "جاذبه",
+        "ru": "достопримечательность / аттракцион",
+        "uk": "визначна памʼятка / атракція",
+        "ar": "معلم جذب / جاذبية"
       }
     },
     "34673": {
@@ -8037,14 +8037,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Auf jeden Fall komme ich morgen zum Treffen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "definitely / in any case",
+        "tr": "kesinlikle / her durumda",
+        "fa": "حتماً / در هر صورت",
+        "ru": "в любом случае / обязательно",
+        "uk": "у будь-якому разі / обовʼязково",
+        "ar": "بالتأكيد / على أي حال"
       }
     },
     "34674": {
@@ -8057,14 +8057,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ausgerechnet heute ist mein Fahrrad kaputt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "of all times / just",
+        "tr": "tam da / özellikle",
+        "fa": "درست همین / از قضا",
+        "ru": "как раз / именно",
+        "uk": "саме / якраз",
+        "ar": "بالذات / تحديدًا"
       }
     },
     "34675": {
@@ -8077,14 +8077,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Im Park kann man viele Vögel beobachten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to observe / to watch",
+        "tr": "gözlemlemek / izlemek",
+        "fa": "مشاهده کردن / زیر نظر گرفتن",
+        "ru": "наблюдать",
+        "uk": "спостерігати",
+        "ar": "يراقب / يشاهد"
       }
     },
     "34676": {
@@ -8097,14 +8097,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Die Bewertung des Restaurants war sehr positiv.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rating / evaluation",
+        "tr": "değerlendirme / puanlama",
+        "fa": "ارزیابی / امتیازدهی",
+        "ru": "оценка / отзыв",
+        "uk": "оцінка / відгук",
+        "ar": "تقييم"
       }
     },
     "34677": {
@@ -8117,14 +8117,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Am Abend trinke ich einen Cocktail ohne Alkohol.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cocktail",
+        "tr": "kokteyl",
+        "fa": "کوکتل",
+        "ru": "коктейль",
+        "uk": "коктейль",
+        "ar": "كوكتيل"
       }
     },
     "34678": {
@@ -8137,14 +8137,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Sie kann leckere Getränke selbst mixen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to mix",
+        "tr": "karıştırmak / mikslemek",
+        "fa": "مخلوط کردن",
+        "ru": "смешивать",
+        "uk": "змішувати",
+        "ar": "يمزج / يخلط"
       }
     },
     "34679": {
@@ -8157,14 +8157,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach dem Umzug war alles durcheinander.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mixed up / confused",
+        "tr": "karışık / karmakarışık",
+        "fa": "درهم‌وبرهم / قاطی",
+        "ru": "вперемешку / запутанно",
+        "uk": "перемішано / заплутано",
+        "ar": "مختلط / مرتبك"
       }
     },
     "34680": {
@@ -8177,14 +8177,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Das Ende des Films war leider enttäuschend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "disappointing",
+        "tr": "hayal kırıklığı yaratan",
+        "fa": "ناامیدکننده",
+        "ru": "разочаровывающий",
+        "uk": "розчаровуючий",
+        "ar": "مخيب للآمال"
       }
     },
     "34681": {
@@ -8197,14 +8197,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Dieses kleine Café ist ein echter Geheimtipp.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "insider tip",
+        "tr": "gizli tavsiye / az bilinen iyi yer",
+        "fa": "پیشنهاد خاص / جای کمتر شناخته‌شده",
+        "ru": "секретная рекомендация",
+        "uk": "секретна порада",
+        "ar": "نصيحة سرية / مكان مميز غير معروف"
       }
     },
     "34682": {
@@ -8217,14 +8217,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Musik ist eine Mischung aus Jazz und Pop.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mixture / mix",
+        "tr": "karışım",
+        "fa": "ترکیب / مخلوط",
+        "ru": "смесь / сочетание",
+        "uk": "суміш / поєднання",
+        "ar": "مزيج / خليط"
       }
     },
     "34683": {
@@ -8237,14 +8237,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Worauf wartest du noch?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "on what / what ... on",
+        "tr": "neye / neyin üzerine",
+        "fa": "روی چه / به چه چیزی",
+        "ru": "на что",
+        "uk": "на що",
+        "ar": "على ماذا"
       }
     },
     "34684": {
@@ -8257,14 +8257,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Das Zirkuszelt steht auf der großen Wiese.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "circus tent",
+        "tr": "sirk çadırı",
+        "fa": "چادر سیرک",
+        "ru": "цирковой шатёр",
+        "uk": "цирковий намет",
+        "ar": "خيمة السيرك"
       }
     },
     "34685": {
@@ -8277,14 +8277,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Bibliotheksführer erklärt die wichtigsten Bereiche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "library guide",
+        "tr": "kütüphane rehberi",
+        "fa": "راهنمای کتابخانه",
+        "ru": "путеводитель по библиотеке",
+        "uk": "путівник бібліотекою",
+        "ar": "دليل المكتبة"
       }
     },
     "34686": {
@@ -8297,14 +8297,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Für die Ausleihe brauche ich einen Bibliotheksausweis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "library card",
+        "tr": "kütüphane kartı",
+        "fa": "کارت کتابخانه",
+        "ru": "читательский билет",
+        "uk": "читацький квиток",
+        "ar": "بطاقة مكتبة"
       }
     },
     "34687": {
@@ -8317,14 +8317,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Meine Tochter liest gern ein Kinderbuch vor dem Schlafen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "children’s book",
+        "tr": "çocuk kitabı",
+        "fa": "کتاب کودک",
+        "ru": "детская книга",
+        "uk": "дитяча книга",
+        "ar": "كتاب أطفال"
       }
     },
     "34688": {
@@ -8337,14 +8337,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Heute Abend gibt es eine Autorenlesung in der Bibliothek.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "author reading",
+        "tr": "yazar okuması / yazar etkinliği",
+        "fa": "جلسه کتاب‌خوانی نویسنده",
+        "ru": "авторское чтение",
+        "uk": "авторське читання",
+        "ar": "قراءة أدبية مع المؤلف"
       }
     },
     "34689": {
@@ -8357,14 +8357,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Kannst du diese Seite bitte kopieren?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to copy",
+        "tr": "kopyalamak",
+        "fa": "کپی کردن",
+        "ru": "копировать",
+        "uk": "копіювати",
+        "ar": "ينسخ"
       }
     },
     "34690": {
@@ -8377,14 +8377,14 @@
       "word_type": "Verb",
       "difficulty": 2,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Ich muss das Formular scannen und per E-Mail schicken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to scan",
+        "tr": "taramak",
+        "fa": "اسکن کردن",
+        "ru": "сканировать",
+        "uk": "сканувати",
+        "ar": "يمسح ضوئيًا"
       }
     },
     "34691": {
@@ -8397,14 +8397,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die DVD liegt neben dem Fernseher.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "DVD",
+        "tr": "DVD",
+        "fa": "دی‌وی‌دی",
+        "ru": "DVD-диск",
+        "uk": "DVD-диск",
+        "ar": "قرص دي في دي"
       }
     },
     "34692": {
@@ -8417,14 +8417,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir sehen uns zuerst in der Ausstellung um.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to look around",
+        "tr": "etrafa bakmak / göz atmak",
+        "fa": "اطراف را نگاه کردن / گشتی زدن",
+        "ru": "осмотреться",
+        "uk": "озирнутися / оглянутися",
+        "ar": "يتجول ناظرًا / ينظر حوله"
       }
     },
     "34693": {
@@ -8437,14 +8437,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bei Fragen wenden Sie sich bitte an die Information.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to contact / to turn to",
+        "tr": "başvurmak / yönelmek",
+        "fa": "مراجعه کردن به / تماس گرفتن با",
+        "ru": "обращаться к",
+        "uk": "звертатися до",
+        "ar": "يتوجه إلى / يتصل بـ"
       }
     },
     "34694": {
@@ -8457,14 +8457,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für den Antrag brauche ich eine Meldebescheinigung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "registration certificate",
+        "tr": "ikamet kayıt belgesi",
+        "fa": "گواهی ثبت نشانی / گواهی اقامت",
+        "ru": "справка о регистрации",
+        "uk": "довідка про реєстрацію",
+        "ar": "شهادة تسجيل السكن"
       }
     },
     "34695": {
@@ -8477,14 +8477,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Für den Weg solltest du genug Zeit einplanen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to plan in / to schedule",
+        "tr": "planlamak / zaman ayırmak",
+        "fa": "در برنامه در نظر گرفتن",
+        "ru": "запланировать",
+        "uk": "запланувати",
+        "ar": "يخصص وقتًا / يخطط له"
       }
     },
     "34696": {
@@ -8497,14 +8497,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Der Kurs ist zweistündig und beginnt um neun Uhr.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "two-hour",
+        "tr": "iki saatlik",
+        "fa": "دوساعته",
+        "ru": "двухчасовой",
+        "uk": "двогодинний",
+        "ar": "لمدة ساعتين"
       }
     },
     "34697": {
@@ -8517,14 +8517,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Ich besuche ab Montag einen VHS-Kurs.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "adult education center course",
+        "tr": "halk eğitim kursu",
+        "fa": "دوره مرکز آموزش بزرگسالان",
+        "ru": "курс в народном университете",
+        "uk": "курс у центрі освіти дорослих",
+        "ar": "دورة في مركز تعليم الكبار"
       }
     },
     "34698": {
@@ -8537,14 +8537,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Deutschlernen macht mit anderen zusammen mehr Spaß.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "learning German",
+        "tr": "Almanca öğrenme",
+        "fa": "یادگیری آلمانی",
+        "ru": "изучение немецкого языка",
+        "uk": "вивчення німецької мови",
+        "ar": "تعلم الألمانية"
       }
     },
     "34699": {
@@ -8557,14 +8557,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Der Kursteilnehmer stellt viele Fragen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male course participant",
+        "tr": "erkek kurs katılımcısı",
+        "fa": "شرکت‌کننده مرد دوره",
+        "ru": "участник курса",
+        "uk": "учасник курсу",
+        "ar": "مشارك في الدورة"
       }
     },
     "34700": {
@@ -8577,14 +8577,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die Kursteilnehmerin kommt immer pünktlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female course participant",
+        "tr": "kadın kurs katılımcısı",
+        "fa": "شرکت‌کننده زن دوره",
+        "ru": "участница курса",
+        "uk": "учасниця курсу",
+        "ar": "مشاركة في الدورة"
       }
     },
     "34701": {
@@ -8597,14 +8597,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Das Kunstwerk hängt im Eingang des Museums.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "work of art",
+        "tr": "sanat eseri",
+        "fa": "اثر هنری",
+        "ru": "произведение искусства",
+        "uk": "твір мистецтва",
+        "ar": "عمل فني"
       }
     },
     "34702": {
@@ -8617,14 +8617,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Die Reisekosten bezahlt die Firma.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "travel costs",
+        "tr": "seyahat masrafları",
+        "fa": "هزینه‌های سفر",
+        "ru": "расходы на поездку",
+        "uk": "витрати на подорож",
+        "ar": "تكاليف السفر"
       }
     },
     "34703": {
@@ -8637,14 +8637,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Jugendlichen dürfen die Wand legal sprayen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to spray",
+        "tr": "sprey sıkmak / boyamak",
+        "fa": "اسپری کردن / با اسپری رنگ زدن",
+        "ru": "распылять / рисовать спреем",
+        "uk": "розпилювати / малювати спреєм",
+        "ar": "يرش / يرسم بالرش"
       }
     },
     "34704": {
@@ -8657,14 +8657,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Im Spray-Workshop lernen sie den Umgang mit Farben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "spray workshop",
+        "tr": "sprey atölyesi",
+        "fa": "کارگاه اسپری / کارگاه گرافیتی",
+        "ru": "мастер-класс по спрею",
+        "uk": "воркшоп зі спрею",
+        "ar": "ورشة رسم بالرش"
       }
     },
     "34705": {
@@ -8677,14 +8677,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Der Bahnhofstunnel ist abends gut beleuchtet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "station tunnel",
+        "tr": "istasyon tüneli",
+        "fa": "تونل ایستگاه قطار",
+        "ru": "вокзальный туннель",
+        "uk": "тунель на вокзалі",
+        "ar": "نفق محطة القطار"
       }
     },
     "34706": {
@@ -8697,14 +8697,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Durch die Unterführung kommen wir sicher zur anderen Seite.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "underpass",
+        "tr": "alt geçit",
+        "fa": "زیرگذر",
+        "ru": "подземный переход",
+        "uk": "підземний перехід",
+        "ar": "ممر سفلي / نفق مشاة"
       }
     },
     "34707": {
@@ -8717,14 +8717,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Hier zu parken ist illegal.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "illegal",
+        "tr": "yasa dışı",
+        "fa": "غیرقانونی",
+        "ru": "незаконный",
+        "uk": "незаконний",
+        "ar": "غير قانوني"
       }
     },
     "34708": {
@@ -8737,14 +8737,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Auf dem Bild sieht man eine bekannte Comic-Figur.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "comic character",
+        "tr": "çizgi roman karakteri",
+        "fa": "شخصیت کمیک / شخصیت کارتونی",
+        "ru": "персонаж комикса",
+        "uk": "персонаж коміксу",
+        "ar": "شخصية كوميكس"
       }
     },
     "34709": {
@@ -8757,14 +8757,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Dekoration im Raum ist sehr fantasievoll.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "imaginative",
+        "tr": "hayal gücü dolu / yaratıcı",
+        "fa": "خیال‌پردازانه / خلاقانه",
+        "ru": "фантазийный / творческий",
+        "uk": "фантазійний / творчий",
+        "ar": "خيالي / مبدع"
       }
     },
     "34710": {
@@ -8777,14 +8777,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Geschichte spielt in einer kleinen Stadt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "story / history",
+        "tr": "hikâye / tarih",
+        "fa": "داستان / تاریخ",
+        "ru": "история / рассказ",
+        "uk": "історія / оповідання",
+        "ar": "قصة / تاريخ"
       }
     },
     "34711": {
@@ -8797,14 +8797,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Hip-Hop-Szene in Berlin ist sehr lebendig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hip-hop scene",
+        "tr": "hip-hop sahnesi / çevresi",
+        "fa": "صحنه هیپ‌هاپ / فضای هیپ‌هاپ",
+        "ru": "хип-хоп-сцена",
+        "uk": "хіп-хоп-сцена",
+        "ar": "مشهد الهيب هوب"
       }
     },
     "34712": {
@@ -8817,14 +8817,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Graffiti ist für viele ein Teil der Jugendkultur.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "youth culture",
+        "tr": "gençlik kültürü",
+        "fa": "فرهنگ جوانان",
+        "ru": "молодёжная культура",
+        "uk": "молодіжна культура",
+        "ar": "ثقافة الشباب"
       }
     },
     "34713": {
@@ -8837,14 +8837,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Am Wochenende findet eine Kulturveranstaltung statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cultural event",
+        "tr": "kültür etkinliği",
+        "fa": "رویداد فرهنگی",
+        "ru": "культурное мероприятие",
+        "uk": "культурний захід",
+        "ar": "فعالية ثقافية"
       }
     },
     "34714": {
@@ -8857,14 +8857,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Im Bürgerbüro kann man einen neuen Ausweis beantragen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "citizens’ office",
+        "tr": "vatandaşlık bürosu / belediye hizmet ofisi",
+        "fa": "اداره امور شهروندان",
+        "ru": "бюро по делам граждан",
+        "uk": "бюро обслуговування громадян",
+        "ar": "مكتب شؤون المواطنين"
       }
     },
     "34715": {
@@ -8877,14 +8877,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Kinder haben oft viel Fantasie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "imagination / fantasy",
+        "tr": "hayal gücü / fantezi",
+        "fa": "تخیل / خیال",
+        "ru": "фантазия / воображение",
+        "uk": "фантазія / уява",
+        "ar": "خيال"
       }
     },
     "34716": {
@@ -8897,14 +8897,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "In der Stadtbücherei leihe ich jeden Monat Bücher aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "city library",
+        "tr": "şehir kütüphanesi",
+        "fa": "کتابخانه شهر",
+        "ru": "городская библиотека",
+        "uk": "міська бібліотека",
+        "ar": "مكتبة المدينة"
       }
     },
     "34717": {
@@ -8917,14 +8917,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Klang der Geige ist sehr warm.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "sound / tone",
+        "tr": "ses / tını",
+        "fa": "صدا / طنین",
+        "ru": "звук / звучание",
+        "uk": "звук / звучання",
+        "ar": "صوت / نغمة"
       }
     },
     "34718": {
@@ -8937,14 +8937,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Meine Mutter hört gern klassische Musik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "classical music",
+        "tr": "klasik müzik",
+        "fa": "موسیقی کلاسیک",
+        "ru": "классическая музыка",
+        "uk": "класична музика",
+        "ar": "موسيقى كلاسيكية"
       }
     },
     "34719": {
@@ -8957,14 +8957,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Auf der Party läuft laute Techno-Musik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "techno music",
+        "tr": "tekno müzik",
+        "fa": "موسیقی تکنو",
+        "ru": "техно-музыка",
+        "uk": "техно-музика",
+        "ar": "موسيقى تكنو"
       }
     },
     "34720": {
@@ -8977,14 +8977,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Reise nach Wien war unvergesslich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "unforgettable",
+        "tr": "unutulmaz",
+        "fa": "فراموش‌نشدنی",
+        "ru": "незабываемый",
+        "uk": "незабутній",
+        "ar": "لا ينسى"
       }
     },
     "34721": {
@@ -8997,14 +8997,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die Musik kann das Publikum schnell bezaubern.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to enchant / to charm",
+        "tr": "büyülemek / etkilemek",
+        "fa": "مجذوب کردن / افسون کردن",
+        "ru": "очаровывать",
+        "uk": "зачаровувати",
+        "ar": "يسحر / يأسر"
       }
     },
     "34722": {
