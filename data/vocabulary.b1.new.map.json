@@ -2017,14 +2017,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "Das Unternehmen ist im Bereich Arbeit wichtig.",
+      "example_de": "Das Unternehmen sucht neue Mitarbeiter für den Verkauf.",
       "translations": {
-        "en": "Company",
-        "tr": "İşletmeler",
-        "fa": "کسب و کار",
-        "ru": "Предприятие",
-        "uk": "компаній, пов’язаних із подорожами",
-        "ar": "الشركة"
+        "en": "company / enterprise",
+        "tr": "şirket / işletme",
+        "fa": "شرکت / بنگاه",
+        "ru": "предприятие / компания",
+        "uk": "підприємство / компанія",
+        "ar": "شركة / مؤسسة"
       }
     },
     "34373": {
@@ -2037,13 +2037,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Lieferdienst ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Lieferdienst bringt die Bestellung am Abend.",
       "translations": {
-        "en": "Meal delivery",
-        "tr": "Teslimat hizmeti",
+        "en": "delivery service",
+        "tr": "teslimat servisi",
         "fa": "خدمات تحویل",
-        "ru": "Служба доставки",
-        "uk": "Служба доставки",
+        "ru": "служба доставки",
+        "uk": "служба доставки",
         "ar": "خدمة التوصيل"
       }
     },
@@ -2057,14 +2057,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "Der Landwirt ist im Bereich Arbeit wichtig.",
+      "example_de": "Der Landwirt arbeitet jeden Tag auf dem Feld.",
       "translations": {
-        "en": "Farmer",
-        "tr": "Çiftçi",
-        "fa": "کشاورز",
-        "ru": "Фермер",
-        "uk": "Фермер",
-        "ar": "فلاح"
+        "en": "farmer",
+        "tr": "çiftçi",
+        "fa": "کشاورز مرد",
+        "ru": "фермер / крестьянин",
+        "uk": "фермер / селянин",
+        "ar": "مزارع"
       }
     },
     "34375": {
@@ -2077,14 +2077,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "Die Landwirtin ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Landwirtin verkauft frisches Gemüse auf dem Markt.",
       "translations": {
-        "en": "farmer",
-        "tr": "Çiftçi",
-        "fa": "کشاورز",
-        "ru": "Фермер",
-        "uk": "Фермер",
-        "ar": "مزارع"
+        "en": "female farmer",
+        "tr": "kadın çiftçi",
+        "fa": "کشاورز زن",
+        "ru": "фермерша / крестьянка",
+        "uk": "фермерка / селянка",
+        "ar": "مزارعة"
       }
     },
     "34376": {
@@ -2097,14 +2097,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 5,
-      "example_de": "Das Milchprodukt ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Joghurt ist ein bekanntes Milchprodukt.",
       "translations": {
-        "en": "MILK PRODUCT",
-        "tr": "Süt ürünleri",
+        "en": "dairy product",
+        "tr": "süt ürünü",
         "fa": "محصول لبنی",
-        "ru": "Молочный продукт",
-        "uk": "Молочний продукт",
-        "ar": "منتجات الألبان"
+        "ru": "молочный продукт",
+        "uk": "молочний продукт",
+        "ar": "منتج ألبان"
       }
     },
     "34377": {
@@ -2117,14 +2117,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 5,
-      "example_de": "Die Erdbeere ist im Bereich Essen und Trinken wichtig.",
+      "example_de": "Die Erdbeere schmeckt im Sommer besonders süß.",
       "translations": {
-        "en": "Strawberry",
-        "tr": "Çilek",
+        "en": "strawberry",
+        "tr": "çilek",
         "fa": "توت‌فرنگی",
-        "ru": "Земляника",
-        "uk": "Полуниця",
-        "ar": "شليك"
+        "ru": "клубника",
+        "uk": "полуниця",
+        "ar": "فراولة"
       }
     },
     "34378": {
@@ -2137,14 +2137,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "Im Bereich Umwelt und Natur kann man oft pflücken.",
+      "example_de": "Im Juni kann man Erdbeeren selbst pflücken.",
       "translations": {
-        "en": "pluck",
-        "tr": "toplama",
-        "fa": "انتخاب",
-        "ru": "комплектация",
-        "uk": "збирання",
-        "ar": "الانتقاء"
+        "en": "to pick",
+        "tr": "toplamak",
+        "fa": "چیدن",
+        "ru": "собирать / срывать",
+        "uk": "збирати / зривати",
+        "ar": "يقطف"
       }
     },
     "34379": {
@@ -2157,14 +2157,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 15,
-      "example_de": "Im Bereich Sport und Freizeit lernt man \"amüsieren\".",
+      "example_de": "Die Kinder amüsieren sich beim Fest sehr.",
       "translations": {
-        "en": "amuse",
-        "tr": "eğlendirmek",
-        "fa": "سرگرم کردن",
-        "ru": "развлечение",
-        "uk": "розваги",
-        "ar": "ماذا تعنين بأن تحظي بالمرح؟"
+        "en": "to amuse oneself / have fun",
+        "tr": "eğlenmek",
+        "fa": "سرگرم شدن / خوش گذراندن",
+        "ru": "развлекаться",
+        "uk": "розважатися",
+        "ar": "يستمتع / يتسلى"
       }
     },
     "34380": {
@@ -2177,14 +2177,14 @@
       "word_type": "Phrase",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"zu sein\".",
+      "example_de": "Die Tür scheint heute offen zu sein.",
       "translations": {
-        "en": "Shepherd",
-        "tr": "olma",
+        "en": "to be",
+        "tr": "olmak",
         "fa": "بودن",
         "ru": "быть",
         "uk": "бути",
-        "ar": "التعامل بأدب."
+        "ar": "يكون"
       }
     },
     "34381": {
@@ -2197,14 +2197,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"netto\".",
+      "example_de": "Der Preis ist netto ohne Mehrwertsteuer angegeben.",
       "translations": {
-        "en": "net",
-        "tr": "Net",
-        "fa": "خالص",
-        "ru": "Нетто, без НДС",
-        "uk": "Нетто",
-        "ar": "النت"
+        "en": "net / excluding tax",
+        "tr": "net / vergisiz",
+        "fa": "خالص / بدون مالیات",
+        "ru": "нетто / без налога",
+        "uk": "нетто / без податку",
+        "ar": "صافٍ / بدون ضريبة"
       }
     },
     "34382": {
@@ -2217,14 +2217,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"MwSt. = die Mehrwertsteuer\".",
+      "example_de": "Die MwSt. steht unten auf der Rechnung.",
       "translations": {
-        "en": "VAT = Value added tax",
-        "tr": "KDV = Katma değer vergisi",
-        "fa": "مالیات بر ارزش افزوده = مالیات بر ارزش افزوده",
-        "ru": "НДС = налог на добавленную стоимость",
-        "uk": "ПДВ = Податок на додану вартість",
-        "ar": "VAT = ضريبة القيمة المضافة"
+        "en": "VAT / value-added tax",
+        "tr": "KDV / katma değer vergisi",
+        "fa": "مالیات بر ارزش افزوده",
+        "ru": "НДС / налог на добавленную стоимость",
+        "uk": "ПДВ / податок на додану вартість",
+        "ar": "ضريبة القيمة المضافة"
       }
     },
     "34383": {
@@ -2237,14 +2237,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 1,
-      "example_de": "Im Bereich Zahlen und Mengen lernt man \"gesamt\".",
+      "example_de": "Der Betrag ist gesamt einhundert Euro.",
       "translations": {
-        "en": "total",
-        "tr": "Adedi",
-        "fa": "& ابزارها‌",
-        "ru": "всего",
-        "uk": "ВСЬОГО",
-        "ar": "المجموع"
+        "en": "total / altogether",
+        "tr": "toplam",
+        "fa": "مجموع / کل",
+        "ru": "всего / общий",
+        "uk": "усього / загальний",
+        "ar": "المجموع / إجمالاً"
       }
     },
     "34384": {
@@ -2257,14 +2257,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Das Bankkonto ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Mein Gehalt kommt auf das Bankkonto.",
       "translations": {
-        "en": "Bank Account",
-        "tr": "Banka Hesap",
+        "en": "bank account",
+        "tr": "banka hesabı",
         "fa": "حساب بانکی",
-        "ru": "Банковский счёт",
-        "uk": "Банківський рахунок",
-        "ar": "حساب بنكي"
+        "ru": "банковский счёт",
+        "uk": "банківський рахунок",
+        "ar": "حساب مصرفي"
       }
     },
     "34385": {
@@ -2277,14 +2277,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"ein Konto eröffnen\".",
+      "example_de": "Sie möchte morgen ein Konto eröffnen.",
       "translations": {
-        "en": "Open an account",
-        "tr": "bir hesap açın",
-        "fa": "حساب باز کنید",
-        "ru": "открыть счет",
+        "en": "to open an account",
+        "tr": "hesap açmak",
+        "fa": "حساب باز کردن",
+        "ru": "открыть счёт",
         "uk": "відкрити рахунок",
-        "ar": "فتح حساب"
+        "ar": "يفتح حسابًا"
       }
     },
     "34386": {
@@ -2297,14 +2297,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Kredit ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Für das Auto nimmt er einen Kredit auf.",
       "translations": {
-        "en": "Credit",
-        "tr": "Kredi",
-        "fa": "اعتبار",
-        "ru": "Кредит",
-        "uk": "Кредит",
-        "ar": "ائتمان مصرفي"
+        "en": "loan / credit",
+        "tr": "kredi",
+        "fa": "وام / اعتبار",
+        "ru": "кредит",
+        "uk": "кредит",
+        "ar": "قرض / ائتمان"
       }
     },
     "34387": {
@@ -2317,14 +2317,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"einen Schaden melden\".",
+      "example_de": "Nach dem Unfall muss er einen Schaden melden.",
       "translations": {
-        "en": "report a claim",
-        "tr": "talep bildirme",
-        "fa": "گزارش خسارت",
-        "ru": "сообщить о претензии",
-        "uk": "повідомити про претензію",
-        "ar": "الإبلاغ عن مطالبة"
+        "en": "to report damage",
+        "tr": "hasarı bildirmek",
+        "fa": "خسارت را گزارش کردن",
+        "ru": "сообщить об ущербе",
+        "uk": "повідомити про збиток",
+        "ar": "يبلغ عن ضرر"
       }
     },
     "34388": {
@@ -2337,14 +2337,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Das Bankgeschäft ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Viele Bankgeschäfte erledige ich heute online.",
       "translations": {
-        "en": "Banking",
-        "tr": "Bankacılık",
-        "fa": "کسب و کار بانکی",
-        "ru": "Банковское дело",
-        "uk": "Банківська справа",
-        "ar": "الخدمات المصرفية"
+        "en": "banking transaction",
+        "tr": "bankacılık işlemi",
+        "fa": "کار بانکی / تراکنش بانکی",
+        "ru": "банковская операция",
+        "uk": "банківська операція",
+        "ar": "معاملة مصرفية"
       }
     },
     "34389": {
@@ -2357,13 +2357,13 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Die Bankkarte ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Ich bezahle im Supermarkt mit der Bankkarte.",
       "translations": {
-        "en": "Bank Card",
-        "tr": "Banka kartı",
+        "en": "bank card",
+        "tr": "banka kartı",
         "fa": "کارت بانکی",
-        "ru": "Банковская карта",
-        "uk": "Банківська картка",
+        "ru": "банковская карта",
+        "uk": "банківська картка",
         "ar": "بطاقة مصرفية"
       }
     },
@@ -2377,14 +2377,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Die Girocard ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Mit der Girocard kann man bargeldlos bezahlen.",
       "translations": {
-        "en": "Girocard",
-        "tr": "Girocard",
-        "fa": "ژیروکارت",
-        "ru": "Girocard",
-        "uk": "Girocard",
-        "ar": "Girocard"
+        "en": "debit card / Girocard",
+        "tr": "banka kartı / Girocard",
+        "fa": "کارت بدهی / گیروکارت",
+        "ru": "дебетовая карта / Girocard",
+        "uk": "дебетова картка / Girocard",
+        "ar": "بطاقة خصم / جيروكارد"
       }
     },
     "34391": {
@@ -2397,14 +2397,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Der Dauerauftrag ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Für die Miete gibt es einen Dauerauftrag.",
       "translations": {
-        "en": "Standing order",
-        "tr": "Düzenli talimat",
-        "fa": "دستور دائمی",
-        "ru": "оплата счёта",
-        "uk": "Порядок",
-        "ar": "تحويل بنكي دائم"
+        "en": "standing order",
+        "tr": "otomatik ödeme talimatı",
+        "fa": "دستور پرداخت دوره‌ای",
+        "ru": "постоянное платёжное поручение",
+        "uk": "постійне платіжне доручення",
+        "ar": "أمر دفع دائم"
       }
     },
     "34392": {
@@ -2417,14 +2417,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Der Kontoauszug ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Auf dem Kontoauszug sieht man alle Buchungen.",
       "translations": {
-        "en": "Account statement",
-        "tr": "Özeti",
-        "fa": "صورتحساب بانکی",
-        "ru": "Выписка из лицевого счета",
-        "uk": "Банківська виписка",
-        "ar": "كشف حساب"
+        "en": "bank statement",
+        "tr": "hesap özeti",
+        "fa": "صورت‌حساب بانکی",
+        "ru": "выписка со счёта",
+        "uk": "виписка з рахунку",
+        "ar": "كشف حساب بنكي"
       }
     },
     "34393": {
@@ -2437,14 +2437,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Die Filiale ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Filiale ist nur vormittags geöffnet.",
       "translations": {
-        "en": "Branch",
-        "tr": "Şube",
-        "fa": "شاخه",
-        "ru": "Филиал",
-        "uk": "Дочірня компанія",
-        "ar": "شركة تابعة"
+        "en": "branch",
+        "tr": "şube",
+        "fa": "شعبه",
+        "ru": "филиал",
+        "uk": "філія",
+        "ar": "فرع"
       }
     },
     "34394": {
@@ -2457,14 +2457,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Die Finanzen ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Sie hat ihre Finanzen gut im Blick.",
       "translations": {
-        "en": "Financials",
-        "tr": "Maliye",
-        "fa": "لغوQShortcut",
-        "ru": "Финансы",
-        "uk": "Фінанси",
-        "ar": "التمويل"
+        "en": "finances",
+        "tr": "finans / mali işler",
+        "fa": "امور مالی",
+        "ru": "финансы",
+        "uk": "фінанси",
+        "ar": "الأمور المالية"
       }
     },
     "34395": {
@@ -2477,13 +2477,13 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"kostenfrei\".",
+      "example_de": "Die Beratung ist für Kunden kostenfrei.",
       "translations": {
         "en": "free of charge",
         "tr": "ücretsiz",
         "fa": "رایگان",
-        "ru": "бесплатно",
-        "uk": "безкоштовно",
+        "ru": "бесплатный",
+        "uk": "безкоштовний",
         "ar": "مجاني"
       }
     },
@@ -2497,13 +2497,13 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Der Überblick ist im Bereich Grammatik und Alltagssprache wichtig.",
+      "example_de": "Der Überblick über die Kosten ist wichtig.",
       "translations": {
-        "en": "Overview",
-        "tr": "Genel bakış",
-        "fa": "خلاصه",
-        "ru": "Краткий обзор",
-        "uk": "Огляд",
+        "en": "overview",
+        "tr": "genel bakış",
+        "fa": "دید کلی / مرور کلی",
+        "ru": "обзор / представление",
+        "uk": "огляд / уявлення",
         "ar": "نظرة عامة"
       }
     },
@@ -2517,14 +2517,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "Im Bereich Gefühle und Eigenschaften lernt man \"kompetent\".",
+      "example_de": "Die Beraterin wirkt freundlich und kompetent.",
       "translations": {
-        "en": "Competent",
-        "tr": "Uzman",
-        "fa": "صالح",
+        "en": "competent",
+        "tr": "yetkin / bilgili",
+        "fa": "توانمند / متخصص",
         "ru": "компетентный",
         "uk": "компетентний",
-        "ar": "بشكل أفضل!"
+        "ar": "كفء / مؤهل"
       }
     },
     "34398": {
@@ -2537,14 +2537,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld kann man oft sperren.",
+      "example_de": "Bei Diebstahl muss man die Karte sperren.",
       "translations": {
-        "en": "Close",
-        "tr": "Ekranı Kilitle",
-        "fa": "& قفل‌گذاری‌",
-        "ru": "Блокировка",
-        "uk": "lock",
-        "ar": "قفل"
+        "en": "to block / lock",
+        "tr": "bloke etmek / kapatmak",
+        "fa": "مسدود کردن",
+        "ru": "блокировать",
+        "uk": "блокувати",
+        "ar": "يحظر / يوقف"
       }
     },
     "34399": {
@@ -2557,14 +2557,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 12,
-      "example_de": "Der Sperrnotruf ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der Sperrnotruf ist rund um die Uhr erreichbar.",
       "translations": {
-        "en": "Blocking emergency call",
-        "tr": "Acil durum çağrısını engelleme",
-        "fa": "تماس اضطراری برای مسدود کردن سرویس‌ها",
-        "ru": "Блокировка экстренного вызова",
-        "uk": "Блокування екстреного виклику",
-        "ar": "حظر مكالمة الطوارئ"
+        "en": "emergency blocking hotline",
+        "tr": "kart bloke acil hattı",
+        "fa": "خط اضطراری مسدودسازی کارت",
+        "ru": "экстренная служба блокировки",
+        "uk": "екстрена служба блокування",
+        "ar": "خط طوارئ لإيقاف البطاقات"
       }
     },
     "34400": {
@@ -2577,14 +2577,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 2,
-      "example_de": "Im Bereich Zeit und Termine lernt man \"rund um die Uhr\".",
+      "example_de": "Der Service ist rund um die Uhr geöffnet.",
       "translations": {
-        "en": "24 hours",
-        "tr": "7/24",
-        "fa": "شبانه روزی",
-        "ru": "24/7",
+        "en": "around the clock",
+        "tr": "yirmi dört saat",
+        "fa": "شبانه‌روزی",
+        "ru": "круглосуточно",
         "uk": "цілодобово",
-        "ar": "24ساعة \\7ايام فى الاسبوع"
+        "ar": "على مدار الساعة"
       }
     },
     "34401": {
@@ -2597,14 +2597,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Die IBAN ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die IBAN steht auf dem Kontoauszug.",
       "translations": {
         "en": "IBAN",
-        "tr": "iBAN;",
-        "fa": "IBAN:",
+        "tr": "IBAN",
+        "fa": "شماره شبا / IBAN",
         "ru": "IBAN",
         "uk": "IBAN",
-        "ar": "رقم الحساب البنكي الدولي IBAN"
+        "ar": "رقم الحساب الدولي IBAN"
       }
     },
     "34402": {
@@ -2617,14 +2617,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 20,
-      "example_de": "Das Inland ist im Bereich Orte und Städte wichtig.",
+      "example_de": "Im Inland sind Überweisungen oft kostenlos.",
       "translations": {
-        "en": "Domestic",
-        "tr": "Yurtiçi",
-        "fa": "داخلی",
-        "ru": "внутренний",
-        "uk": "Внутрішні",
-        "ar": "حسنا..."
+        "en": "domestic country / inland",
+        "tr": "yurt içi",
+        "fa": "داخل کشور",
+        "ru": "внутри страны",
+        "uk": "усередині країни",
+        "ar": "داخل البلاد"
       }
     },
     "34403": {
@@ -2637,14 +2637,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 18,
-      "example_de": "Der Diebstahl ist im Bereich Gesellschaft wichtig.",
+      "example_de": "Nach dem Diebstahl rief sie sofort die Polizei.",
       "translations": {
-        "en": "Theft",
+        "en": "theft",
         "tr": "hırsızlık",
-        "fa": "دزدی",
-        "ru": "%случайная буквенная комбинация%",
-        "uk": "Крадіжка",
-        "ar": "حد السرقة"
+        "fa": "دزدی / سرقت",
+        "ru": "кража",
+        "uk": "крадіжка",
+        "ar": "سرقة"
       }
     },
     "34404": {
@@ -2657,14 +2657,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 12,
-      "example_de": "Die Haftpflichtversicherung ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Eine Haftpflichtversicherung zahlt bei vielen Schäden.",
       "translations": {
-        "en": "Liability Insurance",
-        "tr": "Mesuliyet Sigortası",
-        "fa": "بیمه مسئولیت",
-        "ru": "Страхование гражданской ответственности",
-        "uk": "Страхування відповідальності",
-        "ar": "تأمين المسؤولية (Haftpflichtversicherung)"
+        "en": "liability insurance",
+        "tr": "sorumluluk sigortası",
+        "fa": "بیمه مسئولیت مدنی",
+        "ru": "страхование гражданской ответственности",
+        "uk": "страхування цивільної відповідальності",
+        "ar": "تأمين المسؤولية المدنية"
       }
     },
     "34405": {
@@ -2677,13 +2677,13 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Die Krankenversicherung ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Jeder braucht in Deutschland eine Krankenversicherung.",
       "translations": {
-        "en": "Health Insurance",
-        "tr": "Sağlık Sigortası",
-        "fa": "بیمه درمانی هستید؟",
-        "ru": "Медицинское страхование",
-        "uk": "Медичне страхування",
+        "en": "health insurance",
+        "tr": "sağlık sigortası",
+        "fa": "بیمه درمانی",
+        "ru": "медицинская страховка",
+        "uk": "медичне страхування",
         "ar": "تأمين صحي"
       }
     },
@@ -2697,14 +2697,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 12,
-      "example_de": "Die Pflegeversicherung ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Pflegeversicherung hilft bei Pflegekosten.",
       "translations": {
-        "en": "Long-term care insurance",
-        "tr": "Uzun süreli sağlık sigortası",
-        "fa": "بیمه مراقبت طولانی مدت",
-        "ru": "Сестринское страхование",
-        "uk": "Страхування медсестер",
-        "ar": "تأمين التمريض"
+        "en": "long-term care insurance",
+        "tr": "bakım sigortası",
+        "fa": "بیمه مراقبت طولانی‌مدت",
+        "ru": "страхование по уходу",
+        "uk": "страхування на випадок догляду",
+        "ar": "تأمين الرعاية طويلة الأمد"
       }
     },
     "34407": {
@@ -2717,14 +2717,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "Der Makler ist im Bereich Arbeit wichtig.",
+      "example_de": "Der Makler zeigt uns die Wohnung.",
       "translations": {
-        "en": "Agents",
-        "tr": "Makler",
-        "fa": "کارگزار",
-        "ru": "Маклер",
-        "uk": "Маклер",
-        "ar": "دلال"
+        "en": "broker / estate agent",
+        "tr": "emlakçı / aracı",
+        "fa": "دلال / مشاور املاک",
+        "ru": "маклер / агент",
+        "uk": "маклер / агент",
+        "ar": "وسيط / سمسار"
       }
     },
     "34408": {
@@ -2737,14 +2737,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "Die Maklerin ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Maklerin kennt viele freie Wohnungen.",
       "translations": {
-        "en": "Realtor",
-        "tr": "Emlakçı",
-        "fa": "مشاور املاک",
-        "ru": "Риэлтор",
-        "uk": "Ріелтор",
-        "ar": "العقارات."
+        "en": "female broker / estate agent",
+        "tr": "kadın emlakçı / aracı",
+        "fa": "مشاور املاک زن",
+        "ru": "маклерша / агентка",
+        "uk": "маклерка / агентка",
+        "ar": "وسيطة / سمسارة"
       }
     },
     "34409": {
@@ -2757,14 +2757,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 8,
-      "example_de": "Die Versicherungsmaklerin ist im Bereich Arbeit wichtig.",
+      "example_de": "Die Versicherungsmaklerin erklärt den Vertrag genau.",
       "translations": {
-        "en": "Insurance Broker",
-        "tr": "Sigorta Aracısı",
-        "fa": "کارگزار بیمه",
-        "ru": "Страховой брокер",
-        "uk": "Страховий брокер",
-        "ar": "وسيط التأمين"
+        "en": "female insurance broker",
+        "tr": "kadın sigorta aracısı",
+        "fa": "کارگزار زن بیمه",
+        "ru": "страховой брокер-женщина",
+        "uk": "страхова брокерка",
+        "ar": "وسيطة تأمين"
       }
     },
     "34410": {
@@ -2777,14 +2777,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "Im Bereich Gesellschaft lernt man \"einen Schaden verursachen\".",
+      "example_de": "Ein Sturm kann einen Schaden verursachen.",
       "translations": {
-        "en": "cause damage",
-        "tr": "hasara neden olmak",
-        "fa": "باعث آسیب شود",
-        "ru": "нанести ущерб",
-        "uk": "спричинити пошкодження",
-        "ar": "التسبب في ضرر"
+        "en": "to cause damage",
+        "tr": "zarara yol açmak",
+        "fa": "باعث خسارت شدن",
+        "ru": "причинить ущерб",
+        "uk": "завдати шкоди",
+        "ar": "يسبب ضررًا"
       }
     },
     "34411": {
@@ -2797,14 +2797,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 12,
-      "example_de": "Die Schadenssumme ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Die Schadenssumme beträgt etwa tausend Euro.",
       "translations": {
-        "en": "Sum of damages",
-        "tr": "Zararların toplamı",
-        "fa": "میزان خسارت وارده",
-        "ru": "Сумма убытков",
-        "uk": "Сума збитків",
-        "ar": "مجموع التعويضات"
+        "en": "amount of damage",
+        "tr": "hasar tutarı",
+        "fa": "مبلغ خسارت",
+        "ru": "сумма ущерба",
+        "uk": "сума збитків",
+        "ar": "قيمة الضرر"
       }
     },
     "34412": {
@@ -2817,14 +2817,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld kann man oft erstatten.",
+      "example_de": "Die Versicherung erstattet die Reparaturkosten.",
       "translations": {
-        "en": ".",
-        "tr": "<g id=\"1\">avans ödemesinin kısa sürede geri ödenmesi gerekmektedir.</g>",
-        "fa": "جبران کردن",
-        "ru": "возместить.",
-        "uk": "повернення коштів",
-        "ar": "رد المبلغ المدفوع"
+        "en": "to reimburse",
+        "tr": "geri ödemek / karşılamak",
+        "fa": "بازپرداخت کردن / جبران کردن",
+        "ru": "возмещать",
+        "uk": "відшкодовувати",
+        "ar": "يعوض / يسدد"
       }
     },
     "34413": {
@@ -2837,14 +2837,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"Kosten erstatten\".",
+      "example_de": "Die Krankenkasse kann die Kosten erstatten.",
       "translations": {
-        "en": "Reimbursement of costs",
-        "tr": "Maliyetlerin geri ödenmesi",
-        "fa": "هزینه‌های بازپرداخت",
-        "ru": "Возмещение затрат",
-        "uk": "Відшкодування витрат",
-        "ar": "سداد التكاليف"
+        "en": "to reimburse costs",
+        "tr": "masrafları karşılamak",
+        "fa": "هزینه‌ها را بازپرداخت کردن",
+        "ru": "возместить расходы",
+        "uk": "відшкодувати витрати",
+        "ar": "يعوض التكاليف"
       }
     },
     "34414": {
@@ -2857,14 +2857,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache kann man oft eingeschlossen.",
+      "example_de": "Die Nutzung des Gartens ist eingeschlossen.",
       "translations": {
-        "en": "inclusive",
-        "tr": "Dahil)",
-        "fa": "-از جمله... ؟",
-        "ru": "ВКЛЮЧЕНО",
-        "uk": "включено",
-        "ar": "محبوس"
+        "en": "included",
+        "tr": "dahil",
+        "fa": "شامل شده",
+        "ru": "включённый",
+        "uk": "включений",
+        "ar": "مشمول / متضمن"
       }
     },
     "34415": {
@@ -2877,14 +2877,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"ausgeschlossen sein\".",
+      "example_de": "Private Schäden können ausgeschlossen sein.",
       "translations": {
-        "en": "ausgeschlossen sein.",
+        "en": "to be excluded",
         "tr": "hariç tutulmak",
-        "fa": "مستثنی شدن",
-        "ru": "исключать",
-        "uk": "виключено.",
-        "ar": "يتم استبعادها"
+        "fa": "مستثنی بودن",
+        "ru": "быть исключённым",
+        "uk": "бути виключеним",
+        "ar": "يكون مستثنى"
       }
     },
     "34416": {
@@ -2897,14 +2897,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "Der Tarif ist im Bereich Einkaufen und Geld wichtig.",
+      "example_de": "Der neue Tarif ist etwas günstiger.",
       "translations": {
-        "en": "Rate",
-        "tr": "Ücret",
-        "fa": "طریف",
-        "ru": "Тариф",
-        "uk": "Ставка",
-        "ar": "تعرفة جمركية"
+        "en": "tariff / rate",
+        "tr": "tarife / ücret planı",
+        "fa": "تعرفه / نرخ",
+        "ru": "тариф",
+        "uk": "тариф",
+        "ar": "تعرفة / سعر"
       }
     },
     "34417": {
@@ -2917,14 +2917,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"mitversichert\".",
+      "example_de": "Das Fahrrad ist in der Versicherung mitversichert.",
       "translations": {
-        "en": "co-insured",
-        "tr": "müşterek sigortalı",
-        "fa": "بیمه مشترک",
-        "ru": "сострахователь",
-        "uk": "співстрахувальник",
-        "ar": "مؤمن عليه بشكل مشترك"
+        "en": "also insured",
+        "tr": "sigortaya dahil",
+        "fa": "همراه بیمه‌شده",
+        "ru": "также застрахованный",
+        "uk": "також застрахований",
+        "ar": "مؤمن عليه أيضًا"
       }
     },
     "34418": {
@@ -2937,14 +2937,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "Im Bereich Einkaufen und Geld lernt man \"einen Vertrag abschließen\".",
+      "example_de": "Wir möchten online einen Vertrag abschließen.",
       "translations": {
-        "en": "conclude a contract",
-        "tr": "sözleşme akdetme",
-        "fa": "قرارداد ببندند",
+        "en": "to conclude a contract",
+        "tr": "sözleşme yapmak",
+        "fa": "قرارداد بستن",
         "ru": "заключить договор",
         "uk": "укласти договір",
-        "ar": "إبرام عقد"
+        "ar": "يبرم عقدًا"
       }
     },
     "34419": {
@@ -2957,14 +2957,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache ist das Wort \"sämtlich\" nützlich.",
+      "example_de": "Sämtliche Unterlagen liegen im Ordner.",
       "translations": {
-        "en": "all",
-        "tr": "tümü",
-        "fa": "همه",
-        "ru": "все",
-        "uk": "всі",
-        "ar": "الكل"
+        "en": "all / entire",
+        "tr": "bütün / tüm",
+        "fa": "تمام / همه",
+        "ru": "все / полный",
+        "uk": "усі / повний",
+        "ar": "جميع / كامل"
       }
     },
     "34420": {
@@ -2977,14 +2977,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache lernt man \"aus Versehen\".",
+      "example_de": "Ich habe aus Versehen die falsche Nummer gewählt.",
       "translations": {
-        "en": "accidentally",
+        "en": "by mistake",
         "tr": "yanlışlıkla",
-        "fa": "اتفاقي؟",
-        "ru": "случайно",
-        "uk": "випадково",
-        "ar": "إشتريت هاتفاً جديدًا"
+        "fa": "اشتباهی / از روی سهو",
+        "ru": "по ошибке",
+        "uk": "помилково",
+        "ar": "عن طريق الخطأ"
       }
     },
     "34421": {
@@ -2997,14 +2997,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "Im Bereich Grammatik und Alltagssprache ist das Wort \"absichtlich\" nützlich.",
+      "example_de": "Er hat die Tür absichtlich offen gelassen.",
       "translations": {
-        "en": "Intentional",
-        "tr": "kasıtlı",
-        "fa": "از قصد؟",
-        "ru": "преднамеренно",
-        "uk": "навмисне",
-        "ar": "-لقد أبعدتني عن الخطر ."
+        "en": "intentionally",
+        "tr": "bilerek / kasten",
+        "fa": "عمداً",
+        "ru": "намеренно",
+        "uk": "навмисно",
+        "ar": "عمداً"
       }
     },
     "34422": {
