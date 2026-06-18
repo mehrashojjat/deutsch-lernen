@@ -15017,14 +15017,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Bitte zögern Sie nicht, uns bei Fragen anzurufen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to hesitate",
+        "tr": "tereddüt etmek",
+        "fa": "تردید کردن / دودل بودن",
+        "ru": "медлить / колебаться",
+        "uk": "вагатися / зволікати",
+        "ar": "يتردد"
       }
     },
     "35023": {
@@ -15037,14 +15037,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Ich muss den Reifen vor der Fahrt aufpumpen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to inflate / to pump up",
+        "tr": "şişirmek / pompalamak",
+        "fa": "باد کردن / پمپ کردن",
+        "ru": "накачивать",
+        "uk": "накачувати",
+        "ar": "ينفخ / يضخ الهواء"
       }
     },
     "35024": {
@@ -15057,14 +15057,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Werkstatt lackiert das Fahrrad neu.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to paint / to varnish",
+        "tr": "boyamak / verniklemek",
+        "fa": "رنگ کردن / لاک زدن",
+        "ru": "красить / лакировать",
+        "uk": "фарбувати / лакувати",
+        "ar": "يطلي / يدهن"
       }
     },
     "35025": {
@@ -15077,14 +15077,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "In meinem Freundeskreis fahren viele mit dem Rad.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "circle of friends",
+        "tr": "arkadaş çevresi",
+        "fa": "جمع دوستان / حلقه دوستان",
+        "ru": "круг друзей",
+        "uk": "коло друзів",
+        "ar": "دائرة الأصدقاء"
       }
     },
     "35026": {
@@ -15097,14 +15097,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "In schwierigen Zeiten hält die Familie zusammen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to stick together / to hold together",
+        "tr": "birlikte durmak / dayanışmak",
+        "fa": "با هم ماندن / متحد بودن",
+        "ru": "держаться вместе",
+        "uk": "триматися разом",
+        "ar": "يتكاتف / يبقى متحدًا"
       }
     },
     "35027": {
@@ -15117,14 +15117,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der Sattel meines Fahrrads ist zu niedrig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "saddle / seat",
+        "tr": "sele / eyer",
+        "fa": "زین / صندلی دوچرخه",
+        "ru": "седло",
+        "uk": "сідло",
+        "ar": "مقعد الدراجة / سرج"
       }
     },
     "35028": {
@@ -15137,14 +15137,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Das Rücklicht funktioniert im Dunkeln nicht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rear light / taillight",
+        "tr": "arka ışık",
+        "fa": "چراغ عقب",
+        "ru": "задний фонарь",
+        "uk": "задній ліхтар",
+        "ar": "مصباح خلفي"
       }
     },
     "35029": {
@@ -15157,14 +15157,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Das Ventil am Reifen ist kaputt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "valve",
+        "tr": "supap / valf",
+        "fa": "سوپاپ / والو",
+        "ru": "вентиль / клапан",
+        "uk": "вентиль / клапан",
+        "ar": "صمام"
       }
     },
     "35030": {
@@ -15177,14 +15177,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Das rechte Pedal macht ein komisches Geräusch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "pedal",
+        "tr": "pedal",
+        "fa": "پدال",
+        "ru": "педаль",
+        "uk": "педаль",
+        "ar": "دواسة"
       }
     },
     "35031": {
@@ -15197,14 +15197,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der Fahrradschlauch hat ein kleines Loch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bicycle inner tube",
+        "tr": "bisiklet iç lastiği",
+        "fa": "تیوپ دوچرخه",
+        "ru": "велосипедная камера",
+        "uk": "велосипедна камера",
+        "ar": "أنبوب داخلي للدراجة"
       }
     },
     "35032": {
@@ -15217,14 +15217,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Hast du eine Luftpumpe für mein Fahrrad?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "air pump",
+        "tr": "hava pompası",
+        "fa": "تلمبه هوا / پمپ باد",
+        "ru": "насос",
+        "uk": "насос",
+        "ar": "مضخة هواء"
       }
     },
     "35033": {
@@ -15237,14 +15237,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Am Lenker hängt eine kleine Tasche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "handlebar",
+        "tr": "gidon",
+        "fa": "فرمان دوچرخه",
+        "ru": "руль",
+        "uk": "кермо",
+        "ar": "مقود"
       }
     },
     "35034": {
@@ -15257,14 +15257,14 @@
       "word_type": "Adjective",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Die örtliche Zeitung berichtet über das Fest.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "local",
+        "tr": "yerel",
+        "fa": "محلی",
+        "ru": "местный",
+        "uk": "місцевий",
+        "ar": "محلي"
       }
     },
     "35035": {
@@ -15277,14 +15277,14 @@
       "word_type": "Word",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Zentrum bietet Beratung für queere Jugendliche an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "queer",
+        "tr": "kuir",
+        "fa": "کوئیر",
+        "ru": "квир",
+        "uk": "квір",
+        "ar": "كوير / متنوع جنسيًا"
       }
     },
     "35036": {
@@ -15297,14 +15297,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Die Kinder rennen schnell über den Hof.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to run",
+        "tr": "koşmak",
+        "fa": "دویدن",
+        "ru": "бежать",
+        "uk": "бігти",
+        "ar": "يركض"
       }
     },
     "35037": {
@@ -15317,14 +15317,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Rennen beginnt um zehn Uhr.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "race",
+        "tr": "yarış",
+        "fa": "مسابقه / مسابقه دو",
+        "ru": "гонка / забег",
+        "uk": "перегони / забіг",
+        "ar": "سباق"
       }
     },
     "35038": {
@@ -15337,14 +15337,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Im Drogeriemarkt kaufe ich Shampoo und Seife.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "drugstore / pharmacy shop",
+        "tr": "kozmetik ve temizlik ürünleri mağazası",
+        "fa": "داروخانه-فروشگاه / فروشگاه محصولات بهداشتی",
+        "ru": "дрогери / магазин бытовой химии",
+        "uk": "дрогері / магазин побутової хімії",
+        "ar": "متجر مستحضرات وعناية"
       }
     },
     "35039": {
@@ -15357,14 +15357,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Am Essensstand gibt es Suppe und Brot.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "food stand",
+        "tr": "yemek standı",
+        "fa": "غرفه غذا",
+        "ru": "палатка с едой",
+        "uk": "стенд з їжею",
+        "ar": "كشك طعام"
       }
     },
     "35040": {
@@ -15377,14 +15377,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Eine kleine Spinne sitzt an der Wand.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "spider",
+        "tr": "örümcek",
+        "fa": "عنکبوت",
+        "ru": "паук",
+        "uk": "павук",
+        "ar": "عنكبوت"
       }
     },
     "35041": {
@@ -15397,14 +15397,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach der Party herrschte Chaos in der Küche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chaos",
+        "tr": "kaos / karmaşa",
+        "fa": "آشوب / هرج‌ومرج",
+        "ru": "хаос",
+        "uk": "хаос",
+        "ar": "فوضى"
       }
     },
     "35042": {
@@ -15417,14 +15417,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wann kommt der neue Film im Kino raus?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to come out / to get out",
+        "tr": "çıkmak / ortaya çıkmak",
+        "fa": "بیرون آمدن / منتشر شدن",
+        "ru": "выходить / выйти наружу",
+        "uk": "виходити / вийти назовні",
+        "ar": "يخرج / يصدر"
       }
     },
     "35043": {
@@ -15437,14 +15437,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Wir wohnen in einem Reihenhaus am Stadtrand.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "terraced house / row house",
+        "tr": "sıra ev",
+        "fa": "خانه ردیفی",
+        "ru": "таунхаус / рядный дом",
+        "uk": "таунхаус / рядний будинок",
+        "ar": "منزل متلاصق / منزل صف"
       }
     },
     "35044": {
@@ -15457,14 +15457,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Das alte Fachwerkhaus steht im Zentrum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "half-timbered house",
+        "tr": "ahşap karkas ev",
+        "fa": "خانه نیمه‌چوبی / خانه فاخ‌ورک",
+        "ru": "фахверковый дом",
+        "uk": "фахверковий будинок",
+        "ar": "بيت نصف خشبي"
       }
     },
     "35045": {
@@ -15477,14 +15477,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Ein Einfamilienhaus hat oft einen Garten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "single-family house",
+        "tr": "müstakil aile evi",
+        "fa": "خانه تک‌خانواری",
+        "ru": "односемейный дом",
+        "uk": "односімейний будинок",
+        "ar": "منزل عائلي مستقل"
       }
     },
     "35046": {
@@ -15497,14 +15497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Altbau hat hohe Decken und große Fenster.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "old building",
+        "tr": "eski bina",
+        "fa": "ساختمان قدیمی",
+        "ru": "старое здание",
+        "uk": "стара будівля",
+        "ar": "بناء قديم"
       }
     },
     "35047": {
@@ -15517,14 +15517,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Neubau ist modern und gut isoliert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "new building",
+        "tr": "yeni bina",
+        "fa": "ساختمان نوساز",
+        "ru": "новостройка",
+        "uk": "новобудова",
+        "ar": "بناء جديد"
       }
     },
     "35048": {
@@ -15537,14 +15537,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "In einer Kleinstadt kennt man viele Nachbarn.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "small town",
+        "tr": "küçük şehir",
+        "fa": "شهر کوچک",
+        "ru": "маленький город",
+        "uk": "маленьке місто",
+        "ar": "مدينة صغيرة"
       }
     },
     "35049": {
@@ -15557,14 +15557,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "In der Großstadt gibt es viele Arbeitsplätze.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "big city",
+        "tr": "büyük şehir",
+        "fa": "شهر بزرگ",
+        "ru": "большой город",
+        "uk": "велике місто",
+        "ar": "مدينة كبيرة"
       }
     },
     "35050": {
@@ -15577,14 +15577,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Die Innenstadt ist am Samstag sehr voll.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "city center / downtown",
+        "tr": "şehir merkezi",
+        "fa": "مرکز شهر",
+        "ru": "центр города",
+        "uk": "центр міста",
+        "ar": "وسط المدينة"
       }
     },
     "35051": {
@@ -15597,14 +15597,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Am Stadtrand sind die Wohnungen oft günstiger.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "outskirts / edge of town",
+        "tr": "şehir kenarı",
+        "fa": "حاشیه شهر / اطراف شهر",
+        "ru": "окраина города",
+        "uk": "околиця міста",
+        "ar": "ضواحي المدينة / طرف المدينة"
       }
     },
     "35052": {
@@ -15617,14 +15617,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "In großen Häusern bleibt man oft anonym.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "anonymous",
+        "tr": "anonim / isimsiz",
+        "fa": "ناشناس / گمنام",
+        "ru": "анонимный",
+        "uk": "анонімний",
+        "ar": "مجهول الهوية"
       }
     },
     "35053": {
@@ -15637,14 +15637,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Unsere Straße ist ruhig und kinderfreundlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "child-friendly",
+        "tr": "çocuk dostu",
+        "fa": "مناسب کودکان / کودک‌دوست",
+        "ru": "удобный для детей",
+        "uk": "дружній до дітей",
+        "ar": "مناسب للأطفال"
       }
     },
     "35054": {
@@ -15657,14 +15657,14 @@
       "word_type": "Adjective",
       "difficulty": 6,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Das Viertel ist lebendig und kulturell vielfältig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lively / alive",
+        "tr": "canlı",
+        "fa": "زنده / پرجنب‌وجوش",
+        "ru": "оживлённый / живой",
+        "uk": "жвавий / живий",
+        "ar": "حيوي / نابض بالحياة"
       }
     },
     "35055": {
@@ -15677,14 +15677,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Der Verkehr in der Innenstadt ist oft hektisch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hectic",
+        "tr": "telaşlı / yoğun",
+        "fa": "پرتنش / شلوغ و عجولانه",
+        "ru": "суетливый / напряжённый",
+        "uk": "метушливий / напружений",
+        "ar": "محموم / مزدحم ومتوتر"
       }
     },
     "35056": {
@@ -15697,14 +15697,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die Wohnungssuche in der Großstadt ist schwierig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "apartment search / housing search",
+        "tr": "ev arama / daire arama",
+        "fa": "جست‌وجوی خانه / پیدا کردن آپارتمان",
+        "ru": "поиск квартиры",
+        "uk": "пошук квартири",
+        "ar": "البحث عن شقة"
       }
     },
     "35057": {
@@ -15717,14 +15717,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Sie möchte später eine Eigentumswohnung kaufen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "condominium / owned apartment",
+        "tr": "mülk daire / satın alınmış daire",
+        "fa": "آپارتمان ملکی",
+        "ru": "квартира в собственности",
+        "uk": "власна квартира",
+        "ar": "شقة تمليك"
       }
     },
     "35058": {
@@ -15737,14 +15737,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die Wohnung hat eine moderne Einbauküche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "fitted kitchen / built-in kitchen",
+        "tr": "ankastre mutfak",
+        "fa": "آشپزخانه توکار / کابینت و وسایل نصب‌شده",
+        "ru": "встроенная кухня",
+        "uk": "вбудована кухня",
+        "ar": "مطبخ مدمج"
       }
     },
     "35059": {
@@ -15757,14 +15757,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die neue Wohnung ist im Erstbezug.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "first occupancy",
+        "tr": "ilk kullanım / ilk oturum",
+        "fa": "اولین سکونت / تحویل نوساز",
+        "ru": "первое заселение",
+        "uk": "перше заселення",
+        "ar": "سكن لأول مرة"
       }
     },
     "35060": {
@@ -15777,14 +15777,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Kaltmiete beträgt achthundert Euro.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "base rent / cold rent",
+        "tr": "soğuk kira / giderler hariç kira",
+        "fa": "اجاره پایه / اجاره بدون هزینه‌های جانبی",
+        "ru": "аренда без коммунальных расходов",
+        "uk": "оренда без комунальних витрат",
+        "ar": "الإيجار الأساسي دون التكاليف"
       }
     },
     "35061": {
@@ -15797,14 +15797,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Warmmiete ist für uns noch bezahlbar.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rent including utilities / warm rent",
+        "tr": "giderler dahil kira",
+        "fa": "اجاره با هزینه‌های جانبی",
+        "ru": "аренда с коммунальными расходами",
+        "uk": "оренда з комунальними витратами",
+        "ar": "الإيجار مع التكاليف"
       }
     },
     "35062": {
@@ -15817,14 +15817,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Nebenkosten müssen jeden Monat bezahlt werden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "additional costs / utilities",
+        "tr": "ek giderler / aidat",
+        "fa": "هزینه‌های جانبی / شارژ",
+        "ru": "дополнительные расходы / коммунальные платежи",
+        "uk": "додаткові витрати / комунальні платежі",
+        "ar": "تكاليف إضافية / مصاريف خدمات"
       }
     },
     "35063": {
@@ -15837,14 +15837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Der Kaufpreis für das Haus ist sehr hoch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "purchase price",
+        "tr": "satın alma fiyatı",
+        "fa": "قیمت خرید",
+        "ru": "покупная цена",
+        "uk": "ціна купівлі",
+        "ar": "سعر الشراء"
       }
     },
     "35064": {
@@ -15857,14 +15857,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Vermieter sucht einen Nachmieter ab Juli.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "subsequent tenant / next tenant",
+        "tr": "sonraki kiracı erkek",
+        "fa": "مستأجر بعدی مرد",
+        "ru": "следующий арендатор",
+        "uk": "наступний орендар",
+        "ar": "مستأجر لاحق"
       }
     },
     "35065": {
@@ -15877,14 +15877,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die Nachmieterin möchte die Küche übernehmen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female subsequent tenant / next tenant",
+        "tr": "sonraki kiracı kadın",
+        "fa": "مستأجر بعدی زن",
+        "ru": "следующая арендаторша",
+        "uk": "наступна орендарка",
+        "ar": "مستأجرة لاحقة"
       }
     },
     "35066": {
@@ -15897,14 +15897,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Unsere Wohnung liegt im zweiten Obergeschoss.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "upper floor",
+        "tr": "üst kat",
+        "fa": "طبقه بالا",
+        "ru": "верхний этаж",
+        "uk": "верхній поверх",
+        "ar": "طابق علوي"
       }
     },
     "35067": {
@@ -15917,14 +15917,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Die Wohnfläche beträgt siebzig Quadratmeter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "living space / residential area",
+        "tr": "yaşam alanı / konut alanı",
+        "fa": "مساحت مسکونی",
+        "ru": "жилая площадь",
+        "uk": "житлова площа",
+        "ar": "مساحة السكن"
       }
     },
     "35068": {
@@ -15937,14 +15937,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Eine Besonderheit der Wohnung ist der große Balkon.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "special feature / peculiarity",
+        "tr": "özellik / ayrıcalık",
+        "fa": "ویژگی خاص / خصوصیت",
+        "ru": "особенность",
+        "uk": "особливість",
+        "ar": "ميزة خاصة / خصوصية"
       }
     },
     "35069": {
@@ -15957,14 +15957,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Die kleine Stadt ist ruhig und liebenswert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lovable / endearing",
+        "tr": "sevimli / sevilesi",
+        "fa": "دوست‌داشتنی",
+        "ru": "милый / достойный любви",
+        "uk": "милий / вартий любові",
+        "ar": "محبوب / لطيف"
       }
     },
     "35070": {
@@ -15977,14 +15977,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Eine lebenswerte Stadt braucht Parks und gute Schulen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "worth living in / livable",
+        "tr": "yaşanabilir",
+        "fa": "قابل زندگی / زیست‌پذیر",
+        "ru": "пригодный для жизни",
+        "uk": "придатний для життя",
+        "ar": "صالح للعيش"
       }
     },
     "35071": {
@@ -15997,14 +15997,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Für Familien muss Wohnraum bezahlbar bleiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "affordable",
+        "tr": "ödenebilir / uygun fiyatlı",
+        "fa": "قابل پرداخت / مقرون‌به‌صرفه",
+        "ru": "доступный по цене",
+        "uk": "доступний за ціною",
+        "ar": "ميسور التكلفة"
       }
     },
     "35072": {
@@ -16017,14 +16017,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Es ist unmöglich, heute noch einen Termin zu bekommen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "impossible",
+        "tr": "imkânsız",
+        "fa": "غیرممکن",
+        "ru": "невозможный",
+        "uk": "неможливий",
+        "ar": "مستحيل"
       }
     },
     "35073": {
@@ -16037,14 +16037,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Komm bitte hierhin, ich möchte dir etwas zeigen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "here / to here",
+        "tr": "buraya",
+        "fa": "به اینجا",
+        "ru": "сюда",
+        "uk": "сюди",
+        "ar": "إلى هنا"
       }
     },
     "35074": {
@@ -16057,14 +16057,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Das Kulturangebot in der Stadt ist sehr vielfältig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cultural offer / cultural program",
+        "tr": "kültür programı / kültürel olanaklar",
+        "fa": "برنامه فرهنگی / امکانات فرهنگی",
+        "ru": "культурное предложение / программа",
+        "uk": "культурна пропозиція / програма",
+        "ar": "عرض ثقافي / برنامج ثقافي"
       }
     },
     "35075": {
@@ -16077,14 +16077,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Nach dem Kurs plaudern wir noch ein bisschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to chat",
+        "tr": "sohbet etmek",
+        "fa": "گپ زدن",
+        "ru": "болтать / беседовать",
+        "uk": "балакати / розмовляти",
+        "ar": "يدردش"
       }
     },
     "35076": {
@@ -16097,14 +16097,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Postbote bringt jeden Morgen die Briefe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "postman / mail carrier",
+        "tr": "erkek postacı",
+        "fa": "پستچی مرد",
+        "ru": "почтальон",
+        "uk": "листоноша",
+        "ar": "ساعي بريد"
       }
     },
     "35077": {
@@ -16117,14 +16117,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Postbotin legt das Paket vor die Tür.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female post carrier / postwoman",
+        "tr": "kadın postacı",
+        "fa": "پستچی زن",
+        "ru": "почтальонка",
+        "uk": "листоноша-жінка",
+        "ar": "ساعية بريد"
       }
     },
     "35078": {
@@ -16137,14 +16137,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der neue Radweg führt direkt zum Bahnhof.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bike path / cycle path",
+        "tr": "bisiklet yolu",
+        "fa": "مسیر دوچرخه",
+        "ru": "велодорожка",
+        "uk": "велодоріжка",
+        "ar": "مسار دراجات"
       }
     },
     "35079": {
@@ -16157,14 +16157,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Der Wanderweg durch den Wald ist gut markiert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hiking trail",
+        "tr": "yürüyüş yolu",
+        "fa": "مسیر پیاده‌روی / مسیر کوه‌پیمایی",
+        "ru": "пешеходная тропа",
+        "uk": "пішохідна стежка",
+        "ar": "مسار مشي / مسار تنزه"
       }
     },
     "35080": {
@@ -16177,14 +16177,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Kandidatin stellt ihr Programm im Rathaus vor.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female candidate",
+        "tr": "kadın aday",
+        "fa": "نامزد زن / کاندیدای زن",
+        "ru": "кандидатка",
+        "uk": "кандидатка",
+        "ar": "مرشحة"
       }
     },
     "35081": {
@@ -16197,14 +16197,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Über die Plattform können sich Nachbarn besser vernetzen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to network / to connect",
+        "tr": "ağ kurmak / bağlantı kurmak",
+        "fa": "شبکه‌سازی کردن / ارتباط برقرار کردن",
+        "ru": "налаживать связи / объединяться в сеть",
+        "uk": "налагоджувати звʼязки / мережуватися",
+        "ar": "يتواصل ضمن شبكة"
       }
     },
     "35082": {
@@ -16217,14 +16217,14 @@
       "word_type": "Adjective",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Für diese Reparatur braucht man handwerkliches Geschick.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "manual / craft-related",
+        "tr": "el becerisiyle ilgili / zanaatkâr",
+        "fa": "فنی / مربوط به کار دستی",
+        "ru": "ремесленный / ручной",
+        "uk": "ремісничий / ручний",
+        "ar": "حرفي / يدوي"
       }
     },
     "35083": {
@@ -16237,14 +16237,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Kleiderschrank steht im Schlafzimmer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wardrobe",
+        "tr": "gardırop / elbise dolabı",
+        "fa": "کمد لباس",
+        "ru": "шкаф для одежды",
+        "uk": "шафа для одягу",
+        "ar": "خزانة ملابس"
       }
     },
     "35084": {
@@ -16257,14 +16257,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Nachbarschaftshilfe unterstützt ältere Menschen beim Einkaufen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "neighborhood help",
+        "tr": "komşuluk yardımı",
+        "fa": "کمک همسایگی",
+        "ru": "помощь соседей",
+        "uk": "сусідська допомога",
+        "ar": "مساعدة الجيران"
       }
     },
     "35085": {
@@ -16277,14 +16277,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Auf der Plattform findet man Angebote aus der Umgebung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "platform",
+        "tr": "platform",
+        "fa": "پلتفرم / سکو",
+        "ru": "платформа",
+        "uk": "платформа",
+        "ar": "منصة"
       }
     },
     "35086": {
@@ -16297,14 +16297,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Ich bin in einer kleinen Stadt aufgewachsen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to grow up",
+        "tr": "büyümek",
+        "fa": "بزرگ شدن",
+        "ru": "вырастать",
+        "uk": "виростати",
+        "ar": "ينشأ / يكبر"
       }
     },
     "35087": {
@@ -16317,14 +16317,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Auf der Internetseite stehen alle Termine.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "website / internet page",
+        "tr": "internet sitesi / web sayfası",
+        "fa": "وب‌سایت / صفحه اینترنتی",
+        "ru": "интернет-страница / сайт",
+        "uk": "інтернет-сторінка / сайт",
+        "ar": "موقع إلكتروني / صفحة إنترنت"
       }
     },
     "35088": {
@@ -16337,14 +16337,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ich habe ein Gesuch für eine gebrauchte Lampe geschrieben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "request / wanted ad",
+        "tr": "talep / aranan ilanı",
+        "fa": "درخواست / آگهی درخواست",
+        "ru": "запрос / объявление о поиске",
+        "uk": "запит / оголошення про пошук",
+        "ar": "طلب / إعلان بحث"
       }
     },
     "35089": {
@@ -16357,14 +16357,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Der Schrank ist nur für Selbstabholer kostenlos.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "self-collector / pickup only person",
+        "tr": "kendisi teslim alan erkek",
+        "fa": "تحویل‌گیرنده حضوری مرد",
+        "ru": "самовывоз для мужчин / забирающий сам",
+        "uk": "самовивіз для чоловіка",
+        "ar": "مستلم بنفسه"
       }
     },
     "35090": {
@@ -16377,14 +16377,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Selbstabholerin kommt morgen mit einem Auto.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female self-collector / pickup only person",
+        "tr": "kendisi teslim alan kadın",
+        "fa": "تحویل‌گیرنده حضوری زن",
+        "ru": "самовывоз для женщин / забирающая сама",
+        "uk": "самовивіз для жінки",
+        "ar": "مستلمة بنفسها"
       }
     },
     "35091": {
@@ -16397,14 +16397,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Als neue Nachbarn bekamen wir ein Willkommensgeschenk.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "welcome gift",
+        "tr": "hoş geldin hediyesi",
+        "fa": "هدیه خوشامدگویی",
+        "ru": "приветственный подарок",
+        "uk": "вітальний подарунок",
+        "ar": "هدية ترحيب"
       }
     },
     "35092": {
@@ -16417,14 +16417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Dieser Zungenbrecher ist schwer auszusprechen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tongue twister",
+        "tr": "tekerleme / dil cambazı sözü",
+        "fa": "زبان‌پیچ / جمله دشوار برای تلفظ",
+        "ru": "скороговорка",
+        "uk": "скоромовка",
+        "ar": "عبارة صعبة النطق"
       }
     },
     "35093": {
@@ -16437,14 +16437,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Im Kurs sollen alle den Satz laut vorsprechen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to say aloud first / to audition",
+        "tr": "önce söylemek / sesli okumak",
+        "fa": "بلند نمونه گفتن / آزمون دادن",
+        "ru": "произносить вслух / выступать на пробе",
+        "uk": "промовляти вголос / проходити пробу",
+        "ar": "ينطق كنموذج / يجري تجربة أداء"
       }
     },
     "35094": {
@@ -16457,14 +16457,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Bitte hören Sie zu und sprechen Sie das Wort nach.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to repeat after / to say after",
+        "tr": "ardından tekrar etmek",
+        "fa": "بعد از کسی تکرار کردن",
+        "ru": "повторять за кем-либо",
+        "uk": "повторювати за кимось",
+        "ar": "يكرر بعد"
       }
     },
     "35095": {
@@ -16477,14 +16477,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Möbelpacker trägt den Schrank in den dritten Stock.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male furniture mover",
+        "tr": "erkek nakliyeci / mobilya taşıyıcısı",
+        "fa": "اسباب‌کش مرد / حمل‌کننده مرد اثاثیه",
+        "ru": "грузчик мебели",
+        "uk": "вантажник меблів",
+        "ar": "عامل نقل أثاث"
       }
     },
     "35096": {
@@ -16497,14 +16497,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Möbelpackerin hilft beim Umzug der Familie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female furniture mover",
+        "tr": "kadın nakliyeci / mobilya taşıyıcısı",
+        "fa": "اسباب‌کش زن / حمل‌کننده زن اثاثیه",
+        "ru": "грузчица мебели",
+        "uk": "вантажниця меблів",
+        "ar": "عاملة نقل أثاث"
       }
     },
     "35097": {
@@ -16517,14 +16517,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Wir benachrichtigen Sie, sobald ein Platz frei wird.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to notify / to inform",
+        "tr": "haberdar etmek / bildirmek",
+        "fa": "خبر دادن / اطلاع دادن",
+        "ru": "уведомлять / сообщать",
+        "uk": "повідомляти",
+        "ar": "يبلغ / يخطر"
       }
     },
     "35098": {
@@ -16537,14 +16537,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Der Eltern-Kind-Kurs beginnt nächste Woche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "parent-child course",
+        "tr": "ebeveyn-çocuk kursu",
+        "fa": "دوره والد و کودک",
+        "ru": "курс для родителей и детей",
+        "uk": "курс для батьків і дітей",
+        "ar": "دورة للوالدين والطفل"
       }
     },
     "35099": {
@@ -16557,14 +16557,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Im Musikkurs lernen die Kinder einfache Lieder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "music course",
+        "tr": "müzik kursu",
+        "fa": "دوره موسیقی",
+        "ru": "музыкальный курс",
+        "uk": "музичний курс",
+        "ar": "دورة موسيقى"
       }
     },
     "35100": {
@@ -16577,14 +16577,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Für den Kurs gibt es leider eine Warteliste.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "waiting list",
+        "tr": "bekleme listesi",
+        "fa": "فهرست انتظار",
+        "ru": "лист ожидания",
+        "uk": "лист очікування",
+        "ar": "قائمة انتظار"
       }
     },
     "35101": {
@@ -16597,14 +16597,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Band probt jeden Donnerstag im Keller.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to rehearse",
+        "tr": "prova yapmak",
+        "fa": "تمرین اجرا کردن / تمرین گروهی کردن",
+        "ru": "репетировать",
+        "uk": "репетирувати",
+        "ar": "يتدرب / يجري بروفة"
       }
     },
     "35102": {
@@ -16617,14 +16617,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Der übernächste Termin ist erst im Mai.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "the one after next",
+        "tr": "bir sonrakinden sonraki",
+        "fa": "بعدیِ بعدی / دو نوبت بعد",
+        "ru": "следующий после следующего",
+        "uk": "наступний після наступного",
+        "ar": "الذي يلي القادم"
       }
     },
     "35103": {
@@ -16637,14 +16637,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Können Sie mir die Unterlagen per E-Mail zuschicken?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to send to someone",
+        "tr": "göndermek",
+        "fa": "فرستادن برای کسی",
+        "ru": "присылать / отправлять",
+        "uk": "надсилати",
+        "ar": "يرسل إلى"
       }
     },
     "35104": {
@@ -16657,14 +16657,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Vor dem Rathaus hängt eine europäische Fahne.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "flag",
+        "tr": "bayrak",
+        "fa": "پرچم",
+        "ru": "флаг",
+        "uk": "прапор",
+        "ar": "علم / راية"
       }
     },
     "35105": {
@@ -16677,14 +16677,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Im Integrationskurs lernt man Deutsch und Regeln des Alltags.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "integration course",
+        "tr": "uyum kursu",
+        "fa": "دوره ادغام / دوره همگرایی",
+        "ru": "интеграционный курс",
+        "uk": "інтеграційний курс",
+        "ar": "دورة اندماج"
       }
     },
     "35106": {
@@ -16697,14 +16697,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Aufenthaltsrecht regelt, wer in Deutschland bleiben darf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "right of residence",
+        "tr": "oturma hakkı",
+        "fa": "حق اقامت",
+        "ru": "право на пребывание",
+        "uk": "право на перебування",
+        "ar": "حق الإقامة"
       }
     },
     "35107": {
@@ -16717,14 +16717,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Als EU-Bürger darf er in vielen Ländern arbeiten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male EU citizen",
+        "tr": "erkek AB vatandaşı",
+        "fa": "شهروند مرد اتحادیه اروپا",
+        "ru": "гражданин ЕС",
+        "uk": "громадянин ЄС",
+        "ar": "مواطن في الاتحاد الأوروبي"
       }
     },
     "35108": {
@@ -16737,14 +16737,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die EU-Bürgerin braucht hier kein Visum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female EU citizen",
+        "tr": "kadın AB vatandaşı",
+        "fa": "شهروند زن اتحادیه اروپا",
+        "ru": "гражданка ЕС",
+        "uk": "громадянка ЄС",
+        "ar": "مواطنة في الاتحاد الأوروبي"
       }
     },
     "35109": {
@@ -16757,14 +16757,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "Spanien ist ein EU-Land.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "EU country",
+        "tr": "AB ülkesi",
+        "fa": "کشور عضو اتحادیه اروپا",
+        "ru": "страна ЕС",
+        "uk": "країна ЄС",
+        "ar": "دولة في الاتحاد الأوروبي"
       }
     },
     "35110": {
@@ -16777,14 +16777,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Für die Einbürgerung muss man mehrere Voraussetzungen erfüllen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "naturalization",
+        "tr": "vatandaşlığa geçme",
+        "fa": "تابعیت گرفتن / شهروند شدن",
+        "ru": "натурализация / получение гражданства",
+        "uk": "натуралізація / набуття громадянства",
+        "ar": "التجنس"
       }
     },
     "35111": {
@@ -16797,14 +16797,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Termin liegt schon drei Wochen zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be in the past / to date back",
+        "tr": "geride kalmak / geçmişte olmak",
+        "fa": "در گذشته بودن / به عقب برمی‌گردد",
+        "ru": "быть в прошлом / относиться к прошлому",
+        "uk": "бути в минулому / датуватися",
+        "ar": "يعود إلى / مضى عليه"
       }
     },
     "35112": {
@@ -16817,14 +16817,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Meinungsfreiheit ist ein wichtiges Grundrecht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "fundamental right",
+        "tr": "temel hak",
+        "fa": "حق اساسی / حق بنیادین",
+        "ru": "основное право",
+        "uk": "основне право",
+        "ar": "حق أساسي"
       }
     },
     "35113": {
@@ -16837,14 +16837,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Kinder brauchen besonderen Schutz.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "protection",
+        "tr": "koruma",
+        "fa": "حفاظت / حمایت",
+        "ru": "защита",
+        "uk": "захист",
+        "ar": "حماية"
       }
     },
     "35114": {
@@ -16857,14 +16857,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Visafreiheit erleichtert Reisen innerhalb Europas.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "visa freedom / visa-free travel",
+        "tr": "vizesiz seyahat hakkı",
+        "fa": "آزادی سفر بدون ویزا",
+        "ru": "безвизовый режим",
+        "uk": "безвізовий режим",
+        "ar": "إعفاء من التأشيرة / حرية السفر بلا تأشيرة"
       }
     },
     "35115": {
@@ -16877,14 +16877,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Das Wahlrecht gehört zu den demokratischen Rechten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "right to vote / electoral right",
+        "tr": "seçme hakkı",
+        "fa": "حق رأی",
+        "ru": "избирательное право",
+        "uk": "виборче право",
+        "ar": "حق التصويت"
       }
     },
     "35116": {
@@ -16897,14 +16897,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Staatsbürger hat Rechte und Pflichten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male citizen",
+        "tr": "erkek vatandaş",
+        "fa": "شهروند مرد",
+        "ru": "гражданин",
+        "uk": "громадянин",
+        "ar": "مواطن"
       }
     },
     "35117": {
@@ -16917,14 +16917,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Staatsbürgerin darf an der Wahl teilnehmen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female citizen",
+        "tr": "kadın vatandaş",
+        "fa": "شهروند زن",
+        "ru": "гражданка",
+        "uk": "громадянка",
+        "ar": "مواطنة"
       }
     },
     "35118": {
@@ -16937,14 +16937,14 @@
       "word_type": "Word",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Nach einigen Jahren kann man sich einbürgern lassen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to naturalize / to grant citizenship",
+        "tr": "vatandaşlığa geçirmek / vatandaş olmak",
+        "fa": "تابعیت دادن / تابعیت گرفتن",
+        "ru": "натурализовать / получить гражданство",
+        "uk": "натуралізувати / отримати громадянство",
+        "ar": "يجنس / يحصل على الجنسية"
       }
     },
     "35119": {
@@ -16957,14 +16957,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Für die Reise brauche ich ein Visum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "visa",
+        "tr": "vize",
+        "fa": "ویزا",
+        "ru": "виза",
+        "uk": "віза",
+        "ar": "تأشيرة"
       }
     },
     "35120": {
@@ -16977,14 +16977,14 @@
       "word_type": "Noun",
       "difficulty": 9,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Die Aufenthaltserlaubnis ist noch zwei Jahre gültig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "residence permit",
+        "tr": "oturma izni",
+        "fa": "اجازه اقامت",
+        "ru": "разрешение на пребывание",
+        "uk": "дозвіл на проживання",
+        "ar": "تصريح إقامة"
       }
     },
     "35121": {
@@ -16997,14 +16997,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Glaubensfreiheit ist in der Verfassung geschützt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "freedom of religion",
+        "tr": "inanç özgürlüğü",
+        "fa": "آزادی دین / آزادی عقیده",
+        "ru": "свобода вероисповедания",
+        "uk": "свобода віросповідання",
+        "ar": "حرية المعتقد / حرية الدين"
       }
     },
     "35122": {
