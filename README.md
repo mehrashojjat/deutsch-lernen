@@ -26,13 +26,9 @@ It runs entirely in the browser as a static HTML/JS app — no build step for pr
 │   ├── auth.js              # Supabase authentication & progress persistence
 │   └── announcement.js      # Domain migration banner (non-production hosts)
 ├── data/
-│   ├── a1.csv               # A1 vocabulary (812 words)
-│   ├── a2.csv               # A2 vocabulary (1059 words)
-│   ├── b1.csv               # B1 vocabulary (4272 words)
-│   ├── vocabulary.v2.min.json  # Unified compact vocabulary (generated)
-│   └── vocabulary.v2.map.json  # ID mapping sidecar (generated)
+│   ├── vocabulary.v2.min.json  # Unified compact vocabulary used by the app
+│   └── vocabulary.v2.map.json  # Human-readable vocabulary source/sidecar
 ├── scripts/
-│   ├── merge_vocab.py       # Builds vocabulary.v2.* from CSV sources
 │   ├── dev.mjs              # Local dev server + Cloudflare tunnel
 │   └── restart_server.sh    # Kill/restart npm dev in background
 ├── icons/                   # PWA + favicon assets
@@ -63,7 +59,7 @@ Then open `https://localhost:3000` in your browser (self-signed cert — accept 
 
 **Restart in background:** `scripts/restart_server.sh` (kills anything on port 3000, then runs `npm run dev` via nohup).
 
-**Do not open via `file://`** — CSV/JSON fetches and the service worker require HTTP. Use `npm run dev` locally.
+**Do not open via `file://`** — JSON fetches and the service worker require HTTP. Use `npm run dev` locally.
 
 **Live:** Hosted at [wortschatzapp.de](https://wortschatzapp.de) via GitHub Pages.
 
@@ -109,7 +105,7 @@ All multiple-choice quiz modes share these rules:
 - **Format:** German word (+ article for nouns) → 4 translation choices
 - **Correctness:** Compared by **word ID**, never display string
 - **Distractors:** Up to 6 candidates collected; 3 distractors + 1 correct shown, deduplicated by English translation
-- **Eligible words:** `entry_type === 'main'` with non-empty `translation_en`
+- **Eligible words:** entries in `vocabulary.v2.min.json` with a non-empty English translation
 - **Example sentence:** Shown under the word from `example_de` when present
 - **Results thresholds:** ≥90% Excellent, ≥70% Well done, ≥50% Good effort, else Keep practicing
 - **Study time:** Active seconds spent answering questions (see [Quiz study time](#quiz-study-time) below)
@@ -283,12 +279,6 @@ When `skillLevel ≥ 9` and the last **20** cross-band log entries have ≥ **70
 
 **`challenge` quiz:** 3 struggling + 3 global unseen + 2 oldest stable + B1 confidence + hardest unseen explore.
 
-Regenerate the unified vocabulary file after CSV edits:
-
-```bash
-python3 scripts/merge_vocab.py
-```
-
 ---
 
 ## Theme Quiz
@@ -451,7 +441,7 @@ Unique constraint: `(user_id, level)` where level ∈ `A1`, `A2`, `B1`, `ALL`.
 - Random word from full A1+A2+B1 pool (~6 000 words)
 - Avoids repeats until 300 seen, then clears set
 - Fetches Wiktionary grammar (declension, conjugation, IPA, definitions)
-- Shows CSV example; offline fallback uses CSV data only
+- Shows the German example sentence; offline fallback uses cached vocabulary data
 - Tap any word elsewhere → word card modal
 
 ### Dictionary
@@ -485,13 +475,7 @@ Unique constraint: `(user_id, level)` where level ∈ `A1`, `A2`, `B1`, `ALL`.
 
 ## Word Data
 
-All vocabulary is stored in three CSV files under `data/`. These are the single source of truth for every feature in the app.
-
-| File | Level | Rows | Description |
-|------|-------|-----:|-------------|
-| `data/a1.csv` | A1 | 812 | Starter – survival communication |
-| `data/a2.csv` | A2 | 1059 | Elementary – everyday topics |
-| `data/b1.csv` | B1 | 4272 | Intermediate – independent use |
+All vocabulary is stored in `data/vocabulary.v2.map.json` and `data/vocabulary.v2.min.json`. The compact `min` file is the runtime file loaded by the app; the `map` file is the human-readable source/sidecar for review and maintenance.
 
 Vocabulary is sourced from the official word lists published by the [Goethe-Institut](https://www.goethe.de) — the canonical CEFR-aligned references used in Goethe-Zertifikat examinations. Translations (EN/TR/RU/UK/FA/AR) and example sentences are enriched from DWDS, MyMemory API, and manual curation.
 
@@ -499,28 +483,20 @@ Vocabulary is sourced from the official word lists published by the [Goethe-Inst
 
 ## Vocabulary Schema
 
-Each CSV row has the following columns:
+Each `vocabulary.v2.map.json` entry has the following fields:
 
-| Column | Type | Description |
+| Field | Type | Description |
 |--------|------|-------------|
-| `id` | string | Unique row identifier |
+| `unified_id` | int | Unique vocabulary ID |
 | `level` | string | CEFR level: `A1`, `A2`, or `B1` |
-| `source_page` | int | Page number in source booklet |
-| `section` | string | Section slug |
-| `entry_type` | string | `main` (quiz-eligible) or `section_title` |
 | `word` | string | German word or phrase |
 | `article` | string | Grammatical article (`der`/`die`/`das`) for nouns |
 | `plural` | string | Plural form (nouns) |
 | `word_type` | string | `Noun`, `Verb`, `Adjective`, `Phrase`, `Adverb`, `Number`, `Word` |
-| `translation_en` | string | English translation |
-| `translation_tr` | string | Turkish translation |
-| `translation_ru` | string | Russian translation |
-| `translation_uk` | string | Ukrainian translation |
-| `translation_fa` | string | Persian (Farsi) translation |
-| `translation_ar` | string | Arabic translation |
 | `difficulty` | int 1–10 | Difficulty rating within the level |
 | `category_id` | int 1–21 | Vocabulary category (see table below) |
 | `example_de` | string | German example sentence |
+| `translations` | object | Translations keyed by `en`, `tr`, `fa`, `ru`, `uk`, `ar` |
 
 ### Category IDs
 
@@ -552,7 +528,7 @@ Each CSV row has the following columns:
 
 ## Unified Vocabulary (V2)
 
-Adaptive V2 reads `data/vocabulary.v2.min.json`, a compact dictionary generated by `scripts/merge_vocab.py` from the three CSV sources. Each key is a **unified numeric ID**; the first digit encodes the CEFR level (no zero padding):
+Adaptive V2 reads `data/vocabulary.v2.min.json`, a compact dictionary keyed by **unified numeric ID**. The first digit encodes the CEFR level (no zero padding):
 
 | Prefix digit | Level |
 |:--:|:--|
@@ -560,7 +536,7 @@ Adaptive V2 reads `data/vocabulary.v2.min.json`, a compact dictionary generated 
 | `2` | A2 |
 | `3` | B1 |
 
-Examples: A1 id `129` → `1129` · A2 id `133` → `2133` · B1 id `744` → `3744` · B1 id `4272` → `34272`
+Examples: A1 `129` → `1129` · A2 `133` → `2133` · B1 `744` → `3744` · B1 `4272` → `34272`
 
 Each entry is a 9-tuple (no separate level/srcId fields):
 
@@ -571,10 +547,10 @@ Each entry is a 9-tuple (no separate level/srcId fields):
 | 2 | `article` | `r` = der, `e` = die, `s` = das, empty = none |
 | 3 | `tr` | Translations in order: EN, TR, FA, RU, UK, AR |
 | 4 | `difficulty` | Integer 1–10 |
-| 5 | `category_id` | Category 1–21 (same as CSV) |
+| 5 | `category_id` | Category 1–21 |
 | 6 | `example_de` | German example sentence (shown under quiz word) |
 | 7 | `plural` | Plural form for nouns (empty if not applicable) |
-| 8 | `word` | Display form with original casing from CSV |
+| 8 | `word` | Display form with original casing |
 
 Example:
 
@@ -582,7 +558,7 @@ Example:
 "12": ["eins", "#", "", ["one", "bir", "یک", "одin", "odin", "واحد"], 1, 1, "Eins ist die erste Zahl.", "", "eins"]
 ```
 
-`data/vocabulary.v2.map.json` is a debugging sidecar with human-readable source fields for every unified ID.
+`data/vocabulary.v2.map.json` is the human-readable sidecar with source fields for every unified ID.
 
 ---
 
