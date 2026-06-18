@@ -9017,14 +9017,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Im Kurs sprechen wir über moderne Literatur.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "literature",
+        "tr": "edebiyat",
+        "fa": "ادبیات",
+        "ru": "литература",
+        "uk": "література",
+        "ar": "أدب"
       }
     },
     "34723": {
@@ -9037,14 +9037,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Am Samstag gehen wir zu einem Rockkonzert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rock concert",
+        "tr": "rock konseri",
+        "fa": "کنسرت راک",
+        "ru": "рок-концерт",
+        "uk": "рок-концерт",
+        "ar": "حفلة روك"
       }
     },
     "34724": {
@@ -9057,14 +9057,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 20,
-      "example_de": "",
+      "example_de": "In der Fremde vermisst man manchmal die Familie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "foreign land / unfamiliar place",
+        "tr": "gurbet / yabancı yer",
+        "fa": "غربت / جای ناآشنا",
+        "ru": "чужбина / незнакомое место",
+        "uk": "чужина / незнайоме місце",
+        "ar": "الغربة / مكان غريب"
       }
     },
     "34725": {
@@ -9077,14 +9077,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ich schicke dir später eine Kurznachricht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "short message / text message",
+        "tr": "kısa mesaj",
+        "fa": "پیام کوتاه",
+        "ru": "короткое сообщение",
+        "uk": "коротке повідомлення",
+        "ar": "رسالة قصيرة"
       }
     },
     "34726": {
@@ -9097,14 +9097,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Mit diesem Satz möchte sie ihre Meinung ausdrücken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to express something",
+        "tr": "bir şeyi ifade etmek",
+        "fa": "چیزی را بیان کردن",
+        "ru": "выражать что-либо",
+        "uk": "виражати щось",
+        "ar": "يعبر عن شيء"
       }
     },
     "34727": {
@@ -9117,14 +9117,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Bücherausgabe ist im Erdgeschoss.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "book checkout / book issuing desk",
+        "tr": "kitap teslim bölümü",
+        "fa": "بخش تحویل کتاب",
+        "ru": "выдача книг",
+        "uk": "видача книг",
+        "ar": "قسم تسليم الكتب"
       }
     },
     "34728": {
@@ -9137,14 +9137,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Den Buchtitel habe ich leider vergessen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "book title",
+        "tr": "kitap adı",
+        "fa": "عنوان کتاب",
+        "ru": "название книги",
+        "uk": "назва книги",
+        "ar": "عنوان الكتاب"
       }
     },
     "34729": {
@@ -9157,14 +9157,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Auf dem Portal findet man viele Informationen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "portal / website portal",
+        "tr": "portal / internet kapısı",
+        "fa": "پورتال / درگاه اینترنتی",
+        "ru": "портал",
+        "uk": "портал",
+        "ar": "بوابة إلكترونية"
       }
     },
     "34730": {
@@ -9177,14 +9177,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Über ein Jobportal habe ich eine passende Stelle gefunden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "job portal",
+        "tr": "iş portalı",
+        "fa": "پورتال کاریابی",
+        "ru": "портал вакансий",
+        "uk": "портал вакансій",
+        "ar": "بوابة وظائف"
       }
     },
     "34731": {
@@ -9197,14 +9197,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir treffen uns entweder heute oder morgen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "either ... or",
+        "tr": "ya ... ya da",
+        "fa": "یا ... یا",
+        "ru": "либо ... либо",
+        "uk": "або ... або",
+        "ar": "إما ... أو"
       }
     },
     "34732": {
@@ -9217,14 +9217,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Im Gespräch sprechen wir über unsere Pläne.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to talk about",
+        "tr": "hakkında konuşmak",
+        "fa": "درباره چیزی صحبت کردن",
+        "ru": "говорить о",
+        "uk": "говорити про",
+        "ar": "يتحدث عن"
       }
     },
     "34733": {
@@ -9237,14 +9237,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Sie schickt mir eine kurze Sprachnachricht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "voice message",
+        "tr": "sesli mesaj",
+        "fa": "پیام صوتی",
+        "ru": "голосовое сообщение",
+        "uk": "голосове повідомлення",
+        "ar": "رسالة صوتية"
       }
     },
     "34734": {
@@ -9257,14 +9257,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Während des Studiums möchte er in einem Café jobben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to work a temporary job",
+        "tr": "geçici işte çalışmak",
+        "fa": "کار موقت کردن",
+        "ru": "подрабатывать",
+        "uk": "підробляти",
+        "ar": "يعمل عملاً مؤقتًا"
       }
     },
     "34735": {
@@ -9277,14 +9277,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Für das Thema erstellen wir zuerst eine Mindmap.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mind map",
+        "tr": "zihin haritası",
+        "fa": "نقشه ذهنی",
+        "ru": "майндмэп / карта мыслей",
+        "uk": "майндмеп / карта думок",
+        "ar": "خريطة ذهنية"
       }
     },
     "34736": {
@@ -9297,14 +9297,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Diesen Begriff müssen wir im Text erklären.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "term / concept",
+        "tr": "kavram / terim",
+        "fa": "مفهوم / اصطلاح",
+        "ru": "понятие / термин",
+        "uk": "поняття / термін",
+        "ar": "مصطلح / مفهوم"
       }
     },
     "34737": {
@@ -9317,14 +9317,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Fortbildung hilft mir bei meiner Arbeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "professional training / further training",
+        "tr": "hizmet içi eğitim / mesleki gelişim",
+        "fa": "آموزش تکمیلی حرفه‌ای",
+        "ru": "повышение квалификации",
+        "uk": "підвищення кваліфікації",
+        "ar": "تدريب إضافي / تطوير مهني"
       }
     },
     "34738": {
@@ -9337,14 +9337,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Proben werden im Labor untersucht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "laboratory",
+        "tr": "laboratuvar",
+        "fa": "آزمایشگاه",
+        "ru": "лаборатория",
+        "uk": "лабораторія",
+        "ar": "مختبر"
       }
     },
     "34739": {
@@ -9357,14 +9357,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Schichtarbeit ist für Familien oft schwierig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "shift work",
+        "tr": "vardiyalı çalışma",
+        "fa": "کار شیفتی",
+        "ru": "сменная работа",
+        "uk": "змінна робота",
+        "ar": "العمل بنظام الورديات"
       }
     },
     "34740": {
@@ -9377,14 +9377,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Nach der Ausbildung möchte sie sich weiterbilden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to continue training / to educate oneself further",
+        "tr": "kendini geliştirmek / eğitimine devam etmek",
+        "fa": "آموزش تکمیلی دیدن / خود را ارتقا دادن",
+        "ru": "повышать квалификацию",
+        "uk": "підвищувати кваліфікацію",
+        "ar": "يطور مهاراته / يواصل التدريب"
       }
     },
     "34741": {
@@ -9397,14 +9397,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Für diese Stelle braucht man Berufserfahrung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "professional experience / work experience",
+        "tr": "iş deneyimi / mesleki deneyim",
+        "fa": "تجربه کاری / سابقه حرفه‌ای",
+        "ru": "профессиональный опыт",
+        "uk": "професійний досвід",
+        "ar": "خبرة مهنية"
       }
     },
     "34742": {
@@ -9417,14 +9417,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Der Anwalt erklärt mir meine Rechte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lawyer",
+        "tr": "avukat",
+        "fa": "وکیل مرد",
+        "ru": "адвокат",
+        "uk": "адвокат",
+        "ar": "محام"
       }
     },
     "34743": {
@@ -9437,14 +9437,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die Professorin hält heute eine Vorlesung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female professor",
+        "tr": "kadın profesör",
+        "fa": "استاد زن / پروفسور زن",
+        "ru": "профессор-женщина",
+        "uk": "професорка",
+        "ar": "أستاذة جامعية"
       }
     },
     "34744": {
@@ -9457,14 +9457,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Tagesmutter betreut die Kinder am Nachmittag.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female childminder / day mother",
+        "tr": "çocuk bakıcısı kadın",
+        "fa": "مربی روزانه کودک زن",
+        "ru": "дневная няня",
+        "uk": "денна няня / вихователька",
+        "ar": "مربية أطفال نهارية"
       }
     },
     "34745": {
@@ -9477,14 +9477,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Tagesvater holt die Kinder vom Kindergarten ab.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male childminder / day father",
+        "tr": "çocuk bakıcısı erkek",
+        "fa": "مربی روزانه کودک مرد",
+        "ru": "дневной няня-мужчина",
+        "uk": "денний вихователь",
+        "ar": "مربي أطفال نهاري"
       }
     },
     "34746": {
@@ -9497,14 +9497,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Agentur für Arbeit berät Menschen ohne Job.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "employment agency",
+        "tr": "iş kurumu / çalışma ajansı",
+        "fa": "اداره کار / آژانس کاریابی",
+        "ru": "агентство по трудоустройству",
+        "uk": "агентство зайнятості",
+        "ar": "وكالة العمل / مكتب التوظيف"
       }
     },
     "34747": {
@@ -9517,14 +9517,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Homeoffice kann ich konzentriert arbeiten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "home office / working from home",
+        "tr": "evden çalışma",
+        "fa": "دورکاری / کار از خانه",
+        "ru": "домашний офис / удалённая работа",
+        "uk": "домашній офіс / віддалена робота",
+        "ar": "العمل من المنزل"
       }
     },
     "34748": {
@@ -9537,14 +9537,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "In der Mittagspause gehe ich kurz spazieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lunch break",
+        "tr": "öğle arası",
+        "fa": "استراحت ناهار",
+        "ru": "обеденный перерыв",
+        "uk": "обідня перерва",
+        "ar": "استراحة الغداء"
       }
     },
     "34749": {
@@ -9557,14 +9557,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Kita ist ganztags geöffnet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "all day / full-time",
+        "tr": "tüm gün / tam gün",
+        "fa": "تمام‌روز / تمام‌وقت",
+        "ru": "весь день / полный день",
+        "uk": "цілий день / повний день",
+        "ar": "طوال اليوم / بدوام كامل"
       }
     },
     "34750": {
@@ -9577,14 +9577,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Gute Teamarbeit ist in diesem Projekt wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "teamwork",
+        "tr": "takım çalışması",
+        "fa": "کار گروهی",
+        "ru": "командная работа",
+        "uk": "командна робота",
+        "ar": "عمل جماعي"
       }
     },
     "34751": {
@@ -9597,14 +9597,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Sie möchte in ihrer Karriere den nächsten Schritt machen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "career",
+        "tr": "kariyer",
+        "fa": "مسیر شغلی / کار حرفه‌ای",
+        "ru": "карьера",
+        "uk": "карʼєра",
+        "ar": "مسيرة مهنية"
       }
     },
     "34752": {
@@ -9617,14 +9617,14 @@
       "word_type": "Noun",
       "difficulty": 6,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Seil muss fest an der Wand hängen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rope",
+        "tr": "ip / halat",
+        "fa": "طناب",
+        "ru": "верёвка / канат",
+        "uk": "мотузка / канат",
+        "ar": "حبل"
       }
     },
     "34753": {
@@ -9637,14 +9637,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Auf der Dachterrasse kann man die Stadt sehen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "roof terrace",
+        "tr": "çatı terası",
+        "fa": "تراس پشت‌بام",
+        "ru": "терраса на крыше",
+        "uk": "тераса на даху",
+        "ar": "شرفة السطح"
       }
     },
     "34754": {
@@ -9657,14 +9657,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Er ist seit vielen Jahren als Koch tätig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to work as / to be employed as",
+        "tr": "olarak çalışmak",
+        "fa": "به عنوان چیزی کار کردن",
+        "ru": "работать в качестве",
+        "uk": "працювати як",
+        "ar": "يعمل بصفة"
       }
     },
     "34755": {
@@ -9677,14 +9677,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Das Stellenangebot passt gut zu meiner Erfahrung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "job offer / vacancy",
+        "tr": "iş ilanı / iş teklifi",
+        "fa": "آگهی شغلی / پیشنهاد شغلی",
+        "ru": "вакансия / предложение работы",
+        "uk": "вакансія / пропозиція роботи",
+        "ar": "عرض عمل / وظيفة شاغرة"
       }
     },
     "34756": {
@@ -9697,14 +9697,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Aha, jetzt verstehe ich das Problem.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "aha / I see",
+        "tr": "haa / anladım",
+        "fa": "آها / فهمیدم",
+        "ru": "ага / понятно",
+        "uk": "ага / зрозуміло",
+        "ar": "آها / فهمت"
       }
     },
     "34757": {
@@ -9717,14 +9717,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Apropos Arbeit: Hast du die Bewerbung schon geschickt?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "speaking of / by the way",
+        "tr": "söz açılmışken / bu arada",
+        "fa": "راستی / حالا که صحبتش شد",
+        "ru": "кстати / говоря о",
+        "uk": "до речі / говорячи про",
+        "ar": "بالمناسبة / بما أننا نتحدث عن"
       }
     },
     "34758": {
@@ -9737,14 +9737,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Mein Traumjob wäre eine Arbeit mit Menschen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "dream job",
+        "tr": "hayalindeki iş",
+        "fa": "شغل رؤیایی",
+        "ru": "работа мечты",
+        "uk": "робота мрії",
+        "ar": "وظيفة الأحلام"
       }
     },
     "34759": {
@@ -9757,14 +9757,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Nach dem Studium plant sie eine Weltreise.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "trip around the world",
+        "tr": "dünya turu / dünya seyahati",
+        "fa": "سفر دور دنیا",
+        "ru": "кругосветное путешествие",
+        "uk": "подорож навколо світу",
+        "ar": "رحلة حول العالم"
       }
     },
     "34760": {
@@ -9777,14 +9777,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 15,
-      "example_de": "",
+      "example_de": "Das Event findet in einer großen Halle statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "event",
+        "tr": "etkinlik",
+        "fa": "رویداد",
+        "ru": "мероприятие / событие",
+        "uk": "захід / подія",
+        "ar": "فعالية / حدث"
       }
     },
     "34761": {
@@ -9797,14 +9797,14 @@
       "word_type": "Adjective",
       "difficulty": 8,
       "category_id": 2,
-      "example_de": "",
+      "example_de": "Für die Stelle wird mehrjährige Erfahrung erwartet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lasting several years / multi-year",
+        "tr": "birkaç yıllık / çok yıllık",
+        "fa": "چند ساله / چندساله",
+        "ru": "многолетний",
+        "uk": "багаторічний",
+        "ar": "لعدة سنوات / متعدد السنوات"
       }
     },
     "34762": {
@@ -9817,14 +9817,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Gute Englischkenntnisse sind für den Job nötig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "English skills",
+        "tr": "İngilizce bilgisi",
+        "fa": "مهارت زبان انگلیسی",
+        "ru": "знание английского языка",
+        "uk": "знання англійської мови",
+        "ar": "مهارات اللغة الإنجليزية"
       }
     },
     "34763": {
@@ -9837,14 +9837,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Marketing plant das Team neue Kampagnen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "marketing",
+        "tr": "pazarlama",
+        "fa": "بازاریابی",
+        "ru": "маркетинг",
+        "uk": "маркетинг",
+        "ar": "تسويق"
       }
     },
     "34764": {
@@ -9857,14 +9857,14 @@
       "word_type": "Word",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Vertrag ist auf ein Jahr befristet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "temporary / fixed-term",
+        "tr": "süreli / geçici",
+        "fa": "مدت‌دار / موقت",
+        "ru": "срочный / ограниченный сроком",
+        "uk": "строковий / обмежений терміном",
+        "ar": "محدد المدة / مؤقت"
       }
     },
     "34765": {
@@ -9877,14 +9877,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Das Catering liefert Essen für die Veranstaltung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "catering",
+        "tr": "catering / yemek hizmeti",
+        "fa": "خدمات غذا / کیترینگ",
+        "ru": "кейтеринг / выездное питание",
+        "uk": "кейтеринг / виїзне харчування",
+        "ar": "خدمات الطعام / تموين"
       }
     },
     "34766": {
@@ -9897,14 +9897,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Für den Job braucht man Bereitschaft zu Wochenendarbeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "willingness / readiness",
+        "tr": "hazır olma / istekli olma",
+        "fa": "آمادگی / تمایل",
+        "ru": "готовность",
+        "uk": "готовність",
+        "ar": "استعداد / جاهزية"
       }
     },
     "34767": {
@@ -9917,14 +9917,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Anschreiben erkläre ich meine Motivation.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cover letter",
+        "tr": "ön yazı / başvuru mektubu",
+        "fa": "نامه درخواست / انگیزه‌نامه",
+        "ru": "сопроводительное письмо",
+        "uk": "супровідний лист",
+        "ar": "خطاب التقديم"
       }
     },
     "34768": {
@@ -9937,14 +9937,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Geschäftsführung entscheidet über die neue Strategie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "management / executive board",
+        "tr": "şirket yönetimi",
+        "fa": "مدیریت شرکت",
+        "ru": "руководство компании",
+        "uk": "керівництво компанії",
+        "ar": "إدارة الشركة"
       }
     },
     "34769": {
@@ -9957,14 +9957,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Kundenbetreuung beantwortet Fragen per Telefon.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "customer support / customer service",
+        "tr": "müşteri hizmetleri",
+        "fa": "پشتیبانی مشتریان / خدمات مشتری",
+        "ru": "обслуживание клиентов",
+        "uk": "обслуговування клієнтів",
+        "ar": "خدمة العملاء"
       }
     },
     "34770": {
@@ -9977,14 +9977,14 @@
       "word_type": "Noun",
       "difficulty": 8,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Computerkenntnisse sind in vielen Berufen wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "computer skills",
+        "tr": "bilgisayar bilgisi",
+        "fa": "مهارت‌های کامپیوتری",
+        "ru": "компьютерные навыки",
+        "uk": "компʼютерні навички",
+        "ar": "مهارات الحاسوب"
       }
     },
     "34771": {
@@ -9997,14 +9997,14 @@
       "word_type": "Noun",
       "difficulty": 7,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Die Zeugnisse sende ich im Anhang mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "attachment / appendix",
+        "tr": "ek / ilave",
+        "fa": "پیوست / ضمیمه",
+        "ru": "приложение / вложение",
+        "uk": "додаток / вкладення",
+        "ar": "مرفق / ملحق"
       }
     },
     "34772": {
