@@ -7017,14 +7017,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Frische Kräuter geben dem Essen mehr Geschmack.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "herbs",
+        "tr": "otlar / baharat otları",
+        "fa": "سبزی‌های معطر / گیاهان دارویی",
+        "ru": "травы / зелень",
+        "uk": "трави / зелень",
+        "ar": "أعشاب"
       }
     },
     "34623": {
@@ -7037,14 +7037,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Kühe fressen Gras auf der Wiese.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to eat (animals)",
+        "tr": "yemek / otlamak",
+        "fa": "خوردن حیوانات / چریدن",
+        "ru": "есть / пожирать",
+        "uk": "їсти / пожирати",
+        "ar": "يأكل للحيوانات"
       }
     },
     "34624": {
@@ -7057,14 +7057,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Der Traktor fährt langsam über das Feld.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "tractor",
+        "tr": "traktör",
+        "fa": "تراکتور",
+        "ru": "трактор",
+        "uk": "трактор",
+        "ar": "جرار"
       }
     },
     "34625": {
@@ -7077,14 +7077,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Viele Freiwillige helfen beim Stadtfest.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "volunteers",
+        "tr": "gönüllüler",
+        "fa": "داوطلبان",
+        "ru": "добровольцы / волонтёры",
+        "uk": "добровольці / волонтери",
+        "ar": "متطوعون"
       }
     },
     "34626": {
@@ -7097,14 +7097,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte reinigen Sie die Küche gründlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "thorough / thoroughly",
+        "tr": "titiz / iyice",
+        "fa": "دقیق / کامل",
+        "ru": "тщательный / тщательно",
+        "uk": "ретельний / ретельно",
+        "ar": "دقيق / بدقة"
       }
     },
     "34627": {
@@ -7117,14 +7117,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Ich möchte die alten Bücher verschenken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to give away as a gift",
+        "tr": "hediye etmek / ücretsiz vermek",
+        "fa": "هدیه دادن / رایگان بخشیدن",
+        "ru": "дарить / отдавать даром",
+        "uk": "дарувати / віддавати безкоштовно",
+        "ar": "يهدي / يعطي مجانًا"
       }
     },
     "34628": {
@@ -7137,14 +7137,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Firma exportiert Maschinen in viele Länder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to export",
+        "tr": "ihraç etmek",
+        "fa": "صادر کردن",
+        "ru": "экспортировать",
+        "uk": "експортувати",
+        "ar": "يصدر"
       }
     },
     "34629": {
@@ -7157,14 +7157,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Eine Reise mit dem Zug ist oft klimafreundlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "climate-friendly",
+        "tr": "iklim dostu",
+        "fa": "سازگار با اقلیم / دوستدار محیط‌زیست",
+        "ru": "благоприятный для климата",
+        "uk": "дружній до клімату",
+        "ar": "صديق للمناخ"
       }
     },
     "34630": {
@@ -7177,14 +7177,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Klimakrise betrifft Menschen auf der ganzen Welt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "climate crisis",
+        "tr": "iklim krizi",
+        "fa": "بحران اقلیمی",
+        "ru": "климатический кризис",
+        "uk": "кліматична криза",
+        "ar": "أزمة المناخ"
       }
     },
     "34631": {
@@ -7197,14 +7197,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Klimawandel verändert das Wetter in vielen Regionen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "climate change",
+        "tr": "iklim değişikliği",
+        "fa": "تغییرات اقلیمی",
+        "ru": "изменение климата",
+        "uk": "зміна клімату",
+        "ar": "تغير المناخ"
       }
     },
     "34632": {
@@ -7217,14 +7217,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Auf dem Dach unseres Hauses ist eine Solaranlage.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "solar system / solar installation",
+        "tr": "güneş enerjisi sistemi",
+        "fa": "سیستم خورشیدی / پنل خورشیدی",
+        "ru": "солнечная установка",
+        "uk": "сонячна установка",
+        "ar": "منظومة شمسية / ألواح شمسية"
       }
     },
     "34633": {
@@ -7237,14 +7237,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Expertin erklärt die Ergebnisse der Studie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female expert",
+        "tr": "kadın uzman",
+        "fa": "کارشناس زن / متخصص زن",
+        "ru": "эксперт-женщина",
+        "uk": "експертка",
+        "ar": "خبيرة"
       }
     },
     "34634": {
@@ -7257,14 +7257,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir sind uns einig, dass wir Energie sparen müssen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to agree / to be in agreement",
+        "tr": "hemfikir olmak",
+        "fa": "هم‌نظر بودن / توافق داشتن",
+        "ru": "быть согласным",
+        "uk": "бути згодним",
+        "ar": "يكون متفقًا"
       }
     },
     "34635": {
@@ -7277,14 +7277,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Nach dem starken Regen gab es eine Überschwemmung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "flood",
+        "tr": "sel / su baskını",
+        "fa": "سیل / آب‌گرفتگی",
+        "ru": "наводнение",
+        "uk": "повінь",
+        "ar": "فيضان"
       }
     },
     "34636": {
@@ -7297,14 +7297,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Zu viel Zucker kann schädlich für die Gesundheit sein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be harmful to",
+        "tr": "için zararlı olmak",
+        "fa": "برای چیزی مضر بودن",
+        "ru": "быть вредным для",
+        "uk": "бути шкідливим для",
+        "ar": "يكون ضارًا لـ"
       }
     },
     "34637": {
@@ -7317,14 +7317,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Wir transportieren die Möbel mit einem kleinen Wagen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to transport",
+        "tr": "taşımak / nakletmek",
+        "fa": "حمل کردن / جابه‌جا کردن",
+        "ru": "транспортировать / перевозить",
+        "uk": "транспортувати / перевозити",
+        "ar": "ينقل"
       }
     },
     "34638": {
@@ -7337,14 +7337,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Deine Tipps waren sehr hilfreich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "helpful",
+        "tr": "yardımcı / faydalı",
+        "fa": "کمک‌کننده / مفید",
+        "ru": "полезный",
+        "uk": "корисний",
+        "ar": "مفيد"
       }
     },
     "34639": {
@@ -7357,14 +7357,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Die Herstellung von Papier braucht viel Wasser.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "production / manufacturing",
+        "tr": "üretim",
+        "fa": "تولید / ساخت",
+        "ru": "производство",
+        "uk": "виробництво",
+        "ar": "إنتاج / تصنيع"
       }
     },
     "34640": {
@@ -7377,14 +7377,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Wasser ist eine wichtige Ressource.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "resource",
+        "tr": "kaynak",
+        "fa": "منبع",
+        "ru": "ресурс",
+        "uk": "ресурс",
+        "ar": "مورد"
       }
     },
     "34641": {
@@ -7397,14 +7397,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Aus Öl werden viele Produkte hergestellt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "oil",
+        "tr": "yağ / petrol",
+        "fa": "روغن / نفت",
+        "ru": "масло / нефть",
+        "uk": "олія / нафта",
+        "ar": "زيت / نفط"
       }
     },
     "34642": {
@@ -7417,14 +7417,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Sonnenenergie kann Strom und Wärme liefern.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "solar energy",
+        "tr": "güneş enerjisi",
+        "fa": "انرژی خورشیدی",
+        "ru": "солнечная энергия",
+        "uk": "сонячна енергія",
+        "ar": "طاقة شمسية"
       }
     },
     "34643": {
@@ -7437,14 +7437,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Lkw fährt noch mit Diesel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "diesel",
+        "tr": "dizel / motorin",
+        "fa": "دیزل / گازوئیل",
+        "ru": "дизельное топливо",
+        "uk": "дизельне пальне",
+        "ar": "ديزل"
       }
     },
     "34644": {
@@ -7457,14 +7457,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Wir müssen vor der Autobahn noch tanken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to refuel",
+        "tr": "yakıt almak",
+        "fa": "بنزین زدن / سوخت‌گیری کردن",
+        "ru": "заправляться",
+        "uk": "заправлятися",
+        "ar": "يتزود بالوقود"
       }
     },
     "34645": {
@@ -7477,14 +7477,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Alte Autos sind oft besonders umweltschädlich.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "harmful to the environment",
+        "tr": "çevreye zararlı",
+        "fa": "مضر برای محیط‌زیست",
+        "ru": "вредный для окружающей среды",
+        "uk": "шкідливий для довкілля",
+        "ar": "مضر بالبيئة"
       }
     },
     "34646": {
@@ -7497,14 +7497,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Abgase der Autos verschmutzen die Luft.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "exhaust gas",
+        "tr": "egzoz gazı",
+        "fa": "گاز خروجی / دود اگزوز",
+        "ru": "выхлопной газ",
+        "uk": "вихлопний газ",
+        "ar": "غاز عادم"
       }
     },
     "34647": {
@@ -7517,14 +7517,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Vor der Schule gilt eine Geschwindigkeitsbeschränkung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "speed limit",
+        "tr": "hız sınırlaması",
+        "fa": "محدودیت سرعت",
+        "ru": "ограничение скорости",
+        "uk": "обмеження швидкості",
+        "ar": "تحديد السرعة"
       }
     },
     "34648": {
@@ -7537,14 +7537,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Beim Autofahren entsteht Kohlendioxid.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "carbon dioxide",
+        "tr": "karbondioksit",
+        "fa": "دی‌اکسید کربن",
+        "ru": "углекислый газ",
+        "uk": "вуглекислий газ",
+        "ar": "ثاني أكسيد الكربون"
       }
     },
     "34649": {
@@ -7557,14 +7557,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Mit LED-Lampen kann man Strom einsparen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to save / to reduce",
+        "tr": "tasarruf etmek / azaltmak",
+        "fa": "صرفه‌جویی کردن / کاهش دادن",
+        "ru": "экономить / сокращать",
+        "uk": "заощаджувати / скорочувати",
+        "ar": "يوفر / يخفض"
       }
     },
     "34650": {
@@ -7577,14 +7577,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Gruppe bestimmt gemeinsam den Treffpunkt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to decide / to determine",
+        "tr": "belirlemek / karar vermek",
+        "fa": "تعیین کردن / مشخص کردن",
+        "ru": "определять",
+        "uk": "визначати",
+        "ar": "يحدد"
       }
     },
     "34651": {
@@ -7597,14 +7597,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Lange Diskussionen bringen nichts, wenn niemand handelt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be useless / to achieve nothing",
+        "tr": "bir işe yaramamak",
+        "fa": "فایده‌ای نداشتن",
+        "ru": "ничего не давать / быть бесполезным",
+        "uk": "нічого не давати / бути марним",
+        "ar": "لا يفيد / لا يجدي"
       }
     },
     "34652": {
@@ -7617,14 +7617,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich bezweifle, dass der Plan so funktioniert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to doubt",
+        "tr": "şüphe etmek",
+        "fa": "شک داشتن / تردید کردن",
+        "ru": "сомневаться",
+        "uk": "сумніватися",
+        "ar": "يشك في"
       }
     },
     "34653": {
@@ -7637,14 +7637,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie hat sich entschlossen, weniger Fleisch zu essen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to decide / to resolve",
+        "tr": "karar vermek",
+        "fa": "تصمیم گرفتن",
+        "ru": "решиться / принять решение",
+        "uk": "зважитися / ухвалити рішення",
+        "ar": "يقرر"
       }
     },
     "34654": {
@@ -7657,14 +7657,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Rindfleisch esse ich nur selten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "beef",
+        "tr": "sığır eti",
+        "fa": "گوشت گاو",
+        "ru": "говядина",
+        "uk": "яловичина",
+        "ar": "لحم بقر"
       }
     },
     "34655": {
@@ -7677,14 +7677,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Das Brot ist noch warm aus dem Ofen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "oven",
+        "tr": "fırın",
+        "fa": "فر",
+        "ru": "духовка / печь",
+        "uk": "духовка / піч",
+        "ar": "فرن"
       }
     },
     "34656": {
@@ -7697,14 +7697,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Im Sommer findet hier ein großes Festival statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "festival",
+        "tr": "festival",
+        "fa": "جشنواره / فستیوال",
+        "ru": "фестиваль",
+        "uk": "фестиваль",
+        "ar": "مهرجان"
       }
     },
     "34657": {
@@ -7717,14 +7717,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Kinder sehen im Zirkus Akrobatik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "acrobatics",
+        "tr": "akrobasi",
+        "fa": "آکروباتیک / حرکات نمایشی",
+        "ru": "акробатика",
+        "uk": "акробатика",
+        "ar": "ألعاب بهلوانية"
       }
     },
     "34658": {
@@ -7737,14 +7737,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Clown bringt das Publikum zum Lachen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "clown",
+        "tr": "palyaço",
+        "fa": "دلقک",
+        "ru": "клоун",
+        "uk": "клоун",
+        "ar": "مهرج"
       }
     },
     "34659": {
@@ -7757,14 +7757,14 @@
       "word_type": "Adjective",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Das Restaurant bietet orientalische Gerichte an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "oriental / Middle Eastern",
+        "tr": "doğuya özgü / oryantal",
+        "fa": "شرقی / خاورمیانه‌ای",
+        "ru": "восточный",
+        "uk": "східний",
+        "ar": "شرقي"
       }
     },
     "34660": {
@@ -7777,14 +7777,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Zauberer zeigt einen Trick mit Karten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "magician / wizard",
+        "tr": "sihirbaz / büyücü",
+        "fa": "شعبده‌باز مرد / جادوگر",
+        "ru": "фокусник / волшебник",
+        "uk": "фокусник / чарівник",
+        "ar": "ساحر / لاعب خفة"
       }
     },
     "34661": {
@@ -7797,14 +7797,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Zauberin lässt eine Blume verschwinden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female magician / sorceress",
+        "tr": "kadın sihirbaz / büyücü kadın",
+        "fa": "شعبده‌باز زن / جادوگر زن",
+        "ru": "фокусница / волшебница",
+        "uk": "фокусниця / чарівниця",
+        "ar": "ساحرة / لاعبة خفة"
       }
     },
     "34662": {
@@ -7817,14 +7817,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Hase sitzt ruhig im Gras.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "hare / rabbit",
+        "tr": "tavşan",
+        "fa": "خرگوش",
+        "ru": "заяц / кролик",
+        "uk": "заєць / кролик",
+        "ar": "أرنب"
       }
     },
     "34663": {
@@ -7837,14 +7837,14 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wo gehen wir heute Abend hin?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "there / to there",
+        "tr": "oraya",
+        "fa": "به آنجا",
+        "ru": "туда",
+        "uk": "туди",
+        "ar": "إلى هناك"
       }
     },
     "34664": {
@@ -7857,14 +7857,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "An der Wand neben dem Bahnhof ist ein Graffiti.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "graffiti",
+        "tr": "grafiti",
+        "fa": "گرافیتی / دیوارنگاری",
+        "ru": "граффити",
+        "uk": "графіті",
+        "ar": "غرافيتي / رسم جداري"
       }
     },
     "34665": {
@@ -7877,14 +7877,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Stadtbibliothek ist am Samstag geöffnet.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "city library",
+        "tr": "şehir kütüphanesi",
+        "fa": "کتابخانه شهر",
+        "ru": "городская библиотека",
+        "uk": "міська бібліотека",
+        "ar": "مكتبة المدينة"
       }
     },
     "34666": {
@@ -7897,14 +7897,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ich schreibe die Adresse auf einen Notizzettel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "note / memo slip",
+        "tr": "not kağıdı",
+        "fa": "برگه یادداشت",
+        "ru": "листок для заметок",
+        "uk": "аркуш для нотаток",
+        "ar": "ورقة ملاحظات"
       }
     },
     "34667": {
@@ -7917,14 +7917,14 @@
       "word_type": "Word",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir haben uns spontan für einen Ausflug entschieden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "spontaneous / spontaneously",
+        "tr": "spontane / aniden",
+        "fa": "خودجوش / ناگهانی",
+        "ru": "спонтанный / спонтанно",
+        "uk": "спонтанний / спонтанно",
+        "ar": "عفوي / بشكل عفوي"
       }
     },
     "34668": {
@@ -7937,14 +7937,14 @@
       "word_type": "Verb",
       "difficulty": 2,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ich rufe dich später zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to call back",
+        "tr": "geri aramak",
+        "fa": "دوباره تماس گرفتن / تماس را برگرداندن",
+        "ru": "перезвонить",
+        "uk": "передзвонити",
+        "ar": "يعيد الاتصال"
       }
     },
     "34669": {
@@ -7957,14 +7957,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Der Artist springt hoch über das Seil.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "male performer / circus artist",
+        "tr": "erkek artist / gösteri sanatçısı",
+        "fa": "هنرمند نمایشی مرد / آرتیست مرد",
+        "ru": "артист / цирковой артист",
+        "uk": "артист / цирковий артист",
+        "ar": "فنان استعراضي / بهلوان"
       }
     },
     "34670": {
@@ -7977,14 +7977,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 16,
-      "example_de": "",
+      "example_de": "Die Artistin trainiert jeden Tag für die Show.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female performer / circus artist",
+        "tr": "kadın artist / gösteri sanatçısı",
+        "fa": "هنرمند نمایشی زن / آرتیست زن",
+        "ru": "артистка / цирковая артистка",
+        "uk": "артистка / циркова артистка",
+        "ar": "فنانة استعراضية / بهلوانة"
       }
     },
     "34671": {
@@ -7997,14 +7997,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Im kleinen Café herrscht eine freundliche Atmosphäre.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "atmosphere",
+        "tr": "atmosfer / ortam",
+        "fa": "جو / فضا",
+        "ru": "атмосфера",
+        "uk": "атмосфера",
+        "ar": "جو / أجواء"
       }
     },
     "34672": {
