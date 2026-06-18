@@ -20017,14 +20017,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte schreiben Sie Ihre Telefonnummer dazu.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to add in writing",
+        "tr": "ekleyerek yazmak",
+        "fa": "اضافه نوشتن",
+        "ru": "дописать / добавить письменно",
+        "uk": "дописати / додати письмово",
+        "ar": "يضيف كتابةً"
       }
     },
     "35273": {
@@ -20037,14 +20037,14 @@
       "word_type": "Word",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Das falsche Wort müssen Sie durchstreichen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to cross out",
+        "tr": "üstünü çizmek",
+        "fa": "خط زدن",
+        "ru": "зачеркнуть",
+        "uk": "закреслити",
+        "ar": "يشطب"
       }
     },
     "35274": {
@@ -20057,14 +20057,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Geben Sie bitte den Code in das Formular ein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to enter / to input",
+        "tr": "girmek / veri girmek",
+        "fa": "وارد کردن",
+        "ru": "вводить",
+        "uk": "вводити",
+        "ar": "يدخل"
       }
     },
     "35275": {
@@ -20077,14 +20077,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir müssen die Frist unbedingt einhalten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to keep / to comply with",
+        "tr": "uymak / yerine getirmek",
+        "fa": "رعایت کردن / پایبند بودن",
+        "ru": "соблюдать",
+        "uk": "дотримуватися",
+        "ar": "يلتزم بـ / يراعي"
       }
     },
     "35276": {
@@ -20097,14 +20097,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Gruppe entscheidet morgen über den Plan.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to decide",
+        "tr": "karar vermek",
+        "fa": "تصمیم گرفتن",
+        "ru": "решать",
+        "uk": "вирішувати",
+        "ar": "يقرر"
       }
     },
     "35277": {
@@ -20117,14 +20117,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Am Freitag habe ich frei.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to have time off",
+        "tr": "izinli olmak / boş olmak",
+        "fa": "مرخصی داشتن / وقت آزاد داشتن",
+        "ru": "иметь выходной",
+        "uk": "мати вихідний",
+        "ar": "يكون لديه إجازة"
       }
     },
     "35278": {
@@ -20137,14 +20137,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Kommen Sie bitte herein!",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to come in",
+        "tr": "içeri girmek",
+        "fa": "داخل آمدن",
+        "ru": "входить",
+        "uk": "заходити",
+        "ar": "يدخل"
       }
     },
     "35279": {
@@ -20157,14 +20157,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Du kannst deine Tasche hierlassen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to leave here",
+        "tr": "burada bırakmak",
+        "fa": "اینجا گذاشتن",
+        "ru": "оставить здесь",
+        "uk": "залишити тут",
+        "ar": "يترك هنا"
       }
     },
     "35280": {
@@ -20177,14 +20177,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Arzt schreibt mich für drei Tage krank.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to give sick leave / to write sick",
+        "tr": "rapor vermek / hasta yazmak",
+        "fa": "گواهی بیماری دادن / مرخصی استعلاجی نوشتن",
+        "ru": "выписывать больничный",
+        "uk": "виписувати лікарняний",
+        "ar": "يكتب إجازة مرضية"
       }
     },
     "35281": {
@@ -20197,14 +20197,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Maschine läuft wieder ohne Probleme.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to run / to walk",
+        "tr": "çalışmak / yürümek / koşmak",
+        "fa": "کار کردن / راه رفتن / دویدن",
+        "ru": "идти / работать / бежать",
+        "uk": "йти / працювати / бігти",
+        "ar": "يعمل / يمشي / يركض"
       }
     },
     "35282": {
@@ -20217,14 +20217,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Es tut mir leid, dass ich zu spät bin.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be sorry",
+        "tr": "üzgün olmak / üzgünüm",
+        "fa": "متأسف بودن / معذرت خواستن",
+        "ru": "быть жаль / сожалеть",
+        "uk": "бути шкода / жалкувати",
+        "ar": "يأسف"
       }
     },
     "35283": {
@@ -20237,14 +20237,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Film geht um acht Uhr los.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to start / to set off",
+        "tr": "başlamak / yola çıkmak",
+        "fa": "شروع شدن / راه افتادن",
+        "ru": "начинаться / отправляться",
+        "uk": "починатися / вирушати",
+        "ar": "يبدأ / ينطلق"
       }
     },
     "35284": {
@@ -20257,14 +20257,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Was ist hier los?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be going on",
+        "tr": "olmak / neler oluyor",
+        "fa": "خبر بودن / اتفاق افتادن",
+        "ru": "происходить",
+        "uk": "відбуватися",
+        "ar": "يحدث / ما الأمر"
       }
     },
     "35285": {
@@ -20277,14 +20277,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Kannst du bitte Brot zum Abendessen mitbringen?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to bring along",
+        "tr": "yanında getirmek",
+        "fa": "همراه آوردن",
+        "ru": "принести с собой",
+        "uk": "принести з собою",
+        "ar": "يحضر معه"
       }
     },
     "35286": {
@@ -20297,14 +20297,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Möchtest du morgen ins Kino mitkommen?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to come along",
+        "tr": "birlikte gelmek",
+        "fa": "همراه آمدن",
+        "ru": "пойти вместе",
+        "uk": "піти разом",
+        "ar": "يأتي مع"
       }
     },
     "35287": {
@@ -20317,14 +20317,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich nehme eine Jacke für den Abend mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to take along",
+        "tr": "yanına almak",
+        "fa": "همراه بردن",
+        "ru": "взять с собой",
+        "uk": "взяти з собою",
+        "ar": "يأخذ معه"
       }
     },
     "35288": {
@@ -20337,14 +20337,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Beim Konzert singen alle laut mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to sing along",
+        "tr": "birlikte şarkı söylemek",
+        "fa": "همراه خواندن",
+        "ru": "подпевать",
+        "uk": "підспівувати",
+        "ar": "يغني مع"
       }
     },
     "35289": {
@@ -20357,14 +20357,14 @@
       "word_type": "Phrase",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach dem Kurs stehen dir viele Möglichkeiten offen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be open / to be available",
+        "tr": "açık olmak / mümkün olmak",
+        "fa": "باز بودن / در دسترس بودن",
+        "ru": "быть открытым / быть доступным",
+        "uk": "бути відкритим / бути доступним",
+        "ar": "يكون مفتوحًا / متاحًا"
       }
     },
     "35290": {
@@ -20377,14 +20377,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach dem Essen gehen wir eine Stunde spazieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to go for a walk",
+        "tr": "yürüyüşe çıkmak",
+        "fa": "پیاده‌روی رفتن",
+        "ru": "идти гулять",
+        "uk": "іти на прогулянку",
+        "ar": "يذهب للتنزه"
       }
     },
     "35291": {
@@ -20397,14 +20397,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich habe den Fehler im Text übersehen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to overlook",
+        "tr": "gözden kaçırmak",
+        "fa": "نادیده گرفتن / از قلم انداختن",
+        "ru": "просмотреть / не заметить",
+        "uk": "не помітити / прогледіти",
+        "ar": "يغفل عن / لا يلاحظ"
       }
     },
     "35292": {
@@ -20417,14 +20417,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach der Feier ist viel Essen übrig geblieben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be left over",
+        "tr": "artmak / geriye kalmak",
+        "fa": "باقی ماندن",
+        "ru": "оставаться / быть лишним",
+        "uk": "залишатися",
+        "ar": "يبقى / يتبقى"
       }
     },
     "35293": {
@@ -20437,14 +20437,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "In Köln müssen wir in einen anderen Zug umsteigen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to transfer / to change vehicles",
+        "tr": "aktarma yapmak",
+        "fa": "وسیله عوض کردن / تغییر مسیر دادن",
+        "ru": "пересаживаться",
+        "uk": "пересідати",
+        "ar": "ينتقل إلى وسيلة أخرى"
       }
     },
     "35294": {
@@ -20457,14 +20457,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Sonne geht hinter den Bergen unter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to set / to go under",
+        "tr": "batmak / yok olmak",
+        "fa": "غروب کردن / فرو رفتن",
+        "ru": "заходить / тонуть",
+        "uk": "заходити / тонути",
+        "ar": "يغرب / يغرق"
       }
     },
     "35295": {
@@ -20477,14 +20477,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Verein vergibt jedes Jahr einen Preis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to award / to forgive / to assign",
+        "tr": "vermek / affetmek / tahsis etmek",
+        "fa": "اعطا کردن / بخشیدن / واگذار کردن",
+        "ru": "присуждать / прощать / распределять",
+        "uk": "присуджувати / прощати / розподіляти",
+        "ar": "يمنح / يسامح / يخصص"
       }
     },
     "35296": {
@@ -20497,14 +20497,14 @@
       "word_type": "Verb",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich konnte den Termin leider nicht wahrnehmen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to perceive / to attend",
+        "tr": "algılamak / katılmak",
+        "fa": "درک کردن / حضور یافتن",
+        "ru": "воспринимать / воспользоваться / прийти на",
+        "uk": "сприймати / скористатися / прийти на",
+        "ar": "يدرك / يحضر"
       }
     },
     "35297": {
@@ -20517,14 +20517,14 @@
       "word_type": "Word",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Mein Knie tut seit gestern weh.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to hurt",
+        "tr": "ağrımak / acımak",
+        "fa": "درد کردن",
+        "ru": "болеть / причинять боль",
+        "uk": "боліти",
+        "ar": "يؤلم"
       }
     },
     "35298": {
@@ -20537,14 +20537,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte geben Sie die Information an Ihre Kollegen weiter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to pass on / to forward",
+        "tr": "iletmek / aktarmak",
+        "fa": "منتقل کردن / ارسال کردن",
+        "ru": "передавать дальше",
+        "uk": "передавати далі",
+        "ar": "يمرر / ينقل"
       }
     },
     "35299": {
@@ -20557,14 +20557,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach der Pause geht der Unterricht weiter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to continue / to go on",
+        "tr": "devam etmek",
+        "fa": "ادامه پیدا کردن",
+        "ru": "продолжаться",
+        "uk": "продовжуватися",
+        "ar": "يستمر"
       }
     },
     "35300": {
@@ -20577,14 +20577,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wann kommst du aus dem Urlaub wieder?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to come back",
+        "tr": "geri gelmek",
+        "fa": "برگشتن / دوباره آمدن",
+        "ru": "возвращаться",
+        "uk": "повертатися",
+        "ar": "يعود"
       }
     },
     "35301": {
@@ -20597,14 +20597,14 @@
       "word_type": "Verb",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich bekomme die Kaution nächste Woche zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to get back",
+        "tr": "geri almak",
+        "fa": "پس گرفتن / دوباره دریافت کردن",
+        "ru": "получать обратно",
+        "uk": "отримувати назад",
+        "ar": "يسترجع / يحصل مجددًا"
       }
     },
     "35302": {
@@ -20617,14 +20617,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir fahren am Sonntag nach Hause zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to drive/ride back",
+        "tr": "geri dönmek / araçla geri gitmek",
+        "fa": "با وسیله برگشتن",
+        "ru": "ехать обратно",
+        "uk": "їхати назад",
+        "ar": "يرجع بالسيارة / يعود بالمواصلات"
       }
     },
     "35303": {
@@ -20637,14 +20637,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Nach dem Essen gehen wir ins Hotel zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to go back",
+        "tr": "geri gitmek / dönmek",
+        "fa": "برگشتن / عقب رفتن",
+        "ru": "идти обратно / возвращаться",
+        "uk": "йти назад / повертатися",
+        "ar": "يرجع / يعود"
       }
     },
     "35304": {
@@ -20657,14 +20657,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Gesundheit hängt oft mit Bewegung zusammen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be connected / to be related",
+        "tr": "bağlantılı olmak",
+        "fa": "مرتبط بودن / بستگی داشتن",
+        "ru": "быть связанным",
+        "uk": "бути повʼязаним",
+        "ar": "يرتبط بـ"
       }
     },
     "35305": {
@@ -20677,14 +20677,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Aussage trifft auf viele Menschen zu.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to apply / to be true",
+        "tr": "geçerli olmak / doğru olmak",
+        "fa": "صدق کردن / درست بودن درباره",
+        "ru": "относиться к / соответствовать",
+        "uk": "стосуватися / відповідати",
+        "ar": "ينطبق / يكون صحيحًا"
       }
     }
   }
