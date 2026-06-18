@@ -112,7 +112,54 @@ All multiple-choice quiz modes share these rules:
 - **Eligible words:** `entry_type === 'main'` with non-empty `translation_en`
 - **Example sentence:** Shown under the word from `example_de` when present
 - **Results thresholds:** ≥90% Excellent, ≥70% Well done, ≥50% Good effort, else Keep practicing
-- **Study time:** Recorded from quiz start to results screen
+- **Study time:** Active seconds spent answering questions (see [Quiz study time](#quiz-study-time) below)
+
+---
+
+## Quiz Study Time
+
+All multiple-choice quiz modes share one **active-time tracker** in `app.js`. Time is recorded only when a quiz **fully completes** (all 10 questions answered and the results screen is shown). It appears in the Learning Profile **Activity → Total study time** and in per-topic theme stats.
+
+### What counts
+
+| Included | Excluded |
+|----------|----------|
+| Time on question cards while the tab is visible and the user is active | Loading / prep overlay before the first card |
+| Reading feedback between questions (within the inactivity window) | Tab or browser in background (`document.hidden`) |
+| Adaptive V2, Theme Quiz, legacy adaptive, and profile review quizzes | Practice, Quick Match, Word Explorer, Dictionary |
+| | Results screen (timer stops before it is shown) |
+| | **Any quiz abandoned before completion** |
+
+### Pausing rules
+
+The clock **pauses** when:
+
+- The user switches to another tab or minimizes the browser (`visibilitychange`)
+- The user is inactive for **2 minutes** with no answer or “Next” tap
+
+The clock **resumes** when the tab becomes visible again or the user answers / advances.
+
+### When time is saved
+
+Time is committed **once** in `showResults()` together with correct/incorrect counts. It is added to:
+
+- `quizStats.adaptive` — Adaptive V2 and legacy per-level adaptive quizzes
+- `quizStats.theme[category_slug]` — Theme Quiz (per category)
+
+Signed-in users persist via Supabase; guests via `localStorage`.
+
+### Abandonment and edge cases
+
+| Scenario | Time recorded? | Progress recorded? |
+|----------|----------------|-------------------|
+| User taps ← Back mid-quiz | **No** — timer discarded | **No** — snapshot restored (signed-in) |
+| User closes tab or refreshes mid-quiz | **No** | **No** — snapshot restored on reload (signed-in) |
+| User navigates away via app back / `goHome()` | **No** | **No** |
+| Quiz fails to start (load error, no cards) | **No** — timer never started | **No** |
+| User completes all 10 questions | **Yes** — active seconds only | **Yes** |
+| User taps “Play again” after finishing | Previous quiz already saved; new quiz gets a fresh timer | New quiz saved on its own completion |
+
+Timer start is tied to the **first question card** (`renderCard` at index 0), so all entry paths (Adaptive V2, Theme Quiz, legacy adaptive, profile review) behave the same regardless of how the quiz was launched.
 
 ---
 
@@ -307,7 +354,7 @@ Dashboard for Adaptive V2 (`ALL`-level) progress. Always renders ALL-level data 
    - **Words Mastered** — seen ≥ 3, failScore 0, accuracy ≥ 80%
    - **Accuracy %** — total correct / total seen
 
-3. **Activity** — Quizzes completed, study time, correct/incorrect (from `quizStats.adaptive` + all theme stats, with word-history fallback for guests).
+3. **Activity** — Quizzes completed, study time (active quiz seconds only — see [Quiz study time](#quiz-study-time)), correct/incorrect (from `quizStats.adaptive` + all theme stats, with word-history fallback for guests).
 
 4. **Review** (signed-in only; guests see locked buttons with sign-in prompt):
    - **Review Weak Words** — sorted by failScore desc
@@ -379,7 +426,7 @@ Adaptive V2 and legacy adaptive algorithms run fully for guests. Progress is sto
 
 Google OAuth via Supabase. All four levels (`A1`, `A2`, `B1`, `ALL`) fetched in parallel on sign-in and cached.
 
-**Mid-quiz protection:** A progress snapshot is taken at quiz start. If the user navigates away before results, the snapshot is restored — the database is only updated when a quiz completes.
+**Mid-quiz protection:** A progress snapshot is taken at quiz start. If the user navigates away before results, the snapshot is restored — the database is only updated when a quiz completes. **Quiz study time follows the same rule:** the active-time tracker is discarded on abandonment and only committed in `showResults()`.
 
 **Sign-in merge order for ALL:** Online ALL row → local guest V2 → legacy A1/A2/B1 bootstrap.
 

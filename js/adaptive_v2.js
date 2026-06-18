@@ -1312,8 +1312,6 @@
     idx = 0; ok = 0; no = 0;
     _quizReturnScreen = 'screen-levels';
 
-    window._quizStartedAtMs = Date.now();
-
     window.umami?.track('adaptive_v2_started', {
       stage: _stageAtStart, skill: p.skillLevel, band: p.cefrBand, phase: p.learningPhase
     });
@@ -1355,8 +1353,6 @@
     queue = cards;
     idx = 0; ok = 0; no = 0;
     if (returnScreen) _quizReturnScreen = returnScreen;
-
-    window._quizStartedAtMs = Date.now();
 
     show('screen-quiz');
     renderCard();

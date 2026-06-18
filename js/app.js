@@ -1258,8 +1258,107 @@ var _themeAnswers = [];
 var learningProfileSelectedLevel = 'ALL';
 var learningProfileDetailMode = null;
 var learningProfileLastDetailHtml = '';
-var _quizStartedAtMs = 0;
 var _rwFirstLoad = false;
+
+// ── Quiz active-time tracker ─────────────────────────────────────
+// Accumulates engaged seconds only while a quiz is in progress.
+// Committed in showResults(); discarded on abandonment (back, tab close).
+var _quizTimerActiveMs = 0;
+var _quizTimerSegmentStart = null;
+var _quizTimerRunning = false;
+var _quizTimerPaused = false;
+var _quizTimerInactivityMs = 120000;
+var _quizTimerInactivityHandle = null;
+var _quizTimerLifecycleBound = false;
+
+function _quizTimerNow() { return Date.now(); }
+
+function _quizTimerFlushSegment() {
+  if (_quizTimerRunning && !_quizTimerPaused && _quizTimerSegmentStart != null) {
+    _quizTimerActiveMs += _quizTimerNow() - _quizTimerSegmentStart;
+    _quizTimerSegmentStart = null;
+  }
+}
+
+function _quizTimerBindLifecycle() {
+  if (_quizTimerLifecycleBound) return;
+  _quizTimerLifecycleBound = true;
+  document.addEventListener('visibilitychange', function() {
+    if (!_quizTimerRunning) return;
+    if (document.hidden) _quizTimerPause();
+    else _quizTimerResume();
+  });
+  window.addEventListener('pagehide', function() {
+    if (_quizTimerRunning) _quizTimerAbandon();
+  });
+}
+
+function _quizTimerResetInactivity() {
+  clearTimeout(_quizTimerInactivityHandle);
+  if (!_quizTimerRunning || _quizTimerPaused) return;
+  _quizTimerInactivityHandle = setTimeout(function() {
+    if (_quizTimerRunning && !_quizTimerPaused) _quizTimerPause();
+  }, _quizTimerInactivityMs);
+}
+
+function _quizTimerStart() {
+  _quizTimerBindLifecycle();
+  clearTimeout(_quizTimerInactivityHandle);
+  _quizTimerActiveMs = 0;
+  _quizTimerRunning = true;
+  _quizTimerPaused = false;
+  _quizTimerSegmentStart = _quizTimerNow();
+  _quizTimerResetInactivity();
+}
+
+function _quizTimerPause() {
+  if (!_quizTimerRunning || _quizTimerPaused) return;
+  _quizTimerFlushSegment();
+  _quizTimerPaused = true;
+  clearTimeout(_quizTimerInactivityHandle);
+}
+
+function _quizTimerResume() {
+  if (!_quizTimerRunning || !_quizTimerPaused || document.hidden) return;
+  _quizTimerPaused = false;
+  _quizTimerSegmentStart = _quizTimerNow();
+  _quizTimerResetInactivity();
+}
+
+function _quizTimerTouch() {
+  if (!_quizTimerRunning) return;
+  if (_quizTimerPaused && !document.hidden) {
+    _quizTimerResume();
+    return;
+  }
+  _quizTimerResetInactivity();
+}
+
+function _quizTimerStopAndGetSeconds() {
+  if (!_quizTimerRunning) return 0;
+  _quizTimerFlushSegment();
+  _quizTimerRunning = false;
+  _quizTimerPaused = false;
+  clearTimeout(_quizTimerInactivityHandle);
+  _quizTimerSegmentStart = null;
+  return Math.max(0, Math.round(_quizTimerActiveMs / 1000));
+}
+
+function _quizTimerAbandon() {
+  if (!_quizTimerRunning) return;
+  _quizTimerRunning = false;
+  _quizTimerPaused = false;
+  _quizTimerActiveMs = 0;
+  _quizTimerSegmentStart = null;
+  clearTimeout(_quizTimerInactivityHandle);
+}
+
+function _quizTimerIsRunning() { return _quizTimerRunning; }
+window._quizTimerStart = _quizTimerStart;
+window._quizTimerStopAndGetSeconds = _quizTimerStopAndGetSeconds;
+window._quizTimerAbandon = _quizTimerAbandon;
+window._quizTimerTouch = _quizTimerTouch;
+window._quizTimerIsRunning = _quizTimerIsRunning;
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
 var _deferredInstallPrompt = null;
 var _installPromptReady = false;
@@ -2310,6 +2409,10 @@ async function startLevel(lv) {
 
 function renderCard() {
   answered = false;
+  if (idx === 0 && queue.length &&
+      !document.getElementById('screen-quiz').classList.contains('hidden')) {
+    _quizTimerStart();
+  }
   var card  = queue[idx];
   var total = queue.length;
   var row   = card._row;
@@ -2412,9 +2515,11 @@ function pick(btn, selectedId, correctId) {
   document.getElementById('sc-ok').textContent = formatNum(ok);
   document.getElementById('sc-no').textContent = formatNum(no);
   document.getElementById('next-btn').classList.add('show');
+  _quizTimerTouch();
 }
 
 function nextCard(){
+  _quizTimerTouch();
   idx++;
   if(idx>=queue.length)showResults();
   else renderCard();
@@ -2427,7 +2532,7 @@ function showResults(){
   if(pct>=90){emoji='🏆';title=rt.great;}
   else if(pct>=70){emoji='🎉';title=rt.good;}
   else if(pct>=50){emoji='👍';title=rt.ok;}
-  var elapsedSeconds = _quizStartedAtMs ? Math.max(0, Math.round((Date.now() - _quizStartedAtMs) / 1000)) : 0;
+  var elapsedSeconds = _quizTimerStopAndGetSeconds();
   var statsPayload = {
     mode: currentThemeCategoryId > 0 ? 'theme' : (currentLevel === 'ALL' ? 'adaptive_v2' : 'adaptive'),
     categoryId: currentThemeCategoryId || null,
@@ -2463,7 +2568,10 @@ function restartLevel(){
   if (currentThemeCategoryId) startThemeQuiz(currentThemeCategoryId);
   else startLevel(currentLevel);
 }
-function goHome(){show('screen-levels');}
+function goHome(){
+  _quizTimerAbandon();
+  show('screen-levels');
+}
 function goQuizBack(){var t=_quizReturnScreen;_quizReturnScreen='screen-levels';window.goHome();show(t);}
 function openSwipeSetup(){ window.umami?.track('quick_match_opened'); show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
@@ -2488,14 +2596,12 @@ function setAdaptiveLevel(lv) {
 function launchAdaptiveQuiz() {
   window.umami?.track('adaptive_quiz_started', { level: adaptiveSelectedLevel });
   _quizReturnScreen = 'screen-adaptive-setup';
-  _quizStartedAtMs = Date.now();
   startLevel(adaptiveSelectedLevel);
 }
 
 function openAdaptiveV2() {
   window.umami?.track('adaptive_v2_opened');
   if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
-  _quizStartedAtMs = Date.now();
   if (typeof window.startAdaptiveV2Quiz === 'function') window.startAdaptiveV2Quiz();
 }
 
@@ -2548,7 +2654,6 @@ async function startThemeQuiz(categoryId) {
   currentLevel = _categoryName(categoryId);
   queue = cards;
   idx = 0; ok = 0; no = 0;
-  _quizStartedAtMs = Date.now();
   window.umami?.track('theme_quiz_started', { category_id: categoryId, category_name: currentLevel });
   show('screen-quiz');
   renderCard();
@@ -3477,7 +3582,6 @@ async function startLearningProfileReview(mode) {
   if (typeof window.APP_AUTH_USE_LEARNING_LEVEL === 'function' && snap.signedIn) {
     window.APP_AUTH_USE_LEARNING_LEVEL(learningProfileSelectedLevel);
   }
-  _quizStartedAtMs = Date.now();
   window.umami?.track('learning_profile_review_started', { mode: mode, level: learningProfileSelectedLevel });
   if (learningProfileSelectedLevel === 'ALL' && typeof window.startAdaptiveV2ReviewQuiz === 'function') {
     await window.startAdaptiveV2ReviewQuiz(rows, 'screen-learning-profile');
@@ -6070,9 +6174,13 @@ function _backArrowSvg(isRtl) {
   return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
 }
 function show(id){
+  var quizWasVisible = !document.getElementById('screen-quiz').classList.contains('hidden');
   ['screen-levels','screen-learning-profile','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
+  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results') {
+    _quizTimerAbandon();
+  }
   document.body.classList.toggle('practice-setup-scroll-lock', id === 'screen-practice-setup');
   var btn = document.getElementById('app-back-btn');
   if (!btn) return;
