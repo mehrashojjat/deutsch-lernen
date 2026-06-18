@@ -19017,14 +19017,14 @@
       "word_type": "Word",
       "difficulty": 6,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Ciao! Wir sehen uns morgen wieder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bye! / ciao!",
+        "tr": "çav! / hoşça kal!",
+        "fa": "چاو! / خداحافظ!",
+        "ru": "чао! / пока!",
+        "uk": "чао! / бувай!",
+        "ar": "تشاو! / إلى اللقاء!"
       }
     },
     "35223": {
@@ -19037,14 +19037,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte achten Sie auf die richtige Adresse.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to pay attention to",
+        "tr": "dikkat etmek",
+        "fa": "توجه کردن به",
+        "ru": "обращать внимание на",
+        "uk": "звертати увагу на",
+        "ar": "ينتبه إلى"
       }
     },
     "35224": {
@@ -19057,14 +19057,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bei der Prüfung kommt es auf gute Vorbereitung an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to depend on / to come down to",
+        "tr": "-e bağlı olmak / önemli olmak",
+        "fa": "بستگی داشتن به / مهم بودن",
+        "ru": "зависеть от / сводиться к",
+        "uk": "залежати від / зводитися до",
+        "ar": "يعتمد على / يتوقف على"
       }
     },
     "35225": {
@@ -19077,14 +19077,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bitte antworten Sie auf meine E-Mail.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to answer / to respond to",
+        "tr": "cevap vermek",
+        "fa": "پاسخ دادن به",
+        "ru": "отвечать на",
+        "uk": "відповідати на",
+        "ar": "يرد على"
       }
     },
     "35226": {
@@ -19097,14 +19097,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich ärgere mich über den langen Stau.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be annoyed about",
+        "tr": "-e kızmak / sinirlenmek",
+        "fa": "از چیزی عصبانی شدن",
+        "ru": "сердиться на / раздражаться из-за",
+        "uk": "сердитися через",
+        "ar": "ينزعج من"
       }
     },
     "35227": {
@@ -19117,14 +19117,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Viele Nachbarn beschweren sich über den Lärm.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to complain about",
+        "tr": "şikâyet etmek",
+        "fa": "شکایت کردن از",
+        "ru": "жаловаться на",
+        "uk": "скаржитися на",
+        "ar": "يشتكي من"
       }
     },
     "35228": {
@@ -19137,14 +19137,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Kunde bittet um schnelle Hilfe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to ask for / to request",
+        "tr": "rica etmek / istemek",
+        "fa": "درخواست کردن / خواهش کردن برای",
+        "ru": "просить о",
+        "uk": "просити про",
+        "ar": "يطلب / يلتمس"
       }
     },
     "35229": {
@@ -19157,14 +19157,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich denke oft an meine erste Reise.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to think of / about",
+        "tr": "düşünmek / aklına gelmek",
+        "fa": "فکر کردن به / به یاد آوردن",
+        "ru": "думать о",
+        "uk": "думати про",
+        "ar": "يفكر في"
       }
     },
     "35230": {
@@ -19177,14 +19177,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie entscheidet sich für den Deutschkurs am Abend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to decide in favor of",
+        "tr": "-e karar vermek / seçmek",
+        "fa": "تصمیم گرفتن برای / انتخاب کردن",
+        "ru": "решиться на / выбрать",
+        "uk": "вирішити на користь",
+        "ar": "يقرر اختيار"
       }
     },
     "35231": {
@@ -19197,14 +19197,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Er entschuldigt sich für die Verspätung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to apologize for",
+        "tr": "özür dilemek için",
+        "fa": "عذرخواهی کردن برای",
+        "ru": "извиняться за",
+        "uk": "вибачатися за",
+        "ar": "يعتذر عن"
       }
     },
     "35232": {
@@ -19217,14 +19217,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich erinnere mich gern an diesen Urlaub.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to remember",
+        "tr": "hatırlamak",
+        "fa": "به یاد آوردن",
+        "ru": "вспоминать о",
+        "uk": "згадувати про",
+        "ar": "يتذكر"
       }
     },
     "35233": {
@@ -19237,14 +19237,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir freuen uns auf das Wochenende.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to look forward to",
+        "tr": "heyecanla beklemek",
+        "fa": "مشتاق بودن برای",
+        "ru": "радоваться предстоящему / ждать с радостью",
+        "uk": "з нетерпінням чекати",
+        "ar": "يتطلع إلى"
       }
     },
     "35234": {
@@ -19257,14 +19257,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie freut sich über das Geschenk.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be happy about",
+        "tr": "-e sevinmek",
+        "fa": "از چیزی خوشحال شدن",
+        "ru": "радоваться чему-либо",
+        "uk": "радіти чомусь",
+        "ar": "يفرح بـ"
       }
     },
     "35235": {
@@ -19277,14 +19277,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Im Unterricht konzentrieren wir uns auf das Hören.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to concentrate on",
+        "tr": "odaklanmak",
+        "fa": "تمرکز کردن روی",
+        "ru": "концентрироваться на",
+        "uk": "концентруватися на",
+        "ar": "يركز على"
       }
     },
     "35236": {
@@ -19297,14 +19297,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Eltern kümmern sich um die Kinder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to take care of",
+        "tr": "ilgilenmek / bakmak",
+        "fa": "مراقبت کردن از / رسیدگی کردن به",
+        "ru": "заботиться о",
+        "uk": "піклуватися про",
+        "ar": "يعتني بـ"
       }
     },
     "35237": {
@@ -19317,14 +19317,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich muss über dein Angebot nachdenken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to think about",
+        "tr": "üzerine düşünmek",
+        "fa": "فکر کردن درباره",
+        "ru": "обдумывать / думать о",
+        "uk": "обмірковувати / думати про",
+        "ar": "يفكر في"
       }
     },
     "35238": {
@@ -19337,14 +19337,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir reden über unsere Pläne für den Sommer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to talk about",
+        "tr": "hakkında konuşmak",
+        "fa": "صحبت کردن درباره",
+        "ru": "говорить о",
+        "uk": "говорити про",
+        "ar": "يتحدث عن"
       }
     },
     "35239": {
@@ -19357,14 +19357,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich warte auf den Bus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to wait for",
+        "tr": "beklemek",
+        "fa": "منتظر بودن برای",
+        "ru": "ждать",
+        "uk": "чекати на",
+        "ar": "ينتظر"
       }
     },
     "35240": {
@@ -19377,14 +19377,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich wundere mich über seine schnelle Antwort.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be surprised about / to wonder at",
+        "tr": "şaşırmak",
+        "fa": "تعجب کردن از",
+        "ru": "удивляться",
+        "uk": "дивуватися",
+        "ar": "يتعجب من"
       }
     },
     "35241": {
@@ -19397,14 +19397,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie bedankt sich bei der Lehrerin für die Hilfe.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to thank someone",
+        "tr": "birine teşekkür etmek",
+        "fa": "از کسی تشکر کردن",
+        "ru": "благодарить кого-либо",
+        "uk": "дякувати комусь",
+        "ar": "يشكر شخصًا"
       }
     },
     "35242": {
@@ -19417,14 +19417,14 @@
       "word_type": "Phrase",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Alle können zu einem guten Ergebnis beitragen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to contribute to",
+        "tr": "katkıda bulunmak",
+        "fa": "کمک کردن به / سهم داشتن در",
+        "ru": "способствовать / вносить вклад в",
+        "uk": "сприяти / робити внесок у",
+        "ar": "يساهم في"
       }
     },
     "35243": {
@@ -19437,14 +19437,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Viele Schüler beteiligen sich an der Diskussion.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to participate in",
+        "tr": "katılmak",
+        "fa": "شرکت کردن در",
+        "ru": "участвовать в",
+        "uk": "брати участь у",
+        "ar": "يشارك في"
       }
     },
     "35244": {
@@ -19457,14 +19457,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Zeuge berichtet von einem Unfall.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to report/tell about",
+        "tr": "bahsetmek / anlatmak",
+        "fa": "گزارش دادن از / تعریف کردن از",
+        "ru": "сообщать о / рассказывать о",
+        "uk": "повідомляти про / розповідати про",
+        "ar": "يروي عن / يبلغ عن"
       }
     },
     "35245": {
@@ -19477,14 +19477,14 @@
       "word_type": "Verb",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Im Kurs beschäftigen wir uns mit dem Thema Arbeit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to deal with / to occupy oneself with",
+        "tr": "ilgilenmek / uğraşmak",
+        "fa": "پرداختن به / مشغول بودن با",
+        "ru": "заниматься / иметь дело с",
+        "uk": "займатися / мати справу з",
+        "ar": "ينشغل بـ / يتناول"
       }
     },
     "35246": {
@@ -19497,14 +19497,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Abends chatte ich mit meiner Schwester.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to chat with",
+        "tr": "ile sohbet etmek",
+        "fa": "چت کردن با",
+        "ru": "переписываться / чатиться с",
+        "uk": "чатитися з",
+        "ar": "يدردش مع"
       }
     },
     "35247": {
@@ -19517,14 +19517,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Gruppe diskutiert mit dem Lehrer über Politik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to discuss with",
+        "tr": "ile tartışmak",
+        "fa": "بحث کردن با",
+        "ru": "дискутировать с",
+        "uk": "дискутувати з",
+        "ar": "يناقش مع"
       }
     },
     "35248": {
@@ -19537,14 +19537,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wir laden die Nachbarn zu unserer Feier ein.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to invite to",
+        "tr": "davet etmek",
+        "fa": "دعوت کردن به",
+        "ru": "приглашать на",
+        "uk": "запрошувати на",
+        "ar": "يدعو إلى"
       }
     },
     "35249": {
@@ -19557,14 +19557,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich entschuldige mich bei dir für den Fehler.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to apologize to",
+        "tr": "birinden özür dilemek",
+        "fa": "از کسی عذرخواهی کردن",
+        "ru": "извиняться перед",
+        "uk": "вибачатися перед",
+        "ar": "يعتذر إلى"
       }
     },
     "35250": {
@@ -19577,14 +19577,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie erkundigt sich nach dem Preis.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to inquire about",
+        "tr": "hakkında bilgi almak",
+        "fa": "پرس‌وجو کردن درباره",
+        "ru": "справляться о / узнавать о",
+        "uk": "дізнаватися про",
+        "ar": "يستفسر عن"
       }
     },
     "35251": {
@@ -19597,14 +19597,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Er erzählt von seiner Reise nach Wien.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to tell about",
+        "tr": "anlatmak / bahsetmek",
+        "fa": "تعریف کردن از / درباره گفتن",
+        "ru": "рассказывать о",
+        "uk": "розповідати про",
+        "ar": "يحكي عن"
       }
     },
     "35252": {
@@ -19617,14 +19617,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Aufgabe gehört zu meinem Beruf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to belong to / to be part of",
+        "tr": "ait olmak / dahil olmak",
+        "fa": "متعلق بودن به / جزو چیزی بودن",
+        "ru": "относиться к / принадлежать к",
+        "uk": "належати до",
+        "ar": "ينتمي إلى"
       }
     },
     "35253": {
@@ -19637,14 +19637,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Viele Menschen leiden unter Stress.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to suffer from",
+        "tr": "acı çekmek / muzdarip olmak",
+        "fa": "رنج بردن از",
+        "ru": "страдать от",
+        "uk": "страждати від",
+        "ar": "يعاني من"
       }
     },
     "35254": {
@@ -19657,14 +19657,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Jacke passt gut zu deiner Hose.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to match / to fit with",
+        "tr": "uymak / yakışmak",
+        "fa": "هماهنگ بودن با / مناسب بودن برای",
+        "ru": "подходить к",
+        "uk": "пасувати до",
+        "ar": "يناسب / يتماشى مع"
       }
     },
     "35255": {
@@ -19677,14 +19677,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich muss mit meiner Chefin reden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to talk with",
+        "tr": "ile konuşmak",
+        "fa": "صحبت کردن با",
+        "ru": "говорить с",
+        "uk": "говорити з",
+        "ar": "يتحدث مع"
       }
     },
     "35256": {
@@ -19697,14 +19697,14 @@
       "word_type": "Phrase",
       "difficulty": 6,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Kann ich kurz mit dir sprechen?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to speak with",
+        "tr": "ile konuşmak",
+        "fa": "صحبت کردن با",
+        "ru": "разговаривать с",
+        "uk": "розмовляти з",
+        "ar": "يتكلم مع"
       }
     },
     "35257": {
@@ -19717,14 +19717,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Sie streitet sich oft mit ihrem Bruder.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to argue with",
+        "tr": "kavga etmek / tartışmak",
+        "fa": "دعوا کردن با / جر و بحث کردن با",
+        "ru": "ссориться с",
+        "uk": "сваритися з",
+        "ar": "يتشاجر مع"
       }
     },
     "35258": {
@@ -19737,14 +19737,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich nehme an einem Onlinekurs teil.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to take part in",
+        "tr": "katılmak",
+        "fa": "شرکت کردن در",
+        "ru": "принимать участие в",
+        "uk": "брати участь у",
+        "ar": "يشارك في"
       }
     },
     "35259": {
@@ -19757,14 +19757,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Heute Abend telefoniere ich mit meiner Mutter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to phone with",
+        "tr": "ile telefonda konuşmak",
+        "fa": "تلفنی صحبت کردن با",
+        "ru": "разговаривать по телефону с",
+        "uk": "телефонувати з / розмовляти телефоном з",
+        "ar": "يتحدث هاتفيًا مع"
       }
     },
     "35260": {
@@ -19777,14 +19777,14 @@
       "word_type": "Phrase",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Als Kind träumte sie von einem Haus am Meer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to dream of/about",
+        "tr": "hayal etmek / rüya görmek",
+        "fa": "خواب دیدن درباره / آرزو داشتن",
+        "ru": "мечтать о / видеть во сне",
+        "uk": "мріяти про / бачити уві сні",
+        "ar": "يحلم بـ"
       }
     },
     "35261": {
@@ -19797,14 +19797,14 @@
       "word_type": "Verb",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich unterhalte mich gern mit meinen Nachbarn.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to converse with / to talk with",
+        "tr": "sohbet etmek",
+        "fa": "گفت‌وگو کردن با / گپ زدن با",
+        "ru": "беседовать с",
+        "uk": "розмовляти з",
+        "ar": "يتحاور مع / يتحدث مع"
       }
     },
     "35262": {
@@ -19817,14 +19817,14 @@
       "word_type": "Verb",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Am Bahnhof verabschieden wir uns von unseren Freunden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to say goodbye to",
+        "tr": "vedalaşmak",
+        "fa": "خداحافظی کردن از",
+        "ru": "прощаться с",
+        "uk": "прощатися з",
+        "ar": "يودع"
       }
     },
     "35263": {
@@ -19837,14 +19837,14 @@
       "word_type": "Phrase",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Diese Kirche zählt zu den ältesten Gebäuden der Stadt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to count among / to be one of",
+        "tr": "arasında sayılmak",
+        "fa": "جزو چیزی شمرده شدن",
+        "ru": "относиться к / числиться среди",
+        "uk": "належати до / вважатися одним із",
+        "ar": "يعد من"
       }
     },
     "35264": {
@@ -19857,14 +19857,14 @@
       "word_type": "Verb",
       "difficulty": 9,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Vor der Entscheidung müssen wir die Vorteile abwägen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to weigh / to consider carefully",
+        "tr": "tartmak / değerlendirmek",
+        "fa": "سنجیدن / سبک‌سنگین کردن",
+        "ru": "взвешивать / обдумывать",
+        "uk": "зважувати / обмірковувати",
+        "ar": "يوازن / يدرس بعناية"
       }
     },
     "35265": {
@@ -19877,14 +19877,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Das Licht ist noch an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be on",
+        "tr": "açık olmak",
+        "fa": "روشن بودن",
+        "ru": "быть включённым",
+        "uk": "бути увімкненим",
+        "ar": "يكون مشغلًا / مضاءً"
       }
     },
     "35266": {
@@ -19897,14 +19897,14 @@
       "word_type": "Verb",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich rufe dich morgen früh an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to call / to phone",
+        "tr": "aramak / telefon etmek",
+        "fa": "تماس گرفتن / زنگ زدن",
+        "ru": "звонить",
+        "uk": "дзвонити",
+        "ar": "يتصل هاتفيًا"
       }
     },
     "35267": {
@@ -19917,14 +19917,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Film ist um zehn Uhr aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be off / to be over",
+        "tr": "kapalı olmak / bitmiş olmak",
+        "fa": "خاموش بودن / تمام بودن",
+        "ru": "быть выключенным / закончиться",
+        "uk": "бути вимкненим / закінчитися",
+        "ar": "يكون مطفأً / ينتهي"
       }
     },
     "35268": {
@@ -19937,14 +19937,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Zeitung wird morgens früh ausgetragen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to deliver / to carry out",
+        "tr": "dağıtmak / taşımak",
+        "fa": "پخش کردن / تحویل دادن",
+        "ru": "разносить / доставлять",
+        "uk": "розносити / доставляти",
+        "ar": "يوزع / يسلم"
       }
     },
     "35269": {
@@ -19957,14 +19957,14 @@
       "word_type": "Verb",
       "difficulty": 8,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Familie bezieht im März eine neue Wohnung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to move into / to receive",
+        "tr": "taşınmak / almak",
+        "fa": "نقل مکان کردن به / دریافت کردن",
+        "ru": "заселяться / получать",
+        "uk": "заселятися / отримувати",
+        "ar": "ينتقل إلى / يتلقى"
       }
     },
     "35270": {
@@ -19977,14 +19977,14 @@
       "word_type": "Verb",
       "difficulty": 7,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Du kannst den Schlüssel bei der Nachbarin dalassen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to leave there / to leave behind",
+        "tr": "orada bırakmak",
+        "fa": "آنجا گذاشتن / باقی گذاشتن",
+        "ru": "оставить там",
+        "uk": "залишити там",
+        "ar": "يترك هناك"
       }
     },
     "35271": {
@@ -19997,14 +19997,14 @@
       "word_type": "Word",
       "difficulty": 5,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich bin immer für dich da.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be there / to exist",
+        "tr": "var olmak / yanında olmak",
+        "fa": "حضور داشتن / در کنار کسی بودن",
+        "ru": "быть рядом / существовать",
+        "uk": "бути поруч / існувати",
+        "ar": "يكون موجودًا / يكون بجانب"
       }
     },
     "35272": {
