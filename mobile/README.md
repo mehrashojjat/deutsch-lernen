@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Serves the app at `http://localhost:3000` and starts a Cloudflare Quick Tunnel for mobile device testing. To restart in the background: `scripts/restart_server.sh`.
+Serves the app at `https://localhost:3000` and starts a Cloudflare Quick Tunnel for mobile device testing. To restart in the background: `scripts/restart_server.sh`.
 
 ## Workflow
 

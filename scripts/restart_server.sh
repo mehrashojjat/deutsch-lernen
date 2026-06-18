@@ -14,10 +14,16 @@ lsof -nP -iTCP:$PORT -sTCP:LISTEN || true
 
 echo "Stopping npm dev / dev.mjs / serve on :$PORT"
 pkill -f "scripts/dev.mjs" 2>/dev/null || true
-pkill -f "node.*serve.*$PORT" 2>/dev/null || true
-pids=$(lsof -tiTCP:$PORT -sTCP:LISTEN || true)
+pkill -f "node.*serve.*3000" 2>/dev/null || true
+pkill -f "node.*serve.*3001" 2>/dev/null || true
+pids=$(lsof -tiTCP:3000 -sTCP:LISTEN || true)
 if [ -n "$pids" ]; then
-  echo "Killing: $pids"
+  echo "Killing :3000: $pids"
+  kill $pids 2>/dev/null || true
+fi
+pids=$(lsof -tiTCP:3001 -sTCP:LISTEN || true)
+if [ -n "$pids" ]; then
+  echo "Killing :3001: $pids"
   kill $pids 2>/dev/null || true
 fi
 
@@ -32,7 +38,7 @@ echo $! >"$PID_FILE"
 sleep 1.2
 
 echo "Started PID: $(cat "$PID_FILE")"
-echo "Open: http://localhost:$PORT/"
+echo "Open: https://localhost:$PORT/"
 echo "Log: $LOG_FILE"
 echo "Listener now:"
 lsof -nP -iTCP:$PORT -sTCP:LISTEN || true

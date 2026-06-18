@@ -59,7 +59,7 @@ npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000` in your browser. The dev script also starts a trusted Cloudflare HTTPS tunnel for mobile testing (Web Share, etc.).
+Then open `https://localhost:3000` in your browser (self-signed cert — accept the warning once). The dev script also starts a trusted Cloudflare HTTPS tunnel for mobile testing (Web Share, etc.) with no cert warnings.
 
 **Restart in background:** `scripts/restart_server.sh` (kills anything on port 3000, then runs `npm run dev` via nohup).
 
