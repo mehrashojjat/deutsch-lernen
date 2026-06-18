@@ -47,6 +47,7 @@
   var _origStartAdaptive = null;
   var _origStartAdaptiveV2 = null;
   var _origStartAdaptiveV2Review = null;
+  var _origStartRushMode = null;
   var _origShowResults   = null;
   var _origGoHome        = null;
   var _capAppListener    = null;
@@ -147,7 +148,32 @@
   }
 
   function _defaultQuizStats() {
-    return { adaptive: _emptyStats(), theme: {} };
+    return { adaptive: _emptyStats(), theme: {}, rush: _emptyRushStats() };
+  }
+
+  function _emptyRushStats() {
+    return {
+      sessionsCompleted: 0,
+      totalQuestions: 0,
+      totalCorrect: 0,
+      totalStudyTimeSeconds: 0,
+      bestSessionQuestions: 0,
+      bestSessionAccuracy: 0,
+      longestSessionSeconds: 0
+    };
+  }
+
+  function _normalizeRushStats(rush) {
+    rush = (rush && typeof rush === 'object') ? rush : {};
+    return {
+      sessionsCompleted: Number(rush.sessionsCompleted) || 0,
+      totalQuestions: Number(rush.totalQuestions) || 0,
+      totalCorrect: Number(rush.totalCorrect) || 0,
+      totalStudyTimeSeconds: Number(rush.totalStudyTimeSeconds) || 0,
+      bestSessionQuestions: Number(rush.bestSessionQuestions) || 0,
+      bestSessionAccuracy: Number(rush.bestSessionAccuracy) || 0,
+      longestSessionSeconds: Number(rush.longestSessionSeconds) || 0
+    };
   }
 
   function _emptyStats() {
@@ -470,10 +496,28 @@
     };
   }
 
+  function _mergeRushStats(a, b) {
+    a = _normalizeRushStats(a);
+    b = _normalizeRushStats(b);
+    return {
+      sessionsCompleted: Math.max(a.sessionsCompleted, b.sessionsCompleted),
+      totalQuestions: Math.max(a.totalQuestions, b.totalQuestions),
+      totalCorrect: Math.max(a.totalCorrect, b.totalCorrect),
+      totalStudyTimeSeconds: Math.max(a.totalStudyTimeSeconds, b.totalStudyTimeSeconds),
+      bestSessionQuestions: Math.max(a.bestSessionQuestions, b.bestSessionQuestions),
+      bestSessionAccuracy: Math.max(a.bestSessionAccuracy, b.bestSessionAccuracy),
+      longestSessionSeconds: Math.max(a.longestSessionSeconds, b.longestSessionSeconds)
+    };
+  }
+
   function _mergeQuizStats(incoming, prev) {
     incoming = _normalizeQuizStats(incoming);
     prev = _normalizeQuizStats(prev);
-    var out = { adaptive: _maxStats(incoming.adaptive, prev.adaptive), theme: {} };
+    var out = {
+      adaptive: _maxStats(incoming.adaptive, prev.adaptive),
+      theme: {},
+      rush: _mergeRushStats(incoming.rush, prev.rush)
+    };
     var keys = {};
     Object.keys(prev.theme).forEach(function (k) { keys[k] = true; });
     Object.keys(incoming.theme).forEach(function (k) { keys[k] = true; });
@@ -485,7 +529,7 @@
 
   function _normalizeQuizStats(stats) {
     stats = (stats && typeof stats === 'object') ? stats : {};
-    var out = { adaptive: _normalizeStats(stats.adaptive), theme: {} };
+    var out = { adaptive: _normalizeStats(stats.adaptive), theme: {}, rush: _normalizeRushStats(stats.rush) };
     var theme = (stats.theme && typeof stats.theme === 'object') ? stats.theme : {};
     Object.keys(theme).forEach(function(key) {
       out.theme[key] = _normalizeThemeStatEntry(theme[key]);
@@ -769,6 +813,7 @@
     if (tip) tip.classList.toggle('hidden', !!_user);
     if (typeof window._ensureHomeLayout === 'function') window._ensureHomeLayout();
     if (typeof window.refreshInstallTip === 'function') window.refreshInstallTip();
+    if (typeof window._rushRefreshBanner === 'function') window._rushRefreshBanner();
   }
 
   // ── Public: Google OAuth ───────────────────────────────────────
@@ -1040,6 +1085,41 @@
     };
   }
 
+  function _wrapStartRushMode() {
+    _origStartRushMode = window.startRushMode;
+
+    window.startRushMode = async function () {
+      if (_user) {
+        await _ensureLevelCached(_user.id, V2_LEVEL);
+        _injectV2Level();
+        _quizInProgress = true;
+        _quizCompleted  = false;
+        _quizLevel      = V2_LEVEL;
+        _quizSnapshot   = _deepCopy(_progressCache[V2_LEVEL]);
+      }
+      if (typeof _origStartRushMode === 'function') await _origStartRushMode();
+      var quizScreen = document.getElementById('screen-quiz');
+      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+        _quizInProgress = false;
+        _quizCompleted  = false;
+        _quizSnapshot   = null;
+        _quizLevel      = null;
+      }
+    };
+  }
+
+  window.APP_AUTH_RUSH_CHECKPOINT = function () {
+    if (!_user || !_quizLevel || !_progressCache[_quizLevel]) return;
+    _quizSnapshot = _deepCopy(_progressCache[_quizLevel]);
+  };
+
+  window.APP_AUTH_RUSH_COMPLETE = function () {
+    _quizCompleted  = true;
+    _quizInProgress = false;
+    _quizSnapshot   = null;
+    _quizLevel      = null;
+  };
+
   // 3. showResults: mark quiz as completed so goHome knows not to restore snapshot
   function _wrapShowResults() {
     _origShowResults = window.showResults;
@@ -1086,6 +1166,7 @@
     _wrapStartLevel();
     _wrapStartAdaptive();
     _wrapStartAdaptiveV2();
+    _wrapStartRushMode();
     _wrapShowResults();
     _wrapGoHome();
 

@@ -28,8 +28,37 @@
   var _quizCounter = 0;
   var _LEGACY_GUEST_PREFIX = 'deutsch_adaptive_progress_';
 
+  function _defaultRushStats() {
+    return {
+      sessionsCompleted: 0,
+      totalQuestions: 0,
+      totalCorrect: 0,
+      totalStudyTimeSeconds: 0,
+      bestSessionQuestions: 0,
+      bestSessionAccuracy: 0,
+      longestSessionSeconds: 0
+    };
+  }
+
   function _defaultQuizStats() {
-    return { adaptive: { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 }, theme: {} };
+    return {
+      adaptive: { quizzesCompleted: 0, correctAnswers: 0, incorrectAnswers: 0, studyTimeSeconds: 0 },
+      theme: {},
+      rush: _defaultRushStats()
+    };
+  }
+
+  function _normalizeRushStats(rush) {
+    rush = (rush && typeof rush === 'object') ? rush : {};
+    return {
+      sessionsCompleted: Number(rush.sessionsCompleted) || 0,
+      totalQuestions: Number(rush.totalQuestions) || 0,
+      totalCorrect: Number(rush.totalCorrect) || 0,
+      totalStudyTimeSeconds: Number(rush.totalStudyTimeSeconds) || 0,
+      bestSessionQuestions: Number(rush.bestSessionQuestions) || 0,
+      bestSessionAccuracy: Number(rush.bestSessionAccuracy) || 0,
+      longestSessionSeconds: Number(rush.longestSessionSeconds) || 0
+    };
   }
 
   function _normalizeQuizStats(stats) {
@@ -43,7 +72,8 @@
         incorrectAnswers: Number(adaptive.incorrectAnswers) || 0,
         studyTimeSeconds: Number(adaptive.studyTimeSeconds) || 0
       },
-      theme: theme
+      theme: theme,
+      rush: _normalizeRushStats(stats.rush)
     };
   }
 
@@ -1366,6 +1396,70 @@
     _save(p);
     _progress = p;
   };
+
+  window._adaptiveV2BuildQueue = function () {
+    return _buildQueue();
+  };
+
+  window._adaptiveV2ProcessResults = function (answers, opts) {
+    answers = answers || [];
+    if (!answers.length) return;
+    opts = opts || {};
+    var savedStage = _stageAtStart;
+    if (opts.forceActive) _stageAtStart = 3;
+    if (opts.rush) _quizCounter++;
+    _processResults(answers);
+    _stageAtStart = savedStage;
+    _updateHomeBadge();
+    var profileScreen = document.getElementById('screen-learning-profile');
+    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+        typeof window.renderLearningProfile === 'function') {
+      window.renderLearningProfile();
+    }
+  };
+
+  window._adaptiveV2RecordRushCheckpoint = function (payload) {
+    if (!payload) return;
+    var p = _get();
+    p.quizStats = _normalizeQuizStats(p.quizStats);
+    p.quizStats.adaptive = _incrementQuizStats(p.quizStats.adaptive, payload);
+    var rush = p.quizStats.rush;
+    var correct = Number(payload.correctAnswers) || 0;
+    var incorrect = Number(payload.incorrectAnswers) || 0;
+    var timeSec = Number(payload.studyTimeSeconds) || 0;
+    rush.totalQuestions += correct + incorrect;
+    rush.totalCorrect += correct;
+    rush.totalStudyTimeSeconds += timeSec;
+    p.quizStats.rush = rush;
+    _save(p);
+    _progress = p;
+  };
+
+  window._adaptiveV2FinalizeRushSession = function (session) {
+    session = session || {};
+    var p = _get();
+    p.quizStats = _normalizeQuizStats(p.quizStats);
+    var rush = p.quizStats.rush;
+    var totalQ = Number(session.totalQuestions) || 0;
+    var correct = Number(session.correctAnswers) || 0;
+    var timeSec = Number(session.studyTimeSeconds) || 0;
+    if (totalQ > 0) {
+      rush.sessionsCompleted += 1;
+      var acc = Math.round(correct / totalQ * 100);
+      if (totalQ > rush.bestSessionQuestions) rush.bestSessionQuestions = totalQ;
+      if (acc > rush.bestSessionAccuracy) rush.bestSessionAccuracy = acc;
+      if (timeSec > rush.longestSessionSeconds) rush.longestSessionSeconds = timeSec;
+    }
+    p.quizStats.rush = rush;
+    _save(p);
+    _progress = p;
+  };
+
+  window._adaptiveV2IsCalibrated = function () {
+    return (Number(_get().evaluationStage) || 0) >= 3;
+  };
+
+  window._adaptiveV2IsActive = function () { return _active; };
 
   window._adaptiveV2ApplyThemeResults = function (answers, payload) {
     if (!payload || !payload.categoryId) return null;

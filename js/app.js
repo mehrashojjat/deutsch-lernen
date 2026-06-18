@@ -82,6 +82,34 @@ const UI = {
     adaptiveV2PhaseReview: 'Review mode',
     adaptiveV2PhaseChallenge: 'Challenge mode',
     learningProfileBannerTitle: 'Learning Profile',
+    rushBannerTitle: 'Rush Mode',
+    rushBannerSub: 'Endless adaptive quiz · quit anytime',
+    rushBannerSubGuest: 'Sign in to play · Endless adaptive quiz',
+    dialogCancel: 'Cancel',
+    dialogOk: 'OK',
+    rushSignInTitle: 'Sign in required',
+    rushSignInMessage: 'Sign in required.',
+    rushSignInPrimary: 'Sign in',
+    rushCalTitle: 'Assessment required',
+    rushCalMessage: 'Complete your level assessment in Adaptive V2 before starting Rush Mode.',
+    rushCalPrimary: 'Start assessment',
+    quizExitTitle: 'Leave quiz?',
+    quizExitMessage: 'Your answers in this quiz won\'t be saved.',
+    quizExitLeave: 'Leave quiz',
+    quizExitStay: 'Keep playing',
+    quizExitRushTitle: 'End Rush session?',
+    quizExitRushMessage: 'Your session will end.',
+    quizExitRushLeave: 'End session',
+    rushBadge: 'Rush Mode',
+    rushSummaryTitle: 'Rush complete',
+    rushSummaryRecord: 'New personal best!',
+    rushSummaryAgain: 'Rush again',
+    rushSummaryHome: 'Back Home',
+    rushLblScore: 'Score',
+    rushLblCorrect: 'Correct',
+    rushLblWrong: 'Wrong',
+    rushLblStreak: 'Best streak',
+    rushLblTime: 'Study time',
     learningProfileTitle: 'Learning Profile',
     adaptiveSetupTitle: 'Adaptive Quiz',
     adaptiveSetupSubtitle: 'Adjusts difficulty to your skill level',
@@ -222,6 +250,34 @@ const UI = {
     adaptiveV2PhaseReview: 'Wiederholmodus',
     adaptiveV2PhaseChallenge: 'Herausforderungsmodus',
     learningProfileBannerTitle: 'Lernprofil',
+    rushBannerTitle: 'Rush-Modus',
+    rushBannerSub: 'Endloses Adaptiv-Quiz · jederzeit beenden',
+    rushBannerSubGuest: 'Anmelden zum Spielen · Endloses Adaptiv-Quiz',
+    dialogCancel: 'Abbrechen',
+    dialogOk: 'OK',
+    rushSignInTitle: 'Anmeldung erforderlich',
+    rushSignInMessage: 'Anmeldung erforderlich.',
+    rushSignInPrimary: 'Anmelden',
+    rushCalTitle: 'Niveubestimmung erforderlich',
+    rushCalMessage: 'Schließe zuerst die Niveubestimmung in Adaptiv V2 ab, bevor du den Rush-Modus startest.',
+    rushCalPrimary: 'Bestimmung starten',
+    quizExitTitle: 'Quiz verlassen?',
+    quizExitMessage: 'Deine Antworten in diesem Quiz werden nicht gespeichert.',
+    quizExitLeave: 'Quiz verlassen',
+    quizExitStay: 'Weiterspielen',
+    quizExitRushTitle: 'Rush-Sitzung beenden?',
+    quizExitRushMessage: 'Deine Sitzung endet.',
+    quizExitRushLeave: 'Sitzung beenden',
+    rushBadge: 'Rush-Modus',
+    rushSummaryTitle: 'Rush beendet',
+    rushSummaryRecord: 'Neuer persönlicher Rekord!',
+    rushSummaryAgain: 'Nochmal',
+    rushSummaryHome: 'Zur Startseite',
+    rushLblScore: 'Ergebnis',
+    rushLblCorrect: 'Richtig',
+    rushLblWrong: 'Falsch',
+    rushLblStreak: 'Beste Serie',
+    rushLblTime: 'Lernzeit',
     learningProfileTitle: 'Lernprofil',
     adaptiveSetupTitle: 'Adaptives Quiz',
     adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
@@ -362,6 +418,34 @@ const UI = {
     adaptiveV2PhaseReview: 'Tekrar modu',
     adaptiveV2PhaseChallenge: 'Meydan okuma modu',
     learningProfileBannerTitle: 'Öğrenme Profili',
+    rushBannerTitle: 'Rush Modu',
+    rushBannerSub: 'Sonsuz uyarlamalı quiz · istediğin zaman çık',
+    rushBannerSubGuest: 'Oynamak için giriş yap · Sonsuz uyarlamalı quiz',
+    dialogCancel: 'İptal',
+    dialogOk: 'Tamam',
+    rushSignInTitle: 'Giriş gerekli',
+    rushSignInMessage: 'Giriş gerekli.',
+    rushSignInPrimary: 'Giriş yap',
+    rushCalTitle: 'Seviye belirleme gerekli',
+    rushCalMessage: 'Rush Moduna başlamadan önce Uyarlamalı V2 ile seviye belirlemesini tamamla.',
+    rushCalPrimary: 'Belirlemeyi başlat',
+    quizExitTitle: 'Quizden çık?',
+    quizExitMessage: 'Bu quizdeki cevapların kaydedilmeyecek.',
+    quizExitLeave: 'Quizden çık',
+    quizExitStay: 'Oynamaya devam',
+    quizExitRushTitle: 'Rush oturumunu bitir?',
+    quizExitRushMessage: 'Oturumun sona erecek.',
+    quizExitRushLeave: 'Oturumu bitir',
+    rushBadge: 'Rush Modu',
+    rushSummaryTitle: 'Rush bitti',
+    rushSummaryRecord: 'Yeni kişisel rekor!',
+    rushSummaryAgain: 'Tekrar Rush',
+    rushSummaryHome: 'Ana sayfa',
+    rushLblScore: 'Skor',
+    rushLblCorrect: 'Doğru',
+    rushLblWrong: 'Yanlış',
+    rushLblStreak: 'En iyi seri',
+    rushLblTime: 'Çalışma süresi',
     learningProfileTitle: 'Öğrenme Profili',
     adaptiveSetupTitle: 'Uyarlamalı Sınav',
     adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
@@ -502,6 +586,34 @@ const UI = {
     adaptiveV2PhaseReview: 'حالت مرور',
     adaptiveV2PhaseChallenge: 'حالت چالش',
     learningProfileBannerTitle: 'پروفایل یادگیری',
+    rushBannerTitle: 'حالت Rush',
+    rushBannerSub: 'آزمون تطبیقی بی‌پایان · هر وقت خارج شو',
+    rushBannerSubGuest: 'برای بازی وارد شو · آزمون تطبیقی بی‌پایان',
+    dialogCancel: 'لغو',
+    dialogOk: 'باشه',
+    rushSignInTitle: 'ورود لازم است',
+    rushSignInMessage: 'ورود لازم است.',
+    rushSignInPrimary: 'ورود',
+    rushCalTitle: 'ارزیابی سطح لازم است',
+    rushCalMessage: 'قبل از شروع Rush، ارزیابی سطح را در Adaptive V2 کامل کن.',
+    rushCalPrimary: 'شروع ارزیابی',
+    quizExitTitle: 'خروج از آزمون؟',
+    quizExitMessage: 'پاسخ‌های این آزمون ذخیره نمی‌شوند.',
+    quizExitLeave: 'خروج از آزمون',
+    quizExitStay: 'ادامه بازی',
+    quizExitRushTitle: 'پایان جلسه Rush؟',
+    quizExitRushMessage: 'جلسه تمام می‌شود.',
+    quizExitRushLeave: 'پایان جلسه',
+    rushBadge: 'حالت Rush',
+    rushSummaryTitle: 'پایان Rush',
+    rushSummaryRecord: 'رکورد شخصی جدید!',
+    rushSummaryAgain: 'دوباره Rush',
+    rushSummaryHome: 'خانه',
+    rushLblScore: 'امتیاز',
+    rushLblCorrect: 'درست',
+    rushLblWrong: 'غلط',
+    rushLblStreak: 'بهترین streak',
+    rushLblTime: 'زمان مطالعه',
     learningProfileTitle: 'پروفایل یادگیری',
     adaptiveSetupTitle: 'آزمون تطبیقی',
     adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
@@ -642,6 +754,34 @@ const UI = {
     adaptiveV2PhaseReview: 'Режим повторения',
     adaptiveV2PhaseChallenge: 'Режим вызова',
     learningProfileBannerTitle: 'Профиль обучения',
+    rushBannerTitle: 'Режим Rush',
+    rushBannerSub: 'Бесконечный адаптивный квиз · выход в любой момент',
+    rushBannerSubGuest: 'Войдите, чтобы играть · Бесконечный адаптивный квиз',
+    dialogCancel: 'Отмена',
+    dialogOk: 'OK',
+    rushSignInTitle: 'Требуется вход',
+    rushSignInMessage: 'Требуется вход.',
+    rushSignInPrimary: 'Войти',
+    rushCalTitle: 'Нужна оценка уровня',
+    rushCalMessage: 'Пройдите оценку уровня в Adaptive V2, прежде чем начать Rush.',
+    rushCalPrimary: 'Начать оценку',
+    quizExitTitle: 'Выйти из квиза?',
+    quizExitMessage: 'Ответы в этом квизе не будут сохранены.',
+    quizExitLeave: 'Выйти',
+    quizExitStay: 'Продолжить',
+    quizExitRushTitle: 'Завершить сессию Rush?',
+    quizExitRushMessage: 'Сессия завершится.',
+    quizExitRushLeave: 'Завершить',
+    rushBadge: 'Режим Rush',
+    rushSummaryTitle: 'Rush завершён',
+    rushSummaryRecord: 'Новый личный рекорд!',
+    rushSummaryAgain: 'Ещё Rush',
+    rushSummaryHome: 'На главную',
+    rushLblScore: 'Результат',
+    rushLblCorrect: 'Верно',
+    rushLblWrong: 'Неверно',
+    rushLblStreak: 'Лучшая серия',
+    rushLblTime: 'Время',
     learningProfileTitle: 'Профиль обучения',
     adaptiveSetupTitle: 'Адаптивная викторина',
     adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
@@ -782,6 +922,34 @@ const UI = {
     adaptiveV2PhaseReview: 'Режим повторення',
     adaptiveV2PhaseChallenge: 'Режим виклику',
     learningProfileBannerTitle: 'Профіль навчання',
+    rushBannerTitle: 'Режим Rush',
+    rushBannerSub: 'Нескінченна адаптивна вікторина · вихід будь-коли',
+    rushBannerSubGuest: 'Увійдіть, щоб грати · Нескінченна адаптивна вікторина',
+    dialogCancel: 'Скасувати',
+    dialogOk: 'OK',
+    rushSignInTitle: 'Потрібен вхід',
+    rushSignInMessage: 'Потрібен вхід.',
+    rushSignInPrimary: 'Увійти',
+    rushCalTitle: 'Потрібна оцінка рівня',
+    rushCalMessage: 'Завершіть оцінку рівня в Adaptive V2 перед запуском Rush.',
+    rushCalPrimary: 'Почати оцінку',
+    quizExitTitle: 'Вийти з вікторини?',
+    quizExitMessage: 'Відповіді в цій вікторині не будуть збережені.',
+    quizExitLeave: 'Вийти',
+    quizExitStay: 'Грати далі',
+    quizExitRushTitle: 'Завершити сесію Rush?',
+    quizExitRushMessage: 'Сесію буде завершено.',
+    quizExitRushLeave: 'Завершити',
+    rushBadge: 'Режим Rush',
+    rushSummaryTitle: 'Rush завершено',
+    rushSummaryRecord: 'Новий особистий рекорд!',
+    rushSummaryAgain: 'Ще Rush',
+    rushSummaryHome: 'Додому',
+    rushLblScore: 'Результат',
+    rushLblCorrect: 'Вірно',
+    rushLblWrong: 'Невірно',
+    rushLblStreak: 'Найкраща серія',
+    rushLblTime: 'Час',
     learningProfileTitle: 'Профіль навчання',
     adaptiveSetupTitle: 'Адаптивна вікторина',
     adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
@@ -922,6 +1090,34 @@ const UI = {
     adaptiveV2PhaseReview: 'وضع المراجعة',
     adaptiveV2PhaseChallenge: 'وضع التحدي',
     learningProfileBannerTitle: 'ملف التعلم',
+    rushBannerTitle: 'وضع Rush',
+    rushBannerSub: 'اختبار تكيّفي لا ينتهي · اخرج في أي وقت',
+    rushBannerSubGuest: 'سجّل الدخول للعب · اختبار تكيّفي لا ينتهي',
+    dialogCancel: 'إلغاء',
+    dialogOk: 'موافق',
+    rushSignInTitle: 'تسجيل الدخول مطلوب',
+    rushSignInMessage: 'تسجيل الدخول مطلوب.',
+    rushSignInPrimary: 'تسجيل الدخول',
+    rushCalTitle: 'التقييم مطلوب',
+    rushCalMessage: 'أكمل تقييم مستواك في Adaptive V2 قبل بدء Rush.',
+    rushCalPrimary: 'بدء التقييم',
+    quizExitTitle: 'مغادرة الاختبار؟',
+    quizExitMessage: 'لن تُحفظ إجاباتك في هذا الاختبار.',
+    quizExitLeave: 'مغادرة',
+    quizExitStay: 'متابعة اللعب',
+    quizExitRushTitle: 'إنهاء جلسة Rush؟',
+    quizExitRushMessage: 'ستنتهي جلستك.',
+    quizExitRushLeave: 'إنهاء الجلسة',
+    rushBadge: 'وضع Rush',
+    rushSummaryTitle: 'انتهى Rush',
+    rushSummaryRecord: 'رقم قياسي شخصي جديد!',
+    rushSummaryAgain: 'Rush مرة أخرى',
+    rushSummaryHome: 'الرئيسية',
+    rushLblScore: 'النتيجة',
+    rushLblCorrect: 'صحيح',
+    rushLblWrong: 'خطأ',
+    rushLblStreak: 'أفضل سلسلة',
+    rushLblTime: 'وقت الدراسة',
     learningProfileTitle: 'ملف التعلم',
     adaptiveSetupTitle: 'اختبار تكيّفي',
     adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
@@ -1344,7 +1540,19 @@ function _quizTimerStopAndGetSeconds() {
   return Math.max(0, Math.round(_quizTimerActiveMs / 1000));
 }
 
+function _quizTimerFlushAndGetSeconds() {
+  if (!_quizTimerRunning) return 0;
+  _quizTimerFlushSegment();
+  var secs = Math.max(0, Math.round(_quizTimerActiveMs / 1000));
+  _quizTimerActiveMs = 0;
+  if (_quizTimerRunning && !_quizTimerPaused) {
+    _quizTimerSegmentStart = _quizTimerNow();
+  }
+  return secs;
+}
+
 function _quizTimerAbandon() {
+  if (typeof window._rushIsActive === 'function' && window._rushIsActive()) return;
   if (!_quizTimerRunning) return;
   _quizTimerRunning = false;
   _quizTimerPaused = false;
@@ -1356,9 +1564,11 @@ function _quizTimerAbandon() {
 function _quizTimerIsRunning() { return _quizTimerRunning; }
 window._quizTimerStart = _quizTimerStart;
 window._quizTimerStopAndGetSeconds = _quizTimerStopAndGetSeconds;
+window._quizTimerFlushAndGetSeconds = _quizTimerFlushAndGetSeconds;
 window._quizTimerAbandon = _quizTimerAbandon;
 window._quizTimerTouch = _quizTimerTouch;
 window._quizTimerIsRunning = _quizTimerIsRunning;
+window._formatStudyTime = _formatStudyTime;
 var _quizReturnScreen = 'screen-levels'; // screen to return to when hitting ← Back from quiz
 var _deferredInstallPrompt = null;
 var _installPromptReady = false;
@@ -1743,7 +1953,24 @@ function applyTranslations() {
   var v2Sub = document.getElementById('adaptive-v2-banner-sub');
   if (v2Sub) v2Sub.textContent = u.adaptiveV2BannerSub;
   if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
+  var rushTitle = document.getElementById('rush-banner-title');
+  if (rushTitle) rushTitle.textContent = u.rushBannerTitle;
+  if (typeof window._rushRefreshBanner === 'function') window._rushRefreshBanner();
   document.getElementById('learning-profile-banner-title').textContent = _lp('title');
+  var rushAgain = document.getElementById('btn-rush-again');
+  if (rushAgain) rushAgain.textContent = u.rushSummaryAgain;
+  var rushHome = document.getElementById('btn-rush-home');
+  if (rushHome) rushHome.textContent = u.rushSummaryHome;
+  var rushLblScore = document.getElementById('rush-lbl-score');
+  if (rushLblScore) rushLblScore.textContent = u.rushLblScore;
+  var rushLblOk = document.getElementById('rush-lbl-correct');
+  if (rushLblOk) rushLblOk.textContent = u.rushLblCorrect;
+  var rushLblNo = document.getElementById('rush-lbl-wrong');
+  if (rushLblNo) rushLblNo.textContent = u.rushLblWrong;
+  var rushLblStreak = document.getElementById('rush-lbl-streak');
+  if (rushLblStreak) rushLblStreak.textContent = u.rushLblStreak;
+  var rushLblTime = document.getElementById('rush-lbl-time');
+  if (rushLblTime) rushLblTime.textContent = u.rushLblTime;
   document.getElementById('learning-profile-title').textContent = _lp('title');
   document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
   document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
@@ -2572,7 +2799,43 @@ function goHome(){
   _quizTimerAbandon();
   show('screen-levels');
 }
-function goQuizBack(){var t=_quizReturnScreen;_quizReturnScreen='screen-levels';window.goHome();show(t);}
+function _quizSessionActive(){
+  var el=document.getElementById('screen-quiz');
+  if(!el||el.classList.contains('hidden'))return false;
+  if(typeof window._rushIsActive==='function'&&window._rushIsActive())return true;
+  if(currentThemeCategoryId>0)return true;
+  if(typeof window._adaptiveV2IsActive==='function'&&window._adaptiveV2IsActive())return true;
+  return false;
+}
+function _performQuizBack(){
+  if(typeof window._rushIsActive==='function'&&window._rushIsActive()){
+    if(typeof window.endRushSession==='function')window.endRushSession(true);
+    return;
+  }
+  var ret=_quizReturnScreen;
+  _quizReturnScreen='screen-levels';
+  window.goHome();
+  show(ret);
+}
+function goQuizBack(){
+  if(!_quizSessionActive()){
+    _performQuizBack();
+    return;
+  }
+  var isRush=typeof window._rushIsActive==='function'&&window._rushIsActive();
+  if(typeof window.appDialog!=='object'||typeof window.appDialog.confirm!=='function'){
+    _performQuizBack();
+    return;
+  }
+  window.appDialog.confirm({
+    title:t(isRush?'quizExitRushTitle':'quizExitTitle'),
+    message:t(isRush?'quizExitRushMessage':'quizExitMessage'),
+    primaryLabel:t(isRush?'quizExitRushLeave':'quizExitLeave'),
+    cancelLabel:t('quizExitStay')
+  }).then(function(result){
+    if(result==='primary')_performQuizBack();
+  });
+}
 function openSwipeSetup(){ window.umami?.track('quick_match_opened'); show('screen-swipe-setup'); }
 function setSwipeLevel(lv){
   swipeSelectedLevel = lv;
@@ -6187,10 +6450,10 @@ function _backArrowSvg(isRtl) {
 }
 function show(id){
   var quizWasVisible = !document.getElementById('screen-quiz').classList.contains('hidden');
-  ['screen-levels','screen-learning-profile','screen-quiz','screen-results','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
+  ['screen-levels','screen-learning-profile','screen-quiz','screen-results','screen-rush-summary','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
     document.getElementById(s).classList.toggle('hidden',s!==id);
   });
-  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results') {
+  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results' && id !== 'screen-rush-summary') {
     _quizTimerAbandon();
   }
   document.body.classList.toggle('practice-setup-scroll-lock', id === 'screen-practice-setup');
@@ -6200,6 +6463,7 @@ function show(id){
   var backMap = {
     'screen-quiz':             function(){ goQuizBack(); },
     'screen-results':          null,
+    'screen-rush-summary':     function(){ goHome(); },
     'screen-learning-profile': function(){ goHome(); },
     'screen-swipe-setup':      function(){ goHome(); },
     'screen-swipe':            function(){ openSwipeSetup(); },
