@@ -6017,14 +6017,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die Ausbildung dauert in diesem Beruf drei Jahre.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "training / vocational education",
+        "tr": "eğitim / mesleki eğitim",
+        "fa": "آموزش حرفه‌ای / دوره آموزشی",
+        "ru": "профессиональное обучение",
+        "uk": "професійна освіта",
+        "ar": "تدريب مهني / تعليم مهني"
       }
     },
     "34573": {
@@ -6037,14 +6037,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "Die duale Ausbildung findet im Betrieb und in der Schule statt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "dual",
+        "tr": "ikili / dual",
+        "fa": "دوگانه",
+        "ru": "дуальный / двойной",
+        "uk": "дуальний / подвійний",
+        "ar": "مزدوج / ثنائي"
       }
     },
     "34574": {
@@ -6057,14 +6057,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 9,
-      "example_de": "",
+      "example_de": "In der Berufsschule lernen die Auszubildenden Theorie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vocational school",
+        "tr": "meslek okulu",
+        "fa": "مدرسه فنی‌وحرفه‌ای",
+        "ru": "профессиональная школа",
+        "uk": "професійна школа",
+        "ar": "مدرسة مهنية"
       }
     },
     "34575": {
@@ -6077,14 +6077,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Gute Deutschkenntnisse sind eine wichtige Grundlage.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "basis / foundation",
+        "tr": "temel / dayanak",
+        "fa": "پایه / اساس",
+        "ru": "основа",
+        "uk": "основа",
+        "ar": "أساس / قاعدة"
       }
     },
     "34576": {
@@ -6097,14 +6097,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Ein Gesundheitsberuf verlangt viel Verantwortung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "healthcare profession",
+        "tr": "sağlık mesleği",
+        "fa": "حرفه حوزه سلامت",
+        "ru": "медицинская профессия",
+        "uk": "медична професія",
+        "ar": "مهنة صحية"
       }
     },
     "34577": {
@@ -6117,14 +6117,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Das Pflegepersonal kümmert sich um die Patienten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "nursing staff / care staff",
+        "tr": "bakım personeli / hemşirelik personeli",
+        "fa": "کادر پرستاری / کادر مراقبت",
+        "ru": "медперсонал / персонал по уходу",
+        "uk": "медперсонал / персонал догляду",
+        "ar": "طاقم التمريض / طاقم الرعاية"
       }
     },
     "34578": {
@@ -6137,14 +6137,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Pflegefachkraft erklärt dem Patienten die Behandlung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "qualified nursing professional",
+        "tr": "uzman bakım personeli / hemşire",
+        "fa": "پرستار متخصص / نیروی حرفه‌ای مراقبت",
+        "ru": "квалифицированный специалист по уходу",
+        "uk": "кваліфікований фахівець з догляду",
+        "ar": "ممرض مؤهل / أخصائي رعاية"
       }
     },
     "34579": {
@@ -6157,14 +6157,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die medizinische Fachangestellte macht einen Termin aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "medical assistant",
+        "tr": "tıbbi asistan / sağlık görevlisi",
+        "fa": "دستیار پزشکی",
+        "ru": "медицинский ассистент",
+        "uk": "медичний асистент",
+        "ar": "مساعدة طبية / مساعد طبي"
       }
     },
     "34580": {
@@ -6177,14 +6177,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Physiotherapeut zeigt mir neue Übungen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "physiotherapist",
+        "tr": "fizyoterapist",
+        "fa": "فیزیوتراپیست مرد",
+        "ru": "физиотерапевт",
+        "uk": "фізіотерапевт",
+        "ar": "أخصائي علاج طبيعي"
       }
     },
     "34581": {
@@ -6197,14 +6197,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Physiotherapeutin behandelt meine Schulter.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "female physiotherapist",
+        "tr": "kadın fizyoterapist",
+        "fa": "فیزیوتراپیست زن",
+        "ru": "физиотерапевт-женщина",
+        "uk": "фізіотерапевтка",
+        "ar": "أخصائية علاج طبيعي"
       }
     },
     "34582": {
@@ -6217,14 +6217,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Krankenhaus arbeiten viele Menschen im Schichtdienst.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "shift work",
+        "tr": "vardiyalı çalışma",
+        "fa": "کار شیفتی",
+        "ru": "сменная работа",
+        "uk": "змінна робота",
+        "ar": "عمل بنظام الورديات"
       }
     },
     "34583": {
@@ -6237,14 +6237,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Firma bietet familienfreundliche Arbeitszeiten an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "family-friendly",
+        "tr": "aile dostu",
+        "fa": "خانواده‌دوست / مناسب خانواده",
+        "ru": "удобный для семьи",
+        "uk": "дружній до сімʼї",
+        "ar": "مناسب للعائلة"
       }
     },
     "34584": {
@@ -6257,14 +6257,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Ärztin kontrolliert jeden Morgen den Blutdruck.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "blood pressure",
+        "tr": "tansiyon / kan basıncı",
+        "fa": "فشار خون",
+        "ru": "кровяное давление",
+        "uk": "кровʼяний тиск",
+        "ar": "ضغط الدم"
       }
     },
     "34585": {
@@ -6277,14 +6277,14 @@
       "word_type": "Verb",
       "difficulty": 2,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Kannst du bitte die Temperatur messen?",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to measure",
+        "tr": "ölçmek",
+        "fa": "اندازه گرفتن",
+        "ru": "измерять",
+        "uk": "вимірювати",
+        "ar": "يقيس"
       }
     },
     "34586": {
@@ -6297,14 +6297,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Pflegerin versorgt die Wunde.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to care for / to treat",
+        "tr": "bakmak / tedavi etmek",
+        "fa": "مراقبت کردن / رسیدگی کردن",
+        "ru": "ухаживать / обрабатывать",
+        "uk": "доглядати / обробляти",
+        "ar": "يعتني بـ / يعالج"
       }
     },
     "34587": {
@@ -6317,14 +6317,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Nach dem Duschen brauche ich ein frisches Handtuch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "towel",
+        "tr": "havlu",
+        "fa": "حوله",
+        "ru": "полотенце",
+        "uk": "рушник",
+        "ar": "منشفة"
       }
     },
     "34588": {
@@ -6337,14 +6337,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "Die Einkaufstaschen liegen im Kofferraum.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "trunk / boot",
+        "tr": "bagaj",
+        "fa": "صندوق عقب",
+        "ru": "багажник",
+        "uk": "багажник",
+        "ar": "صندوق السيارة"
       }
     },
     "34589": {
@@ -6357,14 +6357,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Wenn du mehr weißt, gib mir bitte Bescheid.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to know / to be informed",
+        "tr": "haberi olmak / bilmek",
+        "fa": "خبر داشتن / آگاه بودن",
+        "ru": "быть в курсе / знать",
+        "uk": "бути в курсі / знати",
+        "ar": "يكون على علم / يعرف"
       }
     },
     "34590": {
@@ -6377,14 +6377,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Im Nachtdienst ist es oft ruhiger als am Tag.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "night shift",
+        "tr": "gece vardiyası",
+        "fa": "شیفت شب",
+        "ru": "ночная смена",
+        "uk": "нічна зміна",
+        "ar": "وردية ليلية"
       }
     },
     "34591": {
@@ -6397,14 +6397,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Bei der langen Fahrt muss ich wach bleiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to stay awake",
+        "tr": "uyanık kalmak",
+        "fa": "بیدار ماندن",
+        "ru": "оставаться бодрствующим",
+        "uk": "залишатися не спати",
+        "ar": "يبقى مستيقظًا"
       }
     },
     "34592": {
@@ -6417,14 +6417,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Patientin liegt auf der Hals-Nasen-Ohren-Station.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "ear, nose and throat ward",
+        "tr": "kulak burun boğaz servisi",
+        "fa": "بخش گوش و حلق و بینی",
+        "ru": "лор-отделение",
+        "uk": "лор-відділення",
+        "ar": "قسم الأنف والأذن والحنجرة"
       }
     },
     "34593": {
@@ -6437,14 +6437,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Bei Hitze habe ich manchmal Probleme mit dem Kreislauf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "circulation",
+        "tr": "dolaşım",
+        "fa": "گردش خون / سیستم گردش خون",
+        "ru": "кровообращение",
+        "uk": "кровообіг",
+        "ar": "الدورة الدموية"
       }
     },
     "34594": {
@@ -6457,14 +6457,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Für den Einkauf nehme ich eine Stofftasche mit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cloth bag",
+        "tr": "bez çanta",
+        "fa": "کیسه پارچه‌ای",
+        "ru": "тканевая сумка",
+        "uk": "тканинна сумка",
+        "ar": "حقيبة قماشية"
       }
     },
     "34595": {
@@ -6477,14 +6477,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 11,
-      "example_de": "",
+      "example_de": "In der Stadt benutze ich oft die öffentlichen Verkehrsmittel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "public transport",
+        "tr": "toplu taşıma araçları",
+        "fa": "وسایل حمل‌ونقل عمومی",
+        "ru": "общественный транспорт",
+        "uk": "громадський транспорт",
+        "ar": "وسائل النقل العام"
       }
     },
     "34596": {
@@ -6497,14 +6497,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Pfandflasche bringe ich morgen zum Supermarkt zurück.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "deposit bottle",
+        "tr": "depozitolu şişe",
+        "fa": "بطری دارای ودیعه",
+        "ru": "залоговая бутылка",
+        "uk": "заставна пляшка",
+        "ar": "زجاجة برهن / زجاجة قابلة للاسترجاع"
       }
     },
     "34597": {
@@ -6517,14 +6517,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Deckel von der Flasche fehlt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "lid / cap",
+        "tr": "kapak",
+        "fa": "در / درپوش",
+        "ru": "крышка",
+        "uk": "кришка",
+        "ar": "غطاء"
       }
     },
     "34598": {
@@ -6537,14 +6537,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Der Topf steht noch auf dem Herd.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "stove / cooker",
+        "tr": "ocak / fırınlı ocak",
+        "fa": "اجاق گاز",
+        "ru": "плита",
+        "uk": "плита",
+        "ar": "موقد"
       }
     },
     "34599": {
@@ -6557,14 +6557,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Recycling spart Rohstoffe und schützt die Umwelt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "recycling",
+        "tr": "geri dönüşüm",
+        "fa": "بازیافت",
+        "ru": "переработка",
+        "uk": "переробка",
+        "ar": "إعادة التدوير"
       }
     },
     "34600": {
@@ -6577,14 +6577,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Ich versuche, Plastikverpackung beim Einkaufen zu vermeiden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "plastic packaging",
+        "tr": "plastik ambalaj",
+        "fa": "بسته‌بندی پلاستیکی",
+        "ru": "пластиковая упаковка",
+        "uk": "пластикова упаковка",
+        "ar": "تغليف بلاستيكي"
       }
     },
     "34601": {
@@ -6597,14 +6597,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Diese Maßnahme soll den Energieverbrauch senken.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "measure / action",
+        "tr": "önlem / tedbir",
+        "fa": "اقدام / تدبیر",
+        "ru": "мера",
+        "uk": "захід",
+        "ar": "إجراء / تدبير"
       }
     },
     "34602": {
@@ -6617,14 +6617,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 12,
-      "example_de": "",
+      "example_de": "Wir möchten uns eine neue Waschmaschine anschaffen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to get / to purchase something",
+        "tr": "bir şey edinmek / satın almak",
+        "fa": "چیزی تهیه کردن / خریدن",
+        "ru": "приобретать что-либо",
+        "uk": "придбати щось",
+        "ar": "يقتني شيئًا / يشتري شيئًا"
       }
     },
     "34603": {
@@ -6637,14 +6637,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Beim Kauf achte ich auf die Energieklasse.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "energy efficiency class",
+        "tr": "enerji sınıfı",
+        "fa": "رده مصرف انرژی",
+        "ru": "класс энергоэффективности",
+        "uk": "клас енергоефективності",
+        "ar": "فئة كفاءة الطاقة"
       }
     },
     "34604": {
@@ -6657,14 +6657,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 17,
-      "example_de": "",
+      "example_de": "Der Fernseher verbraucht auch im Standby-Modus Strom.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "standby mode",
+        "tr": "bekleme modu",
+        "fa": "حالت آماده‌به‌کار",
+        "ru": "режим ожидания",
+        "uk": "режим очікування",
+        "ar": "وضع الاستعداد"
       }
     },
     "34605": {
@@ -6677,14 +6677,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Das Sparprogramm der Waschmaschine dauert länger.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "eco program / saving program",
+        "tr": "tasarruf programı",
+        "fa": "برنامه صرفه‌جویی",
+        "ru": "экономичная программа",
+        "uk": "економна програма",
+        "ar": "برنامج توفير"
       }
     },
     "34606": {
@@ -6697,14 +6697,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Bei normaler Wäsche brauche ich keine Vorwäsche.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "prewash",
+        "tr": "ön yıkama",
+        "fa": "پیش‌شست‌وشو",
+        "ru": "предварительная стирка",
+        "uk": "попереднє прання",
+        "ar": "غسل أولي"
       }
     },
     "34607": {
@@ -6717,14 +6717,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Heute sind es draußen nur wenige Grad.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "degree",
+        "tr": "derece",
+        "fa": "درجه",
+        "ru": "градус",
+        "uk": "градус",
+        "ar": "درجة"
       }
     },
     "34608": {
@@ -6737,14 +6737,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 6,
-      "example_de": "",
+      "example_de": "Im Winter soll man kurz, aber regelmäßig lüften.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to air / to ventilate",
+        "tr": "havalandırmak",
+        "fa": "هوا دادن / تهویه کردن",
+        "ru": "проветривать",
+        "uk": "провітрювати",
+        "ar": "يهوّي"
       }
     },
     "34609": {
@@ -6757,14 +6757,14 @@
       "word_type": "Phrase",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Zum Teil verstehe ich die Kritik.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "partly",
+        "tr": "kısmen",
+        "fa": "تا حدی / بخشی از",
+        "ru": "частично",
+        "uk": "частково",
+        "ar": "جزئيًا"
       }
     },
     "34610": {
@@ -6777,14 +6777,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Mist kommt später als Dünger auf das Feld.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "manure / rubbish",
+        "tr": "gübre / pislik",
+        "fa": "کود حیوانی / آشغال",
+        "ru": "навоз / дрянь",
+        "uk": "гній / дурниця",
+        "ar": "روث / قمامة"
       }
     },
     "34611": {
@@ -6797,14 +6797,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Das Gras ist nach dem Regen sehr grün.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "grass",
+        "tr": "çimen / ot",
+        "fa": "چمن / علف",
+        "ru": "трава",
+        "uk": "трава",
+        "ar": "عشب"
       }
     },
     "34612": {
@@ -6817,14 +6817,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Der Boden im Garten ist noch feucht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "ground / soil / floor",
+        "tr": "zemin / toprak",
+        "fa": "زمین / خاک / کف",
+        "ru": "земля / пол",
+        "uk": "земля / підлога",
+        "ar": "أرض / تربة"
       }
     },
     "34613": {
@@ -6837,14 +6837,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Das Pferd läuft über die Wiese.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "horse",
+        "tr": "at",
+        "fa": "اسب",
+        "ru": "лошадь",
+        "uk": "кінь",
+        "ar": "حصان"
       }
     },
     "34614": {
@@ -6857,14 +6857,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Die Kuh gibt jeden Tag Milch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "cow",
+        "tr": "inek",
+        "fa": "گاو ماده",
+        "ru": "корова",
+        "uk": "корова",
+        "ar": "بقرة"
       }
     },
     "34615": {
@@ -6877,14 +6877,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Das Schwein lebt auf dem Bauernhof.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "pig",
+        "tr": "domuz",
+        "fa": "خوک",
+        "ru": "свинья",
+        "uk": "свиня",
+        "ar": "خنزير"
       }
     },
     "34616": {
@@ -6897,14 +6897,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Eine Maus läuft durch den Keller.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "mouse",
+        "tr": "fare",
+        "fa": "موش",
+        "ru": "мышь",
+        "uk": "миша",
+        "ar": "فأر"
       }
     },
     "34617": {
@@ -6917,14 +6917,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Das Huhn legt fast jeden Tag ein Ei.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chicken / hen",
+        "tr": "tavuk",
+        "fa": "مرغ",
+        "ru": "курица",
+        "uk": "курка",
+        "ar": "دجاجة"
       }
     },
     "34618": {
@@ -6937,14 +6937,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Ökologische Produkte sind oft etwas teurer.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "ecological / organic",
+        "tr": "ekolojik / organik",
+        "fa": "زیست‌محیطی / ارگانیک",
+        "ru": "экологический",
+        "uk": "екологічний",
+        "ar": "بيئي / عضوي"
       }
     },
     "34619": {
@@ -6957,14 +6957,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "In der Landwirtschaft benutzt man weniger Chemie.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chemistry / chemicals",
+        "tr": "kimya / kimyasal maddeler",
+        "fa": "شیمی / مواد شیمیایی",
+        "ru": "химия / химикаты",
+        "uk": "хімія / хімікати",
+        "ar": "كيمياء / مواد كيميائية"
       }
     },
     "34620": {
@@ -6977,14 +6977,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Im Herbst ernten die Bauern die Äpfel.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to harvest",
+        "tr": "hasat etmek / toplamak",
+        "fa": "برداشت کردن",
+        "ru": "собирать урожай",
+        "uk": "збирати врожай",
+        "ar": "يحصد"
       }
     },
     "34621": {
@@ -6997,14 +6997,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 14,
-      "example_de": "",
+      "example_de": "Viele Bauern bauen hier Kartoffeln an.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to grow / to cultivate",
+        "tr": "yetiştirmek / ekmek",
+        "fa": "کاشتن / کشت کردن",
+        "ru": "выращивать",
+        "uk": "вирощувати",
+        "ar": "يزرع"
       }
     },
     "34622": {
