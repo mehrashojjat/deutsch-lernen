@@ -202,7 +202,7 @@
       if (typeof window.appDialog !== 'object' || typeof window.appDialog.confirm !== 'function') return;
       window.appDialog.confirm({
         title: _rushUi('rushSignInTitle', 'Sign in required'),
-        message: _rushUi('rushSignInMessage', 'Sign in required.'),
+        message: _rushUi('rushSignInMessage', 'Sign in to play Rush Mode.'),
         primaryLabel: _rushUi('rushSignInPrimary', 'Sign in'),
         cancelLabel: _rushUi('dialogCancel', 'Cancel')
       }).then(function (result) {
@@ -278,8 +278,8 @@
     if (!sub) return;
     var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
     sub.textContent = signedIn
-      ? _rushUi('rushBannerSub', 'Endless adaptive quiz · quit anytime')
-      : _rushUi('rushBannerSubGuest', 'Sign in to play · Endless adaptive quiz');
+      ? _rushUi('rushBannerSub', 'Continuous challenge mode · quit anytime')
+      : _rushUi('rushBannerSubGuest', 'Sign in to play · Continuous challenge mode');
     if (icon) icon.textContent = signedIn ? '⚡' : '🔒';
   };
 
