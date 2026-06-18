@@ -5017,14 +5017,14 @@
       "word_type": "Word",
       "difficulty": 1,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ups, das war mein Fehler.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "oops",
+        "tr": "oops / aa",
+        "fa": "اوپس / وای",
+        "ru": "ой / упс",
+        "uk": "ой / упс",
+        "ar": "أوبس / عفوًا"
       }
     },
     "34523": {
@@ -5037,14 +5037,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Er antwortet auf die Frage sehr ausweichend.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "evasive",
+        "tr": "kaçamak / dolaylı",
+        "fa": "طفره‌آمیز / غیرمستقیم",
+        "ru": "уклончивый",
+        "uk": "ухильний",
+        "ar": "مراوغ / غير مباشر"
       }
     },
     "34524": {
@@ -5057,14 +5057,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Raum eignet sich für kleine Kurse.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be suitable for",
+        "tr": "için uygun olmak",
+        "fa": "برای چیزی مناسب بودن",
+        "ru": "подходить для",
+        "uk": "підходити для",
+        "ar": "يناسب / يكون مناسبًا لـ"
       }
     },
     "34525": {
@@ -5077,14 +5077,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 3,
-      "example_de": "",
+      "example_de": "Der Kinderwunsch ist für das Paar sehr wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "wish to have children",
+        "tr": "çocuk sahibi olma isteği",
+        "fa": "تمایل به داشتن فرزند",
+        "ru": "желание иметь детей",
+        "uk": "бажання мати дітей",
+        "ar": "رغبة في إنجاب طفل"
       }
     },
     "34526": {
@@ -5097,14 +5097,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Ursache der Krankheit ist noch unbekannt.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "unknown",
+        "tr": "bilinmeyen",
+        "fa": "ناشناخته / نامعلوم",
+        "ru": "неизвестный",
+        "uk": "невідомий",
+        "ar": "مجهول / غير معروف"
       }
     },
     "34527": {
@@ -5117,14 +5117,14 @@
       "word_type": "Verb",
       "difficulty": 2,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Am Abend möchte ich mit Freunden weggehen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to go out",
+        "tr": "dışarı çıkmak",
+        "fa": "بیرون رفتن",
+        "ru": "выходить / уходить",
+        "uk": "виходити / йти геть",
+        "ar": "يخرج"
       }
     },
     "34528": {
@@ -5137,14 +5137,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Die Entscheidung hängt vom Wetter ab.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to depend on",
+        "tr": "-e bağlı olmak",
+        "fa": "بستگی داشتن به",
+        "ru": "зависеть от",
+        "uk": "залежати від",
+        "ar": "يعتمد على"
       }
     },
     "34529": {
@@ -5157,14 +5157,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 5,
-      "example_de": "",
+      "example_de": "Das Hühnchen ist im Ofen fast fertig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chicken",
+        "tr": "tavuk",
+        "fa": "مرغ / جوجه",
+        "ru": "курица / цыплёнок",
+        "uk": "курка / курча",
+        "ar": "دجاج"
       }
     },
     "34530": {
@@ -5177,14 +5177,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Nach dem Umzug fühlte sie sich isoliert.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "isolated",
+        "tr": "yalnız / izole",
+        "fa": "منزوی / جداافتاده",
+        "ru": "изолированный",
+        "uk": "ізольований",
+        "ar": "معزول"
       }
     },
     "34531": {
@@ -5197,14 +5197,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 10,
-      "example_de": "",
+      "example_de": "Der Aufenthalt im Krankenhaus dauert drei Tage.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "stay / residence",
+        "tr": "kalış / ikamet",
+        "fa": "اقامت / ماندن",
+        "ru": "пребывание",
+        "uk": "перебування",
+        "ar": "إقامة / بقاء"
       }
     },
     "34532": {
@@ -5217,14 +5217,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Nach dem Unfall verlor er etwas Blut.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "blood",
+        "tr": "kan",
+        "fa": "خون",
+        "ru": "кровь",
+        "uk": "кров",
+        "ar": "دم"
       }
     },
     "34533": {
@@ -5237,14 +5237,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Verband muss jeden Tag gewechselt werden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bandage",
+        "tr": "bandaj / sargı",
+        "fa": "باند / پانسمان",
+        "ru": "повязка / бинт",
+        "uk": "повʼязка / бинт",
+        "ar": "ضمادة / رباط"
       }
     },
     "34534": {
@@ -5257,14 +5257,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Ärztin muss einen Verband anlegen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to put on a bandage",
+        "tr": "bandaj yapmak / sargı sarmak",
+        "fa": "باند بستن",
+        "ru": "наложить повязку",
+        "uk": "накласти повʼязку",
+        "ar": "يضع ضمادة"
       }
     },
     "34535": {
@@ -5277,14 +5277,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Knochen ist zum Glück nicht gebrochen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "bone",
+        "tr": "kemik",
+        "fa": "استخوان",
+        "ru": "кость",
+        "uk": "кістка",
+        "ar": "عظم"
       }
     },
     "34536": {
@@ -5297,14 +5297,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Beim Sturz kann man sich einen Knochen brechen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to break a bone",
+        "tr": "kemiğini kırmak",
+        "fa": "استخوان شکستن",
+        "ru": "сломать кость",
+        "uk": "зламати кістку",
+        "ar": "يكسر عظمة"
       }
     },
     "34537": {
@@ -5317,14 +5317,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 19,
-      "example_de": "",
+      "example_de": "Bei dem lauten Knall bekam ich einen Schreck.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to get a fright",
+        "tr": "korkmak / irkilmek",
+        "fa": "ترسیدن / جا خوردن",
+        "ru": "испугаться",
+        "uk": "злякатися",
+        "ar": "يفزع / يخاف فجأة"
       }
     },
     "34538": {
@@ -5337,14 +5337,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Arzt kann Medikamente verschreiben.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to prescribe medicine",
+        "tr": "ilaç yazmak",
+        "fa": "دارو تجویز کردن",
+        "ru": "выписывать лекарства",
+        "uk": "виписувати ліки",
+        "ar": "يصف أدوية"
       }
     },
     "34539": {
@@ -5357,14 +5357,14 @@
       "word_type": "Phrase",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Wenn ich krank bin, habe ich keinen Appetit.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to have no appetite",
+        "tr": "iştahı olmamak",
+        "fa": "اشتها نداشتن",
+        "ru": "не иметь аппетита",
+        "uk": "не мати апетиту",
+        "ar": "لا تكون لديه شهية"
       }
     },
     "34540": {
@@ -5377,14 +5377,14 @@
       "word_type": "Noun",
       "difficulty": 1,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Mein Bauch tut seit gestern weh.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "belly / stomach",
+        "tr": "karın",
+        "fa": "شکم",
+        "ru": "живот",
+        "uk": "живіт",
+        "ar": "بطن"
       }
     },
     "34541": {
@@ -5397,14 +5397,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Sie hat Schmerzen in der Brust.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "chest / breast",
+        "tr": "göğüs",
+        "fa": "سینه",
+        "ru": "грудь",
+        "uk": "груди / грудна клітка",
+        "ar": "صدر / ثدي"
       }
     },
     "34542": {
@@ -5417,14 +5417,14 @@
       "word_type": "Noun",
       "difficulty": 2,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Stirn des Kindes ist sehr warm.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "forehead",
+        "tr": "alın",
+        "fa": "پیشانی",
+        "ru": "лоб",
+        "uk": "лоб",
+        "ar": "جبهة"
       }
     },
     "34543": {
@@ -5437,14 +5437,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Bei einem Unfall wählen wir den Notruf.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "emergency call",
+        "tr": "acil çağrı",
+        "fa": "تماس اضطراری",
+        "ru": "экстренный вызов",
+        "uk": "екстрений виклик",
+        "ar": "نداء طوارئ"
       }
     },
     "34544": {
@@ -5457,14 +5457,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Notrufzentrale schickt sofort einen Krankenwagen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "emergency call center",
+        "tr": "acil çağrı merkezi",
+        "fa": "مرکز تماس اضطراری",
+        "ru": "центр экстренных вызовов",
+        "uk": "центр екстрених викликів",
+        "ar": "مركز نداء الطوارئ"
       }
     },
     "34545": {
@@ -5477,14 +5477,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Ich muss die schweren Kisten ausladen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to unload",
+        "tr": "boşaltmak / indirmek",
+        "fa": "خالی کردن / پایین آوردن",
+        "ru": "разгружать",
+        "uk": "розвантажувати",
+        "ar": "يفرغ / ينزل الحمولة"
       }
     },
     "34546": {
@@ -5497,14 +5497,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Patient ist nach dem Unfall ansprechbar.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "responsive / able to respond",
+        "tr": "bilinci açık / cevap verebilir",
+        "fa": "هوشیار / قابل پاسخ‌گویی",
+        "ru": "в сознании / реагирующий",
+        "uk": "при свідомості / реагує",
+        "ar": "واعٍ / يستجيب"
       }
     },
     "34547": {
@@ -5517,14 +5517,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Frau war kurz bewusstlos.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "unconscious",
+        "tr": "bilinçsiz / baygın",
+        "fa": "بیهوش",
+        "ru": "без сознания",
+        "uk": "непритомний",
+        "ar": "فاقد الوعي"
       }
     },
     "34548": {
@@ -5537,14 +5537,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Mein Knöchel ist nach dem Sport geschwollen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "ankle",
+        "tr": "ayak bileği",
+        "fa": "مچ پا",
+        "ru": "лодыжка",
+        "uk": "щиколотка",
+        "ar": "كاحل"
       }
     },
     "34549": {
@@ -5557,14 +5557,14 @@
       "word_type": "Verb",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Arzt will den Fuß röntgen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to x-ray",
+        "tr": "röntgen çekmek",
+        "fa": "عکس رادیولوژی گرفتن",
+        "ru": "делать рентген",
+        "uk": "робити рентген",
+        "ar": "يصور بالأشعة السينية"
       }
     },
     "34550": {
@@ -5577,14 +5577,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Auf dem Röntgenbild sieht man den Bruch.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "x-ray image",
+        "tr": "röntgen filmi",
+        "fa": "تصویر رادیولوژی",
+        "ru": "рентгеновский снимок",
+        "uk": "рентгенівський знімок",
+        "ar": "صورة أشعة سينية"
       }
     },
     "34551": {
@@ -5597,14 +5597,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Vor der Operation bekommt er eine Narkose.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "anesthesia",
+        "tr": "anestezi / narkoz",
+        "fa": "بیهوشی",
+        "ru": "наркоз / анестезия",
+        "uk": "наркоз / анестезія",
+        "ar": "تخدير"
       }
     },
     "34552": {
@@ -5617,14 +5617,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Prognose nach der Behandlung ist gut.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "prognosis",
+        "tr": "prognoz / tahmin",
+        "fa": "پیش‌آگهی / پیش‌بینی",
+        "ru": "прогноз",
+        "uk": "прогноз",
+        "ar": "توقع طبي / إنذار"
       }
     },
     "34553": {
@@ -5637,14 +5637,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Bitte füllen Sie das Formular vollständig aus.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "form",
+        "tr": "form",
+        "fa": "فرم",
+        "ru": "формуляр / бланк",
+        "uk": "формуляр / бланк",
+        "ar": "استمارة"
       }
     },
     "34554": {
@@ -5657,14 +5657,14 @@
       "word_type": "Adjective",
       "difficulty": 4,
       "category_id": 18,
-      "example_de": "",
+      "example_de": "Gesetzliche Regeln gelten für alle Versicherten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "legal / statutory",
+        "tr": "yasal",
+        "fa": "قانونی",
+        "ru": "законный / установленный законом",
+        "uk": "законний / встановлений законом",
+        "ar": "قانوني"
       }
     },
     "34555": {
@@ -5677,14 +5677,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Arbeitgeber muss den Unfall melden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "employer",
+        "tr": "işveren",
+        "fa": "کارفرما",
+        "ru": "работодатель",
+        "uk": "роботодавець",
+        "ar": "صاحب العمل"
       }
     },
     "34556": {
@@ -5697,14 +5697,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Polizei untersucht den Unfallort.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "accident site",
+        "tr": "kaza yeri",
+        "fa": "محل حادثه",
+        "ru": "место аварии",
+        "uk": "місце аварії",
+        "ar": "مكان الحادث"
       }
     },
     "34557": {
@@ -5717,14 +5717,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Ein Arbeitsunfall muss sofort gemeldet werden.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "work accident",
+        "tr": "iş kazası",
+        "fa": "حادثه کاری",
+        "ru": "несчастный случай на работе",
+        "uk": "нещасний випадок на роботі",
+        "ar": "حادث عمل"
       }
     },
     "34558": {
@@ -5737,14 +5737,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Bei Kopfschmerzen nehme ich eine Schmerztablette.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "painkiller tablet",
+        "tr": "ağrı kesici tablet",
+        "fa": "قرص مسکن",
+        "ru": "обезболивающая таблетка",
+        "uk": "знеболювальна таблетка",
+        "ar": "قرص مسكن"
       }
     },
     "34559": {
@@ -5757,14 +5757,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Vitamintablette nehme ich morgens.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vitamin tablet",
+        "tr": "vitamin tableti",
+        "fa": "قرص ویتامین",
+        "ru": "витаминная таблетка",
+        "uk": "вітамінна таблетка",
+        "ar": "قرص فيتامين"
       }
     },
     "34560": {
@@ -5777,14 +5777,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Meine Allergie wird im Frühling stärker.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "allergy",
+        "tr": "alerji",
+        "fa": "آلرژی / حساسیت",
+        "ru": "аллергия",
+        "uk": "алергія",
+        "ar": "حساسية"
       }
     },
     "34561": {
@@ -5797,14 +5797,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Bei einer Unverträglichkeit soll man vorsichtig essen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "intolerance",
+        "tr": "tahammülsüzlük / intolerans",
+        "fa": "عدم تحمل غذایی / ناسازگاری",
+        "ru": "непереносимость",
+        "uk": "непереносимість",
+        "ar": "عدم تحمل"
       }
     },
     "34562": {
@@ -5817,14 +5817,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Impfung schützt vor schweren Krankheiten.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "vaccination",
+        "tr": "aşı",
+        "fa": "واکسیناسیون / واکسن",
+        "ru": "прививка / вакцинация",
+        "uk": "щеплення / вакцинація",
+        "ar": "تطعيم / لقاح"
       }
     },
     "34563": {
@@ -5837,14 +5837,14 @@
       "word_type": "Verb",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Arzt möchte die Kinder nächste Woche impfen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to vaccinate",
+        "tr": "aşılamak",
+        "fa": "واکسینه کردن",
+        "ru": "вакцинировать",
+        "uk": "вакцинувати",
+        "ar": "يلقح"
       }
     },
     "34564": {
@@ -5857,14 +5857,14 @@
       "word_type": "Word",
       "difficulty": 4,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Die Helferin kann dem Arzt assistieren.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to assist",
+        "tr": "asistanlık yapmak / yardım etmek",
+        "fa": "کمک کردن / دستیاری کردن",
+        "ru": "ассистировать / помогать",
+        "uk": "асистувати / допомагати",
+        "ar": "يساعد / يعاون"
       }
     },
     "34565": {
@@ -5877,14 +5877,14 @@
       "word_type": "Noun",
       "difficulty": 5,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Nach der Operation beginnt die Rehabilitation.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "rehabilitation",
+        "tr": "rehabilitasyon",
+        "fa": "توان‌بخشی",
+        "ru": "реабилитация",
+        "uk": "реабілітація",
+        "ar": "إعادة تأهيل"
       }
     },
     "34566": {
@@ -5897,14 +5897,14 @@
       "word_type": "Word",
       "difficulty": 3,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Der Therapeut massiert den Rücken vorsichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to massage",
+        "tr": "masaj yapmak",
+        "fa": "ماساژ دادن",
+        "ru": "массировать",
+        "uk": "масажувати",
+        "ar": "يدلك / يعمل مساج"
       }
     },
     "34567": {
@@ -5917,14 +5917,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Die Bewegungsübung hilft nach der Verletzung.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "movement exercise",
+        "tr": "hareket egzersizi",
+        "fa": "تمرین حرکتی",
+        "ru": "двигательное упражнение",
+        "uk": "рухова вправа",
+        "ar": "تمرين حركي"
       }
     },
     "34568": {
@@ -5937,14 +5937,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 13,
-      "example_de": "",
+      "example_de": "Die Dokumentation der Behandlung ist wichtig.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "documentation",
+        "tr": "dokümantasyon / belgeleme",
+        "fa": "مستندسازی / مدارک",
+        "ru": "документация",
+        "uk": "документація",
+        "ar": "توثيق / وثائق"
       }
     },
     "34569": {
@@ -5957,14 +5957,14 @@
       "word_type": "Phrase",
       "difficulty": 4,
       "category_id": 21,
-      "example_de": "",
+      "example_de": "Der Patient ist auf Hilfe angewiesen.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "to be dependent on",
+        "tr": "-e bağımlı olmak / muhtaç olmak",
+        "fa": "وابسته بودن به / نیازمند بودن",
+        "ru": "зависеть от / нуждаться в",
+        "uk": "залежати від / потребувати",
+        "ar": "يعتمد على / يحتاج إلى"
       }
     },
     "34570": {
@@ -5977,14 +5977,14 @@
       "word_type": "Noun",
       "difficulty": 3,
       "category_id": 8,
-      "example_de": "",
+      "example_de": "Der Papierkram dauert oft länger als gedacht.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "paperwork",
+        "tr": "evrak işleri",
+        "fa": "کاغذبازی / کارهای اداری",
+        "ru": "бумажная работа",
+        "uk": "паперова робота",
+        "ar": "أعمال ورقية"
       }
     },
     "34571": {
@@ -5997,14 +5997,14 @@
       "word_type": "Noun",
       "difficulty": 4,
       "category_id": 4,
-      "example_de": "",
+      "example_de": "Im Gesundheitsbereich arbeiten viele Fachkräfte.",
       "translations": {
-        "en": "",
-        "tr": "",
-        "fa": "",
-        "ru": "",
-        "uk": "",
-        "ar": ""
+        "en": "health sector",
+        "tr": "sağlık sektörü",
+        "fa": "حوزه سلامت",
+        "ru": "сфера здравоохранения",
+        "uk": "сфера охорони здоровʼя",
+        "ar": "قطاع الصحة"
       }
     },
     "34572": {
