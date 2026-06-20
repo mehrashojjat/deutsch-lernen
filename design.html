@@ -349,7 +349,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .tab-track{display:flex;align-items:flex-start;gap:var(--tab-page-gap);will-change:transform;transition:transform var(--modal-dur) var(--modal-ease);}
 .tab-track.is-dragging{transition:none;}
 .tab-panel{display:flex;flex-direction:column;flex:0 0 100%;width:100%;min-width:0;}
+.tab-panel:not(.tab-flow-visible){height:0;min-height:0;overflow:hidden;pointer-events:none;}
 #tab-panel-practice.active{overflow:visible;flex:none;min-height:auto;flex-direction:column;gap:0;position:relative;}
+#tab-panel-practice.active.tab-flow-visible{height:auto;overflow:visible;pointer-events:auto;}
 #screen-levels:has(#tab-panel-practice.active){overflow:visible;}
 #tab-panel-stats{padding-bottom:4px;}
 #tab-panel-settings{padding-bottom:4px;}
@@ -971,7 +973,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <div class="tab-viewport" id="tab-viewport">
     <div class="tab-track" id="tab-track">
   <!-- Learn tab -->
-  <div class="tab-panel active" id="tab-panel-learn" aria-hidden="false">
+  <div class="tab-panel active tab-flow-visible" id="tab-panel-learn" aria-hidden="false">
     <div class="home-actions">
       <div class="home-primary-actions">
         <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
@@ -8079,6 +8081,25 @@ function _updateTabIndicatorFromIndex(index) {
   indicator.style.height = (ar.height + (br.height - ar.height) * frac) + 'px';
   indicator.style.transform = 'translate(' + ((ar.left - ir.left) + (br.left - ar.left) * frac) + 'px,' + ((ar.top - ir.top) + (br.top - ar.top) * frac) + 'px)';
 }
+function _syncTabPanelFlow(opts) {
+  opts = opts || {};
+  var show = {};
+  if (typeof opts.dragIndex === 'number') {
+    var lo = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.floor(opts.dragIndex)));
+    var hi = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.ceil(opts.dragIndex)));
+    show[lo] = true;
+    show[hi] = true;
+  } else {
+    show[opts.activeIndex != null ? opts.activeIndex : _tabIndex] = true;
+  }
+  (opts.also || []).forEach(function(i) {
+    if (i >= 0 && i < TAB_ORDER.length) show[i] = true;
+  });
+  TAB_ORDER.forEach(function(t, idx) {
+    var panel = document.getElementById('tab-panel-' + t);
+    if (panel) panel.classList.toggle('tab-flow-visible', !!show[idx]);
+  });
+}
 function _syncTabPanelStates(index) {
   TAB_ORDER.forEach(function(t, idx) {
     var panel = document.getElementById('tab-panel-' + t);
@@ -8101,22 +8122,22 @@ function _ensurePracticeTab() {
   if (typeof _initPracticeTab === 'function') _initPracticeTab();
 }
 function _ensureStatsTab() {
-  if (!_statsTabReady) {
-    _statsTabReady = true;
-    if (typeof _ensureLearningProfileData === 'function') {
-      _ensureLearningProfileData(typeof learningProfileSelectedLevel !== 'undefined' ? learningProfileSelectedLevel : 'ALL');
-    }
-  } else if (_profileDirty && typeof renderLearningProfile === 'function') {
-    renderLearningProfile();
+  if (_statsTabReady) {
+    if (_profileDirty && typeof renderLearningProfile === 'function') renderLearningProfile();
+    return;
+  }
+  _statsTabReady = true;
+  if (typeof _ensureLearningProfileData === 'function') {
+    _ensureLearningProfileData(typeof learningProfileSelectedLevel !== 'undefined' ? learningProfileSelectedLevel : 'ALL');
   }
 }
-function _runTabLazyInit(index) {
-  var tab = TAB_ORDER[index];
-  if (tab === 'practice') _ensurePracticeTab();
-  if (tab === 'stats') _ensureStatsTab();
+function _preloadAllTabs() {
+  _ensurePracticeTab();
+  _ensureStatsTab();
 }
 function _setTabDragIndex(fractionalIndex) {
   _tabDragIndex = Math.max(0, Math.min(TAB_ORDER.length - 1, fractionalIndex));
+  _syncTabPanelFlow({ dragIndex: _tabDragIndex });
   _applyTabTrackTransform(_tabDragIndex, false);
   var indicator = document.getElementById('bottom-tab-indicator');
   if (indicator) indicator.classList.add('is-dragging');
@@ -8136,14 +8157,27 @@ function _setTabIndex(index, opts) {
   opts = opts || {};
   index = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.round(index)));
   if (!opts.force && index === _tabIndex && _tabDragIndex === null) return;
+  var prevIndex = _tabIndex;
   if (!opts.skipScrollSave) _saveTabScroll();
+  var animating = opts.animate !== false && _tabCarouselReady && !_tabReducedMotion() && prevIndex !== index;
   _tabIndex = index;
   _activeTab = TAB_ORDER[index];
   _tabDragIndex = null;
   _syncTabPanelStates(index);
-  _applyTabTrackTransform(index, opts.animate !== false);
+  _syncTabPanelFlow({ activeIndex: index, also: animating ? [prevIndex] : [] });
+  _applyTabTrackTransform(index, animating);
   _updateTabIndicator(_activeTab);
-  _runTabLazyInit(index);
+  if (animating) {
+    var track = _getTabTrack();
+    if (track) {
+      var onTransitionEnd = function(e) {
+        if (e.target !== track || e.propertyName !== 'transform') return;
+        track.removeEventListener('transitionend', onTransitionEnd);
+        _syncTabPanelFlow({ activeIndex: index });
+      };
+      track.addEventListener('transitionend', onTransitionEnd);
+    }
+  }
   if (!opts.skipScrollRestore) _restoreTabScroll(_activeTab);
 }
 function switchTab(tab) {
@@ -8417,7 +8451,8 @@ function checkOnline() {
   _langDdSync(LANG);
 })();
 applyTranslations();
-_setTabIndex(0, { animate: false, skipScrollSave: true });
+_preloadAllTabs();
+_setTabIndex(0, { animate: false, skipScrollSave: true, force: true });
 _tabCarouselReady = true;
 _initTabGestures();
 requestAnimationFrame(function() { _updateTabIndicator(_activeTab); });
