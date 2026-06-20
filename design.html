@@ -541,30 +541,34 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .swipe-subtitle{font-size:.74rem;color:var(--muted);}
 .swipe-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:290px;margin:0 0 14px;z-index:1;touch-action:none;overscroll-behavior:none;}
 .swipe-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
-.swipe-card{position:absolute;inset:0;background:#0d1220;border:1px solid rgba(255,255,255,.08);border-radius:25px;padding:16px 16px 14px;box-shadow:0 16px 34px rgba(0,0,0,.28);display:flex;flex-direction:column;justify-content:space-between;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;overflow:hidden;}
-.swipe-card.under-1{transform:translateY(8px) scale(.98);opacity:1;filter:brightness(.92);}
-.swipe-card.under-2{transform:translateY(14px) scale(.96);opacity:1;filter:brightness(.84);}
+.swipe-card{position:absolute;inset:0;--glass-radius:22px;padding:16px 16px 14px;display:flex;flex-direction:column;justify-content:space-between;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;overflow:hidden;}
+.swipe-card.top{z-index:3;}
+.swipe-card.under-1{z-index:2;transform:translateY(8px) scale(.98);--glass-bg:rgba(255,255,255,.06);--glass-bg-fallback:rgba(24,27,38,.94);}
+.swipe-card.under-2{z-index:1;transform:translateY(14px) scale(.96);--glass-bg:rgba(255,255,255,.05);--glass-bg-fallback:rgba(24,27,38,.92);}
 .swipe-card.dragging{transition:none;}
-.swipe-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
-.swipe-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
+.swipe-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;z-index:4;}
+.swipe-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;z-index:4;}
 .swipe-word-block{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:154px;}
 .swipe-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,7vw,2.65rem);line-height:1.02;color:var(--text);text-align:center;margin:0;}
-.swipe-helper{font-size:.76rem;color:var(--muted);text-align:center;min-height:18px;}
-.swipe-meaning-box{background:#161d31;border:1px solid rgba(255,255,255,.08);border-radius:25px;padding:12px 12px;text-align:center;}
-.swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.swipe-helper{font-size:.76rem;color:rgba(210,214,228,.82);text-align:center;min-height:18px;}
+.swipe-meaning-box{--glass-radius:18px;--glass-bg:rgba(255,255,255,.04);--glass-bg-fallback:rgba(18,20,28,.88);padding:12px;text-align:center;}
+.swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(196,200,216,.78);margin-bottom:8px;}
 .swipe-meaning{font-size:.98rem;line-height:1.45;color:var(--text);}
 .swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;margin-top:auto;padding-top:8px;}
-.swipe-btn{width:58px;height:58px;border-radius:50%;cursor:pointer;font-size:1.35rem;transition:transform .15s ease,border-color .15s ease;}
-.swipe-btn.left{--glass-bg:rgba(240,112,112,.08);border-color:rgba(240,112,112,.35);}
-.swipe-btn.right{--glass-bg:rgba(107,232,160,.08);border-color:rgba(107,232,160,.35);}
+.swipe-btn{width:58px;height:58px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s ease,border-color .15s ease,color .15s ease;}
+.swipe-btn.swipe-action-btn{--glass-bg:var(--glass-fill);color:rgba(255,255,255,.72);}
+.swipe-btn.swipe-action-btn .ui-icon{width:22px;height:22px;}
+.swipe-btn.swipe-action-btn:hover{--glass-bg:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:var(--text);}
 @media (prefers-reduced-motion:no-preference){.swipe-btn:hover{transform:translateY(-1px);}}
 .swipe-flash{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;pointer-events:none;opacity:0;transform:scale(.96);transition:opacity .2s ease,transform .2s ease;z-index:8;text-align:center;direction:ltr;}
 .swipe-flash.show{opacity:1;transform:scale(1);}
-.swipe-flash-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:min(100%,320px);margin:0 auto;}
-.swipe-flash-mark{padding:10px 16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 12px 30px rgba(0,0,0,.28);}
-.swipe-flash.good .swipe-flash-mark{border:1px solid rgba(107,232,160,.45);color:var(--green);}
-.swipe-flash.bad .swipe-flash-mark{border:1px solid rgba(240,112,112,.45);color:var(--red);}
-.swipe-flash-note{max-width:300px;--glass-radius:14px;padding:10px 12px;text-align:center;font-size:.8rem;line-height:1.4;color:var(--text);}
+.swipe-flash-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:min(calc(100% - 24px),320px);margin:0 auto;--glass-radius:22px;padding:18px 16px;}
+.swipe-flash.good .swipe-flash-inner{--glass-border:rgba(107,232,160,.28);--glass-bg:rgba(107,232,160,.08);--glass-bg-fallback:rgba(24,32,28,.94);}
+.swipe-flash.bad .swipe-flash-inner{--glass-border:rgba(240,112,112,.28);--glass-bg:rgba(240,112,112,.08);--glass-bg-fallback:rgba(32,22,22,.94);}
+.swipe-flash-mark{padding:0;font-family:inherit;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;line-height:1.2;}
+.swipe-flash.good .swipe-flash-mark{color:var(--green);}
+.swipe-flash.bad .swipe-flash-mark{color:var(--red);}
+.swipe-flash-note{max-width:280px;padding:0;text-align:center;font-size:.8rem;line-height:1.45;color:rgba(210,214,228,.88);}
 .swipe-empty{background:var(--surf);border:1px dashed var(--border);border-radius:25px;padding:40px 18px;text-align:center;color:var(--muted);}
 .swipe-empty strong{display:block;color:var(--text);font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;margin-bottom:8px;}
 
@@ -878,6 +882,8 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
   <symbol id="icon-flip" viewBox="0 0 24 24"><path d="M7 4H4v3"/><path d="M17 20h3v-3"/><path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5"/><path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5"/></symbol>
   <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M6 12l4 4 8-9"/></symbol>
 </svg>
 
 <!-- ══ PERSISTENT HEADER ══ -->
@@ -1324,16 +1330,16 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   </div>
   <div class="swipe-stage">
     <div class="swipe-flash" id="swipe-flash">
-      <div class="swipe-flash-inner">
-        <div class="swipe-flash-mark glass glass-pill glass-overlay glass-highlight" id="swipe-flash-mark">RIGHT</div>
-        <div class="swipe-flash-note glass glass-overlay" id="swipe-flash-note" hidden></div>
+      <div class="swipe-flash-inner glass glass-tile glass-highlight glass-chrome">
+        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
+        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
       </div>
     </div>
     <div class="swipe-card-stack" id="swipe-card-stack"></div>
   </div>
   <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome left" onclick="swipeAction('left')" title="Wrong">✖</button>
-    <button class="swipe-btn glass glass-chrome right" onclick="swipeAction('right')" title="Correct">✔</button>
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')" title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true"><use href="#icon-x"/></svg></button>
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')" title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"/></svg></button>
   </div>
 </div>
 
@@ -5579,12 +5585,12 @@ function _swipeWordSub(row) {
 }
 
 function _renderSwipeCardHtml(card, posClass) {
-  return '<div class="swipe-card ' + posClass + '" data-swipe-pos="' + posClass + '">'
+  return '<div class="swipe-card glass glass-tile glass-highlight glass-chrome ' + posClass + '" data-swipe-pos="' + posClass + '">'
     + '<div class="swipe-word-block">'
     + '<div class="swipe-word">' + escHtml(_swipeWordLabel(card.row)) + '</div>'
     + '<div class="swipe-helper">' + escHtml(_swipeWordSub(card.row)) + '</div>'
     + '</div>'
-    + '<div class="swipe-meaning-box"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
+    + '<div class="swipe-meaning-box glass glass-chrome"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
     + '</div>';
 }
 
