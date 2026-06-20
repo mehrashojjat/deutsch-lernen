@@ -42,7 +42,9 @@
   --glass-fill:rgba(255,255,255,0.08);--glass-fill-hover:rgba(255,255,255,0.11);
   --glass-border:rgba(255,255,255,0.12);--glass-specular:inset 0 1px 0 rgba(255,255,255,0.18);
   --glass-blur:blur(20px) saturate(165%);--glass-shadow:0 4px 24px rgba(0,0,0,0.20);
-  --modal-dur:.32s;--modal-ease:cubic-bezier(.32,.72,0,1);--modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
+  --modal-dur:.4s;--modal-ease:cubic-bezier(0.22,1,0.36,1);--modal-scrim-ease:cubic-bezier(0.32,0,0.18,1);
+  --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
+  --modal-scrim:rgba(0,0,0,0.42);
   --tab-h:62px;
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
@@ -112,52 +114,31 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
   align-items:center;justify-content:center;}
 #quiz-prep-overlay.active{display:flex;}
 
-/* Modal — dim scrim fades on ::before; shell stays opacity:1 so backdrop-blur is instant */
-.drawer-overlay,.app-dialog-overlay,.word-modal-overlay,.about-modal-overlay,.install-guide-overlay,.modal-overlay-dim{
-  position:fixed;top:0;left:0;right:0;bottom:0;width:100%;min-width:100vw;
-  height:100%;min-height:100vh;min-height:100dvh;min-height:-webkit-fill-available;
-  margin:0;padding:0;border:none;background:transparent;overflow:visible;
-  opacity:1;visibility:hidden;pointer-events:none;
-  transition:visibility 0s linear var(--modal-dur);-webkit-tap-highlight-color:transparent;}
-.drawer-overlay::before,.app-dialog-overlay::before,.word-modal-overlay::before,.about-modal-overlay::before,.install-guide-overlay::before,.modal-overlay-dim::before{
-  content:'';position:fixed;top:0;left:0;right:0;bottom:0;width:100%;min-width:100vw;
-  height:100%;min-height:100vh;min-height:100dvh;min-height:-webkit-fill-available;
-  background:rgba(0,0,0,0.42);opacity:0;pointer-events:none;
-  transition:opacity var(--modal-dur) ease;z-index:0;}
-.drawer-overlay{z-index:100;}
-.app-dialog-overlay{z-index:110;}
-.word-modal-overlay{z-index:300;display:flex;align-items:flex-end;justify-content:center;}
-.about-modal-overlay{z-index:500;display:flex;align-items:flex-end;justify-content:center;padding:0 12px calc(12px + env(safe-area-inset-bottom,0px));}
-.install-guide-overlay{z-index:1400;display:flex;align-items:flex-end;justify-content:center;padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));}
-.modal-overlay-dim{z-index:100;}
-.drawer-overlay.open,.app-dialog-overlay.open,.word-modal-overlay.open,.about-modal-overlay.open,.install-guide-overlay.open,.modal-overlay-dim.open{
-  visibility:visible;pointer-events:auto;transition:visibility 0s;}
-.drawer-overlay.open::before,.app-dialog-overlay.open::before,.word-modal-overlay.open::before,.about-modal-overlay.open::before,.install-guide-overlay.open::before,.modal-overlay-dim.open::before{
-  opacity:1;}
-.word-modal-overlay .word-modal,.about-modal-overlay .about-modal,.install-guide-overlay .install-guide{z-index:1;}
+/* ══ UNIFIED MODAL SYSTEM (scrim + sheet are siblings — never opacity-animate the root) ══ */
+.modal-root{position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;height:100dvh;
+  min-height:-webkit-fill-available;margin:0;padding:0;border:none;overflow:visible;
+  visibility:hidden;pointer-events:none;transition:visibility 0s linear var(--modal-dur);z-index:100;}
+.modal-root.open{visibility:visible;pointer-events:auto;transition:visibility 0s;}
+.modal-root--drawer{z-index:100;}
+.modal-root--dialog{z-index:110;}
+.modal-root--word{z-index:300;}
+.modal-root--about{z-index:500;}
+.modal-root--install{z-index:1400;}
+.modal-root--ann{z-index:9000;}
+.modal-root--align-bottom{display:flex;align-items:flex-end;justify-content:center;}
+.modal-root--align-center{display:flex;align-items:center;justify-content:center;padding:20px;}
+.modal-root--pad-bottom{padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));}
+.modal-root--pad-guide{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));}
+.modal-scrim{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;margin:0;padding:0;border:none;
+  background:transparent;transition:background-color var(--modal-dur) var(--modal-scrim-ease);-webkit-tap-highlight-color:transparent;}
+.modal-root.open .modal-scrim{background:var(--modal-scrim);}
+.modal-sheet{position:relative;z-index:1;transition:transform var(--modal-dur) var(--modal-ease);}
 /* Glass sheet shell: shadow on shell (no filter — filter breaks backdrop-blur on surface) */
 .glass-sheet-shell{position:relative;overflow:visible;border-radius:var(--glass-sheet-radius,25px);
-  box-shadow:var(--modal-panel-shadow);transition:transform var(--modal-dur) var(--modal-ease);}
+  box-shadow:var(--modal-panel-shadow);}
 .glass-sheet-shell .glass-sheet-surface{position:relative;background:var(--glass-fill);border:1px solid var(--glass-border);
-  border-radius:inherit;box-shadow:var(--glass-specular);color:var(--text);
-  --muted:rgba(196,201,218,0.94);--text-secondary:rgba(210,214,228,0.96);
-  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);
-  transform:translateZ(0);-webkit-transform:translateZ(0);}
-.glass-sheet-shell .glass-sheet-surface .drawer-section-label,
-.glass-sheet-shell .glass-sheet-surface .app-dialog-message,
-.glass-sheet-shell .glass-sheet-surface .install-step-desc,
-.glass-sheet-shell .glass-sheet-surface .rw-section-title,
-.glass-sheet-shell .glass-sheet-surface .rw-section-title-row>span:first-child,
-.glass-sheet-shell .glass-sheet-surface .rw-meaning-text,
-.glass-sheet-shell .glass-sheet-surface .rw-meaning-single,
-.glass-sheet-shell .glass-sheet-surface .rw-example-box,
-.glass-sheet-shell .glass-sheet-surface .rw-form .fl,
-.glass-sheet-shell .glass-sheet-surface .wikt-head-line,
-.glass-sheet-shell .glass-sheet-surface .wikt-example,
-.glass-sheet-shell .glass-sheet-surface .auth-email{color:var(--text-secondary);}
-.glass-sheet-shell .glass-sheet-surface .rw-click-hint,
-.glass-sheet-shell .glass-sheet-surface .wikt-offline-note,
-.glass-sheet-shell .glass-sheet-surface .rw-source{opacity:.82;}
+  border-radius:inherit;box-shadow:var(--glass-specular);
+  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);transform:translateZ(0);}
 .glass-sheet-shell .glass-sheet-surface::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;z-index:1;}
 .modal-panel-glass{background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--modal-panel-shadow),var(--glass-specular);
@@ -165,12 +146,11 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 /* Word card modal */
 .word-modal{width:100%;max-width:600px;overflow:visible;padding:0;background:transparent;border:none;
-  transform:translateY(110%);
-  transition:transform var(--modal-dur) var(--modal-ease);}
+  transform:translateY(110%);}
 .word-modal.glass-sheet-shell{--glass-sheet-radius:25px 25px 0 0;--modal-panel-shadow:0 -14px 52px rgba(0,0,0,0.38);}
 .word-modal .word-modal-surface{max-height:88vh;overflow-y:auto;
   padding:24px 20px calc(40px + env(safe-area-inset-bottom,0px));overscroll-behavior:none;}
-.word-modal-overlay.open .word-modal{transform:translateY(0);}
+.modal-root.open .word-modal{transform:translateY(0);}
 .word-modal-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:32px;margin:0 0 4px;cursor:pointer;}
 .word-modal-handle::before{content:'';width:40px;height:4px;background:var(--surf3);border-radius:99px;transition:background .15s;}
 .word-modal-handle:hover::before{background:var(--muted);}
@@ -185,11 +165,10 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 /* ── SETTINGS DRAWER ── */
 .drawer{position:fixed;bottom:calc(12px + var(--tab-h) + env(safe-area-inset-bottom,0px));left:50%;
   transform:translateX(-50%) translateY(calc(100% + 40px));
-  width:calc(100% - 24px);max-width:560px;z-index:101;
-  transition:transform var(--modal-dur) var(--modal-ease);overscroll-behavior:none;}
+  width:calc(100% - 24px);max-width:560px;z-index:1;overscroll-behavior:none;}
 body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 .drawer .glass-sheet-surface{padding:18px 18px 24px;}
-.drawer.open{transform:translateX(-50%) translateY(0);}
+.modal-root.open .drawer{transform:translateX(-50%) translateY(0);}
 .drawer-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:28px;margin:0 0 6px;cursor:pointer;}
 .drawer-handle::before{content:'';width:44px;height:5px;background:rgba(255,255,255,.15);border-radius:999px;transition:background .15s;}
 .drawer-handle:hover::before{background:rgba(255,255,255,.28);}
@@ -215,9 +194,9 @@ body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 .lang-dd-option+.lang-dd-option{border-top:1px solid rgba(255,255,255,.06);}
 .drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
 .about-modal{width:min(calc(100% - 24px),480px);overflow:visible;padding:0;background:transparent;border:none;
-  transform:translateY(calc(100% + 24px));transition:transform var(--modal-dur) var(--modal-ease);}
+  transform:translateY(calc(100% + 24px));}
 .about-modal .about-modal-surface{padding:24px 22px 32px;max-height:80vh;overflow-y:auto;}
-.about-modal-overlay.open .about-modal{transform:translateY(0);}
+.modal-root.open .about-modal{transform:translateY(0);}
 .about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.15rem;margin:0 0 16px;}
 .about-modal p{font-size:.85rem;line-height:1.7;color:var(--text);margin:0 0 12px;}
 .about-modal a{color:var(--gold);text-decoration:none;font-weight:600;}
@@ -252,11 +231,10 @@ body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 /* ── APP DIALOG (matches settings drawer) ── */
 .app-dialog{position:fixed;bottom:calc(12px + var(--tab-h) + env(safe-area-inset-bottom,0px));left:50%;
   transform:translateX(-50%) translateY(calc(100% + 40px));
-  width:calc(100% - 24px);max-width:560px;z-index:111;
-  transition:transform var(--modal-dur) var(--modal-ease);overscroll-behavior:none;}
+  width:calc(100% - 24px);max-width:560px;z-index:1;overscroll-behavior:none;}
 body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 .app-dialog .glass-sheet-surface{padding:18px 18px 24px;}
-.app-dialog.open{transform:translateX(-50%) translateY(0);}
+.modal-root.open .app-dialog{transform:translateX(-50%) translateY(0);}
 .app-dialog-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:28px;margin:0 0 6px;cursor:pointer;}
 .app-dialog-handle::before{content:'';width:44px;height:5px;background:rgba(255,255,255,.15);border-radius:999px;transition:background .15s;}
 .app-dialog-handle:hover::before{background:rgba(255,255,255,.28);}
@@ -371,10 +349,12 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 }
 
 /* ── TAB PANELS & BOTTOM NAV ── */
-.tab-panel{display:none;flex-direction:column;flex:1;min-height:0;animation:fadeUp .35s ease both;}
-.tab-panel.active{display:flex;}
-#tab-panel-practice{overflow:hidden;}
-#screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;width:100%;max-width:600px;}
+.tab-panel{display:none;flex-direction:column;flex:1;min-height:0;width:100%;}
+.tab-panel.active{display:flex;animation:fadeUp .35s var(--modal-ease) both;}
+#tab-panel-practice{overflow:hidden;flex:1 1 0;min-height:0;height:0;gap:0;}
+#screen-levels:has(#tab-panel-practice.active){overflow:hidden;flex:1 1 0;min-height:0;height:0;}
+#tab-panel-stats{overflow-y:auto;max-height:calc(100svh - 200px);-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+#screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
 #screen-levels .home-footer{margin-top:auto;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
@@ -624,33 +604,35 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   font-family:inherit;font-size:.92rem;font-weight:700;color:#0b0d13;cursor:pointer;transition:opacity .15s;}
 .btn-primary:hover{opacity:.88;}
 .btn-primary:disabled,.btn-primary[disabled]{opacity:.38;cursor:not-allowed;pointer-events:none;}
-#screen-practice-setup{position:relative;width:100%;max-width:600px;overflow:visible;display:flex;flex-direction:column;flex:1;min-height:0;}
-#screen-practice-setup .practice-setup-header{position:relative;margin-bottom:14px;background:transparent;pointer-events:auto;flex-shrink:0;}
-#screen-practice-setup .practice-setup-header .swipe-title-wrap{background:transparent;}
-#screen-practice-setup .practice-setup-scroll{flex:1;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;padding-bottom:12px;scrollbar-width:none;-ms-overflow-style:none;}
-#screen-practice-setup .practice-setup-scroll::-webkit-scrollbar{display:none;width:0;height:0;}
-#screen-practice-setup .practice-setup-filters{overflow:visible;margin-bottom:0;touch-action:pan-y;}
-#screen-practice-setup .practice-setup-footer{flex-shrink:0;padding:14px 0 4px;margin-top:auto;
-  background:linear-gradient(180deg,transparent,rgba(8,10,16,0.85) 30%);pointer-events:auto;}
-#screen-practice-setup .practice-setup-footer .btn-primary{margin-bottom:0;}
-.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-fill);color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:all .15s ease;font-family:inherit;white-space:nowrap;}
-.practice-chip:hover{border-color:rgba(255,255,255,0.14);color:var(--text);}
+/* ── PRACTICE SETUP (tab) ── */
+#tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;}
+#tab-panel-practice .practice-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
+#tab-panel-practice .practice-head-sub{font-size:.82rem;color:var(--muted);margin:5px 0 0;}
+#tab-panel-practice .practice-clear-btn{flex-shrink:0;align-self:flex-start;margin-top:4px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:999px;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;box-shadow:var(--glass-specular);transition:color .15s,border-color .15s,background .15s;}
+#tab-panel-practice .practice-clear-btn:hover{color:var(--gold);border-color:var(--gold-ring);background:var(--gold-soft);}
+#tab-panel-practice .practice-filters{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;display:flex;flex-direction:column;gap:14px;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none;}
+#tab-panel-practice .practice-filters::-webkit-scrollbar{display:none;}
+#tab-panel-practice .practice-filters .section-label{margin:0 0 8px;}
+#tab-panel-practice .practice-chips{display:flex;flex-wrap:wrap;gap:6px;}
+#tab-panel-practice .practice-dock{flex-shrink:0;margin-top:10px;padding:14px 16px;border-radius:25px;position:relative;overflow:hidden;background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  #tab-panel-practice .practice-dock{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
+}
+#tab-panel-practice .practice-dock::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;}
+#tab-panel-practice .practice-count{text-align:center;font-size:.82rem;color:var(--muted);line-height:1.45;margin:0 0 12px;}
+#tab-panel-practice .practice-count.is-empty{color:rgba(247,138,168,.92);}
+#tab-panel-practice .practice-count-num{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
+#tab-panel-practice .practice-count-hint{display:block;font-size:.72rem;margin-top:4px;color:rgba(247,138,168,.92);}
+#tab-panel-practice .practice-dock .btn-primary{margin-bottom:0;}
+.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-fill);color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:all .15s ease;font-family:inherit;white-space:nowrap;box-shadow:var(--glass-specular);}
+.practice-chip:hover{border-color:rgba(255,255,255,0.14);background:var(--glass-fill-hover);color:var(--text);}
 .practice-chip.active{border-color:var(--gold-ring);background:var(--gold-soft);color:var(--text);}
-.practice-clear-row{display:flex;justify-content:flex-end;margin-bottom:14px;}
-.practice-filter-section{margin-bottom:14px;}
-.practice-filter-label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.practice-filter-label-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;}
-.practice-filter-label-row .practice-filter-label{margin-bottom:0;}
-.practice-filter-clear{background:none;border:none;padding:0;font-size:.72rem;color:rgba(126,184,247,.85);cursor:pointer;font-family:inherit;}
-.practice-filter-clear:hover{color:#7eb8f7;text-decoration:underline;}
-.practice-chip-row,.practice-chip-wrap{display:flex;flex-wrap:wrap;gap:6px;}
 .practice-chip.all-chip{font-weight:600;color:var(--text);}
 .practice-chip.cat-chip{font-size:.72rem;max-width:100%;white-space:normal;text-align:start;}
 .practice-chip .chip-icon{font-size:.85rem;line-height:1;flex-shrink:0;}
-.practice-match-count{text-align:center;font-size:.82rem;color:var(--muted);margin:0 0 12px;line-height:1.45;}
-.practice-match-count.is-empty{color:rgba(247,138,168,.92);}
-.practice-match-count .practice-match-num{font-family:'Fraunces','Vazirmatn',serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
-.practice-match-hint{display:block;font-size:.72rem;margin-top:3px;opacity:.85;}
+@media (max-width:560px){
+  #tab-panel-practice .practice-head{display:block;}
+}
 .btn-outline{width:100%;padding:11px;background:transparent;border:1.5px solid var(--border);
   border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--muted);cursor:pointer;transition:all .15s;}
 .btn-outline:hover{border-color:rgba(255,255,255,.15);color:var(--text);}
@@ -789,10 +771,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .at-desc{font-size:.74rem;line-height:1.5;color:var(--muted);}
 .at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
 .install-guide{width:min(100%,460px);overflow:visible;padding:0;background:transparent;border:none;
-  transform:translateY(calc(100% + 24px));transition:transform var(--modal-dur) var(--modal-ease);}
+  transform:translateY(calc(100% + 24px));}
 .install-guide.glass-sheet-shell{--glass-sheet-radius:24px 24px 20px 20px;}
 .install-guide .install-guide-surface{padding:18px 18px 20px;max-height:min(86vh,760px);overflow:auto;}
-.install-guide-overlay.open .install-guide{transform:translateY(0);}
+.modal-root.open .install-guide{transform:translateY(0);}
+#ann-card.modal-sheet{max-width:380px;width:100%;--glass-sheet-radius:22px;transform:translateY(18px);}
+.modal-root.open #ann-card{transform:translateY(0);}
+#ann-card .glass-sheet-surface{padding:26px 24px 20px;}
 .install-guide-handle{width:54px;height:5px;border-radius:999px;background:rgba(255,255,255,.15);
   margin:0 auto 14px;}
 .install-guide-head{display:block;margin-bottom:14px;}
@@ -816,8 +801,6 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .install-guide-actions{display:flex;gap:10px;margin-top:16px;}
 .install-step-img{display:block;width:auto;max-width:110px;border-radius:8px;margin-top:8px;}
 .install-guide-btn{flex:1;border:0;border-radius:25px;padding:12px 14px;font-size:.9rem;font-weight:700;cursor:pointer;}
-#tab-panel-stats{overflow-y:auto;max-height:calc(100svh - 200px);-webkit-overflow-scrolling:touch;}
-#tab-panel-practice{max-height:calc(100svh - 200px);}
 .install-guide-btn.primary{background:var(--gold);color:#0b0d13;}
 .install-guide-btn.secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.08);}
 .install-guide-btn[disabled]{opacity:.45;cursor:default;}
@@ -912,8 +895,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 </div>
 
 <!-- ══ SETTINGS DRAWER ══ -->
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeSettings()">
-<div class="drawer glass-sheet-shell" id="settings-drawer" onclick="event.stopPropagation()">
+<div class="modal-root modal-root--drawer" id="drawer-overlay">
+  <div class="modal-scrim" onclick="closeSettings()"></div>
+  <div class="modal-sheet drawer glass-sheet-shell" id="settings-drawer">
   <div class="glass-sheet-surface">
   <div class="drawer-handle" onclick="closeSettings()"></div>
   <div class="drawer-title" id="st-title">Settings</div>
@@ -981,12 +965,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
     <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>
   </div>
   </div>
-</div>
+  </div>
 </div>
 
 <!-- ══ APP DIALOG ══ -->
-<div class="app-dialog-overlay" id="app-dialog-overlay">
-<div class="app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title" onclick="event.stopPropagation()">
+<div class="modal-root modal-root--dialog" id="app-dialog-overlay">
+  <div class="modal-scrim" id="app-dialog-scrim"></div>
+  <div class="modal-sheet app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
   <div class="glass-sheet-surface">
   <div class="app-dialog-handle" id="app-dialog-handle"></div>
   <div class="app-dialog-title" id="app-dialog-title"></div>
@@ -996,12 +981,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
     <button type="button" class="app-dialog-btn-primary" id="app-dialog-primary">OK</button>
   </div>
   </div>
-</div>
+  </div>
 </div>
 
 <!-- ══ ABOUT MODAL ══ -->
-<div class="about-modal-overlay" id="about-modal-overlay" onclick="closeAbout(event)">
-  <div class="about-modal glass-sheet-shell" onclick="event.stopPropagation()">
+<div class="modal-root modal-root--about modal-root--align-bottom modal-root--pad-bottom" id="about-modal-overlay">
+  <div class="modal-scrim" onclick="closeAbout()"></div>
+  <div class="modal-sheet about-modal glass-sheet-shell">
     <div class="about-modal-surface glass-sheet-surface">
     <h3 id="about-title">About</h3>
     <p id="about-p1">I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.</p>
@@ -1014,8 +1000,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 </div>
 
 <!-- ══ IOS INSTALL GUIDE ══ -->
-<div class="install-guide-overlay" id="install-guide-overlay" onclick="closeInstallGuide(event)">
-  <div class="install-guide glass-sheet-shell" onclick="event.stopPropagation()">
+<div class="modal-root modal-root--install modal-root--align-bottom modal-root--pad-guide" id="install-guide-overlay">
+  <div class="modal-scrim" onclick="closeInstallGuide()"></div>
+  <div class="modal-sheet install-guide glass-sheet-shell">
     <div class="install-guide-surface glass-sheet-surface">
     <div class="install-guide-handle"></div>
     <div class="install-guide-head">
@@ -1049,8 +1036,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 </div>
 
 <!-- ══ WORD CARD MODAL ══ -->
-<div class="word-modal-overlay" id="word-modal-overlay" onclick="closeWordModal(event)">
-  <div class="word-modal glass-sheet-shell" onclick="event.stopPropagation()">
+<div class="modal-root modal-root--word modal-root--align-bottom" id="word-modal-overlay">
+  <div class="modal-scrim" onclick="closeWordModal()"></div>
+  <div class="modal-sheet word-modal glass-sheet-shell">
     <div class="word-modal-surface glass-sheet-surface">
     <div class="word-modal-handle"></div>
     <div id="word-modal-content"></div>
@@ -1151,48 +1139,41 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 
   <!-- Practice tab -->
   <div class="tab-panel" id="tab-panel-practice">
-    <div id="screen-practice-setup">
-      <div class="practice-setup-scroll" id="practice-setup-scroll">
-        <div class="swipe-header practice-setup-header">
-          <div class="swipe-title-wrap">
-            <div class="swipe-title" id="practice-setup-screen-title" style="color:#7eb8f7">Practice</div>
-            <div class="swipe-subtitle" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</div>
-          </div>
-        </div>
-        <div class="swipe-setup practice-setup-filters">
-          <div class="swipe-level-grid">
-            <button class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
-            <button class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
-            <button class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
-          </div>
-          <div class="practice-clear-row">
-            <button type="button" class="practice-filter-clear" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
-          </div>
-          <div class="practice-filter-section">
-            <span class="practice-filter-label" id="practice-filter-difficulty-label">Difficulty</span>
-            <div class="practice-chip-row" id="practice-difficulty-chips"></div>
-          </div>
-          <div class="practice-filter-section">
-            <span class="practice-filter-label" id="practice-filter-type-label">Word type</span>
-            <div class="practice-chip-row" id="practice-type-chips"></div>
-          </div>
-          <div class="practice-filter-section">
-            <span class="practice-filter-label" id="practice-filter-article-label">Article</span>
-            <div class="practice-chip-row" id="practice-article-chips"></div>
-          </div>
-          <div class="practice-filter-section">
-            <span class="practice-filter-label" id="practice-filter-topics-label">Topics</span>
-            <div class="practice-chip-row" id="practice-category-chips"></div>
-          </div>
-        </div>
+    <header class="practice-head">
+      <div>
+        <h2 class="practice-head-title" id="practice-setup-screen-title">Practice</h2>
+        <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
       </div>
-      <div class="swipe-setup practice-setup-footer">
-        <div class="practice-match-count" id="practice-match-count">
-          <span><span class="practice-match-num" id="practice-match-num">0</span> <span id="practice-match-label">words in your loop</span></span>
-          <span class="practice-match-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
-        </div>
-        <button class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
+      <button type="button" class="practice-clear-btn" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
+    </header>
+
+    <div class="practice-filters" id="practice-filters">
+      <div class="swipe-level-grid" id="practice-levels">
+        <button type="button" class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
+        <button type="button" class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
+        <button type="button" class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
       </div>
+
+      <div class="section-label" id="practice-filter-difficulty-label">Difficulty</div>
+      <div class="practice-chips" id="practice-difficulty-chips"></div>
+
+      <div class="section-label" id="practice-filter-type-label">Word type</div>
+      <div class="practice-chips" id="practice-type-chips"></div>
+
+      <div class="section-label" id="practice-filter-article-label">Article</div>
+      <div class="practice-chips" id="practice-article-chips"></div>
+
+      <div class="section-label" id="practice-filter-topics-label">Topics</div>
+      <div class="practice-chips" id="practice-category-chips"></div>
+    </div>
+
+    <div class="practice-dock" id="practice-dock">
+      <p class="practice-count" id="practice-match-count">
+        <span class="practice-count-num" id="practice-match-num">0</span>
+        <span id="practice-match-label">words in your loop</span>
+        <span class="practice-count-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
+      </p>
+      <button type="button" class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
     </div>
   </div>
 
@@ -1336,7 +1317,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   </div>
 </div>
 
-<!-- Practice setup lives in #tab-panel-practice / #screen-practice-setup -->
+<!-- Practice setup lives in #tab-panel-practice -->
 
 <!-- ══ PRACTICE GAME ══ -->
 <div class="screen hidden" id="screen-practice">
@@ -3271,13 +3252,11 @@ function rowTypeLabel(type) {
 function openSettings() {
   window.umami?.track('settings_opened');
   document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('settings-drawer').classList.add('open');
   document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
 }
 function closeSettings() {
   document.getElementById('drawer-overlay').classList.remove('open');
   var _dr = document.getElementById('settings-drawer');
-  _dr.classList.remove('open');
   // Reset any drag-offset so the next open() starts clean
   _dr.style.transition = '';
   _dr.style.transform = '';
@@ -3380,8 +3359,7 @@ function copyAppLink(opts) {
     onCopied();
   }
 }
-function closeAbout(e) {
-  if (e && e.target !== document.getElementById('about-modal-overlay')) return;
+function closeAbout() {
   document.getElementById('about-modal-overlay').classList.remove('open');
 }
 function openInstallGuide() {
@@ -3399,8 +3377,7 @@ function openInstallGuide() {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closeInstallGuide(e) {
-  if (e && e.target !== document.getElementById('install-guide-overlay')) return;
+function closeInstallGuide() {
   var overlay = document.getElementById('install-guide-overlay');
   var guide = document.querySelector('.install-guide');
   if (!overlay) return;
@@ -3558,7 +3535,8 @@ function applyTranslations() {
   var rushTitle = document.getElementById('rush-banner-title');
   if (rushTitle) rushTitle.textContent = u.rushBannerTitle;
   if (typeof window._rushRefreshBanner === 'function') window._rushRefreshBanner();
-  document.getElementById('learning-profile-title').textContent = _lp('title');
+  var lpTitle = document.getElementById('learning-profile-title');
+  if (lpTitle) lpTitle.textContent = _lp('title');
   var lpbTitle = document.getElementById('learning-profile-banner-title');
   if (lpbTitle) lpbTitle.textContent = _lp('title');
   var rushAgain = document.getElementById('btn-rush-again');
@@ -3575,7 +3553,8 @@ function applyTranslations() {
   if (rushLblStreak) rushLblStreak.textContent = u.rushLblStreak;
   var rushLblTime = document.getElementById('rush-lbl-time');
   if (rushLblTime) rushLblTime.textContent = u.rushLblTime;
-  document.getElementById('learning-profile-title').textContent = _lp('title');
+  lpTitle = document.getElementById('learning-profile-title');
+  if (lpTitle) lpTitle.textContent = _lp('title');
   var pBannerTitle = document.getElementById('practice-banner-title');
   if (pBannerTitle) pBannerTitle.textContent = u.practiceBannerTitle;
   var pBannerSub = document.getElementById('practice-banner-sub');
@@ -5797,22 +5776,6 @@ function _getPracticeFilteredPool(level) {
   return pool;
 }
 
-function _syncPracticeScrollTop() {
-  var scroll = document.getElementById('practice-setup-scroll');
-  var appHdr = document.getElementById('app-header');
-  if (!scroll || !appHdr) return;
-  scroll.style.setProperty('--practice-scroll-top', Math.round(appHdr.getBoundingClientRect().bottom + 14) + 'px');
-}
-
-function _syncPracticeLayout() {
-  /* in-tab practice layout — no fixed scroll sync needed */
-}
-
-if (typeof window !== 'undefined' && !window._practiceLayoutResizeBound) {
-  window._practiceLayoutResizeBound = true;
-  window.addEventListener('resize', _syncPracticeScrollTop);
-}
-
 function _updatePracticeMatchCount() {
   var count = _getPracticeFilteredPool().length;
   var numEl = document.getElementById('practice-match-num');
@@ -5823,7 +5786,6 @@ function _updatePracticeMatchCount() {
   if (wrapEl) wrapEl.classList.toggle('is-empty', count === 0);
   if (hintEl) hintEl.classList.toggle('hidden', count > 0);
   if (btnEl) btnEl.disabled = count === 0;
-  _syncPracticeLayout();
 }
 
 function _renderPracticeChip(group, key, label, extraClass, icon) {
@@ -5897,7 +5859,7 @@ function practiceClearFilters() {
 }
 
 async function _initPracticeTab() {
-  var scrollEl = document.getElementById('practice-setup-scroll');
+  var scrollEl = document.getElementById('practice-filters');
   if (scrollEl) scrollEl.scrollTop = 0;
   try {
     await _loadV2Vocab();
@@ -7784,8 +7746,7 @@ async function openWordCard(word, tc) {
   }
 }
 
-function closeWordModal(e) {
-  if (e && e.target !== document.getElementById('word-modal-overlay')) return;
+function closeWordModal() {
   var _overlay = document.getElementById('word-modal-overlay');
   _overlay.classList.remove('open');
   // Reset any drag-offset so the next open() starts clean
@@ -8084,12 +8045,23 @@ function _updateTabIndicator(tab) {
   indicator.style.transform = 'translate(' + (br.left - ir.left) + 'px,' + (br.top - ir.top) + 'px)';
 }
 
+function _replayTabEnter(panel) {
+  if (!panel) return;
+  panel.style.animation = 'none';
+  void panel.offsetHeight;
+  panel.style.removeProperty('animation');
+}
+
 function switchTab(tab) {
   if (tab === 'settings') { openSettings(); return; }
   _activeTab = tab;
   ['learn', 'practice', 'stats'].forEach(function(t) {
     var panel = document.getElementById('tab-panel-' + t);
-    if (panel) panel.classList.toggle('active', t === tab);
+    var isActive = t === tab;
+    if (panel) {
+      panel.classList.toggle('active', isActive);
+      if (isActive) _replayTabEnter(panel);
+    }
     var btn = document.getElementById('bottom-tab-' + t);
     if (btn) {
       btn.classList.toggle('active', t === tab);
@@ -8272,7 +8244,6 @@ window.addEventListener('online', function() {
   _startConnectivityProbe(showOfflineScreen);
 });
 updateCounts();
-_syncPracticeScrollTop();
 _wireNativeShellInsetGuards();
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
@@ -8481,6 +8452,7 @@ document.addEventListener('keydown', function(e){
   function _els() {
     return {
       overlay: document.getElementById('app-dialog-overlay'),
+      scrim: document.getElementById('app-dialog-scrim'),
       panel: document.getElementById('app-dialog'),
       title: document.getElementById('app-dialog-title'),
       message: document.getElementById('app-dialog-message'),
@@ -8495,10 +8467,7 @@ document.addEventListener('keydown', function(e){
     _open = false;
     var el = _els();
     if (el.overlay) el.overlay.classList.remove('open');
-    if (el.panel) {
-      el.panel.classList.remove('open');
-      el.panel.classList.remove('single');
-    }
+    if (el.panel) el.panel.classList.remove('single');
     document.body.style.overflow = '';
     if (_onKeyDown) {
       document.removeEventListener('keydown', _onKeyDown);
@@ -8541,7 +8510,6 @@ document.addEventListener('keydown', function(e){
       _open = true;
       document.body.style.overflow = 'hidden';
       el.overlay.classList.add('open');
-      el.panel.classList.add('open');
 
       function finish(result) {
         if (result === 'primary' && typeof opts.onPrimary === 'function') {
@@ -8554,7 +8522,7 @@ document.addEventListener('keydown', function(e){
 
       el.primary.onclick = function () { finish('primary'); };
       el.cancel.onclick = function () { finish('cancel'); };
-      el.overlay.onclick = function () { finish('cancel'); };
+      if (el.scrim) el.scrim.onclick = function () { finish('cancel'); };
       if (el.handle) el.handle.onclick = function () { finish('cancel'); };
       el.panel.onclick = function (e) { e.stopPropagation(); };
 
@@ -12516,35 +12484,9 @@ document.addEventListener('keydown', function(e){
   var t = active.i18n[lang] || active.i18n['en'];
   var isRtl = !!RTL_LANGS[lang];
 
-  // ── Inject styles ──────────────────────────────────────────────────────
+  // ── Inject styles (content only — layout uses global .modal-root) ───────
   var style = document.createElement('style');
   style.textContent =
-    '#ann-overlay{' +
-      'position:fixed;top:0;left:0;right:0;bottom:0;z-index:9000;overflow:visible;' +
-      'width:100%;min-width:100vw;height:100%;min-height:100vh;min-height:100dvh;min-height:-webkit-fill-available;' +
-      'display:flex;align-items:center;justify-content:center;padding:20px;' +
-      'background:transparent;opacity:1;' +
-      'visibility:hidden;transition:visibility 0s linear .32s;pointer-events:none;}' +
-    '#ann-overlay::before{' +
-      'content:"";position:fixed;top:0;left:0;right:0;bottom:0;' +
-      'width:100%;min-width:100vw;height:100%;min-height:100vh;min-height:100dvh;min-height:-webkit-fill-available;' +
-      'background:rgba(0,0,0,0.42);opacity:0;pointer-events:none;' +
-      'transition:opacity .32s ease;z-index:0;}' +
-    '#ann-overlay.open{visibility:visible;pointer-events:all;transition:visibility 0s;}' +
-    '#ann-overlay.open::before{opacity:1;}' +
-    '#ann-card{' +
-      'position:relative;z-index:1;max-width:380px;width:100%;padding:0;background:transparent;border:none;overflow:visible;' +
-      'border-radius:22px;box-shadow:0 14px 52px rgba(0,0,0,0.44);' +
-      'transform:translateY(18px);transition:transform .32s cubic-bezier(.32,.72,0,1);}' +
-    '#ann-card .ann-card-surface{' +
-      'background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:22px;' +
-      'padding:26px 24px 20px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.18);position:relative;color:#e8eaf2;' +
-      '-webkit-backdrop-filter:blur(20px) saturate(165%);backdrop-filter:blur(20px) saturate(165%);' +
-      'transform:translateZ(0);-webkit-transform:translateZ(0);}' +
-    '#ann-card .ann-card-surface::before{' +
-      'content:"";position:absolute;top:0;left:8%;right:8%;height:1px;' +
-      'background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;}' +
-    '#ann-overlay.open #ann-card{transform:translateY(0);}' +
     '#ann-icon{font-size:1.55rem;margin-bottom:10px;}' +
     '#ann-title{' +
       'font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;color:#d4af5a;' +
@@ -12563,7 +12505,7 @@ document.addEventListener('keydown', function(e){
     '#ann-dismiss{' +
       'display:block;width:100%;padding:9px;' +
       'background:none;border:none;' +
-      'color:#adb3c8;font-size:.82rem;cursor:pointer;' +
+      'color:#6b7090;font-size:.82rem;cursor:pointer;' +
       'font-family:"Outfit","Vazirmatn",sans-serif;transition:color .15s;}' +
     '#ann-dismiss:hover{color:#dde1f0;}';
   document.head.appendChild(style);
@@ -12571,9 +12513,11 @@ document.addEventListener('keydown', function(e){
   // ── Build markup ───────────────────────────────────────────────────────
   var overlay = document.createElement('div');
   overlay.id = 'ann-overlay';
+  overlay.className = 'modal-root modal-root--ann modal-root--align-center';
   overlay.innerHTML =
-    '<div id="ann-card"' + (isRtl ? ' dir="rtl"' : '') + '>' +
-    '  <div class="ann-card-surface">' +
+    '<div class="modal-scrim"></div>' +
+    '<div id="ann-card" class="modal-sheet glass-sheet-shell"' + (isRtl ? ' dir="rtl"' : '') + '>' +
+    '  <div class="glass-sheet-surface">' +
     '  <div id="ann-icon">📢</div>' +
     '  <div id="ann-title">' + t.title + '</div>' +
     '  <div id="ann-msg">' + t.message + '</div>' +
@@ -12595,10 +12539,7 @@ document.addEventListener('keydown', function(e){
 
   document.getElementById('ann-dismiss').addEventListener('click', dismiss);
 
-  // Clicking the backdrop also dismisses.
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) dismiss();
-  });
+  overlay.querySelector('.modal-scrim').addEventListener('click', dismiss);
 
   /* @design-only START: announcement manual trigger (replaces auto-popup on load) */
   window.designShowAnnouncement = function () {
