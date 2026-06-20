@@ -884,6 +884,10 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <symbol id="icon-dice" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></symbol>
   <symbol id="icon-grad-cap" viewBox="0 0 24 24"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4"/><path d="M21 9v6"/></symbol>
   <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3z"/><path d="M18 14l.8 2.5 2.5.8-2.5.8-.8 2.5-.8-2.5-2.5-.8 2.5-.8.8-2.5z"/><path d="M5 16l.6 1.8L7.4 18l-1.8.6L5 20.4l-.6-1.8L2.6 18l1.8-.6L5 16z"/></symbol>
+  <symbol id="icon-adaptive" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="icon-theme-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></symbol>
+  <symbol id="icon-swipe-match" viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"/><path d="M3 12H6"/><path d="M5 10L3 12l2 2"/><path d="M21 12h-3"/><path d="M19 10l2 2-2 2"/></symbol>
+  <symbol id="icon-word-explore" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
   <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M5 19V11"/><path d="M10 19V6"/><path d="M15 19V14"/><path d="M20 19V9"/><path d="M4 19h17"/></symbol>
   <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
   <symbol id="icon-flip" viewBox="0 0 24 24"><path d="M7 4H4v3"/><path d="M17 20h3v-3"/><path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5"/><path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5"/></symbol>
@@ -1024,7 +1028,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     <div class="home-actions">
       <div class="home-primary-actions">
         <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
-          <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-rocket"/></svg></div>
+          <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-adaptive"/></svg></div>
           <div class="rb-text">
             <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
             <span id="adaptive-v2-banner-sub">Gets smarter as you learn</span>
@@ -1041,21 +1045,21 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       </div>
       <div class="home-grid-actions">
         <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive" onclick="openThemeSelect()">
-          <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-gift"/></svg></div>
+          <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-theme-grid"/></svg></div>
           <div class="rb-text">
             <strong id="theme-banner-title">Theme Quiz</strong>
             <span id="theme-banner-sub">Quiz yourself on a topic</span>
           </div>
         </div>
         <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive" onclick="openSwipeSetup()">
-          <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-phone-match"/></svg></div>
+          <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-swipe-match"/></svg></div>
           <div class="rb-text">
             <strong id="swipe-banner-title">Quick Match</strong>
             <span id="swipe-banner-sub">Swipe if the meaning matches</span>
           </div>
         </div>
         <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive" onclick="showRandomWord()">
-          <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon ui-icon--filled" aria-hidden="true"><use href="#icon-dice"/></svg></div>
+          <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-word-explore"/></svg></div>
           <div class="rb-text">
             <strong id="rw-banner-title">Word Explorer</strong>
             <span id="rw-banner-sub">Open one word card instantly</span>
