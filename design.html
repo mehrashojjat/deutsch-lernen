@@ -178,20 +178,20 @@ body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 .option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .lang-select{display:none;}
 /* ── Custom lang dropdown ── */
-.lang-dd{position:relative;width:100%;user-select:none;}
+.lang-dd{position:relative;width:100%;user-select:none;z-index:1;}
+.lang-dd.open{z-index:20;}
 .lang-dd-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 16px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;
+  font-family:inherit;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;
   transition:border-color .15s;direction:ltr;box-sizing:border-box;}
-.lang-dd.open .lang-dd-trigger{border-color:var(--gold);--glass-bg:rgba(232,201,122,.07);}
+.lang-dd.open .lang-dd-trigger{border-color:var(--gold-ring);--glass-bg:rgba(232,201,122,.07);}
 .lang-dd-trigger-text{display:flex;align-items:center;gap:8px;}
-.lang-dd-chevron{width:14px;height:14px;flex-shrink:0;transition:transform .2s ease;color:rgba(255,255,255,.4);}
-.lang-dd.open .lang-dd-chevron{transform:rotate(180deg);}
-.lang-dd-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:linear-gradient(180deg,#16203a,#111827);border:1.5px solid rgba(255,255,255,.11);border-radius:18px;overflow:hidden;z-index:999;box-shadow:0 12px 36px rgba(0,0,0,.5);direction:ltr;}
+.lang-dd-chevron{width:14px;height:14px;flex-shrink:0;transition:transform .2s ease,color .15s;color:rgba(255,255,255,.4);}
+.lang-dd.open .lang-dd-chevron{transform:rotate(180deg);color:var(--gold);}
+.lang-dd-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;--glass-radius:20px;padding:4px;overflow:hidden;z-index:999;direction:ltr;}
 .lang-dd.open .lang-dd-panel{display:block;}
-.lang-dd-option{display:flex;align-items:center;gap:10px;padding:11px 16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;font-weight:600;color:var(--muted);cursor:pointer;transition:background .12s,color .12s;}
-.lang-dd-option:hover{background:rgba(255,255,255,.06);color:var(--text);}
-.lang-dd-option.active{color:var(--gold);background:rgba(232,201,122,.08);}
-.lang-dd-option+.lang-dd-option{border-top:1px solid rgba(255,255,255,.06);}
+.lang-dd-option{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;font-family:inherit;font-size:.86rem;font-weight:600;color:var(--muted);cursor:pointer;transition:color .15s ease,background .15s ease,border-color .15s ease;border:1px solid transparent;}
+.lang-dd-option:hover{color:var(--text);background:rgba(255,255,255,.06);}
+.lang-dd-option.active{color:#000;border-color:var(--gold-ring);background:rgb(212 175 90);}
 .drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
 .about-modal{width:min(calc(100% - 24px),480px);overflow:visible;padding:0;background:transparent;border:none;
   transform:translateY(calc(100% + 24px));}
@@ -205,8 +205,8 @@ body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
   border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
   cursor:pointer;margin-top:16px;transition:background .15s;}
 .about-modal-close:hover{background:rgba(255,255,255,.11);}
-.home-footer{text-align:center;padding:12px 20px 12px;}
-.home-footer p{margin:0;line-height:1.6;}
+.settings-footer{text-align:start;padding:12px 0 8px;}
+.settings-footer p{margin:0;line-height:1.6;}
 #footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
 #footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
 .opt-btn{padding:10px 4px;border-radius:25px;border:1.5px solid rgba(255,255,255,.09);
@@ -357,7 +357,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .settings-head{margin-bottom:18px;}
 .settings-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-settings .drawer-section:last-of-type{margin-bottom:0;}
-#tab-panel-settings .home-footer{margin-top:24px;padding:12px 20px 8px;}
+#tab-panel-settings .settings-footer{margin-top:24px;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
@@ -606,10 +606,11 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .btn-primary:hover{opacity:.88;}
 .btn-primary:disabled,.btn-primary[disabled]{opacity:.38;cursor:not-allowed;pointer-events:none;}
 /* ── PRACTICE SETUP (tab) ── */
-#tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;}
+#tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px;}
+#tab-panel-practice .practice-head-text{flex:1;min-width:0;}
 #tab-panel-practice .practice-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-practice .practice-head-sub{font-size:.82rem;color:var(--muted);margin:5px 0 0;}
-#tab-panel-practice .practice-clear-btn{flex-shrink:0;align-self:flex-start;margin-top:4px;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:color .15s,border-color .15s;}
+#tab-panel-practice .practice-clear-btn{flex-shrink:0;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:color .15s,border-color .15s;}
 #tab-panel-practice .practice-clear-btn.glass-interactive:hover{color:var(--gold);border-color:var(--gold-ring);}
 #tab-panel-practice .practice-clear-btn.glass-interactive:hover::after{background:var(--gold-soft);}
 #tab-panel-practice .practice-filters{display:flex;flex-direction:column;gap:14px;padding-bottom:14px;}
@@ -629,9 +630,6 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .practice-chip.all-chip.active{color:#000;}
 .practice-chip.cat-chip{font-size:.72rem;max-width:100%;white-space:normal;text-align:start;}
 .practice-chip .chip-icon{font-size:.85rem;line-height:1;flex-shrink:0;}
-@media (max-width:560px){
-  #tab-panel-practice .practice-head{display:block;}
-}
 .btn-outline{width:100%;padding:11px;background:transparent;border:1.5px solid var(--border);
   border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--muted);cursor:pointer;transition:all .15s;}
 .btn-outline:hover{border-color:rgba(255,255,255,.15);color:var(--text);}
@@ -1065,7 +1063,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <!-- Practice tab -->
   <div class="tab-panel" id="tab-panel-practice">
     <header class="practice-head">
-      <div>
+      <div class="practice-head-text">
         <h2 class="practice-head-title" id="practice-setup-screen-title">Practice</h2>
         <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
       </div>
@@ -1125,7 +1123,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
           <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
           <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <div class="lang-dd-panel" id="lang-dd-panel">
+        <div class="lang-dd-panel glass glass-tile glass-highlight glass-chrome" id="lang-dd-panel">
           <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
           <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
           <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
@@ -1180,7 +1178,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
     </div>
 
-    <div class="home-footer">
+    <div class="settings-footer">
       <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
       <p id="footer-copy">© 2026 Mehras Hojjat</p>
     </div>
