@@ -572,24 +572,25 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 #screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
 .practice-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
 .practice-card{position:absolute;inset:0;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;perspective:1000px;}
-.practice-card.under-1{transform:translateY(10px) scale(.98);opacity:0.85;filter:brightness(.94);}
-.practice-card.under-2{transform:translateY(18px) scale(.96);opacity:0.72;filter:brightness(.88);}
+.practice-card.top{z-index:3;}
+.practice-card.under-1{z-index:2;transform:translateY(10px) scale(.98);}
+.practice-card.under-2{z-index:1;transform:translateY(18px) scale(.96);}
+.practice-card.under-1 .practice-front,.practice-card.under-1 .practice-back{--glass-bg:rgba(255,255,255,.06);--glass-bg-fallback:rgba(24,27,38,.94);}
+.practice-card.under-2 .practice-front,.practice-card.under-2 .practice-back{--glass-bg:rgba(255,255,255,.05);--glass-bg-fallback:rgba(24,27,38,.92);}
 .practice-card.dragging{transition:none;}
-.practice-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
-.practice-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
+.practice-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;z-index:4;}
+.practice-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;z-index:4;}
 .practice-card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s ease;padding:3px;}
 .practice-card.flipped .practice-card-inner{transform:rotateY(180deg);}
-.practice-front,.practice-back{position:absolute;inset:3px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:22px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;gap:12px;overflow:hidden;box-shadow:var(--glass-specular);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-.practice-front::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:var(--glass-highlight-line);pointer-events:none;z-index:2;}
+.practice-front,.practice-back{position:absolute;inset:3px;--glass-radius:22px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;gap:12px;overflow:hidden;}
 .practice-back{transform:rotateY(180deg);}
 .practice-word{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:clamp(1.9rem,6.5vw,2.5rem);font-weight:700;line-height:1.05;color:var(--text);text-align:center;margin:0;}
-.practice-example{font-size:.8rem;color:var(--muted);text-align:center;line-height:1.5;font-style:italic;padding:0 8px;}
-.practice-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.practice-example{font-size:.8rem;color:rgba(210,214,228,.82);text-align:center;line-height:1.5;font-style:italic;padding:0 8px;}
+.practice-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(196,200,216,.78);margin-bottom:4px;}
 .practice-meaning{font-size:1.05rem;line-height:1.45;color:var(--text);text-align:center;}
-.practice-flip-btn{--glass-bg:var(--glass-fill);display:flex;align-items:center;justify-content:center;line-height:1;color:rgba(126,184,247,.7);font-size:1.3rem;}
-.practice-flip-btn:hover{--glass-bg:rgba(126,184,247,.12);border-color:rgba(126,184,247,.5);color:rgba(126,184,247,.95);}
-.practice-dismiss-btn{--glass-bg:var(--glass-fill);display:flex;align-items:center;justify-content:center;line-height:1;color:rgba(212,175,90,.65);font-size:1.3rem;}
-.practice-dismiss-btn:hover{--glass-bg:var(--gold-soft);border-color:var(--gold-ring);color:var(--gold);}
+.practice-flip-btn,.practice-dismiss-btn{--glass-bg:var(--glass-fill);display:flex;align-items:center;justify-content:center;line-height:1;color:rgba(255,255,255,.72);}
+.practice-flip-btn .ui-icon,.practice-dismiss-btn .ui-icon{width:22px;height:22px;}
+.practice-flip-btn:hover,.practice-dismiss-btn:hover{--glass-bg:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:var(--text);}
 
 /* ── RESULTS ── */
 .res-card{background:var(--surf2);border:1px solid var(--border);border-radius:25px;padding:36px 24px;text-align:center;}
@@ -875,6 +876,8 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3z"/><path d="M18 14l.8 2.5 2.5.8-2.5.8-.8 2.5-.8-2.5-2.5-.8 2.5-.8.8-2.5z"/><path d="M5 16l.6 1.8L7.4 18l-1.8.6L5 20.4l-.6-1.8L2.6 18l1.8-.6L5 16z"/></symbol>
   <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M5 19V11"/><path d="M10 19V6"/><path d="M15 19V14"/><path d="M20 19V9"/><path d="M4 19h17"/></symbol>
   <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+  <symbol id="icon-flip" viewBox="0 0 24 24"><path d="M7 4H4v3"/><path d="M17 20h3v-3"/><path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5"/><path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5"/></symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
 </svg>
 
 <!-- ══ PERSISTENT HEADER ══ -->
@@ -1348,8 +1351,8 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     <div class="practice-card-stack" id="practice-card-stack"></div>
   </div>
   <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card">↩&#xFE0E;</button>
-    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card">→</button>
+    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flip"/></svg></button>
+    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
   </div>
 </div>
 
@@ -5945,11 +5948,11 @@ function _renderPracticeCardHtml(row, posClass) {
   var meaning = _csvRowDisplay(row) || '';
   return '<div class="practice-card ' + posClass + '">'
     + '<div class="practice-card-inner">'
-    + '<div class="practice-front" dir="ltr">'
+    + '<div class="practice-front glass glass-tile glass-highlight glass-chrome" dir="ltr">'
     + '<div class="practice-word">' + escHtml(word) + '</div>'
     + (example ? '<div class="practice-example">' + escHtml(example) + '</div>' : '')
     + '</div>'
-    + '<div class="practice-back">'
+    + '<div class="practice-back glass glass-tile glass-highlight glass-chrome">'
     + '<div class="practice-meaning-label">' + escHtml(t('practiceMeaningLabel')) + '</div>'
     + '<div class="practice-meaning">' + escHtml(meaning) + '</div>'
     + '</div>'
