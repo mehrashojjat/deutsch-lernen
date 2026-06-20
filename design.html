@@ -351,8 +351,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 /* ── TAB PANELS & BOTTOM NAV ── */
 .tab-panel{display:none;flex-direction:column;flex:1;min-height:0;width:100%;}
 .tab-panel.active{display:flex;animation:fadeUp .35s var(--modal-ease) both;}
-#tab-panel-practice{overflow:hidden;flex:1 1 0;min-height:0;height:0;gap:0;}
-#screen-levels:has(#tab-panel-practice.active){overflow:hidden;flex:1 1 0;min-height:0;height:0;}
+#tab-panel-practice{overflow:visible;flex:1 1 0;min-height:0;height:0;gap:0;position:relative;}
+#screen-levels:has(#tab-panel-practice.active){overflow:visible;flex:1 1 0;min-height:0;height:0;}
 #tab-panel-stats{overflow-y:auto;max-height:calc(100svh - 200px);-webkit-overflow-scrolling:touch;padding-bottom:4px;}
 #screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
 #screen-levels .home-footer{margin-top:auto;}
@@ -610,13 +610,14 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 #tab-panel-practice .practice-head-sub{font-size:.82rem;color:var(--muted);margin:5px 0 0;}
 #tab-panel-practice .practice-clear-btn{flex-shrink:0;align-self:flex-start;margin-top:4px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:999px;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;box-shadow:var(--glass-specular);transition:color .15s,border-color .15s,background .15s;}
 #tab-panel-practice .practice-clear-btn:hover{color:var(--gold);border-color:var(--gold-ring);background:var(--gold-soft);}
-#tab-panel-practice .practice-filters{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;display:flex;flex-direction:column;gap:14px;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none;}
+#tab-panel-practice .practice-filters{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;display:flex;flex-direction:column;gap:14px;padding-bottom:118px;scrollbar-width:none;-ms-overflow-style:none;}
 #tab-panel-practice .practice-filters::-webkit-scrollbar{display:none;}
 #tab-panel-practice .practice-filters .section-label{margin:0 0 8px;}
 #tab-panel-practice .practice-chips{display:flex;flex-wrap:wrap;gap:6px;}
-#tab-panel-practice .practice-dock{flex-shrink:0;margin-top:10px;padding:14px 16px;border-radius:25px;position:relative;overflow:hidden;background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);}
+#tab-panel-practice .practice-dock{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:14px 16px 16px;border-radius:25px;
+  background:rgba(8,10,16,0.42);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  #tab-panel-practice .practice-dock{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
+  #tab-panel-practice .practice-dock{background:rgba(255,255,255,0.06);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);}
 }
 #tab-panel-practice .practice-dock::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;}
 #tab-panel-practice .practice-count{text-align:center;font-size:.82rem;color:var(--muted);line-height:1.45;margin:0 0 12px;}
