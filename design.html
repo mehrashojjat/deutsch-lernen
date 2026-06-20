@@ -356,8 +356,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 #tab-panel-settings{padding-bottom:4px;}
 .settings-head{margin-bottom:18px;}
 .settings-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
-#tab-panel-settings .drawer-section:last-child{margin-bottom:0;}
-#screen-levels .home-footer{margin-top:auto;}
+#tab-panel-settings .drawer-section:last-of-type{margin-bottom:0;}
+#tab-panel-settings .home-footer{margin-top:24px;padding:12px 20px 8px;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
@@ -750,11 +750,13 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   border:1px solid var(--border);position:relative;overflow:hidden;}
 .adaptive-tip:hover{background:rgba(255,255,255,.04);}
 .adaptive-tip.hidden{display:none;}
-.adaptive-tip.signin-tip{background:linear-gradient(135deg,#fff0c8 0%,var(--gold) 52%,#c49a3a 100%);border:none;padding:13px 16px;}
+.adaptive-tip.signin-tip{background:linear-gradient(135deg,#fff0c8 0%,var(--gold) 52%,#c49a3a 100%);border:none;padding:13px 16px;border-radius:999px;}
 .adaptive-tip.signin-tip:hover{background:linear-gradient(135deg,#fff5d6 0%,#e8c97a 52%,#d4ae55 100%);}
 .adaptive-tip.signin-tip .at-title{color:#1a1408;}
 .adaptive-tip.signin-tip .at-desc{color:rgba(26,20,8,.78);}
 .adaptive-tip.signin-tip .at-arrow{color:rgba(26,20,8,.5);}
+.adaptive-tip.signin-tip .at-icon-wrap{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(26,20,8,.12);color:#1a1408;}
+.adaptive-tip.signin-tip .at-icon-wrap .ui-icon{width:20px;height:20px;}
 .home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
 .home-tips .adaptive-tip{margin-top:0;}
 .install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);}
@@ -1047,17 +1049,13 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
         <div class="at-arrow">›</div>
       </div>
       <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
-        <div class="at-icon">🔒</div>
+        <div class="at-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-lock"/></svg></div>
         <div class="at-body">
           <div class="at-title" id="at-title">Progress Not Saved</div>
           <div class="at-desc" id="at-desc">Sign in to keep your learning history and quiz results.</div>
         </div>
         <div class="at-arrow">›</div>
       </div>
-    </div>
-    <div class="home-footer" style="margin-top:0;">
-      <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
-      <p id="footer-copy">© 2026 Mehras Hojjat</p>
     </div>
   </div>
 
@@ -1177,6 +1175,11 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 
     <div class="drawer-section">
       <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
+    </div>
+
+    <div class="home-footer">
+      <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
+      <p id="footer-copy">© 2026 Mehras Hojjat</p>
     </div>
   </div>
     </div>
