@@ -289,6 +289,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   .random-banner.glass-interactive:hover{transform:none;}
   .tab-track{transition:none!important;}
   .bottom-tab-indicator{transition:none!important;}
+  .bottom-tab-gold-overlay{transition:none!important;}
 }
 
 /* ── RANDOM BANNER (glass tiles) ── */
@@ -321,9 +322,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .rb-icon-wrap--swipe{color:var(--blue);}
 .rb-icon-wrap--explorer{color:var(--gold);}
 .bottom-tab .ui-icon{width:20px;height:20px;color:rgba(255,255,255,0.42);}
-.bottom-tab.active .ui-icon{color:var(--gold);}
 .bottom-tab:hover .ui-icon{color:rgba(255,255,255,0.62);}
-.bottom-tab.active:hover .ui-icon{color:var(--gold);}
 /* ── CATEGORY GRID ── */
 .category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:4px 0 20px;}
 .category-card{background:var(--surf2);border:1px solid var(--border);border-radius:25px;padding:14px 10px;cursor:pointer;transition:all .18s ease;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
@@ -365,12 +364,16 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
 .bottom-tabs-inner.is-dragging{cursor:grabbing;}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);
-  z-index:0;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
+  z-index:1;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
 .bottom-tab-indicator.is-dragging{transition:none;}
+.bottom-tab-gold-overlay{position:absolute;inset:0;z-index:2;pointer-events:none;clip-path:inset(0 75% 0 0 round 999px);
+  transition:clip-path var(--modal-dur) var(--modal-ease);}
+.bottom-tab-gold-overlay.is-dragging{transition:none;}
+.bottom-tab--gold{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;box-sizing:border-box;font-family:inherit;color:var(--gold);}
+.bottom-tab--gold .ui-icon{width:20px;height:20px;color:var(--gold);}
 .bottom-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;border:none;border-radius:999px;
-  background:transparent;color:rgba(255,255,255,0.42);cursor:pointer;font-family:inherit;transition:color .18s;min-height:46px;position:relative;z-index:1;}
+  background:transparent;color:rgba(255,255,255,0.42);cursor:pointer;font-family:inherit;transition:color .18s;min-height:46px;position:relative;z-index:0;}
 .bottom-tab:hover{color:rgba(255,255,255,0.65);}
-.bottom-tab.active{color:var(--gold);}
 .bottom-tab-label{font-size:.58rem;font-weight:600;letter-spacing:.02em;line-height:1;}
 .profile-level-tab.adaptive-tab{font-size:.72rem;padding:7px 9px;}
 .profile-level-tabs.has-adaptive-tab{flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
@@ -1200,6 +1203,24 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
       <span class="bottom-tab-label">Settings</span>
     </button>
+    <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
+      <span class="bottom-tab--gold" data-tab="learn">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
+        <span class="bottom-tab-label">Learn</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="practice">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+        <span class="bottom-tab-label">Practice</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="stats">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
+        <span class="bottom-tab-label">Stats</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="settings">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
+        <span class="bottom-tab-label">Settings</span>
+      </span>
+    </div>
   </div>
 </nav>
 
@@ -8057,29 +8078,77 @@ function _applyTabTrackTransform(index, animate) {
   track.style.transform = 'translateX(' + _tabTrackOffsetPx(index) + 'px)';
   if (!shouldAnimate) void track.offsetHeight;
 }
+function _syncTabGoldOverlayLabels() {
+  TAB_ORDER.forEach(function(t) {
+    var src = document.getElementById('bottom-tab-' + t);
+    var dst = document.querySelector('#bottom-tab-gold-overlay [data-tab="' + t + '"] .bottom-tab-label');
+    if (src && dst) {
+      var lbl = src.querySelector('.bottom-tab-label');
+      if (lbl) dst.textContent = lbl.textContent;
+    }
+  });
+}
+function _syncTabGoldOverlayLayout() {
+  var inner = document.querySelector('.bottom-tabs-inner');
+  var overlay = document.getElementById('bottom-tab-gold-overlay');
+  if (!inner || !overlay) return;
+  TAB_ORDER.forEach(function(t) {
+    var btn = document.getElementById('bottom-tab-' + t);
+    var gold = overlay.querySelector('[data-tab="' + t + '"]');
+    if (!btn || !gold) return;
+    gold.style.left = btn.offsetLeft + 'px';
+    gold.style.top = btn.offsetTop + 'px';
+    gold.style.width = btn.offsetWidth + 'px';
+    gold.style.height = btn.offsetHeight + 'px';
+  });
+}
+function _applyTabGoldOverlayClip(pillLeft, pillTop, pillW, pillH) {
+  var inner = document.querySelector('.bottom-tabs-inner');
+  var overlay = document.getElementById('bottom-tab-gold-overlay');
+  if (!inner || !overlay) return;
+  var iw = inner.offsetWidth;
+  var ih = inner.offsetHeight;
+  overlay.style.clipPath = 'inset(' + pillTop + 'px ' + (iw - pillLeft - pillW) + 'px ' + (ih - pillTop - pillH) + 'px ' + pillLeft + 'px round 999px)';
+}
+function _setTabIndicatorDragging(isDragging) {
+  var indicator = document.getElementById('bottom-tab-indicator');
+  var overlay = document.getElementById('bottom-tab-gold-overlay');
+  if (indicator) indicator.classList.toggle('is-dragging', isDragging);
+  if (overlay) overlay.classList.toggle('is-dragging', isDragging);
+}
+function _tabBtnLayout(btn) {
+  return { left: btn.offsetLeft, top: btn.offsetTop, width: btn.offsetWidth, height: btn.offsetHeight };
+}
 function _updateTabIndicatorFromIndex(index) {
   var indicator = document.getElementById('bottom-tab-indicator');
   var inner = document.querySelector('.bottom-tabs-inner');
   if (!indicator || !inner) return;
+  _syncTabGoldOverlayLayout();
   var floorIdx = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.floor(index)));
   var ceilIdx = Math.min(TAB_ORDER.length - 1, floorIdx + 1);
   var frac = index - floorIdx;
   var btnA = document.getElementById('bottom-tab-' + TAB_ORDER[floorIdx]);
   if (!btnA) return;
-  var ir = inner.getBoundingClientRect();
-  var ar = btnA.getBoundingClientRect();
+  var ar = _tabBtnLayout(btnA);
+  var pillLeft, pillTop, pillW, pillH;
   if (floorIdx === ceilIdx || frac < 0.001) {
-    indicator.style.width = ar.width + 'px';
-    indicator.style.height = ar.height + 'px';
-    indicator.style.transform = 'translate(' + (ar.left - ir.left) + 'px,' + (ar.top - ir.top) + 'px)';
-    return;
+    pillW = ar.width;
+    pillH = ar.height;
+    pillLeft = ar.left;
+    pillTop = ar.top;
+  } else {
+    var btnB = document.getElementById('bottom-tab-' + TAB_ORDER[ceilIdx]);
+    if (!btnB) return;
+    var br = _tabBtnLayout(btnB);
+    pillW = ar.width + (br.width - ar.width) * frac;
+    pillH = ar.height + (br.height - ar.height) * frac;
+    pillLeft = ar.left + (br.left - ar.left) * frac;
+    pillTop = ar.top + (br.top - ar.top) * frac;
   }
-  var btnB = document.getElementById('bottom-tab-' + TAB_ORDER[ceilIdx]);
-  if (!btnB) return;
-  var br = btnB.getBoundingClientRect();
-  indicator.style.width = (ar.width + (br.width - ar.width) * frac) + 'px';
-  indicator.style.height = (ar.height + (br.height - ar.height) * frac) + 'px';
-  indicator.style.transform = 'translate(' + ((ar.left - ir.left) + (br.left - ar.left) * frac) + 'px,' + ((ar.top - ir.top) + (br.top - ar.top) * frac) + 'px)';
+  indicator.style.width = pillW + 'px';
+  indicator.style.height = pillH + 'px';
+  indicator.style.transform = 'translate(' + pillLeft + 'px,' + pillTop + 'px)';
+  _applyTabGoldOverlayClip(pillLeft, pillTop, pillW, pillH);
 }
 function _syncTabPanelFlow(opts) {
   opts = opts || {};
@@ -8139,8 +8208,7 @@ function _setTabDragIndex(fractionalIndex) {
   _tabDragIndex = Math.max(0, Math.min(TAB_ORDER.length - 1, fractionalIndex));
   _syncTabPanelFlow({ dragIndex: _tabDragIndex });
   _applyTabTrackTransform(_tabDragIndex, false);
-  var indicator = document.getElementById('bottom-tab-indicator');
-  if (indicator) indicator.classList.add('is-dragging');
+  _setTabIndicatorDragging(true);
   _updateTabIndicatorFromIndex(_tabDragIndex);
 }
 function _snapTabDrag() {
@@ -8149,8 +8217,7 @@ function _snapTabDrag() {
   _tabDragIndex = null;
   var track = _getTabTrack();
   if (track) track.classList.remove('is-dragging');
-  var indicator = document.getElementById('bottom-tab-indicator');
-  if (indicator) indicator.classList.remove('is-dragging');
+  _setTabIndicatorDragging(false);
   _setTabIndex(snapped, { animate: true, force: true });
 }
 function _setTabIndex(index, opts) {
@@ -8204,8 +8271,7 @@ function _updateTabBarVisibility(screenId) {
 }
 
 function _updateTabIndicator(tab) {
-  var indicator = document.getElementById('bottom-tab-indicator');
-  if (indicator) indicator.classList.remove('is-dragging');
+  _setTabIndicatorDragging(false);
   _updateTabIndicatorFromIndex(TAB_ORDER.indexOf(tab));
 }
 
@@ -8455,9 +8521,11 @@ _preloadAllTabs();
 _setTabIndex(0, { animate: false, skipScrollSave: true, force: true });
 _tabCarouselReady = true;
 _initTabGestures();
+_syncTabGoldOverlayLabels();
 requestAnimationFrame(function() { _updateTabIndicator(_activeTab); });
 window.addEventListener('resize', function() {
   _applyTabTrackTransform(_tabDragIndex !== null ? _tabDragIndex : _tabIndex, false);
+  _syncTabGoldOverlayLabels();
   _updateTabIndicator(_activeTab);
 });
 _updateTabBarVisibility('screen-levels');
