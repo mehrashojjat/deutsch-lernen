@@ -15,6 +15,8 @@
   4. Fake Supabase auth + offline fetch shim (JS)
   5. announcement.js patch (manual trigger, no auto-popup)
   6. design trigger helper functions (JS)
+
+  Glass UI system: see docs/GLASS_SYSTEM.md
   ═══════════════════════════════════════════════════════════════════
 -->
 <!DOCTYPE html>
@@ -39,30 +41,36 @@
   --gold:#d4af5a;--gold-soft:rgba(212,175,90,0.18);--gold-ring:rgba(212,175,90,0.55);
   --blue:#7eb8f7;--green:#6be8a0;--red:#f07070;--purple:#c4a0f7;--pink:#f7a0c4;
   --text:#e8eaf2;--muted:#7a8099;--border:rgba(255,255,255,0.07);--r:25px;
-  --glass-fill:rgba(255,255,255,0.08);--glass-fill-hover:rgba(255,255,255,0.11);
+  --glass-fill:rgba(255,255,255,0.08);--glass-fill-fallback:rgba(24,27,38,0.96);
+  --glass-fill-overlay:rgba(8,10,16,0.52);--glass-fill-overlay-fallback:rgba(18,20,28,0.97);
   --glass-border:rgba(255,255,255,0.12);--glass-specular:inset 0 1px 0 rgba(255,255,255,0.18);
   --glass-blur:blur(20px) saturate(165%);--glass-shadow:0 4px 24px rgba(0,0,0,0.20);
+  --glass-highlight-line:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);
   --modal-dur:.4s;--modal-ease:cubic-bezier(0.22,1,0.36,1);--modal-scrim-ease:cubic-bezier(0.32,0,0.18,1);
   --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
   --modal-scrim:rgba(0,0,0,0.42);
   --tab-h:62px;
 }
+/* GLASS SYSTEM — frame (.glass), fill (.glass-overlay / --glass-bg), dim (.modal-scrim).
+   Tier C (.surf*) surfaces are intentionally solid — do not add glass. See docs/GLASS_SYSTEM.md */
+.glass{position:relative;background:var(--glass-bg,var(--glass-fill));border:1px solid var(--glass-border);
+  box-shadow:var(--glass-elevation,var(--glass-shadow)),var(--glass-specular);border-radius:var(--glass-radius,inherit);
+  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);isolation:isolate;}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  :root{--glass-fill:rgba(24,27,38,0.96);--glass-fill-hover:rgba(28,32,44,0.98);}
+  .glass{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--glass-bg-fallback,var(--glass-fill-fallback));}
 }
-.glass-chrome{background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .glass-chrome{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
-.glass-tile{background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);position:relative;overflow:hidden;}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .glass-tile{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
-.glass-tile::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;}
-.glass-pill{border-radius:999px;background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-specular);}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .glass-pill{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
+.glass-tile{position:relative;overflow:hidden;--glass-radius:var(--r);}
+.glass-pill{--glass-radius:999px;border-radius:999px;}
+.glass-chrome{--glass-elevation:0 0 0 transparent;}
+.glass-overlay{--glass-bg:var(--glass-fill-overlay);--glass-bg-fallback:var(--glass-fill-overlay-fallback);}
+.glass-highlight::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;
+  background:var(--glass-highlight-line);pointer-events:none;z-index:2;}
+.glass-interactive{position:relative;}
+.glass-interactive::after{content:'';position:absolute;inset:0;border-radius:inherit;background:transparent;
+  transition:background .18s ease;pointer-events:none;z-index:1;}
+.glass-interactive:hover::after{background:rgba(255,255,255,0.04);}
+.glass-interactive:hover{border-color:rgba(255,255,255,0.16);}
+.glass-interactive>*{position:relative;z-index:2;}
 *{box-sizing:border-box;margin:0;padding:0;}
 html{background:var(--bg);min-height:100%;min-height:100dvh;}
 body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
@@ -83,14 +91,9 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
   letter-spacing:-0.5px;line-height:1;cursor:pointer;}
 .screen-top-bar{width:100%;max-width:600px;margin-bottom:14px;display:flex;align-items:center;min-height:40px;}
 .screen-top-bar.hidden{display:none;}
-.app-back-btn{background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:20px;
-  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:border-color .18s,background .18s;color:var(--text);flex-shrink:0;
-  padding:0;line-height:1;direction:ltr;box-shadow:var(--glass-specular);}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .app-back-btn{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
-.app-back-btn:hover{border-color:rgba(255,255,255,.18);background:var(--glass-fill-hover);}
+.app-back-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:border-color .18s;color:var(--text);flex-shrink:0;
+  padding:0;line-height:1;direction:ltr;--glass-radius:20px;}
 .app-back-btn.hidden{display:none;}
 .app-back-btn svg{width:10px;height:12px;display:block;fill:currentColor;}
 
@@ -131,18 +134,13 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .modal-root--pad-guide{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));}
 .modal-scrim{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;margin:0;padding:0;border:none;
   background:transparent;transition:background-color var(--modal-dur) var(--modal-scrim-ease);-webkit-tap-highlight-color:transparent;}
+/* backdrop dim — darkens page behind transient UI (not glass) */
 .modal-root.open .modal-scrim{background:var(--modal-scrim);}
 .modal-sheet{position:relative;z-index:1;transition:transform var(--modal-dur) var(--modal-ease);}
 /* Glass sheet shell: shadow on shell (no filter — filter breaks backdrop-blur on surface) */
 .glass-sheet-shell{position:relative;overflow:visible;border-radius:var(--glass-sheet-radius,25px);
   box-shadow:var(--modal-panel-shadow);}
-.glass-sheet-shell .glass-sheet-surface{position:relative;background:var(--glass-fill);border:1px solid var(--glass-border);
-  border-radius:inherit;box-shadow:var(--glass-specular);
-  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);transform:translateZ(0);}
-.glass-sheet-shell .glass-sheet-surface::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;z-index:1;}
-.modal-panel-glass{background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--modal-panel-shadow),var(--glass-specular);
-  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
+.glass-sheet-shell .glass-sheet-surface{border-radius:inherit;--glass-elevation:0 0 0 transparent;}
 
 /* Word card modal */
 .word-modal{width:100%;max-width:600px;overflow:visible;padding:0;background:transparent;border:none;
@@ -180,9 +178,10 @@ body.tabs-hidden .drawer{bottom:calc(12px + env(safe-area-inset-bottom,0px));}
 .lang-select{display:none;}
 /* ── Custom lang dropdown ── */
 .lang-dd{position:relative;width:100%;user-select:none;}
-.lang-dd-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s;direction:ltr;box-sizing:border-box;}
-.lang-dd-trigger:hover{border-color:rgba(232,201,122,.35);background:rgba(255,255,255,.07);}
-.lang-dd.open .lang-dd-trigger{border-color:var(--gold);background:rgba(232,201,122,.07);}
+.lang-dd-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 16px;
+  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;
+  transition:border-color .15s;direction:ltr;box-sizing:border-box;}
+.lang-dd.open .lang-dd-trigger{border-color:var(--gold);--glass-bg:rgba(232,201,122,.07);}
 .lang-dd-trigger-text{display:flex;align-items:center;gap:8px;}
 .lang-dd-chevron{width:14px;height:14px;flex-shrink:0;transition:transform .2s ease;color:rgba(255,255,255,.4);}
 .lang-dd.open .lang-dd-chevron{transform:rotate(180deg);}
@@ -286,27 +285,20 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .home-grid-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
-  .random-banner:hover{transform:none;}
+  .random-banner.glass-interactive:hover{transform:none;}
 }
 
 /* ── RANDOM BANNER (glass tiles) ── */
-.random-banner{border-radius:var(--r);padding:14px 16px;display:flex;align-items:center;gap:12px;
-  cursor:pointer;transition:border-color .18s,background .18s,transform .18s;min-height:88px;
-  background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);
-  position:relative;overflow:hidden;}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .random-banner{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
-.random-banner::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);pointer-events:none;}
-.random-banner:hover{border-color:rgba(255,255,255,0.16);background:var(--glass-fill-hover);}
-@media (prefers-reduced-motion:no-preference){.random-banner:hover{transform:translateY(-1px);}}
-.random-banner.adaptive-v2-banner,.random-banner.rush-banner{min-height:76px;border-radius:999px;}
-.random-banner.adaptive-v2-banner{background:linear-gradient(135deg,rgba(196,160,247,0.10),var(--glass-fill));}
+.random-banner{padding:14px 16px;display:flex;align-items:center;gap:12px;
+  cursor:pointer;transition:border-color .18s,transform .18s;min-height:88px;}
+@media (prefers-reduced-motion:no-preference){.random-banner.glass-interactive:hover{transform:translateY(-1px);}}
+.random-banner.adaptive-v2-banner,.random-banner.rush-banner{min-height:76px;--glass-radius:999px;}
+.random-banner.adaptive-v2-banner{--glass-bg:linear-gradient(135deg,rgba(196,160,247,0.10),var(--glass-fill));}
 .random-banner.adaptive-v2-banner .rb-text strong{color:#c4a0f7;font-size:1rem;}
 .random-banner.adaptive-v2-banner .rb-icon-wrap{background:rgba(196,160,247,0.12);}
 .random-banner.adaptive-v2-banner .rb-text span{font-size:.82rem;display:block;line-height:1.45;}
 .random-banner.adaptive-v2-banner .rb-text span + span{margin-top:2px;color:var(--muted);font-size:.76rem;}
-.random-banner.rush-banner{background:linear-gradient(135deg,rgba(255,140,90,0.10),var(--glass-fill));}
+.random-banner.rush-banner{--glass-bg:linear-gradient(135deg,rgba(255,140,90,0.10),var(--glass-fill));}
 .random-banner.rush-banner .rb-text strong{color:#ff9a62;font-size:1rem;}
 .random-banner.rush-banner .rb-icon-wrap{background:rgba(255,140,90,0.12);}
 .random-banner.swipe-banner .rb-text strong{color:var(--blue);}
@@ -351,19 +343,15 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 /* ── TAB PANELS & BOTTOM NAV ── */
 .tab-panel{display:none;flex-direction:column;flex:1;min-height:0;width:100%;}
 .tab-panel.active{display:flex;animation:fadeUp .35s var(--modal-ease) both;}
-#tab-panel-practice{overflow:visible;flex:1 1 0;min-height:0;height:0;gap:0;position:relative;}
-#screen-levels:has(#tab-panel-practice.active){overflow:visible;flex:1 1 0;min-height:0;height:0;}
-#tab-panel-stats{overflow-y:auto;max-height:calc(100svh - 200px);-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+#tab-panel-practice{overflow:visible;flex:none;min-height:auto;display:flex;flex-direction:column;gap:0;position:relative;}
+#screen-levels:has(#tab-panel-practice.active){overflow:visible;}
+#tab-panel-stats{padding-bottom:4px;}
 #screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
 #screen-levels .home-footer{margin-top:auto;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
-.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;border-radius:999px;
-  background:var(--glass-fill);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);pointer-events:all;}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .bottom-tabs-inner{-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);}
-}
+.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);
   z-index:0;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
 .bottom-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;border:none;border-radius:999px;
@@ -379,12 +367,12 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .profile-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;}
 .profile-subtitle{font-size:.82rem;color:var(--muted);margin-top:5px;}
 .profile-level-tabs{display:flex;gap:6px;flex-shrink:0;}
-.profile-level-tab{border:1px solid var(--glass-border);background:var(--glass-fill);color:var(--muted);border-radius:999px;padding:7px 10px;font-family:inherit;font-size:.75rem;font-weight:600;cursor:pointer;}
+.profile-level-tab{color:var(--muted);padding:7px 10px;font-family:inherit;font-size:.75rem;font-weight:600;cursor:pointer;}
 .profile-level-tab.active{border-color:var(--gold-ring);background:var(--gold-soft);color:var(--gold);}
 .profile-section{margin-bottom:20px;}
 .profile-section-title{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 10px;}
 .profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.profile-stat{background:var(--surf2);border:1px solid var(--border);border-radius:18px;padding:14px;}
+.profile-stat{--glass-radius:18px;position:relative;overflow:hidden;padding:14px;}
 .profile-stat strong{display:block;font-size:1.35rem;color:var(--text);line-height:1;}
 .profile-stat span{display:block;font-size:.74rem;color:var(--muted);margin-top:7px;}
 .profile-stat-clickable{cursor:pointer;transition:all .15s ease;}
@@ -395,9 +383,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .profile-stat.profile-stat-struggling strong{color:#ff9a9a;}
 .profile-stat.profile-stat-mastered{border-color:rgba(232,201,122,.35);background:linear-gradient(180deg,rgba(232,201,122,.14),rgba(232,201,122,.06));}
 .profile-stat.profile-stat-mastered strong{color:var(--gold);}
-.profile-stat.active{box-shadow:0 0 0 1px rgba(255,255,255,.16) inset;}
+.profile-stat.active{box-shadow:0 0 0 1px rgba(255,255,255,.16) inset,var(--glass-specular);}
 .profile-activity-grid{display:flex;flex-direction:column;gap:10px;}
-.profile-signin-unlock{background:var(--surf);border:1px solid rgba(232,201,122,.28);border-radius:18px;padding:14px;}
+.profile-signin-unlock{--glass-border:rgba(232,201,122,.28);--glass-radius:18px;position:relative;overflow:hidden;padding:14px;}
 .profile-signin-unlock-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
 .profile-signin-unlock-head--compact{margin-bottom:8px;}
 .profile-signin-unlock-hint{font-size:.8rem;color:var(--muted);line-height:1.45;margin:0;}
@@ -405,20 +393,20 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .profile-signin-btn{flex-shrink:0;padding:8px 16px;border-radius:999px;border:1px solid rgba(232,201,122,.45);background:rgba(232,201,122,.12);color:var(--gold);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;}
 .profile-signin-btn:hover{background:rgba(232,201,122,.2);border-color:var(--gold);}
 .profile-review-actions-inbox{gap:8px;}
-.profile-review-actions-inbox button{background:rgba(0,0,0,.12);border-color:rgba(255,255,255,.08);}
+.profile-review-actions-inbox button{--glass-bg:rgba(0,0,0,.12);--glass-border:rgba(255,255,255,.08);}
 .profile-review-actions button.profile-review-btn-locked{opacity:.45;cursor:not-allowed;color:var(--muted);}
-.profile-review-actions button.profile-review-btn-locked:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.05);}
+.profile-review-actions button.profile-review-btn-locked:hover{border-color:rgba(255,255,255,.1);--glass-bg:var(--glass-fill);}
 .profile-word-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
-.profile-word-item{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:10px 12px;}
+.profile-word-item{--glass-radius:14px;position:relative;overflow:hidden;padding:10px 12px;}
 .profile-word-main{font-size:1.02rem;color:var(--text);font-weight:700;line-height:1.25;}
 .profile-word-meaning{font-size:.84rem;color:var(--blue);}
 .profile-detail-wrap{max-height:0;opacity:0;overflow:hidden;transform:translateY(-6px);transition:max-height .28s ease,opacity .2s ease,transform .28s ease;}
 .profile-detail-wrap.open{max-height:5000px;opacity:1;transform:translateY(0);margin-bottom:8px;}
-.profile-detail-inner{padding-top:2px;max-height:65vh;overflow-y:auto;}
+.profile-detail-inner{padding-top:2px;}
 .profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
-.profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
-.profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
-.profile-empty{color:var(--muted);font-size:.84rem;line-height:1.6;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:16px;}
+.profile-review-actions button{width:100%;padding:13px 14px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:border-color .15s;}
+.profile-review-actions button:hover{border-color:rgba(232,201,122,.35);--glass-bg:rgba(232,201,122,.08);}
+.profile-empty{--glass-radius:18px;position:relative;overflow:hidden;color:var(--muted);font-size:.84rem;line-height:1.6;padding:16px;}
 .profile-journey-wrap{margin-bottom:14px;}
 .profile-journey-bar{display:flex;position:relative;height:10px;border-radius:999px;overflow:hidden;border:1px solid var(--border);background:rgba(0,0,0,.2);}
 .profile-journey-seg{flex:1;position:relative;border-right:1px solid rgba(255,255,255,.1);overflow:hidden;}
@@ -440,18 +428,18 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .profile-journey-dot-b1{background:rgba(196,160,247,.85);}
 .profile-journey-dot-gold{background:linear-gradient(180deg,#fff5d6,var(--gold));}
 .profile-danger-zone{margin-top:8px;padding-top:4px;}
-.profile-reset-btn{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(240,112,112,.45);background:rgba(240,112,112,.08);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:#ff9a9a;cursor:pointer;transition:all .15s;}
-.profile-reset-btn:hover{border-color:rgba(240,112,112,.65);background:rgba(240,112,112,.14);}
+.profile-reset-btn{--glass-border:rgba(240,112,112,.45);--glass-bg:rgba(240,112,112,.08);--glass-radius:25px;width:100%;padding:13px 14px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:#ff9a9a;cursor:pointer;transition:border-color .15s;}
+.profile-reset-btn:hover{--glass-border:rgba(240,112,112,.65);--glass-bg:rgba(240,112,112,.14);}
 .cat-coverage{display:inline-block;margin-top:2px;padding:2px 8px;border-radius:999px;background:rgba(0,0,0,.22);font-size:.68rem;font-weight:700;color:rgba(255,255,255,.88);letter-spacing:.02em;}
-.profile-topic-row{display:flex;align-items:center;gap:10px;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:12px 14px;margin-bottom:8px;}
+.profile-topic-row{--glass-radius:18px;position:relative;overflow:hidden;display:flex;align-items:center;gap:10px;padding:12px 14px;margin-bottom:8px;}
 .profile-topic-main{flex:1;min-width:0;}
 .profile-topic-name{font-size:.92rem;font-weight:700;color:var(--text);line-height:1.25;}
 .profile-topic-meta{font-size:.72rem;color:var(--muted);margin-top:4px;}
 .profile-topic-activity{margin-top:2px;font-size:.68rem;opacity:.92;}
 .profile-topic-bar{height:5px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden;}
 .profile-topic-bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,rgba(126,184,247,.75),rgba(232,201,122,.85));}
-.profile-topic-btn{flex-shrink:0;padding:8px 12px;border-radius:999px;border:1px solid rgba(126,184,247,.35);background:rgba(126,184,247,.1);color:var(--blue);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;}
-.profile-topic-btn:hover{background:rgba(126,184,247,.18);}
+.profile-topic-btn{--glass-border:rgba(126,184,247,.35);--glass-bg:rgba(126,184,247,.1);flex-shrink:0;padding:8px 12px;color:var(--blue);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;transition:border-color .15s;}
+.profile-topic-btn:hover{--glass-bg:rgba(126,184,247,.18);}
 
 
 
@@ -474,14 +462,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   padding:7px 12px;border-radius:25px;cursor:pointer;font-size:.79rem;font-family:'Outfit','Vazirmatn',sans-serif;transition:all .15s;}
 .back-btn:hover{color:var(--text);border-color:rgba(255,255,255,.12);}
 .hud{display:flex;align-items:center;gap:7px;}
-.hud-pill{background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:50px;
-  padding:4px 11px;font-size:.77rem;display:flex;align-items:center;gap:4px;box-shadow:var(--glass-specular);}
+.hud-pill{padding:4px 11px;font-size:.77rem;display:flex;align-items:center;gap:4px;}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
 .dot.r{background:var(--red);}
 .prog-wrap{background:var(--surf2);border:1px solid var(--border);border-radius:99px;height:5px;margin-bottom:16px;overflow:hidden;}
 .prog-fill{height:100%;background:var(--gold);border-radius:99px;transition:width .35s ease;}
 .card-type-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.tbadge{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-fill);}
+.tbadge{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;padding:4px 10px;border-radius:999px;}
 .tbadge.verb{background:rgba(126,184,247,.15);color:var(--blue);}
 .tbadge.noun{background:rgba(232,201,122,.15);color:var(--gold);}
 .tbadge.grammar{background:rgba(107,232,160,.12);color:var(--green);}
@@ -489,7 +476,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .tbadge.adj{background:rgba(196,160,247,.12);color:var(--purple);}
 .tbadge.phrase{background:rgba(247,160,196,.12);color:var(--pink);}
 .tlevel{font-size:.67rem;color:var(--muted);}
-.tmode-badge{font-size:.67rem;padding:3px 8px;border-radius:999px;font-weight:600;border:1px solid var(--glass-border);background:var(--glass-fill);}
+.tmode-badge{font-size:.67rem;padding:3px 8px;border-radius:999px;font-weight:600;}
 .tmode-badge.vocab{background:rgba(232,201,122,.12);color:var(--gold);}
 .tmode-badge.grammar{background:rgba(126,184,247,.12);color:var(--blue);}
 .word-card{background:var(--surf2);border:1px solid var(--border);border-radius:var(--r);
@@ -522,11 +509,11 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 
 /* ── SWIPE MODE ── */
 #screen-swipe{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
-.swipe-setup{background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:45px;padding:18px 15px 10px 15px;box-shadow:var(--glass-specular);}
+.swipe-setup{--glass-radius:45px;padding:18px 15px 10px 15px;}
 .swipe-setup-title{display:none;}
 .swipe-setup-sub{display:none;}
 .swipe-level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
-.swipe-level-btn{background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:20px;padding:14px 8px;cursor:pointer;transition:all .18s ease;text-align:center;box-shadow:var(--glass-specular);}
+.swipe-level-btn{--glass-radius:20px;padding:14px 8px;cursor:pointer;transition:all .18s ease;text-align:center;}
 .swipe-level-btn.active{border-color:var(--gold-ring);background:var(--gold-soft);}
 .swipe-level-btn strong{display:block;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;color:var(--gold);font-size:1.3rem;font-weight:700;}
 .swipe-level-btn span{display:block;color:var(--muted);font-size:.7rem;margin-top:4px;}
@@ -549,29 +536,24 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .swipe-meaning{font-size:.98rem;line-height:1.45;color:var(--text);}
 .swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;margin-top:auto;padding-top:8px;}
-.swipe-btn{width:58px;height:58px;border-radius:50%;border:1px solid var(--glass-border);background:var(--glass-fill);cursor:pointer;font-size:1.35rem;transition:transform .15s ease,border-color .15s ease,background .15s ease;}
-.swipe-btn.left{border-color:rgba(240,112,112,.35);background:rgba(240,112,112,.08);}
-.swipe-btn.right{border-color:rgba(107,232,160,.35);background:rgba(107,232,160,.08);}
+.swipe-btn{width:58px;height:58px;border-radius:50%;cursor:pointer;font-size:1.35rem;transition:transform .15s ease,border-color .15s ease;}
+.swipe-btn.left{--glass-bg:rgba(240,112,112,.08);border-color:rgba(240,112,112,.35);}
+.swipe-btn.right{--glass-bg:rgba(107,232,160,.08);border-color:rgba(107,232,160,.35);}
 @media (prefers-reduced-motion:no-preference){.swipe-btn:hover{transform:translateY(-1px);}}
 .swipe-flash{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;pointer-events:none;opacity:0;transform:scale(.96);transition:opacity .2s ease,transform .2s ease;z-index:8;text-align:center;direction:ltr;}
 .swipe-flash.show{opacity:1;transform:scale(1);}
 .swipe-flash-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:min(100%,320px);margin:0 auto;}
-.swipe-flash-mark{padding:10px 16px;border-radius:999px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(11,13,19,.88);backdrop-filter:blur(8px);box-shadow:0 12px 30px rgba(0,0,0,.28);}
+.swipe-flash-mark{padding:10px 16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 12px 30px rgba(0,0,0,.28);}
 .swipe-flash.good .swipe-flash-mark{border:1px solid rgba(107,232,160,.45);color:var(--green);}
 .swipe-flash.bad .swipe-flash-mark{border:1px solid rgba(240,112,112,.45);color:var(--red);}
-.swipe-flash-note{max-width:300px;background:rgba(17,24,39,.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;text-align:center;font-size:.8rem;line-height:1.4;color:var(--text);}
+.swipe-flash-note{max-width:300px;--glass-radius:14px;padding:10px 12px;text-align:center;font-size:.8rem;line-height:1.4;color:var(--text);}
 .swipe-empty{background:var(--surf);border:1px dashed var(--border);border-radius:25px;padding:40px 18px;text-align:center;color:var(--muted);}
 .swipe-empty strong{display:block;color:var(--text);font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;margin-bottom:8px;}
 
 /* ── PRACTICE MODE ── */
 #screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
 .practice-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
-.practice-card{position:absolute;inset:0;border-radius:25px;box-shadow:var(--glass-shadow);transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;perspective:1000px;
-  background:var(--glass-fill);border:1px solid var(--glass-border);}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .practice-card{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
-}
-.practice-card.top::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;z-index:2;border-radius:25px 25px 0 0;}
+.practice-card{position:absolute;inset:0;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;perspective:1000px;}
 .practice-card.under-1{transform:translateY(10px) scale(.98);opacity:0.85;filter:brightness(.94);}
 .practice-card.under-2{transform:translateY(18px) scale(.96);opacity:0.72;filter:brightness(.88);}
 .practice-card.dragging{transition:none;}
@@ -579,16 +561,17 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .practice-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
 .practice-card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s ease;padding:3px;}
 .practice-card.flipped .practice-card-inner{transform:rotateY(180deg);}
-.practice-front,.practice-back{position:absolute;inset:3px;background:var(--surf2);border:1px solid rgba(255,255,255,.06);border-radius:22px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;gap:12px;overflow:hidden;}
+.practice-front,.practice-back{position:absolute;inset:3px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:22px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;gap:12px;overflow:hidden;box-shadow:var(--glass-specular);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
+.practice-front::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:var(--glass-highlight-line);pointer-events:none;z-index:2;}
 .practice-back{transform:rotateY(180deg);}
 .practice-word{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:clamp(1.9rem,6.5vw,2.5rem);font-weight:700;line-height:1.05;color:var(--text);text-align:center;margin:0;}
 .practice-example{font-size:.8rem;color:var(--muted);text-align:center;line-height:1.5;font-style:italic;padding:0 8px;}
 .practice-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
 .practice-meaning{font-size:1.05rem;line-height:1.45;color:var(--text);text-align:center;}
-.practice-flip-btn{display:flex;align-items:center;justify-content:center;line-height:1;border-color:var(--glass-border);background:var(--glass-fill);color:rgba(126,184,247,.7);font-size:1.3rem;}
-.practice-flip-btn:hover{border-color:rgba(126,184,247,.5);background:rgba(126,184,247,.12);color:rgba(126,184,247,.95);}
-.practice-dismiss-btn{display:flex;align-items:center;justify-content:center;line-height:1;border-color:var(--glass-border);background:var(--glass-fill);color:rgba(212,175,90,.65);font-size:1.3rem;}
-.practice-dismiss-btn:hover{border-color:var(--gold-ring);background:var(--gold-soft);color:var(--gold);}
+.practice-flip-btn{--glass-bg:var(--glass-fill);display:flex;align-items:center;justify-content:center;line-height:1;color:rgba(126,184,247,.7);font-size:1.3rem;}
+.practice-flip-btn:hover{--glass-bg:rgba(126,184,247,.12);border-color:rgba(126,184,247,.5);color:rgba(126,184,247,.95);}
+.practice-dismiss-btn{--glass-bg:var(--glass-fill);display:flex;align-items:center;justify-content:center;line-height:1;color:rgba(212,175,90,.65);font-size:1.3rem;}
+.practice-dismiss-btn:hover{--glass-bg:var(--gold-soft);border-color:var(--gold-ring);color:var(--gold);}
 
 /* ── RESULTS ── */
 .res-card{background:var(--surf2);border:1px solid var(--border);border-radius:25px;padding:36px 24px;text-align:center;}
@@ -608,25 +591,21 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 #tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;}
 #tab-panel-practice .practice-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-practice .practice-head-sub{font-size:.82rem;color:var(--muted);margin:5px 0 0;}
-#tab-panel-practice .practice-clear-btn{flex-shrink:0;align-self:flex-start;margin-top:4px;background:var(--glass-fill);border:1px solid var(--glass-border);border-radius:999px;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;box-shadow:var(--glass-specular);transition:color .15s,border-color .15s,background .15s;}
-#tab-panel-practice .practice-clear-btn:hover{color:var(--gold);border-color:var(--gold-ring);background:var(--gold-soft);}
-#tab-panel-practice .practice-filters{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;display:flex;flex-direction:column;gap:14px;padding-bottom:118px;scrollbar-width:none;-ms-overflow-style:none;}
-#tab-panel-practice .practice-filters::-webkit-scrollbar{display:none;}
+#tab-panel-practice .practice-clear-btn{flex-shrink:0;align-self:flex-start;margin-top:4px;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:color .15s,border-color .15s;}
+#tab-panel-practice .practice-clear-btn.glass-interactive:hover{color:var(--gold);border-color:var(--gold-ring);}
+#tab-panel-practice .practice-clear-btn.glass-interactive:hover::after{background:var(--gold-soft);}
+#tab-panel-practice .practice-filters{display:flex;flex-direction:column;gap:14px;}
 #tab-panel-practice .practice-filters .section-label{margin:0 0 8px;}
 #tab-panel-practice .practice-chips{display:flex;flex-wrap:wrap;gap:6px;}
-#tab-panel-practice .practice-dock{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:14px 16px 16px;border-radius:25px;
-  background:rgba(8,10,16,0.42);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow),var(--glass-specular);}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  #tab-panel-practice .practice-dock{background:rgba(255,255,255,0.06);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);}
-}
-#tab-panel-practice .practice-dock::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);pointer-events:none;}
+#tab-panel-practice .practice-dock{position:sticky;bottom:calc(var(--tab-h) + 16px + env(safe-area-inset-bottom,0px));left:0;right:0;z-index:5;padding:14px 16px 16px;margin-top:auto;}
+body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-area-inset-bottom,0px));}
 #tab-panel-practice .practice-count{text-align:center;font-size:.82rem;color:var(--muted);line-height:1.45;margin:0 0 12px;}
 #tab-panel-practice .practice-count.is-empty{color:rgba(247,138,168,.92);}
 #tab-panel-practice .practice-count-num{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
 #tab-panel-practice .practice-count-hint{display:block;font-size:.72rem;margin-top:4px;color:rgba(247,138,168,.92);}
 #tab-panel-practice .practice-dock .btn-primary{margin-bottom:0;}
-.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;border:1px solid var(--glass-border);background:var(--glass-fill);color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:all .15s ease;font-family:inherit;white-space:nowrap;box-shadow:var(--glass-specular);}
-.practice-chip:hover{border-color:rgba(255,255,255,0.14);background:var(--glass-fill-hover);color:var(--text);}
+.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:color .15s ease,border-color .15s ease;font-family:inherit;white-space:nowrap;}
+.practice-chip.glass-interactive:hover{color:var(--text);}
 .practice-chip.active{border-color:var(--gold-ring);background:var(--gold-soft);color:var(--text);}
 .practice-chip.all-chip{font-weight:600;color:var(--text);}
 .practice-chip.cat-chip{font-size:.72rem;max-width:100%;white-space:normal;text-align:start;}
@@ -716,7 +695,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 
 /* ── ANIMATIONS ── */
 @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{transform:translateY(16px)}to{transform:translateY(0)}}
 @keyframes cardIn{from{opacity:0;transform:scale(.97) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.05)}100%{transform:scale(1)}}
 @keyframes sheetFade{from{opacity:0}to{opacity:1}}
@@ -884,7 +863,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   <h1 onclick="goHome()">Wortschatz</h1>
 </div>
 <div class="screen-top-bar hidden" id="screen-top-bar">
-  <button class="app-back-btn hidden" id="app-back-btn" onclick="_appBackAction()" type="button" aria-label="Back"></button>
+  <button class="app-back-btn glass glass-chrome glass-interactive hidden" id="app-back-btn" onclick="_appBackAction()" type="button" aria-label="Back"></button>
 </div>
 
 <!-- ══ OFFLINE SCREEN ══ -->
@@ -899,14 +878,14 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="modal-root modal-root--drawer" id="drawer-overlay">
   <div class="modal-scrim" onclick="closeSettings()"></div>
   <div class="modal-sheet drawer glass-sheet-shell" id="settings-drawer">
-  <div class="glass-sheet-surface">
+  <div class="glass-sheet-surface glass glass-highlight">
   <div class="drawer-handle" onclick="closeSettings()"></div>
   <div class="drawer-title" id="st-title">Settings</div>
 
   <div class="drawer-section">
     <div class="drawer-section-label" id="st-lang-label">Language</div>
     <div class="lang-dd" id="lang-dd">
-      <button class="lang-dd-trigger" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
+      <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
         <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
         <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
@@ -973,7 +952,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="modal-root modal-root--dialog" id="app-dialog-overlay">
   <div class="modal-scrim" id="app-dialog-scrim"></div>
   <div class="modal-sheet app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
-  <div class="glass-sheet-surface">
+  <div class="glass-sheet-surface glass glass-highlight">
   <div class="app-dialog-handle" id="app-dialog-handle"></div>
   <div class="app-dialog-title" id="app-dialog-title"></div>
   <p class="app-dialog-message" id="app-dialog-message"></p>
@@ -989,7 +968,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="modal-root modal-root--about modal-root--align-bottom modal-root--pad-bottom" id="about-modal-overlay">
   <div class="modal-scrim" onclick="closeAbout()"></div>
   <div class="modal-sheet about-modal glass-sheet-shell">
-    <div class="about-modal-surface glass-sheet-surface">
+    <div class="about-modal-surface glass-sheet-surface glass glass-highlight">
     <h3 id="about-title">About</h3>
     <p id="about-p1">I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.</p>
     <p id="about-p2">Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
@@ -1004,7 +983,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="modal-root modal-root--install modal-root--align-bottom modal-root--pad-guide" id="install-guide-overlay">
   <div class="modal-scrim" onclick="closeInstallGuide()"></div>
   <div class="modal-sheet install-guide glass-sheet-shell">
-    <div class="install-guide-surface glass-sheet-surface">
+    <div class="install-guide-surface glass-sheet-surface glass glass-highlight">
     <div class="install-guide-handle"></div>
     <div class="install-guide-head">
       <div>
@@ -1040,7 +1019,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="modal-root modal-root--word modal-root--align-bottom" id="word-modal-overlay">
   <div class="modal-scrim" onclick="closeWordModal()"></div>
   <div class="modal-sheet word-modal glass-sheet-shell">
-    <div class="word-modal-surface glass-sheet-surface">
+    <div class="word-modal-surface glass-sheet-surface glass glass-highlight">
     <div class="word-modal-handle"></div>
     <div id="word-modal-content"></div>
     </div>
@@ -1056,7 +1035,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   <div class="tab-panel active" id="tab-panel-learn">
     <div class="home-actions">
       <div class="home-primary-actions">
-        <div class="random-banner adaptive-v2-banner glass-tile" onclick="openAdaptiveV2()">
+        <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
           <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-rocket"/></svg></div>
           <div class="rb-text">
             <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
@@ -1064,7 +1043,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
             <span id="adaptive-v2-banner-status" style="display:none"></span>
           </div>
         </div>
-        <div class="random-banner rush-banner glass-tile" id="rush-banner" onclick="openRushMode()">
+        <div class="random-banner rush-banner glass glass-tile glass-highlight glass-interactive" id="rush-banner" onclick="openRushMode()">
           <div class="rb-icon-wrap rb-icon-wrap--rush" id="rush-banner-icon-wrap"><svg class="ui-icon ui-icon--filled" id="rush-banner-icon" aria-hidden="true"><use href="#icon-lightning"/></svg></div>
           <div class="rb-text">
             <strong id="rush-banner-title">Rush Mode</strong>
@@ -1073,21 +1052,21 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
         </div>
       </div>
       <div class="home-grid-actions">
-        <div class="random-banner theme-banner glass-tile" onclick="openThemeSelect()">
+        <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive" onclick="openThemeSelect()">
           <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-gift"/></svg></div>
           <div class="rb-text">
             <strong id="theme-banner-title">Theme Quiz</strong>
             <span id="theme-banner-sub">Quiz yourself on a topic</span>
           </div>
         </div>
-        <div class="random-banner swipe-banner glass-tile" onclick="openSwipeSetup()">
+        <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive" onclick="openSwipeSetup()">
           <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-phone-match"/></svg></div>
           <div class="rb-text">
             <strong id="swipe-banner-title">Quick Match</strong>
             <span id="swipe-banner-sub">Swipe if the meaning matches</span>
           </div>
         </div>
-        <div class="random-banner word-explorer-banner glass-tile" onclick="showRandomWord()">
+        <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive" onclick="showRandomWord()">
           <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon ui-icon--filled" aria-hidden="true"><use href="#icon-dice"/></svg></div>
           <div class="rb-text">
             <strong id="rw-banner-title">Word Explorer</strong>
@@ -1145,14 +1124,14 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
         <h2 class="practice-head-title" id="practice-setup-screen-title">Practice</h2>
         <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
       </div>
-      <button type="button" class="practice-clear-btn" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
+      <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
     </header>
 
     <div class="practice-filters" id="practice-filters">
       <div class="swipe-level-grid" id="practice-levels">
-        <button type="button" class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
-        <button type="button" class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
-        <button type="button" class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
       </div>
 
       <div class="section-label" id="practice-filter-difficulty-label">Difficulty</div>
@@ -1168,7 +1147,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
       <div class="practice-chips" id="practice-category-chips"></div>
     </div>
 
-    <div class="practice-dock" id="practice-dock">
+    <div class="practice-dock glass glass-tile glass-highlight" id="practice-dock">
       <p class="practice-count" id="practice-match-count">
         <span class="practice-count-num" id="practice-match-num">0</span>
         <span id="practice-match-label">words in your loop</span>
@@ -1191,7 +1170,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 
 <!-- Bottom tab bar -->
 <nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
-  <div class="bottom-tabs-inner">
+  <div class="bottom-tabs-inner glass glass-pill">
     <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
     <button type="button" class="bottom-tab active" id="bottom-tab-learn" onclick="switchTab('learn')" aria-current="page">
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
@@ -1216,16 +1195,16 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 <div class="screen hidden" id="screen-quiz">
   <div class="quiz-header">
     <div class="hud">
-      <div class="hud-pill"><span class="dot"></span><span id="sc-ok">0</span></div>
-      <div class="hud-pill"><span class="dot r"></span><span id="sc-no">0</span></div>
-      <div class="hud-pill" style="font-size:.74rem;color:var(--muted);" id="hud-pos">1/10</div>
+      <div class="hud-pill glass glass-pill glass-chrome"><span class="dot"></span><span id="sc-ok">0</span></div>
+      <div class="hud-pill glass glass-pill glass-chrome"><span class="dot r"></span><span id="sc-no">0</span></div>
+      <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;color:var(--muted);" id="hud-pos">1/10</div>
     </div>
   </div>
   <div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
   <div class="card-type-row">
-    <span class="tbadge" id="tbadge">Verb</span>
+    <span class="tbadge glass glass-pill glass-chrome" id="tbadge">Verb</span>
     <span class="tlevel" id="tlevel"></span>
-    <span class="tmode-badge" id="tmode-badge"></span>
+    <span class="tmode-badge glass glass-pill glass-chrome" id="tmode-badge"></span>
   </div>
   <div class="word-card">
     <div class="card-q" id="cquestion"></div>
@@ -1283,13 +1262,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
       <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
     </div>
   </div>
-  <div class="swipe-setup">
+  <div class="swipe-setup glass glass-tile">
     <div class="swipe-setup-title" id="swipe-setup-title"></div>
     <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
     </div>
     <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
   </div>
@@ -1306,15 +1285,15 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
   <div class="swipe-stage">
     <div class="swipe-flash" id="swipe-flash">
       <div class="swipe-flash-inner">
-        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
-        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
+        <div class="swipe-flash-mark glass glass-pill glass-overlay glass-highlight" id="swipe-flash-mark">RIGHT</div>
+        <div class="swipe-flash-note glass glass-overlay" id="swipe-flash-note" hidden></div>
       </div>
     </div>
     <div class="swipe-card-stack" id="swipe-card-stack"></div>
   </div>
   <div class="swipe-actions">
-    <button class="swipe-btn left" onclick="swipeAction('left')" title="Wrong">✖</button>
-    <button class="swipe-btn right" onclick="swipeAction('right')" title="Correct">✔</button>
+    <button class="swipe-btn glass glass-chrome left" onclick="swipeAction('left')" title="Wrong">✖</button>
+    <button class="swipe-btn glass glass-chrome right" onclick="swipeAction('right')" title="Correct">✔</button>
   </div>
 </div>
 
@@ -1332,8 +1311,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
     <div class="practice-card-stack" id="practice-card-stack"></div>
   </div>
   <div class="swipe-actions">
-    <button class="swipe-btn practice-flip-btn" onclick="practiceFlipAction()" title="Flip card">↩&#xFE0E;</button>
-    <button class="swipe-btn practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card">→</button>
+    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card">↩&#xFE0E;</button>
+    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card">→</button>
   </div>
 </div>
 
@@ -1345,11 +1324,11 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
       <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
     </div>
   </div>
-  <div class="swipe-setup">
+  <div class="swipe-setup glass glass-tile">
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
     </div>
     <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
   </div>
@@ -4245,7 +4224,7 @@ function renderCard() {
   document.getElementById('tlevel').textContent = t('levelLabel') + ' ' + currentLevel;
   var mb = document.getElementById('tmode-badge');
   mb.textContent = t('vocabBadge');
-  mb.className = 'tmode-badge vocab';
+  mb.className = 'tmode-badge glass glass-pill glass-chrome vocab';
 
   document.getElementById('cquestion').textContent = t('quizQuestion');
 
@@ -5071,10 +5050,10 @@ function _profileTopics(progress) {
 
 function _profileTopicsHtml(topics) {
   if (!topics.length) {
-    return '<div class="profile-empty">' + escHtml(_lp('notEnoughCategoryData')) + '</div>';
+    return '<div class="profile-empty glass glass-tile">' + escHtml(_lp('notEnoughCategoryData')) + '</div>';
   }
   return topics.map(function(topic) {
-    return '<div class="profile-topic-row">'
+    return '<div class="profile-topic-row glass glass-tile">'
       + '<div class="profile-topic-main">'
       + '<div class="profile-topic-name">' + escHtml(topic.name) + '</div>'
       + '<div class="profile-topic-meta">'
@@ -5089,7 +5068,7 @@ function _profileTopicsHtml(topics) {
       + '</div>'
       + '<div class="profile-topic-bar"><span style="width:' + topic.coveragePct + '%"></span></div>'
       + '</div>'
-      + '<button type="button" class="profile-topic-btn" onclick="startThemeQuiz(' + topic.id + ')">'
+      + '<button type="button" class="profile-topic-btn glass glass-pill glass-interactive" onclick="startThemeQuiz(' + topic.id + ')">'
       + escHtml(_lp('practiceTopic')) + '</button>'
       + '</div>';
   }).join('');
@@ -5124,10 +5103,10 @@ function _categoryPerformanceFromWords(wordRows) {
 
 function _profileWordListHtml(title, rows) {
   if (!rows.length) {
-    return '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('noWordsInList')) + '</div>';
+    return '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('noWordsInList')) + '</div>';
   }
   var items = rows.map(function(w) {
-    return '<div class="profile-word-item">'
+    return '<div class="profile-word-item glass glass-tile">'
       + '<div class="profile-word-main">' + escHtml(w.word) + '</div>'
       + (w.meaning ? '<div class="profile-word-meaning">' + escHtml(w.meaning) + '</div>' : '')
       + '</div>';
@@ -5224,7 +5203,7 @@ function renderLearningProfile() {
   var topicsHtml = _profileTopicsHtml(topics);
   var isGuest = !(snap && snap.signedIn);
   function stat(label, value, extraClass, clickMode, selected) {
-    var cls = 'profile-stat';
+    var cls = 'profile-stat glass glass-tile';
     if (extraClass) cls += ' ' + extraClass;
     if (clickMode) cls += ' profile-stat-clickable';
     if (selected) cls += ' active';
@@ -5245,15 +5224,15 @@ function renderLearningProfile() {
   if (learningProfileDetailMode === 'seen') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('seenWords'), seenListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   } else if (learningProfileDetailMode === 'struggling') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('strugglingWords'), strugglingListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   } else if (learningProfileDetailMode === 'mastered') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('masteredWords'), masteredListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   }
   var detailIsOpen = !!learningProfileDetailMode;
   if (detailIsOpen && detailHtml) {
@@ -5279,12 +5258,12 @@ function renderLearningProfile() {
   var reviewBtnClass = isGuest ? ' profile-review-btn-locked' : '';
   var reviewBtnDisabled = isGuest ? ' disabled' : '';
   function reviewBtn(mode, label) {
-    return '<button type="button" class="profile-review-btn' + reviewBtnClass + '"' + reviewBtnDisabled +
+    return '<button type="button" class="profile-review-btn glass glass-pill glass-interactive' + reviewBtnClass + '"' + reviewBtnDisabled +
       (isGuest ? '' : ' onclick="startLearningProfileReview(\'' + mode + '\')"') + '>' +
       escHtml(label) + '</button>';
   }
   var reviewSectionHtml = isGuest
-    ? '<div class="profile-signin-unlock">' +
+    ? '<div class="profile-signin-unlock glass glass-tile">' +
         '<div class="profile-signin-unlock-head">' +
           '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
           '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
@@ -5301,7 +5280,7 @@ function renderLearningProfile() {
         reviewBtn('mixed', _lp('reviewMixedPractice')) +
       '</div>';
   var topicsSectionHtml = isGuest
-    ? '<div class="profile-signin-unlock">' +
+    ? '<div class="profile-signin-unlock glass glass-tile">' +
         '<div class="profile-signin-unlock-head profile-signin-unlock-head--compact">' +
           '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
           '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
@@ -5337,7 +5316,7 @@ function renderLearningProfile() {
       topicsSectionHtml +
     '</div>' +
     '<div class="profile-section profile-danger-zone">' +
-      '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
+      '<button type="button" class="profile-reset-btn glass glass-pill glass-interactive" onclick="resetAdaptiveV2Progress()">' +
         escHtml(_lp('resetAdaptiveProgress')) +
       '</button></div>';
 
@@ -5793,7 +5772,7 @@ function _renderPracticeChip(group, key, label, extraClass, icon) {
   var active = key === PRACTICE_ALL_KEY
     ? _practiceGroupIsAll(group)
     : (!_practiceGroupIsAll(group) && !!(practiceFilters[group] && practiceFilters[group][key]));
-  return '<button type="button" class="practice-chip' + (active ? ' active' : '') +
+  return '<button type="button" class="practice-chip glass glass-pill glass-chrome glass-interactive' + (active ? ' active' : '') +
     (extraClass ? ' ' + extraClass : '') + '" onclick="practiceToggleFilter(\'' + group + '\',\'' +
     String(key).replace(/'/g, "\\'") + '\')">' +
     (icon ? '<span class="chip-icon">' + icon + '</span>' : '') +
@@ -10705,7 +10684,7 @@ document.addEventListener('keydown', function(e){
       var mb = document.getElementById('tmode-badge');
       if (mb) {
         mb.textContent = (typeof t === 'function' ? t('adaptiveV2Badge') : 'Adaptive V2');
-        mb.className = 'tmode-badge grammar';
+        mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
       }
       var tl = document.getElementById('tlevel');
       if (tl) {
@@ -11110,7 +11089,7 @@ document.addEventListener('keydown', function(e){
     var mb = document.getElementById('tmode-badge');
     if (mb) {
       mb.textContent = _rushUi('rushBadge', 'Rush Mode');
-      mb.className = 'tmode-badge grammar';
+      mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
     }
     var tl = document.getElementById('tlevel');
     if (tl && typeof window._adaptiveV2GetProgress === 'function') {
@@ -12518,7 +12497,7 @@ document.addEventListener('keydown', function(e){
   overlay.innerHTML =
     '<div class="modal-scrim"></div>' +
     '<div id="ann-card" class="modal-sheet glass-sheet-shell"' + (isRtl ? ' dir="rtl"' : '') + '>' +
-    '  <div class="glass-sheet-surface">' +
+    '  <div class="glass-sheet-surface glass glass-highlight">' +
     '  <div id="ann-icon">📢</div>' +
     '  <div id="ann-title">' + t.title + '</div>' +
     '  <div id="ann-msg">' + t.message + '</div>' +
