@@ -50,6 +50,7 @@
   --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
   --modal-scrim:rgba(0,0,0,0.42);
   --tab-h:62px;
+  --tab-page-gap:12px;
 }
 /* GLASS SYSTEM — frame (.glass), fill (.glass-overlay / --glass-bg), dim (.modal-scrim).
    Tier C (.surf*) surfaces are intentionally solid — do not add glass. See docs/GLASS_SYSTEM.md */
@@ -286,6 +287,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
   .random-banner.glass-interactive:hover{transform:none;}
+  .tab-track{transition:none!important;}
+  .bottom-tab-indicator{transition:none!important;}
 }
 
 /* ── RANDOM BANNER (glass tiles) ── */
@@ -341,8 +344,11 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 }
 
 /* ── TAB PANELS & BOTTOM NAV ── */
-.tab-panel{display:none;flex-direction:column;flex:1;min-height:0;width:100%;}
-.tab-panel.active{display:flex;animation:fadeUp .35s var(--modal-ease) both;}
+#screen-levels{flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
+.tab-viewport{width:100%;overflow:visible;}
+.tab-track{display:flex;align-items:flex-start;gap:var(--tab-page-gap);will-change:transform;transition:transform var(--modal-dur) var(--modal-ease);}
+.tab-track.is-dragging{transition:none;}
+.tab-panel{display:flex;flex-direction:column;flex:0 0 100%;width:100%;min-width:0;}
 #tab-panel-practice.active{overflow:visible;flex:none;min-height:auto;flex-direction:column;gap:0;position:relative;}
 #screen-levels:has(#tab-panel-practice.active){overflow:visible;}
 #tab-panel-stats{padding-bottom:4px;}
@@ -350,14 +356,15 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .settings-head{margin-bottom:18px;}
 .settings-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-settings .drawer-section:last-child{margin-bottom:0;}
-#screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
 #screen-levels .home-footer{margin-top:auto;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
-.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;}
+.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
+.bottom-tabs-inner.is-dragging{cursor:grabbing;}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);
   z-index:0;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
+.bottom-tab-indicator.is-dragging{transition:none;}
 .bottom-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;border:none;border-radius:999px;
   background:transparent;color:rgba(255,255,255,0.42);cursor:pointer;font-family:inherit;transition:color .18s;min-height:46px;position:relative;z-index:1;}
 .bottom-tab:hover{color:rgba(255,255,255,0.65);}
@@ -961,8 +968,10 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
 </div>
 <div class="screen" id="screen-levels">
+  <div class="tab-viewport" id="tab-viewport">
+    <div class="tab-track" id="tab-track">
   <!-- Learn tab -->
-  <div class="tab-panel active" id="tab-panel-learn">
+  <div class="tab-panel active" id="tab-panel-learn" aria-hidden="false">
     <div class="home-actions">
       <div class="home-primary-actions">
         <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
@@ -1165,25 +1174,27 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
     </div>
   </div>
+    </div>
+  </div>
 </div>
 
 <!-- Bottom tab bar -->
 <nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
   <div class="bottom-tabs-inner glass glass-pill">
     <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
-    <button type="button" class="bottom-tab active" id="bottom-tab-learn" onclick="switchTab('learn')" aria-current="page">
+    <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
       <span class="bottom-tab-label">Learn</span>
     </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-practice" onclick="switchTab('practice')">
+    <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
       <span class="bottom-tab-label">Practice</span>
     </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-stats" onclick="switchTab('stats')">
+    <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
       <span class="bottom-tab-label">Stats</span>
     </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-settings" onclick="switchTab('settings')">
+    <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
       <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
       <span class="bottom-tab-label">Settings</span>
     </button>
@@ -3015,6 +3026,7 @@ var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _themeAnswers = [];
 var learningProfileSelectedLevel = 'ALL';
+var _profileDirty = true;
 var learningProfileDetailMode = null;
 var learningProfileLastDetailHtml = '';
 var _rwFirstLoad = false;
@@ -5319,6 +5331,7 @@ function renderLearningProfile() {
       if (wrap) wrap.classList.add('open');
     });
   }
+  _profileDirty = false;
 }
 
 window.APP_DEBUG_LEARNING_PROFILE = function(level) {
@@ -5832,8 +5845,6 @@ function practiceClearFilters() {
 }
 
 async function _initPracticeTab() {
-  var scrollEl = document.getElementById('practice-filters');
-  if (scrollEl) scrollEl.scrollTop = 0;
   try {
     await _loadV2Vocab();
   } catch (e) {}
@@ -7986,8 +7997,161 @@ function dictFilter(val) {
 
 
 // ── Screen switcher & tab navigation ──
+var TAB_ORDER = ['learn', 'practice', 'stats', 'settings'];
+var TAB_PAGE_GAP = 12;
 var _activeTab = 'learn';
+var _tabIndex = 0;
+var _tabDragIndex = null;
+var _tabCarouselReady = false;
+var _practiceTabReady = false;
+var _statsTabReady = false;
+var _tabScrollTops = { learn: 0, practice: 0, stats: 0, settings: 0 };
 var _appBackAction = function(){};
+
+function _tabIsRtl() {
+  return document.body.classList.contains('lang-rtl');
+}
+function _tabReducedMotion() {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+function _tabGesturesBlocked() {
+  var tabs = document.getElementById('bottom-tabs');
+  if (tabs && tabs.classList.contains('hidden')) return true;
+  if (document.querySelector('.modal-root.open')) return true;
+  var levels = document.getElementById('screen-levels');
+  if (!levels || levels.classList.contains('hidden')) return true;
+  return false;
+}
+function _getTabViewport() {
+  return document.getElementById('tab-viewport');
+}
+function _getTabTrack() {
+  return document.getElementById('tab-track');
+}
+function _tabStridePx() {
+  var viewport = _getTabViewport();
+  if (!viewport) return 1;
+  return viewport.clientWidth + TAB_PAGE_GAP;
+}
+function _tabTrackOffsetPx(index) {
+  var stride = _tabStridePx();
+  return (_tabIsRtl() ? 1 : -1) * index * stride;
+}
+function _saveTabScroll() {
+  _tabScrollTops[_activeTab] = window.scrollY || document.documentElement.scrollTop || 0;
+}
+function _restoreTabScroll(tab) {
+  var y = _tabScrollTops[tab] || 0;
+  requestAnimationFrame(function() { window.scrollTo(0, y); });
+}
+function _applyTabTrackTransform(index, animate) {
+  var track = _getTabTrack();
+  if (!track) return;
+  var dragging = _tabDragIndex !== null;
+  var shouldAnimate = !!animate && _tabCarouselReady && !_tabReducedMotion() && !dragging;
+  track.classList.toggle('is-dragging', dragging);
+  if (!shouldAnimate) track.style.transition = 'none';
+  else track.style.removeProperty('transition');
+  track.style.transform = 'translateX(' + _tabTrackOffsetPx(index) + 'px)';
+  if (!shouldAnimate) void track.offsetHeight;
+}
+function _updateTabIndicatorFromIndex(index) {
+  var indicator = document.getElementById('bottom-tab-indicator');
+  var inner = document.querySelector('.bottom-tabs-inner');
+  if (!indicator || !inner) return;
+  var floorIdx = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.floor(index)));
+  var ceilIdx = Math.min(TAB_ORDER.length - 1, floorIdx + 1);
+  var frac = index - floorIdx;
+  var btnA = document.getElementById('bottom-tab-' + TAB_ORDER[floorIdx]);
+  if (!btnA) return;
+  var ir = inner.getBoundingClientRect();
+  var ar = btnA.getBoundingClientRect();
+  if (floorIdx === ceilIdx || frac < 0.001) {
+    indicator.style.width = ar.width + 'px';
+    indicator.style.height = ar.height + 'px';
+    indicator.style.transform = 'translate(' + (ar.left - ir.left) + 'px,' + (ar.top - ir.top) + 'px)';
+    return;
+  }
+  var btnB = document.getElementById('bottom-tab-' + TAB_ORDER[ceilIdx]);
+  if (!btnB) return;
+  var br = btnB.getBoundingClientRect();
+  indicator.style.width = (ar.width + (br.width - ar.width) * frac) + 'px';
+  indicator.style.height = (ar.height + (br.height - ar.height) * frac) + 'px';
+  indicator.style.transform = 'translate(' + ((ar.left - ir.left) + (br.left - ar.left) * frac) + 'px,' + ((ar.top - ir.top) + (br.top - ar.top) * frac) + 'px)';
+}
+function _syncTabPanelStates(index) {
+  TAB_ORDER.forEach(function(t, idx) {
+    var panel = document.getElementById('tab-panel-' + t);
+    var isActive = idx === index;
+    if (panel) {
+      panel.classList.toggle('active', isActive);
+      panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+    }
+    var btn = document.getElementById('bottom-tab-' + t);
+    if (btn) {
+      btn.classList.toggle('active', isActive);
+      if (isActive) btn.setAttribute('aria-current', 'page');
+      else btn.removeAttribute('aria-current');
+    }
+  });
+}
+function _ensurePracticeTab() {
+  if (_practiceTabReady) return;
+  _practiceTabReady = true;
+  if (typeof _initPracticeTab === 'function') _initPracticeTab();
+}
+function _ensureStatsTab() {
+  if (!_statsTabReady) {
+    _statsTabReady = true;
+    if (typeof _ensureLearningProfileData === 'function') {
+      _ensureLearningProfileData(typeof learningProfileSelectedLevel !== 'undefined' ? learningProfileSelectedLevel : 'ALL');
+    }
+  } else if (_profileDirty && typeof renderLearningProfile === 'function') {
+    renderLearningProfile();
+  }
+}
+function _runTabLazyInit(index) {
+  var tab = TAB_ORDER[index];
+  if (tab === 'practice') _ensurePracticeTab();
+  if (tab === 'stats') _ensureStatsTab();
+}
+function _setTabDragIndex(fractionalIndex) {
+  _tabDragIndex = Math.max(0, Math.min(TAB_ORDER.length - 1, fractionalIndex));
+  _applyTabTrackTransform(_tabDragIndex, false);
+  var indicator = document.getElementById('bottom-tab-indicator');
+  if (indicator) indicator.classList.add('is-dragging');
+  _updateTabIndicatorFromIndex(_tabDragIndex);
+}
+function _snapTabDrag() {
+  if (_tabDragIndex === null) return;
+  var snapped = Math.round(_tabDragIndex);
+  _tabDragIndex = null;
+  var track = _getTabTrack();
+  if (track) track.classList.remove('is-dragging');
+  var indicator = document.getElementById('bottom-tab-indicator');
+  if (indicator) indicator.classList.remove('is-dragging');
+  _setTabIndex(snapped, { animate: true, force: true });
+}
+function _setTabIndex(index, opts) {
+  opts = opts || {};
+  index = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.round(index)));
+  if (!opts.force && index === _tabIndex && _tabDragIndex === null) return;
+  if (!opts.skipScrollSave) _saveTabScroll();
+  _tabIndex = index;
+  _activeTab = TAB_ORDER[index];
+  _tabDragIndex = null;
+  _syncTabPanelStates(index);
+  _applyTabTrackTransform(index, opts.animate !== false);
+  _updateTabIndicator(_activeTab);
+  _runTabLazyInit(index);
+  if (!opts.skipScrollRestore) _restoreTabScroll(_activeTab);
+}
+function switchTab(tab) {
+  var idx = TAB_ORDER.indexOf(tab);
+  if (idx < 0) return;
+  _setTabIndex(idx, { animate: true });
+}
+window.switchTab = switchTab;
 
 function _isStatsTabVisible() {
   return _activeTab === 'stats' && !document.getElementById('screen-levels').classList.contains('hidden');
@@ -8007,52 +8171,141 @@ function _updateTabBarVisibility(screenId) {
 
 function _updateTabIndicator(tab) {
   var indicator = document.getElementById('bottom-tab-indicator');
+  if (indicator) indicator.classList.remove('is-dragging');
+  _updateTabIndicatorFromIndex(TAB_ORDER.indexOf(tab));
+}
+
+function _tabIndexFromNavX(clientX) {
   var inner = document.querySelector('.bottom-tabs-inner');
-  if (!indicator || !inner) return;
-  var btn = document.getElementById('bottom-tab-' + tab);
-  if (!btn) return;
-  var ir = inner.getBoundingClientRect();
-  var br = btn.getBoundingClientRect();
-  indicator.style.width = br.width + 'px';
-  indicator.style.height = br.height + 'px';
-  indicator.style.transform = 'translate(' + (br.left - ir.left) + 'px,' + (br.top - ir.top) + 'px)';
-}
-
-function _replayTabEnter(panel) {
-  if (!panel) return;
-  panel.style.animation = 'none';
-  void panel.offsetHeight;
-  panel.style.removeProperty('animation');
-}
-
-function switchTab(tab) {
-  _activeTab = tab;
-  ['learn', 'practice', 'stats', 'settings'].forEach(function(t) {
-    var panel = document.getElementById('tab-panel-' + t);
-    var isActive = t === tab;
-    if (panel) {
-      panel.classList.toggle('active', isActive);
-      if (isActive) _replayTabEnter(panel);
-    }
+  if (!inner) return _tabIndex;
+  var rect = inner.getBoundingClientRect();
+  var x = clientX - rect.left;
+  var centers = TAB_ORDER.map(function(t) {
     var btn = document.getElementById('bottom-tab-' + t);
-    if (btn) {
-      btn.classList.toggle('active', t === tab);
-      if (t === tab) btn.setAttribute('aria-current', 'page');
-      else btn.removeAttribute('aria-current');
-    }
+    if (!btn) return 0;
+    return btn.offsetLeft + btn.offsetWidth / 2;
   });
-  _updateTabIndicator(tab);
-  if (tab === 'stats') {
-    if (typeof renderLearningProfile === 'function') renderLearningProfile();
-    if (typeof _ensureLearningProfileData === 'function') {
-      _ensureLearningProfileData(typeof learningProfileSelectedLevel !== 'undefined' ? learningProfileSelectedLevel : 'ALL');
+  if (x <= centers[0]) return 0;
+  if (x >= centers[centers.length - 1]) return centers.length - 1;
+  for (var i = 0; i < centers.length - 1; i++) {
+    if (x >= centers[i] && x <= centers[i + 1]) {
+      return i + (x - centers[i]) / (centers[i + 1] - centers[i]);
     }
   }
-  if (tab === 'practice' && typeof _initPracticeTab === 'function') {
-    _initPracticeTab();
-  }
+  return _tabIndex;
 }
-window.switchTab = switchTab;
+
+function _initTabGestures() {
+  var viewport = document.getElementById('tab-viewport');
+  var navInner = document.querySelector('.bottom-tabs-inner');
+  if (!viewport || !navInner) return;
+
+  var DRAG_THRESHOLD = 8;
+  var vpState = null;
+  var navState = null;
+
+  function _viewportDragIndex(startIndex, deltaX) {
+    var stride = _tabStridePx();
+    return _tabIsRtl()
+      ? startIndex + deltaX / stride
+      : startIndex - deltaX / stride;
+  }
+
+  viewport.addEventListener('pointerdown', function(e) {
+    if (_tabGesturesBlocked() || e.button > 0) return;
+    if (e.target.closest('button, a, input, textarea, select, .lang-dd-panel')) return;
+    vpState = {
+      id: e.pointerId,
+      startX: e.clientX,
+      startY: e.clientY,
+      startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
+      dragging: false
+    };
+  }, { passive: true });
+
+  viewport.addEventListener('pointermove', function(e) {
+    if (!vpState || vpState.id !== e.pointerId) return;
+    var dx = e.clientX - vpState.startX;
+    var dy = e.clientY - vpState.startY;
+    if (!vpState.dragging) {
+      if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > DRAG_THRESHOLD) {
+        vpState = null;
+        return;
+      }
+      if (Math.abs(dx) < DRAG_THRESHOLD) return;
+      vpState.dragging = true;
+      viewport.setPointerCapture(e.pointerId);
+    }
+    e.preventDefault();
+    _setTabDragIndex(_viewportDragIndex(vpState.startIndex, dx));
+  }, { passive: false });
+
+  function _endViewportDrag(e) {
+    if (!vpState || vpState.id !== e.pointerId) return;
+    if (vpState.dragging) {
+      try { viewport.releasePointerCapture(e.pointerId); } catch (err) {}
+      _snapTabDrag();
+    }
+    vpState = null;
+  }
+  viewport.addEventListener('pointerup', _endViewportDrag);
+  viewport.addEventListener('pointercancel', _endViewportDrag);
+
+  navInner.addEventListener('pointerdown', function(e) {
+    if (_tabGesturesBlocked() || e.button > 0) return;
+    var tabBtn = e.target.closest('.bottom-tab');
+    navState = {
+      id: e.pointerId,
+      startX: e.clientX,
+      startY: e.clientY,
+      startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
+      targetTab: tabBtn ? tabBtn.getAttribute('data-tab') : null,
+      dragging: false
+    };
+  });
+
+  navInner.addEventListener('pointermove', function(e) {
+    if (!navState || navState.id !== e.pointerId) return;
+    var dx = e.clientX - navState.startX;
+    var dy = e.clientY - navState.startY;
+    if (!navState.dragging) {
+      if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      navState.dragging = true;
+      navInner.classList.add('is-dragging');
+      navInner.setPointerCapture(e.pointerId);
+    }
+    e.preventDefault();
+    _setTabDragIndex(_tabIndexFromNavX(e.clientX));
+  }, { passive: false });
+
+  function _endNavDrag(e) {
+    if (!navState || navState.id !== e.pointerId) return;
+    navInner.classList.remove('is-dragging');
+    if (navState.dragging) {
+      try { navInner.releasePointerCapture(e.pointerId); } catch (err) {}
+      _snapTabDrag();
+    } else if (navState.targetTab) {
+      switchTab(navState.targetTab);
+    } else {
+      _setTabIndex(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true });
+    }
+    navState = null;
+  }
+  navInner.addEventListener('pointerup', _endNavDrag);
+  navInner.addEventListener('pointercancel', _endNavDrag);
+
+  TAB_ORDER.forEach(function(t) {
+    var btn = document.getElementById('bottom-tab-' + t);
+    if (!btn) return;
+    btn.addEventListener('click', function(e) {
+      if (navState && navState.dragging) {
+        e.preventDefault();
+        return;
+      }
+    });
+  });
+}
+window._initTabGestures = _initTabGestures;
 
 function _backArrowSvg(isRtl) {
   var pts = isRtl ? '10,6 0,0 0,12' : '0,6 10,0 10,12';
@@ -8164,9 +8417,14 @@ function checkOnline() {
   _langDdSync(LANG);
 })();
 applyTranslations();
-switchTab('learn');
+_setTabIndex(0, { animate: false, skipScrollSave: true });
+_tabCarouselReady = true;
+_initTabGestures();
 requestAnimationFrame(function() { _updateTabIndicator(_activeTab); });
-window.addEventListener('resize', function() { _updateTabIndicator(_activeTab); });
+window.addEventListener('resize', function() {
+  _applyTabTrackTransform(_tabDragIndex !== null ? _tabDragIndex : _tabIndex, false);
+  _updateTabIndicator(_activeTab);
+});
 _updateTabBarVisibility('screen-levels');
 _ensureHomeLayout();
 window.addEventListener('pageshow', function() {
