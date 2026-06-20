@@ -343,9 +343,13 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 /* ── TAB PANELS & BOTTOM NAV ── */
 .tab-panel{display:none;flex-direction:column;flex:1;min-height:0;width:100%;}
 .tab-panel.active{display:flex;animation:fadeUp .35s var(--modal-ease) both;}
-#tab-panel-practice{overflow:visible;flex:none;min-height:auto;display:flex;flex-direction:column;gap:0;position:relative;}
+#tab-panel-practice.active{overflow:visible;flex:none;min-height:auto;flex-direction:column;gap:0;position:relative;}
 #screen-levels:has(#tab-panel-practice.active){overflow:visible;}
 #tab-panel-stats{padding-bottom:4px;}
+#tab-panel-settings{padding-bottom:4px;}
+.settings-head{margin-bottom:18px;}
+.settings-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
+#tab-panel-settings .drawer-section:last-child{margin-bottom:0;}
 #screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;min-height:0;width:100%;max-width:600px;}
 #screen-levels .home-footer{margin-top:auto;}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
@@ -874,80 +878,6 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
 </div>
 
-<!-- ══ SETTINGS DRAWER ══ -->
-<div class="modal-root modal-root--drawer" id="drawer-overlay">
-  <div class="modal-scrim" onclick="closeSettings()"></div>
-  <div class="modal-sheet drawer glass-sheet-shell" id="settings-drawer">
-  <div class="glass-sheet-surface glass glass-highlight">
-  <div class="drawer-handle" onclick="closeSettings()"></div>
-  <div class="drawer-title" id="st-title">Settings</div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-lang-label">Language</div>
-    <div class="lang-dd" id="lang-dd">
-      <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
-        <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
-        <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="lang-dd-panel" id="lang-dd-panel">
-        <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
-        <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
-        <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
-        <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
-        <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
-        <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
-        <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
-      </div>
-    </div>
-    <!-- hidden opt-* anchors kept for JS compat -->
-    <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
-    <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
-    <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-account-label">Account</div>
-    <div id="auth-section-content">
-      <!-- populated by auth.js once Supabase initialises -->
-      <button class="gsi-material-button" onclick="authSignIn()">
-        <div class="gsi-material-button-state"></div>
-        <div class="gsi-material-button-content-wrapper">
-          <div class="gsi-material-button-icon">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
-              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-            </svg>
-          </div>
-          <span class="gsi-material-button-contents">Sign in with Google</span>
-        </div>
-      </button>
-    </div>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-share-label">Share this app</div>
-    <div class="drawer-footer-row">
-      <button class="drawer-about-row" id="share-app-btn" onclick="shareApp()">Share</button>
-      <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
-    </div>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-footer-row">
-    <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">About</button>
-    <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>
-  </div>
-  </div>
-  </div>
-</div>
-
 <!-- ══ APP DIALOG ══ -->
 <div class="modal-root modal-root--dialog" id="app-dialog-overlay">
   <div class="modal-scrim" id="app-dialog-scrim"></div>
@@ -1086,7 +1016,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
         <button type="button" class="design-lab-btn" onclick="designShowQuizExit()">Quiz exit</button>
         <button type="button" class="design-lab-btn" onclick="designShowRushExit()">Rush exit</button>
         <button type="button" class="design-lab-btn" onclick="designShowAlert()">Alert dialog</button>
-        <button type="button" class="design-lab-btn" onclick="openSettings()">Settings drawer</button>
+        <button type="button" class="design-lab-btn" onclick="openSettings()">Settings tab</button>
         <button type="button" class="design-lab-btn" onclick="openAbout()">About modal</button>
         <button type="button" class="design-lab-btn" onclick="openInstallGuide()">Install guide</button>
         <button type="button" class="design-lab-btn" onclick="designShowOffline()">Offline screen</button>
@@ -1164,6 +1094,75 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
         <div class="profile-title" id="learning-profile-title">Learning Profile</div>
       </div>
       <div id="learning-profile-content"></div>
+    </div>
+  </div>
+
+  <!-- Settings tab -->
+  <div class="tab-panel" id="tab-panel-settings">
+    <header class="settings-head">
+      <h2 class="settings-head-title" id="st-title">Settings</h2>
+    </header>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-lang-label">Language</div>
+      <div class="lang-dd" id="lang-dd">
+        <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
+          <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
+          <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-dd-panel" id="lang-dd-panel">
+          <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
+          <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
+          <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
+          <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
+          <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
+          <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
+          <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
+        </div>
+      </div>
+      <!-- hidden opt-* anchors kept for JS compat -->
+      <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
+      <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
+      <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-account-label">Account</div>
+      <div id="auth-section-content">
+        <!-- populated by auth.js once Supabase initialises -->
+        <button class="gsi-material-button" onclick="authSignIn()">
+          <div class="gsi-material-button-state"></div>
+          <div class="gsi-material-button-content-wrapper">
+            <div class="gsi-material-button-icon">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              </svg>
+            </div>
+            <span class="gsi-material-button-contents">Sign in with Google</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-share-label">Share this app</div>
+      <div class="drawer-footer-row">
+        <button class="drawer-about-row" id="share-app-btn" onclick="shareApp()">Share</button>
+        <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
+      </div>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
     </div>
   </div>
 </div>
@@ -3228,19 +3227,14 @@ function rowTypeLabel(type) {
   return labels[type] || type || (labels.Word || 'Word');
 }
 
-// ── Settings drawer ──
+// ── Settings tab ──
 function openSettings() {
   window.umami?.track('settings_opened');
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
+  if (typeof show === 'function') show('screen-levels');
+  switchTab('settings');
 }
 function closeSettings() {
-  document.getElementById('drawer-overlay').classList.remove('open');
-  var _dr = document.getElementById('settings-drawer');
-  // Reset any drag-offset so the next open() starts clean
-  _dr.style.transition = '';
-  _dr.style.transform = '';
-  document.body.style.overflow = ''; // restore scroll
+  switchTab('learn');
 }
 function openAbout() {
   window.umami?.track('about_opened');
@@ -3451,7 +3445,6 @@ function applyTranslations() {
   const u = new Proxy(UI[LANG], { get: function(obj, prop) { return obj[prop] !== undefined ? obj[prop] : UI.en[prop]; } });
   document.getElementById('st-title').textContent = u.settingsTitle;
   document.getElementById('st-lang-label').textContent = u.langLabel;
-  document.getElementById('st-close-btn').textContent = u.closeDone;
   document.getElementById('rw-banner-title').textContent = u.rwBannerTitle;
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
   document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
@@ -8015,7 +8008,7 @@ function _updateTabBarVisibility(screenId) {
 function _updateTabIndicator(tab) {
   var indicator = document.getElementById('bottom-tab-indicator');
   var inner = document.querySelector('.bottom-tabs-inner');
-  if (!indicator || !inner || tab === 'settings') return;
+  if (!indicator || !inner) return;
   var btn = document.getElementById('bottom-tab-' + tab);
   if (!btn) return;
   var ir = inner.getBoundingClientRect();
@@ -8033,9 +8026,8 @@ function _replayTabEnter(panel) {
 }
 
 function switchTab(tab) {
-  if (tab === 'settings') { openSettings(); return; }
   _activeTab = tab;
-  ['learn', 'practice', 'stats'].forEach(function(t) {
+  ['learn', 'practice', 'stats', 'settings'].forEach(function(t) {
     var panel = document.getElementById('tab-panel-' + t);
     var isActive = t === tab;
     if (panel) {
@@ -8290,66 +8282,6 @@ document.addEventListener('keydown', function(e){
     }
     _dragging = false;
     _deltaY = 0;
-  });
-})();
-
-// ── Settings drawer drag-to-close ────────────────────────────────────
-// Handle click (desktop) + drag-to-close via the handle pill only (mobile)
-(function() {
-  var handle = document.querySelector('.drawer-handle');
-  var drawer = document.getElementById('settings-drawer');
-  if (!drawer) return;
-
-  // Desktop: click the handle to dismiss
-  if (handle) handle.addEventListener('click', function() { closeSettings(); });
-
-  // Mobile drag-to-close — listen ONLY on the handle, not the whole drawer.
-  // This means buttons in the drawer body receive clean, uninterrupted taps.
-  if (!handle) return;
-
-  var _startY, _dragging, _deltaY;
-
-  handle.addEventListener('touchstart', function(e) {
-    _startY = e.touches[0].clientY;
-    _dragging = false;
-    _deltaY = 0;
-  }, { passive: true });
-
-  handle.addEventListener('touchmove', function(e) {
-    if (_startY === undefined) return;
-    var dy = e.touches[0].clientY - _startY;
-    if (dy > 0) e.preventDefault();
-    if (!_dragging && dy > 8) {
-      _dragging = true;
-      drawer.style.transition = 'none';
-    }
-    if (_dragging) {
-      _deltaY = Math.max(0, dy);
-      drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
-    }
-  }, { passive: false });
-
-  handle.addEventListener('touchend', function() {
-    if (_startY === undefined) return;
-    _startY = undefined;
-    if (_dragging && _deltaY > 60) {
-      drawer.style.transition = 'transform .2s ease-out';
-      drawer.style.transform = 'translateX(-50%) translateY(calc(100% + 28px))';
-      setTimeout(function() { closeSettings(); }, 210);
-    } else {
-      drawer.style.transition = '';
-      drawer.style.transform = '';
-    }
-    _dragging = false;
-    _deltaY = 0;
-  });
-
-  handle.addEventListener('touchcancel', function() {
-    _startY = undefined;
-    _dragging = false;
-    _deltaY = 0;
-    drawer.style.transition = '';
-    drawer.style.transform = '';
   });
 })();
 
