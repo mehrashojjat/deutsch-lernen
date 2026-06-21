@@ -3536,23 +3536,103 @@ function setLang(lang) {
   updateCounts();
   _renderCategoryGrid();
   _resyncTabLayoutAfterDirChange();
-  // Immediately update the active screen so the user sees the new language at once
-  if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
-    _quizRefreshLang();
-  } else if (!document.getElementById('screen-swipe').classList.contains('hidden')) {
-    _swipeRefreshLang();
-  } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
-    _explorerRefreshLang();
-  } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
-    // already re-rendered unconditionally above
-  } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
-  } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
-    _practiceRefreshCards();
-  } else if (typeof _isStatsTabVisible === 'function' && _isStatsTabVisible()) {
-    renderLearningProfile();
+  _refreshDynamicUiForLang();
+}
+
+function _screenIsVisible(id) {
+  var el = document.getElementById(id);
+  return !!(el && !el.classList.contains('hidden'));
+}
+
+function _resultsRefreshLang() {
+  if (!_screenIsVisible('screen-results')) return;
+  var total = (typeof ok === 'number' ? ok : 0) + (typeof no === 'number' ? no : 0);
+  if (!total) return;
+  var pct = Math.round(ok / total * 100);
+  var titles = t('resultTitles');
+  var title = pct >= 90 ? titles.great : pct >= 70 ? titles.good : pct >= 50 ? titles.ok : titles.low;
+  var rTitle = document.getElementById('r-title');
+  if (rTitle) rTitle.textContent = title;
+  var rSub = document.getElementById('r-sub');
+  if (rSub && typeof currentLevel !== 'undefined') rSub.textContent = t('resultSub')(currentLevel, pct);
+}
+
+function _rushSummaryRefreshLang() {
+  if (!_screenIsVisible('screen-rush-summary')) return;
+  var u = (typeof UI !== 'undefined' && UI[LANG]) ? UI[LANG] : UI.en;
+  var title = document.getElementById('rush-summary-title');
+  if (title) title.textContent = u.rushSummaryTitle;
+  var record = document.getElementById('rush-summary-record');
+  if (record && record.style.display !== 'none') record.textContent = u.rushSummaryRecord;
+}
+
+async function _wordModalRefreshLang() {
+  var overlay = document.getElementById('word-modal-overlay');
+  if (!overlay || !overlay.classList.contains('open') || !rwWordKey) return;
+  var word = rwWordKey;
+  var meta = metaFromWord(word);
+  var content = document.getElementById('word-modal-content');
+  if (!content) return;
+  try {
+    var data = await fetchWiktionary(word, meta.tc);
+    await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
+    content.innerHTML = renderWiktCard(data, meta);
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
+    if (chip) chip.click();
+  } catch (e) {
+    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
+    _translateDefsInContainer(content);
+    _autoFetchLangMeaning(word, content);
   }
 }
+
+function _refreshActiveOverlayScreenForLang() {
+  if (_screenIsVisible('screen-quiz') && typeof _quizRefreshLang === 'function') {
+    _quizRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-swipe') && typeof _swipeRefreshLang === 'function') {
+    _swipeRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-random') && typeof _explorerRefreshLang === 'function') {
+    _explorerRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-practice') && typeof _practiceRefreshCards === 'function') {
+    _practiceRefreshCards();
+    return;
+  }
+  if (_screenIsVisible('screen-dictionary') && _dictLoaded && typeof _renderDictList === 'function') {
+    var dictInput = document.getElementById('dict-search-input');
+    _renderDictList(dictInput ? dictInput.value : '', true);
+    return;
+  }
+  _resultsRefreshLang();
+  _rushSummaryRefreshLang();
+  var modal = document.getElementById('word-modal-overlay');
+  if (modal && modal.classList.contains('open')) _wordModalRefreshLang();
+}
+
+function _refreshDynamicUiForLang() {
+  learningProfileLastDetailHtml = '';
+
+  if (typeof _statsTabReady !== 'undefined' && _statsTabReady && typeof renderLearningProfile === 'function') {
+    renderLearningProfile();
+  }
+  if (typeof _practiceTabReady !== 'undefined' && _practiceTabReady) {
+    if (typeof _renderPracticeSetupFilters === 'function') _renderPracticeSetupFilters();
+    if (typeof _updatePracticeMatchCount === 'function') _updatePracticeMatchCount();
+  }
+  if (_dictLoaded && typeof _renderDictList === 'function' && !_screenIsVisible('screen-dictionary')) {
+    var dictSearch = document.getElementById('dict-search-input');
+    _renderDictList(dictSearch ? dictSearch.value : '', true);
+  }
+  if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
+  _refreshActiveOverlayScreenForLang();
+}
+window._refreshDynamicUiForLang = _refreshDynamicUiForLang;
 
 // ── Apply all UI translations ──
 function applyTranslations() {
@@ -3684,11 +3764,7 @@ function applyTranslations() {
   if (pfl) pfl.textContent = u.practiceWordCount;
   pfl = document.getElementById('practice-match-hint');
   if (pfl) pfl.textContent = u.practiceNoWordsHint;
-  if (typeof _isPracticeTabVisible === 'function' && _isPracticeTabVisible()) {
-    _renderPracticeSetupFilters();
-    _updatePracticeMatchCount();
-  }
-  // Dictionary screen
+  // Dictionary static chrome (list refresh handled by _refreshDynamicUiForLang)
   var _dbt = document.getElementById('dict-banner-title');
   if (_dbt) _dbt.textContent = u.dictBannerTitle;
   var _dbs = document.getElementById('dict-banner-sub');
@@ -3698,10 +3774,6 @@ function applyTranslations() {
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
   var _dlt = document.getElementById('dict-loading-text');
   if (_dlt) _dlt.textContent = u.dictLoading;
-  // Refresh meanings immediately if dictionary is open
-  if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    _renderDictList(document.getElementById('dict-search-input').value, true);
-  }
   // Offline screen
   var _os = document.getElementById('offline-title');
   if (_os) _os.textContent = u.offlineTitle;
@@ -5367,10 +5439,12 @@ function renderLearningProfile() {
   var detailIsOpen = !!learningProfileDetailMode;
   if (detailIsOpen && detailHtml) {
     learningProfileLastDetailHtml = detailHtml;
+  } else if (!detailIsOpen) {
+    learningProfileLastDetailHtml = '';
   }
   var detailPanelHtml =
     '<div id="profile-detail-wrap" class="profile-detail-wrap' + (detailIsOpen ? ' has-content' : '') + '">' +
-      '<div class="profile-detail-inner">' + (learningProfileLastDetailHtml || '') + '</div>' +
+      '<div class="profile-detail-inner">' + (detailHtml || '') + '</div>' +
     '</div>';
 
   var band = progress.cefrBand || 'A1';
