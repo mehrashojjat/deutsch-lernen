@@ -384,7 +384,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .tab-stack.is-stack-animating{overflow:visible;--stack-travel:100vh;}
 .tab-stack.is-stack-measuring{width:100%;min-height:0!important;height:auto!important;overflow:visible!important;}
 .tab-page{width:100%;box-sizing:border-box;}
-.tab-page:not(.is-stack-top):not(.is-stack-enter):not(.is-stack-exit):not(.is-stack-enter-back):not(.is-stack-exit-back){visibility:hidden;height:0;overflow:hidden;pointer-events:none;margin:0;padding:0;border:none;}
+.tab-page:not(.is-stack-top):not(.is-stack-enter):not(.is-stack-exit):not(.is-stack-enter-back):not(.is-stack-exit-back){visibility:hidden;height:0;min-height:0;max-height:0;overflow:hidden;pointer-events:none;margin:0;padding:0;border:none;}
 .tab-page.is-stack-top{visibility:visible;height:auto;overflow:visible;pointer-events:auto;}
 .tab-page.is-stack-exit,
 .tab-page.is-stack-enter,
@@ -571,8 +571,16 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 
 /* ── SWIPE MODE ── */
 /* ── CARD GAME SCREENS (Quick Match + Practice Learn) ── */
-#screen-swipe,
-#screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
+#screen-swipe.is-stack-top,
+#screen-swipe.is-stack-enter,
+#screen-swipe.is-stack-exit,
+#screen-swipe.is-stack-enter-back,
+#screen-swipe.is-stack-exit-back,
+#screen-practice.is-stack-top,
+#screen-practice.is-stack-enter,
+#screen-practice.is-stack-exit,
+#screen-practice.is-stack-enter-back,
+#screen-practice.is-stack-exit-back{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
 #screen-swipe .tab-page-chrome,
 #screen-practice .tab-page-chrome{flex-shrink:0;}
 #screen-swipe .tab-page-body,
@@ -676,11 +684,12 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 #tab-panel-practice .tab-stack{display:flex;flex-direction:column;flex:1 1 auto;min-height:100%;}
 #tab-page-practice-root.is-stack-top{display:flex;flex-direction:column;flex:1 1 auto;min-height:calc(100svh - 170px);}
 #tab-page-practice-root:not(.is-stack-top){min-height:0;}
+#screen-practice:not(.is-stack-top):not(.is-stack-enter):not(.is-stack-exit):not(.is-stack-enter-back):not(.is-stack-exit-back){min-height:0;max-height:0;}
 #tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px;}
 #tab-panel-practice .practice-head-text{flex:1;min-width:0;}
 #tab-panel-practice .practice-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-practice .practice-head-sub{font-size:.82rem;color:var(--muted);margin:5px 0 0;}
-#tab-panel-practice .practice-clear-btn{flex-shrink:0;padding:6px 12px;font-size:.72rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:color .15s,border-color .15s;}
+#tab-panel-practice .practice-clear-btn{flex-shrink:0;padding:6px 12px;font-size:.72rem;font-weight:600;color:#b4bad5;cursor:pointer;font-family:inherit;transition:color .15s,border-color .15s;}
 #tab-panel-practice .practice-clear-btn.glass-interactive:hover{color:var(--gold);border-color:var(--gold-ring);}
 #tab-panel-practice .practice-clear-btn.glass-interactive:hover::after{background:var(--gold-soft);}
 #tab-panel-practice .practice-filters{display:flex;flex-direction:column;gap:14px;padding-bottom:14px;}
