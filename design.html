@@ -407,7 +407,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
-.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;}
+.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
+.bottom-tabs-inner.is-dragging{cursor:grabbing;}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);
   z-index:1;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
 .bottom-tab-indicator.is-dragging{transition:none;}
@@ -9123,10 +9124,66 @@ function _resyncTabLayoutAfterDirChange() {
 window._resyncTabLayoutAfterDirChange = _resyncTabLayoutAfterDirChange;
 
 function _initTabGestures() {
+  var navInner = document.querySelector('.bottom-tabs-inner');
+  if (!navInner) return;
+
+  var DRAG_THRESHOLD = 8;
+  var navState = null;
+  var navSuppressClick = false;
+
+  navInner.addEventListener('pointerdown', function(e) {
+    if (_tabGesturesBlocked() || e.button > 0) return;
+    var tabBtn = e.target.closest('.bottom-tab');
+    navState = {
+      id: e.pointerId,
+      startX: e.clientX,
+      startY: e.clientY,
+      startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
+      targetTab: tabBtn ? tabBtn.getAttribute('data-tab') : null,
+      dragging: false
+    };
+  });
+
+  navInner.addEventListener('pointermove', function(e) {
+    if (!navState || navState.id !== e.pointerId) return;
+    var dx = e.clientX - navState.startX;
+    var dy = e.clientY - navState.startY;
+    if (!navState.dragging) {
+      if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+      navState.dragging = true;
+      navInner.classList.add('is-dragging');
+      navInner.setPointerCapture(e.pointerId);
+    }
+    e.preventDefault();
+    _setTabDragIndex(_tabIndexFromNavX(e.clientX));
+  }, { passive: false });
+
+  function _endNavDrag(e) {
+    if (!navState || navState.id !== e.pointerId) return;
+    navInner.classList.remove('is-dragging');
+    if (navState.dragging) {
+      try { navInner.releasePointerCapture(e.pointerId); } catch (err) {}
+      _snapTabDrag();
+      navSuppressClick = true;
+    } else if (navState.targetTab) {
+      if (!_tabGesturesBlocked()) switchTab(navState.targetTab);
+    } else if (!_tabGesturesBlocked()) {
+      _setTabIndex(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true });
+    }
+    navState = null;
+  }
+  navInner.addEventListener('pointerup', _endNavDrag);
+  navInner.addEventListener('pointercancel', _endNavDrag);
+
   TAB_ORDER.forEach(function(t) {
     var btn = document.getElementById('bottom-tab-' + t);
     if (!btn) return;
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+      if (navSuppressClick) {
+        e.preventDefault();
+        navSuppressClick = false;
+        return;
+      }
       if (_tabGesturesBlocked()) return;
       switchTab(t);
     });
