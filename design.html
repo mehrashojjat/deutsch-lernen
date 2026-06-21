@@ -346,7 +346,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .category-card .rb-icon-wrap{background:var(--cat-icon-bg);color:var(--cat-accent);}
 .rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
 .rb-text span{font-size:.74rem;color:var(--muted);}
-.rb-arrow{margin-left:auto;color:var(--muted);font-size:1.1rem;}
+.rb-arrow{margin-inline-start:auto;color:var(--muted);font-size:1.1rem;}
 
 /* ── SECTION LABEL ── */
 .section-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
@@ -441,8 +441,8 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .profile-empty{--glass-radius:18px;position:relative;overflow:hidden;color:var(--muted);font-size:.84rem;line-height:1.6;padding:16px;}
 .profile-journey-wrap{margin-bottom:14px;}
 .profile-journey-bar{display:flex;position:relative;height:10px;border-radius:999px;overflow:hidden;border:1px solid var(--border);background:rgba(0,0,0,.2);}
-.profile-journey-seg{flex:1;position:relative;border-right:1px solid rgba(255,255,255,.1);overflow:hidden;}
-.profile-journey-seg:last-child{border-right:none;}
+.profile-journey-seg{flex:1;position:relative;border-inline-end:1px solid rgba(255,255,255,.1);overflow:hidden;}
+.profile-journey-seg:last-child{border-inline-end:none;}
 .profile-journey-seg-fill{position:absolute;left:0;top:0;bottom:0;transition:width .3s ease;}
 .profile-journey-seg-a1 .profile-journey-seg-fill{background:rgba(107,232,160,.45);}
 .profile-journey-seg-a2 .profile-journey-seg-fill{background:rgba(126,184,247,.45);}
@@ -680,14 +680,14 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .rw-form .fv.gold{color:var(--gold);}
 .rw-form .fv.blue{color:var(--blue);}
 .rw-form .fv.green{color:var(--green);}
-.rw-example{background:var(--surf2);border-left:3px solid var(--gold);
+.rw-example{background:var(--surf2);border-inline-start:3px solid var(--gold);
   border-radius:0 8px 8px 0;padding:10px 14px;font-size:.82rem;line-height:1.55;color:var(--muted);}
 .rw-example em{color:var(--text);font-style:normal;}
 .rw-meaning-single{font-size:.98rem;color:var(--muted);font-style:italic;margin-bottom:16px;}
 .rw-section-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .rw-section-title-row>span:first-child{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;}
 .rw-click-hint{font-size:.62rem;color:var(--muted);opacity:.55;font-style:italic;}
-.rw-example-box{background:var(--surf2);border-left:3px solid var(--border);border-radius:0 8px 8px 0;
+.rw-example-box{background:var(--surf2);border-inline-start:3px solid var(--border);border-radius:0 8px 8px 0;
   padding:11px 14px;font-size:.83rem;line-height:1.6;color:var(--muted);font-style:italic;
   transition:border-color .2s,color .2s;min-height:44px;}
 .rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
@@ -702,7 +702,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 @keyframes wSpin{to{transform:rotate(360deg)}}
 .wikt-ipa{font-family:'Outfit',monospace;color:var(--blue);font-size:.83rem;margin:-4px 0 14px;opacity:.85;letter-spacing:.03em;}
 .wikt-head-line{font-size:.77rem;color:var(--muted);line-height:1.6;margin-bottom:14px;
-  border-left:2px solid var(--surf3);padding:6px 10px;background:var(--surf2);border-radius:0 8px 8px 0;}
+  border-inline-start:2px solid var(--surf3);padding:6px 10px;background:var(--surf2);border-radius:0 8px 8px 0;}
 .wikt-pos-badge{display:inline-block;font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;
   padding:3px 9px;border-radius:6px;font-weight:700;margin-bottom:10px;
   background:rgba(232,201,122,.12);color:var(--gold);}
@@ -712,7 +712,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .wikt-def-num{color:var(--gold);font-weight:700;font-size:.78rem;flex-shrink:0;}
 .wikt-def-text{color:var(--text);}
 .wikt-example{font-size:.77rem;color:var(--muted);font-style:italic;margin-top:3px;
-  padding:6px 10px;border-left:2px solid var(--border);border-radius:0 6px 6px 0;background:var(--surf2);}
+  padding:6px 10px;border-inline-start:2px solid var(--border);border-radius:0 6px 6px 0;background:var(--surf2);}
 .wikt-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;margin-top:4px;}
 .wikt-table{border-collapse:collapse;font-size:.7rem;min-width:260px;width:100%;}
 .wikt-table th{background:var(--surf3);color:var(--muted);padding:5px 7px;text-align:center;
@@ -777,7 +777,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .adaptive-tip.signin-tip .at-icon-wrap .ui-icon{width:20px;height:20px;}
 .home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
 .home-tips .adaptive-tip{margin-top:0;}
-.install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);}
+.install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-inline-start:1px solid rgb(74 119 159);border-inline-end:1px solid rgb(64 97 127);}
 .install-tip:hover{background:linear-gradient(135deg,rgba(126,184,247,.18),rgba(232,201,122,.12));}
 .install-tip .at-title{color:var(--blue);}
 .install-tip .at-icon{font-size:1.15rem;}
@@ -839,7 +839,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .dict-search-input:focus{border-color:rgba(126,184,247,.4);}
 .dict-search-input::placeholder{color:var(--muted);}
 .dict-body{display:flex;position:relative;height:calc(100svh - 220px);min-height:300px;}
-.dict-list{flex:1;overflow-y:auto;overscroll-behavior:contain;padding-right:28px;padding-bottom:20px;}
+.dict-list{flex:1;overflow-y:auto;overscroll-behavior:contain;padding-inline-end:28px;padding-bottom:20px;}
 .dict-list::-webkit-scrollbar{width:0;}
 .dict-letter-header{position:sticky;top:0;z-index:10;
   font-family:'Fraunces','Vazirmatn',serif;font-size:1.05rem;font-weight:700;
@@ -851,9 +851,9 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .dict-word{font-family:'Fraunces','Vazirmatn',serif;font-size:.98rem;font-weight:600;color:var(--text);}
 .dict-article{font-size:.76rem;color:var(--muted);font-style:italic;}
 .dict-level{font-size:.58rem;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:.05em;
-  background:rgba(232,201,122,.12);color:var(--gold);margin-left:auto;flex-shrink:0;}
+  background:rgba(232,201,122,.12);color:var(--gold);margin-inline-start:auto;flex-shrink:0;}
 .dict-meaning{font-size:.8rem;color:var(--muted);margin-top:2px;line-height:1.4;}
-.dict-alpha-bar{position:absolute;right:-2px;top:0;bottom:0;width:24px;
+.dict-alpha-bar{position:absolute;inset-inline-end:-2px;top:0;bottom:0;width:24px;
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
   padding:4px 0;z-index:20;touch-action:none;user-select:none;overflow:hidden;}
 .dict-alpha-letter{font-size:.6rem;font-weight:700;color:var(--muted);line-height:1;
@@ -1835,6 +1835,7 @@ const UI = {
     shareUnavailable: 'Share unavailable',
     shareFailed: 'Share failed',
     rwTapFormHint: 'Tap a form to see an example',
+    navTabs: { learn: 'Learn', practice: 'Practice', stats: 'Stats', settings: 'Settings' },
   },
   de: {
     headerSub: 'Adaptive Quiz · Üben · Lernprofil',
@@ -2003,6 +2004,7 @@ const UI = {
     shareFailed: 'Teilen fehlgeschlagen',
     rwTapFormHint: 'Form antippen für ein Beispiel',
     categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
+    navTabs: { learn: 'Lernen', practice: 'Üben', stats: 'Statistik', settings: 'Einstellungen' },
   },
   tr: {
     headerSub: 'Uyarlanabilir quiz · Pratik · Öğrenme profili',
@@ -2171,6 +2173,7 @@ const UI = {
     shareUnavailable: 'Paylaşım kullanılamıyor',
     shareFailed: 'Paylaşım başarısız',
     rwTapFormHint: 'Örnek için bir biçime dokun',
+    navTabs: { learn: 'Öğren', practice: 'Pratik', stats: 'İstatistik', settings: 'Ayarlar' },
   },
   fa: {
     headerSub: 'آزمون تطبیقی · تمرین · پروفایل یادگیری',
@@ -2339,6 +2342,7 @@ const UI = {
     shareFailed: 'اشتراک‌گذاری ناموفق بود',
     rwTapFormHint: 'برای مثال روی یک شکل بزنید',
     categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
+    navTabs: { learn: 'یادگیری', practice: 'تمرین', stats: 'آمار', settings: 'تنظیمات' },
   },
   ru: {
     headerSub: 'Адаптивные викторины · Практика · Профиль',
@@ -2507,6 +2511,7 @@ const UI = {
     shareFailed: 'Не удалось поделиться',
     rwTapFormHint: 'Нажмите на форму, чтобы увидеть пример',
     categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
+    navTabs: { learn: 'Обучение', practice: 'Практика', stats: 'Статистика', settings: 'Настройки' },
   },
   uk: {
     headerSub: 'Адаптивні вікторини · Практика · Профіль',
@@ -2675,6 +2680,7 @@ const UI = {
     shareFailed: 'Не вдалося поділитися',
     rwTapFormHint: 'Натисніть на форму, щоб побачити приклад',
     categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
+    navTabs: { learn: 'Навчання', practice: 'Практика', stats: 'Статистика', settings: 'Налаштування' },
   },
   ar: {
     headerSub: 'اختبارات تكيفية · تمرين · ملف التعلم',
@@ -2843,6 +2849,7 @@ const UI = {
     shareFailed: 'فشلت المشاركة',
     rwTapFormHint: 'اضغط على شكل لرؤية مثال',
     categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
+    navTabs: { learn: 'تعلّم', practice: 'تمرين', stats: 'إحصائيات', settings: 'الإعدادات' },
   }
 };
 
@@ -3519,6 +3526,7 @@ function setLang(lang) {
   document.body.classList.toggle('lang-fa', lang==='fa');
   document.body.classList.toggle('lang-ar', lang==='ar');
   document.body.classList.toggle('lang-rtl', isRtl);
+  if (typeof window._syncSideRaysOrigins === 'function') window._syncSideRaysOrigins();
   var backBtn = document.getElementById('app-back-btn');
   var topBar = document.getElementById('screen-top-bar');
   if (backBtn && topBar && !topBar.classList.contains('hidden')) {
@@ -3527,6 +3535,7 @@ function setLang(lang) {
   applyTranslations();
   updateCounts();
   _renderCategoryGrid();
+  _resyncTabLayoutAfterDirChange();
   // Immediately update the active screen so the user sees the new language at once
   if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
     _quizRefreshLang();
@@ -3700,6 +3709,14 @@ function applyTranslations() {
   if (_om) _om.textContent = u.offlineMessage;
   var _or = document.getElementById('offline-refresh-btn');
   if (_or) _or.textContent = u.offlineRefreshBtn;
+  var navTabs = u.navTabs || UI.en.navTabs;
+  TAB_ORDER.forEach(function(tabId) {
+    var text = (navTabs && navTabs[tabId]) || tabId;
+    var lbl = document.querySelector('#bottom-tab-' + tabId + ' .bottom-tab-label');
+    var goldLbl = document.querySelector('#bottom-tab-gold-overlay [data-tab="' + tabId + '"] .bottom-tab-label');
+    if (lbl) lbl.textContent = text;
+    if (goldLbl) goldLbl.textContent = text;
+  });
   _refreshInstallGuideContent();
   _resyncScreenTopBarIfVisible();
 }
@@ -8423,20 +8440,38 @@ function _tabIndexFromNavX(clientX) {
   if (!inner) return _tabIndex;
   var rect = inner.getBoundingClientRect();
   var x = clientX - rect.left;
-  var centers = TAB_ORDER.map(function(t) {
+  var entries = TAB_ORDER.map(function(t, i) {
     var btn = document.getElementById('bottom-tab-' + t);
-    if (!btn) return 0;
-    return btn.offsetLeft + btn.offsetWidth / 2;
-  });
-  if (x <= centers[0]) return 0;
-  if (x >= centers[centers.length - 1]) return centers.length - 1;
-  for (var i = 0; i < centers.length - 1; i++) {
-    if (x >= centers[i] && x <= centers[i + 1]) {
-      return i + (x - centers[i]) / (centers[i + 1] - centers[i]);
+    if (!btn) return null;
+    return { index: i, center: btn.offsetLeft + btn.offsetWidth / 2 };
+  }).filter(Boolean);
+  if (!entries.length) return _tabIndex;
+  entries.sort(function(a, b) { return a.center - b.center; });
+  if (x <= entries[0].center) return entries[0].index;
+  if (x >= entries[entries.length - 1].center) return entries[entries.length - 1].index;
+  for (var i = 0; i < entries.length - 1; i++) {
+    if (x >= entries[i].center && x <= entries[i + 1].center) {
+      var span = entries[i + 1].center - entries[i].center;
+      if (!span) return entries[i].index;
+      var frac = (x - entries[i].center) / span;
+      return entries[i].index + frac * (entries[i + 1].index - entries[i].index);
     }
   }
   return _tabIndex;
 }
+
+function _resyncTabLayoutAfterDirChange() {
+  if (typeof _tabIndex !== 'number') return;
+  var idx = _tabDragIndex !== null ? _tabDragIndex : _tabIndex;
+  _syncTabPanelFlow({ activeIndex: _tabIndex, also: [Math.floor(idx), Math.ceil(idx)] });
+  _applyTabTrackTransform(idx, false);
+  requestAnimationFrame(function() {
+    _syncTabGoldOverlayLabels();
+    _updateTabIndicator(_activeTab);
+    _syncTabViewportHeight({ [_tabIndex]: true });
+  });
+}
+window._resyncTabLayoutAfterDirChange = _resyncTabLayoutAfterDirChange;
 
 function _initTabGestures() {
   var viewport = document.getElementById('tab-viewport');
@@ -13235,7 +13270,14 @@ document.addEventListener('keydown', function(e){
     falloff: 1.8,
     opacity: 1.0
   };
-  var origins = ['top-right', 'bottom-left'];
+  function sideRaysIsRtl() {
+    return document.documentElement.getAttribute('dir') === 'rtl' ||
+      document.body.classList.contains('lang-rtl');
+  }
+
+  function sideRaysOrigins(isRtl) {
+    return isRtl ? ['top-left', 'bottom-right'] : ['top-right', 'bottom-left'];
+  }
 
   function hexToRgb(hex) {
     var m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -13376,7 +13418,14 @@ document.addEventListener('keydown', function(e){
     return {
       canvas: canvas,
       gl: gl,
+      program: program,
       uniforms: uniforms,
+      setOrigin: function (origin) {
+        var nextFlip = originToFlip(origin);
+        gl.useProgram(program);
+        gl.uniform1f(uniforms.iFlipX, nextFlip[0]);
+        gl.uniform1f(uniforms.iFlipY, nextFlip[1]);
+      },
       updateSize: function () {
         var dpr = Math.min(window.devicePixelRatio || 1, 2);
         var w = container.clientWidth;
@@ -13396,11 +13445,18 @@ document.addEventListener('keydown', function(e){
     };
   }
 
-  var layers = origins.map(function (origin) {
+  var layers = sideRaysOrigins(sideRaysIsRtl()).map(function (origin) {
     return createLayer(Object.assign({}, baseOpts, { origin: origin }));
   }).filter(Boolean);
 
   if (!layers.length) return;
+
+  function syncSideRaysOrigins() {
+    sideRaysOrigins(sideRaysIsRtl()).forEach(function (origin, i) {
+      if (layers[i]) layers[i].setOrigin(origin);
+    });
+  }
+  window._syncSideRaysOrigins = syncSideRaysOrigins;
 
   var animId = null;
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
