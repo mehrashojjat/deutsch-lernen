@@ -492,44 +492,44 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .back-btn:hover{color:var(--text);border-color:rgba(255,255,255,.12);}
 .hud{display:flex;align-items:center;gap:7px;}
 .hud-pill{padding:4px 11px;font-size:.77rem;display:flex;align-items:center;gap:4px;}
+#hud-pos{color:#fff;}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
 .dot.r{background:var(--red);}
-.prog-wrap{background:var(--surf2);border:1px solid var(--border);border-radius:99px;height:5px;margin-bottom:16px;overflow:hidden;}
+.prog-wrap{border-radius:99px;height:5px;margin-bottom:16px;overflow:hidden;}
 .prog-fill{height:100%;background:var(--gold);border-radius:99px;transition:width .35s ease;}
 .card-type-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
 .tbadge{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;padding:4px 10px;border-radius:999px;}
-.tbadge.verb{background:rgba(126,184,247,.15);color:var(--blue);}
-.tbadge.noun{background:rgba(232,201,122,.15);color:var(--gold);}
-.tbadge.grammar{background:rgba(107,232,160,.12);color:var(--green);}
-.tbadge.modal{background:rgba(240,112,112,.12);color:#f7a0a0;}
-.tbadge.adj{background:rgba(196,160,247,.12);color:var(--purple);}
-.tbadge.phrase{background:rgba(247,160,196,.12);color:var(--pink);}
+.tbadge.verb{--glass-bg:rgba(126,184,247,.15);--glass-bg-fallback:rgba(126,184,247,.15);color:var(--blue);}
+.tbadge.noun{--glass-bg:rgba(232,201,122,.15);--glass-bg-fallback:rgba(232,201,122,.15);color:var(--gold);}
+.tbadge.grammar{--glass-bg:rgba(107,232,160,.12);--glass-bg-fallback:rgba(107,232,160,.12);color:var(--green);}
+.tbadge.modal{--glass-bg:rgba(240,112,112,.12);--glass-bg-fallback:rgba(240,112,112,.12);color:#f7a0a0;}
+.tbadge.adj{--glass-bg:rgba(196,160,247,.12);--glass-bg-fallback:rgba(196,160,247,.12);color:var(--purple);}
+.tbadge.phrase{--glass-bg:rgba(247,160,196,.12);--glass-bg-fallback:rgba(247,160,196,.12);color:var(--pink);}
 .tlevel{font-size:.67rem;color:var(--muted);}
 .tmode-badge{font-size:.67rem;padding:3px 8px;border-radius:999px;font-weight:600;}
-.tmode-badge.vocab{background:rgba(232,201,122,.12);color:var(--gold);}
-.tmode-badge.grammar{background:rgba(126,184,247,.12);color:var(--blue);}
-.word-card{background:var(--surf2);border:1px solid var(--border);border-radius:var(--r);
-  padding:26px 22px 22px;margin-bottom:13px;position:relative;overflow:hidden;animation:cardIn .3s ease both;}
+.tmode-badge.vocab{--glass-bg:rgba(232,201,122,.12);--glass-bg-fallback:rgba(232,201,122,.12);color:var(--gold);}
+.tmode-badge.grammar{--glass-bg:rgba(126,184,247,.12);--glass-bg-fallback:rgba(126,184,247,.12);color:var(--blue);}
+.word-card{padding:26px 22px 22px;margin-bottom:13px;position:relative;overflow:hidden;animation:cardIn .3s ease both;}
 .word-card::after{content:'';position:absolute;top:-50px;right:-50px;width:150px;height:150px;border-radius:50%;
-  background:radial-gradient(circle,rgba(232,201,122,.06),transparent 70%);pointer-events:none;}
+  background:radial-gradient(circle,rgba(232,201,122,.06),transparent 70%);pointer-events:none;z-index:1;}
+.word-card>*{position:relative;z-index:2;}
 .card-q{font-size:.8rem;color:var(--muted);margin-bottom:9px;line-height:1.55;}
 .card-q em{color:var(--gold);font-style:normal;font-weight:600;}
 .card-main{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;line-height:1.15;margin-bottom:7px;}
 .card-sub{font-size:.8rem;color:var(--muted);line-height:1.55;font-style:italic;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:13px;}
-.cbtn{background:var(--surf2);border:1px solid var(--glass-border);border-radius:20px;
-  padding:13px 11px;font-family:inherit;font-size:.86rem;color:var(--text);
-  cursor:pointer;transition:border-color .15s ease,background .15s ease;text-align:center;line-height:1.3;box-shadow:var(--glass-specular);}
-.cbtn:not(.disabled):hover{border-color:var(--gold-ring);background:var(--gold-soft);}
-.cbtn.correct{border-color:rgba(107,232,160,.45);background:rgba(107,232,160,.12);color:var(--green);font-weight:600;}
-.cbtn.wrong{border-color:rgba(240,112,112,.45);background:rgba(240,112,112,.12);color:var(--red);}
+.cbtn{--glass-radius:20px;padding:13px 11px;font-family:inherit;font-size:.86rem;color:var(--text);
+  cursor:pointer;transition:border-color .15s ease,background .15s ease;text-align:center;line-height:1.3;}
+.cbtn:not(.disabled):hover{border-color:var(--gold-ring);--glass-bg:var(--gold-soft);--glass-bg-fallback:var(--gold-soft);}
+.cbtn.correct{border-color:rgba(107,232,160,.45);--glass-bg:rgba(107,232,160,.12);--glass-bg-fallback:rgba(107,232,160,.12);color:var(--green);font-weight:600;}
+.cbtn.wrong{border-color:rgba(240,112,112,.45);--glass-bg:rgba(240,112,112,.12);--glass-bg-fallback:rgba(240,112,112,.12);color:var(--red);}
 .cbtn.disabled{pointer-events:none;opacity:.4;}
 .cbtn.correct,.cbtn.wrong{opacity:1!important;}
 .feedback{text-align:center;padding:11px 14px;border-radius:50px;font-size:.84rem;
   margin-bottom:11px;font-weight:500;opacity:0;transition:opacity .2s;line-height:1.5;}
 .feedback.show{opacity:1;}
-.feedback.c{background:rgba(107,232,160,.1);color:var(--green);border:1px solid rgba(107,232,160,.35);}
-.feedback.w{background:rgba(240,112,112,.1);color:var(--red);border:1px solid rgba(240,112,112,.35);}
+.feedback.c{--glass-bg:rgba(107,232,160,.1);--glass-bg-fallback:rgba(107,232,160,.1);color:var(--green);border-color:rgba(107,232,160,.35);}
+.feedback.w{--glass-bg:rgba(240,112,112,.1);--glass-bg-fallback:rgba(240,112,112,.1);color:var(--red);border-color:rgba(240,112,112,.35);}
 .next-btn{width:100%;padding:13px;background:var(--gold);
   border:none;border-radius:50px;font-family:inherit;font-size:.93rem;font-weight:700;
   color:#0b0d13;cursor:pointer;transition:opacity .15s;display:none;}
@@ -1288,23 +1288,23 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       <div class="hud">
         <div class="hud-pill glass glass-pill glass-chrome"><span class="dot"></span><span id="sc-ok">0</span></div>
         <div class="hud-pill glass glass-pill glass-chrome"><span class="dot r"></span><span id="sc-no">0</span></div>
-        <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;color:var(--muted);" id="hud-pos">1/10</div>
+        <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;" id="hud-pos">1/10</div>
       </div>
     </div>
   </div>
-  <div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
+  <div class="prog-wrap glass glass-pill glass-chrome"><div class="prog-fill" id="prog"></div></div>
   <div class="card-type-row">
     <span class="tbadge glass glass-pill glass-chrome" id="tbadge">Verb</span>
     <span class="tlevel" id="tlevel"></span>
     <span class="tmode-badge glass glass-pill glass-chrome" id="tmode-badge"></span>
   </div>
-  <div class="word-card">
+  <div class="word-card glass glass-tile glass-highlight">
     <div class="card-q" id="cquestion"></div>
     <div class="card-main" id="cmain" dir="ltr"></div>
     <div class="card-sub" id="csub" dir="ltr"></div>
   </div>
   <div class="choices" id="choices"></div>
-  <div class="feedback" id="feedback"></div>
+  <div class="feedback glass glass-pill glass-chrome" id="feedback"></div>
   <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
 </div>
 
@@ -4323,7 +4323,7 @@ function renderCard() {
   var badge = document.getElementById('tbadge');
   var wt = row.word_type || 'Word';
   badge.textContent = wt;
-  badge.className = 'tbadge '
+  badge.className = 'tbadge glass glass-pill glass-chrome '
     + (wt === 'Noun'       ? 'noun'
      : wt === 'Verb'       ? 'verb'
      : (wt === 'Adjective' || wt === 'Adj') ? 'adj'
@@ -4353,7 +4353,7 @@ function renderCard() {
   choicesEl.innerHTML = '';
   allChoiceRows.forEach(function(choiceRow) {
     var btn = document.createElement('button');
-    btn.className = 'cbtn';
+    btn.className = 'cbtn glass glass-tile glass-interactive';
     btn.dataset.csvId = choiceRow.id;
     btn.textContent   = _csvRowDisplay(choiceRow);
     btn.onclick = (function(b, cId, corrId) {
@@ -4365,7 +4365,7 @@ function renderCard() {
   // All languages use CSV columns directly — no per-choice API retry needed.
 
   var fb = document.getElementById('feedback');
-  fb.className = 'feedback'; fb.textContent = '';
+  fb.className = 'feedback glass glass-pill glass-chrome'; fb.textContent = '';
   document.getElementById('next-btn').textContent = t('next');
   document.getElementById('next-btn').classList.remove('show');
   _syncQuizTopBar();
@@ -4382,7 +4382,7 @@ function pick(btn, selectedId, correctId) {
     btn.classList.add('correct'); btn.classList.remove('disabled');
     ok++; btn.classList.add('pop');
     fb.textContent = t('correct');
-    fb.className = 'feedback c show';
+    fb.className = 'feedback glass glass-pill glass-chrome c show';
     if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
       _themeAnswers.push({
         wordId: String(queue[idx]._row.id),
@@ -4401,7 +4401,7 @@ function pick(btn, selectedId, correctId) {
       }
     });
     fb.innerHTML = t('wrong')(correctText);
-    fb.className = 'feedback w show';
+    fb.className = 'feedback glass glass-pill glass-chrome w show';
     if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
       _themeAnswers.push({
         wordId: String(queue[idx]._row.id),
@@ -13196,11 +13196,11 @@ document.addEventListener('keydown', function(e){
     rayColor1: '#3B82F6',
     rayColor2: '#ffffff',
     intensity: 2,
-    spread: 1.1,
+    spread: 2,
     tilt: 60,
     saturation: 1.5,
     blend: 0.75,
-    falloff: 2,
+    falloff: 1.8,
     opacity: 1.0
   };
   var origins = ['top-right', 'bottom-left'];
