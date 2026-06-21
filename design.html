@@ -4657,58 +4657,79 @@ function _quizSessionActive(){
   if(typeof window._adaptiveV2IsActive==='function'&&window._adaptiveV2IsActive())return true;
   return false;
 }
+function _abortQuizSession() {
+  _quizTimerAbandon();
+  currentThemeCategoryId = 0;
+  _quizReturnScreen = 'screen-levels';
+}
+function _pageLeaveRequiresConfirm(pageId) {
+  return pageId === 'screen-quiz' && _quizSessionActive();
+}
+function _confirmPageLeave(pageId) {
+  return new Promise(function(resolve) {
+    if (!_pageLeaveRequiresConfirm(pageId)) {
+      resolve(true);
+      return;
+    }
+    var isRush = typeof window._rushIsActive === 'function' && window._rushIsActive();
+    if (typeof window.appDialog !== 'object' || typeof window.appDialog.confirm !== 'function') {
+      resolve(true);
+      return;
+    }
+    window.appDialog.confirm({
+      title: t(isRush ? 'quizExitRushTitle' : 'quizExitTitle'),
+      message: t(isRush ? 'quizExitRushMessage' : 'quizExitMessage'),
+      primaryLabel: t(isRush ? 'quizExitRushLeave' : 'quizExitLeave'),
+      cancelLabel: t('quizExitStay')
+    }).then(function(result) {
+      resolve(result === 'primary');
+    });
+  });
+}
 function _performQuizBack(){
   if(typeof window._rushIsActive==='function'&&window._rushIsActive()){
     if(typeof window.endRushSession==='function')window.endRushSession(true);
     return;
   }
   var ret=_quizReturnScreen;
-  _quizReturnScreen='screen-levels';
-  _quizTimerAbandon();
-  currentThemeCategoryId = 0;
+  _abortQuizSession();
   if (ret === 'screen-learning-profile') {
-    switchTab('stats');
+    switchTab('stats', { popActiveToRoot: false });
     _resetTabStack('stats');
     _syncAppChrome();
     return;
   }
   if (ret === 'screen-practice-setup') {
-    switchTab('practice');
+    switchTab('practice', { popActiveToRoot: false });
     _resetTabStack('practice');
     _syncAppChrome();
     return;
   }
-  switchTab('learn');
+  if (_activeTab !== 'learn') switchTab('learn', { popActiveToRoot: false });
   var targetId = (!ret || ret === 'screen-levels' || ret === 'learn-root') ? _tabRoots.learn : ret;
   if (_getStackTop('learn') === 'screen-quiz') {
-    if (!_popStackToPage('learn', targetId, { animate: true })) {
-      _resetTabStack('learn');
-      if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
-    }
+    _popStackToPage('learn', targetId, { animate: true }).then(function(ok) {
+      if (!ok) {
+        _resetTabStack('learn');
+        if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+      }
+      var top = _getStackTop('learn');
+      _syncAppChrome(top === _tabRoots.learn ? null : top);
+    });
   } else {
     _resetTabStack('learn');
     if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+    var top = _getStackTop('learn');
+    _syncAppChrome(top === _tabRoots.learn ? null : top);
   }
-  var top = _getStackTop('learn');
-  _syncAppChrome(top === _tabRoots.learn ? null : top);
 }
 function goQuizBack(){
   if(!_quizSessionActive()){
     _performQuizBack();
     return;
   }
-  var isRush=typeof window._rushIsActive==='function'&&window._rushIsActive();
-  if(typeof window.appDialog!=='object'||typeof window.appDialog.confirm!=='function'){
-    _performQuizBack();
-    return;
-  }
-  window.appDialog.confirm({
-    title:t(isRush?'quizExitRushTitle':'quizExitTitle'),
-    message:t(isRush?'quizExitRushMessage':'quizExitMessage'),
-    primaryLabel:t(isRush?'quizExitRushLeave':'quizExitLeave'),
-    cancelLabel:t('quizExitStay')
-  }).then(function(result){
-    if(result==='primary')_performQuizBack();
+  _confirmPageLeave('screen-quiz').then(function(ok) {
+    if (ok) _performQuizBack();
   });
 }
 function openSwipeSetup(){ window.umami?.track('quick_match_opened'); show('screen-swipe-setup'); }
@@ -8711,7 +8732,10 @@ function popTabPage(opts) {
   opts = opts || {};
   var tab = opts.tab || _activeTab;
   var stack = _tabStacks[tab];
-  if (!stack || stack.length <= 1 || _stackAnimating) return false;
+  if (!stack || stack.length <= 1 || _stackAnimating) {
+    if (opts.onComplete) opts.onComplete(false);
+    return false;
+  }
   var fromId = stack[stack.length - 1];
   var toId = stack[stack.length - 2];
   var animate = opts.animate !== false && !_tabReducedMotion();
@@ -8721,29 +8745,61 @@ function popTabPage(opts) {
   if (animate) {
     _animateStackNav(tab, fromId, toId, 'back', function() {
       if (deferDepot) _returnSharedPageToDepot(fromId);
+      if (opts.onComplete) opts.onComplete(true);
     });
   } else {
     if (_isSharedPage(fromId)) _returnSharedPageToDepot(fromId);
     _syncTabStackVisibility(tab);
     _syncAppChrome();
+    if (opts.onComplete) opts.onComplete(true);
   }
   return true;
 }
 function _popStackToPage(tab, targetPageId, opts) {
   opts = opts || {};
   if (!targetPageId || targetPageId === 'screen-levels') targetPageId = _tabRoots[tab];
-  var stack = _tabStacks[tab];
-  if (!stack || stack.length <= 1) return _getStackTop(tab) === targetPageId;
-  if (_getStackTop(tab) === targetPageId) return true;
-  var animated = opts.animate !== false && !_tabReducedMotion();
-  if (!popTabPage({ animate: animated, tab: tab })) return false;
-  if (_getStackTop(tab) === targetPageId) return true;
-  while (stack.length > 1 && _getStackTop(tab) !== targetPageId) {
-    if (!popTabPage({ animate: false, tab: tab })) break;
-  }
-  return _getStackTop(tab) === targetPageId;
+  return new Promise(function(resolve) {
+    function step() {
+      if (_getStackTop(tab) === targetPageId) {
+        var top = _getStackTop(tab);
+        _syncAppChrome(top === _tabRoots[tab] ? null : top);
+        resolve(true);
+        return;
+      }
+      if (!_tabStacks[tab] || _tabStacks[tab].length <= 1) {
+        resolve(_getStackTop(tab) === targetPageId);
+        return;
+      }
+      if (_stackAnimating) {
+        setTimeout(step, 40);
+        return;
+      }
+      if (!popTabPage({
+        animate: opts.animate !== false,
+        tab: tab,
+        onComplete: function(ok) {
+          if (!ok) resolve(false);
+          else step();
+        }
+      })) resolve(false);
+    }
+    step();
+  });
+}
+function _popStackToRoot(tab, opts) {
+  opts = opts || {};
+  tab = tab || _activeTab;
+  var root = _tabRoots[tab];
+  if (_getStackTop(tab) === root) return Promise.resolve(true);
+  var top = _getStackTop(tab);
+  return _confirmPageLeave(top).then(function(ok) {
+    if (!ok) return false;
+    if (top === 'screen-quiz') _abortQuizSession();
+    return _popStackToPage(tab, root, opts);
+  });
 }
 window.popStackToPage = _popStackToPage;
+window.popStackToRoot = _popStackToRoot;
 function _resetTabStack(tab) {
   if (!_tabStacks[tab]) return;
   _returnSharedPagesFromTabStack(tab);
@@ -9037,7 +9093,38 @@ function _snapTabDrag() {
   var track = _getTabTrack();
   if (track) track.classList.remove('is-dragging');
   _setTabIndicatorDragging(false);
-  _setTabIndex(snapped, { animate: true, force: true });
+  _navigateTab(snapped, { animate: true, force: true, fromDrag: true });
+}
+function _navigateTab(index, opts) {
+  opts = opts || {};
+  index = Math.max(0, Math.min(TAB_ORDER.length - 1, Math.round(index)));
+  var targetTab = TAB_ORDER[index];
+  if (index === _tabIndex && _tabDragIndex === null && !opts.fromDrag && opts.popActiveToRoot !== false) {
+    if (_getStackTop(targetTab) !== _tabRoots[targetTab]) {
+      _popStackToRoot(targetTab, { animate: opts.animate !== false });
+    }
+    return;
+  }
+  if (index === _tabIndex && opts.fromDrag) {
+    _setTabIndex(index, Object.assign({}, opts, { force: true }));
+    return;
+  }
+  var leavingPage = _getStackTop(_activeTab);
+  _confirmPageLeave(leavingPage).then(function(ok) {
+    if (!ok) {
+      if (opts.fromDrag) {
+        _tabDragIndex = null;
+        _setTabIndex(_tabIndex, { animate: true, force: true });
+        _updateTabIndicator(_activeTab);
+      }
+      return;
+    }
+    if (leavingPage === 'screen-quiz') {
+      _abortQuizSession();
+      if (_getStackTop(_activeTab) === 'screen-quiz') popTabPage({ animate: false, tab: _activeTab });
+    }
+    _setTabIndex(index, opts);
+  });
 }
 function _setTabIndex(index, opts) {
   opts = opts || {};
@@ -9067,10 +9154,10 @@ function _setTabIndex(index, opts) {
   if (!opts.skipScrollRestore) _restoreTabScroll(_activeTab);
   _syncAppChrome();
 }
-function switchTab(tab) {
+function switchTab(tab, opts) {
   var idx = TAB_ORDER.indexOf(tab);
   if (idx < 0) return;
-  _setTabIndex(idx, { animate: true });
+  _navigateTab(idx, Object.assign({ animate: true, popActiveToRoot: false }, opts || {}));
 }
 window.switchTab = switchTab;
 
@@ -9175,9 +9262,9 @@ function _initTabGestures() {
       _snapTabDrag();
       navSuppressClick = true;
     } else if (navState.targetTab) {
-      if (!_tabGesturesBlocked()) switchTab(navState.targetTab);
+      if (!_tabGesturesBlocked()) switchTab(navState.targetTab, { popActiveToRoot: true });
     } else if (!_tabGesturesBlocked()) {
-      _setTabIndex(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true });
+      _navigateTab(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true, fromDrag: true });
     }
     navState = null;
   }
@@ -9194,7 +9281,7 @@ function _initTabGestures() {
         return;
       }
       if (_tabGesturesBlocked()) return;
-      switchTab(t);
+      switchTab(t, { popActiveToRoot: true });
     });
   });
 }
