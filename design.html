@@ -47,6 +47,7 @@
   --glass-blur:blur(20px) saturate(165%);--glass-shadow:0 4px 24px rgba(0,0,0,0.20);
   --glass-highlight-line:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);
   --modal-dur:.4s;--modal-ease:cubic-bezier(0.22,1,0.36,1);--modal-scrim-ease:cubic-bezier(0.32,0,0.18,1);
+  --stack-dur:.52s;--stack-ease:cubic-bezier(0.25,0.8,0.35,1);
   --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
   --modal-scrim:rgba(0,0,0,0.42);
   --tab-h:62px;
@@ -92,21 +93,24 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 
 /* ── HEADER ── */
 .app-header{width:100%;max-width:600px;margin-bottom:16px;animation:fadeDown .5s ease both;}
-.app-header.header-subscreen h1{display:none;}
+/* Logo stays visible on sub-pages */
 .app-header h1{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:clamp(1.55rem,4.8vw,2.2rem);font-weight:700;
   background:linear-gradient(180deg,#f0d78c 0%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
   letter-spacing:-0.5px;line-height:1;cursor:pointer;}
-.screen-top-bar{width:100%;max-width:600px;margin-bottom:14px;display:flex;align-items:stretch;gap:10px;min-height:40px;}
-.screen-top-bar.hidden{display:none;}
-.screen-top-main{flex:1 1 50%;max-width:50%;min-width:0;display:flex;align-items:flex-end;gap:12px;}
-.screen-top-title-wrap{flex:1;min-width:0;text-align:start;}
-.screen-top-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;line-height:1.2;color:var(--blue);}
-.screen-top-title.hidden{display:none;}
-.screen-top-subtitle{font-size:.74rem;color:var(--muted);margin-top:3px;line-height:1.35;}
-.screen-top-subtitle.hidden{display:none;}
-.screen-top-actions{flex:1 1 50%;max-width:50%;min-width:0;display:flex;align-items:flex-end;justify-content:flex-end;gap:8px;}
-.screen-top-actions.hidden{display:none;}
-.screen-top-actions .quiz-header{margin-bottom:0;width:100%;justify-content:flex-end;align-items:flex-end;}
+#screen-top-bar{display:none!important;}
+.tab-page-chrome{width:100%;display:flex;align-items:stretch;gap:10px;margin-bottom:14px;min-height:40px;}
+.tab-page-chrome.hidden{display:none;}
+.tab-page-chrome-main{flex:1 1 50%;max-width:50%;min-width:0;display:flex;align-items:flex-end;gap:12px;}
+.tab-page-title-wrap{flex:1;min-width:0;text-align:start;}
+.tab-page-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;line-height:1.2;color:var(--blue);}
+.tab-page-title.hidden{display:none;}
+.tab-page-subtitle{font-size:.74rem;color:var(--muted);margin-top:3px;line-height:1.35;}
+.tab-page-subtitle.hidden{display:none;}
+.tab-page-actions{flex:1 1 50%;max-width:50%;min-width:0;display:flex;align-items:flex-end;justify-content:flex-end;gap:8px;}
+.tab-page-actions.hidden{display:none;}
+.tab-page-actions .quiz-header{margin-bottom:0;width:100%;justify-content:flex-end;align-items:flex-end;}
+.tab-page-body{width:100%;box-sizing:border-box;}
+.tab-page-chrome .page-back-btn.hidden{display:none;}
 .app-back-btn,.app-top-action-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;transition:border-color .18s,transform .4s ease;color:var(--text);flex-shrink:0;
   padding:0;line-height:1;direction:ltr;--glass-radius:20px;}
@@ -366,7 +370,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .tab-panel{display:flex;flex-direction:column;flex:0 0 100vw;width:100vw;max-width:100vw;min-width:0;box-sizing:border-box;padding-inline:var(--tab-panel-gutter);}
 .tab-panel:not(.tab-flow-visible){height:0;min-height:0;overflow:hidden;pointer-events:none;}
 #tab-panel-practice.active{overflow:visible;flex:0 0 100vw;min-height:auto;flex-direction:column;gap:0;position:relative;}
-#tab-panel-practice.active.tab-flow-visible{height:auto;overflow:visible;pointer-events:auto;}
+#tab-panel-practice.active.tab-flow-visible{height:auto;min-height:calc(100svh - 170px);overflow:visible;pointer-events:auto;}
 #screen-levels:has(#tab-panel-practice.active){overflow:visible;}
 #tab-panel-stats{padding-bottom:4px;}
 #tab-panel-settings{padding-bottom:4px;}
@@ -374,11 +378,36 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .settings-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
 #tab-panel-settings .drawer-section:last-of-type{margin-bottom:0;}
 #tab-panel-settings .settings-footer{margin-top:24px;}
+
+/* ── TAB PAGE STACKS ── */
+.tab-stack{position:relative;width:100%;min-height:0;overflow:visible;}
+.tab-stack.is-stack-animating{overflow:visible;--stack-travel:100vh;}
+.tab-stack.is-stack-measuring{width:100%;min-height:0!important;height:auto!important;overflow:visible!important;}
+.tab-page{width:100%;box-sizing:border-box;}
+.tab-page:not(.is-stack-top):not(.is-stack-enter):not(.is-stack-exit):not(.is-stack-enter-back):not(.is-stack-exit-back){visibility:hidden;height:0;overflow:hidden;pointer-events:none;margin:0;padding:0;border:none;}
+.tab-page.is-stack-top{visibility:visible;height:auto;overflow:visible;pointer-events:auto;}
+.tab-page.is-stack-exit,
+.tab-page.is-stack-enter,
+.tab-page.is-stack-exit-back,
+.tab-page.is-stack-enter-back{position:absolute;left:0;right:0;top:0;width:100%;visibility:visible;overflow:visible;pointer-events:none;will-change:transform;}
+.tab-page.is-stack-exit,.tab-page.is-stack-exit-back{z-index:3;}
+.tab-page.is-stack-enter,.tab-page.is-stack-enter-back{z-index:2;}
+.tab-page.is-stack-exit{animation:stackExitDown var(--stack-dur) var(--stack-ease) forwards;}
+.tab-page.is-stack-enter{animation:stackEnterDown var(--stack-dur) var(--stack-ease) forwards;}
+.tab-page.is-stack-exit-back{animation:stackExitUp var(--stack-dur) var(--stack-ease) forwards;}
+.tab-page.is-stack-enter-back{animation:stackEnterUp var(--stack-dur) var(--stack-ease) forwards;}
+@keyframes stackExitDown{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,var(--stack-travel,100vh),0)}}
+@keyframes stackEnterDown{from{transform:translate3d(0,calc(-1 * var(--stack-travel,100vh)),0)}to{transform:translate3d(0,0,0)}}
+@keyframes stackExitUp{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,calc(-1 * var(--stack-travel,100vh)),0)}}
+@keyframes stackEnterUp{from{transform:translate3d(0,var(--stack-travel,100vh),0)}to{transform:translate3d(0,0,0)}}
+#tab-shared-depot{display:none!important;visibility:hidden;pointer-events:none;height:0;overflow:hidden;}
+@media(prefers-reduced-motion:reduce){
+  .tab-page.is-stack-exit,.tab-page.is-stack-enter,.tab-page.is-stack-exit-back,.tab-page.is-stack-enter-back{animation:none!important;}
+}
 .bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
-.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
-.bottom-tabs-inner.is-dragging{cursor:grabbing;}
+.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;pointer-events:all;}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);
   z-index:1;pointer-events:none;transition:transform var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease);}
 .bottom-tab-indicator.is-dragging{transition:none;}
@@ -540,7 +569,17 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .next-btn:hover{opacity:.88;}
 
 /* ── SWIPE MODE ── */
-#screen-swipe{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
+/* ── CARD GAME SCREENS (Quick Match + Practice Learn) ── */
+#screen-swipe,
+#screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
+#screen-swipe .tab-page-chrome,
+#screen-practice .tab-page-chrome{flex-shrink:0;}
+#screen-swipe .tab-page-body,
+#screen-practice .tab-page-body{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;}
+#screen-swipe .swipe-stage,
+#screen-practice .swipe-stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:290px;margin:0;}
+#screen-swipe .swipe-actions,
+#screen-practice .swipe-actions{flex-shrink:0;margin-top:auto;padding-top:8px;}
 .swipe-setup{--glass-radius:45px;padding:18px 15px 10px 15px;}
 .swipe-setup-title{display:none;}
 .swipe-setup-sub{display:none;}
@@ -555,7 +594,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .swipe-title-wrap{display:flex;flex-direction:column;gap:3px;align-items:flex-start;flex:1;min-width:0;text-align:start;}
 .swipe-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;color:var(--blue);}
 .swipe-subtitle{font-size:.74rem;color:var(--muted);}
-.swipe-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:290px;margin:0 0 14px;z-index:1;touch-action:none;overscroll-behavior:none;}
+.swipe-stage{position:relative;z-index:1;touch-action:none;overscroll-behavior:none;}
 .swipe-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
 .swipe-card{position:absolute;inset:0;--glass-radius:22px;padding:16px 16px 14px;display:flex;flex-direction:column;justify-content:space-between;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;overflow:hidden;}
 .swipe-card.top{z-index:3;}
@@ -570,7 +609,7 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .swipe-meaning-box{--glass-radius:18px;--glass-bg:rgba(255,255,255,.04);--glass-bg-fallback:rgba(18,20,28,.88);padding:12px;text-align:center;}
 .swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(196,200,216,.78);margin-bottom:8px;}
 .swipe-meaning{font-size:.98rem;line-height:1.45;color:var(--text);}
-.swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;margin-top:auto;padding-top:8px;}
+.swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;}
 .swipe-btn{width:58px;height:58px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s ease,border-color .15s ease,color .15s ease;}
 .swipe-btn.swipe-action-btn{--glass-bg:var(--glass-fill);color:rgba(255,255,255,.72);}
 .swipe-btn.swipe-action-btn .ui-icon{width:22px;height:22px;}
@@ -589,7 +628,6 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .swipe-empty strong{display:block;color:var(--text);font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;margin-bottom:8px;}
 
 /* ── PRACTICE MODE ── */
-#screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
 .practice-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
 .practice-card{position:absolute;inset:0;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;perspective:1000px;}
 .practice-card.top{z-index:3;}
@@ -627,6 +665,9 @@ body.tabs-hidden .app-dialog{bottom:calc(12px + env(safe-area-inset-bottom,0px))
 .btn-primary:hover{opacity:.88;}
 .btn-primary:disabled,.btn-primary[disabled]{opacity:.38;cursor:not-allowed;pointer-events:none;}
 /* ── PRACTICE SETUP (tab) ── */
+#tab-panel-practice .tab-stack{display:flex;flex-direction:column;flex:1 1 auto;min-height:100%;}
+#tab-page-practice-root.is-stack-top{display:flex;flex-direction:column;flex:1 1 auto;min-height:calc(100svh - 170px);}
+#tab-page-practice-root:not(.is-stack-top){min-height:0;}
 #tab-panel-practice .practice-head{flex-shrink:0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px;}
 #tab-panel-practice .practice-head-text{flex:1;min-width:0;}
 #tab-panel-practice .practice-head-title{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',system-ui,sans-serif;font-size:1.45rem;font-weight:700;color:var(--text);line-height:1.15;margin:0;}
@@ -838,7 +879,7 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   font-family:'Outfit','Vazirmatn',sans-serif;outline:none;-webkit-appearance:none;appearance:none;}
 .dict-search-input:focus{border-color:rgba(126,184,247,.4);}
 .dict-search-input::placeholder{color:var(--muted);}
-.dict-body{display:flex;position:relative;height:calc(100svh - 220px);min-height:300px;}
+.dict-body{display:flex;position:relative;flex:1;min-height:240px;max-height:calc(100svh - var(--tab-h) - 250px - env(safe-area-inset-bottom,0px));}
 .dict-list{flex:1;overflow-y:auto;overscroll-behavior:contain;padding-inline-end:28px;padding-bottom:20px;}
 .dict-list::-webkit-scrollbar{width:0;}
 .dict-letter-header{position:sticky;top:0;z-index:10;
@@ -1037,6 +1078,9 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     <div class="tab-track" id="tab-track">
   <!-- Learn tab -->
   <div class="tab-panel active tab-flow-visible" id="tab-panel-learn" aria-hidden="false">
+    <div class="tab-stack" id="tab-stack-learn">
+    <div class="tab-page is-stack-top" id="tab-page-learn-root" data-page-id="learn-root">
+
     <div class="home-actions">
       <div class="home-primary-actions">
         <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
@@ -1117,11 +1161,107 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     </div>
   </div>
 
+<div class="tab-page tab-flow-page" id="screen-swipe-setup">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="swipe-setup-screen-title">Quick Match</div>
+      <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
+    </div>
+  </div>
+  <div class="swipe-setup glass glass-tile">
+    <div class="swipe-setup-title" id="swipe-setup-title"></div>
+    <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
+    <div class="swipe-level-grid">
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
+    </div>
+    <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
+  </div>
+</div><div class="tab-page tab-flow-page" id="screen-swipe">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="swipe-title">Swipe Check</div>
+      <div class="swipe-subtitle" id="swipe-subtitle">Swipe if the meaning matches</div>
+    </div>
+  </div>
+  <div class="swipe-stage">
+    <div class="swipe-flash" id="swipe-flash">
+      <div class="swipe-flash-inner glass glass-tile glass-highlight glass-chrome">
+        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
+        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
+      </div>
+    </div>
+    <div class="swipe-card-stack" id="swipe-card-stack"></div>
+  </div>
+  <div class="swipe-actions">
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')" title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true"><use href="#icon-x"/></svg></button>
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')" title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"/></svg></button>
+  </div>
+</div><div class="tab-page tab-flow-page" id="screen-adaptive-setup">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
+      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
+    </div>
+  </div>
+  <div class="swipe-setup glass glass-tile">
+    <div class="swipe-level-grid">
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
+    </div>
+    <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
+  </div>
+</div><div class="tab-page tab-flow-page" id="screen-theme-select">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
+      <div class="swipe-subtitle" id="theme-screen-subtitle">Pick a topic to practise</div>
+    </div>
+  </div>
+  <div class="category-grid" id="category-grid"></div>
+</div><div class="tab-page tab-flow-page" id="screen-random">
+  <div class="screen-top-title-src">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="rw-screen-title">Word Explorer</div>
+      <div class="swipe-subtitle" id="rw-screen-subtitle">Open one word card instantly</div>
+    </div>
+  </div>
+  <div class="screen-top-actions-src" id="rw-top-actions">
+    <button class="app-top-action-btn glass glass-chrome glass-interactive" onclick="renderRandomWord()" id="rw-refresh-btn" type="button" title="New word" aria-label="New word"><svg class="ui-icon" aria-hidden="true"><use href="#icon-refresh"/></svg></button>
+  </div>
+  <div id="rw-content"></div>
+</div><div class="tab-page tab-flow-page" id="screen-dictionary">
+  <div class="dict-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)">Dictionary</div>
+      <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
+    </div>
+  </div>
+  <div class="dict-search-wrap">
+    <input type="search" class="dict-search-input" id="dict-search-input"
+           placeholder="Filter words…" oninput="dictFilter(this.value)">
+  </div>
+  <div class="dict-body">
+    <div class="dict-list" id="dict-list">
+      <div class="dict-loading">
+        <div class="wikt-spinner"></div>
+        <span id="dict-loading-text">Loading…</span>
+      </div>
+    </div>
+    <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
+  </div>
+</div>    </div>
+  </div>
   <!-- Practice tab -->
   <div class="tab-panel" id="tab-panel-practice">
+    <div class="tab-stack" id="tab-stack-practice">
+    <div class="tab-page is-stack-top" id="tab-page-practice-root" data-page-id="practice-root">
+
     <header class="practice-head">
       <div class="practice-head-text">
-        <h2 class="practice-head-title" id="practice-setup-screen-title">Practice</h2>
+        <h2 class="practice-head-title" id="practice-setup-screen-title">Learn</h2>
         <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
       </div>
       <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
@@ -1156,9 +1296,28 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
       <button type="button" class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
     </div>
   </div>
-
+<div class="tab-page tab-flow-page" id="screen-practice">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="practice-title" style="color:#7eb8f7">Learn</div>
+      <div class="swipe-subtitle" id="practice-subtitle">Flip cards to reveal meanings</div>
+    </div>
+  </div>
+  <div class="swipe-stage">
+    <div class="practice-card-stack" id="practice-card-stack"></div>
+  </div>
+  <div class="swipe-actions">
+    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flip"/></svg></button>
+    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
+  </div>
+</div>
+    </div>
+  </div>
   <!-- Stats tab -->
   <div class="tab-panel" id="tab-panel-stats">
+    <div class="tab-stack" id="tab-stack-stats">
+    <div class="tab-page is-stack-top" id="tab-page-stats-root" data-page-id="stats-root">
+
     <div id="screen-learning-profile">
       <div class="profile-header">
         <div class="profile-title" id="learning-profile-title">Learning Profile</div>
@@ -1167,8 +1326,14 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     </div>
   </div>
 
+
+    </div>
+    </div>
   <!-- Settings tab -->
   <div class="tab-panel" id="tab-panel-settings">
+    <div class="tab-stack" id="tab-stack-settings">
+    <div class="tab-page is-stack-top" id="tab-page-settings-root" data-page-id="settings-root">
+
     <header class="settings-head">
       <h2 class="settings-head-title" id="st-title">Settings</h2>
     </header>
@@ -1241,53 +1406,11 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     </div>
   </div>
     </div>
-  </div>
-  </div>
-</div>
-
-<!-- Bottom tab bar -->
-<nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
-  <div class="bottom-tabs-inner glass glass-pill">
-    <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
-    <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
-      <span class="bottom-tab-label">Learn</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
-      <span class="bottom-tab-label">Practice</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
-      <span class="bottom-tab-label">Stats</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
-      <span class="bottom-tab-label">Settings</span>
-    </button>
-    <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
-      <span class="bottom-tab--gold" data-tab="learn">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
-        <span class="bottom-tab-label">Learn</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="practice">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
-        <span class="bottom-tab-label">Practice</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="stats">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
-        <span class="bottom-tab-label">Stats</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="settings">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
-        <span class="bottom-tab-label">Settings</span>
-      </span>
     </div>
   </div>
-</nav>
-
-<!-- ══ QUIZ ══ -->
-<div class="screen hidden" id="screen-quiz">
+  </div>
+  <div id="tab-shared-depot" aria-hidden="true">
+<div class="tab-page tab-flow-page" id="screen-quiz">
   <div class="screen-top-actions-src" id="quiz-top-actions">
     <div class="quiz-header">
       <div class="hud">
@@ -1311,10 +1434,21 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
   <div class="choices" id="choices"></div>
   <div class="feedback glass glass-pill glass-chrome" id="feedback"></div>
   <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
-</div>
-
-<!-- ══ RUSH SUMMARY ══ -->
-<div class="screen hidden" id="screen-rush-summary">
+</div><div class="tab-page tab-flow-page" id="screen-results">
+  <div class="res-card">
+    <div class="res-emoji" id="r-emoji">🏆</div>
+    <div class="res-title" id="r-title">Ausgezeichnet!</div>
+    <div class="res-score" id="r-score">9/10</div>
+    <div class="res-sub" id="r-sub"></div>
+    <div class="res-row">
+      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score">Score</span></div>
+      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct">Correct</span></div>
+      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
+    </div>
+    <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
+    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
+  </div>
+</div><div class="tab-page tab-flow-page" id="screen-rush-summary">
   <div class="res-card">
     <div class="res-emoji" id="rush-summary-emoji">🏆</div>
     <div class="res-title" id="rush-summary-title">Rush complete</div>
@@ -1332,152 +1466,82 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
     <button class="btn-primary" id="btn-rush-again" onclick="restartRushMode()">Rush again</button>
     <button class="btn-outline" id="btn-rush-home" onclick="goHome()">Back Home</button>
   </div>
+</div>  </div>
+
 </div>
+
+<!-- Bottom tab bar -->
+<nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
+  <div class="bottom-tabs-inner glass glass-pill">
+    <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
+    <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+      <span class="bottom-tab-label">Practice</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
+      <span class="bottom-tab-label">Learn</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
+      <span class="bottom-tab-label">Stats</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
+      <span class="bottom-tab-label">Settings</span>
+    </button>
+    <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
+      <span class="bottom-tab--gold" data-tab="learn">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+        <span class="bottom-tab-label">Practice</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="practice">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
+        <span class="bottom-tab-label">Learn</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="stats">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
+        <span class="bottom-tab-label">Stats</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="settings">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
+        <span class="bottom-tab-label">Settings</span>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ QUIZ ══ -->
+
+
+<!-- ══ RUSH SUMMARY ══ -->
+
 
 <!-- ══ RESULTS ══ -->
-<div class="screen hidden" id="screen-results">
-  <div class="res-card">
-    <div class="res-emoji" id="r-emoji">🏆</div>
-    <div class="res-title" id="r-title">Ausgezeichnet!</div>
-    <div class="res-score" id="r-score">9/10</div>
-    <div class="res-sub" id="r-sub"></div>
-    <div class="res-row">
-      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score">Score</span></div>
-      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct">Correct</span></div>
-      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
-    </div>
-    <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
-    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
-  </div>
-</div>
+
 
 <!-- ══ SWIPE SETUP ══ -->
-<div class="screen hidden" id="screen-swipe-setup">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-setup-screen-title">Quick Match</div>
-      <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
-    </div>
-  </div>
-  <div class="swipe-setup glass glass-tile">
-    <div class="swipe-setup-title" id="swipe-setup-title"></div>
-    <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
-    <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
-    </div>
-    <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
-  </div>
-</div>
+
 
 <!-- ══ SWIPE GAME ══ -->
-<div class="screen hidden" id="screen-swipe">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-title">Swipe Check</div>
-      <div class="swipe-subtitle" id="swipe-subtitle">Swipe if the meaning matches</div>
-    </div>
-  </div>
-  <div class="swipe-stage">
-    <div class="swipe-flash" id="swipe-flash">
-      <div class="swipe-flash-inner glass glass-tile glass-highlight glass-chrome">
-        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
-        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
-      </div>
-    </div>
-    <div class="swipe-card-stack" id="swipe-card-stack"></div>
-  </div>
-  <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')" title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true"><use href="#icon-x"/></svg></button>
-    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')" title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"/></svg></button>
-  </div>
-</div>
+
 
 <!-- Practice setup lives in #tab-panel-practice -->
 
 <!-- ══ PRACTICE GAME ══ -->
-<div class="screen hidden" id="screen-practice">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="practice-title" style="color:#7eb8f7">Practice</div>
-      <div class="swipe-subtitle" id="practice-subtitle">Flip cards to reveal meanings</div>
-    </div>
-  </div>
-  <div class="swipe-stage">
-    <div class="practice-card-stack" id="practice-card-stack"></div>
-  </div>
-  <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flip"/></svg></button>
-    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
-  </div>
-</div>
+
 
 <!-- ══ ADAPTIVE QUIZ SETUP ══ -->
-<div class="screen hidden" id="screen-adaptive-setup">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
-      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
-    </div>
-  </div>
-  <div class="swipe-setup glass glass-tile">
-    <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
-    </div>
-    <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
-  </div>
-</div>
+
 
 <!-- ══ THEME SELECT ══ -->
-<div class="screen hidden" id="screen-theme-select">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
-      <div class="swipe-subtitle" id="theme-screen-subtitle">Pick a topic to practise</div>
-    </div>
-  </div>
-  <div class="category-grid" id="category-grid"></div>
-</div>
+
 
 <!-- ══ RANDOM WORD ══ -->
-<div class="screen hidden" id="screen-random">
-  <div class="screen-top-title-src">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="rw-screen-title">Word Explorer</div>
-      <div class="swipe-subtitle" id="rw-screen-subtitle">Open one word card instantly</div>
-    </div>
-  </div>
-  <div class="screen-top-actions-src" id="rw-top-actions">
-    <button class="app-top-action-btn glass glass-chrome glass-interactive" onclick="renderRandomWord()" id="rw-refresh-btn" type="button" title="New word" aria-label="New word"><svg class="ui-icon" aria-hidden="true"><use href="#icon-refresh"/></svg></button>
-  </div>
-  <div id="rw-content"></div>
-</div>
+
 
 <!-- ══ DICTIONARY ══ -->
-<div class="screen hidden" id="screen-dictionary">
-  <div class="dict-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)">Dictionary</div>
-      <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
-    </div>
-  </div>
-  <div class="dict-search-wrap">
-    <input type="search" class="dict-search-input" id="dict-search-input"
-           placeholder="Filter words…" oninput="dictFilter(this.value)">
-  </div>
-  <div class="dict-body">
-    <div class="dict-list" id="dict-list">
-      <div class="dict-loading">
-        <div class="wikt-spinner"></div>
-        <span id="dict-loading-text">Loading…</span>
-      </div>
-    </div>
-    <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
-  </div>
-</div>
+
 
 <!-- Inline script bundle: production JS + @design-only demo layers -->
 <script>
@@ -1797,7 +1861,7 @@ const UI = {
     categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
     practiceBannerTitle: 'Practice',
     practiceBannerSub: 'Flip cards to learn words',
-    practiceSetupTitle: 'Practice',
+    practiceSetupTitle: 'Learn',
     practiceSetupSub: '',
     practiceSubtitle: 'Flip cards to reveal meanings',
     practiceMeaningLabel: 'Meaning',
@@ -1965,7 +2029,7 @@ const UI = {
     signOut: 'Abmelden',
     practiceBannerTitle: 'Üben',
     practiceBannerSub: 'Karten umdrehen und Wörter lernen',
-    practiceSetupTitle: 'Üben',
+    practiceSetupTitle: 'Lernen',
     practiceSetupSub: '',
     practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
     practiceMeaningLabel: 'Bedeutung',
@@ -2135,7 +2199,7 @@ const UI = {
     categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
     practiceBannerTitle: 'Pratik',
     practiceBannerSub: 'Kartları çevirerek kelime öğren',
-    practiceSetupTitle: 'Pratik',
+    practiceSetupTitle: 'Öğren',
     practiceSetupSub: '',
     practiceSubtitle: 'Anlamı görmek için kartı çevir',
     practiceMeaningLabel: 'Anlam',
@@ -2303,7 +2367,7 @@ const UI = {
     signOut: 'خروج از حساب',
     practiceBannerTitle: 'تمرین',
     practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها را یاد بگیرید',
-    practiceSetupTitle: 'تمرین',
+    practiceSetupTitle: 'یادگیری',
     practiceSetupSub: '',
     practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
     practiceMeaningLabel: 'معنی',
@@ -2472,7 +2536,7 @@ const UI = {
     signOut: 'Выйти',
     practiceBannerTitle: 'Практика',
     practiceBannerSub: 'Переворачивайте карточки, чтобы учить слова',
-    practiceSetupTitle: 'Практика',
+    practiceSetupTitle: 'Обучение',
     practiceSetupSub: '',
     practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
     practiceMeaningLabel: 'Значение',
@@ -2810,7 +2874,7 @@ const UI = {
     signOut: 'تسجيل الخروج',
     practiceBannerTitle: 'تدريب',
     practiceBannerSub: 'اقلب البطاقات لتعلم الكلمات',
-    practiceSetupTitle: 'تدريب',
+    practiceSetupTitle: 'تعلّم',
     practiceSetupSub: '',
     practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
     practiceMeaningLabel: 'المعنى',
@@ -3341,8 +3405,8 @@ function rowTypeLabel(type) {
 // ── Settings tab ──
 function openSettings() {
   window.umami?.track('settings_opened');
-  if (typeof show === 'function') show('screen-levels');
   switchTab('settings');
+  _syncAppChrome();
 }
 function closeSettings() {
   switchTab('learn');
@@ -3527,11 +3591,9 @@ function setLang(lang) {
   document.body.classList.toggle('lang-ar', lang==='ar');
   document.body.classList.toggle('lang-rtl', isRtl);
   if (typeof window._syncSideRaysOrigins === 'function') window._syncSideRaysOrigins();
-  var backBtn = document.getElementById('app-back-btn');
-  var topBar = document.getElementById('screen-top-bar');
-  if (backBtn && topBar && !topBar.classList.contains('hidden')) {
-    backBtn.innerHTML = _backArrowSvg(isRtl);
-  }
+  document.querySelectorAll('.page-back-btn').forEach(function(btn) {
+    btn.innerHTML = _backArrowSvg(isRtl);
+  });
   applyTranslations();
   updateCounts();
   _renderCategoryGrid();
@@ -3540,8 +3602,14 @@ function setLang(lang) {
 }
 
 function _screenIsVisible(id) {
-  var el = document.getElementById(id);
-  return !!(el && !el.classList.contains('hidden'));
+  if (id === 'screen-levels') return true;
+  var tab = _pageOwnerTab(id);
+  if (!tab) {
+    if (_sharedPageIds && _sharedPageIds.indexOf(id) >= 0) return _getStackTop(_activeTab) === id;
+    var el = document.getElementById(id);
+    return !!(el && el.classList.contains('is-stack-top'));
+  }
+  return _getStackTop(tab) === id && tab === _activeTab;
 }
 
 function _resultsRefreshLang() {
@@ -3782,28 +3850,26 @@ function applyTranslations() {
   var _or = document.getElementById('offline-refresh-btn');
   if (_or) _or.textContent = u.offlineRefreshBtn;
   var navTabs = u.navTabs || UI.en.navTabs;
+  function _navTabLabel(tabId) {
+    if (!navTabs) return tabId;
+    if (tabId === 'learn') return navTabs.practice || tabId;
+    if (tabId === 'practice') return navTabs.learn || tabId;
+    return navTabs[tabId] || tabId;
+  }
   TAB_ORDER.forEach(function(tabId) {
-    var text = (navTabs && navTabs[tabId]) || tabId;
+    var text = _navTabLabel(tabId);
     var lbl = document.querySelector('#bottom-tab-' + tabId + ' .bottom-tab-label');
     var goldLbl = document.querySelector('#bottom-tab-gold-overlay [data-tab="' + tabId + '"] .bottom-tab-label');
     if (lbl) lbl.textContent = text;
     if (goldLbl) goldLbl.textContent = text;
   });
   _refreshInstallGuideContent();
-  _resyncScreenTopBarIfVisible();
+  _resyncPageChromeIfVisible();
 }
 
-function _resyncScreenTopBarIfVisible() {
-  var topBar = document.getElementById('screen-top-bar');
-  if (!topBar || topBar.classList.contains('hidden')) return;
-  ['screen-quiz','screen-rush-summary','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-random','screen-dictionary','screen-practice'].some(function(id) {
-    var el = document.getElementById(id);
-    if (el && !el.classList.contains('hidden')) {
-      _syncScreenTopBar(id);
-      return true;
-    }
-    return false;
-  });
+function _resyncPageChromeIfVisible() {
+  var pageId = _activeFlowPageId && _activeFlowPageId();
+  if (pageId) _syncPageChrome(pageId);
 }
 
 function _setInstallStep1Text() {
@@ -4401,7 +4467,7 @@ async function startLevel(lv) {
 function renderCard() {
   answered = false;
   if (idx === 0 && queue.length &&
-      !document.getElementById('screen-quiz').classList.contains('hidden')) {
+      _screenIsVisible('screen-quiz')) {
     _quizTimerStart();
   }
   var card  = queue[idx];
@@ -4462,7 +4528,7 @@ function renderCard() {
   fb.className = 'feedback glass glass-pill glass-chrome'; fb.textContent = '';
   document.getElementById('next-btn').textContent = t('next');
   document.getElementById('next-btn').classList.remove('show');
-  _syncQuizTopBar();
+  _syncPageChrome('screen-quiz');
 }
 
 function pick(btn, selectedId, correctId) {
@@ -4563,11 +4629,12 @@ function restartLevel(){
 function goHome(){
   _quizTimerAbandon();
   switchTab('learn');
-  show('screen-levels');
+  _resetTabStack('learn');
+  _syncAppChrome();
 }
 function _quizSessionActive(){
   var el=document.getElementById('screen-quiz');
-  if(!el||el.classList.contains('hidden'))return false;
+  if(!_screenIsVisible('screen-quiz'))return false;
   if(typeof window._rushIsActive==='function'&&window._rushIsActive())return true;
   if(currentThemeCategoryId>0)return true;
   if(typeof window._adaptiveV2IsActive==='function'&&window._adaptiveV2IsActive())return true;
@@ -4580,17 +4647,33 @@ function _performQuizBack(){
   }
   var ret=_quizReturnScreen;
   _quizReturnScreen='screen-levels';
+  _quizTimerAbandon();
+  currentThemeCategoryId = 0;
   if (ret === 'screen-learning-profile') {
     switchTab('stats');
-    show('screen-levels');
+    _resetTabStack('stats');
+    _syncAppChrome();
     return;
   }
   if (ret === 'screen-practice-setup') {
-    openPracticeSetup();
+    switchTab('practice');
+    _resetTabStack('practice');
+    _syncAppChrome();
     return;
   }
   switchTab('learn');
-  show(ret);
+  var targetId = (!ret || ret === 'screen-levels' || ret === 'learn-root') ? _tabRoots.learn : ret;
+  if (_getStackTop('learn') === 'screen-quiz') {
+    if (!_popStackToPage('learn', targetId, { animate: true })) {
+      _resetTabStack('learn');
+      if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+    }
+  } else {
+    _resetTabStack('learn');
+    if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+  }
+  var top = _getStackTop('learn');
+  _syncAppChrome(top === _tabRoots.learn ? null : top);
 }
 function goQuizBack(){
   if(!_quizSessionActive()){
@@ -4663,6 +4746,7 @@ function _renderCategoryGrid() {
       + '<div class="rb-text"><strong>' + escHtml(catNames[cat.id] || cat.name) + '</strong></div>'
       + '</button>';
   }).join('');
+  if (typeof _syncTabViewportHeight === 'function') _syncTabViewportHeight();
 }
 
 async function startThemeQuiz(categoryId) {
@@ -6054,7 +6138,8 @@ async function _initPracticeTab() {
 async function openPracticeSetup() {
   window.umami?.track('practice_opened');
   switchTab('practice');
-  show('screen-levels');
+  _resetTabStack('practice');
+  _syncAppChrome();
 }
 
 function setPracticeLevel(lv) {
@@ -8237,9 +8322,421 @@ var _tabDragIndex = null;
 var _tabCarouselReady = false;
 var _practiceTabReady = false;
 var _statsTabReady = false;
-var _tabScrollTops = { learn: 0, practice: 0, stats: 0, settings: 0 };
-var _appBackAction = function(){};
+var _tabScrollTops = { learn: {}, practice: {}, stats: {}, settings: {} };
+var _tabRoots = { learn: 'learn-root', practice: 'practice-root', stats: 'stats-root', settings: 'settings-root' };
+var _tabStacks = { learn: ['learn-root'], practice: ['practice-root'], stats: ['stats-root'], settings: ['settings-root'] };
+var _sharedPageIds = ['screen-quiz', 'screen-results', 'screen-rush-summary'];
+var _flowPageIds = ['screen-adaptive-setup','screen-theme-select','screen-swipe-setup','screen-swipe','screen-random','screen-dictionary','screen-practice'].concat(_sharedPageIds);
+var _stackAnimating = false;
 
+/* Swap stack transition classes here — chrome + body animate together on .tab-page */
+var STACK_TRANSITION = {
+  forward: { exit: 'is-stack-exit', enter: 'is-stack-enter' },
+  back:    { exit: 'is-stack-exit-back', enter: 'is-stack-enter-back' }
+};
+window.STACK_TRANSITION = STACK_TRANSITION;
+
+function _pageElId(pageId) {
+  if (pageId === 'learn-root') return 'tab-page-learn-root';
+  if (pageId === 'practice-root') return 'tab-page-practice-root';
+  if (pageId === 'stats-root') return 'tab-page-stats-root';
+  if (pageId === 'settings-root') return 'tab-page-settings-root';
+  return pageId;
+}
+function _getPageEl(pageId) {
+  return document.getElementById(_pageElId(pageId));
+}
+function _getTabStackEl(tab) {
+  return document.getElementById('tab-stack-' + tab);
+}
+function _getSharedDepot() {
+  return document.getElementById('tab-shared-depot');
+}
+function _getStackTop(tab) {
+  var stack = _tabStacks[tab];
+  return stack.length ? stack[stack.length - 1] : _tabRoots[tab];
+}
+function _pageOwnerTab(pageId) {
+  if (pageId === 'learn-root') return 'learn';
+  if (pageId === 'practice-root') return 'practice';
+  if (pageId === 'stats-root') return 'stats';
+  if (pageId === 'settings-root') return 'settings';
+  var el = _getPageEl(pageId);
+  if (!el) return null;
+  var stack = el.closest('.tab-stack');
+  if (!stack || !stack.id) return null;
+  if (stack.id === 'tab-stack-learn') return 'learn';
+  if (stack.id === 'tab-stack-practice') return 'practice';
+  if (stack.id === 'tab-stack-stats') return 'stats';
+  if (stack.id === 'tab-stack-settings') return 'settings';
+  return null;
+}
+function _isSharedPage(pageId) {
+  return _sharedPageIds.indexOf(pageId) >= 0;
+}
+function _mountPageInStack(pageId, tab) {
+  var el = _getPageEl(pageId);
+  var stackEl = _getTabStackEl(tab);
+  if (!el || !stackEl) return;
+  if (el.parentElement !== stackEl) stackEl.appendChild(el);
+}
+function _returnSharedPageToDepot(pageId) {
+  if (!_isSharedPage(pageId)) return;
+  var el = _getPageEl(pageId);
+  var depot = _getSharedDepot();
+  if (el && depot && el.parentElement !== depot) depot.appendChild(el);
+}
+function _returnSharedPagesFromTabStack(tab) {
+  _sharedPageIds.forEach(function(pid) {
+    var el = _getPageEl(pid);
+    if (el && el.parentElement && el.parentElement.id === 'tab-stack-' + tab) {
+      _returnSharedPageToDepot(pid);
+    }
+  });
+}
+function _clearStackAnimClasses(el) {
+  if (!el) return;
+  el.classList.remove('is-stack-enter', 'is-stack-exit', 'is-stack-enter-back', 'is-stack-exit-back');
+}
+function _scrubStackPageInline(el) {
+  if (!el) return;
+  ['transform', 'min-height', 'height', 'width', 'left', 'top', 'visibility', 'overflow', 'pointer-events', 'position'].forEach(function(prop) {
+    el.style.removeProperty(prop);
+  });
+}
+function _stackDurMs() {
+  return _tabReducedMotion() ? 0 : 520;
+}
+function _measurePageScrollHeight(pageId) {
+  var el = _getPageEl(pageId);
+  if (!el) return 0;
+  if (el.classList.contains('is-stack-top') && el.offsetHeight > 0) return el.scrollHeight;
+  var stackEl = el.closest('.tab-stack');
+  var panel = el.closest('.tab-panel');
+  var measureW = panel && panel.getBoundingClientRect().width > 0 ? panel.getBoundingClientRect().width : 0;
+  if (measureW <= 0) {
+    var stage = typeof _getTabStage === 'function' ? _getTabStage() : null;
+    measureW = stage ? stage.clientWidth : 0;
+  }
+  var saved = {
+    position: el.style.position,
+    visibility: el.style.visibility,
+    height: el.style.height,
+    overflow: el.style.overflow,
+    pointerEvents: el.style.pointerEvents,
+    left: el.style.left,
+    top: el.style.top,
+    width: el.style.width,
+    hadTop: el.classList.contains('is-stack-top')
+  };
+  if (stackEl) stackEl.classList.add('is-stack-measuring');
+  el.classList.add('is-stack-top');
+  el.style.position = 'relative';
+  el.style.visibility = 'hidden';
+  el.style.height = 'auto';
+  el.style.overflow = 'visible';
+  el.style.pointerEvents = 'none';
+  el.style.left = '0';
+  el.style.top = '0';
+  el.style.width = measureW > 0 ? measureW + 'px' : '100%';
+  var h = el.scrollHeight;
+  el.classList.toggle('is-stack-top', saved.hadTop);
+  el.style.position = saved.position;
+  el.style.visibility = saved.visibility;
+  el.style.height = saved.height;
+  el.style.overflow = saved.overflow;
+  el.style.pointerEvents = saved.pointerEvents;
+  el.style.left = saved.left;
+  el.style.top = saved.top;
+  el.style.width = saved.width;
+  if (stackEl) stackEl.classList.remove('is-stack-measuring');
+  return h;
+}
+function _afterLayout(fn) {
+  requestAnimationFrame(function() { requestAnimationFrame(fn); });
+}
+function _syncTabStackVisibility(tab) {
+  var stackEl = _getTabStackEl(tab);
+  if (!stackEl) return;
+  var topId = _getStackTop(tab);
+  stackEl.querySelectorAll('.tab-page').forEach(function(page) {
+    var pid = page.getAttribute('data-page-id') || page.id;
+    var isTop = pid === topId || page.id === topId || _pageElId(topId) === page.id;
+    page.classList.toggle('is-stack-top', isTop);
+    if (isTop) page.style.removeProperty('visibility');
+  });
+}
+function _syncAllTabStacks() {
+  TAB_ORDER.forEach(function(t) { _syncTabStackVisibility(t); });
+}
+function _stackContentHeight(tab) {
+  return _measurePageScrollHeight(_getStackTop(tab));
+}
+function _setTabViewportHeight(h) {
+  var viewport = _getTabViewport();
+  if (!viewport) return;
+  viewport.style.removeProperty('height');
+}
+function _viewportBounds() {
+  var vv = window.visualViewport;
+  if (vv) return { top: vv.offsetTop, bottom: vv.offsetTop + vv.height };
+  return { top: 0, bottom: window.innerHeight };
+}
+function _pageHeightPx(el, pageId) {
+  if (!el) return 0;
+  if (el.offsetHeight > 0) return el.offsetHeight;
+  if (pageId) return _measurePageScrollHeight(pageId);
+  return el.scrollHeight || 0;
+}
+function _travelDownPx(stackEl, el, pageId) {
+  var sr = stackEl.getBoundingClientRect();
+  var v = _viewportBounds();
+  return Math.max(1, Math.ceil(v.bottom - sr.top + 2));
+}
+function _travelUpPx(stackEl, el, pageId) {
+  var sr = stackEl.getBoundingClientRect();
+  var v = _viewportBounds();
+  var h = _pageHeightPx(el, pageId);
+  return Math.max(1, Math.ceil((sr.top + h) - v.top + 2));
+}
+function _stackTravelForTransition(stackEl, fromEl, fromId, toEl, toId, mode) {
+  if (mode === 'down') return _travelDownPx(stackEl, fromEl, fromId);
+  return Math.max(_travelUpPx(stackEl, fromEl, fromId), _travelUpPx(stackEl, toEl, toId));
+}
+function _pageFrameHeight(el, pageId) {
+  if (el && el.offsetHeight > 0) return el.offsetHeight;
+  if (pageId) return _measurePageScrollHeight(pageId);
+  return el ? el.scrollHeight : 0;
+}
+function _clearStackAnimState(stackEl) {
+  if (!stackEl) return;
+  stackEl.classList.remove('is-stack-animating');
+  stackEl.style.removeProperty('min-height');
+  stackEl.style.removeProperty('--stack-travel');
+}
+function _stackTransition(tab, fromId, toId, direction, done) {
+  var stackEl = _getTabStackEl(tab);
+  var fromEl = _getPageEl(fromId);
+  var toEl = _getPageEl(toId);
+  var tKey = direction === 'forward' ? 'forward' : 'back';
+  var exitCls = STACK_TRANSITION[tKey].exit;
+  var enterCls = STACK_TRANSITION[tKey].enter;
+  var travelMode = direction === 'forward' ? 'down' : 'up';
+  if (!stackEl || !fromEl || !toEl || _tabReducedMotion()) {
+    _clearStackAnimState(stackEl);
+    _scrubStackPageInline(fromEl);
+    _scrubStackPageInline(toEl);
+    _syncTabStackVisibility(tab);
+    if (done) done();
+    return;
+  }
+  if (typeof _syncPageChrome === 'function') _syncPageChrome(toId);
+  var fromH = _pageFrameHeight(fromEl, fromId);
+  var toH = _pageFrameHeight(toEl, toId);
+  var travelPx = _stackTravelForTransition(stackEl, fromEl, fromId, toEl, toId, travelMode);
+  var frameH = Math.max(fromH, toH, 120);
+  stackEl.classList.add('is-stack-animating');
+  stackEl.style.setProperty('--stack-travel', travelPx + 'px');
+  stackEl.style.minHeight = frameH + 'px';
+  _clearStackAnimClasses(fromEl);
+  _clearStackAnimClasses(toEl);
+  _scrubStackPageInline(fromEl);
+  _scrubStackPageInline(toEl);
+  fromEl.classList.add(exitCls);
+  toEl.classList.add(enterCls);
+  fromEl.classList.remove('is-stack-top');
+  toEl.classList.add('is-stack-top');
+  var finished = false;
+  function finish() {
+    if (finished) return;
+    finished = true;
+    fromEl.removeEventListener('animationend', onAnimEnd);
+    toEl.removeEventListener('animationend', onAnimEnd);
+    _clearStackAnimClasses(fromEl);
+    _clearStackAnimClasses(toEl);
+    _clearStackAnimState(stackEl);
+    _syncTabStackVisibility(tab);
+    _scrubStackPageInline(fromEl);
+    _scrubStackPageInline(toEl);
+    if (done) done();
+  }
+  var ended = 0;
+  function onAnimEnd(e) {
+    if (e.target !== fromEl && e.target !== toEl) return;
+    ended++;
+    if (ended >= 2) finish();
+  }
+  fromEl.addEventListener('animationend', onAnimEnd);
+  toEl.addEventListener('animationend', onAnimEnd);
+  setTimeout(finish, _stackDurMs() + 80);
+}
+function _animateStackNav(tab, fromId, toId, direction, done) {
+  _stackAnimating = true;
+  _afterLayout(function() {
+    _stackTransition(tab, fromId, toId, direction, function() {
+      _stackAnimating = false;
+      var top = _getStackTop(tab);
+      _syncAppChrome(top === _tabRoots[tab] ? null : top);
+      if (done) done();
+    });
+  });
+}
+function pushTabPage(pageId, opts) {
+  opts = opts || {};
+  var tab = opts.tab || _pageOwnerTab(pageId) || _activeTab;
+  if (!_tabStacks[tab]) return;
+  var stack = _tabStacks[tab];
+  if (stack[stack.length - 1] === pageId) {
+    _syncAppChrome();
+    return;
+  }
+  if (_isSharedPage(pageId)) _mountPageInStack(pageId, tab);
+  else if (!_pageOwnerTab(pageId)) _mountPageInStack(pageId, tab);
+  var fromId = stack[stack.length - 1];
+  var animate = opts.animate !== false && !_tabReducedMotion() && !_stackAnimating;
+  stack.push(pageId);
+  if (animate) {
+    _animateStackNav(tab, fromId, pageId, 'forward');
+  } else {
+    _syncTabStackVisibility(tab);
+    _syncAppChrome(pageId);
+  }
+}
+function popTabPage(opts) {
+  opts = opts || {};
+  var tab = opts.tab || _activeTab;
+  var stack = _tabStacks[tab];
+  if (!stack || stack.length <= 1 || _stackAnimating) return false;
+  var fromId = stack[stack.length - 1];
+  var toId = stack[stack.length - 2];
+  var animate = opts.animate !== false && !_tabReducedMotion();
+  stack.pop();
+  var deferDepot = animate && _isSharedPage(fromId);
+  if (!deferDepot && _isSharedPage(fromId)) _returnSharedPageToDepot(fromId);
+  if (animate) {
+    _animateStackNav(tab, fromId, toId, 'back', function() {
+      if (deferDepot) _returnSharedPageToDepot(fromId);
+    });
+  } else {
+    if (_isSharedPage(fromId)) _returnSharedPageToDepot(fromId);
+    _syncTabStackVisibility(tab);
+    _syncAppChrome();
+  }
+  return true;
+}
+function _popStackToPage(tab, targetPageId, opts) {
+  opts = opts || {};
+  if (!targetPageId || targetPageId === 'screen-levels') targetPageId = _tabRoots[tab];
+  var stack = _tabStacks[tab];
+  if (!stack || stack.length <= 1) return _getStackTop(tab) === targetPageId;
+  if (_getStackTop(tab) === targetPageId) return true;
+  var animated = opts.animate !== false && !_tabReducedMotion();
+  if (!popTabPage({ animate: animated, tab: tab })) return false;
+  if (_getStackTop(tab) === targetPageId) return true;
+  while (stack.length > 1 && _getStackTop(tab) !== targetPageId) {
+    if (!popTabPage({ animate: false, tab: tab })) break;
+  }
+  return _getStackTop(tab) === targetPageId;
+}
+window.popStackToPage = _popStackToPage;
+function _resetTabStack(tab) {
+  if (!_tabStacks[tab]) return;
+  _returnSharedPagesFromTabStack(tab);
+  _tabStacks[tab] = [_tabRoots[tab]];
+  _syncTabStackVisibility(tab);
+  _syncTabViewportHeight();
+}
+function _activeFlowPageId() {
+  var top = _getStackTop(_activeTab);
+  return top === _tabRoots[_activeTab] ? null : top;
+}
+function _ensureFlowPageChrome() {
+  var isRtl = document.body.classList.contains('lang-rtl');
+  document.querySelectorAll('.tab-flow-page').forEach(function(page) {
+    if (page.querySelector(':scope > .tab-page-chrome')) return;
+    var body = document.createElement('div');
+    body.className = 'tab-page-body';
+    while (page.firstChild) body.appendChild(page.firstChild);
+    var chrome = document.createElement('div');
+    chrome.className = 'tab-page-chrome';
+    chrome.innerHTML = '<div class="tab-page-chrome-main">' +
+      '<button class="app-back-btn page-back-btn glass glass-chrome glass-interactive" type="button" aria-label="Back"></button>' +
+      '<div class="tab-page-title-wrap">' +
+      '<div class="tab-page-title hidden"></div>' +
+      '<div class="tab-page-subtitle hidden"></div>' +
+      '</div></div>' +
+      '<div class="tab-page-actions hidden"></div>';
+    page.appendChild(chrome);
+    page.appendChild(body);
+    var pageId = page.id;
+    var btn = chrome.querySelector('.page-back-btn');
+    if (btn) {
+      btn.innerHTML = _backArrowSvg(isRtl);
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var act = _getPageBackAction(pageId);
+        if (act) act();
+      });
+    }
+  });
+}
+function _getPageBackAction(pageId) {
+  var backMap = {
+    'screen-quiz': function(){ goQuizBack(); },
+    'screen-results': null,
+    'screen-rush-summary': function(){ goHome(); },
+    'screen-swipe-setup': function(){ popTabPage(); },
+    'screen-swipe': function(){ popTabPage(); },
+    'screen-adaptive-setup': function(){ popTabPage(); },
+    'screen-theme-select': function(){ popTabPage(); },
+    'screen-random': function(){ popTabPage(); },
+    'screen-dictionary': function(){ popTabPage(); },
+    'screen-practice': function(){ popTabPage(); }
+  };
+  return pageId ? backMap[pageId] : null;
+}
+function _syncAppChrome(pageId) {
+  var header = document.getElementById('app-header');
+  if (pageId === undefined) pageId = _activeFlowPageId();
+  if (header) header.classList.remove('header-subscreen');
+  if (pageId) {
+    _syncPageChrome(pageId);
+    _appBackAction = _getPageBackAction(pageId) || function(){};
+  } else {
+    _resetSubscreenHeaders();
+    _appBackAction = function(){};
+  }
+  _updateTabBarVisibility();
+}
+function show(id) {
+  if (id === 'screen-learning-profile') {
+    switchTab('stats');
+    _resetTabStack('stats');
+    _syncAppChrome();
+    return;
+  }
+  if (id === 'screen-practice-setup') {
+    switchTab('practice');
+    _resetTabStack('practice');
+    _syncAppChrome();
+    return;
+  }
+  if (id === 'screen-levels') {
+    _resetTabStack(_activeTab);
+    _syncAppChrome();
+    return;
+  }
+  var quizWasVisible = _screenIsVisible('screen-quiz');
+  var tab = _pageOwnerTab(id) || _activeTab;
+  if (tab !== _activeTab && TAB_ORDER.indexOf(tab) >= 0) switchTab(tab);
+  var instant = { 'screen-results': 1, 'screen-rush-summary': 1 };
+  pushTabPage(id, { animate: !instant[id], tab: tab });
+  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results' && id !== 'screen-rush-summary') {
+    _quizTimerAbandon();
+  }
+}
+window.pushTabPage = pushTabPage;
+window.popTabPage = popTabPage;
 function _tabIsRtl() {
   return document.body.classList.contains('lang-rtl');
 }
@@ -8247,11 +8744,8 @@ function _tabReducedMotion() {
   return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 function _tabGesturesBlocked() {
-  var tabs = document.getElementById('bottom-tabs');
-  if (tabs && tabs.classList.contains('hidden')) return true;
   if (document.querySelector('.modal-root.open')) return true;
-  var levels = document.getElementById('screen-levels');
-  if (!levels || levels.classList.contains('hidden')) return true;
+  if (_stackAnimating) return true;
   return false;
 }
 function _getTabStage() {
@@ -8269,35 +8763,20 @@ function _tabStridePx() {
   return stage.clientWidth + TAB_PAGE_GAP;
 }
 function _syncTabViewportHeight(show) {
-  var viewport = _getTabViewport();
-  if (!viewport) return;
-  var maxH = 0;
-  var visibleCount = 0;
-  TAB_ORDER.forEach(function(t, idx) {
-    if (show && !show[idx]) return;
-    var panel = document.getElementById('tab-panel-' + t);
-    if (!panel || !panel.classList.contains('tab-flow-visible')) return;
-    visibleCount++;
-    maxH = Math.max(maxH, panel.offsetHeight);
-  });
-  if (!visibleCount) {
-    var activePanel = document.getElementById('tab-panel-' + TAB_ORDER[_tabIndex]);
-    if (activePanel && activePanel.classList.contains('tab-flow-visible')) {
-      maxH = activePanel.offsetHeight;
-    }
-  }
-  if (maxH > 0) viewport.style.height = maxH + 'px';
-  else viewport.style.removeProperty('height');
+  _setTabViewportHeight(0);
 }
 function _tabTrackOffsetPx(index) {
   var stride = _tabStridePx();
   return (_tabIsRtl() ? 1 : -1) * index * stride;
 }
 function _saveTabScroll() {
-  _tabScrollTops[_activeTab] = window.scrollY || document.documentElement.scrollTop || 0;
+  var pageId = _getStackTop(_activeTab);
+  if (!_tabScrollTops[_activeTab]) _tabScrollTops[_activeTab] = {};
+  _tabScrollTops[_activeTab][pageId] = window.scrollY || document.documentElement.scrollTop || 0;
 }
 function _restoreTabScroll(tab) {
-  var y = _tabScrollTops[tab] || 0;
+  var pageId = _getStackTop(tab);
+  var y = (_tabScrollTops[tab] && _tabScrollTops[tab][pageId]) || 0;
   requestAnimationFrame(function() { window.scrollTo(0, y); });
 }
 function _applyTabTrackTransform(index, animate) {
@@ -8400,6 +8879,7 @@ function _syncTabPanelFlow(opts) {
   TAB_ORDER.forEach(function(t, idx) {
     var panel = document.getElementById('tab-panel-' + t);
     if (panel) panel.classList.toggle('tab-flow-visible', !!show[idx]);
+    if (show[idx]) _syncTabStackVisibility(t);
   });
   _syncTabViewportHeight(show);
 }
@@ -8480,6 +8960,7 @@ function _setTabIndex(index, opts) {
     }
   }
   if (!opts.skipScrollRestore) _restoreTabScroll(_activeTab);
+  _syncAppChrome();
 }
 function switchTab(tab) {
   var idx = TAB_ORDER.indexOf(tab);
@@ -8489,19 +8970,18 @@ function switchTab(tab) {
 window.switchTab = switchTab;
 
 function _isStatsTabVisible() {
-  return _activeTab === 'stats' && !document.getElementById('screen-levels').classList.contains('hidden');
+  return _activeTab === 'stats' && _getStackTop('stats') === 'stats-root';
 }
 function _isPracticeTabVisible() {
-  return _activeTab === 'practice' && !document.getElementById('screen-levels').classList.contains('hidden');
+  return _activeTab === 'practice';
 }
 window._isStatsTabVisible = _isStatsTabVisible;
 
-function _updateTabBarVisibility(screenId) {
+function _updateTabBarVisibility() {
   var tabs = document.getElementById('bottom-tabs');
   if (!tabs) return;
-  var showTabs = screenId === 'screen-levels';
-  tabs.classList.toggle('hidden', !showTabs);
-  document.body.classList.toggle('tabs-hidden', !showTabs);
+  tabs.classList.remove('hidden');
+  document.body.classList.remove('tabs-hidden');
 }
 
 function _updateTabIndicator(tab) {
@@ -8548,112 +9028,12 @@ function _resyncTabLayoutAfterDirChange() {
 window._resyncTabLayoutAfterDirChange = _resyncTabLayoutAfterDirChange;
 
 function _initTabGestures() {
-  var viewport = document.getElementById('tab-viewport');
-  var navInner = document.querySelector('.bottom-tabs-inner');
-  if (!viewport || !navInner) return;
-
-  var DRAG_THRESHOLD = 8;
-  var vpState = null;
-  var navState = null;
-
-  function _viewportDragIndex(startIndex, deltaX) {
-    var stride = _tabStridePx();
-    return _tabIsRtl()
-      ? startIndex + deltaX / stride
-      : startIndex - deltaX / stride;
-  }
-
-  viewport.addEventListener('pointerdown', function(e) {
-    if (_tabGesturesBlocked() || e.button > 0) return;
-    if (e.target.closest('button, a, input, textarea, select, .lang-dd-panel')) return;
-    vpState = {
-      id: e.pointerId,
-      startX: e.clientX,
-      startY: e.clientY,
-      startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
-      dragging: false
-    };
-  }, { passive: true });
-
-  viewport.addEventListener('pointermove', function(e) {
-    if (!vpState || vpState.id !== e.pointerId) return;
-    var dx = e.clientX - vpState.startX;
-    var dy = e.clientY - vpState.startY;
-    if (!vpState.dragging) {
-      if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > DRAG_THRESHOLD) {
-        vpState = null;
-        return;
-      }
-      if (Math.abs(dx) < DRAG_THRESHOLD) return;
-      vpState.dragging = true;
-      viewport.setPointerCapture(e.pointerId);
-    }
-    e.preventDefault();
-    _setTabDragIndex(_viewportDragIndex(vpState.startIndex, dx));
-  }, { passive: false });
-
-  function _endViewportDrag(e) {
-    if (!vpState || vpState.id !== e.pointerId) return;
-    if (vpState.dragging) {
-      try { viewport.releasePointerCapture(e.pointerId); } catch (err) {}
-      _snapTabDrag();
-    }
-    vpState = null;
-  }
-  viewport.addEventListener('pointerup', _endViewportDrag);
-  viewport.addEventListener('pointercancel', _endViewportDrag);
-
-  navInner.addEventListener('pointerdown', function(e) {
-    if (_tabGesturesBlocked() || e.button > 0) return;
-    var tabBtn = e.target.closest('.bottom-tab');
-    navState = {
-      id: e.pointerId,
-      startX: e.clientX,
-      startY: e.clientY,
-      startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
-      targetTab: tabBtn ? tabBtn.getAttribute('data-tab') : null,
-      dragging: false
-    };
-  });
-
-  navInner.addEventListener('pointermove', function(e) {
-    if (!navState || navState.id !== e.pointerId) return;
-    var dx = e.clientX - navState.startX;
-    var dy = e.clientY - navState.startY;
-    if (!navState.dragging) {
-      if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
-      navState.dragging = true;
-      navInner.classList.add('is-dragging');
-      navInner.setPointerCapture(e.pointerId);
-    }
-    e.preventDefault();
-    _setTabDragIndex(_tabIndexFromNavX(e.clientX));
-  }, { passive: false });
-
-  function _endNavDrag(e) {
-    if (!navState || navState.id !== e.pointerId) return;
-    navInner.classList.remove('is-dragging');
-    if (navState.dragging) {
-      try { navInner.releasePointerCapture(e.pointerId); } catch (err) {}
-      _snapTabDrag();
-    } else if (navState.targetTab) {
-      switchTab(navState.targetTab);
-    } else {
-      _setTabIndex(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true });
-    }
-    navState = null;
-  }
-  navInner.addEventListener('pointerup', _endNavDrag);
-  navInner.addEventListener('pointercancel', _endNavDrag);
-
   TAB_ORDER.forEach(function(t) {
     var btn = document.getElementById('bottom-tab-' + t);
     if (!btn) return;
-    btn.addEventListener('click', function(e) {
-      if (navState && navState.dragging) {
-        e.preventDefault();
-        return;
-      }
+    btn.addEventListener('click', function() {
+      if (_tabGesturesBlocked()) return;
+      switchTab(t);
     });
   });
 }
@@ -8663,36 +9043,35 @@ function _backArrowSvg(isRtl) {
   return '<svg class="ui-icon" aria-hidden="true"><use href="#' + (isRtl ? 'icon-arrow-right' : 'icon-arrow-left') + '"/></svg>';
 }
 
-// Universal top-bar actions: any sub-screen can expose `.screen-top-actions-src`;
-// _mountTopBarActions moves it into #screen-top-actions (right half) while active.
-var _topBarActionMount = null;
+// Page chrome actions: `.screen-top-actions-src` mounts into `.tab-page-actions`.
+var _pageActionMount = null;
 
-function _restoreTopBarActions() {
-  var slot = document.getElementById('screen-top-actions');
-  if (slot) {
-    slot.innerHTML = '';
-    slot.classList.add('hidden');
+function _restorePageActions() {
+  if (_pageActionMount && _pageActionMount.slot) {
+    _pageActionMount.slot.innerHTML = '';
+    _pageActionMount.slot.classList.add('hidden');
   }
-  if (_topBarActionMount && _topBarActionMount.el && _topBarActionMount.home) {
-    _topBarActionMount.home.appendChild(_topBarActionMount.el);
+  if (_pageActionMount && _pageActionMount.el && _pageActionMount.home) {
+    _pageActionMount.home.appendChild(_pageActionMount.el);
   }
-  _topBarActionMount = null;
+  _pageActionMount = null;
 }
 
-function _mountTopBarActions(screenId) {
-  _restoreTopBarActions();
+function _mountPageActions(screenId) {
+  _restorePageActions();
   var screen = document.getElementById(screenId);
-  var slot = document.getElementById('screen-top-actions');
-  if (!screen || !slot) return;
+  if (!screen) return;
   var src = screen.querySelector('.screen-top-actions-src');
-  if (!src) return;
-  _topBarActionMount = { el: src, home: screen };
+  var slot = screen.querySelector('.tab-page-actions');
+  if (!src || !slot) return;
+  var home = screen.querySelector('.tab-page-body') || screen;
+  _pageActionMount = { el: src, home: home, slot: slot };
   slot.appendChild(src);
   slot.classList.remove('hidden');
 }
 
 function _resetSubscreenHeaders() {
-  _restoreTopBarActions();
+  _restorePageActions();
   document.querySelectorAll('.swipe-header, .dict-header').forEach(function(h) { h.style.display = ''; });
   ['rush-summary-title'].forEach(function(id) {
     var el = document.getElementById(id);
@@ -8761,9 +9140,9 @@ function _getQuizTopBarMeta() {
   return { title: '', subtitle: '', color: '' };
 }
 
-function _syncQuizTopBar() {
-  var titleEl = document.getElementById('screen-top-title');
-  var subEl = document.getElementById('screen-top-subtitle');
+function _syncQuizPageChrome(screen) {
+  var titleEl = screen.querySelector('.tab-page-title');
+  var subEl = screen.querySelector('.tab-page-subtitle');
   if (!titleEl || !subEl) return;
   var meta = _getQuizTopBarMeta();
   if (meta.title) {
@@ -8783,34 +9162,32 @@ function _syncQuizTopBar() {
   }
 }
 
-function _syncScreenTopBar(screenId) {
-  var titleEl = document.getElementById('screen-top-title');
-  var subEl = document.getElementById('screen-top-subtitle');
+function _syncPageChrome(screenId) {
   var screen = document.getElementById(screenId);
-  if (!titleEl || !screen) return;
-
-  _resetSubscreenHeaders();
-
+  if (!screen) return;
+  var chrome = screen.querySelector(':scope > .tab-page-chrome');
+  if (!chrome) return;
+  var titleEl = chrome.querySelector('.tab-page-title');
+  var subEl = chrome.querySelector('.tab-page-subtitle');
+  var backBtn = chrome.querySelector('.page-back-btn');
+  var isRtl = document.body.classList.contains('lang-rtl');
+  var showBack = !!_getPageBackAction(screenId);
+  _restorePageActions();
   if (screenId === 'screen-quiz') {
-    _syncQuizTopBar();
-    _mountTopBarActions(screenId);
-    return;
-  }
-
-  var titleSrc = screen.querySelector('.swipe-title, .rw-title, #rush-summary-title');
-  var subSrc = screen.querySelector('.swipe-subtitle');
-
-  if (titleSrc && titleSrc.textContent.trim()) {
-    titleEl.textContent = titleSrc.textContent;
-    titleEl.style.color = titleSrc.style.color || '';
-    titleEl.classList.remove('hidden');
-    if (titleSrc.id === 'rush-summary-title') titleSrc.style.visibility = 'hidden';
+    _syncQuizPageChrome(screen);
+    _mountPageActions(screenId);
   } else {
-    titleEl.textContent = '';
-    titleEl.classList.add('hidden');
-  }
-
-  if (subEl) {
+    var titleSrc = screen.querySelector('.swipe-title, .rw-title, #rush-summary-title');
+    var subSrc = screen.querySelector('.swipe-subtitle');
+    if (titleSrc && titleSrc.textContent.trim()) {
+      titleEl.textContent = titleSrc.textContent;
+      titleEl.style.color = titleSrc.style.color || '';
+      titleEl.classList.remove('hidden');
+      if (titleSrc.id === 'rush-summary-title') titleSrc.style.visibility = 'hidden';
+    } else {
+      titleEl.textContent = '';
+      titleEl.classList.add('hidden');
+    }
     if (subSrc && subSrc.textContent.trim()) {
       subEl.textContent = subSrc.textContent;
       subEl.classList.remove('hidden');
@@ -8818,50 +9195,17 @@ function _syncScreenTopBar(screenId) {
       subEl.textContent = '';
       subEl.classList.add('hidden');
     }
+    var inlineHeader = screen.querySelector('.swipe-header, .dict-header, .screen-top-title-src');
+    if (inlineHeader) inlineHeader.style.display = 'none';
+    _mountPageActions(screenId);
   }
-
-  var inlineHeader = screen.querySelector('.swipe-header, .dict-header');
-  if (inlineHeader) inlineHeader.style.display = 'none';
-
-  _mountTopBarActions(screenId);
-}
-function show(id){
-  if (id === 'screen-learning-profile') { switchTab('stats'); id = 'screen-levels'; }
-  if (id === 'screen-practice-setup') { switchTab('practice'); id = 'screen-levels'; }
-  var quizWasVisible = !document.getElementById('screen-quiz').classList.contains('hidden');
-  ['screen-levels','screen-quiz','screen-results','screen-rush-summary','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice'].forEach(function(s){
-    var el = document.getElementById(s);
-    if (!el || !el.classList.contains('screen')) return;
-    el.classList.toggle('hidden', s !== id);
-  });
-  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results' && id !== 'screen-rush-summary') {
-    _quizTimerAbandon();
+  if (backBtn) {
+    backBtn.innerHTML = _backArrowSvg(isRtl);
+    backBtn.classList.toggle('hidden', !showBack);
   }
-  _updateTabBarVisibility(id);
-  var btn = document.getElementById('app-back-btn');
-  var topBar = document.getElementById('screen-top-bar');
-  var header = document.getElementById('app-header');
-  var isRtl = document.body.classList.contains('lang-rtl');
-  var backMap = {
-    'screen-quiz':             function(){ goQuizBack(); },
-    'screen-results':          null,
-    'screen-rush-summary':     function(){ goHome(); },
-    'screen-swipe-setup':      function(){ goHome(); },
-    'screen-swipe':            function(){ openSwipeSetup(); },
-    'screen-adaptive-setup':   function(){ goHome(); },
-    'screen-theme-select':     function(){ goHome(); },
-    'screen-random':           function(){ goHome(); },
-    'screen-dictionary':       function(){ goHome(); },
-    'screen-practice':         function(){ openPracticeSetup(); }
-  };
-  var action = backMap[id];
-  var showBack = !!action;
-  if (header) header.classList.toggle('header-subscreen', showBack);
-  if (topBar) topBar.classList.toggle('hidden', !showBack);
-  if (showBack) _syncScreenTopBar(id);
-  else _resetSubscreenHeaders();
-  if (btn) btn.innerHTML = _backArrowSvg(isRtl);
-  _appBackAction = action || function(){};
+  var hasTitle = titleEl && !titleEl.classList.contains('hidden');
+  var hasActions = chrome.querySelector('.tab-page-actions:not(.hidden)');
+  chrome.classList.toggle('hidden', !showBack && !hasTitle && !hasActions);
 }
 
 function showOfflineScreen() {
@@ -8931,6 +9275,8 @@ function checkOnline() {
 })();
 applyTranslations();
 _preloadAllTabs();
+_ensureFlowPageChrome();
+
 _setTabIndex(0, { animate: false, skipScrollSave: true, force: true });
 _tabCarouselReady = true;
 _initTabGestures();
@@ -8943,7 +9289,9 @@ window.addEventListener('resize', function() {
   _syncTabGoldOverlayLabels();
   _updateTabIndicator(_activeTab);
 });
-_updateTabBarVisibility('screen-levels');
+_updateTabBarVisibility();
+_syncAllTabStacks();
+_syncAppChrome();
 _ensureHomeLayout();
 window.addEventListener('pageshow', function() {
   _ensureHomeLayout();
@@ -12926,7 +13274,7 @@ document.addEventListener('keydown', function(e){
       // If the quiz screen never became visible (CSV load failure, no cards, etc.)
       // then no quiz actually started — discard the snapshot flags immediately.
       var quizScreen = document.getElementById('screen-quiz');
-      if (quizScreen && quizScreen.classList.contains('hidden')) {
+      if (quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
@@ -12950,7 +13298,7 @@ document.addEventListener('keydown', function(e){
       }
       if (typeof fn === 'function') await fn.apply(null, args);
       var quizScreen = document.getElementById('screen-quiz');
-      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+      if (_user && quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
@@ -12980,7 +13328,7 @@ document.addEventListener('keydown', function(e){
       }
       if (typeof _origStartRushMode === 'function') await _origStartRushMode();
       var quizScreen = document.getElementById('screen-quiz');
-      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+      if (_user && quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
