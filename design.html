@@ -716,39 +716,45 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 /* ── RANDOM WORD ── */
 .rw-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;color:var(--blue);}
 .screen-top-title-src{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.rw-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);
-  padding:28px 22px;animation:cardIn .3s ease both;}
+.rw-card{--glass-radius:var(--r);padding:28px 22px;position:relative;overflow:hidden;animation:cardIn .3s ease both;}
+.rw-card::after{content:'';position:absolute;top:-50px;right:-50px;width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,201,122,.06),transparent 70%);pointer-events:none;z-index:1;}
+.rw-card>*{position:relative;z-index:2;}
 .rw-type{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin-bottom:8px;}
 .rw-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,6vw,2.8rem);font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.1;}
 .rw-meanings{margin-bottom:18px;}
 .rw-meaning-row{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
 .rw-meaning-flag{font-size:.75rem;opacity:.8;}
 .rw-meaning-text{font-size:.92rem;color:var(--muted);font-style:italic;}
-.rw-divider{height:1px;background:var(--border);margin-bottom:16px;}
+.rw-divider{height:1px;background:rgba(255,255,255,.08);margin-bottom:16px;}
 .rw-section{margin-bottom:14px;}
 .rw-section-title{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;font-weight:600;}
 .rw-forms{display:flex;flex-wrap:wrap;gap:7px;}
-.rw-form{background:var(--surf2);border:1px solid var(--border);border-radius:8px;
-  padding:6px 12px;font-size:.8rem;line-height:1.4;cursor:pointer;transition:all .15s;user-select:none;}
-.rw-form:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.06);}
-.rw-form.active-chip{border-color:var(--gold);background:rgba(232,201,122,.13);}
+.rw-form{--glass-radius:12px;--glass-bg:rgba(255,255,255,.05);--glass-bg-fallback:rgba(24,27,38,.92);padding:6px 12px;font-size:.8rem;line-height:1.4;cursor:pointer;transition:border-color .15s ease,background .15s ease;user-select:none;}
+.rw-form:hover{--glass-bg:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);}
+.rw-form.active-chip,.rw-form.rw-form--gold{--glass-bg:rgba(232,201,122,.12);--glass-bg-fallback:rgba(232,201,122,.12);border-color:var(--gold-ring);}
 .rw-form.active-chip .fl{color:var(--gold);}
 .rw-form .fl{font-size:.65rem;color:var(--muted);display:block;margin-bottom:1px;}
 .rw-form .fv{color:var(--text);font-weight:500;}
 .rw-form .fv.gold{color:var(--gold);}
 .rw-form .fv.blue{color:var(--blue);}
 .rw-form .fv.green{color:var(--green);}
-.rw-example{background:var(--surf2);border-inline-start:3px solid var(--gold);
-  border-radius:0 8px 8px 0;padding:10px 14px;font-size:.82rem;line-height:1.55;color:var(--muted);}
+.rw-example{--glass-radius:0 12px 12px 0;--glass-bg:rgba(255,255,255,.04);--glass-bg-fallback:rgba(18,20,28,.88);border-inline-start:3px solid var(--gold);
+  padding:10px 14px;font-size:.82rem;line-height:1.55;color:var(--muted);}
 .rw-example em{color:var(--text);font-style:normal;}
 .rw-meaning-single{font-size:.98rem;color:var(--muted);font-style:italic;margin-bottom:16px;}
 .rw-section-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .rw-section-title-row>span:first-child{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;}
 .rw-click-hint{font-size:.62rem;color:var(--muted);opacity:.55;font-style:italic;}
-.rw-example-box{background:var(--surf2);border-inline-start:3px solid var(--border);border-radius:0 8px 8px 0;
+.rw-example-box{--glass-radius:0 12px 12px 0;--glass-bg:rgba(255,255,255,.04);--glass-bg-fallback:rgba(18,20,28,.88);border-inline-start:3px solid rgba(255,255,255,.12);
   padding:11px 14px;font-size:.83rem;line-height:1.6;color:var(--muted);font-style:italic;
   transition:border-color .2s,color .2s;min-height:44px;}
-.rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
+.rw-example-box.lit{border-inline-start-color:var(--gold);color:var(--text);font-style:normal;}
+.rw-form,.rw-example,.rw-example-box{position:relative;isolation:isolate;background:var(--glass-bg,var(--glass-fill));border:1px solid var(--glass-border);
+  box-shadow:var(--glass-elevation,var(--glass-shadow)),var(--glass-specular);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .rw-form,.rw-example,.rw-example-box{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--glass-bg-fallback,var(--glass-fill-fallback));}
+}
 .rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;}
 .rw-source a{color:var(--blue);opacity:.85;}
 
@@ -7435,7 +7441,7 @@ function renderHeadLineChips(text) {
     });
 
     // Non-clickable gold chip for the base word
-    html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+    html += '<div class="rw-form rw-form--gold" style="cursor:default;">'
       + '<span class="fl" style="font-size:.62rem;">→</span>'
       + '<span class="fv gold">' + escHtml(baseWord) + '</span></div>';
 
@@ -7552,7 +7558,7 @@ function renderWiktCard(data, meta, targetId) {
   var level = _csvLevelRow ? (_csvLevelRow.level || '') : '';
   var wb = _csvRowToOfflineWord(_csvLevelRow);
 
-  var html = '<div class="rw-card">';
+  var html = '<div class="rw-card glass glass-tile glass-highlight glass-chrome">';
   html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcNameDE(tc) + '</div>';
   html += '<div class="rw-word">' + escHtml(displayWord)
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
@@ -7643,7 +7649,7 @@ function renderWiktCard(data, meta, targetId) {
           + '<div class="rw-section-title">Grundform</div>'
           + '<div class="rw-forms">';
         _bwSet.forEach(function(_bwf) {
-          html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+          html += '<div class="rw-form rw-form--gold" style="cursor:default;">'
             + '<span class="fl" style="font-size:.62rem;">→</span>'
             + '<span class="fv gold">' + escHtml(_bwf) + '</span>'
             + '</div>';
