@@ -175,8 +175,11 @@
       },
       updateSize: function () {
         var dpr = Math.min(window.devicePixelRatio || 1, 2);
-        var w = container.clientWidth;
-        var h = container.clientHeight;
+        // Fall back to viewport dimensions: on iOS the fixed container can
+        // report 0 client size at init, which would leave iResolution at 0
+        // and render nothing.
+        var w = container.clientWidth || window.innerWidth || document.documentElement.clientWidth;
+        var h = container.clientHeight || window.innerHeight || document.documentElement.clientHeight;
         if (!w || !h) return;
         canvas.width = Math.round(w * dpr);
         canvas.height = Math.round(h * dpr);
@@ -222,9 +225,21 @@
     animId = requestAnimationFrame(loop);
   }
 
+  function resync() {
+    updateSize();
+    drawAll(0);
+  }
+
   updateSize();
   drawAll(0);
   if (!reducedMotion) animId = requestAnimationFrame(loop);
+
+  // Re-sync after layout settles — covers iOS where the fixed container may
+  // report 0 size during the initial synchronous run.
+  requestAnimationFrame(resync);
+  setTimeout(resync, 300);
+  window.addEventListener('load', resync);
+  window.addEventListener('orientationchange', function () { setTimeout(resync, 200); });
 
   window.addEventListener('resize', updateSize);
   window.addEventListener('pagehide', function () {
