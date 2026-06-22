@@ -1,4 +1,4 @@
-var CACHE_NAME = 'wortschatz-shell-v1.2';
+var CACHE_NAME = 'wortschatz-shell-v1.2.1';
 
 // Static assets only — never pre-cache index.html or versioned JS (they go stale
 // quickly and cause layout/behaviour mismatches on soft refresh).
