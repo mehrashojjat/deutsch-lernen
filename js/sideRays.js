@@ -17,6 +17,7 @@
     falloff: 1.8,
     opacity: 1.0
   };
+
   function sideRaysIsRtl() {
     return document.documentElement.getAttribute('dir') === 'rtl' ||
       document.body.classList.contains('lang-rtl');
@@ -42,6 +43,20 @@
     }
   }
 
+  // Read the page background so the rays can be composited over it inside the
+  // shader. We render an OPAQUE canvas (no alpha channel) because mobile
+  // browsers / WebViews do not reliably honour a transparent WebGL canvas'
+  // alpha when compositing it over the page — which made opacity/blend look
+  // wrong (over-bright, "zoomed/scaled up") on phones while being correct on
+  // desktop. Compositing here removes that platform dependency entirely.
+  function bgColor() {
+    var v = '';
+    try {
+      v = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+    } catch (e) {}
+    return /^#?[a-f\d]{6}$/i.test(v) ? hexToRgb(v) : [0.031373, 0.039216, 0.062745];
+  }
+
   var vertSrc = 'attribute vec2 position;void main(){gl_Position=vec4(position,0.0,1.0);}';
   var fragSrc = [
     'precision highp float;',
@@ -52,23 +67,25 @@
     'uniform vec3 iRayColor2;',
     'uniform float iIntensity;',
     'uniform float iSpread;',
-    'uniform float iFlipX;',
-    'uniform float iFlipY;',
     'uniform float iTilt;',
     'uniform float iSaturation;',
     'uniform float iBlend;',
     'uniform float iFalloff;',
     'uniform float iOpacity;',
+    'uniform vec3 iBgColor;',
+    'uniform vec2 iFlipA;',
+    'uniform vec2 iFlipB;',
     'float rayStrength(vec2 raySource,vec2 rayRefDirection,vec2 coord,float seedA,float seedB,float speed){',
     '  vec2 sourceToCoord=coord-raySource;',
     '  float cosAngle=dot(normalize(sourceToCoord),rayRefDirection);',
     '  return clamp((0.45+0.15*sin(cosAngle*seedA+iTime*speed))+(0.3+0.2*cos(-cosAngle*seedB+iTime*speed)),0.0,1.0)*',
     '    clamp((iResolution.x-length(sourceToCoord))/iResolution.x,0.5,1.0);',
     '}',
-    'void main(){',
+    // Returns the lit ray colour (rgb) and its visibility (a) for one corner.
+    'vec4 computeRays(vec2 flip){',
     '  vec2 fragCoord=gl_FragCoord.xy;',
-    '  if(iFlipX>0.5) fragCoord.x=iResolution.x-fragCoord.x;',
-    '  if(iFlipY>0.5) fragCoord.y=iResolution.y-fragCoord.y;',
+    '  if(flip.x>0.5) fragCoord.x=iResolution.x-fragCoord.x;',
+    '  if(flip.y>0.5) fragCoord.y=iResolution.y-fragCoord.y;',
     '  vec2 coord=vec2(fragCoord.x,iResolution.y-fragCoord.y);',
     '  vec2 rayPos=vec2(iResolution.x*1.1,-0.5*iResolution.y);',
     '  float tiltRad=iTilt*3.14159265/180.0;',
@@ -87,8 +104,16 @@
     '  color.rgb*=brightness;',
     '  float gray=dot(color.rgb,vec3(0.299,0.587,0.114));',
     '  color.rgb=mix(vec3(gray),color.rgb,iSaturation);',
-    '  color.a=max(color.r,max(color.g,color.b))*iOpacity;',
-    '  gl_FragColor=color;',
+    '  float a=max(color.r,max(color.g,color.b))*iOpacity;',
+    '  return vec4(color.rgb,clamp(a,0.0,1.0));',
+    '}',
+    'void main(){',
+    '  vec4 a=computeRays(iFlipA);',
+    '  vec4 b=computeRays(iFlipB);',
+    '  vec3 outc=iBgColor;',
+    '  outc=mix(outc,a.rgb,a.a);',
+    '  outc=mix(outc,b.rgb,b.a);',
+    '  gl_FragColor=vec4(outc,1.0);',
     '}'
   ].join('');
 
@@ -103,13 +128,16 @@
     return shader;
   }
 
-  function createLayer(opts) {
+  function createScene(opts) {
     var canvas = document.createElement('canvas');
     canvas.style.width = '100%';
     canvas.style.height = '100%';
     container.appendChild(canvas);
 
-    var gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: false });
+    // alpha:false → opaque canvas; we composite over the bg ourselves so the
+    // result is identical on desktop and mobile regardless of how the platform
+    // composites a transparent WebGL surface.
+    var gl = canvas.getContext('webgl', { alpha: false, antialias: false });
     if (!gl) return null;
 
     var vertShader = compileShader(gl, gl.VERTEX_SHADER, vertSrc);
@@ -131,7 +159,6 @@
     gl.enableVertexAttribArray(posLoc);
     gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
 
-    var flip = originToFlip(opts.origin);
     var uniforms = {
       iTime: gl.getUniformLocation(program, 'iTime'),
       iResolution: gl.getUniformLocation(program, 'iResolution'),
@@ -140,13 +167,14 @@
       iRayColor2: gl.getUniformLocation(program, 'iRayColor2'),
       iIntensity: gl.getUniformLocation(program, 'iIntensity'),
       iSpread: gl.getUniformLocation(program, 'iSpread'),
-      iFlipX: gl.getUniformLocation(program, 'iFlipX'),
-      iFlipY: gl.getUniformLocation(program, 'iFlipY'),
       iTilt: gl.getUniformLocation(program, 'iTilt'),
       iSaturation: gl.getUniformLocation(program, 'iSaturation'),
       iBlend: gl.getUniformLocation(program, 'iBlend'),
       iFalloff: gl.getUniformLocation(program, 'iFalloff'),
-      iOpacity: gl.getUniformLocation(program, 'iOpacity')
+      iOpacity: gl.getUniformLocation(program, 'iOpacity'),
+      iBgColor: gl.getUniformLocation(program, 'iBgColor'),
+      iFlipA: gl.getUniformLocation(program, 'iFlipA'),
+      iFlipB: gl.getUniformLocation(program, 'iFlipB')
     };
 
     gl.uniform1f(uniforms.iSpeed, opts.speed);
@@ -154,24 +182,32 @@
     gl.uniform3fv(uniforms.iRayColor2, hexToRgb(opts.rayColor2));
     gl.uniform1f(uniforms.iIntensity, opts.intensity);
     gl.uniform1f(uniforms.iSpread, opts.spread);
-    gl.uniform1f(uniforms.iFlipX, flip[0]);
-    gl.uniform1f(uniforms.iFlipY, flip[1]);
     gl.uniform1f(uniforms.iTilt, opts.tilt);
     gl.uniform1f(uniforms.iSaturation, opts.saturation);
     gl.uniform1f(uniforms.iBlend, opts.blend);
     gl.uniform1f(uniforms.iFalloff, opts.falloff);
     gl.uniform1f(uniforms.iOpacity, opts.opacity);
+    gl.uniform3fv(uniforms.iBgColor, bgColor());
+
+    function applyOrigins(origins) {
+      var fa = originToFlip(origins[0]);
+      var fb = originToFlip(origins[1]);
+      gl.useProgram(program);
+      gl.uniform2f(uniforms.iFlipA, fa[0], fa[1]);
+      gl.uniform2f(uniforms.iFlipB, fb[0], fb[1]);
+    }
+
+    applyOrigins(sideRaysOrigins(sideRaysIsRtl()));
 
     return {
       canvas: canvas,
       gl: gl,
       program: program,
       uniforms: uniforms,
-      setOrigin: function (origin) {
-        var nextFlip = originToFlip(origin);
+      setOrigins: applyOrigins,
+      updateBgColor: function () {
         gl.useProgram(program);
-        gl.uniform1f(uniforms.iFlipX, nextFlip[0]);
-        gl.uniform1f(uniforms.iFlipY, nextFlip[1]);
+        gl.uniform3fv(uniforms.iBgColor, bgColor());
       },
       updateSize: function () {
         var dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -187,24 +223,18 @@
         gl.uniform2f(uniforms.iResolution, canvas.width, canvas.height);
       },
       draw: function (t) {
-        gl.clearColor(0, 0, 0, 0);
-        gl.clear(gl.COLOR_BUFFER_BIT);
         gl.uniform1f(uniforms.iTime, t);
         gl.drawArrays(gl.TRIANGLES, 0, 3);
       }
     };
   }
 
-  var layers = sideRaysOrigins(sideRaysIsRtl()).map(function (origin) {
-    return createLayer(Object.assign({}, baseOpts, { origin: origin }));
-  }).filter(Boolean);
-
-  if (!layers.length) return;
+  var scene = createScene(baseOpts);
+  if (!scene) return;
 
   function syncSideRaysOrigins() {
-    sideRaysOrigins(sideRaysIsRtl()).forEach(function (origin, i) {
-      if (layers[i]) layers[i].setOrigin(origin);
-    });
+    scene.setOrigins(sideRaysOrigins(sideRaysIsRtl()));
+    scene.updateBgColor();
   }
   window._syncSideRaysOrigins = syncSideRaysOrigins;
 
@@ -212,12 +242,11 @@
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function updateSize() {
-    layers.forEach(function (layer) { layer.updateSize(); });
+    scene.updateSize();
   }
 
   function drawAll(t) {
-    var timeVal = reducedMotion ? 0 : t * 0.001;
-    layers.forEach(function (layer) { layer.draw(timeVal); });
+    scene.draw(reducedMotion ? 0 : t * 0.001);
   }
 
   function loop(t) {
