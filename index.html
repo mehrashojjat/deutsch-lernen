@@ -116,6 +116,7 @@
   <symbol id="icon-cat-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></symbol>
   <symbol id="icon-cat-map" viewBox="0 0 24 24"><path d="M8 4l-4 2v14l4-2 8 2 4-2V4l-4 2-8-2z"/><path d="M8 4v14"/><path d="M16 6v14"/></symbol>
   <symbol id="icon-cat-pencil" viewBox="0 0 24 24"><path d="M16 4l4 4-10 10H6v-4L16 4z"/><path d="M14 6l4 4"/></symbol>
+  <symbol id="icon-wifi-off" viewBox="0 0 24 24"><path d="M2 4l20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.5a10 10 0 0 1 4-2.43"/><path d="M2 8.8a15.5 15.5 0 0 1 5-3.1"/><path d="M12.5 5.04a15.5 15.5 0 0 1 9.5 3.76"/><path d="M16.7 11.27A10 10 0 0 1 19 12.5"/><path d="M12 20h.01"/></symbol>
 </svg>
 
 <!-- ══ PERSISTENT HEADER ══ -->
@@ -135,10 +136,12 @@
 
 <!-- ══ OFFLINE SCREEN ══ -->
 <div id="offline-screen" class="hidden">
-  <div style="font-size:2.5rem;line-height:1;">📡</div>
-  <h2 id="offline-title">You're Offline</h2>
-  <p id="offline-message">This app needs an internet connection to work.</p>
-  <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
+  <div class="offline-card glass glass-tile glass-highlight">
+    <div class="offline-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-wifi-off"/></svg></div>
+    <h2 id="offline-title">You're Offline</h2>
+    <p id="offline-message">This app needs an internet connection to work.</p>
+    <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
+  </div>
 </div>
 
 <!-- ══ APP DIALOG ══ -->

@@ -1019,12 +1019,14 @@ function showOfflineScreen() {
   window.APP_OFFLINE = true;
   var el = document.getElementById('offline-screen');
   if (el) el.classList.remove('hidden');
+  document.body.classList.add('app-offline');
 }
 
 function hideOfflineScreen() {
   window.APP_OFFLINE = false;
   var el = document.getElementById('offline-screen');
   if (el) el.classList.add('hidden');
+  document.body.classList.remove('app-offline');
   if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
 }
 
