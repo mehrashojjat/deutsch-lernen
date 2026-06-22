@@ -20,6 +20,7 @@
   function _els() {
     return {
       overlay: document.getElementById('app-dialog-overlay'),
+      scrim: document.getElementById('app-dialog-scrim'),
       panel: document.getElementById('app-dialog'),
       title: document.getElementById('app-dialog-title'),
       message: document.getElementById('app-dialog-message'),
@@ -34,10 +35,7 @@
     _open = false;
     var el = _els();
     if (el.overlay) el.overlay.classList.remove('open');
-    if (el.panel) {
-      el.panel.classList.remove('open');
-      el.panel.classList.remove('single');
-    }
+    if (el.panel) el.panel.classList.remove('single');
     document.body.style.overflow = '';
     if (_onKeyDown) {
       document.removeEventListener('keydown', _onKeyDown);
@@ -80,7 +78,6 @@
       _open = true;
       document.body.style.overflow = 'hidden';
       el.overlay.classList.add('open');
-      el.panel.classList.add('open');
 
       function finish(result) {
         if (result === 'primary' && typeof opts.onPrimary === 'function') {
@@ -93,7 +90,7 @@
 
       el.primary.onclick = function () { finish('primary'); };
       el.cancel.onclick = function () { finish('cancel'); };
-      el.overlay.onclick = function () { finish('cancel'); };
+      if (el.scrim) el.scrim.onclick = function () { finish('cancel'); };
       if (el.handle) el.handle.onclick = function () { finish('cancel'); };
       el.panel.onclick = function (e) { e.stopPropagation(); };
 
@@ -118,3 +115,5 @@
     }
   };
 })();
+
+

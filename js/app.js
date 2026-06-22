@@ -1,1417 +1,3 @@
-// ══════════════════════════════════════════════════════════════════
-//  UI STRINGS  (EN + TR)
-// ══════════════════════════════════════════════════════════════════
-const UI = {
-  en: {
-    headerSub: 'Adaptive quizzes · Practice · Learning profile',
-    settingsTitle: 'Settings',
-    langLabel: 'Language',
-    closeDone: 'Close',
-    rwBannerTitle: 'Word Explorer',
-    rwBannerSub: 'Open one word card instantly',
-    swipeBannerTitle: 'Quick Match',
-    swipeBannerSub: 'Swipe if the meaning matches',
-    selectLevel: 'Select Level',
-    levelNames: { A1:'Starter', A2:'Elementary', B1:'Intermediate', B2:'Upper-Intermediate' },
-    cardCount: (n) => formatNum(n) + ' word practice cards',
-    back: '← Back',
-    next: 'Next →',
-    correct: '✓ Correct!',
-    wrong: (a) => `✗ Wrong. Correct answer: <strong>${a}</strong>`,
-    resultTitles: { great:'Excellent!', good:'Well done!', ok:'Good effort!', low:'Keep practicing!' },
-    resultSub: (lv,p) => `Level ${lv} · ${formatNum(p)}% correct`,
-    scoreLbl: 'Score', correctLbl: 'Correct', wrongLbl: 'Wrong',
-    accountLabel: 'Account',
-    installTipTitle: 'Install the app',
-    installTipDesc: 'Install it on your home screen for faster access and an app-like experience.',
-    installGuideTitle: 'Install this app',
-    installGuideSub: 'Use these two quick steps to install the app on your home screen.',
-    installStep1Title: 'Open the Share menu',
-    installStep1Desc: 'Tap the Share button in your browser, or click here.',
-    installStep2Title: 'Choose Add to Home Screen',
-    installStep2Desc: 'In the menu that opens, tap Add to Home Screen, then confirm to install.',
-    installOpenShare: 'Open Share Menu',
-    installClose: 'Close',
-    tipTitle: 'Progress Not Saved',
-    tipDesc: 'Sign in to keep your learning history and quiz results.',
-    playAgain: 'Play again', chooseLevel: 'Back Home',
-    rwTitle: 'Word Explorer',
-    cases: 'Cases (Kasus)', plural: 'Plural',
-    presentTense: 'Präsens (Present)', pastSimple: 'Präteritum (Simple Past)', perfekt: 'Perfekt',
-    comparatives: 'Komparativ & Superlativ', adjEndings: 'Adjective Endings (Nom.)', examples: 'Examples',
-    source: 'Source: Goethe-Institut word list',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'Word Practice',
-    meaning: 'Meaning',
-    tapPrompt: '👆 Tap any form above to see an example sentence.',
-    noExample: 'No example available.',
-    quizQuestion: 'What does this word mean?',
-    swipeSetupTitle: 'Quick Match',
-    swipeSetupSub: '',
-    prepareTen: 'Start',
-    swipeSubtitle: 'Swipe if the meaning matches',
-    swipeMeaningLabel: 'Meaning',
-    swipeEmptyTitle: 'Deck finished',
-    swipeEmptySub: 'Prepare another batch to continue swiping.',
-    swipeToastGoodMatch: 'Correct',
-    swipeToastGoodMiss: 'Correct',
-    swipeToastBadMatch: 'Wrong',
-    swipeToastBadMiss: 'Wrong',
-    levelLabel: 'Level',
-    wiktSource: 'Source',
-    meanings: 'Meanings',
-    autoTranslated: 'Auto-translated',
-    offlineNote: 'ⓘ Offline data · Wiktionary unreachable',
-    aboutBtn: 'ℹ️ About',
-    aboutTitle: 'About',
-    aboutClose: 'Close',
-    aboutP1: 'I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.',
-    aboutP2html: 'Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.',
-    aboutP3html: 'Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.',
-    aboutP4: 'Originally named DeutschLernen during early development.',
-    footerMsg: 'Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'Adaptive Quiz',
-    adaptiveBannerSub: 'Adjusts to your skill level',
-    adaptiveV2BannerTitle: 'Adaptive V2 (Beta)',
-    adaptiveV2BannerSub: 'Gets smarter as you learn',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'Calibration · step 1 of 2',
-    adaptiveV2StatusCal2: 'Calibration · step 2 of 2',
-    adaptiveV2StatusSkill: (n) => 'Your skill level: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'Review mode',
-    adaptiveV2PhaseChallenge: 'Challenge mode',
-    learningProfileBannerTitle: 'Learning Profile',
-    rushBannerTitle: 'Rush Mode',
-    rushBannerSub: 'Continuous challenge mode · quit anytime',
-    rushBannerSubGuest: 'Sign in to play · Continuous challenge mode',
-    dialogCancel: 'Cancel',
-    dialogOk: 'OK',
-    rushSignInTitle: 'Sign in required',
-    rushSignInMessage: 'Sign in to play Rush Mode.',
-    rushSignInPrimary: 'Sign in',
-    rushCalTitle: 'Assessment required',
-    rushCalMessage: 'Complete your level assessment in Adaptive V2 before starting Rush Mode.',
-    rushCalPrimary: 'Start assessment',
-    quizExitTitle: 'Leave quiz?',
-    quizExitMessage: 'Your answers in this quiz won\'t be saved.',
-    quizExitLeave: 'Leave quiz',
-    quizExitStay: 'Keep playing',
-    quizExitRushTitle: 'End Rush session?',
-    quizExitRushMessage: 'Your session will end.',
-    quizExitRushLeave: 'End session',
-    rushBadge: 'Rush Mode',
-    rushSummaryTitle: 'Rush complete',
-    rushSummaryRecord: 'New personal best!',
-    rushSummaryAgain: 'Rush again',
-    rushSummaryHome: 'Back Home',
-    rushLblScore: 'Score',
-    rushLblCorrect: 'Correct',
-    rushLblWrong: 'Wrong',
-    rushLblStreak: 'Best streak',
-    rushLblTime: 'Study time',
-    learningProfileTitle: 'Learning Profile',
-    adaptiveSetupTitle: 'Adaptive Quiz',
-    adaptiveSetupSubtitle: 'Adjusts difficulty to your skill level',
-    themeBannerTitle: 'Theme Quiz',
-    themeBannerSub: 'Quiz yourself on a topic',
-    themeSelectTitle: 'Theme Quiz',
-    themeSelectSubtitle: 'Pick a topic to practise',
-    dictBannerTitle: 'Dictionary',
-    dictBannerSub: 'Browse all words',
-    dictScreenTitle: 'Dictionary',
-    dictScreenSubtitle: 'All words',
-    dictBack: '← Back',
-    dictFilterPlaceholder: 'Filter words…',
-    dictLoading: 'Loading…',
-    dictEmpty: 'No words found.',
-    typeBadge: { Noun: 'Noun', Verb: 'Verb', Adjective: 'Adjective', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Word' },
-    signedInAs: 'Signed in as:',
-    signOut: 'Sign out',
-    categoryNames: {1:'Numbers & Quantities',2:'Time & Calendar',3:'Family & Relationships',4:'Body & Health',5:'Food & Drink',6:'Home & Living',7:'Clothing & Appearance',8:'Work & Careers',9:'Education & Learning',10:'Travel & Tourism',11:'Transportation',12:'Shopping & Finance',13:'Language, Communication & Media',14:'Nature, Weather & Animals',15:'Sports & Leisure',16:'Arts & Culture',17:'Technology & Devices',18:'Society, Law & Politics',19:'Emotions & Personal Traits',20:'Places & Geography',21:'Grammar & Function Words'},
-    practiceBannerTitle: 'Practice',
-    practiceBannerSub: 'Flip cards to learn words',
-    practiceSetupTitle: 'Practice',
-    practiceSetupSub: '',
-    practiceSubtitle: 'Flip cards to reveal meanings',
-    practiceMeaningLabel: 'Meaning',
-    practiceFilterDifficulty: 'Difficulty',
-    practiceFilterType: 'Word type',
-    practiceFilterArticle: 'Article (nouns)',
-    practiceFilterTopics: 'Topics',
-    practiceFilterAll: 'All',
-    practiceClearFilters: 'Clear filters',
-    practiceWordCount: 'words in your loop',
-    practiceNoWordsHint: 'No words match — try another level or loosen filters.',
-    offlineTitle: "You're Offline",
-    offlineMessage: 'This app needs an internet connection to work.',
-    offlineRefreshBtn: 'Refresh',
-    offlineChecking: 'Checking…',
-    practiceDoneTitle: 'All done',
-    practiceDoneSub: 'Loading next difficulty…',
-    errLoadQuiz: 'Could not load quiz data.',
-    errLoadQuizLevel: (lv) => 'Could not load ' + lv + ' quiz data.',
-    errNoCards: 'No cards!',
-    errNoWords: 'No words available!',
-    errNoWordsTopic: 'Not enough words available for this topic yet!',
-    errCompleteAdaptiveFirst: 'Complete an adaptive quiz first so your review set has words to use.',
-    errSwipePrepare: 'Could not prepare swipe cards.',
-    errNoPracticeCards: 'No practice cards found.',
-    errLoadPractice: 'Could not load practice data.',
-    errFileProtocol: ' Run npm run dev from the repo root (https://localhost:3000), not file://.',
-    adaptiveV2Badge: 'Adaptive V2',
-    adaptiveV2ReviewLabel: 'B1 Review',
-    adaptiveV2ChallengeLabel: 'Challenge',
-    shareSectionLabel: 'Share this app',
-    shareAppLabel: 'Share',
-    copyLinkLabel: 'Copy link',
-    linkCopied: 'Link copied',
-    shareUnavailable: 'Share unavailable',
-    shareFailed: 'Share failed',
-    rwTapFormHint: 'Tap a form to see an example',
-  },
-  de: {
-    headerSub: 'Adaptive Quiz · Üben · Lernprofil',
-    settingsTitle: 'Einstellungen',
-    langLabel: 'Sprache',
-    closeDone: 'Schließen',
-    rwBannerTitle: 'Wort-Explorer',
-    rwBannerSub: 'Jedes Wort mit allen Formen, Fällen und Beispielen ansehen',
-    swipeBannerTitle: 'Quick Match',
-    swipeBannerSub: 'Wische, wenn die Bedeutung passt',
-    selectLevel: 'Niveau wählen',
-    levelNames: { A1:'Anfänger', A2:'Grundstufe', B1:'Mittelstufe', B2:'Obere Mittelstufe' },
-    cardCount: (n) => formatNum(n) + ' Lernkarten',
-    back: '← Zurück',
-    next: 'Weiter →',
-    correct: '✓ Richtig!',
-    wrong: (a) => `✗ Falsch. Richtige Antwort: <strong>${a}</strong>`,
-    resultTitles: { great:'Ausgezeichnet!', good:'Gut gemacht!', ok:'Guter Versuch!', low:'Weiter üben!' },
-    resultSub: (lv,p) => `Niveau ${lv} · ${formatNum(p)}% richtig`,
-    scoreLbl: 'Punkte', correctLbl: 'Richtig', wrongLbl: 'Falsch',
-    accountLabel: 'Konto',
-    installTipTitle: 'App installieren',
-    installTipDesc: 'Auf dem Startbildschirm installieren für schnelleren Zugriff und ein App-ähnliches Erlebnis.',
-    installGuideTitle: 'Diese App installieren',
-    installGuideSub: 'Zwei einfache Schritte zur Installation auf dem Startbildschirm.',
-    installStep1Title: 'Teilen-Menü öffnen',
-    installStep1Desc: 'Auf die Teilen-Schaltfläche im Browser tippen oder hier klicken.',
-    installStep2Title: '„Zum Home-Bildschirm" wählen',
-    installStep2Desc: 'Im Menü „Zum Home-Bildschirm hinzufügen" antippen und bestätigen.',
-    installOpenShare: 'Teilen-Menü öffnen',
-    installClose: 'Schließen',
-    tipTitle: 'Fortschritt nicht gespeichert',
-    tipDesc: 'Melde dich an, um deinen Lernverlauf und Quiz-Ergebnisse zu behalten.',
-    playAgain: 'Nochmal spielen', chooseLevel: 'Zur Startseite',
-    rwTitle: 'Wort-Explorer',
-    cases: 'Fälle (Kasus)', plural: 'Plural',
-    presentTense: 'Präsens', pastSimple: 'Präteritum', perfekt: 'Perfekt',
-    comparatives: 'Komparativ & Superlativ', adjEndings: 'Adjektivendungen (Nom.)', examples: 'Beispiele',
-    source: 'Quelle: Goethe-Institut Wortliste',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'Wortübung',
-    meaning: 'Bedeutung',
-    tapPrompt: '👆 Auf eine Form oben tippen, um einen Beispielsatz zu sehen.',
-    noExample: 'Kein Beispiel verfügbar.',
-    quizQuestion: 'Was bedeutet dieses Wort?',
-    swipeSetupTitle: 'Quick Match',
-    swipeSetupSub: '',
-    prepareTen: 'Starten',
-    swipeSubtitle: 'Wische, wenn die Bedeutung passt',
-    swipeMeaningLabel: 'Bedeutung',
-    swipeEmptyTitle: 'Stapel beendet',
-    swipeEmptySub: 'Neue Runde starten, um weiterzumachen.',
-    swipeToastGoodMatch: 'Richtig',
-    swipeToastGoodMiss: 'Richtig',
-    swipeToastBadMatch: 'Falsch',
-    swipeToastBadMiss: 'Falsch',
-    levelLabel: 'Niveau',
-    wiktSource: 'Quelle',
-    meanings: 'Bedeutungen',
-    autoTranslated: 'Automatisch übersetzt',
-    offlineNote: 'ⓘ Offline-Daten · Wiktionary nicht erreichbar',
-    aboutBtn: 'ℹ️ Über',
-    aboutTitle: 'Über',
-    aboutClose: 'Schließen',
-    aboutP1: 'Ich habe diese kostenlose Vokabel-App für mich selbst gebaut — adaptive Quiz, Übungsmodi und ein optionales Lernprofil mit Cloud-Sync. Keine Bezahlschranken; offen für alle Deutschlernenden.',
-    aboutP2html: 'Erstellt von <strong>Mehras Hojjat</strong>. Für Funktionswünsche oder Feedback auf <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> oder <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
-    aboutP3html: 'Wortlisten von <strong>Goethe-Institut</strong> · Übersetzungen via <strong>MyMemory API</strong> · Open Source auf <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Erstellt mit <strong>Claude AI</strong>.',
-    aboutP4: 'In der frühen Entwicklungsphase unter dem Namen DeutschLernen bekannt.',
-    footerMsg: 'Hallo! Ich habe das für mein eigenes Deutschlernen gebaut — hoffe, es hilft dir auch. Komplett kostenlos 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'Adaptives Quiz',
-    adaptiveBannerSub: 'Passt sich deinem Niveau an',
-    adaptiveV2BannerTitle: 'Adaptiv V2 (Beta)',
-    adaptiveV2BannerSub: 'Wird schlauer, während du lernst',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'Kalibrierung · Schritt 1 von 2',
-    adaptiveV2StatusCal2: 'Kalibrierung · Schritt 2 von 2',
-    adaptiveV2StatusSkill: (n) => 'Dein Niveau: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'Wiederholmodus',
-    adaptiveV2PhaseChallenge: 'Herausforderungsmodus',
-    learningProfileBannerTitle: 'Lernprofil',
-    rushBannerTitle: 'Rush-Modus',
-    rushBannerSub: 'Dauerhafter Herausforderungsmodus · jederzeit beenden',
-    rushBannerSubGuest: 'Zum Spielen anmelden · Dauerhafter Herausforderungsmodus',
-    dialogCancel: 'Abbrechen',
-    dialogOk: 'OK',
-    rushSignInTitle: 'Anmeldung erforderlich',
-    rushSignInMessage: 'Bitte melde dich an, um den Rush-Modus zu spielen.',
-    rushSignInPrimary: 'Anmelden',
-    rushCalTitle: 'Niveubestimmung erforderlich',
-    rushCalMessage: 'Schließe zuerst die Niveubestimmung in Adaptiv V2 ab, bevor du den Rush-Modus startest.',
-    rushCalPrimary: 'Bestimmung starten',
-    quizExitTitle: 'Quiz verlassen?',
-    quizExitMessage: 'Deine Antworten in diesem Quiz werden nicht gespeichert.',
-    quizExitLeave: 'Quiz verlassen',
-    quizExitStay: 'Weiterspielen',
-    quizExitRushTitle: 'Rush-Sitzung beenden?',
-    quizExitRushMessage: 'Deine Sitzung endet.',
-    quizExitRushLeave: 'Sitzung beenden',
-    rushBadge: 'Rush-Modus',
-    rushSummaryTitle: 'Rush beendet',
-    rushSummaryRecord: 'Neuer persönlicher Rekord!',
-    rushSummaryAgain: 'Nochmal',
-    rushSummaryHome: 'Zur Startseite',
-    rushLblScore: 'Ergebnis',
-    rushLblCorrect: 'Richtig',
-    rushLblWrong: 'Falsch',
-    rushLblStreak: 'Beste Serie',
-    rushLblTime: 'Lernzeit',
-    learningProfileTitle: 'Lernprofil',
-    adaptiveSetupTitle: 'Adaptives Quiz',
-    adaptiveSetupSubtitle: 'Schwierigkeit passt sich deinem Niveau an',
-    themeBannerTitle: 'Themen-Quiz',
-    themeBannerSub: 'Über ein Thema testen',
-    themeSelectTitle: 'Themen-Quiz',
-    themeSelectSubtitle: 'Thema zum Üben wählen',
-    dictBannerTitle: 'Wörterbuch',
-    dictBannerSub: 'Alle Wörter durchsuchen',
-    dictScreenTitle: 'Wörterbuch',
-    dictScreenSubtitle: 'Alle Wörter',
-    dictBack: '← Zurück',
-    dictFilterPlaceholder: 'Wörter filtern…',
-    dictLoading: 'Wird geladen…',
-    dictEmpty: 'Keine Wörter gefunden.',
-    typeBadge: { Noun: 'Nomen', Verb: 'Verb', Adjective: 'Adjektiv', Phrase: 'Phrase', Adverb: 'Adverb', Word: 'Wort' },
-    signedInAs: 'Angemeldet als:',
-    signOut: 'Abmelden',
-    practiceBannerTitle: 'Üben',
-    practiceBannerSub: 'Karten umdrehen und Wörter lernen',
-    practiceSetupTitle: 'Üben',
-    practiceSetupSub: '',
-    practiceSubtitle: 'Karte umdrehen, um die Bedeutung zu sehen',
-    practiceMeaningLabel: 'Bedeutung',
-    practiceFilterDifficulty: 'Schwierigkeit',
-    practiceFilterType: 'Wortart',
-    practiceFilterArticle: 'Artikel (Nomen)',
-    practiceFilterTopics: 'Themen',
-    practiceFilterAll: 'Alle',
-    practiceClearFilters: 'Filter löschen',
-    practiceWordCount: 'Wörter in deiner Runde',
-    practiceNoWordsHint: 'Keine Wörter passen — anderes Niveau oder weniger Filter.',
-    offlineTitle: 'Kein Internet',
-    offlineMessage: 'Diese App benötigt eine Internetverbindung.',
-    offlineRefreshBtn: 'Neu laden',
-    offlineChecking: 'Prüfen…',
-    practiceDoneTitle: 'Fertig',
-    practiceDoneSub: 'Nächste Schwierigkeit wird geladen…',
-    errLoadQuiz: 'Quiz-Daten konnten nicht geladen werden.',
-    errLoadQuizLevel: (lv) => lv + '-Quiz-Daten konnten nicht geladen werden.',
-    errNoCards: 'Keine Karten!',
-    errNoWords: 'Keine Wörter verfügbar!',
-    errNoWordsTopic: 'Für dieses Thema noch nicht genug Wörter.',
-    errCompleteAdaptiveFirst: 'Zuerst ein adaptives Quiz absolvieren, damit Wörter zum Wiederholen vorhanden sind.',
-    errSwipePrepare: 'Swipe-Karten konnten nicht vorbereitet werden.',
-    errNoPracticeCards: 'Keine Übungskarten gefunden.',
-    errLoadPractice: 'Übungsdaten konnten nicht geladen werden.',
-    errFileProtocol: ' npm run dev im Repo-Root ausführen (https://localhost:3000), nicht file://.',
-    adaptiveV2Badge: 'Adaptiv V2',
-    adaptiveV2ReviewLabel: 'B1-Wiederholung',
-    adaptiveV2ChallengeLabel: 'Herausforderung',
-    shareSectionLabel: 'App teilen',
-    shareAppLabel: 'Teilen',
-    copyLinkLabel: 'Link kopieren',
-    linkCopied: 'Link kopiert',
-    shareUnavailable: 'Teilen nicht verfügbar',
-    shareFailed: 'Teilen fehlgeschlagen',
-    rwTapFormHint: 'Form antippen für ein Beispiel',
-    categoryNames: {1:'Zahlen & Mengen',2:'Zeit & Kalender',3:'Familie & Beziehungen',4:'Körper & Gesundheit',5:'Essen & Trinken',6:'Zuhause & Wohnen',7:'Kleidung & Aussehen',8:'Arbeit & Karriere',9:'Bildung & Lernen',10:'Reisen & Tourismus',11:'Verkehr & Transport',12:'Einkaufen & Finanzen',13:'Sprache, Kommunikation & Medien',14:'Natur, Wetter & Tiere',15:'Sport & Freizeit',16:'Kunst & Kultur',17:'Technologie & Geräte',18:'Gesellschaft, Recht & Politik',19:'Gefühle & Charaktereigenschaften',20:'Orte & Geografie',21:'Grammatik & Funktionswörter'},
-  },
-  tr: {
-    headerSub: 'Uyarlanabilir quiz · Pratik · Öğrenme profili',
-    settingsTitle: 'Ayarlar',
-    langLabel: 'Dil',
-    closeDone: 'Kapat',
-    rwBannerTitle: 'Rastgele Kelime Keşfi',
-    rwBannerSub: 'Her kelimenin tüm hâllerini, çekimlerini ve örneklerini gör',
-    swipeBannerTitle: 'Hızlı Eşleştirme',
-    swipeBannerSub: 'Anlam eşleşiyorsa kaydır',
-    selectLevel: 'Seviye Seç',
-    levelNames: { A1:'Başlangıç', A2:'Temel', B1:'Orta', B2:'Üst-Orta' },
-    cardCount: (n) => formatNum(n) + ' kelime pratiği kartı',
-    back: '← Geri',
-    next: 'Sonraki →',
-    correct: '✓ Doğru!',
-    wrong: (a) => `✗ Yanlış. Doğru cevap: <strong>${a}</strong>`,
-    resultTitles: { great:'Mükemmel!', good:'Çok iyi!', ok:'Güzel deneme!', low:'Pratik yapmaya devam!' },
-    resultSub: (lv,p) => `Seviye ${lv} · %${formatNum(p)} doğru`,
-    scoreLbl: 'Puan', correctLbl: 'Doğru', wrongLbl: 'Yanlış',
-    accountLabel: 'Hesap',
-    installTipTitle: 'Uygulamayı yükle',
-    installTipDesc: 'Daha hızlı erişim ve uygulama deneyimi için ana ekranınıza yükleyin.',
-    installGuideTitle: 'Bu uygulamayı yükle',
-    installGuideSub: 'Uygulamayı ana ekranınıza eklemek için bu iki hızlı adımı izleyin.',
-    installStep1Title: 'Paylaş menüsünü aç',
-    installStep1Desc: 'Tarayıcınızdaki Paylaş düğmesine dokunun veya buraya tıklayın.',
-    installStep2Title: 'Ana Ekrana Ekle\'yi seç',
-    installStep2Desc: 'Açılan menüden Ana Ekrana Ekle\'ye dokunun ve onaylayın.',
-    installOpenShare: 'Paylaş menüsünü aç',
-    installClose: 'Kapat',
-    tipTitle: 'İlerleme kaydedilmedi',
-    tipDesc: 'Öğrenme geçmişinizi ve quiz sonuçlarınızı korumak için giriş yapın.',
-    playAgain: 'Tekrar oyna', chooseLevel: 'Ana Sayfaya Dön',
-    rwTitle: 'Kelime Keşfi',
-    cases: 'Hâller (Kasus)', plural: 'Çoğul',
-    presentTense: 'Präsens (Şimdiki)', pastSimple: 'Präteritum (Geçmiş)', perfekt: 'Perfekt',
-    comparatives: 'Karşılaştırma & Üstünlük', adjEndings: 'Sıfat Ekleri (Nom.)', examples: 'Örnekler',
-    source: 'Kaynak: Goethe-Enstitüsü kelime listesi',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'Kelime Pratiği',
-    meaning: 'Anlam',
-    tapPrompt: '👆 Örnek cümle görmek için yukarıdaki bir biçime dokun.',
-    noExample: 'Örnek bulunamadı.',
-    quizQuestion: 'Bu kelimenin anlamı nedir?',
-    swipeSetupTitle: 'Hızlı Eşleştirme',
-    swipeSetupSub: '',
-    prepareTen: 'Başlat',
-    swipeSubtitle: 'Anlam eşleşiyorsa kaydır',
-    swipeMeaningLabel: 'Anlam',
-    swipeEmptyTitle: 'Kartlar bitti',
-    swipeEmptySub: 'Devam etmek için yeni bir seri başlat.',
-    swipeToastGoodMatch: 'Doğru',
-    swipeToastGoodMiss: 'Doğru',
-    swipeToastBadMatch: 'Yanlış',
-    swipeToastBadMiss: 'Yanlış',
-    levelLabel: 'Seviye',
-    wiktSource: 'Kaynak',
-    meanings: 'Anlamlar',
-    autoTranslated: 'Otomatik çevrildi',
-    offlineNote: 'ⓘ Çevrimdışı veri · Wiktionary erişilemiyor',
-    aboutBtn: 'ℹ️ Hakkında',
-    aboutTitle: 'Hakkında',
-    aboutClose: 'Kapat',
-    aboutP1: 'Bu ücretsiz kelime uygulamasını kendim için yaptım — uyarlanabilir quizler, pratik modları ve isteğe bağlı bulut senkronlu öğrenme profili. Ücret yok; Almanca öğrenen herkese açık.',
-    aboutP2html: 'Yapımcı: <strong>Mehras Hojjat</strong>. Özellik istekleri veya geri bildirim için <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> ya da <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>\'dan ulaşabilirsiniz.',
-    aboutP3html: 'Kelime listeleri: <strong>Goethe-Institut</strong> · Çeviriler: <strong>MyMemory API</strong> · Açık kaynak: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · <strong>Claude AI</strong> ile yapıldı.',
-    aboutP4: 'Erken geliştirme döneminde DeutschLernen adıyla biliniyordu.',
-    footerMsg: 'Merhaba! Bunu Almanca öğrenirken kendim için yaptım — umarım sana da yardımcı olur. Tamamen ücretsiz 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'Uyarlamalı Sınav',
-    adaptiveBannerSub: 'Seviyenize göre ayarlanır',
-    adaptiveV2BannerTitle: 'Uyarlamalı V2 (Beta)',
-    adaptiveV2BannerSub: 'Öğrendikçe daha akıllı hale gelir',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'Kalibrasyon · adım 1 / 2',
-    adaptiveV2StatusCal2: 'Kalibrasyon · adım 2 / 2',
-    adaptiveV2StatusSkill: (n) => 'Seviyeniz: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'Tekrar modu',
-    adaptiveV2PhaseChallenge: 'Meydan okuma modu',
-    learningProfileBannerTitle: 'Öğrenme Profili',
-    rushBannerTitle: 'Rush Modu',
-    rushBannerSub: 'Kesintisiz meydan okuma · istediğin zaman bırak',
-    rushBannerSubGuest: 'Oynamak için giriş yap · Kesintisiz meydan okuma',
-    dialogCancel: 'İptal',
-    dialogOk: 'Tamam',
-    rushSignInTitle: 'Giriş gerekli',
-    rushSignInMessage: 'Rush Modunu oynamak için giriş yapmalısın.',
-    rushSignInPrimary: 'Giriş yap',
-    rushCalTitle: 'Seviye belirleme gerekli',
-    rushCalMessage: 'Rush Moduna başlamadan önce Uyarlamalı V2 ile seviye belirlemesini tamamla.',
-    rushCalPrimary: 'Belirlemeyi başlat',
-    quizExitTitle: 'Quizden çık?',
-    quizExitMessage: 'Bu quizdeki cevapların kaydedilmeyecek.',
-    quizExitLeave: 'Quizden çık',
-    quizExitStay: 'Oynamaya devam',
-    quizExitRushTitle: 'Rush oturumunu bitir?',
-    quizExitRushMessage: 'Oturumun sona erecek.',
-    quizExitRushLeave: 'Oturumu bitir',
-    rushBadge: 'Rush Modu',
-    rushSummaryTitle: 'Rush bitti',
-    rushSummaryRecord: 'Yeni kişisel rekor!',
-    rushSummaryAgain: 'Tekrar Rush',
-    rushSummaryHome: 'Ana sayfa',
-    rushLblScore: 'Skor',
-    rushLblCorrect: 'Doğru',
-    rushLblWrong: 'Yanlış',
-    rushLblStreak: 'En iyi seri',
-    rushLblTime: 'Çalışma süresi',
-    learningProfileTitle: 'Öğrenme Profili',
-    adaptiveSetupTitle: 'Uyarlamalı Sınav',
-    adaptiveSetupSubtitle: 'Zorluk seviyenize göre ayarlanır',
-    themeBannerTitle: 'Konu Sınavı',
-    themeBannerSub: 'Bir konuyu seçerek test edin',
-    themeSelectTitle: 'Konu Sınavı',
-    themeSelectSubtitle: 'Çalışmak istediğiniz konuyu seçin',
-    dictBannerTitle: 'Sözlük',
-    dictBannerSub: 'Tüm kelimelere göz at',
-    dictScreenTitle: 'Sözlük',
-    dictScreenSubtitle: 'Tüm kelimeler',
-    dictBack: '← Geri',
-    dictFilterPlaceholder: 'Kelime ara…',
-    dictLoading: 'Yükleniyor…',
-    dictEmpty: 'Kelime bulunamadı.',
-    typeBadge: { Noun: 'İsim', Verb: 'Fiil', Adjective: 'Sıfat', Phrase: 'Deyim', Adverb: 'Zarf', Word: 'Kelime' },
-    signedInAs: 'Giriş yapıldı:',
-    signOut: 'Çıkış yap',
-    categoryNames: {1:'Sayılar ve Miktarlar',2:'Zaman ve Takvim',3:'Aile ve İlişkiler',4:'Vücut ve Sağlık',5:'Yiyecek ve İçecek',6:'Ev ve Yaşam',7:'Giyim ve Görünüm',8:'İş ve Kariyer',9:'Eğitim ve Öğrenim',10:'Seyahat ve Turizm',11:'Ulaşım',12:'Alışveriş ve Finans',13:'Dil, İletişim ve Medya',14:'Doğa, Hava ve Hayvanlar',15:'Spor ve Boş Zaman',16:'Sanat ve Kültür',17:'Teknoloji ve Cihazlar',18:'Toplum, Hukuk ve Siyaset',19:'Duygular ve Kişilik Özellikleri',20:'Yerler ve Coğrafya',21:'Dilbilgisi ve İşlev Sözcükleri'},
-    practiceBannerTitle: 'Pratik',
-    practiceBannerSub: 'Kartları çevirerek kelime öğren',
-    practiceSetupTitle: 'Pratik',
-    practiceSetupSub: '',
-    practiceSubtitle: 'Anlamı görmek için kartı çevir',
-    practiceMeaningLabel: 'Anlam',
-    practiceFilterDifficulty: 'Zorluk',
-    practiceFilterType: 'Kelime türü',
-    practiceFilterArticle: 'Tanımlık (isimler)',
-    practiceFilterTopics: 'Konular',
-    practiceFilterAll: 'Tümü',
-    practiceClearFilters: 'Filtreleri temizle',
-    practiceWordCount: 'turundaki kelime',
-    practiceNoWordsHint: 'Eşleşen kelime yok — seviye veya filtreleri değiştirin.',
-    offlineTitle: 'Çevrimedışısınız',
-    offlineMessage: 'Bu uygulama çalışmak için internet bağlantısı gerektirir.',
-    offlineRefreshBtn: 'Yenile',
-    offlineChecking: 'Kontrol ediliyor…',
-    practiceDoneTitle: 'Tamamlandı',
-    practiceDoneSub: 'Sonraki zorluk yükleniyor…',
-    errLoadQuiz: 'Quiz verileri yüklenemedi.',
-    errLoadQuizLevel: (lv) => lv + ' quiz verileri yüklenemedi.',
-    errNoCards: 'Kart yok!',
-    errNoWords: 'Kelime bulunamadı!',
-    errNoWordsTopic: 'Bu konu için henüz yeterli kelime yok.',
-    errCompleteAdaptiveFirst: 'Tekrar setinizde kelime olması için önce uyarlamalı bir quiz tamamlayın.',
-    errSwipePrepare: 'Kaydırma kartları hazırlanamadı.',
-    errNoPracticeCards: 'Pratik kartı bulunamadı.',
-    errLoadPractice: 'Pratik verileri yüklenemedi.',
-    errFileProtocol: ' Repo kökünden npm run dev çalıştırın (https://localhost:3000), file:// değil.',
-    adaptiveV2Badge: 'Uyarlamalı V2',
-    adaptiveV2ReviewLabel: 'B1 Tekrar',
-    adaptiveV2ChallengeLabel: 'Meydan okuma',
-    shareSectionLabel: 'Bu uygulamayı paylaş',
-    shareAppLabel: 'Paylaş',
-    copyLinkLabel: 'Bağlantıyı kopyala',
-    linkCopied: 'Bağlantı kopyalandı',
-    shareUnavailable: 'Paylaşım kullanılamıyor',
-    shareFailed: 'Paylaşım başarısız',
-    rwTapFormHint: 'Örnek için bir biçime dokun',
-  },
-  fa: {
-    headerSub: 'آزمون تطبیقی · تمرین · پروفایل یادگیری',
-    settingsTitle: 'تنظیمات',
-    langLabel: 'زبان',
-    closeDone: 'بستن',
-    rwBannerTitle: 'کاوشگر واژه تصادفی',
-    rwBannerSub: 'هر واژه را با تمام حالت‌ها، صرف‌ها و مثال‌هایش ببین',
-    swipeBannerTitle: 'تطبیق سریع',
-    swipeBannerSub: 'اگر معنی درست است، بکش',
-    selectLevel: 'انتخاب سطح',
-    levelNames: { A1:'مبتدی', A2:'پایه', B1:'متوسط', B2:'بالاتر از متوسط' },
-    cardCount: (n) => formatNum(n) + ' کارت تمرین واژگان',
-    back: '→ بازگشت',
-    next: 'بعدی ←',
-    correct: '✓ درست!',
-    wrong: (a) => `✗ اشتباه. جواب درست: <strong>${a}</strong>`,
-    resultTitles: { great:'عالی!', good:'خیلی خوب!', ok:'تلاش خوبی بود!', low:'به تمرین ادامه بده!' },
-    resultSub: (lv,p) => `سطح ${lv} · ${formatNum(p)}٪ درست`,
-    scoreLbl: 'امتیاز', correctLbl: 'درست', wrongLbl: 'اشتباه',
-    accountLabel: 'حساب کاربری',
-    installTipTitle: 'نصب برنامه',
-    installTipDesc: 'برای دسترسی سریع‌تر و تجربه‌ای روان‌تر، روی صفحه اصلی نصب کنید.',
-    installGuideTitle: 'این برنامه را نصب کنید',
-    installGuideSub: 'برای نصب برنامه روی صفحهٔ اصلی این دو گام ساده را انجام دهید.',
-    installStep1Title: 'منوی اشتراک‌گذاری را باز کنید',
-    installStep1Desc: 'روی دکمهٔ اشتراک‌گذاری در مرورگر بزنید یا اینجا کلیک کنید.',
-    installStep2Title: '«Add to Home Screen» را انتخاب کنید',
-    installStep2Desc: 'در منوی بازشده «Add to Home Screen» را بزنید و تأیید کنید.',
-    installOpenShare: 'باز کردن منوی اشتراک‌گذاری',
-    installClose: 'بستن',
-    tipTitle: 'پیشرفت ذخیره نشده',
-    tipDesc: 'برای حفظ تاریخچهٔ یادگیری و نتایج آزمون وارد شوید.',
-    playAgain: 'دوباره بازی کن', chooseLevel: 'بازگشت به خانه',
-    rwTitle: 'کاوشگر واژه',
-    cases: 'حالت‌ها (Kasus)', plural: 'جمع',
-    presentTense: 'Präsens (حال)', pastSimple: 'Präteritum (گذشته ساده)', perfekt: 'Perfekt',
-    comparatives: 'تفضیلی و عالی', adjEndings: 'پسوندهای صفت (Nom.)', examples: 'مثال‌ها',
-    source: 'منبع: فهرست واژگان مؤسسه گوته',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'تمرین واژگان',
-    meaning: 'معنی',
-    tapPrompt: '👆 برای مشاهده جمله نمونه روی یک شکل بالا ضربه بزنید.',
-    noExample: 'نمونه‌ای موجود نیست.',
-    quizQuestion: 'این کلمه چه معنایی دارد؟',
-    swipeSetupTitle: 'تطبیق سریع',
-    swipeSetupSub: '',
-    prepareTen: 'شروع',
-    swipeSubtitle: 'اگر معنی درست است، بکش',
-    swipeMeaningLabel: 'معنی',
-    swipeEmptyTitle: 'کارت‌ها تمام شد',
-    swipeEmptySub: 'برای ادامه یک دسته جدید شروع کنید.',
-    swipeToastGoodMatch: 'درست',
-    swipeToastGoodMiss: 'درست',
-    swipeToastBadMatch: 'اشتباه',
-    swipeToastBadMiss: 'اشتباه',
-    levelLabel: 'سطح',
-    wiktSource: 'منبع',
-    meanings: 'معانی',
-    autoTranslated: 'ترجمه خودکار',
-    offlineNote: 'ⓘ داده آفلاین · Wiktionary در دسترس نیست',
-    aboutBtn: 'ℹ️ درباره',
-    aboutTitle: 'درباره',
-    aboutClose: 'بستن',
-    aboutP1: 'این اپلیکیشن رایگان واژگان را برای خودم ساختم — آزمون‌های تطبیقی، حالت‌های تمرین و پروفایل یادگیری اختیاری با همگام‌سازی ابری. بدون پرداخت؛ برای همهٔ زبان‌آموزان آلمانی.',
-    aboutP2html: 'ساخته <strong>Mehras Hojjat</strong>. برای درخواست ویژگی یا بازخورد از طریق <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> یا <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> در تماس باشید.',
-    aboutP3html: 'فهرست واژگان: <strong>Goethe-Institut</strong> · ترجمه‌ها: <strong>MyMemory API</strong> · متن‌باز در <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · ساخته شده با <strong>Claude AI</strong>.',
-    aboutP4: 'در مراحل اولیه توسعه با نام DeutschLernen شناخته می‌شد.',
-    footerMsg: 'سلام! این بازی رو برای یادگیری آلمانی خودم ساختم — امیدوارم به تو هم کمک کنه. کاملاً رایگان 🇩🇪',
-    footerCopy: '© ۲۰۲۶ Mehras Hojjat',
-    adaptiveBannerTitle: 'آزمون تطبیقی',
-    adaptiveBannerSub: 'سطح شما را تشخیص می‌دهد',
-    adaptiveV2BannerTitle: 'آزمون تطبیقی V2 (بتا)',
-    adaptiveV2BannerSub: 'با یادگیری‌ات هوشمندتر می‌شود',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'کالیبراسیون · گام ۱ از ۲',
-    adaptiveV2StatusCal2: 'کالیبراسیون · گام ۲ از ۲',
-    adaptiveV2StatusSkill: (n) => 'سطح مهارت شما: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'حالت مرور',
-    adaptiveV2PhaseChallenge: 'حالت چالش',
-    learningProfileBannerTitle: 'پروفایل یادگیری',
-    rushBannerTitle: 'حالت راش',
-    rushBannerSub: 'چالش پی‌درپی · هر وقت خارج شو',
-    rushBannerSubGuest: 'برای بازی وارد حساب شو · چالش پی‌درپی',
-    dialogCancel: 'لغو',
-    dialogOk: 'باشه',
-    rushSignInTitle: 'ورود به حساب کاربری',
-    rushSignInMessage: 'برای بازی در این بخش، ابتدا وارد حساب کاربری شو.',
-    rushSignInPrimary: 'ورود به حساب',
-    rushCalTitle: 'ارزیابی سطح لازم است',
-    rushCalMessage: 'قبل از شروع حالت راش، ارزیابی سطح را در آزمون تطبیقی نسخهٔ ۲ کامل کن.',
-    rushCalPrimary: 'شروع ارزیابی',
-    quizExitTitle: 'خروج از آزمون؟',
-    quizExitMessage: 'پاسخ‌های این آزمون ذخیره نمی‌شوند.',
-    quizExitLeave: 'خروج از آزمون',
-    quizExitStay: 'ادامه بازی',
-    quizExitRushTitle: 'پایان جلسهٔ راش؟',
-    quizExitRushMessage: 'جلسه تمام می‌شود.',
-    quizExitRushLeave: 'پایان جلسه',
-    rushBadge: 'حالت راش',
-    rushSummaryTitle: 'پایان جلسهٔ راش',
-    rushSummaryRecord: 'رکورد شخصی جدید!',
-    rushSummaryAgain: 'یک بار دیگر',
-    rushSummaryHome: 'خانه',
-    rushLblScore: 'امتیاز',
-    rushLblCorrect: 'درست',
-    rushLblWrong: 'غلط',
-    rushLblStreak: 'بهترین ردیف درست',
-    rushLblTime: 'زمان مطالعه',
-    learningProfileTitle: 'پروفایل یادگیری',
-    adaptiveSetupTitle: 'آزمون تطبیقی',
-    adaptiveSetupSubtitle: 'دشواری بر اساس سطح شما تنظیم می‌شود',
-    themeBannerTitle: 'آزمون موضوعی',
-    themeBannerSub: 'یک موضوع انتخاب کنید',
-    themeSelectTitle: 'آزمون موضوعی',
-    themeSelectSubtitle: 'موضوع مورد نظر را انتخاب کنید',
-    dictBannerTitle: 'واژه‌نامه',
-    dictBannerSub: 'مرور همه واژه‌ها',
-    dictScreenTitle: 'واژه‌نامه',
-    dictScreenSubtitle: 'همه واژه‌ها',
-    dictBack: '→ بازگشت',
-    dictFilterPlaceholder: 'جستجوی واژه…',
-    dictLoading: 'در حال بارگذاری…',
-    dictEmpty: 'واژه‌ای یافت نشد.',
-    typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفت', Phrase: 'عبارت', Adverb: 'قید', Word: 'کلمه' },
-    signedInAs: 'وارد شده به عنوان:',
-    signOut: 'خروج از حساب',
-    practiceBannerTitle: 'تمرین',
-    practiceBannerSub: 'کارت‌ها را برگردانید تا واژه‌ها را یاد بگیرید',
-    practiceSetupTitle: 'تمرین',
-    practiceSetupSub: '',
-    practiceSubtitle: 'کارت را برگردانید تا معنی را ببینید',
-    practiceMeaningLabel: 'معنی',
-    practiceFilterDifficulty: 'سختی',
-    practiceFilterType: 'نوع واژه',
-    practiceFilterArticle: 'حرف تعریف (اسم)',
-    practiceFilterTopics: 'موضوعات',
-    practiceFilterAll: 'همه',
-    practiceClearFilters: 'پاک کردن فیلترها',
-    practiceWordCount: 'واژه در لیست شما',
-    practiceNoWordsHint: 'واژه‌ای پیدا نشد — سطح یا فیلترها را تغییر دهید.',
-    offlineTitle: 'آفلاین هستید',
-    offlineMessage: 'این برنامه برای کار کردن به اتصال اینترنت نیاز دارد.',
-    offlineRefreshBtn: 'بارگذاری مجدد',
-    offlineChecking: 'در حال بررسی…',
-    practiceDoneTitle: 'تمام شد',
-    practiceDoneSub: 'در حال بارگذاری سختی بعدی…',
-    errLoadQuiz: 'دادهٔ آزمون بارگذاری نشد.',
-    errLoadQuizLevel: (lv) => 'دادهٔ آزمون ' + lv + ' بارگذاری نشد.',
-    errNoCards: 'کارتی نیست!',
-    errNoWords: 'واژه‌ای در دسترس نیست!',
-    errNoWordsTopic: 'برای این موضوع هنوز واژهٔ کافی نیست.',
-    errCompleteAdaptiveFirst: 'ابتدا یک آزمون تطبیقی کامل کنید تا واژه‌های مرور داشته باشید.',
-    errSwipePrepare: 'کارت‌های تطبیق آماده نشد.',
-    errNoPracticeCards: 'کارتی برای تمرین پیدا نشد.',
-    errLoadPractice: 'دادهٔ تمرین بارگذاری نشد.',
-    errFileProtocol: ' npm run dev را از ریشهٔ مخزن اجرا کنید (https://localhost:3000)، نه file://.',
-    adaptiveV2Badge: 'تطبیقی نسخه ۲',
-    adaptiveV2ReviewLabel: 'مرور سطح B1',
-    adaptiveV2ChallengeLabel: 'چالش',
-    shareSectionLabel: 'اشتراک‌گذاری این برنامه',
-    shareAppLabel: 'اشتراک‌گذاری',
-    copyLinkLabel: 'کپی پیوند',
-    linkCopied: 'پیوند کپی شد',
-    shareUnavailable: 'اشتراک‌گذاری در دسترس نیست',
-    shareFailed: 'اشتراک‌گذاری ناموفق بود',
-    rwTapFormHint: 'برای مثال روی یک شکل بزنید',
-    categoryNames: {1:'اعداد و مقادیر',2:'زمان و تقویم',3:'خانواده و روابط',4:'بدن و سلامتی',5:'غذا و نوشیدنی',6:'خانه و زندگی',7:'پوشاک و ظاهر',8:'کار و مشاغل',9:'آموزش و یادگیری',10:'سفر و گردشگری',11:'حمل‌ونقل',12:'خرید و امور مالی',13:'زبان، ارتباطات و رسانه',14:'طبیعت، آب‌وهوا و حیوانات',15:'ورزش و اوقات فراغت',16:'هنر و فرهنگ',17:'فناوری و دستگاه‌ها',18:'جامعه، قانون و سیاست',19:'احساسات و ویژگی‌های شخصیتی',20:'مکان‌ها و جغرافیا',21:'دستور زبان و کلمات ربط'},
-  },
-  ru: {
-    headerSub: 'Адаптивные викторины · Практика · Профиль',
-    settingsTitle: 'Настройки',
-    langLabel: 'Язык',
-    closeDone: 'Закрыть',
-    rwBannerTitle: 'Исследователь случайных слов',
-    rwBannerSub: 'Смотри любое слово со всеми формами, падежами и примерами',
-    swipeBannerTitle: 'Быстрое совпадение',
-    swipeBannerSub: 'Смахни, если значение подходит',
-    selectLevel: 'Выбрать уровень',
-    levelNames: { A1:'Начальный', A2:'Элементарный', B1:'Средний', B2:'Выше среднего' },
-    cardCount: (n) => formatNum(n) + ' карточек практики слов',
-    back: '← Назад',
-    next: 'Далее →',
-    correct: '✓ Правильно!',
-    wrong: (a) => `✗ Неверно. Правильный ответ: <strong>${a}</strong>`,
-    resultTitles: { great:'Отлично!', good:'Хорошо!', ok:'Неплохая попытка!', low:'Продолжай практиковаться!' },
-    resultSub: (lv,p) => `Уровень ${lv} · ${formatNum(p)}% правильно`,
-    scoreLbl: 'Счёт', correctLbl: 'Правильно', wrongLbl: 'Неверно',
-    accountLabel: 'Аккаунт',
-    installTipTitle: 'Установить приложение',
-    installTipDesc: 'Установите на главный экран для быстрого доступа и удобного использования.',
-    installGuideTitle: 'Установить это приложение',
-    installGuideSub: 'Два простых шага для установки приложения на главный экран.',
-    installStep1Title: 'Откройте меню «Поделиться»',
-    installStep1Desc: 'Нажмите кнопку «Поделиться» в браузере или нажмите здесь.',
-    installStep2Title: 'Выберите «Add to Home Screen»',
-    installStep2Desc: 'В открывшемся меню выберите «Add to Home Screen» и подтвердите.',
-    installOpenShare: 'Открыть меню «Поделиться»',
-    installClose: 'Закрыть',
-    tipTitle: 'Прогресс не сохранён',
-    tipDesc: 'Войдите, чтобы сохранить историю обучения и результаты викторин.',
-    playAgain: 'Играть снова', chooseLevel: 'На главную',
-    rwTitle: 'Исследователь слов',
-    cases: 'Падежи (Kasus)', plural: 'Множественное число',
-    presentTense: 'Präsens (Настоящее)', pastSimple: 'Präteritum (Прошедшее)', perfekt: 'Perfekt',
-    comparatives: 'Сравнительная и превосходная степень', adjEndings: 'Окончания прилагательных (Nom.)', examples: 'Примеры',
-    source: 'Источник: список слов института Гёте',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'Практика слов',
-    meaning: 'Значение',
-    tapPrompt: '👆 Нажмите на форму выше, чтобы увидеть пример предложения.',
-    noExample: 'Пример отсутствует.',
-    quizQuestion: 'Что означает это слово?',
-    swipeSetupTitle: 'Быстрое совпадение',
-    swipeSetupSub: '',
-    prepareTen: 'Старт',
-    swipeSubtitle: 'Смахни, если значение подходит',
-    swipeMeaningLabel: 'Значение',
-    swipeEmptyTitle: 'Колода закончилась',
-    swipeEmptySub: 'Запусти новую серию, чтобы продолжить.',
-    swipeToastGoodMatch: 'Верно',
-    swipeToastGoodMiss: 'Верно',
-    swipeToastBadMatch: 'Неверно',
-    swipeToastBadMiss: 'Неверно',
-    levelLabel: 'Уровень',
-    wiktSource: 'Источник',
-    meanings: 'Значения',
-    autoTranslated: 'Авто-перевод',
-    offlineNote: 'ⓘ Офлайн данные · Wiktionary недоступен',
-    aboutBtn: 'ℹ️ О приложении',
-    aboutTitle: 'О приложении',
-    aboutClose: 'Закрыть',
-    aboutP1: 'Я создал это бесплатное приложение для лексики — адаптивные викторины, режимы практики и необязательный профиль с облачной синхронизацией. Без подписок; доступно всем, кто учит немецкий.',
-    aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запросов функций или обратной связи пишите в <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> или <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
-    aboutP3html: 'Списки слов: <strong>Goethe-Institut</strong> · Переводы: <strong>MyMemory API</strong> · Открытый код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Создано с <strong>Claude AI</strong>.',
-    aboutP4: 'В начале разработки приложение называлось DeutschLernen.',
-    footerMsg: 'Привет! Сделал это для своего изучения немецкого — надеюсь, поможет и тебе. Полностью бесплатно 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'Адаптивная викторина',
-    adaptiveBannerSub: 'Адаптируется к вашему уровню',
-    adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
-    adaptiveV2BannerSub: 'Становится умнее по мере обучения',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'Калибровка · шаг 1 из 2',
-    adaptiveV2StatusCal2: 'Калибровка · шаг 2 из 2',
-    adaptiveV2StatusSkill: (n) => 'Ваш уровень: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'Режим повторения',
-    adaptiveV2PhaseChallenge: 'Режим вызова',
-    learningProfileBannerTitle: 'Профиль обучения',
-    rushBannerTitle: 'Режим Rush',
-    rushBannerSub: 'Непрерывный режим испытаний · выход в любой момент',
-    rushBannerSubGuest: 'Войдите, чтобы играть · Непрерывный режим испытаний',
-    dialogCancel: 'Отмена',
-    dialogOk: 'OK',
-    rushSignInTitle: 'Требуется вход',
-    rushSignInMessage: 'Чтобы играть в Rush, необходимо войти в аккаунт.',
-    rushSignInPrimary: 'Войти',
-    rushCalTitle: 'Нужна оценка уровня',
-    rushCalMessage: 'Сначала пройдите оценку уровня в Адаптив V2, затем начните Rush.',
-    rushCalPrimary: 'Начать оценку',
-    quizExitTitle: 'Выйти из квиза?',
-    quizExitMessage: 'Ответы в этом квизе не будут сохранены.',
-    quizExitLeave: 'Выйти',
-    quizExitStay: 'Продолжить',
-    quizExitRushTitle: 'Завершить сессию Rush?',
-    quizExitRushMessage: 'Сессия завершится.',
-    quizExitRushLeave: 'Завершить',
-    rushBadge: 'Режим Rush',
-    rushSummaryTitle: 'Rush завершён',
-    rushSummaryRecord: 'Новый личный рекорд!',
-    rushSummaryAgain: 'Ещё Rush',
-    rushSummaryHome: 'На главную',
-    rushLblScore: 'Результат',
-    rushLblCorrect: 'Верно',
-    rushLblWrong: 'Неверно',
-    rushLblStreak: 'Лучшая серия',
-    rushLblTime: 'Время',
-    learningProfileTitle: 'Профиль обучения',
-    adaptiveSetupTitle: 'Адаптивная викторина',
-    adaptiveSetupSubtitle: 'Сложность адаптируется к вашему уровню',
-    themeBannerTitle: 'Тематическая викторина',
-    themeBannerSub: 'Выберите тему для тренировки',
-    themeSelectTitle: 'Тематическая викторина',
-    themeSelectSubtitle: 'Выберите тему',
-    dictBannerTitle: 'Словарь',
-    dictBannerSub: 'Все слова',
-    dictScreenTitle: 'Словарь',
-    dictScreenSubtitle: 'Все слова',
-    dictBack: '← Назад',
-    dictFilterPlaceholder: 'Фильтр слов…',
-    dictLoading: 'Загрузка…',
-    dictEmpty: 'Слова не найдены.',
-    typeBadge: { Noun: 'Существительное', Verb: 'Глагол', Adjective: 'Прилагательное', Phrase: 'Фраза', Adverb: 'Наречие', Word: 'Слово' },
-    signedInAs: 'Вы вошли как:',
-    signOut: 'Выйти',
-    practiceBannerTitle: 'Практика',
-    practiceBannerSub: 'Переворачивайте карточки, чтобы учить слова',
-    practiceSetupTitle: 'Практика',
-    practiceSetupSub: '',
-    practiceSubtitle: 'Переверни карточку, чтобы увидеть значение',
-    practiceMeaningLabel: 'Значение',
-    practiceFilterDifficulty: 'Сложность',
-    practiceFilterType: 'Тип слова',
-    practiceFilterArticle: 'Артикль (существ.)',
-    practiceFilterTopics: 'Темы',
-    practiceFilterAll: 'Все',
-    practiceClearFilters: 'Сбросить фильтры',
-    practiceWordCount: 'слов в наборе',
-    practiceNoWordsHint: 'Нет подходящих слов — смените уровень или фильтры.',
-    offlineTitle: 'Нет подключения',
-    offlineMessage: 'Для работы приложения необходимо подключение к интернету.',
-    offlineRefreshBtn: 'Обновить',
-    offlineChecking: 'Проверка…',
-    practiceDoneTitle: 'Готово',
-    practiceDoneSub: 'Загрузка следующей сложности…',
-    errLoadQuiz: 'Не удалось загрузить данные викторины.',
-    errLoadQuizLevel: (lv) => 'Не удалось загрузить данные викторины ' + lv + '.',
-    errNoCards: 'Нет карточек!',
-    errNoWords: 'Нет доступных слов!',
-    errNoWordsTopic: 'Для этой темы пока недостаточно слов.',
-    errCompleteAdaptiveFirst: 'Сначала пройдите адаптивную викторину, чтобы были слова для повторения.',
-    errSwipePrepare: 'Не удалось подготовить карточки для свайпа.',
-    errNoPracticeCards: 'Карточки для практики не найдены.',
-    errLoadPractice: 'Не удалось загрузить данные практики.',
-    errFileProtocol: ' Запустите npm run dev из корня репозитория (https://localhost:3000), а не file://.',
-    adaptiveV2Badge: 'Адаптив V2',
-    adaptiveV2ReviewLabel: 'Повторение B1',
-    adaptiveV2ChallengeLabel: 'Вызов',
-    shareSectionLabel: 'Поделиться приложением',
-    shareAppLabel: 'Поделиться',
-    copyLinkLabel: 'Копировать ссылку',
-    linkCopied: 'Ссылка скопирована',
-    shareUnavailable: 'Поделиться недоступно',
-    shareFailed: 'Не удалось поделиться',
-    rwTapFormHint: 'Нажмите на форму, чтобы увидеть пример',
-    categoryNames: {1:'Числа и количества',2:'Время и календарь',3:'Семья и отношения',4:'Тело и здоровье',5:'Еда и напитки',6:'Дом и быт',7:'Одежда и внешность',8:'Работа и карьера',9:'Образование и обучение',10:'Путешествия и туризм',11:'Транспорт',12:'Покупки и финансы',13:'Язык, общение и СМИ',14:'Природа, погода и животные',15:'Спорт и досуг',16:'Искусство и культура',17:'Технологии и устройства',18:'Общество, право и политика',19:'Эмоции и черты характера',20:'Места и география',21:'Грамматика и служебные слова'},
-  },
-  uk: {
-    headerSub: 'Адаптивні вікторини · Практика · Профіль',
-    settingsTitle: 'Налаштування',
-    langLabel: 'Мова',
-    closeDone: 'Закрити',
-    rwBannerTitle: 'Дослідник випадкових слів',
-    rwBannerSub: 'Переглядай будь-яке слово з усіма формами, відмінками та прикладами',
-    swipeBannerTitle: 'Швидке зіставлення',
-    swipeBannerSub: 'Свайпни, якщо значення підходить',
-    selectLevel: 'Обрати рівень',
-    levelNames: { A1:'Початківець', A2:'Елементарний', B1:'Середній', B2:'Вище середнього' },
-    cardCount: (n) => formatNum(n) + ' карток практики слів',
-    back: '← Назад',
-    next: 'Далі →',
-    correct: '✓ Правильно!',
-    wrong: (a) => `✗ Неправильно. Правильна відповідь: <strong>${a}</strong>`,
-    resultTitles: { great:'Відмінно!', good:'Молодець!', ok:'Непогана спроба!', low:'Продовжуй практикуватись!' },
-    resultSub: (lv,p) => `Рівень ${lv} · ${formatNum(p)}% правильно`,
-    scoreLbl: 'Рахунок', correctLbl: 'Правильно', wrongLbl: 'Неправильно',
-    accountLabel: 'Акаунт',
-    installTipTitle: 'Встановити додаток',
-    installTipDesc: 'Встановіть на головний екран для швидкого доступу та зручного використання.',
-    installGuideTitle: 'Встановити цей додаток',
-    installGuideSub: 'Два прості кроки для встановлення додатку на головний екран.',
-    installStep1Title: 'Відкрийте меню «Поділитися»',
-    installStep1Desc: 'Натисніть кнопку «Поділитися» в браузері або натисніть тут.',
-    installStep2Title: 'Виберіть «Add to Home Screen»',
-    installStep2Desc: 'У меню, що відкриється, виберіть «Add to Home Screen» і підтвердіть.',
-    installOpenShare: 'Відкрити меню «Поділитися»',
-    installClose: 'Закрити',
-    tipTitle: 'Прогрес не збережено',
-    tipDesc: 'Увійдіть, щоб зберегти історію навчання та результати вікторин.',
-    playAgain: 'Грати знову', chooseLevel: 'На головну',
-    rwTitle: 'Дослідник слів',
-    cases: 'Відмінки (Kasus)', plural: 'Множина',
-    presentTense: 'Präsens (Теперішній)', pastSimple: 'Präteritum (Минулий)', perfekt: 'Perfekt',
-    comparatives: 'Вищий і найвищий ступінь', adjEndings: 'Закінчення прикметників (Nom.)', examples: 'Приклади',
-    source: 'Джерело: список слів інституту Гете',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'Практика слів',
-    meaning: 'Значення',
-    tapPrompt: '👆 Натисніть на форму вище, щоб побачити приклад речення.',
-    noExample: 'Приклад відсутній.',
-    quizQuestion: 'Що означає це слово?',
-    swipeSetupTitle: 'Швидке зіставлення',
-    swipeSetupSub: '',
-    prepareTen: 'Старт',
-    swipeSubtitle: 'Свайпни, якщо значення підходить',
-    swipeMeaningLabel: 'Значення',
-    swipeEmptyTitle: 'Колода закінчилась',
-    swipeEmptySub: 'Запусти нову серію, щоб продовжити.',
-    swipeToastGoodMatch: 'Правильно',
-    swipeToastGoodMiss: 'Правильно',
-    swipeToastBadMatch: 'Неправильно',
-    swipeToastBadMiss: 'Неправильно',
-    levelLabel: 'Рівень',
-    wiktSource: 'Джерело',
-    meanings: 'Значення',
-    autoTranslated: 'Авто-переклад',
-    offlineNote: 'ⓘ Офлайн дані · Wiktionary недоступний',
-    aboutBtn: 'ℹ️ Про додаток',
-    aboutTitle: 'Про додаток',
-    aboutClose: 'Закрити',
-    aboutP1: 'Я створив цей безкоштовний додаток для лексики — адаптивні вікторини, режими практики та необов\'язковий профіль з хмарною синхронізацією. Без платежів; відкритий для всіх, хто вивчає німецьку.',
-    aboutP2html: 'Автор: <strong>Mehras Hojjat</strong>. Для запитів щодо функцій або відгуків пишіть у <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> або <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
-    aboutP3html: 'Списки слів: <strong>Goethe-Institut</strong> · Переклади: <strong>MyMemory API</strong> · Відкритий код: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Створено з <strong>Claude AI</strong>.',
-    aboutP4: 'На початку розробки додаток мав назву DeutschLernen.',
-    footerMsg: 'Привіт! Зробив це для вивчення німецької — сподіваюся, допоможе і тобі. Повністю безкоштовно 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'Адаптивна вікторина',
-    adaptiveBannerSub: 'Адаптується до вашого рівня',
-    adaptiveV2BannerTitle: 'Адаптив V2 (Beta)',
-    adaptiveV2BannerSub: 'Стає розумнішим у процесі навчання',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'Калібрування · крок 1 з 2',
-    adaptiveV2StatusCal2: 'Калібрування · крок 2 з 2',
-    adaptiveV2StatusSkill: (n) => 'Ваш рівень: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'Режим повторення',
-    adaptiveV2PhaseChallenge: 'Режим виклику',
-    learningProfileBannerTitle: 'Профіль навчання',
-    rushBannerTitle: 'Режим Rush',
-    rushBannerSub: 'Безперервний режим викликів · вихід будь-коли',
-    rushBannerSubGuest: 'Увійдіть, щоб грати · Безперервний режим викликів',
-    dialogCancel: 'Скасувати',
-    dialogOk: 'OK',
-    rushSignInTitle: 'Потрібен вхід',
-    rushSignInMessage: 'Щоб грати в Rush, потрібно увійти в обліковий запис.',
-    rushSignInPrimary: 'Увійти',
-    rushCalTitle: 'Потрібна оцінка рівня',
-    rushCalMessage: 'Спочатку пройдіть оцінку рівня в Адаптив V2, потім запускайте Rush.',
-    rushCalPrimary: 'Почати оцінку',
-    quizExitTitle: 'Вийти з вікторини?',
-    quizExitMessage: 'Відповіді в цій вікторині не будуть збережені.',
-    quizExitLeave: 'Вийти',
-    quizExitStay: 'Грати далі',
-    quizExitRushTitle: 'Завершити сесію Rush?',
-    quizExitRushMessage: 'Сесію буде завершено.',
-    quizExitRushLeave: 'Завершити',
-    rushBadge: 'Режим Rush',
-    rushSummaryTitle: 'Rush завершено',
-    rushSummaryRecord: 'Новий особистий рекорд!',
-    rushSummaryAgain: 'Ще Rush',
-    rushSummaryHome: 'Додому',
-    rushLblScore: 'Результат',
-    rushLblCorrect: 'Вірно',
-    rushLblWrong: 'Невірно',
-    rushLblStreak: 'Найкраща серія',
-    rushLblTime: 'Час',
-    learningProfileTitle: 'Профіль навчання',
-    adaptiveSetupTitle: 'Адаптивна вікторина',
-    adaptiveSetupSubtitle: 'Складність адаптується до вашого рівня',
-    themeBannerTitle: 'Тематична вікторина',
-    themeBannerSub: 'Виберіть тему для практики',
-    themeSelectTitle: 'Тематична вікторина',
-    themeSelectSubtitle: 'Виберіть тему',
-    dictBannerTitle: 'Словник',
-    dictBannerSub: 'Усі слова',
-    dictScreenTitle: 'Словник',
-    dictScreenSubtitle: 'Усі слова',
-    dictBack: '← Назад',
-    dictFilterPlaceholder: 'Фільтр слів…',
-    dictLoading: 'Завантаження…',
-    dictEmpty: 'Слова не знайдено.',
-    typeBadge: { Noun: 'Іменник', Verb: 'Дієслово', Adjective: 'Прикметник', Phrase: 'Фраза', Adverb: 'Прислівник', Word: 'Слово' },
-    signedInAs: 'Ввійшли як:',
-    signOut: 'Вийти',
-    practiceBannerTitle: 'Практика',
-    practiceBannerSub: 'Перевертайте картки, щоб вивчати слова',
-    practiceSetupTitle: 'Практика',
-    practiceSetupSub: '',
-    practiceSubtitle: 'Переверни картку, щоб побачити значення',
-    practiceMeaningLabel: 'Значення',
-    practiceFilterDifficulty: 'Складність',
-    practiceFilterType: 'Тип слова',
-    practiceFilterArticle: 'Артикль (іменники)',
-    practiceFilterTopics: 'Теми',
-    practiceFilterAll: 'Усі',
-    practiceClearFilters: 'Скинути фільтри',
-    practiceWordCount: 'слів у наборі',
-    practiceNoWordsHint: 'Немає відповідних слів — змініть рівень або фільтри.',
-    offlineTitle: 'Немає інтернету',
-    offlineMessage: 'Для роботи додатку потрібне підключення до інтернету.',
-    offlineRefreshBtn: 'Оновити',
-    offlineChecking: 'Перевірка…',
-    practiceDoneTitle: 'Готово',
-    practiceDoneSub: 'Завантаження наступної складності…',
-    errLoadQuiz: 'Не вдалося завантажити дані вікторини.',
-    errLoadQuizLevel: (lv) => 'Не вдалося завантажити дані вікторини ' + lv + '.',
-    errNoCards: 'Немає карток!',
-    errNoWords: 'Немає доступних слів!',
-    errNoWordsTopic: 'Для цієї теми поки недостатньо слів.',
-    errCompleteAdaptiveFirst: 'Спочатку пройдіть адаптивну вікторину, щоб були слова для повторення.',
-    errSwipePrepare: 'Не вдалося підготувати картки для свайпу.',
-    errNoPracticeCards: 'Картки для практики не знайдено.',
-    errLoadPractice: 'Не вдалося завантажити дані практики.',
-    errFileProtocol: ' Запустіть npm run dev з кореня репозиторію (https://localhost:3000), а не file://.',
-    adaptiveV2Badge: 'Адаптив V2',
-    adaptiveV2ReviewLabel: 'Повторення B1',
-    adaptiveV2ChallengeLabel: 'Виклик',
-    shareSectionLabel: 'Поділитися додатком',
-    shareAppLabel: 'Поділитися',
-    copyLinkLabel: 'Копіювати посилання',
-    linkCopied: 'Посилання скопійовано',
-    shareUnavailable: 'Поділитися недоступно',
-    shareFailed: 'Не вдалося поділитися',
-    rwTapFormHint: 'Натисніть на форму, щоб побачити приклад',
-    categoryNames: {1:'Числа та кількості',2:'Час і календар',3:'Сім\'я та стосунки',4:'Тіло та здоров\'я',5:'Їжа та напої',6:'Дім та побут',7:'Одяг та зовнішність',8:'Робота та кар\'єра',9:'Освіта та навчання',10:'Подорожі та туризм',11:'Транспорт',12:'Покупки та фінанси',13:'Мова, спілкування та ЗМІ',14:'Природа, погода та тварини',15:'Спорт та дозвілля',16:'Мистецтво та культура',17:'Технології та пристрої',18:'Суспільство, право та політика',19:'Емоції та риси характеру',20:'Місця та географія',21:'Граматика та службові слова'},
-  },
-  ar: {
-    headerSub: 'اختبارات تكيفية · تمرين · ملف التعلم',
-    settingsTitle: 'الإعدادات',
-    langLabel: 'اللغة',
-    closeDone: 'إغلاق',
-    rwBannerTitle: 'مستكشف الكلمات العشوائي',
-    rwBannerSub: 'اعرض أي كلمة بجميع أشكالها وحالاتها وأمثلتها',
-    swipeBannerTitle: 'مطابقة سريعة',
-    swipeBannerSub: 'اسحب إذا كان المعنى صحيحاً',
-    selectLevel: 'اختر المستوى',
-    levelNames: { A1:'مبتدئ', A2:'أساسي', B1:'متوسط', B2:'فوق المتوسط' },
-    cardCount: (n) => formatNum(n) + ' بطاقة تدريب مفردات',
-    back: '→ رجوع',
-    next: '← التالي',
-    correct: '✓ صحيح!',
-    wrong: (a) => `✗ خطأ. الإجابة الصحيحة: <strong>${a}</strong>`,
-    resultTitles: { great:'ممتاز!', good:'أحسنت!', ok:'محاولة جيدة!', low:'واصل التدريب!' },
-    resultSub: (lv,p) => `المستوى ${lv} · ${formatNum(p)}% صحيح`,
-    scoreLbl: 'النقاط', correctLbl: 'صحيح', wrongLbl: 'خطأ',
-    accountLabel: 'الحساب',
-    installTipTitle: 'ثبّت التطبيق',
-    installTipDesc: 'ثبّته على شاشتك الرئيسية للوصول السريع وتجربة سلسة.',
-    installGuideTitle: 'ثبّت هذا التطبيق',
-    installGuideSub: 'خطوتان سريعتان لتثبيت التطبيق على شاشتك الرئيسية.',
-    installStep1Title: 'افتح قائمة المشاركة',
-    installStep1Desc: 'اضغط زر المشاركة في متصفحك، أو انقر هنا.',
-    installStep2Title: 'اختر «Add to Home Screen»',
-    installStep2Desc: 'في القائمة التي تفتح، اضغط Add to Home Screen ثم أكّد التثبيت.',
-    installOpenShare: 'فتح قائمة المشاركة',
-    installClose: 'إغلاق',
-    tipTitle: 'التقدم غير محفوظ',
-    tipDesc: 'سجّل الدخول للاحتفاظ بسجل تعلّمك ونتائج الاختبارات.',
-    playAgain: 'العب مرة أخرى', chooseLevel: 'العودة للرئيسية',
-    rwTitle: 'مستكشف الكلمات',
-    cases: 'الحالات (Kasus)', plural: 'الجمع',
-    presentTense: 'Präsens (المضارع)', pastSimple: 'Präteritum (الماضي البسيط)', perfekt: 'Perfekt',
-    comparatives: 'المقارنة والتفضيل', adjEndings: 'لواحق الصفات (Nom.)', examples: 'أمثلة',
-    source: 'المصدر: قائمة مفردات معهد غوته',
-    modeIcons: { vocab:'📖' },
-    vocabBadge: 'تدريب المفردات',
-    meaning: 'المعنى',
-    tapPrompt: '👆 اضغط على أي شكل أعلاه لرؤية جملة مثال.',
-    noExample: 'لا يوجد مثال.',
-    quizQuestion: 'ما معنى هذه الكلمة؟',
-    swipeSetupTitle: 'مطابقة سريعة',
-    swipeSetupSub: '',
-    prepareTen: 'ابدأ',
-    swipeSubtitle: 'اسحب إذا كان المعنى صحيحاً',
-    swipeMeaningLabel: 'المعنى',
-    swipeEmptyTitle: 'انتهت البطاقات',
-    swipeEmptySub: 'ابدأ مجموعة جديدة للمتابعة.',
-    swipeToastGoodMatch: 'صحيح',
-    swipeToastGoodMiss: 'صحيح',
-    swipeToastBadMatch: 'خطأ',
-    swipeToastBadMiss: 'خطأ',
-    levelLabel: 'المستوى',
-    wiktSource: 'المصدر',
-    meanings: 'المعاني',
-    autoTranslated: 'ترجمة تلقائية',
-    offlineNote: 'ⓘ بيانات غير متصلة · Wiktionary غير متاح',
-    aboutBtn: 'ℹ️ حول التطبيق',
-    aboutTitle: 'حول التطبيق',
-    aboutClose: 'إغلاق',
-    aboutP1: 'صنعت هذا التطبيق المجاني للمفردات لنفسي — اختبارات تكيفية، أوضاع تمرين، وملف تعلم اختياري مع مزامنة سحابية. بلا رسوم؛ متاح لكل من يتعلم الألمانية.',
-    aboutP2html: 'صنعه <strong>Mehras Hojjat</strong>. للتواصل بشأن طلبات الميزات أو الملاحظات عبر <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> أو <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a>.',
-    aboutP3html: 'قوائم الكلمات: <strong>Goethe-Institut</strong> · الترجمات: <strong>MyMemory API</strong> · مفتوح المصدر: <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · مبني بـ <strong>Claude AI</strong>.',
-    aboutP4: 'كان اسم التطبيق DeutschLernen في مراحل التطوير الأولى.',
-    footerMsg: 'مرحباً! صنعت هذا لتعلم الألمانية بنفسي — أتمنى أن يفيدك أيضاً. مجاني تماماً 🇩🇪',
-    footerCopy: '© 2026 Mehras Hojjat',
-    adaptiveBannerTitle: 'اختبار تكيّفي',
-    adaptiveBannerSub: 'يتكيّف مع مستواك',
-    adaptiveV2BannerTitle: 'اختبار تكيّفي V2 (تجريبي)',
-    adaptiveV2BannerSub: 'يزداد ذكاءً مع تعلّمك',
-    adaptiveV2BannerStatusDefault: '',
-    adaptiveV2StatusCal1: 'المعايرة · الخطوة ١ من ٢',
-    adaptiveV2StatusCal2: 'المعايرة · الخطوة ٢ من ٢',
-    adaptiveV2StatusSkill: (n) => 'مستوى مهارتك: ' + formatNum(n),
-    adaptiveV2PhaseReview: 'وضع المراجعة',
-    adaptiveV2PhaseChallenge: 'وضع التحدي',
-    learningProfileBannerTitle: 'ملف التعلم',
-    rushBannerTitle: 'وضع راش',
-    rushBannerSub: 'تحدٍّ مستمر · اخرج في أي وقت',
-    rushBannerSubGuest: 'سجّل الدخول للّعب · تحدٍّ مستمر',
-    dialogCancel: 'إلغاء',
-    dialogOk: 'موافق',
-    rushSignInTitle: 'تسجيل الدخول مطلوب',
-    rushSignInMessage: 'يجب تسجيل الدخول للّعب في هذا الوضع.',
-    rushSignInPrimary: 'تسجيل الدخول',
-    rushCalTitle: 'التقييم مطلوب',
-    rushCalMessage: 'أكمل تقييم مستواك في الاختبار التكيّفي (الإصدار ٢) قبل بدء وضع راش.',
-    rushCalPrimary: 'بدء التقييم',
-    quizExitTitle: 'مغادرة الاختبار؟',
-    quizExitMessage: 'لن تُحفظ إجاباتك في هذا الاختبار.',
-    quizExitLeave: 'مغادرة',
-    quizExitStay: 'متابعة اللعب',
-    quizExitRushTitle: 'إنهاء جلسة راش؟',
-    quizExitRushMessage: 'ستنتهي جلستك.',
-    quizExitRushLeave: 'إنهاء الجلسة',
-    rushBadge: 'وضع راش',
-    rushSummaryTitle: 'انتهت الجلسة',
-    rushSummaryRecord: 'رقم قياسي شخصي جديد!',
-    rushSummaryAgain: 'العب مرة أخرى',
-    rushSummaryHome: 'الرئيسية',
-    rushLblScore: 'النتيجة',
-    rushLblCorrect: 'صحيح',
-    rushLblWrong: 'خطأ',
-    rushLblStreak: 'أفضل سلسلة',
-    rushLblTime: 'وقت الدراسة',
-    learningProfileTitle: 'ملف التعلم',
-    adaptiveSetupTitle: 'اختبار تكيّفي',
-    adaptiveSetupSubtitle: 'تتكيّف الصعوبة مع مستواك',
-    themeBannerTitle: 'اختبار موضوعي',
-    themeBannerSub: 'اختبر نفسك في موضوع محدد',
-    themeSelectTitle: 'اختبار موضوعي',
-    themeSelectSubtitle: 'اختر موضوعاً للتدرّب عليه',
-    dictBannerTitle: 'القاموس',
-    dictBannerSub: 'تصفح جميع الكلمات',
-    dictScreenTitle: 'القاموس',
-    dictScreenSubtitle: 'جميع الكلمات',
-    dictBack: '→ رجوع',
-    dictFilterPlaceholder: 'ابحث عن كلمة…',
-    dictLoading: 'جارٍ التحميل…',
-    dictEmpty: 'لا توجد كلمات.',
-    typeBadge: { Noun: 'اسم', Verb: 'فعل', Adjective: 'صفة', Phrase: 'عبارة', Adverb: 'ظرف', Word: 'كلمة' },
-    signedInAs: 'تسجيل الدخول باسم:',
-    signOut: 'تسجيل الخروج',
-    practiceBannerTitle: 'تدريب',
-    practiceBannerSub: 'اقلب البطاقات لتعلم الكلمات',
-    practiceSetupTitle: 'تدريب',
-    practiceSetupSub: '',
-    practiceSubtitle: 'اقلب البطاقة لرؤية المعنى',
-    practiceMeaningLabel: 'المعنى',
-    practiceFilterDifficulty: 'الصعوبة',
-    practiceFilterType: 'نوع الكلمة',
-    practiceFilterArticle: 'أداة التعريف (الأسماء)',
-    practiceFilterTopics: 'المواضيع',
-    practiceFilterAll: 'الكل',
-    practiceClearFilters: 'مسح الفلاتر',
-    practiceWordCount: 'كلمة في مجموعتك',
-    practiceNoWordsHint: 'لا توجد كلمات مطابقة — غيّر المستوى أو الفلاتر.',
-    offlineTitle: 'أنت غير متصل',
-    offlineMessage: 'يحتاج هذا التطبيق إلى اتصال بالإنترنت للعمل.',
-    offlineRefreshBtn: 'تحديث',
-    offlineChecking: 'جارٍ التحقق…',
-    practiceDoneTitle: 'اكتمل',
-    practiceDoneSub: 'جارٍ تحميل الصعوبة التالية…',
-    errLoadQuiz: 'تعذّر تحميل بيانات الاختبار.',
-    errLoadQuizLevel: (lv) => 'تعذّر تحميل بيانات اختبار ' + lv + '.',
-    errNoCards: 'لا توجد بطاقات!',
-    errNoWords: 'لا توجد كلمات متاحة!',
-    errNoWordsTopic: 'لا توجد كلمات كافية لهذا الموضوع بعد.',
-    errCompleteAdaptiveFirst: 'أكمل اختباراً تكيّفياً أولاً ليكون لديك كلمات للمراجعة.',
-    errSwipePrepare: 'تعذّر تجهيز بطاقات السحب.',
-    errNoPracticeCards: 'لم يتم العثور على بطاقات تدريب.',
-    errLoadPractice: 'تعذّر تحميل بيانات التدريب.',
-    errFileProtocol: ' شغّل npm run dev من جذر المستودع (https://localhost:3000)، وليس file://.',
-    adaptiveV2Badge: 'تكيّفي V2',
-    adaptiveV2ReviewLabel: 'مراجعة B1',
-    adaptiveV2ChallengeLabel: 'تحدي',
-    shareSectionLabel: 'شارك هذا التطبيق',
-    shareAppLabel: 'مشاركة',
-    copyLinkLabel: 'نسخ الرابط',
-    linkCopied: 'تم نسخ الرابط',
-    shareUnavailable: 'المشاركة غير متاحة',
-    shareFailed: 'فشلت المشاركة',
-    rwTapFormHint: 'اضغط على شكل لرؤية مثال',
-    categoryNames: {1:'الأعداد والكميات',2:'الوقت والتقويم',3:'العائلة والعلاقات',4:'الجسم والصحة',5:'الطعام والشراب',6:'المنزل والمعيشة',7:'الملابس والمظهر',8:'العمل والمهن',9:'التعليم والتعلم',10:'السفر والسياحة',11:'المواصلات',12:'التسوق والمال',13:'اللغة والتواصل والإعلام',14:'الطبيعة والطقس والحيوانات',15:'الرياضة وأوقات الفراغ',16:'الفنون والثقافة',17:'التكنولوجيا والأجهزة',18:'المجتمع والقانون والسياسة',19:'المشاعر وسمات الشخصية',20:'الأماكن والجغرافيا',21:'قواعد اللغة والكلمات الوظيفية'},
-  }
-};
-
-const PROFILE_I18N = {
-  en: {
-    title: 'Learning Profile',
-    adaptive: 'Adaptive',
-    overview: 'Overview', activity: 'Activity', performance: 'Performance', review: 'Review',
-    wordsSeen: 'Words Seen', wordsStruggling: 'Words Struggling', wordsMastered: 'Words Mastered', accuracyPct: 'Accuracy %', wordsReviewed: 'Words Reviewed',
-    quizzesCompleted: 'Quizzes Completed', correctAnswers: 'Correct Answers', incorrectAnswers: 'Incorrect Answers', totalStudyTime: 'Total Study Time',
-    strongest: 'Strongest', needsPractice: 'Needs Practice', notEnoughCategoryData: 'Not enough category data yet',
-    topics: 'Topics', topicCoverage: 'Coverage', topicAccuracy: 'Accuracy', practiceTopic: 'Practice',
-    reviewWeakWords: 'Review Weak Words', reviewRecentMistakes: 'Review Recent Mistakes', reviewMixedPractice: 'Review Mixed Practice',
-    seenWords: 'Seen Words', strugglingWords: 'Struggling Words', masteredWords: 'Mastered Words',
-    loadingLevelWords: 'Loading words for this level...', noWordsInList: 'No words available in this list yet.',
-    signInUnlock: 'Sign in to unlock:',
-    signInUnlockTopicsHint: 'Coverage and accuracy for each vocabulary topic.',
-    signInBtn: 'Sign in',
-    signInPrompt: 'Sign in to sync your progress across devices.',
-    guestProfileEmpty: 'Complete a quiz at this level to see stats here.',
-    noTrackedFor: 'No tracked data for {level}. Try the {best} tab.',
-    adaptiveBand: 'CEFR band',
-    adaptiveSkill: 'Skill level',
-    journeySeenShort: '{pct}% seen',
-    journeyGoldShort: 'Your level',
-    journeyGoldHint: 'wide = calibrating · narrow = confident',
-    resetAdaptiveProgress: 'Reset adaptive progress',
-    resetAdaptiveConfirm: 'Reset all Adaptive V2 progress? This deletes your word history, skill level, and calibration. This cannot be undone.',
-    metaSeen: 'Seen', metaRight: 'Right', metaWrong: 'Wrong',
-    uncategorized: 'Uncategorized'
-  },
-  de: {
-    title: 'Lernprofil',
-    adaptive: 'Adaptiv',
-    overview: 'Überblick', activity: 'Aktivität', performance: 'Leistung', review: 'Wiederholen',
-    wordsSeen: 'Gesehene Wörter', wordsStruggling: 'Schwierige Wörter', wordsMastered: 'Gemeisterte Wörter', accuracyPct: 'Genauigkeit %', wordsReviewed: 'Überprüfte Wörter',
-    quizzesCompleted: 'Abgeschlossene Quizze', correctAnswers: 'Richtige Antworten', incorrectAnswers: 'Falsche Antworten', totalStudyTime: 'Gesamtlernzeit',
-    strongest: 'Stärkste Bereiche', needsPractice: 'Mehr Übung nötig', notEnoughCategoryData: 'Noch nicht genug Kategoriedaten',
-    reviewWeakWords: 'Schwache Wörter wiederholen', reviewRecentMistakes: 'Letzte Fehler wiederholen', reviewMixedPractice: 'Gemischte Wiederholung',
-    seenWords: 'Gesehene Wörter', strugglingWords: 'Schwierige Wörter', masteredWords: 'Gemeisterte Wörter',
-    loadingLevelWords: 'Wörter für dieses Niveau werden geladen...', noWordsInList: 'Noch keine Wörter in dieser Liste.',
-    signInUnlock: 'Anmelden zum Freischalten:',
-    signInUnlockTopicsHint: 'Abdeckung und Genauigkeit für jedes Vokabelthema.',
-    signInBtn: 'Anmelden',
-    signInPrompt: 'Melde dich an, um deinen Fortschritt geräteübergreifend zu synchronisieren.',
-    guestProfileEmpty: 'Spiele ein Quiz auf diesem Niveau, um hier Statistiken zu sehen.',
-    noTrackedFor: 'Keine erfassten Daten für {level}. Wechsle zum Tab {best}.',
-    adaptiveBand: 'CEFR-Niveau',
-    adaptiveSkill: 'Fähigkeitsstufe',
-    journeySeenShort: '{pct}% gesehen',
-    journeyGoldShort: 'Dein Niveau',
-    journeyGoldHint: 'breit = kalibrieren · schmal = sicher',
-    resetAdaptiveProgress: 'Adaptiven Fortschritt zurücksetzen',
-    resetAdaptiveConfirm: 'Gesamten adaptiven V2-Fortschritt zurücksetzen? Wortverlauf, Niveau und Kalibrierung werden gelöscht. Das kann nicht rückgängig gemacht werden.',
-    metaSeen: 'Gesehen', metaRight: 'Richtig', metaWrong: 'Falsch',
-    uncategorized: 'Ohne Kategorie',
-    topics: 'Themen', topicCoverage: 'Abdeckung', topicAccuracy: 'Genauigkeit', practiceTopic: 'Üben'
-  },
-  tr: {
-    title: 'Öğrenme Profili',
-    adaptive: 'Uyarlamalı',
-    overview: 'Genel Bakış', activity: 'Aktivite', performance: 'Performans', review: 'Tekrar',
-    wordsSeen: 'Görülen Kelimeler', wordsStruggling: 'Zorlanılan Kelimeler', wordsMastered: 'Uzmanlaşılan Kelimeler', accuracyPct: 'Doğruluk %', wordsReviewed: 'İncelenen Kelimeler',
-    quizzesCompleted: 'Tamamlanan Quizler', correctAnswers: 'Doğru Cevaplar', incorrectAnswers: 'Yanlış Cevaplar', totalStudyTime: 'Toplam Çalışma Süresi',
-    strongest: 'En Güçlü Alanlar', needsPractice: 'Daha Fazla Pratik', notEnoughCategoryData: 'Henüz yeterli kategori verisi yok',
-    reviewWeakWords: 'Zayıf Kelimeleri Tekrar Et', reviewRecentMistakes: 'Son Hataları Tekrar Et', reviewMixedPractice: 'Karışık Tekrar',
-    seenWords: 'Görülen Kelimeler', strugglingWords: 'Zorlanılan Kelimeler', masteredWords: 'Uzmanlaşılan Kelimeler',
-    loadingLevelWords: 'Bu seviye için kelimeler yükleniyor...', noWordsInList: 'Bu listede henüz kelime yok.',
-    signInUnlock: 'Kilidi açmak için giriş yap:',
-    signInUnlockTopicsHint: 'Her konudaki kapsama ve doğruluk oranlarını gör.',
-    signInBtn: 'Giriş yap',
-    signInPrompt: 'İlerlemenizi cihazlar arasında senkronize etmek için giriş yapın.',
-    guestProfileEmpty: 'Burada istatistik görmek için bu seviyede bir quiz tamamlayın.',
-    noTrackedFor: '{level} için takip edilen veri yok. {best} sekmesini dene.',
-    adaptiveBand: 'CEFR seviyesi',
-    adaptiveSkill: 'Yetenek seviyesi',
-    journeySeenShort: '%{pct} görüldü',
-    journeyGoldShort: 'Seviyeniz',
-    journeyGoldHint: 'geniş = kalibrasyon · dar = emin',
-    resetAdaptiveProgress: 'Uyarlamalı ilerlemeyi sıfırla',
-    resetAdaptiveConfirm: 'Tüm Uyarlamalı V2 ilerlemesini sıfırla? Kelime geçmişi, seviye ve kalibrasyon silinir. Bu geri alınamaz.',
-    metaSeen: 'Görüldü', metaRight: 'Doğru', metaWrong: 'Yanlış',
-    uncategorized: 'Kategorisiz',
-    topics: 'Konular', topicCoverage: 'Kapsam', topicAccuracy: 'Doğruluk', practiceTopic: 'Pratik'
-  },
-  fa: {
-    title: 'پروفایل یادگیری',
-    adaptive: 'تطبیقی',
-    overview: 'نمای کلی', activity: 'فعالیت', performance: 'عملکرد', review: 'مرور',
-    wordsSeen: 'واژه‌های دیده‌شده', wordsStruggling: 'واژه‌های دشوار', wordsMastered: 'واژه‌های مسلط', accuracyPct: 'دقت ٪', wordsReviewed: 'واژه‌های مرورشده',
-    quizzesCompleted: 'کوئیزهای تکمیل‌شده', correctAnswers: 'پاسخ‌های درست', incorrectAnswers: 'پاسخ‌های نادرست', totalStudyTime: 'کل زمان مطالعه',
-    strongest: 'قوی‌ترین دسته‌ها', needsPractice: 'نیاز به تمرین', notEnoughCategoryData: 'هنوز دادهٔ کافی برای دسته‌ها نیست',
-    reviewWeakWords: 'مرور واژه‌های ضعیف', reviewRecentMistakes: 'مرور اشتباهات اخیر', reviewMixedPractice: 'مرور ترکیبی',
-    seenWords: 'واژه‌های دیده‌شده', strugglingWords: 'واژه‌های دشوار', masteredWords: 'واژه‌های مسلط',
-    loadingLevelWords: 'در حال بارگذاری واژه‌های این سطح...', noWordsInList: 'هنوز واژه‌ای در این فهرست نیست.',
-    signInUnlock: 'برای باز کردن قفل وارد شوید:',
-    signInUnlockTopicsHint: 'پوشش و دقت هر موضوع واژگان را ببینید.',
-    signInBtn: 'ورود',
-    signInPrompt: 'برای همگام‌سازی پیشرفت بین دستگاه‌ها وارد شوید.',
-    guestProfileEmpty: 'برای دیدن آمار این سطح، یک آزمون کامل کنید.',
-    noTrackedFor: 'برای {level} دادهٔ ثبت‌شده‌ای نیست. تب {best} را امتحان کنید.',
-    adaptiveBand: 'سطح CEFR',
-    adaptiveSkill: 'سطح مهارت',
-    journeySeenShort: '{pct}٪ دیده‌شده',
-    journeyGoldShort: 'سطح شما',
-    journeyGoldHint: 'عریض = کالیبراسیون · باریک = اطمینان',
-    resetAdaptiveProgress: 'بازنشانی پیشرفت تطبیقی',
-    resetAdaptiveConfirm: 'همهٔ پیشرفت تطبیقی V2 بازنشانی شود؟ تاریخچهٔ واژه‌ها، سطح و کالیبراسیون حذف می‌شود. این کار برگشت‌پذیر نیست.',
-    metaSeen: 'دیده', metaRight: 'درست', metaWrong: 'نادرست',
-    uncategorized: 'بدون دسته',
-    topics: 'موضوعات', topicCoverage: 'پوشش', topicAccuracy: 'دقت', practiceTopic: 'تمرین'
-  },
-  ru: {
-    title: 'Профиль обучения',
-    adaptive: 'Адаптив',
-    overview: 'Обзор', activity: 'Активность', performance: 'Результаты', review: 'Повторение',
-    wordsSeen: 'Просмотрено слов', wordsStruggling: 'Сложные слова', wordsMastered: 'Освоенные слова', accuracyPct: 'Точность %', wordsReviewed: 'Повторенные слова',
-    quizzesCompleted: 'Завершено викторин', correctAnswers: 'Правильные ответы', incorrectAnswers: 'Неправильные ответы', totalStudyTime: 'Общее время обучения',
-    strongest: 'Сильные категории', needsPractice: 'Нужно подтянуть', notEnoughCategoryData: 'Недостаточно данных по категориям',
-    reviewWeakWords: 'Повторить слабые слова', reviewRecentMistakes: 'Повторить недавние ошибки', reviewMixedPractice: 'Смешанная практика',
-    seenWords: 'Просмотренные слова', strugglingWords: 'Сложные слова', masteredWords: 'Освоенные слова',
-    loadingLevelWords: 'Загрузка слов для этого уровня...', noWordsInList: 'В этом списке пока нет слов.',
-    signInUnlock: 'Войдите, чтобы разблокировать:',
-    signInUnlockTopicsHint: 'Охват и точность по каждой теме словаря.',
-    signInBtn: 'Войти',
-    signInPrompt: 'Войдите, чтобы синхронизировать прогресс между устройствами.',
-    guestProfileEmpty: 'Пройдите викторину на этом уровне, чтобы увидеть статистику.',
-    noTrackedFor: 'Нет данных для {level}. Попробуйте вкладку {best}.',
-    adaptiveBand: 'Уровень CEFR',
-    adaptiveSkill: 'Уровень навыка',
-    journeySeenShort: '{pct}% просмотрено',
-    journeyGoldShort: 'Ваш уровень',
-    journeyGoldHint: 'широко = калибровка · узко = уверенно',
-    resetAdaptiveProgress: 'Сбросить адаптивный прогресс',
-    resetAdaptiveConfirm: 'Сбросить весь прогресс Adaptive V2? История слов, уровень и калибровка будут удалены. Это нельзя отменить.',
-    metaSeen: 'Просм.', metaRight: 'Верно', metaWrong: 'Неверно',
-    uncategorized: 'Без категории',
-    topics: 'Темы', topicCoverage: 'Охват', topicAccuracy: 'Точность', practiceTopic: 'Практика'
-  },
-  uk: {
-    title: 'Профіль навчання',
-    adaptive: 'Адаптив',
-    overview: 'Огляд', activity: 'Активність', performance: 'Результати', review: 'Повторення',
-    wordsSeen: 'Переглянуто слів', wordsStruggling: 'Складні слова', wordsMastered: 'Опановані слова', accuracyPct: 'Точність %', wordsReviewed: 'Повторені слова',
-    quizzesCompleted: 'Завершено вікторин', correctAnswers: 'Правильні відповіді', incorrectAnswers: 'Неправильні відповіді', totalStudyTime: 'Загальний час навчання',
-    strongest: 'Найсильніші категорії', needsPractice: 'Потрібно попрактикувати', notEnoughCategoryData: 'Недостатньо даних за категоріями',
-    reviewWeakWords: 'Повторити слабкі слова', reviewRecentMistakes: 'Повторити недавні помилки', reviewMixedPractice: 'Змішана практика',
-    seenWords: 'Переглянуті слова', strugglingWords: 'Складні слова', masteredWords: 'Опановані слова',
-    loadingLevelWords: 'Завантаження слів для цього рівня...', noWordsInList: 'У цьому списку поки немає слів.',
-    signInUnlock: 'Увійдіть, щоб розблокувати:',
-    signInUnlockTopicsHint: 'Охоплення й точність для кожної теми словника.',
-    signInBtn: 'Увійти',
-    signInPrompt: 'Увійдіть, щоб синхронізувати прогрес між пристроями.',
-    guestProfileEmpty: 'Пройдіть вікторину на цьому рівні, щоб побачити статистику.',
-    noTrackedFor: 'Немає даних для {level}. Спробуйте вкладку {best}.',
-    adaptiveBand: 'Рівень CEFR',
-    adaptiveSkill: 'Рівень навички',
-    journeySeenShort: '{pct}% переглянуто',
-    journeyGoldShort: 'Ваш рівень',
-    journeyGoldHint: 'широко = калібрування · вузько = впевнено',
-    resetAdaptiveProgress: 'Скинути адаптивний прогрес',
-    resetAdaptiveConfirm: 'Скинути весь прогрес Adaptive V2? Історія слів, рівень і калібрування будуть видалені. Це не можна скасувати.',
-    metaSeen: 'Перегл.', metaRight: 'Прав.', metaWrong: 'Неправ.',
-    uncategorized: 'Без категорії',
-    topics: 'Теми', topicCoverage: 'Охоплення', topicAccuracy: 'Точність', practiceTopic: 'Практика'
-  },
-  ar: {
-    title: 'ملف التعلم',
-    adaptive: 'تكيّفي',
-    overview: 'نظرة عامة', activity: 'النشاط', performance: 'الأداء', review: 'مراجعة',
-    wordsSeen: 'الكلمات التي تمت رؤيتها', wordsStruggling: 'الكلمات الصعبة', wordsMastered: 'الكلمات المتقنة', accuracyPct: 'الدقة %', wordsReviewed: 'الكلمات المُراجَعة',
-    quizzesCompleted: 'الاختبارات المكتملة', correctAnswers: 'الإجابات الصحيحة', incorrectAnswers: 'الإجابات الخاطئة', totalStudyTime: 'إجمالي وقت الدراسة',
-    strongest: 'أقوى الفئات', needsPractice: 'تحتاج إلى تدريب', notEnoughCategoryData: 'لا توجد بيانات فئات كافية بعد',
-    reviewWeakWords: 'مراجعة الكلمات الضعيفة', reviewRecentMistakes: 'مراجعة الأخطاء الأخيرة', reviewMixedPractice: 'مراجعة مختلطة',
-    seenWords: 'الكلمات التي تمت رؤيتها', strugglingWords: 'الكلمات الصعبة', masteredWords: 'الكلمات المتقنة',
-    loadingLevelWords: 'جارٍ تحميل كلمات هذا المستوى...', noWordsInList: 'لا توجد كلمات في هذه القائمة بعد.',
-    signInUnlock: 'سجّل الدخول للفتح:',
-    signInUnlockTopicsHint: 'التغطية والدقة لكل موضوع مفردات.',
-    signInBtn: 'تسجيل الدخول',
-    signInPrompt: 'سجّل الدخول لمزامنة تقدمك عبر الأجهزة.',
-    guestProfileEmpty: 'أكمل اختباراً على هذا المستوى لرؤية الإحصائيات هنا.',
-    noTrackedFor: 'لا توجد بيانات متتبعة للمستوى {level}. جرّب تبويب {best}.',
-    adaptiveBand: 'مستوى CEFR',
-    adaptiveSkill: 'مستوى المهارة',
-    journeySeenShort: '{pct}% شوهد',
-    journeyGoldShort: 'مستواك',
-    journeyGoldHint: 'عريض = معايرة · ضيق = ثقة',
-    resetAdaptiveProgress: 'إعادة تعيين التقدم التكيّفي',
-    resetAdaptiveConfirm: 'إعادة تعيين كل تقدم Adaptive V2؟ سيتم حذف سجل الكلمات والمستوى والمعايرة. لا يمكن التراجع عن ذلك.',
-    metaSeen: 'شوهد', metaRight: 'صحيح', metaWrong: 'خطأ',
-    uncategorized: 'غير مصنف',
-    topics: 'المواضيع', topicCoverage: 'التغطية', topicAccuracy: 'الدقة', practiceTopic: 'تدريب'
-  }
-};
-
-function _lp(key, vars) {
-  var dict = PROFILE_I18N[LANG] || PROFILE_I18N.en;
-  var text = dict[key] || PROFILE_I18N.en[key] || '';
-  if (vars && typeof text === 'string') {
-    Object.keys(vars).forEach(function(k) {
-      text = text.replace(new RegExp('\\{' + k + '\\}', 'g'), formatNumStr(String(vars[k])));
-    });
-  }
-  return text;
-}
-
-// ════════════════════════════════════════════════════════════════
-//  CATEGORY MAP — 21 vocabulary categories, ID 1–21
-// ════════════════════════════════════════════════════════════════
-var CATEGORY_MAP = [
-  { id:  1, name: 'Numbers & Quantities',            icon: '🔢', c1: 'rgba(126,184,247,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
-  { id:  2, name: 'Time & Calendar',                 icon: '🕐', c1: 'rgba(183,138,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(183,138,247,.28)', bl: 'rgb(117 81 159)',  br: 'rgb(111 77 150)'  },
-  { id:  3, name: 'Family & Relationships',          icon: '👨‍👩‍👧', c1: 'rgba(247,138,168,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
-  { id:  4, name: 'Body & Health',                   icon: '🏥', c1: 'rgba(247,100,120,.12)', c2: 'rgba(247,138,168,.08)', b: 'rgba(247,100,120,.28)', bl: 'rgb(146 65 77)',   br: 'rgb(127 55 66)'   },
-  { id:  5, name: 'Food & Drink',                    icon: '🍽️', c1: 'rgba(247,170,80,.12)',  c2: 'rgba(232,201,122,.08)', b: 'rgba(247,170,80,.28)',  bl: 'rgb(146 111 51)',  br: 'rgb(127 95 44)'   },
-  { id:  6, name: 'Home & Living',                   icon: '🏠', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
-  { id:  7, name: 'Clothing & Appearance',           icon: '👗', c1: 'rgba(247,138,183,.12)', c2: 'rgba(183,138,247,.08)', b: 'rgba(247,138,183,.28)', bl: 'rgb(146 90 117)',  br: 'rgb(127 78 101)'  },
-  { id:  8, name: 'Work & Careers',                  icon: '💼', c1: 'rgba(100,220,190,.12)', c2: 'rgba(107,232,160,.08)', b: 'rgba(100,220,190,.28)', bl: 'rgb(59 143 122)',  br: 'rgb(51 123 105)'  },
-  { id:  9, name: 'Education & Learning',            icon: '📚', c1: 'rgba(100,170,247,.12)', c2: 'rgba(100,220,190,.08)', b: 'rgba(100,170,247,.28)', bl: 'rgb(59 111 158)',  br: 'rgb(51 95 127)'   },
-  { id: 10, name: 'Travel & Tourism',                icon: '✈️', c1: 'rgba(100,210,247,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(100,210,247,.28)', bl: 'rgb(59 137 158)',  br: 'rgb(51 117 127)'  },
-  { id: 11, name: 'Transportation',                  icon: '🚗', c1: 'rgba(126,184,247,.12)', c2: 'rgba(100,210,247,.08)', b: 'rgba(126,184,247,.28)', bl: 'rgb(74 119 159)',  br: 'rgb(64 97 127)'   },
-  { id: 12, name: 'Shopping & Finance',              icon: '🛍️', c1: 'rgba(247,138,168,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(247,138,168,.28)', bl: 'rgb(146 90 108)',  br: 'rgb(127 78 94)'   },
-  { id: 13, name: 'Language, Communication & Media', icon: '💬', c1: 'rgba(107,232,160,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
-  { id: 14, name: 'Nature, Weather & Animals',       icon: '🌿', c1: 'rgba(107,232,160,.12)', c2: 'rgba(100,210,180,.08)', b: 'rgba(107,232,160,.28)', bl: 'rgb(69 127 90)',   br: 'rgb(54 95 69)'    },
-  { id: 15, name: 'Sports & Leisure',                icon: '⚽', c1: 'rgba(150,220,100,.12)', c2: 'rgba(232,201,122,.08)', b: 'rgba(150,220,100,.28)', bl: 'rgb(89 143 64)',   br: 'rgb(77 123 55)'   },
-  { id: 16, name: 'Arts & Culture',                  icon: '🎨', c1: 'rgba(247,140,80,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,140,80,.28)',  bl: 'rgb(146 91 51)',   br: 'rgb(127 78 44)'   },
-  { id: 17, name: 'Technology & Devices',            icon: '💻', c1: 'rgba(80,220,240,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,220,240,.28)',  bl: 'rgb(47 143 154)',  br: 'rgb(40 123 132)'  },
-  { id: 18, name: 'Society, Law & Politics',         icon: '⚖️', c1: 'rgba(232,201,122,.12)', c2: 'rgba(247,170,80,.08)',  b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
-  { id: 19, name: 'Emotions & Personal Traits',      icon: '❤️', c1: 'rgba(247,80,100,.12)',  c2: 'rgba(247,138,168,.08)', b: 'rgba(247,80,100,.28)',  bl: 'rgb(146 52 64)',   br: 'rgb(127 44 55)'   },
-  { id: 20, name: 'Places & Geography',              icon: '🗺️', c1: 'rgba(80,200,200,.12)',  c2: 'rgba(126,184,247,.08)', b: 'rgba(80,200,200,.28)',  bl: 'rgb(47 130 128)',  br: 'rgb(40 112 110)'  },
-  { id: 21, name: 'Grammar & Function Words',        icon: '📝', c1: 'rgba(232,201,122,.12)', c2: 'rgba(126,184,247,.08)', b: 'rgba(232,201,122,.28)', bl: 'rgb(121 107 68)',  br: 'rgb(111 98 62)'   },
-];
-
-
-// ══════════════════════════════════════════════════════════════════
 //  APP STATE
 // ══════════════════════════════════════════════════════════════════
 let LANG = (function() { try { return localStorage.getItem('dl_lang') || 'en'; } catch(e) { return 'en'; } })();
@@ -1452,6 +38,7 @@ var adaptiveSelectedLevel = 'A1';
 var currentThemeCategoryId = 0; // non-zero while a theme quiz is active
 var _themeAnswers = [];
 var learningProfileSelectedLevel = 'ALL';
+var _profileDirty = true;
 var learningProfileDetailMode = null;
 var learningProfileLastDetailHtml = '';
 var _rwFirstLoad = false;
@@ -1664,21 +251,14 @@ function rowTypeLabel(type) {
   return labels[type] || type || (labels.Word || 'Word');
 }
 
-// ── Settings drawer ──
+// ── Settings tab ──
 function openSettings() {
   window.umami?.track('settings_opened');
-  document.getElementById('drawer-overlay').classList.add('open');
-  document.getElementById('settings-drawer').classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
+  switchTab('settings');
+  _syncAppChrome();
 }
 function closeSettings() {
-  document.getElementById('drawer-overlay').classList.remove('open');
-  var _dr = document.getElementById('settings-drawer');
-  _dr.classList.remove('open');
-  // Reset any drag-offset so the next open() starts clean
-  _dr.style.transition = '';
-  _dr.style.transform = '';
-  document.body.style.overflow = ''; // restore scroll
+  switchTab('learn');
 }
 function openAbout() {
   window.umami?.track('about_opened');
@@ -1777,8 +357,7 @@ function copyAppLink(opts) {
     onCopied();
   }
 }
-function closeAbout(e) {
-  if (e && e.target !== document.getElementById('about-modal-overlay')) return;
+function closeAbout() {
   document.getElementById('about-modal-overlay').classList.remove('open');
 }
 function openInstallGuide() {
@@ -1796,8 +375,7 @@ function openInstallGuide() {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closeInstallGuide(e) {
-  if (e && e.target !== document.getElementById('install-guide-overlay')) return;
+function closeInstallGuide() {
   var overlay = document.getElementById('install-guide-overlay');
   var guide = document.querySelector('.install-guide');
   if (!overlay) return;
@@ -1861,38 +439,123 @@ function setLang(lang) {
   document.body.classList.toggle('lang-fa', lang==='fa');
   document.body.classList.toggle('lang-ar', lang==='ar');
   document.body.classList.toggle('lang-rtl', isRtl);
-  var backBtn = document.getElementById('app-back-btn');
-  if (backBtn && !backBtn.classList.contains('hidden')) {
-    backBtn.innerHTML = _backArrowSvg(isRtl);
-  }
+  if (typeof window._syncSideRaysOrigins === 'function') window._syncSideRaysOrigins();
+  document.querySelectorAll('.page-back-btn').forEach(function(btn) {
+    btn.innerHTML = _backArrowSvg(isRtl);
+  });
   applyTranslations();
   updateCounts();
   _renderCategoryGrid();
-  // Immediately update the active screen so the user sees the new language at once
-  if (!document.getElementById('screen-quiz').classList.contains('hidden')) {
-    _quizRefreshLang();
-  } else if (!document.getElementById('screen-swipe').classList.contains('hidden')) {
-    _swipeRefreshLang();
-  } else if (!document.getElementById('screen-random').classList.contains('hidden')) {
-    _explorerRefreshLang();
-  } else if (!document.getElementById('screen-theme-select').classList.contains('hidden')) {
-    // already re-rendered unconditionally above
-  } else if (!document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    if (_dictLoaded) _renderDictList(document.getElementById('dict-search-input').value, true);
-  } else if (!document.getElementById('screen-practice').classList.contains('hidden')) {
-    _practiceRefreshCards();
-  } else if (!document.getElementById('screen-learning-profile').classList.contains('hidden')) {
-    renderLearningProfile();
+  _resyncTabLayoutAfterDirChange();
+  _refreshDynamicUiForLang();
+}
+
+function _screenIsVisible(id) {
+  if (id === 'screen-levels') return true;
+  var tab = _pageOwnerTab(id);
+  if (!tab) {
+    if (_sharedPageIds && _sharedPageIds.indexOf(id) >= 0) return _getStackTop(_activeTab) === id;
+    var el = document.getElementById(id);
+    return !!(el && el.classList.contains('is-stack-top'));
+  }
+  return _getStackTop(tab) === id && tab === _activeTab;
+}
+
+function _resultsRefreshLang() {
+  if (!_screenIsVisible('screen-results')) return;
+  var total = (typeof ok === 'number' ? ok : 0) + (typeof no === 'number' ? no : 0);
+  if (!total) return;
+  var pct = Math.round(ok / total * 100);
+  var titles = t('resultTitles');
+  var title = pct >= 90 ? titles.great : pct >= 70 ? titles.good : pct >= 50 ? titles.ok : titles.low;
+  var rTitle = document.getElementById('r-title');
+  if (rTitle) rTitle.textContent = title;
+  var rSub = document.getElementById('r-sub');
+  if (rSub && typeof currentLevel !== 'undefined') rSub.textContent = t('resultSub')(currentLevel, pct);
+}
+
+function _rushSummaryRefreshLang() {
+  if (!_screenIsVisible('screen-rush-summary')) return;
+  var u = (typeof UI !== 'undefined' && UI[LANG]) ? UI[LANG] : UI.en;
+  var title = document.getElementById('rush-summary-title');
+  if (title) title.textContent = u.rushSummaryTitle;
+  var record = document.getElementById('rush-summary-record');
+  if (record && record.style.display !== 'none') record.textContent = u.rushSummaryRecord;
+}
+
+async function _wordModalRefreshLang() {
+  var overlay = document.getElementById('word-modal-overlay');
+  if (!overlay || !overlay.classList.contains('open') || !rwWordKey) return;
+  var word = rwWordKey;
+  var meta = metaFromWord(word);
+  var content = document.getElementById('word-modal-content');
+  if (!content) return;
+  try {
+    var data = await fetchWiktionary(word, meta.tc);
+    await _prefetchLangMeta(word, meta);
+    await _prefetchDefTranslations(data);
+    content.innerHTML = renderWiktCard(data, meta);
+    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
+    if (chip) chip.click();
+  } catch (e) {
+    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
+    _translateDefsInContainer(content);
+    _autoFetchLangMeaning(word, content);
   }
 }
+
+function _refreshActiveOverlayScreenForLang() {
+  if (_screenIsVisible('screen-quiz') && typeof _quizRefreshLang === 'function') {
+    _quizRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-swipe') && typeof _swipeRefreshLang === 'function') {
+    _swipeRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-random') && typeof _explorerRefreshLang === 'function') {
+    _explorerRefreshLang();
+    return;
+  }
+  if (_screenIsVisible('screen-practice') && typeof _practiceRefreshCards === 'function') {
+    _practiceRefreshCards();
+    return;
+  }
+  if (_screenIsVisible('screen-dictionary') && _dictLoaded && typeof _renderDictList === 'function') {
+    var dictInput = document.getElementById('dict-search-input');
+    _renderDictList(dictInput ? dictInput.value : '', true);
+    return;
+  }
+  _resultsRefreshLang();
+  _rushSummaryRefreshLang();
+  var modal = document.getElementById('word-modal-overlay');
+  if (modal && modal.classList.contains('open')) _wordModalRefreshLang();
+}
+
+function _refreshDynamicUiForLang() {
+  learningProfileLastDetailHtml = '';
+
+  if (typeof _statsTabReady !== 'undefined' && _statsTabReady && typeof renderLearningProfile === 'function') {
+    renderLearningProfile();
+  }
+  if (typeof _practiceTabReady !== 'undefined' && _practiceTabReady) {
+    if (typeof _renderPracticeSetupFilters === 'function') _renderPracticeSetupFilters();
+    if (typeof _updatePracticeMatchCount === 'function') _updatePracticeMatchCount();
+  }
+  if (_dictLoaded && typeof _renderDictList === 'function' && !_screenIsVisible('screen-dictionary')) {
+    var dictSearch = document.getElementById('dict-search-input');
+    _renderDictList(dictSearch ? dictSearch.value : '', true);
+  }
+  if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
+  _refreshActiveOverlayScreenForLang();
+}
+window._refreshDynamicUiForLang = _refreshDynamicUiForLang;
 
 // ── Apply all UI translations ──
 function applyTranslations() {
   const u = new Proxy(UI[LANG], { get: function(obj, prop) { return obj[prop] !== undefined ? obj[prop] : UI.en[prop]; } });
-  document.getElementById('header-sub').textContent = u.headerSub;
   document.getElementById('st-title').textContent = u.settingsTitle;
   document.getElementById('st-lang-label').textContent = u.langLabel;
-  document.getElementById('st-close-btn').textContent = u.closeDone;
   document.getElementById('rw-banner-title').textContent = u.rwBannerTitle;
   document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
   document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
@@ -1909,7 +572,8 @@ function applyTranslations() {
   document.getElementById('btn-play-again').textContent = u.playAgain;
   document.getElementById('btn-choose-level').textContent = u.chooseLevel;
   // Quiz buttons (back buttons are now in app-header, not in screens)
-  document.getElementById('rw-screen-title').textContent = u.rwTitle;
+  document.getElementById('rw-screen-title').textContent = u.rwBannerTitle;
+  document.getElementById('rw-screen-subtitle').textContent = u.rwBannerSub;
   document.getElementById('swipe-setup-screen-title').textContent = u.swipeSetupTitle;
   document.getElementById('swipe-setup-screen-subtitle').textContent = u.swipeSubtitle;
   document.getElementById('swipe-setup-title').textContent = u.swipeSetupTitle;
@@ -1956,7 +620,10 @@ function applyTranslations() {
   var rushTitle = document.getElementById('rush-banner-title');
   if (rushTitle) rushTitle.textContent = u.rushBannerTitle;
   if (typeof window._rushRefreshBanner === 'function') window._rushRefreshBanner();
-  document.getElementById('learning-profile-banner-title').textContent = _lp('title');
+  var lpTitle = document.getElementById('learning-profile-title');
+  if (lpTitle) lpTitle.textContent = _lp('title');
+  var lpbTitle = document.getElementById('learning-profile-banner-title');
+  if (lpbTitle) lpbTitle.textContent = _lp('title');
   var rushAgain = document.getElementById('btn-rush-again');
   if (rushAgain) rushAgain.textContent = u.rushSummaryAgain;
   var rushHome = document.getElementById('btn-rush-home');
@@ -1971,7 +638,12 @@ function applyTranslations() {
   if (rushLblStreak) rushLblStreak.textContent = u.rushLblStreak;
   var rushLblTime = document.getElementById('rush-lbl-time');
   if (rushLblTime) rushLblTime.textContent = u.rushLblTime;
-  document.getElementById('learning-profile-title').textContent = _lp('title');
+  lpTitle = document.getElementById('learning-profile-title');
+  if (lpTitle) lpTitle.textContent = _lp('title');
+  var pBannerTitle = document.getElementById('practice-banner-title');
+  if (pBannerTitle) pBannerTitle.textContent = u.practiceBannerTitle;
+  var pBannerSub = document.getElementById('practice-banner-sub');
+  if (pBannerSub) pBannerSub.textContent = u.practiceBannerSub;
   document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
   document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
   // Adaptive setup screen
@@ -1985,9 +657,7 @@ function applyTranslations() {
   // Theme select screen
   document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
   document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
-  // Practice banner + setup screen
-  document.getElementById('practice-banner-title').textContent = u.practiceBannerTitle;
-  document.getElementById('practice-banner-sub').textContent = u.practiceBannerSub;
+  // Practice setup screen
   document.getElementById('practice-setup-screen-title').textContent = u.practiceSetupTitle;
   document.getElementById('practice-setup-screen-subtitle').textContent = u.practiceSubtitle;
   document.getElementById('practice-title').textContent = u.practiceSetupTitle;
@@ -2011,11 +681,7 @@ function applyTranslations() {
   if (pfl) pfl.textContent = u.practiceWordCount;
   pfl = document.getElementById('practice-match-hint');
   if (pfl) pfl.textContent = u.practiceNoWordsHint;
-  if (!document.getElementById('screen-practice-setup').classList.contains('hidden')) {
-    _renderPracticeSetupFilters();
-    _updatePracticeMatchCount();
-  }
-  // Dictionary screen
+  // Dictionary static chrome (list refresh handled by _refreshDynamicUiForLang)
   var _dbt = document.getElementById('dict-banner-title');
   if (_dbt) _dbt.textContent = u.dictBannerTitle;
   var _dbs = document.getElementById('dict-banner-sub');
@@ -2025,10 +691,6 @@ function applyTranslations() {
   document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
   var _dlt = document.getElementById('dict-loading-text');
   if (_dlt) _dlt.textContent = u.dictLoading;
-  // Refresh meanings immediately if dictionary is open
-  if (_dictLoaded && !document.getElementById('screen-dictionary').classList.contains('hidden')) {
-    _renderDictList(document.getElementById('dict-search-input').value, true);
-  }
   // Offline screen
   var _os = document.getElementById('offline-title');
   if (_os) _os.textContent = u.offlineTitle;
@@ -2036,7 +698,27 @@ function applyTranslations() {
   if (_om) _om.textContent = u.offlineMessage;
   var _or = document.getElementById('offline-refresh-btn');
   if (_or) _or.textContent = u.offlineRefreshBtn;
+  var navTabs = u.navTabs || UI.en.navTabs;
+  function _navTabLabel(tabId) {
+    if (!navTabs) return tabId;
+    if (tabId === 'learn') return navTabs.practice || tabId;
+    if (tabId === 'practice') return navTabs.learn || tabId;
+    return navTabs[tabId] || tabId;
+  }
+  TAB_ORDER.forEach(function(tabId) {
+    var text = _navTabLabel(tabId);
+    var lbl = document.querySelector('#bottom-tab-' + tabId + ' .bottom-tab-label');
+    var goldLbl = document.querySelector('#bottom-tab-gold-overlay [data-tab="' + tabId + '"] .bottom-tab-label');
+    if (lbl) lbl.textContent = text;
+    if (goldLbl) goldLbl.textContent = text;
+  });
   _refreshInstallGuideContent();
+  _resyncPageChromeIfVisible();
+}
+
+function _resyncPageChromeIfVisible() {
+  var pageId = _activeFlowPageId && _activeFlowPageId();
+  if (pageId) _syncPageChrome(pageId);
 }
 
 function _setInstallStep1Text() {
@@ -2252,10 +934,7 @@ function _initInstallExperience() {
 }
 
 function _ensureHomeLayout() {
-  var actions = document.querySelector('.home-actions');
-  if (actions) actions.classList.add('profile-visible');
-  var profile = document.getElementById('learning-profile-banner');
-  if (profile) profile.classList.remove('hidden');
+  /* layout now driven by bottom tabs */
 }
 
 window._ensureHomeLayout = _ensureHomeLayout;
@@ -2637,7 +1316,7 @@ async function startLevel(lv) {
 function renderCard() {
   answered = false;
   if (idx === 0 && queue.length &&
-      !document.getElementById('screen-quiz').classList.contains('hidden')) {
+      _screenIsVisible('screen-quiz')) {
     _quizTimerStart();
   }
   var card  = queue[idx];
@@ -2653,7 +1332,7 @@ function renderCard() {
   var badge = document.getElementById('tbadge');
   var wt = row.word_type || 'Word';
   badge.textContent = wt;
-  badge.className = 'tbadge '
+  badge.className = 'tbadge glass glass-pill glass-chrome '
     + (wt === 'Noun'       ? 'noun'
      : wt === 'Verb'       ? 'verb'
      : (wt === 'Adjective' || wt === 'Adj') ? 'adj'
@@ -2662,7 +1341,7 @@ function renderCard() {
   document.getElementById('tlevel').textContent = t('levelLabel') + ' ' + currentLevel;
   var mb = document.getElementById('tmode-badge');
   mb.textContent = t('vocabBadge');
-  mb.className = 'tmode-badge vocab';
+  mb.className = 'tmode-badge glass glass-pill glass-chrome vocab';
 
   document.getElementById('cquestion').textContent = t('quizQuestion');
 
@@ -2683,7 +1362,7 @@ function renderCard() {
   choicesEl.innerHTML = '';
   allChoiceRows.forEach(function(choiceRow) {
     var btn = document.createElement('button');
-    btn.className = 'cbtn';
+    btn.className = 'cbtn glass glass-tile glass-interactive';
     btn.dataset.csvId = choiceRow.id;
     btn.textContent   = _csvRowDisplay(choiceRow);
     btn.onclick = (function(b, cId, corrId) {
@@ -2695,9 +1374,10 @@ function renderCard() {
   // All languages use CSV columns directly — no per-choice API retry needed.
 
   var fb = document.getElementById('feedback');
-  fb.className = 'feedback'; fb.textContent = '';
+  fb.className = 'feedback glass glass-pill glass-chrome'; fb.textContent = '';
   document.getElementById('next-btn').textContent = t('next');
   document.getElementById('next-btn').classList.remove('show');
+  _syncPageChrome('screen-quiz');
 }
 
 function pick(btn, selectedId, correctId) {
@@ -2711,7 +1391,7 @@ function pick(btn, selectedId, correctId) {
     btn.classList.add('correct'); btn.classList.remove('disabled');
     ok++; btn.classList.add('pop');
     fb.textContent = t('correct');
-    fb.className = 'feedback c show';
+    fb.className = 'feedback glass glass-pill glass-chrome c show';
     if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
       _themeAnswers.push({
         wordId: String(queue[idx]._row.id),
@@ -2730,7 +1410,7 @@ function pick(btn, selectedId, correctId) {
       }
     });
     fb.innerHTML = t('wrong')(correctText);
-    fb.className = 'feedback w show';
+    fb.className = 'feedback glass glass-pill glass-chrome w show';
     if (currentThemeCategoryId > 0 && queue[idx] && queue[idx]._row) {
       _themeAnswers.push({
         wordId: String(queue[idx]._row.id),
@@ -2797,15 +1477,46 @@ function restartLevel(){
 }
 function goHome(){
   _quizTimerAbandon();
-  show('screen-levels');
+  switchTab('learn');
+  _resetTabStack('learn');
+  _syncAppChrome();
 }
 function _quizSessionActive(){
   var el=document.getElementById('screen-quiz');
-  if(!el||el.classList.contains('hidden'))return false;
+  if(!_screenIsVisible('screen-quiz'))return false;
   if(typeof window._rushIsActive==='function'&&window._rushIsActive())return true;
   if(currentThemeCategoryId>0)return true;
   if(typeof window._adaptiveV2IsActive==='function'&&window._adaptiveV2IsActive())return true;
   return false;
+}
+function _abortQuizSession() {
+  _quizTimerAbandon();
+  currentThemeCategoryId = 0;
+  _quizReturnScreen = 'screen-levels';
+}
+function _pageLeaveRequiresConfirm(pageId) {
+  return pageId === 'screen-quiz' && _quizSessionActive();
+}
+function _confirmPageLeave(pageId) {
+  return new Promise(function(resolve) {
+    if (!_pageLeaveRequiresConfirm(pageId)) {
+      resolve(true);
+      return;
+    }
+    var isRush = typeof window._rushIsActive === 'function' && window._rushIsActive();
+    if (typeof window.appDialog !== 'object' || typeof window.appDialog.confirm !== 'function') {
+      resolve(true);
+      return;
+    }
+    window.appDialog.confirm({
+      title: t(isRush ? 'quizExitRushTitle' : 'quizExitTitle'),
+      message: t(isRush ? 'quizExitRushMessage' : 'quizExitMessage'),
+      primaryLabel: t(isRush ? 'quizExitRushLeave' : 'quizExitLeave'),
+      cancelLabel: t('quizExitStay')
+    }).then(function(result) {
+      resolve(result === 'primary');
+    });
+  });
 }
 function _performQuizBack(){
   if(typeof window._rushIsActive==='function'&&window._rushIsActive()){
@@ -2813,27 +1524,44 @@ function _performQuizBack(){
     return;
   }
   var ret=_quizReturnScreen;
-  _quizReturnScreen='screen-levels';
-  window.goHome();
-  show(ret);
+  _abortQuizSession();
+  if (ret === 'screen-learning-profile') {
+    switchTab('stats', { popActiveToRoot: false });
+    _resetTabStack('stats');
+    _syncAppChrome();
+    return;
+  }
+  if (ret === 'screen-practice-setup') {
+    switchTab('practice', { popActiveToRoot: false });
+    _resetTabStack('practice');
+    _syncAppChrome();
+    return;
+  }
+  if (_activeTab !== 'learn') switchTab('learn', { popActiveToRoot: false });
+  var targetId = (!ret || ret === 'screen-levels' || ret === 'learn-root') ? _tabRoots.learn : ret;
+  if (_getStackTop('learn') === 'screen-quiz') {
+    _popStackToPage('learn', targetId, { animate: true }).then(function(ok) {
+      if (!ok) {
+        _resetTabStack('learn');
+        if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+      }
+      var top = _getStackTop('learn');
+      _syncAppChrome(top === _tabRoots.learn ? null : top);
+    });
+  } else {
+    _resetTabStack('learn');
+    if (targetId !== _tabRoots.learn) pushTabPage(targetId, { animate: false, tab: 'learn' });
+    var top = _getStackTop('learn');
+    _syncAppChrome(top === _tabRoots.learn ? null : top);
+  }
 }
 function goQuizBack(){
   if(!_quizSessionActive()){
     _performQuizBack();
     return;
   }
-  var isRush=typeof window._rushIsActive==='function'&&window._rushIsActive();
-  if(typeof window.appDialog!=='object'||typeof window.appDialog.confirm!=='function'){
-    _performQuizBack();
-    return;
-  }
-  window.appDialog.confirm({
-    title:t(isRush?'quizExitRushTitle':'quizExitTitle'),
-    message:t(isRush?'quizExitRushMessage':'quizExitMessage'),
-    primaryLabel:t(isRush?'quizExitRushLeave':'quizExitLeave'),
-    cancelLabel:t('quizExitStay')
-  }).then(function(result){
-    if(result==='primary')_performQuizBack();
+  _confirmPageLeave('screen-quiz').then(function(ok) {
+    if (ok) _performQuizBack();
   });
 }
 function openSwipeSetup(){ window.umami?.track('quick_match_opened'); show('screen-swipe-setup'); }
@@ -2882,13 +1610,13 @@ function _renderCategoryGrid() {
   if (!grid) return;
   var catNames = t('categoryNames') || {};
   grid.innerHTML = CATEGORY_MAP.map(function(cat) {
-    var badge = _categoryGridBadge(cat.id);
-    return '<button class="category-card" style="background:linear-gradient(135deg,' + cat.c1 + ',' + cat.c2 + ');border-left:1px solid ' + cat.bl + ';border-right:1px solid ' + cat.br + '" onclick="startThemeQuiz(' + cat.id + ')">'
-      + '<span class="cat-icon">' + cat.icon + '</span>'
-      + '<span class="cat-name">' + escHtml(catNames[cat.id] || cat.name) + '</span>'
-      + badge
+    var vars = '--cat-accent:' + cat.accent + ';--cat-icon-bg:' + cat.iconBg + ';';
+    return '<button type="button" class="category-card random-banner glass glass-tile glass-highlight glass-interactive" style="' + vars + '" onclick="startThemeQuiz(' + cat.id + ')">'
+      + '<div class="rb-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#' + cat.svgIcon + '"/></svg></div>'
+      + '<div class="rb-text"><strong>' + escHtml(catNames[cat.id] || cat.name) + '</strong></div>'
       + '</button>';
   }).join('');
+  if (typeof _syncTabViewportHeight === 'function') _syncTabViewportHeight();
 }
 
 async function startThemeQuiz(categoryId) {
@@ -3116,11 +1844,11 @@ function _buildQueueFromRows(rows) {
 
 // ── LEARNING PROFILE ──
 function openLearningProfile() {
-  _ensureHomeLayout();
   learningProfileSelectedLevel = 'ALL';
   _setLearningProfileTabActive(learningProfileSelectedLevel);
   window.umami?.track('learning_profile_opened');
-  show('screen-learning-profile');
+  switchTab('stats');
+  show('screen-levels');
   renderLearningProfile();
   _ensureLearningProfileData(learningProfileSelectedLevel);
 }
@@ -3478,10 +2206,10 @@ function _profileTopics(progress) {
 
 function _profileTopicsHtml(topics) {
   if (!topics.length) {
-    return '<div class="profile-empty">' + escHtml(_lp('notEnoughCategoryData')) + '</div>';
+    return '<div class="profile-empty glass glass-tile">' + escHtml(_lp('notEnoughCategoryData')) + '</div>';
   }
   return topics.map(function(topic) {
-    return '<div class="profile-topic-row">'
+    return '<div class="profile-topic-row glass glass-tile">'
       + '<div class="profile-topic-main">'
       + '<div class="profile-topic-name">' + escHtml(topic.name) + '</div>'
       + '<div class="profile-topic-meta">'
@@ -3496,7 +2224,7 @@ function _profileTopicsHtml(topics) {
       + '</div>'
       + '<div class="profile-topic-bar"><span style="width:' + topic.coveragePct + '%"></span></div>'
       + '</div>'
-      + '<button type="button" class="profile-topic-btn" onclick="startThemeQuiz(' + topic.id + ')">'
+      + '<button type="button" class="profile-topic-btn glass glass-pill glass-interactive" onclick="startThemeQuiz(' + topic.id + ')">'
       + escHtml(_lp('practiceTopic')) + '</button>'
       + '</div>';
   }).join('');
@@ -3531,10 +2259,10 @@ function _categoryPerformanceFromWords(wordRows) {
 
 function _profileWordListHtml(title, rows) {
   if (!rows.length) {
-    return '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('noWordsInList')) + '</div>';
+    return '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('noWordsInList')) + '</div>';
   }
   var items = rows.map(function(w) {
-    return '<div class="profile-word-item">'
+    return '<div class="profile-word-item glass glass-tile">'
       + '<div class="profile-word-main">' + escHtml(w.word) + '</div>'
       + (w.meaning ? '<div class="profile-word-meaning">' + escHtml(w.meaning) + '</div>' : '')
       + '</div>';
@@ -3631,7 +2359,7 @@ function renderLearningProfile() {
   var topicsHtml = _profileTopicsHtml(topics);
   var isGuest = !(snap && snap.signedIn);
   function stat(label, value, extraClass, clickMode, selected) {
-    var cls = 'profile-stat';
+    var cls = 'profile-stat glass glass-tile';
     if (extraClass) cls += ' ' + extraClass;
     if (clickMode) cls += ' profile-stat-clickable';
     if (selected) cls += ' active';
@@ -3652,23 +2380,25 @@ function renderLearningProfile() {
   if (learningProfileDetailMode === 'seen') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('seenWords'), seenListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   } else if (learningProfileDetailMode === 'struggling') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('strugglingWords'), strugglingListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   } else if (learningProfileDetailMode === 'mastered') {
     detailHtml = detailsCsvReady
       ? _profileWordListHtml(_lp('masteredWords'), masteredListRows)
-      : '<div class="profile-empty" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
+      : '<div class="profile-empty glass glass-tile" style="margin-top:10px;">' + escHtml(_lp('loadingLevelWords')) + '</div>';
   }
   var detailIsOpen = !!learningProfileDetailMode;
   if (detailIsOpen && detailHtml) {
     learningProfileLastDetailHtml = detailHtml;
+  } else if (!detailIsOpen) {
+    learningProfileLastDetailHtml = '';
   }
   var detailPanelHtml =
     '<div id="profile-detail-wrap" class="profile-detail-wrap' + (detailIsOpen ? ' has-content' : '') + '">' +
-      '<div class="profile-detail-inner">' + (learningProfileLastDetailHtml || '') + '</div>' +
+      '<div class="profile-detail-inner">' + (detailHtml || '') + '</div>' +
     '</div>';
 
   var band = progress.cefrBand || 'A1';
@@ -3686,12 +2416,12 @@ function renderLearningProfile() {
   var reviewBtnClass = isGuest ? ' profile-review-btn-locked' : '';
   var reviewBtnDisabled = isGuest ? ' disabled' : '';
   function reviewBtn(mode, label) {
-    return '<button type="button" class="profile-review-btn' + reviewBtnClass + '"' + reviewBtnDisabled +
+    return '<button type="button" class="profile-review-btn glass glass-pill glass-interactive' + reviewBtnClass + '"' + reviewBtnDisabled +
       (isGuest ? '' : ' onclick="startLearningProfileReview(\'' + mode + '\')"') + '>' +
       escHtml(label) + '</button>';
   }
   var reviewSectionHtml = isGuest
-    ? '<div class="profile-signin-unlock">' +
+    ? '<div class="profile-signin-unlock glass glass-tile">' +
         '<div class="profile-signin-unlock-head">' +
           '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
           '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
@@ -3708,7 +2438,7 @@ function renderLearningProfile() {
         reviewBtn('mixed', _lp('reviewMixedPractice')) +
       '</div>';
   var topicsSectionHtml = isGuest
-    ? '<div class="profile-signin-unlock">' +
+    ? '<div class="profile-signin-unlock glass glass-tile">' +
         '<div class="profile-signin-unlock-head profile-signin-unlock-head--compact">' +
           '<span class="profile-signin-unlock-label">🔒 ' + escHtml(_lp('signInUnlock')) + '</span>' +
           '<button type="button" class="profile-signin-btn" onclick="openSettings()">' + escHtml(_lp('signInBtn')) + '</button>' +
@@ -3744,7 +2474,7 @@ function renderLearningProfile() {
       topicsSectionHtml +
     '</div>' +
     '<div class="profile-section profile-danger-zone">' +
-      '<button type="button" class="profile-reset-btn" onclick="resetAdaptiveV2Progress()">' +
+      '<button type="button" class="profile-reset-btn glass glass-pill glass-interactive" onclick="resetAdaptiveV2Progress()">' +
         escHtml(_lp('resetAdaptiveProgress')) +
       '</button></div>';
 
@@ -3754,6 +2484,7 @@ function renderLearningProfile() {
       if (wrap) wrap.classList.add('open');
     });
   }
+  _profileDirty = false;
 }
 
 window.APP_DEBUG_LEARNING_PROFILE = function(level) {
@@ -3971,13 +2702,79 @@ function _swipeWordSub(row) {
 }
 
 function _renderSwipeCardHtml(card, posClass) {
-  return '<div class="swipe-card ' + posClass + '" data-swipe-pos="' + posClass + '">'
+  return '<div class="swipe-card glass glass-tile glass-highlight glass-chrome ' + posClass + '" data-swipe-pos="' + posClass + '">'
     + '<div class="swipe-word-block">'
     + '<div class="swipe-word">' + escHtml(_swipeWordLabel(card.row)) + '</div>'
     + '<div class="swipe-helper">' + escHtml(_swipeWordSub(card.row)) + '</div>'
     + '</div>'
-    + '<div class="swipe-meaning-box"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
+    + '<div class="swipe-meaning-box glass glass-chrome"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
     + '</div>';
+}
+
+function _cardStackExitMs() {
+  return _tabReducedMotion() ? 0 : 260;
+}
+
+function _releaseCardSettling(el) {
+  if (!el) return;
+  if (_tabReducedMotion()) {
+    el.classList.remove('is-settling');
+    return;
+  }
+  var settled = false;
+  var finish = function() {
+    if (settled) return;
+    settled = true;
+    el.classList.remove('is-settling');
+    el.removeEventListener('transitionend', onEnd);
+  };
+  var onEnd = function(e) {
+    if (e.target !== el || e.propertyName !== 'transform') return;
+    finish();
+  };
+  el.addEventListener('transitionend', onEnd);
+  setTimeout(finish, 380);
+}
+
+function _cardStackPromote(cfg) {
+  var stack = document.getElementById(cfg.stackId);
+  if (!stack) return false;
+  var top = stack.querySelector('.' + cfg.cardClass + '.top');
+  var under1 = stack.querySelector('.' + cfg.cardClass + '.under-1');
+  var under2 = stack.querySelector('.' + cfg.cardClass + '.under-2');
+  if (top) top.remove();
+  if (!cfg.deck[cfg.idx]) {
+    if (cfg.renderEmpty) cfg.renderEmpty(stack);
+    return true;
+  }
+  if (!under1) return false;
+  under1.classList.remove('under-1', 'dragging', 'swipe-left', 'swipe-right', 'flipped');
+  under1.style.transform = '';
+  under1.classList.add('top', 'is-settling');
+  _releaseCardSettling(under1);
+  if (under2) {
+    under2.classList.remove('under-2');
+    under2.classList.add('under-1');
+  }
+  var incoming = cfg.deck[cfg.idx + 2];
+  if (incoming) {
+    var wrap = document.createElement('div');
+    wrap.innerHTML = cfg.renderCard(incoming, 'under-2');
+    var el = wrap.firstElementChild;
+    if (el) {
+      if (!_tabReducedMotion()) el.classList.add('is-stack-enter');
+      stack.insertBefore(el, stack.firstChild);
+      if (!_tabReducedMotion()) {
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            el.classList.remove('is-stack-enter');
+          });
+        });
+      }
+    }
+  }
+  if (cfg.attachTop) cfg.attachTop(stack.querySelector('.' + cfg.cardClass + '.top'));
+  return true;
 }
 
 function renderSwipeCards() {
@@ -4052,7 +2849,7 @@ function _animateSwipe(dir, cardEl) {
   setTimeout(function() {
     _finalizeSwipe(dir);
     swipeAnimating = false;
-  }, 190);
+  }, _cardStackExitMs());
 }
 
 function _showSwipeToast(success, card) {
@@ -4086,7 +2883,18 @@ function _finalizeSwipe(dir) {
   else swipeBad++;
   _showSwipeToast(success, card);
   swipeIdx++;
-  renderSwipeCards();
+  if (!_cardStackPromote({
+    stackId: 'swipe-card-stack',
+    cardClass: 'swipe-card',
+    deck: swipeDeck,
+    idx: swipeIdx,
+    renderCard: _renderSwipeCardHtml,
+    attachTop: _attachSwipeGesture,
+    renderEmpty: function(stack) {
+      stack.innerHTML = '<div class="swipe-empty"><strong>' + escHtml(t('swipeEmptyTitle')) + '</strong><span>' + escHtml(t('swipeEmptySub')) + '</span></div>';
+    }
+  })) renderSwipeCards();
+  else _ensureSwipePrefetch();
 }
 
 function _ensureSwipePrefetch() {
@@ -4184,27 +2992,6 @@ function _getPracticeFilteredPool(level) {
   return pool;
 }
 
-function _syncPracticeScrollTop() {
-  var scroll = document.getElementById('practice-setup-scroll');
-  var appHdr = document.getElementById('app-header');
-  if (!scroll || !appHdr) return;
-  scroll.style.setProperty('--practice-scroll-top', Math.round(appHdr.getBoundingClientRect().bottom + 14) + 'px');
-}
-
-function _syncPracticeLayout() {
-  _syncPracticeScrollTop();
-  var screen = document.getElementById('screen-practice-setup');
-  var scroll = document.getElementById('practice-setup-scroll');
-  var footer = screen && screen.querySelector('.practice-setup-footer');
-  if (!screen || screen.classList.contains('hidden') || !scroll || !footer) return;
-  scroll.style.setProperty('--practice-scroll-pad', (footer.offsetHeight + 26) + 'px');
-}
-
-if (typeof window !== 'undefined' && !window._practiceLayoutResizeBound) {
-  window._practiceLayoutResizeBound = true;
-  window.addEventListener('resize', _syncPracticeScrollTop);
-}
-
 function _updatePracticeMatchCount() {
   var count = _getPracticeFilteredPool().length;
   var numEl = document.getElementById('practice-match-num');
@@ -4215,14 +3002,13 @@ function _updatePracticeMatchCount() {
   if (wrapEl) wrapEl.classList.toggle('is-empty', count === 0);
   if (hintEl) hintEl.classList.toggle('hidden', count > 0);
   if (btnEl) btnEl.disabled = count === 0;
-  _syncPracticeLayout();
 }
 
 function _renderPracticeChip(group, key, label, extraClass, icon) {
   var active = key === PRACTICE_ALL_KEY
     ? _practiceGroupIsAll(group)
     : (!_practiceGroupIsAll(group) && !!(practiceFilters[group] && practiceFilters[group][key]));
-  return '<button type="button" class="practice-chip' + (active ? ' active' : '') +
+  return '<button type="button" class="practice-chip glass glass-pill glass-chrome glass-interactive' + (active ? ' active' : '') +
     (extraClass ? ' ' + extraClass : '') + '" onclick="practiceToggleFilter(\'' + group + '\',\'' +
     String(key).replace(/'/g, "\\'") + '\')">' +
     (icon ? '<span class="chip-icon">' + icon + '</span>' : '') +
@@ -4288,18 +3074,19 @@ function practiceClearFilters() {
   _updatePracticeMatchCount();
 }
 
-async function openPracticeSetup() {
-  window.umami?.track('practice_opened');
-  _syncPracticeScrollTop();
-  show('screen-practice-setup');
-  _syncPracticeScrollTop();
-  var scrollEl = document.getElementById('practice-setup-scroll');
-  if (scrollEl) scrollEl.scrollTop = 0;
+async function _initPracticeTab() {
   try {
     await _loadV2Vocab();
   } catch (e) {}
   _renderPracticeSetupFilters();
   _updatePracticeMatchCount();
+}
+
+async function openPracticeSetup() {
+  window.umami?.track('practice_opened');
+  switchTab('practice');
+  _resetTabStack('practice');
+  _syncAppChrome();
 }
 
 function setPracticeLevel(lv) {
@@ -4362,11 +3149,11 @@ function _renderPracticeCardHtml(row, posClass) {
   var meaning = _csvRowDisplay(row) || '';
   return '<div class="practice-card ' + posClass + '">'
     + '<div class="practice-card-inner">'
-    + '<div class="practice-front" dir="ltr">'
+    + '<div class="practice-front glass glass-tile glass-highlight glass-chrome" dir="ltr">'
     + '<div class="practice-word">' + escHtml(word) + '</div>'
     + (example ? '<div class="practice-example">' + escHtml(example) + '</div>' : '')
     + '</div>'
-    + '<div class="practice-back">'
+    + '<div class="practice-back glass glass-tile glass-highlight glass-chrome">'
     + '<div class="practice-meaning-label">' + escHtml(t('practiceMeaningLabel')) + '</div>'
     + '<div class="practice-meaning">' + escHtml(meaning) + '</div>'
     + '</div>'
@@ -4463,9 +3250,20 @@ function _animatePracticeDismiss(dir, cardEl) {
   }
   setTimeout(function() {
     practiceIdx++;
-    renderPracticeCards();
+    if (!_cardStackPromote({
+      stackId: 'practice-card-stack',
+      cardClass: 'practice-card',
+      deck: practiceDeck,
+      idx: practiceIdx,
+      renderCard: _renderPracticeCardHtml,
+      attachTop: _attachPracticeGesture,
+      renderEmpty: function(stack) {
+        stack.innerHTML = '<div class="swipe-empty"><strong>' + escHtml(t('practiceDoneTitle')) + '</strong><span>' + escHtml(t('practiceDoneSub')) + '</span></div>';
+      }
+    })) renderPracticeCards();
+    else _ensurePracticePrefetch();
     practiceAnimating = false;
-  }, 190);
+  }, _cardStackExitMs());
 }
 
 function _ensurePracticePrefetch() {
@@ -4752,7 +3550,12 @@ function deduceLemma(word) {
 // ══════════════════════════════════════════════════════════════════
 async function fetchWiktionary(word, tc) {
   var lw = wiktLookupWord(word, tc);
-  var data = await _wiktFetch(lw);
+  var data;
+  try {
+    data = await _wiktFetch(lw);
+  } catch (e) {
+    data = { found: false, word: lw, ipa: '', sections: [] };
+  }
   // Retry with flipped first-letter case (handles ?-type words where we guessed
   // capitalisation but the Wiktionary entry is lowercase or vice versa)
   if (!data.found) {
@@ -5461,7 +4264,7 @@ function renderHeadLineChips(text) {
     });
 
     // Non-clickable gold chip for the base word
-    html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+    html += '<div class="rw-form rw-form--gold" style="cursor:default;">'
       + '<span class="fl" style="font-size:.62rem;">→</span>'
       + '<span class="fv gold">' + escHtml(baseWord) + '</span></div>';
 
@@ -5576,8 +4379,9 @@ function renderWiktCard(data, meta, targetId) {
     if (r) _csvLevelRow = r;
   });
   var level = _csvLevelRow ? (_csvLevelRow.level || '') : '';
+  var wb = _csvRowToOfflineWord(_csvLevelRow);
 
-  var html = '<div class="rw-card">';
+  var html = '<div class="rw-card glass glass-tile glass-highlight glass-chrome">';
   html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcNameDE(tc) + '</div>';
   html += '<div class="rw-word">' + escHtml(displayWord)
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
@@ -5668,7 +4472,7 @@ function renderWiktCard(data, meta, targetId) {
           + '<div class="rw-section-title">Grundform</div>'
           + '<div class="rw-forms">';
         _bwSet.forEach(function(_bwf) {
-          html += '<div class="rw-form" style="cursor:default;border-color:var(--gold);background:rgba(232,201,122,.08);">'
+          html += '<div class="rw-form rw-form--gold" style="cursor:default;">'
             + '<span class="fl" style="font-size:.62rem;">→</span>'
             + '<span class="fv gold">' + escHtml(_bwf) + '</span>'
             + '</div>';
@@ -5947,6 +4751,20 @@ function _tryChips(trows) {
   return null; // give up — use the compact table fallback
 }
 
+// Build offline word-bank payload from embedded vocabulary row (design / offline).
+function _csvRowToOfflineWord(row) {
+  if (!row || !row.word) return null;
+  var wb = {
+    word: row.word,
+    type: row.word_type || 'Word',
+    level: row.level || '',
+    example: row.example_de || '',
+    source: 'Vocabulary'
+  };
+  if (row.plural) wb.plural = row.plural;
+  return wb;
+}
+
 // Offline card body (cases/conjugation chips) — fallback when Wiktionary fails
 function renderOfflineWordBody(w) {
   var u = UI[LANG];
@@ -5996,784 +4814,3 @@ function renderOfflineWordBody(w) {
   return html;
 }
 
-// ══════════════════════════════════════════════════════════════════
-//  RANDOM WORD EXPLORER (API-powered)
-// ══════════════════════════════════════════════════════════════════
-var _randUsed = new Set();
-// State for the currently displayed explorer card (used by _explorerRefreshLang)
-var _currentRandRow  = null;  // CSV row object
-var _currentWiktData = null;  // Wiktionary data object (null when offline/failed)
-
-function showRandomWord() { window.umami?.track('word_explorer_opened'); _rwFirstLoad = true; show('screen-random'); renderRandomWord(); }
-
-// Build a flat pool of all CSV rows across A1/A2/B1 (cached after first build)
-var _csvRandPool = null;
-function _getCsvRandPool() {
-  if (_csvRandPool) return _csvRandPool;
-  var pool = [];
-  ['A1','A2','B1'].forEach(function(lv) {
-    var rows = CSV_QUIZ_DATA[lv] || [];
-    rows.forEach(function(r) {
-      if (r.word && r.word.trim() && r.translation_en && r.translation_en.trim()) pool.push(r);
-    });
-  });
-  _csvRandPool = pool;
-  return pool;
-}
-
-async function renderRandomWord() {
-  if (_rwFirstLoad) { _rwFirstLoad = false; } else { window.umami?.track('word_refreshed'); }
-  // Ensure CSV data is loaded (fast no-op if already done)
-  await _loadAllCSV();
-
-  var pool = _getCsvRandPool();
-  if (!pool.length) return;
-
-  var idx, attempts = 0;
-  do {
-    idx = Math.floor(Math.random() * pool.length);
-    attempts++;
-  } while (_randUsed.has(idx) && attempts < 60);
-  if (_randUsed.size > 300) _randUsed.clear();
-  _randUsed.add(idx);
-
-  var row  = pool[idx];
-  var word = row.word;
-  var tc   = typeChar(row.word_type);
-  var key  = normKey(word);
-  var meta = {
-    word: word, tc: tc,
-    en: row.translation_en || '',
-    tr: row.translation_tr || '',
-    ru: row.translation_ru || '',
-    uk: row.translation_uk || '',
-    fa: row.translation_fa || '',
-    ar: (_arMemCache && _arMemCache[key]) || ''
-  };
-
-  // Animate refresh
-  var rb = document.querySelector('.refresh-btn');
-  if (rb) {
-    rb.style.transform = 'rotate(360deg)';
-    rb.style.transition = 'transform .4s ease';
-    setTimeout(function(){ rb.style.transition='none'; rb.style.transform='rotate(0deg)'; }, 410);
-  }
-
-  var content = document.getElementById('rw-content');
-  content.innerHTML = loadingHTML();
-
-  fetchWiktionary(word, tc).then(async function(data) {
-    _currentRandRow  = row;
-    _currentWiktData = data;
-    await _prefetchLangMeta(word, meta);
-    await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
-    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-    if (chip) { rwWordKey = word; chip.click(); }
-  }).catch(function() {
-    _currentRandRow  = row;
-    _currentWiktData = null;
-    // Offline fallback: render with whatever is cached
-    var data = { found: false, word: word, ipa: '', sections: [] };
-    content.innerHTML = renderWiktCard(data, meta);
-    _translateDefsInContainer(content);
-    _autoFetchLangMeaning(word, content, meta.en);
-  });
-}
-
-// Re-renders the currently visible explorer card in the newly selected language.
-// Called by setLang() when screen-random is active.
-async function _explorerRefreshLang() {
-  if (!_currentRandRow) return;
-  var row  = _currentRandRow;
-  var data = _currentWiktData;
-  var word = row.word;
-  var tc   = typeChar(row.word_type);
-  var key  = normKey(word);
-  var meta = {
-    word: word, tc: tc,
-    en: row.translation_en || '',
-    tr: row.translation_tr || '',
-    ru: row.translation_ru || '',
-    uk: row.translation_uk || '',
-    fa: row.translation_fa || '',
-    ar: (_arMemCache && _arMemCache[key]) || ''
-  };
-  var content = document.getElementById('rw-content');
-  content.innerHTML = loadingHTML();
-  if (data) {
-    await _prefetchLangMeta(word, meta);
-    await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
-    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-    if (chip) { rwWordKey = word; chip.click(); }
-  } else {
-    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
-    _translateDefsInContainer(content);
-    _autoFetchLangMeaning(word, content, meta.en);
-  }
-}
-
-// Prefetches translations for all remaining quiz cards in the new language,
-// then re-renders the current card. Called by setLang() when screen-quiz is active.
-async function _quizRefreshLang() {
-  if (!queue.length) return;
-  var targetLang = LANG;
-
-  // All languages use CSV columns — re-render immediately
-  renderCard();
-}
-
-// Pre-fetch the active language translation into meta before rendering
-// so the card always displays in the right language on first paint.
-async function _prefetchLangMeta(word, meta) {
-  if (LANG === 'tr' && !meta.tr) { var _t = await fetchTurkish(word); if (_t) meta.tr = _t; }
-  // ar, uk: read from CSV via metaFromWord — no API fetch needed
-}
-
-// Pre-fetches all definition translations into cache before the card renders,
-// so the card shows translated definitions on first paint (no flicker/update).
-async function _prefetchDefTranslations(data) {
-  if (LANG === 'en' || !data || !data.sections || !data.sections.length) return;
-  var cs = _defCacheFor(LANG), cache = cs.cache, saveFn = cs.saveFn;
-  // Collect unique uncached definition texts across all sections
-  var seen = {}, toFetch = [];
-  data.sections.forEach(function(sec) {
-    (sec.defs || []).slice(0, 5).forEach(function(d) {
-      var dk = normDefKey(d.text);
-      if (cache[dk] === undefined && !seen[dk]) { seen[dk] = true; toFetch.push({ text: d.text, key: dk }); }
-    });
-  });
-  if (!toFetch.length) return;
-  await _batchTranslateDefs(toFetch, LANG, cache, saveFn, null);
-}
-
-async function openWordCard(word, tc) {
-  if (!word) return;
-  var meta = metaFromWord(word);
-  if (tc && meta.tc === '?') meta.tc = tc;
-  var content = document.getElementById('word-modal-content');
-  content.innerHTML = loadingHTML();
-  document.getElementById('word-modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent iOS pull-to-refresh
-  try {
-    var data = await fetchWiktionary(word, meta.tc);
-    await _prefetchLangMeta(word, meta);
-    await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
-    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-    if (chip) { rwWordKey = word; chip.click(); }
-  } catch(e) {
-    // Offline: render immediately with whatever is cached, auto-fetchers update if online
-    var data = { found: false, word: word, ipa: '', sections: [] };
-    content.innerHTML = renderWiktCard(data, meta);
-    _translateDefsInContainer(content);
-    _autoFetchLangMeaning(word, content);
-    var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
-    if (chip) { rwWordKey = word; chip.click(); }
-  }
-}
-
-function closeWordModal(e) {
-  if (e && e.target !== document.getElementById('word-modal-overlay')) return;
-  var _overlay = document.getElementById('word-modal-overlay');
-  _overlay.classList.remove('open');
-  // Reset any drag-offset so the next open() starts clean
-  var _wm = _overlay.querySelector('.word-modal');
-  if (_wm) { _wm.style.transition = ''; _wm.style.transform = ''; }
-  document.body.style.overflow = ''; // restore scroll
-}
-
-// ══════════════════════════════════════════════════════════════════
-//  DICTIONARY
-// ══════════════════════════════════════════════════════════════════
-var _dictLoaded = false;
-var _dictAllWords = [];
-var _dictScrollPaused = false;
-var _dictScrollPauseTimer = null;
-var _dictLetterOffsets = {}; // letter → scrollTop px, built at render time
-
-function openDictionary() {
-  window.umami?.track('dictionary_opened');
-  show('screen-dictionary');
-  document.getElementById('dict-search-input').value = '';
-  if (!_dictLoaded) {
-    _loadAllCSV().then(function() {
-      _buildDictData();
-      _dictLoaded = true;
-      _renderDictList('');
-    }).catch(function() {
-      document.getElementById('dict-list').innerHTML =
-        '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
-    });
-  } else {
-    _renderDictList('');
-  }
-}
-
-function _buildDictData() {
-  var all = [];
-  ['A1', 'A2', 'B1'].forEach(function(lv) {
-    (CSV_QUIZ_DATA[lv] || []).forEach(function(row) {
-      if (!row.word) return;
-      all.push({
-        word: row.word,
-        article: row.article || '',
-        type: row.word_type || '',
-        level: row.level || lv,
-        translation_en: row.translation_en || '',
-        translation_tr: row.translation_tr || '',
-        translation_ru: row.translation_ru || '',
-        translation_uk: row.translation_uk || '',
-        translation_fa: row.translation_fa || '',
-        translation_ar: row.translation_ar || '',
-      });
-    });
-  });
-  all.sort(function(a, b) {
-    return a.word.localeCompare(b.word, 'de', { sensitivity: 'base' });
-  });
-  _dictAllWords = all;
-  var subEl = document.getElementById('dict-screen-subtitle');
-  if (subEl) {
-    var _wLabel = {en:'words',de:'Wörter',tr:'kelime',fa:'واژه',ru:'слов',uk:'слів',ar:'كلمة'};
-    subEl.textContent = formatNum(_dictAllWords.length) + ' ' + (_wLabel[LANG] || 'words') + ' · A–Z';
-  }
-  _buildDictAlphaBar();
-  _initDictScrollTracker();
-}
-
-function _getDictMeaning(entry) {
-  if (LANG === 'en') return entry.translation_en;
-  if (LANG === 'tr') return entry.translation_tr || entry.translation_en;
-  if (LANG === 'ru') return entry.translation_ru || entry.translation_en;
-  if (LANG === 'uk') return entry.translation_uk || entry.translation_en;
-  if (LANG === 'fa') return entry.translation_fa || entry.translation_en;
-  if (LANG === 'ar') return entry.translation_ar || entry.translation_en;
-  return entry.translation_en;
-}
-
-function _dictFirstLetter(word) {
-  if (!word) return '#';
-  var ch = word[0].toUpperCase();
-  if (ch === '-' || (ch >= '0' && ch <= '9')) return '#';
-  return ch;
-}
-
-function _buildDictAlphaBar() {
-  var present = {};
-  _dictAllWords.forEach(function(e) { present[_dictFirstLetter(e.word)] = true; });
-
-  var alphabet = ['#','A','Ä','B','C','D','E','F','G','H','I','J','K','L',
-                  'M','N','O','Ö','P','Q','R','S','T','U','Ü','V','W','X','Y','Z'];
-  var bar = document.getElementById('dict-alpha-bar');
-  bar.innerHTML = '';
-
-  alphabet.forEach(function(l) {
-    if (!present[l]) return;
-    var sp = document.createElement('span');
-    sp.className = 'dict-alpha-letter';
-    sp.textContent = l;
-    sp.setAttribute('data-letter', l);
-    sp.addEventListener('click', function(e) { e.stopPropagation(); _dictJumpToLetter(l); });
-    bar.appendChild(sp);
-  });
-
-  // Touch drag — works like a phone-book index strip
-  bar.addEventListener('touchstart', _dictBarTouchHandler, { passive: true });
-  bar.addEventListener('touchmove',  _dictBarTouchHandler, { passive: true });
-  // touchend intentionally left without a handler — active class persists until next jump
-}
-
-function _dictBarTouchHandler(e) {
-  var touch = e.touches[0];
-  // Find closest letter by geometry (immune to RTL layout changes)
-  var bar = document.getElementById('dict-alpha-bar');
-  var letters = bar.querySelectorAll('.dict-alpha-letter');
-  var closest = null, closestDist = Infinity;
-  letters.forEach(function(sp) {
-    var r = sp.getBoundingClientRect();
-    var cy = r.top + r.height / 2;
-    var dist = Math.abs(touch.clientY - cy);
-    if (dist < closestDist) { closestDist = dist; closest = sp; }
-  });
-  if (closest && closestDist < 40) {
-    var letter = closest.getAttribute('data-letter');
-    if (letter) _dictJumpToLetter(letter);
-  }
-}
-
-function _dictSetActiveLetter(l) {
-  document.querySelectorAll('#dict-alpha-bar .dict-alpha-letter').forEach(function(sp) {
-    sp.classList.toggle('active', sp.getAttribute('data-letter') === l);
-  });
-}
-
-function _dictJumpToLetter(l) {
-  var list = document.getElementById('dict-list');
-  var offset = _dictLetterOffsets[l];
-  // _dictLetterOffsets are captured at render time when scrollTop=0, so they
-  // are the true layout positions and are unaffected by position:sticky painting.
-  if (offset === undefined) return;
-  _dictSetActiveLetter(l);
-  _dictScrollPaused = true;
-  clearTimeout(_dictScrollPauseTimer);
-  list.scrollTop = offset;
-  _dictScrollPauseTimer = setTimeout(function() { _dictScrollPaused = false; }, 500);
-}
-
-function _initDictScrollTracker() {
-  var list = document.getElementById('dict-list');
-  if (!list) return;
-  if (list._dictScrollFn) list.removeEventListener('scroll', list._dictScrollFn);
-  list._dictScrollFn = function() {
-    if (_dictScrollPaused) return;
-    var headers = list.querySelectorAll('[data-dict-letter]');
-    if (!headers.length) return;
-    var listTop = list.getBoundingClientRect().top;
-    var activeLetter = null;
-    // Last header whose top is at or above the list’s own top = current section
-    headers.forEach(function(h) {
-      if (h.getBoundingClientRect().top - listTop <= 2) {
-        activeLetter = h.getAttribute('data-dict-letter');
-      }
-    });
-    if (activeLetter) _dictSetActiveLetter(activeLetter);
-  };
-  list.addEventListener('scroll', list._dictScrollFn, { passive: true });
-}
-
-function _renderDictList(filter, keepScroll) {
-  var list = document.getElementById('dict-list');
-  var savedScroll = keepScroll ? list.scrollTop : 0;
-  var filt = (filter || '').trim().toLowerCase();
-
-  var words = filt
-    ? _dictAllWords.filter(function(e) {
-        return e.word.toLowerCase().includes(filt) ||
-               _getDictMeaning(e).toLowerCase().includes(filt);
-      })
-    : _dictAllWords;
-
-  if (!words.length) {
-    list.innerHTML = '<div class="dict-empty">' + escHtml(t('dictEmpty')) + '</div>';
-    return;
-  }
-
-  var isRtl = LANG === 'fa' || LANG === 'ar';
-  var frag = document.createDocumentFragment();
-  var curLetter = null;
-
-  words.forEach(function(entry) {
-    if (!filt) {
-      var letter = _dictFirstLetter(entry.word);
-      if (letter !== curLetter) {
-        curLetter = letter;
-        var hdr = document.createElement('div');
-        hdr.className = 'dict-letter-header';
-        hdr.setAttribute('data-dict-letter', letter);
-        hdr.textContent = letter;
-        frag.appendChild(hdr);
-      }
-    }
-
-    var div = document.createElement('div');
-    div.className = 'dict-entry';
-    div.setAttribute('data-word', entry.word);
-    div.setAttribute('data-level', entry.level);
-    (function(w, tc) {
-      div.addEventListener('click', function() { openWordCard(w, tc); });
-    }(entry.word, entry.type ? typeChar(entry.type) : '?'));
-
-    var top = document.createElement('div');
-    top.className = 'dict-entry-top';
-
-    var wEl = document.createElement('span');
-    wEl.className = 'dict-word';
-    if (entry.article && entry.type === 'Noun') {
-      var artEl = document.createElement('span');
-      artEl.className = 'dict-article';
-      artEl.textContent = entry.article + ' ';
-      wEl.appendChild(artEl);
-      wEl.appendChild(document.createTextNode(entry.word));
-    } else {
-      wEl.textContent = entry.word;
-    }
-    top.appendChild(wEl);
-
-    var lvEl = document.createElement('span');
-    lvEl.className = 'dict-level';
-    lvEl.textContent = entry.level;
-    top.appendChild(lvEl);
-
-    div.appendChild(top);
-
-    var meaning = _getDictMeaning(entry);
-    if (meaning) {
-      var mEl = document.createElement('div');
-      mEl.className = 'dict-meaning';
-      // For RTL languages, give the meaning its own RTL context while the
-      // surrounding layout stays LTR (German words are always left-to-right)
-      if (isRtl) { mEl.dir = 'rtl'; mEl.style.textAlign = 'right'; }
-      mEl.textContent = meaning;
-      div.appendChild(mEl);
-    }
-
-    frag.appendChild(div);
-  });
-
-  list.innerHTML = '';
-  list.appendChild(frag);
-  list.scrollTop = 0;
-  // Capture letter→scrollTop offsets NOW, while scrollTop=0 and before sticky moves anything.
-  _dictLetterOffsets = {};
-  var lr = list.getBoundingClientRect();
-  list.querySelectorAll('[data-dict-letter]').forEach(function(h) {
-    _dictLetterOffsets[h.getAttribute('data-dict-letter')] = h.getBoundingClientRect().top - lr.top;
-  });
-  if (savedScroll > 0) list.scrollTop = savedScroll;
-  _initDictScrollTracker();
-}
-
-function dictFilter(val) {
-  if (_dictLoaded) _renderDictList(val);
-}
-
-
-
-// ── Screen switcher ──
-var _appBackAction = function(){};
-function _backArrowSvg(isRtl) {
-  var pts = isRtl ? '10,6 0,0 0,12' : '0,6 10,0 10,12';
-  return '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="currentColor"><polygon points="'+pts+'"/></svg>';
-}
-function show(id){
-  var quizWasVisible = !document.getElementById('screen-quiz').classList.contains('hidden');
-  ['screen-levels','screen-learning-profile','screen-quiz','screen-results','screen-rush-summary','screen-random','screen-swipe-setup','screen-swipe','screen-adaptive-setup','screen-theme-select','screen-dictionary','screen-practice-setup','screen-practice'].forEach(s=>{
-    document.getElementById(s).classList.toggle('hidden',s!==id);
-  });
-  if (quizWasVisible && id !== 'screen-quiz' && id !== 'screen-results' && id !== 'screen-rush-summary') {
-    _quizTimerAbandon();
-  }
-  document.body.classList.toggle('practice-setup-scroll-lock', id === 'screen-practice-setup');
-  var btn = document.getElementById('app-back-btn');
-  if (!btn) return;
-  var isRtl = document.body.classList.contains('lang-rtl');
-  var backMap = {
-    'screen-quiz':             function(){ goQuizBack(); },
-    'screen-results':          null,
-    'screen-rush-summary':     function(){ goHome(); },
-    'screen-learning-profile': function(){ goHome(); },
-    'screen-swipe-setup':      function(){ goHome(); },
-    'screen-swipe':            function(){ openSwipeSetup(); },
-    'screen-adaptive-setup':   function(){ goHome(); },
-    'screen-theme-select':     function(){ goHome(); },
-    'screen-random':           function(){ goHome(); },
-    'screen-dictionary':       function(){ goHome(); },
-    'screen-practice-setup':   function(){ goHome(); },
-    'screen-practice':         function(){ openPracticeSetup(); }
-  };
-  var action = backMap[id];
-  var show = !!action;
-  btn.classList.toggle('hidden', !show);
-  btn.innerHTML = _backArrowSvg(isRtl);
-  _appBackAction = action || function(){};
-}
-
-function showOfflineScreen() {
-  window.APP_OFFLINE = true;
-  var el = document.getElementById('offline-screen');
-  if (el) el.classList.remove('hidden');
-}
-
-function hideOfflineScreen() {
-  window.APP_OFFLINE = false;
-  var el = document.getElementById('offline-screen');
-  if (el) el.classList.add('hidden');
-  if (typeof window.APP_AUTH_RENDER === 'function') window.APP_AUTH_RENDER();
-}
-
-function checkOnline() {
-  var btn = document.getElementById('offline-refresh-btn');
-  var origText = btn ? btn.textContent : '';
-  if (btn) { btn.disabled = true; btn.textContent = t('offlineChecking') || '…'; }
-
-  var _done = false;
-  function _restore() {
-    if (_done) return;
-    _done = true;
-    if (btn) { btn.disabled = false; btn.textContent = origText; }
-  }
-
-  // Safety net: never leave the button stuck for more than 7 seconds.
-  var _timer = setTimeout(_restore, 7000);
-
-  // GET with a cache-bust query string: the SW won't find it in cache,
-  // so it hits the real network. Succeeds online, rejects offline.
-  // GET is used (not HEAD) because some WebKit PWA environments silently
-  // hang on fetch() for methods the SW doesn't handle via respondWith().
-  fetch('/sw.js?_nc=' + Date.now(), { cache: 'no-store' })
-    .then(function(res) {
-      clearTimeout(_timer);
-      if (_done) return;
-      _done = true;
-      if (res.ok) {
-        hideOfflineScreen();
-      } else {
-        _restore();
-      }
-    })
-    .catch(function() {
-      clearTimeout(_timer);
-      _restore();
-    });
-}
-
-// ── Init ──
-// Apply persisted language layout (RTL, body classes, active button) on startup
-(function() {
-  var isRtl = LANG === 'fa' || LANG === 'ar';
-  document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
-  document.body.classList.toggle('lang-fa', LANG === 'fa');
-  document.body.classList.toggle('lang-ar', LANG === 'ar');
-  document.body.classList.toggle('lang-rtl', isRtl);
-  ['de','en','tr','fa','ru','uk','ar'].forEach(function(l) {
-    var el = document.getElementById('opt-' + l);
-    if (el) el.classList.toggle('active', l === LANG);
-  });
-  var sel = document.getElementById('lang-select');
-  if (sel) sel.value = LANG;
-  _langDdSync(LANG);
-})();
-applyTranslations();
-_ensureHomeLayout();
-window.addEventListener('pageshow', function() {
-  _ensureHomeLayout();
-  if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
-});
-// ── Connectivity probe ───────────────────────────────────────────────────
-// Fetches a cache-busted URL through the real network (SW passes _nc=
-// requests un-cached). Times out after 5 s to handle captive-portal /
-// server-unreachable scenarios that don't give an immediate connection error.
-function _startConnectivityProbe(onFail) {
-  var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
-  var timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 5000) : null;
-  fetch('/sw.js?_nc=' + Date.now(), {
-    cache: 'no-store',
-    signal: ctrl ? ctrl.signal : undefined
-  }).then(function(res) {
-    if (timer) clearTimeout(timer);
-    if (!res.ok) onFail();
-  }).catch(function() {
-    if (timer) clearTimeout(timer);
-    onFail();
-  });
-}
-
-// Connectivity check on startup.
-// navigator.onLine is unreliable (reports true when a network interface is
-// active even without real internet), so we probe the network directly.
-// Runs in all contexts (browser tab + standalone PWA) because browsers cache
-// the page via the service worker and will serve it even with no internet —
-// we need to detect that and show the offline screen regardless.
-if (!navigator.onLine) {
-  // Synchronous fast path: browser already knows it's offline.
-  showOfflineScreen();
-} else {
-  // Async probe with 5-second timeout.
-  _startConnectivityProbe(showOfflineScreen);
-}
-
-// React to connectivity changes while the page is open.
-window.addEventListener('offline', function() { showOfflineScreen(); });
-window.addEventListener('online', function() {
-  // Browser says a network interface is back. Optimistically hide the screen
-  // and re-probe; if the probe fails (captive portal / server still down),
-  // the offline screen re-appears.
-  hideOfflineScreen();
-  _startConnectivityProbe(showOfflineScreen);
-});
-updateCounts();
-_syncPracticeScrollTop();
-_wireNativeShellInsetGuards();
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', _initInstallExperience, { once: true });
-} else {
-  _initInstallExperience();
-}
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') {
-    closeWordModal();
-    closeInstallGuide();
-  }
-});
-
-// ── Word-modal drag-to-close ─────────────────────────────────────────
-// Handle click (desktop) + full-modal swipe-down (mobile, scroll-aware)
-(function() {
-  var handle = document.querySelector('.word-modal-handle');
-  var modal  = document.querySelector('.word-modal');
-  if (!modal) return;
-
-  // Desktop: click the pill handle to dismiss
-  if (handle) handle.addEventListener('click', function() { closeWordModal(); });
-
-  var _startY, _startScrollTop, _dragging, _deltaY;
-
-  modal.addEventListener('touchstart', function(e) {
-    _startY = e.touches[0].clientY;
-    _startScrollTop = modal.scrollTop;
-    _dragging = false;
-    _deltaY = 0;
-  }, { passive: true });
-
-  // non-passive so we can preventDefault before the browser fires pull-to-refresh
-  modal.addEventListener('touchmove', function(e) {
-    if (_startY === undefined) return;
-    var dy = e.touches[0].clientY - _startY;
-    // When already at scroll-top and moving down, block pull-to-refresh
-    // immediately — even before the drag threshold is crossed.
-    if (_startScrollTop === 0 && dy > 0) {
-      e.preventDefault();
-    }
-    if (!_dragging && dy > 6 && _startScrollTop === 0) {
-      _dragging = true;
-      modal.style.transition = 'none';
-    }
-    if (_dragging) {
-      _deltaY = Math.max(0, dy);
-      modal.style.transform = 'translateY(' + _deltaY + 'px)';
-    }
-  }, { passive: false });
-
-  modal.addEventListener('touchend', function() {
-    if (_startY === undefined) return;
-    _startY = undefined;
-    if (_dragging && _deltaY > 80) {
-      // Animate off-screen, then close
-      modal.style.transition = 'transform .2s ease-out';
-      modal.style.transform = 'translateY(110%)';
-      setTimeout(function() { closeWordModal(); }, 210);
-    } else {
-      modal.style.transition = '';
-      modal.style.transform = '';
-    }
-    _dragging = false;
-    _deltaY = 0;
-  });
-})();
-
-// ── Settings drawer drag-to-close ────────────────────────────────────
-// Handle click (desktop) + drag-to-close via the handle pill only (mobile)
-(function() {
-  var handle = document.querySelector('.drawer-handle');
-  var drawer = document.getElementById('settings-drawer');
-  if (!drawer) return;
-
-  // Desktop: click the handle to dismiss
-  if (handle) handle.addEventListener('click', function() { closeSettings(); });
-
-  // Mobile drag-to-close — listen ONLY on the handle, not the whole drawer.
-  // This means buttons in the drawer body receive clean, uninterrupted taps.
-  if (!handle) return;
-
-  var _startY, _dragging, _deltaY;
-
-  handle.addEventListener('touchstart', function(e) {
-    _startY = e.touches[0].clientY;
-    _dragging = false;
-    _deltaY = 0;
-  }, { passive: true });
-
-  handle.addEventListener('touchmove', function(e) {
-    if (_startY === undefined) return;
-    var dy = e.touches[0].clientY - _startY;
-    if (dy > 0) e.preventDefault();
-    if (!_dragging && dy > 8) {
-      _dragging = true;
-      drawer.style.transition = 'none';
-    }
-    if (_dragging) {
-      _deltaY = Math.max(0, dy);
-      drawer.style.transform = 'translateX(-50%) translateY(' + _deltaY + 'px)';
-    }
-  }, { passive: false });
-
-  handle.addEventListener('touchend', function() {
-    if (_startY === undefined) return;
-    _startY = undefined;
-    if (_dragging && _deltaY > 60) {
-      drawer.style.transition = 'transform .2s ease-out';
-      drawer.style.transform = 'translateX(-50%) translateY(calc(100% + 28px))';
-      setTimeout(function() { closeSettings(); }, 210);
-    } else {
-      drawer.style.transition = '';
-      drawer.style.transform = '';
-    }
-    _dragging = false;
-    _deltaY = 0;
-  });
-
-  handle.addEventListener('touchcancel', function() {
-    _startY = undefined;
-    _dragging = false;
-    _deltaY = 0;
-    drawer.style.transition = '';
-    drawer.style.transform = '';
-  });
-})();
-
-// ── Install guide drag-to-close ──────────────────────────────────────
-// Same close behavior as the settings drawer: tap the handle or swipe down.
-(function() {
-  var handle = document.querySelector('.install-guide-handle');
-  var guide = document.querySelector('.install-guide');
-  if (!guide) return;
-
-  if (handle) handle.addEventListener('click', function() { closeInstallGuide(); });
-
-  var _startY, _dragging, _deltaY;
-
-  guide.addEventListener('touchstart', function(e) {
-    _startY = e.touches[0].clientY;
-    _dragging = false;
-    _deltaY = 0;
-  }, { passive: true });
-
-  guide.addEventListener('touchmove', function(e) {
-    if (_startY === undefined) return;
-    var dy = e.touches[0].clientY - _startY;
-    if (dy > 0) e.preventDefault();
-    if (!_dragging && dy > 6) {
-      _dragging = true;
-      guide.style.transition = 'none';
-    }
-    if (_dragging) {
-      _deltaY = Math.max(0, dy);
-      guide.style.transform = 'translateY(' + _deltaY + 'px)';
-    }
-  }, { passive: false });
-
-  guide.addEventListener('touchend', function() {
-    if (_startY === undefined) return;
-    _startY = undefined;
-    if (_dragging && _deltaY > 80) {
-      guide.style.transition = 'transform .2s ease-out';
-      guide.style.transform = 'translateY(110%)';
-      setTimeout(function() { closeInstallGuide(); }, 210);
-    } else {
-      guide.style.transition = '';
-      guide.style.transform = '';
-    }
-    _dragging = false;
-    _deltaY = 0;
-  });
-
-  guide.addEventListener('touchcancel', function() {
-    _startY = undefined;
-    guide.style.transition = '';
-    guide.style.transform = '';
-    _dragging = false;
-    _deltaY = 0;
-  });
-})();

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+:root{
+  --bg:#080a10;--surf:rgba(18,20,28,0.92);--surf2:rgba(24,27,38,0.96);--surf3:rgba(32,36,50,0.98);
+  --gold:#d4af5a;--gold-soft:rgba(212,175,90,0.18);--gold-ring:rgba(212,175,90,0.55);
+  --blue:#7eb8f7;--green:#6be8a0;--red:#f07070;--purple:#c4a0f7;--pink:#f7a0c4;
+  --text:#e8eaf2;--muted:#7a8099;--border:rgba(255,255,255,0.07);--r:25px;
+  --glass-fill:rgba(255,255,255,0.08);--glass-fill-fallback:rgba(24,27,38,0.96);
+  --glass-fill-overlay:rgba(8,10,16,0.52);--glass-fill-overlay-fallback:rgba(18,20,28,0.97);
+  --glass-border:rgba(255,255,255,0.12);--glass-specular:inset 0 1px 0 rgba(255,255,255,0.18);
+  --glass-blur:blur(20px) saturate(165%);--glass-shadow:0 4px 24px rgba(0,0,0,0.20);
+  --glass-highlight-line:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);
+  --modal-dur:.4s;--modal-ease:cubic-bezier(0.22,1,0.36,1);--modal-scrim-ease:cubic-bezier(0.32,0,0.18,1);
+  --stack-dur:.52s;--stack-ease:cubic-bezier(0.25,0.8,0.35,1);
+  --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
+  --modal-scrim:rgba(0,0,0,0.42);
+  --tab-h:62px;
+  --tab-page-gap:12px;
+  --tab-content-max:600px;
+  --tab-panel-gutter:max(14px,calc((100vw - var(--tab-content-max)) / 2));
+}
+/* GLASS SYSTEM — frame (.glass), fill (.glass-overlay / --glass-bg), dim (.modal-scrim).
+   Tier C (.surf*) surfaces are intentionally solid — do not add glass. See docs/GLASS_SYSTEM.md */

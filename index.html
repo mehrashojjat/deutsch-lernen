@@ -61,770 +61,76 @@
   "keywords": "Deutsch lernen, German vocabulary, learn German, German quiz, Goethe-Institut"
 }
 </script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
-:root{
-  --bg:#0b0d13;--surf:#131620;--surf2:#1a1e2e;--surf3:#222640;
-  --gold:#e8c97a;--blue:#7eb8f7;--green:#6be8a0;--red:#f07070;--purple:#c4a0f7;--pink:#f7a0c4;
-  --text:#dde1f0;--muted:#6b7090;--border:rgba(255,255,255,0.06);--r:25px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Outfit','Vazirmatn',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
-  display:flex;flex-direction:column;align-items:center;padding:18px 14px 18px;
-  overflow-x:hidden;background-image:radial-gradient(ellipse at 10% 0%,rgba(232,201,122,.07) 0%,transparent 50%),
-    radial-gradient(ellipse at 90% 95%,rgba(126,184,247,.06) 0%,transparent 50%);}
 
-/* Native shell: keep content below system status area while letting page
-   background extend into the notch area (no black strip). */
-body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
-
-/* ── HEADER ── */
-.app-header{width:100%;max-width:600px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;
-  margin-bottom:20px;animation:fadeDown .5s ease both;}
-.app-header-center{text-align:center;min-width:0;grid-column:2;}
-.app-header h1{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:700;
-  color:var(--gold);letter-spacing:-1px;line-height:1;cursor:pointer;}
-.app-header p{color:var(--muted);font-size:.82rem;margin-top:3px;font-weight:300;}
-.settings-btn,.app-back-btn{background:var(--surf);border:1px solid var(--border);border-radius:25px;
-  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1.3rem;transition:all .18s;color:var(--text);flex-shrink:0;
-  padding:0;line-height:1;direction:ltr;
-  font-family:system-ui,-apple-system,'Apple Color Emoji','Segoe UI Emoji',sans-serif!important;}
-.app-back-btn{grid-column:1;justify-self:center;}
-.settings-btn{grid-column:3;justify-self:center;}
-.settings-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
-.app-back-btn:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);}
-.app-back-btn.hidden{visibility:hidden;pointer-events:none;}
-
-/* ── Offline screen ── */
-.app-header{position:relative;z-index:60;}
-#offline-screen{position:fixed;inset:0;z-index:50;background:var(--bg);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:2rem;gap:.75rem;}
-#offline-screen.hidden{display:none;}
-#offline-screen h2{font-family:'Fraunces','Vazirmatn',serif;font-size:1.5rem;font-weight:700;
-  color:var(--text);margin:0;}
-#offline-screen p{color:var(--muted);font-size:.9rem;max-width:280px;margin:0;line-height:1.5;}
-#offline-refresh-btn{margin-top:.5rem;padding:11px 28px;background:var(--gold);
-  color:#1a1a1a;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;
-  border:none;border-radius:50px;cursor:pointer;transition:opacity .15s;}
-#offline-refresh-btn:hover{opacity:.85;}
-.auth-btn-offline{opacity:.45!important;pointer-events:none!important;cursor:default!important;}
-
-/* ── Quiz prep loading overlay ── */
-#quiz-prep-overlay{display:none;position:fixed;inset:0;background:var(--bg);z-index:400;
-  align-items:center;justify-content:center;}
-#quiz-prep-overlay.active{display:flex;}
-
-/* Word card modal */
-.word-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;
-  display:flex;align-items:flex-end;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .2s;}
-.word-modal-overlay.open{opacity:1;pointer-events:all;}
-.word-modal{background:var(--bg);border-radius:25px 25px 0 0;width:100%;max-width:600px;
-  max-height:88vh;overflow-y:auto;padding:24px 20px 40px;
-  transform:translateY(40px);transition:transform .25s cubic-bezier(.32,.72,0,1);
-  overscroll-behavior:none;}
-.word-modal-overlay.open .word-modal{transform:translateY(0);}
-.word-modal-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:32px;margin:0 0 4px;cursor:pointer;}
-.word-modal-handle::before{content:'';width:40px;height:4px;background:var(--surf3);border-radius:99px;transition:background .15s;}
-.word-modal-handle:hover::before{background:var(--muted);}
-.word-modal-close{float:right;background:none;border:none;color:var(--muted);
-  font-size:1.2rem;cursor:pointer;padding:0 0 8px 8px;}
-
-/* ── SCREENS ── */
-.screen{width:100%;max-width:600px;}
-.screen.hidden{display:none!important;}
-.hidden{display:none!important;}
-
-/* ── SETTINGS DRAWER ── */
-.drawer-overlay{position:fixed;inset:0;background:rgba(6,8,16,.70);z-index:100;
-  opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(14px);}
-.drawer-overlay.open{opacity:1;pointer-events:all;}
-.drawer{position:fixed;bottom:12px;left:50%;transform:translateX(-50%) translateY(calc(100% + 16px));
-  width:calc(100% - 24px);max-width:560px;
-  background:linear-gradient(180deg,rgba(21,28,46,.98),rgba(14,18,31,.98));
-  border:1px solid rgba(126,184,247,.22);border-radius:25px;
-  padding:18px 18px 24px;z-index:101;transition:transform .3s cubic-bezier(.32,.72,0,1);
-  box-shadow:0 28px 80px rgba(0,0,0,.48);overscroll-behavior:none;}
-.drawer.open{transform:translateX(-50%) translateY(0);}
-.drawer-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:28px;margin:0 0 6px;cursor:pointer;}
-.drawer-handle::before{content:'';width:44px;height:5px;background:rgba(255,255,255,.15);border-radius:999px;transition:background .15s;}
-.drawer-handle:hover::before{background:rgba(255,255,255,.28);}
-.drawer-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;font-weight:700;color:var(--text);margin-bottom:20px;}
-.drawer-section{margin-bottom:22px;}
-.drawer-section-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.14em;
-  color:var(--muted);margin-bottom:10px;font-weight:700;}
-.option-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
-.lang-select{display:none;}
-/* ── Custom lang dropdown ── */
-.lang-dd{position:relative;width:100%;user-select:none;}
-.lang-dd-trigger{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s;direction:ltr;box-sizing:border-box;}
-.lang-dd-trigger:hover{border-color:rgba(232,201,122,.35);background:rgba(255,255,255,.07);}
-.lang-dd.open .lang-dd-trigger{border-color:var(--gold);background:rgba(232,201,122,.07);}
-.lang-dd-trigger-text{display:flex;align-items:center;gap:8px;}
-.lang-dd-chevron{width:14px;height:14px;flex-shrink:0;transition:transform .2s ease;color:rgba(255,255,255,.4);}
-.lang-dd.open .lang-dd-chevron{transform:rotate(180deg);}
-.lang-dd-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:linear-gradient(180deg,#16203a,#111827);border:1.5px solid rgba(255,255,255,.11);border-radius:18px;overflow:hidden;z-index:999;box-shadow:0 12px 36px rgba(0,0,0,.5);direction:ltr;}
-.lang-dd.open .lang-dd-panel{display:block;}
-.lang-dd-option{display:flex;align-items:center;gap:10px;padding:11px 16px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;font-weight:600;color:var(--muted);cursor:pointer;transition:background .12s,color .12s;}
-.lang-dd-option:hover{background:rgba(255,255,255,.06);color:var(--text);}
-.lang-dd-option.active{color:var(--gold);background:rgba(232,201,122,.08);}
-.lang-dd-option+.lang-dd-option{border-top:1px solid rgba(255,255,255,.06);}
-.drawer-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 0 22px;}
-.about-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;
-  align-items:flex-end;justify-content:center;padding-bottom:12px;}
-.about-modal-overlay.open{display:flex;}
-.about-modal{background:linear-gradient(180deg,rgba(21,28,46,.99),rgba(14,18,31,.99));
-  border:1px solid rgba(126,184,247,.18);border-radius:25px;
-  width:min(calc(100% - 24px),480px);padding:24px 22px 32px;max-height:80vh;overflow-y:auto;
-  box-shadow:0 28px 80px rgba(0,0,0,.48);}
-.about-modal h3{font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.15rem;margin:0 0 16px;}
-.about-modal p{font-size:.85rem;line-height:1.7;color:var(--text);margin:0 0 12px;}
-.about-modal a{color:var(--gold);text-decoration:none;font-weight:600;}
-.about-modal a:hover{text-decoration:underline;}
-.about-modal-close{width:100%;padding:13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);
-  border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
-  cursor:pointer;margin-top:16px;transition:background .15s;}
-.about-modal-close:hover{background:rgba(255,255,255,.11);}
-.home-footer{text-align:center;padding:12px 20px 12px;}
-.home-footer p{margin:0;line-height:1.6;}
-#footer-msg{font-size:.8rem;color:var(--muted);font-style:italic;opacity:.8;}
-#footer-copy{font-size:.68rem;color:var(--muted);opacity:.4;margin-top:3px;}
-.opt-btn{padding:10px 4px;border-radius:25px;border:1.5px solid rgba(255,255,255,.09);
-  background:rgba(255,255,255,.04);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:600;
-  color:var(--muted);cursor:pointer;transition:all .15s;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;min-height:60px;width:100%;line-height:1.2;}
-.opt-btn:hover{border-color:rgba(232,201,122,.3);color:var(--text);}
-.opt-btn.active{border-color:var(--gold);background:rgba(232,201,122,.1);color:var(--gold);}
-.opt-btn.active.blue{border-color:var(--blue);background:rgba(126,184,247,.1);color:var(--blue);}
-.opt-btn.active.purple{border-color:var(--purple);background:rgba(196,160,247,.1);color:var(--purple);}
-.opt-btn.active.green{border-color:var(--green);background:rgba(107,232,160,.1);color:var(--green);}
-.drawer-footer-row{display:flex;gap:10px;margin-top:8px;}
-.drawer-close{flex:1;padding:13px;background:linear-gradient(135deg,var(--blue),#5ba8ff);border:none;border-radius:25px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;color:#08111f;
-  cursor:pointer;transition:opacity .15s;}
-.drawer-close:hover{opacity:.88;}
-.drawer-about-row{flex:1;padding:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:25px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
-  cursor:pointer;transition:background .15s;text-align:center;}
-.drawer-about-row:hover{background:rgba(255,255,255,.10);}
-/* ── APP DIALOG (matches settings drawer) ── */
-.app-dialog-overlay{position:fixed;inset:0;background:rgba(6,8,16,.70);z-index:110;
-  opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(14px);}
-.app-dialog-overlay.open{opacity:1;pointer-events:all;}
-.app-dialog{position:fixed;bottom:12px;left:50%;transform:translateX(-50%) translateY(calc(100% + 16px));
-  width:calc(100% - 24px);max-width:560px;
-  background:linear-gradient(180deg,rgba(21,28,46,.98),rgba(14,18,31,.98));
-  border:1px solid rgba(126,184,247,.22);border-radius:25px;
-  padding:18px 18px 24px;z-index:111;transition:transform .3s cubic-bezier(.32,.72,0,1);
-  box-shadow:0 28px 80px rgba(0,0,0,.48);overscroll-behavior:none;}
-.app-dialog.open{transform:translateX(-50%) translateY(0);}
-.app-dialog-handle{display:flex;align-items:center;justify-content:center;width:100%;min-height:28px;margin:0 0 6px;cursor:pointer;}
-.app-dialog-handle::before{content:'';width:44px;height:5px;background:rgba(255,255,255,.15);border-radius:999px;transition:background .15s;}
-.app-dialog-handle:hover::before{background:rgba(255,255,255,.28);}
-.app-dialog-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;font-weight:700;color:var(--text);margin-bottom:12px;}
-.app-dialog-message{font-size:.85rem;line-height:1.6;color:var(--muted);margin:0 0 20px;white-space:pre-line;}
-.app-dialog-footer-row{display:flex;gap:10px;margin-top:4px;}
-.app-dialog-btn-primary{flex:1;padding:13px;background:linear-gradient(135deg,var(--blue),#5ba8ff);border:none;border-radius:25px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:700;color:#08111f;
-  cursor:pointer;transition:opacity .15s;}
-.app-dialog-btn-primary:hover{opacity:.88;}
-.app-dialog-btn-cancel{flex:1;padding:13px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:25px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.9rem;font-weight:600;color:var(--text);
-  cursor:pointer;transition:background .15s;text-align:center;}
-.app-dialog-btn-cancel:hover{background:rgba(255,255,255,.10);}
-.app-dialog.single .app-dialog-btn-cancel{display:none;}
-.app-dialog.single .app-dialog-btn-primary{flex:1;width:100%;}
-/* ── GOOGLE SIGN-IN BUTTON ── */
-.gsi-material-button{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;
-  -webkit-appearance:none;appearance:none;background-color:#131314;background-image:none;
-  border:1px solid #8e918f;border-radius:25px;box-sizing:border-box;color:#e3e3e3;
-  cursor:pointer;font-family:'Roboto',arial,sans-serif;font-size:14px;
-  height:44px;letter-spacing:.25px;outline:none;overflow:hidden;
-  padding:0 16px;position:relative;text-align:center;
-  transition:background-color .218s,border-color .218s,box-shadow .218s;
-  vertical-align:middle;white-space:nowrap;width:100%;}
-.gsi-material-button .gsi-material-button-icon{height:20px;margin-right:10px;min-width:20px;width:20px;}
-.gsi-material-button .gsi-material-button-content-wrapper{
-  align-items:center;display:flex;flex-direction:row;flex-wrap:nowrap;
-  height:100%;justify-content:center;position:relative;width:100%;}
-.gsi-material-button .gsi-material-button-contents{
-  flex-grow:0;font-family:'Roboto',arial,sans-serif;font-weight:500;
-  overflow:hidden;text-overflow:ellipsis;vertical-align:top;}
-.gsi-material-button .gsi-material-button-state{
-  transition:opacity .218s;bottom:0;left:0;opacity:0;
-  position:absolute;right:0;top:0;}
-.gsi-material-button:not(:disabled):hover{box-shadow:0 1px 2px 0 rgba(60,64,67,.30),0 1px 3px 1px rgba(60,64,67,.15);}
-.gsi-material-button:not(:disabled):hover .gsi-material-button-state{background-color:#fff;opacity:.08;}
-.gsi-material-button:not(:disabled):active .gsi-material-button-state{background-color:#fff;opacity:.12;}
-/* ── AUTH SIGNED-IN STATE ── */
-.auth-signout-btn{width:100%;padding:10px 14px;background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.09);border-radius:25px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.83rem;font-weight:600;
-  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:8px;}
-.auth-signout-btn:hover{color:var(--text);border-color:rgba(255,255,255,.18);}
-
-/* ── HOME ACTIONS ── */
-.home-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
-.home-primary-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;grid-column:1/-1;}
-
-/* ── RANDOM BANNER ── */
-.random-banner{background:linear-gradient(135deg,rgba(232,201,122,.1),rgba(126,184,247,.08));
-  border-top:none;border-bottom:none;
-  border-left:1px solid rgb(69 127 90);border-right:1px solid rgb(54 95 69);
-  border-radius:25px;
-  padding:14px 18px;display:flex;align-items:center;gap:12px;
-  cursor:pointer;transition:all .18s ease;min-height:100px;}
-.random-banner:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
-.random-banner.swipe-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(107,232,160,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);}
-.random-banner.swipe-banner .rb-text strong{color:var(--blue);}
-.random-banner.adaptive-banner{background:linear-gradient(135deg,rgba(107,232,160,.12),rgba(232,201,122,.08));border-left:1px solid rgb(69 127 90);border-right:1px solid rgb(54 95 69);}
-.home-actions.profile-visible .home-primary-actions .random-banner.adaptive-banner{grid-column:span 2;}
-.random-banner.adaptive-banner .rb-text strong{color:#6be8a0;font-size:1rem;}
-.random-banner.adaptive-banner .rb-icon{font-size:3rem;}
-.random-banner.adaptive-banner .rb-text span{font-size:.9rem;}
-.random-banner.adaptive-v2-banner{background:linear-gradient(135deg,rgba(196,160,247,.14),rgba(107,232,160,.08));border-left:1px solid rgb(117 81 159);border-right:1px solid rgb(69 127 90);}
-.home-actions.profile-visible .home-primary-actions .random-banner.adaptive-v2-banner{grid-column:span 2;}
-.random-banner.adaptive-v2-banner .rb-text strong{color:#c4a0f7;font-size:1rem;}
-.random-banner.adaptive-v2-banner .rb-icon{font-size:2.6rem;}
-.random-banner.adaptive-v2-banner .rb-text span{font-size:.86rem;display:block;line-height:1.45;}
-.random-banner.adaptive-v2-banner .rb-text span + span{margin-top:2px;color:var(--muted);font-size:.78rem;}
-.profile-level-tab.adaptive-tab{font-size:.72rem;padding:7px 9px;}
-.profile-level-tabs.has-adaptive-tab{flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
-.random-banner.learning-profile-banner{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(121 107 68);}
-.random-banner.learning-profile-banner .rb-text strong{color:var(--blue);}
-.random-banner.learning-profile-banner .rb-icon{font-size:2.2rem;}
-.random-banner.learning-profile-banner.hidden{display:none;}
-.random-banner.rush-banner{background:linear-gradient(135deg,rgba(255,140,90,.14),rgba(232,120,80,.08));border-left:1px solid rgb(180 95 55);border-right:1px solid rgb(140 70 40);grid-column:1/-1;}
-.random-banner.rush-banner .rb-text strong{color:#ff9a62;font-size:1rem;}
-.random-banner.rush-banner .rb-icon{font-size:2.4rem;}
-.random-banner.theme-banner{background:linear-gradient(135deg,rgba(183,138,247,.12),rgba(126,184,247,.08));border-left:1px solid rgb(117 81 159);border-right:1px solid rgb(111 77 150);}
-.random-banner.theme-banner .rb-text strong{color:#b78af7;}
-.random-banner.practice-banner{border-left:1px solid rgb(121 107 68);border-right:1px solid rgb(111 98 62);}
-.random-banner.word-explorer-banner{border-left:1px solid rgb(121 107 68);border-right:1px solid rgb(111 98 62);}
-.rb-icon{font-size:1.5rem;}
-/* ── CATEGORY GRID ── */
-.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:4px 0 20px;}
-.category-card{background:var(--surf);border:none;border-radius:25px;padding:14px 10px;cursor:pointer;transition:all .18s ease;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
-.category-card:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.25);}
-.cat-icon{font-size:2rem;}
-.cat-name{font-size:.74rem;color:var(--text);line-height:1.3;}
-.rb-text strong{display:block;font-size:.93rem;font-weight:600;color:var(--gold);}
-.rb-text span{font-size:.74rem;color:var(--muted);}
-.rb-arrow{margin-left:auto;color:var(--muted);font-size:1.1rem;}
-
-/* ── SECTION LABEL ── */
-.section-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);margin:16px 0 10px;}
-
-@media (max-width:560px){
-  .home-actions{grid-template-columns:1fr 1fr;}
-  .home-actions.profile-visible .home-primary-actions .random-banner.adaptive-v2-banner{grid-column:span 2;}
-  .profile-header{display:block;}
-}
-
-/* ── LEARNING PROFILE ── */
-.profile-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px;}
-.profile-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.55rem;font-weight:700;color:var(--text);line-height:1.15;}
-.profile-subtitle{font-size:.82rem;color:var(--muted);margin-top:5px;}
-.profile-level-tabs{display:flex;gap:6px;flex-shrink:0;}
-.profile-level-tab{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:var(--muted);border-radius:999px;padding:7px 10px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.75rem;font-weight:700;cursor:pointer;}
-.profile-level-tab.active{border-color:rgba(126,184,247,.45);background:rgba(126,184,247,.12);color:var(--blue);}
-.profile-section{margin-bottom:20px;}
-.profile-section-title{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 10px;}
-.profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.profile-stat{background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:14px;}
-.profile-stat strong{display:block;font-size:1.35rem;color:var(--text);line-height:1;}
-.profile-stat span{display:block;font-size:.74rem;color:var(--muted);margin-top:7px;}
-.profile-stat-clickable{cursor:pointer;transition:all .15s ease;}
-.profile-stat-clickable:hover{transform:translateY(-1px);}
-.profile-stat.profile-stat-seen{border-color:rgba(107,232,160,.28);background:linear-gradient(180deg,rgba(107,232,160,.12),rgba(107,232,160,.05));}
-.profile-stat.profile-stat-seen strong{color:#8cf1b5;}
-.profile-stat.profile-stat-struggling{border-color:rgba(240,112,112,.35);background:linear-gradient(180deg,rgba(240,112,112,.14),rgba(240,112,112,.06));}
-.profile-stat.profile-stat-struggling strong{color:#ff9a9a;}
-.profile-stat.profile-stat-mastered{border-color:rgba(232,201,122,.35);background:linear-gradient(180deg,rgba(232,201,122,.14),rgba(232,201,122,.06));}
-.profile-stat.profile-stat-mastered strong{color:var(--gold);}
-.profile-stat.active{box-shadow:0 0 0 1px rgba(255,255,255,.16) inset;}
-.profile-activity-grid{display:flex;flex-direction:column;gap:10px;}
-.profile-signin-unlock{background:var(--surf);border:1px solid rgba(232,201,122,.28);border-radius:18px;padding:14px;}
-.profile-signin-unlock-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
-.profile-signin-unlock-head--compact{margin-bottom:8px;}
-.profile-signin-unlock-hint{font-size:.8rem;color:var(--muted);line-height:1.45;margin:0;}
-.profile-signin-unlock-label{font-size:.84rem;color:var(--muted);font-weight:600;}
-.profile-signin-btn{flex-shrink:0;padding:8px 16px;border-radius:999px;border:1px solid rgba(232,201,122,.45);background:rgba(232,201,122,.12);color:var(--gold);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;}
-.profile-signin-btn:hover{background:rgba(232,201,122,.2);border-color:var(--gold);}
-.profile-review-actions-inbox{gap:8px;}
-.profile-review-actions-inbox button{background:rgba(0,0,0,.12);border-color:rgba(255,255,255,.08);}
-.profile-review-actions button.profile-review-btn-locked{opacity:.45;cursor:not-allowed;color:var(--muted);}
-.profile-review-actions button.profile-review-btn-locked:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.05);}
-.profile-word-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
-.profile-word-item{background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:10px 12px;}
-.profile-word-main{font-size:1.02rem;color:var(--text);font-weight:700;line-height:1.25;}
-.profile-word-meaning{font-size:.84rem;color:var(--blue);}
-.profile-detail-wrap{max-height:0;opacity:0;overflow:hidden;transform:translateY(-6px);transition:max-height .28s ease,opacity .2s ease,transform .28s ease;}
-.profile-detail-wrap.open{max-height:5000px;opacity:1;transform:translateY(0);margin-bottom:8px;}
-.profile-detail-inner{padding-top:2px;max-height:65vh;overflow-y:auto;}
-.profile-review-actions{display:grid;grid-template-columns:1fr;gap:9px;}
-.profile-review-actions button{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s;}
-.profile-review-actions button:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.08);}
-.profile-empty{color:var(--muted);font-size:.84rem;line-height:1.6;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:16px;}
-.profile-journey-wrap{margin-bottom:14px;}
-.profile-journey-bar{display:flex;position:relative;height:10px;border-radius:999px;overflow:hidden;border:1px solid var(--border);background:rgba(0,0,0,.2);}
-.profile-journey-seg{flex:1;position:relative;border-right:1px solid rgba(255,255,255,.1);overflow:hidden;}
-.profile-journey-seg:last-child{border-right:none;}
-.profile-journey-seg-fill{position:absolute;left:0;top:0;bottom:0;transition:width .3s ease;}
-.profile-journey-seg-a1 .profile-journey-seg-fill{background:rgba(107,232,160,.45);}
-.profile-journey-seg-a2 .profile-journey-seg-fill{background:rgba(126,184,247,.45);}
-.profile-journey-seg-b1 .profile-journey-seg-fill{background:rgba(196,160,247,.45);}
-.profile-journey-marker{position:absolute;top:1px;bottom:1px;border-radius:999px;background:linear-gradient(180deg,#fff5d6,var(--gold));box-shadow:0 0 0 1px rgba(0,0,0,.3);z-index:2;min-width:3px;}
-.profile-journey-legend{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:8px;font-size:.72rem;color:var(--muted);line-height:1.3;}
-.profile-journey-legend-bands{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;}
-.profile-journey-chip{display:inline-flex;align-items:center;gap:5px;}
-.profile-journey-chip-band{font-weight:700;color:var(--text);letter-spacing:.03em;}
-.profile-journey-chip-meta{opacity:.85;}
-.profile-journey-chip-gold .profile-journey-chip-band{font-weight:600;color:var(--muted);}
-.profile-journey-dot{width:8px;height:8px;border-radius:50%;flex:0 0 8px;border:1px solid rgba(255,255,255,.15);}
-.profile-journey-dot-a1{background:rgba(107,232,160,.85);}
-.profile-journey-dot-a2{background:rgba(126,184,247,.85);}
-.profile-journey-dot-b1{background:rgba(196,160,247,.85);}
-.profile-journey-dot-gold{background:linear-gradient(180deg,#fff5d6,var(--gold));}
-.profile-danger-zone{margin-top:8px;padding-top:4px;}
-.profile-reset-btn{width:100%;padding:13px 14px;border-radius:25px;border:1px solid rgba(240,112,112,.45);background:rgba(240,112,112,.08);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.88rem;font-weight:700;color:#ff9a9a;cursor:pointer;transition:all .15s;}
-.profile-reset-btn:hover{border-color:rgba(240,112,112,.65);background:rgba(240,112,112,.14);}
-.cat-coverage{display:inline-block;margin-top:2px;padding:2px 8px;border-radius:999px;background:rgba(0,0,0,.22);font-size:.68rem;font-weight:700;color:rgba(255,255,255,.88);letter-spacing:.02em;}
-.profile-topic-row{display:flex;align-items:center;gap:10px;background:var(--surf);border:1px solid var(--border);border-radius:18px;padding:12px 14px;margin-bottom:8px;}
-.profile-topic-main{flex:1;min-width:0;}
-.profile-topic-name{font-size:.92rem;font-weight:700;color:var(--text);line-height:1.25;}
-.profile-topic-meta{font-size:.72rem;color:var(--muted);margin-top:4px;}
-.profile-topic-activity{margin-top:2px;font-size:.68rem;opacity:.92;}
-.profile-topic-bar{height:5px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden;}
-.profile-topic-bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,rgba(126,184,247,.75),rgba(232,201,122,.85));}
-.profile-topic-btn{flex-shrink:0;padding:8px 12px;border-radius:999px;border:1px solid rgba(126,184,247,.35);background:rgba(126,184,247,.1);color:var(--blue);font-family:'Outfit','Vazirmatn',sans-serif;font-size:.76rem;font-weight:700;cursor:pointer;}
-.profile-topic-btn:hover{background:rgba(126,184,247,.18);}
-
-
-
-/* ── LEVEL GRID ── */
-.level-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.level-card{background:var(--surf);border:1px solid var(--border);border-radius:25px;
-  padding:16px 10px 12px;cursor:pointer;transition:all .18s ease;position:relative;overflow:hidden;}
-.level-card::before{content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,var(--gold),var(--blue));opacity:0;transition:opacity .2s;}
-.level-card:hover::before{opacity:.06;}
-.level-card:hover{border-color:rgba(232,201,122,.25);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
-.level-card:active{transform:scale(.97);}
-.lv-badge{font-family:'Fraunces','Vazirmatn',serif;font-size:1.5rem;font-weight:700;color:var(--gold);display:block;margin-bottom:2px;}
-.lv-name{font-size:.7rem;color:var(--muted);font-weight:500;}
-.lv-count{font-size:.65rem;color:var(--muted);margin-top:4px;opacity:.7;}
-
-/* ── QUIZ ── */
-.quiz-header{display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
-.back-btn{background:var(--surf);border:1px solid var(--border);color:var(--muted);
-  padding:7px 12px;border-radius:25px;cursor:pointer;font-size:.79rem;font-family:'Outfit','Vazirmatn',sans-serif;transition:all .15s;}
-.back-btn:hover{color:var(--text);border-color:rgba(255,255,255,.12);}
-.hud{display:flex;align-items:center;gap:7px;}
-.hud-pill{background:var(--surf);border:1px solid var(--border);border-radius:50px;
-  padding:4px 11px;font-size:.77rem;display:flex;align-items:center;gap:4px;}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
-.dot.r{background:var(--red);}
-.prog-wrap{background:var(--surf);border-radius:99px;height:4px;margin-bottom:16px;overflow:hidden;}
-.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--blue));border-radius:99px;transition:width .35s ease;}
-.card-type-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.tbadge{font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;padding:4px 10px;border-radius:6px;}
-.tbadge.verb{background:rgba(126,184,247,.15);color:var(--blue);}
-.tbadge.noun{background:rgba(232,201,122,.15);color:var(--gold);}
-.tbadge.grammar{background:rgba(107,232,160,.12);color:var(--green);}
-.tbadge.modal{background:rgba(240,112,112,.12);color:#f7a0a0;}
-.tbadge.adj{background:rgba(196,160,247,.12);color:var(--purple);}
-.tbadge.phrase{background:rgba(247,160,196,.12);color:var(--pink);}
-.tlevel{font-size:.67rem;color:var(--muted);}
-.tmode-badge{font-size:.67rem;padding:3px 8px;border-radius:5px;font-weight:600;}
-.tmode-badge.vocab{background:rgba(232,201,122,.12);color:var(--gold);}
-.tmode-badge.grammar{background:rgba(126,184,247,.12);color:var(--blue);}
-.word-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);
-  padding:26px 22px 22px;margin-bottom:13px;position:relative;overflow:hidden;animation:cardIn .3s ease both;}
-.word-card::after{content:'';position:absolute;top:-50px;right:-50px;width:150px;height:150px;border-radius:50%;
-  background:radial-gradient(circle,rgba(232,201,122,.06),transparent 70%);pointer-events:none;}
-.card-q{font-size:.8rem;color:var(--muted);margin-bottom:9px;line-height:1.55;}
-.card-q em{color:var(--gold);font-style:normal;font-weight:600;}
-.card-main{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;line-height:1.15;margin-bottom:7px;}
-.card-sub{font-size:.8rem;color:var(--muted);line-height:1.55;font-style:italic;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:13px;}
-.cbtn{background:var(--surf);border:1.5px solid var(--border);border-radius:25px;
-  padding:13px 11px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--text);
-  cursor:pointer;transition:all .15s ease;text-align:center;line-height:1.3;}
-.cbtn:not(.disabled):hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.05);transform:translateY(-1px);}
-.cbtn.correct{border-top:none;border-bottom:none;border-left:1.5px solid rgb(69 127 90);border-right:1.5px solid rgb(54 95 69);background:rgba(107,232,160,.1);color:var(--green);font-weight:600;}
-.cbtn.wrong{border-top:none;border-bottom:none;border-left:1.5px solid rgb(159 69 69);border-right:1.5px solid rgb(127 54 54);background:rgba(240,112,112,.1);color:var(--red);}
-.cbtn.disabled{pointer-events:none;opacity:.4;}
-.cbtn.correct,.cbtn.wrong{opacity:1!important;}
-.feedback{text-align:center;padding:11px 14px;border-radius:50px;font-size:.84rem;
-  margin-bottom:11px;font-weight:500;opacity:0;transition:opacity .2s;line-height:1.5;}
-.feedback.show{opacity:1;}
-.feedback.c{background:rgba(107,232,160,.1);color:var(--green);border-top:none;border-bottom:none;border-left:1px solid rgb(69 127 90);border-right:1px solid rgb(54 95 69);}
-.feedback.w{background:rgba(240,112,112,.1);color:var(--red);border-top:none;border-bottom:none;border-left:1px solid rgb(159 69 69);border-right:1px solid rgb(127 54 54);}
-.next-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),#c8a050);
-  border:none;border-radius:50px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.93rem;font-weight:700;
-  color:#0b0d13;cursor:pointer;transition:all .15s;display:none;}
-.next-btn.show{display:block;}
-.next-btn:hover{opacity:.88;transform:translateY(-1px);}
-
-/* ── SWIPE MODE ── */
-#screen-swipe{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
-.swipe-setup{background:var(--surf);border:1px solid var(--border);border-radius:45px;padding:18px 15px 10px 15px;}
-.swipe-setup-title{display:none;}
-.swipe-setup-sub{display:none;}
-.swipe-level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
-.swipe-level-btn{background:var(--surf2);border:none;border-left:1px solid var(--border);border-right:1px solid var(--border);border-radius:25px;padding:14px 8px;cursor:pointer;transition:all .18s ease;text-align:center;}
-.swipe-level-btn.active{border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);background:rgba(126,184,247,.12);}
-.swipe-level-btn strong{display:block;font-family:'Fraunces','Vazirmatn',serif;color:var(--gold);font-size:1.3rem;}
-.swipe-level-btn span{display:block;color:var(--muted);font-size:.7rem;margin-top:4px;}
-.swipe-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px;}
-.swipe-title-wrap{display:flex;flex-direction:column;gap:3px;align-items:center;flex:1;}
-.swipe-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;color:var(--blue);}
-.swipe-subtitle{font-size:.74rem;color:var(--muted);}
-.swipe-stage{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:290px;margin:0 0 14px;z-index:1;touch-action:none;overscroll-behavior:none;}
-.swipe-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
-.swipe-card{position:absolute;inset:0;background:#0d1220;border:1px solid rgba(255,255,255,.08);border-radius:25px;padding:16px 16px 14px;box-shadow:0 16px 34px rgba(0,0,0,.28);display:flex;flex-direction:column;justify-content:space-between;transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;overflow:hidden;}
-.swipe-card.under-1{transform:translateY(8px) scale(.98);opacity:1;filter:brightness(.92);}
-.swipe-card.under-2{transform:translateY(14px) scale(.96);opacity:1;filter:brightness(.84);}
-.swipe-card.dragging{transition:none;}
-.swipe-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
-.swipe-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
-.swipe-word-block{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:154px;}
-.swipe-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,7vw,2.65rem);line-height:1.02;color:var(--text);text-align:center;margin:0;}
-.swipe-helper{font-size:.76rem;color:var(--muted);text-align:center;min-height:18px;}
-.swipe-meaning-box{background:#161d31;border:1px solid rgba(255,255,255,.08);border-radius:25px;padding:12px 12px;text-align:center;}
-.swipe-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.swipe-meaning{font-size:.98rem;line-height:1.45;color:var(--text);}
-.swipe-actions{display:flex;justify-content:center;gap:14px;direction:ltr;position:relative;z-index:3;margin-top:auto;padding-top:8px;}
-.swipe-btn{width:58px;height:58px;border-radius:50%;border:1px solid var(--border);background:var(--surf);cursor:pointer;font-size:1.35rem;transition:transform .15s ease,border-color .15s ease,background .15s ease,box-shadow .15s ease;}
-.swipe-btn:hover{transform:translateY(-2px);}
-.swipe-btn.left{border-color:rgba(240,112,112,.5);background:rgba(240,112,112,.08);}
-.swipe-btn.right{border-color:rgba(107,232,160,.45);background:rgba(107,232,160,.08);}
-.swipe-btn.left:hover{border-color:rgba(240,112,112,.9);background:rgba(240,112,112,.22);box-shadow:0 0 16px rgba(240,112,112,.3);}
-.swipe-btn.right:hover{border-color:rgba(107,232,160,.85);background:rgba(107,232,160,.22);box-shadow:0 0 16px rgba(107,232,160,.28);}
-.swipe-btn.left:active{transform:scale(.92);background:rgba(240,112,112,.32);box-shadow:0 0 22px rgba(240,112,112,.45);}
-.swipe-btn.right:active{transform:scale(.92);background:rgba(107,232,160,.30);box-shadow:0 0 22px rgba(107,232,160,.4);}
-.swipe-flash{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;pointer-events:none;opacity:0;transform:scale(.96);transition:opacity .2s ease,transform .2s ease;z-index:8;text-align:center;direction:ltr;}
-.swipe-flash.show{opacity:1;transform:scale(1);}
-.swipe-flash-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:min(100%,320px);margin:0 auto;}
-.swipe-flash-mark{padding:10px 16px;border-radius:999px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(11,13,19,.88);backdrop-filter:blur(8px);box-shadow:0 12px 30px rgba(0,0,0,.28);}
-.swipe-flash.good .swipe-flash-mark{border:1px solid rgba(107,232,160,.45);color:var(--green);}
-.swipe-flash.bad .swipe-flash-mark{border:1px solid rgba(240,112,112,.45);color:var(--red);}
-.swipe-flash-note{max-width:300px;background:rgba(17,24,39,.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;text-align:center;font-size:.8rem;line-height:1.4;color:var(--text);}
-.swipe-empty{background:var(--surf);border:1px dashed var(--border);border-radius:25px;padding:40px 18px;text-align:center;color:var(--muted);}
-.swipe-empty strong{display:block;color:var(--text);font-family:'Fraunces','Vazirmatn',serif;font-size:1.35rem;margin-bottom:8px;}
-
-/* ── PRACTICE MODE ── */
-#screen-practice{display:flex;flex-direction:column;min-height:calc(100svh - 170px);}
-.practice-card-stack{position:relative;width:100%;height:290px;max-height:290px;z-index:1;touch-action:none;}
-.practice-card{position:absolute;inset:0;border-radius:25px;box-shadow:0 16px 34px rgba(0,0,0,.28);transform-origin:center;transition:transform .18s ease,opacity .18s ease;touch-action:none;user-select:none;perspective:1000px;}
-.practice-card.under-1{transform:translateY(8px) scale(.98);opacity:1;filter:brightness(.92);}
-.practice-card.under-2{transform:translateY(14px) scale(.96);opacity:1;filter:brightness(.84);}
-.practice-card.dragging{transition:none;}
-.practice-card.swipe-left{transform:translateX(-120%) rotate(-18deg);opacity:0;}
-.practice-card.swipe-right{transform:translateX(120%) rotate(18deg);opacity:0;}
-.practice-card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s ease;}
-.practice-card.flipped .practice-card-inner{transform:rotateY(180deg);}
-.practice-front,.practice-back{position:absolute;inset:0;background:#0d1220;border:1px solid rgba(255,255,255,.08);border-radius:25px;padding:20px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;gap:12px;overflow:hidden;}
-.practice-back{transform:rotateY(180deg);}
-.practice-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(1.9rem,6.5vw,2.5rem);font-weight:700;line-height:1.05;color:var(--text);text-align:center;margin:0;}
-.practice-example{font-size:.8rem;color:var(--muted);text-align:center;line-height:1.5;font-style:italic;padding:0 8px;}
-.practice-meaning-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
-.practice-meaning{font-size:1.05rem;line-height:1.45;color:var(--text);text-align:center;}
-.practice-flip-btn{display:flex;align-items:center;justify-content:center;line-height:1;border-color:rgba(126,184,247,.5);background:rgba(126,184,247,.08);color:rgba(126,184,247,.5);font-size:1.3rem;}
-.practice-flip-btn:hover{border-color:rgba(126,184,247,.9);background:rgba(126,184,247,.22);box-shadow:0 0 16px rgba(126,184,247,.3);color:rgba(126,184,247,.9);}
-.practice-flip-btn:active{transform:scale(.92);background:rgba(126,184,247,.32);box-shadow:0 0 22px rgba(126,184,247,.4);}
-.practice-dismiss-btn{display:flex;align-items:center;justify-content:center;line-height:1;border-color:rgba(232,201,122,.45);background:rgba(232,201,122,.07);color:rgba(232,201,122,.45);font-size:1.3rem;}
-.practice-dismiss-btn:hover{border-color:rgba(232,201,122,.85);background:rgba(232,201,122,.18);box-shadow:0 0 16px rgba(232,201,122,.25);color:rgba(232,201,122,.85);}
-.practice-dismiss-btn:active{transform:scale(.92);background:rgba(232,201,122,.28);box-shadow:0 0 22px rgba(232,201,122,.35);}
-
-/* ── RESULTS ── */
-.res-card{background:var(--surf);border:1px solid var(--border);border-radius:25px;padding:36px 24px;text-align:center;}
-.res-emoji{font-size:3rem;margin-bottom:12px;}
-.res-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.9rem;margin-bottom:8px;}
-.res-score{font-family:'Fraunces','Vazirmatn',serif;font-size:3.8rem;font-weight:700;color:var(--gold);margin:8px 0;}
-.res-sub{color:var(--muted);font-size:.86rem;margin-bottom:22px;}
-.res-row{display:flex;gap:10px;justify-content:center;margin-bottom:22px;}
-.res-stat{background:var(--surf2);border-radius:10px;padding:9px 16px;font-size:.8rem;color:var(--muted);}
-.res-stat strong{display:block;font-size:1.3rem;font-family:'Fraunces','Vazirmatn',serif;color:var(--text);}
-.btn-primary{width:100%;padding:13px;margin-bottom:9px;
-  background:linear-gradient(135deg,var(--gold),#c8a050);border:none;border-radius:50px;
-  font-family:'Outfit','Vazirmatn',sans-serif;font-size:.92rem;font-weight:700;color:#0b0d13;cursor:pointer;transition:all .15s;}
-.btn-primary:hover{opacity:.88;}
-.btn-primary:disabled,.btn-primary[disabled]{opacity:.38;cursor:not-allowed;pointer-events:none;}
-#screen-practice-setup{position:relative;width:100%;max-width:600px;overflow:visible;}
-#screen-practice-setup .practice-setup-header{position:relative;margin-bottom:14px;background:transparent;pointer-events:auto;}
-#screen-practice-setup .practice-setup-header .swipe-title-wrap{background:transparent;}
-#screen-practice-setup .practice-setup-scroll{position:fixed;top:0;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:600px;height:100dvh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;z-index:85;pointer-events:none;padding-top:var(--practice-scroll-top,110px);padding-bottom:var(--practice-scroll-pad,112px);box-sizing:border-box;scrollbar-width:none;-ms-overflow-style:none;}
-#screen-practice-setup .practice-setup-scroll::-webkit-scrollbar{display:none;width:0;height:0;}
-#screen-practice-setup .practice-setup-filters{overflow:visible;margin-bottom:0;touch-action:pan-y;pointer-events:auto;}
-#screen-practice-setup .practice-setup-filters .swipe-level-btn,
-#screen-practice-setup .practice-setup-filters .practice-chip,
-#screen-practice-setup .practice-setup-filters .practice-filter-clear{touch-action:pan-y;}
-#screen-practice-setup .practice-setup-footer{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));width:calc(100% - 28px);max-width:600px;z-index:90;padding:14px 15px 12px;box-shadow:0 -10px 28px rgba(0,0,0,.32);pointer-events:auto;}
-#screen-practice-setup .practice-setup-footer .btn-primary{margin-bottom:0;}
-body.practice-setup-scroll-lock{overflow:hidden;overscroll-behavior:none;scrollbar-gutter:stable;}
-body.practice-setup-scroll-lock .app-header{z-index:90;pointer-events:none;}
-body.practice-setup-scroll-lock .app-header-center{pointer-events:none;}
-body.practice-setup-scroll-lock .app-back-btn:not(.hidden),
-body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
-.practice-clear-row{display:flex;justify-content:flex-end;margin-bottom:14px;}
-.practice-filter-section{margin-bottom:14px;}
-.practice-filter-label{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.practice-filter-label-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;}
-.practice-filter-label-row .practice-filter-label{margin-bottom:0;}
-.practice-filter-clear{background:none;border:none;padding:0;font-size:.72rem;color:rgba(126,184,247,.85);cursor:pointer;font-family:inherit;}
-.practice-filter-clear:hover{color:#7eb8f7;text-decoration:underline;}
-.practice-chip-row,.practice-chip-wrap{display:flex;flex-wrap:wrap;gap:6px;}
-.practice-chip.all-chip{font-weight:600;color:var(--text);}
-.practice-chip{display:inline-flex;align-items:center;gap:4px;padding:7px 11px;border-radius:999px;border:1px solid var(--border);background:var(--surf2);color:var(--muted);font-size:.74rem;line-height:1.2;cursor:pointer;transition:all .15s ease;font-family:inherit;white-space:nowrap;}
-.practice-chip:hover{border-color:rgba(126,184,247,.35);color:var(--text);}
-.practice-chip.active{border-color:rgba(126,184,247,.65);background:rgba(126,184,247,.14);color:var(--text);box-shadow:0 0 0 1px rgba(126,184,247,.12);}
-.practice-chip.cat-chip{font-size:.72rem;max-width:100%;white-space:normal;text-align:start;}
-.practice-chip .chip-icon{font-size:.85rem;line-height:1;flex-shrink:0;}
-.practice-match-count{text-align:center;font-size:.82rem;color:var(--muted);margin:0 0 12px;line-height:1.45;}
-.practice-match-count.is-empty{color:rgba(247,138,168,.92);}
-.practice-match-count .practice-match-num{font-family:'Fraunces','Vazirmatn',serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
-.practice-match-hint{display:block;font-size:.72rem;margin-top:3px;opacity:.85;}
-.btn-outline{width:100%;padding:11px;background:transparent;border:1.5px solid var(--border);
-  border-radius:25px;font-family:'Outfit','Vazirmatn',sans-serif;font-size:.86rem;color:var(--muted);cursor:pointer;transition:all .15s;}
-.btn-outline:hover{border-color:rgba(255,255,255,.15);color:var(--text);}
-
-/* ── RANDOM WORD ── */
-.rw-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
-.rw-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.4rem;color:var(--gold);}
-.refresh-btn{background:var(--surf);border:1px solid var(--border);border-radius:50%;
-  width:42px;height:42px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1.3rem;transition:all .2s;color:var(--text);}
-.refresh-btn:hover{border-color:var(--gold);background:rgba(232,201,122,.08);}
-.rw-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);
-  padding:28px 22px;animation:cardIn .3s ease both;}
-.rw-type{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600;margin-bottom:8px;}
-.rw-word{font-family:'Fraunces','Vazirmatn',serif;font-size:clamp(2rem,6vw,2.8rem);font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.1;}
-.rw-meanings{margin-bottom:18px;}
-.rw-meaning-row{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
-.rw-meaning-flag{font-size:.75rem;opacity:.8;}
-.rw-meaning-text{font-size:.92rem;color:var(--muted);font-style:italic;}
-.rw-divider{height:1px;background:var(--border);margin-bottom:16px;}
-.rw-section{margin-bottom:14px;}
-.rw-section-title{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;font-weight:600;}
-.rw-forms{display:flex;flex-wrap:wrap;gap:7px;}
-.rw-form{background:var(--surf2);border:1px solid var(--border);border-radius:8px;
-  padding:6px 12px;font-size:.8rem;line-height:1.4;cursor:pointer;transition:all .15s;user-select:none;}
-.rw-form:hover{border-color:rgba(232,201,122,.35);background:rgba(232,201,122,.06);}
-.rw-form.active-chip{border-color:var(--gold);background:rgba(232,201,122,.13);}
-.rw-form.active-chip .fl{color:var(--gold);}
-.rw-form .fl{font-size:.65rem;color:var(--muted);display:block;margin-bottom:1px;}
-.rw-form .fv{color:var(--text);font-weight:500;}
-.rw-form .fv.gold{color:var(--gold);}
-.rw-form .fv.blue{color:var(--blue);}
-.rw-form .fv.green{color:var(--green);}
-.rw-example{background:var(--surf2);border-left:3px solid var(--gold);
-  border-radius:0 8px 8px 0;padding:10px 14px;font-size:.82rem;line-height:1.55;color:var(--muted);}
-.rw-example em{color:var(--text);font-style:normal;}
-.rw-meaning-single{font-size:.98rem;color:var(--muted);font-style:italic;margin-bottom:16px;}
-.rw-section-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
-.rw-section-title-row>span:first-child{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;}
-.rw-click-hint{font-size:.62rem;color:var(--muted);opacity:.55;font-style:italic;}
-.rw-example-box{background:var(--surf2);border-left:3px solid var(--border);border-radius:0 8px 8px 0;
-  padding:11px 14px;font-size:.83rem;line-height:1.6;color:var(--muted);font-style:italic;
-  transition:border-color .2s,color .2s;min-height:44px;}
-.rw-example-box.lit{border-color:var(--gold);color:var(--text);font-style:normal;}
-.rw-source{font-size:.65rem;color:var(--muted);text-align:right;margin-top:12px;}
-.rw-source a{color:var(--blue);opacity:.85;}
-
-/* ── WIKTIONARY CARD ── */
-.wikt-loading{display:flex;align-items:center;justify-content:center;gap:12px;
-  padding:48px 20px;color:var(--muted);font-size:.9rem;}
-.wikt-spinner{width:22px;height:22px;border:3px solid var(--surf3);border-top-color:var(--gold);
-  border-radius:50%;flex-shrink:0;animation:wSpin .75s linear infinite;}
-@keyframes wSpin{to{transform:rotate(360deg)}}
-.wikt-ipa{font-family:'Outfit',monospace;color:var(--blue);font-size:.83rem;margin:-4px 0 14px;opacity:.85;letter-spacing:.03em;}
-.wikt-head-line{font-size:.77rem;color:var(--muted);line-height:1.6;margin-bottom:14px;
-  border-left:2px solid var(--surf3);padding:6px 10px;background:var(--surf2);border-radius:0 8px 8px 0;}
-.wikt-pos-badge{display:inline-block;font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;
-  padding:3px 9px;border-radius:6px;font-weight:700;margin-bottom:10px;
-  background:rgba(232,201,122,.12);color:var(--gold);}
-.wikt-def-list{display:flex;flex-direction:column;gap:8px;}
-.wikt-def-item{font-size:.84rem;line-height:1.55;display:flex;flex-direction:column;gap:4px;}
-.wikt-def-row{display:flex;gap:8px;align-items:baseline;}
-.wikt-def-num{color:var(--gold);font-weight:700;font-size:.78rem;flex-shrink:0;}
-.wikt-def-text{color:var(--text);}
-.wikt-example{font-size:.77rem;color:var(--muted);font-style:italic;margin-top:3px;
-  padding:6px 10px;border-left:2px solid var(--border);border-radius:0 6px 6px 0;background:var(--surf2);}
-.wikt-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;margin-top:4px;}
-.wikt-table{border-collapse:collapse;font-size:.7rem;min-width:260px;width:100%;}
-.wikt-table th{background:var(--surf3);color:var(--muted);padding:5px 7px;text-align:center;
-  font-weight:600;border:1px solid var(--border);white-space:nowrap;font-size:.67rem;}
-.wikt-table td{background:var(--surf2);color:var(--text);padding:5px 7px;text-align:center;
-  border:1px solid var(--border);white-space:nowrap;}
-.wikt-table tr:hover td{background:rgba(232,201,122,.06);}
-.wikt-error{color:var(--muted);font-size:.85rem;text-align:center;padding:30px 16px;
-  font-style:italic;display:flex;flex-direction:column;gap:12px;align-items:center;}
-.wikt-error-word{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--text);
-  font-style:normal;}
-.wikt-offline-note{color:var(--muted);font-size:.7rem;text-align:right;margin-top:10px;opacity:.6;
-  font-style:italic;}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-@keyframes cardIn{from{opacity:0;transform:scale(.97) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
-@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.05)}100%{transform:scale(1)}}
-@keyframes sheetFade{from{opacity:0}to{opacity:1}}
-.pop{animation:pop .22s ease;}
-#screen-levels{animation:fadeUp .4s ease both;flex:1;display:flex;flex-direction:column;}
-#screen-levels .home-footer{margin-top:auto;}
-
-/* ── Persian / Vazirmatn font ── */
-:root[dir="rtl"], body.lang-rtl,
-:root[dir="rtl"] *, body.lang-rtl * {
-  font-family:'Vazirmatn',sans-serif;
-}
-:root[dir="rtl"] .app-header h1, body.lang-rtl .app-header h1,
-:root[dir="rtl"] .drawer-title, body.lang-rtl .drawer-title,
-:root[dir="rtl"] .lv-badge, body.lang-rtl .lv-badge,
-:root[dir="rtl"] .card-main, body.lang-rtl .card-main,
-:root[dir="rtl"] .res-title, body.lang-rtl .res-title,
-:root[dir="rtl"] .res-score, body.lang-rtl .res-score,
-:root[dir="rtl"] .res-stat strong, body.lang-rtl .res-stat strong,
-:root[dir="rtl"] .rw-title, body.lang-rtl .rw-title,
-:root[dir="rtl"] .rw-word, body.lang-rtl .rw-word,
-:root[dir="rtl"] .swipe-title, body.lang-rtl .swipe-title,
-:root[dir="rtl"] .swipe-level-btn strong, body.lang-rtl .swipe-level-btn strong,
-:root[dir="rtl"] .rb-text strong, body.lang-rtl .rb-text strong,
-:root[dir="rtl"] .swipe-empty strong, body.lang-rtl .swipe-empty strong,
-:root[dir="rtl"] .sri-word, body.lang-rtl .sri-word {
-  font-family:'Vazirmatn',serif;
-}
-/* ── AUTH UI ── */
-.auth-email{font-size:.8rem;color:var(--muted);margin:0 0 10px;word-break:break-all;
-  padding:10px 12px;background:rgba(255,255,255,.04);border-radius:10px;
-  border:1px solid rgba(255,255,255,.07);line-height:1.5;direction:ltr;text-align:left;}
-.auth-email strong{color:var(--text);display:block;font-size:.85rem;}
-/* ── ADAPTIVE TIP ── */
-.adaptive-tip{display:flex;align-items:center;gap:12px;margin-top:auto;margin-bottom:0;
-  padding:13px 16px 13px 18px;background:var(--surf);
-  border-radius:18px;cursor:pointer;transition:background .18s,border-color .18s;
-  border:1px solid var(--border);position:relative;overflow:hidden;}
-.adaptive-tip:hover{background:rgba(255,255,255,.04);}
-.adaptive-tip.hidden{display:none;}
-.adaptive-tip.signin-tip{background:linear-gradient(135deg,#fff0c8 0%,var(--gold) 52%,#c49a3a 100%);border:none;padding:13px 16px;}
-.adaptive-tip.signin-tip:hover{background:linear-gradient(135deg,#fff5d6 0%,#e8c97a 52%,#d4ae55 100%);}
-.adaptive-tip.signin-tip .at-title{color:#1a1408;}
-.adaptive-tip.signin-tip .at-desc{color:rgba(26,20,8,.78);}
-.adaptive-tip.signin-tip .at-arrow{color:rgba(26,20,8,.5);}
-.home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
-.home-tips .adaptive-tip{margin-top:0;}
-.install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-left:1px solid rgb(74 119 159);border-right:1px solid rgb(64 97 127);}
-.install-tip:hover{background:linear-gradient(135deg,rgba(126,184,247,.18),rgba(232,201,122,.12));}
-.install-tip .at-title{color:var(--blue);}
-.install-tip .at-icon{font-size:1.15rem;}
-.at-icon{font-size:1.2rem;flex-shrink:0;}
-.at-body{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0;}
-.at-title{font-size:.78rem;font-weight:700;color:var(--text);letter-spacing:.02em;}
-.at-desc{font-size:.74rem;line-height:1.5;color:var(--muted);}
-.at-arrow{color:var(--muted);font-size:.9rem;flex-shrink:0;}
-.install-guide-overlay{position:fixed;inset:0;background:rgba(6,8,16,.7);display:flex;
-  align-items:flex-end;justify-content:center;padding:16px;z-index:1400;backdrop-filter:blur(12px);
-  opacity:0;pointer-events:none;transition:opacity .25s;}
-.install-guide-overlay.open{opacity:1;pointer-events:all;}
-.install-guide{width:min(100%,460px);max-height:min(86vh,760px);overflow:auto;
-  background:linear-gradient(180deg,rgba(21,28,46,.98),rgba(14,18,31,.98));
-  border:1px solid rgba(126,184,247,.22);border-radius:24px 24px 20px 20px;
-  box-shadow:0 28px 80px rgba(0,0,0,.42);padding:18px 18px 20px;
-  will-change:transform;transform:translateY(100%);
-  transition:transform .3s cubic-bezier(.32,.72,0,1),opacity .18s ease;}
-.install-guide-overlay.open .install-guide{transform:translateY(0);}
-.install-guide-handle{width:54px;height:5px;border-radius:999px;background:rgba(255,255,255,.15);
-  margin:0 auto 14px;}
-.install-guide-head{display:block;margin-bottom:14px;}
-.install-guide-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.4rem;font-weight:700;color:var(--text);}
-.install-guide-sub{font-size:.84rem;line-height:1.5;color:var(--muted);margin-top:4px;}
-.share-glyph,.share-glyph-inline{display:inline-flex;align-items:center;justify-content:center;
-  width:28px;height:28px;border-radius:10px;background:rgba(0,122,255,.16);color:#4aa3ff;
-  border:1px solid rgba(74,163,255,.28);vertical-align:middle;}
-.share-glyph svg,.share-glyph-inline svg{width:17px;height:17px;display:block;}
-.share-glyph-inline{width:20px;height:20px;border-radius:7px;margin:0 2px;transform:translateY(-1px);}
-.install-inline-link{display:inline;border:0;background:none;color:var(--blue);font:inherit;
-  padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:2px;}
-.install-steps{display:flex;flex-direction:column;gap:12px;}
-.install-step{display:flex;gap:12px;padding:14px;border-radius:18px;background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06);}
-.install-step-num{width:28px;height:28px;border-radius:999px;background:rgba(126,184,247,.16);
-  color:var(--blue);font-size:.84rem;font-weight:700;display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:2px;}
-.install-step-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;}
-.install-step-desc{font-size:.82rem;line-height:1.6;color:var(--muted);}
-.install-guide-actions{display:flex;gap:10px;margin-top:16px;}
-.install-step-img{display:block;width:auto;max-width:110px;border-radius:8px;margin-top:8px;}
-.install-guide-btn{flex:1;border:0;border-radius:25px;padding:12px 14px;font-size:.9rem;font-weight:700;cursor:pointer;}
-.install-guide-btn.primary{background:linear-gradient(135deg,var(--blue),#5ba8ff);color:#08111f;}
-.install-guide-btn.secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.08);}
-.install-guide-btn[disabled]{opacity:.45;cursor:default;}
-@media(max-width:640px){
-  .install-guide{padding:16px 16px 18px;}
-}
-
-/* ── DICTIONARY ── */
-/* Force LTR on the dictionary screen regardless of global dir — words are German.
-   RTL languages get per-element dir="rtl" on the meaning line only. */
-#screen-dictionary { direction: ltr !important; }
-.dict-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.dict-search-wrap{margin-bottom:10px;}
-/* Force LTR on the dictionary screen regardless of global dir — words are German.
-   RTL languages get per-element dir="rtl" on the meaning line only. */
-#screen-dictionary { direction: ltr !important; }
-.dict-search-input{width:100%;padding:10px 14px;background:var(--surf);border:1.5px solid var(--border);
-  border-radius:12px;font-size:16px;color:var(--text);
-  font-family:'Outfit','Vazirmatn',sans-serif;outline:none;-webkit-appearance:none;appearance:none;}
-.dict-search-input:focus{border-color:rgba(126,184,247,.4);}
-.dict-search-input::placeholder{color:var(--muted);}
-.dict-body{display:flex;position:relative;height:calc(100svh - 220px);min-height:300px;}
-.dict-list{flex:1;overflow-y:auto;overscroll-behavior:contain;padding-right:28px;padding-bottom:20px;}
-.dict-list::-webkit-scrollbar{width:0;}
-.dict-letter-header{position:sticky;top:0;z-index:10;
-  font-family:'Fraunces','Vazirmatn',serif;font-size:1.05rem;font-weight:700;
-  color:var(--gold);background:var(--bg);padding:6px 0 3px;line-height:1;}
-.dict-entry{display:flex;flex-direction:column;padding:9px 0;
-  border-bottom:1px solid var(--border);cursor:pointer;}
-@media(hover:hover){.dict-entry:hover{background:rgba(126,184,247,.05);}}
-.dict-entry-top{display:flex;align-items:center;gap:6px;}
-.dict-word{font-family:'Fraunces','Vazirmatn',serif;font-size:.98rem;font-weight:600;color:var(--text);}
-.dict-article{font-size:.76rem;color:var(--muted);font-style:italic;}
-.dict-level{font-size:.58rem;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:.05em;
-  background:rgba(232,201,122,.12);color:var(--gold);margin-left:auto;flex-shrink:0;}
-.dict-meaning{font-size:.8rem;color:var(--muted);margin-top:2px;line-height:1.4;}
-.dict-alpha-bar{position:absolute;right:-2px;top:0;bottom:0;width:24px;
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
-  padding:4px 0;z-index:20;touch-action:none;user-select:none;overflow:hidden;}
-.dict-alpha-letter{font-size:.6rem;font-weight:700;color:var(--muted);line-height:1;
-  width:20px;height:auto;min-height:14px;display:flex;align-items:center;justify-content:center;
-  border-radius:3px;cursor:pointer;touch-action:none;flex-shrink:0;}
-.dict-alpha-letter.active{color:var(--blue);background:rgba(126,184,247,.14);}
-@media(hover:hover){.dict-alpha-letter:hover{color:var(--blue);background:rgba(126,184,247,.14);}}
-.dict-empty{color:var(--muted);font-size:.9rem;text-align:center;padding:40px 16px;font-style:italic;}
-.dict-loading{display:flex;align-items:center;justify-content:center;gap:12px;
-  padding:48px 20px;color:var(--muted);font-size:.9rem;}
-</style>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="0c4788e2-4038-4d45-89f3-0580ebd000d8"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/glass.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/screens.css">
 </head>
 <body>
+<div id="side-rays-bg" class="side-rays-container" aria-hidden="true"></div>
+
+<!-- UI icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M12 15c2-3 3-6 3-9 0 0-3 1-6 3 0 3 1 6 3 9z"/><path d="M9 12L4 17l2 2 5-5"/><path d="M12 6V3"/><path d="M10 4h4"/></symbol>
+  <symbol id="icon-lightning" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="icon-gift" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1.5"/><path d="M12 10v11"/><path d="M3 14h18"/><path d="M12 10c-2-2-3-3.5-1.5-5S14 6 12 8c2-2 3.5-3 5-1.5S16 10 12 10z"/></symbol>
+  <symbol id="icon-phone-match" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 18h4"/><path d="M15 8c1.5 0 3 .5 4 2"/><path d="M16 11c1 .5 2 1.5 2.5 3"/></symbol>
+  <symbol id="icon-dice" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-grad-cap" viewBox="0 0 24 24"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4"/><path d="M21 9v6"/></symbol>
+  <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3z"/><path d="M18 14l.8 2.5 2.5.8-2.5.8-.8 2.5-.8-2.5-2.5-.8 2.5-.8.8-2.5z"/><path d="M5 16l.6 1.8L7.4 18l-1.8.6L5 20.4l-.6-1.8L2.6 18l1.8-.6L5 16z"/></symbol>
+  <symbol id="icon-adaptive" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="icon-theme-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></symbol>
+  <symbol id="icon-swipe-match" viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"/><path d="M3 12H6"/><path d="M5 10L3 12l2 2"/><path d="M21 12h-3"/><path d="M19 10l2 2-2 2"/></symbol>
+  <symbol id="icon-word-explore" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M5 19V11"/><path d="M10 19V6"/><path d="M15 19V14"/><path d="M20 19V9"/><path d="M4 19h17"/></symbol>
+  <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+  <symbol id="icon-flip" viewBox="0 0 24 24"><path d="M7 4H4v3"/><path d="M17 20h3v-3"/><path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5"/><path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5"/></symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></symbol>
+  <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M6 12l4 4 8-9"/></symbol>
+  <symbol id="icon-cat-numbers" viewBox="0 0 24 24"><path d="M9 4l-2 16"/><path d="M17 4l-2 16"/><path d="M4 9h16"/><path d="M4 15h16"/></symbol>
+  <symbol id="icon-cat-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
+  <symbol id="icon-cat-family" viewBox="0 0 24 24"><circle cx="12" cy="7" r="2.2"/><path d="M8.5 20v-2a3.5 3.5 0 0 1 7 0v2"/><circle cx="6.5" cy="10.5" r="1.7"/><path d="M4.5 20v-1.5a2.2 2.2 0 0 1 4 0"/><circle cx="17.5" cy="10.5" r="1.7"/><path d="M15.5 20v-1.5a2.2 2.2 0 0 1 4 0"/></symbol>
+  <symbol id="icon-cat-health" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M12 9v6"/><path d="M9 12h6"/></symbol>
+  <symbol id="icon-cat-food" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M6 2v2"/><path d="M10 2v2"/><path d="M14 2v2"/></symbol>
+  <symbol id="icon-cat-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></symbol>
+  <symbol id="icon-cat-shirt" viewBox="0 0 24 24"><path d="M8 5L5 8l2 2v11h10V10l2-2-3-3-4 3-4-3z"/></symbol>
+  <symbol id="icon-cat-briefcase" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M4 14h16"/></symbol>
+  <symbol id="icon-cat-book" viewBox="0 0 24 24"><path d="M6 4h6a3 3 0 0 1 3 3v14H9a3 3 0 0 0-3 3V4z"/><path d="M18 4h-6a3 3 0 0 0-3 3v14h6a3 3 0 0 1 3-3V4z"/></symbol>
+  <symbol id="icon-cat-plane" viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 19 4c-1 0-2 1-3.5 2.5L12 10 4.8 8.2c-.5-.1-.9.1-1.1.5l-.1.5c-.2.5.1 1 .6 1.2L8 12l-2 3H8l1 1 1-3 3 2 5.3 1.3c.5.1 1-.1 1.2-.6l.5-.1c.4-.2.6-.6.5-1.1z"/></symbol>
+  <symbol id="icon-cat-car" viewBox="0 0 24 24"><path d="M5 11l2-5h10l2 5"/><path d="M4 11h16v5H4z"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></symbol>
+  <symbol id="icon-cat-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 13H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="icon-cat-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+  <symbol id="icon-cat-leaf" viewBox="0 0 24 24"><path d="M12 21C8 17 6 12 6 8a6 6 0 0 1 12 0c0 4-2 9-6 13z"/><path d="M12 21V8"/></symbol>
+  <symbol id="icon-cat-sport" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a12 12 0 0 1 0 16"/><path d="M4 12h16"/></symbol>
+  <symbol id="icon-cat-palette" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><circle cx="8.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="10" r="1" fill="currentColor" stroke="none"/><path d="M8.5 15.5c1.2-1.8 5.8-1.8 7 0"/></symbol>
+  <symbol id="icon-cat-laptop" viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="10" rx="1.5"/><path d="M3 18h18"/></symbol>
+  <symbol id="icon-cat-scale" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M6 8h12"/><path d="M6 8L2 14h8L6 8z"/><path d="M18 8l-4 6h8l-4-6z"/></symbol>
+  <symbol id="icon-cat-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></symbol>
+  <symbol id="icon-cat-map" viewBox="0 0 24 24"><path d="M8 4l-4 2v14l4-2 8 2 4-2V4l-4 2-8-2z"/><path d="M8 4v14"/><path d="M16 6v14"/></symbol>
+  <symbol id="icon-cat-pencil" viewBox="0 0 24 24"><path d="M16 4l4 4-10 10H6v-4L16 4z"/><path d="M14 6l4 4"/></symbol>
+</svg>
 
 <!-- ══ PERSISTENT HEADER ══ -->
 <div class="app-header" id="app-header">
-  <button class="app-back-btn hidden" id="app-back-btn" onclick="_appBackAction()"></button>
-  <div class="app-header-center">
-    <h1 onclick="goHome()">Wortschatz</h1>
-    <p id="header-sub">Adaptive quizzes · Practice · Learning profile</p>
+  <h1 onclick="goHome()">Wortschatz</h1>
+</div>
+<div class="screen-top-bar hidden" id="screen-top-bar">
+  <div class="screen-top-main">
+    <button class="app-back-btn glass glass-chrome glass-interactive" id="app-back-btn" onclick="_appBackAction()" type="button" aria-label="Back"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-left"/></svg></button>
+    <div class="screen-top-title-wrap">
+      <div class="screen-top-title" id="screen-top-title"></div>
+      <div class="screen-top-subtitle hidden" id="screen-top-subtitle"></div>
+    </div>
   </div>
-  <button class="settings-btn" onclick="openSettings()" title="Settings">⛭</button>
+  <div class="screen-top-actions hidden" id="screen-top-actions"></div>
 </div>
 
 <!-- ══ OFFLINE SCREEN ══ -->
@@ -835,79 +141,11 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
   <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
 </div>
 
-<!-- ══ SETTINGS DRAWER ══ -->
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeSettings()"></div>
-<div class="drawer" id="settings-drawer">
-  <div class="drawer-handle" onclick="closeSettings()"></div>
-  <div class="drawer-title" id="st-title">Settings</div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-lang-label">Language</div>
-    <div class="lang-dd" id="lang-dd">
-      <button class="lang-dd-trigger" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
-        <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
-        <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="lang-dd-panel" id="lang-dd-panel">
-        <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
-        <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
-        <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
-        <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
-        <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
-        <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
-        <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
-      </div>
-    </div>
-    <!-- hidden opt-* anchors kept for JS compat -->
-    <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
-    <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
-    <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-account-label">Account</div>
-    <div id="auth-section-content">
-      <!-- populated by auth.js once Supabase initialises -->
-      <button class="gsi-material-button" onclick="authSignIn()">
-        <div class="gsi-material-button-state"></div>
-        <div class="gsi-material-button-content-wrapper">
-          <div class="gsi-material-button-icon">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
-              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-            </svg>
-          </div>
-          <span class="gsi-material-button-contents">Sign in with Google</span>
-        </div>
-      </button>
-    </div>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-section">
-    <div class="drawer-section-label" id="st-share-label">Share this app</div>
-    <div class="drawer-footer-row">
-      <button class="drawer-about-row" id="share-app-btn" onclick="shareApp()">Share</button>
-      <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
-    </div>
-  </div>
-
-  <div class="drawer-divider"></div>
-
-  <div class="drawer-footer-row">
-    <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()">About</button>
-    <button class="drawer-close" id="st-close-btn" onclick="closeSettings()">Close</button>
-  </div>
-</div>
-
 <!-- ══ APP DIALOG ══ -->
-<div class="app-dialog-overlay" id="app-dialog-overlay"></div>
-<div class="app-dialog" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
+<div class="modal-root modal-root--dialog" id="app-dialog-overlay">
+  <div class="modal-scrim" id="app-dialog-scrim"></div>
+  <div class="modal-sheet app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
+  <div class="glass-sheet-surface glass glass-highlight">
   <div class="app-dialog-handle" id="app-dialog-handle"></div>
   <div class="app-dialog-title" id="app-dialog-title"></div>
   <p class="app-dialog-message" id="app-dialog-message"></p>
@@ -915,23 +153,30 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
     <button type="button" class="app-dialog-btn-cancel" id="app-dialog-cancel">Cancel</button>
     <button type="button" class="app-dialog-btn-primary" id="app-dialog-primary">OK</button>
   </div>
+  </div>
+  </div>
 </div>
 
 <!-- ══ ABOUT MODAL ══ -->
-<div class="about-modal-overlay" id="about-modal-overlay" onclick="closeAbout(event)">
-  <div class="about-modal">
+<div class="modal-root modal-root--about modal-root--align-bottom modal-root--pad-bottom" id="about-modal-overlay">
+  <div class="modal-scrim" onclick="closeAbout()"></div>
+  <div class="modal-sheet about-modal glass-sheet-shell">
+    <div class="about-modal-surface glass-sheet-surface glass glass-highlight">
     <h3 id="about-title">About</h3>
     <p id="about-p1">I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.</p>
     <p id="about-p2">Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
     <p id="about-p3">Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.</p>
     <p id="about-p4">Originally named DeutschLernen during early development.</p>
     <button class="about-modal-close" id="about-close-btn" onclick="closeAbout()">Close</button>
+    </div>
   </div>
 </div>
 
 <!-- ══ IOS INSTALL GUIDE ══ -->
-<div class="install-guide-overlay" id="install-guide-overlay" onclick="closeInstallGuide(event)">
-  <div class="install-guide">
+<div class="modal-root modal-root--install modal-root--align-bottom modal-root--pad-guide" id="install-guide-overlay">
+  <div class="modal-scrim" onclick="closeInstallGuide()"></div>
+  <div class="modal-sheet install-guide glass-sheet-shell">
+    <div class="install-guide-surface glass-sheet-surface glass glass-highlight">
     <div class="install-guide-handle"></div>
     <div class="install-guide-head">
       <div>
@@ -959,14 +204,18 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
     <div class="install-guide-actions">
       <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" onclick="closeInstallGuide()">Close</button>
     </div>
+    </div>
   </div>
 </div>
 
 <!-- ══ WORD CARD MODAL ══ -->
-<div class="word-modal-overlay" id="word-modal-overlay" onclick="closeWordModal(event)">
-  <div class="word-modal">
+<div class="modal-root modal-root--word modal-root--align-bottom" id="word-modal-overlay">
+  <div class="modal-scrim" onclick="closeWordModal()"></div>
+  <div class="modal-sheet word-modal glass-sheet-shell">
+    <div class="word-modal-surface glass-sheet-surface glass glass-highlight">
     <div class="word-modal-handle"></div>
     <div id="word-modal-content"></div>
+    </div>
   </div>
 </div>
 
@@ -975,195 +224,94 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
   <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
 </div>
 <div class="screen" id="screen-levels">
-  <div class="home-actions profile-visible">
-    <div class="home-primary-actions">
-      <div class="random-banner adaptive-v2-banner" onclick="openAdaptiveV2()">
-        <div class="rb-icon">🚀</div>
-        <div class="rb-text">
-          <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
-          <span id="adaptive-v2-banner-sub">Gets smarter as you learn</span>
-          <span id="adaptive-v2-banner-status" style="display:none"></span>
+  <div class="tab-stage">
+  <div class="tab-viewport" id="tab-viewport">
+    <div class="tab-track" id="tab-track">
+  <!-- Learn tab -->
+  <div class="tab-panel active tab-flow-visible" id="tab-panel-learn" aria-hidden="false">
+    <div class="tab-stack" id="tab-stack-learn">
+    <div class="tab-page is-stack-top" id="tab-page-learn-root" data-page-id="learn-root">
+
+    <div class="home-actions">
+      <div class="home-primary-actions">
+        <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
+          <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-adaptive"/></svg></div>
+          <div class="rb-text">
+            <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
+            <span id="adaptive-v2-banner-sub">Gets smarter as you learn</span>
+            <span id="adaptive-v2-banner-status" style="display:none"></span>
+          </div>
+        </div>
+        <div class="random-banner rush-banner glass glass-tile glass-highlight glass-interactive" id="rush-banner" onclick="openRushMode()">
+          <div class="rb-icon-wrap rb-icon-wrap--rush" id="rush-banner-icon-wrap"><svg class="ui-icon ui-icon--filled" id="rush-banner-icon" aria-hidden="true"><use href="#icon-lightning"/></svg></div>
+          <div class="rb-text">
+            <strong id="rush-banner-title">Rush Mode</strong>
+            <span id="rush-banner-sub">Sign in to play · Continuous challenge mode</span>
+          </div>
         </div>
       </div>
-      <!-- Legacy adaptive quiz — hidden while V2 is primary
-      <div class="random-banner adaptive-banner" onclick="openAdaptiveSetup()">
-        <div class="rb-icon">🎯</div>
-        <div class="rb-text">
-          <strong id="adaptive-banner-title">Adaptive Quiz</strong>
-          <span id="adaptive-banner-sub">Adjusts to your skill level</span>
+      <div class="home-grid-actions">
+        <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive" onclick="openThemeSelect()">
+          <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-theme-grid"/></svg></div>
+          <div class="rb-text">
+            <strong id="theme-banner-title">Theme Quiz</strong>
+            <span id="theme-banner-sub">Quiz yourself on a topic</span>
+          </div>
+        </div>
+        <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive" onclick="openSwipeSetup()">
+          <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-swipe-match"/></svg></div>
+          <div class="rb-text">
+            <strong id="swipe-banner-title">Quick Match</strong>
+            <span id="swipe-banner-sub">Swipe if the meaning matches</span>
+          </div>
+        </div>
+        <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive" onclick="showRandomWord()">
+          <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-word-explore"/></svg></div>
+          <div class="rb-text">
+            <strong id="rw-banner-title">Word Explorer</strong>
+            <span id="rw-banner-sub">Open one word card instantly</span>
+          </div>
         </div>
       </div>
-      -->
-      <div class="random-banner learning-profile-banner" id="learning-profile-banner" onclick="openLearningProfile()">
-        <div class="rb-icon">👨🏻‍💻</div>
-        <div class="rb-text">
-          <strong id="learning-profile-banner-title">Learning Profile</strong>
+    </div>
+    <div class="home-tips">
+      <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()">
+        <div class="at-icon">⬇️</div>
+        <div class="at-body">
+          <div class="at-title" id="install-tip-title">Install the app</div>
+          <div class="at-desc" id="install-tip-desc">Install it on your home screen for faster access and an app-like experience.</div>
         </div>
+        <div class="at-arrow">›</div>
+      </div>
+      <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
+        <div class="at-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-lock"/></svg></div>
+        <div class="at-body">
+          <div class="at-title" id="at-title">Progress Not Saved</div>
+          <div class="at-desc" id="at-desc">Sign in to keep your learning history and quiz results.</div>
+        </div>
+        <div class="at-arrow">›</div>
       </div>
     </div>
-    <div class="random-banner rush-banner" id="rush-banner" onclick="openRushMode()">
-      <div class="rb-icon">⚡</div>
-      <div class="rb-text">
-        <strong id="rush-banner-title">Rush Mode</strong>
-        <span id="rush-banner-sub">Sign in to play · Continuous challenge mode</span>
-      </div>
-    </div>
-    <div class="random-banner practice-banner" onclick="openPracticeSetup()">
-      <div class="rb-icon">👟</div>
-      <div class="rb-text">
-        <strong id="practice-banner-title">Practice</strong>
-        <span id="practice-banner-sub">Flip cards to learn words</span>
-      </div>
-    </div>
-    <div class="random-banner theme-banner" onclick="openThemeSelect()">
-      <div class="rb-icon">🗂️</div>
-      <div class="rb-text">
-        <strong id="theme-banner-title">Theme Quiz</strong>
-        <span id="theme-banner-sub">Quiz yourself on a topic</span>
-      </div>
-    </div>
-    <div class="random-banner swipe-banner" onclick="openSwipeSetup()">
-      <div class="rb-icon">🃏</div>
-      <div class="rb-text">
-        <strong id="swipe-banner-title">Quick Match</strong>
-        <span id="swipe-banner-sub">Swipe if the meaning matches</span>
-      </div>
-    </div>
-    <div class="random-banner word-explorer-banner" onclick="showRandomWord()">
-      <div class="rb-icon">🎲</div>
-      <div class="rb-text">
-        <strong id="rw-banner-title">Word Explorer</strong>
-        <span id="rw-banner-sub">Open one word card instantly</span>
-      </div>
-    </div>
-    <!--
-    <div class="random-banner" style="background:linear-gradient(135deg,rgba(126,184,247,.1),rgba(232,201,122,.06));border-color:rgba(126,184,247,.22);" onclick="openDictionary()">
-      <div class="rb-icon">📖</div>
-      <div class="rb-text">
-        <strong id="dict-banner-title" style="color:var(--blue)">Dictionary</strong>
-        <span id="dict-banner-sub">Browse all words</span>
-      </div>
-    </div>
-    -->
   </div>
 
-  <div class="home-tips">
-    <div class="adaptive-tip install-tip hidden" id="install-tip" onclick="handleInstallCTA()">
-      <div class="at-icon">⬇️</div>
-      <div class="at-body">
-        <div class="at-title" id="install-tip-title">Install the app</div>
-        <div class="at-desc" id="install-tip-desc">Install it on your home screen for faster access and an app-like experience.</div>
-      </div>
-      <div class="at-arrow">›</div>
-    </div>
-    <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
-      <div class="at-icon">🔒</div>
-      <div class="at-body">
-        <div class="at-title" id="at-title">Progress Not Saved</div>
-        <div class="at-desc" id="at-desc">Sign in to keep your learning history and quiz results.</div>
-      </div>
-      <div class="at-arrow">›</div>
-    </div>
-  </div>
-  <div class="home-footer" style="margin-top:0;">
-    <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
-    <p id="footer-copy">© 2026 Mehras Hojjat</p>
-  </div>
-</div>
-
-<!-- ══ LEARNING PROFILE ══ -->
-<div class="screen hidden" id="screen-learning-profile">
-  <div class="profile-header">
-    <div class="profile-title" id="learning-profile-title">Learning Profile</div>
-  </div>
-  <div id="learning-profile-content"></div>
-</div>
-
-<!-- ══ QUIZ ══ -->
-<div class="screen hidden" id="screen-quiz">
-  <div class="quiz-header">
-    <div class="hud">
-      <div class="hud-pill"><span class="dot"></span><span id="sc-ok">0</span></div>
-      <div class="hud-pill"><span class="dot r"></span><span id="sc-no">0</span></div>
-      <div class="hud-pill" style="font-size:.74rem;color:var(--muted);" id="hud-pos">1/10</div>
-    </div>
-  </div>
-  <div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
-  <div class="card-type-row">
-    <span class="tbadge" id="tbadge">Verb</span>
-    <span class="tlevel" id="tlevel"></span>
-    <span class="tmode-badge" id="tmode-badge"></span>
-  </div>
-  <div class="word-card">
-    <div class="card-q" id="cquestion"></div>
-    <div class="card-main" id="cmain" dir="ltr"></div>
-    <div class="card-sub" id="csub" dir="ltr"></div>
-  </div>
-  <div class="choices" id="choices"></div>
-  <div class="feedback" id="feedback"></div>
-  <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
-</div>
-
-<!-- ══ RUSH SUMMARY ══ -->
-<div class="screen hidden" id="screen-rush-summary">
-  <div class="res-card">
-    <div class="res-emoji" id="rush-summary-emoji">🏆</div>
-    <div class="res-title" id="rush-summary-title">Rush complete</div>
-    <div class="res-score" id="rush-summary-score">0/0</div>
-    <div class="res-sub" id="rush-summary-record" style="display:none"></div>
-    <div class="res-row">
-      <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score">Score</span></div>
-      <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span id="rush-lbl-correct">Correct</span></div>
-      <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span id="rush-lbl-wrong">Wrong</span></div>
-    </div>
-    <div class="res-row" style="margin-top:8px;">
-      <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak">Best streak</span></div>
-      <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time">Study time</span></div>
-    </div>
-    <button class="btn-primary" id="btn-rush-again" onclick="restartRushMode()">Rush again</button>
-    <button class="btn-outline" id="btn-rush-home" onclick="goHome()">Back Home</button>
-  </div>
-</div>
-
-<!-- ══ RESULTS ══ -->
-<div class="screen hidden" id="screen-results">
-  <div class="res-card">
-    <div class="res-emoji" id="r-emoji">🏆</div>
-    <div class="res-title" id="r-title">Ausgezeichnet!</div>
-    <div class="res-score" id="r-score">9/10</div>
-    <div class="res-sub" id="r-sub"></div>
-    <div class="res-row">
-      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score">Score</span></div>
-      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct">Correct</span></div>
-      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
-    </div>
-    <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
-    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
-  </div>
-</div>
-
-<!-- ══ SWIPE SETUP ══ -->
-<div class="screen hidden" id="screen-swipe-setup">
+<div class="tab-page tab-flow-page" id="screen-swipe-setup">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="swipe-setup-screen-title">Quick Match</div>
       <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
     </div>
   </div>
-  <div class="swipe-setup">
+  <div class="swipe-setup glass glass-tile">
     <div class="swipe-setup-title" id="swipe-setup-title"></div>
     <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
     </div>
     <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
   </div>
-</div>
-
-<!-- ══ SWIPE GAME ══ -->
-<div class="screen hidden" id="screen-swipe">
+</div><div class="tab-page tab-flow-page" id="screen-swipe">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="swipe-title">Swipe Check</div>
@@ -1172,7 +320,7 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
   </div>
   <div class="swipe-stage">
     <div class="swipe-flash" id="swipe-flash">
-      <div class="swipe-flash-inner">
+      <div class="swipe-flash-inner glass glass-tile glass-highlight glass-chrome">
         <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
         <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
       </div>
@@ -1180,93 +328,25 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
     <div class="swipe-card-stack" id="swipe-card-stack"></div>
   </div>
   <div class="swipe-actions">
-    <button class="swipe-btn left" onclick="swipeAction('left')" title="Wrong">✖</button>
-    <button class="swipe-btn right" onclick="swipeAction('right')" title="Correct">✔</button>
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')" title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true"><use href="#icon-x"/></svg></button>
+    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')" title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"/></svg></button>
   </div>
-</div>
-
-<!-- ══ PRACTICE SETUP ══ -->
-<div class="screen hidden" id="screen-practice-setup">
-  <div class="practice-setup-scroll" id="practice-setup-scroll">
-    <div class="swipe-header practice-setup-header">
-      <div class="swipe-title-wrap">
-        <div class="swipe-title" id="practice-setup-screen-title" style="color:#7eb8f7">Practice</div>
-        <div class="swipe-subtitle" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</div>
-      </div>
-    </div>
-    <div class="swipe-setup practice-setup-filters">
-      <div class="swipe-level-grid">
-        <button class="swipe-level-btn active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
-        <button class="swipe-level-btn" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
-        <button class="swipe-level-btn" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
-      </div>
-      <div class="practice-clear-row">
-        <button type="button" class="practice-filter-clear" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
-      </div>
-      <div class="practice-filter-section">
-        <span class="practice-filter-label" id="practice-filter-difficulty-label">Difficulty</span>
-        <div class="practice-chip-row" id="practice-difficulty-chips"></div>
-      </div>
-      <div class="practice-filter-section">
-        <span class="practice-filter-label" id="practice-filter-type-label">Word type</span>
-        <div class="practice-chip-row" id="practice-type-chips"></div>
-      </div>
-      <div class="practice-filter-section">
-        <span class="practice-filter-label" id="practice-filter-article-label">Article</span>
-        <div class="practice-chip-row" id="practice-article-chips"></div>
-      </div>
-      <div class="practice-filter-section">
-        <span class="practice-filter-label" id="practice-filter-topics-label">Topics</span>
-        <div class="practice-chip-row" id="practice-category-chips"></div>
-      </div>
-    </div>
-  </div>
-  <div class="swipe-setup practice-setup-footer">
-    <div class="practice-match-count" id="practice-match-count">
-      <span><span class="practice-match-num" id="practice-match-num">0</span> <span id="practice-match-label">words in your loop</span></span>
-      <span class="practice-match-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
-    </div>
-    <button class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
-  </div>
-</div>
-
-<!-- ══ PRACTICE GAME ══ -->
-<div class="screen hidden" id="screen-practice">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="practice-title" style="color:#7eb8f7">Practice</div>
-      <div class="swipe-subtitle" id="practice-subtitle">Flip cards to reveal meanings</div>
-    </div>
-  </div>
-  <div class="swipe-stage">
-    <div class="practice-card-stack" id="practice-card-stack"></div>
-  </div>
-  <div class="swipe-actions">
-    <button class="swipe-btn practice-flip-btn" onclick="practiceFlipAction()" title="Flip card">↩&#xFE0E;</button>
-    <button class="swipe-btn practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card">→</button>
-  </div>
-</div>
-
-<!-- ══ ADAPTIVE QUIZ SETUP ══ -->
-<div class="screen hidden" id="screen-adaptive-setup">
+</div><div class="tab-page tab-flow-page" id="screen-adaptive-setup">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
       <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
     </div>
   </div>
-  <div class="swipe-setup">
+  <div class="swipe-setup glass glass-tile">
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
+      <button class="swipe-level-btn glass glass-chrome glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
     </div>
     <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
   </div>
-</div>
-
-<!-- ══ THEME SELECT ══ -->
-<div class="screen hidden" id="screen-theme-select">
+</div><div class="tab-page tab-flow-page" id="screen-theme-select">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
@@ -1274,19 +354,18 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
     </div>
   </div>
   <div class="category-grid" id="category-grid"></div>
-</div>
-
-<!-- ══ RANDOM WORD ══ -->
-<div class="screen hidden" id="screen-random">
-  <div class="rw-header">
-    <div class="rw-title" id="rw-screen-title">Word Explorer</div>
-    <button class="refresh-btn" onclick="renderRandomWord()" id="rw-refresh-btn" title="New word">↻</button>
+</div><div class="tab-page tab-flow-page" id="screen-random">
+  <div class="screen-top-title-src">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="rw-screen-title">Word Explorer</div>
+      <div class="swipe-subtitle" id="rw-screen-subtitle">Open one word card instantly</div>
+    </div>
+  </div>
+  <div class="screen-top-actions-src" id="rw-top-actions">
+    <button class="app-top-action-btn glass glass-chrome glass-interactive" onclick="renderRandomWord()" id="rw-refresh-btn" type="button" title="New word" aria-label="New word"><svg class="ui-icon" aria-hidden="true"><use href="#icon-refresh"/></svg></button>
   </div>
   <div id="rw-content"></div>
-</div>
-
-<!-- ══ DICTIONARY ══ -->
-<div class="screen hidden" id="screen-dictionary">
+</div><div class="tab-page tab-flow-page" id="screen-dictionary">
   <div class="dict-header">
     <div class="swipe-title-wrap">
       <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)">Dictionary</div>
@@ -1306,15 +385,318 @@ body.practice-setup-scroll-lock .settings-btn{z-index:1;pointer-events:auto;}
     </div>
     <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
   </div>
+</div>    </div>
+  </div>
+  <!-- Practice tab -->
+  <div class="tab-panel" id="tab-panel-practice">
+    <div class="tab-stack" id="tab-stack-practice">
+    <div class="tab-page is-stack-top" id="tab-page-practice-root" data-page-id="practice-root">
+
+    <header class="practice-head">
+      <div class="practice-head-text">
+        <h2 class="practice-head-title" id="practice-setup-screen-title">Learn</h2>
+        <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
+      </div>
+      <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
+    </header>
+
+    <div class="practice-filters" id="practice-filters">
+      <div class="swipe-level-grid" id="practice-levels">
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
+      </div>
+
+      <div class="section-label" id="practice-filter-difficulty-label">Difficulty</div>
+      <div class="practice-chips" id="practice-difficulty-chips"></div>
+
+      <div class="section-label" id="practice-filter-type-label">Word type</div>
+      <div class="practice-chips" id="practice-type-chips"></div>
+
+      <div class="section-label" id="practice-filter-article-label">Article</div>
+      <div class="practice-chips" id="practice-article-chips"></div>
+
+      <div class="section-label" id="practice-filter-topics-label">Topics</div>
+      <div class="practice-chips" id="practice-category-chips"></div>
+    </div>
+
+    <div class="practice-dock glass glass-tile glass-highlight" id="practice-dock">
+      <p class="practice-count" id="practice-match-count">
+        <span class="practice-count-num" id="practice-match-num">0</span>
+        <span id="practice-match-label">words in your loop</span>
+        <span class="practice-count-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
+      </p>
+      <button type="button" class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
+    </div>
+  </div>
+<div class="tab-page tab-flow-page" id="screen-practice">
+  <div class="swipe-header">
+    <div class="swipe-title-wrap">
+      <div class="swipe-title" id="practice-title" style="color:#7eb8f7">Learn</div>
+      <div class="swipe-subtitle" id="practice-subtitle">Flip cards to reveal meanings</div>
+    </div>
+  </div>
+  <div class="swipe-stage">
+    <div class="practice-card-stack" id="practice-card-stack"></div>
+  </div>
+  <div class="swipe-actions">
+    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flip"/></svg></button>
+    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
+  </div>
+</div>
+    </div>
+  </div>
+  <!-- Stats tab -->
+  <div class="tab-panel" id="tab-panel-stats">
+    <div class="tab-stack" id="tab-stack-stats">
+    <div class="tab-page is-stack-top" id="tab-page-stats-root" data-page-id="stats-root">
+
+    <div id="screen-learning-profile">
+      <div class="profile-header">
+        <div class="profile-title" id="learning-profile-title">Learning Profile</div>
+      </div>
+      <div id="learning-profile-content"></div>
+    </div>
+  </div>
+
+
+    </div>
+    </div>
+  <!-- Settings tab -->
+  <div class="tab-panel" id="tab-panel-settings">
+    <div class="tab-stack" id="tab-stack-settings">
+    <div class="tab-page is-stack-top" id="tab-page-settings-root" data-page-id="settings-root">
+
+    <header class="settings-head">
+      <h2 class="settings-head-title" id="st-title">Settings</h2>
+    </header>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-lang-label">Language</div>
+      <div class="lang-dd" id="lang-dd">
+        <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
+          <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
+          <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-dd-panel glass glass-tile glass-highlight glass-chrome" id="lang-dd-panel">
+          <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
+          <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
+          <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
+          <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
+          <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
+          <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
+          <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
+        </div>
+      </div>
+      <!-- hidden opt-* anchors kept for JS compat -->
+      <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
+      <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
+      <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-account-label">Account</div>
+      <div id="auth-section-content">
+        <!-- populated by auth.js once Supabase initialises -->
+        <button class="gsi-material-button" onclick="authSignIn()">
+          <div class="gsi-material-button-state"></div>
+          <div class="gsi-material-button-content-wrapper">
+            <div class="gsi-material-button-icon">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              </svg>
+            </div>
+            <span class="gsi-material-button-contents">Sign in with Google</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <div class="drawer-section-label" id="st-share-label">Share this app</div>
+      <div class="drawer-footer-row">
+        <button class="drawer-about-row" id="share-app-btn" onclick="shareApp()">Share</button>
+        <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
+      </div>
+    </div>
+
+    <div class="drawer-divider"></div>
+
+    <div class="drawer-section">
+      <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
+    </div>
+
+    <div class="settings-footer">
+      <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
+      <p id="footer-copy">© 2026 Mehras Hojjat</p>
+    </div>
+  </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div id="tab-shared-depot" aria-hidden="true">
+<div class="tab-page tab-flow-page" id="screen-quiz">
+  <div class="screen-top-actions-src" id="quiz-top-actions">
+    <div class="quiz-header">
+      <div class="hud">
+        <div class="hud-pill glass glass-pill glass-chrome"><span class="dot"></span><span id="sc-ok">0</span></div>
+        <div class="hud-pill glass glass-pill glass-chrome"><span class="dot r"></span><span id="sc-no">0</span></div>
+        <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;" id="hud-pos">1/10</div>
+      </div>
+    </div>
+  </div>
+  <div class="prog-wrap glass glass-pill glass-chrome"><div class="prog-fill" id="prog"></div></div>
+  <div class="card-type-row">
+    <span class="tbadge glass glass-pill glass-chrome" id="tbadge">Verb</span>
+    <span class="tlevel" id="tlevel"></span>
+    <span class="tmode-badge glass glass-pill glass-chrome" id="tmode-badge"></span>
+  </div>
+  <div class="word-card glass glass-tile glass-highlight">
+    <div class="card-q" id="cquestion"></div>
+    <div class="card-main" id="cmain" dir="ltr"></div>
+    <div class="card-sub" id="csub" dir="ltr"></div>
+  </div>
+  <div class="choices" id="choices"></div>
+  <div class="feedback glass glass-pill glass-chrome" id="feedback"></div>
+  <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
+</div><div class="tab-page tab-flow-page" id="screen-results">
+  <div class="res-card">
+    <div class="res-emoji" id="r-emoji">🏆</div>
+    <div class="res-title" id="r-title">Ausgezeichnet!</div>
+    <div class="res-score" id="r-score">9/10</div>
+    <div class="res-sub" id="r-sub"></div>
+    <div class="res-row">
+      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score">Score</span></div>
+      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct">Correct</span></div>
+      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
+    </div>
+    <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
+    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
+  </div>
+</div><div class="tab-page tab-flow-page" id="screen-rush-summary">
+  <div class="res-card">
+    <div class="res-emoji" id="rush-summary-emoji">🏆</div>
+    <div class="res-title" id="rush-summary-title">Rush complete</div>
+    <div class="res-score" id="rush-summary-score">0/0</div>
+    <div class="res-sub" id="rush-summary-record" style="display:none"></div>
+    <div class="res-row">
+      <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score">Score</span></div>
+      <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span id="rush-lbl-correct">Correct</span></div>
+      <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span id="rush-lbl-wrong">Wrong</span></div>
+    </div>
+    <div class="res-row" style="margin-top:8px;">
+      <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak">Best streak</span></div>
+      <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time">Study time</span></div>
+    </div>
+    <button class="btn-primary" id="btn-rush-again" onclick="restartRushMode()">Rush again</button>
+    <button class="btn-outline" id="btn-rush-home" onclick="goHome()">Back Home</button>
+  </div>
+</div>  </div>
+
 </div>
 
-<!-- ══ DATA SOURCES — loaded here so HTML renders before scripts block ══ -->
-<script src="js/app.js?v=4.9"></script>
-<script src="js/app_dialog.js?v=1.0"></script>
-<script src="js/adaptive.js?v=2.7"></script>
-<script src="js/adaptive_v2.js?v=3.5"></script>
-<script src="js/rush_mode.js?v=1.0"></script>
-<script src="js/auth.js?v=2.9"></script>
-<script src="js/announcement.js?v=1.2"></script>
+<!-- Bottom tab bar -->
+<nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
+  <div class="bottom-tabs-inner glass glass-pill">
+    <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
+    <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+      <span class="bottom-tab-label">Practice</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
+      <span class="bottom-tab-label">Learn</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
+      <span class="bottom-tab-label">Stats</span>
+    </button>
+    <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
+      <span class="bottom-tab-label">Settings</span>
+    </button>
+    <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
+      <span class="bottom-tab--gold" data-tab="learn">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+        <span class="bottom-tab-label">Practice</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="practice">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
+        <span class="bottom-tab-label">Learn</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="stats">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
+        <span class="bottom-tab-label">Stats</span>
+      </span>
+      <span class="bottom-tab--gold" data-tab="settings">
+        <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
+        <span class="bottom-tab-label">Settings</span>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ QUIZ ══ -->
+
+
+<!-- ══ RUSH SUMMARY ══ -->
+
+
+<!-- ══ RESULTS ══ -->
+
+
+<!-- ══ SWIPE SETUP ══ -->
+
+
+<!-- ══ SWIPE GAME ══ -->
+
+
+<!-- Practice setup lives in #tab-panel-practice -->
+
+<!-- ══ PRACTICE GAME ══ -->
+
+
+<!-- ══ ADAPTIVE QUIZ SETUP ══ -->
+
+
+<!-- ══ THEME SELECT ══ -->
+
+
+<!-- ══ RANDOM WORD ══ -->
+
+
+<!-- ══ DICTIONARY ══ -->
+<!-- 1. Supabase CDN — must be before auth.js -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<!-- 2. Core app (globals used by all other files) -->
+<script src="js/app_i18n.js?v=5.0"></script>
+<script src="js/app.js?v=5.0"></script>
+<script src="js/app_wordexplorer.js?v=5.0"></script>
+<script src="js/app_screens.js?v=5.0"></script>
+<script src="js/app_dialog.js?v=5.0"></script>
+
+<!-- 3. Game engines (call globals from app.js) -->
+<script src="js/adaptive.js?v=5.0"></script>
+<script src="js/adaptive_v2.js?v=5.0"></script>
+<script src="js/rush_mode.js?v=5.0"></script>
+
+<!-- 4. Auth — wraps functions defined in app.js -->
+<script src="js/auth.js?v=5.0"></script>
+
+<!-- 5. Supplemental features -->
+<script src="js/announcement.js?v=5.0"></script>
+<script src="js/sideRays.js?v=5.0"></script>
+
+<!-- 6. Umami analytics — deferred, non-blocking -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="0c4788e2-4038-4d45-89f3-0580ebd000d8"></script>
 </body>
 </html>

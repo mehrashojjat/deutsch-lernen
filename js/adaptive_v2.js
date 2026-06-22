@@ -1411,8 +1411,7 @@
     _processResults(answers);
     _stageAtStart = savedStage;
     _updateHomeBadge();
-    var profileScreen = document.getElementById('screen-learning-profile');
-    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+    if (typeof window._isStatsTabVisible === 'function' && window._isStatsTabVisible() &&
         typeof window.renderLearningProfile === 'function') {
       window.renderLearningProfile();
     }
@@ -1493,8 +1492,7 @@
     _save(p);
     _progress = p;
     _updateHomeBadge();
-    var profileScreen = document.getElementById('screen-learning-profile');
-    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+    if (typeof window._isStatsTabVisible === 'function' && window._isStatsTabVisible() &&
         typeof window.renderLearningProfile === 'function') {
       window.renderLearningProfile();
     }
@@ -1589,7 +1587,7 @@
       var mb = document.getElementById('tmode-badge');
       if (mb) {
         mb.textContent = (typeof t === 'function' ? t('adaptiveV2Badge') : 'Adaptive V2');
-        mb.className = 'tmode-badge grammar';
+        mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
       }
       var tl = document.getElementById('tlevel');
       if (tl) {
@@ -1628,8 +1626,7 @@
     if (wasActive) {
       _processResults(_answers);
       _updateHomeBadge();
-      var profileScreen = document.getElementById('screen-learning-profile');
-      if (profileScreen && !profileScreen.classList.contains('hidden') &&
+      if (typeof window._isStatsTabVisible === 'function' && window._isStatsTabVisible() &&
           typeof window.renderLearningProfile === 'function') {
         window.renderLearningProfile();
       }
@@ -1686,3 +1683,5 @@
     setTimeout(_onReady, 0);
   }
 })();
+
+

@@ -972,8 +972,7 @@
     _injectV2Level();
     _registerSaveHook(user.id);
     _registerV2SaveHook(user.id);
-    var profileScreen = document.getElementById('screen-learning-profile');
-    if (profileScreen && !profileScreen.classList.contains('hidden') &&
+    if (typeof window._isStatsTabVisible === 'function' && window._isStatsTabVisible() &&
         typeof window.renderLearningProfile === 'function') {
       window.renderLearningProfile();
     }
@@ -1045,7 +1044,7 @@
       // If the quiz screen never became visible (CSV load failure, no cards, etc.)
       // then no quiz actually started — discard the snapshot flags immediately.
       var quizScreen = document.getElementById('screen-quiz');
-      if (quizScreen && quizScreen.classList.contains('hidden')) {
+      if (quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
@@ -1069,7 +1068,7 @@
       }
       if (typeof fn === 'function') await fn.apply(null, args);
       var quizScreen = document.getElementById('screen-quiz');
-      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+      if (_user && quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
@@ -1099,7 +1098,7 @@
       }
       if (typeof _origStartRushMode === 'function') await _origStartRushMode();
       var quizScreen = document.getElementById('screen-quiz');
-      if (_user && quizScreen && quizScreen.classList.contains('hidden')) {
+      if (_user && quizScreen && !_screenIsVisible('screen-quiz')) {
         _quizInProgress = false;
         _quizCompleted  = false;
         _quizSnapshot   = null;
@@ -1210,3 +1209,5 @@
   window.APP_AUTH_RENDER = function() { _renderAuthSection(); _renderHome(); };
 
 })();
+
+

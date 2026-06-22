@@ -274,13 +274,15 @@
 
   window._rushRefreshBanner = function () {
     var sub = document.getElementById('rush-banner-sub');
-    var icon = document.querySelector('#rush-banner .rb-icon');
+    var iconUse = document.querySelector('#rush-banner-icon use');
+    var iconSvg = document.getElementById('rush-banner-icon');
     if (!sub) return;
     var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
     sub.textContent = signedIn
       ? _rushUi('rushBannerSub', 'Continuous challenge mode · quit anytime')
       : _rushUi('rushBannerSubGuest', 'Sign in to play · Continuous challenge mode');
-    if (icon) icon.textContent = signedIn ? '⚡' : '🔒';
+    if (iconUse) iconUse.setAttribute('href', signedIn ? '#icon-lightning' : '#icon-lock');
+    if (iconSvg) iconSvg.classList.toggle('ui-icon--filled', !!signedIn);
   };
 
   var _origRenderCard = window.renderCard;
@@ -302,7 +304,7 @@
     var mb = document.getElementById('tmode-badge');
     if (mb) {
       mb.textContent = _rushUi('rushBadge', 'Rush Mode');
-      mb.className = 'tmode-badge grammar';
+      mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
     }
     var tl = document.getElementById('tlevel');
     if (tl && typeof window._adaptiveV2GetProgress === 'function') {
@@ -382,3 +384,5 @@
     window._rushRefreshBanner();
   }
 })();
+
+

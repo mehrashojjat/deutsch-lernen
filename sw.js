@@ -1,4 +1,4 @@
-var CACHE_NAME = 'wortschatz-shell-v1.1.u';
+var CACHE_NAME = 'wortschatz-shell-v1.2';
 
 // Static assets only — never pre-cache index.html or versioned JS (they go stale
 // quickly and cause layout/behaviour mismatches on soft refresh).
@@ -61,9 +61,9 @@ self.addEventListener('fetch', function(event) {
     return;
   }
 
-  // JavaScript and CSS: network-first; fall back to cache when offline.
+  // JavaScript, CSS and data: network-first; fall back to cache when offline.
   var url = event.request.url;
-  if (url.indexOf('/js/') !== -1 || url.indexOf('/data/') !== -1 || url.match(/\.js(\?|$)/) || url.match(/\.json(\?|$)/)) {
+  if (url.indexOf('/js/') !== -1 || url.indexOf('/css/') !== -1 || url.indexOf('/data/') !== -1 || url.match(/\.js(\?|$)/) || url.match(/\.json(\?|$)/)) {
     event.respondWith(
       fetch(event.request, { cache: 'no-cache' }).then(function(response) {
         if (!response || response.status !== 200 || response.type !== 'basic') return response;

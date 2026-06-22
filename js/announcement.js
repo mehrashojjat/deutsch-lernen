@@ -76,35 +76,22 @@
   var t = active.i18n[lang] || active.i18n['en'];
   var isRtl = !!RTL_LANGS[lang];
 
-  // ── Inject styles ──────────────────────────────────────────────────────
+  // ── Inject styles (content only — layout uses global .modal-root) ───────
   var style = document.createElement('style');
   style.textContent =
-    '#ann-overlay{' +
-      'position:fixed;inset:0;z-index:9000;' +
-      'display:flex;align-items:center;justify-content:center;padding:20px;' +
-      'background:rgba(6,8,16,.72);backdrop-filter:blur(14px);' +
-      'opacity:0;transition:opacity .25s;pointer-events:none;}' +
-    '#ann-overlay.open{opacity:1;pointer-events:all;}' +
-    '#ann-card{' +
-      'background:linear-gradient(180deg,rgba(21,28,46,.99),rgba(14,18,31,.99));' +
-      'border:1px solid rgba(255,255,255,.09);border-radius:22px;' +
-      'padding:26px 24px 20px;max-width:380px;width:100%;' +
-      'box-shadow:0 20px 60px rgba(0,0,0,.6);' +
-      'transform:translateY(12px);transition:transform .28s cubic-bezier(.32,.72,0,1);}' +
-    '#ann-overlay.open #ann-card{transform:translateY(0);}' +
     '#ann-icon{font-size:1.55rem;margin-bottom:10px;}' +
     '#ann-title{' +
-      'font-family:"Fraunces","Vazirmatn",serif;color:#e8c97a;' +
+      'font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;color:#d4af5a;' +
       'font-size:1.1rem;font-weight:700;margin-bottom:10px;}' +
-    '#ann-msg{font-size:.86rem;line-height:1.72;color:#dde1f0;margin-bottom:22px;}' +
-    '#ann-msg strong{color:#e8c97a;font-weight:600;}' +
-    '#ann-msg a{color:#e8c97a;text-decoration:none;font-weight:600;}' +
+    '#ann-msg{font-size:.86rem;line-height:1.72;color:#e8eaf2;margin-bottom:22px;}' +
+    '#ann-msg strong{color:#d4af5a;font-weight:600;}' +
+    '#ann-msg a{color:#d4af5a;text-decoration:none;font-weight:600;}' +
     '#ann-msg a:hover{text-decoration:underline;}' +
     '#ann-cta{' +
       'display:block;width:100%;padding:13px;' +
-      'background:linear-gradient(135deg,#e8c97a,#c8a050);color:#0b0d13;' +
+      'background:#d4af5a;color:#0b0d13;' +
       'border:none;border-radius:50px;' +
-      'font-family:"Outfit","Vazirmatn",sans-serif;font-size:.9rem;font-weight:700;' +
+      'font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:.9rem;font-weight:700;' +
       'cursor:pointer;margin-bottom:8px;transition:opacity .15s;}' +
     '#ann-cta:hover{opacity:.88;}' +
     '#ann-dismiss{' +
@@ -118,20 +105,23 @@
   // ── Build markup ───────────────────────────────────────────────────────
   var overlay = document.createElement('div');
   overlay.id = 'ann-overlay';
+  overlay.className = 'modal-root modal-root--ann modal-root--align-center';
   overlay.innerHTML =
-    '<div id="ann-card"' + (isRtl ? ' dir="rtl"' : '') + '>' +
+    '<div class="modal-scrim"></div>' +
+    '<div id="ann-card" class="modal-sheet glass-sheet-shell"' + (isRtl ? ' dir="rtl"' : '') + '>' +
+    '  <div class="glass-sheet-surface glass glass-highlight">' +
     '  <div id="ann-icon">📢</div>' +
     '  <div id="ann-title">' + t.title + '</div>' +
     '  <div id="ann-msg">' + t.message + '</div>' +
     '  <button id="ann-cta">' + t.ctaLabel + '</button>' +
     '  <button id="ann-dismiss">' + t.dismiss + '</button>' +
+    '  </div>' +
     '</div>';
   document.body.appendChild(overlay);
 
   // ── Dismiss helper ─────────────────────────────────────────────────────
   function dismiss() {
     overlay.classList.remove('open');
-    setTimeout(function () { overlay.remove(); style.remove(); }, 300);
   }
 
   document.getElementById('ann-cta').addEventListener('click', function () {
@@ -141,10 +131,8 @@
 
   document.getElementById('ann-dismiss').addEventListener('click', dismiss);
 
-  // Clicking the backdrop also dismisses.
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) dismiss();
-  });
+  overlay.querySelector('.modal-scrim').addEventListener('click', dismiss);
+
 
   // ── Show (after two rAF frames so the page has painted first) ──────────
   requestAnimationFrame(function () {
