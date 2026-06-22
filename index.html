@@ -69,8 +69,31 @@
 <link rel="stylesheet" href="css/modals.css">
 <link rel="stylesheet" href="css/auth.css">
 <link rel="stylesheet" href="css/screens.css">
+
+<!-- Splash / loading screen — inline so it paints instantly before CSS loads -->
+<style>
+#app-splash{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
+  opacity:1;transition:opacity .55s ease;-webkit-tap-highlight-color:transparent;
+  -webkit-backdrop-filter:blur(50px);backdrop-filter:blur(50px);}
+#app-splash.is-hidden{opacity:0;pointer-events:none;}
+#app-splash .splash-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
+#app-splash .splash-glow{position:absolute;left:50%;top:50%;width:170px;height:170px;transform:translate(-50%,-50%);
+  border-radius:50%;background:radial-gradient(circle at center,rgba(0,0,0,.5) 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,0) 70%);
+  filter:blur(10px);animation:splashGlow 3.6s ease-in-out infinite;}
+#app-splash .splash-logo{position:relative;width:96px;height:96px;border-radius:22px;box-shadow:0 12px 44px rgba(0,0,0,.55);
+  animation:splashPulse 3.6s ease-in-out infinite;}
+@keyframes splashPulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.05);opacity:1}}
+@keyframes splashGlow{0%,100%{opacity:.28;transform:translate(-50%,-50%) scale(.9)}50%{opacity:.7;transform:translate(-50%,-50%) scale(1.12)}}
+@media (prefers-reduced-motion:reduce){#app-splash .splash-logo,#app-splash .splash-glow{animation:none}}
+</style>
 </head>
 <body>
+<div id="app-splash" role="status" aria-label="Loading">
+  <div class="splash-logo-wrap">
+    <div class="splash-glow" aria-hidden="true"></div>
+    <img class="splash-logo" src="apple-touch-icon.png" alt="Wortschatz" width="96" height="96">
+  </div>
+</div>
 <div id="side-rays-bg" class="side-rays-container" aria-hidden="true"></div>
 
 <!-- UI icon sprite -->
@@ -693,5 +716,44 @@
 
 <!-- 6. Umami analytics — deferred, non-blocking -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="0c4788e2-4038-4d45-89f3-0580ebd000d8"></script>
+
+<!-- Splash teardown — fade out once the page has loaded and painted -->
+<script>
+(function(){
+  var splash = document.getElementById('app-splash');
+  if (!splash) return;
+  var MIN_VISIBLE_MS = 1000;
+  var done = false;
+  function fadeOut(){
+    // Wait two frames so the real UI has painted its first frame underneath
+    // the splash, then fade the splash out and remove it.
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        splash.classList.add('is-hidden');
+        var removed = false;
+        function remove(){
+          if (removed) return;
+          removed = true;
+          if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+        }
+        splash.addEventListener('transitionend', remove, { once: true });
+        setTimeout(remove, 900);
+      });
+    });
+  }
+  function hide(){
+    if (done) return;
+    done = true;
+    // Keep the splash up for at least MIN_VISIBLE_MS (measured from page load
+    // start) so it never just flashes when everything is already cached.
+    var elapsed = (window.performance && performance.now) ? performance.now() : MIN_VISIBLE_MS;
+    setTimeout(fadeOut, Math.max(0, MIN_VISIBLE_MS - elapsed));
+  }
+  if (document.readyState === 'complete') hide();
+  else window.addEventListener('load', hide, { once: true });
+  // Hard fallback: never let the splash get stuck.
+  setTimeout(hide, 7000);
+})();
+</script>
 </body>
 </html>
