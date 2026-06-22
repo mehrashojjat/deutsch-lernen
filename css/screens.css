@@ -472,10 +472,6 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .adaptive-tip.signin-tip .at-icon-wrap .ui-icon{width:20px;height:20px;}
 .home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
 .home-tips .adaptive-tip{margin-top:0;}
-.install-tip{background:linear-gradient(135deg,rgba(126,184,247,.12),rgba(232,201,122,.08));border-inline-start:1px solid rgb(74 119 159);border-inline-end:1px solid rgb(64 97 127);}
-.install-tip:hover{background:linear-gradient(135deg,rgba(126,184,247,.18),rgba(232,201,122,.12));}
-.install-tip .at-title{color:var(--blue);}
-.install-tip .at-icon{font-size:1.15rem;}
 .at-icon{font-size:1.2rem;flex-shrink:0;}
 .at-body{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0;}
 .at-title{font-size:.78rem;font-weight:700;color:var(--text);letter-spacing:.02em;}

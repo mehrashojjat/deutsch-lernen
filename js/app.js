@@ -589,8 +589,6 @@ function applyTranslations() {
   if (shareBtn) shareBtn.textContent = u.shareAppLabel;
   var copyBtn = document.getElementById('copy-link-btn');
   if (copyBtn) copyBtn.textContent = u.copyLinkLabel;
-  document.getElementById('install-tip-title').textContent = u.installTipTitle;
-  document.getElementById('install-tip-desc').textContent = u.installTipDesc;
   document.getElementById('install-guide-title').textContent = u.installGuideTitle;
   document.getElementById('install-step1-title').textContent = u.installStep1Title;
   document.getElementById('install-step2-title').textContent = u.installStep2Title;
