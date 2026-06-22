@@ -19,7 +19,7 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{background:var(--bg);min-height:100%;min-height:100dvh;}
 body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif;background:transparent;color:var(--text);min-height:100vh;
-  display:flex;flex-direction:column;align-items:center;padding:18px 14px calc(18px + var(--tab-h) + env(safe-area-inset-bottom,0px)) 14px;
+  display:flex;flex-direction:column;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) 14px calc(18px + var(--tab-h) + env(safe-area-inset-bottom,0px)) 14px;
   overflow-x:hidden;}
 body.tabs-hidden{padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));}
 
