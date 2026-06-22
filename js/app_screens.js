@@ -626,10 +626,14 @@ function _ensurePracticeTab() {
 }
 function _ensureStatsTab() {
   if (_statsTabReady) {
-    if (_profileDirty && typeof renderLearningProfile === 'function') renderLearningProfile();
+    // Always re-render on revisit so any stat updates since last view are shown.
+    if (typeof renderLearningProfile === 'function') renderLearningProfile();
     return;
   }
   _statsTabReady = true;
+  // Render immediately with whatever progress is available (does not need vocab),
+  // then load the vocab so the word-detail lists can populate and re-render.
+  if (typeof renderLearningProfile === 'function') renderLearningProfile();
   if (typeof _ensureLearningProfileData === 'function') {
     _ensureLearningProfileData(typeof learningProfileSelectedLevel !== 'undefined' ? learningProfileSelectedLevel : 'ALL');
   }
@@ -711,6 +715,7 @@ function _setTabIndex(index, opts) {
     }
   }
   if (!opts.skipScrollRestore) _restoreTabScroll(_activeTab);
+  if (_activeTab === 'stats') _ensureStatsTab();
   _syncAppChrome();
 }
 function switchTab(tab, opts) {
