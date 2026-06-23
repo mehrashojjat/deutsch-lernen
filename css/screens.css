@@ -470,8 +470,17 @@ body.tabs-hidden #tab-panel-practice .practice-dock{bottom:calc(16px + env(safe-
 .adaptive-tip.signin-tip .at-arrow{color:rgba(26,20,8,.5);}
 .adaptive-tip.signin-tip .at-icon-wrap{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(26,20,8,.12);color:#1a1408;}
 .adaptive-tip.signin-tip .at-icon-wrap .ui-icon{width:20px;height:20px;}
-.home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
+.home-tips{display:flex;flex-direction:column;gap:10px;margin-top:auto;
+  position:sticky;bottom:calc(var(--tab-h) + 16px + env(safe-area-inset-bottom,0px));z-index:5;}
+body.tabs-hidden .home-tips{bottom:calc(16px + env(safe-area-inset-bottom,0px));}
 .home-tips .adaptive-tip{margin-top:0;}
+/* Fill the viewport down to the content box so .home-tips (margin-top:auto +
+   sticky bottom) anchors the adaptive tip just above the bottom tabs with the
+   same clearance as #tab-panel-practice .practice-dock, instead of sitting
+   directly under the last banner. */
+#tab-page-learn-root.is-stack-top{display:flex;flex-direction:column;flex:1 1 auto;
+  min-height:calc(100svh - 149px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));}
+#tab-page-learn-root:not(.is-stack-top){min-height:0;}
 .at-icon{font-size:1.2rem;flex-shrink:0;}
 .at-body{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0;}
 .at-title{font-size:.78rem;font-weight:700;color:var(--text);letter-spacing:.02em;}
