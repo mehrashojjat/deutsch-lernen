@@ -551,165 +551,80 @@ function _refreshDynamicUiForLang() {
 }
 window._refreshDynamicUiForLang = _refreshDynamicUiForLang;
 
+// ── Resolve a (possibly dotted) i18n key against the current language,
+//    falling back to English. Returns undefined when the key is missing.
+function _i18nResolveKey(key) {
+  if (!key) return undefined;
+  if (key.indexOf('.') === -1) return t(key);
+  var parts = key.split('.');
+  function dig(root) {
+    var cur = root;
+    for (var i = 0; i < parts.length && cur != null; i++) cur = cur[parts[i]];
+    return cur;
+  }
+  var val = dig(UI[LANG]);
+  if (val == null) val = dig(UI.en);
+  return val;
+}
+
 // ── Apply all UI translations ──
+// Static strings live only in UI (js/app_i18n.js) and are bound declaratively
+// in the HTML via data-i18n / data-i18n-html / data-i18n-attr. The blocks below
+// handle the cases that need logic beyond a single static key.
 function applyTranslations() {
-  const u = new Proxy(UI[LANG], { get: function(obj, prop) { return obj[prop] !== undefined ? obj[prop] : UI.en[prop]; } });
-  document.getElementById('st-title').textContent = u.settingsTitle;
-  document.getElementById('st-lang-label').textContent = u.langLabel;
-  document.getElementById('rw-banner-title').textContent = u.rwBannerTitle;
-  document.getElementById('rw-banner-sub').textContent = u.rwBannerSub;
-  document.getElementById('swipe-banner-title').textContent = u.swipeBannerTitle;
-  document.getElementById('swipe-banner-sub').textContent = u.swipeBannerSub;
-  // Level names
-  const ln = u.levelNames;
-  document.getElementById('swipe-ln-A1').textContent = ln.A1;
-  document.getElementById('swipe-ln-A2').textContent = ln.A2;
-  document.getElementById('swipe-ln-B1').textContent = ln.B1;
-  // Results page
-  document.getElementById('r-lbl-score').textContent = u.scoreLbl;
-  document.getElementById('r-lbl-correct').textContent = u.correctLbl;
-  document.getElementById('r-lbl-wrong').textContent = u.wrongLbl;
-  document.getElementById('btn-play-again').textContent = u.playAgain;
-  document.getElementById('btn-choose-level').textContent = u.chooseLevel;
-  // Quiz buttons (back buttons are now in app-header, not in screens)
-  document.getElementById('rw-screen-title').textContent = u.rwBannerTitle;
-  document.getElementById('rw-screen-subtitle').textContent = u.rwBannerSub;
-  document.getElementById('swipe-setup-screen-title').textContent = u.swipeSetupTitle;
-  document.getElementById('swipe-setup-screen-subtitle').textContent = u.swipeSubtitle;
-  document.getElementById('swipe-setup-title').textContent = u.swipeSetupTitle;
-  document.getElementById('swipe-setup-sub').textContent = u.swipeSetupSub;
-  document.getElementById('swipe-prepare-btn').textContent = u.prepareTen;
-  document.getElementById('swipe-title').textContent = u.swipeSetupTitle;
-  document.getElementById('swipe-subtitle').textContent = u.swipeSubtitle;
-  // Account section label & adaptive tip
-  document.getElementById('st-account-label').textContent = u.accountLabel;
-  var shareLbl = document.getElementById('st-share-label');
-  if (shareLbl) shareLbl.textContent = u.shareSectionLabel;
-  var shareBtn = document.getElementById('share-app-btn');
-  if (shareBtn) shareBtn.textContent = u.shareAppLabel;
-  var copyBtn = document.getElementById('copy-link-btn');
-  if (copyBtn) copyBtn.textContent = u.copyLinkLabel;
-  document.getElementById('install-guide-title').textContent = u.installGuideTitle;
-  document.getElementById('install-step1-title').textContent = u.installStep1Title;
-  document.getElementById('install-step2-title').textContent = u.installStep2Title;
-  document.getElementById('install-guide-dismiss-btn').textContent = u.installClose;
-  document.getElementById('at-title').textContent = u.tipTitle;
-  document.getElementById('at-desc').textContent = u.tipDesc;
-  // About & footer
-  document.getElementById('st-about-btn').textContent = u.aboutTitle;
-  document.getElementById('about-title').textContent = u.aboutTitle;
-  document.getElementById('about-p1').textContent = u.aboutP1;
-  document.getElementById('about-p2').innerHTML = u.aboutP2html;
-  document.getElementById('about-p3').innerHTML = u.aboutP3html;
-  document.getElementById('about-p4').textContent = u.aboutP4;
-  document.getElementById('about-close-btn').textContent = u.aboutClose;
-  document.getElementById('footer-msg').textContent = u.footerMsg;
-  document.getElementById('footer-copy').textContent = u.footerCopy;
-  // New banner titles
-  var adaptiveBannerTitle = document.getElementById('adaptive-banner-title');
-  if (adaptiveBannerTitle) adaptiveBannerTitle.textContent = u.adaptiveBannerTitle;
-  var adaptiveBannerSub = document.getElementById('adaptive-banner-sub');
-  if (adaptiveBannerSub) adaptiveBannerSub.textContent = u.adaptiveBannerSub;
-  var v2Title = document.getElementById('adaptive-v2-banner-title');
-  if (v2Title) v2Title.textContent = u.adaptiveV2BannerTitle;
-  var v2Sub = document.getElementById('adaptive-v2-banner-sub');
-  if (v2Sub) v2Sub.textContent = u.adaptiveV2BannerSub;
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var v = _i18nResolveKey(el.getAttribute('data-i18n'));
+    if (typeof v === 'string') el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+    var v = _i18nResolveKey(el.getAttribute('data-i18n-html'));
+    if (typeof v === 'string') el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+    el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+      var sep = pair.indexOf(':');
+      if (sep < 0) return;
+      var attr = pair.slice(0, sep).trim();
+      var key = pair.slice(sep + 1).trim();
+      if (!attr || !key) return;
+      var v = _i18nResolveKey(key);
+      if (typeof v === 'string') el.setAttribute(attr, v);
+    });
+  });
+
+  // Adaptive/Rush home banners carry dynamic status beyond their title.
   if (typeof window._adaptiveV2RefreshBadge === 'function') window._adaptiveV2RefreshBadge();
-  var rushTitle = document.getElementById('rush-banner-title');
-  if (rushTitle) rushTitle.textContent = u.rushBannerTitle;
   if (typeof window._rushRefreshBanner === 'function') window._rushRefreshBanner();
+
+  // Learning profile titles come from the profile dictionary (_lp), not UI.
   var lpTitle = document.getElementById('learning-profile-title');
   if (lpTitle) lpTitle.textContent = _lp('title');
   var lpbTitle = document.getElementById('learning-profile-banner-title');
   if (lpbTitle) lpbTitle.textContent = _lp('title');
-  var rushAgain = document.getElementById('btn-rush-again');
-  if (rushAgain) rushAgain.textContent = u.rushSummaryAgain;
-  var rushHome = document.getElementById('btn-rush-home');
-  if (rushHome) rushHome.textContent = u.rushSummaryHome;
-  var rushLblScore = document.getElementById('rush-lbl-score');
-  if (rushLblScore) rushLblScore.textContent = u.rushLblScore;
-  var rushLblOk = document.getElementById('rush-lbl-correct');
-  if (rushLblOk) rushLblOk.textContent = u.rushLblCorrect;
-  var rushLblNo = document.getElementById('rush-lbl-wrong');
-  if (rushLblNo) rushLblNo.textContent = u.rushLblWrong;
-  var rushLblStreak = document.getElementById('rush-lbl-streak');
-  if (rushLblStreak) rushLblStreak.textContent = u.rushLblStreak;
-  var rushLblTime = document.getElementById('rush-lbl-time');
-  if (rushLblTime) rushLblTime.textContent = u.rushLblTime;
-  lpTitle = document.getElementById('learning-profile-title');
-  if (lpTitle) lpTitle.textContent = _lp('title');
-  var pBannerTitle = document.getElementById('practice-banner-title');
-  if (pBannerTitle) pBannerTitle.textContent = u.practiceBannerTitle;
-  var pBannerSub = document.getElementById('practice-banner-sub');
-  if (pBannerSub) pBannerSub.textContent = u.practiceBannerSub;
-  document.getElementById('theme-banner-title').textContent = u.themeBannerTitle;
-  document.getElementById('theme-banner-sub').textContent = u.themeBannerSub;
-  // Adaptive setup screen
-  document.getElementById('adaptive-setup-screen-title').textContent = u.adaptiveSetupTitle;
-  document.getElementById('adaptive-setup-screen-subtitle').textContent = u.adaptiveSetupSubtitle;
-  var aln = u.levelNames;
-  document.getElementById('adaptive-ln-A1').textContent = aln.A1;
-  document.getElementById('adaptive-ln-A2').textContent = aln.A2;
-  document.getElementById('adaptive-ln-B1').textContent = aln.B1;
-  document.getElementById('adaptive-launch-btn').textContent = u.prepareTen;
-  // Theme select screen
-  document.getElementById('theme-screen-title').textContent = u.themeSelectTitle;
-  document.getElementById('theme-screen-subtitle').textContent = u.themeSelectSubtitle;
-  // Practice setup screen
-  document.getElementById('practice-setup-screen-title').textContent = u.practiceSetupTitle;
-  document.getElementById('practice-setup-screen-subtitle').textContent = u.practiceSubtitle;
-  document.getElementById('practice-title').textContent = u.practiceSetupTitle;
-  document.getElementById('practice-subtitle').textContent = u.practiceSubtitle;
-  document.getElementById('practice-prepare-btn').textContent = u.prepareTen;
-  var pln = u.levelNames;
-  document.getElementById('practice-ln-A1').textContent = pln.A1;
-  document.getElementById('practice-ln-A2').textContent = pln.A2;
-  document.getElementById('practice-ln-B1').textContent = pln.B1;
-  var pfl = document.getElementById('practice-filter-difficulty-label');
-  if (pfl) pfl.textContent = u.practiceFilterDifficulty;
-  pfl = document.getElementById('practice-filter-type-label');
-  if (pfl) pfl.textContent = u.practiceFilterType;
-  pfl = document.getElementById('practice-filter-article-label');
-  if (pfl) pfl.textContent = u.practiceFilterArticle;
-  pfl = document.getElementById('practice-filter-topics-label');
-  if (pfl) pfl.textContent = u.practiceFilterTopics;
-  pfl = document.getElementById('practice-clear-filters-btn');
-  if (pfl) pfl.textContent = u.practiceClearFilters;
-  pfl = document.getElementById('practice-match-label');
-  if (pfl) pfl.textContent = u.practiceWordCount;
-  pfl = document.getElementById('practice-match-hint');
-  if (pfl) pfl.textContent = u.practiceNoWordsHint;
-  // Dictionary static chrome (list refresh handled by _refreshDynamicUiForLang)
-  var _dbt = document.getElementById('dict-banner-title');
-  if (_dbt) _dbt.textContent = u.dictBannerTitle;
-  var _dbs = document.getElementById('dict-banner-sub');
-  if (_dbs) _dbs.textContent = u.dictBannerSub;
-  document.getElementById('dict-screen-title').textContent = u.dictScreenTitle;
-  if (!_dictLoaded) document.getElementById('dict-screen-subtitle').textContent = u.dictScreenSubtitle;
-  document.getElementById('dict-search-input').placeholder = u.dictFilterPlaceholder;
-  var _dlt = document.getElementById('dict-loading-text');
-  if (_dlt) _dlt.textContent = u.dictLoading;
-  // Offline screen
-  var _os = document.getElementById('offline-title');
-  if (_os) _os.textContent = u.offlineTitle;
-  var _om = document.getElementById('offline-message');
-  if (_om) _om.textContent = u.offlineMessage;
-  var _or = document.getElementById('offline-refresh-btn');
-  if (_or) _or.textContent = u.offlineRefreshBtn;
-  var navTabs = u.navTabs || UI.en.navTabs;
+
+  // Dictionary subtitle only when the list has not loaded yet (otherwise it
+  // shows the live word count managed by the dictionary renderer).
+  if (!_dictLoaded) {
+    var dictSub = document.getElementById('dict-screen-subtitle');
+    if (dictSub) dictSub.textContent = t('dictScreenSubtitle');
+  }
+
+  // Bottom navigation tab labels are intentionally swapped (learn<->practice).
+  var navTabs = t('navTabs') || UI.en.navTabs;
   function _navTabLabel(tabId) {
     if (!navTabs) return tabId;
     if (tabId === 'learn') return navTabs.practice || tabId;
     if (tabId === 'practice') return navTabs.learn || tabId;
     return navTabs[tabId] || tabId;
   }
-  TAB_ORDER.forEach(function(tabId) {
+  TAB_ORDER.forEach(function (tabId) {
     var text = _navTabLabel(tabId);
     var lbl = document.querySelector('#bottom-tab-' + tabId + ' .bottom-tab-label');
     var goldLbl = document.querySelector('#bottom-tab-gold-overlay [data-tab="' + tabId + '"] .bottom-tab-label');
     if (lbl) lbl.textContent = text;
     if (goldLbl) goldLbl.textContent = text;
   });
+
   _refreshInstallGuideContent();
   _resyncPageChromeIfVisible();
 }

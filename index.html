@@ -161,9 +161,9 @@
 <div id="offline-screen" class="hidden">
   <div class="offline-card glass glass-tile glass-highlight">
     <div class="offline-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-wifi-off"/></svg></div>
-    <h2 id="offline-title">You're Offline</h2>
-    <p id="offline-message">This app needs an internet connection to work.</p>
-    <button id="offline-refresh-btn" onclick="checkOnline()">Refresh</button>
+    <h2 id="offline-title" data-i18n="offlineTitle"></h2>
+    <p id="offline-message" data-i18n="offlineMessage"></p>
+    <button id="offline-refresh-btn" data-i18n="offlineRefreshBtn" onclick="checkOnline()"></button>
   </div>
 </div>
 
@@ -188,12 +188,12 @@
   <div class="modal-scrim" onclick="closeAbout()"></div>
   <div class="modal-sheet about-modal glass-sheet-shell">
     <div class="about-modal-surface glass-sheet-surface glass glass-highlight">
-    <h3 id="about-title">About</h3>
-    <p id="about-p1">I built this free vocabulary app for myself — adaptive quizzes, practice modes, and an optional learning profile with cloud sync. No paywalls; open to anyone learning German.</p>
-    <p id="about-p2">Made by <strong>Mehras Hojjat</strong>. Feel free to reach out on <a href="https://linkedin.com/in/mehrashojjat" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://instagram.com/mehrashojjat" target="_blank" rel="noopener">Instagram</a> for feature requests or feedback.</p>
-    <p id="about-p3">Word lists from <strong>Goethe-Institut</strong> · Translations via <strong>MyMemory API</strong> · Open source on <a href="https://github.com/mehrashojjat/deutsch-lernen" target="_blank" rel="noopener">GitHub</a> · Built with <strong>Claude AI</strong>.</p>
-    <p id="about-p4">Originally named DeutschLernen during early development.</p>
-    <button class="about-modal-close" id="about-close-btn" onclick="closeAbout()">Close</button>
+    <h3 id="about-title" data-i18n="aboutTitle"></h3>
+    <p id="about-p1" data-i18n="aboutP1"></p>
+    <p id="about-p2" data-i18n-html="aboutP2html"></p>
+    <p id="about-p3" data-i18n-html="aboutP3html"></p>
+    <p id="about-p4" data-i18n="aboutP4"></p>
+    <button class="about-modal-close" id="about-close-btn" data-i18n="aboutClose" onclick="closeAbout()"></button>
     </div>
   </div>
 </div>
@@ -206,14 +206,14 @@
     <div class="install-guide-handle"></div>
     <div class="install-guide-head">
       <div>
-        <div class="install-guide-title" id="install-guide-title">Install this app</div>
+        <div class="install-guide-title" id="install-guide-title" data-i18n="installGuideTitle"></div>
       </div>
     </div>
     <div class="install-steps">
       <div class="install-step">
         <div class="install-step-num">1</div>
         <div>
-          <div class="install-step-title" id="install-step1-title">Open the Share menu</div>
+          <div class="install-step-title" id="install-step1-title" data-i18n="installStep1Title"></div>
           <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Share button in your browser.</div>
           <img src="assets/ShareButton.png" alt="Share button location" class="install-step-img">
         </div>
@@ -221,14 +221,14 @@
       <div class="install-step">
         <div class="install-step-num">2</div>
         <div>
-          <div class="install-step-title" id="install-step2-title">Choose Add to Home Screen</div>
+          <div class="install-step-title" id="install-step2-title" data-i18n="installStep2Title"></div>
           <div class="install-step-desc" id="install-step2-desc">In the menu that opens, tap Add to Home Screen, then confirm to install.</div>
           <img src="assets/A2HS.png" alt="Add to Home Screen option" class="install-step-img">
         </div>
       </div>
     </div>
     <div class="install-guide-actions">
-      <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" onclick="closeInstallGuide()">Close</button>
+      <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" data-i18n="installClose" onclick="closeInstallGuide()"></button>
     </div>
     </div>
   </div>
@@ -263,15 +263,15 @@
         <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
           <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-adaptive"/></svg></div>
           <div class="rb-text">
-            <strong id="adaptive-v2-banner-title">Adaptive V2 (Beta)</strong>
-            <span id="adaptive-v2-banner-sub">Gets smarter as you learn</span>
+            <strong id="adaptive-v2-banner-title" data-i18n="adaptiveV2BannerTitle"></strong>
+            <span id="adaptive-v2-banner-sub" data-i18n="adaptiveV2BannerSub"></span>
             <span id="adaptive-v2-banner-status" style="display:none"></span>
           </div>
         </div>
         <div class="random-banner rush-banner glass glass-tile glass-highlight glass-interactive" id="rush-banner" onclick="openRushMode()">
           <div class="rb-icon-wrap rb-icon-wrap--rush" id="rush-banner-icon-wrap"><svg class="ui-icon ui-icon--filled" id="rush-banner-icon" aria-hidden="true"><use href="#icon-lightning"/></svg></div>
           <div class="rb-text">
-            <strong id="rush-banner-title">Rush Mode</strong>
+            <strong id="rush-banner-title" data-i18n="rushBannerTitle"></strong>
             <span id="rush-banner-sub">Sign in to play · Continuous challenge mode</span>
           </div>
         </div>
@@ -280,22 +280,22 @@
         <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive" onclick="openThemeSelect()">
           <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-theme-grid"/></svg></div>
           <div class="rb-text">
-            <strong id="theme-banner-title">Theme Quiz</strong>
-            <span id="theme-banner-sub">Quiz yourself on a topic</span>
+            <strong id="theme-banner-title" data-i18n="themeBannerTitle"></strong>
+            <span id="theme-banner-sub" data-i18n="themeBannerSub"></span>
           </div>
         </div>
         <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive" onclick="openSwipeSetup()">
           <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-swipe-match"/></svg></div>
           <div class="rb-text">
-            <strong id="swipe-banner-title">Quick Match</strong>
-            <span id="swipe-banner-sub">Swipe if the meaning matches</span>
+            <strong id="swipe-banner-title" data-i18n="swipeBannerTitle"></strong>
+            <span id="swipe-banner-sub" data-i18n="swipeBannerSub"></span>
           </div>
         </div>
         <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive" onclick="showRandomWord()">
           <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-word-explore"/></svg></div>
           <div class="rb-text">
-            <strong id="rw-banner-title">Word Explorer</strong>
-            <span id="rw-banner-sub">Open one word card instantly</span>
+            <strong id="rw-banner-title" data-i18n="rwBannerTitle"></strong>
+            <span id="rw-banner-sub" data-i18n="rwBannerSub"></span>
           </div>
         </div>
       </div>
@@ -304,8 +304,8 @@
       <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
         <div class="at-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-lock"/></svg></div>
         <div class="at-body">
-          <div class="at-title" id="at-title">Progress Not Saved</div>
-          <div class="at-desc" id="at-desc">Sign in to keep your learning history and quiz results.</div>
+          <div class="at-title" id="at-title" data-i18n="tipTitle"></div>
+          <div class="at-desc" id="at-desc" data-i18n="tipDesc"></div>
         </div>
         <div class="at-arrow">›</div>
       </div>
@@ -315,25 +315,25 @@
 <div class="tab-page tab-flow-page" id="screen-swipe-setup">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-setup-screen-title">Quick Match</div>
-      <div class="swipe-subtitle" id="swipe-setup-screen-subtitle">Swipe if the meaning matches</div>
+      <div class="swipe-title" id="swipe-setup-screen-title" data-i18n="swipeSetupTitle"></div>
+      <div class="swipe-subtitle" id="swipe-setup-screen-subtitle" data-i18n="swipeSubtitle"></div>
     </div>
   </div>
   <div class="swipe-setup glass glass-tile">
-    <div class="swipe-setup-title" id="swipe-setup-title"></div>
-    <div class="swipe-setup-sub" id="swipe-setup-sub"></div>
+    <div class="swipe-setup-title" id="swipe-setup-title" data-i18n="swipeSetupTitle"></div>
+    <div class="swipe-setup-sub" id="swipe-setup-sub" data-i18n="swipeSetupSub"></div>
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass-inner glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1" data-i18n="levelNames.A1"></span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2" data-i18n="levelNames.A2"></span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1" data-i18n="levelNames.B1"></span></button>
     </div>
-    <button class="btn-primary" id="swipe-prepare-btn" onclick="prepareSwipeGame()">Start</button>
+    <button class="btn-primary" id="swipe-prepare-btn" data-i18n="prepareTen" onclick="prepareSwipeGame()"></button>
   </div>
 </div><div class="tab-page tab-flow-page" id="screen-swipe">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-title">Swipe Check</div>
-      <div class="swipe-subtitle" id="swipe-subtitle">Swipe if the meaning matches</div>
+      <div class="swipe-title" id="swipe-title" data-i18n="swipeSetupTitle"></div>
+      <div class="swipe-subtitle" id="swipe-subtitle" data-i18n="swipeSubtitle"></div>
     </div>
   </div>
   <div class="swipe-stage">
@@ -352,31 +352,31 @@
 </div><div class="tab-page tab-flow-page" id="screen-adaptive-setup">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0">Adaptive Quiz</div>
-      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle">Adjusts difficulty to your skill level</div>
+      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0" data-i18n="adaptiveSetupTitle"></div>
+      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle" data-i18n="adaptiveSetupSubtitle"></div>
     </div>
   </div>
   <div class="swipe-setup glass glass-tile">
     <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass-inner glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1">Starter</span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2">Elementary</span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1">Intermediate</span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1" data-i18n="levelNames.A1"></span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2" data-i18n="levelNames.A2"></span></button>
+      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1" data-i18n="levelNames.B1"></span></button>
     </div>
-    <button class="btn-primary" id="adaptive-launch-btn" onclick="launchAdaptiveQuiz()">Start</button>
+    <button class="btn-primary" id="adaptive-launch-btn" data-i18n="prepareTen" onclick="launchAdaptiveQuiz()"></button>
   </div>
 </div><div class="tab-page tab-flow-page" id="screen-theme-select">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7">Theme Quiz</div>
-      <div class="swipe-subtitle" id="theme-screen-subtitle">Pick a topic to practise</div>
+      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7" data-i18n="themeSelectTitle"></div>
+      <div class="swipe-subtitle" id="theme-screen-subtitle" data-i18n="themeSelectSubtitle"></div>
     </div>
   </div>
   <div class="category-grid" id="category-grid"></div>
 </div><div class="tab-page tab-flow-page" id="screen-random">
   <div class="screen-top-title-src">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="rw-screen-title">Word Explorer</div>
-      <div class="swipe-subtitle" id="rw-screen-subtitle">Open one word card instantly</div>
+      <div class="swipe-title" id="rw-screen-title" data-i18n="rwBannerTitle"></div>
+      <div class="swipe-subtitle" id="rw-screen-subtitle" data-i18n="rwBannerSub"></div>
     </div>
   </div>
   <div class="screen-top-actions-src" id="rw-top-actions">
@@ -386,19 +386,19 @@
 </div><div class="tab-page tab-flow-page" id="screen-dictionary">
   <div class="dict-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)">Dictionary</div>
+      <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)" data-i18n="dictScreenTitle"></div>
       <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
     </div>
   </div>
   <div class="dict-search-wrap">
     <input type="search" class="dict-search-input" id="dict-search-input"
-           placeholder="Filter words…" oninput="dictFilter(this.value)">
+           data-i18n-attr="placeholder:dictFilterPlaceholder" oninput="dictFilter(this.value)">
   </div>
   <div class="dict-body">
     <div class="dict-list" id="dict-list">
       <div class="dict-loading">
         <div class="wikt-spinner"></div>
-        <span id="dict-loading-text">Loading…</span>
+        <span id="dict-loading-text" data-i18n="dictLoading"></span>
       </div>
     </div>
     <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
@@ -412,46 +412,46 @@
 
     <header class="practice-head">
       <div class="practice-head-text">
-        <h2 class="practice-head-title" id="practice-setup-screen-title">Learn</h2>
-        <p class="practice-head-sub" id="practice-setup-screen-subtitle">Flip cards to reveal meanings</p>
+        <h2 class="practice-head-title" id="practice-setup-screen-title" data-i18n="practiceSetupTitle"></h2>
+        <p class="practice-head-sub" id="practice-setup-screen-subtitle" data-i18n="practiceSubtitle"></p>
       </div>
-      <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" onclick="practiceClearFilters()">Clear filters</button>
+      <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" data-i18n="practiceClearFilters" onclick="practiceClearFilters()"></button>
     </header>
 
     <div class="practice-filters" id="practice-filters">
       <div class="swipe-level-grid" id="practice-levels">
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1">Starter</span></button>
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2">Elementary</span></button>
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1">Intermediate</span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1" data-i18n="levelNames.A1"></span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2" data-i18n="levelNames.A2"></span></button>
+        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1" data-i18n="levelNames.B1"></span></button>
       </div>
 
-      <div class="section-label" id="practice-filter-difficulty-label">Difficulty</div>
+      <div class="section-label" id="practice-filter-difficulty-label" data-i18n="practiceFilterDifficulty"></div>
       <div class="practice-chips" id="practice-difficulty-chips"></div>
 
-      <div class="section-label" id="practice-filter-type-label">Word type</div>
+      <div class="section-label" id="practice-filter-type-label" data-i18n="practiceFilterType"></div>
       <div class="practice-chips" id="practice-type-chips"></div>
 
-      <div class="section-label" id="practice-filter-article-label">Article</div>
+      <div class="section-label" id="practice-filter-article-label" data-i18n="practiceFilterArticle"></div>
       <div class="practice-chips" id="practice-article-chips"></div>
 
-      <div class="section-label" id="practice-filter-topics-label">Topics</div>
+      <div class="section-label" id="practice-filter-topics-label" data-i18n="practiceFilterTopics"></div>
       <div class="practice-chips" id="practice-category-chips"></div>
     </div>
 
     <div class="practice-dock glass glass-tile glass-highlight" id="practice-dock">
       <p class="practice-count" id="practice-match-count">
         <span class="practice-count-num" id="practice-match-num">0</span>
-        <span id="practice-match-label">words in your loop</span>
-        <span class="practice-count-hint hidden" id="practice-match-hint">No words match — try another level or loosen filters.</span>
+        <span id="practice-match-label" data-i18n="practiceWordCount"></span>
+        <span class="practice-count-hint hidden" id="practice-match-hint" data-i18n="practiceNoWordsHint"></span>
       </p>
-      <button type="button" class="btn-primary" id="practice-prepare-btn" onclick="startPracticeGame()" disabled>Start</button>
+      <button type="button" class="btn-primary" id="practice-prepare-btn" data-i18n="prepareTen" onclick="startPracticeGame()" disabled></button>
     </div>
   </div>
 <div class="tab-page tab-flow-page" id="screen-practice">
   <div class="swipe-header">
     <div class="swipe-title-wrap">
-      <div class="swipe-title" id="practice-title" style="color:#7eb8f7">Learn</div>
-      <div class="swipe-subtitle" id="practice-subtitle">Flip cards to reveal meanings</div>
+      <div class="swipe-title" id="practice-title" style="color:#7eb8f7" data-i18n="practiceSetupTitle"></div>
+      <div class="swipe-subtitle" id="practice-subtitle" data-i18n="practiceSubtitle"></div>
     </div>
   </div>
   <div class="swipe-stage">
@@ -486,11 +486,11 @@
     <div class="tab-page is-stack-top" id="tab-page-settings-root" data-page-id="settings-root">
 
     <header class="settings-head">
-      <h2 class="settings-head-title" id="st-title">Settings</h2>
+      <h2 class="settings-head-title" id="st-title" data-i18n="settingsTitle"></h2>
     </header>
 
     <div class="drawer-section">
-      <div class="drawer-section-label" id="st-lang-label">Language</div>
+      <div class="drawer-section-label" id="st-lang-label" data-i18n="langLabel"></div>
       <div class="lang-dd" id="lang-dd">
         <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
           <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
@@ -515,7 +515,7 @@
     <div class="drawer-divider"></div>
 
     <div class="drawer-section">
-      <div class="drawer-section-label" id="st-account-label">Account</div>
+      <div class="drawer-section-label" id="st-account-label" data-i18n="accountLabel"></div>
       <div id="auth-section-content">
         <!-- populated by auth.js once Supabase initialises -->
         <button class="gsi-material-button" onclick="authSignIn()">
@@ -538,22 +538,22 @@
     <div class="drawer-divider"></div>
 
     <div class="drawer-section">
-      <div class="drawer-section-label" id="st-share-label">Share this app</div>
+      <div class="drawer-section-label" id="st-share-label" data-i18n="shareSectionLabel"></div>
       <div class="drawer-footer-row">
-        <button class="drawer-about-row" id="share-app-btn" onclick="shareApp()">Share</button>
-        <button class="drawer-about-row" id="copy-link-btn" onclick="copyAppLink()">Copy link</button>
+        <button class="drawer-about-row" id="share-app-btn" data-i18n="shareAppLabel" onclick="shareApp()"></button>
+        <button class="drawer-about-row" id="copy-link-btn" data-i18n="copyLinkLabel" onclick="copyAppLink()"></button>
       </div>
     </div>
 
     <div class="drawer-divider"></div>
 
     <div class="drawer-section">
-      <button class="drawer-about-row" id="st-about-btn" onclick="openAbout()" style="width:100%;">About</button>
+      <button class="drawer-about-row" id="st-about-btn" data-i18n="aboutTitle" onclick="openAbout()" style="width:100%;"></button>
     </div>
 
     <div class="settings-footer">
-      <p id="footer-msg">Hey! Built this while learning German myself — hope it helps you too. Completely free 🇩🇪</p>
-      <p id="footer-copy">© 2026 Mehras Hojjat</p>
+      <p id="footer-msg" data-i18n="footerMsg"></p>
+      <p id="footer-copy" data-i18n="footerCopy"></p>
     </div>
   </div>
     </div>
@@ -592,12 +592,12 @@
     <div class="res-score" id="r-score">9/10</div>
     <div class="res-sub" id="r-sub"></div>
     <div class="res-row">
-      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score">Score</span></div>
-      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct">Correct</span></div>
-      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong">Wrong</span></div>
+      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score" data-i18n="scoreLbl"></span></div>
+      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct" data-i18n="correctLbl"></span></div>
+      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong" data-i18n="wrongLbl"></span></div>
     </div>
-    <button class="btn-primary" id="btn-play-again" onclick="restartLevel()">Play again</button>
-    <button class="btn-outline" id="btn-choose-level" onclick="goHome()">Back Home</button>
+    <button class="btn-primary" id="btn-play-again" data-i18n="playAgain" onclick="restartLevel()"></button>
+    <button class="btn-outline" id="btn-choose-level" data-i18n="chooseLevel" onclick="goHome()"></button>
   </div>
 </div><div class="tab-page tab-flow-page" id="screen-rush-summary">
   <div class="res-card">
@@ -606,16 +606,16 @@
     <div class="res-score" id="rush-summary-score">0/0</div>
     <div class="res-sub" id="rush-summary-record" style="display:none"></div>
     <div class="res-row">
-      <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score">Score</span></div>
-      <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span id="rush-lbl-correct">Correct</span></div>
-      <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span id="rush-lbl-wrong">Wrong</span></div>
+      <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score" data-i18n="rushLblScore"></span></div>
+      <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span id="rush-lbl-correct" data-i18n="rushLblCorrect"></span></div>
+      <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span id="rush-lbl-wrong" data-i18n="rushLblWrong"></span></div>
     </div>
     <div class="res-row" style="margin-top:8px;">
-      <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak">Best streak</span></div>
-      <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time">Study time</span></div>
+      <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak" data-i18n="rushLblStreak"></span></div>
+      <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time" data-i18n="rushLblTime"></span></div>
     </div>
-    <button class="btn-primary" id="btn-rush-again" onclick="restartRushMode()">Rush again</button>
-    <button class="btn-outline" id="btn-rush-home" onclick="goHome()">Back Home</button>
+    <button class="btn-primary" id="btn-rush-again" data-i18n="rushSummaryAgain" onclick="restartRushMode()"></button>
+    <button class="btn-outline" id="btn-rush-home" data-i18n="rushSummaryHome" onclick="goHome()"></button>
   </div>
 </div>  </div>
 
@@ -696,16 +696,16 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
 <!-- 2. Core app (globals used by all other files) -->
-<script src="js/app_i18n.js?v=5.0"></script>
-<script src="js/app.js?v=5.0"></script>
+<script src="js/app_i18n.js?v=5.1"></script>
+<script src="js/app.js?v=5.1"></script>
 <script src="js/app_wordexplorer.js?v=5.0"></script>
-<script src="js/app_screens.js?v=5.0"></script>
+<script src="js/app_screens.js?v=5.1"></script>
 <script src="js/app_dialog.js?v=5.0"></script>
 
 <!-- 3. Game engines (call globals from app.js) -->
-<script src="js/adaptive.js?v=5.0"></script>
-<script src="js/adaptive_v2.js?v=5.0"></script>
-<script src="js/rush_mode.js?v=5.0"></script>
+<script src="js/adaptive.js?v=5.1"></script>
+<script src="js/adaptive_v2.js?v=5.1"></script>
+<script src="js/rush_mode.js?v=5.1"></script>
 
 <!-- 4. Auth — wraps functions defined in app.js -->
 <script src="js/auth.js?v=5.0"></script>

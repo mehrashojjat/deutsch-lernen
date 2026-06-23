@@ -1274,26 +1274,12 @@
     _progress = p;
   }
 
-  function _v2Ui(key) {
-    if (typeof t === 'function') {
-      var val = t(key);
-      if (val != null && val !== key) return val;
-    }
-    var fallback = {
-      adaptiveV2StatusCal1: 'Calibration · step 1 of 2',
-      adaptiveV2StatusCal2: 'Calibration · step 2 of 2',
-      adaptiveV2PhaseReview: 'Review mode',
-      adaptiveV2PhaseChallenge: 'Challenge mode'
-    };
-    return fallback[key] || '';
-  }
-
   function _badgeText() {
     var p = _get();
-    if (p.evaluationStage === 0) return _v2Ui('adaptiveV2StatusCal1');
-    if (p.evaluationStage === 1) return _v2Ui('adaptiveV2StatusCal2');
-    if (p.learningPhase === 'band_review') return _v2Ui('adaptiveV2PhaseReview');
-    if (p.learningPhase === 'challenge') return _v2Ui('adaptiveV2PhaseChallenge');
+    if (p.evaluationStage === 0) return t('adaptiveV2StatusCal1');
+    if (p.evaluationStage === 1) return t('adaptiveV2StatusCal2');
+    if (p.learningPhase === 'band_review') return t('adaptiveV2PhaseReview');
+    if (p.learningPhase === 'challenge') return t('adaptiveV2PhaseChallenge');
     return '';
   }
 
@@ -1319,8 +1305,8 @@
       if (typeof window._loadV2Vocab === 'function') await window._loadV2Vocab();
     } catch (err) {
       ov.classList.remove('active');
-      var msg = (typeof t === 'function' ? t('errLoadQuiz') : 'Could not load vocabulary data.');
-      if (window.location.protocol === 'file:') msg += (typeof t === 'function' ? t('errFileProtocol') : ' Open through a local server instead of file://.');
+      var msg = t('errLoadQuiz');
+      if (window.location.protocol === 'file:') msg += t('errFileProtocol');
       alert(msg);
       _active = false;
       return;
@@ -1331,7 +1317,7 @@
     ov.classList.remove('active');
 
     if (!cards.length) {
-      alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
+      alert(t('errNoWords'));
       _active = false;
       return;
     }
@@ -1363,7 +1349,7 @@
       if (typeof window._loadV2Vocab === 'function') await window._loadV2Vocab();
     } catch (err) {
       ov.classList.remove('active');
-      alert('Could not load vocabulary data.');
+      alert(t('errLoadQuiz'));
       _active = false;
       return;
     }
@@ -1373,7 +1359,7 @@
     ov.classList.remove('active');
 
     if (!cards.length) {
-      alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
+      alert(t('errNoWords'));
       _active = false;
       return;
     }
@@ -1586,16 +1572,16 @@
     if (_active) {
       var mb = document.getElementById('tmode-badge');
       if (mb) {
-        mb.textContent = (typeof t === 'function' ? t('adaptiveV2Badge') : 'Adaptive V2');
+        mb.textContent = t('adaptiveV2Badge');
         mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
       }
       var tl = document.getElementById('tlevel');
       if (tl) {
         var p = _get();
         var label = p.cefrBand || 'ALL';
-        if (p.learningPhase === 'band_review') label = (typeof t === 'function' ? t('adaptiveV2ReviewLabel') : 'B1 Review');
-        else if (p.learningPhase === 'challenge') label = (typeof t === 'function' ? t('adaptiveV2ChallengeLabel') : 'Challenge');
-        tl.textContent = (typeof t === 'function' ? t('levelLabel') : 'Level') + ' ' + label;
+        if (p.learningPhase === 'band_review') label = t('adaptiveV2ReviewLabel');
+        else if (p.learningPhase === 'challenge') label = t('adaptiveV2ChallengeLabel');
+        tl.textContent = t('levelLabel') + ' ' + label;
       }
     }
   };

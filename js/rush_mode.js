@@ -14,14 +14,6 @@
   var _rushSessionTimeSec = 0;
   var _rushPagehideBound = false;
 
-  function _rushUi(key, fallback) {
-    if (typeof t === 'function') {
-      var val = t(key);
-      if (val != null && val !== key) return val;
-    }
-    return fallback || '';
-  }
-
   function _rushTimerFlushSeconds() {
     if (typeof window._quizTimerFlushAndGetSeconds === 'function') {
       return window._quizTimerFlushAndGetSeconds();
@@ -129,7 +121,7 @@
     var isRecord = total > 0 && total >= bestQ;
 
     document.getElementById('rush-summary-emoji').textContent = pct >= 80 ? '🏆' : (pct >= 60 ? '🎉' : '👍');
-    document.getElementById('rush-summary-title').textContent = _rushUi('rushSummaryTitle', 'Rush complete');
+    document.getElementById('rush-summary-title').textContent = t('rushSummaryTitle');
     document.getElementById('rush-summary-score').textContent =
       (typeof formatNum === 'function' ? formatNum(correct) : correct) + '/' +
       (typeof formatNum === 'function' ? formatNum(total) : total);
@@ -149,7 +141,7 @@
     }
     var recordEl = document.getElementById('rush-summary-record');
     if (recordEl) {
-      recordEl.textContent = isRecord ? _rushUi('rushSummaryRecord', 'New personal best!') : '';
+      recordEl.textContent = isRecord ? t('rushSummaryRecord') : '';
       recordEl.style.display = isRecord ? '' : 'none';
     }
     if (typeof show === 'function') show('screen-rush-summary');
@@ -201,10 +193,10 @@
     if (typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && !window.APP_AUTH_IS_SIGNED_IN()) {
       if (typeof window.appDialog !== 'object' || typeof window.appDialog.confirm !== 'function') return;
       window.appDialog.confirm({
-        title: _rushUi('rushSignInTitle', 'Sign in required'),
-        message: _rushUi('rushSignInMessage', 'Sign in to play Rush Mode.'),
-        primaryLabel: _rushUi('rushSignInPrimary', 'Sign in'),
-        cancelLabel: _rushUi('dialogCancel', 'Cancel')
+        title: t('rushSignInTitle'),
+        message: t('rushSignInMessage'),
+        primaryLabel: t('rushSignInPrimary'),
+        cancelLabel: t('dialogCancel')
       }).then(function (result) {
         if (result === 'primary' && typeof openSettings === 'function') openSettings();
       });
@@ -213,10 +205,10 @@
     if (typeof window._adaptiveV2IsCalibrated === 'function' && !window._adaptiveV2IsCalibrated()) {
       if (typeof window.appDialog !== 'object' || typeof window.appDialog.confirm !== 'function') return;
       window.appDialog.confirm({
-        title: _rushUi('rushCalTitle', 'Assessment required'),
-        message: _rushUi('rushCalMessage', 'Complete your level assessment in Adaptive V2 before starting Rush Mode.'),
-        primaryLabel: _rushUi('rushCalPrimary', 'Start assessment'),
-        cancelLabel: _rushUi('dialogCancel', 'Cancel')
+        title: t('rushCalTitle'),
+        message: t('rushCalMessage'),
+        primaryLabel: t('rushCalPrimary'),
+        cancelLabel: t('dialogCancel')
       }).then(function (result) {
         if (result === 'primary' && typeof openAdaptiveV2 === 'function') openAdaptiveV2();
       });
@@ -242,7 +234,7 @@
     } catch (err) {
       ov.classList.remove('active');
       _rushActive = false;
-      alert(typeof t === 'function' ? t('errLoadQuiz') : 'Could not load vocabulary data.');
+      alert(t('errLoadQuiz'));
       return;
     }
 
@@ -251,7 +243,7 @@
 
     if (!cards.length) {
       _rushActive = false;
-      alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
+      alert(t('errNoWords'));
       return;
     }
 
@@ -279,8 +271,8 @@
     if (!sub) return;
     var signedIn = typeof window.APP_AUTH_IS_SIGNED_IN === 'function' && window.APP_AUTH_IS_SIGNED_IN();
     sub.textContent = signedIn
-      ? _rushUi('rushBannerSub', 'Continuous challenge mode · quit anytime')
-      : _rushUi('rushBannerSubGuest', 'Sign in to play · Continuous challenge mode');
+      ? t('rushBannerSub')
+      : t('rushBannerSubGuest');
     if (iconUse) iconUse.setAttribute('href', signedIn ? '#icon-lightning' : '#icon-lock');
     if (iconSvg) iconSvg.classList.toggle('ui-icon--filled', !!signedIn);
   };
@@ -303,7 +295,7 @@
 
     var mb = document.getElementById('tmode-badge');
     if (mb) {
-      mb.textContent = _rushUi('rushBadge', 'Rush Mode');
+      mb.textContent = t('rushBadge');
       mb.className = 'tmode-badge glass glass-pill glass-chrome grammar';
     }
     var tl = document.getElementById('tlevel');
@@ -311,11 +303,11 @@
       var p = window._adaptiveV2GetProgress();
       var label = (p && p.cefrBand) || 'ALL';
       if (p && p.learningPhase === 'band_review') {
-        label = _rushUi('adaptiveV2ReviewLabel', 'B1 Review');
+        label = t('adaptiveV2ReviewLabel');
       } else if (p && p.learningPhase === 'challenge') {
-        label = _rushUi('adaptiveV2ChallengeLabel', 'Challenge');
+        label = t('adaptiveV2ChallengeLabel');
       }
-      var lvl = typeof t === 'function' ? t('levelLabel') : 'Level';
+      var lvl = t('levelLabel');
       tl.textContent = lvl + ' ' + label;
     }
   };
@@ -359,7 +351,7 @@
     idx++;
     _rushEnsureQueueAsync().then(function (hasCards) {
       if (!hasCards || idx >= queue.length) {
-        alert(typeof t === 'function' ? t('errNoWords') : 'No words available!');
+        alert(t('errNoWords'));
         _rushEndSession(true);
         return;
       }

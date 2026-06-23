@@ -883,10 +883,10 @@ function _resetSubscreenHeaders() {
 function _adaptiveBandLabel(p) {
   if (!p) return '';
   if (p.learningPhase === 'band_review') {
-    return typeof t === 'function' ? t('adaptiveV2ReviewLabel') : 'B1 Review';
+    return t('adaptiveV2ReviewLabel');
   }
   if (p.learningPhase === 'challenge') {
-    return typeof t === 'function' ? t('adaptiveV2ChallengeLabel') : 'Challenge';
+    return t('adaptiveV2ChallengeLabel');
   }
   return p.cefrBand || 'ALL';
 }
@@ -895,12 +895,12 @@ function _adaptiveV2Subtitle(p) {
   if (!p) return '';
   var stage = Number(p.evaluationStage) || 0;
   if (stage < 3) {
-    if (stage <= 1) return typeof t === 'function' ? t('adaptiveV2StatusCal1') : 'Calibration · step 1 of 2';
-    return typeof t === 'function' ? t('adaptiveV2StatusCal2') : 'Calibration · step 2 of 2';
+    if (stage <= 1) return t('adaptiveV2StatusCal1');
+    return t('adaptiveV2StatusCal2');
   }
-  if (p.learningPhase === 'band_review') return typeof t === 'function' ? t('adaptiveV2PhaseReview') : 'Review mode';
-  if (p.learningPhase === 'challenge') return typeof t === 'function' ? t('adaptiveV2PhaseChallenge') : 'Challenge mode';
-  var skillFn = typeof t === 'function' ? t('adaptiveV2StatusSkill') : null;
+  if (p.learningPhase === 'band_review') return t('adaptiveV2PhaseReview');
+  if (p.learningPhase === 'challenge') return t('adaptiveV2PhaseChallenge');
+  var skillFn = t('adaptiveV2StatusSkill');
   if (skillFn && Number(p.skillLevel) >= 1) return skillFn(p.skillLevel);
   return _adaptiveBandLabel(p);
 }
@@ -908,7 +908,7 @@ function _adaptiveV2Subtitle(p) {
 function _getQuizTopBarMeta() {
   if (currentThemeCategoryId > 0) {
     return {
-      title: typeof t === 'function' ? t('themeSelectTitle') : 'Theme Quiz',
+      title: t('themeSelectTitle'),
       subtitle: _categoryName(currentThemeCategoryId),
       color: '#b78af7'
     };
@@ -916,7 +916,7 @@ function _getQuizTopBarMeta() {
   if (typeof window._rushIsActive === 'function' && window._rushIsActive()) {
     var rushP = typeof window._adaptiveV2GetProgress === 'function' ? window._adaptiveV2GetProgress() : null;
     return {
-      title: typeof t === 'function' ? t('rushBannerTitle') : 'Rush Mode',
+      title: t('rushBannerTitle'),
       subtitle: _adaptiveBandLabel(rushP),
       color: '#ff9a62'
     };
@@ -924,16 +924,16 @@ function _getQuizTopBarMeta() {
   if (typeof window._adaptiveV2IsActive === 'function' && window._adaptiveV2IsActive()) {
     var v2P = typeof window._adaptiveV2GetProgress === 'function' ? window._adaptiveV2GetProgress() : null;
     return {
-      title: typeof t === 'function' ? t('adaptiveV2BannerTitle') : 'Adaptive V2 (Beta)',
+      title: t('adaptiveV2BannerTitle'),
       subtitle: _adaptiveV2Subtitle(v2P),
       color: '#c4a0f7'
     };
   }
   if (currentLevel && currentLevel !== 'ALL') {
-    var levelNames = (typeof t === 'function' ? t('levelNames') : null) || (UI[LANG] && UI[LANG].levelNames) || UI.en.levelNames || {};
+    var levelNames = t('levelNames') || (UI[LANG] && UI[LANG].levelNames) || UI.en.levelNames || {};
     var levelName = levelNames[currentLevel] || '';
     return {
-      title: typeof t === 'function' ? t('adaptiveSetupTitle') : 'Adaptive Quiz',
+      title: t('adaptiveSetupTitle'),
       subtitle: levelName ? currentLevel + ' · ' + levelName : currentLevel,
       color: '#6be8a0'
     };
