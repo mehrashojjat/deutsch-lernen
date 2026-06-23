@@ -494,11 +494,11 @@ async function _wordModalRefreshLang() {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'word-modal-content');
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) chip.click();
   } catch (e) {
-    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
+    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta, 'word-modal-content');
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content);
   }
@@ -2222,7 +2222,7 @@ function _profileTopicsHtml(topics) {
       + '</div>'
       + '<div class="profile-topic-bar"><span style="width:' + topic.coveragePct + '%"></span></div>'
       + '</div>'
-      + '<button type="button" class="profile-topic-btn glass glass-pill glass-interactive" onclick="startThemeQuiz(' + topic.id + ')">'
+      + '<button type="button" class="profile-topic-btn glass-inner glass-pill glass-interactive" onclick="startThemeQuiz(' + topic.id + ')">'
       + escHtml(_lp('practiceTopic')) + '</button>'
       + '</div>';
   }).join('');
@@ -2414,7 +2414,7 @@ function renderLearningProfile() {
   var reviewBtnClass = isGuest ? ' profile-review-btn-locked' : '';
   var reviewBtnDisabled = isGuest ? ' disabled' : '';
   function reviewBtn(mode, label) {
-    return '<button type="button" class="profile-review-btn glass glass-pill glass-interactive' + reviewBtnClass + '"' + reviewBtnDisabled +
+    return '<button type="button" class="profile-review-btn glass-inner glass-pill glass-interactive' + reviewBtnClass + '"' + reviewBtnDisabled +
       (isGuest ? '' : ' onclick="startLearningProfileReview(\'' + mode + '\')"') + '>' +
       escHtml(label) + '</button>';
   }
@@ -2705,7 +2705,7 @@ function _renderSwipeCardHtml(card, posClass) {
     + '<div class="swipe-word">' + escHtml(_swipeWordLabel(card.row)) + '</div>'
     + '<div class="swipe-helper">' + escHtml(_swipeWordSub(card.row)) + '</div>'
     + '</div>'
-    + '<div class="swipe-meaning-box glass glass-chrome"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
+    + '<div class="swipe-meaning-box glass-inner"><div class="swipe-meaning-label">' + escHtml(t('swipeMeaningLabel')) + '</div><div class="swipe-meaning">' + escHtml(card.meaningText) + '</div></div>'
     + '</div>';
 }
 
@@ -4379,7 +4379,10 @@ function renderWiktCard(data, meta, targetId) {
   var level = _csvLevelRow ? (_csvLevelRow.level || '') : '';
   var wb = _csvRowToOfflineWord(_csvLevelRow);
 
-  var html = '<div class="rw-card glass glass-tile glass-highlight glass-chrome">';
+  var cardClass = targetId === 'word-modal-content'
+    ? 'rw-card glass-inner glass-tile glass-highlight'
+    : 'rw-card glass glass-tile glass-highlight glass-chrome';
+  var html = '<div class="' + cardClass + '">';
   html += '<div class="rw-type">' + (level ? escHtml(level) + ' · ' : '') + tcNameDE(tc) + '</div>';
   html += '<div class="rw-word">' + escHtml(displayWord)
     + (baseLemma ? ' <span style="color:var(--muted);font-size:.52em;font-weight:400;vertical-align:middle;white-space:nowrap">→ ' + escHtml(baseLemma) + '</span>' : '')
@@ -4811,4 +4814,3 @@ function renderOfflineWordBody(w) {
   html += '<div class="rw-source">'+(w.source?w.source:UI[LANG].source)+' · '+w.level+'</div>';
   return html;
 }
-

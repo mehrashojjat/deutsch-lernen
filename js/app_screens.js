@@ -793,6 +793,7 @@ function _initTabGestures() {
 
   navInner.addEventListener('pointerdown', function(e) {
     if (_tabGesturesBlocked() || e.button > 0) return;
+    navSuppressClick = false;
     var tabBtn = e.target.closest('.bottom-tab');
     navState = {
       id: e.pointerId,
@@ -826,6 +827,7 @@ function _initTabGestures() {
       _snapTabDrag();
       navSuppressClick = true;
     } else if (navState.targetTab) {
+      navSuppressClick = true;
       if (!_tabGesturesBlocked()) switchTab(navState.targetTab, { popActiveToRoot: true });
     } else if (!_tabGesturesBlocked()) {
       _navigateTab(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true, fromDrag: true });
@@ -884,7 +886,6 @@ function _mountPageActions(screenId) {
 
 function _resetSubscreenHeaders() {
   _restorePageActions();
-  document.querySelectorAll('.swipe-header, .dict-header').forEach(function(h) { h.style.display = ''; });
   ['rush-summary-title'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.style.visibility = '';

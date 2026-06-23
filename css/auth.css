@@ -24,7 +24,7 @@
 .auth-signout-btn{width:100%;padding:10px 14px;background:rgba(255,255,255,.04);
   border:1px solid rgba(255,255,255,.09);border-radius:25px;
   font-family:'Outfit','Vazirmatn',sans-serif;font-size:.83rem;font-weight:600;
-  color:var(--muted);cursor:pointer;transition:all .15s;text-align:center;margin-top:8px;}
+  color:var(--muted);cursor:pointer;transition:border-color .15s,color .15s;text-align:center;margin-top:8px;}
 .auth-signout-btn:hover{color:var(--text);border-color:rgba(255,255,255,.18);}
 
 /* ── AUTH UI ── */

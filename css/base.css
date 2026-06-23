@@ -5,6 +5,8 @@
   --blue:#7eb8f7;--green:#6be8a0;--red:#f07070;--purple:#c4a0f7;--pink:#f7a0c4;
   --text:#e8eaf2;--muted:#7a8099;--border:rgba(255,255,255,0.07);--r:25px;
   --glass-fill:rgba(255,255,255,0.08);--glass-fill-fallback:rgba(24,27,38,0.96);
+  --glass-fill-nav:rgba(0,0,0,0.15);--glass-fill-inner:rgba(255,255,255,0.05);
+  --glass-fill-inner-fallback:rgba(24,27,38,0.92);
   --glass-fill-overlay:rgba(8,10,16,0.52);--glass-fill-overlay-fallback:rgba(18,20,28,0.97);
   --glass-border:rgba(255,255,255,0.12);--glass-specular:inset 0 1px 0 rgba(255,255,255,0.18);
   --glass-blur:blur(20px) saturate(165%);--glass-shadow:0 4px 24px rgba(0,0,0,0.20);

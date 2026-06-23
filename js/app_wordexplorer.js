@@ -79,7 +79,7 @@ async function renderRandomWord() {
     _currentWiktData = data;
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'rw-content');
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   }).catch(function() {
@@ -87,7 +87,7 @@ async function renderRandomWord() {
     _currentWiktData = null;
     // Offline fallback: render with whatever is cached
     var data = { found: false, word: word, ipa: '', sections: [] };
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'rw-content');
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content, meta.en);
   });
@@ -116,11 +116,11 @@ async function _explorerRefreshLang() {
   if (data) {
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'rw-content');
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } else {
-    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta);
+    content.innerHTML = renderWiktCard({ found: false, word: word, ipa: '', sections: [] }, meta, 'rw-content');
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content, meta.en);
   }
@@ -172,13 +172,13 @@ async function openWordCard(word, tc) {
     var data = await fetchWiktionary(word, meta.tc);
     await _prefetchLangMeta(word, meta);
     await _prefetchDefTranslations(data);
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'word-modal-content');
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
     if (chip) { rwWordKey = word; chip.click(); }
   } catch(e) {
     // Offline: render immediately with whatever is cached, auto-fetchers update if online
     var data = { found: false, word: word, ipa: '', sections: [] };
-    content.innerHTML = renderWiktCard(data, meta);
+    content.innerHTML = renderWiktCard(data, meta, 'word-modal-content');
     _translateDefsInContainer(content);
     _autoFetchLangMeaning(word, content);
     var chip = content.querySelector('.rw-form[onclick*="pickFormExample"]');
@@ -449,6 +449,5 @@ function _renderDictList(filter, keepScroll) {
 function dictFilter(val) {
   if (_dictLoaded) _renderDictList(val);
 }
-
 
 
