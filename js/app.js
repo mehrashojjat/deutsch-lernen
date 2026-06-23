@@ -1493,7 +1493,10 @@ function _abortQuizSession() {
   _quizReturnScreen = 'screen-levels';
 }
 function _pageLeaveRequiresConfirm(pageId) {
-  return pageId === 'screen-quiz' && _quizSessionActive();
+  if (pageId === 'screen-quiz') return _quizSessionActive();
+  if (pageId === 'screen-swipe') return swipeDeck.length > 0 && swipeIdx < swipeDeck.length;
+  if (pageId === 'screen-practice') return practiceDeck.length > 0 && practiceIdx < practiceDeck.length;
+  return false;
 }
 function _confirmPageLeave(pageId) {
   return new Promise(function(resolve) {

@@ -406,12 +406,12 @@ function _getPageBackAction(pageId) {
     'screen-results': null,
     'screen-rush-summary': function(){ goHome(); },
     'screen-swipe-setup': function(){ popTabPage(); },
-    'screen-swipe': function(){ popTabPage(); },
+    'screen-swipe': function(){ _confirmPageLeave('screen-swipe').then(function(ok){ if (ok) popTabPage(); }); },
     'screen-adaptive-setup': function(){ popTabPage(); },
     'screen-theme-select': function(){ popTabPage(); },
     'screen-random': function(){ popTabPage(); },
     'screen-dictionary': function(){ popTabPage(); },
-    'screen-practice': function(){ popTabPage(); }
+    'screen-practice': function(){ _confirmPageLeave('screen-practice').then(function(ok){ if (ok) popTabPage(); }); }
   };
   return pageId ? backMap[pageId] : null;
 }
@@ -672,22 +672,10 @@ function _navigateTab(index, opts) {
     _setTabIndex(index, Object.assign({}, opts, { force: true }));
     return;
   }
-  var leavingPage = _getStackTop(_activeTab);
-  _confirmPageLeave(leavingPage).then(function(ok) {
-    if (!ok) {
-      if (opts.fromDrag) {
-        _tabDragIndex = null;
-        _setTabIndex(_tabIndex, { animate: true, force: true });
-        _updateTabIndicator(_activeTab);
-      }
-      return;
-    }
-    if (leavingPage === 'screen-quiz') {
-      _abortQuizSession();
-      if (_getStackTop(_activeTab) === 'screen-quiz') popTabPage({ animate: false, tab: _activeTab });
-    }
-    _setTabIndex(index, opts);
-  });
+  // Switching to a different tab is not an exit: the active page stays alive in
+  // its own stack, so no leave-confirmation is needed here. Confirmation only
+  // happens when actually exiting a page (back button or re-tapping the active tab).
+  _setTabIndex(index, opts);
 }
 function _setTabIndex(index, opts) {
   opts = opts || {};
