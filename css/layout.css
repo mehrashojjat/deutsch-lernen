@@ -18,7 +18,7 @@ body.native-shell{padding-top:calc(18px + env(safe-area-inset-top,0px));}
 .tab-page-chrome.hidden{display:none;}
 .tab-page-chrome-main{flex:1 1 50%;max-width:50%;min-width:0;display:flex;align-items:flex-end;gap:12px;}
 .tab-page-title-wrap{flex:1;min-width:0;text-align:start;}
-.tab-page-title{font-family:'Fraunces','Vazirmatn',serif;font-size:1.25rem;line-height:1.2;color:var(--blue);}
+.tab-page-title{font-family:'Vazirmatn',sans-serif;font-size:1.25rem;line-height:1.2;color:var(--blue);}
 .tab-page-title.hidden{display:none;}
 .tab-page-subtitle{font-size:.74rem;color:var(--muted);margin-top:3px;line-height:1.35;}
 .tab-page-subtitle.hidden{display:none;}
