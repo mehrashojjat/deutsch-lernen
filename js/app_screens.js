@@ -547,6 +547,8 @@ function _setTabIndicatorDragging(isDragging) {
   var overlay = document.getElementById('bottom-tab-gold-overlay');
   if (indicator) indicator.classList.toggle('is-dragging', isDragging);
   if (overlay) overlay.classList.toggle('is-dragging', isDragging);
+  // Drag start: pop the active pill into liquid glass and let it follow the finger.
+  if (isDragging && window.GlassNavPill) window.GlassNavPill.beginMove(true);
 }
 function _tabBtnLayout(btn) {
   return { left: btn.offsetLeft, top: btn.offsetTop, width: btn.offsetWidth, height: btn.offsetHeight };
@@ -579,8 +581,13 @@ function _updateTabIndicatorFromIndex(index) {
   }
   indicator.style.width = pillW + 'px';
   indicator.style.height = pillH + 'px';
-  indicator.style.transform = 'translate(' + pillLeft + 'px,' + pillTop + 'px)';
+  // Position via the independent `translate` property (NOT `transform`) so the
+  // `scale` property morphs the pill in place into the bubble's exact x/y shape,
+  // instead of scaling the translate offset (which shifted + distorted it).
+  indicator.style.translate = pillLeft + 'px ' + pillTop + 'px';
   _applyTabGoldOverlayClip(pillLeft, pillTop, pillW, pillH);
+  // Keep the liquid-glass pill mirrored over the yellow indicator (concentric).
+  if (window.GlassNavPill) window.GlassNavPill.sync(pillLeft, pillTop, pillW, pillH);
 }
 function _syncTabPanelFlow(opts) {
   opts = opts || {};
@@ -687,10 +694,24 @@ function _setTabIndex(index, opts) {
   _tabIndex = index;
   _activeTab = TAB_ORDER[index];
   _tabDragIndex = null;
+  // Keep the liquid-glass pill visible and gliding (smooth, not finger-locked)
+  // for the whole slide. If it's already showing (normal drag/tap) just unlock it
+  // — this avoids the heavy reflow/map-regen of beginMove() that hiccuped on drop.
+  if (window.GlassNavPill && (animating || opts.fromDrag)) {
+    if (window.GlassNavPill.isActive()) window.GlassNavPill.releaseInstant();
+    else window.GlassNavPill.beginMove(false);
+  }
   _syncTabPanelStates(index);
   _syncTabPanelFlow({ activeIndex: index, also: animating ? [prevIndex] : [] });
   _applyTabTrackTransform(index, animating);
   _updateTabIndicator(_activeTab);
+  // Morph the glass back to yellow. A drag drop snaps back in one motion (concurrent
+  // slide + shrink); a tap/programmatic switch stays visible while it slides to the
+  // new tab and only then cross-fades back.
+  if (window.GlassNavPill && window.GlassNavPill.isActive()) {
+    if (opts.fromDrag || !animating) window.GlassNavPill.settle();
+    else window.GlassNavPill.settleOnArrival();
+  }
   if (animating) {
     var track = _getTabTrack();
     if (track) {
@@ -783,14 +804,23 @@ function _initTabGestures() {
     if (_tabGesturesBlocked() || e.button > 0) return;
     navSuppressClick = false;
     var tabBtn = e.target.closest('.bottom-tab');
+    // Dragging (and the liquid-glass morph) is only allowed from the ACTIVE pill's
+    // area. Pressing any other tab is left to the native click — which already does
+    // the natural thing: nothing happens if you move/scroll away before releasing.
+    if (!tabBtn || tabBtn.getAttribute('data-tab') !== _activeTab) {
+      navState = null;
+      return;
+    }
     navState = {
       id: e.pointerId,
       startX: e.clientX,
       startY: e.clientY,
       startIndex: _tabDragIndex !== null ? _tabDragIndex : _tabIndex,
-      targetTab: tabBtn ? tabBtn.getAttribute('data-tab') : null,
+      targetTab: tabBtn.getAttribute('data-tab'),
       dragging: false
     };
+    // Pop the active pill into liquid glass the instant it's pressed (before any move).
+    if (window.GlassNavPill) window.GlassNavPill.beginMove(true);
   });
 
   navInner.addEventListener('pointermove', function(e) {
@@ -821,6 +851,10 @@ function _initTabGestures() {
       _navigateTab(Math.round(_tabIndexFromNavX(e.clientX)), { animate: true, fromDrag: true });
     }
     navState = null;
+    // Fallback close for taps that didn't run a switch (e.g. re-tapping the active
+    // tab). Uses the "settle on arrival" path so it never cancels a switch's travel
+    // animation — that was making tab-tap transitions flash on then instantly off.
+    if (window.GlassNavPill && window.GlassNavPill.isActive()) window.GlassNavPill.settleOnArrival();
   }
   navInner.addEventListener('pointerup', _endNavDrag);
   navInner.addEventListener('pointercancel', _endNavDrag);
