@@ -14,20 +14,18 @@
 
 // GLOBAL NAVBAR GLASS CONFIGURATION (For easy editing)
 window.GLASS_NAV_CONFIG = {
-  scaleX: 1.15, // <-- horizontal size of the glass pill (1 = same width)
-  scaleY: 1.45, // <-- vertical size of the glass pill (1 = same height)
-
-  // --- glossy / glass effect settings ---
-  borderWidth: 0.2,
+  scaleX: 1.2,
+  scaleY: 1.4,
+  borderWidth: 0.1,
   brightness: 50,
   opacity: 1,
-  blur: 8,
-  displace: 0.2,
+  blur: 11,
+  displace: 0.5,
   backgroundOpacity: 0,
-  saturation: 1,
-  distortionScale: -250,
-  redOffset: -16,
-  greenOffset: 15,
+  saturation: 1.1,
+  distortionScale: 40,
+  redOffset: 0,
+  greenOffset: 5,
   blueOffset: 10,
   mixBlendMode: 'difference'
 };
@@ -333,7 +331,7 @@ window.GLASS_NAV_CONFIG = {
       if (!g) return;
       const c = global.GLASS_NAV_CONFIG;
       Object.assign(g.opts, c);
-      
+
       const inner = document.querySelector('.bottom-tabs-inner');
       if (inner) {
         inner.style.setProperty('--nav-glass-scale-x', String(c.scaleX));
@@ -341,7 +339,7 @@ window.GLASS_NAV_CONFIG = {
       }
       g.style.setProperty('--g-rest-sx', String(1 / c.scaleX));
       g.style.setProperty('--g-rest-sy', String(1 / c.scaleY));
-      
+
       syncToIndicator();
       if (g._glassUpdate) g._glassUpdate();
     }
