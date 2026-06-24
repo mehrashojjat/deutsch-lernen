@@ -220,10 +220,10 @@
     scaleY: 1.45, // <-- vertical size of the glass pill (1 = same height)
 
     // --- glossy / glass effect settings ---
-    borderWidth: 0.1,
+    borderWidth: 0.2,
     brightness: 50,
-    opacity: 0.93,
-    blur: 5,
+    opacity: 1,
+    blur: 8,
     displace: 0.2,
     backgroundOpacity: 0,
     saturation: 1,
