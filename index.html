@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>Wortschatz — Free German Vocabulary Game</title>
-<meta name="description" content="Free German vocabulary app with adaptive quizzes, flashcard practice, theme quizzes, and a learning profile. Goethe-Institut A1–B1 lists (~6 000 words). No paywall; optional Google sign-in syncs progress.">
-<meta name="keywords" content="Wortschatz, German vocabulary, learn German, German quiz, Goethe-Institut word list, free German game, German flashcards, vocabulary practice">
-<meta name="author" content="Mehras Hojjat">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://wortschatzapp.de/">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Wortschatz — Free German Vocabulary Game</title>
+  <meta name="description"
+    content="Free German vocabulary app with adaptive quizzes, flashcard practice, theme quizzes, and a learning profile. Goethe-Institut A1–B1 lists (~6 000 words). No paywall; optional Google sign-in syncs progress.">
+  <meta name="keywords"
+    content="Wortschatz, German vocabulary, learn German, German quiz, Goethe-Institut word list, free German game, German flashcards, vocabulary practice">
+  <meta name="author" content="Mehras Hojjat">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wortschatzapp.de/">
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
-<meta name="theme-color" content="#0b0d13">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Wortschatz">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+  <meta name="theme-color" content="#0b0d13">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Wortschatz">
 
-<!-- Open Graph / Social -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://wortschatzapp.de/">
-<meta property="og:title" content="Wortschatz — Free German Vocabulary Game">
-<meta property="og:description" content="Adaptive German vocabulary quizzes, flashcard practice, theme quizzes, and progress tracking. Goethe-Institut A1–B1 word lists. Free — optional sign-in to sync.">
-<meta property="og:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
-<meta property="og:site_name" content="Wortschatz">
-<meta property="og:locale" content="en">
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wortschatzapp.de/">
+  <meta property="og:title" content="Wortschatz — Free German Vocabulary Game">
+  <meta property="og:description"
+    content="Adaptive German vocabulary quizzes, flashcard practice, theme quizzes, and progress tracking. Goethe-Institut A1–B1 word lists. Free — optional sign-in to sync.">
+  <meta property="og:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
+  <meta property="og:site_name" content="Wortschatz">
+  <meta property="og:locale" content="en">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wortschatz — Free German Vocabulary Game">
-<meta name="twitter:description" content="Adaptive German vocabulary app: quizzes, practice cards, learning profile. Goethe-Institut A1–B1. Free with optional progress sync.">
-<meta name="twitter:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wortschatz — Free German Vocabulary Game">
+  <meta name="twitter:description"
+    content="Adaptive German vocabulary app: quizzes, practice cards, learning profile. Goethe-Institut A1–B1. Free with optional progress sync.">
+  <meta name="twitter:image" content="https://wortschatzapp.de/icons/android-chrome-512x512.png">
 
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -62,979 +68,1072 @@
 }
 </script>
 
-<!-- CSS -->
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/glass.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/modals.css">
-<link rel="stylesheet" href="css/auth.css">
-<link rel="stylesheet" href="css/screens.css">
-<link rel="stylesheet" href="css/glassSurface.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/glass.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/screens.css">
+  <link rel="stylesheet" href="css/glassSurface.css">
 
-<!-- Splash / loading screen — inline so it paints instantly before CSS loads -->
-<style>
-#app-splash{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
-  opacity:1;transition:opacity .55s ease;-webkit-tap-highlight-color:transparent;
-  -webkit-backdrop-filter:blur(50px);backdrop-filter:blur(50px);}
-#app-splash.is-hidden{opacity:0;pointer-events:none;}
-#app-splash .splash-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
-#app-splash .splash-glow{position:absolute;left:50%;top:50%;width:170px;height:170px;transform:translate(-50%,-50%);
-  border-radius:50%;background:radial-gradient(circle at center,rgba(0,0,0,.5) 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,0) 70%);
-  filter:blur(10px);animation:splashGlow 3.6s ease-in-out infinite;}
-#app-splash .splash-logo{position:relative;width:96px;height:96px;border-radius:22px;box-shadow:0 12px 44px rgba(0,0,0,.55);
-  animation:splashPulse 3.6s ease-in-out infinite;}
-@keyframes splashPulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.05);opacity:1}}
-@keyframes splashGlow{0%,100%{opacity:.28;transform:translate(-50%,-50%) scale(.9)}50%{opacity:.7;transform:translate(-50%,-50%) scale(1.12)}}
-@media (prefers-reduced-motion:reduce){#app-splash .splash-logo,#app-splash .splash-glow{animation:none}}
-</style>
+  <!-- Splash / loading screen — inline so it paints instantly before CSS loads -->
+  <style>
+    #app-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity .55s ease;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-backdrop-filter: blur(50px);
+      backdrop-filter: blur(50px);
+    }
+
+    #app-splash.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #app-splash .splash-logo-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #app-splash .splash-glow {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 170px;
+      height: 170px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .12) 45%, rgba(0, 0, 0, 0) 70%);
+      filter: blur(10px);
+      animation: splashGlow 3.6s ease-in-out infinite;
+    }
+
+    #app-splash .splash-logo {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 12px 44px rgba(0, 0, 0, .55);
+      animation: splashPulse 3.6s ease-in-out infinite;
+    }
+
+    @keyframes splashPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .95
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 1
+      }
+    }
+
+    @keyframes splashGlow {
+
+      0%,
+      100% {
+        opacity: .28;
+        transform: translate(-50%, -50%) scale(.9)
+      }
+
+      50% {
+        opacity: .7;
+        transform: translate(-50%, -50%) scale(1.12)
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+
+      #app-splash .splash-logo,
+      #app-splash .splash-glow {
+        animation: none
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div id="app-splash" role="status" aria-label="Loading">
-  <div class="splash-logo-wrap">
-    <div class="splash-glow" aria-hidden="true"></div>
-    <img class="splash-logo" src="apple-touch-icon.png" alt="Wortschatz" width="96" height="96">
-  </div>
-</div>
-<div id="side-rays-bg" class="side-rays-container" aria-hidden="true"></div>
-
-<!-- UI icon sprite -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M12 15c2-3 3-6 3-9 0 0-3 1-6 3 0 3 1 6 3 9z"/><path d="M9 12L4 17l2 2 5-5"/><path d="M12 6V3"/><path d="M10 4h4"/></symbol>
-  <symbol id="icon-lightning" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="currentColor" stroke="none"/></symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
-  <symbol id="icon-gift" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1.5"/><path d="M12 10v11"/><path d="M3 14h18"/><path d="M12 10c-2-2-3-3.5-1.5-5S14 6 12 8c2-2 3.5-3 5-1.5S16 10 12 10z"/></symbol>
-  <symbol id="icon-phone-match" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 18h4"/><path d="M15 8c1.5 0 3 .5 4 2"/><path d="M16 11c1 .5 2 1.5 2.5 3"/></symbol>
-  <symbol id="icon-dice" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></symbol>
-  <symbol id="icon-grad-cap" viewBox="0 0 24 24"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4"/><path d="M21 9v6"/></symbol>
-  <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3z"/><path d="M18 14l.8 2.5 2.5.8-2.5.8-.8 2.5-.8-2.5-2.5-.8 2.5-.8.8-2.5z"/><path d="M5 16l.6 1.8L7.4 18l-1.8.6L5 20.4l-.6-1.8L2.6 18l1.8-.6L5 16z"/></symbol>
-  <symbol id="icon-adaptive" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
-  <symbol id="icon-theme-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></symbol>
-  <symbol id="icon-swipe-match" viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="2"/><path d="M3 12H6"/><path d="M5 10L3 12l2 2"/><path d="M21 12h-3"/><path d="M19 10l2 2-2 2"/></symbol>
-  <symbol id="icon-word-explore" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
-  <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M5 19V11"/><path d="M10 19V6"/><path d="M15 19V14"/><path d="M20 19V9"/><path d="M4 19h17"/></symbol>
-  <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
-  <symbol id="icon-flip" viewBox="0 0 24 24"><path d="M7 4H4v3"/><path d="M17 20h3v-3"/><path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5"/><path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5"/></symbol>
-  <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
-  <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></symbol>
-  <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></symbol>
-  <symbol id="icon-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
-  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M6 12l4 4 8-9"/></symbol>
-  <symbol id="icon-cat-numbers" viewBox="0 0 24 24"><path d="M9 4l-2 16"/><path d="M17 4l-2 16"/><path d="M4 9h16"/><path d="M4 15h16"/></symbol>
-  <symbol id="icon-cat-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
-  <symbol id="icon-cat-family" viewBox="0 0 24 24"><circle cx="12" cy="7" r="2.2"/><path d="M8.5 20v-2a3.5 3.5 0 0 1 7 0v2"/><circle cx="6.5" cy="10.5" r="1.7"/><path d="M4.5 20v-1.5a2.2 2.2 0 0 1 4 0"/><circle cx="17.5" cy="10.5" r="1.7"/><path d="M15.5 20v-1.5a2.2 2.2 0 0 1 4 0"/></symbol>
-  <symbol id="icon-cat-health" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M12 9v6"/><path d="M9 12h6"/></symbol>
-  <symbol id="icon-cat-food" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M6 2v2"/><path d="M10 2v2"/><path d="M14 2v2"/></symbol>
-  <symbol id="icon-cat-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></symbol>
-  <symbol id="icon-cat-shirt" viewBox="0 0 24 24"><path d="M8 5L5 8l2 2v11h10V10l2-2-3-3-4 3-4-3z"/></symbol>
-  <symbol id="icon-cat-briefcase" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M4 14h16"/></symbol>
-  <symbol id="icon-cat-book" viewBox="0 0 24 24"><path d="M6 4h6a3 3 0 0 1 3 3v14H9a3 3 0 0 0-3 3V4z"/><path d="M18 4h-6a3 3 0 0 0-3 3v14h6a3 3 0 0 1 3-3V4z"/></symbol>
-  <symbol id="icon-cat-plane" viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 19 4c-1 0-2 1-3.5 2.5L12 10 4.8 8.2c-.5-.1-.9.1-1.1.5l-.1.5c-.2.5.1 1 .6 1.2L8 12l-2 3H8l1 1 1-3 3 2 5.3 1.3c.5.1 1-.1 1.2-.6l.5-.1c.4-.2.6-.6.5-1.1z"/></symbol>
-  <symbol id="icon-cat-car" viewBox="0 0 24 24"><path d="M5 11l2-5h10l2 5"/><path d="M4 11h16v5H4z"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></symbol>
-  <symbol id="icon-cat-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 13H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
-  <symbol id="icon-cat-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
-  <symbol id="icon-cat-leaf" viewBox="0 0 24 24"><path d="M12 21C8 17 6 12 6 8a6 6 0 0 1 12 0c0 4-2 9-6 13z"/><path d="M12 21V8"/></symbol>
-  <symbol id="icon-cat-sport" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a12 12 0 0 1 0 16"/><path d="M4 12h16"/></symbol>
-  <symbol id="icon-cat-palette" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><circle cx="8.5" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="10" r="1" fill="currentColor" stroke="none"/><path d="M8.5 15.5c1.2-1.8 5.8-1.8 7 0"/></symbol>
-  <symbol id="icon-cat-laptop" viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="10" rx="1.5"/><path d="M3 18h18"/></symbol>
-  <symbol id="icon-cat-scale" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M6 8h12"/><path d="M6 8L2 14h8L6 8z"/><path d="M18 8l-4 6h8l-4-6z"/></symbol>
-  <symbol id="icon-cat-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></symbol>
-  <symbol id="icon-cat-map" viewBox="0 0 24 24"><path d="M8 4l-4 2v14l4-2 8 2 4-2V4l-4 2-8-2z"/><path d="M8 4v14"/><path d="M16 6v14"/></symbol>
-  <symbol id="icon-cat-pencil" viewBox="0 0 24 24"><path d="M16 4l4 4-10 10H6v-4L16 4z"/><path d="M14 6l4 4"/></symbol>
-  <symbol id="icon-wifi-off" viewBox="0 0 24 24"><path d="M2 4l20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 12.5a10 10 0 0 1 4-2.43"/><path d="M2 8.8a15.5 15.5 0 0 1 5-3.1"/><path d="M12.5 5.04a15.5 15.5 0 0 1 9.5 3.76"/><path d="M16.7 11.27A10 10 0 0 1 19 12.5"/><path d="M12 20h.01"/></symbol>
-</svg>
-
-<!-- ══ PERSISTENT HEADER ══ -->
-<div class="app-header" id="app-header">
-  <h1 onclick="goHome()">Wortschatz</h1>
-</div>
-<div class="screen-top-bar hidden" id="screen-top-bar">
-  <div class="screen-top-main">
-    <button class="app-back-btn glass glass-chrome glass-interactive" id="app-back-btn" onclick="_appBackAction()" type="button" aria-label="Back"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-left"/></svg></button>
-    <div class="screen-top-title-wrap">
-      <div class="screen-top-title" id="screen-top-title"></div>
-      <div class="screen-top-subtitle hidden" id="screen-top-subtitle"></div>
+  <div id="app-splash" role="status" aria-label="Loading">
+    <div class="splash-logo-wrap">
+      <div class="splash-glow" aria-hidden="true"></div>
+      <img class="splash-logo" src="apple-touch-icon.png" alt="Wortschatz" width="96" height="96">
     </div>
   </div>
-  <div class="screen-top-actions hidden" id="screen-top-actions"></div>
-</div>
+  <div id="side-rays-bg" class="side-rays-container" aria-hidden="true"></div>
 
-<!-- ══ OFFLINE SCREEN ══ -->
-<div id="offline-screen" class="hidden">
-  <div class="offline-card glass glass-tile glass-highlight">
-    <div class="offline-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-wifi-off"/></svg></div>
-    <h2 id="offline-title" data-i18n="offlineTitle"></h2>
-    <p id="offline-message" data-i18n="offlineMessage"></p>
-    <button id="offline-refresh-btn" data-i18n="offlineRefreshBtn" onclick="checkOnline()"></button>
-  </div>
-</div>
+  <!-- UI icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-rocket" viewBox="0 0 24 24">
+      <path d="M12 15c2-3 3-6 3-9 0 0-3 1-6 3 0 3 1 6 3 9z" />
+      <path d="M9 12L4 17l2 2 5-5" />
+      <path d="M12 6V3" />
+      <path d="M10 4h4" />
+    </symbol>
+    <symbol id="icon-lightning" viewBox="0 0 24 24">
+      <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </symbol>
+    <symbol id="icon-gift" viewBox="0 0 24 24">
+      <rect x="3" y="10" width="18" height="11" rx="1.5" />
+      <path d="M12 10v11" />
+      <path d="M3 14h18" />
+      <path d="M12 10c-2-2-3-3.5-1.5-5S14 6 12 8c2-2 3.5-3 5-1.5S16 10 12 10z" />
+    </symbol>
+    <symbol id="icon-phone-match" viewBox="0 0 24 24">
+      <rect x="7" y="3" width="10" height="18" rx="2" />
+      <path d="M10 18h4" />
+      <path d="M15 8c1.5 0 3 .5 4 2" />
+      <path d="M16 11c1 .5 2 1.5 2.5 3" />
+    </symbol>
+    <symbol id="icon-dice" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="3" />
+      <circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="icon-grad-cap" viewBox="0 0 24 24">
+      <path d="M3 9l9-4 9 4-9 4-9-4z" />
+      <path d="M6 11v4c0 1.5 2.7 3 6 3s6-1.5 6-3v-4" />
+      <path d="M21 9v6" />
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="M12 3l1.2 3.8L17 8l-3.8 1.2L12 13l-1.2-3.8L7 8l3.8-1.2L12 3z" />
+      <path d="M18 14l.8 2.5 2.5.8-2.5.8-.8 2.5-.8-2.5-2.5-.8 2.5-.8.8-2.5z" />
+      <path d="M5 16l.6 1.8L7.4 18l-1.8.6L5 20.4l-.6-1.8L2.6 18l1.8-.6L5 16z" />
+    </symbol>
+    <symbol id="icon-adaptive" viewBox="0 0 24 24">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+    </symbol>
+    <symbol id="icon-theme-grid" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="8" height="8" rx="2" />
+      <rect x="13" y="3" width="8" height="8" rx="2" />
+      <rect x="3" y="13" width="8" height="8" rx="2" />
+      <rect x="13" y="13" width="8" height="8" rx="2" />
+    </symbol>
+    <symbol id="icon-swipe-match" viewBox="0 0 24 24">
+      <rect x="7" y="4" width="10" height="16" rx="2" />
+      <path d="M3 12H6" />
+      <path d="M5 10L3 12l2 2" />
+      <path d="M21 12h-3" />
+      <path d="M19 10l2 2-2 2" />
+    </symbol>
+    <symbol id="icon-word-explore" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" />
+      <path d="M20 20l-3.5-3.5" />
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M5 19V11" />
+      <path d="M10 19V6" />
+      <path d="M15 19V14" />
+      <path d="M20 19V9" />
+      <path d="M4 19h17" />
+    </symbol>
+    <symbol id="icon-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+    </symbol>
+    <symbol id="icon-flip" viewBox="0 0 24 24">
+      <path d="M7 4H4v3" />
+      <path d="M17 20h3v-3" />
+      <path d="M4 7c1.6-3.2 4.8-5 8-5s6.4 1.8 8 5" />
+      <path d="M20 17c-1.6 3.2-4.8 5-8 5s-6.4-1.8-8-5" />
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14" />
+      <path d="M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M19 12H5" />
+      <path d="M12 19l-7-7 7-7" />
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24">
+      <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+      <path d="M21 3v6h-6" />
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="M7 7l10 10M17 7L7 17" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M6 12l4 4 8-9" />
+    </symbol>
+    <symbol id="icon-cat-numbers" viewBox="0 0 24 24">
+      <path d="M9 4l-2 16" />
+      <path d="M17 4l-2 16" />
+      <path d="M4 9h16" />
+      <path d="M4 15h16" />
+    </symbol>
+    <symbol id="icon-cat-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 8v4l3 2" />
+    </symbol>
+    <symbol id="icon-cat-family" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="2.2" />
+      <path d="M8.5 20v-2a3.5 3.5 0 0 1 7 0v2" />
+      <circle cx="6.5" cy="10.5" r="1.7" />
+      <path d="M4.5 20v-1.5a2.2 2.2 0 0 1 4 0" />
+      <circle cx="17.5" cy="10.5" r="1.7" />
+      <path d="M15.5 20v-1.5a2.2 2.2 0 0 1 4 0" />
+    </symbol>
+    <symbol id="icon-cat-health" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="14" height="14" rx="3" />
+      <path d="M12 9v6" />
+      <path d="M9 12h6" />
+    </symbol>
+    <symbol id="icon-cat-food" viewBox="0 0 24 24">
+      <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+      <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+      <path d="M6 2v2" />
+      <path d="M10 2v2" />
+      <path d="M14 2v2" />
+    </symbol>
+    <symbol id="icon-cat-home" viewBox="0 0 24 24">
+      <path d="M4 11l8-7 8 7" />
+      <path d="M6 10v9h12v-9" />
+    </symbol>
+    <symbol id="icon-cat-shirt" viewBox="0 0 24 24">
+      <path d="M8 5L5 8l2 2v11h10V10l2-2-3-3-4 3-4-3z" />
+    </symbol>
+    <symbol id="icon-cat-briefcase" viewBox="0 0 24 24">
+      <rect x="4" y="8" width="16" height="12" rx="2" />
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+      <path d="M4 14h16" />
+    </symbol>
+    <symbol id="icon-cat-book" viewBox="0 0 24 24">
+      <path d="M6 4h6a3 3 0 0 1 3 3v14H9a3 3 0 0 0-3 3V4z" />
+      <path d="M18 4h-6a3 3 0 0 0-3 3v14h6a3 3 0 0 1 3-3V4z" />
+    </symbol>
+    <symbol id="icon-cat-plane" viewBox="0 0 24 24">
+      <path
+        d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 19 4c-1 0-2 1-3.5 2.5L12 10 4.8 8.2c-.5-.1-.9.1-1.1.5l-.1.5c-.2.5.1 1 .6 1.2L8 12l-2 3H8l1 1 1-3 3 2 5.3 1.3c.5.1 1-.1 1.2-.6l.5-.1c.4-.2.6-.6.5-1.1z" />
+    </symbol>
+    <symbol id="icon-cat-car" viewBox="0 0 24 24">
+      <path d="M5 11l2-5h10l2 5" />
+      <path d="M4 11h16v5H4z" />
+      <circle cx="7.5" cy="16.5" r="1.5" />
+      <circle cx="16.5" cy="16.5" r="1.5" />
+    </symbol>
+    <symbol id="icon-cat-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 13H7L6 8z" />
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+    </symbol>
+    <symbol id="icon-cat-chat" viewBox="0 0 24 24">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
+    </symbol>
+    <symbol id="icon-cat-leaf" viewBox="0 0 24 24">
+      <path d="M12 21C8 17 6 12 6 8a6 6 0 0 1 12 0c0 4-2 9-6 13z" />
+      <path d="M12 21V8" />
+    </symbol>
+    <symbol id="icon-cat-sport" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 4a12 12 0 0 1 0 16" />
+      <path d="M4 12h16" />
+    </symbol>
+    <symbol id="icon-cat-palette" viewBox="0 0 24 24">
+      <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" />
+      <circle cx="8.5" cy="10" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="8" r="1" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="10" r="1" fill="currentColor" stroke="none" />
+      <path d="M8.5 15.5c1.2-1.8 5.8-1.8 7 0" />
+    </symbol>
+    <symbol id="icon-cat-laptop" viewBox="0 0 24 24">
+      <rect x="5" y="6" width="14" height="10" rx="1.5" />
+      <path d="M3 18h18" />
+    </symbol>
+    <symbol id="icon-cat-scale" viewBox="0 0 24 24">
+      <path d="M12 4v16" />
+      <path d="M6 8h12" />
+      <path d="M6 8L2 14h8L6 8z" />
+      <path d="M18 8l-4 6h8l-4-6z" />
+    </symbol>
+    <symbol id="icon-cat-heart" viewBox="0 0 24 24">
+      <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" />
+    </symbol>
+    <symbol id="icon-cat-map" viewBox="0 0 24 24">
+      <path d="M8 4l-4 2v14l4-2 8 2 4-2V4l-4 2-8-2z" />
+      <path d="M8 4v14" />
+      <path d="M16 6v14" />
+    </symbol>
+    <symbol id="icon-cat-pencil" viewBox="0 0 24 24">
+      <path d="M16 4l4 4-10 10H6v-4L16 4z" />
+      <path d="M14 6l4 4" />
+    </symbol>
+    <symbol id="icon-wifi-off" viewBox="0 0 24 24">
+      <path d="M2 4l20 20" />
+      <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+      <path d="M5 12.5a10 10 0 0 1 4-2.43" />
+      <path d="M2 8.8a15.5 15.5 0 0 1 5-3.1" />
+      <path d="M12.5 5.04a15.5 15.5 0 0 1 9.5 3.76" />
+      <path d="M16.7 11.27A10 10 0 0 1 19 12.5" />
+      <path d="M12 20h.01" />
+    </symbol>
+  </svg>
 
-<!-- ══ APP DIALOG ══ -->
-<div class="modal-root modal-root--dialog" id="app-dialog-overlay">
-  <div class="modal-scrim" id="app-dialog-scrim"></div>
-  <div class="modal-sheet app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
-  <div class="glass-sheet-surface glass glass-highlight">
-  <div class="app-dialog-handle" id="app-dialog-handle"></div>
-  <div class="app-dialog-title" id="app-dialog-title"></div>
-  <p class="app-dialog-message" id="app-dialog-message"></p>
-  <div class="app-dialog-footer-row" id="app-dialog-footer">
-    <button type="button" class="app-dialog-btn-cancel" id="app-dialog-cancel">Cancel</button>
-    <button type="button" class="app-dialog-btn-primary" id="app-dialog-primary">OK</button>
+  <!-- ══ PERSISTENT HEADER ══ -->
+  <div class="app-header" id="app-header">
+    <h1 onclick="goHome()">Wortschatz</h1>
   </div>
-  </div>
-  </div>
-</div>
-
-<!-- ══ ABOUT MODAL ══ -->
-<div class="modal-root modal-root--about modal-root--align-bottom modal-root--pad-bottom" id="about-modal-overlay">
-  <div class="modal-scrim" onclick="closeAbout()"></div>
-  <div class="modal-sheet about-modal glass-sheet-shell">
-    <div class="about-modal-surface glass-sheet-surface glass glass-highlight">
-    <h3 id="about-title" data-i18n="aboutTitle"></h3>
-    <p id="about-p1" data-i18n="aboutP1"></p>
-    <p id="about-p2" data-i18n-html="aboutP2html"></p>
-    <p id="about-p3" data-i18n-html="aboutP3html"></p>
-    <p id="about-p4" data-i18n="aboutP4"></p>
-    <button class="about-modal-close" id="about-close-btn" data-i18n="aboutClose" onclick="closeAbout()"></button>
-    </div>
-  </div>
-</div>
-
-<!-- ══ IOS INSTALL GUIDE ══ -->
-<div class="modal-root modal-root--install modal-root--align-bottom modal-root--pad-guide" id="install-guide-overlay">
-  <div class="modal-scrim" onclick="closeInstallGuide()"></div>
-  <div class="modal-sheet install-guide glass-sheet-shell">
-    <div class="install-guide-surface glass-sheet-surface glass glass-highlight">
-    <div class="install-guide-handle"></div>
-    <div class="install-guide-head">
-      <div>
-        <div class="install-guide-title" id="install-guide-title" data-i18n="installGuideTitle"></div>
+  <div class="screen-top-bar hidden" id="screen-top-bar">
+    <div class="screen-top-main">
+      <button class="app-back-btn glass glass-chrome glass-interactive" id="app-back-btn" onclick="_appBackAction()"
+        type="button" aria-label="Back"><svg class="ui-icon" aria-hidden="true">
+          <use href="#icon-arrow-left" />
+        </svg></button>
+      <div class="screen-top-title-wrap">
+        <div class="screen-top-title" id="screen-top-title"></div>
+        <div class="screen-top-subtitle hidden" id="screen-top-subtitle"></div>
       </div>
     </div>
-    <div class="install-steps">
-      <div class="install-step">
-        <div class="install-step-num">1</div>
-        <div>
-          <div class="install-step-title" id="install-step1-title" data-i18n="installStep1Title"></div>
-          <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Share button in your browser.</div>
-          <img src="assets/ShareButton.png" alt="Share button location" class="install-step-img">
+    <div class="screen-top-actions hidden" id="screen-top-actions"></div>
+  </div>
+
+  <!-- ══ OFFLINE SCREEN ══ -->
+  <div id="offline-screen" class="hidden">
+    <div class="offline-card glass glass-tile glass-highlight">
+      <div class="offline-icon-wrap"><svg class="ui-icon" aria-hidden="true">
+          <use href="#icon-wifi-off" />
+        </svg></div>
+      <h2 id="offline-title" data-i18n="offlineTitle"></h2>
+      <p id="offline-message" data-i18n="offlineMessage"></p>
+      <button id="offline-refresh-btn" data-i18n="offlineRefreshBtn" onclick="checkOnline()"></button>
+    </div>
+  </div>
+
+  <!-- ══ APP DIALOG ══ -->
+  <div class="modal-root modal-root--dialog" id="app-dialog-overlay">
+    <div class="modal-scrim" id="app-dialog-scrim"></div>
+    <div class="modal-sheet app-dialog glass-sheet-shell" id="app-dialog" role="dialog" aria-modal="true"
+      aria-labelledby="app-dialog-title">
+      <div class="glass-sheet-surface glass glass-highlight">
+        <div class="app-dialog-handle" id="app-dialog-handle"></div>
+        <div class="app-dialog-title" id="app-dialog-title"></div>
+        <p class="app-dialog-message" id="app-dialog-message"></p>
+        <div class="app-dialog-footer-row" id="app-dialog-footer">
+          <button type="button" class="app-dialog-btn-cancel" id="app-dialog-cancel">Cancel</button>
+          <button type="button" class="app-dialog-btn-primary" id="app-dialog-primary">OK</button>
         </div>
       </div>
-      <div class="install-step">
-        <div class="install-step-num">2</div>
-        <div>
-          <div class="install-step-title" id="install-step2-title" data-i18n="installStep2Title"></div>
-          <div class="install-step-desc" id="install-step2-desc">In the menu that opens, tap Add to Home Screen, then confirm to install.</div>
-          <img src="assets/A2HS.png" alt="Add to Home Screen option" class="install-step-img">
-        </div>
+    </div>
+  </div>
+
+  <!-- ══ ABOUT MODAL ══ -->
+  <div class="modal-root modal-root--about modal-root--align-bottom modal-root--pad-bottom" id="about-modal-overlay">
+    <div class="modal-scrim" onclick="closeAbout()"></div>
+    <div class="modal-sheet about-modal glass-sheet-shell">
+      <div class="about-modal-surface glass-sheet-surface glass glass-highlight">
+        <h3 id="about-title" data-i18n="aboutTitle"></h3>
+        <p id="about-p1" data-i18n="aboutP1"></p>
+        <p id="about-p2" data-i18n-html="aboutP2html"></p>
+        <p id="about-p3" data-i18n-html="aboutP3html"></p>
+        <p id="about-p4" data-i18n="aboutP4"></p>
+        <button class="about-modal-close" id="about-close-btn" data-i18n="aboutClose" onclick="closeAbout()"></button>
       </div>
     </div>
-    <div class="install-guide-actions">
-      <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" data-i18n="installClose" onclick="closeInstallGuide()"></button>
-    </div>
-    </div>
   </div>
-</div>
 
-<!-- ══ WORD CARD MODAL ══ -->
-<div class="modal-root modal-root--word modal-root--align-bottom" id="word-modal-overlay">
-  <div class="modal-scrim" onclick="closeWordModal()"></div>
-  <div class="modal-sheet word-modal glass-sheet-shell">
-    <div class="word-modal-surface glass-sheet-surface glass glass-highlight">
-    <div class="word-modal-handle"></div>
-    <div id="word-modal-content"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ HOME ══ -->
-<div id="quiz-prep-overlay" aria-live="polite">
-  <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
-</div>
-<div class="screen" id="screen-levels">
-  <div class="tab-stage">
-  <div class="tab-viewport" id="tab-viewport">
-    <div class="tab-track" id="tab-track">
-  <!-- Learn tab -->
-  <div class="tab-panel active tab-flow-visible" id="tab-panel-learn" aria-hidden="false">
-    <div class="tab-stack" id="tab-stack-learn">
-    <div class="tab-page is-stack-top" id="tab-page-learn-root" data-page-id="learn-root">
-
-    <div class="home-actions">
-      <div class="home-primary-actions">
-        <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive" onclick="openAdaptiveV2()">
-          <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true"><use href="#icon-adaptive"/></svg></div>
-          <div class="rb-text">
-            <strong id="adaptive-v2-banner-title" data-i18n="adaptiveV2BannerTitle"></strong>
-            <span id="adaptive-v2-banner-sub" data-i18n="adaptiveV2BannerSub"></span>
-            <span id="adaptive-v2-banner-status" style="display:none"></span>
+  <!-- ══ IOS INSTALL GUIDE ══ -->
+  <div class="modal-root modal-root--install modal-root--align-bottom modal-root--pad-guide" id="install-guide-overlay">
+    <div class="modal-scrim" onclick="closeInstallGuide()"></div>
+    <div class="modal-sheet install-guide glass-sheet-shell">
+      <div class="install-guide-surface glass-sheet-surface glass glass-highlight">
+        <div class="install-guide-handle"></div>
+        <div class="install-guide-head">
+          <div>
+            <div class="install-guide-title" id="install-guide-title" data-i18n="installGuideTitle"></div>
           </div>
         </div>
-        <div class="random-banner rush-banner glass glass-tile glass-highlight glass-interactive" id="rush-banner" onclick="openRushMode()">
-          <div class="rb-icon-wrap rb-icon-wrap--rush" id="rush-banner-icon-wrap"><svg class="ui-icon ui-icon--filled" id="rush-banner-icon" aria-hidden="true"><use href="#icon-lightning"/></svg></div>
-          <div class="rb-text">
-            <strong id="rush-banner-title" data-i18n="rushBannerTitle"></strong>
-            <span id="rush-banner-sub">Sign in to play · Continuous challenge mode</span>
-          </div>
-        </div>
-      </div>
-      <div class="home-grid-actions">
-        <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive" onclick="openThemeSelect()">
-          <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true"><use href="#icon-theme-grid"/></svg></div>
-          <div class="rb-text">
-            <strong id="theme-banner-title" data-i18n="themeBannerTitle"></strong>
-            <span id="theme-banner-sub" data-i18n="themeBannerSub"></span>
-          </div>
-        </div>
-        <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive" onclick="openSwipeSetup()">
-          <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true"><use href="#icon-swipe-match"/></svg></div>
-          <div class="rb-text">
-            <strong id="swipe-banner-title" data-i18n="swipeBannerTitle"></strong>
-            <span id="swipe-banner-sub" data-i18n="swipeBannerSub"></span>
-          </div>
-        </div>
-        <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive" onclick="showRandomWord()">
-          <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon" aria-hidden="true"><use href="#icon-word-explore"/></svg></div>
-          <div class="rb-text">
-            <strong id="rw-banner-title" data-i18n="rwBannerTitle"></strong>
-            <span id="rw-banner-sub" data-i18n="rwBannerSub"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="home-tips">
-      <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
-        <div class="at-icon-wrap"><svg class="ui-icon" aria-hidden="true"><use href="#icon-lock"/></svg></div>
-        <div class="at-body">
-          <div class="at-title" id="at-title" data-i18n="tipTitle"></div>
-          <div class="at-desc" id="at-desc" data-i18n="tipDesc"></div>
-        </div>
-        <div class="at-arrow">›</div>
-      </div>
-    </div>
-  </div>
-
-<div class="tab-page tab-flow-page" id="screen-swipe-setup">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-setup-screen-title" data-i18n="swipeSetupTitle"></div>
-      <div class="swipe-subtitle" id="swipe-setup-screen-subtitle" data-i18n="swipeSubtitle"></div>
-    </div>
-  </div>
-  <div class="swipe-setup glass glass-tile">
-    <div class="swipe-setup-title" id="swipe-setup-title" data-i18n="swipeSetupTitle"></div>
-    <div class="swipe-setup-sub" id="swipe-setup-sub" data-i18n="swipeSetupSub"></div>
-    <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass-inner glass-interactive active" id="swipe-level-A1" onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1" data-i18n="levelNames.A1"></span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-A2" onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2" data-i18n="levelNames.A2"></span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-B1" onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1" data-i18n="levelNames.B1"></span></button>
-    </div>
-    <button class="btn-primary" id="swipe-prepare-btn" data-i18n="prepareTen" onclick="prepareSwipeGame()"></button>
-  </div>
-</div><div class="tab-page tab-flow-page" id="screen-swipe">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="swipe-title" data-i18n="swipeSetupTitle"></div>
-      <div class="swipe-subtitle" id="swipe-subtitle" data-i18n="swipeSubtitle"></div>
-    </div>
-  </div>
-  <div class="swipe-stage">
-    <div class="swipe-flash" id="swipe-flash">
-      <div class="swipe-flash-inner glass-inner glass-tile glass-highlight">
-        <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
-        <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
-      </div>
-    </div>
-    <div class="swipe-card-stack" id="swipe-card-stack"></div>
-  </div>
-  <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')" title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true"><use href="#icon-x"/></svg></button>
-    <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')" title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"/></svg></button>
-  </div>
-</div><div class="tab-page tab-flow-page" id="screen-adaptive-setup">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0" data-i18n="adaptiveSetupTitle"></div>
-      <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle" data-i18n="adaptiveSetupSubtitle"></div>
-    </div>
-  </div>
-  <div class="swipe-setup glass glass-tile">
-    <div class="swipe-level-grid">
-      <button class="swipe-level-btn glass-inner glass-interactive active" id="adaptive-level-A1" onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1" data-i18n="levelNames.A1"></span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-A2" onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2" data-i18n="levelNames.A2"></span></button>
-      <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-B1" onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1" data-i18n="levelNames.B1"></span></button>
-    </div>
-    <button class="btn-primary" id="adaptive-launch-btn" data-i18n="prepareTen" onclick="launchAdaptiveQuiz()"></button>
-  </div>
-</div><div class="tab-page tab-flow-page" id="screen-theme-select">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="theme-screen-title" style="color:#b78af7" data-i18n="themeSelectTitle"></div>
-      <div class="swipe-subtitle" id="theme-screen-subtitle" data-i18n="themeSelectSubtitle"></div>
-    </div>
-  </div>
-  <div class="category-grid" id="category-grid"></div>
-</div><div class="tab-page tab-flow-page" id="screen-random">
-  <div class="screen-top-title-src">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="rw-screen-title" data-i18n="rwBannerTitle"></div>
-      <div class="swipe-subtitle" id="rw-screen-subtitle" data-i18n="rwBannerSub"></div>
-    </div>
-  </div>
-  <div class="screen-top-actions-src" id="rw-top-actions">
-    <button class="app-top-action-btn glass glass-chrome glass-interactive" onclick="renderRandomWord()" id="rw-refresh-btn" type="button" title="New word" aria-label="New word"><svg class="ui-icon" aria-hidden="true"><use href="#icon-refresh"/></svg></button>
-  </div>
-  <div id="rw-content"></div>
-</div><div class="tab-page tab-flow-page" id="screen-dictionary">
-  <div class="dict-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)" data-i18n="dictScreenTitle"></div>
-      <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
-    </div>
-  </div>
-  <div class="dict-search-wrap">
-    <input type="search" class="dict-search-input" id="dict-search-input"
-           data-i18n-attr="placeholder:dictFilterPlaceholder" oninput="dictFilter(this.value)">
-  </div>
-  <div class="dict-body">
-    <div class="dict-list" id="dict-list">
-      <div class="dict-loading">
-        <div class="wikt-spinner"></div>
-        <span id="dict-loading-text" data-i18n="dictLoading"></span>
-      </div>
-    </div>
-    <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
-  </div>
-</div>    </div>
-  </div>
-  <!-- Practice tab -->
-  <div class="tab-panel" id="tab-panel-practice">
-    <div class="tab-stack" id="tab-stack-practice">
-    <div class="tab-page is-stack-top" id="tab-page-practice-root" data-page-id="practice-root">
-
-    <header class="practice-head">
-      <div class="practice-head-text">
-        <h2 class="practice-head-title" id="practice-setup-screen-title" data-i18n="practiceSetupTitle"></h2>
-        <p class="practice-head-sub" id="practice-setup-screen-subtitle" data-i18n="practiceSubtitle"></p>
-      </div>
-      <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive" id="practice-clear-filters-btn" data-i18n="practiceClearFilters" onclick="practiceClearFilters()"></button>
-    </header>
-
-    <div class="practice-filters" id="practice-filters">
-      <div class="swipe-level-grid" id="practice-levels">
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active" id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span id="practice-ln-A1" data-i18n="levelNames.A1"></span></button>
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span id="practice-ln-A2" data-i18n="levelNames.A2"></span></button>
-        <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive" id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span id="practice-ln-B1" data-i18n="levelNames.B1"></span></button>
-      </div>
-
-      <div class="section-label" id="practice-filter-difficulty-label" data-i18n="practiceFilterDifficulty"></div>
-      <div class="practice-chips" id="practice-difficulty-chips"></div>
-
-      <div class="section-label" id="practice-filter-type-label" data-i18n="practiceFilterType"></div>
-      <div class="practice-chips" id="practice-type-chips"></div>
-
-      <div class="section-label" id="practice-filter-article-label" data-i18n="practiceFilterArticle"></div>
-      <div class="practice-chips" id="practice-article-chips"></div>
-
-      <div class="section-label" id="practice-filter-topics-label" data-i18n="practiceFilterTopics"></div>
-      <div class="practice-chips" id="practice-category-chips"></div>
-    </div>
-
-    <div class="practice-dock glass glass-tile glass-highlight" id="practice-dock">
-      <p class="practice-count" id="practice-match-count">
-        <span class="practice-count-num" id="practice-match-num">0</span>
-        <span id="practice-match-label" data-i18n="practiceWordCount"></span>
-        <span class="practice-count-hint hidden" id="practice-match-hint" data-i18n="practiceNoWordsHint"></span>
-      </p>
-      <button type="button" class="btn-primary" id="practice-prepare-btn" data-i18n="prepareTen" onclick="startPracticeGame()" disabled></button>
-    </div>
-  </div>
-<div class="tab-page tab-flow-page" id="screen-practice">
-  <div class="swipe-header">
-    <div class="swipe-title-wrap">
-      <div class="swipe-title" id="practice-title" style="color:#7eb8f7" data-i18n="practiceSetupTitle"></div>
-      <div class="swipe-subtitle" id="practice-subtitle" data-i18n="practiceSubtitle"></div>
-    </div>
-  </div>
-  <div class="swipe-stage">
-    <div class="practice-card-stack" id="practice-card-stack"></div>
-  </div>
-  <div class="swipe-actions">
-    <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()" title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flip"/></svg></button>
-    <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()" title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
-  </div>
-</div>
-    </div>
-  </div>
-  <!-- Stats tab -->
-  <div class="tab-panel" id="tab-panel-stats">
-    <div class="tab-stack" id="tab-stack-stats">
-    <div class="tab-page is-stack-top" id="tab-page-stats-root" data-page-id="stats-root">
-
-    <div id="screen-learning-profile">
-      <div class="profile-header">
-        <div class="profile-title" id="learning-profile-title">Learning Profile</div>
-      </div>
-      <div id="learning-profile-content"></div>
-    </div>
-  </div>
-
-
-    </div>
-    </div>
-  <!-- Settings tab -->
-  <div class="tab-panel" id="tab-panel-settings">
-    <div class="tab-stack" id="tab-stack-settings">
-    <div class="tab-page is-stack-top" id="tab-page-settings-root" data-page-id="settings-root">
-
-    <header class="settings-head">
-      <h2 class="settings-head-title" id="st-title" data-i18n="settingsTitle"></h2>
-    </header>
-
-    <div class="drawer-section">
-      <div class="drawer-section-label" id="st-lang-label" data-i18n="langLabel"></div>
-      <div class="lang-dd" id="lang-dd">
-        <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger" onclick="_langDdToggle()" type="button" dir="ltr">
-          <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
-          <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="lang-dd-panel glass glass-tile glass-highlight glass-chrome" id="lang-dd-panel">
-          <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
-          <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
-          <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
-          <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
-          <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
-          <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
-          <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
-        </div>
-      </div>
-      <!-- hidden opt-* anchors kept for JS compat -->
-      <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
-      <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
-      <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
-    </div>
-
-    <div class="drawer-divider"></div>
-
-    <div class="drawer-section">
-      <div class="drawer-section-label" id="st-account-label" data-i18n="accountLabel"></div>
-      <div id="auth-section-content">
-        <!-- populated by auth.js once Supabase initialises -->
-        <button class="gsi-material-button" onclick="authSignIn()">
-          <div class="gsi-material-button-state"></div>
-          <div class="gsi-material-button-content-wrapper">
-            <div class="gsi-material-button-icon">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="display:block;">
-                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-              </svg>
+        <div class="install-steps">
+          <div class="install-step">
+            <div class="install-step-num">1</div>
+            <div>
+              <div class="install-step-title" id="install-step1-title" data-i18n="installStep1Title"></div>
+              <div class="install-step-desc" id="install-step1-desc">Tap the <span class="share-glyph-inline"
+                  aria-hidden="true"><svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 15V4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M8.5 7.5L12 4l3.5 3.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M5 13.5v4.3A1.2 1.2 0 0 0 6.2 19h11.6a1.2 1.2 0 0 0 1.2-1.2v-4.3" stroke="currentColor"
+                      stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span> Share button in your browser.</div>
+              <img src="assets/ShareButton.png" alt="Share button location" class="install-step-img">
             </div>
-            <span class="gsi-material-button-contents">Sign in with Google</span>
           </div>
+          <div class="install-step">
+            <div class="install-step-num">2</div>
+            <div>
+              <div class="install-step-title" id="install-step2-title" data-i18n="installStep2Title"></div>
+              <div class="install-step-desc" id="install-step2-desc">In the menu that opens, tap Add to Home Screen,
+                then confirm to install.</div>
+              <img src="assets/A2HS.png" alt="Add to Home Screen option" class="install-step-img">
+            </div>
+          </div>
+        </div>
+        <div class="install-guide-actions">
+          <button class="install-guide-btn secondary" id="install-guide-dismiss-btn" data-i18n="installClose"
+            onclick="closeInstallGuide()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ WORD CARD MODAL ══ -->
+  <div class="modal-root modal-root--word modal-root--align-bottom" id="word-modal-overlay">
+    <div class="modal-scrim" onclick="closeWordModal()"></div>
+    <div class="modal-sheet word-modal glass-sheet-shell">
+      <div class="word-modal-surface glass-sheet-surface glass glass-highlight">
+        <div class="word-modal-handle"></div>
+        <div id="word-modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ HOME ══ -->
+  <div id="quiz-prep-overlay" aria-live="polite">
+    <div class="wikt-spinner" style="width:36px;height:36px;border-width:4px;"></div>
+  </div>
+  <div class="screen" id="screen-levels">
+    <div class="tab-stage">
+      <div class="tab-viewport" id="tab-viewport">
+        <div class="tab-track" id="tab-track">
+          <!-- Learn tab -->
+          <div class="tab-panel active tab-flow-visible" id="tab-panel-learn" aria-hidden="false">
+            <div class="tab-stack" id="tab-stack-learn">
+              <div class="tab-page is-stack-top" id="tab-page-learn-root" data-page-id="learn-root">
+
+                <div class="home-actions">
+                  <div class="home-primary-actions">
+                    <div class="random-banner adaptive-v2-banner glass glass-tile glass-highlight glass-interactive"
+                      onclick="openAdaptiveV2()">
+                      <div class="rb-icon-wrap rb-icon-wrap--v2"><svg class="ui-icon" aria-hidden="true">
+                          <use href="#icon-adaptive" />
+                        </svg></div>
+                      <div class="rb-text">
+                        <strong id="adaptive-v2-banner-title" data-i18n="adaptiveV2BannerTitle"></strong>
+                        <span id="adaptive-v2-banner-sub" data-i18n="adaptiveV2BannerSub"></span>
+                        <span id="adaptive-v2-banner-status" style="display:none"></span>
+                      </div>
+                    </div>
+                    <div class="random-banner rush-banner glass glass-tile glass-highlight glass-interactive"
+                      id="rush-banner" onclick="openRushMode()">
+                      <div class="rb-icon-wrap rb-icon-wrap--rush" id="rush-banner-icon-wrap"><svg
+                          class="ui-icon ui-icon--filled" id="rush-banner-icon" aria-hidden="true">
+                          <use href="#icon-lightning" />
+                        </svg></div>
+                      <div class="rb-text">
+                        <strong id="rush-banner-title" data-i18n="rushBannerTitle"></strong>
+                        <span id="rush-banner-sub">Sign in to play · Continuous challenge mode</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="home-grid-actions">
+                    <div class="random-banner theme-banner glass glass-tile glass-highlight glass-interactive"
+                      onclick="openThemeSelect()">
+                      <div class="rb-icon-wrap rb-icon-wrap--theme"><svg class="ui-icon" aria-hidden="true">
+                          <use href="#icon-theme-grid" />
+                        </svg></div>
+                      <div class="rb-text">
+                        <strong id="theme-banner-title" data-i18n="themeBannerTitle"></strong>
+                        <span id="theme-banner-sub" data-i18n="themeBannerSub"></span>
+                      </div>
+                    </div>
+                    <div class="random-banner swipe-banner glass glass-tile glass-highlight glass-interactive"
+                      onclick="openSwipeSetup()">
+                      <div class="rb-icon-wrap rb-icon-wrap--swipe"><svg class="ui-icon" aria-hidden="true">
+                          <use href="#icon-swipe-match" />
+                        </svg></div>
+                      <div class="rb-text">
+                        <strong id="swipe-banner-title" data-i18n="swipeBannerTitle"></strong>
+                        <span id="swipe-banner-sub" data-i18n="swipeBannerSub"></span>
+                      </div>
+                    </div>
+                    <div class="random-banner word-explorer-banner glass glass-tile glass-highlight glass-interactive"
+                      onclick="showRandomWord()">
+                      <div class="rb-icon-wrap rb-icon-wrap--explorer"><svg class="ui-icon" aria-hidden="true">
+                          <use href="#icon-word-explore" />
+                        </svg></div>
+                      <div class="rb-text">
+                        <strong id="rw-banner-title" data-i18n="rwBannerTitle"></strong>
+                        <span id="rw-banner-sub" data-i18n="rwBannerSub"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-tips">
+                  <div class="adaptive-tip signin-tip" id="adaptive-tip" onclick="openSettings()">
+                    <div class="at-icon-wrap"><svg class="ui-icon" aria-hidden="true">
+                        <use href="#icon-lock" />
+                      </svg></div>
+                    <div class="at-body">
+                      <div class="at-title" id="at-title" data-i18n="tipTitle"></div>
+                      <div class="at-desc" id="at-desc" data-i18n="tipDesc"></div>
+                    </div>
+                    <div class="at-arrow">›</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-page tab-flow-page" id="screen-swipe-setup">
+                <div class="swipe-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="swipe-setup-screen-title" data-i18n="swipeSetupTitle"></div>
+                    <div class="swipe-subtitle" id="swipe-setup-screen-subtitle" data-i18n="swipeSubtitle"></div>
+                  </div>
+                </div>
+                <div class="swipe-setup glass glass-tile">
+                  <div class="swipe-setup-title" id="swipe-setup-title" data-i18n="swipeSetupTitle"></div>
+                  <div class="swipe-setup-sub" id="swipe-setup-sub" data-i18n="swipeSetupSub"></div>
+                  <div class="swipe-level-grid">
+                    <button class="swipe-level-btn glass-inner glass-interactive active" id="swipe-level-A1"
+                      onclick="setSwipeLevel('A1')"><strong>A1</strong><span id="swipe-ln-A1"
+                        data-i18n="levelNames.A1"></span></button>
+                    <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-A2"
+                      onclick="setSwipeLevel('A2')"><strong>A2</strong><span id="swipe-ln-A2"
+                        data-i18n="levelNames.A2"></span></button>
+                    <button class="swipe-level-btn glass-inner glass-interactive" id="swipe-level-B1"
+                      onclick="setSwipeLevel('B1')"><strong>B1</strong><span id="swipe-ln-B1"
+                        data-i18n="levelNames.B1"></span></button>
+                  </div>
+                  <button class="btn-primary" id="swipe-prepare-btn" data-i18n="prepareTen"
+                    onclick="prepareSwipeGame()"></button>
+                </div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-swipe">
+                <div class="swipe-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="swipe-title" data-i18n="swipeSetupTitle"></div>
+                    <div class="swipe-subtitle" id="swipe-subtitle" data-i18n="swipeSubtitle"></div>
+                  </div>
+                </div>
+                <div class="swipe-stage">
+                  <div class="swipe-flash" id="swipe-flash">
+                    <div class="swipe-flash-inner glass-inner glass-tile glass-highlight">
+                      <div class="swipe-flash-mark" id="swipe-flash-mark">RIGHT</div>
+                      <div class="swipe-flash-note" id="swipe-flash-note" hidden></div>
+                    </div>
+                  </div>
+                  <div class="swipe-card-stack" id="swipe-card-stack"></div>
+                </div>
+                <div class="swipe-actions">
+                  <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('left')"
+                    title="Wrong" aria-label="Wrong"><svg class="ui-icon" aria-hidden="true">
+                      <use href="#icon-x" />
+                    </svg></button>
+                  <button class="swipe-btn glass glass-chrome swipe-action-btn" onclick="swipeAction('right')"
+                    title="Correct" aria-label="Correct"><svg class="ui-icon" aria-hidden="true">
+                      <use href="#icon-check" />
+                    </svg></button>
+                </div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-adaptive-setup">
+                <div class="swipe-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="adaptive-setup-screen-title" style="color:#6be8a0"
+                      data-i18n="adaptiveSetupTitle"></div>
+                    <div class="swipe-subtitle" id="adaptive-setup-screen-subtitle" data-i18n="adaptiveSetupSubtitle">
+                    </div>
+                  </div>
+                </div>
+                <div class="swipe-setup glass glass-tile">
+                  <div class="swipe-level-grid">
+                    <button class="swipe-level-btn glass-inner glass-interactive active" id="adaptive-level-A1"
+                      onclick="setAdaptiveLevel('A1')"><strong>A1</strong><span id="adaptive-ln-A1"
+                        data-i18n="levelNames.A1"></span></button>
+                    <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-A2"
+                      onclick="setAdaptiveLevel('A2')"><strong>A2</strong><span id="adaptive-ln-A2"
+                        data-i18n="levelNames.A2"></span></button>
+                    <button class="swipe-level-btn glass-inner glass-interactive" id="adaptive-level-B1"
+                      onclick="setAdaptiveLevel('B1')"><strong>B1</strong><span id="adaptive-ln-B1"
+                        data-i18n="levelNames.B1"></span></button>
+                  </div>
+                  <button class="btn-primary" id="adaptive-launch-btn" data-i18n="prepareTen"
+                    onclick="launchAdaptiveQuiz()"></button>
+                </div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-theme-select">
+                <div class="swipe-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="theme-screen-title" style="color:#b78af7" data-i18n="themeSelectTitle">
+                    </div>
+                    <div class="swipe-subtitle" id="theme-screen-subtitle" data-i18n="themeSelectSubtitle"></div>
+                  </div>
+                </div>
+                <div class="category-grid" id="category-grid"></div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-random">
+                <div class="screen-top-title-src">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="rw-screen-title" data-i18n="rwBannerTitle"></div>
+                    <div class="swipe-subtitle" id="rw-screen-subtitle" data-i18n="rwBannerSub"></div>
+                  </div>
+                </div>
+                <div class="screen-top-actions-src" id="rw-top-actions">
+                  <button class="app-top-action-btn glass glass-chrome glass-interactive" onclick="renderRandomWord()"
+                    id="rw-refresh-btn" type="button" title="New word" aria-label="New word"><svg class="ui-icon"
+                      aria-hidden="true">
+                      <use href="#icon-refresh" />
+                    </svg></button>
+                </div>
+                <div id="rw-content"></div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-dictionary">
+                <div class="dict-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="dict-screen-title" style="color:var(--blue)"
+                      data-i18n="dictScreenTitle"></div>
+                    <div class="swipe-subtitle" id="dict-screen-subtitle">All words</div>
+                  </div>
+                </div>
+                <div class="dict-search-wrap">
+                  <input type="search" class="dict-search-input" id="dict-search-input"
+                    data-i18n-attr="placeholder:dictFilterPlaceholder" oninput="dictFilter(this.value)">
+                </div>
+                <div class="dict-body">
+                  <div class="dict-list" id="dict-list">
+                    <div class="dict-loading">
+                      <div class="wikt-spinner"></div>
+                      <span id="dict-loading-text" data-i18n="dictLoading"></span>
+                    </div>
+                  </div>
+                  <div class="dict-alpha-bar" id="dict-alpha-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Practice tab -->
+          <div class="tab-panel" id="tab-panel-practice">
+            <div class="tab-stack" id="tab-stack-practice">
+              <div class="tab-page is-stack-top" id="tab-page-practice-root" data-page-id="practice-root">
+
+                <header class="practice-head">
+                  <div class="practice-head-text">
+                    <h2 class="practice-head-title" id="practice-setup-screen-title" data-i18n="practiceSetupTitle">
+                    </h2>
+                    <p class="practice-head-sub" id="practice-setup-screen-subtitle" data-i18n="practiceSubtitle"></p>
+                  </div>
+                  <button type="button" class="practice-clear-btn glass glass-pill glass-chrome glass-interactive"
+                    id="practice-clear-filters-btn" data-i18n="practiceClearFilters"
+                    onclick="practiceClearFilters()"></button>
+                </header>
+
+                <div class="practice-filters" id="practice-filters">
+                  <div class="swipe-level-grid" id="practice-levels">
+                    <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive active"
+                      id="practice-level-A1" onclick="setPracticeLevel('A1')"><strong>A1</strong><span
+                        id="practice-ln-A1" data-i18n="levelNames.A1"></span></button>
+                    <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive"
+                      id="practice-level-A2" onclick="setPracticeLevel('A2')"><strong>A2</strong><span
+                        id="practice-ln-A2" data-i18n="levelNames.A2"></span></button>
+                    <button type="button" class="swipe-level-btn glass glass-chrome glass-interactive"
+                      id="practice-level-B1" onclick="setPracticeLevel('B1')"><strong>B1</strong><span
+                        id="practice-ln-B1" data-i18n="levelNames.B1"></span></button>
+                  </div>
+
+                  <div class="section-label" id="practice-filter-difficulty-label" data-i18n="practiceFilterDifficulty">
+                  </div>
+                  <div class="practice-chips" id="practice-difficulty-chips"></div>
+
+                  <div class="section-label" id="practice-filter-type-label" data-i18n="practiceFilterType"></div>
+                  <div class="practice-chips" id="practice-type-chips"></div>
+
+                  <div class="section-label" id="practice-filter-article-label" data-i18n="practiceFilterArticle"></div>
+                  <div class="practice-chips" id="practice-article-chips"></div>
+
+                  <div class="section-label" id="practice-filter-topics-label" data-i18n="practiceFilterTopics"></div>
+                  <div class="practice-chips" id="practice-category-chips"></div>
+                </div>
+
+                <div class="practice-dock glass glass-tile glass-highlight" id="practice-dock">
+                  <p class="practice-count" id="practice-match-count">
+                    <span class="practice-count-num" id="practice-match-num">0</span>
+                    <span id="practice-match-label" data-i18n="practiceWordCount"></span>
+                    <span class="practice-count-hint hidden" id="practice-match-hint"
+                      data-i18n="practiceNoWordsHint"></span>
+                  </p>
+                  <button type="button" class="btn-primary" id="practice-prepare-btn" data-i18n="prepareTen"
+                    onclick="startPracticeGame()" disabled></button>
+                </div>
+              </div>
+              <div class="tab-page tab-flow-page" id="screen-practice">
+                <div class="swipe-header">
+                  <div class="swipe-title-wrap">
+                    <div class="swipe-title" id="practice-title" style="color:#7eb8f7" data-i18n="practiceSetupTitle">
+                    </div>
+                    <div class="swipe-subtitle" id="practice-subtitle" data-i18n="practiceSubtitle"></div>
+                  </div>
+                </div>
+                <div class="swipe-stage">
+                  <div class="practice-card-stack" id="practice-card-stack"></div>
+                </div>
+                <div class="swipe-actions">
+                  <button class="swipe-btn glass glass-chrome practice-flip-btn" onclick="practiceFlipAction()"
+                    title="Flip card" aria-label="Flip card"><svg class="ui-icon" aria-hidden="true">
+                      <use href="#icon-flip" />
+                    </svg></button>
+                  <button class="swipe-btn glass glass-chrome practice-dismiss-btn" onclick="practiceDismissAction()"
+                    title="Next card" aria-label="Next card"><svg class="ui-icon" aria-hidden="true">
+                      <use href="#icon-arrow-right" />
+                    </svg></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Stats tab -->
+          <div class="tab-panel" id="tab-panel-stats">
+            <div class="tab-stack" id="tab-stack-stats">
+              <div class="tab-page is-stack-top" id="tab-page-stats-root" data-page-id="stats-root">
+
+                <div id="screen-learning-profile">
+                  <div class="profile-header">
+                    <div class="profile-title" id="learning-profile-title">Learning Profile</div>
+                  </div>
+                  <div id="learning-profile-content"></div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- Settings tab -->
+          <div class="tab-panel" id="tab-panel-settings">
+            <div class="tab-stack" id="tab-stack-settings">
+              <div class="tab-page is-stack-top" id="tab-page-settings-root" data-page-id="settings-root">
+
+                <header class="settings-head">
+                  <h2 class="settings-head-title" id="st-title" data-i18n="settingsTitle"></h2>
+                </header>
+
+                <div class="drawer-section">
+                  <div class="drawer-section-label" id="st-lang-label" data-i18n="langLabel"></div>
+                  <div class="lang-dd" id="lang-dd">
+                    <button class="lang-dd-trigger glass glass-pill glass-chrome glass-interactive" id="lang-dd-trigger"
+                      onclick="_langDdToggle()" type="button" dir="ltr">
+                      <span class="lang-dd-trigger-text" id="lang-dd-label">🇬🇧 English</span>
+                      <svg class="lang-dd-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <div class="lang-dd-panel glass glass-tile glass-highlight glass-chrome" id="lang-dd-panel">
+                      <div class="lang-dd-option" data-lang="de" onclick="_langDdSelect('de')">🇩🇪 Deutsch</div>
+                      <div class="lang-dd-option active" data-lang="en" onclick="_langDdSelect('en')">🇬🇧 English</div>
+                      <div class="lang-dd-option" data-lang="tr" onclick="_langDdSelect('tr')">🇹🇷 Türkçe</div>
+                      <div class="lang-dd-option" data-lang="ru" onclick="_langDdSelect('ru')">🇷🇺 Русский</div>
+                      <div class="lang-dd-option" data-lang="uk" onclick="_langDdSelect('uk')">🇺🇦 Українська</div>
+                      <div class="lang-dd-option" data-lang="fa" onclick="_langDdSelect('fa')">🇮🇷 فارسی</div>
+                      <div class="lang-dd-option" data-lang="ar" onclick="_langDdSelect('ar')">🇸🇦 العربية</div>
+                    </div>
+                  </div>
+                  <!-- hidden opt-* anchors kept for JS compat -->
+                  <span id="opt-de" hidden></span><span id="opt-en" hidden></span><span id="opt-tr" hidden></span>
+                  <span id="opt-ru" hidden></span><span id="opt-uk" hidden></span>
+                  <span id="opt-fa" hidden></span><span id="opt-ar" hidden></span>
+                </div>
+
+                <div class="drawer-divider"></div>
+
+                <div class="drawer-section">
+                  <div class="drawer-section-label" id="st-account-label" data-i18n="accountLabel"></div>
+                  <div id="auth-section-content">
+                    <!-- populated by auth.js once Supabase initialises -->
+                    <button class="gsi-material-button" onclick="authSignIn()">
+                      <div class="gsi-material-button-state"></div>
+                      <div class="gsi-material-button-content-wrapper">
+                        <div class="gsi-material-button-icon">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                            style="display:block;">
+                            <path fill="#EA4335"
+                              d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                            <path fill="#4285F4"
+                              d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                            <path fill="#FBBC05"
+                              d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                            <path fill="#34A853"
+                              d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                          </svg>
+                        </div>
+                        <span class="gsi-material-button-contents">Sign in with Google</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="drawer-divider"></div>
+
+                <div class="drawer-section">
+                  <div class="drawer-section-label" id="st-share-label" data-i18n="shareSectionLabel"></div>
+                  <div class="drawer-footer-row">
+                    <button class="drawer-about-row" id="share-app-btn" data-i18n="shareAppLabel"
+                      onclick="shareApp()"></button>
+                    <button class="drawer-about-row" id="copy-link-btn" data-i18n="copyLinkLabel"
+                      onclick="copyAppLink()"></button>
+                  </div>
+                </div>
+
+                <div class="drawer-divider"></div>
+
+                <div class="drawer-section">
+                  <button class="drawer-about-row" id="st-about-btn" data-i18n="aboutTitle" onclick="openAbout()"
+                    style="width:100%;"></button>
+                </div>
+
+                <div class="settings-footer">
+                  <p id="footer-msg" data-i18n="footerMsg"></p>
+                  <p id="footer-copy" data-i18n="footerCopy"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-shared-depot" aria-hidden="true">
+        <div class="tab-page tab-flow-page" id="screen-quiz">
+          <div class="screen-top-actions-src" id="quiz-top-actions">
+            <div class="quiz-header">
+              <div class="hud">
+                <div class="hud-pill glass glass-pill glass-chrome"><span class="dot"></span><span id="sc-ok">0</span>
+                </div>
+                <div class="hud-pill glass glass-pill glass-chrome"><span class="dot r"></span><span id="sc-no">0</span>
+                </div>
+                <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;" id="hud-pos">1/10</div>
+              </div>
+            </div>
+          </div>
+          <div class="prog-wrap glass glass-pill glass-chrome">
+            <div class="prog-fill" id="prog"></div>
+          </div>
+          <div class="card-type-row">
+            <span class="tbadge glass glass-pill glass-chrome" id="tbadge">Verb</span>
+            <span class="tlevel" id="tlevel"></span>
+            <span class="tmode-badge glass glass-pill glass-chrome" id="tmode-badge"></span>
+          </div>
+          <div class="word-card glass glass-tile glass-highlight">
+            <div class="card-q" id="cquestion"></div>
+            <div class="card-main" id="cmain" dir="ltr"></div>
+            <div class="card-sub" id="csub" dir="ltr"></div>
+          </div>
+          <div class="choices" id="choices"></div>
+          <div class="feedback glass glass-pill glass-chrome" id="feedback"></div>
+          <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
+        </div>
+        <div class="tab-page tab-flow-page" id="screen-results">
+          <div class="res-card">
+            <div class="res-emoji" id="r-emoji">🏆</div>
+            <div class="res-title" id="r-title">Ausgezeichnet!</div>
+            <div class="res-score" id="r-score">9/10</div>
+            <div class="res-sub" id="r-sub"></div>
+            <div class="res-row">
+              <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score" data-i18n="scoreLbl"></span>
+              </div>
+              <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct"
+                  data-i18n="correctLbl"></span></div>
+              <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong"
+                  data-i18n="wrongLbl"></span></div>
+            </div>
+            <button class="btn-primary" id="btn-play-again" data-i18n="playAgain" onclick="restartLevel()"></button>
+            <button class="btn-outline" id="btn-choose-level" data-i18n="chooseLevel" onclick="goHome()"></button>
+          </div>
+        </div>
+        <div class="tab-page tab-flow-page" id="screen-rush-summary">
+          <div class="res-card">
+            <div class="res-emoji" id="rush-summary-emoji">🏆</div>
+            <div class="res-title" id="rush-summary-title">Rush complete</div>
+            <div class="res-score" id="rush-summary-score">0/0</div>
+            <div class="res-sub" id="rush-summary-record" style="display:none"></div>
+            <div class="res-row">
+              <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score"
+                  data-i18n="rushLblScore"></span></div>
+              <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span
+                  id="rush-lbl-correct" data-i18n="rushLblCorrect"></span></div>
+              <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span
+                  id="rush-lbl-wrong" data-i18n="rushLblWrong"></span></div>
+            </div>
+            <div class="res-row" style="margin-top:8px;">
+              <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak"
+                  data-i18n="rushLblStreak"></span></div>
+              <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time"
+                  data-i18n="rushLblTime"></span></div>
+            </div>
+            <button class="btn-primary" id="btn-rush-again" data-i18n="rushSummaryAgain"
+              onclick="restartRushMode()"></button>
+            <button class="btn-outline" id="btn-rush-home" data-i18n="rushSummaryHome" onclick="goHome()"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom tab bar -->
+    <nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
+      <div class="bottom-tabs-inner glass glass-pill">
+        <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
+        <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
+          <svg class="ui-icon" aria-hidden="true">
+            <use href="#icon-sparkles" />
+          </svg>
+          <span class="bottom-tab-label">Practice</span>
         </button>
+        <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
+          <svg class="ui-icon" aria-hidden="true">
+            <use href="#icon-grad-cap" />
+          </svg>
+          <span class="bottom-tab-label">Learn</span>
+        </button>
+        <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
+          <svg class="ui-icon" aria-hidden="true">
+            <use href="#icon-chart" />
+          </svg>
+          <span class="bottom-tab-label">Stats</span>
+        </button>
+        <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
+          <svg class="ui-icon" aria-hidden="true">
+            <use href="#icon-gear" />
+          </svg>
+          <span class="bottom-tab-label">Settings</span>
+        </button>
+        <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
+          <span class="bottom-tab--gold" data-tab="learn">
+            <svg class="ui-icon" aria-hidden="true">
+              <use href="#icon-sparkles" />
+            </svg>
+            <span class="bottom-tab-label">Practice</span>
+          </span>
+          <span class="bottom-tab--gold" data-tab="practice">
+            <svg class="ui-icon" aria-hidden="true">
+              <use href="#icon-grad-cap" />
+            </svg>
+            <span class="bottom-tab-label">Learn</span>
+          </span>
+          <span class="bottom-tab--gold" data-tab="stats">
+            <svg class="ui-icon" aria-hidden="true">
+              <use href="#icon-chart" />
+            </svg>
+            <span class="bottom-tab-label">Stats</span>
+          </span>
+          <span class="bottom-tab--gold" data-tab="settings">
+            <svg class="ui-icon" aria-hidden="true">
+              <use href="#icon-gear" />
+            </svg>
+            <span class="bottom-tab-label">Settings</span>
+          </span>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="drawer-divider"></div>
-
-    <div class="drawer-section">
-      <div class="drawer-section-label" id="st-share-label" data-i18n="shareSectionLabel"></div>
-      <div class="drawer-footer-row">
-        <button class="drawer-about-row" id="share-app-btn" data-i18n="shareAppLabel" onclick="shareApp()"></button>
-        <button class="drawer-about-row" id="copy-link-btn" data-i18n="copyLinkLabel" onclick="copyAppLink()"></button>
-      </div>
-    </div>
-
-    <div class="drawer-divider"></div>
-
-    <div class="drawer-section">
-      <button class="drawer-about-row" id="st-about-btn" data-i18n="aboutTitle" onclick="openAbout()" style="width:100%;"></button>
-    </div>
-
-    <div class="settings-footer">
-      <p id="footer-msg" data-i18n="footerMsg"></p>
-      <p id="footer-copy" data-i18n="footerCopy"></p>
-    </div>
-  </div>
-    </div>
-    </div>
-  </div>
-  </div>
-  <div id="tab-shared-depot" aria-hidden="true">
-<div class="tab-page tab-flow-page" id="screen-quiz">
-  <div class="screen-top-actions-src" id="quiz-top-actions">
-    <div class="quiz-header">
-      <div class="hud">
-        <div class="hud-pill glass glass-pill glass-chrome"><span class="dot"></span><span id="sc-ok">0</span></div>
-        <div class="hud-pill glass glass-pill glass-chrome"><span class="dot r"></span><span id="sc-no">0</span></div>
-        <div class="hud-pill glass glass-pill glass-chrome" style="font-size:.74rem;" id="hud-pos">1/10</div>
-      </div>
-    </div>
-  </div>
-  <div class="prog-wrap glass glass-pill glass-chrome"><div class="prog-fill" id="prog"></div></div>
-  <div class="card-type-row">
-    <span class="tbadge glass glass-pill glass-chrome" id="tbadge">Verb</span>
-    <span class="tlevel" id="tlevel"></span>
-    <span class="tmode-badge glass glass-pill glass-chrome" id="tmode-badge"></span>
-  </div>
-  <div class="word-card glass glass-tile glass-highlight">
-    <div class="card-q" id="cquestion"></div>
-    <div class="card-main" id="cmain" dir="ltr"></div>
-    <div class="card-sub" id="csub" dir="ltr"></div>
-  </div>
-  <div class="choices" id="choices"></div>
-  <div class="feedback glass glass-pill glass-chrome" id="feedback"></div>
-  <button class="next-btn" id="next-btn" onclick="nextCard()">Next →</button>
-</div><div class="tab-page tab-flow-page" id="screen-results">
-  <div class="res-card">
-    <div class="res-emoji" id="r-emoji">🏆</div>
-    <div class="res-title" id="r-title">Ausgezeichnet!</div>
-    <div class="res-score" id="r-score">9/10</div>
-    <div class="res-sub" id="r-sub"></div>
-    <div class="res-row">
-      <div class="res-stat"><strong id="r-pct">90%</strong><span id="r-lbl-score" data-i18n="scoreLbl"></span></div>
-      <div class="res-stat"><strong id="r-ok" style="color:var(--green)">9</strong><span id="r-lbl-correct" data-i18n="correctLbl"></span></div>
-      <div class="res-stat"><strong id="r-no" style="color:var(--red)">1</strong><span id="r-lbl-wrong" data-i18n="wrongLbl"></span></div>
-    </div>
-    <button class="btn-primary" id="btn-play-again" data-i18n="playAgain" onclick="restartLevel()"></button>
-    <button class="btn-outline" id="btn-choose-level" data-i18n="chooseLevel" onclick="goHome()"></button>
-  </div>
-</div><div class="tab-page tab-flow-page" id="screen-rush-summary">
-  <div class="res-card">
-    <div class="res-emoji" id="rush-summary-emoji">🏆</div>
-    <div class="res-title" id="rush-summary-title">Rush complete</div>
-    <div class="res-score" id="rush-summary-score">0/0</div>
-    <div class="res-sub" id="rush-summary-record" style="display:none"></div>
-    <div class="res-row">
-      <div class="res-stat"><strong id="rush-summary-pct">0%</strong><span id="rush-lbl-score" data-i18n="rushLblScore"></span></div>
-      <div class="res-stat"><strong id="rush-summary-ok" style="color:var(--green)">0</strong><span id="rush-lbl-correct" data-i18n="rushLblCorrect"></span></div>
-      <div class="res-stat"><strong id="rush-summary-no" style="color:var(--red)">0</strong><span id="rush-lbl-wrong" data-i18n="rushLblWrong"></span></div>
-    </div>
-    <div class="res-row" style="margin-top:8px;">
-      <div class="res-stat"><strong id="rush-summary-streak">0</strong><span id="rush-lbl-streak" data-i18n="rushLblStreak"></span></div>
-      <div class="res-stat"><strong id="rush-summary-time">0s</strong><span id="rush-lbl-time" data-i18n="rushLblTime"></span></div>
-    </div>
-    <button class="btn-primary" id="btn-rush-again" data-i18n="rushSummaryAgain" onclick="restartRushMode()"></button>
-    <button class="btn-outline" id="btn-rush-home" data-i18n="rushSummaryHome" onclick="goHome()"></button>
-  </div>
-</div>  </div>
-
-</div>
-
-<!-- Bottom tab bar -->
-<nav class="bottom-tabs" id="bottom-tabs" aria-label="Main navigation">
-  <div class="bottom-tabs-inner glass glass-pill">
-    <span class="bottom-tab-indicator" id="bottom-tab-indicator" aria-hidden="true"></span>
-    <button type="button" class="bottom-tab active" id="bottom-tab-learn" data-tab="learn" aria-current="page">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
-      <span class="bottom-tab-label">Practice</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-practice" data-tab="practice">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
-      <span class="bottom-tab-label">Learn</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-stats" data-tab="stats">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
-      <span class="bottom-tab-label">Stats</span>
-    </button>
-    <button type="button" class="bottom-tab" id="bottom-tab-settings" data-tab="settings">
-      <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
-      <span class="bottom-tab-label">Settings</span>
-    </button>
-    <div class="bottom-tab-gold-overlay" id="bottom-tab-gold-overlay" aria-hidden="true">
-      <span class="bottom-tab--gold" data-tab="learn">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
-        <span class="bottom-tab-label">Practice</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="practice">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-grad-cap"/></svg>
-        <span class="bottom-tab-label">Learn</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="stats">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-chart"/></svg>
-        <span class="bottom-tab-label">Stats</span>
-      </span>
-      <span class="bottom-tab--gold" data-tab="settings">
-        <svg class="ui-icon" aria-hidden="true"><use href="#icon-gear"/></svg>
-        <span class="bottom-tab-label">Settings</span>
-      </span>
-    </div>
-  </div>
-</nav>
-
-<!-- ══ QUIZ ══ -->
+    <!-- ══ QUIZ ══ -->
 
 
-<!-- ══ RUSH SUMMARY ══ -->
+    <!-- ══ RUSH SUMMARY ══ -->
 
 
-<!-- ══ RESULTS ══ -->
+    <!-- ══ RESULTS ══ -->
 
 
-<!-- ══ SWIPE SETUP ══ -->
+    <!-- ══ SWIPE SETUP ══ -->
 
 
-<!-- ══ SWIPE GAME ══ -->
+    <!-- ══ SWIPE GAME ══ -->
 
 
-<!-- Practice setup lives in #tab-panel-practice -->
+    <!-- Practice setup lives in #tab-panel-practice -->
 
-<!-- ══ PRACTICE GAME ══ -->
-
-
-<!-- ══ ADAPTIVE QUIZ SETUP ══ -->
+    <!-- ══ PRACTICE GAME ══ -->
 
 
-<!-- ══ THEME SELECT ══ -->
+    <!-- ══ ADAPTIVE QUIZ SETUP ══ -->
 
 
-<!-- ══ RANDOM WORD ══ -->
+    <!-- ══ THEME SELECT ══ -->
 
 
-<!-- ══ DICTIONARY ══ -->
-<!-- 1. Supabase CDN — must be before auth.js -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <!-- ══ RANDOM WORD ══ -->
 
-<!-- 2. Core app (globals used by all other files) -->
-<script src="js/app_i18n.js?v=5.1"></script>
-<script src="js/app.js?v=5.1"></script>
-<script src="js/app_wordexplorer.js?v=5.0"></script>
-<script src="js/app_screens.js?v=5.1"></script>
-<script src="js/app_dialog.js?v=5.0"></script>
 
-<!-- 3. Game engines (call globals from app.js) -->
-<script src="js/adaptive.js?v=5.1"></script>
-<script src="js/adaptive_v2.js?v=5.1"></script>
-<script src="js/rush_mode.js?v=5.1"></script>
+    <!-- ══ DICTIONARY ══ -->
+    <!-- 1. Supabase CDN — must be before auth.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 
-<!-- 4. Auth — wraps functions defined in app.js -->
-<script src="js/auth.js?v=5.0"></script>
+    <!-- 2. Core app (globals used by all other files) -->
+    <script src="js/app_i18n.js?v=5.1"></script>
+    <script src="js/app.js?v=5.1"></script>
+    <script src="js/app_wordexplorer.js?v=5.0"></script>
+    <script src="js/app_screens.js?v=5.1"></script>
+    <script src="js/app_dialog.js?v=5.0"></script>
 
-<!-- 5. Supplemental features -->
-<script src="js/announcement.js?v=5.0"></script>
-<script src="js/sideRays.js?v=5.1"></script>
+    <!-- 3. Game engines (call globals from app.js) -->
+    <script src="js/adaptive.js?v=5.1"></script>
+    <script src="js/adaptive_v2.js?v=5.1"></script>
+    <script src="js/rush_mode.js?v=5.1"></script>
 
-<!-- Liquid-glass active navbar pill (GlassSurface) -->
-<script src="js/glassSurface.js?v=1.0"></script>
+    <!-- 4. Auth — wraps functions defined in app.js -->
+    <script src="js/auth.js?v=5.0"></script>
 
-<!-- 6. Umami analytics — deferred, non-blocking -->
-<script defer src="https://cloud.umami.is/script.js" data-website-id="0c4788e2-4038-4d45-89f3-0580ebd000d8"></script>
+    <!-- 5. Supplemental features -->
+    <script src="js/announcement.js?v=5.0"></script>
+    <script src="js/sideRays.js?v=5.1"></script>
 
-<!-- Splash teardown — fade out once the page has loaded and painted -->
-<script>
-(function(){
-  var splash = document.getElementById('app-splash');
-  if (!splash) return;
-  var MIN_VISIBLE_MS = 1000;
-  var done = false;
-  function fadeOut(){
-    // Wait two frames so the real UI has painted its first frame underneath
-    // the splash, then fade the splash out and remove it.
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){
-        splash.classList.add('is-hidden');
-        var removed = false;
-        function remove(){
-          if (removed) return;
-          removed = true;
-          if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+    <!-- Liquid-glass active navbar pill (GlassSurface) -->
+    <script src="js/glassSurface.js?v=1.0"></script>
+
+    <!-- 6. Umami analytics — deferred, non-blocking -->
+    <script defer src="https://cloud.umami.is/script.js"
+      data-website-id="0c4788e2-4038-4d45-89f3-0580ebd000d8"></script>
+
+    <!-- Splash teardown — fade out once the page has loaded and painted -->
+    <script>
+      (function () {
+        var splash = document.getElementById('app-splash');
+        if (!splash) return;
+        var MIN_VISIBLE_MS = 1000;
+        var done = false;
+        function fadeOut() {
+          // Wait two frames so the real UI has painted its first frame underneath
+          // the splash, then fade the splash out and remove it.
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              splash.classList.add('is-hidden');
+              var removed = false;
+              function remove() {
+                if (removed) return;
+                removed = true;
+                if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+              }
+              splash.addEventListener('transitionend', remove, { once: true });
+              setTimeout(remove, 900);
+            });
+          });
         }
-        splash.addEventListener('transitionend', remove, { once: true });
-        setTimeout(remove, 900);
-      });
-    });
-  }
-  function hide(){
-    if (done) return;
-    done = true;
-    // Keep the splash up for at least MIN_VISIBLE_MS (measured from page load
-    // start) so it never just flashes when everything is already cached.
-    var elapsed = (window.performance && performance.now) ? performance.now() : MIN_VISIBLE_MS;
-    setTimeout(fadeOut, Math.max(0, MIN_VISIBLE_MS - elapsed));
-  }
-  if (document.readyState === 'complete') hide();
-  else window.addEventListener('load', hide, { once: true });
-  // Hard fallback: never let the splash get stuck.
-  setTimeout(hide, 7000);
-})();
-</script>
-<!-- TEMPORARY GLASS SURFACE DEV TOOLS -->
-<script>
-(function() {
-  window.addEventListener('load', function() {
-    if (!window.GLASS_NAV_CONFIG || !window.GlassNavPill) {
-      console.warn("GlassNavPill or GLASS_NAV_CONFIG not loaded yet.");
-      return;
-    }
-
-    const cfg = window.GLASS_NAV_CONFIG;
-    
-    const styleEl = document.createElement('style');
-    styleEl.innerHTML = `
-      #glass-dev-panel {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 100000;
-        width: 320px;
-        max-height: 85vh;
-        background: rgba(11, 13, 19, 0.9);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-        color: #f1f1f1;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        box-sizing: border-box;
-      }
-      #glass-dev-panel * {
-        box-sizing: border-box;
-      }
-      .glass-dev-header {
-        padding: 10px 14px;
-        background: rgba(255, 255, 255, 0.04);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        user-select: none;
-        font-weight: 600;
-        font-size: 13px;
-      }
-      .glass-dev-header:hover {
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .glass-dev-toggle-icon {
-        transition: transform 0.2s ease;
-      }
-      .glass-dev-panel-collapsed .glass-dev-toggle-icon {
-        transform: rotate(-90deg);
-      }
-      .glass-dev-content {
-        padding: 14px;
-        overflow-y: auto;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .glass-dev-panel-collapsed .glass-dev-content {
-        display: none;
-      }
-      .glass-dev-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 8px;
-      }
-      .glass-dev-row label {
-        font-size: 11px;
-        color: #aaa;
-        font-family: monospace;
-      }
-      .glass-dev-row input {
-        width: 140px;
-        background: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #fff;
-        border-radius: 6px;
-        padding: 4px 8px;
-        font-size: 12px;
-        font-family: monospace;
-        outline: none;
-      }
-      .glass-dev-row input:focus {
-        border-color: #007aff;
-      }
-      .glass-dev-btn-toggle {
-        width: 100%;
-        padding: 8px;
-        background: rgba(0, 122, 255, 0.15);
-        border: 1px solid rgba(0, 122, 255, 0.4);
-        color: #fff;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 12px;
-        text-align: center;
-        transition: background 0.2s, border-color 0.2s;
-      }
-      .glass-dev-btn-toggle.active {
-        background: rgba(0, 122, 255, 0.8);
-        border-color: #007aff;
-        box-shadow: 0 0 8px rgba(0,122,255,0.4);
-      }
-      .glass-dev-textarea {
-        width: 100%;
-        height: 120px;
-        background: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        color: #00e676;
-        font-family: monospace;
-        font-size: 10px;
-        padding: 8px;
-        border-radius: 6px;
-        resize: none;
-        white-space: pre;
-        margin-top: 5px;
-      }
-      .glass-dev-copy-btn {
-        padding: 6px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #ccc;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 11px;
-        text-align: center;
-        width: 100%;
-        transition: background 0.2s, color 0.2s;
-      }
-      .glass-dev-copy-btn:hover {
-        background: rgba(255, 255, 255, 0.2);
-        color: #fff;
-      }
-    `;
-    document.head.appendChild(styleEl);
-
-    const panel = document.createElement('div');
-    panel.id = 'glass-dev-panel';
-    panel.className = 'glass-dev-panel-collapsed';
-
-    const header = document.createElement('div');
-    header.className = 'glass-dev-header';
-    header.innerHTML = `<span>🧪 Glass Pill Dev Tools</span><span class="glass-dev-toggle-icon">▼</span>`;
-    header.addEventListener('click', () => {
-      panel.classList.toggle('glass-dev-panel-collapsed');
-    });
-    panel.appendChild(header);
-
-    const content = document.createElement('div');
-    content.className = 'glass-dev-content';
-
-    const forceBtn = document.createElement('button');
-    forceBtn.className = 'glass-dev-btn-toggle';
-    forceBtn.innerText = 'Force Active: OFF';
-    let forceActive = false;
-
-    const originalSettle = window.GlassNavPill.settle;
-    const originalSettleOnArrival = window.GlassNavPill.settleOnArrival;
-
-    forceBtn.addEventListener('click', () => {
-      forceActive = !forceActive;
-      if (forceActive) {
-        forceBtn.innerText = 'Force Active: ON';
-        forceBtn.classList.add('active');
-        window.GlassNavPill.settle = () => {};
-        window.GlassNavPill.settleOnArrival = () => {};
-        window.GlassNavPill.beginMove(false);
-      } else {
-        forceBtn.innerText = 'Force Active: OFF';
-        forceBtn.classList.remove('active');
-        window.GlassNavPill.settle = originalSettle;
-        window.GlassNavPill.settleOnArrival = originalSettleOnArrival;
-        window.GlassNavPill.settle();
-      }
-    });
-    content.appendChild(forceBtn);
-
-    const textarea = document.createElement('textarea');
-    textarea.className = 'glass-dev-textarea';
-    textarea.readOnly = true;
-
-    function updateCodeBlock() {
-      textarea.value = `window.GLASS_NAV_CONFIG = {
-  scaleX: ${cfg.scaleX},
-  scaleY: ${cfg.scaleY},
-  borderWidth: ${cfg.borderWidth},
-  brightness: ${cfg.brightness},
-  opacity: ${cfg.opacity},
-  blur: ${cfg.blur},
-  displace: ${cfg.displace},
-  backgroundOpacity: ${cfg.backgroundOpacity},
-  saturation: ${cfg.saturation},
-  distortionScale: ${cfg.distortionScale},
-  redOffset: ${cfg.redOffset},
-  greenOffset: ${cfg.greenOffset},
-  blueOffset: ${cfg.blueOffset},
-  mixBlendMode: '${cfg.mixBlendMode}'
-};`;
-    }
-
-    const keys = [
-      { key: 'scaleX', label: 'scaleX', type: 'number' },
-      { key: 'scaleY', label: 'scaleY', type: 'number' },
-      { key: 'borderWidth', label: 'borderWidth', type: 'number' },
-      { key: 'brightness', label: 'brightness', type: 'number' },
-      { key: 'opacity', label: 'opacity', type: 'number' },
-      { key: 'blur', label: 'blur', type: 'number' },
-      { key: 'displace', label: 'displace', type: 'number' },
-      { key: 'backgroundOpacity', label: 'backgroundOpacity', type: 'number' },
-      { key: 'saturation', label: 'saturation', type: 'number' },
-      { key: 'distortionScale', label: 'distortionScale', type: 'number' },
-      { key: 'redOffset', label: 'redOffset', type: 'number' },
-      { key: 'greenOffset', label: 'greenOffset', type: 'number' },
-      { key: 'blueOffset', label: 'blueOffset', type: 'number' },
-      { key: 'mixBlendMode', label: 'mixBlendMode', type: 'text' }
-    ];
-
-    keys.forEach(item => {
-      const row = document.createElement('div');
-      row.className = 'glass-dev-row';
-      
-      const labelEl = document.createElement('label');
-      labelEl.innerText = item.label;
-      row.appendChild(labelEl);
-
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.value = cfg[item.key];
-      input.addEventListener('input', (e) => {
-        let val = e.target.value;
-        if (item.type === 'number') {
-          const parsed = parseFloat(val);
-          if (!isNaN(parsed)) {
-            cfg[item.key] = parsed;
-          }
-        } else {
-          cfg[item.key] = val;
+        function hide() {
+          if (done) return;
+          done = true;
+          // Keep the splash up for at least MIN_VISIBLE_MS (measured from page load
+          // start) so it never just flashes when everything is already cached.
+          var elapsed = (window.performance && performance.now) ? performance.now() : MIN_VISIBLE_MS;
+          setTimeout(fadeOut, Math.max(0, MIN_VISIBLE_MS - elapsed));
         }
-        
-        window.GlassNavPill.updateConfig();
-        if (forceActive) {
-          window.GlassNavPill.beginMove(false);
-        }
-        updateCodeBlock();
-      });
-      row.appendChild(input);
-      content.appendChild(row);
-    });
-
-    content.appendChild(textarea);
-
-    const copyBtn = document.createElement('button');
-    copyBtn.className = 'glass-dev-copy-btn';
-    copyBtn.innerText = 'Copy JS Config Code';
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(textarea.value).then(() => {
-        copyBtn.innerText = 'Copied!';
-        setTimeout(() => { copyBtn.innerText = 'Copy JS Config Code'; }, 1500);
-      });
-    });
-    content.appendChild(copyBtn);
-
-    panel.appendChild(content);
-    document.body.appendChild(panel);
-
-    updateCodeBlock();
-  });
-})();
-</script>
+        if (document.readyState === 'complete') hide();
+        else window.addEventListener('load', hide, { once: true });
+        // Hard fallback: never let the splash get stuck.
+        setTimeout(hide, 7000);
+      })();
+    </script>
 </body>
+
 </html>
