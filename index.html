@@ -759,5 +759,282 @@
   setTimeout(hide, 7000);
 })();
 </script>
+<!-- TEMPORARY GLASS SURFACE DEV TOOLS -->
+<script>
+(function() {
+  window.addEventListener('load', function() {
+    if (!window.GLASS_NAV_CONFIG || !window.GlassNavPill) {
+      console.warn("GlassNavPill or GLASS_NAV_CONFIG not loaded yet.");
+      return;
+    }
+
+    const cfg = window.GLASS_NAV_CONFIG;
+    
+    const styleEl = document.createElement('style');
+    styleEl.innerHTML = `
+      #glass-dev-panel {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 100000;
+        width: 320px;
+        max-height: 85vh;
+        background: rgba(11, 13, 19, 0.9);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        color: #f1f1f1;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      #glass-dev-panel * {
+        box-sizing: border-box;
+      }
+      .glass-dev-header {
+        padding: 10px 14px;
+        background: rgba(255, 255, 255, 0.04);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        font-weight: 600;
+        font-size: 13px;
+      }
+      .glass-dev-header:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .glass-dev-toggle-icon {
+        transition: transform 0.2s ease;
+      }
+      .glass-dev-panel-collapsed .glass-dev-toggle-icon {
+        transform: rotate(-90deg);
+      }
+      .glass-dev-content {
+        padding: 14px;
+        overflow-y: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .glass-dev-panel-collapsed .glass-dev-content {
+        display: none;
+      }
+      .glass-dev-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+      .glass-dev-row label {
+        font-size: 11px;
+        color: #aaa;
+        font-family: monospace;
+      }
+      .glass-dev-row input {
+        width: 140px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border-radius: 6px;
+        padding: 4px 8px;
+        font-size: 12px;
+        font-family: monospace;
+        outline: none;
+      }
+      .glass-dev-row input:focus {
+        border-color: #007aff;
+      }
+      .glass-dev-btn-toggle {
+        width: 100%;
+        padding: 8px;
+        background: rgba(0, 122, 255, 0.15);
+        border: 1px solid rgba(0, 122, 255, 0.4);
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: center;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .glass-dev-btn-toggle.active {
+        background: rgba(0, 122, 255, 0.8);
+        border-color: #007aff;
+        box-shadow: 0 0 8px rgba(0,122,255,0.4);
+      }
+      .glass-dev-textarea {
+        width: 100%;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #00e676;
+        font-family: monospace;
+        font-size: 10px;
+        padding: 8px;
+        border-radius: 6px;
+        resize: none;
+        white-space: pre;
+        margin-top: 5px;
+      }
+      .glass-dev-copy-btn {
+        padding: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ccc;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 11px;
+        text-align: center;
+        width: 100%;
+        transition: background 0.2s, color 0.2s;
+      }
+      .glass-dev-copy-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+    `;
+    document.head.appendChild(styleEl);
+
+    const panel = document.createElement('div');
+    panel.id = 'glass-dev-panel';
+    panel.className = 'glass-dev-panel-collapsed';
+
+    const header = document.createElement('div');
+    header.className = 'glass-dev-header';
+    header.innerHTML = `<span>🧪 Glass Pill Dev Tools</span><span class="glass-dev-toggle-icon">▼</span>`;
+    header.addEventListener('click', () => {
+      panel.classList.toggle('glass-dev-panel-collapsed');
+    });
+    panel.appendChild(header);
+
+    const content = document.createElement('div');
+    content.className = 'glass-dev-content';
+
+    const forceBtn = document.createElement('button');
+    forceBtn.className = 'glass-dev-btn-toggle';
+    forceBtn.innerText = 'Force Active: OFF';
+    let forceActive = false;
+
+    const originalSettle = window.GlassNavPill.settle;
+    const originalSettleOnArrival = window.GlassNavPill.settleOnArrival;
+
+    forceBtn.addEventListener('click', () => {
+      forceActive = !forceActive;
+      if (forceActive) {
+        forceBtn.innerText = 'Force Active: ON';
+        forceBtn.classList.add('active');
+        window.GlassNavPill.settle = () => {};
+        window.GlassNavPill.settleOnArrival = () => {};
+        window.GlassNavPill.beginMove(false);
+      } else {
+        forceBtn.innerText = 'Force Active: OFF';
+        forceBtn.classList.remove('active');
+        window.GlassNavPill.settle = originalSettle;
+        window.GlassNavPill.settleOnArrival = originalSettleOnArrival;
+        window.GlassNavPill.settle();
+      }
+    });
+    content.appendChild(forceBtn);
+
+    const textarea = document.createElement('textarea');
+    textarea.className = 'glass-dev-textarea';
+    textarea.readOnly = true;
+
+    function updateCodeBlock() {
+      textarea.value = `window.GLASS_NAV_CONFIG = {
+  scaleX: ${cfg.scaleX},
+  scaleY: ${cfg.scaleY},
+  borderWidth: ${cfg.borderWidth},
+  brightness: ${cfg.brightness},
+  opacity: ${cfg.opacity},
+  blur: ${cfg.blur},
+  displace: ${cfg.displace},
+  backgroundOpacity: ${cfg.backgroundOpacity},
+  saturation: ${cfg.saturation},
+  distortionScale: ${cfg.distortionScale},
+  redOffset: ${cfg.redOffset},
+  greenOffset: ${cfg.greenOffset},
+  blueOffset: ${cfg.blueOffset},
+  mixBlendMode: '${cfg.mixBlendMode}'
+};`;
+    }
+
+    const keys = [
+      { key: 'scaleX', label: 'scaleX', type: 'number' },
+      { key: 'scaleY', label: 'scaleY', type: 'number' },
+      { key: 'borderWidth', label: 'borderWidth', type: 'number' },
+      { key: 'brightness', label: 'brightness', type: 'number' },
+      { key: 'opacity', label: 'opacity', type: 'number' },
+      { key: 'blur', label: 'blur', type: 'number' },
+      { key: 'displace', label: 'displace', type: 'number' },
+      { key: 'backgroundOpacity', label: 'backgroundOpacity', type: 'number' },
+      { key: 'saturation', label: 'saturation', type: 'number' },
+      { key: 'distortionScale', label: 'distortionScale', type: 'number' },
+      { key: 'redOffset', label: 'redOffset', type: 'number' },
+      { key: 'greenOffset', label: 'greenOffset', type: 'number' },
+      { key: 'blueOffset', label: 'blueOffset', type: 'number' },
+      { key: 'mixBlendMode', label: 'mixBlendMode', type: 'text' }
+    ];
+
+    keys.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'glass-dev-row';
+      
+      const labelEl = document.createElement('label');
+      labelEl.innerText = item.label;
+      row.appendChild(labelEl);
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = cfg[item.key];
+      input.addEventListener('input', (e) => {
+        let val = e.target.value;
+        if (item.type === 'number') {
+          const parsed = parseFloat(val);
+          if (!isNaN(parsed)) {
+            cfg[item.key] = parsed;
+          }
+        } else {
+          cfg[item.key] = val;
+        }
+        
+        window.GlassNavPill.updateConfig();
+        if (forceActive) {
+          window.GlassNavPill.beginMove(false);
+        }
+        updateCodeBlock();
+      });
+      row.appendChild(input);
+      content.appendChild(row);
+    });
+
+    content.appendChild(textarea);
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'glass-dev-copy-btn';
+    copyBtn.innerText = 'Copy JS Config Code';
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        copyBtn.innerText = 'Copied!';
+        setTimeout(() => { copyBtn.innerText = 'Copy JS Config Code'; }, 1500);
+      });
+    });
+    content.appendChild(copyBtn);
+
+    panel.appendChild(content);
+    document.body.appendChild(panel);
+
+    updateCodeBlock();
+  });
+})();
+</script>
 </body>
 </html>

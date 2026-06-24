@@ -11,6 +11,27 @@
  * active pill "pop" into liquid glass while it moves (drag / tab switch), then
  * settle back to yellow. Driven from js/app_screens.js.
  */
+
+// GLOBAL NAVBAR GLASS CONFIGURATION (For easy editing)
+window.GLASS_NAV_CONFIG = {
+  scaleX: 1.15, // <-- horizontal size of the glass pill (1 = same width)
+  scaleY: 1.45, // <-- vertical size of the glass pill (1 = same height)
+
+  // --- glossy / glass effect settings ---
+  borderWidth: 0.2,
+  brightness: 50,
+  opacity: 1,
+  blur: 8,
+  displace: 0.2,
+  backgroundOpacity: 0,
+  saturation: 1,
+  distortionScale: -250,
+  redOffset: -16,
+  greenOffset: 15,
+  blueOffset: 10,
+  mixBlendMode: 'difference'
+};
+
 (function (global) {
   'use strict';
 
@@ -60,6 +81,7 @@
     const blueGradId = `blue-grad-${unique}`;
 
     const container = document.createElement('div');
+    container.opts = o;
     const svgOk = supportsSVGFilters(filterId);
     container.className =
       `glass-surface ${svgOk ? 'glass-surface--svg' : 'glass-surface--fallback'} ${o.className}`.trim();
@@ -164,6 +186,12 @@
       const w = container.offsetWidth || rect.width || 400;
       const h = container.offsetHeight || rect.height || 200;
       const edge = Math.min(w, h) * (o.borderWidth * 0.5);
+
+      // Dynamically extract the current border-radius to keep SVG shape aligned with CSS borders
+      const brVal = parseFloat(container.style.borderRadius);
+      const br = !isNaN(brVal) ? brVal : o.borderRadius;
+      const brInner = Math.max(0, br - edge);
+
       const svgContent = `
         <svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -176,15 +204,18 @@
               <stop offset="100%" stop-color="blue"/>
             </linearGradient>
           </defs>
-          <rect x="0" y="0" width="${w}" height="${h}" fill="black"></rect>
-          <rect x="0" y="0" width="${w}" height="${h}" rx="${o.borderRadius}" fill="url(#${redGradId})" />
-          <rect x="0" y="0" width="${w}" height="${h}" rx="${o.borderRadius}" fill="url(#${blueGradId})" style="mix-blend-mode: ${o.mixBlendMode}" />
-          <rect x="${edge}" y="${edge}" width="${w - edge * 2}" height="${h - edge * 2}" rx="${o.borderRadius}" fill="hsl(0 0% ${o.brightness}% / ${o.opacity})" style="filter:blur(${o.blur}px)" />
+          <rect x="0" y="0" width="${w}" height="${h}" rx="${br}" fill="url(#${redGradId})" />
+          <rect x="0" y="0" width="${w}" height="${h}" rx="${br}" fill="url(#${blueGradId})" style="mix-blend-mode: ${o.mixBlendMode}" />
+          <rect x="${edge}" y="${edge}" width="${w - edge * 2}" height="${h - edge * 2}" rx="${brInner}" fill="hsl(0 0% ${o.brightness}% / ${o.opacity})" style="filter:blur(${o.blur}px)" />
         </svg>`;
       return `data:image/svg+xml,${encodeURIComponent(svgContent)}`;
     }
 
     function updateDisplacementMap() {
+      // Sync dynamic settings that could affect CSS custom properties
+      container.style.setProperty('--glass-frost', o.backgroundOpacity);
+      container.style.setProperty('--glass-saturation', o.saturation);
+
       feImage.setAttribute('href', generateDisplacementMap());
       [
         [redChannel, o.redOffset],
@@ -209,30 +240,7 @@
     return container;
   }
 
-  // ===========================================================================
-  // GLOSSY / GLASS EFFECTS — settings for the navbar active pill.
-  // scaleX / scaleY = how much bigger the liquid-glass pill is than the yellow
-  // indicator while it is "popped out" and moving. 1 = same size as the pill.
-  // Adjust width (X) and height (Y) independently.
-  // ===========================================================================
-  const GLASS_NAV_CONFIG = {
-    scaleX: 1.15, // <-- horizontal size of the glass pill (1 = same width)
-    scaleY: 1.45, // <-- vertical size of the glass pill (1 = same height)
-
-    // --- glossy / glass effect settings ---
-    borderWidth: 0.2,
-    brightness: 50,
-    opacity: 1,
-    blur: 8,
-    displace: 0.2,
-    backgroundOpacity: 0,
-    saturation: 1,
-    distortionScale: -250,
-    redOffset: -16,
-    greenOffset: 15,
-    blueOffset: 10,
-    mixBlendMode: 'difference'
-  };
+  // Note: GLASS_NAV_CONFIG is now defined globally at the top of this file.
 
   // ---------------------------------------------------------------------------
   // Navbar liquid-glass pill.
@@ -263,7 +271,7 @@
       if (el) return el;
       const inner = document.querySelector('.bottom-tabs-inner');
       if (!inner) return null;
-      const c = GLASS_NAV_CONFIG;
+      const c = global.GLASS_NAV_CONFIG;
       el = createGlassSurface({
         width: 10,
         height: 10,
@@ -305,8 +313,8 @@
     function place(pillLeftVP, pillTopVP, pillW, pillH) {
       const g = ensure();
       if (!g) return;
-      const gw = pillW * GLASS_NAV_CONFIG.scaleX;
-      const gh = pillH * GLASS_NAV_CONFIG.scaleY;
+      const gw = pillW * global.GLASS_NAV_CONFIG.scaleX;
+      const gh = pillH * global.GLASS_NAV_CONFIG.scaleY;
       const gl = pillLeftVP - (gw - pillW) / 2;
       const gt = pillTopVP - (gh - pillH) / 2;
       if (Math.abs(gw - curW) > 0.5 || Math.abs(gh - curH) > 0.5) {
@@ -318,6 +326,24 @@
         if (g._glassUpdate) g._glassUpdate();
       }
       g.style.translate = `${gl}px ${gt}px`;
+    }
+
+    function updateConfig() {
+      const g = ensure();
+      if (!g) return;
+      const c = global.GLASS_NAV_CONFIG;
+      Object.assign(g.opts, c);
+      
+      const inner = document.querySelector('.bottom-tabs-inner');
+      if (inner) {
+        inner.style.setProperty('--nav-glass-scale-x', String(c.scaleX));
+        inner.style.setProperty('--nav-glass-scale-y', String(c.scaleY));
+      }
+      g.style.setProperty('--g-rest-sx', String(1 / c.scaleX));
+      g.style.setProperty('--g-rest-sy', String(1 / c.scaleY));
+      
+      syncToIndicator();
+      if (g._glassUpdate) g._glassUpdate();
     }
 
     // Mirror the yellow indicator. pillLeft/pillTop are offsets inside
@@ -417,7 +443,7 @@
       return !!(el && el.classList.contains('is-active'));
     }
 
-    return { ensure, sync, beginMove, releaseInstant, settle, settleOnArrival, isActive };
+    return { ensure, sync, beginMove, releaseInstant, settle, settleOnArrival, isActive, updateConfig };
   })();
 
   // export
