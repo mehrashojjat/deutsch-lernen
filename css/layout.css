@@ -113,26 +113,30 @@ body.app-offline .bottom-tabs{display:none!important;}
 @media(prefers-reduced-motion:reduce){
   .tab-page.is-stack-exit,.tab-page.is-stack-enter,.tab-page.is-stack-exit-back,.tab-page.is-stack-enter-back{animation:none!important;}
 }
-.bottom-tabs{position:fixed;bottom:0;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px) * 0.3);
+.bottom-tabs{position:fixed;bottom:calc(var(--tab-bar-bottom-inset) + env(safe-area-inset-bottom,0px));left:0;right:0;z-index:80;display:flex;justify-content:center;padding-inline:var(--tab-panel-gutter);
   pointer-events:none;}
 .bottom-tabs.hidden{display:none;}
-.bottom-tabs-inner{width:100%;max-width:600px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px;--glass-bg:var(--glass-fill-nav);pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
+.bottom-tabs-inner{width:100%;max-width:var(--tab-content-max);min-height:var(--tab-bar-content-height);position:relative;display:flex;align-items:stretch;justify-content:center;gap:var(--tab-bar-gap);padding:var(--tab-bar-padding-block) var(--tab-bar-padding-inline);border-radius:999px;box-sizing:border-box;overflow:visible;transform-origin:center;scale:1;transition:scale var(--modal-dur) var(--modal-ease);--tab-item-effective:min(var(--tab-item-width),calc((100% - 3 * var(--tab-bar-gap)) / 4));--glass-bg:var(--glass-fill-nav);pointer-events:all;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;}
 .bottom-tabs-inner.is-dragging{cursor:grabbing;}
+.bottom-tabs-inner.nav-glass-morph{scale:var(--nav-bar-drag-scale);}
 .bottom-tab-indicator{position:absolute;top:0;left:0;border-radius:999px;background:var(--gold-soft);transform-origin:center;
   scale:var(--ind-sx,1) var(--ind-sy,1);
   z-index:1;pointer-events:none;transition:translate var(--modal-dur) var(--modal-ease),scale var(--modal-dur) var(--modal-ease),width var(--modal-dur) var(--modal-ease),height var(--modal-dur) var(--modal-ease),opacity var(--modal-dur) var(--modal-ease);}
 /* During a drag the position follows the finger instantly, but the shape (scale) + opacity still morph. */
 .bottom-tab-indicator.is-dragging{transition:scale var(--modal-dur) var(--modal-ease),opacity var(--modal-dur) var(--modal-ease);}
 /* While the active pill "pops" into liquid glass, the yellow indicator grows and fades out. */
-.bottom-tabs-inner.nav-glass-morph .bottom-tab-indicator{opacity:0;--ind-sx:var(--nav-glass-scale-x,1.3);--ind-sy:var(--nav-glass-scale-y,1.3);}
+.bottom-tabs-inner.nav-glass-morph .bottom-tab-indicator{opacity:0;visibility:hidden;--ind-sx:var(--nav-glass-scale-x,1.3);--ind-sy:var(--nav-glass-scale-y,1.3);}
+/* Base tabs stay muted during morph — gold only via the moving overlay clip. */
+.bottom-tabs-inner.nav-glass-morph .bottom-tab,
+.bottom-tabs-inner.nav-glass-morph .bottom-tab .ui-icon{color:rgba(255,255,255,0.55);}
 .bottom-tab-gold-overlay{position:absolute;inset:0;z-index:2;pointer-events:none;clip-path:inset(0 75% 0 0 round 999px);
   transition:clip-path var(--modal-dur) var(--modal-ease);}
 .bottom-tab-gold-overlay.is-dragging{transition:none;}
-.bottom-tab--gold{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;box-sizing:border-box;font-family:inherit;color:var(--gold);}
-.bottom-tab--gold .ui-icon{width:20px;height:20px;color:var(--gold);}
-.bottom-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;border:none;border-radius:999px;
-  background:transparent;color:rgba(255,255,255,0.42);cursor:pointer;font-family:inherit;transition:color .18s;min-height:46px;position:relative;z-index:0;}
-.bottom-tab:hover{color:rgba(255,255,255,0.65);}
-.bottom-tab-label{font-size:.58rem;font-weight:600;letter-spacing:.02em;line-height:1;}
+.bottom-tab--gold{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:5px 6px;box-sizing:border-box;font-family:inherit;color:var(--gold);}
+.bottom-tab--gold .ui-icon{width:var(--tab-icon-size);height:var(--tab-icon-size);color:var(--gold);}
+.bottom-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:var(--tab-item-effective);flex:0 0 var(--tab-item-effective);align-self:stretch;box-sizing:border-box;padding:5px 6px;border:none;border-radius:var(--tab-highlight-radius);
+  background:transparent;color:rgba(255,255,255,0.55);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;transition:color .18s;min-height:0;position:relative;z-index:0;}
+.bottom-tab:hover{color:rgba(255,255,255,0.72);}
+.bottom-tab-label{font-size:var(--tab-label-size);font-weight:500;letter-spacing:.01em;line-height:1.1;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .profile-level-tab.adaptive-tab{font-size:.72rem;padding:7px 9px;}
 .profile-level-tabs.has-adaptive-tab{flex-wrap:wrap;justify-content:flex-end;max-width:220px;}

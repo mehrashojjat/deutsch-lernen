@@ -8,6 +8,9 @@
 (function () {
   'use strict';
 
+  // Set to true to show the migration announcement modal (#ann-overlay).
+  if (!window.ANNOUNCEMENT_OVERLAY_ENABLED) return;
+
   var LINK = '<strong><a href="https://wortschatzapp.de" target="_blank" rel="noopener noreferrer">wortschatzapp.de</a></strong>';
 
   var ANNOUNCEMENTS = [

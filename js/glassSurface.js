@@ -14,21 +14,27 @@
 
 // GLOBAL NAVBAR GLASS CONFIGURATION (For easy editing)
 window.GLASS_NAV_CONFIG = {
-  scaleX: 1.2,
-  scaleY: 1.4,
-  borderWidth: 0.1,
+  scaleX: 1.3,
+  scaleY: 1.6,
+  navBarScale: 1.025,
+  borderWidth: 0.11,
   brightness: 50,
-  opacity: 1,
+  opacity: 0.1,
   blur: 11,
-  displace: 0.5,
+  displace: 0,
   backgroundOpacity: 0,
   saturation: 1.1,
-  distortionScale: 40,
+  distortionScale: 80,
   redOffset: 0,
-  greenOffset: 5,
-  blueOffset: 10,
+  greenOffset: 70,
+  blueOffset: 100,
   mixBlendMode: 'difference'
 };
+
+document.documentElement.style.setProperty(
+  '--nav-bar-drag-scale',
+  String(window.GLASS_NAV_CONFIG.navBarScale)
+);
 
 (function (global) {
   'use strict';
@@ -75,8 +81,6 @@ window.GLASS_NAV_CONFIG = {
 
     const unique = `gs-${++uid}`;
     const filterId = `glass-filter-${unique}`;
-    const redGradId = `red-grad-${unique}`;
-    const blueGradId = `blue-grad-${unique}`;
 
     const container = document.createElement('div');
     container.opts = o;
@@ -181,8 +185,8 @@ window.GLASS_NAV_CONFIG = {
       // so a live CSS `scale` transform (the morph) doesn't distort the map and make
       // the glass "flip" once the scale settles.
       const rect = container.getBoundingClientRect();
-      const w = container.offsetWidth || rect.width || 400;
-      const h = container.offsetHeight || rect.height || 200;
+      const w = Math.max(1, Math.round(container.offsetWidth || rect.width || 400));
+      const h = Math.max(1, Math.round(container.offsetHeight || rect.height || 200));
       const edge = Math.min(w, h) * (o.borderWidth * 0.5);
 
       // Dynamically extract the current border-radius to keep SVG shape aligned with CSS borders
@@ -190,23 +194,105 @@ window.GLASS_NAV_CONFIG = {
       const br = !isNaN(brVal) ? brVal : o.borderRadius;
       const brInner = Math.max(0, br - edge);
 
-      const svgContent = `
-        <svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="${redGradId}" x1="100%" y1="0%" x2="0%" y2="0%">
-              <stop offset="0%" stop-color="#0000"/>
-              <stop offset="100%" stop-color="red"/>
-            </linearGradient>
-            <linearGradient id="${blueGradId}" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#0000"/>
-              <stop offset="100%" stop-color="blue"/>
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="${w}" height="${h}" rx="${br}" fill="url(#${redGradId})" />
-          <rect x="0" y="0" width="${w}" height="${h}" rx="${br}" fill="url(#${blueGradId})" style="mix-blend-mode: ${o.mixBlendMode}" />
-          <rect x="${edge}" y="${edge}" width="${w - edge * 2}" height="${h - edge * 2}" rx="${brInner}" fill="hsl(0 0% ${o.brightness}% / ${o.opacity})" style="filter:blur(${o.blur}px)" />
-        </svg>`;
-      return `data:image/svg+xml,${encodeURIComponent(svgContent)}`;
+      // Canvas lens map: calm center + rim that stretches outward (convex bulge at the
+      // pill edge) instead of pinching inward. Vertical emphasis at top/bottom caps.
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      const img = ctx.createImageData(w, h);
+      const px = img.data;
+      const cx = w * 0.5;
+      const cy = h * 0.5;
+      const lensK = o.distortionScale * 0.35;
+      const rim = Math.max(edge * 3, Math.min(w, h) * 0.14, 8);
+      const edgeBoost = 1.45;
+
+      for (let y = 0; y < h; y++) {
+        const ry = (y - cy) / cy;
+        for (let x = 0; x < w; x++) {
+          const rx = (x - cx) / cx;
+          const rx2 = rx * rx;
+          const ry2 = ry * ry;
+          const r2 = rx2 + ry2;
+          const i = (y * w + x) * 4;
+
+          // 0 in the deep center → 1 on the pill boundary (top/bottom/left/right).
+          const distX = Math.min(x, w - 1 - x);
+          const distY = Math.min(y, h - 1 - y);
+          const edgeProx = 1 - Math.min(1, Math.min(distX, distY) / rim);
+          const edgeProxCurve = edgeProx * edgeProx;
+          const centerWeight = 1 - edgeProxCurve;
+
+          // Glossy barrel in the middle (unchanged feel from distortionScale).
+          let dx = rx * r2 * lensK * centerWeight;
+          let dy = ry * r2 * lensK * centerWeight;
+
+          // Rim: signed lensK so negative distortionScale inverts the edge stretch too.
+          const radialLen = Math.sqrt(r2) || 1;
+          const ux = rx / radialLen;
+          const uy = ry / radialLen;
+          const rimK = lensK * edgeBoost;
+          dx += -ux * edgeProxCurve * rimK;
+          dy += -uy * edgeProxCurve * rimK;
+
+          px[i] = 128 + Math.max(-127, Math.min(127, dx));
+          px[i + 1] = 128 + Math.max(-127, Math.min(127, dy));
+          px[i + 2] = 128;
+          px[i + 3] = 255;
+        }
+      }
+      ctx.putImageData(img, 0, 0);
+
+      // Clip to the outer pill/rounded rect.
+      ctx.globalCompositeOperation = 'destination-in';
+      ctx.beginPath();
+      if (typeof ctx.roundRect === 'function') {
+        ctx.roundRect(0, 0, w, h, br);
+      } else {
+        ctx.moveTo(br, 0);
+        ctx.lineTo(w - br, 0);
+        ctx.quadraticCurveTo(w, 0, w, br);
+        ctx.lineTo(w, h - br);
+        ctx.quadraticCurveTo(w, h, w - br, h);
+        ctx.lineTo(br, h);
+        ctx.quadraticCurveTo(0, h, 0, h - br);
+        ctx.lineTo(0, br);
+        ctx.quadraticCurveTo(0, 0, br, 0);
+        ctx.closePath();
+      }
+      ctx.fill();
+
+      // Inner frosted body — clipped so blur can't wash out the rim displacement.
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.filter = `blur(${o.blur}px)`;
+      ctx.fillStyle = `hsla(0, 0%, ${o.brightness}%, ${o.opacity})`;
+      ctx.beginPath();
+      const ix = edge;
+      const iy = edge;
+      const iw = w - edge * 2;
+      const ih = h - edge * 2;
+      if (typeof ctx.roundRect === 'function') {
+        ctx.roundRect(ix, iy, iw, ih, brInner);
+      } else {
+        ctx.moveTo(ix + brInner, iy);
+        ctx.lineTo(ix + iw - brInner, iy);
+        ctx.quadraticCurveTo(ix + iw, iy, ix + iw, iy + brInner);
+        ctx.lineTo(ix + iw, iy + ih - brInner);
+        ctx.quadraticCurveTo(ix + iw, iy + ih, ix + iw - brInner, iy + ih);
+        ctx.lineTo(ix + brInner, iy + ih);
+        ctx.quadraticCurveTo(ix, iy + ih, ix, iy + ih - brInner);
+        ctx.lineTo(ix, iy + brInner);
+        ctx.quadraticCurveTo(ix, iy, ix + brInner, iy);
+        ctx.closePath();
+      }
+      ctx.save();
+      ctx.clip();
+      ctx.fill();
+      ctx.restore();
+      ctx.filter = 'none';
+
+      return canvas.toDataURL('image/png');
     }
 
     function updateDisplacementMap() {
@@ -215,12 +301,15 @@ window.GLASS_NAV_CONFIG = {
       container.style.setProperty('--glass-saturation', o.saturation);
 
       feImage.setAttribute('href', generateDisplacementMap());
+      // Direction lives in the map (signed lensK); filter scale is magnitude only so
+      // negative distortionScale doesn't double-invert with feDisplacementMap.
+      const dispMag = Math.abs(o.distortionScale);
       [
         [redChannel, o.redOffset],
         [greenChannel, o.greenOffset],
         [blueChannel, o.blueOffset]
       ].forEach(([ref, offset]) => {
-        ref.setAttribute('scale', String(o.distortionScale + offset));
+        ref.setAttribute('scale', String(dispMag + offset));
         ref.setAttribute('xChannelSelector', o.xChannel);
         ref.setAttribute('yChannelSelector', o.yChannel);
       });
@@ -337,6 +426,9 @@ window.GLASS_NAV_CONFIG = {
         inner.style.setProperty('--nav-glass-scale-x', String(c.scaleX));
         inner.style.setProperty('--nav-glass-scale-y', String(c.scaleY));
       }
+      if (c.navBarScale != null && isFinite(c.navBarScale)) {
+        document.documentElement.style.setProperty('--nav-bar-drag-scale', String(c.navBarScale));
+      }
       g.style.setProperty('--g-rest-sx', String(1 / c.scaleX));
       g.style.setProperty('--g-rest-sy', String(1 / c.scaleY));
 
@@ -344,29 +436,54 @@ window.GLASS_NAV_CONFIG = {
       if (g._glassUpdate) g._glassUpdate();
     }
 
-    // Mirror the yellow indicator. pillLeft/pillTop are offsets inside
-    // .bottom-tabs-inner; convert to viewport coordinates for the fixed glass.
+    // Navbar morph scale must not affect the body-mounted glass pill size/position.
+    function navBarMorphScale(inner) {
+      if (!inner || !inner.classList.contains('nav-glass-morph')) return 1;
+      const s = parseFloat(getComputedStyle(inner).scale);
+      return isFinite(s) && s > 0 ? s : 1;
+    }
+
+    function layoutPillToViewport(inner, pillLeft, pillTop) {
+      const ir = inner.getBoundingClientRect();
+      const navScale = navBarMorphScale(inner);
+      if (navScale === 1) {
+        return {
+          left: ir.left + inner.clientLeft + pillLeft,
+          top: ir.top + inner.clientTop + pillTop
+        };
+      }
+      // Bar scales from its center — map layout pill coords to the unscaled box.
+      const layoutW = inner.offsetWidth;
+      const layoutH = inner.offsetHeight;
+      const originX = ir.left + ir.width / 2;
+      const originY = ir.top + ir.height / 2;
+      const unscaledLeft = originX - layoutW / 2;
+      const unscaledTop = originY - layoutH / 2;
+      return {
+        left: unscaledLeft + inner.clientLeft + pillLeft,
+        top: unscaledTop + inner.clientTop + pillTop
+      };
+    }
+
+    // Mirror the yellow indicator using layout coords — glass stays unscaled while the bar grows.
     function sync(pillLeft, pillTop, pillW, pillH) {
       const inner = document.querySelector('.bottom-tabs-inner');
       if (!inner) return;
-      const ir = inner.getBoundingClientRect();
-      place(ir.left + inner.clientLeft + pillLeft, ir.top + inner.clientTop + pillTop, pillW, pillH);
+      const vp = layoutPillToViewport(inner, pillLeft, pillTop);
+      place(vp.left, vp.top, pillW, pillH);
     }
 
-    // Position the glass straight from the indicator's current on-screen rect.
-    // Used on reveal so the very first show isn't mis-placed (and never "blank"
-    // off in a corner) before any move has happened.
+    // Position the glass straight from the indicator's layout box (not viewport rect).
     function syncToIndicator() {
       const ind = document.getElementById('bottom-tab-indicator');
       if (!ind) return;
-      const r = ind.getBoundingClientRect();
-      // Use the indicator's LAYOUT size (offsetWidth/Height, unaffected by its scale
-      // morph) so it matches the size sync() uses during a drag — otherwise the glass
-      // is sized slightly differently on press vs. first move and visibly snaps.
-      const w = ind.offsetWidth || r.width;
-      const h = ind.offsetHeight || r.height;
+      const w = ind.offsetWidth;
+      const h = ind.offsetHeight;
       if (w < 1 || h < 1) return;
-      place(r.left, r.top, w, h);
+      const parts = (ind.style.translate || '0px 0px').trim().split(/\s+/);
+      const pillLeft = parseFloat(parts[0]) || 0;
+      const pillTop = parseFloat(parts[1]) || 0;
+      sync(pillLeft, pillTop, w, h);
     }
 
     // Start of a move: reveal the glass and morph it up to full size (yellow fades

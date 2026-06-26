@@ -534,13 +534,55 @@ function _syncTabGoldOverlayLayout() {
     gold.style.height = btn.offsetHeight + 'px';
   });
 }
+function _glassPillClipScale() {
+  var inner = document.querySelector('.bottom-tabs-inner');
+  if (!inner || !inner.classList.contains('nav-glass-morph')) {
+    return { sx: 1, sy: 1, active: false };
+  }
+  var sx = parseFloat(getComputedStyle(inner).getPropertyValue('--nav-glass-scale-x'));
+  var sy = parseFloat(getComputedStyle(inner).getPropertyValue('--nav-glass-scale-y'));
+  if (!isFinite(sx) || sx <= 0) sx = 1;
+  if (!isFinite(sy) || sy <= 0) sy = 1;
+  return { sx: sx, sy: sy, active: true };
+}
+function _tabHighlightClipRadius(_inner, clipH) {
+  // Pill/capsule — always half the highlight height (scales with responsive tab size).
+  return clipH / 2;
+}
 function _applyTabGoldOverlayClip(pillLeft, pillTop, pillW, pillH) {
   var inner = document.querySelector('.bottom-tabs-inner');
   var overlay = document.getElementById('bottom-tab-gold-overlay');
   if (!inner || !overlay) return;
   var iw = inner.offsetWidth;
   var ih = inner.offsetHeight;
-  overlay.style.clipPath = 'inset(' + pillTop + 'px ' + (iw - pillLeft - pillW) + 'px ' + (ih - pillTop - pillH) + 'px ' + pillLeft + 'px round 999px)';
+  var scale = _glassPillClipScale();
+  var clipW = pillW;
+  var clipH = pillH;
+  var clipLeft = pillLeft;
+  var clipTop = pillTop;
+  // Match the liquid-glass pill footprint (scaleX/scaleY, centered on the tab).
+  if (scale.active) {
+    clipW = pillW * scale.sx;
+    clipH = pillH * scale.sy;
+    clipLeft = pillLeft - (clipW - pillW) / 2;
+    clipTop = pillTop - (clipH - pillH) / 2;
+  }
+  var clipRadius = _tabHighlightClipRadius(inner, clipH);
+  overlay.style.clipPath =
+    'inset(' +
+    clipTop + 'px ' +
+    (iw - clipLeft - clipW) + 'px ' +
+    (ih - clipTop - clipH) + 'px ' +
+    clipLeft + 'px round ' + clipRadius + 'px)';
+}
+function _refreshGoldClipFromIndicator() {
+  var indicator = document.getElementById('bottom-tab-indicator');
+  if (!indicator) return;
+  var translate = indicator.style.translate || '0px 0px';
+  var parts = translate.trim().split(/\s+/);
+  var pillLeft = parseFloat(parts[0]) || 0;
+  var pillTop = parseFloat(parts[1]) || 0;
+  _applyTabGoldOverlayClip(pillLeft, pillTop, indicator.offsetWidth, indicator.offsetHeight);
 }
 function _setTabIndicatorDragging(isDragging) {
   var indicator = document.getElementById('bottom-tab-indicator');
@@ -549,6 +591,7 @@ function _setTabIndicatorDragging(isDragging) {
   if (overlay) overlay.classList.toggle('is-dragging', isDragging);
   // Drag start: pop the active pill into liquid glass and let it follow the finger.
   if (isDragging && window.GlassNavPill) window.GlassNavPill.beginMove(true);
+  _refreshGoldClipFromIndicator();
 }
 function _tabBtnLayout(btn) {
   return { left: btn.offsetLeft, top: btn.offsetTop, width: btn.offsetWidth, height: btn.offsetHeight };
@@ -821,6 +864,7 @@ function _initTabGestures() {
     };
     // Pop the active pill into liquid glass the instant it's pressed (before any move).
     if (window.GlassNavPill) window.GlassNavPill.beginMove(true);
+    _refreshGoldClipFromIndicator();
   });
 
   navInner.addEventListener('pointermove', function(e) {

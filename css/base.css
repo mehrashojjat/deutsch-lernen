@@ -15,7 +15,17 @@
   --stack-dur:.52s;--stack-ease:cubic-bezier(0.25,0.8,0.35,1);
   --modal-panel-shadow:0 14px 52px rgba(0,0,0,0.44);
   --modal-scrim:rgba(0,0,0,0.42);
-  --tab-h:62px;
+  --tab-bar-bottom-inset:21px;
+  --tab-bar-content-height:62px;
+  --tab-bar-padding-block:6px;
+  --tab-bar-padding-inline:8px;
+  --tab-bar-gap:10px;
+  --tab-item-width:120px;
+  --tab-icon-size:24px;
+  --tab-label-size:0.625rem;
+  --tab-highlight-radius:14px;
+  --nav-bar-drag-scale:1.1;
+  --tab-h:calc(var(--tab-bar-bottom-inset) + var(--tab-bar-content-height));
   --tab-page-gap:12px;
   --tab-content-max:600px;
   --tab-panel-gutter:max(14px,calc((100vw - var(--tab-content-max)) / 2));

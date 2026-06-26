@@ -39,8 +39,8 @@
 .rb-icon-wrap--theme{color:#b78af7;}
 .rb-icon-wrap--swipe{color:var(--blue);}
 .rb-icon-wrap--explorer{color:var(--gold);}
-.bottom-tab .ui-icon{width:20px;height:20px;color:rgba(255,255,255,0.42);}
-.bottom-tab:hover .ui-icon{color:rgba(255,255,255,0.62);}
+.bottom-tab .ui-icon{width:var(--tab-icon-size);height:var(--tab-icon-size);color:rgba(255,255,255,0.55);}
+.bottom-tab:hover .ui-icon{color:rgba(255,255,255,0.72);}
 /* ── CATEGORY GRID (theme quiz — matches home glass tiles) ── */
 .category-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 0 20px;}
 .category-card{--cat-accent:var(--gold);--cat-icon-bg:rgba(255,255,255,0.06);text-align:start;}
